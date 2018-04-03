@@ -1,0 +1,153 @@
+/**
+ * Font Face
+ */
+// Noto Sans TC (Chinese_traditional)
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 100;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 300;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.otf) format('opentype');
+}
+
+@font-face {
+   font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 900;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.otf) format('opentype');
+}
+
+/**
+ * Mixins
+ */
+@mixin font-size($remSize) {
+    // // $remSize: 1.4
+    // $pxSize: ($remSize * 10);
+
+    // font-size: ~"${pxSize}px";
+    // font-size: ~"${remSize}rem";
+}
+
+@mixin border-radius($radius) {
+    // $radius: 4px
+    border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+    // $shadow: 0 1px 3px rgba(0,0,0,.25)
+    box-shadow: $shadow;
+}
+
+@mixin opacity($setting) {
+    // $setting: 100
+    opacity: $setting / 100;
+    filter: alpha(opacity=$setting);
+}
+
+@mixin hover-shadow {
+    border: 1px solid #c4c4c4;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+@mixin linear-gradient($color1, $color2) {
+    background: -webkit-linear-gradient($color1, $color2);
+    background: -o-linear-gradient($color1, $color2);
+    background: -moz-linear-gradient($color1, $color2);
+    background: linear-gradient($color1, $color2);
+}
+
+@mixin linear-gradient-horizontal($color1, $color2, $color3) {
+    background: -webkit-linear-gradient(left, $color1, $color2, $color3);
+    background: -o-linear-gradient(right, $color1, $color2, $color3);
+    background: -moz-linear-gradient(right, $color1, $color2, $color3);
+    background: linear-gradient(to right, $color1, $color2, $color3);
+}
+
+/**
+ * Global Reset
+ */
+* {
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+html,
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family:
+        "Noto Sans TC",
+        Arial,
+        sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html.no-js > body {
+    display: none;
+}
+
+html.js > body {
+    display: block;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none !important;
+
+    &:visited,
+    &:link {
+        text-decoration: none !important;
+    }
+
+    &.ot-active,
+    &:hover
+    &:focus {
+        text-decoration: none !important;
+    }
+}

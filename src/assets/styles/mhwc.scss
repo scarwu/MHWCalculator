@@ -1,0 +1,16 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/font-awesome/scss/font-awesome";
+
+/**
+ * Load Specify Styles
+ */
+@import "component/common";
+@import "component/desktop";
+@import "component/mobile";
+
+/**
+ * Module & Option Style
+ */
+#main {
+    @import "module/main";
+}
