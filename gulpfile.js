@@ -237,6 +237,12 @@ gulp.task('release:optimize:images', function () {
  */
 gulp.task('clean', function (callback) {
     return del([
+        'src/boot'
+    ], callback);
+});
+
+gulp.task('clean:release', function (callback) {
+    return del([
         'src/boot',
         'docs'
     ], callback);
@@ -272,7 +278,7 @@ gulp.task('release', function (callback) {
     // Warrning: Change ENVIRONMENT to Prodctuion
     ENVIRONMENT = 'production';
 
-    run('prepare', [
+    run('clean:release', 'prepare', [
         'release:copy:boot',
         'release:copy:application'
     ], [
