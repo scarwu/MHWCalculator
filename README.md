@@ -1,6 +1,6 @@
 # Monster Hunter: World - Calculator
 
-## Dev
+## Devlopment
 
 ### Install Env Tools
 
@@ -14,7 +14,7 @@ sudo npm -g install gulp-cli yarn
 ./setup.sh
 ~~~
 
-### Grnerate Files
+### Generate Folder for Dev
 
 web root path please set to ./src/boot
 
@@ -29,5 +29,5 @@ gulp prepare # for 1 time check
 ## Deploy Github Page
 
 ~~~
-gulp release
+gulp release # and commit to github
 ~~~
