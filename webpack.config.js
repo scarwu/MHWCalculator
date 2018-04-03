@@ -1,11 +1,10 @@
 'use strict';
-
 /**
  * Webpack Config
  *
  * @package     MHW Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.simcz.tw/)
+ * @copyright   Copyright (c) Scar Wu (http://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
