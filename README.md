@@ -31,3 +31,9 @@ gulp prepare # for 1 time check
 ~~~
 gulp release # and commit to github
 ~~~
+
+## Reference Website (Information Source)
+
+* https://www.mhchinese.wiki
+* https://game8.jp/mhw
+* http://mhw.wiki-db.com
