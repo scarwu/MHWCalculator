@@ -1,1 +1,1074 @@
-{}
+{
+    "KO護石 II": {
+        "name": "KO護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "KO術",
+                "level": 3
+            }
+        ]
+    },
+    "體術護石 II": {
+        "name": "體術護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "體術",
+                "level": 3
+            }
+        ]
+    },
+    "體力護石 II": {
+        "name": "體力護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "體力增強",
+                "level": 3
+            }
+        ]
+    },
+    "小胃口護石 I": {
+        "name": "小胃口護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "滿足感",
+                "level": 1
+            }
+        ]
+    },
+    "火焰護石 II": {
+        "name": "火焰護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "火屬性攻擊強化",
+                "level": 3
+            }
+        ]
+    },
+    "心靜自然涼護石 I": {
+        "name": "心靜自然涼護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "熱傷害無效",
+                "level": 1
+            },
+            {
+                "name": "適應瘴氣環境",
+                "level": 1
+            }
+        ]
+    },
+    "不屈護石 I": {
+        "name": "不屈護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "不屈",
+                "level": 1
+            }
+        ]
+    },
+    "友愛護石 II": {
+        "name": "友愛護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "廣域化",
+                "level": 3
+            }
+        ]
+    },
+    "加護護石 II": {
+        "name": "加護護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "精靈加護",
+                "level": 3
+            }
+        ]
+    },
+    "全開護石 II": {
+        "name": "全開護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "力量解放",
+                "level": 2
+            }
+        ]
+    },
+    "早氣護石 II": {
+        "name": "早氣護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "耐力急速回復",
+                "level": 2
+            }
+        ]
+    },
+    "早復護石 II": {
+        "name": "早復護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "回復速度",
+                "level": 3
+            }
+        ]
+    },
+    "匠之護石 II": {
+        "name": "匠之護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "匠",
+                "level": 3
+            }
+        ]
+    },
+    "地學護石 II": {
+        "name": "地學護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "地質學",
+                "level": 3
+            }
+        ]
+    },
+    "冰結護石 II": {
+        "name": "冰結護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "冰屬性攻擊強化",
+                "level": 3
+            }
+        ]
+    },
+    "耳塞護石 II": {
+        "name": "耳塞護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "耳塞",
+                "level": 3
+            }
+        ]
+    },
+    "攻擊護石 II": {
+        "name": "攻擊護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "攻擊",
+                "level": 3
+            }
+        ]
+    },
+    "快吃護石 II": {
+        "name": "快吃護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "快吃",
+                "level": 3
+            }
+        ]
+    },
+    "投石護石 II": {
+        "name": "投石護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "投射器裝填數UP",
+                "level": 3
+            }
+        ]
+    },
+    "吹笛護石 I": {
+        "name": "吹笛護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "吹笛名人",
+                "level": 1
+            }
+        ]
+    },
+    "防禦護石 II": {
+        "name": "防禦護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "防禦",
+                "level": 3
+            }
+        ]
+    },
+    "防風護石 II": {
+        "name": "防風護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "風壓耐性",
+                "level": 3
+            }
+        ]
+    },
+    "昆蟲學護石 II": {
+        "name": "昆蟲學護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "昆蟲標本達人",
+                "level": 3
+            }
+    ]
+    },
+    "昂揚護石 II": {
+        "name": "昂揚護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "強化持續",
+                "level": 2
+            }
+        ]
+    },
+    "底力護石 II": {
+        "name": "底力護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "火場怪力",
+                "level": 2
+            }
+        ]
+    },
+    "治癒護石 II": {
+        "name": "治癒護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "體力回復量UP",
+                "level": 3
+            }
+        ]
+    },
+    "泥浴護石 I": {
+        "name": "泥浴護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "泥耐性",
+                "level": 1
+            },
+            {
+                "name": "飛身躍入",
+                "level": 1
+            }
+        ]
+    },
+    "沼渡護石 II": {
+        "name": "沼渡護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "適應水場",
+                "level": 3
+            }
+        ]
+    },
+    "拔刀護石 II": {
+        "name": "拔刀護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "拔刀術【技】",
+                "level": 2
+            }
+        ]
+    },
+    "威嚇護石 II": {
+        "name": "威嚇護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "威嚇",
+                "level": 3
+            }
+        ]
+    },
+    "研磨護石 II": {
+        "name": "研磨護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "砥石使用高速化",
+                "level": 3
+            }
+        ]
+    },
+    "指揮護石 II": {
+        "name": "指揮護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "指示隨從",
+                "level": 3
+            }
+        ]
+    },
+    "持續護石 II": {
+        "name": "持續護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "道具使用強化",
+                "level": 3
+            }
+        ]
+    },
+    "狩獵生活護石 I": {
+        "name": "狩獵生活護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "烤肉名人",
+                "level": 1
+            },
+            {
+                "name": "釣魚名人",
+                "level": 1
+            }
+        ]
+    },
+    "重擊護石 II": {
+        "name": "重擊護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "破壞王",
+                "level": 2
+            }
+        ]
+    },
+    "耐瘴護石 II": {
+        "name": "耐瘴護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "瘴氣耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐火護石 II": {
+        "name": "耐火護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "火耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐衝護石 II": {
+        "name": "耐衝護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "減輕膽怯",
+                "level": 2
+            }
+        ]
+    },
+    "耐震護石 II": {
+        "name": "耐震護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "耐震",
+                "level": 2
+            }
+        ]
+    },
+    "耐水護石 II": {
+        "name": "耐水護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "水耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐絕護石 II": {
+        "name": "耐絕護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "昏厥耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐屬護石 II": {
+        "name": "耐屬護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "屬性異常狀態耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐毒護石 II": {
+        "name": "耐毒護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "毒耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐爆護石 II": {
+        "name": "耐爆護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "爆破異常狀態的耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐冰護石 II": {
+        "name": "耐冰護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "冰耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐防護石 II": {
+        "name": "耐防護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "防御力DOWN耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐眠護石 II": {
+        "name": "耐眠護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "睡眠耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐雷護石 II": {
+        "name": "耐雷護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "雷耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐龍護石 II": {
+        "name": "耐龍護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "龍耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐裂護石 II": {
+        "name": "耐裂護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "裂傷耐性",
+                "level": 3
+            }
+        ]
+    },
+    "耐痺護石 II": {
+        "name": "耐痺護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "麻痺耐性",
+                "level": 3
+            }
+        ]
+    },
+    "挑戰護石 II": {
+        "name": "挑戰護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "挑戰者",
+                "level": 2
+            }
+        ]
+    },
+    "毒擊護石 II": {
+        "name": "毒擊護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "毒屬性強化",
+                "level": 3
+            }
+        ]
+    },
+    "毒瓶護石 I": {
+        "name": "毒瓶護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "毒瓶追加",
+                "level": 1
+            }
+        ]
+    },
+    "風水護石 I": {
+        "name": "風水護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "探索者的幸運",
+                "level": 1
+            },
+            {
+                "name": "察覺",
+                "level": 1
+            }
+        ]
+    },
+    "流水護石 II": {
+        "name": "流水護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "水屬性攻擊強化",
+                "level": 3
+            }
+        ]
+    },
+    "追風護石 I": {
+        "name": "追風護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "攻擊",
+                "level": 1
+            },
+            {
+                "name": "精靈加護",
+                "level": 1
+            }
+        ]
+    },
+    "迴避護石 II": {
+        "name": "迴避護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "迴避性能",
+                "level": 3
+            }
+        ]
+    },
+    "疾風護石 I": {
+        "name": "疾風護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "滑走強化",
+                "level": 1
+            },
+            {
+                "name": "飛燕",
+                "level": 1
+            }
+        ]
+    },
+    "追踨護石 I": {
+        "name": "追踨護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "追蹤達人",
+                "level": 1
+            }
+        ]
+    },
+    "特射護石 II": {
+        "name": "特射護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "特殊射擊強化",
+                "level": 2
+            }
+        ]
+    },
+    "納刀護石 II": {
+        "name": "納刀護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "收刀術",
+                "level": 3
+            }
+        ]
+    },
+    "破龍護石 II": {
+        "name": "破龍護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "龍屬性攻擊強化",
+                "level": 3
+            }
+        ]
+    },
+    "砲擊手護石 II": {
+        "name": "砲擊手護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "砲擊手",
+                "level": 2
+            }
+        ]
+    },
+    "砲術護石 II": {
+        "name": "砲術護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "砲術",
+                "level": 3
+            }
+        ]
+    },
+    "貫通彈護石 I": {
+        "name": "貫通彈護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "貫通彈・龍之箭強化",
+                "level": 1
+            }
+        ]
+    },
+    "強走護石 II": {
+        "name": "強走護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "跑者",
+                "level": 2
+            }
+        ]
+    },
+    "堅守護石 I": {
+        "name": "堅守護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "防禦強化",
+                "level": 1
+            },
+            {
+                "name": "死裡逃生",
+                "level": 1
+            }
+        ]
+    },
+    "採集鐵人護石 I": {
+        "name": "採集鐵人護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "採集達人",
+                "level": 1
+            },
+            {
+                "name": "剝取鐵人",
+                "level": 1
+            }
+        ]
+    },
+    "陷阱彈護石 I": {
+        "name": "陷阱彈護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "異臭名人",
+                "level": 1
+            },
+            {
+                "name": "閃光強化",
+                "level": 1
+            }
+        ]
+    },
+    "通常彈護石 I": {
+        "name": "通常彈護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "通常彈・通常箭強化",
+                "level": 1
+            }
+        ]
+    },
+    "麻痺瓶護石 I": {
+        "name": "麻痺瓶護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "麻痺瓶追加",
+                "level": 1
+            }
+        ]
+    },
+    "渾身護石 II": {
+        "name": "渾身護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "精神抖擻",
+                "level": 2
+            }
+        ]
+    },
+    "散彈護石 I": {
+        "name": "散彈護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "散彈・剛射強化",
+                "level": 1
+            }
+        ]
+    },
+    "集中護石 II": {
+        "name": "集中護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "集中",
+                "level": 2
+            }
+        ]
+    },
+    "植學護石 II": {
+        "name": "植學護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "植生學",
+                "level": 3
+            }
+        ]
+    },
+    "超心護石 I": {
+        "name": "超心護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "超會心",
+                "level": 1
+            }
+        ]
+    },
+    "痛擊護石 II": {
+        "name": "痛擊護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "弱點特效",
+                "level": 2
+            }
+        ]
+    },
+    "無傷護石 II": {
+        "name": "無傷護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "無傷",
+                "level": 2
+            }
+        ]
+    },
+    "煙復護石 II": {
+        "name": "煙復護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "綿花孢子草的知識",
+                "level": 3
+            }
+        ]
+    },
+    "滅龍護石 I": {
+        "name": "滅龍護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "龍封力強化",
+                "level": 1
+            },
+            {
+                "name": "龍屬性攻擊強化",
+                "level": 1
+            }
+        ]
+    },
+    "嗜菇護石 II": {
+        "name": "嗜菇護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "最愛菇類",
+                "level": 2
+            }
+        ]
+    },
+    "裝備護石 II": {
+        "name": "裝備護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "整備",
+                "level": 3
+            }
+        ]
+    },
+    "裝填護石 I": {
+        "name": "裝填護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "砲彈裝填數UP",
+                "level": 1
+            }
+        ]
+    },
+    "達人護石 II": {
+        "name": "達人護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "看破",
+                "level": 3
+            }
+        ]
+    },
+    "跳躍護石 II": {
+        "name": "跳躍護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "迴避距離UP",
+                "level": 2
+            }
+        ]
+    },
+    "痺擊護石 II": {
+        "name": "痺擊護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "麻痺屬性強化",
+                "level": 3
+            }
+        ]
+    },
+    "雷光護石 II": {
+        "name": "雷光護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "雷屬性攻擊強化",
+                "level": 3
+            }
+        ]
+    },
+    "睡擊護石 II": {
+        "name": "睡擊護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "睡眠屬性強化",
+                "level": 3
+            }
+        ]
+    },
+    "睡眠瓶護石 I": {
+        "name": "睡眠瓶護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "睡眠瓶追加",
+                "level": 1
+            }
+        ]
+    },
+    "奪氣護石 II": {
+        "name": "奪氣護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "奪取耐力",
+                "level": 3
+            }
+        ]
+    },
+    "暴怒護石 II": {
+        "name": "暴怒護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "怨恨",
+                "level": 2
+            }
+        ]
+    },
+    "潛伏護石 II": {
+        "name": "潛伏護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "潛伏",
+                "level": 3
+            }
+        ]
+    },
+    "調查達人護石 I": {
+        "name": "調查達人護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "導蟲反應距離UP",
+                "level": 1
+            },
+            {
+                "name": "研究者",
+                "level": 1
+            }
+        ]
+    },
+    "騎手護石 I": {
+        "name": "騎手護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "騎乘名人",
+                "level": 1
+            },
+            {
+                "name": "跳躍鐵人",
+                "level": 1
+            }
+        ]
+    },
+    "斷食護石 II": {
+        "name": "斷食護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "飢餓耐性",
+                "level": 3
+            }
+        ]
+    },
+    "爆師護石 II": {
+        "name": "爆師護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "炸彈客",
+                "level": 3
+            }
+        ]
+    },
+    "爆破護石 II": {
+        "name": "爆破護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "爆破屬性強化",
+                "level": 3
+            }
+        ]
+    },
+    "爆破瓶護石 I": {
+        "name": "爆破瓶護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "爆破瓶追加",
+                "level": 1
+            }
+        ]
+    },
+    "覺醒護石 II": {
+        "name": "覺醒護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "屬性解放／裝填擴充",
+                "level": 2
+            }
+        ]
+    },
+    "籌備護石 I": {
+        "name": "籌備護石 I",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "搬運達人",
+                "level": 1
+            },
+            {
+                "name": "蜂蜜獵人",
+                "level": 1
+            }
+        ]
+    },
+    "鐵壁護石 II": {
+        "name": "鐵壁護石 II",
+        "rare": null,
+        "skillList": [
+            {
+                "name": "防禦性能",
+                "level": 3
+            }
+        ]
+    }
+}
