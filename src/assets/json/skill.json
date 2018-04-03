@@ -1,1 +1,943 @@
-{}
+{
+    "KO術": {
+        "name": "KO術",
+        "list": [
+            {
+                "level": 1,
+                "description": "昏厥威力1.1倍"
+            },
+            {
+                "level": 2,
+                "description": "昏厥威力1.2倍"
+            },
+            {
+                "level": 3,
+                "description": "昏厥威力1.3倍"
+            }
+        ]
+    },
+    "力量解放": {
+        "name": "力量解放",
+        "list": [
+            {
+                "level": 1,
+                "description": "技能發動時，會心率+10%，耐力消耗量減少10%"
+            },
+            {
+                "level": 2,
+                "description": "技能發動時，會心率+20%，耐力消耗量減少20%"
+            },
+            {
+                "level": 3,
+                "description": "技能發動時，會心率+30%，耐力消耗量減少30%"
+            },
+            {
+                "level": 4,
+                "description": "技能發動時，會心率+40%，耐力消耗量減少40%"
+            },
+            {
+                "level": 5,
+                "description": "技能發動時，會心率+50%，耐力消耗量減少50%"
+            }
+        ]
+    },
+    "水屬性攻擊強化": {
+        "name": "水屬性攻擊強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "水屬性攻擊值+30"
+            },
+            {
+                "level": 2,
+                "description": "水屬性攻擊值+60"
+            },
+            {
+                "level": 3,
+                "description": "水屬性攻擊值+100"
+            },
+            {
+                "level": 4,
+                "description": "水屬性攻擊值變為1.05倍，水屬性攻擊值+100"
+            },
+            {
+                "level": 5,
+                "description": "水屬性攻擊值變為1.1倍，水屬性攻擊值+100"
+            }
+        ]
+    },
+    "火屬性攻擊強化": {
+        "name": "火屬性攻擊強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "火屬性攻擊值+30"
+            },
+            {
+                "level": 2,
+                "description": "火屬性攻擊值+60"
+            },
+            {
+                "level": 3,
+                "description": "火屬性攻擊值+100"
+            },
+            {
+                "level": 4,
+                "description": "火屬性攻擊值變為1.05倍，火屬性攻擊值+100"
+            },
+            {
+                "level": 5,
+                "description": "火屬性攻擊值變為1.1倍，火屬性攻擊值+100"
+            }
+        ]
+    },
+    "心眼／彈導強化": {
+        "name": "心眼／彈導強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "攻擊不會被彈開，縮短彈藥、箭矢達到最大威力時的距離"
+            }
+        ]
+    },
+    "不屈": {
+        "name": "不屈",
+        "list": [
+            {
+                "level": 1,
+                "description": "每次攻擊力1.1倍、防禦力1.15倍"
+            }
+        ]
+    },
+    "火場怪力": {
+        "name": "火場怪力",
+        "list": [
+            {
+                "level": 1,
+                "description": "技能發動時，攻擊力1.05倍，防禦力+15"
+            },
+            {
+                "level": 2,
+                "description": "技能發動時，攻擊力1.1倍，防禦力+20"
+            },
+            {
+                "level": 3,
+                "description": "技能發動時，攻擊力1.15倍，防禦力+25"
+            },
+            {
+                "level": 4,
+                "description": "技能發動時，攻擊力1.2倍，防禦力+30"
+            },
+            {
+                "level": 5,
+                "description": "技能發動時，攻擊力1.3倍，防禦力+40"
+            }
+        ]
+    },
+    "冰屬性攻擊強化": {
+        "name": "冰屬性攻擊強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "冰屬性攻擊值+30"
+            },
+            {
+                "level": 2,
+                "description": "冰屬性攻擊值+60"
+            },
+            {
+                "level": 3,
+                "description": "冰屬性攻擊值+100"
+            },
+            {
+                "level": 4,
+                "description": "冰屬性攻擊值變為1.05倍，冰屬性攻擊值+100"
+            },
+            {
+                "level": 5,
+                "description": "冰屬性攻擊值變為1.1倍，冰屬性攻擊值+100"
+            }
+        ]
+    },
+    "收刀術": {
+        "name": "收刀術",
+        "list": [
+            {
+                "level": 1,
+                "description": "速度小幅上升"
+            },
+            {
+                "level": 2,
+                "description": "速度上升"
+            },
+            {
+                "level": 3,
+                "description": "速度大幅上升"
+            }
+        ]
+    },
+    "死裡逃生": {
+        "name": "死裡逃生",
+        "list": [
+            {
+                "level": 1,
+                "description": "技能發動時，大幅延長迴避的無敵時間，並減少耐力消耗量"
+            }
+        ]
+    },
+    "匠": {
+        "name": "匠",
+        "list": [
+            {
+                "level": 1,
+                "description": "武器的銳利度+10"
+            },
+            {
+                "level": 2,
+                "description": "武器的銳利度+20"
+            },
+            {
+                "level": 3,
+                "description": "武器的銳利度+30"
+            },
+            {
+                "level": 4,
+                "description": "武器的銳利度+40"
+            },
+            {
+                "level": 5,
+                "description": "武器的銳利度+50"
+            }
+        ]
+    },
+    "攻擊": {
+        "name": "攻擊",
+        "list": [
+            {
+                "level": 1,
+                "description": "基礎攻擊力+3"
+            },
+            {
+                "level": 2,
+                "description": "基礎攻擊力+6"
+            },
+            {
+                "level": 3,
+                "description": "基礎攻擊力+9"
+            },
+            {
+                "level": 4,
+                "description": "基礎攻擊力+12、會心率+5%"
+            },
+            {
+                "level": 5,
+                "description": "基礎攻擊力+15、會心率+5%"
+            },
+            {
+                "level": 6,
+                "description": "基礎攻擊力+18、會心率+5%"
+            },
+            {
+                "level": 7,
+                "description": "基礎攻擊力+21、會心率+5%"
+            }
+        ]
+    },
+    "吹笛名人": {
+        "name": "吹笛名人",
+        "list": [
+            {
+                "level": 1,
+                "description": "延長狩獵笛旋律效果時間，體力回復量的上升率UP"
+            }
+        ]
+    },
+    "防禦強化": {
+        "name": "防禦強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "可以防禦一般無法防禦的攻擊"
+            }
+        ]
+    },
+    "防禦": {
+        "name": "防禦",
+        "list": [
+            {
+                "level": 1,
+                "description": "防禦力+5"
+            },
+            {
+                "level": 2,
+                "description": "防禦力+10"
+            },
+            {
+                "level": 3,
+                "description": "防禦力+15"
+            },
+            {
+                "level": 4,
+                "description": "防禦力+20，全屬性耐性值+3"
+            },
+            {
+                "level": 5,
+                "description": "防禦力+25，全屬性耐性值+3"
+            },
+            {
+                "level": 6,
+                "description": "防禦力+30，全屬性耐性值+3"
+            },
+            {
+                "level": 7,
+                "description": "防禦力+35，全屬性耐性值+3"
+            }
+        ]
+    },
+    "利刃／彈藥節約": {
+        "name": "利刃／彈藥節約",
+        "list": [
+            {
+                "level": 1,
+                "description": "銳利度的消耗降低一半 ／ 有少量機會在射擊時不消耗弩槍的彈藥及弓的瓶"
+            }
+        ]
+    },
+    "防禦性能": {
+        "name": "防禦性能",
+        "list": [
+            {
+                "level": 1,
+                "description": "小幅減少攻擊的威力"
+            },
+            {
+                "level": 2,
+                "description": "小幅減少攻擊的威力，減少耐力消費量15%"
+            },
+            {
+                "level": 3,
+                "description": "大幅減少攻擊的威力，減少耐力消費量15%"
+            },
+            {
+                "level": 4,
+                "description": "大幅減少攻擊的威力，減少耐力消費量30%"
+            },
+            {
+                "level": 5,
+                "description": "極大幅減少攻擊的威力，減少耐力消費量50%"
+            }
+        ]
+    },
+    "拔刀術【力】": {
+        "name": "拔刀術【力】",
+        "list": [
+            {
+                "level": 1,
+                "description": "追加、強化武器拔刀攻擊所引起的昏厥的能力，攻擊力也會小幅提升"
+            }
+        ]
+    },
+    "拔刀術【技】": {
+        "name": "拔刀術【技】",
+        "list": [
+            {
+                "level": 1,
+                "description": "武器拔刀攻擊的會心率+30%"
+            },
+            {
+                "level": 2,
+                "description": "武器拔刀攻擊的會心率+60%"
+            },
+            {
+                "level": 3,
+                "description": "武器拔刀攻擊的會心率+100%"
+            }
+        ]
+    },
+    "看破": {
+        "name": "看破",
+        "list": [
+            {
+                "level": 1,
+                "description": "會心率+3%"
+            },
+            {
+                "level": 2,
+                "description": "會心率+6%"
+            },
+            {
+                "level": 3,
+                "description": "會心率+10%"
+            },
+            {
+                "level": 4,
+                "description": "會心率+15%"
+            },
+            {
+                "level": 5,
+                "description": "會心率+20%"
+            },
+            {
+                "level": 6,
+                "description": "會心率+25%"
+            },
+            {
+                "level": 7,
+                "description": "會心率+30%"
+            }
+        ]
+    },
+    "飛身躍入": {
+        "name": "飛身躍入",
+        "list": [
+            {
+                "level": 1,
+                "description": "可以發動技能"
+            }
+        ]
+    },
+    "炸彈客": {
+        "name": "炸彈客",
+        "list": [
+            {
+                "level": 1,
+                "description": "威力1.1倍"
+            },
+            {
+                "level": 2,
+                "description": "威力1.2倍"
+            },
+            {
+                "level": 3,
+                "description": "威力1.3倍"
+            }
+        ]
+    },
+    "毒屬性強化": {
+        "name": "毒屬性強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "毒素累積值變為1.05倍，毒素累積值+10"
+            },
+            {
+                "level": 2,
+                "description": "毒素累積值變為1.1倍，毒素累積值+10"
+            },
+            {
+                "level": 3,
+                "description": "毒素累積值變為1.2倍，毒素累積值+10"
+            }
+        ]
+    },
+    "飛燕": {
+        "name": "飛燕",
+        "list": [
+            {
+                "level": 1,
+                "description": "跳躍攻擊的威力變為1.1倍"
+            }
+        ]
+    },
+    "毒傷害強化": {
+        "name": "毒傷害強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "提高對魔物施毒的效果時間"
+            }
+        ]
+    },
+    "挑戰者": {
+        "name": "挑戰者",
+        "list": [
+            {
+                "level": 1,
+                "description": "技能發動時，基礎攻擊力+4，會心率+3%"
+            },
+            {
+                "level": 2,
+                "description": "技能發動時，基礎攻擊力+8，會心率+6%"
+            },
+            {
+                "level": 3,
+                "description": "技能發動時，基礎攻擊力+12，會心率+9%"
+            },
+            {
+                "level": 4,
+                "description": "技能發動時，基礎攻擊力+16，會心率+12%"
+            },
+            {
+                "level": 5,
+                "description": "技能發動時，基礎攻擊力+20，會心率+15%"
+            }
+        ]
+    },
+    "怨恨": {
+        "name": "怨恨",
+        "list": [
+            {
+                "level": 1,
+                "description": "技能發動時，基礎攻擊力+5"
+            },
+            {
+                "level": 2,
+                "description": "技能發動時，基礎攻擊力+10"
+            },
+            {
+                "level": 3,
+                "description": "技能發動時，基礎攻擊力+15"
+            },
+            {
+                "level": 4,
+                "description": "技能發動時，基礎攻擊力+20"
+            },
+            {
+                "level": 5,
+                "description": "技能發動時，基礎攻擊力+25"
+            }
+        ]
+    },
+    "砲術": {
+        "name": "砲術",
+        "list": [
+            {
+                "level": 1,
+                "description": "對象的攻擊力1.1倍，減少龍擊砲的冷卻時間15%"
+            },
+            {
+                "level": 2,
+                "description": "對象的攻擊力1.2倍，減少龍擊砲的冷卻時間30%"
+            },
+            {
+                "level": 3,
+                "description": "對象的攻擊力1.3倍，減少龍擊砲的冷卻時間50%"
+            }
+        ]
+    },
+    "迴避性能": {
+        "name": "迴避性能",
+        "list": [
+            {
+                "level": 1,
+                "description": "無敵時間極小幅延長"
+            },
+            {
+                "level": 2,
+                "description": "無敵時間小幅延長"
+            },
+            {
+                "level": 3,
+                "description": "延長無敵時間"
+            },
+            {
+                "level": 4,
+                "description": "大幅延長無敵時間"
+            },
+            {
+                "level": 5,
+                "description": "極大幅延長無敵時間"
+            }
+        ]
+    },
+    "破壞王": {
+        "name": "破壞王",
+        "list": [
+            {
+                "level": 1,
+                "description": "對部位的累積傷害1.1倍"
+            },
+            {
+                "level": 2,
+                "description": "對部位的累積傷害1.2倍"
+            },
+            {
+                "level": 3,
+                "description": "對部位的累積傷害1.3倍"
+            }
+        ]
+    },
+    "迴避距離UP": {
+        "name": "迴避距離UP",
+        "list": [
+            {
+                "level": 1,
+                "description": "迴避距離小幅延長"
+            },
+            {
+                "level": 2,
+                "description": "延長迴避距離"
+            },
+            {
+                "level": 3,
+                "description": "大幅延長迴避距離"
+            }
+        ]
+    },
+    "砲擊手": {
+        "name": "砲擊手",
+        "list": [
+            {
+                "level": 1,
+                "description": "威力1.1倍"
+            },
+            {
+                "level": 2,
+                "description": "威力1.2倍"
+            }
+        ]
+    },
+    "剛刃研磨": {
+        "name": "剛刃研磨",
+        "list": [
+            {
+                "level": 1,
+                "description": "研磨武器後，一定時間內銳利度不會降低"
+            }
+        ]
+    },
+    "砥石使用高速化": {
+        "name": "砥石使用高速化",
+        "list": [
+            {
+                "level": 1,
+                "description": "省略研磨動作1次"
+            },
+            {
+                "level": 2,
+                "description": "省略研磨動作2次"
+            },
+            {
+                "level": 3,
+                "description": "省略研磨動作3次"
+            }
+        ]
+    },
+    "砲彈裝填數UP": {
+        "name": "砲彈裝填數UP",
+        "list": [
+            {
+                "level": 1,
+                "description": "裝填數+1"
+            }
+        ]
+    },
+    "弱點特效": {
+        "name": "弱點特效",
+        "list": [
+            {
+                "level": 1,
+                "description": "攻擊有效部份時，會心率+15%"
+            },
+            {
+                "level": 2,
+                "description": "攻擊有效部份時，會心率+30%"
+            },
+            {
+                "level": 3,
+                "description": "攻擊有效部份時，會心率+50%"
+            }
+        ]
+    },
+    "強化持續": {
+        "name": "強化持續",
+        "list": [
+            {
+                "level": 1,
+                "description": "持續時間1.1倍"
+            },
+            {
+                "level": 2,
+                "description": "持續時間1.2倍"
+            },
+            {
+                "level": 3,
+                "description": "持續時間1.3倍"
+            }
+        ]
+    },
+    "麻痺屬性強化": {
+        "name": "麻痺屬性強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "麻痺累積值變為1.05倍，麻痺累積值+10"
+            },
+            {
+                "level": 2,
+                "description": "麻痺累積值變為1.1倍，麻痺累積值+10"
+            },
+            {
+                "level": 3,
+                "description": "麻痺累積值變為1.2倍，麻痺累積值+10"
+            }
+        ]
+    },
+    "集中": {
+        "name": "集中",
+        "list": [
+            {
+                "level": 1,
+                "description": "計量表上升率5%UP，蓄力時間縮短5%"
+            },
+            {
+                "level": 2,
+                "description": "計量表上升率10%UP，蓄力時間縮短10%"
+            },
+            {
+                "level": 3,
+                "description": "計量表上升率20%UP，蓄力時間縮短20%"
+            }
+        ]
+    },
+    "鈍器能手": {
+        "name": "鈍器能手",
+        "list": [
+            {
+                "level": 1,
+                "description": "銳利度愈差攻擊力愈高。遠距離武器的近身攻擊威力與使敵人昏厥的容易度有大幅提升"
+            }
+        ]
+    },
+    "無屬性強化": {
+        "name": "無屬性強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "強化裝備中的無屬性武器 (測試約提升10%)"
+            }
+        ]
+    },
+    "無傷": {
+        "name": "無傷",
+        "list": [
+            {
+                "level": 1,
+                "description": "技能發動時，基礎攻擊力+5"
+            },
+            {
+                "level": 2,
+                "description": "技能發動時，基礎攻擊力+10"
+            },
+            {
+                "level": 3,
+                "description": "技能發動時，基礎攻擊力+20"
+            }
+        ]
+    },
+    "減輕膽怯": {
+        "name": "減輕膽怯",
+        "list": [
+            {
+                "level": 1,
+                "description": "使後仰無效"
+            },
+            {
+                "level": 2,
+                "description": "使後仰無效，將屁股著地減輕為後仰狀態"
+            },
+            {
+                "level": 3,
+                "description": "使後仰、屁股著地無效"
+            }
+        ]
+    },
+    "超會心": {
+        "name": "超會心",
+        "list": [
+            {
+                "level": 1,
+                "description": "會心攻擊時的傷害倍率增強為1.3倍"
+            },
+            {
+                "level": 2,
+                "description": "會心攻擊時的傷害倍率增強為1.35倍"
+            },
+            {
+                "level": 3,
+                "description": "會心攻擊時的傷害倍率增強為1.4倍"
+            }
+        ]
+    },
+    "雷屬性攻擊強化": {
+        "name": "雷屬性攻擊強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "雷屬性攻擊值+30"
+            },
+            {
+                "level": 2,
+                "description": "雷屬性攻擊值+60"
+            },
+            {
+                "level": 3,
+                "description": "雷屬性攻擊值+100"
+            },
+            {
+                "level": 4,
+                "description": "雷屬性攻擊值變為1.05倍，雷屬性攻擊值+100"
+            },
+            {
+                "level": 5,
+                "description": "雷屬性攻擊值變為1.1倍，雷屬性攻擊值+100"
+            }
+        ]
+    },
+    "滑走強化": {
+        "name": "滑走強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "可發動技能"
+            }
+        ]
+    },
+    "達人藝": {
+        "name": "達人藝",
+        "list": [
+            {
+                "level": 1,
+                "description": "發生會心攻擊時，不會消耗銳利度"
+            }
+        ]
+    },
+    "會心攻擊【屬性】": {
+        "name": "會心攻擊【屬性】",
+        "list": [
+            {
+                "level": 1,
+                "description": "因攻擊而出現會心時，所造成的屬性傷害(火、水、雷、冰、龍)會提高"
+            }
+        ]
+    },
+    "會心攻擊【特殊】": {
+        "name": "會心攻擊【特殊】",
+        "list": [
+            {
+                "level": 1,
+                "description": "因攻擊而出現會心時，所造成的狀態異常值(麻痺、毒、睡眠、爆破)會提高"
+            }
+        ]
+    },
+    "睡眠屬性強化": {
+        "name": "睡眠屬性強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "睡眠累積值變為1.05倍，睡眠累積值+10"
+            },
+            {
+                "level": 2,
+                "description": "睡眠累積值變為1.1倍，睡眠累積值+10"
+            },
+            {
+                "level": 3,
+                "description": "睡眠累積值變為1.2倍，睡眠累積值+10"
+            }
+        ]
+    },
+    "奪取耐力": {
+        "name": "奪取耐力",
+        "list": [
+            {
+                "level": 1,
+                "description": "減氣威力1.1倍"
+            },
+            {
+                "level": 2,
+                "description": "減氣威力1.2倍"
+            },
+            {
+                "level": 3,
+                "description": "減氣威力1.3倍"
+            }
+        ]
+    },
+    "精靈加護": {
+        "name": "精靈加護",
+        "list": [
+            {
+                "level": 1,
+                "description": "效果發動時，傷害減輕15%"
+            },
+            {
+                "level": 2,
+                "description": "效果發動時，傷害減輕30%"
+            },
+            {
+                "level": 3,
+                "description": "效果發動時，傷害減輕50%"
+            }
+        ]
+    },
+    "精神抖擻": {
+        "name": "精神抖擻",
+        "list": [
+            {
+                "level": 1,
+                "description": "效果發動時，會心率+10%"
+            },
+            {
+                "level": 2,
+                "description": "效果發動時，會心率+20%"
+            },
+            {
+                "level": 3,
+                "description": "效果發動時，會心率+30%"
+            }
+        ]
+    },
+    "毅力": {
+        "name": "毅力",
+        "list": [
+            {
+                "level": 1,
+                "description": "當體力在一定程度以上時，即使承受了超過體力的傷害，也能撐住而不耗盡體力一次"
+            }
+        ]
+    },
+    "龍屬性攻擊強化": {
+        "name": "龍屬性攻擊強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "龍屬性攻擊值+30"
+            },
+            {
+                "level": 2,
+                "description": "龍屬性攻擊值+60"
+            },
+            {
+                "level": 3,
+                "description": "龍屬性攻擊值+100"
+            },
+            {
+                "level": 4,
+                "description": "龍屬性攻擊值變為1.05倍，龍屬性攻擊值+100"
+            },
+            {
+                "level": 5,
+                "description": "龍屬性攻擊值變為1.1倍，龍屬性攻擊值+100"
+            }
+        ]
+    },
+    "龍封力強化": {
+        "name": "龍封力強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "龍封力強化一個階段"
+            }
+        ]
+    },
+    "騎乘名人": {
+        "name": "騎乘名人",
+        "list": [
+            {
+                "level": 1,
+                "description": "容易騎乘怪物，更容易在騎乘狀態下成功"
+            }
+        ]
+    }
+}
