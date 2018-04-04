@@ -1,29 +1,20 @@
 {
-    "鉻鋼剃刀Ⅱ": {
-        "name": "鉻鋼剃刀Ⅱ",
+    "鉻鋼剃刀 II": {
+        "name": "鉻鋼剃刀 II",
         "type": "大劍",
         "series": "礦石素材",
         "attack": 864,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 30,
-                "orange": 30,
-                "yellow": 10,
-                "green": 75,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 30,
                 "yellow": 10,
                 "green": 75,
                 "blue": 45,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -49,23 +40,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -74,7 +56,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -82,31 +64,22 @@
             }
         ]
     },
-    "雷光懲罰者Ⅲ": {
-        "name": "雷光懲罰者Ⅲ",
+    "雷光懲罰者 III": {
+        "name": "雷光懲罰者 III",
         "type": "大劍",
         "series": "雷屬性",
         "attack": 912,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -121,31 +94,22 @@
             }
         ]
     },
-    "霜炎Ⅱ": {
-        "name": "霜炎Ⅱ",
+    "霜炎 II": {
+        "name": "霜炎 II",
         "type": "大劍",
         "series": "冰屬性",
         "attack": 768,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 35,
-                "orange": 35,
-                "yellow": 40,
-                "green": 40,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 35,
                 "orange": 35,
                 "yellow": 40,
                 "green": 40,
                 "blue": 40,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -160,31 +124,22 @@
             }
         ]
     },
-    "凶豺龍鉤爪Ⅲ": {
-        "name": "凶豺龍鉤爪Ⅲ",
+    "凶豺龍鉤爪 III": {
+        "name": "凶豺龍鉤爪 III",
         "type": "大劍",
         "series": "大凶豺龍",
         "attack": 912,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -202,31 +157,22 @@
             }
         ]
     },
-    "馬拉多之鐵Ⅲ": {
-        "name": "馬拉多之鐵Ⅲ",
+    "馬拉多之鐵 III": {
+        "name": "馬拉多之鐵 III",
         "type": "大劍",
         "series": "大凶顎龍",
         "attack": 768,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 35,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -237,31 +183,22 @@
         "elderseal": null,
         "slots": []
     },
-    "熔岩之炎Ⅱ": {
-        "name": "熔岩之炎Ⅱ",
+    "熔岩之炎 II": {
+        "name": "熔岩之炎 II",
         "type": "大劍",
         "series": "熔岩龍",
         "attack": 864,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 40,
-                "yellow": 40,
-                "green": 50,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 195,
+            "steps": {
                 "red": 45,
                 "orange": 40,
                 "yellow": 40,
                 "green": 50,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -279,31 +216,22 @@
             }
         ]
     },
-    "曼陀羅之炎Ⅲ": {
-        "name": "曼陀羅之炎Ⅲ",
+    "曼陀羅之炎 III": {
+        "name": "曼陀羅之炎 III",
         "type": "大劍",
         "series": "毒妖鳥",
         "attack": 816,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -329,23 +257,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -360,31 +279,22 @@
             }
         ]
     },
-    "大龍顎Ⅱ": {
-        "name": "大龍顎Ⅱ",
+    "大龍顎 II": {
+        "name": "大龍顎 II",
         "type": "大劍",
         "series": "駭骨素材",
         "attack": 912,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -407,23 +317,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -432,7 +333,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "中"
+            "effect": "中"
         },
         "slots": [
             {
@@ -448,23 +349,14 @@
         "criticalRate": -30,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 35,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -475,31 +367,22 @@
         "elderseal": null,
         "slots": []
     },
-    "激流巨像Ⅲ": {
-        "name": "激流巨像Ⅲ",
+    "激流巨像 III": {
+        "name": "激流巨像 III",
         "type": "大劍",
         "series": "水屬性",
         "attack": 912,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 95,
-                "orange": 35,
-                "yellow": 10,
-                "green": 25,
-                "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 95,
                 "orange": 35,
                 "yellow": 10,
                 "green": 25,
                 "blue": 15,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -514,31 +397,22 @@
             }
         ]
     },
-    "土砂龍粉碎者Ⅲ": {
-        "name": "土砂龍粉碎者Ⅲ",
+    "土砂龍粉碎者 III": {
+        "name": "土砂龍粉碎者 III",
         "type": "大鎚",
         "series": "土砂龍",
         "attack": 1040,
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -556,31 +430,22 @@
             }
         ]
     },
-    "塊劍拉多巴爾喀Ⅲ": {
-        "name": "塊劍拉多巴爾喀Ⅲ",
+    "塊劍拉多巴爾喀 III": {
+        "name": "塊劍拉多巴爾喀 III",
         "type": "大劍",
         "series": "骨鎚龍",
         "attack": 912,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -591,31 +456,22 @@
         "elderseal": null,
         "slots": []
     },
-    "龍骨大劍Ⅲ": {
-        "name": "龍骨大劍Ⅲ",
+    "龍骨大劍 III": {
+        "name": "龍骨大劍 III",
         "type": "大劍",
         "series": "龍骨",
         "attack": 768,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -624,7 +480,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -643,23 +499,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 10,
-                "yellow": 10,
-                "green": 75,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 10,
                 "yellow": 10,
                 "green": 75,
                 "blue": 50,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -670,31 +517,22 @@
         "elderseal": null,
         "slots": []
     },
-    "熔山龍大劍Ⅱ": {
-        "name": "熔山龍大劍Ⅱ",
+    "熔山龍大劍 II": {
+        "name": "熔山龍大劍 II",
         "type": "大劍",
         "series": "熔山龍",
         "attack": 1056,
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 105,
-                "orange": 15,
-                "yellow": 20,
-                "green": 35,
-                "blue": 0,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 105,
                 "orange": 15,
                 "yellow": 20,
                 "green": 45,
                 "blue": 15,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -717,23 +555,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -756,23 +585,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -781,7 +601,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -800,23 +620,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -839,23 +650,14 @@
         "criticalRate": -30,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 25,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 20,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -864,35 +666,26 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "鐵刀【神樂】Ⅱ": {
-        "name": "鐵刀【神樂】Ⅱ",
+    "鐵刀【神樂】 II": {
+        "name": "鐵刀【神樂】 II",
         "type": "太刀",
         "series": "礦石素材",
         "attack": 594,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 25,
-                "orange": 30,
-                "yellow": 10,
-                "green": 75,
-                "blue": 35,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 30,
                 "yellow": 10,
                 "green": 75,
                 "blue": 45,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -918,23 +711,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -943,7 +727,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -951,31 +735,22 @@
             }
         ]
     },
-    "眩惑刀【閃】Ⅲ": {
-        "name": "眩惑刀【閃】Ⅲ",
+    "眩惑刀【閃】 III": {
+        "name": "眩惑刀【閃】 III",
         "type": "太刀",
         "series": "眩鳥",
         "attack": 594,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -990,31 +765,22 @@
             }
         ]
     },
-    "星空迅刀Ⅲ": {
-        "name": "星空迅刀Ⅲ",
+    "星空迅刀 III": {
+        "name": "星空迅刀 III",
         "type": "太刀",
         "series": "搔鳥",
         "attack": 561,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 40,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -1025,31 +791,22 @@
         "elderseal": null,
         "slots": []
     },
-    "爆鎚太刀Ⅱ": {
-        "name": "爆鎚太刀Ⅱ",
+    "爆鎚太刀 II": {
+        "name": "爆鎚太刀 II",
         "type": "太刀",
         "series": "爆鎚龍",
         "attack": 660,
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 25,
-                "yellow": 25,
-                "green": 40,
-                "blue": 40,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 25,
                 "yellow": 25,
                 "green": 40,
                 "blue": 65,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -1075,23 +832,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 35,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -1114,23 +862,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 35,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 35,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 30,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -1145,31 +884,22 @@
             }
         ]
     },
-    "骨鐮Ⅱ": {
-        "name": "骨鐮Ⅱ",
+    "骨鐮 II": {
+        "name": "骨鐮 II",
         "type": "太刀",
         "series": "駭骨素材",
         "attack": 627,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -1192,23 +922,14 @@
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 30,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 15,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -1226,31 +947,22 @@
             }
         ]
     },
-    "蠻顎龍偃月刀Ⅲ": {
-        "name": "蠻顎龍偃月刀Ⅲ",
+    "蠻顎龍偃月刀 III": {
+        "name": "蠻顎龍偃月刀 III",
         "type": "太刀",
         "series": "蠻顎龍",
         "attack": 693,
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -1261,31 +973,22 @@
         "elderseal": null,
         "slots": []
     },
-    "深土太刀Ⅲ": {
-        "name": "深土太刀Ⅲ",
+    "深土太刀 III": {
+        "name": "深土太刀 III",
         "type": "太刀",
         "series": "泥魚龍",
         "attack": 627,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 85,
-                "orange": 50,
-                "yellow": 15,
-                "green": 15,
-                "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 85,
                 "orange": 50,
                 "yellow": 15,
                 "green": 15,
                 "blue": 20,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -1300,31 +1003,22 @@
             }
         ]
     },
-    "屍套龍太刀Ⅱ": {
-        "name": "屍套龍太刀Ⅱ",
+    "屍套龍太刀 II": {
+        "name": "屍套龍太刀 II",
         "type": "太刀",
         "series": "屍套龍",
         "attack": 660,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -1333,7 +1027,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "中"
+            "effect": "中"
         },
         "slots": [
             {
@@ -1341,31 +1035,22 @@
             }
         ]
     },
-    "飛雷龍之牙Ⅲ": {
-        "name": "飛雷龍之牙Ⅲ",
+    "飛雷龍之牙 III": {
+        "name": "飛雷龍之牙 III",
         "type": "太刀",
         "series": "飛雷龍",
         "attack": 594,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 75,
-                "orange": 50,
-                "yellow": 15,
-                "green": 15,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 75,
                 "orange": 50,
                 "yellow": 15,
                 "green": 15,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -1388,23 +1073,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 120,
                 "orange": 10,
                 "yellow": 10,
                 "green": 10,
                 "blue": 15,
-                "white": 10,
-                "purple": 0
-            },
-            "max": {
-                "red": 120,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 15,
-                "white": 35,
-                "purple": 0
+                "white": 35
             }
         },
         "element": {
@@ -1415,31 +1091,22 @@
         "elderseal": null,
         "slots": []
     },
-    "黑色偃月刀Ⅲ": {
-        "name": "黑色偃月刀Ⅲ",
+    "黑色偃月刀 III": {
+        "name": "黑色偃月刀 III",
         "type": "太刀",
         "series": "巨甲蟲",
         "attack": 528,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 15,
-                "purple": 0
-            },
-            "max": {
-                "red": 55,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 40,
-                "purple": 0
+                "white": 40
             }
         },
         "element": {
@@ -1454,31 +1121,22 @@
             }
         ]
     },
-    "龍骨刀Ⅲ": {
-        "name": "龍骨刀Ⅲ",
+    "龍骨刀 III": {
+        "name": "龍骨刀 III",
         "type": "太刀",
         "series": "龍骨",
         "attack": 528,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 75,
-                "orange": 50,
-                "yellow": 15,
-                "green": 15,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 75,
                 "orange": 50,
                 "yellow": 15,
                 "green": 15,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -1487,7 +1145,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -1495,31 +1153,22 @@
             }
         ]
     },
-    "熔山龍太刀Ⅱ": {
-        "name": "熔山龍太刀Ⅱ",
+    "熔山龍太刀 II": {
+        "name": "熔山龍太刀 II",
         "type": "太刀",
         "series": "熔山龍",
         "attack": 726,
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 105,
-                "orange": 15,
-                "yellow": 20,
-                "green": 35,
-                "blue": 0,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 105,
                 "orange": 15,
                 "yellow": 20,
                 "green": 45,
                 "blue": 15,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -1542,23 +1191,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 35,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 35,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 30,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -1577,23 +1217,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -1602,7 +1233,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -1621,23 +1252,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 25,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -1646,7 +1268,7 @@
             "isHidden": true
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -1662,23 +1284,14 @@
         "criticalRate": -25,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 25,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 20,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -1687,7 +1300,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -1699,23 +1312,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 25,
-                "orange": 30,
-                "yellow": 10,
-                "green": 75,
-                "blue": 35,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 30,
                 "yellow": 10,
                 "green": 75,
                 "blue": 45,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -1741,23 +1345,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 45,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 50,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 45,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 50,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -1766,7 +1361,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -1782,23 +1377,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -1821,23 +1407,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 25,
-                "yellow": 25,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 150,
+            "steps": {
                 "red": 40,
                 "orange": 25,
                 "yellow": 25,
                 "green": 40,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -1860,23 +1437,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 50,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -1902,23 +1470,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -1937,23 +1496,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 25,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -1976,23 +1526,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 10,
-                "purple": 0
-            },
-            "max": {
-                "red": 60,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 35,
-                "purple": 0
+                "white": 35
             }
         },
         "element": {
@@ -2015,23 +1556,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -2054,23 +1586,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -2096,23 +1619,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 50,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -2135,23 +1649,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -2170,23 +1675,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 35,
-                "yellow": 15,
-                "green": 35,
-                "blue": 0,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 125,
+            "steps": {
                 "red": 40,
                 "orange": 35,
                 "yellow": 15,
                 "green": 60,
                 "blue": 0,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": null,
@@ -2201,23 +1697,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 50,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -2243,23 +1730,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -2282,23 +1760,14 @@
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -2324,23 +1793,14 @@
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -2359,23 +1819,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 75,
-                "orange": 50,
-                "yellow": 15,
-                "green": 15,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 75,
                 "orange": 50,
                 "yellow": 15,
                 "green": 15,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -2384,7 +1835,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -2400,23 +1851,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 10,
-                "yellow": 10,
-                "green": 65,
-                "blue": 35,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 10,
                 "yellow": 10,
                 "green": 65,
                 "blue": 60,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -2435,23 +1877,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 35,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 35,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 30,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -2470,23 +1903,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -2495,7 +1919,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -2514,23 +1938,14 @@
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 25,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 20,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -2539,7 +1954,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -2551,23 +1966,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 30,
-                "orange": 30,
-                "yellow": 10,
-                "green": 75,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 30,
                 "yellow": 10,
                 "green": 75,
                 "blue": 45,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -2593,23 +1999,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 45,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 50,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 45,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 50,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -2618,7 +2015,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -2634,23 +2031,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -2673,23 +2061,14 @@
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 30,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 15,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -2712,23 +2091,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -2751,23 +2121,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 35,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -2786,23 +2147,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 30,
-                "orange": 25,
-                "yellow": 30,
-                "green": 35,
-                "blue": 55,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 25,
                 "yellow": 30,
                 "green": 35,
                 "blue": 60,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -2825,23 +2177,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 25,
-                "yellow": 25,
-                "green": 40,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 25,
                 "yellow": 25,
                 "green": 40,
                 "blue": 55,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -2864,23 +2207,14 @@
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -2899,23 +2233,14 @@
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 30,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -2938,23 +2263,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 75,
-                "yellow": 15,
-                "green": 15,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 75,
                 "yellow": 15,
                 "green": 15,
                 "blue": 25,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -2977,23 +2293,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -3019,23 +2326,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 15,
-                "purple": 0
-            },
-            "max": {
-                "red": 55,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 40,
-                "purple": 0
+                "white": 40
             }
         },
         "element": {
@@ -3058,23 +2356,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -3097,23 +2386,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
-            },
-            "max": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -3132,23 +2412,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 40,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -3157,7 +2428,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -3176,23 +2447,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 10,
-                "yellow": 10,
-                "green": 60,
-                "blue": 40,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 10,
                 "yellow": 10,
                 "green": 60,
                 "blue": 65,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -3211,23 +2473,14 @@
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 90,
-                "orange": 15,
-                "yellow": 30,
-                "green": 15,
-                "blue": 0,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 150,
+            "steps": {
                 "red": 90,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 0,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -3250,23 +2503,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 30,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 35,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -3289,23 +2533,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 10,
-                "purple": 0
-            },
-            "max": {
-                "red": 60,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 35,
-                "purple": 0
+                "white": 35
             }
         },
         "element": {
@@ -3314,7 +2549,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -3333,23 +2568,14 @@
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 25,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 20,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -3358,35 +2584,26 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "大鬼鐵Ⅱ": {
-        "name": "大鬼鐵Ⅱ",
+    "大鬼鐵 II": {
+        "name": "大鬼鐵 II",
         "type": "大鎚",
         "series": "礦石素材",
         "attack": 936,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 30,
-                "orange": 30,
-                "yellow": 10,
-                "green": 75,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 30,
                 "yellow": 10,
                 "green": 75,
                 "blue": 45,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -3412,23 +2629,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -3437,7 +2645,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -3453,23 +2661,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -3484,31 +2683,22 @@
             }
         ]
     },
-    "激流強鎚Ⅲ": {
-        "name": "激流強鎚Ⅲ",
+    "激流強鎚 III": {
+        "name": "激流強鎚 III",
         "type": "大鎚",
         "series": "水屬性",
         "attack": 936,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -3523,31 +2713,22 @@
             }
         ]
     },
-    "馬拉多戰鎚Ⅲ": {
-        "name": "馬拉多戰鎚Ⅲ",
+    "馬拉多戰鎚 III": {
+        "name": "馬拉多戰鎚 III",
         "type": "大鎚",
         "series": "大凶顎龍",
         "attack": 832,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -3566,23 +2747,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -3600,31 +2772,22 @@
             }
         ]
     },
-    "雷光強鎚Ⅲ": {
-        "name": "雷光強鎚Ⅲ",
+    "雷光強鎚 III": {
+        "name": "雷光強鎚 III",
         "type": "大鎚",
         "series": "雷屬性",
         "attack": 988,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 75,
-                "orange": 50,
-                "yellow": 15,
-                "green": 15,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 75,
                 "orange": 50,
                 "yellow": 15,
                 "green": 15,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -3639,31 +2802,22 @@
             }
         ]
     },
-    "大地之岩Ⅱ": {
-        "name": "大地之岩Ⅱ",
+    "大地之岩 II": {
+        "name": "大地之岩 II",
         "type": "大鎚",
         "series": "駭骨素材",
         "attack": 988,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -3686,23 +2840,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -3711,7 +2856,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "中"
+            "effect": "中"
         },
         "slots": [
             {
@@ -3719,31 +2864,22 @@
             }
         ]
     },
-    "骨鎚龍擊鎚Ⅲ": {
-        "name": "骨鎚龍擊鎚Ⅲ",
+    "骨鎚龍擊鎚 III": {
+        "name": "骨鎚龍擊鎚 III",
         "type": "大鎚",
         "series": "骨鎚龍",
         "attack": 988,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -3754,31 +2890,22 @@
         "elderseal": null,
         "slots": []
     },
-    "爆鎚粉碎者Ⅱ": {
-        "name": "爆鎚粉碎者Ⅱ",
+    "爆鎚粉碎者 II": {
+        "name": "爆鎚粉碎者 II",
         "type": "大鎚",
         "series": "爆鎚龍",
         "attack": 1092,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 35,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -3793,31 +2920,22 @@
             }
         ]
     },
-    "衝擊釘鎚Ⅲ": {
-        "name": "衝擊釘鎚Ⅲ",
+    "衝擊釘鎚 III": {
+        "name": "衝擊釘鎚 III",
         "type": "大鎚",
         "series": "搔鳥",
         "attack": 884,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -3828,31 +2946,22 @@
         "elderseal": null,
         "slots": []
     },
-    "爆鎚戰鎚Ⅱ": {
-        "name": "爆鎚戰鎚Ⅱ",
+    "爆鎚戰鎚 II": {
+        "name": "爆鎚戰鎚 II",
         "type": "大鎚",
         "series": "角龍",
         "attack": 1196,
         "criticalRate": -25,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 25,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -3867,31 +2976,22 @@
             }
         ]
     },
-    "蠻顎龍戰鎚Ⅲ": {
-        "name": "蠻顎龍戰鎚Ⅲ",
+    "蠻顎龍戰鎚 III": {
+        "name": "蠻顎龍戰鎚 III",
         "type": "大鎚",
         "series": "蠻顎龍",
         "attack": 1092,
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 35,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -3902,31 +3002,22 @@
         "elderseal": null,
         "slots": []
     },
-    "龍骨大鎚Ⅲ": {
-        "name": "龍骨大鎚Ⅲ",
+    "龍骨大鎚 III": {
+        "name": "龍骨大鎚 III",
         "type": "大鎚",
         "series": "龍骨",
         "attack": 832,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -3935,7 +3026,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -3951,23 +3042,14 @@
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 95,
-                "orange": 15,
-                "yellow": 30,
-                "green": 35,
-                "blue": 0,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 95,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -3990,23 +3072,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -4029,23 +3102,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -4054,7 +3118,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -4073,23 +3137,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 80,
-                "orange": 50,
-                "yellow": 15,
-                "green": 15,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 80,
                 "orange": 50,
                 "yellow": 15,
                 "green": 15,
                 "blue": 25,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -4112,23 +3167,14 @@
         "criticalRate": -30,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 25,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 20,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -4137,7 +3183,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -4149,23 +3195,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 30,
-                "orange": 30,
-                "yellow": 10,
-                "green": 75,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 30,
                 "yellow": 10,
                 "green": 75,
                 "blue": 45,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -4191,23 +3228,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -4216,7 +3244,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -4232,23 +3260,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -4271,23 +3290,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -4306,23 +3316,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 35,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 35,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 30,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -4345,23 +3346,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -4384,23 +3376,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -4419,23 +3402,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -4458,23 +3432,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -4500,23 +3465,14 @@
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 35,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -4535,23 +3491,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -4577,23 +3524,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -4619,23 +3557,14 @@
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 35,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 35,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 10,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -4661,23 +3590,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 15,
-                "purple": 0
-            },
-            "max": {
-                "red": 55,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 40,
-                "purple": 0
+                "white": 40
             }
         },
         "element": {
@@ -4703,23 +3623,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -4738,23 +3649,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -4763,7 +3665,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -4782,23 +3684,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 10,
-                "yellow": 10,
-                "green": 70,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 10,
                 "yellow": 10,
                 "green": 70,
                 "blue": 55,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -4817,23 +3710,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -4852,23 +3736,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -4877,7 +3752,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -4896,23 +3771,14 @@
         "criticalRate": -30,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 25,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 20,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -4921,35 +3787,26 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "鉻鋼長槍Ⅱ": {
-        "name": "鉻鋼長槍Ⅱ",
+    "鉻鋼長槍 II": {
+        "name": "鉻鋼長槍 II",
         "type": "長槍",
         "series": "礦石素材",
         "attack": 414,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 30,
-                "orange": 30,
-                "yellow": 10,
-                "green": 75,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 30,
                 "yellow": 10,
                 "green": 75,
                 "blue": 45,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -4975,23 +3832,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -5000,7 +3848,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -5008,31 +3856,22 @@
             }
         ]
     },
-    "風漂龍斧槍Ⅱ": {
-        "name": "風漂龍斧槍Ⅱ",
+    "風漂龍斧槍 II": {
+        "name": "風漂龍斧槍 II",
         "type": "長槍",
         "series": "風漂龍",
         "attack": 368,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -5043,31 +3882,22 @@
         "elderseal": null,
         "slots": []
     },
-    "搔鳥尖槍Ⅲ": {
-        "name": "搔鳥尖槍Ⅲ",
+    "搔鳥尖槍 III": {
+        "name": "搔鳥尖槍 III",
         "type": "長槍",
         "series": "搔鳥",
         "attack": 391,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -5078,31 +3908,22 @@
         "elderseal": null,
         "slots": []
     },
-    "岩賊龍刺針Ⅱ": {
-        "name": "岩賊龍刺針Ⅱ",
+    "岩賊龍刺針 II": {
+        "name": "岩賊龍刺針 II",
         "type": "長槍",
         "series": "岩賊龍",
         "attack": 391,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -5120,31 +3941,22 @@
             }
         ]
     },
-    "雷光長槍Ⅲ": {
-        "name": "雷光長槍Ⅲ",
+    "雷光長槍 III": {
+        "name": "雷光長槍 III",
         "type": "長槍",
         "series": "雷屬性",
         "attack": 414,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -5159,31 +3971,22 @@
             }
         ]
     },
-    "曼陀羅長槍Ⅲ": {
-        "name": "曼陀羅長槍Ⅲ",
+    "曼陀羅長槍 III": {
+        "name": "曼陀羅長槍 III",
         "type": "長槍",
         "series": "毒妖鳥",
         "attack": 391,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -5209,23 +4012,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -5240,31 +4034,22 @@
             }
         ]
     },
-    "堅骨槍Ⅱ": {
-        "name": "堅骨槍Ⅱ",
+    "堅骨槍 II": {
+        "name": "堅骨槍 II",
         "type": "長槍",
         "series": "駭骨素材",
         "attack": 437,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -5287,23 +4072,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -5312,7 +4088,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "中"
+            "effect": "中"
         },
         "slots": [
             {
@@ -5320,31 +4096,22 @@
             }
         ]
     },
-    "黑色刺針Ⅲ": {
-        "name": "黑色刺針Ⅲ",
+    "黑色刺針 III": {
+        "name": "黑色刺針 III",
         "type": "長槍",
         "series": "巨甲蟲",
         "attack": 368,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 15,
-                "purple": 0
-            },
-            "max": {
-                "red": 55,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 40,
-                "purple": 0
+                "white": 40
             }
         },
         "element": {
@@ -5359,31 +4126,22 @@
             }
         ]
     },
-    "土砂龍刺針Ⅲ": {
-        "name": "土砂龍刺針Ⅲ",
+    "土砂龍刺針 III": {
+        "name": "土砂龍刺針 III",
         "type": "長槍",
         "series": "土砂龍",
         "attack": 460,
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -5401,31 +4159,22 @@
             }
         ]
     },
-    "慘爪刺針Ⅱ": {
-        "name": "慘爪刺針Ⅱ",
+    "慘爪刺針 II": {
+        "name": "慘爪刺針 II",
         "type": "長槍",
         "series": "慘爪龍",
         "attack": 391,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 85,
                 "orange": 50,
                 "yellow": 15,
                 "green": 15,
                 "blue": 20,
-                "white": 15,
-                "purple": 0
-            },
-            "max": {
-                "red": 85,
-                "orange": 50,
-                "yellow": 15,
-                "green": 15,
-                "blue": 20,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -5436,31 +4185,22 @@
         "elderseal": null,
         "slots": []
     },
-    "激流尖刺Ⅲ": {
-        "name": "激流尖刺Ⅲ",
+    "激流尖刺 III": {
+        "name": "激流尖刺 III",
         "type": "長槍",
         "series": "水屬性",
         "attack": 437,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -5475,31 +4215,22 @@
             }
         ]
     },
-    "龍骨槍Ⅲ": {
-        "name": "龍骨槍Ⅲ",
+    "龍骨槍 III": {
+        "name": "龍骨槍 III",
         "type": "長槍",
         "series": "龍骨",
         "attack": 368,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -5508,7 +4239,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -5527,23 +4258,14 @@
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 35,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 35,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 10,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -5562,23 +4284,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 10,
-                "yellow": 10,
-                "green": 70,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 10,
                 "yellow": 10,
                 "green": 70,
                 "blue": 55,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -5597,23 +4310,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 170,
+            "steps": {
                 "red": 40,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -5636,23 +4340,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -5661,7 +4356,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -5680,23 +4375,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -5719,23 +4405,14 @@
         "criticalRate": -25,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 25,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 20,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -5744,35 +4421,26 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "鉻鋼銃槍Ⅱ": {
-        "name": "鉻鋼銃槍Ⅱ",
+    "鉻鋼銃槍 II": {
+        "name": "鉻鋼銃槍 II",
         "type": "銃槍",
         "series": "礦石素材",
         "attack": 414,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 30,
-                "orange": 30,
-                "yellow": 10,
-                "green": 75,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 30,
                 "yellow": 10,
                 "green": 75,
                 "blue": 45,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -5798,23 +4466,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -5823,7 +4482,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -5839,23 +4498,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 40,
-                "yellow": 40,
-                "green": 50,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 195,
+            "steps": {
                 "red": 50,
                 "orange": 40,
                 "yellow": 40,
                 "green": 50,
                 "blue": 25,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -5878,23 +4528,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -5917,23 +4558,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 35,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -5948,31 +4580,22 @@
             }
         ]
     },
-    "泥岩龍銃槍Ⅲ": {
-        "name": "泥岩龍銃槍Ⅲ",
+    "泥岩龍銃槍 III": {
+        "name": "泥岩龍銃槍 III",
         "type": "銃槍",
         "series": "泥魚龍",
         "attack": 437,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 25,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -5987,31 +4610,22 @@
             }
         ]
     },
-    "風漂龍加農砲Ⅱ": {
-        "name": "風漂龍加農砲Ⅱ",
+    "風漂龍加農砲 II": {
+        "name": "風漂龍加農砲 II",
         "type": "銃槍",
         "series": "風漂龍",
         "attack": 368,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -6022,31 +4636,22 @@
         "elderseal": null,
         "slots": []
     },
-    "大骨銃槍【龍尾】Ⅱ": {
-        "name": "大骨銃槍【龍尾】Ⅱ",
+    "大骨銃槍【龍尾】 II": {
+        "name": "大骨銃槍【龍尾】 II",
         "type": "銃槍",
         "series": "駭骨素材",
         "attack": 437,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -6061,31 +4666,22 @@
             }
         ]
     },
-    "爆鱗龍銃槍Ⅱ": {
-        "name": "爆鱗龍銃槍Ⅱ",
+    "爆鱗龍銃槍 II": {
+        "name": "爆鱗龍銃槍 II",
         "type": "銃槍",
         "series": "爆鱗龍",
         "attack": 460,
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 30,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 15,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -6100,31 +4696,22 @@
             }
         ]
     },
-    "牙龍銃槍【大喰】Ⅲ": {
-        "name": "牙龍銃槍【大喰】Ⅲ",
+    "牙龍銃槍【大喰】 III": {
+        "name": "牙龍銃槍【大喰】 III",
         "type": "銃槍",
         "series": "大凶豺龍",
         "attack": 437,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 50,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -6142,31 +4729,22 @@
             }
         ]
     },
-    "牙龍銃槍【黑頭巾】Ⅲ": {
-        "name": "牙龍銃槍【黑頭巾】Ⅲ",
+    "牙龍銃槍【黑頭巾】 III": {
+        "name": "牙龍銃槍【黑頭巾】 III",
         "type": "銃槍",
         "series": "大凶顎龍",
         "attack": 368,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 75,
-                "orange": 50,
-                "yellow": 15,
-                "green": 15,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 75,
                 "orange": 50,
                 "yellow": 15,
                 "green": 15,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -6177,31 +4755,22 @@
         "elderseal": null,
         "slots": []
     },
-    "屍套龍火槍Ⅱ": {
-        "name": "屍套龍火槍Ⅱ",
+    "屍套龍火槍 II": {
+        "name": "屍套龍火槍 II",
         "type": "銃槍",
         "series": "屍套龍",
         "attack": 460,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -6210,7 +4779,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "中"
+            "effect": "中"
         },
         "slots": [
             {
@@ -6218,31 +4787,22 @@
             }
         ]
     },
-    "土砂龍破壞砲Ⅲ": {
-        "name": "土砂龍破壞砲Ⅲ",
+    "土砂龍破壞砲 III": {
+        "name": "土砂龍破壞砲 III",
         "type": "銃槍",
         "series": "土砂龍",
         "attack": 460,
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 35,
-                "yellow": 15,
-                "green": 50,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 35,
                 "yellow": 15,
                 "green": 50,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -6253,31 +4813,22 @@
         "elderseal": null,
         "slots": []
     },
-    "蠻顎龍加農砲Ⅲ": {
-        "name": "蠻顎龍加農砲Ⅲ",
+    "蠻顎龍加農砲 III": {
+        "name": "蠻顎龍加農砲 III",
         "type": "銃槍",
         "series": "蠻顎龍",
         "attack": 483,
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 65,
-                "orange": 35,
-                "yellow": 15,
-                "green": 50,
-                "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 35,
                 "yellow": 15,
                 "green": 50,
                 "blue": 35,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -6288,31 +4839,22 @@
         "elderseal": null,
         "slots": []
     },
-    "龍骨銃槍Ⅲ": {
-        "name": "龍骨銃槍Ⅲ",
+    "龍骨銃槍 III": {
+        "name": "龍骨銃槍 III",
         "type": "銃槍",
         "series": "龍骨",
         "attack": 368,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -6321,7 +4863,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -6340,23 +4882,14 @@
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 105,
-                "orange": 15,
-                "yellow": 20,
-                "green": 35,
-                "blue": 0,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 105,
                 "orange": 15,
                 "yellow": 20,
                 "green": 45,
                 "blue": 15,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -6375,23 +4908,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -6414,23 +4938,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -6439,7 +4954,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -6458,23 +4973,14 @@
         "criticalRate": -30,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 25,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 20,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -6483,35 +4989,26 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "合金制完成劍斧Ⅱ": {
-        "name": "合金制完成劍斧Ⅱ",
+    "合金制完成劍斧 II": {
+        "name": "合金制完成劍斧 II",
         "type": "斬擊斧",
         "series": "礦石素材",
         "attack": 630,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 30,
-                "orange": 30,
-                "yellow": 10,
-                "green": 0,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 100,
+            "steps": {
                 "red": 30,
                 "orange": 30,
                 "yellow": 10,
                 "green": 0,
                 "blue": 45,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -6537,23 +5034,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -6562,7 +5050,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -6578,23 +5066,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -6605,31 +5084,22 @@
         "elderseal": null,
         "slots": []
     },
-    "雷光迅斧Ⅲ": {
-        "name": "雷光迅斧Ⅲ",
+    "雷光迅斧 III": {
+        "name": "雷光迅斧 III",
         "type": "斬擊斧",
         "series": "雷屬性",
         "attack": 630,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -6644,31 +5114,22 @@
             }
         ]
     },
-    "動力迅斧Ⅱ": {
-        "name": "動力迅斧Ⅱ",
+    "動力迅斧 II": {
+        "name": "動力迅斧 II",
         "type": "斬擊斧",
         "series": "爆鎚龍",
         "attack": 735,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 25,
-                "yellow": 40,
-                "green": 50,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 25,
                 "yellow": 40,
                 "green": 50,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -6683,31 +5144,22 @@
             }
         ]
     },
-    "凶豺龍掠奪者Ⅲ": {
-        "name": "凶豺龍掠奪者Ⅲ",
+    "凶豺龍掠奪者 III": {
+        "name": "凶豺龍掠奪者 III",
         "type": "斬擊斧",
         "series": "大凶豺龍",
         "attack": 665,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -6725,31 +5177,22 @@
             }
         ]
     },
-    "爆鱗龍劍斧Ⅱ": {
-        "name": "爆鱗龍劍斧Ⅱ",
+    "爆鱗龍劍斧 II": {
+        "name": "爆鱗龍劍斧 II",
         "type": "斬擊斧",
         "series": "爆鱗龍",
         "attack": 700,
         "criticalRate": -15,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 35,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 35,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 10,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -6764,31 +5207,22 @@
             }
         ]
     },
-    "火龍斧飛龍牙Ⅱ": {
-        "name": "火龍斧飛龍牙Ⅱ",
+    "火龍斧飛龍牙 II": {
+        "name": "火龍斧飛龍牙 II",
         "type": "斬擊斧",
         "series": "火龍",
         "attack": 665,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -6803,36 +5237,27 @@
             }
         ]
     },
-    "重擊斬斧Ⅱ": {
-        "name": "重擊斬斧Ⅱ",
+    "重擊斬斧 II": {
+        "name": "重擊斬斧 II",
         "type": "斬擊斧",
         "series": "駭骨素材",
         "attack": 665,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": null,
         "elderseal": {
-            "effinity": "中"
+            "effect": "中"
         },
         "slots": [
             {
@@ -6840,31 +5265,22 @@
             }
         ]
     },
-    "屍套龍劍斧Ⅱ": {
-        "name": "屍套龍劍斧Ⅱ",
+    "屍套龍劍斧 II": {
+        "name": "屍套龍劍斧 II",
         "type": "斬擊斧",
         "series": "屍套龍",
         "attack": 700,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -6873,7 +5289,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "中"
+            "effect": "中"
         },
         "slots": [
             {
@@ -6881,31 +5297,22 @@
             }
         ]
     },
-    "泥岩龍劍斧Ⅲ": {
-        "name": "泥岩龍劍斧Ⅲ",
+    "泥岩龍劍斧 III": {
+        "name": "泥岩龍劍斧 III",
         "type": "斬擊斧",
         "series": "泥魚龍",
         "attack": 665,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 70,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 10,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 70,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 25,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -6920,31 +5327,22 @@
             }
         ]
     },
-    "浮空龍斬斧Ⅲ": {
-        "name": "浮空龍斬斧Ⅲ",
+    "浮空龍斬斧 III": {
+        "name": "浮空龍斬斧 III",
         "type": "斬擊斧",
         "series": "浮空龍",
         "attack": 595,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 70,
-                "orange": 50,
-                "yellow": 15,
-                "green": 15,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 70,
                 "orange": 50,
                 "yellow": 15,
                 "green": 15,
                 "blue": 35,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -6959,31 +5357,22 @@
             }
         ]
     },
-    "土砂龍劍斧Ⅲ": {
-        "name": "土砂龍劍斧Ⅲ",
+    "土砂龍劍斧 III": {
+        "name": "土砂龍劍斧 III",
         "type": "斬擊斧",
         "series": "土砂龍",
         "attack": 735,
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 35,
-                "yellow": 15,
-                "green": 50,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 35,
                 "yellow": 15,
                 "green": 50,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -7009,23 +5398,14 @@
         "criticalRate": -30,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 30,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -7048,23 +5428,14 @@
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 15,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 170,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 15,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -7075,31 +5446,22 @@
         "elderseal": null,
         "slots": []
     },
-    "龍骨劍斧Ⅲ": {
-        "name": "龍骨劍斧Ⅲ",
+    "龍骨劍斧 III": {
+        "name": "龍骨劍斧 III",
         "type": "斬擊斧",
         "series": "龍骨",
         "attack": 560,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -7108,7 +5470,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -7127,23 +5489,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 10,
-                "yellow": 10,
-                "green": 70,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 10,
                 "yellow": 10,
                 "green": 70,
                 "blue": 55,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -7162,23 +5515,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -7197,23 +5541,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 45,
                 "blue": 15,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 45,
-                "blue": 15,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -7222,7 +5557,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -7241,23 +5576,14 @@
         "criticalRate": -25,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 25,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 20,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -7266,35 +5592,26 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "鉻鋼守護者Ⅱ": {
-        "name": "鉻鋼守護者Ⅱ",
+    "鉻鋼守護者 II": {
+        "name": "鉻鋼守護者 II",
         "type": "充能斧",
         "series": "礦石素材",
         "attack": 648,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 30,
-                "orange": 30,
-                "yellow": 10,
-                "green": 75,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 30,
                 "yellow": 10,
                 "green": 75,
                 "blue": 45,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -7320,23 +5637,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -7345,7 +5653,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -7361,23 +5669,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 35,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 35,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 30,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -7392,31 +5691,22 @@
             }
         ]
     },
-    "深坑泥岩Ⅲ": {
-        "name": "深坑泥岩Ⅲ",
+    "深坑泥岩 III": {
+        "name": "深坑泥岩 III",
         "type": "充能斧",
         "series": "泥魚龍",
         "attack": 684,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 25,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -7431,31 +5721,22 @@
             }
         ]
     },
-    "寒霜巨人Ⅱ": {
-        "name": "寒霜巨人Ⅱ",
+    "寒霜巨人 II": {
+        "name": "寒霜巨人 II",
         "type": "充能斧",
         "series": "冰屬性",
         "attack": 612,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -7481,23 +5762,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 35,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 35,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 30,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -7515,31 +5787,22 @@
             }
         ]
     },
-    "強骨兵裝Ⅱ": {
-        "name": "強骨兵裝Ⅱ",
+    "強骨兵裝 II": {
+        "name": "強骨兵裝 II",
         "type": "充能斧",
         "series": "駭骨素材",
         "attack": 684,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 50,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -7554,31 +5817,22 @@
             }
         ]
     },
-    "暴君銅盾Ⅱ": {
-        "name": "暴君銅盾Ⅱ",
+    "暴君銅盾 II": {
+        "name": "暴君銅盾 II",
         "type": "充能斧",
         "series": "角龍",
         "attack": 828,
         "criticalRate": -30,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 30,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -7589,31 +5843,22 @@
         "elderseal": null,
         "slots": []
     },
-    "凶豺龍盾斧Ⅲ": {
-        "name": "凶豺龍盾斧Ⅲ",
+    "凶豺龍盾斧 III": {
+        "name": "凶豺龍盾斧 III",
         "type": "充能斧",
         "series": "大凶豺龍",
         "attack": 684,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -7631,31 +5876,22 @@
             }
         ]
     },
-    "岩賊龍盾Ⅱ": {
-        "name": "岩賊龍盾Ⅱ",
+    "岩賊龍盾 II": {
+        "name": "岩賊龍盾 II",
         "type": "充能斧",
         "series": "岩賊龍",
         "attack": 612,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 40,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -7673,31 +5909,22 @@
             }
         ]
     },
-    "凶顎龍盾斧Ⅲ": {
-        "name": "凶顎龍盾斧Ⅲ",
+    "凶顎龍盾斧 III": {
+        "name": "凶顎龍盾斧 III",
         "type": "充能斧",
         "series": "大凶顎龍",
         "attack": 576,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 40,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -7708,31 +5935,22 @@
         "elderseal": null,
         "slots": []
     },
-    "屍套龍盾斧Ⅱ": {
-        "name": "屍套龍盾斧Ⅱ",
+    "屍套龍盾斧 II": {
+        "name": "屍套龍盾斧 II",
         "type": "充能斧",
         "series": "屍套龍",
         "attack": 684,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -7741,7 +5959,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "中"
+            "effect": "中"
         },
         "slots": [
             {
@@ -7749,31 +5967,22 @@
             }
         ]
     },
-    "飛雷龍之腕Ⅲ": {
-        "name": "飛雷龍之腕Ⅲ",
+    "飛雷龍之腕 III": {
+        "name": "飛雷龍之腕 III",
         "type": "充能斧",
         "series": "飛雷龍",
         "attack": 648,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 95,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 95,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 30,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -7796,23 +6005,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
-            },
-            "max": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -7823,31 +6023,22 @@
         "elderseal": null,
         "slots": []
     },
-    "龍骨盾斧Ⅲ": {
-        "name": "龍骨盾斧Ⅲ",
+    "龍骨盾斧 III": {
+        "name": "龍骨盾斧 III",
         "type": "充能斧",
         "series": "龍骨",
         "attack": 576,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -7856,7 +6047,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -7875,23 +6066,14 @@
         "criticalRate": -10,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 105,
-                "orange": 15,
-                "yellow": 20,
-                "green": 35,
-                "blue": 0,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 105,
                 "orange": 15,
                 "yellow": 20,
                 "green": 45,
                 "blue": 15,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -7910,23 +6092,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -7952,23 +6125,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -7977,7 +6141,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -7996,23 +6160,14 @@
         "criticalRate": -25,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 25,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 20,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -8021,35 +6176,26 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "鉻鋼長刀Ⅱ": {
-        "name": "鉻鋼長刀Ⅱ",
+    "鉻鋼長刀 II": {
+        "name": "鉻鋼長刀 II",
         "type": "操蟲棍",
         "series": "礦石素材",
         "attack": 558,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 30,
-                "orange": 30,
-                "yellow": 10,
-                "green": 75,
-                "blue": 30,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 30,
                 "orange": 30,
                 "yellow": 10,
                 "green": 75,
                 "blue": 45,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -8075,23 +6221,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -8100,7 +6237,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -8116,23 +6253,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 30,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -8147,31 +6275,22 @@
             }
         ]
     },
-    "星空長刀Ⅲ": {
-        "name": "星空長刀Ⅲ",
+    "星空長刀 III": {
+        "name": "星空長刀 III",
         "type": "操蟲棍",
         "series": "搔鳥",
         "attack": 527,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 30,
-                "yellow": 30,
-                "green": 50,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 30,
                 "yellow": 30,
                 "green": 50,
                 "blue": 35,
-                "white": 15,
-                "purple": 0
+                "white": 15
             }
         },
         "element": {
@@ -8182,31 +6301,22 @@
         "elderseal": null,
         "slots": []
     },
-    "利刃長刀Ⅲ": {
-        "name": "利刃長刀Ⅲ",
+    "利刃長刀 III": {
+        "name": "利刃長刀 III",
         "type": "操蟲棍",
         "series": "眩鳥",
         "attack": 558,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 40,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 40,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -8221,31 +6331,22 @@
             }
         ]
     },
-    "凍寒疾風刀Ⅱ": {
-        "name": "凍寒疾風刀Ⅱ",
+    "凍寒疾風刀 II": {
+        "name": "凍寒疾風刀 II",
         "type": "操蟲棍",
         "series": "冰屬性",
         "attack": 527,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -8263,31 +6364,22 @@
             }
         ]
     },
-    "曼陀羅長刀Ⅲ": {
-        "name": "曼陀羅長刀Ⅲ",
+    "曼陀羅長刀 III": {
+        "name": "曼陀羅長刀 III",
         "type": "操蟲棍",
         "series": "毒妖鳥",
         "attack": 527,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 50,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -8305,31 +6397,22 @@
             }
         ]
     },
-    "岩賊龍長鞭Ⅱ": {
-        "name": "岩賊龍長鞭Ⅱ",
+    "岩賊龍長鞭 II": {
+        "name": "岩賊龍長鞭 II",
         "type": "操蟲棍",
         "series": "岩賊龍",
         "attack": 527,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 65,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 30,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -8347,31 +6430,22 @@
             }
         ]
     },
-    "飛空棍Ⅱ": {
-        "name": "飛空棍Ⅱ",
+    "飛空棍 II": {
+        "name": "飛空棍 II",
         "type": "操蟲棍",
         "series": "駭骨素材",
         "attack": 589,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 50,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -8386,31 +6460,22 @@
             }
         ]
     },
-    "屍套龍操蟲棍Ⅱ": {
-        "name": "屍套龍操蟲棍Ⅱ",
+    "屍套龍操蟲棍 II": {
+        "name": "屍套龍操蟲棍 II",
         "type": "操蟲棍",
         "series": "屍套龍",
         "attack": 620,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -8419,7 +6484,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "中"
+            "effect": "中"
         },
         "slots": [
             {
@@ -8435,23 +6500,14 @@
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 50,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 50,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 45,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -8462,31 +6518,22 @@
         "elderseal": null,
         "slots": []
     },
-    "激流長刀Ⅲ": {
-        "name": "激流長刀Ⅲ",
+    "激流長刀 III": {
+        "name": "激流長刀 III",
         "type": "操蟲棍",
         "series": "水屬性",
         "attack": 589,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 60,
-                "yellow": 20,
-                "green": 25,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 60,
                 "yellow": 20,
                 "green": 25,
                 "blue": 40,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -8501,31 +6548,22 @@
             }
         ]
     },
-    "暴君長刀Ⅱ": {
-        "name": "暴君長刀Ⅱ",
+    "暴君長刀 II": {
+        "name": "暴君長刀 II",
         "type": "操蟲棍",
         "series": "角龍",
         "attack": 713,
         "criticalRate": -30,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 25,
-                "yellow": 30,
-                "green": 60,
-                "blue": 15,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 25,
                 "yellow": 30,
                 "green": 60,
                 "blue": 30,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -8540,31 +6578,22 @@
             }
         ]
     },
-    "飛雷龍之柱Ⅲ": {
-        "name": "飛雷龍之柱Ⅲ",
+    "飛雷龍之柱 III": {
+        "name": "飛雷龍之柱 III",
         "type": "操蟲棍",
         "series": "飛雷龍",
         "attack": 558,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 95,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 25,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 95,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 30,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -8587,23 +6616,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 200,
+            "steps": {
                 "red": 100,
                 "orange": 35,
                 "yellow": 10,
                 "green": 10,
                 "blue": 25,
-                "white": 20,
-                "purple": 0
-            },
-            "max": {
-                "red": 100,
-                "orange": 35,
-                "yellow": 10,
-                "green": 10,
-                "blue": 25,
-                "white": 20,
-                "purple": 0
+                "white": 20
             }
         },
         "element": {
@@ -8618,31 +6638,22 @@
             }
         ]
     },
-    "龍骨棍Ⅲ": {
-        "name": "龍骨棍Ⅲ",
+    "龍骨棍 III": {
+        "name": "龍骨棍 III",
         "type": "操蟲棍",
         "series": "龍骨",
         "attack": 496,
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 60,
-                "orange": 55,
-                "yellow": 20,
-                "green": 20,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 60,
                 "orange": 55,
                 "yellow": 20,
                 "green": 20,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -8651,7 +6662,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -8670,23 +6681,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 55,
-                "orange": 10,
-                "yellow": 10,
-                "green": 60,
-                "blue": 40,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 55,
                 "orange": 10,
                 "yellow": 10,
                 "green": 60,
                 "blue": 65,
-                "white": 0,
-                "purple": 0
+                "white": 0
             }
         },
         "element": {
@@ -8705,23 +6707,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
-                "red": 45,
-                "orange": 30,
-                "yellow": 40,
-                "green": 40,
-                "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
+            "value": 175,
+            "steps": {
                 "red": 45,
                 "orange": 30,
                 "yellow": 40,
                 "green": 40,
                 "blue": 35,
-                "white": 10,
-                "purple": 0
+                "white": 10
             }
         },
         "element": {
@@ -8744,23 +6737,14 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 65,
                 "orange": 15,
                 "yellow": 30,
                 "green": 40,
                 "blue": 20,
-                "white": 5,
-                "purple": 0
-            },
-            "max": {
-                "red": 65,
-                "orange": 15,
-                "yellow": 30,
-                "green": 40,
-                "blue": 20,
-                "white": 30,
-                "purple": 0
+                "white": 30
             }
         },
         "element": {
@@ -8769,7 +6753,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -8788,23 +6772,14 @@
         "criticalRate": -25,
         "defense": 0,
         "sharpness": {
-            "min": {
+            "value": 175,
+            "steps": {
                 "red": 25,
                 "orange": 60,
                 "yellow": 40,
                 "green": 30,
                 "blue": 20,
-                "white": 0,
-                "purple": 0
-            },
-            "max": {
-                "red": 25,
-                "orange": 60,
-                "yellow": 40,
-                "green": 30,
-                "blue": 20,
-                "white": 25,
-                "purple": 0
+                "white": 25
             }
         },
         "element": {
@@ -8813,12 +6788,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "鉻鋼迅擊弩Ⅱ": {
-        "name": "鉻鋼迅擊弩Ⅱ",
+    "鉻鋼迅擊弩 II": {
+        "name": "鉻鋼迅擊弩 II",
         "type": "輕弩",
         "series": "礦石素材",
         "attack": 234,
@@ -8831,7 +6806,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -8849,12 +6824,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "浮空龍颶風砲Ⅲ": {
-        "name": "浮空龍颶風砲Ⅲ",
+    "浮空龍颶風砲 III": {
+        "name": "浮空龍颶風砲 III",
         "type": "輕弩",
         "series": "浮空龍",
         "attack": 221,
@@ -8867,12 +6842,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "爆鱗龍颶風砲Ⅱ": {
-        "name": "爆鱗龍颶風砲Ⅱ",
+    "爆鱗龍颶風砲 II": {
+        "name": "爆鱗龍颶風砲 II",
         "type": "輕弩",
         "series": "爆鱗龍",
         "attack": 260,
@@ -8885,12 +6860,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "凶豺龍火砲Ⅲ": {
-        "name": "凶豺龍火砲Ⅲ",
+    "凶豺龍火砲 III": {
+        "name": "凶豺龍火砲 III",
         "type": "輕弩",
         "series": "大凶豺龍",
         "attack": 247,
@@ -8903,12 +6878,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "火龍破壞砲Ⅱ": {
-        "name": "火龍破壞砲Ⅱ",
+    "火龍破壞砲 II": {
+        "name": "火龍破壞砲 II",
         "type": "輕弩",
         "series": "火龍",
         "attack": 247,
@@ -8921,12 +6896,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "雷光迅擊弩Ⅲ": {
-        "name": "雷光迅擊弩Ⅲ",
+    "雷光迅擊弩 III": {
+        "name": "雷光迅擊弩 III",
         "type": "輕弩",
         "series": "雷屬性",
         "attack": 234,
@@ -8939,12 +6914,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "寒霜迅擊弩Ⅱ": {
-        "name": "寒霜迅擊弩Ⅱ",
+    "寒霜迅擊弩 II": {
+        "name": "寒霜迅擊弩 II",
         "type": "輕弩",
         "series": "冰屬性",
         "attack": 247,
@@ -8957,12 +6932,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "狙擊射手Ⅱ": {
-        "name": "狙擊射手Ⅱ",
+    "狙擊射手 II": {
+        "name": "狙擊射手 II",
         "type": "輕弩",
         "series": "駭骨素材",
         "attack": 247,
@@ -8975,7 +6950,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -8993,12 +6968,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "蠻顎龍破壞砲Ⅲ": {
-        "name": "蠻顎龍破壞砲Ⅲ",
+    "蠻顎龍破壞砲 III": {
+        "name": "蠻顎龍破壞砲 III",
         "type": "輕弩",
         "series": "蠻顎龍",
         "attack": 273,
@@ -9011,12 +6986,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "泥岩龍輕弩Ⅲ": {
-        "name": "泥岩龍輕弩Ⅲ",
+    "泥岩龍輕弩 III": {
+        "name": "泥岩龍輕弩 III",
         "type": "輕弩",
         "series": "泥魚龍",
         "attack": 247,
@@ -9029,12 +7004,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "熔岩輕弩Ⅱ": {
-        "name": "熔岩輕弩Ⅱ",
+    "熔岩輕弩 II": {
+        "name": "熔岩輕弩 II",
         "type": "輕弩",
         "series": "熔岩龍",
         "attack": 234,
@@ -9047,12 +7022,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "土砂龍射手Ⅲ": {
-        "name": "土砂龍射手Ⅲ",
+    "土砂龍射手 III": {
+        "name": "土砂龍射手 III",
         "type": "輕弩",
         "series": "土砂龍",
         "attack": 260,
@@ -9065,7 +7040,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9083,12 +7058,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "龍骨弩Ⅲ": {
-        "name": "龍骨弩Ⅲ",
+    "龍骨弩 III": {
+        "name": "龍骨弩 III",
         "type": "輕弩",
         "series": "龍骨",
         "attack": 208,
@@ -9101,7 +7076,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9119,7 +7094,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9137,7 +7112,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9155,7 +7130,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9173,7 +7148,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9191,7 +7166,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9209,12 +7184,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "鉻鋼突擊弩Ⅱ": {
-        "name": "鉻鋼突擊弩Ⅱ",
+    "鉻鋼突擊弩 II": {
+        "name": "鉻鋼突擊弩 II",
         "type": "重弩",
         "series": "礦石素材",
         "attack": 255,
@@ -9227,7 +7202,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9245,12 +7220,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "激流加農砲Ⅲ": {
-        "name": "激流加農砲Ⅲ",
+    "激流加農砲 III": {
+        "name": "激流加農砲 III",
         "type": "重弩",
         "series": "水屬性",
         "attack": 255,
@@ -9263,12 +7238,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "長尾重裝弩Ⅲ": {
-        "name": "長尾重裝弩Ⅲ",
+    "長尾重裝弩 III": {
+        "name": "長尾重裝弩 III",
         "type": "重弩",
         "series": "眩鳥",
         "attack": 255,
@@ -9281,7 +7256,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9299,7 +7274,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9317,7 +7292,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9335,12 +7310,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "動能發射器Ⅱ": {
-        "name": "動能發射器Ⅱ",
+    "動能發射器 II": {
+        "name": "動能發射器 II",
         "type": "重弩",
         "series": "駭骨素材",
         "attack": 270,
@@ -9353,7 +7328,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9371,12 +7346,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "曼陀羅爆破砲Ⅲ": {
-        "name": "曼陀羅爆破砲Ⅲ",
+    "曼陀羅爆破砲 III": {
+        "name": "曼陀羅爆破砲 III",
         "type": "重弩",
         "series": "毒妖鳥",
         "attack": 255,
@@ -9389,12 +7364,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "骨鎚龍加農砲Ⅲ": {
-        "name": "骨鎚龍加農砲Ⅲ",
+    "骨鎚龍加農砲 III": {
+        "name": "骨鎚龍加農砲 III",
         "type": "重弩",
         "series": "骨鎚龍",
         "attack": 270,
@@ -9407,12 +7382,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "岩賊龍砲Ⅱ": {
-        "name": "岩賊龍砲Ⅱ",
+    "岩賊龍砲 II": {
+        "name": "岩賊龍砲 II",
         "type": "重弩",
         "series": "岩賊龍",
         "attack": 255,
@@ -9425,12 +7400,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "飛雷龍之針Ⅲ": {
-        "name": "飛雷龍之針Ⅲ",
+    "飛雷龍之針 III": {
+        "name": "飛雷龍之針 III",
         "type": "重弩",
         "series": "飛雷龍",
         "attack": 255,
@@ -9443,12 +7418,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "龍骨砲Ⅲ": {
-        "name": "龍骨砲Ⅲ",
+    "龍骨砲 III": {
+        "name": "龍骨砲 III",
         "type": "重弩",
         "series": "龍骨",
         "attack": 255,
@@ -9461,7 +7436,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9479,12 +7454,12 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
-    "熔山龍重弩槍Ⅱ": {
-        "name": "熔山龍重弩槍Ⅱ",
+    "熔山龍重弩槍 II": {
+        "name": "熔山龍重弩槍 II",
         "type": "重弩",
         "series": "熔山龍",
         "attack": 315,
@@ -9497,7 +7472,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9515,7 +7490,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9533,7 +7508,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9551,7 +7526,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     },
@@ -9592,7 +7567,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": [
             {
@@ -9646,7 +7621,7 @@
             "isHidden": true
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -9747,7 +7722,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "中"
+            "effect": "中"
         },
         "slots": [
             {
@@ -9851,7 +7826,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -9899,7 +7874,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "小"
+            "effect": "小"
         },
         "slots": [
             {
@@ -9964,7 +7939,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effinity": "大"
+            "effect": "大"
         },
         "slots": []
     }

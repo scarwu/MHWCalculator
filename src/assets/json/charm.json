@@ -1,6 +1,6 @@
 {
-    "KO護石 II": {
-        "name": "KO護石 II",
+    "KO護石 III": {
+        "name": "KO護石 II",I
         "rare": null,
         "skills": [
             {
@@ -9,8 +9,8 @@
             }
         ]
     },
-    "體術護石 II": {
-        "name": "體術護石 II",
+    "體術護石 III": {
+        "name": "體術護石 III",
         "rare": null,
         "skills": [
             {
@@ -19,8 +19,8 @@
             }
         ]
     },
-    "體力護石 II": {
-        "name": "體力護石 II",
+    "體力護石 III": {
+        "name": "體力護石 III",
         "rare": null,
         "skills": [
             {
@@ -39,8 +39,8 @@
             }
         ]
     },
-    "火焰護石 II": {
-        "name": "火焰護石 II",
+    "火焰護石 III": {
+        "name": "火焰護石 III",
         "rare": null,
         "skills": [
             {
@@ -73,8 +73,8 @@
             }
         ]
     },
-    "友愛護石 II": {
-        "name": "友愛護石 II",
+    "友愛護石 III": {
+        "name": "友愛護石 III",
         "rare": null,
         "skills": [
             {
@@ -83,8 +83,8 @@
             }
         ]
     },
-    "加護護石 II": {
-        "name": "加護護石 II",
+    "加護護石 III": {
+        "name": "加護護石 III",
         "rare": null,
         "skills": [
             {
@@ -113,8 +113,8 @@
             }
         ]
     },
-    "早復護石 II": {
-        "name": "早復護石 II",
+    "早復護石 III": {
+        "name": "早復護石 III",
         "rare": null,
         "skills": [
             {
@@ -123,8 +123,8 @@
             }
         ]
     },
-    "匠之護石 II": {
-        "name": "匠之護石 II",
+    "匠之護石 III": {
+        "name": "匠之護石 III",
         "rare": null,
         "skills": [
             {
@@ -133,8 +133,8 @@
             }
         ]
     },
-    "地學護石 II": {
-        "name": "地學護石 II",
+    "地學護石 III": {
+        "name": "地學護石 III",
         "rare": null,
         "skills": [
             {
@@ -143,8 +143,8 @@
             }
         ]
     },
-    "冰結護石 II": {
-        "name": "冰結護石 II",
+    "冰結護石 III": {
+        "name": "冰結護石 III",
         "rare": null,
         "skills": [
             {
@@ -153,8 +153,8 @@
             }
         ]
     },
-    "耳塞護石 II": {
-        "name": "耳塞護石 II",
+    "耳塞護石 III": {
+        "name": "耳塞護石 III",
         "rare": null,
         "skills": [
             {
@@ -163,8 +163,8 @@
             }
         ]
     },
-    "攻擊護石 II": {
-        "name": "攻擊護石 II",
+    "攻擊護石 III": {
+        "name": "攻擊護石 III",
         "rare": null,
         "skills": [
             {
@@ -173,8 +173,8 @@
             }
         ]
     },
-    "快吃護石 II": {
-        "name": "快吃護石 II",
+    "快吃護石 III": {
+        "name": "快吃護石 III",
         "rare": null,
         "skills": [
             {
@@ -183,8 +183,8 @@
             }
         ]
     },
-    "投石護石 II": {
-        "name": "投石護石 II",
+    "投石護石 III": {
+        "name": "投石護石 III",
         "rare": null,
         "skills": [
             {
@@ -203,8 +203,8 @@
             }
         ]
     },
-    "防禦護石 II": {
-        "name": "防禦護石 II",
+    "防禦護石 III": {
+        "name": "防禦護石 III",
         "rare": null,
         "skills": [
             {
@@ -213,8 +213,8 @@
             }
         ]
     },
-    "防風護石 II": {
-        "name": "防風護石 II",
+    "防風護石 III": {
+        "name": "防風護石 III",
         "rare": null,
         "skills": [
             {
@@ -223,8 +223,8 @@
             }
         ]
     },
-    "昆蟲學護石 II": {
-        "name": "昆蟲學護石 II",
+    "昆蟲學護石 III": {
+        "name": "昆蟲學護石 III",
         "rare": null,
         "skills": [
             {
@@ -253,8 +253,8 @@
             }
         ]
     },
-    "治癒護石 II": {
-        "name": "治癒護石 II",
+    "治癒護石 III": {
+        "name": "治癒護石 III",
         "rare": null,
         "skills": [
             {
@@ -277,8 +277,8 @@
             }
         ]
     },
-    "沼渡護石 II": {
-        "name": "沼渡護石 II",
+    "沼渡護石 III": {
+        "name": "沼渡護石 III",
         "rare": null,
         "skills": [
             {
@@ -297,8 +297,8 @@
             }
         ]
     },
-    "威嚇護石 II": {
-        "name": "威嚇護石 II",
+    "威嚇護石 III": {
+        "name": "威嚇護石 III",
         "rare": null,
         "skills": [
             {
@@ -307,8 +307,8 @@
             }
         ]
     },
-    "研磨護石 II": {
-        "name": "研磨護石 II",
+    "研磨護石 III": {
+        "name": "研磨護石 III",
         "rare": null,
         "skills": [
             {
@@ -317,8 +317,8 @@
             }
         ]
     },
-    "指揮護石 II": {
-        "name": "指揮護石 II",
+    "指揮護石 III": {
+        "name": "指揮護石 III",
         "rare": null,
         "skills": [
             {
@@ -327,8 +327,8 @@
             }
         ]
     },
-    "持續護石 II": {
-        "name": "持續護石 II",
+    "持續護石 III": {
+        "name": "持續護石 III",
         "rare": null,
         "skills": [
             {
@@ -361,8 +361,8 @@
             }
         ]
     },
-    "耐瘴護石 II": {
-        "name": "耐瘴護石 II",
+    "耐瘴護石 III": {
+        "name": "耐瘴護石 III",
         "rare": null,
         "skills": [
             {
@@ -371,8 +371,8 @@
             }
         ]
     },
-    "耐火護石 II": {
-        "name": "耐火護石 II",
+    "耐火護石 III": {
+        "name": "耐火護石 III",
         "rare": null,
         "skills": [
             {
@@ -401,8 +401,8 @@
             }
         ]
     },
-    "耐水護石 II": {
-        "name": "耐水護石 II",
+    "耐水護石 III": {
+        "name": "耐水護石 III",
         "rare": null,
         "skills": [
             {
@@ -411,8 +411,8 @@
             }
         ]
     },
-    "耐絕護石 II": {
-        "name": "耐絕護石 II",
+    "耐絕護石 III": {
+        "name": "耐絕護石 III",
         "rare": null,
         "skills": [
             {
@@ -421,8 +421,8 @@
             }
         ]
     },
-    "耐屬護石 II": {
-        "name": "耐屬護石 II",
+    "耐屬護石 III": {
+        "name": "耐屬護石 III",
         "rare": null,
         "skills": [
             {
@@ -431,8 +431,8 @@
             }
         ]
     },
-    "耐毒護石 II": {
-        "name": "耐毒護石 II",
+    "耐毒護石 III": {
+        "name": "耐毒護石 III",
         "rare": null,
         "skills": [
             {
@@ -441,8 +441,8 @@
             }
         ]
     },
-    "耐爆護石 II": {
-        "name": "耐爆護石 II",
+    "耐爆護石 III": {
+        "name": "耐爆護石 III",
         "rare": null,
         "skills": [
             {
@@ -451,8 +451,8 @@
             }
         ]
     },
-    "耐冰護石 II": {
-        "name": "耐冰護石 II",
+    "耐冰護石 III": {
+        "name": "耐冰護石 III",
         "rare": null,
         "skills": [
             {
@@ -461,8 +461,8 @@
             }
         ]
     },
-    "耐防護石 II": {
-        "name": "耐防護石 II",
+    "耐防護石 III": {
+        "name": "耐防護石 III",
         "rare": null,
         "skills": [
             {
@@ -471,8 +471,8 @@
             }
         ]
     },
-    "耐眠護石 II": {
-        "name": "耐眠護石 II",
+    "耐眠護石 III": {
+        "name": "耐眠護石 III",
         "rare": null,
         "skills": [
             {
@@ -481,8 +481,8 @@
             }
         ]
     },
-    "耐雷護石 II": {
-        "name": "耐雷護石 II",
+    "耐雷護石 III": {
+        "name": "耐雷護石 III",
         "rare": null,
         "skills": [
             {
@@ -491,8 +491,8 @@
             }
         ]
     },
-    "耐龍護石 II": {
-        "name": "耐龍護石 II",
+    "耐龍護石 III": {
+        "name": "耐龍護石 III",
         "rare": null,
         "skills": [
             {
@@ -501,8 +501,8 @@
             }
         ]
     },
-    "耐裂護石 II": {
-        "name": "耐裂護石 II",
+    "耐裂護石 III": {
+        "name": "耐裂護石 III",
         "rare": null,
         "skills": [
             {
@@ -511,8 +511,8 @@
             }
         ]
     },
-    "耐痺護石 II": {
-        "name": "耐痺護石 II",
+    "耐痺護石 III": {
+        "name": "耐痺護石 III",
         "rare": null,
         "skills": [
             {
@@ -531,8 +531,8 @@
             }
         ]
     },
-    "毒擊護石 II": {
-        "name": "毒擊護石 II",
+    "毒擊護石 III": {
+        "name": "毒擊護石 III",
         "rare": null,
         "skills": [
             {
@@ -565,8 +565,8 @@
             }
         ]
     },
-    "流水護石 II": {
-        "name": "流水護石 II",
+    "流水護石 III": {
+        "name": "流水護石 III",
         "rare": null,
         "skills": [
             {
@@ -589,8 +589,8 @@
             }
         ]
     },
-    "迴避護石 II": {
-        "name": "迴避護石 II",
+    "迴避護石 III": {
+        "name": "迴避護石 III",
         "rare": null,
         "skills": [
             {
@@ -633,8 +633,8 @@
             }
         ]
     },
-    "納刀護石 II": {
-        "name": "納刀護石 II",
+    "納刀護石 III": {
+        "name": "納刀護石 III",
         "rare": null,
         "skills": [
             {
@@ -643,8 +643,8 @@
             }
         ]
     },
-    "破龍護石 II": {
-        "name": "破龍護石 II",
+    "破龍護石 III": {
+        "name": "破龍護石 III",
         "rare": null,
         "skills": [
             {
@@ -663,8 +663,8 @@
             }
         ]
     },
-    "砲術護石 II": {
-        "name": "砲術護石 II",
+    "砲術護石 III": {
+        "name": "砲術護石 III",
         "rare": null,
         "skills": [
             {
@@ -785,8 +785,8 @@
             }
         ]
     },
-    "植學護石 II": {
-        "name": "植學護石 II",
+    "植學護石 III": {
+        "name": "植學護石 III",
         "rare": null,
         "skills": [
             {
@@ -825,8 +825,8 @@
             }
         ]
     },
-    "煙復護石 II": {
-        "name": "煙復護石 II",
+    "煙復護石 III": {
+        "name": "煙復護石 III",
         "rare": null,
         "skills": [
             {
@@ -859,8 +859,8 @@
             }
         ]
     },
-    "裝備護石 II": {
-        "name": "裝備護石 II",
+    "裝備護石 III": {
+        "name": "裝備護石 III",
         "rare": null,
         "skills": [
             {
@@ -879,8 +879,8 @@
             }
         ]
     },
-    "達人護石 II": {
-        "name": "達人護石 II",
+    "達人護石 III": {
+        "name": "達人護石 III",
         "rare": null,
         "skills": [
             {
@@ -899,8 +899,8 @@
             }
         ]
     },
-    "痺擊護石 II": {
-        "name": "痺擊護石 II",
+    "痺擊護石 III": {
+        "name": "痺擊護石 III",
         "rare": null,
         "skills": [
             {
@@ -909,8 +909,8 @@
             }
         ]
     },
-    "雷光護石 II": {
-        "name": "雷光護石 II",
+    "雷光護石 III": {
+        "name": "雷光護石 III",
         "rare": null,
         "skills": [
             {
@@ -919,8 +919,8 @@
             }
         ]
     },
-    "睡擊護石 II": {
-        "name": "睡擊護石 II",
+    "睡擊護石 III": {
+        "name": "睡擊護石 III",
         "rare": null,
         "skills": [
             {
@@ -939,8 +939,8 @@
             }
         ]
     },
-    "奪氣護石 II": {
-        "name": "奪氣護石 II",
+    "奪氣護石 III": {
+        "name": "奪氣護石 III",
         "rare": null,
         "skills": [
             {
@@ -959,8 +959,8 @@
             }
         ]
     },
-    "潛伏護石 II": {
-        "name": "潛伏護石 II",
+    "潛伏護石 III": {
+        "name": "潛伏護石 III",
         "rare": null,
         "skills": [
             {
@@ -997,8 +997,8 @@
             }
         ]
     },
-    "斷食護石 II": {
-        "name": "斷食護石 II",
+    "斷食護石 III": {
+        "name": "斷食護石 III",
         "rare": null,
         "skills": [
             {
@@ -1007,8 +1007,8 @@
             }
         ]
     },
-    "爆師護石 II": {
-        "name": "爆師護石 II",
+    "爆師護石 III": {
+        "name": "爆師護石 III",
         "rare": null,
         "skills": [
             {
@@ -1017,8 +1017,8 @@
             }
         ]
     },
-    "爆破護石 II": {
-        "name": "爆破護石 II",
+    "爆破護石 III": {
+        "name": "爆破護石 III",
         "rare": null,
         "skills": [
             {
@@ -1061,8 +1061,8 @@
             }
         ]
     },
-    "鐵壁護石 II": {
-        "name": "鐵壁護石 II",
+    "鐵壁護石 III": {
+        "name": "鐵壁護石 III",
         "rare": null,
         "skills": [
             {

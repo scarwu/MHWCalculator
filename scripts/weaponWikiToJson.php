@@ -81,8 +81,7 @@ $sharpnessList = [
     'yellow',
     'green',
     'blue',
-    'white',
-    'purple'
+    'white'
 ];
 
 $urlMapping = [
@@ -225,23 +224,14 @@ foreach ($urlMapping as $weaponType => $url) {
 
         if (null !== $sharpnessBlock) {
             $equip['sharpness'] = [
-                'min' => [
+                'value' => 0,
+                'steps' => [
                     'red' => 0,
                     'orange' => 0,
                     'yellow' => 0,
                     'green' => 0,
                     'blue' => 0,
-                    'white' => 0,
-                    'purple' => 0
-                ],
-                'max' => [
-                    'red' => 0,
-                    'orange' => 0,
-                    'yellow' => 0,
-                    'green' => 0,
-                    'blue' => 0,
-                    'white' => 0,
-                    'purple' => 0
+                    'white' => 0
                 ]
             ];
 
@@ -250,7 +240,7 @@ foreach ($urlMapping as $weaponType => $url) {
                     continue;
                 }
 
-                $equip['sharpness']['min'][$sharpnessList[$index]] = (int) $matches[1];
+                $equip['sharpness']['value'] += (int) $matches[1];
             }
 
             foreach ($sharpnessBlock->find('.sharpness', 1)->find('div') as $index => $div) {
@@ -258,7 +248,11 @@ foreach ($urlMapping as $weaponType => $url) {
                     continue;
                 }
 
-                $equip['sharpness']['max'][$sharpnessList[$index]] = (int) $matches[1];
+                if (!isset($sharpnessList[$index])) {
+                    continue;
+                }
+
+                $equip['sharpness']['steps'][$sharpnessList[$index]] = (int) $matches[1];
             }
         }
 
@@ -281,7 +275,7 @@ foreach ($urlMapping as $weaponType => $url) {
 
             if (preg_match('/^.+?\[(.+)\]$/', trim($text), $matches)) {
                 $equip['elderseal'] = [
-                    'effinity' => $matches[1]
+                    'effect' => $matches[1]
                 ];
             }
         }
@@ -312,6 +306,10 @@ foreach ($urlMapping as $weaponType => $url) {
 
         $allEquips[$name] = $equip;
     }
+}
+
+if (!file_exists("{$root}/../temp")) {
+    mkdir("{$root}/../temp");
 }
 
 $json = json_encode($allEquips, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);

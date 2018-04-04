@@ -325,5 +325,9 @@ foreach ($mainDom->find('a.tip') as $item) {
     }
 }
 
+if (!file_exists("{$root}/../temp")) {
+    mkdir("{$root}/../temp");
+}
+
 $json = json_encode($allEquiqs, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 file_put_contents("{$root}/../temp/armor.json", $json);
