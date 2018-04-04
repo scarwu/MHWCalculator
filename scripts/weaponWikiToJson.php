@@ -58,6 +58,23 @@ function parseHTML($str)
 
 $host = 'https://www.mhchinese.wiki';
 
+$urlMapping = [
+    "greatSword" => "{$host}/weapons/final/great_swords",
+    "longSword" => "{$host}/weapons/final/long_sword",
+    "swordAndShield" => "{$host}/weapons/final/sword_shield",
+    "dualSlades" => "{$host}/weapons/final/dual_blades",
+    "hammer" => "{$host}/weapons/final/hammer",
+    "huntingHorn" => "{$host}/weapons/final/hunting_horn",
+    "lance" => "{$host}/weapons/final/lances",
+    "gunlance" => "{$host}/weapons/final/gunlance",
+    "switchAxe" => "{$host}/weapons/final/switch_ace",
+    "chargeBlade" => "{$host}/weapons/final/charge_blade",
+    "insectGlaive" => "{$host}/weapons/final/insect_glaive",
+    "lightBowgun" => "{$host}/weapons/final/light_bowgun",
+    "heavyBowgun" => "{$host}/weapons/final/heavy_bowgun",
+    "bow" => "{$host}/weapons/final/bow"
+];
+
 $typeMapping = [
     "greatSword" => '大劍',
     "longSword" => '太刀',
@@ -82,23 +99,6 @@ $sharpnessList = [
     'green',
     'blue',
     'white'
-];
-
-$urlMapping = [
-    "greatSword" => "{$host}/weapons/final/great_swords",
-    "longSword" => "{$host}/weapons/final/long_sword",
-    "swordAndShield" => "{$host}/weapons/final/sword_shield",
-    "dualSlades" => "{$host}/weapons/final/dual_blades",
-    "hammer" => "{$host}/weapons/final/hammer",
-    "huntingHorn" => "{$host}/weapons/final/hunting_horn",
-    "lance" => "{$host}/weapons/final/lances",
-    "gunlance" => "{$host}/weapons/final/gunlance",
-    "switchAxe" => "{$host}/weapons/final/switch_ace",
-    "chargeBlade" => "{$host}/weapons/final/charge_blade",
-    "insectGlaive" => "{$host}/weapons/final/insect_glaive",
-    "lightBowgun" => "{$host}/weapons/final/light_bowgun",
-    "heavyBowgun" => "{$host}/weapons/final/heavy_bowgun",
-    "bow" => "{$host}/weapons/final/bow"
 ];
 
 $allEquips = [];
@@ -209,6 +209,14 @@ foreach ($urlMapping as $weaponType => $url) {
             $slots = trim($row->find('td', 6)->plaintext);
         }
 
+        $name = str_replace(' ', '', $name);
+        $name = str_replace('III', 'Ⅲ', $name);
+        $name = str_replace('II', 'Ⅱ', $name);
+        $name = str_replace('I', 'Ⅰ', $name);
+        $name = str_replace('Ⅲ', ' III', $name);
+        $name = str_replace('Ⅱ', ' II', $name);
+        $name = str_replace('Ⅰ', ' I', $name);
+
         $equip = [
             'name' => $name,
             'type' => $typeMapping[$weaponType],
@@ -240,7 +248,7 @@ foreach ($urlMapping as $weaponType => $url) {
                     continue;
                 }
 
-                $equip['sharpness']['value'] += (int) $matches[1];
+                $equip['sharpness']['value'] += ((int) $matches[1]) * 2;
             }
 
             foreach ($sharpnessBlock->find('.sharpness', 1)->find('div') as $index => $div) {
@@ -252,7 +260,7 @@ foreach ($urlMapping as $weaponType => $url) {
                     continue;
                 }
 
-                $equip['sharpness']['steps'][$sharpnessList[$index]] = (int) $matches[1];
+                $equip['sharpness']['steps'][$sharpnessList[$index]] = ((int) $matches[1]) * 2;
             }
         }
 
