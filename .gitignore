@@ -1,3 +1,4 @@
 src/boot
 node_modules
 .sass-cache
+scripts/vendor
