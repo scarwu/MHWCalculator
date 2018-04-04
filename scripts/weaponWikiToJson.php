@@ -315,6 +315,4 @@ foreach ($urlMapping as $weaponType => $url) {
 }
 
 $json = json_encode($allEquips, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-file_put_contents("{$root}/../src/assets/json/weapon.json", $json);
-
-echo $json;
+file_put_contents("{$root}/../temp/weapon.json", $json);

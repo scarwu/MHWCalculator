@@ -115,6 +115,7 @@ foreach ($mainDom->find('a.tip') as $item) {
                 if (!isset($equips[$name])) {
                     $equips[$name] = [
                         'name' => null,
+                        'type' => null,
                         'rare' => 0,
                         'gender' => null,
                         'defense' => [
@@ -148,6 +149,56 @@ foreach ($mainDom->find('a.tip') as $item) {
                 $equips[$name]['resistance']['thunder'] = (int) $thunderResist;
                 $equips[$name]['resistance']['ice'] = (int) $iceResist;
                 $equips[$name]['resistance']['dragon'] = (int) $dragonResist;
+
+                if (false !== strpos($name, '頭')
+                    || false !== strpos($name, '頭飾')
+                    || false !== strpos($name, '頭套')
+                    || false !== strpos($name, '頭盔')
+                    || false !== strpos($name, '護目鏡')
+                    || false !== strpos($name, '護頭')
+                    || false !== strpos($name, '墨鏡')
+                    || false !== strpos($name, '面罩')
+                    || false !== strpos($name, '耳環')
+                    || false !== strpos($name, '眼帶')
+                    || false !== strpos($name, '突擊龍角')
+                    || false !== strpos($name, '麒麟角')
+                    || false !== strpos($name, '爆碎的羽飾')
+                    || false !== strpos($name, '龍王的獨眼')
+                    || false !== strpos($name, '知性眼鏡')) {
+
+                    $equips[$name]['type'] = '頭';
+                } elseif (false !== strpos($name, '身')
+                    || false !== strpos($name, '皮')
+                    || false !== strpos($name, '上身')
+                    || false !== strpos($name, '斗篷')
+                    || false !== strpos($name, '服飾')
+                    || false !== strpos($name, '鎧甲')) {
+
+                    $equips[$name]['type'] = '身';
+                } elseif (false !== strpos($name, '手')
+                    || false !== strpos($name, '護袖')
+                    || false !== strpos($name, '鋼爪')
+                    || false !== strpos($name, '護手')
+                    || false !== strpos($name, '腕甲')) {
+
+                    $equips[$name]['type'] = '手';
+                } elseif (false !== strpos($name, '腰')
+                    || false !== strpos($name, '護腰')
+                    || false !== strpos($name, '脊椎')
+                    || false !== strpos($name, '腰甲')
+                    || false !== strpos($name, '腰環')) {
+
+                    $equips[$name]['type'] = '腰';
+                } elseif (false !== strpos($name, '腿')
+                    || false !== strpos($name, '腳')
+                    || false !== strpos($name, '靴')
+                    || false !== strpos($name, '護腿')
+                    || false !== strpos($name, '護脛')) {
+
+                    $equips[$name]['type'] = '腿';
+                } else {
+                    echo "{$name}\n";
+                }
             }
         }
 
@@ -275,6 +326,4 @@ foreach ($mainDom->find('a.tip') as $item) {
 }
 
 $json = json_encode($allEquiqs, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-file_put_contents("{$root}/../src/assets/json/armor.json", $json);
-
-echo $json;
+file_put_contents("{$root}/../temp/armor.json", $json);

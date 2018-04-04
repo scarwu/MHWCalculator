@@ -1,6 +1,7 @@
 {
     "土砂龍頭盔": {
         "name": "土砂龍頭盔",
+        "type": "頭",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -29,6 +30,7 @@
     },
     "土砂龍鎧甲": {
         "name": "土砂龍鎧甲",
+        "type": "身",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -57,6 +59,7 @@
     },
     "土砂龍腕甲": {
         "name": "土砂龍腕甲",
+        "type": "手",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -85,6 +88,7 @@
     },
     "土砂龍腰甲": {
         "name": "土砂龍腰甲",
+        "type": "腰",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -113,6 +117,7 @@
     },
     "土砂龍護腿": {
         "name": "土砂龍護腿",
+        "type": "腿",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -141,6 +146,7 @@
     },
     "土砂龍頭盔α": {
         "name": "土砂龍頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -169,6 +175,7 @@
     },
     "土砂龍鎧甲α": {
         "name": "土砂龍鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -197,6 +204,7 @@
     },
     "土砂龍腕甲α": {
         "name": "土砂龍腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -229,6 +237,7 @@
     },
     "土砂龍腰甲α": {
         "name": "土砂龍腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -261,6 +270,7 @@
     },
     "土砂龍護腿α": {
         "name": "土砂龍護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -293,6 +303,7 @@
     },
     "土砂龍頭盔β": {
         "name": "土砂龍頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -325,6 +336,7 @@
     },
     "土砂龍鎧甲β": {
         "name": "土砂龍鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -357,6 +369,7 @@
     },
     "土砂龍腕甲β": {
         "name": "土砂龍腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -389,6 +402,7 @@
     },
     "土砂龍腰甲β": {
         "name": "土砂龍腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -421,6 +435,7 @@
     },
     "土砂龍護腿β": {
         "name": "土砂龍護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -456,6 +471,7 @@
     },
     "大馬士革頭盔α": {
         "name": "大馬士革頭盔α",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -492,6 +508,7 @@
     },
     "大馬士革鎧甲α": {
         "name": "大馬士革鎧甲α",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -528,6 +545,7 @@
     },
     "大馬士革腕甲α": {
         "name": "大馬士革腕甲α",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -560,6 +578,7 @@
     },
     "大馬士革腰甲α": {
         "name": "大馬士革腰甲α",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -596,6 +615,7 @@
     },
     "大馬士革護腿α": {
         "name": "大馬士革護腿α",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -632,6 +652,7 @@
     },
     "大馬士革頭盔β": {
         "name": "大馬士革頭盔β",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -664,6 +685,7 @@
     },
     "大馬士革鎧甲β": {
         "name": "大馬士革鎧甲β",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -702,6 +724,7 @@
     },
     "大馬士革腕甲β": {
         "name": "大馬士革腕甲β",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -734,6 +757,7 @@
     },
     "大馬士革腰甲β": {
         "name": "大馬士革腰甲β",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -772,6 +796,7 @@
     },
     "大馬士革護腿β": {
         "name": "大馬士革護腿β",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -804,6 +829,7 @@
     },
     "孑孓頭α": {
         "name": "孑孓頭α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -839,6 +865,7 @@
     },
     "凶豺龍頭盔": {
         "name": "凶豺龍頭盔",
+        "type": "頭",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -867,6 +894,7 @@
     },
     "凶豺龍鎧甲": {
         "name": "凶豺龍鎧甲",
+        "type": "身",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -895,6 +923,7 @@
     },
     "凶豺龍腕甲": {
         "name": "凶豺龍腕甲",
+        "type": "手",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -923,6 +952,7 @@
     },
     "凶豺龍腰甲": {
         "name": "凶豺龍腰甲",
+        "type": "腰",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -951,6 +981,7 @@
     },
     "凶豺龍護腿": {
         "name": "凶豺龍護腿",
+        "type": "腿",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -979,6 +1010,7 @@
     },
     "凶豺龍頭盔α": {
         "name": "凶豺龍頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -1007,6 +1039,7 @@
     },
     "凶豺龍鎧甲α": {
         "name": "凶豺龍鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -1035,6 +1068,7 @@
     },
     "凶豺龍腕甲α": {
         "name": "凶豺龍腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -1067,6 +1101,7 @@
     },
     "凶豺龍腰甲α": {
         "name": "凶豺龍腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -1099,6 +1134,7 @@
     },
     "凶豺龍護腿α": {
         "name": "凶豺龍護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -1131,6 +1167,7 @@
     },
     "凶豺龍頭盔β": {
         "name": "凶豺龍頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -1163,6 +1200,7 @@
     },
     "凶豺龍鎧甲β": {
         "name": "凶豺龍鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -1195,6 +1233,7 @@
     },
     "凶豺龍腕甲β": {
         "name": "凶豺龍腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -1227,6 +1266,7 @@
     },
     "凶豺龍腰甲β": {
         "name": "凶豺龍腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -1259,6 +1299,7 @@
     },
     "凶豺龍護腿β": {
         "name": "凶豺龍護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -1291,6 +1332,7 @@
     },
     "火龍心頭盔α": {
         "name": "火龍心頭盔α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -1328,6 +1370,7 @@
     },
     "火龍心鎧甲α": {
         "name": "火龍心鎧甲α",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -1361,6 +1404,7 @@
     },
     "火龍心腕甲α": {
         "name": "火龍心腕甲α",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -1394,6 +1438,7 @@
     },
     "火龍心腰甲α": {
         "name": "火龍心腰甲α",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -1431,6 +1476,7 @@
     },
     "火龍心護腿α": {
         "name": "火龍心護腿α",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -1468,6 +1514,7 @@
     },
     "火龍心頭盔β": {
         "name": "火龍心頭盔β",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -1505,6 +1552,7 @@
     },
     "火龍心鎧甲β": {
         "name": "火龍心鎧甲β",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -1545,6 +1593,7 @@
     },
     "火龍心腕甲β": {
         "name": "火龍心腕甲β",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -1582,6 +1631,7 @@
     },
     "火龍心腰甲β": {
         "name": "火龍心腰甲β",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -1619,6 +1669,7 @@
     },
     "火龍心護腿β": {
         "name": "火龍心護腿β",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -1656,6 +1707,7 @@
     },
     "火龍頭盔": {
         "name": "火龍頭盔",
+        "type": "頭",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -1689,6 +1741,7 @@
     },
     "火龍鎧甲": {
         "name": "火龍鎧甲",
+        "type": "身",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -1722,6 +1775,7 @@
     },
     "火龍腕甲": {
         "name": "火龍腕甲",
+        "type": "手",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -1755,6 +1809,7 @@
     },
     "火龍腰甲": {
         "name": "火龍腰甲",
+        "type": "腰",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -1788,6 +1843,7 @@
     },
     "火龍護腿": {
         "name": "火龍護腿",
+        "type": "腿",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -1821,6 +1877,7 @@
     },
     "火龍魂頭盔β": {
         "name": "火龍魂頭盔β",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -1865,6 +1922,7 @@
     },
     "火龍魂鎧甲β": {
         "name": "火龍魂鎧甲β",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -1906,6 +1964,7 @@
     },
     "火龍魂腕甲β": {
         "name": "火龍魂腕甲β",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -1947,6 +2006,7 @@
     },
     "火龍魂腰甲β": {
         "name": "火龍魂腰甲β",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -1988,6 +2048,7 @@
     },
     "火龍魂護腿β": {
         "name": "火龍魂護腿β",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -2029,6 +2090,7 @@
     },
     "火龍魂頭盔α": {
         "name": "火龍魂頭盔α",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -2070,6 +2132,7 @@
     },
     "火龍魂鎧甲α": {
         "name": "火龍魂鎧甲α",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -2115,6 +2178,7 @@
     },
     "火龍魂腕甲α": {
         "name": "火龍魂腕甲α",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -2160,6 +2224,7 @@
     },
     "火龍魂腰甲α": {
         "name": "火龍魂腰甲α",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -2201,6 +2266,7 @@
     },
     "火龍魂護腿α": {
         "name": "火龍魂護腿α",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -2242,6 +2308,7 @@
     },
     "火龍頭盔α": {
         "name": "火龍頭盔α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -2283,6 +2350,7 @@
     },
     "火龍鎧甲α": {
         "name": "火龍鎧甲α",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -2324,6 +2392,7 @@
     },
     "火龍腕甲α": {
         "name": "火龍腕甲α",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -2365,6 +2434,7 @@
     },
     "火龍腰甲α": {
         "name": "火龍腰甲α",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -2406,6 +2476,7 @@
     },
     "火龍護腿α": {
         "name": "火龍護腿α",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -2447,6 +2518,7 @@
     },
     "火龍頭盔β": {
         "name": "火龍頭盔β",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -2488,6 +2560,7 @@
     },
     "火龍鎧甲β": {
         "name": "火龍鎧甲β",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -2529,6 +2602,7 @@
     },
     "火龍腕甲β": {
         "name": "火龍腕甲β",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -2570,6 +2644,7 @@
     },
     "火龍腰甲β": {
         "name": "火龍腰甲β",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -2611,6 +2686,7 @@
     },
     "火龍護腿β": {
         "name": "火龍護腿β",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -2652,6 +2728,7 @@
     },
     "公會頭盔α": {
         "name": "公會頭盔α",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -2693,6 +2770,7 @@
     },
     "公會鎧甲α": {
         "name": "公會鎧甲α",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -2734,6 +2812,7 @@
     },
     "公會腕甲α": {
         "name": "公會腕甲α",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -2775,6 +2854,7 @@
     },
     "公會腰甲α": {
         "name": "公會腰甲α",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -2816,6 +2896,7 @@
     },
     "公會護腿α": {
         "name": "公會護腿α",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -2857,6 +2938,7 @@
     },
     "公會頭盔β": {
         "name": "公會頭盔β",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -2900,6 +2982,7 @@
     },
     "公會鎧甲β": {
         "name": "公會鎧甲β",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -2937,6 +3020,7 @@
     },
     "公會腕甲β": {
         "name": "公會腕甲β",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -2974,6 +3058,7 @@
     },
     "公會腰甲β": {
         "name": "公會腰甲β",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -3017,6 +3102,7 @@
     },
     "公會護腿β": {
         "name": "公會護腿β",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -3054,6 +3140,7 @@
     },
     "巨甲蟲頭盔": {
         "name": "巨甲蟲頭盔",
+        "type": "頭",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -3082,6 +3169,7 @@
     },
     "巨甲蟲鎧甲": {
         "name": "巨甲蟲鎧甲",
+        "type": "身",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -3110,6 +3198,7 @@
     },
     "巨甲蟲腕甲": {
         "name": "巨甲蟲腕甲",
+        "type": "手",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -3138,6 +3227,7 @@
     },
     "巨甲蟲腰甲": {
         "name": "巨甲蟲腰甲",
+        "type": "腰",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -3166,6 +3256,7 @@
     },
     "巨甲蟲護腿": {
         "name": "巨甲蟲護腿",
+        "type": "腿",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -3194,6 +3285,7 @@
     },
     "巨甲蟲頭盔α": {
         "name": "巨甲蟲頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3226,6 +3318,7 @@
     },
     "巨甲蟲鎧甲α": {
         "name": "巨甲蟲鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3258,6 +3351,7 @@
     },
     "巨甲蟲腕甲α": {
         "name": "巨甲蟲腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3290,6 +3384,7 @@
     },
     "巨甲蟲腰甲α": {
         "name": "巨甲蟲腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3322,6 +3417,7 @@
     },
     "巨甲蟲護腿α": {
         "name": "巨甲蟲護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3354,6 +3450,7 @@
     },
     "巨甲蟲頭盔β": {
         "name": "巨甲蟲頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3386,6 +3483,7 @@
     },
     "巨甲蟲鎧甲β": {
         "name": "巨甲蟲鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3418,6 +3516,7 @@
     },
     "巨甲蟲腕甲β": {
         "name": "巨甲蟲腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3450,6 +3549,7 @@
     },
     "巨甲蟲腰甲β": {
         "name": "巨甲蟲腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3482,6 +3582,7 @@
     },
     "巨甲蟲護腿β": {
         "name": "巨甲蟲護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3514,6 +3615,7 @@
     },
     "巨蜂頭盔": {
         "name": "巨蜂頭盔",
+        "type": "頭",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -3542,6 +3644,7 @@
     },
     "巨蜂鎧甲": {
         "name": "巨蜂鎧甲",
+        "type": "身",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -3570,6 +3673,7 @@
     },
     "巨蜂腕甲": {
         "name": "巨蜂腕甲",
+        "type": "手",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -3598,6 +3702,7 @@
     },
     "巨蜂腰甲": {
         "name": "巨蜂腰甲",
+        "type": "腰",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -3626,6 +3731,7 @@
     },
     "巨蜂護腿": {
         "name": "巨蜂護腿",
+        "type": "腿",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -3654,6 +3760,7 @@
     },
     "巨蜂頭盔α": {
         "name": "巨蜂頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3686,6 +3793,7 @@
     },
     "巨蜂鎧甲α": {
         "name": "巨蜂鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3714,6 +3822,7 @@
     },
     "巨蜂腕甲α": {
         "name": "巨蜂腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3742,6 +3851,7 @@
     },
     "巨蜂腰甲α": {
         "name": "巨蜂腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3770,6 +3880,7 @@
     },
     "巨蜂護腿α": {
         "name": "巨蜂護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3802,6 +3913,7 @@
     },
     "巨蜂頭盔β": {
         "name": "巨蜂頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3834,6 +3946,7 @@
     },
     "巨蜂鎧甲β": {
         "name": "巨蜂鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3866,6 +3979,7 @@
     },
     "巨蜂腕甲β": {
         "name": "巨蜂腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3898,6 +4012,7 @@
     },
     "巨蜂腰甲β": {
         "name": "巨蜂腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3930,6 +4045,7 @@
     },
     "巨蜂護腿β": {
         "name": "巨蜂護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -3962,6 +4078,7 @@
     },
     "皮製頭飾": {
         "name": "皮製頭飾",
+        "type": "頭",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -3990,6 +4107,7 @@
     },
     "皮製服飾": {
         "name": "皮製服飾",
+        "type": "身",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -4013,6 +4131,7 @@
     },
     "皮製手套": {
         "name": "皮製手套",
+        "type": "身",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -4036,6 +4155,7 @@
     },
     "皮製皮帶": {
         "name": "皮製皮帶",
+        "type": "身",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -4059,6 +4179,7 @@
     },
     "皮製長褲": {
         "name": "皮製長褲",
+        "type": "身",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -4082,6 +4203,7 @@
     },
     "皮製頭飾α": {
         "name": "皮製頭飾α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4110,6 +4232,7 @@
     },
     "皮製服飾α": {
         "name": "皮製服飾α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4138,6 +4261,7 @@
     },
     "皮製手套α": {
         "name": "皮製手套α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4166,6 +4290,7 @@
     },
     "皮製皮帶α": {
         "name": "皮製皮帶α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4194,6 +4319,7 @@
     },
     "皮製長褲α": {
         "name": "皮製長褲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4222,6 +4348,7 @@
     },
     "皮製頭飾β": {
         "name": "皮製頭飾β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4254,6 +4381,7 @@
     },
     "皮製服飾β": {
         "name": "皮製服飾β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4281,6 +4409,7 @@
     },
     "皮製手套β": {
         "name": "皮製手套β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4308,6 +4437,7 @@
     },
     "皮製皮帶β": {
         "name": "皮製皮帶β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4335,6 +4465,7 @@
     },
     "皮製長褲β": {
         "name": "皮製長褲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4362,6 +4493,7 @@
     },
     "合金頭盔": {
         "name": "合金頭盔",
+        "type": "頭",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -4390,6 +4522,7 @@
     },
     "合金鎧甲": {
         "name": "合金鎧甲",
+        "type": "身",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -4418,6 +4551,7 @@
     },
     "合金腕甲": {
         "name": "合金腕甲",
+        "type": "手",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -4446,6 +4580,7 @@
     },
     "合金腰甲": {
         "name": "合金腰甲",
+        "type": "腰",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -4474,6 +4609,7 @@
     },
     "合金護腿": {
         "name": "合金護腿",
+        "type": "腿",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -4502,6 +4638,7 @@
     },
     "合金頭盔α": {
         "name": "合金頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4534,6 +4671,7 @@
     },
     "合金鎧甲α": {
         "name": "合金鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4562,6 +4700,7 @@
     },
     "合金腕甲α": {
         "name": "合金腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4594,6 +4733,7 @@
     },
     "合金腰甲α": {
         "name": "合金腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4626,6 +4766,7 @@
     },
     "合金護腿α": {
         "name": "合金護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4654,6 +4795,7 @@
     },
     "合金頭盔β": {
         "name": "合金頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4686,6 +4828,7 @@
     },
     "合金鎧甲β": {
         "name": "合金鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4718,6 +4861,7 @@
     },
     "合金腕甲β": {
         "name": "合金腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4750,6 +4894,7 @@
     },
     "合金腰甲β": {
         "name": "合金腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4782,6 +4927,7 @@
     },
     "合金護腿β": {
         "name": "合金護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4814,6 +4960,7 @@
     },
     "兇顎龍頭盔": {
         "name": "兇顎龍頭盔",
+        "type": "頭",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -4842,6 +4989,7 @@
     },
     "兇顎龍鎧甲": {
         "name": "兇顎龍鎧甲",
+        "type": "身",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -4870,6 +5018,7 @@
     },
     "兇顎龍腕甲": {
         "name": "兇顎龍腕甲",
+        "type": "手",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -4898,6 +5047,7 @@
     },
     "兇顎龍腰甲": {
         "name": "兇顎龍腰甲",
+        "type": "腰",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -4926,6 +5076,7 @@
     },
     "兇顎龍護腿": {
         "name": "兇顎龍護腿",
+        "type": "腿",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -4954,6 +5105,7 @@
     },
     "兇顎龍頭盔α": {
         "name": "兇顎龍頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -4986,6 +5138,7 @@
     },
     "兇顎龍鎧甲α": {
         "name": "兇顎龍鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -5014,6 +5167,7 @@
     },
     "兇顎龍腕甲α": {
         "name": "兇顎龍腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -5042,6 +5196,7 @@
     },
     "兇顎龍腰甲α": {
         "name": "兇顎龍腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -5074,6 +5229,7 @@
     },
     "兇顎龍護腿α": {
         "name": "兇顎龍護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -5102,6 +5258,7 @@
     },
     "兇顎龍頭盔β": {
         "name": "兇顎龍頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -5134,6 +5291,7 @@
     },
     "兇顎龍鎧甲β": {
         "name": "兇顎龍鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -5166,6 +5324,7 @@
     },
     "兇顎龍腕甲β": {
         "name": "兇顎龍腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -5198,6 +5357,7 @@
     },
     "兇顎龍腰甲β": {
         "name": "兇顎龍腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -5230,6 +5390,7 @@
     },
     "兇顎龍護腿β": {
         "name": "兇顎龍護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -5262,6 +5423,7 @@
     },
     "死亡頭盔": {
         "name": "死亡頭盔",
+        "type": "頭",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -5290,6 +5452,7 @@
     },
     "死亡鎧甲": {
         "name": "死亡鎧甲",
+        "type": "身",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -5318,6 +5481,7 @@
     },
     "死亡腕甲": {
         "name": "死亡腕甲",
+        "type": "手",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -5346,6 +5510,7 @@
     },
     "死亡腰甲": {
         "name": "死亡腰甲",
+        "type": "腰",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -5374,6 +5539,7 @@
     },
     "死亡護腿": {
         "name": "死亡護腿",
+        "type": "腿",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -5402,6 +5568,7 @@
     },
     "艾路頭套α": {
         "name": "艾路頭套α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -5430,6 +5597,7 @@
     },
     "死神頭盔α": {
         "name": "死神頭盔α",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -5466,6 +5634,7 @@
     },
     "死神鎧甲α": {
         "name": "死神鎧甲α",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -5498,6 +5667,7 @@
     },
     "死神腕甲α": {
         "name": "死神腕甲α",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -5534,6 +5704,7 @@
     },
     "死神腰甲α": {
         "name": "死神腰甲α",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -5566,6 +5737,7 @@
     },
     "死神護腿α": {
         "name": "死神護腿α",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -5598,6 +5770,7 @@
     },
     "死神頭盔β": {
         "name": "死神頭盔β",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -5630,6 +5803,7 @@
     },
     "死神鎧甲β": {
         "name": "死神鎧甲β",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -5662,6 +5836,7 @@
     },
     "死神腕甲β": {
         "name": "死神腕甲β",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -5697,6 +5872,7 @@
     },
     "死神腰甲β": {
         "name": "死神腰甲β",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -5732,6 +5908,7 @@
     },
     "死神護腿β": {
         "name": "死神護腿β",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -5767,6 +5944,7 @@
     },
     "角龍頭盔": {
         "name": "角龍頭盔",
+        "type": "頭",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -5800,6 +5978,7 @@
     },
     "角龍鎧甲": {
         "name": "角龍鎧甲",
+        "type": "身",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -5833,6 +6012,7 @@
     },
     "角龍腕甲": {
         "name": "角龍腕甲",
+        "type": "手",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -5866,6 +6046,7 @@
     },
     "角龍腰甲": {
         "name": "角龍腰甲",
+        "type": "腰",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -5899,6 +6080,7 @@
     },
     "角龍護腿": {
         "name": "角龍護腿",
+        "type": "腿",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -5932,6 +6114,7 @@
     },
     "角龍頭盔β": {
         "name": "角龍頭盔β",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -5973,6 +6156,7 @@
     },
     "角龍鎧甲β": {
         "name": "角龍鎧甲β",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -6014,6 +6198,7 @@
     },
     "角龍腕甲β": {
         "name": "角龍腕甲β",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -6055,6 +6240,7 @@
     },
     "角龍腰甲β": {
         "name": "角龍腰甲β",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -6096,6 +6282,7 @@
     },
     "角龍護腿β": {
         "name": "角龍護腿β",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -6140,6 +6327,7 @@
     },
     "角龍頭盔α": {
         "name": "角龍頭盔α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -6181,6 +6369,7 @@
     },
     "角龍鎧甲α": {
         "name": "角龍鎧甲α",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -6222,6 +6411,7 @@
     },
     "角龍腕甲α": {
         "name": "角龍腕甲α",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -6263,6 +6453,7 @@
     },
     "角龍腰甲α": {
         "name": "角龍腰甲α",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -6304,6 +6495,7 @@
     },
     "角龍護腿α": {
         "name": "角龍護腿α",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -6345,6 +6537,7 @@
     },
     "杜賓頭盔β": {
         "name": "杜賓頭盔β",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -6377,6 +6570,7 @@
     },
     "杜賓鎧甲β": {
         "name": "杜賓鎧甲β",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -6409,6 +6603,7 @@
     },
     "杜賓腕甲β": {
         "name": "杜賓腕甲β",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -6448,6 +6643,7 @@
     },
     "杜賓腰甲β": {
         "name": "杜賓腰甲β",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -6480,6 +6676,7 @@
     },
     "杜賓護腿β": {
         "name": "杜賓護腿β",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -6512,6 +6709,7 @@
     },
     "杜賓頭盔α": {
         "name": "杜賓頭盔α",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -6544,6 +6742,7 @@
     },
     "杜賓鎧甲α": {
         "name": "杜賓鎧甲α",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -6576,6 +6775,7 @@
     },
     "杜賓腕甲α": {
         "name": "杜賓腕甲α",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -6608,6 +6808,7 @@
     },
     "杜賓腰甲α": {
         "name": "杜賓腰甲α",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -6640,6 +6841,7 @@
     },
     "杜賓護腿α": {
         "name": "杜賓護腿α",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -6672,6 +6874,7 @@
     },
     "泥魚龍頭盔": {
         "name": "泥魚龍頭盔",
+        "type": "頭",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -6700,6 +6903,7 @@
     },
     "泥魚龍鎧甲": {
         "name": "泥魚龍鎧甲",
+        "type": "身",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -6728,6 +6932,7 @@
     },
     "泥魚龍腕甲": {
         "name": "泥魚龍腕甲",
+        "type": "手",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -6756,6 +6961,7 @@
     },
     "泥魚龍腰甲": {
         "name": "泥魚龍腰甲",
+        "type": "腰",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -6784,6 +6990,7 @@
     },
     "泥魚龍護腿": {
         "name": "泥魚龍護腿",
+        "type": "腿",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -6812,6 +7019,7 @@
     },
     "泥魚龍頭盔α": {
         "name": "泥魚龍頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -6840,6 +7048,7 @@
     },
     "泥魚龍鎧甲α": {
         "name": "泥魚龍鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -6872,6 +7081,7 @@
     },
     "泥魚龍腕甲α": {
         "name": "泥魚龍腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -6904,6 +7114,7 @@
     },
     "泥魚龍腰甲α": {
         "name": "泥魚龍腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -6932,6 +7143,7 @@
     },
     "泥魚龍護腿α": {
         "name": "泥魚龍護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -6960,6 +7172,7 @@
     },
     "泥魚龍頭盔β": {
         "name": "泥魚龍頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -6992,6 +7205,7 @@
     },
     "泥魚龍鎧甲β": {
         "name": "泥魚龍鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7024,6 +7238,7 @@
     },
     "泥魚龍腕甲β": {
         "name": "泥魚龍腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7056,6 +7271,7 @@
     },
     "泥魚龍腰甲β": {
         "name": "泥魚龍腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7088,6 +7304,7 @@
     },
     "泥魚龍護腿β": {
         "name": "泥魚龍護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7120,6 +7337,7 @@
     },
     "岩賊龍頭盔β": {
         "name": "岩賊龍頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7152,6 +7370,7 @@
     },
     "岩賊龍鎧甲β": {
         "name": "岩賊龍鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7184,6 +7403,7 @@
     },
     "岩賊龍腕甲β": {
         "name": "岩賊龍腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7216,6 +7436,7 @@
     },
     "岩賊龍腰甲β": {
         "name": "岩賊龍腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7248,6 +7469,7 @@
     },
     "岩賊龍護腿β": {
         "name": "岩賊龍護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7280,6 +7502,7 @@
     },
     "岩賊龍頭盔α": {
         "name": "岩賊龍頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7308,6 +7531,7 @@
     },
     "岩賊龍鎧甲α": {
         "name": "岩賊龍鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7336,6 +7560,7 @@
     },
     "岩賊龍腕甲α": {
         "name": "岩賊龍腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7364,6 +7589,7 @@
     },
     "岩賊龍腰甲α": {
         "name": "岩賊龍腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7396,6 +7622,7 @@
     },
     "岩賊龍護腿α": {
         "name": "岩賊龍護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7428,6 +7655,7 @@
     },
     "知性眼鏡α": {
         "name": "知性眼鏡α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -7460,6 +7688,7 @@
     },
     "飛雷龍頭盔": {
         "name": "飛雷龍頭盔",
+        "type": "頭",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -7488,6 +7717,7 @@
     },
     "飛雷龍鎧甲": {
         "name": "飛雷龍鎧甲",
+        "type": "身",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -7516,6 +7746,7 @@
     },
     "飛雷龍腕甲": {
         "name": "飛雷龍腕甲",
+        "type": "手",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -7544,6 +7775,7 @@
     },
     "飛雷龍腰甲": {
         "name": "飛雷龍腰甲",
+        "type": "腰",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -7572,6 +7804,7 @@
     },
     "飛雷龍護腿": {
         "name": "飛雷龍護腿",
+        "type": "腿",
         "rare": 2,
         "gender": "general",
         "defense": {
@@ -7600,6 +7833,7 @@
     },
     "飛雷龍頭盔α": {
         "name": "飛雷龍頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7628,6 +7862,7 @@
     },
     "飛雷龍鎧甲α": {
         "name": "飛雷龍鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7660,6 +7895,7 @@
     },
     "飛雷龍腕甲α": {
         "name": "飛雷龍腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7688,6 +7924,7 @@
     },
     "飛雷龍腰甲α": {
         "name": "飛雷龍腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7720,6 +7957,7 @@
     },
     "飛雷龍護腿α": {
         "name": "飛雷龍護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7752,6 +7990,7 @@
     },
     "飛雷龍頭盔β": {
         "name": "飛雷龍頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7784,6 +8023,7 @@
     },
     "飛雷龍鎧甲β": {
         "name": "飛雷龍鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7816,6 +8056,7 @@
     },
     "飛雷龍腕甲β": {
         "name": "飛雷龍腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7848,6 +8089,7 @@
     },
     "飛雷龍腰甲β": {
         "name": "飛雷龍腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7883,6 +8125,7 @@
     },
     "飛雷龍護腿β": {
         "name": "飛雷龍護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7918,6 +8161,7 @@
     },
     "咬魚靴": {
         "name": "咬魚靴",
+        "type": "腿",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -7946,6 +8190,7 @@
     },
     "咬魚靴α": {
         "name": "咬魚靴α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -7978,6 +8223,7 @@
     },
     "咬魚靴β": {
         "name": "咬魚靴β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8014,6 +8260,7 @@
     },
     "風漂龍頭盔": {
         "name": "風漂龍頭盔",
+        "type": "頭",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -8047,6 +8294,7 @@
     },
     "風漂龍鎧甲": {
         "name": "風漂龍鎧甲",
+        "type": "身",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -8080,6 +8328,7 @@
     },
     "風漂龍腕甲": {
         "name": "風漂龍腕甲",
+        "type": "手",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -8113,6 +8362,7 @@
     },
     "風漂龍腰甲": {
         "name": "風漂龍腰甲",
+        "type": "腰",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -8146,6 +8396,7 @@
     },
     "風漂龍護腿": {
         "name": "風漂龍護腿",
+        "type": "腿",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -8179,6 +8430,7 @@
     },
     "冠突龍護手": {
         "name": "冠突龍護手",
+        "type": "手",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -8207,6 +8459,7 @@
     },
     "冠突龍護手α": {
         "name": "冠突龍護手α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8239,6 +8492,7 @@
     },
     "冠突龍護手β": {
         "name": "冠突龍護手β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8271,6 +8525,7 @@
     },
     "毒妖鳥頭盔": {
         "name": "毒妖鳥頭盔",
+        "type": "頭",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -8299,6 +8554,7 @@
     },
     "毒妖鳥鎧甲": {
         "name": "毒妖鳥鎧甲",
+        "type": "身",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -8327,6 +8583,7 @@
     },
     "毒妖鳥腕甲": {
         "name": "毒妖鳥腕甲",
+        "type": "手",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -8355,6 +8612,7 @@
     },
     "毒妖鳥腰甲": {
         "name": "毒妖鳥腰甲",
+        "type": "腰",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -8383,6 +8641,7 @@
     },
     "毒妖鳥護腿": {
         "name": "毒妖鳥護腿",
+        "type": "腿",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -8411,6 +8670,7 @@
     },
     "毒妖鳥頭盔α": {
         "name": "毒妖鳥頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8439,6 +8699,7 @@
     },
     "毒妖鳥鎧甲α": {
         "name": "毒妖鳥鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8471,6 +8732,7 @@
     },
     "毒妖鳥腕甲α": {
         "name": "毒妖鳥腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8503,6 +8765,7 @@
     },
     "毒妖鳥腰甲α": {
         "name": "毒妖鳥腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8531,6 +8794,7 @@
     },
     "毒妖鳥護腿α": {
         "name": "毒妖鳥護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8563,6 +8827,7 @@
     },
     "毒妖鳥頭盔β": {
         "name": "毒妖鳥頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8598,6 +8863,7 @@
     },
     "毒妖鳥鎧甲β": {
         "name": "毒妖鳥鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8630,6 +8896,7 @@
     },
     "毒妖鳥腕甲β": {
         "name": "毒妖鳥腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8665,6 +8932,7 @@
     },
     "毒妖鳥腰甲β": {
         "name": "毒妖鳥腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8697,6 +8965,7 @@
     },
     "毒妖鳥護腿β": {
         "name": "毒妖鳥護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -8729,6 +8998,7 @@
     },
     "風漂龍頭盔β": {
         "name": "風漂龍頭盔β",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -8770,6 +9040,7 @@
     },
     "風漂龍鎧甲β": {
         "name": "風漂龍鎧甲β",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -8811,6 +9082,7 @@
     },
     "風漂龍腕甲β": {
         "name": "風漂龍腕甲β",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -8852,6 +9124,7 @@
     },
     "風漂龍腰甲β": {
         "name": "風漂龍腰甲β",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -8893,6 +9166,7 @@
     },
     "風漂龍護腿β": {
         "name": "風漂龍護腿β",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -8934,6 +9208,7 @@
     },
     "風漂龍頭盔α": {
         "name": "風漂龍頭盔α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -8975,6 +9250,7 @@
     },
     "風漂龍鎧甲α": {
         "name": "風漂龍鎧甲α",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -9016,6 +9292,7 @@
     },
     "風漂龍腕甲α": {
         "name": "風漂龍腕甲α",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -9057,6 +9334,7 @@
     },
     "風漂龍腰甲α": {
         "name": "風漂龍腰甲α",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -9098,6 +9376,7 @@
     },
     "風漂龍護腿α": {
         "name": "風漂龍護腿α",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -9139,6 +9418,7 @@
     },
     "屍套龍頭盔α": {
         "name": "屍套龍頭盔α",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9176,6 +9456,7 @@
     },
     "屍套龍鎧甲α": {
         "name": "屍套龍鎧甲α",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9217,6 +9498,7 @@
     },
     "屍套龍腕甲α": {
         "name": "屍套龍腕甲α",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9258,6 +9540,7 @@
     },
     "屍套龍腰甲α": {
         "name": "屍套龍腰甲α",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9299,6 +9582,7 @@
     },
     "屍套龍護腿α": {
         "name": "屍套龍護腿α",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9340,6 +9624,7 @@
     },
     "屍套龍頭盔β": {
         "name": "屍套龍頭盔β",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9377,6 +9662,7 @@
     },
     "屍套龍鎧甲β": {
         "name": "屍套龍鎧甲β",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9417,6 +9703,7 @@
     },
     "屍套龍腕甲β": {
         "name": "屍套龍腕甲β",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9460,6 +9747,7 @@
     },
     "屍套龍腰甲β": {
         "name": "屍套龍腰甲β",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9500,6 +9788,7 @@
     },
     "屍套龍護腿β": {
         "name": "屍套龍護腿β",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9540,6 +9829,7 @@
     },
     "帝王α頭": {
         "name": "帝王α頭",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9573,6 +9863,7 @@
     },
     "帝王α身": {
         "name": "帝王α身",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9610,6 +9901,7 @@
     },
     "帝王α手": {
         "name": "帝王α手",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9647,6 +9939,7 @@
     },
     "帝王α腰": {
         "name": "帝王α腰",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9684,6 +9977,7 @@
     },
     "帝王α腳": {
         "name": "帝王α腳",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9721,6 +10015,7 @@
     },
     "帝王β頭": {
         "name": "帝王β頭",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9758,6 +10053,7 @@
     },
     "帝王β身": {
         "name": "帝王β身",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9798,6 +10094,7 @@
     },
     "帝王β手": {
         "name": "帝王β手",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9835,6 +10132,7 @@
     },
     "帝王β腰": {
         "name": "帝王β腰",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9872,6 +10170,7 @@
     },
     "帝王β腳": {
         "name": "帝王β腳",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -9909,6 +10208,7 @@
     },
     "突擊龍角α": {
         "name": "突擊龍角α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -9941,6 +10241,7 @@
     },
     "突擊龍角β": {
         "name": "突擊龍角β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -9973,41 +10274,7 @@
     },
     "封印的眼帶α": {
         "name": "封印的眼帶α",
-        "rare": 5,
-        "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
-        "resistance": {
-            "fire": 3,
-            "water": 2,
-            "thunder": 0,
-            "ice": 2,
-            "dragon": 0
-        },
-        "slots": [
-            {
-                "size": 2
-            },
-            {
-                "size": 1
-            }
-        ],
-        "skills": [
-            {
-                "key": "火耐性",
-                "level": 1
-            }
-        ],
-        "set": {
-            "name": null,
-            "skills": []
-        },
-        "price": 4000
-    },
-    "封印之眼帶α": {
-        "name": "封印之眼帶α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10043,6 +10310,7 @@
     },
     "浮空龍頭盔": {
         "name": "浮空龍頭盔",
+        "type": "頭",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -10071,6 +10339,7 @@
     },
     "浮空龍鎧甲": {
         "name": "浮空龍鎧甲",
+        "type": "身",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -10099,6 +10368,7 @@
     },
     "浮空龍腕甲": {
         "name": "浮空龍腕甲",
+        "type": "手",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -10127,6 +10397,7 @@
     },
     "浮空龍腰甲": {
         "name": "浮空龍腰甲",
+        "type": "腰",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -10155,6 +10426,7 @@
     },
     "浮空龍護腿": {
         "name": "浮空龍護腿",
+        "type": "腿",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -10183,6 +10455,7 @@
     },
     "浮空龍頭盔α": {
         "name": "浮空龍頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10211,6 +10484,7 @@
     },
     "浮空龍鎧甲α": {
         "name": "浮空龍鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10243,6 +10517,7 @@
     },
     "浮空龍腕甲α": {
         "name": "浮空龍腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10271,6 +10546,7 @@
     },
     "浮空龍腰甲α": {
         "name": "浮空龍腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10299,6 +10575,7 @@
     },
     "浮空龍護腿α": {
         "name": "浮空龍護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10331,6 +10608,7 @@
     },
     "浮空龍頭盔β": {
         "name": "浮空龍頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10363,6 +10641,7 @@
     },
     "浮空龍鎧甲β": {
         "name": "浮空龍鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10395,6 +10674,7 @@
     },
     "浮空龍腕甲β": {
         "name": "浮空龍腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10427,6 +10707,7 @@
     },
     "浮空龍腰甲β": {
         "name": "浮空龍腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10459,6 +10740,7 @@
     },
     "浮空龍護腿β": {
         "name": "浮空龍護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10494,6 +10776,7 @@
     },
     "眩鳥頭盔": {
         "name": "眩鳥頭盔",
+        "type": "頭",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -10522,6 +10805,7 @@
     },
     "眩鳥鎧甲": {
         "name": "眩鳥鎧甲",
+        "type": "身",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -10550,6 +10834,7 @@
     },
     "眩鳥腕甲": {
         "name": "眩鳥腕甲",
+        "type": "手",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -10578,6 +10863,7 @@
     },
     "眩鳥腰甲": {
         "name": "眩鳥腰甲",
+        "type": "腰",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -10606,6 +10892,7 @@
     },
     "眩鳥護腿": {
         "name": "眩鳥護腿",
+        "type": "腿",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -10634,6 +10921,7 @@
     },
     "眩鳥頭盔α": {
         "name": "眩鳥頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10666,6 +10954,7 @@
     },
     "眩鳥鎧甲α": {
         "name": "眩鳥鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10698,6 +10987,7 @@
     },
     "眩鳥腕甲α": {
         "name": "眩鳥腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10730,6 +11020,7 @@
     },
     "眩鳥腰甲α": {
         "name": "眩鳥腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10762,6 +11053,7 @@
     },
     "眩鳥護腿α": {
         "name": "眩鳥護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10790,6 +11082,7 @@
     },
     "眩鳥頭盔β": {
         "name": "眩鳥頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10822,6 +11115,7 @@
     },
     "眩鳥鎧甲β": {
         "name": "眩鳥鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10857,6 +11151,7 @@
     },
     "眩鳥腕甲β": {
         "name": "眩鳥腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10889,6 +11184,7 @@
     },
     "眩鳥腰甲β": {
         "name": "眩鳥腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10921,6 +11217,7 @@
     },
     "眩鳥護腿β": {
         "name": "眩鳥護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -10953,6 +11250,7 @@
     },
     "骨鎚龍頭盔": {
         "name": "骨鎚龍頭盔",
+        "type": "頭",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -10981,6 +11279,7 @@
     },
     "骨鎚龍鎧甲": {
         "name": "骨鎚龍鎧甲",
+        "type": "身",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -11009,6 +11308,7 @@
     },
     "骨鎚龍腕甲": {
         "name": "骨鎚龍腕甲",
+        "type": "手",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -11037,6 +11337,7 @@
     },
     "骨鎚龍腰甲": {
         "name": "骨鎚龍腰甲",
+        "type": "腰",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -11065,6 +11366,7 @@
     },
     "骨鎚龍護腿": {
         "name": "骨鎚龍護腿",
+        "type": "腿",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -11093,6 +11395,7 @@
     },
     "骨鎚龍頭盔α": {
         "name": "骨鎚龍頭盔α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -11121,6 +11424,7 @@
     },
     "骨鎚龍鎧甲α": {
         "name": "骨鎚龍鎧甲α",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -11153,6 +11457,7 @@
     },
     "骨鎚龍腕甲α": {
         "name": "骨鎚龍腕甲α",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -11185,6 +11490,7 @@
     },
     "骨鎚龍腰甲α": {
         "name": "骨鎚龍腰甲α",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -11213,6 +11519,7 @@
     },
     "骨鎚龍護腿α": {
         "name": "骨鎚龍護腿α",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -11241,6 +11548,7 @@
     },
     "骨鎚龍頭盔β": {
         "name": "骨鎚龍頭盔β",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -11273,6 +11581,7 @@
     },
     "骨鎚龍鎧甲β": {
         "name": "骨鎚龍鎧甲β",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -11305,6 +11614,7 @@
     },
     "骨鎚龍腕甲β": {
         "name": "骨鎚龍腕甲β",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -11341,6 +11651,7 @@
     },
     "骨鎚龍腰甲β": {
         "name": "骨鎚龍腰甲β",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -11373,6 +11684,7 @@
     },
     "骨鎚龍護腿β": {
         "name": "骨鎚龍護腿β",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -11405,6 +11717,7 @@
     },
     "鬥技場頭盔": {
         "name": "鬥技場頭盔",
+        "type": "頭",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -11433,6 +11746,7 @@
     },
     "鬥技場鎧甲": {
         "name": "鬥技場鎧甲",
+        "type": "身",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -11461,6 +11775,7 @@
     },
     "鬥技場腕甲": {
         "name": "鬥技場腕甲",
+        "type": "手",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -11489,6 +11804,7 @@
     },
     "鬥技場腰甲": {
         "name": "鬥技場腰甲",
+        "type": "腰",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -11517,6 +11833,7 @@
     },
     "鬥技場護腿": {
         "name": "鬥技場護腿",
+        "type": "腿",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -11545,6 +11862,7 @@
     },
     "骨製頭盔": {
         "name": "骨製頭盔",
+        "type": "頭",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -11573,6 +11891,7 @@
     },
     "骨製鎧甲": {
         "name": "骨製鎧甲",
+        "type": "身",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -11601,6 +11920,7 @@
     },
     "骨製腕甲": {
         "name": "骨製腕甲",
+        "type": "手",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -11629,6 +11949,7 @@
     },
     "骨製腰甲": {
         "name": "骨製腰甲",
+        "type": "腰",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -11657,6 +11978,7 @@
     },
     "骨製護腿": {
         "name": "骨製護腿",
+        "type": "腿",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -11685,6 +12007,7 @@
     },
     "骨製頭盔α": {
         "name": "骨製頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -11717,6 +12040,7 @@
     },
     "骨製鎧甲α": {
         "name": "骨製鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -11745,6 +12069,7 @@
     },
     "骨製腕甲α": {
         "name": "骨製腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -11777,6 +12102,7 @@
     },
     "骨製腰甲α": {
         "name": "骨製腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -11809,6 +12135,7 @@
     },
     "骨製護腿α": {
         "name": "骨製護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -11837,6 +12164,7 @@
     },
     "骨製頭盔β": {
         "name": "骨製頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -11869,6 +12197,7 @@
     },
     "骨製鎧甲β": {
         "name": "骨製鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -11901,6 +12230,7 @@
     },
     "骨製腕甲β": {
         "name": "骨製腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -11933,6 +12263,7 @@
     },
     "骨製腰甲β": {
         "name": "骨製腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -11965,6 +12296,7 @@
     },
     "骨製護腿β": {
         "name": "骨製護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -11997,6 +12329,7 @@
     },
     "異種大型頭飾α": {
         "name": "異種大型頭飾α",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12038,6 +12371,7 @@
     },
     "異種大型皮α": {
         "name": "異種大型皮α",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12079,6 +12413,7 @@
     },
     "異種大型鋼爪α": {
         "name": "異種大型鋼爪α",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12120,6 +12455,7 @@
     },
     "異種大型脊椎α": {
         "name": "異種大型脊椎α",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12161,6 +12497,7 @@
     },
     "異種大型靴α": {
         "name": "異種大型靴α",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12202,6 +12539,7 @@
     },
     "異種大型頭飾β": {
         "name": "異種大型頭飾β",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12239,6 +12577,7 @@
     },
     "異種大型皮β": {
         "name": "異種大型皮β",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12279,6 +12618,7 @@
     },
     "異種大型鋼爪β": {
         "name": "異種大型鋼爪β",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12316,6 +12656,7 @@
     },
     "異種大型脊椎β": {
         "name": "異種大型脊椎β",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12356,6 +12697,7 @@
     },
     "異種大型靴β": {
         "name": "異種大型靴β",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12396,6 +12738,7 @@
     },
     "追尋者頭盔α": {
         "name": "追尋者頭盔α",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12437,6 +12780,7 @@
     },
     "追尋者鎧甲α": {
         "name": "追尋者鎧甲α",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12474,6 +12818,7 @@
     },
     "追尋者腕甲α": {
         "name": "追尋者腕甲α",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12515,6 +12860,7 @@
     },
     "追尋者腰甲α": {
         "name": "追尋者腰甲α",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12556,6 +12902,7 @@
     },
     "追尋者護腿α": {
         "name": "追尋者護腿α",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12593,6 +12940,7 @@
     },
     "追尋者頭盔β": {
         "name": "追尋者頭盔β",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12630,6 +12978,7 @@
     },
     "追尋者鎧甲β": {
         "name": "追尋者鎧甲β",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12667,6 +13016,7 @@
     },
     "追尋者腕甲β": {
         "name": "追尋者腕甲β",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12704,6 +13054,7 @@
     },
     "追尋者腰甲β": {
         "name": "追尋者腰甲β",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12741,6 +13092,7 @@
     },
     "追尋者護腿β": {
         "name": "追尋者護腿β",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -12778,6 +13130,7 @@
     },
     "鬥技場頭盔α": {
         "name": "鬥技場頭盔α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -12810,6 +13163,7 @@
     },
     "鬥技場鎧甲α": {
         "name": "鬥技場鎧甲α",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -12842,6 +13196,7 @@
     },
     "鬥技場腕甲α": {
         "name": "鬥技場腕甲α",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -12874,6 +13229,7 @@
     },
     "鬥技場腰甲α": {
         "name": "鬥技場腰甲α",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -12906,6 +13262,7 @@
     },
     "鬥技場護腿α": {
         "name": "鬥技場護腿α",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -12942,6 +13299,7 @@
     },
     "鬥技場頭盔β": {
         "name": "鬥技場頭盔β",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -12974,6 +13332,7 @@
     },
     "鬥技場鎧甲β": {
         "name": "鬥技場鎧甲β",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -13009,6 +13368,7 @@
     },
     "鬥技場腕甲β": {
         "name": "鬥技場腕甲β",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -13041,6 +13401,7 @@
     },
     "鬥技場腰甲β": {
         "name": "鬥技場腰甲β",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -13073,6 +13434,7 @@
     },
     "鬥技場護腿β": {
         "name": "鬥技場護腿β",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -13105,6 +13467,7 @@
     },
     "菌豬頭套頭": {
         "name": "菌豬頭套頭",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -13133,6 +13496,7 @@
     },
     "殘虐頭盔α": {
         "name": "殘虐頭盔α",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -13169,6 +13533,7 @@
     },
     "殘虐鎧甲α": {
         "name": "殘虐鎧甲α",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -13205,6 +13570,7 @@
     },
     "殘虐腕甲α": {
         "name": "殘虐腕甲α",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -13237,6 +13603,7 @@
     },
     "殘虐腰甲α": {
         "name": "殘虐腰甲α",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -13273,6 +13640,7 @@
     },
     "殘虐護腿α": {
         "name": "殘虐護腿α",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -13305,6 +13673,7 @@
     },
     "殘虐頭盔β": {
         "name": "殘虐頭盔β",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -13340,6 +13709,7 @@
     },
     "殘虐鎧甲β": {
         "name": "殘虐鎧甲β",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -13372,6 +13742,7 @@
     },
     "殘虐腕甲β": {
         "name": "殘虐腕甲β",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -13404,6 +13775,7 @@
     },
     "殘虐腰甲β": {
         "name": "殘虐腰甲β",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -13439,6 +13811,7 @@
     },
     "殘虐護腿β": {
         "name": "殘虐護腿β",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -13474,6 +13847,7 @@
     },
     "搔鳥頭盔": {
         "name": "搔鳥頭盔",
+        "type": "頭",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -13502,6 +13876,7 @@
     },
     "搔鳥鎧甲": {
         "name": "搔鳥鎧甲",
+        "type": "身",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -13530,6 +13905,7 @@
     },
     "搔鳥腕甲": {
         "name": "搔鳥腕甲",
+        "type": "手",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -13558,6 +13934,7 @@
     },
     "搔鳥腰甲": {
         "name": "搔鳥腰甲",
+        "type": "腰",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -13586,6 +13963,7 @@
     },
     "搔鳥護腿": {
         "name": "搔鳥護腿",
+        "type": "腿",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -13614,6 +13992,7 @@
     },
     "搔鳥頭盔α": {
         "name": "搔鳥頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -13646,6 +14025,7 @@
     },
     "搔鳥鎧甲α": {
         "name": "搔鳥鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -13678,6 +14058,7 @@
     },
     "搔鳥腕甲α": {
         "name": "搔鳥腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -13710,6 +14091,7 @@
     },
     "搔鳥腰甲α": {
         "name": "搔鳥腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -13738,6 +14120,7 @@
     },
     "搔鳥護腿α": {
         "name": "搔鳥護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -13770,6 +14153,7 @@
     },
     "搔鳥頭盔β": {
         "name": "搔鳥頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -13805,6 +14189,7 @@
     },
     "搔鳥鎧甲β": {
         "name": "搔鳥鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -13837,6 +14222,7 @@
     },
     "搔鳥腕甲β": {
         "name": "搔鳥腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -13869,6 +14255,7 @@
     },
     "搔鳥腰甲β": {
         "name": "搔鳥腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -13901,6 +14288,7 @@
     },
     "搔鳥護腿β": {
         "name": "搔鳥護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -13933,6 +14321,7 @@
     },
     "慘爪龍頭盔": {
         "name": "慘爪龍頭盔",
+        "type": "頭",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -13966,6 +14355,7 @@
     },
     "慘爪龍鎧甲": {
         "name": "慘爪龍鎧甲",
+        "type": "身",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -13999,6 +14389,7 @@
     },
     "慘爪龍腕甲": {
         "name": "慘爪龍腕甲",
+        "type": "手",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -14032,6 +14423,7 @@
     },
     "慘爪龍腰甲": {
         "name": "慘爪龍腰甲",
+        "type": "腰",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -14065,6 +14457,7 @@
     },
     "慘爪龍護腿": {
         "name": "慘爪龍護腿",
+        "type": "腿",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -14098,6 +14491,7 @@
     },
     "熔山龍頭盔α": {
         "name": "熔山龍頭盔α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14135,6 +14529,7 @@
     },
     "熔山龍鎧甲α": {
         "name": "熔山龍鎧甲α",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14172,6 +14567,7 @@
     },
     "熔山龍腕甲α": {
         "name": "熔山龍腕甲α",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14209,6 +14605,7 @@
     },
     "熔山龍腰甲α": {
         "name": "熔山龍腰甲α",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14246,6 +14643,7 @@
     },
     "熔山龍護腿α": {
         "name": "熔山龍護腿α",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14283,6 +14681,7 @@
     },
     "熔山龍頭盔β": {
         "name": "熔山龍頭盔β",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14320,6 +14719,7 @@
     },
     "熔山龍鎧甲β": {
         "name": "熔山龍鎧甲β",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14357,6 +14757,7 @@
     },
     "熔山龍腕甲β": {
         "name": "熔山龍腕甲β",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14394,6 +14795,7 @@
     },
     "熔山龍腰甲β": {
         "name": "熔山龍腰甲β",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14431,6 +14833,7 @@
     },
     "熔山龍護腿β": {
         "name": "熔山龍護腿β",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14468,6 +14871,7 @@
     },
     "雌火龍頭盔": {
         "name": "雌火龍頭盔",
+        "type": "頭",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -14496,6 +14900,7 @@
     },
     "雌火龍鎧甲": {
         "name": "雌火龍鎧甲",
+        "type": "身",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -14524,6 +14929,7 @@
     },
     "雌火龍腕甲": {
         "name": "雌火龍腕甲",
+        "type": "手",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -14552,6 +14958,7 @@
     },
     "雌火龍腰甲": {
         "name": "雌火龍腰甲",
+        "type": "腰",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -14580,6 +14987,7 @@
     },
     "雌火龍護腿": {
         "name": "雌火龍護腿",
+        "type": "腿",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -14608,6 +15016,7 @@
     },
     "雌火龍頭盔α": {
         "name": "雌火龍頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -14640,6 +15049,7 @@
     },
     "雌火龍鎧甲α": {
         "name": "雌火龍鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -14672,6 +15082,7 @@
     },
     "雌火龍腕甲α": {
         "name": "雌火龍腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -14700,6 +15111,7 @@
     },
     "雌火龍腰甲α": {
         "name": "雌火龍腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -14732,6 +15144,7 @@
     },
     "雌火龍護腿α": {
         "name": "雌火龍護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -14760,6 +15173,7 @@
     },
     "雌火龍頭盔β": {
         "name": "雌火龍頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -14796,6 +15210,7 @@
     },
     "雌火龍鎧甲β": {
         "name": "雌火龍鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -14832,6 +15247,7 @@
     },
     "雌火龍腕甲β": {
         "name": "雌火龍腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -14864,6 +15280,7 @@
     },
     "雌火龍腰甲β": {
         "name": "雌火龍腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -14900,6 +15317,7 @@
     },
     "雌火龍護腿β": {
         "name": "雌火龍護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -14932,6 +15350,7 @@
     },
     "熔岩龍頭盔α": {
         "name": "熔岩龍頭盔α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14964,6 +15383,7 @@
     },
     "熔岩龍鎧甲α": {
         "name": "熔岩龍鎧甲α",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -14996,6 +15416,7 @@
     },
     "熔岩龍腕甲α": {
         "name": "熔岩龍腕甲α",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15032,6 +15453,7 @@
     },
     "熔岩龍腰甲α": {
         "name": "熔岩龍腰甲α",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15064,6 +15486,7 @@
     },
     "熔岩龍護腿α": {
         "name": "熔岩龍護腿α",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15100,6 +15523,7 @@
     },
     "熔岩龍頭盔β": {
         "name": "熔岩龍頭盔β",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15139,6 +15563,7 @@
     },
     "熔岩龍鎧甲β": {
         "name": "熔岩龍鎧甲β",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15174,6 +15599,7 @@
     },
     "熔岩龍腕甲β": {
         "name": "熔岩龍腕甲β",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15206,6 +15632,7 @@
     },
     "熔岩龍腰甲β": {
         "name": "熔岩龍腰甲β",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15238,6 +15665,7 @@
     },
     "熔岩龍護腿β": {
         "name": "熔岩龍護腿β",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15270,6 +15698,7 @@
     },
     "慘爪龍頭盔α": {
         "name": "慘爪龍頭盔α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15311,6 +15740,7 @@
     },
     "慘爪龍鎧甲α": {
         "name": "慘爪龍鎧甲α",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15352,6 +15782,7 @@
     },
     "慘爪龍腕甲α": {
         "name": "慘爪龍腕甲α",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15393,6 +15824,7 @@
     },
     "慘爪龍腰甲α": {
         "name": "慘爪龍腰甲α",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15434,6 +15866,7 @@
     },
     "慘爪龍護腿α": {
         "name": "慘爪龍護腿α",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15475,6 +15908,7 @@
     },
     "慘爪龍頭盔β": {
         "name": "慘爪龍頭盔β",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15516,6 +15950,7 @@
     },
     "慘爪龍鎧甲β": {
         "name": "慘爪龍鎧甲β",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15557,6 +15992,7 @@
     },
     "慘爪龍腕甲β": {
         "name": "慘爪龍腕甲β",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15598,6 +16034,7 @@
     },
     "慘爪龍腰甲β": {
         "name": "慘爪龍腰甲β",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15639,6 +16076,7 @@
     },
     "慘爪龍護腿β": {
         "name": "慘爪龍護腿β",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -15680,6 +16118,7 @@
     },
     "酸翼龍斗篷α": {
         "name": "酸翼龍斗篷α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -15712,6 +16151,7 @@
     },
     "酸翼龍斗篷β": {
         "name": "酸翼龍斗篷β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -15744,6 +16184,7 @@
     },
     "骷髏面罩α": {
         "name": "骷髏面罩α",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -15776,6 +16217,7 @@
     },
     "暴君角龍頭盔α": {
         "name": "暴君角龍頭盔α",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -15817,6 +16259,7 @@
     },
     "暴君角龍鎧甲α": {
         "name": "暴君角龍鎧甲α",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -15858,6 +16301,7 @@
     },
     "暴君角龍腕甲α": {
         "name": "暴君角龍腕甲α",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -15899,6 +16343,7 @@
     },
     "暴君角龍腰甲α": {
         "name": "暴君角龍腰甲α",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -15940,6 +16385,7 @@
     },
     "暴君角龍護腿α": {
         "name": "暴君角龍護腿α",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -15985,6 +16431,7 @@
     },
     "暴君角龍頭盔β": {
         "name": "暴君角龍頭盔β",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -16026,6 +16473,7 @@
     },
     "暴君角龍鎧甲β": {
         "name": "暴君角龍鎧甲β",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -16070,6 +16518,7 @@
     },
     "暴君角龍腕甲β": {
         "name": "暴君角龍腕甲β",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -16114,6 +16563,7 @@
     },
     "暴君角龍腰甲β": {
         "name": "暴君角龍腰甲β",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -16155,6 +16605,7 @@
     },
     "暴君角龍護腿β": {
         "name": "暴君角龍護腿β",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -16196,6 +16647,7 @@
     },
     "墨鏡α": {
         "name": "墨鏡α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -16234,6 +16686,7 @@
     },
     "獨角仙護頭": {
         "name": "獨角仙護頭",
+        "type": "頭",
         "rare": 3,
         "gender": "male",
         "defense": {
@@ -16262,6 +16715,7 @@
     },
     "獨角仙上身": {
         "name": "獨角仙上身",
+        "type": "身",
         "rare": 3,
         "gender": "male",
         "defense": {
@@ -16290,6 +16744,7 @@
     },
     "獨角仙護袖": {
         "name": "獨角仙護袖",
+        "type": "手",
         "rare": 3,
         "gender": "male",
         "defense": {
@@ -16318,6 +16773,7 @@
     },
     "獨角仙護腰具": {
         "name": "獨角仙護腰具",
+        "type": "腰",
         "rare": 3,
         "gender": "male",
         "defense": {
@@ -16346,6 +16802,7 @@
     },
     "獨角仙腳": {
         "name": "獨角仙腳",
+        "type": "腿",
         "rare": 3,
         "gender": "male",
         "defense": {
@@ -16374,6 +16831,7 @@
     },
     "獨角仙護頭α": {
         "name": "獨角仙護頭α",
+        "type": "頭",
         "rare": 5,
         "gender": "male",
         "defense": {
@@ -16406,6 +16864,7 @@
     },
     "獨角仙上身α": {
         "name": "獨角仙上身α",
+        "type": "身",
         "rare": 5,
         "gender": "male",
         "defense": {
@@ -16438,6 +16897,7 @@
     },
     "獨角仙護袖α": {
         "name": "獨角仙護袖α",
+        "type": "手",
         "rare": 5,
         "gender": "male",
         "defense": {
@@ -16474,6 +16934,7 @@
     },
     "獨角仙護腰具α": {
         "name": "獨角仙護腰具α",
+        "type": "腰",
         "rare": 5,
         "gender": "male",
         "defense": {
@@ -16510,6 +16971,7 @@
     },
     "獨角仙腳α": {
         "name": "獨角仙腳α",
+        "type": "腿",
         "rare": 5,
         "gender": "male",
         "defense": {
@@ -16546,6 +17008,7 @@
     },
     "獨角仙護頭β": {
         "name": "獨角仙護頭β",
+        "type": "頭",
         "rare": 5,
         "gender": "male",
         "defense": {
@@ -16578,6 +17041,7 @@
     },
     "獨角仙上身β": {
         "name": "獨角仙上身β",
+        "type": "身",
         "rare": 5,
         "gender": "male",
         "defense": {
@@ -16610,6 +17074,7 @@
     },
     "獨角仙護袖β": {
         "name": "獨角仙護袖β",
+        "type": "手",
         "rare": 5,
         "gender": "male",
         "defense": {
@@ -16645,6 +17110,7 @@
     },
     "獨角仙護腰具β": {
         "name": "獨角仙護腰具β",
+        "type": "腰",
         "rare": 5,
         "gender": "male",
         "defense": {
@@ -16680,6 +17146,7 @@
     },
     "獨角仙腳β": {
         "name": "獨角仙腳β",
+        "type": "腿",
         "rare": 5,
         "gender": "male",
         "defense": {
@@ -16715,6 +17182,7 @@
     },
     "貓蜥龍護目鏡": {
         "name": "貓蜥龍護目鏡",
+        "type": "頭",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -16743,6 +17211,7 @@
     },
     "貓蜥龍護目鏡α": {
         "name": "貓蜥龍護目鏡α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -16775,6 +17244,7 @@
     },
     "貓蜥龍護目鏡β": {
         "name": "貓蜥龍護目鏡β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -16807,6 +17277,7 @@
     },
     "燕尾蝶護頭": {
         "name": "燕尾蝶護頭",
+        "type": "頭",
         "rare": 3,
         "gender": "female",
         "defense": {
@@ -16835,6 +17306,7 @@
     },
     "燕尾蝶上身": {
         "name": "燕尾蝶上身",
+        "type": "身",
         "rare": 3,
         "gender": "female",
         "defense": {
@@ -16863,6 +17335,7 @@
     },
     "燕尾蝶護袖": {
         "name": "燕尾蝶護袖",
+        "type": "手",
         "rare": 3,
         "gender": "female",
         "defense": {
@@ -16891,6 +17364,7 @@
     },
     "燕尾蝶護腰具": {
         "name": "燕尾蝶護腰具",
+        "type": "腰",
         "rare": 3,
         "gender": "female",
         "defense": {
@@ -16919,6 +17393,7 @@
     },
     "燕尾蝶腳": {
         "name": "燕尾蝶腳",
+        "type": "腿",
         "rare": 3,
         "gender": "female",
         "defense": {
@@ -16947,6 +17422,7 @@
     },
     "燕尾蝶護頭α": {
         "name": "燕尾蝶護頭α",
+        "type": "頭",
         "rare": 5,
         "gender": "female",
         "defense": {
@@ -16979,6 +17455,7 @@
     },
     "燕尾蝶上身α": {
         "name": "燕尾蝶上身α",
+        "type": "身",
         "rare": 5,
         "gender": "female",
         "defense": {
@@ -17011,6 +17488,7 @@
     },
     "燕尾蝶護袖α": {
         "name": "燕尾蝶護袖α",
+        "type": "手",
         "rare": 5,
         "gender": "female",
         "defense": {
@@ -17047,6 +17525,7 @@
     },
     "燕尾蝶護腰具α": {
         "name": "燕尾蝶護腰具α",
+        "type": "腰",
         "rare": 5,
         "gender": "female",
         "defense": {
@@ -17083,6 +17562,7 @@
     },
     "燕尾蝶腳α": {
         "name": "燕尾蝶腳α",
+        "type": "腿",
         "rare": 5,
         "gender": "female",
         "defense": {
@@ -17119,6 +17599,7 @@
     },
     "燕尾蝶護頭β": {
         "name": "燕尾蝶護頭β",
+        "type": "頭",
         "rare": 5,
         "gender": "female",
         "defense": {
@@ -17151,6 +17632,7 @@
     },
     "燕尾蝶上身β": {
         "name": "燕尾蝶上身β",
+        "type": "身",
         "rare": 5,
         "gender": "female",
         "defense": {
@@ -17183,6 +17665,7 @@
     },
     "燕尾蝶護袖β": {
         "name": "燕尾蝶護袖β",
+        "type": "手",
         "rare": 5,
         "gender": "female",
         "defense": {
@@ -17218,6 +17701,7 @@
     },
     "燕尾蝶護腰具β": {
         "name": "燕尾蝶護腰具β",
+        "type": "腰",
         "rare": 5,
         "gender": "female",
         "defense": {
@@ -17253,6 +17737,7 @@
     },
     "燕尾蝶腳β": {
         "name": "燕尾蝶腳β",
+        "type": "腿",
         "rare": 5,
         "gender": "female",
         "defense": {
@@ -17288,6 +17773,7 @@
     },
     "戰紋頭盔α": {
         "name": "戰紋頭盔α",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17329,6 +17815,7 @@
     },
     "戰紋鎧甲α": {
         "name": "戰紋鎧甲α",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17370,6 +17857,7 @@
     },
     "戰紋腕甲α": {
         "name": "戰紋腕甲α",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17407,6 +17895,7 @@
     },
     "戰紋腰甲α": {
         "name": "戰紋腰甲α",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17444,6 +17933,7 @@
     },
     "戰紋護腿α": {
         "name": "戰紋護腿α",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17485,6 +17975,7 @@
     },
     "戰紋頭盔β": {
         "name": "戰紋頭盔β",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17525,6 +18016,7 @@
     },
     "戰紋鎧甲β": {
         "name": "戰紋鎧甲β",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17565,6 +18057,7 @@
     },
     "戰紋腕甲β": {
         "name": "戰紋腕甲β",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17602,6 +18095,7 @@
     },
     "戰紋腰甲β": {
         "name": "戰紋腰甲β",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17639,6 +18133,7 @@
     },
     "戰紋護腿β": {
         "name": "戰紋護腿β",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17674,8 +18169,9 @@
         },
         "price": 16000
     },
-    "鋼龍α頭": {
-        "name": "鋼龍α頭",
+    "鋼龍頭α": {
+        "name": "鋼龍頭α",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17711,8 +18207,9 @@
         },
         "price": 16000
     },
-    "鋼龍α身": {
-        "name": "鋼龍α身",
+    "鋼龍身α": {
+        "name": "鋼龍身α",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17748,8 +18245,9 @@
         },
         "price": 16000
     },
-    "鋼龍α手": {
-        "name": "鋼龍α手",
+    "鋼龍手α": {
+        "name": "鋼龍手α",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17785,8 +18283,9 @@
         },
         "price": 16000
     },
-    "鋼龍α腰": {
-        "name": "鋼龍α腰",
+    "鋼龍腰α": {
+        "name": "鋼龍腰α",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17822,8 +18321,9 @@
         },
         "price": 16000
     },
-    "鋼龍α腳": {
-        "name": "鋼龍α腳",
+    "鋼龍腳α": {
+        "name": "鋼龍腳α",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17859,8 +18359,9 @@
         },
         "price": 16000
     },
-    "鋼龍β頭": {
-        "name": "鋼龍β頭",
+    "鋼龍頭β": {
+        "name": "鋼龍頭β",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17902,8 +18403,9 @@
         },
         "price": 16000
     },
-    "鋼龍β身": {
-        "name": "鋼龍β身",
+    "鋼龍身β": {
+        "name": "鋼龍身β",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17939,8 +18441,9 @@
         },
         "price": 16000
     },
-    "鋼龍β手": {
-        "name": "鋼龍β手",
+    "鋼龍手β": {
+        "name": "鋼龍手β",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -17976,8 +18479,9 @@
         },
         "price": 16000
     },
-    "鋼龍β腰": {
-        "name": "鋼龍β腰",
+    "鋼龍腰β": {
+        "name": "鋼龍腰β",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -18016,8 +18520,9 @@
         },
         "price": 16000
     },
-    "鋼龍β腳": {
-        "name": "鋼龍β腳",
+    "鋼龍腳β": {
+        "name": "鋼龍腳β",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -18055,6 +18560,7 @@
     },
     "龍王的獨眼α": {
         "name": "龍王的獨眼α",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -18087,6 +18593,7 @@
     },
     "龍封的耳環α": {
         "name": "龍封的耳環α",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -18122,6 +18629,7 @@
     },
     "鎖甲頭盔": {
         "name": "鎖甲頭盔",
+        "type": "頭",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -18150,6 +18658,7 @@
     },
     "鎖甲鎧甲": {
         "name": "鎖甲鎧甲",
+        "type": "身",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -18173,6 +18682,7 @@
     },
     "鎖甲腕甲": {
         "name": "鎖甲腕甲",
+        "type": "手",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -18196,6 +18706,7 @@
     },
     "鎖甲腰甲": {
         "name": "鎖甲腰甲",
+        "type": "腰",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -18219,6 +18730,7 @@
     },
     "鎖甲護腿": {
         "name": "鎖甲護腿",
+        "type": "腿",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -18242,6 +18754,7 @@
     },
     "鎖甲頭盔α": {
         "name": "鎖甲頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18274,6 +18787,7 @@
     },
     "鎖甲鎧甲α": {
         "name": "鎖甲鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18302,6 +18816,7 @@
     },
     "鎖甲腕甲α": {
         "name": "鎖甲腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18330,6 +18845,7 @@
     },
     "鎖甲腰甲α": {
         "name": "鎖甲腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18358,6 +18874,7 @@
     },
     "鎖甲護腿α": {
         "name": "鎖甲護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18386,6 +18903,7 @@
     },
     "鎖甲頭盔β": {
         "name": "鎖甲頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18418,6 +18936,7 @@
     },
     "鎖甲鎧甲β": {
         "name": "鎖甲鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18445,6 +18964,7 @@
     },
     "鎖甲腕甲β": {
         "name": "鎖甲腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18472,6 +18992,7 @@
     },
     "鎖甲腰甲β": {
         "name": "鎖甲腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18499,6 +19020,7 @@
     },
     "鎖甲護腿β": {
         "name": "鎖甲護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18526,6 +19048,7 @@
     },
     "獵人頭盔": {
         "name": "獵人頭盔",
+        "type": "頭",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -18554,6 +19077,7 @@
     },
     "獵人鎧甲": {
         "name": "獵人鎧甲",
+        "type": "身",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -18582,6 +19106,7 @@
     },
     "獵人腕甲": {
         "name": "獵人腕甲",
+        "type": "手",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -18610,6 +19135,7 @@
     },
     "獵人腰甲": {
         "name": "獵人腰甲",
+        "type": "腰",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -18638,6 +19164,7 @@
     },
     "獵人護腿": {
         "name": "獵人護腿",
+        "type": "腿",
         "rare": 1,
         "gender": "general",
         "defense": {
@@ -18666,6 +19193,7 @@
     },
     "獵人頭盔α": {
         "name": "獵人頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18698,6 +19226,7 @@
     },
     "獵人鎧甲α": {
         "name": "獵人鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18726,6 +19255,7 @@
     },
     "獵人腕甲α": {
         "name": "獵人腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18754,6 +19284,7 @@
     },
     "獵人腰甲α": {
         "name": "獵人腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18786,6 +19317,7 @@
     },
     "獵人護腿α": {
         "name": "獵人護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18818,6 +19350,7 @@
     },
     "獵人頭盔β": {
         "name": "獵人頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18850,6 +19383,7 @@
     },
     "獵人鎧甲β": {
         "name": "獵人鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18882,6 +19416,7 @@
     },
     "獵人腕甲β": {
         "name": "獵人腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18914,6 +19449,7 @@
     },
     "獵人腰甲β": {
         "name": "獵人腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18946,6 +19482,7 @@
     },
     "獵人護腿β": {
         "name": "獵人護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -18978,6 +19515,7 @@
     },
     "麒麟角": {
         "name": "麒麟角",
+        "type": "頭",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -19011,6 +19549,7 @@
     },
     "麒麟服飾": {
         "name": "麒麟服飾",
+        "type": "身",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -19044,6 +19583,7 @@
     },
     "麒麟長腕甲": {
         "name": "麒麟長腕甲",
+        "type": "手",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -19077,6 +19617,7 @@
     },
     "麒麟腰環": {
         "name": "麒麟腰環",
+        "type": "腰",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -19110,6 +19651,7 @@
     },
     "麒麟護脛": {
         "name": "麒麟護脛",
+        "type": "腿",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -19143,6 +19685,7 @@
     },
     "爆鎚龍頭盔α": {
         "name": "爆鎚龍頭盔α",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19180,6 +19723,7 @@
     },
     "爆鎚龍鎧甲α": {
         "name": "爆鎚龍鎧甲α",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19217,6 +19761,7 @@
     },
     "爆鎚龍腕甲α": {
         "name": "爆鎚龍腕甲α",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19258,6 +19803,7 @@
     },
     "爆鎚龍腰甲α": {
         "name": "爆鎚龍腰甲α",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19302,6 +19848,7 @@
     },
     "爆鎚龍護腿α": {
         "name": "爆鎚龍護腿α",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19339,6 +19886,7 @@
     },
     "爆鎚龍頭盔β": {
         "name": "爆鎚龍頭盔β",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19379,6 +19927,7 @@
     },
     "爆鎚龍鎧甲β": {
         "name": "爆鎚龍鎧甲β",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19416,6 +19965,7 @@
     },
     "爆鎚龍腕甲β": {
         "name": "爆鎚龍腕甲β",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19453,6 +20003,7 @@
     },
     "爆鎚龍腰甲β": {
         "name": "爆鎚龍腰甲β",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19493,6 +20044,7 @@
     },
     "爆鎚龍護腿β": {
         "name": "爆鎚龍護腿β",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19530,6 +20082,7 @@
     },
     "麒麟角α": {
         "name": "麒麟角α",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -19567,6 +20120,7 @@
     },
     "麒麟服飾α": {
         "name": "麒麟服飾α",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -19604,6 +20158,7 @@
     },
     "麒麟長腕甲α": {
         "name": "麒麟長腕甲α",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -19641,6 +20196,7 @@
     },
     "麒麟腰環α": {
         "name": "麒麟腰環α",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -19678,6 +20234,7 @@
     },
     "麒麟護脛α": {
         "name": "麒麟護脛α",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -19715,6 +20272,7 @@
     },
     "麒麟角β": {
         "name": "麒麟角β",
+        "type": "頭",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -19752,6 +20310,7 @@
     },
     "麒麟服飾β": {
         "name": "麒麟服飾β",
+        "type": "身",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -19789,6 +20348,7 @@
     },
     "麒麟長腕甲β": {
         "name": "麒麟長腕甲β",
+        "type": "手",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -19829,6 +20389,7 @@
     },
     "麒麟腰環β": {
         "name": "麒麟腰環β",
+        "type": "腰",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -19872,6 +20433,7 @@
     },
     "麒麟護脛β": {
         "name": "麒麟護脛β",
+        "type": "腿",
         "rare": 8,
         "gender": "general",
         "defense": {
@@ -19912,6 +20474,7 @@
     },
     "爆鱗龍頭盔α": {
         "name": "爆鱗龍頭盔α",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19953,6 +20516,7 @@
     },
     "爆鱗龍鎧甲α": {
         "name": "爆鱗龍鎧甲α",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -19990,6 +20554,7 @@
     },
     "爆鱗龍腕甲α": {
         "name": "爆鱗龍腕甲α",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -20027,6 +20592,7 @@
     },
     "爆鱗龍腰甲α": {
         "name": "爆鱗龍腰甲α",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -20068,6 +20634,7 @@
     },
     "爆鱗龍護腿α": {
         "name": "爆鱗龍護腿α",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -20109,6 +20676,7 @@
     },
     "爆鱗龍頭盔β": {
         "name": "爆鱗龍頭盔β",
+        "type": "頭",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -20149,6 +20717,7 @@
     },
     "爆鱗龍鎧甲β": {
         "name": "爆鱗龍鎧甲β",
+        "type": "身",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -20189,6 +20758,7 @@
     },
     "爆鱗龍腕甲β": {
         "name": "爆鱗龍腕甲β",
+        "type": "手",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -20226,6 +20796,7 @@
     },
     "爆鱗龍腰甲β": {
         "name": "爆鱗龍腰甲β",
+        "type": "腰",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -20263,6 +20834,7 @@
     },
     "爆鱗龍護腿β": {
         "name": "爆鱗龍護腿β",
+        "type": "腿",
         "rare": 7,
         "gender": "general",
         "defense": {
@@ -20300,6 +20872,7 @@
     },
     "爆碎的羽飾": {
         "name": "爆碎的羽飾",
+        "type": "頭",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -20328,6 +20901,7 @@
     },
     "礦石頭盔": {
         "name": "礦石頭盔",
+        "type": "頭",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -20356,6 +20930,7 @@
     },
     "礦石鎧甲": {
         "name": "礦石鎧甲",
+        "type": "身",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -20384,6 +20959,7 @@
     },
     "礦石腕甲": {
         "name": "礦石腕甲",
+        "type": "手",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -20412,6 +20988,7 @@
     },
     "礦石腰甲": {
         "name": "礦石腰甲",
+        "type": "腰",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -20440,6 +21017,7 @@
     },
     "礦石護腿": {
         "name": "礦石護腿",
+        "type": "腿",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -20468,6 +21046,7 @@
     },
     "礦石頭盔α": {
         "name": "礦石頭盔α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20500,6 +21079,7 @@
     },
     "礦石鎧甲α": {
         "name": "礦石鎧甲α",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20532,6 +21112,7 @@
     },
     "礦石腕甲α": {
         "name": "礦石腕甲α",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20564,6 +21145,7 @@
     },
     "礦石腰甲α": {
         "name": "礦石腰甲α",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20596,6 +21178,7 @@
     },
     "礦石護腿α": {
         "name": "礦石護腿α",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20628,6 +21211,7 @@
     },
     "礦石頭盔β": {
         "name": "礦石頭盔β",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20660,6 +21244,7 @@
     },
     "礦石鎧甲β": {
         "name": "礦石鎧甲β",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20696,6 +21281,7 @@
     },
     "礦石腕甲β": {
         "name": "礦石腕甲β",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20728,6 +21314,7 @@
     },
     "礦石腰甲β": {
         "name": "礦石腰甲β",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20760,6 +21347,7 @@
     },
     "礦石護腿β": {
         "name": "礦石護腿β",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20792,6 +21380,7 @@
     },
     "鑄鐵頭盔": {
         "name": "鑄鐵頭盔",
+        "type": "頭",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -20820,6 +21409,7 @@
     },
     "鑄鐵鎧甲": {
         "name": "鑄鐵鎧甲",
+        "type": "身",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -20848,6 +21438,7 @@
     },
     "鑄鐵腕甲": {
         "name": "鑄鐵腕甲",
+        "type": "手",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -20876,6 +21467,7 @@
     },
     "鑄鐵腰甲": {
         "name": "鑄鐵腰甲",
+        "type": "腰",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -20904,6 +21496,7 @@
     },
     "鑄鐵護腿": {
         "name": "鑄鐵護腿",
+        "type": "腿",
         "rare": 4,
         "gender": "general",
         "defense": {
@@ -20932,6 +21525,7 @@
     },
     "鑄鐵頭盔β": {
         "name": "鑄鐵頭盔β",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20964,6 +21558,7 @@
     },
     "鑄鐵鎧甲β": {
         "name": "鑄鐵鎧甲β",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -20996,6 +21591,7 @@
     },
     "鑄鐵腕甲β": {
         "name": "鑄鐵腕甲β",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -21028,6 +21624,7 @@
     },
     "鑄鐵腰甲β": {
         "name": "鑄鐵腰甲β",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -21060,6 +21657,7 @@
     },
     "鑄鐵護腿β": {
         "name": "鑄鐵護腿β",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -21092,6 +21690,7 @@
     },
     "鑄鐵頭盔α": {
         "name": "鑄鐵頭盔α",
+        "type": "頭",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -21120,6 +21719,7 @@
     },
     "鑄鐵鎧甲α": {
         "name": "鑄鐵鎧甲α",
+        "type": "身",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -21148,6 +21748,7 @@
     },
     "鑄鐵腕甲α": {
         "name": "鑄鐵腕甲α",
+        "type": "手",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -21180,6 +21781,7 @@
     },
     "鑄鐵腰甲α": {
         "name": "鑄鐵腰甲α",
+        "type": "腰",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -21208,6 +21810,7 @@
     },
     "鑄鐵護腿α": {
         "name": "鑄鐵護腿α",
+        "type": "腿",
         "rare": 6,
         "gender": "general",
         "defense": {
@@ -21240,6 +21843,7 @@
     },
     "蠻顎龍頭盔": {
         "name": "蠻顎龍頭盔",
+        "type": "頭",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -21273,6 +21877,7 @@
     },
     "蠻顎龍鎧甲": {
         "name": "蠻顎龍鎧甲",
+        "type": "身",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -21306,6 +21911,7 @@
     },
     "蠻顎龍腕甲": {
         "name": "蠻顎龍腕甲",
+        "type": "手",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -21339,6 +21945,7 @@
     },
     "蠻顎龍腰甲": {
         "name": "蠻顎龍腰甲",
+        "type": "腰",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -21372,6 +21979,7 @@
     },
     "蠻顎龍護腿": {
         "name": "蠻顎龍護腿",
+        "type": "腿",
         "rare": 3,
         "gender": "general",
         "defense": {
@@ -21405,6 +22013,7 @@
     },
     "蠻顎龍頭盔α": {
         "name": "蠻顎龍頭盔α",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -21446,6 +22055,7 @@
     },
     "蠻顎龍鎧甲α": {
         "name": "蠻顎龍鎧甲α",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -21487,6 +22097,7 @@
     },
     "蠻顎龍腕甲α": {
         "name": "蠻顎龍腕甲α",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -21528,6 +22139,7 @@
     },
     "蠻顎龍腰甲α": {
         "name": "蠻顎龍腰甲α",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -21569,6 +22181,7 @@
     },
     "蠻顎龍護腿α": {
         "name": "蠻顎龍護腿α",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -21606,6 +22219,7 @@
     },
     "蠻顎龍頭盔β": {
         "name": "蠻顎龍頭盔β",
+        "type": "頭",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -21647,6 +22261,7 @@
     },
     "蠻顎龍鎧甲β": {
         "name": "蠻顎龍鎧甲β",
+        "type": "身",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -21691,6 +22306,7 @@
     },
     "蠻顎龍腕甲β": {
         "name": "蠻顎龍腕甲β",
+        "type": "手",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -21732,6 +22348,7 @@
     },
     "蠻顎龍腰甲β": {
         "name": "蠻顎龍腰甲β",
+        "type": "腰",
         "rare": 5,
         "gender": "general",
         "defense": {
@@ -21773,6 +22390,7 @@
     },
     "蠻顎龍護腿β": {
         "name": "蠻顎龍護腿β",
+        "type": "腿",
         "rare": 5,
         "gender": "general",
         "defense": {
