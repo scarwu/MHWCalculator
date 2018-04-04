@@ -37,3 +37,5 @@ gulp release # and commit to github
 * https://www.mhchinese.wiki
 * https://game8.jp/mhw
 * http://mhw.wiki-db.com
+* https://game.capcom.com/manual/MHW/ps4
+* https://monsterhunterworld.wiki.fextralife.com
