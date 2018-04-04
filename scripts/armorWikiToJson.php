@@ -69,7 +69,7 @@ $genderMapping = [
 ];
 
 foreach ($mainDom->find('a.tip') as $item) {
-    echo "{$item->plaintext}: {$item->href}\n";
+    echo "{$item->plaintext}: {$host}{$item->href}\n";
 
     $url = "{$host}{$item->href}";
     $subDom = parseHTML(getHTML($url));
@@ -119,7 +119,7 @@ foreach ($mainDom->find('a.tip') as $item) {
                         'gender' => null,
                         'defense' => [
                             'min' => 0,
-                            'min' => 0
+                            'max' => 0
                         ],
                         'resistance' => [
                             'fire' => 0,
