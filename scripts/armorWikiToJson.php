@@ -73,9 +73,10 @@ foreach ($mainDom->find('a.tip') as $item) {
 
     $url = "{$host}{$item->href}";
     $subDom = parseHTML(getHTML($url));
-    $equips = [];
-
     $tableCount = count($subDom->find('.simple-table'));
+
+    $equips = [];
+    $set = null;
 
     foreach ($subDom->find('.simple-table') as $tableIndex => $table) {
         if (0 === $tableIndex) {
@@ -111,8 +112,8 @@ foreach ($mainDom->find('a.tip') as $item) {
                     continue;
                 }
 
-                if (!isset($equiqs[$name])) {
-                    $equiqs[$name] = [
+                if (!isset($equips[$name])) {
+                    $equips[$name] = [
                         'name' => null,
                         'rare' => 0,
                         'gender' => null,
@@ -120,7 +121,7 @@ foreach ($mainDom->find('a.tip') as $item) {
                             'min' => 0,
                             'min' => 0
                         ],
-                        'resistence' => [
+                        'resistance' => [
                             'fire' => 0,
                             'water' => 0,
                             'thunder' => 0,
@@ -129,20 +130,53 @@ foreach ($mainDom->find('a.tip') as $item) {
                         ],
                         'slots' => [],
                         'skills' => [],
+                        'set' => [
+                            'name' => null,
+                            'skills' => []
+                        ],
                         'price' => 0
                     ];
                 }
 
-                $equiqs[$name]['name'] = $name;
-                $equiqs[$name]['rare'] = (int) $rare;
-                $equiqs[$name]['gender'] = $gender;
-                $equiqs[$name]['defense']['min'] = (int) $minDef;
-                $equiqs[$name]['defense']['max'] = (int) $maxDef;
-                $equiqs[$name]['resistence']['fire'] = (int) $fireResist;
-                $equiqs[$name]['resistence']['water'] = (int) $waterResist;
-                $equiqs[$name]['resistence']['thunder'] = (int) $thunderResist;
-                $equiqs[$name]['resistence']['ice'] = (int) $iceResist;
-                $equiqs[$name]['resistence']['dragon'] = (int) $dragonResist;
+                $equips[$name]['name'] = $name;
+                $equips[$name]['rare'] = (int) $rare;
+                $equips[$name]['gender'] = $gender;
+                $equips[$name]['defense']['min'] = (int) $minDef;
+                $equips[$name]['defense']['max'] = (int) $maxDef;
+                $equips[$name]['resistance']['fire'] = (int) $fireResist;
+                $equips[$name]['resistance']['water'] = (int) $waterResist;
+                $equips[$name]['resistance']['thunder'] = (int) $thunderResist;
+                $equips[$name]['resistance']['ice'] = (int) $iceResist;
+                $equips[$name]['resistance']['dragon'] = (int) $dragonResist;
+            }
+        }
+
+        if (6 === $tableCount && 2 === $tableIndex) {
+            $set = [
+                'name' => null,
+                'skills' => []
+            ];
+
+            foreach ($table->find('tr') as $rowIndex => $row) {
+                if (0 === $rowIndex) {
+                    continue;
+                }
+
+                if (1 === $rowIndex) {
+                    $name = trim($row->find('td', 0)->plaintext);
+
+                    $set['name'] = $name;
+
+                    continue;
+                } else {
+                    $skillKey = trim($row->find('td', 0)->plaintext);
+                    $require = trim($row->find('td', 1)->plaintext);
+
+                    $set['skills'][] = [
+                        'key' => $skillKey,
+                        'require' => (int) $require
+                    ];
+                }
             }
         }
 
@@ -168,19 +202,19 @@ foreach ($mainDom->find('a.tip') as $item) {
                     }
 
                     if ('①' === $slot) {
-                        $equiqs[$name]['slots'][] = [
+                        $equips[$name]['slots'][] = [
                             'size' => 1
                         ];
                     }
 
                     if ('②' === $slot) {
-                        $equiqs[$name]['slots'][] = [
+                        $equips[$name]['slots'][] = [
                             'size' => 2
                         ];
                     }
 
                     if ('③' === $slot) {
-                        $equiqs[$name]['slots'][] = [
+                        $equips[$name]['slots'][] = [
                             'size' => 3
                         ];
                     }
@@ -190,7 +224,7 @@ foreach ($mainDom->find('a.tip') as $item) {
                     foreach (explode(' ', $skills) as $skill) {
                         list($skillKey, $skillLevel) = explode('+', $skill);
 
-                        $equiqs[$name]['skills'][] = [
+                        $equips[$name]['skills'][] = [
                             'key' => $skillKey,
                             'level' => (int) $skillLevel
                         ];
@@ -230,7 +264,11 @@ foreach ($mainDom->find('a.tip') as $item) {
         }
     }
 
-    foreach ($equiqs as $key => $equip) {
+    foreach ($equips as $key => $equip) {
+        if (null !== $set) {
+            $equip['set'] = $set;
+        }
+
         $equip['price'] = (int) trim($price, 'z');
         $allEquiqs[$key] = $equip;
     }
