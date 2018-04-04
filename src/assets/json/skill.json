@@ -1,4 +1,38 @@
 {
+    "體力增強": {
+        "name": "體力增強",
+        "list": [
+            {
+                "level": 1,
+                "description": "體力+15"
+            },
+            {
+                "level": 2,
+                "description": "體力+30"
+            },
+            {
+                "level": 3,
+                "description": "體力+50"
+            }
+        ]
+    },
+    "體力回復量UP": {
+        "name": "體力回復量UP",
+        "list": [
+            {
+                "level": 1,
+                "description": "回復量1.1倍"
+            },
+            {
+                "level": 2,
+                "description": "回復量1.2倍"
+            },
+            {
+                "level": 3,
+                "description": "回復量1.3倍"
+            }
+        ]
+    },
     "KO術": {
         "name": "KO術",
         "list": [
@@ -13,6 +47,31 @@
             {
                 "level": 3,
                 "description": "昏厥威力1.3倍"
+            }
+        ]
+    },
+    "體術": {
+        "name": "體術",
+        "list": [
+            {
+                "level": 1,
+                "description": "固定耐力消耗量減少10%"
+            },
+            {
+                "level": 2,
+                "description": "固定耐力消耗量減少20%"
+            },
+            {
+                "level": 3,
+                "description": "固定耐力消耗量減少30%"
+            },
+            {
+                "level": 4,
+                "description": "固定耐力消耗量減少40%"
+            },
+            {
+                "level": 5,
+                "description": "固定耐力消耗量減少50%"
             }
         ]
     },
@@ -100,6 +159,40 @@
             }
         ]
     },
+    "火耐性": {
+        "name": "火耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "火耐性+6"
+            },
+            {
+                "level": 2,
+                "description": "火耐性+12"
+            },
+            {
+                "level": 3,
+                "description": "火耐性+20、防禦力+10"
+            }
+        ]
+    },
+    "水耐性": {
+        "name": "水耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "水耐性+6"
+            },
+            {
+                "level": 2,
+                "description": "水耐性+12"
+            },
+            {
+                "level": 3,
+                "description": "水耐性+20、防禦力+10"
+            }
+        ]
+    },
     "不屈": {
         "name": "不屈",
         "list": [
@@ -131,6 +224,66 @@
             {
                 "level": 5,
                 "description": "技能發動時，攻擊力1.3倍，防禦力+40"
+            }
+        ]
+    },
+    "加速再生": {
+        "name": "加速再生",
+        "list": [
+            {
+                "level": 1,
+                "description": "若持續攻擊命中魔物，便能回復體力。回復量會依武器種類不同而有所變動"
+            }
+        ]
+    },
+    "冰耐性": {
+        "name": "冰耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "冰耐性+6"
+            },
+            {
+                "level": 2,
+                "description": "冰耐性+12"
+            },
+            {
+                "level": 3,
+                "description": "冰耐性+20、防禦力+10"
+            }
+        ]
+    },
+    "地質學": {
+        "name": "地質學",
+        "list": [
+            {
+                "level": 1,
+                "description": "駭骨採集點的採集次數+1"
+            },
+            {
+                "level": 2,
+                "description": "追加特產品採集點的採集次數+1"
+            },
+            {
+                "level": 3,
+                "description": "追加礦石採集點的採集次數+1"
+            }
+        ]
+    },
+    "回復速度": {
+        "name": "回復速度",
+        "list": [
+            {
+                "level": 1,
+                "description": "紅色計量表的自動回復速度2倍"
+            },
+            {
+                "level": 2,
+                "description": "紅色計量表的自動回復速度3倍"
+            },
+            {
+                "level": 3,
+                "description": "紅色計量表的自動回復速度4倍"
             }
         ]
     },
@@ -173,6 +326,31 @@
             {
                 "level": 3,
                 "description": "速度大幅上升"
+            }
+        ]
+    },
+    "耳塞": {
+        "name": "耳塞",
+        "list": [
+            {
+                "level": 1,
+                "description": "小幅減輕咆哮【小】的影響"
+            },
+            {
+                "level": 2,
+                "description": "減輕咆哮【小】的影響"
+            },
+            {
+                "level": 3,
+                "description": "使咆哮【小】無效"
+            },
+            {
+                "level": 4,
+                "description": "使咆哮【小】無效，減輕咆哮【大】的影響"
+            },
+            {
+                "level": 5,
+                "description": "使咆哮【小】【大】無效"
             }
         ]
     },
@@ -261,6 +439,40 @@
             }
         ]
     },
+    "投射器裝填數UP": {
+        "name": "投射器裝填數UP",
+        "list": [
+            {
+                "level": 1,
+                "description": "小幅增加在地面或植物取得的彈藥裝填數"
+            },
+            {
+                "level": 2,
+                "description": "再小幅增加一部份魔物掉落的彈藥裝填數"
+            },
+            {
+                "level": 3,
+                "description": "再小幅增加所有魔物掉落的彈藥裝填數"
+            }
+        ]
+    },
+    "防御力DOWN耐性": {
+        "name": "防御力DOWN耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "減少防禦力DOWN狀態的時間30%"
+            },
+            {
+                "level": 2,
+                "description": "減少防禦力DOWN狀態的時間60%"
+            },
+            {
+                "level": 3,
+                "description": "不會變為防禦力DOWN狀態"
+            }
+        ]
+    },
     "防禦": {
         "name": "防禦",
         "list": [
@@ -303,6 +515,23 @@
             }
         ]
     },
+    "快吃": {
+        "name": "快吃",
+        "list": [
+            {
+                "level": 1,
+                "description": "速度小幅上升"
+            },
+            {
+                "level": 2,
+                "description": "速度上升"
+            },
+            {
+                "level": 3,
+                "description": "速度大幅上升"
+            }
+        ]
+    },
     "防禦性能": {
         "name": "防禦性能",
         "list": [
@@ -337,6 +566,15 @@
             }
         ]
     },
+    "泥耐性": {
+        "name": "泥耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "減輕移動速度、迴避行動的限制"
+            }
+        ]
+    },
     "拔刀術【技】": {
         "name": "拔刀術【技】",
         "list": [
@@ -351,6 +589,49 @@
             {
                 "level": 3,
                 "description": "武器拔刀攻擊的會心率+100%"
+            }
+        ]
+    },
+    "幸運": {
+        "name": "幸運",
+        "list": [
+            {
+                "level": 1,
+                "description": "完成任務獲得的報酬數量容易變多(從任務中途開始使用不會有效果)"
+            }
+        ]
+    },
+    "昏厥耐性": {
+        "name": "昏厥耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "減少昏厥狀態的時間30%"
+            },
+            {
+                "level": 2,
+                "description": "減少昏厥狀態的時間60%"
+            },
+            {
+                "level": 3,
+                "description": "不會變為昏厥狀態"
+            }
+        ]
+    },
+    "昆蟲標本達人": {
+        "name": "昆蟲標本達人",
+        "list": [
+            {
+                "level": 1,
+                "description": "屍體殘留的機率提高"
+            },
+            {
+                "level": 2,
+                "description": "屍體殘留的機率大幅提高"
+            },
+            {
+                "level": 3,
+                "description": "必定會有屍體殘留"
             }
         ]
     },
@@ -384,6 +665,31 @@
             {
                 "level": 7,
                 "description": "會心率+30%"
+            }
+        ]
+    },
+    "指示隨從": {
+        "name": "指示隨從",
+        "list": [
+            {
+                "level": 1,
+                "description": "隨從的攻擊力與防禦力變為1.05倍"
+            },
+            {
+                "level": 2,
+                "description": "隨從的攻擊力與防禦力變為1.1倍"
+            },
+            {
+                "level": 3,
+                "description": "隨從的攻擊力與防禦力變為1.15倍"
+            },
+            {
+                "level": 4,
+                "description": "隨從的攻擊力與防禦力變為1.2倍"
+            },
+            {
+                "level": 5,
+                "description": "隨從的攻擊力與防禦力變為1.25倍"
             }
         ]
     },
@@ -430,12 +736,132 @@
             }
         ]
     },
+    "耐力急速回復": {
+        "name": "耐力急速回復",
+        "list": [
+            {
+                "level": 1,
+                "description": "回復速度1.1倍"
+            },
+            {
+                "level": 2,
+                "description": "回復速度1.2倍"
+            },
+            {
+                "level": 3,
+                "description": "回復速度1.3倍"
+            }
+        ]
+    },
+    "風壓完全無効": {
+        "name": "風壓完全無効",
+        "list": [
+            {
+                "level": 1,
+                "description": "使全部的風壓無效"
+            }
+        ]
+    },
+    "風壓耐性": {
+        "name": "風壓耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "小幅減輕風壓【小】"
+            },
+            {
+                "level": 2,
+                "description": "減輕風壓【小】"
+            },
+            {
+                "level": 3,
+                "description": "使風壓【小】無效"
+            },
+            {
+                "level": 4,
+                "description": "使風壓【小】無效，減輕風壓【大】"
+            },
+            {
+                "level": 5,
+                "description": "使風壓【小】【大】無效"
+            }
+        ]
+    },
+    "突破耐力上限": {
+        "name": "突破耐力上限",
+        "list": [
+            {
+                "level": 1,
+                "description": "增加耐力的上限值"
+            }
+        ]
+    },
+    "耐震": {
+        "name": "耐震",
+        "list": [
+            {
+                "level": 1,
+                "description": "使震動【小】無效"
+            },
+            {
+                "level": 2,
+                "description": "使震動【小】無效，減輕震動【大】的影響"
+            },
+            {
+                "level": 3,
+                "description": "使震動【小】【大】無效"
+            }
+        ]
+    },
     "飛燕": {
         "name": "飛燕",
         "list": [
             {
                 "level": 1,
                 "description": "跳躍攻擊的威力變為1.1倍"
+            }
+        ]
+    },
+    "毒耐性": {
+        "name": "毒耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "減少中毒狀態的時間30%"
+            },
+            {
+                "level": 2,
+                "description": "減少中毒狀態的時間60%"
+            },
+            {
+                "level": 3,
+                "description": "不會變為中毒狀態"
+            }
+        ]
+    },
+    "威嚇": {
+        "name": "威嚇",
+        "list": [
+            {
+                "level": 1,
+                "description": "即使被發現也不容易進入戰鬥狀態"
+            },
+            {
+                "level": 2,
+                "description": "即使被發現也幾乎不會進入戰鬥狀態"
+            },
+            {
+                "level": 3,
+                "description": "即使被發現也不會變為戰鬥狀態"
+            }
+        ]
+    },
+    "研究者": {
+        "name": "研究者",
+        "list": [
+            {
+                "level": 1,
+                "description": "更容易調查及研究大型魔物"
             }
         ]
     },
@@ -498,6 +924,15 @@
             }
         ]
     },
+    "毒瓶追加": {
+        "name": "毒瓶追加",
+        "list": [
+            {
+                "level": 1,
+                "description": "弓可以裝著毒瓶"
+            }
+        ]
+    },
     "砲術": {
         "name": "砲術",
         "list": [
@@ -557,6 +992,15 @@
             }
         ]
     },
+    "剝取名人": {
+        "name": "剝取名人",
+        "list": [
+            {
+                "level": 1,
+                "description": "剝取回數增加1回(從任務中途開始使用不會有效果)"
+            }
+        ]
+    },
     "迴避距離UP": {
         "name": "迴避距離UP",
         "list": [
@@ -571,6 +1015,33 @@
             {
                 "level": 3,
                 "description": "大幅延長迴避距離"
+            }
+        ]
+    },
+    "振奮 振": {
+        "name": "振奮 振",
+        "list": [
+            {
+                "level": 1,
+                "description": "體力降低至40%以下時，一定時間內耐力的消耗量會減少"
+            }
+        ]
+    },
+    "追蹤達人": {
+        "name": "追蹤達人",
+        "list": [
+            {
+                "level": 1,
+                "description": "取得痕跡時的計量表上升量1.5倍"
+            }
+        ]
+    },
+    "剝取鐵人": {
+        "name": "剝取鐵人",
+        "list": [
+            {
+                "level": 1,
+                "description": "剝取中，後仰無效"
             }
         ]
     },
@@ -622,6 +1093,45 @@
             }
         ]
     },
+    "烤肉名人": {
+        "name": "烤肉名人",
+        "list": [
+            {
+                "level": 1,
+                "description": "更容易烤出全熟肉"
+            }
+        ]
+    },
+    "飢餓耐性": {
+        "name": "飢餓耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "到減少的時間延長30%"
+            },
+            {
+                "level": 2,
+                "description": "到減少的時間延長60%"
+            },
+            {
+                "level": 3,
+                "description": "使耐力最大值的減少無效"
+            }
+        ]
+    },
+    "特殊射擊強化": {
+        "name": "特殊射擊強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "弩的特殊彈藥和弓的龍之箭的威力變為1.1倍"
+            },
+            {
+                "level": 2,
+                "description": "弩的特殊彈藥和弓的龍之箭的威力變為1.2倍"
+            }
+        ]
+    },
     "弱點特效": {
         "name": "弱點特效",
         "list": [
@@ -636,6 +1146,51 @@
             {
                 "level": 3,
                 "description": "攻擊有效部份時，會心率+50%"
+            }
+        ]
+    },
+    "閃光強化": {
+        "name": "閃光強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "閃光效果的生效率UP"
+            }
+        ]
+    },
+    "捕獲名人": {
+        "name": "捕獲名人",
+        "list": [
+            {
+                "level": 1,
+                "description": "捕獲獲取得的報酬數量變多的機率很高(從任務中途開始使用不會有效果)"
+            }
+        ]
+    },
+    "採集達人": {
+        "name": "採集達人",
+        "list": [
+            {
+                "level": 1,
+                "description": "採集行動時，速度上升&後仰無效"
+            }
+        ]
+    },
+    "異臭名人": {
+        "name": "異臭名人",
+        "list": [
+            {
+                "level": 1,
+                "description": "提高逃離投射器異臭彈的效果"
+            }
+        ]
+    },
+    "貫通彈・龍之箭強化": {
+        "name": "貫通彈・龍之箭強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "貫通彈、龍之箭的威力UP"
             }
         ]
     },
@@ -656,6 +1211,41 @@
             }
         ]
     },
+    "釣魚名人": {
+        "name": "釣魚名人",
+        "list": [
+            {
+                "level": 1,
+                "description": "延長釣起魚的時間，就更容易釣起大魚"
+            }
+        ]
+    },
+    "通常彈・通常箭強化": {
+        "name": "通常彈・通常箭強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "通常彈、通常箭的威力UP"
+            }
+        ]
+    },
+    "麻痺耐性": {
+        "name": "麻痺耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "減少麻痺狀態的時間30%"
+            },
+            {
+                "level": 2,
+                "description": "減少麻痺狀態的時間60%"
+            },
+            {
+                "level": 3,
+                "description": "不會變為麻痺狀態"
+            }
+        ]
+    },
     "麻痺屬性強化": {
         "name": "麻痺屬性強化",
         "list": [
@@ -670,6 +1260,50 @@
             {
                 "level": 3,
                 "description": "麻痺累積值變為1.2倍，麻痺累積值+10"
+            }
+        ]
+    },
+    "探索者的幸運": {
+        "name": "探索者的幸運",
+        "list": [
+            {
+                "level": 1,
+                "description": "發生機率UP"
+            }
+        ]
+    },
+    "強運": {
+        "name": "強運",
+        "list": [
+            {
+                "level": 1,
+                "description": "完成任務獲取得的報酬數量變多的機率很高(從任務中途開始使用不會有效果)"
+            }
+        ]
+    },
+    "麻痺瓶追加": {
+        "name": "麻痺瓶追加",
+        "list": [
+            {
+                "level": 1,
+                "description": "弓可以裝著麻痺瓶"
+            }
+        ]
+    },
+    "跑者": {
+        "name": "跑者",
+        "list": [
+            {
+                "level": 1,
+                "description": "持續耐力消耗量減少15%"
+            },
+            {
+                "level": 2,
+                "description": "持續耐力消耗量減少30%"
+            },
+            {
+                "level": 3,
+                "description": "持續耐力消耗量減少50%"
             }
         ]
     },
@@ -690,6 +1324,27 @@
             }
         ]
     },
+    "植生學": {
+        "name": "植生學",
+        "list": [
+            {
+                "level": 1,
+                "description": "草系消耗道具的取得數+1"
+            },
+            {
+                "level": 2,
+                "description": "追加實、種系消耗道具的取得數+1"
+            },
+            {
+                "level": 3,
+                "description": "追加蟲系消耗道具的取得數+1"
+            },
+            {
+                "level": 4,
+                "description": "追加菇系消耗道具的取得數+1"
+            }
+        ]
+    },
     "鈍器能手": {
         "name": "鈍器能手",
         "list": [
@@ -699,12 +1354,46 @@
             }
         ]
     },
+    "最愛菇類": {
+        "name": "最愛菇類",
+        "list": [
+            {
+                "level": 1,
+                "description": "已可食用青菇與毒菇"
+            },
+            {
+                "level": 2,
+                "description": "追加可食用爆炸菇與麻痺菇"
+            },
+            {
+                "level": 3,
+                "description": "追加可食用風茄，鬼爆炸菇與心跳加速菇"
+            }
+        ]
+    },
+    "裂傷耐性": {
+        "name": "裂傷耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "將減輕裂傷狀態造成的傷害"
+            },
+            {
+                "level": 2,
+                "description": "大幅減輕裂傷狀態造成的傷害"
+            },
+            {
+                "level": 3,
+                "description": "不會變為裂傷狀態"
+            }
+        ]
+    },
     "無屬性強化": {
         "name": "無屬性強化",
         "list": [
             {
                 "level": 1,
-                "description": "強化裝備中的無屬性武器 (測試約提升10%)"
+                "description": "強化裝備中的無屬性武器"
             }
         ]
     },
@@ -722,6 +1411,15 @@
             {
                 "level": 3,
                 "description": "技能發動時，基礎攻擊力+20"
+            }
+        ]
+    },
+    "散彈・剛射強化": {
+        "name": "散彈・剛射強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "散彈、剛射的威力UP"
             }
         ]
     },
@@ -759,6 +1457,15 @@
             }
         ]
     },
+    "超回復力": {
+        "name": "超回復力",
+        "list": [
+            {
+                "level": 1,
+                "description": "體力在達到計量表的最大值前會持續自動回復"
+            }
+        ]
+    },
     "雷屬性攻擊強化": {
         "name": "雷屬性攻擊強化",
         "list": [
@@ -784,12 +1491,47 @@
             }
         ]
     },
+    "道具使用強化": {
+        "name": "道具使用強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "效果時間1.1倍"
+            },
+            {
+                "level": 2,
+                "description": "效果時間1.25倍"
+            },
+            {
+                "level": 3,
+                "description": "效果時間1.5倍"
+            }
+        ]
+    },
+    "搬運達人": {
+        "name": "搬運達人",
+        "list": [
+            {
+                "level": 1,
+                "description": "搬運時的移動速度上升，減輕著地時的反作用力"
+            }
+        ]
+    },
     "滑走強化": {
         "name": "滑走強化",
         "list": [
             {
                 "level": 1,
                 "description": "可發動技能"
+            }
+        ]
+    },
+    "跳躍鐵人": {
+        "name": "跳躍鐵人",
+        "list": [
+            {
+                "level": 1,
+                "description": "跳躍中，後仰無效"
             }
         ]
     },
@@ -811,12 +1553,47 @@
             }
         ]
     },
+    "蜂蜜獵人": {
+        "name": "蜂蜜獵人",
+        "list": [
+            {
+                "level": 1,
+                "description": "蜂蜜取得數+1"
+            }
+        ]
+    },
+    "解放弓的蓄力階段": {
+        "name": "解放弓的蓄力階段",
+        "list": [
+            {
+                "level": 1,
+                "description": "弓的蓄力階段增加1個階段"
+            }
+        ]
+    },
     "會心攻擊【特殊】": {
         "name": "會心攻擊【特殊】",
         "list": [
             {
                 "level": 1,
                 "description": "因攻擊而出現會心時，所造成的狀態異常值(麻痺、毒、睡眠、爆破)會提高"
+            }
+        ]
+    },
+    "雷耐性": {
+        "name": "雷耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "雷耐性+6"
+            },
+            {
+                "level": 2,
+                "description": "雷耐性+12"
+            },
+            {
+                "level": 3,
+                "description": "雷耐性+20、防禦力+10"
             }
         ]
     },
@@ -834,6 +1611,41 @@
             {
                 "level": 3,
                 "description": "睡眠累積值變為1.2倍，睡眠累積值+10"
+            }
+        ]
+    },
+    "睡眠耐性": {
+        "name": "睡眠耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "減少睡眠狀態的時間30%"
+            },
+            {
+                "level": 2,
+                "description": "減少睡眠狀態的時間60%"
+            },
+            {
+                "level": 3,
+                "description": "不會變為睡眠狀態"
+            }
+        ]
+    },
+    "察覺": {
+        "name": "察覺",
+        "list": [
+            {
+                "level": 1,
+                "description": "在生態MAP上標記"
+            }
+        ]
+    },
+    "滿足感": {
+        "name": "滿足感",
+        "list": [
+            {
+                "level": 1,
+                "description": "效果發動率25%"
             }
         ]
     },
@@ -871,6 +1683,23 @@
             }
         ]
     },
+    "綿花孢子草的知識": {
+        "name": "綿花孢子草的知識",
+        "list": [
+            {
+                "level": 1,
+                "description": "體力回復20"
+            },
+            {
+                "level": 2,
+                "description": "體力回復35"
+            },
+            {
+                "level": 3,
+                "description": "體力回復60"
+            }
+        ]
+    },
     "精神抖擻": {
         "name": "精神抖擻",
         "list": [
@@ -888,12 +1717,115 @@
             }
         ]
     },
+    "睡眠瓶追加": {
+        "name": "睡眠瓶追加",
+        "list": [
+            {
+                "level": 1,
+                "description": "弓可以裝著睡眠瓶"
+            }
+        ]
+    },
+    "廣域化": {
+        "name": "廣域化",
+        "list": [
+            {
+                "level": 1,
+                "description": "給予周圍的同伴1/3的效果"
+            },
+            {
+                "level": 2,
+                "description": "給予大範圍的同伴1/3的效果"
+            },
+            {
+                "level": 3,
+                "description": "給予大範圍的同伴2/3的效果"
+            },
+            {
+                "level": 4,
+                "description": "給予極大範圍的同伴2/3的效果"
+            },
+            {
+                "level": 5,
+                "description": "給予極大範圍的同伴同樣的效果"
+            }
+        ]
+    },
+    "適應瘴氣環境": {
+        "name": "適應瘴氣環境",
+        "list": [
+            {
+                "level": 1,
+                "description": "使瘴氣霧霾無效，減輕酸造成的傷害"
+            }
+        ]
+    },
+    "潛伏": {
+        "name": "潛伏",
+        "list": [
+            {
+                "level": 1,
+                "description": "追丟的機率小幅提高"
+            },
+            {
+                "level": 2,
+                "description": "追丟的機率提高"
+            },
+            {
+                "level": 3,
+                "description": "追丟的機率大幅提高"
+            }
+        ]
+    },
+    "熱傷害無效": {
+        "name": "熱傷害無效",
+        "list": [
+            {
+                "level": 1,
+                "description": "使熱造成的傷害無效"
+            }
+        ]
+    },
+    "適應水場": {
+        "name": "適應水場",
+        "list": [
+            {
+                "level": 1,
+                "description": "即使在水中移動速度也不會減慢"
+            },
+            {
+                "level": 2,
+                "description": "在水中移動速度也不會減慢，提高在水中的迴避性能"
+            },
+            {
+                "level": 3,
+                "description": "在水中移動速度也不會減慢，大幅提高在水中的迴避性能"
+            }
+        ]
+    },
     "毅力": {
         "name": "毅力",
         "list": [
             {
                 "level": 1,
                 "description": "當體力在一定程度以上時，即使承受了超過體力的傷害，也能撐住而不耗盡體力一次"
+            }
+        ]
+    },
+    "龍耐性": {
+        "name": "龍耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "龍耐性+6"
+            },
+            {
+                "level": 2,
+                "description": "龍耐性+12"
+            },
+            {
+                "level": 3,
+                "description": "龍耐性+20、防禦力+10"
             }
         ]
     },
@@ -922,6 +1854,49 @@
             }
         ]
     },
+    "導蟲反應距離UP": {
+        "name": "導蟲反應距離UP",
+        "list": [
+            {
+                "level": 1,
+                "description": "反應距離擴張"
+            }
+        ]
+    },
+    "整備": {
+        "name": "整備",
+        "list": [
+            {
+                "level": 1,
+                "description": "再使用時間縮短5%"
+            },
+            {
+                "level": 2,
+                "description": "再使用時間縮短10%"
+            },
+            {
+                "level": 3,
+                "description": "再使用時間縮短20%"
+            }
+        ]
+    },
+    "瘴氣耐性": {
+        "name": "瘴氣耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "抑制瘴氣的侵蝕"
+            },
+            {
+                "level": 2,
+                "description": "大幅抑制瘴氣的侵蝕"
+            },
+            {
+                "level": 3,
+                "description": "使瘴氣侵蝕狀態無效"
+            }
+        ]
+    },
     "龍封力強化": {
         "name": "龍封力強化",
         "list": [
@@ -937,6 +1912,101 @@
             {
                 "level": 1,
                 "description": "容易騎乘怪物，更容易在騎乘狀態下成功"
+            }
+        ]
+    },
+    "攀岩者": {
+        "name": "攀岩者",
+        "list": [
+            {
+                "level": 1,
+                "description": "耐力消耗減少25%"
+            }
+        ]
+    },
+    "爆破屬性強化": {
+        "name": "爆破屬性強化",
+        "list": [
+            {
+                "level": 1,
+                "description": "爆破累積值變為1.05倍，爆破累積值+10"
+            },
+            {
+                "level": 2,
+                "description": "爆破累積值變為1.1倍，爆破累積值+10"
+            },
+            {
+                "level": 3,
+                "description": "爆破累積值變為1.2倍，爆破累積值+10"
+            }
+        ]
+    },
+    "蹲下移動速度UP": {
+        "name": "蹲下移動速度UP",
+        "list": [
+            {
+                "level": 1,
+                "description": "加快蹲下時的移動速度"
+            }
+        ]
+    },
+    "爆破異常狀態的耐性": {
+        "name": "爆破異常狀態的耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "延長爆破前的間隔時間，減輕爆破時受到的傷害"
+            },
+            {
+                "level": 2,
+                "description": "更加延長爆破前的間隔時間，大幅減輕爆破時遭受的傷害"
+            },
+            {
+                "level": 3,
+                "description": "不會變為爆破異常狀態"
+            }
+        ]
+    },
+    "爆破瓶追加": {
+        "name": "爆破瓶追加",
+        "list": [
+            {
+                "level": 1,
+                "description": "弓可以裝著爆破瓶"
+            }
+        ]
+    },
+    "屬性解放／裝填擴充": {
+        "name": "屬性解放／裝填擴充",
+        "list": [
+            {
+                "level": 1,
+                "description": "激發出1/3的隱藏屬性／增加部分彈藥裝填數"
+            },
+            {
+                "level": 2,
+                "description": "激發出2/3的隱藏屬性／增加多數彈藥裝填數"
+            },
+            {
+                "level": 3,
+                "description": "激發出100%的隱藏屬性／幾乎增加所有彈藥裝填數"
+            }
+        ]
+    },
+    "屬性異常狀態耐性": {
+        "name": "屬性異常狀態耐性",
+        "list": [
+            {
+                "level": 1,
+                "description": "全屬性異常狀態的效果時間減少30%"
+            },
+            {
+                "level": 2,
+                "description": "全屬性異常狀態的效果時間減少60%"
+            },
+            {
+                "level": 3,
+                "description": "使全屬性異常狀態無效"
             }
         ]
     }
