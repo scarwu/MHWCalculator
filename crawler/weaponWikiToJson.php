@@ -283,7 +283,7 @@ foreach ($urlMapping as $weaponType => $url) {
 
             if (preg_match('/^.+?\[(.+)\]$/', trim($text), $matches)) {
                 $equip['elderseal'] = [
-                    'effect' => $matches[1]
+                    'affinity' => $matches[1]
                 ];
             }
         }

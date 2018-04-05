@@ -56,7 +56,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -333,7 +333,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "中"
+            "affinity": "中"
         },
         "slots": [
             {
@@ -480,7 +480,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -601,7 +601,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -666,7 +666,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -727,7 +727,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -1027,7 +1027,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "中"
+            "affinity": "中"
         },
         "slots": [
             {
@@ -1145,7 +1145,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -1233,7 +1233,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -1268,7 +1268,7 @@
             "isHidden": true
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -1300,7 +1300,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -1361,7 +1361,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -1835,7 +1835,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -1919,7 +1919,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -1954,7 +1954,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -2015,7 +2015,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -2428,7 +2428,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -2549,7 +2549,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -2584,7 +2584,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -2645,7 +2645,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -2856,7 +2856,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "中"
+            "affinity": "中"
         },
         "slots": [
             {
@@ -3026,7 +3026,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -3118,7 +3118,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -3183,7 +3183,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -3244,7 +3244,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -3665,7 +3665,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -3752,7 +3752,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -3787,7 +3787,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -3848,7 +3848,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -4088,7 +4088,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "中"
+            "affinity": "中"
         },
         "slots": [
             {
@@ -4239,7 +4239,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -4356,7 +4356,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -4421,7 +4421,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -4482,7 +4482,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -4779,7 +4779,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "中"
+            "affinity": "中"
         },
         "slots": [
             {
@@ -4863,7 +4863,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -4954,7 +4954,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -4989,7 +4989,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -5050,7 +5050,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -5257,7 +5257,7 @@
         },
         "element": null,
         "elderseal": {
-            "effect": "中"
+            "affinity": "中"
         },
         "slots": [
             {
@@ -5289,7 +5289,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "中"
+            "affinity": "中"
         },
         "slots": [
             {
@@ -5470,7 +5470,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -5557,7 +5557,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -5592,7 +5592,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -5653,7 +5653,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -5959,7 +5959,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "中"
+            "affinity": "中"
         },
         "slots": [
             {
@@ -6047,7 +6047,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -6141,7 +6141,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -6176,7 +6176,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6237,7 +6237,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -6484,7 +6484,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "中"
+            "affinity": "中"
         },
         "slots": [
             {
@@ -6662,7 +6662,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -6753,7 +6753,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -6788,7 +6788,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6806,7 +6806,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6824,7 +6824,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6842,7 +6842,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6860,7 +6860,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6878,7 +6878,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6896,7 +6896,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6914,7 +6914,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6932,7 +6932,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6950,7 +6950,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6968,7 +6968,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -6986,7 +6986,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7004,7 +7004,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7022,7 +7022,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7040,7 +7040,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7058,7 +7058,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7076,7 +7076,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7094,7 +7094,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7112,7 +7112,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7130,7 +7130,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7148,7 +7148,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7166,7 +7166,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7184,7 +7184,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7202,7 +7202,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7220,7 +7220,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7238,7 +7238,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7256,7 +7256,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7274,7 +7274,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7292,7 +7292,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7310,7 +7310,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7328,7 +7328,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7346,7 +7346,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7364,7 +7364,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7382,7 +7382,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7400,7 +7400,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7418,7 +7418,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7436,7 +7436,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7454,7 +7454,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7472,7 +7472,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7490,7 +7490,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7508,7 +7508,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7526,7 +7526,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     },
@@ -7567,7 +7567,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": [
             {
@@ -7621,7 +7621,7 @@
             "isHidden": true
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -7722,7 +7722,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "中"
+            "affinity": "中"
         },
         "slots": [
             {
@@ -7826,7 +7826,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -7874,7 +7874,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "小"
+            "affinity": "小"
         },
         "slots": [
             {
@@ -7939,7 +7939,7 @@
             "isHidden": false
         },
         "elderseal": {
-            "effect": "大"
+            "affinity": "大"
         },
         "slots": []
     }

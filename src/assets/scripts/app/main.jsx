@@ -25,13 +25,54 @@ export default class Main extends Component {
 
     // Default Props
     static defaultProps = {
-
+        equip: {
+            chram: null,
+            helm: null,
+            chest: null,
+            arm: null,
+            waist: null
+        },
+        status: {
+            headlth: 100,
+            stamina: 100,
+            attack: 0,
+            criticalRate: 0,
+            sharpness: {
+                value: 0,
+                steps: {
+                    red: 0,
+                    orange: 0,
+                    yellow: 0,
+                    green: 0,
+                    blue: 0,
+                    white: 0
+                }
+            },
+            element: {
+                type: null,
+                value: 0,
+                isHidden: null
+            },
+            elderseal: {
+                affinity: null
+            },
+            resistance: {
+                fire: 0,
+                water: 0,
+                thunder: 0,
+                ice: 0,
+                dragon: 0
+            }
+        }
     };
 
     // Initial State
     state = {
         skillSegment: null,
-        selectedSkills: []
+        selectedSkills: [],
+        candidateList: [],
+        equips: null,
+        status: null
     };
 
     /**
@@ -72,6 +113,68 @@ export default class Main extends Component {
         });
     };
 
+    handleSkillLevelDown = (index) => {
+        let selectedSkills = this.state.selectedSkills;
+        let skill = Constant.skill[selectedSkills[index].key];
+
+        if (1 === selectedSkills[index].level) {
+            return false;
+        }
+
+        selectedSkills[index].level -= 1;
+
+        this.setState({
+            selectedSkills: selectedSkills
+        });
+    };
+
+    handleSkillLevelUp = (index) => {
+        let selectedSkills = this.state.selectedSkills;
+        let skill = Constant.skill[selectedSkills[index].key];
+
+        if (skill.list.length === selectedSkills[index].level) {
+            return false;
+        }
+
+        selectedSkills[index].level += 1;
+
+        this.setState({
+            selectedSkills: selectedSkills
+        });
+    };
+
+    handleSkillMoveUp = (index) => {
+        let selectedSkills = this.state.selectedSkills;
+
+        if (0 === index) {
+            return false;
+        }
+
+        [selectedSkills[index], selectedSkills[index - 1]] = [selectedSkills[index - 1], selectedSkills[index]];
+
+        this.setState({
+            selectedSkills: selectedSkills
+        });
+    };
+
+    handleSkillMoveDown = (index) => {
+        let selectedSkills = this.state.selectedSkills;
+
+        if (selectedSkills.length - 1 === index) {
+            return false;
+        }
+
+        [selectedSkills[index], selectedSkills[index + 1]] = [selectedSkills[index + 1], selectedSkills[index]];
+
+        this.setState({
+            selectedSkills: selectedSkills
+        });
+    };
+
+    handleEquipSearch = () => {
+
+    };
+
     /**
      * Lifecycle Functions
      */
@@ -98,9 +201,25 @@ export default class Main extends Component {
 
             return (
                 <div key={skill.name}>
-                    <span>{skill.name}</span>
-                    <span>Lv.{data.level}</span>
-                    <i className="fa fa-minus" onClick={() => {this.handleSkillUnselect(index)}}></i>
+                    <div className="mhwc-skill_item">
+                        <i className="fa fa-times" onClick={() => {this.handleSkillUnselect(index)}}></i>
+                        &nbsp;
+                        <span className="mhwc-skill_name">{skill.name}</span>
+                        &nbsp;
+                        <div>
+                            <i className="fa fa-minus" onClick={() => {this.handleSkillLevelDown(index)}}></i>
+                            &nbsp;
+                            <span className="mhwc-skill_level">
+                                {data.level} / {skill.list.length}
+                            </span>
+                            &nbsp;
+                            <i className="fa fa-plus" onClick={() => {this.handleSkillLevelUp(index)}}></i>
+                        </div>
+                        <div>
+                            <i className="fa fa-chevron-up" onClick={() => {this.handleSkillMoveUp(index)}}></i>
+                            <i className="fa fa-chevron-down" onClick={() => {this.handleSkillMoveDown(index)}}></i>
+                        </div>
+                    </div>
                 </div>
             );
         });
@@ -130,8 +249,11 @@ export default class Main extends Component {
 
             return (
                 <div key={skill.name}>
-                    <span>{skill.name}</span>
-                    <i className="fa fa-plus" onClick={() => {this.handleSkillSelect(skill.name)}}></i>
+                    <div className="mhwc-skill_item">
+                        <i className="fa fa-check" onClick={() => {this.handleSkillSelect(skill.name)}}></i>
+                        &nbsp;
+                        <span className="mhwc-skill_name">{skill.name}</span>
+                    </div>
                 </div>
             );
         });
@@ -156,30 +278,40 @@ export default class Main extends Component {
     }
 
     render () {
-
         return (
-            <div id="main">
-                <div className="mhwc-header">
+            <div id="main" className="container-fluid">
+                <div className="row mhwc-header">
                     <div>
                         <h1>Monster Hunter: World Calculator</h1>
                     </div>
                 </div>
-                <div className="mhwc-container">
-                    <div className="mhwc-skills">
-                        <div>
-                            <input type="text" ref="skillSegment" onChange={this.handleSkillInput} />
+
+                <div className="row mhwc-container">
+                    <div className="col-3 mhwc-skills">
+                        <div className="mhwc-function_bar">
+                            <input className="mhwc-skill_segment" type="text"
+                                ref="skillSegment" onChange={this.handleSkillInput} />
                         </div>
-                        <div>
-                            {this.renderSelectedSkillItems()}
-                        </div>
-                        <div>
+                        <div className="mhwc-list">
                             {this.renderUnselectedSkillItems()}
                         </div>
                     </div>
-                    <div className="mhwc-content">
+
+                    <div className="col-3 mhwc-selected_skills">
+                        <div className="mhwc-function_bar">
+                            <input className="mhwc-equip_search" type="button"
+                                value="Search" onChange={this.handleEquipSearch} />
+                        </div>
+                        <div className="mhwc-list">
+                            {this.renderSelectedSkillItems()}
+                        </div>
+                    </div>
+
+                    <div className="col-3 mhwc-content">
                         {this.renderEquipItems()}
                     </div>
-                    <div className="mhwc-status">
+
+                    <div className="col-3 mhwc-status">
                         {this.renderStatus()}
                     </div>
                 </div>

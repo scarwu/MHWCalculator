@@ -8,6 +8,7 @@
  */
 
 $header-height: 40px;
+$function_bar-height: 40px;
 
 & {
     height: 100vh;
@@ -20,22 +21,55 @@ $header-height: 40px;
         margin: 0;
         padding: 0;
         line-height: $header-height;
-
-        @font-size(3.2);
         font-weight: bold;
+
+        @include font-size(2.4);
     }
 }
 
 .mhwc-container {
     height: calc(100vh - #{$header-height});
 
-    .mhwc-skills {
+    .mhwc-skills,
+    .mhwc-selected_skills {
+        height: inherit;
 
+        .mhwc-function_bar {
+            padding: 5px;
+            height: $function_bar-height;
+
+            @include font-size(1.4);
+
+            input {
+                width: 100%;
+                height: $function_bar-height - 10px;
+                // line-height: $function_bar-height;
+            }
+        }
+
+        .mhwc-list {
+            overflow-y: scroll;
+            height: calc(100vh - #{$header-height + $function_bar-height});
+        }
+
+        .mhwc-skill_item {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #333;
+
+            @include font-size(1.4);
+        }
+
+        .mhwc-skill_name {
+
+        }
+
+        .mhwc-skill_level {
+
+        }
     }
 
     .mhwc-content {
-
-
         .mhwc-equips {
 
         }
