@@ -55,7 +55,10 @@ var defaultStatus = {
     elderseal: {
         affinity: null
     },
-    defense: 0,
+    defense: {
+        min: 0,
+        max: 0
+    },
     resistance: {
         fire: 0,
         water: 0,
@@ -194,6 +197,167 @@ export default class Main extends Component {
         let charm = Constant.charm[equips.charm.key];
 
         let status = defaultStatus;
+
+        status.attack = weapon.attack;
+        status.criticalRate = weapon.criticalRate;
+        status.sharpness = weapon.sharpness;
+        status.element = weapon.element;
+        status.elderseal = weapon.elderseal;
+
+        // Defense
+        status.defense.min = weapon.defense + helm.defense.min;
+            + chest.defense.min + arm.defense.min;
+            + waist.defense.min + leg.defense.min;
+
+        status.defense.max = weapon.defense + helm.defense.max;
+            + chest.defense.max + arm.defense.max;
+            + waist.defense.max + leg.defense.max;
+
+        // Resistance
+        status.resistance.fire = helm.resistance.fire
+            + chest.resistance.fire + arm.resistance.fire
+            + waist.resistance.fire + leg.resistance.fire;
+
+        status.resistance.water = helm.resistance.water
+            + chest.resistance.water + arm.resistance.water
+            + waist.resistance.water + leg.resistance.water;
+
+        status.resistance.thunder = helm.resistance.thunder
+            + chest.resistance.thunder + arm.resistance.thunder
+            + waist.resistance.thunder + leg.resistance.thunder;
+
+        status.resistance.ice = helm.resistance.ice
+            + chest.resistance.ice + arm.resistance.ice
+            + waist.resistance.ice + leg.resistance.ice;
+
+        status.resistance.dragon = helm.resistance.dragon
+            + chest.resistance.dragon + arm.resistance.dragon
+            + waist.resistance.dragon + leg.resistance.dragon;
+
+        // Skills
+        var tempSkills = {};
+
+        // Skills from Equips
+        helm.skills.map((data) => {
+            if (undefined === tempSkills[data.key]) {
+                tempSkills[data.key] = 0;
+            }
+
+            tempSkills[data.key] += data.level;
+        });
+
+        chest.skills.map((data) => {
+            if (undefined === tempSkills[data.key]) {
+                tempSkills[data.key] = 0;
+            }
+
+            tempSkills[data.key] += data.level;
+        });
+
+        arm.skills.map((data) => {
+            if (undefined === tempSkills[data.key]) {
+                tempSkills[data.key] = 0;
+            }
+
+            tempSkills[data.key] += data.level;
+        });
+
+        waist.skills.map((data) => {
+            if (undefined === tempSkills[data.key]) {
+                tempSkills[data.key] = 0;
+            }
+
+            tempSkills[data.key] += data.level;
+        });
+
+        leg.skills.map((data) => {
+            if (undefined === tempSkills[data.key]) {
+                tempSkills[data.key] = 0;
+            }
+
+            tempSkills[data.key] += data.level;
+        });
+
+        // Skills from Charm
+        charm.skills.map((data) => {
+            if (undefined === tempSkills[data.key]) {
+                tempSkills[data.key] = 0;
+            }
+
+            tempSkills[data.key] += data.level;
+        })
+
+        // Skills from Slots
+        equips.weapon.slots.map((data) => {
+            let jewel = Constant.jewel[data.key]
+
+            if (undefined === tempSkills[jewel.skill.key]) {
+                tempSkills[jewel.skill.key] = 0;
+            }
+
+            tempSkills[jewel.skill.key] += 1;
+        });
+
+        equips.helm.slots.map((data) => {
+            let jewel = Constant.jewel[data.key]
+
+            if (undefined === tempSkills[jewel.skill.key]) {
+                tempSkills[jewel.skill.key] = 0;
+            }
+
+            tempSkills[jewel.skill.key] += 1;
+        });
+
+        equips.chest.slots.map((data) => {
+            let jewel = Constant.jewel[data.key]
+
+            if (undefined === tempSkills[jewel.skill.key]) {
+                tempSkills[jewel.skill.key] = 0;
+            }
+
+            tempSkills[jewel.skill.key] += 1;
+        });
+
+        equips.arm.slots.map((data) => {
+            let jewel = Constant.jewel[data.key]
+
+            if (undefined === tempSkills[jewel.skill.key]) {
+                tempSkills[jewel.skill.key] = 0;
+            }
+
+            tempSkills[jewel.skill.key] += 1;
+        });
+
+        equips.waist.slots.map((data) => {
+            let jewel = Constant.jewel[data.key]
+
+            if (undefined === tempSkills[jewel.skill.key]) {
+                tempSkills[jewel.skill.key] = 0;
+            }
+
+            tempSkills[jewel.skill.key] += 1;
+        });
+
+        equips.leg.slots.map((data) => {
+            let jewel = Constant.jewel[data.key]
+
+            if (undefined === tempSkills[jewel.skill.key]) {
+                tempSkills[jewel.skill.key] = 0;
+            }
+
+            tempSkills[jewel.skill.key] += 1;
+        });
+
+        for (let key in tempSkills) {
+            let skill = Constant.skill[key];
+            let level = tempSkills[key];
+
+            status.skills.push({
+                name: skill.name,
+                level: level,
+                description: skill.list[level - 1].description
+            });
+        }
 
         this.setState({
             status: status
@@ -428,16 +592,46 @@ export default class Main extends Component {
 
         return (null !== status) ? (
             <div>
-                <span>{status.health}</span>
-                <span>{status.stamina}</span>
-                <span>{status.attack}</span>
-                <span>{status.criticalRate}</span>
-                <span>{JSON.stringify(status.sharpness)}</span>
-                <span>{JSON.stringify(status.element)}</span>
-                <span>{JSON.stringify(status.elderseal)}</span>
-                <span>{status.defense}</span>
-                <span>{JSON.stringify(status.resistance)}</span>
-                <span>{JSON.stringify(status.skills)}</span>
+                <div>
+                    <span>Health</span>
+                    <span>{status.health}</span>
+                </div>
+                <div>
+                    <span>Stamina</span>
+                    <span>{status.stamina}</span>
+                </div>
+                <div>
+                    <span>Attack</span>
+                    <span>{status.attack}</span>
+                </div>
+                <div>
+                    <span>CriticalRate</span>
+                    <span>{status.criticalRate}</span>
+                </div>
+                <div>
+                    <span>Sharpness</span>
+                    <span>{JSON.stringify(status.sharpness)}</span>
+                </div>
+                <div>
+                    <span>Element</span>
+                    <span>{JSON.stringify(status.element)}</span>
+                </div>
+                <div>
+                    <span>Elderseal</span>
+                    <span>{JSON.stringify(status.elderseal)}</span>
+                </div>
+                <div>
+                    <span>Defense</span>
+                    <span>{JSON.stringify(status.defense)}</span>
+                </div>
+                <div>
+                    <span>Resistance</span>
+                    <span>{JSON.stringify(status.resistance)}</span>
+                </div>
+                <div>
+                    <span>Skills</span>
+                    <span>{JSON.stringify(status.skills)}</span>
+                </div>
             </div>
         ) : false;
     }
