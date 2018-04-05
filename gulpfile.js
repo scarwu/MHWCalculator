@@ -43,7 +43,7 @@ var compileTask = {
     sass: function (src, dest) {
         return gulp.src(src)
             .pipe($.sass().on('error', handleCompileError))
-            .pipe($.replace('../fonts/', '/assets/fonts/vendor/'))
+            .pipe($.replace('../fonts/', '../../assets/fonts/vendor/'))
             .pipe($.autoprefixer())
             .pipe($.rename(function (path) {
                 path.basename = path.basename.split('.')[0];
@@ -142,9 +142,7 @@ gulp.task('watch', function () {
     $.livereload.listen();
 
     gulp.watch([
-        'src/application/**/*',
-        'src/boot/**/*',
-        '!src/boot/uploads/**/*'    // Skip Watch
+        'src/boot/**/*'
     ]).on('change', $.livereload.changed);
 
     // Static Files
@@ -177,39 +175,6 @@ gulp.task('release:copy:boot', function () {
             'src/boot/**/*'
         ])
         .pipe(gulp.dest('docs'));
-});
-
-gulp.task('release:copy:application', function () {
-    return gulp.src('src/application/**/*')
-        .pipe(gulp.dest('docs/application'));
-});
-
-// Replace
-gulp.task('release:replace:cli', function () {
-    return gulp.src('docs/application/cli.php')
-        .pipe($.replace(
-            'define(\'ENVIRONMENT\', \'development\');',
-            'define(\'ENVIRONMENT\', \'production\');'
-        ))
-        .pipe(gulp.dest('docs/application'));
-});
-
-gulp.task('release:replace:index', function () {
-    return gulp.src('docs/index.php')
-        .pipe($.replace(
-            'define(\'ENVIRONMENT\', \'development\');',
-            'define(\'ENVIRONMENT\', \'production\');'
-        ))
-        .pipe(gulp.dest('docs'));
-});
-
-gulp.task('release:replace:config', function () {
-    return gulp.src('docs/application/config/config.php')
-        .pipe($.replace(
-            '(int) (array_sum(explode(\' \', microtime())) * 1000)',
-            postfix
-        ))
-        .pipe(gulp.dest('docs/application/config'));
 });
 
 // Optimize
@@ -279,11 +244,6 @@ gulp.task('release', function (callback) {
 
     run('clean:release', 'prepare', [
         'release:copy:boot',
-        'release:copy:application'
-    ], [
-        'release:replace:cli',
-        'release:replace:index',
-        'release:replace:config'
     ], [
         'release:optimize:images',
         'release:optimize:scripts',

@@ -8,4 +8,4 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-export default {}
+export default {};
