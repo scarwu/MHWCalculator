@@ -3,11 +3,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:description" name="description" content="Monster Hunter: World - Calculator">
+    <meta property="og:title" content="NodeJS API Viewer">
+    <meta property="og:url" content="http://scar.tw/MHWHCalculator/">
+    <meta property="og:image" content="http://scar.tw/images/icon.jpg">
+    <meta property="og:type" content="website">
 
-    <title>MHW Calculator</title>
+    <title>Monster Hunter: World - Calculator</title>
 
+    <link rel="canonical" href="http://scar.tw/MHWHCalculator/">
+    <link rel="author" href="https://plus.google.com/+ScarWu">
+    <link rel="image_src" href="http://scar.tw/images/icon.jpg">
+    <link rel="shortcut icon" href="http://scar.tw/favicon.ico">
     <link rel="stylesheet" href="/assets/styles/mhwc.min.css">
 
+    <script>
+        function asyncLoad(src) {
+            var s = document.createElement('script');
+            s.src = src; s.async = true;
+            var e = document.getElementsByTagName('script')[0];
+            e.parentNode.insertBefore(s, e);
+        }
+        var _gaq = [['_setAccount', 'UA-30675094-2'], ['_trackPageview']];
+        asyncLoad(('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js');
+    </script>
     <script src="/assets/scripts/vendor/modernizr.min.js"></script>
     <script src="/assets/scripts/mhwc.min.js" async></script>
 </head>
