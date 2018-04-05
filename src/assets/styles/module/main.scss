@@ -6,3 +6,46 @@
  * @copyright   Copyright (c) Scar Wu (http://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
+
+$header-height: 40px;
+
+& {
+    height: 100vh;
+}
+
+.mhwc-header {
+    height: $header-height;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        line-height: $header-height;
+
+        @font-size(3.2);
+        font-weight: bold;
+    }
+}
+
+.mhwc-container {
+    height: calc(100vh - #{$header-height});
+
+    .mhwc-skills {
+
+    }
+
+    .mhwc-content {
+
+
+        .mhwc-equips {
+
+        }
+
+        .mhwc-jewels {
+
+        }
+    }
+
+    .mhwc-status {
+
+    }
+}
