@@ -30,34 +30,31 @@ $function_bar-height: 40px;
 .mhwc-container {
     height: calc(100vh - #{$header-height});
 
+    @include font-size(1.4);
+
     .mhwc-skills,
     .mhwc-selected_skills {
-        height: inherit;
+        height: calc(50vh - (#{$header-height} / 2));
 
         .mhwc-function_bar {
             padding: 5px;
             height: $function_bar-height;
 
-            @include font-size(1.4);
-
             input {
                 width: 100%;
                 height: $function_bar-height - 10px;
-                // line-height: $function_bar-height;
             }
         }
 
         .mhwc-list {
             overflow-y: scroll;
-            height: calc(100vh - #{$header-height + $function_bar-height});
+            height: calc(50vh - ((#{$header-height} / 2) + #{$function_bar-height}));
         }
 
         .mhwc-skill_item {
             margin: 5px;
             padding: 5px;
             border: 1px solid #333;
-
-            @include font-size(1.4);
         }
 
         .mhwc-skill_name {

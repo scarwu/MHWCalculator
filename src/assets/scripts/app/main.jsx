@@ -21,49 +21,56 @@ import Event from 'core/event';
 import Config from 'config';
 import Constant from 'constant';
 
+var defaultEquips = {
+    weapon: null,
+    helm: null,
+    chest: null,
+    arm: null,
+    waist: null,
+    leg: null,
+    charm: null
+};
+
+var defaultStatus = {
+    health: 100,
+    stamina: 100,
+    attack: 0,
+    criticalRate: 0,
+    sharpness: {
+        value: 0,
+        steps: {
+            red: 0,
+            orange: 0,
+            yellow: 0,
+            green: 0,
+            blue: 0,
+            white: 0
+        }
+    },
+    element: {
+        type: null,
+        value: 0,
+        isHidden: null
+    },
+    elderseal: {
+        affinity: null
+    },
+    defense: 0,
+    resistance: {
+        fire: 0,
+        water: 0,
+        thunder: 0,
+        ice: 0,
+        dragon: 0
+    },
+    skills: []
+};
+
 export default class Main extends Component {
 
     // Default Props
     static defaultProps = {
-        equip: {
-            chram: null,
-            helm: null,
-            chest: null,
-            arm: null,
-            waist: null
-        },
-        status: {
-            headlth: 100,
-            stamina: 100,
-            attack: 0,
-            criticalRate: 0,
-            sharpness: {
-                value: 0,
-                steps: {
-                    red: 0,
-                    orange: 0,
-                    yellow: 0,
-                    green: 0,
-                    blue: 0,
-                    white: 0
-                }
-            },
-            element: {
-                type: null,
-                value: 0,
-                isHidden: null
-            },
-            elderseal: {
-                affinity: null
-            },
-            resistance: {
-                fire: 0,
-                water: 0,
-                thunder: 0,
-                ice: 0,
-                dragon: 0
-            }
-        }
+
     };
 
     // Initial State
@@ -175,11 +182,81 @@ export default class Main extends Component {
 
     };
 
+    generateStatus = () => {
+        let equips = this.state.equips;
+
+        let weapon = Constant.weapon[equips.weapon.key];
+        let helm = Constant.armor[equips.helm.key];
+        let chest = Constant.armor[equips.chest.key];
+        let arm = Constant.armor[equips.arm.key];
+        let waist = Constant.armor[equips.waist.key];
+        let leg = Constant.armor[equips.leg.key];
+        let charm = Constant.charm[equips.charm.key];
+
+        let status = defaultStatus;
+
+        this.setState({
+            status: status
+        });
+    }
+
     /**
      * Lifecycle Functions
      */
     componentWillMount () {
-
+        this.setState({
+            equips: {
+                weapon: {
+                    key: '日冕短劍',
+                    slots: []
+                },
+                helm: {
+                    key: '龍王的獨眼α',
+                    slots: [
+                        {
+                            key: '耐衝珠'
+                        }
+                    ]
+                },
+                chest: {
+                    key: '鋼龍身β',
+                    slots: [
+                        {
+                            key: '飛燕珠'
+                        }
+                    ]
+                },
+                arm: {
+                    key: '帝王β手',
+                    slots: [
+                        {
+                            key: '超心珠'
+                        }
+                    ]
+                },
+                waist: {
+                    key: '帝王β身',
+                    slots: [
+                        {
+                            key: '渾身珠'
+                        }
+                    ]
+                },
+                leg: {
+                    key: '慘爪龍護腿β',
+                    slots: [
+                        {
+                            key: '渾身珠'
+                        }
+                    ]
+                },
+                charm: {
+                    key: '匠之護石 III'
+                }
+            }
+        }, () => {
+            this.generateStatus();
+        });
     }
 
     componentDidMount () {
@@ -260,21 +337,109 @@ export default class Main extends Component {
     };
 
     renderEquipItems = () => {
-        return [(
+        let equips = this.state.equips;
+
+        let weapon = Constant.weapon[equips.weapon.key];
+        let helm = Constant.armor[equips.helm.key];
+        let chest = Constant.armor[equips.chest.key];
+        let arm = Constant.armor[equips.arm.key];
+        let waist = Constant.armor[equips.waist.key];
+        let leg = Constant.armor[equips.leg.key];
+        let charm = Constant.charm[equips.charm.key];
+
+        return (
             <div key="equip" className="mhwc-equips">
-
+                <div className="mhwc-equip_item">
+                    <span>{weapon.name}</span>
+                    <span>{weapon.attack}</span>
+                    <span>{weapon.criticalRate}</span>
+                    <span>{weapon.defense}</span>
+                    {equips.weapon.slots.map((data) => {
+                        return (
+                            <span key={data.key}>{Constant.jewel[data.key].name}</span>
+                        );
+                    })}
+                </div>
+                <div className="mhwc-equip_item">
+                    <span>{helm.name}</span>
+                    <span>{helm.defense.min} ~ {helm.defense.max}</span>
+                    <span>{helm.resistance.fire}</span>
+                    <span>{helm.resistance.water}</span>
+                    <span>{helm.resistance.thunder}</span>
+                    <span>{helm.resistance.ice}</span>
+                    <span>{helm.resistance.dragon}</span>
+                    {equips.helm.slots.map((data) => {
+                        return (
+                            <span key={data.key}>{Constant.jewel[data.key].name}</span>
+                        );
+                    })}
+                </div>
+                <div className="mhwc-equip_item">
+                    <span>{arm.name}</span>
+                    <span>{arm.defense.min} ~ {arm.defense.max}</span>
+                    <span>{arm.resistance.fire}</span>
+                    <span>{arm.resistance.water}</span>
+                    <span>{arm.resistance.thunder}</span>
+                    <span>{arm.resistance.ice}</span>
+                    <span>{arm.resistance.dragon}</span>
+                    {equips.arm.slots.map((data) => {
+                        return (
+                            <span key={data.key}>{Constant.jewel[data.key].name}</span>
+                        );
+                    })}
+                </div>
+                <div className="mhwc-equip_item">
+                    <span>{waist.name}</span>
+                    <span>{waist.defense.min} ~ {waist.defense.max}</span>
+                    <span>{waist.resistance.fire}</span>
+                    <span>{waist.resistance.water}</span>
+                    <span>{waist.resistance.thunder}</span>
+                    <span>{waist.resistance.ice}</span>
+                    <span>{waist.resistance.dragon}</span>
+                    {equips.waist.slots.map((data) => {
+                        return (
+                            <span key={data.key}>{Constant.jewel[data.key].name}</span>
+                        );
+                    })}
+                </div>
+                <div className="mhwc-equip_item">
+                    <span>{leg.name}</span>
+                    <span>{leg.defense.min} ~ {leg.defense.max}</span>
+                    <span>{leg.resistance.fire}</span>
+                    <span>{leg.resistance.water}</span>
+                    <span>{leg.resistance.thunder}</span>
+                    <span>{leg.resistance.ice}</span>
+                    <span>{leg.resistance.dragon}</span>
+                    {equips.leg.slots.map((data) => {
+                        return (
+                            <span key={data.key}>{Constant.jewel[data.key].name}</span>
+                        );
+                    })}
+                </div>
+                <div className="mhwc-equip_item">
+                    <span>{charm.name}</span>
+                </div>
             </div>
-        ), (
-            <div key="jewel" className="mhwc-jewels">
-
-            </div>
-        )];
+        );
     };
 
     renderStatus = () => {
-        return (
-            <div></div>
-        );
+        let status = this.state.status;
+
+        return (null !== status) ? (
+            <div>
+                <span>{status.health}</span>
+                <span>{status.stamina}</span>
+                <span>{status.attack}</span>
+                <span>{status.criticalRate}</span>
+                <span>{JSON.stringify(status.sharpness)}</span>
+                <span>{JSON.stringify(status.element)}</span>
+                <span>{JSON.stringify(status.elderseal)}</span>
+                <span>{status.defense}</span>
+                <span>{JSON.stringify(status.resistance)}</span>
+                <span>{JSON.stringify(status.skills)}</span>
+            </div>
+        ) : false;
     }
 
     render () {
@@ -287,23 +452,25 @@ export default class Main extends Component {
                 </div>
 
                 <div className="row mhwc-container">
-                    <div className="col-3 mhwc-skills">
-                        <div className="mhwc-function_bar">
-                            <input className="mhwc-skill_segment" type="text"
-                                ref="skillSegment" onChange={this.handleSkillInput} />
+                    <div className="col-3">
+                        <div className="mhwc-selected_skills">
+                            <div className="mhwc-function_bar">
+                                <input className="mhwc-equip_search" type="button"
+                                    value="Search" onChange={this.handleEquipSearch} />
+                            </div>
+                            <div className="mhwc-list">
+                                {this.renderSelectedSkillItems()}
+                            </div>
                         </div>
-                        <div className="mhwc-list">
-                            {this.renderUnselectedSkillItems()}
-                        </div>
-                    </div>
 
-                    <div className="col-3 mhwc-selected_skills">
-                        <div className="mhwc-function_bar">
-                            <input className="mhwc-equip_search" type="button"
-                                value="Search" onChange={this.handleEquipSearch} />
-                        </div>
-                        <div className="mhwc-list">
-                            {this.renderSelectedSkillItems()}
+                        <div className="mhwc-skills">
+                            <div className="mhwc-function_bar">
+                                <input className="mhwc-skill_segment" type="text"
+                                    ref="skillSegment" onChange={this.handleSkillInput} />
+                            </div>
+                            <div className="mhwc-list">
+                                {this.renderUnselectedSkillItems()}
+                            </div>
                         </div>
                     </div>
 
