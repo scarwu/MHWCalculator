@@ -509,140 +509,276 @@ export default class Main extends Component {
         let leg = DataSet.armor.getInfo(equips.leg.key);
         let charm = DataSet.charm.getInfo(equips.charm.key);
 
-        return (
-            <div key="equip" className="mhwc-equips">
-                <div className="mhwc-equip_item">
-                    <div>
-                        <span>{weapon.name}</span>
-                    </div>
-
+        return [(
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>{weapon.name}</span>
+                </div>
+                <div className="mhwc-slots">
                     {equips.weapon.slots.map((data) => {
                         return (
-                            <div>
-                                <span key={data.key}>
-                                    {DataSet.jewel.getInfo(data.key).name}
-                                </span>
+                            <div className="mhwc-jewel">
+                                <div className="mhwc-name">
+                                    <span key={data.key}>
+                                        {DataSet.jewel.getInfo(data.key).name}
+                                    </span>
+                                </div>
                             </div>
                         );
                     })}
-                </div>
-                <div className="mhwc-equip_item">
-                    <div>
-                        <span>{helm.name}</span>
-                    </div>
-
-                    {equips.helm.slots.map((data) => {
-                        return (
-                            <div>
-                                <span key={data.key}>
-                                    {DataSet.jewel.getInfo(data.key).name}
-                                </span>
-                            </div>
-                        );
-                    })}
-                </div>
-                <div className="mhwc-equip_item">
-                    <div>
-                        <span>{arm.name}</span>
-                    </div>
-
-                    {equips.arm.slots.map((data) => {
-                        return (
-                            <div>
-                                <span key={data.key}>
-                                    {DataSet.jewel.getInfo(data.key).name}
-                                </span>
-                            </div>
-                        );
-                    })}
-                </div>
-                <div className="mhwc-equip_item">
-                    <div>
-                        <span>{waist.name}</span>
-                    </div>
-
-                    {equips.waist.slots.map((data) => {
-                        return (
-                            <div>
-                                <span key={data.key}>
-                                    {DataSet.jewel.getInfo(data.key).name}
-                                </span>
-                            </div>
-                        );
-                    })}
-                </div>
-                <div className="mhwc-equip_item">
-                    <div>
-                        <span>{leg.name}</span>
-                    </div>
-
-                    {equips.leg.slots.map((data) => {
-                        return (
-                            <div>
-                                <span key={data.key}>
-                                    {DataSet.jewel.getInfo(data.key).name}
-                                </span>
-                            </div>
-                        );
-                    })}
-                </div>
-                <div className="mhwc-equip_item">
-                    <div>
-                        <span>{charm.name}</span>
-                    </div>
-
                 </div>
             </div>
-        );
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>{helm.name}</span>
+                </div>
+                <div className="mhwc-slots">
+                    {equips.helm.slots.map((data) => {
+                        return (
+                            <div className="mhwc-jewel">
+                                <div className="mhwc-name">
+                                    <span key={data.key}>
+                                        {DataSet.jewel.getInfo(data.key).name}
+                                    </span>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>{arm.name}</span>
+                </div>
+                <div className="mhwc-slots">
+                    {equips.arm.slots.map((data) => {
+                        return (
+                            <div className="mhwc-jewel">
+                                <div className="mhwc-name">
+                                    <span key={data.key}>
+                                        {DataSet.jewel.getInfo(data.key).name}
+                                    </span>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>{waist.name}</span>
+                </div>
+                <div className="mhwc-slots">
+                    {equips.waist.slots.map((data) => {
+                        return (
+                            <div className="mhwc-jewel">
+                                <div className="mhwc-name">
+                                    <span key={data.key}>
+                                        {DataSet.jewel.getInfo(data.key).name}
+                                    </span>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>{leg.name}</span>
+                </div>
+                <div className="mhwc-slots">
+                    {equips.leg.slots.map((data) => {
+                        return (
+                            <div className="mhwc-jewel">
+                                <div className="mhwc-name">
+                                    <span key={data.key}>
+                                        {DataSet.jewel.getInfo(data.key).name}
+                                    </span>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>{charm.name}</span>
+                </div>
+            </div>
+        )];
     };
 
     renderStatus = () => {
         let status = this.state.status;
 
-        return (null !== status) ? (
-            <div>
-                <div>
+        if (null === status) {
+            return false;
+        }
+
+        let sharpnessStyle = {
+            red: {
+                width: (status.sharpness.steps.red / 4) + '%'
+            },
+            orange: {
+                width: (status.sharpness.steps.orange / 4) + '%'
+            },
+            yellow: {
+                width: (status.sharpness.steps.yellow / 4) + '%'
+            },
+            green: {
+                width: (status.sharpness.steps.green / 4) + '%'
+            },
+            blue: {
+                width: (status.sharpness.steps.blue / 4) + '%'
+            },
+            white: {
+                width: (status.sharpness.steps.white / 4) + '%'
+            },
+            mask: {
+                width: ((400 - status.sharpness.value) / 4) + '%'
+            }
+        };
+
+        return [(
+            <div className="mhwc-item">
+                <div className="mhwc-name">
                     <span>Health</span>
+                </div>
+                <div className="mhwc-value">
                     <span>{status.health}</span>
                 </div>
-                <div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
                     <span>Stamina</span>
+                </div>
+                <div className="mhwc-value">
                     <span>{status.stamina}</span>
                 </div>
-                <div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
                     <span>Attack</span>
+                </div>
+                <div className="mhwc-value">
                     <span>{status.attack}</span>
                 </div>
-                <div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
                     <span>CriticalRate</span>
-                    <span>{status.criticalRate}</span>
                 </div>
-                <div>
-                    <span>Sharpness</span>
-                    <span>{JSON.stringify(status.sharpness)}</span>
-                </div>
-                <div>
-                    <span>Element</span>
-                    <span>{JSON.stringify(status.element)}</span>
-                </div>
-                <div>
-                    <span>Elderseal</span>
-                    <span>{JSON.stringify(status.elderseal)}</span>
-                </div>
-                <div>
-                    <span>Defense</span>
-                    <span>{JSON.stringify(status.defense)}</span>
-                </div>
-                <div>
-                    <span>Resistance</span>
-                    <span>{JSON.stringify(status.resistance)}</span>
-                </div>
-                <div>
-                    <span>Skills</span>
-                    <span>{JSON.stringify(status.skills)}</span>
+                <div className="mhwc-value">
+                    <span>{status.criticalRate}%</span>
                 </div>
             </div>
-        ) : false;
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>Sharpness</span>
+                </div>
+                <div className="mhwc-value">
+                    <div className="mhwc-sharpness">
+                        <div className="mhwc-step" style={sharpnessStyle.red}></div>
+                        <div className="mhwc-step" style={sharpnessStyle.orange}></div>
+                        <div className="mhwc-step" style={sharpnessStyle.yellow}></div>
+                        <div className="mhwc-step" style={sharpnessStyle.green}></div>
+                        <div className="mhwc-step" style={sharpnessStyle.blue}></div>
+                        <div className="mhwc-step" style={sharpnessStyle.white}></div>
+                        <div className="mhwc-mask" style={sharpnessStyle.mask}></div>
+                    </div>
+                </div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>Element</span>
+                </div>
+                <div className="mhwc-value">
+                    {status.element.isHidden ? (
+                        <span>({status.element.type}: {status.element.value})</span>
+                    ) : (
+                        <span>{status.element.type}: {status.element.value}</span>
+                    )}
+                </div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>Elderseal</span>
+                </div>
+                <div className="mhwc-value">
+                    <span>{status.elderseal.affinity}</span>
+                </div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>Defense</span>
+                </div>
+                <div className="mhwc-value">
+                    <span>{status.defense.min} ~ {status.defense.max}</span>
+                </div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>Resistance</span>
+                </div>
+                <div className="mhwc-value">
+                    <div>
+                        <span>Fire</span>
+                        <span>{status.resistance.fire}</span>
+                    </div>
+                    <div>
+                        <span>Water</span>
+                        <span>{status.resistance.water}</span>
+                    </div>
+                    <div>
+                        <span>Thunder</span>
+                        <span>{status.resistance.thunder}</span>
+                    </div>
+                    <div>
+                        <span>Ice</span>
+                        <span>{status.resistance.ice}</span>
+                    </div>
+                    <div>
+                        <span>Dragon</span>
+                        <span>{status.resistance.dragon}</span>
+                    </div>
+                </div>
+            </div>
+        ), (
+            <div className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>Skills</span>
+                </div>
+                <div className="mhwc-value">
+                    {status.skills.sort((a, b) => {
+                        return b.level - a.level;
+                    }).map((data) => {
+                        return (
+                            <div>
+                                <div>
+                                    <span>{data.name} Lv.{data.level}</span>
+                                </div>
+                                <div>
+                                    <span>{data.description}</span>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        )];
     }
 
     render () {
@@ -677,8 +813,14 @@ export default class Main extends Component {
                         </div>
                     </div>
 
-                    <div className="col-3 mhwc-content">
-                        {this.renderEquipItems()}
+                    <div className="col-3">
+                        <div className="mhwc-equips">
+                            {this.renderEquipItems()}
+                        </div>
+
+                        <div className="mhwc-canditate_equips">
+
+                        </div>
                     </div>
 
                     <div className="col-3 mhwc-status">

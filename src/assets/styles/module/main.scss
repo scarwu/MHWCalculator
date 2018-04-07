@@ -66,17 +66,81 @@ $function_bar-height: 40px;
         }
     }
 
-    .mhwc-content {
-        .mhwc-equips {
+    .mhwc-equips,
+    .mhwc-canditate_equips {
+        height: calc(50vh - (#{$header-height} / 2));
+    }
 
-        }
+    .mhwc-equips {
+        .mhwc-item {
+            .mhwc-name {
 
-        .mhwc-jewels {
+            }
 
+            .mhwc-slots {
+                .mhwc-name {
+
+                }
+            }
         }
     }
 
     .mhwc-status {
+        .mhwc-item {
 
+            .mhwc-name {
+
+            }
+
+            .mhwc-value {
+
+            }
+        }
+
+        .mhwc-sharpness {
+            position: relative;
+            border: 1px solid black;
+            width: 100%;
+            height: 20px;
+            background-color: black;
+
+            .mhwc-step {
+                display: inline-block;
+                height: 18px;
+
+                &:nth-child(1) {
+                    background-color: red;
+                }
+
+                &:nth-child(2) {
+                    background-color: orange;
+                }
+
+                &:nth-child(3) {
+                    background-color: yellow;
+                }
+
+                &:nth-child(4) {
+                    background-color: green;
+                }
+
+                &:nth-child(5) {
+                    background-color: blue;
+                }
+
+                &:nth-child(6) {
+                    background-color: white;
+                }
+
+            }
+
+            .mhwc-mask {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 18px;
+                background-color: black;
+            }
+        }
     }
 }

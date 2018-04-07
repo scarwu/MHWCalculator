@@ -18,11 +18,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 420,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -51,12 +53,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -83,11 +85,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -113,11 +117,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 390,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -143,11 +149,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 300,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -176,11 +184,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 450,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "熔岩之炎 II": {
@@ -202,11 +212,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 330,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -235,11 +247,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 540,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -268,11 +282,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -298,11 +314,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 300,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -328,12 +346,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 300,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "中"
+            "affinity": "medium"
         },
         "slots": [
             {
@@ -360,11 +378,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 480,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "激流巨像 III": {
@@ -386,11 +406,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -416,11 +438,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 390,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -449,11 +473,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "龍骨大劍 III": {
@@ -475,12 +501,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 420,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -510,11 +536,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 540,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "熔山龍大劍 II": {
@@ -536,11 +564,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 420,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -566,11 +596,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -596,12 +628,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -631,11 +663,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 330,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -661,12 +695,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 240,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -689,11 +723,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 180,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -722,12 +758,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 120,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -754,11 +790,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 360,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -784,11 +822,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 270,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "爆鎚太刀 II": {
@@ -810,11 +850,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 120,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -843,11 +885,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 330,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -873,11 +917,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -903,11 +949,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 270,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -933,11 +981,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -966,11 +1016,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 390,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "深土太刀 III": {
@@ -992,11 +1044,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 360,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -1022,12 +1076,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 270,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "中"
+            "affinity": "medium"
         },
         "slots": [
             {
@@ -1054,11 +1108,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -1084,11 +1140,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 360,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "黑色偃月刀 III": {
@@ -1110,11 +1168,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 240,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -1140,12 +1200,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 420,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -1172,11 +1232,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 360,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -1202,11 +1264,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "冥燈龍太刀": {
@@ -1228,12 +1292,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 180,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -1263,12 +1327,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": true
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -1295,12 +1359,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -1323,11 +1387,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 240,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -1356,12 +1422,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -1388,11 +1454,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 180,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -1418,11 +1486,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 330,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -1448,11 +1518,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 390,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -1481,11 +1553,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "洶湧奔流 III": {
@@ -1507,11 +1581,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -1537,11 +1613,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 330,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -1567,11 +1645,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -1597,11 +1677,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 330,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -1630,11 +1712,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 300,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -1660,11 +1744,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "凶豺龍銳劍 III": {
@@ -1686,7 +1772,9 @@
             }
         },
         "element": null,
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "凶豺龍棍棒 III": {
@@ -1708,11 +1796,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 360,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -1741,11 +1831,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -1771,11 +1863,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 180,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -1804,11 +1898,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "龍骨劍 III": {
@@ -1830,12 +1926,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 450,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -1862,11 +1958,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "炎王紋章": {
@@ -1888,11 +1986,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "冥燈龍劍 I": {
@@ -1914,12 +2014,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 270,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -1949,12 +2049,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -1977,11 +2077,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 270,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -2010,12 +2112,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 120,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -2042,11 +2144,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 210,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -2072,11 +2176,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 150,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -2102,11 +2208,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 150,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -2132,11 +2240,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 120,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "神聖佩劍": {
@@ -2158,11 +2268,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 120,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -2188,11 +2300,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 180,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -2218,11 +2332,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "爆鎚棍棒 II": {
@@ -2244,11 +2360,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 90,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -2274,11 +2392,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -2304,11 +2424,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 150,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -2337,11 +2459,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 90,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -2367,11 +2491,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 150,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -2397,11 +2523,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 180,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "封龍劍【超絕一門】": {
@@ -2423,12 +2551,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 270,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -2458,11 +2586,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "熔山龍鉤爪 II": {
@@ -2484,11 +2614,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -2514,11 +2646,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -2544,12 +2678,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -2579,12 +2713,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 180,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -2607,11 +2741,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 270,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -2640,12 +2776,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 120,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -2672,11 +2808,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 450,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -2702,11 +2840,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -2732,11 +2872,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 390,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "花之女神": {
@@ -2758,11 +2900,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 540,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -2791,11 +2935,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -2821,11 +2967,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 420,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -2851,12 +2999,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 270,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "中"
+            "affinity": "medium"
         },
         "slots": [
             {
@@ -2883,11 +3031,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "爆鎚粉碎者 II": {
@@ -2909,11 +3059,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 120,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -2939,11 +3091,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 360,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "爆鎚戰鎚 II": {
@@ -2965,11 +3119,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 150,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -2995,11 +3151,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 450,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "龍骨大鎚 III": {
@@ -3021,12 +3179,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 420,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -3053,11 +3211,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 420,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -3083,11 +3243,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 150,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -3113,12 +3275,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 180,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -3148,11 +3310,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -3178,12 +3342,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -3206,11 +3370,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 270,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -3239,12 +3405,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -3271,11 +3437,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -3301,11 +3469,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 360,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "皇家戰笛": {
@@ -3327,11 +3497,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -3357,11 +3529,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -3387,11 +3561,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 360,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "堅骨號角 II": {
@@ -3413,11 +3589,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 240,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -3443,11 +3621,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 150,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -3476,11 +3656,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 450,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "曼陀羅號角 III": {
@@ -3502,11 +3684,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 540,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -3535,11 +3719,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 570,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -3568,11 +3754,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -3601,11 +3789,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -3634,11 +3824,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "龍骨古笛 III": {
@@ -3660,12 +3852,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 420,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -3695,11 +3887,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 540,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "炎王豎琴": {
@@ -3721,11 +3915,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 390,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "冥燈龍狩獵笛": {
@@ -3747,12 +3943,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 180,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -3782,12 +3978,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 240,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -3810,11 +4006,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 270,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -3843,12 +4041,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -3875,11 +4073,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 360,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "搔鳥尖槍 III": {
@@ -3901,11 +4101,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 360,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "岩賊龍刺針 II": {
@@ -3927,11 +4129,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -3960,11 +4164,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -3990,11 +4196,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 540,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -4023,11 +4231,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -4053,11 +4263,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 240,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -4083,12 +4295,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 270,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "中"
+            "affinity": "medium"
         },
         "slots": [
             {
@@ -4115,11 +4327,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 240,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -4145,11 +4359,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 390,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -4178,11 +4394,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 210,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "激流尖刺 III": {
@@ -4204,11 +4422,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -4234,12 +4454,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 420,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -4269,11 +4489,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "雷槍【建御雷】": {
@@ -4295,11 +4517,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 540,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "祈願鋼龍槍": {
@@ -4321,11 +4545,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -4351,12 +4577,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 180,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -4386,11 +4612,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 330,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -4416,12 +4644,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -4444,11 +4672,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 270,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -4477,12 +4707,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -4509,11 +4739,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -4539,11 +4771,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -4569,11 +4803,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 330,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -4599,11 +4835,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 360,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -4629,11 +4867,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 360,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "大骨銃槍【龍尾】 II": {
@@ -4655,11 +4895,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -4685,11 +4927,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -4715,11 +4959,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 300,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -4748,11 +4994,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 450,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "屍套龍火槍 II": {
@@ -4774,12 +5022,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 270,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "中"
+            "affinity": "medium"
         },
         "slots": [
             {
@@ -4806,11 +5054,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 390,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "蠻顎龍加農砲 III": {
@@ -4832,11 +5082,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 450,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "龍骨銃槍 III": {
@@ -4858,12 +5110,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 420,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -4893,11 +5145,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 420,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "鋼龍爪銃槍": {
@@ -4919,11 +5173,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -4949,12 +5205,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 180,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -4984,12 +5240,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 240,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -5012,11 +5268,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 420,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -5045,12 +5303,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -5077,11 +5335,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "雷光迅斧 III": {
@@ -5103,11 +5363,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 180,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -5133,11 +5395,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 120,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -5163,11 +5427,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 240,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -5196,11 +5462,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 180,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -5226,11 +5494,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 150,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -5257,7 +5527,7 @@
         },
         "element": null,
         "elderseal": {
-            "affinity": "中"
+            "affinity": "medium"
         },
         "slots": [
             {
@@ -5284,12 +5554,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "中"
+            "affinity": "medium"
         },
         "slots": [
             {
@@ -5316,11 +5586,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -5346,11 +5618,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 420,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -5376,11 +5650,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 300,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -5409,11 +5685,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 180,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -5439,11 +5717,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "龍骨劍斧 III": {
@@ -5465,12 +5745,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 330,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -5500,11 +5780,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 420,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "炎王城寨": {
@@ -5526,11 +5808,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "冥燈龍劍斧": {
@@ -5552,12 +5836,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -5587,12 +5871,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 180,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -5615,11 +5899,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 270,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -5648,12 +5934,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -5680,11 +5966,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -5710,11 +5998,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -5740,11 +6030,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -5773,11 +6065,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 330,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -5806,11 +6100,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 240,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -5836,11 +6132,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 180,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "凶豺龍盾斧 III": {
@@ -5862,11 +6160,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 180,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -5895,11 +6195,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 180,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -5928,11 +6230,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 300,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "屍套龍盾斧 II": {
@@ -5954,12 +6258,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 270,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "中"
+            "affinity": "medium"
         },
         "slots": [
             {
@@ -5986,11 +6290,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -6016,11 +6322,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 180,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "龍骨盾斧 III": {
@@ -6042,12 +6350,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 360,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -6077,11 +6385,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "鋼龍幻夢": {
@@ -6103,11 +6413,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 180,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -6136,12 +6448,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 180,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -6171,12 +6483,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6199,11 +6511,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 270,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -6232,12 +6546,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -6264,11 +6578,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 180,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -6294,11 +6610,13 @@
             }
         },
         "element": {
-            "type": "眠",
+            "type": "sleep",
             "value": 210,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "利刃長刀 III": {
@@ -6320,11 +6638,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 300,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -6350,11 +6670,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -6383,11 +6705,13 @@
             }
         },
         "element": {
-            "type": "毒",
+            "type": "posion",
             "value": 390,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -6416,11 +6740,13 @@
             }
         },
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 150,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -6449,11 +6775,13 @@
             }
         },
         "element": {
-            "type": "麻",
+            "type": "paralysis",
             "value": 210,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -6479,12 +6807,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 180,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "中"
+            "affinity": "medium"
         },
         "slots": [
             {
@@ -6511,11 +6839,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "激流長刀 III": {
@@ -6537,11 +6867,13 @@
             }
         },
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 210,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -6567,11 +6899,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 180,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -6597,11 +6931,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -6627,11 +6963,13 @@
             }
         },
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 150,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -6657,12 +6995,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 390,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -6692,11 +7030,13 @@
             }
         },
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 360,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "冰體鋼龍棍": {
@@ -6718,11 +7058,13 @@
             }
         },
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 180,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -6748,12 +7090,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 120,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -6783,12 +7125,12 @@
             }
         },
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6801,12 +7143,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6819,12 +7161,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6837,12 +7179,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6855,12 +7197,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6873,12 +7215,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6891,12 +7233,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6909,12 +7251,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6927,12 +7269,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6945,12 +7287,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6963,12 +7305,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6981,12 +7323,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -6999,12 +7341,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7017,12 +7359,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7035,12 +7377,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7053,12 +7395,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7071,12 +7413,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7089,12 +7431,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7107,12 +7449,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7125,12 +7467,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7143,12 +7485,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7161,12 +7503,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7179,12 +7521,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7197,12 +7539,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7215,12 +7557,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7233,12 +7575,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7251,12 +7593,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7269,12 +7611,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7287,12 +7629,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7305,12 +7647,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7323,12 +7665,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7341,12 +7683,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7359,12 +7701,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7377,12 +7719,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7395,12 +7737,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7413,12 +7755,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7431,12 +7773,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7449,12 +7791,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7467,12 +7809,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7485,12 +7827,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7503,12 +7845,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7521,12 +7863,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     },
@@ -7539,11 +7881,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 150,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -7562,12 +7906,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 150,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": [
             {
@@ -7584,11 +7928,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 270,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "重弓巨靈勇士": {
@@ -7600,11 +7946,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 150,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "公主弓矢 III": {
@@ -7616,12 +7964,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 240,
             "isHidden": true
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -7641,11 +7989,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -7661,11 +8011,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -7681,11 +8033,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 390,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "勇氣獵弓 II": {
@@ -7697,11 +8051,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "水",
+            "type": "water",
             "value": 360,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -7717,12 +8073,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 270,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "中"
+            "affinity": "medium"
         },
         "slots": [
             {
@@ -7739,11 +8095,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 150,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -7762,11 +8120,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 240,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -7785,11 +8145,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "火",
+            "type": "fire",
             "value": 390,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": []
     },
     "飛雷弓【羽羽矢】": {
@@ -7801,11 +8163,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 270,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 1
@@ -7821,12 +8185,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 420,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -7846,11 +8210,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "冰",
+            "type": "ice",
             "value": 240,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 2
@@ -7869,12 +8235,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 180,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "小"
+            "affinity": "low"
         },
         "slots": [
             {
@@ -7894,11 +8260,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "爆",
+            "type": "blast",
             "value": 150,
             "isHidden": false
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -7914,11 +8282,13 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "雷",
+            "type": "thunder",
             "value": 240,
             "isHidden": true
         },
-        "elderseal": null,
+        "elderseal": {
+            "affinity": "none"
+        },
         "slots": [
             {
                 "size": 3
@@ -7934,12 +8304,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "龍",
+            "type": "dragon",
             "value": 210,
             "isHidden": false
         },
         "elderseal": {
-            "affinity": "大"
+            "affinity": "high"
         },
         "slots": []
     }
