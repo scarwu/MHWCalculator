@@ -19,6 +19,9 @@ import Status from 'core/status';
 // Load Custom Libraries
 import DataSet from 'library/dataset';
 
+// Load Constant
+import Constant from 'constant';
+
 var defaultEquips = {
     weapon: null,
     helm: null,
@@ -183,167 +186,66 @@ export default class Main extends Component {
 
     };
 
+    /**
+     * Generate Functions
+     */
     generateStatus = () => {
+
         let equips = this.state.equips;
-
-        let weapon = DataSet.weapon.getInfo(equips.weapon.key);
-        let helm = DataSet.armor.getInfo(equips.helm.key);
-        let chest = DataSet.armor.getInfo(equips.chest.key);
-        let arm = DataSet.armor.getInfo(equips.arm.key);
-        let waist = DataSet.armor.getInfo(equips.waist.key);
-        let leg = DataSet.armor.getInfo(equips.leg.key);
-        let charm = DataSet.charm.getInfo(equips.charm.key);
-
         let status = defaultStatus;
+        let elements = ['fire', 'water', 'thunder', 'ice', 'dragon'];
+        let equipsHasSkill = ['helm', 'chest', 'arm', 'waist', 'leg', 'charm'];
+        let equipsHasSlot = ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'];
+        let tempSkills = {};
 
-        status.attack += weapon.attack;
-        status.critical.rate = weapon.criticalRate;
-        status.sharpness = weapon.sharpness;
-        status.element = weapon.element;
-        status.elderseal = weapon.elderseal;
+        equips.weapon.info = DataSet.weapon.getInfo(equips.weapon.key);
+        equips.helm.info = DataSet.armor.getInfo(equips.helm.key);
+        equips.chest.info = DataSet.armor.getInfo(equips.chest.key);
+        equips.arm.info = DataSet.armor.getInfo(equips.arm.key);
+        equips.waist.info = DataSet.armor.getInfo(equips.waist.key);
+        equips.leg.info = DataSet.armor.getInfo(equips.leg.key);
+        equips.charm.info = DataSet.charm.getInfo(equips.charm.key);
 
-        console.log(status.defense, weapon.defense, helm.defense
-           , chest.defense, arm.defense
-           , waist.defense, leg.defense);
+        status.attack += equips.weapon.info.attack;
+        status.critical.rate = equips.weapon.info.criticalRate;
+        status.sharpness = equips.weapon.info.sharpness;
+        status.element = equips.weapon.info.element;
+        status.elderseal = equips.weapon.info.elderseal;
 
         // Defense
-        status.defense += (weapon.defense + helm.defense
-            + chest.defense + arm.defense
-            + waist.defense + leg.defense);
+        status.defense += (equips.weapon.info.defense + equips.helm.info.defense
+            + equips.chest.info.defense + equips.arm.info.defense
+            + equips.waist.info.defense + equips.leg.info.defense);
 
         // Resistance
-        status.resistance.fire = helm.resistance.fire
-            + chest.resistance.fire + arm.resistance.fire
-            + waist.resistance.fire + leg.resistance.fire;
-
-        status.resistance.water = helm.resistance.water
-            + chest.resistance.water + arm.resistance.water
-            + waist.resistance.water + leg.resistance.water;
-
-        status.resistance.thunder = helm.resistance.thunder
-            + chest.resistance.thunder + arm.resistance.thunder
-            + waist.resistance.thunder + leg.resistance.thunder;
-
-        status.resistance.ice = helm.resistance.ice
-            + chest.resistance.ice + arm.resistance.ice
-            + waist.resistance.ice + leg.resistance.ice;
-
-        status.resistance.dragon = helm.resistance.dragon
-            + chest.resistance.dragon + arm.resistance.dragon
-            + waist.resistance.dragon + leg.resistance.dragon;
-
-        // Skills
-        var tempSkills = {};
+        elements.map((elementType) => {
+            status.resistance[elementType] = equips.helm.info.resistance[elementType]
+                + equips.chest.info.resistance[elementType] + equips.arm.info.resistance[elementType]
+                + equips.waist.info.resistance[elementType] + equips.leg.info.resistance[elementType];
+        });
 
         // Skills from Equips
-        helm.skills.map((data) => {
-            if (undefined === tempSkills[data.key]) {
-                tempSkills[data.key] = 0;
-            }
+        equipsHasSkill.map((equipType) => {
+            equips[equipType].info.skills.map((data) => {
+                if (undefined === tempSkills[data.key]) {
+                    tempSkills[data.key] = 0;
+                }
 
-            tempSkills[data.key] += data.level;
+                tempSkills[data.key] += data.level;
+            });
         });
-
-        chest.skills.map((data) => {
-            if (undefined === tempSkills[data.key]) {
-                tempSkills[data.key] = 0;
-            }
-
-            tempSkills[data.key] += data.level;
-        });
-
-        arm.skills.map((data) => {
-            if (undefined === tempSkills[data.key]) {
-                tempSkills[data.key] = 0;
-            }
-
-            tempSkills[data.key] += data.level;
-        });
-
-        waist.skills.map((data) => {
-            if (undefined === tempSkills[data.key]) {
-                tempSkills[data.key] = 0;
-            }
-
-            tempSkills[data.key] += data.level;
-        });
-
-        leg.skills.map((data) => {
-            if (undefined === tempSkills[data.key]) {
-                tempSkills[data.key] = 0;
-            }
-
-            tempSkills[data.key] += data.level;
-        });
-
-        // Skills from Charm
-        charm.skills.map((data) => {
-            if (undefined === tempSkills[data.key]) {
-                tempSkills[data.key] = 0;
-            }
-
-            tempSkills[data.key] += data.level;
-        })
 
         // Skills from Slots
-        equips.weapon.slots.map((data) => {
-            let jewel = DataSet.jewel.getInfo(data.key)
+        equipsHasSlot.map((equipType) => {
+            equips[equipType].slots.map((data) => {
+                let jewel = DataSet.jewel.getInfo(data.key)
 
-            if (undefined === tempSkills[jewel.skill.key]) {
-                tempSkills[jewel.skill.key] = 0;
-            }
+                if (undefined === tempSkills[jewel.skill.key]) {
+                    tempSkills[jewel.skill.key] = 0;
+                }
 
-            tempSkills[jewel.skill.key] += 1;
-        });
-
-        equips.helm.slots.map((data) => {
-            let jewel = DataSet.jewel.getInfo(data.key)
-
-            if (undefined === tempSkills[jewel.skill.key]) {
-                tempSkills[jewel.skill.key] = 0;
-            }
-
-            tempSkills[jewel.skill.key] += 1;
-        });
-
-        equips.chest.slots.map((data) => {
-            let jewel = DataSet.jewel.getInfo(data.key)
-
-            if (undefined === tempSkills[jewel.skill.key]) {
-                tempSkills[jewel.skill.key] = 0;
-            }
-
-            tempSkills[jewel.skill.key] += 1;
-        });
-
-        equips.arm.slots.map((data) => {
-            let jewel = DataSet.jewel.getInfo(data.key)
-
-            if (undefined === tempSkills[jewel.skill.key]) {
-                tempSkills[jewel.skill.key] = 0;
-            }
-
-            tempSkills[jewel.skill.key] += 1;
-        });
-
-        equips.waist.slots.map((data) => {
-            let jewel = DataSet.jewel.getInfo(data.key)
-
-            if (undefined === tempSkills[jewel.skill.key]) {
-                tempSkills[jewel.skill.key] = 0;
-            }
-
-            tempSkills[jewel.skill.key] += 1;
-        });
-
-        equips.leg.slots.map((data) => {
-            let jewel = DataSet.jewel.getInfo(data.key)
-
-            if (undefined === tempSkills[jewel.skill.key]) {
-                tempSkills[jewel.skill.key] = 0;
-            }
-
-            tempSkills[jewel.skill.key] += 1;
+                tempSkills[jewel.skill.key] += 1;
+            });
         });
 
         for (let key in tempSkills) {
@@ -355,6 +257,14 @@ export default class Main extends Component {
                 level: level,
                 description: skill.list[level - 1].description
             });
+
+            if ('passive' === skill.type) {
+                continue;
+            }
+
+            if (undefined === skill.list[level - 1].reaction) {
+                continue;
+            }
         }
 
         this.setState({
@@ -367,60 +277,7 @@ export default class Main extends Component {
      */
     componentWillMount () {
         this.setState({
-            equips: {
-                weapon: {
-                    key: '罪【真】',
-                    slots: [],
-                    enhances: [
-                        {
-                            'key': '賦予回復能力'
-                        }
-                    ]
-                },
-                helm: {
-                    key: '龍王的獨眼α',
-                    slots: [
-                        {
-                            key: '耐衝珠'
-                        }
-                    ]
-                },
-                chest: {
-                    key: '杜賓鎧甲β',
-                    slots: [
-                        {
-                            key: '痛擊珠'
-                        }
-                    ]
-                },
-                arm: {
-                    key: '異種大型鋼爪α',
-                    slots: [
-                        {
-                            key: '達人珠'
-                        }
-                    ]
-                },
-                waist: {
-                    key: '慘爪龍腰甲β',
-                    slots: [
-                        {
-                            key: '無擊珠'
-                        }
-                    ]
-                },
-                leg: {
-                    key: '杜賓護腿β',
-                    slots: [
-                        {
-                            key: '達人珠'
-                        }
-                    ]
-                },
-                charm: {
-                    key: '攻擊護石 III'
-                }
-            }
+            equips: Constant.defaultSets['狂暴雙刀']
         }, () => {
             this.generateStatus();
         });
@@ -522,8 +379,8 @@ export default class Main extends Component {
                 <div className="mhwc-enhances">
                     {equips.weapon.enhances.map((data) => {
                         return (
-                            <div className="mhwc-name">
-                                <span key={data.key}>{data.key}</span>
+                            <div key={data.key} className="mhwc-name">
+                                <span>{data.key}</span>
                             </div>
                         );
                     })}
@@ -531,9 +388,9 @@ export default class Main extends Component {
                 <div className="mhwc-slots">
                     {equips.weapon.slots.map((data) => {
                         return (
-                            <div className="mhwc-jewel">
+                            <div key={data.key} className="mhwc-jewel">
                                 <div className="mhwc-name">
-                                    <span key={data.key}>
+                                    <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
                                 </div>
@@ -550,9 +407,9 @@ export default class Main extends Component {
                 <div className="mhwc-slots">
                     {equips.helm.slots.map((data) => {
                         return (
-                            <div className="mhwc-jewel">
+                            <div key={data.key} className="mhwc-jewel">
                                 <div className="mhwc-name">
-                                    <span key={data.key}>
+                                    <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
                                 </div>
@@ -569,9 +426,9 @@ export default class Main extends Component {
                 <div className="mhwc-slots">
                     {equips.chest.slots.map((data) => {
                         return (
-                            <div className="mhwc-jewel">
+                            <div key={data.key} className="mhwc-jewel">
                                 <div className="mhwc-name">
-                                    <span key={data.key}>
+                                    <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
                                 </div>
@@ -588,9 +445,9 @@ export default class Main extends Component {
                 <div className="mhwc-slots">
                     {equips.arm.slots.map((data) => {
                         return (
-                            <div className="mhwc-jewel">
+                            <div key={data.key} className="mhwc-jewel">
                                 <div className="mhwc-name">
-                                    <span key={data.key}>
+                                    <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
                                 </div>
@@ -607,9 +464,9 @@ export default class Main extends Component {
                 <div className="mhwc-slots">
                     {equips.waist.slots.map((data) => {
                         return (
-                            <div className="mhwc-jewel">
+                            <div key={data.key} className="mhwc-jewel">
                                 <div className="mhwc-name">
-                                    <span key={data.key}>
+                                    <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
                                 </div>
@@ -626,9 +483,9 @@ export default class Main extends Component {
                 <div className="mhwc-slots">
                     {equips.leg.slots.map((data) => {
                         return (
-                            <div className="mhwc-jewel">
+                            <div key={data.key} className="mhwc-jewel">
                                 <div className="mhwc-name">
-                                    <span key={data.key}>
+                                    <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
                                 </div>
@@ -808,7 +665,7 @@ export default class Main extends Component {
                         return b.level - a.level;
                     }).map((data) => {
                         return (
-                            <div>
+                            <div key={data.name}>
                                 <div>
                                     <span>{data.name} Lv.{data.level}</span>
                                 </div>
