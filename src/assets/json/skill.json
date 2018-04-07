@@ -1,23 +1,40 @@
 {
     "體力增強": {
         "name": "體力增強",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "體力+15"
+                "description": "體力+15",
+                "reaction": {
+                    "health": {
+                        "value": 15
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "體力+30"
+                "description": "體力+30",
+                "reaction": {
+                    "health": {
+                        "value": 30
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "體力+50"
+                "description": "體力+50",
+                "reaction": {
+                    "health": {
+                        "value": 50
+                    }
+                }
             }
         ]
     },
     "體力回復量UP": {
         "name": "體力回復量UP",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -35,6 +52,7 @@
     },
     "KO術": {
         "name": "KO術",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -52,6 +70,7 @@
     },
     "體術": {
         "name": "體術",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -77,81 +96,180 @@
     },
     "力量解放": {
         "name": "力量解放",
+        "type": "passive",
         "list": [
             {
                 "level": 1,
-                "description": "技能發動時，會心率+10%，耐力消耗量減少10%"
+                "description": "技能發動時，會心率+10%，耐力消耗量減少10%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 10
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "技能發動時，會心率+20%，耐力消耗量減少20%"
+                "description": "技能發動時，會心率+20%，耐力消耗量減少20%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 20
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "技能發動時，會心率+30%，耐力消耗量減少30%"
+                "description": "技能發動時，會心率+30%，耐力消耗量減少30%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 30
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "技能發動時，會心率+40%，耐力消耗量減少40%"
+                "description": "技能發動時，會心率+40%，耐力消耗量減少40%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 40
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "技能發動時，會心率+50%，耐力消耗量減少50%"
+                "description": "技能發動時，會心率+50%，耐力消耗量減少50%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 50
+                    }
+                }
             }
         ]
     },
     "水屬性攻擊強化": {
         "name": "水屬性攻擊強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "水屬性攻擊值+30"
+                "description": "水屬性攻擊值+30",
+                "reaction": {
+                    "element": {
+                        "type": "水",
+                        "value": 30,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "水屬性攻擊值+60"
+                "description": "水屬性攻擊值+60",
+                "reaction": {
+                    "element": {
+                        "type": "水",
+                        "value": 60,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "水屬性攻擊值+100"
+                "description": "水屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "水",
+                        "value": 100,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "水屬性攻擊值變為1.05倍，水屬性攻擊值+100"
+                "description": "水屬性攻擊值變為1.05倍，水屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "水",
+                        "value": 100,
+                        "multiple": 1.05
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "水屬性攻擊值變為1.1倍，水屬性攻擊值+100"
+                "description": "水屬性攻擊值變為1.1倍，水屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "水",
+                        "value": 100,
+                        "multiple": 1.1
+                    }
+                }
             }
         ]
     },
     "火屬性攻擊強化": {
         "name": "火屬性攻擊強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "火屬性攻擊值+30"
+                "description": "火屬性攻擊值+30",
+                "reaction": {
+                    "element": {
+                        "type": "火",
+                        "value": 30,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "火屬性攻擊值+60"
+                "description": "火屬性攻擊值+60",
+                "reaction": {
+                    "element": {
+                        "type": "火",
+                        "value": 60,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "火屬性攻擊值+100"
+                "description": "火屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "火",
+                        "value": 100,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "火屬性攻擊值變為1.05倍，火屬性攻擊值+100"
+                "description": "火屬性攻擊值變為1.05倍，火屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "火",
+                        "value": 100,
+                        "multiple": 1.05
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "火屬性攻擊值變為1.1倍，火屬性攻擊值+100"
+                "description": "火屬性攻擊值變為1.1倍，火屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "火",
+                        "value": 100,
+                        "multiple": 1.1
+                    }
+                }
             }
         ]
     },
     "心眼／彈導強化": {
         "name": "心眼／彈導強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -161,74 +279,181 @@
     },
     "火耐性": {
         "name": "火耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "火耐性+6"
+                "description": "火耐性+6",
+                "reaction": {
+                    "resistance": {
+                        "type": "火",
+                        "value": 6
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "火耐性+12"
+                "description": "火耐性+12",
+                "reaction": {
+                    "resistance": {
+                        "type": "火",
+                        "value": 12
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "火耐性+20、防禦力+10"
+                "description": "火耐性+20、防禦力+10",
+                "reaction": {
+                    "defense": {
+                        "value": 10
+                    },
+                    "resistance": {
+                        "type": "火",
+                        "value": 20
+                    }
+                }
             }
         ]
     },
     "水耐性": {
         "name": "水耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "水耐性+6"
+                "description": "水耐性+6",
+                "reaction": {
+                    "resistance": {
+                        "type": "水",
+                        "value": 6
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "水耐性+12"
+                "description": "水耐性+12",
+                "reaction": {
+                    "resistance": {
+                        "type": "水",
+                        "value": 12
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "水耐性+20、防禦力+10"
+                "description": "水耐性+20、防禦力+10",
+                "reaction": {
+                    "defense": {
+                        "value": 10
+                    },
+                    "resistance": {
+                        "type": "水",
+                        "value": 20
+                    }
+                }
             }
         ]
     },
     "不屈": {
         "name": "不屈",
+        "type": "passive",
         "list": [
             {
                 "level": 1,
-                "description": "每次攻擊力1.1倍、防禦力1.15倍"
+                "description": "每次攻擊力1.1倍、防禦力1.15倍",
+                "reaction": {
+                    "finalAttck": {
+                        "value": 0,
+                        "multiple": 1.1
+                    },
+                    "finalDefense": {
+                        "value": 0,
+                        "multiple": 1.15
+                    }
+                }
             }
         ]
     },
     "火場怪力": {
         "name": "火場怪力",
+        "type": "passive",
         "list": [
             {
                 "level": 1,
-                "description": "技能發動時，攻擊力1.05倍，防禦力+15"
+                "description": "技能發動時，攻擊力1.05倍，防禦力+15",
+                "reaction": {
+                    "finalAttck": {
+                        "value": 0,
+                        "multiple": 1.05
+                    },
+                    "finalDefense": {
+                        "value": 15,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "技能發動時，攻擊力1.1倍，防禦力+20"
+                "description": "技能發動時，攻擊力1.1倍，防禦力+20",
+                "reaction": {
+                    "finalAttck": {
+                        "value": 0,
+                        "multiple": 1.1
+                    },
+                    "finalDefense": {
+                        "value": 20,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "技能發動時，攻擊力1.15倍，防禦力+25"
+                "description": "技能發動時，攻擊力1.15倍，防禦力+25",
+                "reaction": {
+                    "finalAttck": {
+                        "value": 0,
+                        "multiple": 1.15
+                    },
+                    "finalDefense": {
+                        "value": 25,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "技能發動時，攻擊力1.2倍，防禦力+30"
+                "description": "技能發動時，攻擊力1.2倍，防禦力+30",
+                "reaction": {
+                    "finalAttck": {
+                        "value": 0,
+                        "multiple": 1.2
+                    },
+                    "finalDefense": {
+                        "value": 30,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "技能發動時，攻擊力1.3倍，防禦力+40"
+                "description": "技能發動時，攻擊力1.3倍，防禦力+40",
+                "reaction": {
+                    "finalAttck": {
+                        "value": 0,
+                        "multiple": 1.3
+                    },
+                    "finalDefense": {
+                        "value": 40,
+                        "multiple": 1
+                    }
+                }
             }
         ]
     },
     "加速再生": {
         "name": "加速再生",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -238,23 +463,46 @@
     },
     "冰耐性": {
         "name": "冰耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "冰耐性+6"
+                "description": "冰耐性+6",
+                "reaction": {
+                    "resistance": {
+                        "type": "冰",
+                        "value": 6
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "冰耐性+12"
+                "description": "冰耐性+12",
+                "reaction": {
+                    "resistance": {
+                        "type": "冰",
+                        "value": 12
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "冰耐性+20、防禦力+10"
+                "description": "冰耐性+20、防禦力+10",
+                "reaction": {
+                    "defense": {
+                        "value": 10
+                    },
+                    "resistance": {
+                        "type": "冰",
+                        "value": 20
+                    }
+                }
             }
         ]
     },
     "地質學": {
         "name": "地質學",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -272,6 +520,7 @@
     },
     "回復速度": {
         "name": "回復速度",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -289,31 +538,68 @@
     },
     "冰屬性攻擊強化": {
         "name": "冰屬性攻擊強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "冰屬性攻擊值+30"
+                "description": "冰屬性攻擊值+30",
+                "reaction": {
+                    "element": {
+                        "type": "冰",
+                        "value": 30,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "冰屬性攻擊值+60"
+                "description": "冰屬性攻擊值+60",
+                "reaction": {
+                    "element": {
+                        "type": "冰",
+                        "value": 60,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "冰屬性攻擊值+100"
+                "description": "冰屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "冰",
+                        "value": 100,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "冰屬性攻擊值變為1.05倍，冰屬性攻擊值+100"
+                "description": "冰屬性攻擊值變為1.05倍，冰屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "冰",
+                        "value": 100,
+                        "multiple": 1.05
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "冰屬性攻擊值變為1.1倍，冰屬性攻擊值+100"
+                "description": "冰屬性攻擊值變為1.1倍，冰屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "冰",
+                        "value": 100,
+                        "multiple": 1.1
+                    }
+                }
             }
         ]
     },
     "收刀術": {
         "name": "收刀術",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -331,6 +617,7 @@
     },
     "耳塞": {
         "name": "耳塞",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -356,6 +643,7 @@
     },
     "死裡逃生": {
         "name": "死裡逃生",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -365,64 +653,139 @@
     },
     "匠": {
         "name": "匠",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "武器的銳利度+10"
+                "description": "武器的銳利度+10",
+                "reaction": {
+                    "sharpness": {
+                        "value": 10
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "武器的銳利度+20"
+                "description": "武器的銳利度+20",
+                "reaction": {
+                    "sharpness": {
+                        "value": 20
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "武器的銳利度+30"
+                "description": "武器的銳利度+30",
+                "reaction": {
+                    "sharpness": {
+                        "value": 30
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "武器的銳利度+40"
+                "description": "武器的銳利度+40",
+                "reaction": {
+                    "sharpness": {
+                        "value": 40
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "武器的銳利度+50"
+                "description": "武器的銳利度+50",
+                "reaction": {
+                    "sharpness": {
+                        "value": 50
+                    }
+                }
             }
         ]
     },
     "攻擊": {
         "name": "攻擊",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "基礎攻擊力+3"
+                "description": "基礎攻擊力+3",
+                "reaction": {
+                    "attack": {
+                        "value": 3
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "基礎攻擊力+6"
+                "description": "基礎攻擊力+6",
+                "reaction": {
+                    "attack": {
+                        "value": 6
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "基礎攻擊力+9"
+                "description": "基礎攻擊力+9",
+                "reaction": {
+                    "attack": {
+                        "value": 9
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "基礎攻擊力+12、會心率+5%"
+                "description": "基礎攻擊力+12、會心率+5%",
+                "reaction": {
+                    "attack": {
+                        "value": 12
+                    },
+                    "criticalRate": {
+                        "value": 5
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "基礎攻擊力+15、會心率+5%"
+                "description": "基礎攻擊力+15、會心率+5%",
+                "reaction": {
+                    "attack": {
+                        "value": 15
+                    },
+                    "criticalRate": {
+                        "value": 5
+                    }
+                }
             },
             {
                 "level": 6,
-                "description": "基礎攻擊力+18、會心率+5%"
+                "description": "基礎攻擊力+18、會心率+5%",
+                "reaction": {
+                    "attack": {
+                        "value": 18
+                    },
+                    "criticalRate": {
+                        "value": 5
+                    }
+                }
             },
             {
                 "level": 7,
-                "description": "基礎攻擊力+21、會心率+5%"
+                "description": "基礎攻擊力+21、會心率+5%",
+                "reaction": {
+                    "attack": {
+                        "value": 21
+                    },
+                    "criticalRate": {
+                        "value": 5
+                    }
+                }
             }
         ]
     },
     "吹笛名人": {
         "name": "吹笛名人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -432,6 +795,7 @@
     },
     "防禦強化": {
         "name": "防禦強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -441,6 +805,7 @@
     },
     "投射器裝填數UP": {
         "name": "投射器裝填數UP",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -458,6 +823,7 @@
     },
     "防御力DOWN耐性": {
         "name": "防御力DOWN耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -475,39 +841,92 @@
     },
     "防禦": {
         "name": "防禦",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "防禦力+5"
+                "description": "防禦力+5",
+                "reaction": {
+                    "defense": {
+                        "value": 5
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "防禦力+10"
+                "description": "防禦力+10",
+                "reaction": {
+                    "defense": {
+                        "value": 10
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "防禦力+15"
+                "description": "防禦力+15",
+                "reaction": {
+                    "defense": {
+                        "value": 15
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "防禦力+20，全屬性耐性值+3"
+                "description": "防禦力+20，全屬性耐性值+3",
+                "reaction": {
+                    "defense": {
+                        "value": 20
+                    },
+                    "resistance": {
+                        "type": "all",
+                        "value": 3
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "防禦力+25，全屬性耐性值+3"
+                "description": "防禦力+25，全屬性耐性值+3",
+                "reaction": {
+                    "defense": {
+                        "value": 25
+                    },
+                    "resistance": {
+                        "type": "全部",
+                        "value": 3
+                    }
+                }
             },
             {
                 "level": 6,
-                "description": "防禦力+30，全屬性耐性值+3"
+                "description": "防禦力+30，全屬性耐性值+3",
+                "reaction": {
+                    "defense": {
+                        "value": 30
+                    },
+                    "resistance": {
+                        "type": "all",
+                        "value": 3
+                    }
+                }
             },
             {
                 "level": 7,
-                "description": "防禦力+35，全屬性耐性值+3"
+                "description": "防禦力+35，全屬性耐性值+3",
+                "reaction": {
+                    "defense": {
+                        "value": 35
+                    },
+                    "resistance": {
+                        "type": "all",
+                        "value": 3
+                    }
+                }
             }
         ]
     },
     "利刃／彈藥節約": {
         "name": "利刃／彈藥節約",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -517,6 +936,7 @@
     },
     "快吃": {
         "name": "快吃",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -534,6 +954,7 @@
     },
     "防禦性能": {
         "name": "防禦性能",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -559,6 +980,7 @@
     },
     "拔刀術【力】": {
         "name": "拔刀術【力】",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -568,6 +990,7 @@
     },
     "泥耐性": {
         "name": "泥耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -577,23 +1000,40 @@
     },
     "拔刀術【技】": {
         "name": "拔刀術【技】",
+        "type": "passive",
         "list": [
             {
                 "level": 1,
-                "description": "武器拔刀攻擊的會心率+30%"
+                "description": "武器拔刀攻擊的會心率+30%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 30
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "武器拔刀攻擊的會心率+60%"
+                "description": "武器拔刀攻擊的會心率+60%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 60
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "武器拔刀攻擊的會心率+100%"
+                "description": "武器拔刀攻擊的會心率+100%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 100
+                    }
+                }
             }
         ]
     },
     "幸運": {
         "name": "幸運",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -603,6 +1043,7 @@
     },
     "昏厥耐性": {
         "name": "昏厥耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -620,6 +1061,7 @@
     },
     "昆蟲標本達人": {
         "name": "昆蟲標本達人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -637,39 +1079,76 @@
     },
     "看破": {
         "name": "看破",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "會心率+3%"
+                "description": "會心率+3%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 3
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "會心率+6%"
+                "description": "會心率+6%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 6
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "會心率+10%"
+                "description": "會心率+10%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 10
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "會心率+15%"
+                "description": "會心率+15%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 15
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "會心率+20%"
+                "description": "會心率+20%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 20
+                    }
+                }
             },
             {
                 "level": 6,
-                "description": "會心率+25%"
+                "description": "會心率+25%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 25
+                    }
+                }
             },
             {
                 "level": 7,
-                "description": "會心率+30%"
+                "description": "會心率+30%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 30
+                    }
+                }
             }
         ]
     },
     "指示隨從": {
         "name": "指示隨從",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -695,6 +1174,7 @@
     },
     "飛身躍入": {
         "name": "飛身躍入",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -704,6 +1184,7 @@
     },
     "炸彈客": {
         "name": "炸彈客",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -721,6 +1202,7 @@
     },
     "毒屬性強化": {
         "name": "毒屬性強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -738,6 +1220,7 @@
     },
     "耐力急速回復": {
         "name": "耐力急速回復",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -755,6 +1238,7 @@
     },
     "風壓完全無效": {
         "name": "風壓完全無效",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -764,6 +1248,7 @@
     },
     "風壓耐性": {
         "name": "風壓耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -789,15 +1274,22 @@
     },
     "突破耐力上限": {
         "name": "突破耐力上限",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "增加耐力的上限值"
+                "description": "增加耐力的上限值",
+                "reaction": {
+                    "stamina": {
+                        "value": 50
+                    }
+                }
             }
         ]
     },
     "耐震": {
         "name": "耐震",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -815,15 +1307,23 @@
     },
     "飛燕": {
         "name": "飛燕",
+        "type": "passive",
         "list": [
             {
                 "level": 1,
-                "description": "跳躍攻擊的威力變為1.1倍"
+                "description": "跳躍攻擊的威力變為1.1倍",
+                "reaction": {
+                    "finalAttck": {
+                        "value": 0,
+                        "multiple": 1.1
+                    }
+                }
             }
         ]
     },
     "毒耐性": {
         "name": "毒耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -841,6 +1341,7 @@
     },
     "威嚇": {
         "name": "威嚇",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -858,6 +1359,7 @@
     },
     "研究者": {
         "name": "研究者",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -867,6 +1369,7 @@
     },
     "毒傷害強化": {
         "name": "毒傷害強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -876,56 +1379,124 @@
     },
     "挑戰者": {
         "name": "挑戰者",
+        "type": "passive",
         "list": [
             {
                 "level": 1,
-                "description": "技能發動時，基礎攻擊力+4，會心率+3%"
+                "description": "技能發動時，基礎攻擊力+4，會心率+3%",
+                "reaction": {
+                    "attack": {
+                        "value": 4
+                    },
+                    "criticalRate": {
+                        "value": 3
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "技能發動時，基礎攻擊力+8，會心率+6%"
+                "description": "技能發動時，基礎攻擊力+8，會心率+6%",
+                "reaction": {
+                    "attack": {
+                        "value": 8
+                    },
+                    "criticalRate": {
+                        "value": 6
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "技能發動時，基礎攻擊力+12，會心率+9%"
+                "description": "技能發動時，基礎攻擊力+12，會心率+9%",
+                "reaction": {
+                    "attack": {
+                        "value": 12
+                    },
+                    "criticalRate": {
+                        "value": 9
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "技能發動時，基礎攻擊力+16，會心率+12%"
+                "description": "技能發動時，基礎攻擊力+16，會心率+12%",
+                "reaction": {
+                    "attack": {
+                        "value": 16
+                    },
+                    "criticalRate": {
+                        "value": 12
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "技能發動時，基礎攻擊力+20，會心率+15%"
+                "description": "技能發動時，基礎攻擊力+20，會心率+15%",
+                "reaction": {
+                    "attack": {
+                        "value": 20
+                    },
+                    "criticalRate": {
+                        "value": 15
+                    }
+                }
             }
         ]
     },
     "怨恨": {
         "name": "怨恨",
+        "type": "passive",
         "list": [
             {
                 "level": 1,
-                "description": "技能發動時，基礎攻擊力+5"
+                "description": "技能發動時，基礎攻擊力+5",
+                "reaction": {
+                    "attack": {
+                        "value": 5
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "技能發動時，基礎攻擊力+10"
+                "description": "技能發動時，基礎攻擊力+10",
+                "reaction": {
+                    "attack": {
+                        "value": 10
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "技能發動時，基礎攻擊力+15"
+                "description": "技能發動時，基礎攻擊力+15",
+                "reaction": {
+                    "attack": {
+                        "value": 15
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "技能發動時，基礎攻擊力+20"
+                "description": "技能發動時，基礎攻擊力+20",
+                "reaction": {
+                    "attack": {
+                        "value": 20
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "技能發動時，基礎攻擊力+25"
+                "description": "技能發動時，基礎攻擊力+25",
+                "reaction": {
+                    "attack": {
+                        "value": 25
+                    }
+                }
             }
         ]
     },
     "毒瓶追加": {
         "name": "毒瓶追加",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -935,6 +1506,7 @@
     },
     "砲術": {
         "name": "砲術",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -952,6 +1524,7 @@
     },
     "迴避性能": {
         "name": "迴避性能",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -977,6 +1550,7 @@
     },
     "破壞王": {
         "name": "破壞王",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -994,6 +1568,7 @@
     },
     "剝取名人": {
         "name": "剝取名人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1003,6 +1578,7 @@
     },
     "迴避距離UP": {
         "name": "迴避距離UP",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1018,8 +1594,9 @@
             }
         ]
     },
-    "振奮 振": {
-        "name": "振奮 振",
+    "振奮": {
+        "name": "振奮",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1029,6 +1606,7 @@
     },
     "追蹤達人": {
         "name": "追蹤達人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1038,6 +1616,7 @@
     },
     "剝取鐵人": {
         "name": "剝取鐵人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1047,6 +1626,7 @@
     },
     "砲擊手": {
         "name": "砲擊手",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1060,6 +1640,7 @@
     },
     "剛刃研磨": {
         "name": "剛刃研磨",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1069,6 +1650,7 @@
     },
     "砥石使用高速化": {
         "name": "砥石使用高速化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1086,6 +1668,7 @@
     },
     "砲彈裝填數UP": {
         "name": "砲彈裝填數UP",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1095,6 +1678,7 @@
     },
     "烤肉名人": {
         "name": "烤肉名人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1104,6 +1688,7 @@
     },
     "飢餓耐性": {
         "name": "飢餓耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1121,6 +1706,7 @@
     },
     "特殊射擊強化": {
         "name": "特殊射擊強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1134,23 +1720,40 @@
     },
     "弱點特效": {
         "name": "弱點特效",
+        "type": "passive",
         "list": [
             {
                 "level": 1,
-                "description": "攻擊有效部份時，會心率+15%"
+                "description": "攻擊有效部份時，會心率+15%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 15
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "攻擊有效部份時，會心率+30%"
+                "description": "攻擊有效部份時，會心率+30%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 30
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "攻擊有效部份時，會心率+50%"
+                "description": "攻擊有效部份時，會心率+50%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 50
+                    }
+                }
             }
         ]
     },
     "閃光強化": {
         "name": "閃光強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1160,6 +1763,7 @@
     },
     "捕獲名人": {
         "name": "捕獲名人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1169,6 +1773,7 @@
     },
     "採集達人": {
         "name": "採集達人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1178,6 +1783,7 @@
     },
     "異臭名人": {
         "name": "異臭名人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1187,6 +1793,7 @@
     },
     "貫通彈・龍之箭強化": {
         "name": "貫通彈・龍之箭強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1196,6 +1803,7 @@
     },
     "強化持續": {
         "name": "強化持續",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1213,6 +1821,7 @@
     },
     "釣魚名人": {
         "name": "釣魚名人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1222,6 +1831,7 @@
     },
     "通常彈・通常箭強化": {
         "name": "通常彈・通常箭強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1231,6 +1841,7 @@
     },
     "麻痺耐性": {
         "name": "麻痺耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1248,6 +1859,7 @@
     },
     "麻痺屬性強化": {
         "name": "麻痺屬性強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1265,6 +1877,7 @@
     },
     "探索者的幸運": {
         "name": "探索者的幸運",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1274,6 +1887,7 @@
     },
     "強運": {
         "name": "強運",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1283,6 +1897,7 @@
     },
     "麻痺瓶追加": {
         "name": "麻痺瓶追加",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1292,6 +1907,7 @@
     },
     "跑者": {
         "name": "跑者",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1309,6 +1925,7 @@
     },
     "集中": {
         "name": "集中",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1326,6 +1943,7 @@
     },
     "植生學": {
         "name": "植生學",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1347,6 +1965,7 @@
     },
     "鈍器能手": {
         "name": "鈍器能手",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1356,6 +1975,7 @@
     },
     "最愛菇類": {
         "name": "最愛菇類",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1373,6 +1993,7 @@
     },
     "裂傷耐性": {
         "name": "裂傷耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1390,6 +2011,7 @@
     },
     "無屬性強化": {
         "name": "無屬性強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1399,23 +2021,40 @@
     },
     "無傷": {
         "name": "無傷",
+        "type": "passive",
         "list": [
             {
                 "level": 1,
-                "description": "技能發動時，基礎攻擊力+5"
+                "description": "技能發動時，基礎攻擊力+5",
+                "reaction": {
+                    "attack": {
+                        "value": 5
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "技能發動時，基礎攻擊力+10"
+                "description": "技能發動時，基礎攻擊力+10",
+                "reaction": {
+                    "attack": {
+                        "value": 10
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "技能發動時，基礎攻擊力+20"
+                "description": "技能發動時，基礎攻擊力+20",
+                "reaction": {
+                    "attack": {
+                        "value": 20
+                    }
+                }
             }
         ]
     },
     "散彈・剛射強化": {
         "name": "散彈・剛射強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1425,6 +2064,7 @@
     },
     "減輕膽怯": {
         "name": "減輕膽怯",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1442,6 +2082,7 @@
     },
     "超會心": {
         "name": "超會心",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1459,6 +2100,7 @@
     },
     "超回復力": {
         "name": "超回復力",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1468,31 +2110,68 @@
     },
     "雷屬性攻擊強化": {
         "name": "雷屬性攻擊強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "雷屬性攻擊值+30"
+                "description": "雷屬性攻擊值+30",
+                "reaction": {
+                    "element": {
+                        "type": "雷",
+                        "value": 30,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "雷屬性攻擊值+60"
+                "description": "雷屬性攻擊值+60",
+                "reaction": {
+                    "element": {
+                        "type": "雷",
+                        "value": 60,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "雷屬性攻擊值+100"
+                "description": "雷屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "雷",
+                        "value": 100,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "雷屬性攻擊值變為1.05倍，雷屬性攻擊值+100"
+                "description": "雷屬性攻擊值變為1.05倍，雷屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "雷",
+                        "value": 100,
+                        "multiple": 1.05
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "雷屬性攻擊值變為1.1倍，雷屬性攻擊值+100"
+                "description": "雷屬性攻擊值變為1.1倍，雷屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "雷",
+                        "value": 100,
+                        "multiple": 1.1
+                    }
+                }
             }
         ]
     },
     "道具使用強化": {
         "name": "道具使用強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1510,6 +2189,7 @@
     },
     "搬運達人": {
         "name": "搬運達人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1519,6 +2199,7 @@
     },
     "滑走強化": {
         "name": "滑走強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1528,6 +2209,7 @@
     },
     "跳躍鐵人": {
         "name": "跳躍鐵人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1537,6 +2219,7 @@
     },
     "達人藝": {
         "name": "達人藝",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1546,6 +2229,7 @@
     },
     "會心攻擊【屬性】": {
         "name": "會心攻擊【屬性】",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1555,6 +2239,7 @@
     },
     "蜂蜜獵人": {
         "name": "蜂蜜獵人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1564,6 +2249,7 @@
     },
     "解放弓的蓄力階段": {
         "name": "解放弓的蓄力階段",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1573,6 +2259,7 @@
     },
     "會心攻擊【特殊】": {
         "name": "會心攻擊【特殊】",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1582,23 +2269,46 @@
     },
     "雷耐性": {
         "name": "雷耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "雷耐性+6"
+                "description": "雷耐性+6",
+                "reaction": {
+                    "resistance": {
+                        "type": "雷",
+                        "value": 6
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "雷耐性+12"
+                "description": "雷耐性+12",
+                "reaction": {
+                    "resistance": {
+                        "type": "雷",
+                        "value": 12
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "雷耐性+20、防禦力+10"
+                "description": "雷耐性+20、防禦力+10",
+                "reaction": {
+                    "defense": {
+                        "value": 10
+                    },
+                    "resistance": {
+                        "type": "雷",
+                        "value": 20
+                    }
+                }
             }
         ]
     },
     "睡眠屬性強化": {
         "name": "睡眠屬性強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1616,6 +2326,7 @@
     },
     "睡眠耐性": {
         "name": "睡眠耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1633,6 +2344,7 @@
     },
     "察覺": {
         "name": "察覺",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1642,6 +2354,7 @@
     },
     "滿足感": {
         "name": "滿足感",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1651,6 +2364,7 @@
     },
     "奪取耐力": {
         "name": "奪取耐力",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1668,6 +2382,7 @@
     },
     "精靈加護": {
         "name": "精靈加護",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1685,6 +2400,7 @@
     },
     "綿花孢子草的知識": {
         "name": "綿花孢子草的知識",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1702,23 +2418,40 @@
     },
     "精神抖擻": {
         "name": "精神抖擻",
+        "type": "passive",
         "list": [
             {
                 "level": 1,
-                "description": "效果發動時，會心率+10%"
+                "description": "效果發動時，會心率+10%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 10
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "效果發動時，會心率+20%"
+                "description": "效果發動時，會心率+20%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 20
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "效果發動時，會心率+30%"
+                "description": "效果發動時，會心率+30%",
+                "reaction": {
+                    "criticalRate": {
+                        "value": 30
+                    }
+                }
             }
         ]
     },
     "睡眠瓶追加": {
         "name": "睡眠瓶追加",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1728,6 +2461,7 @@
     },
     "廣域化": {
         "name": "廣域化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1753,6 +2487,7 @@
     },
     "適應瘴氣環境": {
         "name": "適應瘴氣環境",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1762,6 +2497,7 @@
     },
     "潛伏": {
         "name": "潛伏",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1779,6 +2515,7 @@
     },
     "熱傷害無效": {
         "name": "熱傷害無效",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1788,6 +2525,7 @@
     },
     "適應水場": {
         "name": "適應水場",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1805,6 +2543,7 @@
     },
     "毅力": {
         "name": "毅力",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1814,48 +2553,107 @@
     },
     "龍耐性": {
         "name": "龍耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "龍耐性+6"
+                "description": "龍耐性+6",
+                "reaction": {
+                    "resistance": {
+                        "type": "龍",
+                        "value": 6
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "龍耐性+12"
+                "description": "龍耐性+12",
+                "reaction": {
+                    "resistance": {
+                        "type": "龍",
+                        "value": 12
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "龍耐性+20、防禦力+10"
+                "description": "龍耐性+20、防禦力+10",
+                "reaction": {
+                    "defense": {
+                        "value": 10
+                    },
+                    "resistance": {
+                        "type": "龍",
+                        "value": 20
+                    }
+                }
             }
         ]
     },
     "龍屬性攻擊強化": {
         "name": "龍屬性攻擊強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "龍屬性攻擊值+30"
+                "description": "龍屬性攻擊值+30",
+                "reaction": {
+                    "element": {
+                        "type": "龍",
+                        "value": 30,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "龍屬性攻擊值+60"
+                "description": "龍屬性攻擊值+60",
+                "reaction": {
+                    "element": {
+                        "type": "龍",
+                        "value": 60,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "龍屬性攻擊值+100"
+                "description": "龍屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "龍",
+                        "value": 100,
+                        "multiple": 1
+                    }
+                }
             },
             {
                 "level": 4,
-                "description": "龍屬性攻擊值變為1.05倍，龍屬性攻擊值+100"
+                "description": "龍屬性攻擊值變為1.05倍，龍屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "龍",
+                        "value": 100,
+                        "multiple": 1.05
+                    }
+                }
             },
             {
                 "level": 5,
-                "description": "龍屬性攻擊值變為1.1倍，龍屬性攻擊值+100"
+                "description": "龍屬性攻擊值變為1.1倍，龍屬性攻擊值+100",
+                "reaction": {
+                    "element": {
+                        "type": "龍",
+                        "value": 100,
+                        "multiple": 1.1
+                    }
+                }
             }
         ]
     },
     "導蟲反應距離UP": {
         "name": "導蟲反應距離UP",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1865,6 +2663,7 @@
     },
     "整備": {
         "name": "整備",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1882,6 +2681,7 @@
     },
     "瘴氣耐性": {
         "name": "瘴氣耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1899,6 +2699,7 @@
     },
     "龍封力強化": {
         "name": "龍封力強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1908,6 +2709,7 @@
     },
     "騎乘名人": {
         "name": "騎乘名人",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1917,6 +2719,7 @@
     },
     "攀岩者": {
         "name": "攀岩者",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1926,6 +2729,7 @@
     },
     "爆破屬性強化": {
         "name": "爆破屬性強化",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1943,6 +2747,7 @@
     },
     "蹲下移動速度UP": {
         "name": "蹲下移動速度UP",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1952,6 +2757,7 @@
     },
     "爆破異常狀態的耐性": {
         "name": "爆破異常狀態的耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1969,6 +2775,7 @@
     },
     "爆破瓶追加": {
         "name": "爆破瓶追加",
+        "type": "active",
         "list": [
             {
                 "level": 1,
@@ -1978,23 +2785,40 @@
     },
     "屬性解放／裝填擴充": {
         "name": "屬性解放／裝填擴充",
+        "type": "active",
         "list": [
             {
                 "level": 1,
-                "description": "激發出1/3的隱藏屬性／增加部分彈藥裝填數"
+                "description": "激發出1/3的隱藏屬性／增加部分彈藥裝填數",
+                "reaction": {
+                    "enableElement": {
+                        "multiple": 0.3333
+                    }
+                }
             },
             {
                 "level": 2,
-                "description": "激發出2/3的隱藏屬性／增加多數彈藥裝填數"
+                "description": "激發出2/3的隱藏屬性／增加多數彈藥裝填數",
+                "reaction": {
+                    "enableElement": {
+                        "multiple": 0.6666
+                    }
+                }
             },
             {
                 "level": 3,
-                "description": "激發出100%的隱藏屬性／幾乎增加所有彈藥裝填數"
+                "description": "激發出100%的隱藏屬性／幾乎增加所有彈藥裝填數",
+                "reaction": {
+                    "enableElement": {
+                        "multiple": 1
+                    }
+                }
             }
         ]
     },
     "屬性異常狀態耐性": {
         "name": "屬性異常狀態耐性",
+        "type": "active",
         "list": [
             {
                 "level": 1,

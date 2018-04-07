@@ -369,7 +369,7 @@ export default class Main extends Component {
         this.setState({
             equips: {
                 weapon: {
-                    key: '日冕短劍',
+                    key: '罪【真】',
                     slots: []
                 },
                 helm: {
@@ -381,39 +381,39 @@ export default class Main extends Component {
                     ]
                 },
                 chest: {
-                    key: '鋼龍身β',
+                    key: '杜賓鎧甲β',
                     slots: [
                         {
-                            key: '飛燕珠'
+                            key: '痛擊珠'
                         }
                     ]
                 },
                 arm: {
-                    key: '帝王β手',
+                    key: '異種大型鋼爪α',
                     slots: [
                         {
-                            key: '超心珠'
+                            key: '達人珠'
                         }
                     ]
                 },
                 waist: {
-                    key: '帝王β身',
+                    key: '慘爪龍腰甲β',
                     slots: [
                         {
-                            key: '渾身珠'
+                            key: '無擊珠'
                         }
                     ]
                 },
                 leg: {
-                    key: '慘爪龍護腿β',
+                    key: '杜賓護腿β',
                     slots: [
                         {
-                            key: '渾身珠'
+                            key: '達人珠'
                         }
                     ]
                 },
                 charm: {
-                    key: '匠之護石 III'
+                    key: '攻擊護石 III'
                 }
             }
         }, () => {
@@ -512,57 +512,85 @@ export default class Main extends Component {
         return (
             <div key="equip" className="mhwc-equips">
                 <div className="mhwc-equip_item">
-                    <span>{weapon.name}</span>
+                    <div>
+                        <span>{weapon.name}</span>
+                    </div>
+
                     {equips.weapon.slots.map((data) => {
                         return (
-                            <span key={data.key}>
-                                {DataSet.jewel.getInfo(data.key).name}
-                            </span>
+                            <div>
+                                <span key={data.key}>
+                                    {DataSet.jewel.getInfo(data.key).name}
+                                </span>
+                            </div>
                         );
                     })}
                 </div>
                 <div className="mhwc-equip_item">
-                    <span>{helm.name}</span>
+                    <div>
+                        <span>{helm.name}</span>
+                    </div>
+
                     {equips.helm.slots.map((data) => {
                         return (
-                            <span key={data.key}>
-                                {DataSet.jewel.getInfo(data.key).name}
-                            </span>
+                            <div>
+                                <span key={data.key}>
+                                    {DataSet.jewel.getInfo(data.key).name}
+                                </span>
+                            </div>
                         );
                     })}
                 </div>
                 <div className="mhwc-equip_item">
-                    <span>{arm.name}</span>
+                    <div>
+                        <span>{arm.name}</span>
+                    </div>
+
                     {equips.arm.slots.map((data) => {
                         return (
-                            <span key={data.key}>
-                                {DataSet.jewel.getInfo(data.key).name}
-                            </span>
+                            <div>
+                                <span key={data.key}>
+                                    {DataSet.jewel.getInfo(data.key).name}
+                                </span>
+                            </div>
                         );
                     })}
                 </div>
                 <div className="mhwc-equip_item">
-                    <span>{waist.name}</span>
+                    <div>
+                        <span>{waist.name}</span>
+                    </div>
+
                     {equips.waist.slots.map((data) => {
                         return (
-                            <span key={data.key}>
-                                {DataSet.jewel.getInfo(data.key).name}
-                            </span>
+                            <div>
+                                <span key={data.key}>
+                                    {DataSet.jewel.getInfo(data.key).name}
+                                </span>
+                            </div>
                         );
                     })}
                 </div>
                 <div className="mhwc-equip_item">
-                    <span>{leg.name}</span>
+                    <div>
+                        <span>{leg.name}</span>
+                    </div>
+
                     {equips.leg.slots.map((data) => {
                         return (
-                            <span key={data.key}>
-                                {DataSet.jewel.getInfo(data.key).name}
-                            </span>
+                            <div>
+                                <span key={data.key}>
+                                    {DataSet.jewel.getInfo(data.key).name}
+                                </span>
+                            </div>
                         );
                     })}
                 </div>
                 <div className="mhwc-equip_item">
-                    <span>{charm.name}</span>
+                    <div>
+                        <span>{charm.name}</span>
+                    </div>
+
                 </div>
             </div>
         );
