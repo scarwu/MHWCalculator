@@ -32,8 +32,11 @@ var defaultEquips = {
 var defaultStatus = {
     health: 100,
     stamina: 100,
-    attack: 0,
-    criticalRate: 0,
+    attack: 50, // 力量護符+20 力量之爪+30
+    critical: {
+        rate: 0,
+        multiple: 1.25
+    },
     sharpness: {
         value: 0,
         steps: {
@@ -53,10 +56,7 @@ var defaultStatus = {
     elderseal: {
         affinity: null
     },
-    defense: {
-        min: 0,
-        max: 0
-    },
+    defense: 31, // 守護護符+10 守護之爪+20
     resistance: {
         fire: 0,
         water: 0,
@@ -196,20 +196,20 @@ export default class Main extends Component {
 
         let status = defaultStatus;
 
-        status.attack = weapon.attack;
-        status.criticalRate = weapon.criticalRate;
+        status.attack += weapon.attack;
+        status.critical.rate = weapon.criticalRate;
         status.sharpness = weapon.sharpness;
         status.element = weapon.element;
         status.elderseal = weapon.elderseal;
 
-        // Defense
-        status.defense.min = weapon.defense + helm.defense.min;
-            + chest.defense.min + arm.defense.min;
-            + waist.defense.min + leg.defense.min;
+        console.log(status.defense, weapon.defense, helm.defense
+           , chest.defense, arm.defense
+           , waist.defense, leg.defense);
 
-        status.defense.max = weapon.defense + helm.defense.max;
-            + chest.defense.max + arm.defense.max;
-            + waist.defense.max + leg.defense.max;
+        // Defense
+        status.defense += (weapon.defense + helm.defense
+            + chest.defense + arm.defense
+            + waist.defense + leg.defense);
 
         // Resistance
         status.resistance.fire = helm.resistance.fire
@@ -370,7 +370,12 @@ export default class Main extends Component {
             equips: {
                 weapon: {
                     key: '罪【真】',
-                    slots: []
+                    slots: [],
+                    enhances: [
+                        {
+                            'key': '賦予回復能力'
+                        }
+                    ]
                 },
                 helm: {
                     key: '龍王的獨眼α',
@@ -510,9 +515,18 @@ export default class Main extends Component {
         let charm = DataSet.charm.getInfo(equips.charm.key);
 
         return [(
-            <div className="mhwc-item">
+            <div key="weapon" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>{weapon.name}</span>
+                </div>
+                <div className="mhwc-enhances">
+                    {equips.weapon.enhances.map((data) => {
+                        return (
+                            <div className="mhwc-name">
+                                <span key={data.key}>{data.key}</span>
+                            </div>
+                        );
+                    })}
                 </div>
                 <div className="mhwc-slots">
                     {equips.weapon.slots.map((data) => {
@@ -529,7 +543,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="helm" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>{helm.name}</span>
                 </div>
@@ -547,8 +561,27 @@ export default class Main extends Component {
                     })}
                 </div>
             </div>
+        ), , (
+            <div key="chest" className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>{chest.name}</span>
+                </div>
+                <div className="mhwc-slots">
+                    {equips.chest.slots.map((data) => {
+                        return (
+                            <div className="mhwc-jewel">
+                                <div className="mhwc-name">
+                                    <span key={data.key}>
+                                        {DataSet.jewel.getInfo(data.key).name}
+                                    </span>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
         ), (
-            <div className="mhwc-item">
+            <div key="arm" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>{arm.name}</span>
                 </div>
@@ -567,7 +600,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="waist" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>{waist.name}</span>
                 </div>
@@ -586,7 +619,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="leg" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>{leg.name}</span>
                 </div>
@@ -605,7 +638,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="charm" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>{charm.name}</span>
                 </div>
@@ -645,7 +678,7 @@ export default class Main extends Component {
         };
 
         return [(
-            <div className="mhwc-item">
+            <div key="health" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>Health</span>
                 </div>
@@ -654,7 +687,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="stamina" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>Stamina</span>
                 </div>
@@ -663,7 +696,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="attack" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>Attack</span>
                 </div>
@@ -672,16 +705,25 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="criticalRate" className="mhwc-item">
                 <div className="mhwc-name">
-                    <span>CriticalRate</span>
+                    <span>Critical Rate</span>
                 </div>
                 <div className="mhwc-value">
-                    <span>{status.criticalRate}%</span>
+                    <span>{status.critical.rate}%</span>
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="criticalMultiple" className="mhwc-item">
+                <div className="mhwc-name">
+                    <span>Critical Multiple</span>
+                </div>
+                <div className="mhwc-value">
+                    <span>{status.critical.multiple}%</span>
+                </div>
+            </div>
+        ), (
+            <div key="sharpness" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>Sharpness</span>
                 </div>
@@ -698,7 +740,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="element" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>Element</span>
                 </div>
@@ -711,7 +753,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="elderseal" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>Elderseal</span>
                 </div>
@@ -720,16 +762,16 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="defense" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>Defense</span>
                 </div>
                 <div className="mhwc-value">
-                    <span>{status.defense.min} ~ {status.defense.max}</span>
+                    <span>{status.defense}</span>
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="resistance" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>Resistance</span>
                 </div>
@@ -757,7 +799,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div className="mhwc-item">
+            <div key="skills" className="mhwc-item">
                 <div className="mhwc-name">
                     <span>Skills</span>
                 </div>

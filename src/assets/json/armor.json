@@ -5,10 +5,7 @@
         "type": "leg",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 12,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 5,
@@ -35,10 +32,7 @@
         "type": "helm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 10,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -65,10 +59,7 @@
         "type": "chest",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 10,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -95,10 +86,7 @@
         "type": "arm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 10,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -125,10 +113,7 @@
         "type": "waist",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 10,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -155,10 +140,7 @@
         "type": "leg",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 10,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -185,10 +167,7 @@
         "type": "arm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 12,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 4,
             "water": 0,
@@ -215,10 +194,7 @@
         "type": "helm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -245,10 +221,7 @@
         "type": "chest",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -275,10 +248,7 @@
         "type": "arm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -305,10 +275,7 @@
         "type": "waist",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -335,10 +302,7 @@
         "type": "leg",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -365,10 +329,7 @@
         "type": "helm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 2,
-            "max": 68
-        },
+        "defense": 68,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -395,10 +356,7 @@
         "type": "chest",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 2,
-            "max": 68
-        },
+        "defense": 68,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -420,10 +378,7 @@
         "type": "arm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 2,
-            "max": 68
-        },
+        "defense": 68,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -445,10 +400,7 @@
         "type": "waist",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 2,
-            "max": 68
-        },
+        "defense": 68,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -470,10 +422,7 @@
         "type": "leg",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 2,
-            "max": 68
-        },
+        "defense": 68,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -495,10 +444,7 @@
         "type": "helm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 6,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -525,10 +471,7 @@
         "type": "chest",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 6,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -555,10 +498,7 @@
         "type": "arm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 6,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -585,10 +525,7 @@
         "type": "waist",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 6,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -615,10 +552,7 @@
         "type": "leg",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 6,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -645,10 +579,7 @@
         "type": "helm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 12,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -675,10 +606,7 @@
         "type": "chest",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 12,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -705,10 +633,7 @@
         "type": "arm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 12,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -735,10 +660,7 @@
         "type": "waist",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 12,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -765,10 +687,7 @@
         "type": "leg",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 12,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -795,10 +714,7 @@
         "type": "helm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 6,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -825,10 +741,7 @@
         "type": "chest",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 6,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -855,10 +768,7 @@
         "type": "arm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 6,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -885,10 +795,7 @@
         "type": "waist",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 6,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -915,10 +822,7 @@
         "type": "leg",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 6,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -945,10 +849,7 @@
         "type": "helm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -975,10 +876,7 @@
         "type": "chest",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -1005,10 +903,7 @@
         "type": "arm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -1035,10 +930,7 @@
         "type": "waist",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -1065,10 +957,7 @@
         "type": "leg",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -1095,10 +984,7 @@
         "type": "helm",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 2,
-            "max": 68
-        },
+        "defense": 68,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -1125,10 +1011,7 @@
         "type": "chest",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 2,
-            "max": 68
-        },
+        "defense": 68,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -1150,10 +1033,7 @@
         "type": "chest",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 2,
-            "max": 68
-        },
+        "defense": 68,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -1175,10 +1055,7 @@
         "type": "chest",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 2,
-            "max": 68
-        },
+        "defense": 68,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -1200,10 +1077,7 @@
         "type": "chest",
         "rare": 1,
         "gender": "general",
-        "defense": {
-            "min": 2,
-            "max": 68
-        },
+        "defense": 68,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -1225,10 +1099,7 @@
         "type": "helm",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 66
-        },
+        "defense": 66,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -1255,10 +1126,7 @@
         "type": "chest",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 66
-        },
+        "defense": 66,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -1285,10 +1153,7 @@
         "type": "arm",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 66
-        },
+        "defense": 66,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -1315,10 +1180,7 @@
         "type": "waist",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 66
-        },
+        "defense": 66,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -1345,10 +1207,7 @@
         "type": "leg",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 8,
-            "max": 66
-        },
+        "defense": 66,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -1375,10 +1234,7 @@
         "type": "helm",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 16,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -1405,10 +1261,7 @@
         "type": "chest",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 16,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -1435,10 +1288,7 @@
         "type": "arm",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 16,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -1465,10 +1315,7 @@
         "type": "waist",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 16,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -1495,10 +1342,7 @@
         "type": "leg",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 16,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -1525,10 +1369,7 @@
         "type": "helm",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 14,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -1555,10 +1396,7 @@
         "type": "chest",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 14,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -1585,10 +1423,7 @@
         "type": "arm",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 14,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -1615,10 +1450,7 @@
         "type": "waist",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 14,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -1645,10 +1477,7 @@
         "type": "leg",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 14,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -1675,10 +1504,7 @@
         "type": "helm",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 14,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -1705,10 +1531,7 @@
         "type": "chest",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 14,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -1735,10 +1558,7 @@
         "type": "arm",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 14,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -1765,10 +1585,7 @@
         "type": "waist",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 14,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -1795,10 +1612,7 @@
         "type": "leg",
         "rare": 2,
         "gender": "general",
-        "defense": {
-            "min": 14,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -1825,10 +1639,7 @@
         "type": "helm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -1855,10 +1666,7 @@
         "type": "chest",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -1885,10 +1693,7 @@
         "type": "arm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -1915,10 +1720,7 @@
         "type": "waist",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -1945,10 +1747,7 @@
         "type": "leg",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -1975,10 +1774,7 @@
         "type": "helm",
         "rare": 3,
         "gender": "male",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2005,10 +1801,7 @@
         "type": "chest",
         "rare": 3,
         "gender": "male",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2035,10 +1828,7 @@
         "type": "arm",
         "rare": 3,
         "gender": "male",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2065,10 +1855,7 @@
         "type": "waist",
         "rare": 3,
         "gender": "male",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2095,10 +1882,7 @@
         "type": "leg",
         "rare": 3,
         "gender": "male",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2125,10 +1909,7 @@
         "type": "helm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -2155,10 +1936,7 @@
         "type": "chest",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -2185,10 +1963,7 @@
         "type": "arm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -2215,10 +1990,7 @@
         "type": "waist",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -2245,10 +2017,7 @@
         "type": "leg",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -2275,10 +2044,7 @@
         "type": "helm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -2310,10 +2076,7 @@
         "type": "chest",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -2345,10 +2108,7 @@
         "type": "arm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -2380,10 +2140,7 @@
         "type": "waist",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -2415,10 +2172,7 @@
         "type": "leg",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 20,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -2450,10 +2204,7 @@
         "type": "helm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -2480,10 +2231,7 @@
         "type": "helm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2510,10 +2258,7 @@
         "type": "chest",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2540,10 +2285,7 @@
         "type": "arm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2570,10 +2312,7 @@
         "type": "waist",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2600,10 +2339,7 @@
         "type": "leg",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2630,10 +2366,7 @@
         "type": "helm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -2660,10 +2393,7 @@
         "type": "chest",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -2690,10 +2420,7 @@
         "type": "arm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -2720,10 +2447,7 @@
         "type": "waist",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -2750,10 +2474,7 @@
         "type": "leg",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -2780,10 +2501,7 @@
         "type": "helm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -2810,10 +2528,7 @@
         "type": "chest",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -2840,10 +2555,7 @@
         "type": "arm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -2870,10 +2582,7 @@
         "type": "waist",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -2900,10 +2609,7 @@
         "type": "leg",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 18,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -2930,10 +2636,7 @@
         "type": "helm",
         "rare": 3,
         "gender": "female",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2960,10 +2663,7 @@
         "type": "chest",
         "rare": 3,
         "gender": "female",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -2990,10 +2690,7 @@
         "type": "arm",
         "rare": 3,
         "gender": "female",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -3020,10 +2717,7 @@
         "type": "waist",
         "rare": 3,
         "gender": "female",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -3050,10 +2744,7 @@
         "type": "leg",
         "rare": 3,
         "gender": "female",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -3080,10 +2771,7 @@
         "type": "helm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 24,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -3110,10 +2798,7 @@
         "type": "chest",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 24,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -3140,10 +2825,7 @@
         "type": "arm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 24,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -3170,10 +2852,7 @@
         "type": "waist",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 24,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -3200,10 +2879,7 @@
         "type": "leg",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 24,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -3230,10 +2906,7 @@
         "type": "helm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -3260,10 +2933,7 @@
         "type": "chest",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -3290,10 +2960,7 @@
         "type": "arm",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -3320,10 +2987,7 @@
         "type": "waist",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -3350,10 +3014,7 @@
         "type": "leg",
         "rare": 3,
         "gender": "general",
-        "defense": {
-            "min": 22,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -3380,10 +3041,7 @@
         "type": "helm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 28,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -3410,10 +3068,7 @@
         "type": "chest",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 28,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -3440,10 +3095,7 @@
         "type": "arm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 28,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -3470,10 +3122,7 @@
         "type": "waist",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 28,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -3500,10 +3149,7 @@
         "type": "leg",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 28,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -3530,10 +3176,7 @@
         "type": "helm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -3565,10 +3208,7 @@
         "type": "chest",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -3600,10 +3240,7 @@
         "type": "arm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -3635,10 +3272,7 @@
         "type": "waist",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -3670,10 +3304,7 @@
         "type": "leg",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -3705,10 +3336,7 @@
         "type": "helm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -3740,10 +3368,7 @@
         "type": "chest",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -3775,10 +3400,7 @@
         "type": "arm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -3810,10 +3432,7 @@
         "type": "waist",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -3845,10 +3464,7 @@
         "type": "leg",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -3880,10 +3496,7 @@
         "type": "helm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 34,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -3915,10 +3528,7 @@
         "type": "chest",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 34,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -3950,10 +3560,7 @@
         "type": "arm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 34,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -3985,10 +3592,7 @@
         "type": "waist",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 34,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -4020,10 +3624,7 @@
         "type": "leg",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 34,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -4055,10 +3656,7 @@
         "type": "helm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -4090,10 +3688,7 @@
         "type": "chest",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -4125,10 +3720,7 @@
         "type": "arm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -4160,10 +3752,7 @@
         "type": "waist",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -4195,10 +3784,7 @@
         "type": "leg",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -4230,10 +3816,7 @@
         "type": "helm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -4260,10 +3843,7 @@
         "type": "chest",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -4290,10 +3870,7 @@
         "type": "arm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -4320,10 +3897,7 @@
         "type": "waist",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -4350,10 +3924,7 @@
         "type": "leg",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -4380,10 +3951,7 @@
         "type": "helm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 28,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -4410,10 +3978,7 @@
         "type": "chest",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 28,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -4440,10 +4005,7 @@
         "type": "arm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 28,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -4470,10 +4032,7 @@
         "type": "waist",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 28,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -4500,10 +4059,7 @@
         "type": "leg",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 28,
-            "max": 72
-        },
+        "defense": 72,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -4530,10 +4086,7 @@
         "type": "helm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 0,
             "water": 1,
@@ -4565,10 +4118,7 @@
         "type": "chest",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 0,
             "water": 1,
@@ -4600,10 +4150,7 @@
         "type": "arm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 0,
             "water": 1,
@@ -4635,10 +4182,7 @@
         "type": "waist",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 0,
             "water": 1,
@@ -4670,10 +4214,7 @@
         "type": "leg",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 30,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 0,
             "water": 1,
@@ -4705,10 +4246,7 @@
         "type": "helm",
         "rare": 4,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -4735,10 +4273,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -4769,10 +4304,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -4799,10 +4331,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -4833,10 +4362,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -4867,10 +4393,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -4897,10 +4420,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -4931,10 +4451,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -4965,10 +4482,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -4999,10 +4513,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -5033,10 +4544,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -5067,10 +4575,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -5097,10 +4602,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -5131,10 +4633,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -5161,10 +4660,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -5191,10 +4687,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -5225,10 +4718,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -5259,10 +4749,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -5293,10 +4780,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -5327,10 +4811,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -5361,10 +4842,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -5398,10 +4876,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "male",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -5432,10 +4907,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "male",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -5466,10 +4938,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "male",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -5504,10 +4973,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "male",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -5542,10 +5008,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "male",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -5580,10 +5043,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "male",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -5614,10 +5074,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "male",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -5648,10 +5105,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "male",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -5685,10 +5139,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "male",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -5722,10 +5173,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "male",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -5759,10 +5207,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -5789,10 +5234,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -5823,10 +5265,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -5853,10 +5292,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -5887,10 +5323,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -5921,10 +5354,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -5955,10 +5385,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -5989,10 +5416,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6023,10 +5447,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6060,10 +5481,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6097,10 +5515,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 5,
@@ -6131,10 +5546,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 5,
@@ -6169,10 +5581,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6203,10 +5612,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6233,10 +5639,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6263,10 +5666,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6297,10 +5697,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6327,10 +5724,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6361,10 +5755,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6395,10 +5786,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6429,10 +5817,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6463,10 +5848,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6497,10 +5879,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6531,10 +5910,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6565,10 +5941,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6599,10 +5972,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6629,10 +5999,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6663,10 +6030,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6700,10 +6064,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6734,10 +6095,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6768,10 +6126,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6802,10 +6157,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": -3,
@@ -6836,10 +6188,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 4,
             "water": 0,
@@ -6870,10 +6219,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 4,
             "water": 0,
@@ -6904,10 +6250,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -6934,10 +6277,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -6964,10 +6304,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -6998,10 +6335,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -7032,10 +6366,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -7066,10 +6397,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -7100,10 +6428,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -7134,10 +6459,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -7168,10 +6490,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -7202,10 +6521,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": -2,
             "water": 2,
@@ -7236,10 +6552,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -7279,10 +6592,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -7322,10 +6632,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -7365,10 +6672,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -7408,10 +6712,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -7447,10 +6748,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -7490,10 +6788,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -7536,10 +6831,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -7579,10 +6871,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -7622,10 +6911,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -7665,10 +6951,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -7699,10 +6982,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -7733,10 +7013,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -7763,10 +7040,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -7797,10 +7071,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -7831,10 +7102,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -7861,10 +7129,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -7891,10 +7156,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -7925,10 +7187,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -7959,10 +7218,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -7993,10 +7249,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -8027,10 +7280,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -8061,10 +7311,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -8095,10 +7342,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -8129,10 +7373,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -8163,10 +7404,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -8197,10 +7435,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -8231,10 +7466,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -8265,10 +7497,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -8299,10 +7528,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -8333,10 +7559,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -8367,10 +7590,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -8401,10 +7621,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -8435,10 +7652,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -8465,10 +7679,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -8495,10 +7706,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -8525,10 +7733,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -8555,10 +7760,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -8589,10 +7791,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -8618,10 +7817,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -8647,10 +7843,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -8676,10 +7869,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -8705,10 +7895,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -8739,10 +7926,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -8773,10 +7957,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -8807,10 +7988,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -8841,10 +8019,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -8871,10 +8046,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -8905,10 +8077,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -8942,10 +8111,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -8976,10 +8142,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -9010,10 +8173,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -9044,10 +8204,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "female",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -9078,10 +8235,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "female",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -9112,10 +8266,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "female",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -9150,10 +8301,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "female",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -9188,10 +8336,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "female",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -9226,10 +8371,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "female",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -9260,10 +8402,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "female",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -9294,10 +8433,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "female",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -9331,10 +8467,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "female",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -9368,10 +8501,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "female",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -1,
             "water": -1,
@@ -9405,10 +8535,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -9439,10 +8566,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -9469,10 +8593,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -9499,10 +8620,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -9533,10 +8651,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -9567,10 +8682,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -9601,10 +8713,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -9635,10 +8744,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -9669,10 +8775,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -9703,10 +8806,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -9737,10 +8837,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -9767,10 +8864,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -9801,10 +8895,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -9835,10 +8926,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -9865,10 +8953,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -9899,10 +8984,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -9936,10 +9018,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -9970,10 +9049,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -10007,10 +9083,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -10041,10 +9114,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": 0,
             "water": 3,
@@ -10075,10 +9145,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -10109,10 +9176,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -10139,10 +9203,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -10173,10 +9234,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -10207,10 +9265,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -10237,10 +9292,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -10271,10 +9323,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -10305,10 +9354,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -10339,10 +9385,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -10373,10 +9416,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 36,
-            "max": 74
-        },
+        "defense": 74,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -10407,10 +9447,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -10437,10 +9474,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -10467,10 +9501,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -10501,10 +9532,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -10535,10 +9563,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -10569,10 +9594,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -10603,10 +9625,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -10637,10 +9656,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -10671,10 +9687,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -10705,10 +9718,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 42,
-            "max": 80
-        },
+        "defense": 80,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -10742,10 +9752,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 40,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -10772,10 +9779,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -10806,10 +9810,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -10836,10 +9837,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -10866,10 +9864,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -10896,10 +9891,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -10930,10 +9922,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -10964,10 +9953,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -10998,10 +9984,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -11032,10 +10015,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -11066,10 +10046,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 38,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": -2,
             "water": 1,
@@ -11100,10 +10077,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11134,10 +10108,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11168,10 +10139,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11198,10 +10166,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11232,10 +10197,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11262,10 +10224,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11300,10 +10259,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11338,10 +10294,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11372,10 +10325,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11410,10 +10360,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11444,10 +10391,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11474,10 +10418,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11504,10 +10445,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11534,10 +10472,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11564,10 +10499,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11594,10 +10526,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11628,10 +10557,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11657,10 +10583,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11686,10 +10609,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11715,10 +10635,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 32,
-            "max": 70
-        },
+        "defense": 70,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11744,10 +10661,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11778,10 +10692,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11812,10 +10723,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11846,10 +10754,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11880,10 +10785,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11914,10 +10816,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11944,10 +10843,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -11974,10 +10870,7 @@
         "type": "arm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -12004,10 +10897,7 @@
         "type": "waist",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -12038,10 +10928,7 @@
         "type": "leg",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 0,
@@ -12072,10 +10959,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -12106,10 +10990,7 @@
         "type": "chest",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -12140,10 +11021,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -12174,10 +11052,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 48,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -12208,10 +11083,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -12245,10 +11117,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 0,
             "water": 4,
@@ -12282,10 +11151,7 @@
         "type": "helm",
         "rare": 5,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 4,
             "water": 0,
@@ -12322,10 +11188,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -12361,10 +11224,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -12400,10 +11260,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -12439,10 +11296,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -12478,10 +11332,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -12517,10 +11368,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -12556,10 +11404,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -12595,10 +11440,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -12634,10 +11476,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -12673,10 +11512,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 44,
-            "max": 76
-        },
+        "defense": 76,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -12712,10 +11548,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -12742,10 +11575,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -12776,10 +11606,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -12810,10 +11637,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -12840,10 +11664,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -12870,10 +11691,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -12904,10 +11722,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -12938,10 +11753,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -12976,10 +11788,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -13010,10 +11819,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 46,
-            "max": 78
-        },
+        "defense": 78,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -13044,10 +11850,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -13083,10 +11886,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -13118,10 +11918,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -13153,10 +11950,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -13192,10 +11986,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -13231,10 +12022,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -13270,10 +12058,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -13312,10 +12097,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -13351,10 +12133,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -13390,10 +12169,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 0,
@@ -13429,10 +12205,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -13463,10 +12236,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -13497,10 +12267,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -13535,10 +12302,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -13569,10 +12333,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -13607,10 +12368,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -13648,10 +12406,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -13685,10 +12440,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -13719,10 +12471,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -13753,10 +12502,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -13787,10 +12533,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -13821,10 +12564,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -13855,10 +12595,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -13889,10 +12626,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -13923,10 +12657,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -13957,10 +12688,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -13987,10 +12715,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -14017,10 +12742,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -14051,10 +12773,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -14081,10 +12800,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -14115,10 +12831,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -14145,10 +12858,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -14179,10 +12889,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -14222,10 +12929,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -14265,10 +12969,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -14308,10 +13009,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -14351,10 +13049,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -14394,10 +13089,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -14437,10 +13129,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -14480,10 +13169,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -14523,10 +13209,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -14566,10 +13249,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -1,
             "water": 2,
@@ -14609,10 +13289,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -14652,10 +13329,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -14695,10 +13369,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -14738,10 +13409,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -14781,10 +13449,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -14827,10 +13492,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -14870,10 +13532,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -14913,10 +13572,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -14956,10 +13612,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -14999,10 +13652,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": -2,
@@ -15042,10 +13692,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -15076,10 +13723,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -15110,10 +13754,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -15144,10 +13785,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -15178,10 +13816,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -15212,10 +13847,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -15246,10 +13878,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -15284,10 +13913,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -15318,10 +13944,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -15352,10 +13975,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 50,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": -1,
@@ -15386,10 +14006,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -15429,10 +14046,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -15472,10 +14086,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -15515,10 +14126,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -15558,10 +14166,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -15601,10 +14206,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -15644,10 +14246,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -15687,10 +14286,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -15730,10 +14326,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -15773,10 +14366,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -15816,10 +14406,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -15859,10 +14446,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -15902,10 +14486,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -15945,10 +14526,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -15988,10 +14566,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -16031,10 +14606,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -16074,10 +14646,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -16117,10 +14686,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -16160,10 +14726,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -16203,10 +14766,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 54,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -16246,10 +14806,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -16280,10 +14837,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -16314,10 +14868,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -16348,10 +14899,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -16382,10 +14930,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -16420,10 +14965,7 @@
         "type": "helm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -16454,10 +14996,7 @@
         "type": "chest",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -16491,10 +15030,7 @@
         "type": "arm",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -16525,10 +15061,7 @@
         "type": "waist",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -16559,10 +15092,7 @@
         "type": "leg",
         "rare": 6,
         "gender": "general",
-        "defense": {
-            "min": 52,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 0,
@@ -16593,10 +15123,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -16639,10 +15166,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -16682,10 +15206,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -16725,10 +15246,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -16768,10 +15286,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -16811,10 +15326,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -16854,10 +15366,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -16901,10 +15410,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -16948,10 +15454,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -16991,10 +15494,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -17034,10 +15534,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": -3,
             "water": -1,
@@ -17068,10 +15565,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -17102,10 +15596,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -17136,10 +15627,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -17177,10 +15665,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -17211,10 +15696,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -17245,10 +15727,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -17279,10 +15758,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -17313,10 +15789,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -17347,10 +15820,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -17381,10 +15851,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": -2,
             "water": 0,
@@ -17415,10 +15882,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -17454,10 +15918,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -17493,10 +15954,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -17536,10 +15994,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -17582,10 +16037,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -17621,10 +16073,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -17663,10 +16112,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -17702,10 +16148,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -17741,10 +16184,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -17783,10 +16223,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -3,
@@ -17822,10 +16259,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -2,
@@ -17860,10 +16294,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -2,
@@ -17898,10 +16329,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -2,
@@ -17932,10 +16360,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -2,
@@ -17970,10 +16395,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -2,
@@ -18008,10 +16430,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -2,
@@ -18042,10 +16461,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -2,
@@ -18082,10 +16498,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -2,
@@ -18116,10 +16529,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -2,
@@ -18156,10 +16566,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 4,
             "water": -2,
@@ -18190,10 +16597,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 2,
             "water": -3,
@@ -18233,10 +16637,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 2,
             "water": -3,
@@ -18276,10 +16677,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 2,
             "water": -3,
@@ -18319,10 +16717,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 2,
             "water": -3,
@@ -18362,10 +16757,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 2,
             "water": -3,
@@ -18409,10 +16801,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 2,
             "water": -3,
@@ -18452,10 +16841,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 2,
             "water": -3,
@@ -18498,10 +16884,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 2,
             "water": -3,
@@ -18544,10 +16927,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 2,
             "water": -3,
@@ -18587,10 +16967,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 56,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 2,
             "water": -3,
@@ -18630,10 +17007,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -18668,10 +17042,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -18702,10 +17073,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -18740,10 +17108,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -18774,10 +17139,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -18808,10 +17170,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -18842,10 +17201,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -18876,10 +17232,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -18913,10 +17266,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -18950,10 +17300,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 88
-        },
+        "defense": 88,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -18987,10 +17334,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -19030,10 +17374,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -19069,10 +17410,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -19108,10 +17446,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -19151,10 +17486,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -19194,10 +17526,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -19236,10 +17565,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -19278,10 +17604,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -19317,10 +17640,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -19356,10 +17676,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": 1,
@@ -19395,10 +17712,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 60,
-            "max": 86
-        },
+        "defense": 86,
         "resistance": {
             "fire": 3,
             "water": 2,
@@ -19432,10 +17746,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -19470,10 +17781,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -19508,10 +17816,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -19542,10 +17847,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -19580,10 +17882,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -19614,10 +17913,7 @@
         "type": "helm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -19651,10 +17947,7 @@
         "type": "chest",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -19685,10 +17978,7 @@
         "type": "arm",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -19719,10 +18009,7 @@
         "type": "waist",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -19756,10 +18043,7 @@
         "type": "leg",
         "rare": 7,
         "gender": "general",
-        "defense": {
-            "min": 58,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -19793,10 +18077,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -4,
             "water": 4,
@@ -19832,10 +18113,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -4,
             "water": 4,
@@ -19875,10 +18153,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -4,
             "water": 4,
@@ -19918,10 +18193,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -4,
             "water": 4,
@@ -19961,10 +18233,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -4,
             "water": 4,
@@ -20004,10 +18273,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -4,
             "water": 4,
@@ -20043,10 +18309,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -4,
             "water": 4,
@@ -20085,10 +18348,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -4,
             "water": 4,
@@ -20130,10 +18390,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -4,
             "water": 4,
@@ -20172,10 +18429,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -4,
             "water": 4,
@@ -20214,10 +18468,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -20257,10 +18508,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -20300,10 +18548,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -20339,10 +18584,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -20378,10 +18620,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -20421,10 +18660,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -20463,10 +18699,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -20505,10 +18738,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -20544,10 +18774,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -20583,10 +18810,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 1,
             "water": 1,
@@ -20622,10 +18846,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -20657,10 +18878,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -20696,10 +18914,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -20735,10 +18950,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -20774,10 +18986,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -20813,10 +19022,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -20852,10 +19058,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -20894,10 +19097,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -20933,10 +19133,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -20972,10 +19169,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 3,
             "water": -3,
@@ -21011,10 +19205,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -21050,10 +19241,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -21089,10 +19277,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -21128,10 +19313,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -21167,10 +19349,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -21206,10 +19385,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -21251,10 +19427,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -21290,10 +19463,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -21329,10 +19499,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -21371,10 +19538,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": 0,
             "water": 2,
@@ -21410,10 +19574,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 72,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -21444,10 +19605,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 72,
-            "max": 92
-        },
+        "defense": 92,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -21487,10 +19645,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 72,
-            "max": 92
-        },
+        "defense": 92,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -21530,10 +19685,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 72,
-            "max": 92
-        },
+        "defense": 92,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -21573,10 +19725,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 72,
-            "max": 92
-        },
+        "defense": 92,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -21616,10 +19765,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 72,
-            "max": 92
-        },
+        "defense": 92,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -21659,10 +19805,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 72,
-            "max": 92
-        },
+        "defense": 92,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -21698,10 +19841,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 72,
-            "max": 92
-        },
+        "defense": 92,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -21740,10 +19880,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 72,
-            "max": 92
-        },
+        "defense": 92,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -21779,10 +19916,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 72,
-            "max": 92
-        },
+        "defense": 92,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -21821,10 +19955,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 72,
-            "max": 92
-        },
+        "defense": 92,
         "resistance": {
             "fire": -3,
             "water": 2,
@@ -21863,10 +19994,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -21902,10 +20030,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -21941,10 +20066,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -21980,10 +20102,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -22019,10 +20138,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -22058,10 +20174,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -22097,10 +20210,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -22136,10 +20246,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -22178,10 +20285,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -22223,10 +20327,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 64,
-            "max": 84
-        },
+        "defense": 84,
         "resistance": {
             "fire": -3,
             "water": -2,
@@ -22265,10 +20366,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -22308,10 +20406,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -22351,10 +20446,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -22394,10 +20486,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -22437,10 +20526,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -22480,10 +20566,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -22525,10 +20608,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -22564,10 +20644,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -22603,10 +20680,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -22648,10 +20722,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 62,
-            "max": 82
-        },
+        "defense": 82,
         "resistance": {
             "fire": 0,
             "water": 0,
@@ -22687,10 +20758,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 70,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -22730,10 +20798,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 70,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -22769,10 +20834,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 70,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -22812,10 +20874,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 70,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -22855,10 +20914,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 70,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -22894,10 +20950,7 @@
         "type": "helm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 70,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -22933,10 +20986,7 @@
         "type": "chest",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 70,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -22972,10 +21022,7 @@
         "type": "arm",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 70,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -23011,10 +21058,7 @@
         "type": "waist",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 70,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": 2,
             "water": 2,
@@ -23050,10 +21094,7 @@
         "type": "leg",
         "rare": 8,
         "gender": "general",
-        "defense": {
-            "min": 70,
-            "max": 90
-        },
+        "defense": 90,
         "resistance": {
             "fire": 2,
             "water": 2,
