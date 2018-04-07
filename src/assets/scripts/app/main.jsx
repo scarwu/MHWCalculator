@@ -265,6 +265,42 @@ export default class Main extends Component {
             if (undefined === skill.list[level - 1].reaction) {
                 continue;
             }
+
+            for (let reactionType in skill.list[level - 1].reaction) {
+                let data = skill.list[level - 1].reaction[reactionType];
+
+                switch (reactionType) {
+                case 'health':
+                case 'stamina':
+                case 'attack':
+                case 'defense':
+                    status[reactionType] += data.value;
+
+                    break;
+                case 'criticalRate':
+                    status.critical.rate += data.value;
+
+                    break;
+                case 'criticalMultiple':
+                    status.critical.multiple = data.value;
+
+                    break;
+                case 'sharpness':
+                    status.sharpness.value += data.value;
+
+                    break;
+                case 'element':
+                    break;
+                case 'resistance':
+                    break;
+                case 'finalAttck':
+                    break;
+                case 'finalDefense':
+                    break;
+                case 'enableElement':
+                    break;
+                }
+            }
         }
 
         this.setState({
@@ -576,7 +612,7 @@ export default class Main extends Component {
                     <span>Critical Multiple</span>
                 </div>
                 <div className="mhwc-value">
-                    <span>{status.critical.multiple}%</span>
+                    <span>{status.critical.multiple}x</span>
                 </div>
             </div>
         ), (
