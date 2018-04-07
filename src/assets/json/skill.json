@@ -2002,7 +2002,12 @@
         "list": [
             {
                 "level": 1,
-                "description": "強化裝備中的無屬性武器"
+                "description": "強化裝備中的無屬性武器",
+                "reaction": {
+                    "noneElementAttackMutiple": {
+                        "value": 1.1
+                    }
+                }
             }
         ]
     },

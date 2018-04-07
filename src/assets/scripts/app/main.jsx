@@ -35,7 +35,12 @@ var defaultEquips = {
 var defaultStatus = {
     health: 100,
     stamina: 100,
-    attack: 50, // 力量護符+20 力量之爪+30
+    attack: {
+        weapon: 0,
+        basic: 0,
+        bonus: 50, // 力量護符+20 力量之爪+30
+        total: 0
+    },
     critical: {
         rate: 0,
         multiple: 1.25
@@ -206,7 +211,7 @@ export default class Main extends Component {
         equips.leg.info = DataSet.armor.getInfo(equips.leg.key);
         equips.charm.info = DataSet.charm.getInfo(equips.charm.key);
 
-        status.attack += equips.weapon.info.attack;
+        status.attack.weapon = equips.weapon.info.attack;
         status.critical.rate = equips.weapon.info.criticalRate;
         status.sharpness = equips.weapon.info.sharpness;
         status.element = equips.weapon.info.element;
@@ -248,9 +253,10 @@ export default class Main extends Component {
             });
         });
 
+        let noneElementAttackMutiple = null;
+        let enableElement = null;
         let attackMultiples = [];
         let defenseMultiples = [];
-        let enableElement = null;
 
         for (let key in tempSkills) {
             let skill = DataSet.skill.getInfo(key);
@@ -276,9 +282,12 @@ export default class Main extends Component {
                 switch (reactionType) {
                 case 'health':
                 case 'stamina':
-                case 'attack':
                 case 'defense':
                     status[reactionType] += data.value;
+
+                    break;
+                case 'attack':
+                    status.attack.basic += data.value;
 
                     break;
                 case 'criticalRate':
@@ -312,16 +321,26 @@ export default class Main extends Component {
                     }
 
                     break;
+                case 'noneElementAttackMutiple':
+                    noneElementAttackMutiple = data;
+
+                    break;
+                case 'enableElement':
+                    enableElement = data;
+
+                    break;
                 case 'attackMultiple':
                     attackMultiples.push(data.value);
 
                     break;
                 case 'defenseMultiple':
-                    defenseMultiples.push(data.value);
+                    if (null !== status.element
+                        && false === status.element.isHidden) {
 
-                    break;
-                case 'enableElement':
-                    enableElement = data;
+                        break;
+                    }
+
+                    defenseMultiples.push(data.value);
 
                     break;
                 }
@@ -329,18 +348,31 @@ export default class Main extends Component {
         }
 
         // Last Status Completion
+        if (null == enableElement && null !== noneElementAttackMutiple) {
+            status.attack.weapon *= noneElementAttackMutiple.value;
+            status.attack.weapon = Math.round(status.attack.weapon);
+        }
+
+        if (null !== enableElement) {
+            status.element.value *= enableElement.multiple;
+            status.element.value = Math.round(status.element.value);
+            status.element.isHidden = false;
+        }
+
+        status.attack.total = status.attack.weapon
+            + status.attack.basic
+            + status.attack.bonus;
+
         attackMultiples.map((multiple) => {
-            status.attack *= multiple;
+            status.attack.total *= multiple;
         });
 
         defenseMultiples.map((multiple) => {
             status.defense *= multiple;
         });
 
-        if (null !== enableElement) {
-            status.element.value *= enableElement.multiple;
-            status.element.isHidden = false;
-        }
+        status.attack.total = Math.round(status.attack.total);
+        status.defense = Math.round(status.defense);
 
         this.setState({
             status: status
@@ -352,7 +384,7 @@ export default class Main extends Component {
      */
     componentWillMount () {
         this.setState({
-            equips: Constant.defaultSets['狂暴雙刀']
+            equips: Constant.defaultSets['破壞大劍']
         }, () => {
             this.generateStatus();
         });
@@ -461,9 +493,9 @@ export default class Main extends Component {
                     })}
                 </div>
                 <div className="mhwc-slots">
-                    {equips.weapon.slots.map((data) => {
+                    {equips.weapon.slots.map((data, index) => {
                         return (
-                            <div key={data.key} className="mhwc-jewel">
+                            <div key={data.key + '_' + index} className="mhwc-jewel">
                                 <div className="mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
@@ -480,9 +512,9 @@ export default class Main extends Component {
                     <span>{helm.name}</span>
                 </div>
                 <div className="mhwc-slots">
-                    {equips.helm.slots.map((data) => {
+                    {equips.helm.slots.map((data, index) => {
                         return (
-                            <div key={data.key} className="mhwc-jewel">
+                            <div key={data.key + '_' + index} className="mhwc-jewel">
                                 <div className="mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
@@ -499,9 +531,9 @@ export default class Main extends Component {
                     <span>{chest.name}</span>
                 </div>
                 <div className="mhwc-slots">
-                    {equips.chest.slots.map((data) => {
+                    {equips.chest.slots.map((data, index) => {
                         return (
-                            <div key={data.key} className="mhwc-jewel">
+                            <div key={data.key + '_' + index} className="mhwc-jewel">
                                 <div className="mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
@@ -518,9 +550,9 @@ export default class Main extends Component {
                     <span>{arm.name}</span>
                 </div>
                 <div className="mhwc-slots">
-                    {equips.arm.slots.map((data) => {
+                    {equips.arm.slots.map((data, index) => {
                         return (
-                            <div key={data.key} className="mhwc-jewel">
+                            <div key={data.key + '_' + index} className="mhwc-jewel">
                                 <div className="mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
@@ -537,9 +569,9 @@ export default class Main extends Component {
                     <span>{waist.name}</span>
                 </div>
                 <div className="mhwc-slots">
-                    {equips.waist.slots.map((data) => {
+                    {equips.waist.slots.map((data, index) => {
                         return (
-                            <div key={data.key} className="mhwc-jewel">
+                            <div key={data.key + '_' + index} className="mhwc-jewel">
                                 <div className="mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
@@ -556,9 +588,9 @@ export default class Main extends Component {
                     <span>{leg.name}</span>
                 </div>
                 <div className="mhwc-slots">
-                    {equips.leg.slots.map((data) => {
+                    {equips.leg.slots.map((data, index) => {
                         return (
-                            <div key={data.key} className="mhwc-jewel">
+                            <div key={data.key + '_' + index} className="mhwc-jewel">
                                 <div className="mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
@@ -633,7 +665,7 @@ export default class Main extends Component {
                     <span>Attack</span>
                 </div>
                 <div className="mhwc-value">
-                    <span>{status.attack}</span>
+                    <span>{status.attack.total}</span>
                 </div>
             </div>
         ), (
