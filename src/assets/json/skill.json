@@ -363,13 +363,11 @@
                 "level": 1,
                 "description": "每次攻擊力1.1倍、防禦力1.15倍",
                 "reaction": {
-                    "finalAttck": {
-                        "value": 0,
-                        "multiple": 1.1
+                    "attackMultiple": {
+                        "value": 1.1
                     },
-                    "finalDefense": {
-                        "value": 0,
-                        "multiple": 1.15
+                    "defenseMultiple": {
+                        "value": 1.15
                     }
                 }
             }
@@ -383,13 +381,11 @@
                 "level": 1,
                 "description": "技能發動時，攻擊力1.05倍，防禦力+15",
                 "reaction": {
-                    "finalAttck": {
-                        "value": 0,
-                        "multiple": 1.05
+                    "attackMultiple": {
+                        "value": 1.05
                     },
-                    "finalDefense": {
-                        "value": 15,
-                        "multiple": 1
+                    "defense": {
+                        "value": 15
                     }
                 }
             },
@@ -397,13 +393,11 @@
                 "level": 2,
                 "description": "技能發動時，攻擊力1.1倍，防禦力+20",
                 "reaction": {
-                    "finalAttck": {
-                        "value": 0,
-                        "multiple": 1.1
+                    "attackMultiple": {
+                        "value": 1.1
                     },
-                    "finalDefense": {
-                        "value": 20,
-                        "multiple": 1
+                    "defense": {
+                        "value": 20
                     }
                 }
             },
@@ -411,13 +405,11 @@
                 "level": 3,
                 "description": "技能發動時，攻擊力1.15倍，防禦力+25",
                 "reaction": {
-                    "finalAttck": {
-                        "value": 0,
-                        "multiple": 1.15
+                    "attackMultiple": {
+                        "value": 1.15
                     },
-                    "finalDefense": {
-                        "value": 25,
-                        "multiple": 1
+                    "defense": {
+                        "value": 25
                     }
                 }
             },
@@ -425,13 +417,11 @@
                 "level": 4,
                 "description": "技能發動時，攻擊力1.2倍，防禦力+30",
                 "reaction": {
-                    "finalAttck": {
-                        "value": 0,
-                        "multiple": 1.2
+                    "attackMultiple": {
+                        "value": 1.2
                     },
-                    "finalDefense": {
-                        "value": 30,
-                        "multiple": 1
+                    "defense": {
+                        "value": 30
                     }
                 }
             },
@@ -439,13 +429,11 @@
                 "level": 5,
                 "description": "技能發動時，攻擊力1.3倍，防禦力+40",
                 "reaction": {
-                    "finalAttck": {
-                        "value": 0,
-                        "multiple": 1.3
+                    "attackMultiple": {
+                        "value": 1.3
                     },
-                    "finalDefense": {
-                        "value": 40,
-                        "multiple": 1
+                    "defense": {
+                        "value": 40
                     }
                 }
             }
@@ -1313,9 +1301,8 @@
                 "level": 1,
                 "description": "跳躍攻擊的威力變為1.1倍",
                 "reaction": {
-                    "finalAttck": {
-                        "value": 0,
-                        "multiple": 1.1
+                    "attackMultiple": {
+                        "value": 1.1
                     }
                 }
             }

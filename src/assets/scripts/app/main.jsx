@@ -248,6 +248,10 @@ export default class Main extends Component {
             });
         });
 
+        let attackMultiples = [];
+        let defenseMultiples = [];
+        let enableElement = null;
+
         for (let key in tempSkills) {
             let skill = DataSet.skill.getInfo(key);
             let level = tempSkills[key];
@@ -290,17 +294,52 @@ export default class Main extends Component {
 
                     break;
                 case 'element':
+                    if (status.element.type !== data.type) {
+                        break;
+                    }
+
+                    status.element.value += data.value;
+                    status.element.value *= data.multiple;
+
                     break;
                 case 'resistance':
+                    if ('all' === data.type) {
+                        elements.map((elementType) => {
+                            status.resistance[elementType] += data.value;
+                        });
+                    } else {
+                        status.resistance[data.type] += data.value;
+                    }
+
                     break;
-                case 'finalAttck':
+                case 'attackMultiple':
+                    attackMultiples.push(data.value);
+
                     break;
-                case 'finalDefense':
+                case 'defenseMultiple':
+                    defenseMultiples.push(data.value);
+
                     break;
                 case 'enableElement':
+                    enableElement = data;
+
                     break;
                 }
             }
+        }
+
+        // Last Status Completion
+        attackMultiples.map((multiple) => {
+            status.attack *= multiple;
+        });
+
+        defenseMultiples.map((multiple) => {
+            status.defense *= multiple;
+        });
+
+        if (null !== enableElement) {
+            status.element.value *= enableElement.multiple;
+            status.element.isHidden = false;
         }
 
         this.setState({
