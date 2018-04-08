@@ -311,7 +311,7 @@
         "series": "駭骨素材",
         "attack": 912,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -333,7 +333,7 @@
         },
         "slots": [
             {
-                "size": 2
+                "size": 3
             }
         ]
     },
@@ -439,7 +439,7 @@
         "series": "土砂龍",
         "attack": 1040,
         "criticalRate": -10,
-        "defense": 0,
+        "defense": 15,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -475,7 +475,7 @@
         "series": "骨鎚龍",
         "attack": 912,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -569,7 +569,7 @@
         "series": "熔山龍",
         "attack": 1056,
         "criticalRate": -20,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -668,10 +668,10 @@
         "name": "龍顎劍【大牙】",
         "rare": null,
         "type": "greatSword",
-        "series": "工房",
+        "series": "工房武器",
         "attack": 960,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -900,7 +900,7 @@
         "series": "爆鎚龍",
         "attack": 660,
         "criticalRate": -10,
-        "defense": 0,
+        "defense": 30,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -1002,7 +1002,7 @@
         "series": "駭骨素材",
         "attack": 627,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -1294,7 +1294,7 @@
         "series": "熔山龍",
         "attack": 726,
         "criticalRate": -20,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -1389,10 +1389,10 @@
         "name": "天上天下無雙刀",
         "rare": null,
         "type": "longSword",
-        "series": "工房",
+        "series": "工房武器",
         "attack": 693,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -1556,7 +1556,7 @@
         "series": "工房武器",
         "attack": 280,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 300,
             "steps": {
@@ -1789,7 +1789,7 @@
         "series": "駭骨素材",
         "attack": 266,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -1822,7 +1822,7 @@
         "series": "骨鎚龍",
         "attack": 266,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -1945,7 +1945,7 @@
         "series": "土砂龍",
         "attack": 294,
         "criticalRate": -10,
-        "defense": 0,
+        "defense": 15,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -2396,7 +2396,7 @@
         "series": "駭骨素材",
         "attack": 266,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -2458,7 +2458,7 @@
         "series": "角龍",
         "attack": 322,
         "criticalRate": -10,
-        "defense": 0,
+        "defense": 15,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -2720,7 +2720,7 @@
         "series": "熔山龍",
         "attack": 308,
         "criticalRate": -20,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 300,
             "steps": {
@@ -2915,9 +2915,9 @@
     },
     "慟泣冰河": {
         "name": "慟泣冰河",
-        "rare": null,
+        "rare": 7,
         "type": "hammer",
-        "series": "工房",
+        "series": "工房武器",
         "attack": 936,
         "criticalRate": 0,
         "defense": 0,
@@ -3084,7 +3084,7 @@
         "series": "駭骨素材",
         "attack": 988,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -3150,7 +3150,7 @@
         "series": "骨鎚龍",
         "attack": 988,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -3179,7 +3179,7 @@
         "series": "爆鎚龍",
         "attack": 1092,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 30,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -3241,7 +3241,7 @@
         "series": "角龍",
         "attack": 1196,
         "criticalRate": -25,
-        "defense": 0,
+        "defense": 15,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -3274,7 +3274,7 @@
         "series": "蠻顎龍",
         "attack": 1092,
         "criticalRate": -20,
-        "defense": 0,
+        "defense": 15,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -3336,7 +3336,7 @@
         "series": "熔山龍",
         "attack": 1144,
         "criticalRate": -20,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -3438,7 +3438,7 @@
         "series": "工房武器",
         "attack": 936,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -3726,7 +3726,7 @@
         "series": "駭骨素材",
         "attack": 798,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -3968,7 +3968,7 @@
         "series": "骨鎚龍",
         "attack": 798,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -4421,7 +4421,7 @@
         "series": "駭骨素材",
         "attack": 437,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -4520,7 +4520,7 @@
         "series": "土砂龍",
         "attack": 460,
         "criticalRate": -20,
-        "defense": 0,
+        "defense": 15,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -4778,10 +4778,10 @@
         "name": "遠古巴別塔",
         "rare": null,
         "type": "lance",
-        "series": "工房",
+        "series": "工房武器",
         "attack": 460,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -5073,7 +5073,7 @@
         "series": "駭骨素材",
         "attack": 437,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -5237,7 +5237,7 @@
         "series": "土砂龍",
         "attack": 460,
         "criticalRate": -10,
-        "defense": 0,
+        "defense": 15,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -5331,7 +5331,7 @@
         "series": "熔山龍",
         "attack": 460,
         "criticalRate": -10,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -5589,7 +5589,7 @@
         "series": "爆鎚龍",
         "attack": 735,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 30,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -5724,7 +5724,7 @@
         "series": "駭骨素材",
         "attack": 665,
         "criticalRate": 10,
-        "defense": 0,
+        "defense": 10,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -5852,7 +5852,7 @@
         "series": "土砂龍",
         "attack": 735,
         "criticalRate": -20,
-        "defense": 0,
+        "defense": 15,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -5888,7 +5888,7 @@
         "series": "角龍",
         "attack": 805,
         "criticalRate": -30,
-        "defense": 0,
+        "defense": 15,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -6316,7 +6316,7 @@
         "series": "駭骨素材",
         "attack": 684,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -6349,7 +6349,7 @@
         "series": "角龍",
         "attack": 828,
         "criticalRate": -30,
-        "defense": 0,
+        "defense": 15,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -6610,7 +6610,7 @@
         "series": "熔山龍",
         "attack": 756,
         "criticalRate": -10,
-        "defense": 0,
+        "defense": 20,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -7012,7 +7012,7 @@
         "series": "駭骨素材",
         "attack": 589,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -7140,7 +7140,7 @@
         "series": "角龍",
         "attack": 713,
         "criticalRate": -30,
-        "defense": 0,
+        "defense": 15,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -7554,7 +7554,7 @@
         "series": "駭骨素材",
         "attack": 247,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": null,
         "element": {
             "type": "dragon",
@@ -7649,7 +7649,7 @@
         "series": "土砂龍",
         "attack": 260,
         "criticalRate": -20,
-        "defense": 0,
+        "defense": 15,
         "sharpness": null,
         "element": {
             "type": "dragon",
@@ -7779,10 +7779,10 @@
         "name": "巨型十字槍",
         "rare": null,
         "type": "lightBowgun",
-        "series": "工房",
+        "series": "工房武器",
         "attack": 260,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": null,
         "element": {
             "type": "dragon",
@@ -7953,7 +7953,7 @@
         "series": "駭骨素材",
         "attack": 270,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": null,
         "element": {
             "type": "dragon",
@@ -7972,7 +7972,7 @@
         "series": "角龍",
         "attack": 330,
         "criticalRate": -20,
-        "defense": 0,
+        "defense": 15,
         "sharpness": null,
         "element": {
             "type": "dragon",
@@ -8010,7 +8010,7 @@
         "series": "骨鎚龍",
         "attack": 270,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": null,
         "element": {
             "type": "dragon",
@@ -8105,7 +8105,7 @@
         "series": "熔山龍",
         "attack": 315,
         "criticalRate": -20,
-        "defense": 0,
+        "defense": 20,
         "sharpness": null,
         "element": {
             "type": "dragon",
@@ -8244,12 +8244,12 @@
     },
     "重弓巨靈勇士": {
         "name": "重弓巨靈勇士",
-        "rare": null,
+        "rare": 8,
         "type": "bow",
         "series": "爆鎚龍",
         "attack": 228,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 30,
         "sharpness": null,
         "element": {
             "type": "fire",
@@ -8354,12 +8354,12 @@
     },
     "勇氣獵弓 II": {
         "name": "勇氣獵弓 II",
-        "rare": null,
+        "rare": 6,
         "type": "bow",
         "series": "駭骨素材",
         "attack": 216,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 10,
         "sharpness": null,
         "element": {
             "type": "water",
@@ -8400,12 +8400,12 @@
     },
     "角王弓疾風": {
         "name": "角王弓疾風",
-        "rare": null,
+        "rare": 8,
         "type": "bow",
         "series": "角龍",
         "attack": 264,
         "criticalRate": -30,
-        "defense": 0,
+        "defense": 15,
         "sharpness": null,
         "element": {
             "type": "ice",
@@ -8572,12 +8572,12 @@
     },
     "巨型獵弓": {
         "name": "巨型獵弓",
-        "rare": null,
+        "rare": 8,
         "type": "bow",
-        "series": "工房",
+        "series": "工房武器",
         "attack": 228,
         "criticalRate": 0,
-        "defense": 0,
+        "defense": 20,
         "sharpness": null,
         "element": {
             "type": "blast",
