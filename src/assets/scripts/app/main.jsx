@@ -35,12 +35,7 @@ var defaultEquips = {
 var defaultStatus = {
     health: 100,
     stamina: 100,
-    attack: {
-        weapon: 0,
-        basic: 0,
-        bonus: 50, // 力量護符+20 力量之爪+30
-        total: 0
-    },
+    attack: 15, // 力量護符+6 力量之爪+9
     critical: {
         rate: 0,
         multiple: 1.25
@@ -211,7 +206,6 @@ export default class Main extends Component {
         equips.leg.info = DataSet.armor.getInfo(equips.leg.key);
         equips.charm.info = DataSet.charm.getInfo(equips.charm.key);
 
-        status.attack.weapon = equips.weapon.info.attack;
         status.critical.rate = equips.weapon.info.criticalRate;
         status.sharpness = equips.weapon.info.sharpness;
         status.element = equips.weapon.info.element;
@@ -282,12 +276,9 @@ export default class Main extends Component {
                 switch (reactionType) {
                 case 'health':
                 case 'stamina':
+                case 'attack':
                 case 'defense':
                     status[reactionType] += data.value;
-
-                    break;
-                case 'attack':
-                    status.attack.basic += data.value;
 
                     break;
                 case 'criticalRate':
@@ -348,31 +339,33 @@ export default class Main extends Component {
         }
 
         // Last Status Completion
+        let weaponAttack = equips.weapon.info.attack;
+        let weaponType = equips.weapon.info.type;
+
+        status.attack *= Constant.weaponMultiple[weaponType]; // 武器倍率
+
         if (null == enableElement && null !== noneElementAttackMutiple) {
-            status.attack.weapon *= noneElementAttackMutiple.value;
-            status.attack.weapon = Math.round(status.attack.weapon);
+            status.attack += weaponAttack * noneElementAttackMutiple.value;
+        } else {
+            status.attack += weaponAttack;
         }
 
         if (null !== enableElement) {
             status.element.value *= enableElement.multiple;
-            status.element.value = Math.round(status.element.value);
+            status.element.value = parseInt(Math.round(status.element.value));
             status.element.isHidden = false;
         }
 
-        status.attack.total = status.attack.weapon
-            + status.attack.basic
-            + status.attack.bonus;
-
         attackMultiples.map((multiple) => {
-            status.attack.total *= multiple;
+            status.attack *= multiple;
         });
 
         defenseMultiples.map((multiple) => {
             status.defense *= multiple;
         });
 
-        status.attack.total = Math.round(status.attack.total);
-        status.defense = Math.round(status.defense);
+        status.attack = parseInt(Math.round(status.attack));
+        status.defense = parseInt(Math.round(status.defense));
 
         this.setState({
             status: status
@@ -665,7 +658,7 @@ export default class Main extends Component {
                     <span>Attack</span>
                 </div>
                 <div className="mhwc-value">
-                    <span>{status.attack.total}</span>
+                    <span>{status.attack}</span>
                 </div>
             </div>
         ), (

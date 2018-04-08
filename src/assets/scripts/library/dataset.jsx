@@ -9,11 +9,52 @@
  */
 
 // Load JSON Data
-import skill from '../../json/skill.json';
-import jewel from '../../json/jewel.json';
-import charm from '../../json/charm.json';
-import armor from '../../json/armor.json';
-import weapon from '../../json/weapon.json';
+import Skills from '../../json/skills.json';
+import Jewels from '../../json/jewels.json';
+import Charms from '../../json/charms.json';
+import Armors from '../../json/armors.json';
+import Weapons from '../../json/weapons.json';
+import Sets from '../../json/sets.json';
+
+/**
+ * Set Helper
+ */
+class SetHelper {
+
+    constructor (mapping) {
+        this.mapping = mapping;
+
+        // Filter Conditional
+        this.filterSkillKey = null;
+    }
+
+    getKeys = () => {
+        return Object.keys(this.mapping);
+    };
+
+    getItems = () => {
+        return Object.values(this.mapping).filter((data) => {
+            if (null !== this.filterSkillKey) {
+                if (this.filterSkillKey !== data.skill.key) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
+    };
+
+    getInfo = (key) => {
+        return undefined !== this.mapping[key]
+            ? this.mapping[key] : null;
+    };
+
+    hasSkill = (key) => {
+        this.filterSkillKey = key;
+
+        return this;
+    }
+}
 
 /**
  * Weapon Helper
@@ -256,9 +297,10 @@ class SkillHelper {
 }
 
 export default {
-    weapon: new WeaponHelper(weapon),
-    armor: new ArmorHelper(armor),
-    charm: new CharmHelper(charm),
-    jewel: new JewelHelper(jewel),
-    skill: new SkillHelper(skill)
+    set: new SetHelper(Sets),
+    weapon: new WeaponHelper(Weapons),
+    armor: new ArmorHelper(Armors),
+    charm: new CharmHelper(Charms),
+    jewel: new JewelHelper(Jewels),
+    skill: new SkillHelper(Skills)
 };

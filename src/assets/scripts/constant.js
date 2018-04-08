@@ -9,18 +9,22 @@
  */
 
 export default {
-    // 大劍 4.8
-    // 大鎚 5.2
-    // 太刀 3.3
-    // 片手劍/雙劍 1.4
-    // 長槍/銃槍 2.3
-    // 斬斧 3.5
-    // 盾斧 3.6
-    // 狩獵笛 4.2
-    // 操蟲棍 3.1
-    // 輕弩 1.3
-    // 重弩 1.5
-    // 弓 1.2
+    weaponMultiple: {
+        'greatSword': 4.8,
+        'longSword': 3.3,
+        'swordAndShield': 1.4,
+        'dualSlades': 1.4,
+        'hammer': 5.2,
+        'huntingHorn': 4.2,
+        'lance': 2.3,
+        'gunlance': 2.3,
+        'switchAxe': 3.5,
+        'chargeBlade': 3.6,
+        'insectGlaive': 3.1,
+        'lightBowgun': 1.3,
+        'heavyBowgun': 1.5,
+        'bow': 1.2
+    },
     defaultSets: {
         '狂暴雙刀': {
             weapon: {
