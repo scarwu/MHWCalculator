@@ -477,20 +477,9 @@ export default class Main extends Component {
         let charm = DataSet.charm.getInfo(equips.charm.key);
 
         return [(
-            <div key="weapon" className="row mhwc-item">
+            <div key="weapon" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
                     <span>{weapon.name}</span>
-                </div>
-                <div className="col-12 mhwc-enhances">
-                    {equips.weapon.enhances.map((data) => {
-                        return (
-                            <div key={data.key} className="row mhwc-enhance">
-                                <div className="col-11 offset-1 mhwc-name">
-                                    <span>{data.key}</span>
-                                </div>
-                            </div>
-                        );
-                    })}
                 </div>
                 <div className="col-12 mhwc-slots">
                     {equips.weapon.slots.map((data, index) => {
@@ -505,9 +494,20 @@ export default class Main extends Component {
                         );
                     })}
                 </div>
+                <div className="col-12 mhwc-enhances">
+                    {equips.weapon.enhances.map((data) => {
+                        return (
+                            <div key={data.key} className="row mhwc-enhance">
+                                <div className="col-11 offset-1 mhwc-name">
+                                    <span>{data.key}</span>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         ), (
-            <div key="helm" className="row mhwc-item">
+            <div key="helm" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
                     <span>{helm.name}</span>
                 </div>
@@ -526,7 +526,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), , (
-            <div key="chest" className="row mhwc-item">
+            <div key="chest" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
                     <span>{chest.name}</span>
                 </div>
@@ -545,7 +545,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="arm" className="row mhwc-item">
+            <div key="arm" className="row mhwc-equip">
                 <div className="mhwc-name">
                     <span>{arm.name}</span>
                 </div>
@@ -564,7 +564,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="waist" className="row mhwc-item">
+            <div key="waist" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
                     <span>{waist.name}</span>
                 </div>
@@ -583,7 +583,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="leg" className="row mhwc-item">
+            <div key="leg" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
                     <span>{leg.name}</span>
                 </div>
@@ -602,7 +602,7 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="charm" className="row mhwc-item">
+            <div key="charm" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
                     <span>{charm.name}</span>
                 </div>
@@ -644,7 +644,7 @@ export default class Main extends Component {
         return [(
             <div key="health" className="row mhwc-item">
                 <div className="col-6 mhwc-name">
-                    <span>Health</span>
+                    <span>體力</span>
                 </div>
                 <div className="col-6 mhwc-value">
                     <span>{status.health}</span>
@@ -653,7 +653,7 @@ export default class Main extends Component {
         ), (
             <div key="stamina" className="row mhwc-item">
                 <div className="col-6 mhwc-name">
-                    <span>Stamina</span>
+                    <span>耐力</span>
                 </div>
                 <div className="col-6 mhwc-value">
                     <span>{status.stamina}</span>
@@ -662,7 +662,7 @@ export default class Main extends Component {
         ), (
             <div key="attack" className="row mhwc-item">
                 <div className="col-6 mhwc-name">
-                    <span>Attack</span>
+                    <span>攻擊力</span>
                 </div>
                 <div className="col-6 mhwc-value">
                     <span>{status.attack}</span>
@@ -671,7 +671,7 @@ export default class Main extends Component {
         ), (
             <div key="criticalRate" className="row mhwc-item">
                 <div className="col-6 mhwc-name">
-                    <span>Critical Rate</span>
+                    <span>會心率</span>
                 </div>
                 <div className="col-6 mhwc-value">
                     <span>{status.critical.rate}%</span>
@@ -680,7 +680,7 @@ export default class Main extends Component {
         ), (
             <div key="criticalMultiple" className="row mhwc-item">
                 <div className="col-6 mhwc-name">
-                    <span>Critical Multiple</span>
+                    <span>會心倍數</span>
                 </div>
                 <div className="col-6 mhwc-value">
                     <span>{status.critical.multiple}x</span>
@@ -689,7 +689,7 @@ export default class Main extends Component {
         ), (
             <div key="sharpness" className="row mhwc-item">
                 <div className="col-12 mhwc-name">
-                    <span>Sharpness</span>
+                    <span>斬位</span>
                 </div>
                 <div className="col-12 mhwc-value">
                     <div className="col-11 offset-1 mhwc-sharpness">
@@ -706,7 +706,7 @@ export default class Main extends Component {
         ), (
             <div key="element" className="row mhwc-item">
                 <div className="col-6 mhwc-name">
-                    <span>Element</span>
+                    <span>屬性</span>
                 </div>
                 <div className="col-6 mhwc-value">
                     {status.element.isHidden ? (
@@ -719,7 +719,7 @@ export default class Main extends Component {
         ), (
             <div key="elderseal" className="row mhwc-item">
                 <div className="col-6 mhwc-name">
-                    <span>Elderseal</span>
+                    <span>龍封力</span>
                 </div>
                 <div className="col-6 mhwc-value">
                     <span>{status.elderseal.affinity}</span>
@@ -728,7 +728,7 @@ export default class Main extends Component {
         ), (
             <div key="defense" className="row mhwc-item">
                 <div className="col-6 mhwc-name">
-                    <span>Defense</span>
+                    <span>防禦</span>
                 </div>
                 <div className="col-6 mhwc-value">
                     <span>{status.defense}</span>
@@ -737,12 +737,12 @@ export default class Main extends Component {
         ), (
             <div key="resistance" className="row mhwc-item">
                 <div className="col-12 mhwc-name">
-                    <span>Resistance</span>
+                    <span>抗性</span>
                 </div>
                 <div className="col-12 mhwc-value">
                     <div className="row">
                         <div className="col-5 offset-1">
-                            <span>Fire</span>
+                            <span>火</span>
                         </div>
                         <div className="col">
                             <span>{status.resistance.fire}</span>
@@ -750,7 +750,7 @@ export default class Main extends Component {
                     </div>
                     <div className="row">
                         <div className="col-5 offset-1">
-                            <span>Water</span>
+                            <span>水</span>
                         </div>
                         <div className="col">
                             <span>{status.resistance.water}</span>
@@ -758,7 +758,7 @@ export default class Main extends Component {
                     </div>
                     <div className="row">
                         <div className="col-5 offset-1">
-                            <span>Thunder</span>
+                            <span>雷</span>
                         </div>
                         <div className="col">
                             <span>{status.resistance.thunder}</span>
@@ -766,7 +766,7 @@ export default class Main extends Component {
                     </div>
                     <div className="row">
                         <div className="col-5 offset-1">
-                            <span>Ice</span>
+                            <span>冰</span>
                         </div>
                         <div className="col">
                             <span>{status.resistance.ice}</span>
@@ -774,7 +774,7 @@ export default class Main extends Component {
                     </div>
                     <div className="row">
                         <div className="col-5 offset-1">
-                            <span>Dragon</span>
+                            <span>龍</span>
                         </div>
                         <div className="col">
                             <span>{status.resistance.dragon}</span>
@@ -785,7 +785,7 @@ export default class Main extends Component {
         ), (
             <div key="skills" className="row mhwc-item">
                 <div className="col-12 mhwc-name">
-                    <span>Skills</span>
+                    <span>技能</span>
                 </div>
                 <div className="col-12 mhwc-value">
                     {status.skills.sort((a, b) => {
@@ -852,6 +852,9 @@ export default class Main extends Component {
                             <span>備選裝備</span>
                         </div>
 
+                        <div className="mhwc-list">
+
+                        </div>
                     </div>
 
                     <div className="col mhwc-equips">
@@ -859,7 +862,9 @@ export default class Main extends Component {
                             <span>已選裝備</span>
                         </div>
 
-                        {this.renderEquipItems()}
+                        <div className="mhwc-list">
+                            {this.renderEquipItems()}
+                        </div>
                     </div>
 
                     <div className="col mhwc-status">
@@ -867,7 +872,9 @@ export default class Main extends Component {
                             <span>狀態</span>
                         </div>
 
-                        {this.renderStatus()}
+                        <div className="mhwc-list">
+                            {this.renderStatus()}
+                        </div>
                     </div>
                 </div>
             </div>

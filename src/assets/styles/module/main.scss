@@ -53,7 +53,6 @@ $function_bar-height: 40px;
 
     .mhwc-skills,
     .mhwc-selected_skills {
-
         .mhwc-function_bar {
             padding: 0 10px;
             height: $function_bar-height;
@@ -84,10 +83,10 @@ $function_bar-height: 40px;
 
         .mhwc-skill_item {
             margin: 5px 5px 5px 10px;
-            padding: 0 5px;
+            padding: 5px;
             border: 1px solid #333;
             height: 60px;
-            line-height: 60px;
+            line-height: 50px;
 
             -webkit-touch-callout: none; /* iOS Safari */
             -webkit-user-select: none; /* Safari */
@@ -121,7 +120,7 @@ $function_bar-height: 40px;
     .mhwc-selected_skills {
         .mhwc-skill_item {
             div:nth-child(1) {
-                line-height: 30px;
+                line-height: 25px;
                 text-align: center;
             }
 
@@ -139,31 +138,67 @@ $function_bar-height: 40px;
         }
     }
 
+    .mhwc-canditate_equips,
+    .mhwc-equips,
+    .mhwc-status {
+        .mhwc-list {
+            overflow-y: scroll;
+            height: calc(100vh - (#{$header-height} + #{$section_name-height}));
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                height: 5px;
+                // background: rgba(0, 0, 0, 0.1);
+                background: white;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0.1);
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+            }
+        }
+    }
+
     .mhwc-canditate_equips {
-        padding: 0 10px;
 
     }
 
     .mhwc-equips {
-        padding: 0 10px;
+        .mhwc-equip {
+            margin: 5px 5px 5px 10px;
+            padding: 5px;
+            border: 1px solid #333;
 
-        .mhwc-item {
             .mhwc-name {
 
             }
+        }
 
-            .mhwc-slots {
-                .mhwc-name {
+        .mhwc-slots {
+            padding: 5px;
+            border: 1px solid #333;
 
-                }
+            .mhwc-name {
+
+            }
+        }
+
+        .mhwc-enhances {
+            padding: 5px;
+            border: 1px solid #333;
+
+            .mhwc-name {
+
             }
         }
     }
 
     .mhwc-status {
-        padding: 0 10px;
-
         .mhwc-item {
+            margin: 5px 5px 5px 10px;
+            padding: 5px;
+            border: 1px solid #333;
 
             .mhwc-name {
 
@@ -178,12 +213,13 @@ $function_bar-height: 40px;
             position: relative;
             border: 1px solid black;
             width: 100%;
-            height: 20px;
+            height: 14px;
+            line-height: 14px;
             background-color: black;
 
             .mhwc-step {
                 display: inline-block;
-                height: 18px;
+                height: 12px;
 
                 &:nth-child(1) {
                     background-color: red;
