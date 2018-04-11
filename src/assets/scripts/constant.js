@@ -109,7 +109,11 @@ export default {
                         key: '奪氣珠'
                     }
                 ],
-                enhances: []
+                enhances: [
+                    {
+                        'key': '賦予回復能力'
+                    }
+                ]
             },
             helm: {
                 key: '龍王的獨眼α',

@@ -19,8 +19,9 @@ import Status from 'core/status';
 // Load Custom Libraries
 import DataSet from 'library/dataset';
 
-// Load Constant
+// Load Constant & Lang
 import Constant from 'constant';
+import Lang from 'lang';
 
 var defaultEquips = {
     weapon: null,
@@ -497,35 +498,61 @@ export default class Main extends Component {
         let leg = DataSet.armor.getInfo(equips.leg.key);
         let charm = DataSet.charm.getInfo(equips.charm.key);
 
+        let weaponEnhances = null;
+
+        if (8 === weapon.rare) {
+            weaponEnhances = [Array(1).keys()];
+        } else if (7 === weapon.rare) {
+            weaponEnhances = [Array(2).keys()];
+        } else if (6 === weapon.rare) {
+            weaponEnhances = [Array(3).keys()];
+        }
+
         return [(
             <div key="weapon" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
                     <span>{weapon.name}</span>
                 </div>
+
                 <div className="col-12 mhwc-slots">
-                    {equips.weapon.slots.map((data, index) => {
+                    {weapon.slots.map((data, index) => {
+                        let jewel = DataSet.jewel.getInfo(equips.weapon.slots[index].key)
+
                         return (
                             <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-11 offset-1 mhwc-name">
-                                    <span>
-                                        {DataSet.jewel.getInfo(data.key).name}
-                                    </span>
+                                <div className="col-4 mhwc-name">
+                                    <span>插槽 {index + 1} - [{data.size}]</span>
+                                </div>
+                                <div className="col-8 mhwc-value">
+                                    {undefined !== jewel ? (
+                                        <span>[{jewel.size}] {jewel.name}</span>
+                                    ) : false}
                                 </div>
                             </div>
                         );
                     })}
                 </div>
-                <div className="col-12 mhwc-enhances">
-                    {equips.weapon.enhances.map((data) => {
-                        return (
-                            <div key={data.key} className="row mhwc-enhance">
-                                <div className="col-11 offset-1 mhwc-name">
-                                    <span>{data.key}</span>
+
+                {null !== weaponEnhances ? (
+                    <div className="col-12 mhwc-enhances">
+                        {weaponEnhances.map((data, index) => {
+                            let enhance = equips.weapon.enhances[index];
+
+                            return (
+                                <div key={data.key + '_' + index} className="row mhwc-enhance">
+                                    <div className="col-4 mhwc-name">
+                                        <span>強化 {index + 1}</span>
+                                    </div>
+                                    <div className="col-8 mhwc-value">
+                                        {undefined !== enhance ? (
+                                            <span>{enhance.key}</span>
+                                        ) : false}
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
-                </div>
+                            );
+                        })}
+                    </div>
+                ) : false}
             </div>
         ), (
             <div key="helm" className="row mhwc-equip">
@@ -533,13 +560,18 @@ export default class Main extends Component {
                     <span>{helm.name}</span>
                 </div>
                 <div className="col-12 mhwc-slots">
-                    {equips.helm.slots.map((data, index) => {
+                    {helm.slots.map((data, index) => {
+                        let jewel = DataSet.jewel.getInfo(equips.helm.slots[index].key)
+
                         return (
                             <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-11 offset-1 mhwc-name">
-                                    <span>
-                                        {DataSet.jewel.getInfo(data.key).name}
-                                    </span>
+                                <div className="col-4 mhwc-name">
+                                    <span>插槽 {index + 1} - [{data.size}]</span>
+                                </div>
+                                <div className="col-8 mhwc-value">
+                                    {undefined !== jewel ? (
+                                        <span>[{jewel.size}] {jewel.name}</span>
+                                    ) : false}
                                 </div>
                             </div>
                         );
@@ -552,13 +584,18 @@ export default class Main extends Component {
                     <span>{chest.name}</span>
                 </div>
                 <div className="col-12 mhwc-slots">
-                    {equips.chest.slots.map((data, index) => {
+                    {chest.slots.map((data, index) => {
+                        let jewel = DataSet.jewel.getInfo(equips.chest.slots[index].key)
+
                         return (
                             <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-11 offset-1 mhwc-name">
-                                    <span>
-                                        {DataSet.jewel.getInfo(data.key).name}
-                                    </span>
+                                <div className="col-4 mhwc-name">
+                                    <span>插槽 {index + 1} - [{data.size}]</span>
+                                </div>
+                                <div className="col-8 mhwc-value">
+                                    {undefined !== jewel ? (
+                                        <span>[{jewel.size}] {jewel.name}</span>
+                                    ) : false}
                                 </div>
                             </div>
                         );
@@ -571,13 +608,18 @@ export default class Main extends Component {
                     <span>{arm.name}</span>
                 </div>
                 <div className="col-12 mhwc-slots">
-                    {equips.arm.slots.map((data, index) => {
+                    {arm.slots.map((data, index) => {
+                        let jewel = DataSet.jewel.getInfo(equips.arm.slots[index].key)
+
                         return (
                             <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-11 offset-1 mhwc-name">
-                                    <span>
-                                        {DataSet.jewel.getInfo(data.key).name}
-                                    </span>
+                                <div className="col-4 mhwc-name">
+                                    <span>插槽 {index + 1} - [{data.size}]</span>
+                                </div>
+                                <div className="col-8 mhwc-value">
+                                    {undefined !== jewel ? (
+                                        <span>[{jewel.size}] {jewel.name}</span>
+                                    ) : false}
                                 </div>
                             </div>
                         );
@@ -590,13 +632,18 @@ export default class Main extends Component {
                     <span>{waist.name}</span>
                 </div>
                 <div className="col-12 mhwc-slots">
-                    {equips.waist.slots.map((data, index) => {
+                    {waist.slots.map((data, index) => {
+                        let jewel = DataSet.jewel.getInfo(equips.waist.slots[index].key)
+
                         return (
                             <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-11 offset-1 mhwc-name">
-                                    <span>
-                                        {DataSet.jewel.getInfo(data.key).name}
-                                    </span>
+                                <div className="col-4 mhwc-name">
+                                    <span>插槽 {index + 1} - [{data.size}]</span>
+                                </div>
+                                <div className="col-8 mhwc-value">
+                                    {undefined !== jewel ? (
+                                        <span>[{jewel.size}] {jewel.name}</span>
+                                    ) : false}
                                 </div>
                             </div>
                         );
@@ -609,13 +656,18 @@ export default class Main extends Component {
                     <span>{leg.name}</span>
                 </div>
                 <div className="col-12 mhwc-slots">
-                    {equips.leg.slots.map((data, index) => {
+                    {leg.slots.map((data, index) => {
+                        let jewel = DataSet.jewel.getInfo(equips.leg.slots[index].key)
+
                         return (
                             <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-11 offset-1 mhwc-name">
-                                    <span>
-                                        {DataSet.jewel.getInfo(data.key).name}
-                                    </span>
+                                <div className="col-4 mhwc-name">
+                                    <span>插槽 {index + 1} - [{data.size}]</span>
+                                </div>
+                                <div className="col-8 mhwc-value">
+                                    {undefined !== jewel ? (
+                                        <span>[{jewel.size}] {jewel.name}</span>
+                                    ) : false}
                                 </div>
                             </div>
                         );
@@ -732,7 +784,7 @@ export default class Main extends Component {
                 <div className="col-12 mhwc-value">
                     <div className="row">
                         <div className="col-4 mhwc-name">
-                            <span>{status.element.type}</span>
+                            <span>{Lang[status.element.type]}</span>
                         </div>
                         <div className="col-8 mhwc-value">
                             {status.element.isHidden ? (
@@ -750,7 +802,7 @@ export default class Main extends Component {
                     <span>龍封力</span>
                 </div>
                 <div className="col-8 mhwc-value">
-                    <span>{status.elderseal.affinity}</span>
+                    <span>{Lang[status.elderseal.affinity]}</span>
                 </div>
             </div>
         ), (

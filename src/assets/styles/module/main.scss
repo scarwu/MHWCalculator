@@ -176,7 +176,22 @@ $function_bar-height: 40px;
             @include border-radius(5px);
 
             .mhwc-name {
+                line-height: 33px;
+            }
 
+            .mhwc-value {
+                padding: 5px;
+                border: 1px solid #333;
+
+                @include border-radius(5px);
+            }
+
+            .row .mhwc-value {
+                margin-bottom: 5px;
+            }
+
+            .row:nth-last-child(1) .mhwc-value {
+                margin-bottom: 0;
             }
         }
 
@@ -190,6 +205,10 @@ $function_bar-height: 40px;
             .mhwc-name {
 
             }
+
+            .mhwc-value {
+
+            }
         }
 
         .mhwc-enhances {
@@ -200,6 +219,10 @@ $function_bar-height: 40px;
             @include border-radius(5px);
 
             .mhwc-name {
+
+            }
+
+            .mhwc-value {
 
             }
         }
