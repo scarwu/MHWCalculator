@@ -401,25 +401,28 @@ export default class Main extends Component {
             let skill = DataSet.skill.getInfo(data.key);
 
             return (
-                <div key={skill.name}>
-                    <div className="mhwc-skill_item">
-                        <i className="fa fa-times" onClick={() => {this.handleSkillUnselect(index)}}></i>
-                        &nbsp;
+                <div key={skill.name} className="row mhwc-skill_item">
+                    <div className="col-1">
+                        <a className="fa fa-chevron-up" onClick={() => {this.handleSkillMoveUp(index)}}></a>
+                        <a className="fa fa-chevron-down" onClick={() => {this.handleSkillMoveDown(index)}}></a>
+                    </div>
+
+                    <div className="col-6">
                         <span className="mhwc-skill_name">{skill.name}</span>
+                    </div>
+
+                    <div className="col-4">
+                        <a className="fa fa-minus" onClick={() => {this.handleSkillLevelDown(index)}}></a>
                         &nbsp;
-                        <div>
-                            <i className="fa fa-minus" onClick={() => {this.handleSkillLevelDown(index)}}></i>
-                            &nbsp;
-                            <span className="mhwc-skill_level">
-                                {data.level} / {skill.list.length}
-                            </span>
-                            &nbsp;
-                            <i className="fa fa-plus" onClick={() => {this.handleSkillLevelUp(index)}}></i>
-                        </div>
-                        <div>
-                            <i className="fa fa-chevron-up" onClick={() => {this.handleSkillMoveUp(index)}}></i>
-                            <i className="fa fa-chevron-down" onClick={() => {this.handleSkillMoveDown(index)}}></i>
-                        </div>
+                        <span className="mhwc-skill_level">
+                            {data.level} / {skill.list.length}
+                        </span>
+                        &nbsp;
+                        <a className="fa fa-plus" onClick={() => {this.handleSkillLevelUp(index)}}></a>
+                    </div>
+
+                    <div className="col-1">
+                        <a className="fa fa-times" onClick={() => {this.handleSkillUnselect(index)}}></a>
                     </div>
                 </div>
             );
@@ -449,11 +452,13 @@ export default class Main extends Component {
             }
 
             return (
-                <div key={skill.name}>
-                    <div className="mhwc-skill_item">
-                        <i className="fa fa-check" onClick={() => {this.handleSkillSelect(skill.name)}}></i>
-                        &nbsp;
+                <div key={skill.name} className="row mhwc-skill_item">
+                    <div className="col-10 offset-1">
                         <span className="mhwc-skill_name">{skill.name}</span>
+                    </div>
+
+                    <div className="col-1">
+                        <a className="fa fa-check" onClick={() => {this.handleSkillSelect(skill.name)}}></a>
                     </div>
                 </div>
             );
@@ -472,24 +477,26 @@ export default class Main extends Component {
         let charm = DataSet.charm.getInfo(equips.charm.key);
 
         return [(
-            <div key="weapon" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="weapon" className="row mhwc-item">
+                <div className="col-12 mhwc-name">
                     <span>{weapon.name}</span>
                 </div>
-                <div className="mhwc-enhances">
+                <div className="col-12 mhwc-enhances">
                     {equips.weapon.enhances.map((data) => {
                         return (
-                            <div key={data.key} className="mhwc-name">
-                                <span>{data.key}</span>
+                            <div key={data.key} className="row mhwc-enhance">
+                                <div className="col-11 offset-1 mhwc-name">
+                                    <span>{data.key}</span>
+                                </div>
                             </div>
                         );
                     })}
                 </div>
-                <div className="mhwc-slots">
+                <div className="col-12 mhwc-slots">
                     {equips.weapon.slots.map((data, index) => {
                         return (
-                            <div key={data.key + '_' + index} className="mhwc-jewel">
-                                <div className="mhwc-name">
+                            <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                <div className="col-11 offset-1 mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
@@ -500,15 +507,15 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="helm" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="helm" className="row mhwc-item">
+                <div className="col-12 mhwc-name">
                     <span>{helm.name}</span>
                 </div>
-                <div className="mhwc-slots">
+                <div className="col-12 mhwc-slots">
                     {equips.helm.slots.map((data, index) => {
                         return (
-                            <div key={data.key + '_' + index} className="mhwc-jewel">
-                                <div className="mhwc-name">
+                            <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                <div className="col-11 offset-1 mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
@@ -519,15 +526,15 @@ export default class Main extends Component {
                 </div>
             </div>
         ), , (
-            <div key="chest" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="chest" className="row mhwc-item">
+                <div className="col-12 mhwc-name">
                     <span>{chest.name}</span>
                 </div>
-                <div className="mhwc-slots">
+                <div className="col-12 mhwc-slots">
                     {equips.chest.slots.map((data, index) => {
                         return (
-                            <div key={data.key + '_' + index} className="mhwc-jewel">
-                                <div className="mhwc-name">
+                            <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                <div className="col-11 offset-1 mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
@@ -538,15 +545,15 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="arm" className="mhwc-item">
+            <div key="arm" className="row mhwc-item">
                 <div className="mhwc-name">
                     <span>{arm.name}</span>
                 </div>
-                <div className="mhwc-slots">
+                <div className="col-12 mhwc-slots">
                     {equips.arm.slots.map((data, index) => {
                         return (
-                            <div key={data.key + '_' + index} className="mhwc-jewel">
-                                <div className="mhwc-name">
+                            <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                <div className="col-11 offset-1 mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
@@ -557,15 +564,15 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="waist" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="waist" className="row mhwc-item">
+                <div className="col-12 mhwc-name">
                     <span>{waist.name}</span>
                 </div>
-                <div className="mhwc-slots">
+                <div className="col-12 mhwc-slots">
                     {equips.waist.slots.map((data, index) => {
                         return (
-                            <div key={data.key + '_' + index} className="mhwc-jewel">
-                                <div className="mhwc-name">
+                            <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                <div className="col-11 offset-1 mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
@@ -576,15 +583,15 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="leg" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="leg" className="row mhwc-item">
+                <div className="col-12 mhwc-name">
                     <span>{leg.name}</span>
                 </div>
-                <div className="mhwc-slots">
+                <div className="col-12 mhwc-slots">
                     {equips.leg.slots.map((data, index) => {
                         return (
-                            <div key={data.key + '_' + index} className="mhwc-jewel">
-                                <div className="mhwc-name">
+                            <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                <div className="col-11 offset-1 mhwc-name">
                                     <span>
                                         {DataSet.jewel.getInfo(data.key).name}
                                     </span>
@@ -595,8 +602,8 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="charm" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="charm" className="row mhwc-item">
+                <div className="col-12 mhwc-name">
                     <span>{charm.name}</span>
                 </div>
             </div>
@@ -635,57 +642,57 @@ export default class Main extends Component {
         };
 
         return [(
-            <div key="health" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="health" className="row mhwc-item">
+                <div className="col-6 mhwc-name">
                     <span>Health</span>
                 </div>
-                <div className="mhwc-value">
+                <div className="col-6 mhwc-value">
                     <span>{status.health}</span>
                 </div>
             </div>
         ), (
-            <div key="stamina" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="stamina" className="row mhwc-item">
+                <div className="col-6 mhwc-name">
                     <span>Stamina</span>
                 </div>
-                <div className="mhwc-value">
+                <div className="col-6 mhwc-value">
                     <span>{status.stamina}</span>
                 </div>
             </div>
         ), (
-            <div key="attack" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="attack" className="row mhwc-item">
+                <div className="col-6 mhwc-name">
                     <span>Attack</span>
                 </div>
-                <div className="mhwc-value">
+                <div className="col-6 mhwc-value">
                     <span>{status.attack}</span>
                 </div>
             </div>
         ), (
-            <div key="criticalRate" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="criticalRate" className="row mhwc-item">
+                <div className="col-6 mhwc-name">
                     <span>Critical Rate</span>
                 </div>
-                <div className="mhwc-value">
+                <div className="col-6 mhwc-value">
                     <span>{status.critical.rate}%</span>
                 </div>
             </div>
         ), (
-            <div key="criticalMultiple" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="criticalMultiple" className="row mhwc-item">
+                <div className="col-6 mhwc-name">
                     <span>Critical Multiple</span>
                 </div>
-                <div className="mhwc-value">
+                <div className="col-6 mhwc-value">
                     <span>{status.critical.multiple}x</span>
                 </div>
             </div>
         ), (
-            <div key="sharpness" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="sharpness" className="row mhwc-item">
+                <div className="col-12 mhwc-name">
                     <span>Sharpness</span>
                 </div>
-                <div className="mhwc-value">
-                    <div className="mhwc-sharpness">
+                <div className="col-12 mhwc-value">
+                    <div className="col-11 offset-1 mhwc-sharpness">
                         <div className="mhwc-step" style={sharpnessStyle.red}></div>
                         <div className="mhwc-step" style={sharpnessStyle.orange}></div>
                         <div className="mhwc-step" style={sharpnessStyle.yellow}></div>
@@ -697,11 +704,11 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="element" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="element" className="row mhwc-item">
+                <div className="col-6 mhwc-name">
                     <span>Element</span>
                 </div>
-                <div className="mhwc-value">
+                <div className="col-6 mhwc-value">
                     {status.element.isHidden ? (
                         <span>({status.element.type}: {status.element.value})</span>
                     ) : (
@@ -710,66 +717,86 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="elderseal" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="elderseal" className="row mhwc-item">
+                <div className="col-6 mhwc-name">
                     <span>Elderseal</span>
                 </div>
-                <div className="mhwc-value">
+                <div className="col-6 mhwc-value">
                     <span>{status.elderseal.affinity}</span>
                 </div>
             </div>
         ), (
-            <div key="defense" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="defense" className="row mhwc-item">
+                <div className="col-6 mhwc-name">
                     <span>Defense</span>
                 </div>
-                <div className="mhwc-value">
+                <div className="col-6 mhwc-value">
                     <span>{status.defense}</span>
                 </div>
             </div>
         ), (
-            <div key="resistance" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="resistance" className="row mhwc-item">
+                <div className="col-12 mhwc-name">
                     <span>Resistance</span>
                 </div>
-                <div className="mhwc-value">
-                    <div>
-                        <span>Fire</span>
-                        <span>{status.resistance.fire}</span>
+                <div className="col-12 mhwc-value">
+                    <div className="row">
+                        <div className="col-5 offset-1">
+                            <span>Fire</span>
+                        </div>
+                        <div className="col">
+                            <span>{status.resistance.fire}</span>
+                        </div>
                     </div>
-                    <div>
-                        <span>Water</span>
-                        <span>{status.resistance.water}</span>
+                    <div className="row">
+                        <div className="col-5 offset-1">
+                            <span>Water</span>
+                        </div>
+                        <div className="col">
+                            <span>{status.resistance.water}</span>
+                        </div>
                     </div>
-                    <div>
-                        <span>Thunder</span>
-                        <span>{status.resistance.thunder}</span>
+                    <div className="row">
+                        <div className="col-5 offset-1">
+                            <span>Thunder</span>
+                        </div>
+                        <div className="col">
+                            <span>{status.resistance.thunder}</span>
+                        </div>
                     </div>
-                    <div>
-                        <span>Ice</span>
-                        <span>{status.resistance.ice}</span>
+                    <div className="row">
+                        <div className="col-5 offset-1">
+                            <span>Ice</span>
+                        </div>
+                        <div className="col">
+                            <span>{status.resistance.ice}</span>
+                        </div>
                     </div>
-                    <div>
-                        <span>Dragon</span>
-                        <span>{status.resistance.dragon}</span>
+                    <div className="row">
+                        <div className="col-5 offset-1">
+                            <span>Dragon</span>
+                        </div>
+                        <div className="col">
+                            <span>{status.resistance.dragon}</span>
+                        </div>
                     </div>
                 </div>
             </div>
         ), (
-            <div key="skills" className="mhwc-item">
-                <div className="mhwc-name">
+            <div key="skills" className="row mhwc-item">
+                <div className="col-12 mhwc-name">
                     <span>Skills</span>
                 </div>
-                <div className="mhwc-value">
+                <div className="col-12 mhwc-value">
                     {status.skills.sort((a, b) => {
                         return b.level - a.level;
                     }).map((data) => {
                         return (
-                            <div key={data.name}>
-                                <div>
+                            <div key={data.name} className="row">
+                                <div className="col-11 offset-1">
                                     <span>{data.name} Lv.{data.level}</span>
                                 </div>
-                                <div>
+                                <div className="col-10 offset-2">
                                     <span>{data.description}</span>
                                 </div>
                             </div>
@@ -790,39 +817,56 @@ export default class Main extends Component {
                 </div>
 
                 <div className="row mhwc-container">
-                    <div className="col-3">
-                        <div className="mhwc-selected_skills">
-                            <div className="mhwc-function_bar">
-                                <input className="mhwc-equip_search" type="button"
-                                    value="Search" onChange={this.handleEquipSearch} />
-                            </div>
-                            <div className="mhwc-list">
-                                {this.renderSelectedSkillItems()}
-                            </div>
+                    <div className="col mhwc-skills">
+                        <div className="mhwc-section_name">
+                            <span>備選技能</span>
                         </div>
 
-                        <div className="mhwc-skills">
-                            <div className="mhwc-function_bar">
-                                <input className="mhwc-skill_segment" type="text"
-                                    ref="skillSegment" onChange={this.handleSkillInput} />
-                            </div>
-                            <div className="mhwc-list">
-                                {this.renderUnselectedSkillItems()}
-                            </div>
+                        <div className="mhwc-function_bar">
+                            <input className="mhwc-skill_segment" type="text"
+                                ref="skillSegment" onChange={this.handleSkillInput} />
+                        </div>
+
+                        <div className="mhwc-list">
+                            {this.renderUnselectedSkillItems()}
                         </div>
                     </div>
 
-                    <div className="col-3">
-                        <div className="mhwc-equips">
-                            {this.renderEquipItems()}
+                    <div className="col mhwc-selected_skills">
+                        <div className="mhwc-section_name">
+                            <span>已選技能</span>
                         </div>
 
-                        <div className="mhwc-canditate_equips">
+                        <div className="mhwc-function_bar">
+                            <input className="mhwc-equip_search" type="button"
+                                value="Search" onChange={this.handleEquipSearch} />
+                        </div>
 
+                        <div className="mhwc-list">
+                            {this.renderSelectedSkillItems()}
                         </div>
                     </div>
 
-                    <div className="col-3 mhwc-status">
+                    <div className="col mhwc-canditate_equips">
+                        <div className="mhwc-section_name">
+                            <span>備選裝備</span>
+                        </div>
+
+                    </div>
+
+                    <div className="col mhwc-equips">
+                        <div className="mhwc-section_name">
+                            <span>已選裝備</span>
+                        </div>
+
+                        {this.renderEquipItems()}
+                    </div>
+
+                    <div className="col mhwc-status">
+                        <div className="mhwc-section_name">
+                            <span>狀態</span>
+                        </div>
+
                         {this.renderStatus()}
                     </div>
                 </div>

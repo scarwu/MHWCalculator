@@ -8,6 +8,7 @@
  */
 
 $header-height: 40px;
+$section_name-height: 40px;
 $function_bar-height: 40px;
 
 & {
@@ -15,6 +16,7 @@ $function_bar-height: 40px;
 }
 
 .mhwc-header {
+    padding: 0 10px;
     height: $header-height;
 
     h1 {
@@ -32,12 +34,28 @@ $function_bar-height: 40px;
 
     @include font-size(1.4);
 
+    .mhwc-section_name {
+        height: $section_name-height;
+        line-height: 40px;
+        text-align: center;
+
+        @include font-size(1.8);
+    }
+
+    .mhwc-skills,
+    .mhwc-selected_skills,
+    .mhwc-canditate_equips,
+    .mhwc-equips,
+    .mhwc-status {
+        position: relative;
+        height: calc(100vh - (#{$header-height} + #{$section_name-height}));
+    }
+
     .mhwc-skills,
     .mhwc-selected_skills {
-        height: calc(50vh - (#{$header-height} / 2));
 
         .mhwc-function_bar {
-            padding: 5px;
+            padding: 0 10px;
             height: $function_bar-height;
 
             input {
@@ -48,13 +66,35 @@ $function_bar-height: 40px;
 
         .mhwc-list {
             overflow-y: scroll;
-            height: calc(50vh - ((#{$header-height} / 2) + #{$function_bar-height}));
+            height: calc(100vh - (#{$header-height} + #{$section_name-height} + #{$function_bar-height}));
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                height: 5px;
+                // background: rgba(0, 0, 0, 0.1);
+                background: white;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0.1);
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+            }
         }
 
         .mhwc-skill_item {
-            margin: 5px;
-            padding: 5px;
+            margin: 5px 5px 5px 10px;
+            padding: 0 5px;
             border: 1px solid #333;
+            height: 60px;
+            line-height: 60px;
+
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
         }
 
         .mhwc-skill_name {
@@ -66,12 +106,47 @@ $function_bar-height: 40px;
         }
     }
 
-    .mhwc-equips,
+    .mhwc-skills {
+        .mhwc-skill_item {
+            div:nth-child(1) {
+
+            }
+
+            div:nth-child(2) {
+                text-align: center;
+            }
+        }
+    }
+
+    .mhwc-selected_skills {
+        .mhwc-skill_item {
+            div:nth-child(1) {
+                line-height: 30px;
+                text-align: center;
+            }
+
+            div:nth-child(2) {
+
+            }
+
+            div:nth-child(3) {
+                text-align: center;
+            }
+
+            div:nth-child(4) {
+                text-align: center;
+            }
+        }
+    }
+
     .mhwc-canditate_equips {
-        height: calc(50vh - (#{$header-height} / 2));
+        padding: 0 10px;
+
     }
 
     .mhwc-equips {
+        padding: 0 10px;
+
         .mhwc-item {
             .mhwc-name {
 
@@ -86,6 +161,8 @@ $function_bar-height: 40px;
     }
 
     .mhwc-status {
+        padding: 0 10px;
+
         .mhwc-item {
 
             .mhwc-name {
