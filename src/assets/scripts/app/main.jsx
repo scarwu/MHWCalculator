@@ -199,9 +199,6 @@ export default class Main extends Component {
 
         let equips = this.state.equips;
         let status = defaultStatus;
-        let elements = ['fire', 'water', 'thunder', 'ice', 'dragon'];
-        let equipsHasSkill = ['helm', 'chest', 'arm', 'waist', 'leg', 'charm'];
-        let equipsHasSlot = ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'];
         let tempSkills = {};
 
         equips.weapon.info = DataSet.weapon.getInfo(equips.weapon.key);
@@ -218,19 +215,19 @@ export default class Main extends Component {
         status.elderseal = equips.weapon.info.elderseal;
 
         // Defense
-        status.defense += (equips.weapon.info.defense + equips.helm.info.defense
-            + equips.chest.info.defense + equips.arm.info.defense
-            + equips.waist.info.defense + equips.leg.info.defense);
+        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+            status.defense += equips[equipType].info.defense;
+        });
 
         // Resistance
-        elements.map((elementType) => {
-            status.resistance[elementType] = equips.helm.info.resistance[elementType]
-                + equips.chest.info.resistance[elementType] + equips.arm.info.resistance[elementType]
-                + equips.waist.info.resistance[elementType] + equips.leg.info.resistance[elementType];
+        ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+            Constant.elements.map((elementType) => {
+                status.resistance[elementType] += equips[equipType].info.resistance[elementType];
+            });
         });
 
         // Skills from Equips
-        equipsHasSkill.map((equipType) => {
+        ['helm', 'chest', 'arm', 'waist', 'leg', 'charm'].map((equipType) => {
             equips[equipType].info.skills.map((data) => {
                 if (undefined === tempSkills[data.key]) {
                     tempSkills[data.key] = 0;
@@ -241,7 +238,7 @@ export default class Main extends Component {
         });
 
         // Skills from Slots
-        equipsHasSlot.map((equipType) => {
+        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
             equips[equipType].slots.map((data) => {
                 let jewel = DataSet.jewel.getInfo(data.key)
 
@@ -416,41 +413,6 @@ export default class Main extends Component {
     /**
      * Render Functions
      */
-    renderSelectedSkillItems = () => {
-        let selectedSkills = this.state.selectedSkills;
-
-        return selectedSkills.map((data, index) => {
-            let skill = DataSet.skill.getInfo(data.key);
-
-            return (
-                <div key={skill.name} className="row mhwc-skill_item">
-                    <div className="col-1">
-                        <a className="fa fa-chevron-up" onClick={() => {this.handleSkillMoveUp(index)}}></a>
-                        <a className="fa fa-chevron-down" onClick={() => {this.handleSkillMoveDown(index)}}></a>
-                    </div>
-
-                    <div className="col-6">
-                        <span className="mhwc-skill_name">{skill.name}</span>
-                    </div>
-
-                    <div className="col-4">
-                        <a className="fa fa-minus" onClick={() => {this.handleSkillLevelDown(index)}}></a>
-                        &nbsp;
-                        <span className="mhwc-skill_level">
-                            {data.level} / {skill.list.length}
-                        </span>
-                        &nbsp;
-                        <a className="fa fa-plus" onClick={() => {this.handleSkillLevelUp(index)}}></a>
-                    </div>
-
-                    <div className="col-1">
-                        <a className="fa fa-times" onClick={() => {this.handleSkillUnselect(index)}}></a>
-                    </div>
-                </div>
-            );
-        });
-    };
-
     renderUnselectedSkillItems = () => {
         let segment = this.state.skillSegment;
         let selectedSkills = this.state.selectedSkills.map((data) => {
@@ -487,31 +449,71 @@ export default class Main extends Component {
         });
     };
 
+    renderSelectedSkillItems = () => {
+        let selectedSkills = this.state.selectedSkills;
+
+        return selectedSkills.map((data, index) => {
+            let skill = DataSet.skill.getInfo(data.key);
+
+            return (
+                <div key={skill.name} className="row mhwc-skill_item">
+                    <div className="col-1">
+                        <div className="col-12">
+                            <a className="fa fa-chevron-up" onClick={() => {this.handleSkillMoveUp(index)}}></a>
+                        </div>
+                        <div className="col-12">
+                            <a className="fa fa-chevron-down" onClick={() => {this.handleSkillMoveDown(index)}}></a>
+                        </div>
+                    </div>
+
+                    <div className="col-6">
+                        <span className="mhwc-skill_name">{skill.name}</span>
+                    </div>
+
+                    <div className="col-4">
+                        <a className="fa fa-minus" onClick={() => {this.handleSkillLevelDown(index)}}></a>
+                        &nbsp;
+                        <span className="mhwc-skill_level">
+                            {data.level} / {skill.list.length}
+                        </span>
+                        &nbsp;
+                        <a className="fa fa-plus" onClick={() => {this.handleSkillLevelUp(index)}}></a>
+                    </div>
+
+                    <div className="col-1">
+                        <a className="fa fa-times" onClick={() => {this.handleSkillUnselect(index)}}></a>
+                    </div>
+                </div>
+            );
+        });
+    };
+
     renderEquipItems = () => {
         let equips = this.state.equips;
 
         let weapon = DataSet.weapon.getInfo(equips.weapon.key);
-        let helm = DataSet.armor.getInfo(equips.helm.key);
-        let chest = DataSet.armor.getInfo(equips.chest.key);
-        let arm = DataSet.armor.getInfo(equips.arm.key);
-        let waist = DataSet.armor.getInfo(equips.waist.key);
-        let leg = DataSet.armor.getInfo(equips.leg.key);
         let charm = DataSet.charm.getInfo(equips.charm.key);
 
         let weaponEnhances = null;
 
         if (8 === weapon.rare) {
-            weaponEnhances = [Array(1).keys()];
+            weaponEnhances = [...Array(1).keys()];
         } else if (7 === weapon.rare) {
-            weaponEnhances = [Array(2).keys()];
+            weaponEnhances = [...Array(2).keys()];
         } else if (6 === weapon.rare) {
-            weaponEnhances = [Array(3).keys()];
+            weaponEnhances = [...Array(3).keys()];
         }
 
-        return [(
+        let ContentBlocks = [];
+
+        // Weapon
+        ContentBlocks.push((
             <div key="weapon" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
                     <span>{weapon.name}</span>
+                    <a className="fa fa-unlock-alt"></a>
+                    <a className="fa fa-exchange"></a>
+                    <a className="fa fa-times"></a>
                 </div>
 
                 <div className="col-12 mhwc-slots">
@@ -524,9 +526,13 @@ export default class Main extends Component {
                                     <span>插槽 {index + 1} - [{data.size}]</span>
                                 </div>
                                 <div className="col-8 mhwc-value">
-                                    {undefined !== jewel ? (
+                                    {undefined !== jewel ? [(
                                         <span>[{jewel.size}] {jewel.name}</span>
-                                    ) : false}
+                                    ), (
+                                        <a className="fa fa-times"></a>
+                                    )] : (
+                                        <a className="fa fa-plus"></a>
+                                    )}
                                 </div>
                             </div>
                         );
@@ -544,9 +550,13 @@ export default class Main extends Component {
                                         <span>強化 {index + 1}</span>
                                     </div>
                                     <div className="col-8 mhwc-value">
-                                        {undefined !== enhance ? (
+                                        {undefined !== enhance ? [(
                                             <span>{enhance.key}</span>
-                                        ) : false}
+                                        ), (
+                                            <a className="fa fa-times"></a>
+                                        )] : (
+                                            <a className="fa fa-plus"></a>
+                                        )}
                                     </div>
                                 </div>
                             );
@@ -554,133 +564,53 @@ export default class Main extends Component {
                     </div>
                 ) : false}
             </div>
-        ), (
-            <div key="helm" className="row mhwc-equip">
-                <div className="col-12 mhwc-name">
-                    <span>{helm.name}</span>
-                </div>
-                <div className="col-12 mhwc-slots">
-                    {helm.slots.map((data, index) => {
-                        let jewel = DataSet.jewel.getInfo(equips.helm.slots[index].key)
+        ));
 
-                        return (
-                            <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-4 mhwc-name">
-                                    <span>插槽 {index + 1} - [{data.size}]</span>
-                                </div>
-                                <div className="col-8 mhwc-value">
-                                    {undefined !== jewel ? (
-                                        <span>[{jewel.size}] {jewel.name}</span>
-                                    ) : false}
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-        ), , (
-            <div key="chest" className="row mhwc-equip">
-                <div className="col-12 mhwc-name">
-                    <span>{chest.name}</span>
-                </div>
-                <div className="col-12 mhwc-slots">
-                    {chest.slots.map((data, index) => {
-                        let jewel = DataSet.jewel.getInfo(equips.chest.slots[index].key)
+        // Armors
+        ['helm', 'chest', 'arm', 'waist', 'leg'].map((part) => {
+            let equip = DataSet.armor.getInfo(equips[part].key);
 
-                        return (
-                            <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-4 mhwc-name">
-                                    <span>插槽 {index + 1} - [{data.size}]</span>
-                                </div>
-                                <div className="col-8 mhwc-value">
-                                    {undefined !== jewel ? (
-                                        <span>[{jewel.size}] {jewel.name}</span>
-                                    ) : false}
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-        ), (
-            <div key="arm" className="row mhwc-equip">
-                <div className="mhwc-name">
-                    <span>{arm.name}</span>
-                </div>
-                <div className="col-12 mhwc-slots">
-                    {arm.slots.map((data, index) => {
-                        let jewel = DataSet.jewel.getInfo(equips.arm.slots[index].key)
+            ContentBlocks.push((
+                <div key={'equip_' + part} className="row mhwc-equip">
+                    <div className="col-12 mhwc-name">
+                        <span>{equip.name}</span>
+                    </div>
+                    <div className="col-12 mhwc-slots">
+                        {equip.slots.map((data, index) => {
+                            let jewel = DataSet.jewel.getInfo(equips[part].slots[index].key)
 
-                        return (
-                            <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-4 mhwc-name">
-                                    <span>插槽 {index + 1} - [{data.size}]</span>
+                            return (
+                                <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                    <div className="col-4 mhwc-name">
+                                        <span>插槽 {index + 1} - [{data.size}]</span>
+                                    </div>
+                                    <div className="col-8 mhwc-value">
+                                        {undefined !== jewel ? [(
+                                            <span>[{jewel.size}] {jewel.name}</span>
+                                        ), (
+                                            <a className="fa fa-times"></a>
+                                        )] : (
+                                            <a className="fa fa-plus"></a>
+                                        )}
+                                    </div>
                                 </div>
-                                <div className="col-8 mhwc-value">
-                                    {undefined !== jewel ? (
-                                        <span>[{jewel.size}] {jewel.name}</span>
-                                    ) : false}
-                                </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
-            </div>
-        ), (
-            <div key="waist" className="row mhwc-equip">
-                <div className="col-12 mhwc-name">
-                    <span>{waist.name}</span>
-                </div>
-                <div className="col-12 mhwc-slots">
-                    {waist.slots.map((data, index) => {
-                        let jewel = DataSet.jewel.getInfo(equips.waist.slots[index].key)
+            ));
+        });
 
-                        return (
-                            <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-4 mhwc-name">
-                                    <span>插槽 {index + 1} - [{data.size}]</span>
-                                </div>
-                                <div className="col-8 mhwc-value">
-                                    {undefined !== jewel ? (
-                                        <span>[{jewel.size}] {jewel.name}</span>
-                                    ) : false}
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-        ), (
-            <div key="leg" className="row mhwc-equip">
-                <div className="col-12 mhwc-name">
-                    <span>{leg.name}</span>
-                </div>
-                <div className="col-12 mhwc-slots">
-                    {leg.slots.map((data, index) => {
-                        let jewel = DataSet.jewel.getInfo(equips.leg.slots[index].key)
-
-                        return (
-                            <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-4 mhwc-name">
-                                    <span>插槽 {index + 1} - [{data.size}]</span>
-                                </div>
-                                <div className="col-8 mhwc-value">
-                                    {undefined !== jewel ? (
-                                        <span>[{jewel.size}] {jewel.name}</span>
-                                    ) : false}
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-        ), (
+        // Charm
+        ContentBlocks.push((
             <div key="charm" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
                     <span>{charm.name}</span>
                 </div>
             </div>
-        )];
+        ));
+
+        return ContentBlocks;
     };
 
     renderStatus = () => {
@@ -689,30 +619,6 @@ export default class Main extends Component {
         if (null === status) {
             return false;
         }
-
-        let sharpnessStyle = {
-            red: {
-                width: (status.sharpness.steps.red / 4) + '%'
-            },
-            orange: {
-                width: (status.sharpness.steps.orange / 4) + '%'
-            },
-            yellow: {
-                width: (status.sharpness.steps.yellow / 4) + '%'
-            },
-            green: {
-                width: (status.sharpness.steps.green / 4) + '%'
-            },
-            blue: {
-                width: (status.sharpness.steps.blue / 4) + '%'
-            },
-            white: {
-                width: (status.sharpness.steps.white / 4) + '%'
-            },
-            mask: {
-                width: ((400 - status.sharpness.value) / 4) + '%'
-            }
-        };
 
         return [(
             <div key="health" className="row mhwc-item mhwc-health">
@@ -766,13 +672,17 @@ export default class Main extends Component {
                 </div>
                 <div className="col-8 mhwc-value">
                     <div className="col-12 mhwc-steps">
-                        <div className="mhwc-step" style={sharpnessStyle.red}></div>
-                        <div className="mhwc-step" style={sharpnessStyle.orange}></div>
-                        <div className="mhwc-step" style={sharpnessStyle.yellow}></div>
-                        <div className="mhwc-step" style={sharpnessStyle.green}></div>
-                        <div className="mhwc-step" style={sharpnessStyle.blue}></div>
-                        <div className="mhwc-step" style={sharpnessStyle.white}></div>
-                        <div className="mhwc-mask" style={sharpnessStyle.mask}></div>
+                        {['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
+                            return (
+                                <div key={'sharpness_' + step} className="mhwc-step" style={{
+                                    width: (status.sharpness.steps[step] / 4) + '%'
+                                }}></div>
+                            );
+                        })}
+
+                        <div className="mhwc-mask" style={{
+                            width: ((400 - status.sharpness.value) / 4) + '%'
+                        }}></div>
                     </div>
                 </div>
             </div>
@@ -820,46 +730,18 @@ export default class Main extends Component {
                     <span>抗性</span>
                 </div>
                 <div className="col-12 mhwc-value">
-                    <div className="row mhwc-fire">
-                        <div className="col-4 mhwc-name">
-                            <span>火</span>
-                        </div>
-                        <div className="col-8 mhwc-value">
-                            <span>{status.resistance.fire}</span>
-                        </div>
-                    </div>
-                    <div className="row mhwc-water">
-                        <div className="col-4 mhwc-name">
-                            <span>水</span>
-                        </div>
-                        <div className="col-8 mhwc-value">
-                            <span>{status.resistance.water}</span>
-                        </div>
-                    </div>
-                    <div className="row mhwc-thunder">
-                        <div className="col-4 mhwc-name">
-                            <span>雷</span>
-                        </div>
-                        <div className="col-8 mhwc-value">
-                            <span>{status.resistance.thunder}</span>
-                        </div>
-                    </div>
-                    <div className="row mhwc-ice">
-                        <div className="col-4 mhwc-name">
-                            <span>冰</span>
-                        </div>
-                        <div className="col-8 mhwc-value">
-                            <span>{status.resistance.ice}</span>
-                        </div>
-                    </div>
-                    <div className="row mhwc-dragon">
-                        <div className="col-4 mhwc-name">
-                            <span>龍</span>
-                        </div>
-                        <div className="col-8 mhwc-value">
-                            <span>{status.resistance.dragon}</span>
-                        </div>
-                    </div>
+                    {Constant.elements.map((elementType) => {
+                        return (
+                            <div key={'resistance_' + elementType} className={`row mhwc-${elementType}`}>
+                                <div className="col-4 mhwc-name">
+                                    <span>{Lang[elementType]}</span>
+                                </div>
+                                <div className="col-8 mhwc-value">
+                                    <span>{status.resistance[elementType]}</span>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         ), (
@@ -923,9 +805,7 @@ export default class Main extends Component {
         return (
             <div id="main" className="container-fluid">
                 <div className="row mhwc-header">
-                    <div>
-                        <h1>Monster Hunter: World Calculator</h1>
-                    </div>
+                    <h1>Monster Hunter: World Calculator</h1>
                 </div>
 
                 <div className="row mhwc-container">

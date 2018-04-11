@@ -7,7 +7,7 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-$header-height: 40px;
+$header-height: 60px;
 $section_name-height: 40px;
 $function_bar-height: 40px;
 
@@ -20,7 +20,7 @@ $function_bar-height: 40px;
     height: $header-height;
 
     h1 {
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         line-height: $header-height;
         font-weight: bold;
@@ -71,7 +71,6 @@ $function_bar-height: 40px;
             &::-webkit-scrollbar {
                 width: 5px;
                 height: 5px;
-                // background: rgba(0, 0, 0, 0.1);
                 background: white;
             }
 
@@ -108,13 +107,17 @@ $function_bar-height: 40px;
         }
     }
 
-    .mhwc-skills {
+    .mhwc-unselected_skills {
         .mhwc-skill_item {
-            div:nth-child(1) {
+            > div:nth-child(1) {
                 padding: 0 5px;
+
+                span {
+                    @include nowrap();
+                }
             }
 
-            div:nth-child(2) {
+            > div:nth-child(2) {
                 text-align: center;
             }
         }
@@ -122,20 +125,24 @@ $function_bar-height: 40px;
 
     .mhwc-selected_skills {
         .mhwc-skill_item {
-            div:nth-child(1) {
+            > div:nth-child(1) {
                 line-height: 25px;
                 text-align: center;
             }
 
-            div:nth-child(2) {
+            > div:nth-child(2) {
                 padding: 0 5px;
+
+                span {
+                    @include nowrap();
+                }
             }
 
-            div:nth-child(3) {
+            > div:nth-child(3) {
                 text-align: center;
             }
 
-            div:nth-child(4) {
+            > div:nth-child(4) {
                 text-align: center;
             }
         }
@@ -177,6 +184,8 @@ $function_bar-height: 40px;
 
             .mhwc-name {
                 line-height: 33px;
+
+                @include nowrap();
             }
 
             .mhwc-value {
@@ -204,6 +213,8 @@ $function_bar-height: 40px;
 
             .mhwc-name {
 
+
+@include nowrap();
             }
 
             .mhwc-value {
@@ -219,7 +230,7 @@ $function_bar-height: 40px;
             @include border-radius(5px);
 
             .mhwc-name {
-
+                @include nowrap();
             }
 
             .mhwc-value {
@@ -238,6 +249,8 @@ $function_bar-height: 40px;
 
             .mhwc-name {
                 line-height: 33px;
+
+                @include nowrap();
             }
 
             .mhwc-value {

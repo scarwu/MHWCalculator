@@ -9,6 +9,13 @@
  */
 
 export default {
+    elements: [
+        'fire',
+        'water',
+        'thunder',
+        'ice',
+        'dragon'
+    ],
     sharpnessMultiple: {
         raw: {
             red: 0.50,
