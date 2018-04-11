@@ -189,7 +189,29 @@ export default class Main extends Component {
     };
 
     handleEquipSearch = () => {
+        console.log('EquipSearch');
+    };
 
+    handleEquipLockToggle = (equipType) => {
+        let equips = this.state.equips;
+
+        equips[equipType].isLock = !equips[equipType].isLock;
+
+        this.setState({
+            equips: equips
+        });
+    };
+
+    handleEquipSwitch = (equipType) => {
+        console.log('EquipSwitch', equipType);
+    };
+
+    handleEquipSlotSwitch = (equipType, index) => {
+        console.log('EquipSlotSwitch', equipType, index);
+    };
+
+    handleWeaponEnhanceSwitch = (index) => {
+        console.log('WeaponEnhanceSwitch', index);
     };
 
     /**
@@ -239,8 +261,12 @@ export default class Main extends Component {
 
         // Skills from Slots
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
-            equips[equipType].slots.map((data) => {
-                let jewel = DataSet.jewel.getInfo(data.key)
+            Object.values(equips[equipType].slotKeys).map((slotKey) => {
+                if (null === slotKey) {
+                    return false;
+                }
+
+                let jewel = DataSet.jewel.getInfo(slotKey);
 
                 if (undefined === tempSkills[jewel.skill.key]) {
                     tempSkills[jewel.skill.key] = 0;
@@ -381,8 +407,6 @@ export default class Main extends Component {
         status.extraInfo.basicCriticalAttack = parseInt(Math.round(basicCriticalAttack));
         status.extraInfo.expectedValue = parseInt(Math.round(expectedValue));
 
-        console.log(status.extraInfo);
-
         status.attack = parseInt(Math.round(status.attack));
         status.defense = parseInt(Math.round(status.defense));
 
@@ -490,94 +514,46 @@ export default class Main extends Component {
 
     renderEquipItems = () => {
         let equips = this.state.equips;
-
-        let weapon = DataSet.weapon.getInfo(equips.weapon.key);
-        let charm = DataSet.charm.getInfo(equips.charm.key);
-
-        let weaponEnhances = null;
-
-        if (8 === weapon.rare) {
-            weaponEnhances = [...Array(1).keys()];
-        } else if (7 === weapon.rare) {
-            weaponEnhances = [...Array(2).keys()];
-        } else if (6 === weapon.rare) {
-            weaponEnhances = [...Array(3).keys()];
-        }
-
         let ContentBlocks = [];
 
         // Weapon
-        ContentBlocks.push((
-            <div key="weapon" className="row mhwc-equip">
-                <div className="col-12 mhwc-name">
-                    <span>{weapon.name}</span>
-                    <a className="fa fa-unlock-alt"></a>
-                    <a className="fa fa-exchange"></a>
-                    <a className="fa fa-times"></a>
-                </div>
+        if (null !== equips.weapon) {
+            let weaponInfo = DataSet.weapon.getInfo(equips.weapon.key);
+            let weaponEnhances = null;
 
-                <div className="col-12 mhwc-slots">
-                    {weapon.slots.map((data, index) => {
-                        let jewel = DataSet.jewel.getInfo(equips.weapon.slots[index].key)
-
-                        return (
-                            <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                <div className="col-4 mhwc-name">
-                                    <span>插槽 {index + 1} - [{data.size}]</span>
-                                </div>
-                                <div className="col-8 mhwc-value">
-                                    {undefined !== jewel ? [(
-                                        <span>[{jewel.size}] {jewel.name}</span>
-                                    ), (
-                                        <a className="fa fa-times"></a>
-                                    )] : (
-                                        <a className="fa fa-plus"></a>
-                                    )}
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-
-                {null !== weaponEnhances ? (
-                    <div className="col-12 mhwc-enhances">
-                        {weaponEnhances.map((data, index) => {
-                            let enhance = equips.weapon.enhances[index];
-
-                            return (
-                                <div key={data.key + '_' + index} className="row mhwc-enhance">
-                                    <div className="col-4 mhwc-name">
-                                        <span>強化 {index + 1}</span>
-                                    </div>
-                                    <div className="col-8 mhwc-value">
-                                        {undefined !== enhance ? [(
-                                            <span>{enhance.key}</span>
-                                        ), (
-                                            <a className="fa fa-times"></a>
-                                        )] : (
-                                            <a className="fa fa-plus"></a>
-                                        )}
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                ) : false}
-            </div>
-        ));
-
-        // Armors
-        ['helm', 'chest', 'arm', 'waist', 'leg'].map((part) => {
-            let equip = DataSet.armor.getInfo(equips[part].key);
+            if (8 === weaponInfo.rare) {
+                weaponEnhances = [...Array(1).keys()];
+            } else if (7 === weaponInfo.rare) {
+                weaponEnhances = [...Array(2).keys()];
+            } else if (6 === weaponInfo.rare) {
+                weaponEnhances = [...Array(3).keys()];
+            }
 
             ContentBlocks.push((
-                <div key={'equip_' + part} className="row mhwc-equip">
+                <div key="weapon" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
-                        <span>{equip.name}</span>
+                        {equips.weapon.isLock ? (
+                            <a className="fa fa-lock" onClick={() => {this.handleEquipLockToggle('weapon')}}></a>
+                        ) : (
+                            <a className="fa fa-unlock-alt" onClick={() => {this.handleEquipLockToggle('weapon')}}></a>
+                        )}
+                        &nbsp;
+                        <span>{weaponInfo.name}</span>
+
+                        <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch('weapon')}}></a>
                     </div>
+
                     <div className="col-12 mhwc-slots">
-                        {equip.slots.map((data, index) => {
-                            let jewel = DataSet.jewel.getInfo(equips[part].slots[index].key)
+                        {weaponInfo.slots.sort((a, b) => {
+                            return a.size < b.size;
+                        }).map((data, index) => {
+                            let jewel = null;
+
+                            if (null !== equips.weapon.slotKeys
+                                && null !== equips.weapon.slotKeys[index]) {
+
+                                jewel = DataSet.jewel.getInfo(equips.weapon.slotKeys[index])
+                            }
 
                             return (
                                 <div key={data.key + '_' + index} className="row mhwc-jewel">
@@ -585,30 +561,158 @@ export default class Main extends Component {
                                         <span>插槽 {index + 1} - [{data.size}]</span>
                                     </div>
                                     <div className="col-8 mhwc-value">
-                                        {undefined !== jewel ? [(
+                                        {null !== jewel ? (
                                             <span>[{jewel.size}] {jewel.name}</span>
-                                        ), (
-                                            <a className="fa fa-times"></a>
-                                        )] : (
-                                            <a className="fa fa-plus"></a>
+                                        ) : (
+                                            <span>&nbsp;-&nbsp;</span>
                                         )}
+
+                                        <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSlotSwitch('weapon', index)}}></a>
                                     </div>
                                 </div>
                             );
                         })}
                     </div>
+
+                    {null !== weaponEnhances ? (
+                        <div className="col-12 mhwc-enhances">
+                            {weaponEnhances.map((data, index) => {
+                                let enhance = null;
+
+                                if (null !== equips.weapon.enhanceKeys
+                                    && null !== equips.weapon.enhanceKeys[index]) {
+
+                                    enhance = equips.weapon.enhanceKeys[index]
+                                }
+
+                                return (
+                                    <div key={data.key + '_' + index} className="row mhwc-enhance">
+                                        <div className="col-4 mhwc-name">
+                                            <span>強化 {index + 1}</span>
+                                        </div>
+                                        <div className="col-8 mhwc-value">
+                                            {null !== enhance ? (
+                                                <span>{enhance}</span>
+                                            ) : (
+                                                <span>&nbsp;-&nbsp;</span>
+                                            )}
+
+                                            <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleWeaponEnhanceSwitch(index)}}></a>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    ) : false}
                 </div>
             ));
+        } else {
+            ContentBlocks.push((
+                <div key="weapon" className="row mhwc-equip">
+                    <div className="col-12 mhwc-name">
+                        <span>&nbsp;-&nbsp;</span>
+
+                        <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch('weapon')}}></a>
+                    </div>
+                </div>
+            ));
+        }
+
+
+        // Armors
+        ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+            if (null !== equips[equipType]) {
+                let equipInfo = DataSet.armor.getInfo(equips[equipType].key);
+
+                ContentBlocks.push((
+                    <div key={'equip_' + equipType} className="row mhwc-equip">
+                        <div className="col-12 mhwc-name">
+                            {equips[equipType].isLock ? (
+                                <a className="fa fa-lock" onClick={() => {this.handleEquipLockToggle(equipType)}}></a>
+                            ) : (
+                                <a className="fa fa-unlock-alt" onClick={() => {this.handleEquipLockToggle(equipType)}}></a>
+                            )}
+                            &nbsp;
+                            <span>{equipInfo.name}</span>
+
+                            <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch(equipType)}}></a>
+                        </div>
+
+                        <div className="col-12 mhwc-slots">
+                            {equipInfo.slots.sort((a, b) => {
+                                return a.size < b.size;
+                            }).map((data, index) => {
+                                let jewel = null;
+
+                                if (null !== equips.weapon.slotKeys
+                                    && null !== equips.weapon.slotKeys[index]) {
+
+                                    jewel = DataSet.jewel.getInfo(equips.weapon.slotKeys[index])
+                                }
+
+                                return (
+                                    <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                        <div className="col-4 mhwc-name">
+                                            <span>插槽 {index + 1} - [{data.size}]</span>
+                                        </div>
+                                        <div className="col-8 mhwc-value">
+                                            {null !== jewel ? (
+                                                <span>[{jewel.size}] {jewel.name}</span>
+                                            ) : (
+                                                <span>&nbsp;-&nbsp;</span>
+                                            )}
+
+                                            <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSlotSwitch(equipType, index)}}></a>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                ) );
+            } else {
+                ContentBlocks.push((
+                    <div key={'equip_' + equipType} className="row mhwc-equip">
+                        <div className="col-12 mhwc-name">
+                            <span>&nbsp;-&nbsp;</span>
+
+                            <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch(equipType)}}></a>
+                        </div>
+                    </div>
+                ));
+            }
         });
 
         // Charm
-        ContentBlocks.push((
-            <div key="charm" className="row mhwc-equip">
-                <div className="col-12 mhwc-name">
-                    <span>{charm.name}</span>
+        if (null !== equips.charm) {
+            let charmInfo = DataSet.charm.getInfo(equips.charm.key);
+
+            ContentBlocks.push((
+                <div key="charm" className="row mhwc-equip">
+                    <div className="col-12 mhwc-name">
+                        {equips.charm.isLock ? (
+                            <a className="fa fa-lock" onClick={() => {this.handleEquipLockToggle('charm')}}></a>
+                        ) : (
+                            <a className="fa fa-unlock-alt" onClick={() => {this.handleEquipLockToggle('charm')}}></a>
+                        )}
+                        &nbsp;
+                        <span>{charmInfo.name}</span>
+
+                        <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch('charm')}}></a>
+                    </div>
                 </div>
-            </div>
-        ));
+            ));
+        } else {
+            ContentBlocks.push((
+                <div key="charm" className="row mhwc-equip">
+                    <div className="col-12 mhwc-name">
+                        <span>&nbsp;-&nbsp;</span>
+
+                        <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch('charm')}}></a>
+                    </div>
+                </div>
+            ));
+        }
 
         return ContentBlocks;
     };
@@ -805,7 +909,9 @@ export default class Main extends Component {
         return (
             <div id="main" className="container-fluid">
                 <div className="row mhwc-header">
-                    <h1>Monster Hunter: World Calculator</h1>
+                    <div>
+                        <h1>Monster Hunter: World Calculator</h1>
+                    </div>
                 </div>
 
                 <div className="row mhwc-container">
@@ -867,6 +973,22 @@ export default class Main extends Component {
                         <div className="mhwc-list">
                             {this.renderStatus()}
                         </div>
+                    </div>
+                </div>
+
+                <div className="row mhwc-footer">
+                    <div className="col-12">
+                        <span>Copyright (c) Scar Wu</span>
+                    </div>
+
+                    <div className="col-12">
+                        <a href="//scar.tw" target="_blank">
+                            <span>Blog</span>
+                        </a>
+                        &nbsp;|&nbsp;
+                        <a href="https://github.com/scarwu/MHWCalculator" target="_blank">
+                            <span>Github</span>
+                        </a>
                     </div>
                 </div>
             </div>

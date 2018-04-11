@@ -54,122 +54,106 @@ export default {
         '狂暴雙刀': {
             weapon: {
                 key: '罪【真】',
-                slots: [],
-                enhances: [
-                    {
-                        'key': '賦予回復能力'
-                    }
-                ]
+                slotKeys: null,
+                enhanceKeys: {
+                    0: '賦予回復能力',
+                    1: null
+                },
+                isLock: false
             },
             helm: {
                 key: '龍王的獨眼α',
-                slots: [
-                    {
-                        key: '耐衝珠'
-                    }
-                ]
+                slotKeys: {
+                    0: '耐衝珠'
+                },
+                isLock: false
             },
             chest: {
                 key: '杜賓鎧甲β',
-                slots: [
-                    {
-                        key: '痛擊珠'
-                    }
-                ]
+                slotKeys: {
+                    0: '痛擊珠'
+                },
+                isLock: false
             },
             arm: {
                 key: '異種大型鋼爪α',
-                slots: [
-                    {
-                        key: '達人珠'
-                    }
-                ]
+                slotKeys: {
+                    0: '達人珠'
+                },
+                isLock: false
             },
             waist: {
                 key: '慘爪龍腰甲β',
-                slots: [
-                    {
-                        key: '無擊珠'
-                    }
-                ]
+                slotKeys: {
+                    0: '無擊珠'
+                },
+                isLock: false
             },
             leg: {
                 key: '杜賓護腿β',
-                slots: [
-                    {
-                        key: '達人珠'
-                    }
-                ]
+                slotKeys: {
+                    0: '達人珠'
+                },
+                isLock: false
             },
             charm: {
-                key: '攻擊護石 III'
+                key: '攻擊護石 III',
+                isLock: false
             }
         },
         '破壞大劍': {
             weapon: {
                 key: '龍熱機關式【鋼翼】改',
-                slots: [
-                    {
-                        key: '奪氣珠'
-                    },
-                    {
-                        key: '奪氣珠'
-                    }
-                ],
-                enhances: [
-                    {
-                        'key': '賦予回復能力'
-                    }
-                ]
+                slotKeys: {
+                    0: '奪氣珠',
+                    1: '奪氣珠'
+                },
+                enhanceKeys: {
+                    0: '賦予回復能力',
+                    1: null
+                },
+                isLock: false
             },
             helm: {
                 key: '龍王的獨眼α',
-                slots: [
-                    {
-                        key: 'KO珠'
-                    }
-                ]
+                slotKeys: {
+                    0: 'KO珠'
+                },
+                isLock: false
             },
             chest: {
                 key: '爆鎚龍鎧甲α',
-                slots: [
-                    {
-                        key: '達人珠'
-                    }
-                ]
+                slotKeys: {
+                    0: '達人珠'
+                },
+                isLock: false
             },
             arm: {
                 key: '帝王手β',
-                slots: [
-                    {
-                        key: 'KO珠'
-                    }
-                ]
+                slotKeys: {
+                    0: 'KO珠'
+                },
+                isLock: false
             },
             waist: {
                 key: '爆鎚龍腰甲β',
-                slots: [
-                    {
-                        key: '無擊珠'
-                    },
-                    {
-                        key: '達人珠'
-                    }
-                ]
+                slotKeys: {
+                    0: '無擊珠',
+                    1: '達人珠'
+                },
+                isLock: false
             },
             leg: {
                 key: '死神護腿β',
-                slots: [
-                    {
-                        key: '攻擊珠'
-                    },
-                    {
-                        key: '攻擊珠'
-                    }
-                ]
+                slotKeys: {
+                    0: '攻擊珠',
+                    1: '攻擊珠'
+                },
+                isLock: false
             },
             charm: {
-                key: '匠之護石 III'
+                key: '匠之護石 III',
+                isLock: false
             }
         }
     }

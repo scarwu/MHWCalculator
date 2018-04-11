@@ -8,6 +8,7 @@
  */
 
 $header-height: 60px;
+$footer-height: 50px;
 $section_name-height: 40px;
 $function_bar-height: 40px;
 
@@ -19,8 +20,12 @@ $function_bar-height: 40px;
     padding: 0 10px;
     height: $header-height;
 
-    h1 {
+    > div {
         margin: 0 auto;
+    }
+
+    h1 {
+        margin: 0;
         padding: 0;
         line-height: $header-height;
         font-weight: bold;
@@ -29,8 +34,27 @@ $function_bar-height: 40px;
     }
 }
 
+.mhwc-footer {
+    padding: 0 10px;
+    height: $footer-height;
+
+    > div:nth-child(1) {
+        margin: 0 auto;
+        text-align: center;
+
+        @include font-size(1.4);
+    }
+
+    > div:nth-child(2) {
+        margin: 0 auto;
+        text-align: center;
+
+        @include font-size(1.2);
+    }
+}
+
 .mhwc-container {
-    height: calc(100vh - #{$header-height});
+    height: calc(100vh - (#{$header-height} + #{$footer-height}));
 
     @include font-size(1.4);
 
@@ -48,7 +72,7 @@ $function_bar-height: 40px;
     .mhwc-equips,
     .mhwc-status {
         position: relative;
-        height: calc(100vh - (#{$header-height} + #{$section_name-height}));
+        height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
     }
 
     .mhwc-unselected_skills,
@@ -66,7 +90,7 @@ $function_bar-height: 40px;
 
         .mhwc-list {
             overflow-y: scroll;
-            height: calc(100vh - (#{$header-height} + #{$section_name-height} + #{$function_bar-height}));
+            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height} + #{$function_bar-height}));
 
             &::-webkit-scrollbar {
                 width: 5px;
@@ -153,7 +177,7 @@ $function_bar-height: 40px;
     .mhwc-status {
         .mhwc-list {
             overflow-y: scroll;
-            height: calc(100vh - (#{$header-height} + #{$section_name-height}));
+            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
 
             &::-webkit-scrollbar {
                 width: 5px;
@@ -186,6 +210,11 @@ $function_bar-height: 40px;
                 line-height: 33px;
 
                 @include nowrap();
+
+                .mhwc-exchnage {
+                    float: right;
+                    line-height: 33px;
+                }
             }
 
             .mhwc-value {
@@ -212,13 +241,14 @@ $function_bar-height: 40px;
             @include border-radius(5px);
 
             .mhwc-name {
-
-
-@include nowrap();
+                @include nowrap();
             }
 
             .mhwc-value {
-
+                .mhwc-exchnage {
+                    float: right;
+                    line-height: 21px;
+                }
             }
         }
 
@@ -234,7 +264,10 @@ $function_bar-height: 40px;
             }
 
             .mhwc-value {
-
+                .mhwc-exchnage {
+                    float: right;
+                    line-height: 21px;
+                }
             }
         }
     }
