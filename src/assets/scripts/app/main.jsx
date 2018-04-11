@@ -67,7 +67,12 @@ var defaultStatus = {
         ice: 0,
         dragon: 0
     },
-    skills: []
+    skills: [],
+    extraInfo: {
+        basicAttack: 0,
+        basicCriticalAttack: 0,
+        expectedValue: 0
+    }
 };
 
 export default class Main extends Component {
@@ -338,6 +343,10 @@ export default class Main extends Component {
             }
         }
 
+        if (status.critical.rate < 0) {
+            status.critical.multiple = 0.75;
+        }
+
         // Last Status Completion
         let weaponAttack = equips.weapon.info.attack;
         let weaponType = equips.weapon.info.type;
@@ -363,6 +372,18 @@ export default class Main extends Component {
         defenseMultiples.map((multiple) => {
             status.defense *= multiple;
         });
+
+        // Expected Value
+        let basicAttack = status.attack / Constant.weaponMultiple[weaponType];
+        let basicCriticalAttack = basicAttack * status.critical.multiple;
+        let expectedValue = (basicAttack * (100 - Math.abs(status.critical.rate)) / 100)
+            + (basicCriticalAttack * Math.abs(status.critical.rate) / 100);
+
+        status.extraInfo.basicAttack = parseInt(Math.round(basicAttack));
+        status.extraInfo.basicCriticalAttack = parseInt(Math.round(basicCriticalAttack));
+        status.extraInfo.expectedValue = parseInt(Math.round(expectedValue));
+
+        console.log(status.extraInfo);
 
         status.attack = parseInt(Math.round(status.attack));
         status.defense = parseInt(Math.round(status.defense));
@@ -642,57 +663,57 @@ export default class Main extends Component {
         };
 
         return [(
-            <div key="health" className="row mhwc-item">
-                <div className="col-6 mhwc-name">
+            <div key="health" className="row mhwc-item mhwc-health">
+                <div className="col-4 mhwc-name">
                     <span>體力</span>
                 </div>
-                <div className="col-6 mhwc-value">
+                <div className="col-8 mhwc-value">
                     <span>{status.health}</span>
                 </div>
             </div>
         ), (
-            <div key="stamina" className="row mhwc-item">
-                <div className="col-6 mhwc-name">
+            <div key="stamina" className="row mhwc-item mhwc-stamina">
+                <div className="col-4 mhwc-name">
                     <span>耐力</span>
                 </div>
-                <div className="col-6 mhwc-value">
+                <div className="col-8 mhwc-value">
                     <span>{status.stamina}</span>
                 </div>
             </div>
         ), (
-            <div key="attack" className="row mhwc-item">
-                <div className="col-6 mhwc-name">
+            <div key="attack" className="row mhwc-item mhwc-attack">
+                <div className="col-4 mhwc-name">
                     <span>攻擊力</span>
                 </div>
-                <div className="col-6 mhwc-value">
+                <div className="col-8 mhwc-value">
                     <span>{status.attack}</span>
                 </div>
             </div>
         ), (
-            <div key="criticalRate" className="row mhwc-item">
-                <div className="col-6 mhwc-name">
+            <div key="criticalRate" className="row mhwc-item mhwc-critical_rate">
+                <div className="col-4 mhwc-name">
                     <span>會心率</span>
                 </div>
-                <div className="col-6 mhwc-value">
+                <div className="col-8 mhwc-value">
                     <span>{status.critical.rate}%</span>
                 </div>
             </div>
         ), (
-            <div key="criticalMultiple" className="row mhwc-item">
-                <div className="col-6 mhwc-name">
+            <div key="criticalMultiple" className="row mhwc-item mhwc-critical_multiple">
+                <div className="col-4 mhwc-name">
                     <span>會心倍數</span>
                 </div>
-                <div className="col-6 mhwc-value">
+                <div className="col-8 mhwc-value">
                     <span>{status.critical.multiple}x</span>
                 </div>
             </div>
         ), (
-            <div key="sharpness" className="row mhwc-item">
-                <div className="col-12 mhwc-name">
+            <div key="sharpness" className="row mhwc-item mhwc-sharpness">
+                <div className="col-4 mhwc-name">
                     <span>斬位</span>
                 </div>
-                <div className="col-12 mhwc-value">
-                    <div className="col-11 offset-1 mhwc-sharpness">
+                <div className="col-8 mhwc-value">
+                    <div className="col-12 mhwc-steps">
                         <div className="mhwc-step" style={sharpnessStyle.red}></div>
                         <div className="mhwc-step" style={sharpnessStyle.orange}></div>
                         <div className="mhwc-step" style={sharpnessStyle.yellow}></div>
@@ -704,86 +725,93 @@ export default class Main extends Component {
                 </div>
             </div>
         ), (
-            <div key="element" className="row mhwc-item">
-                <div className="col-6 mhwc-name">
+            <div key="element" className="row mhwc-item mhwc-element">
+                <div className="col-12 mhwc-name">
                     <span>屬性</span>
                 </div>
-                <div className="col-6 mhwc-value">
-                    {status.element.isHidden ? (
-                        <span>({status.element.type}: {status.element.value})</span>
-                    ) : (
-                        <span>{status.element.type}: {status.element.value}</span>
-                    )}
+                <div className="col-12 mhwc-value">
+                    <div className="row">
+                        <div className="col-4 mhwc-name">
+                            <span>{status.element.type}</span>
+                        </div>
+                        <div className="col-8 mhwc-value">
+                            {status.element.isHidden ? (
+                                <span>({status.element.value})</span>
+                            ) : (
+                                <span>{status.element.value}</span>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </div>
         ), (
-            <div key="elderseal" className="row mhwc-item">
-                <div className="col-6 mhwc-name">
+            <div key="elderseal" className="row mhwc-item mhwc-elderseal">
+                <div className="col-4 mhwc-name">
                     <span>龍封力</span>
                 </div>
-                <div className="col-6 mhwc-value">
+                <div className="col-8 mhwc-value">
                     <span>{status.elderseal.affinity}</span>
                 </div>
             </div>
         ), (
-            <div key="defense" className="row mhwc-item">
-                <div className="col-6 mhwc-name">
+            <div key="defense" className="row mhwc-item mhwc-defense">
+                <div className="col-4 mhwc-name">
                     <span>防禦</span>
                 </div>
-                <div className="col-6 mhwc-value">
+                <div className="col-8 mhwc-value">
                     <span>{status.defense}</span>
                 </div>
             </div>
         ), (
-            <div key="resistance" className="row mhwc-item">
+            <div key="resistance" className="row mhwc-item mhwc-resistance">
                 <div className="col-12 mhwc-name">
                     <span>抗性</span>
                 </div>
                 <div className="col-12 mhwc-value">
-                    <div className="row">
-                        <div className="col-5 offset-1">
+                    <div className="row mhwc-fire">
+                        <div className="col-4 mhwc-name">
                             <span>火</span>
                         </div>
-                        <div className="col">
+                        <div className="col-8 mhwc-value">
                             <span>{status.resistance.fire}</span>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-5 offset-1">
+                    <div className="row mhwc-water">
+                        <div className="col-4 mhwc-name">
                             <span>水</span>
                         </div>
-                        <div className="col">
+                        <div className="col-8 mhwc-value">
                             <span>{status.resistance.water}</span>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-5 offset-1">
+                    <div className="row mhwc-thunder">
+                        <div className="col-4 mhwc-name">
                             <span>雷</span>
                         </div>
-                        <div className="col">
+                        <div className="col-8 mhwc-value">
                             <span>{status.resistance.thunder}</span>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-5 offset-1">
+                    <div className="row mhwc-ice">
+                        <div className="col-4 mhwc-name">
                             <span>冰</span>
                         </div>
-                        <div className="col">
+                        <div className="col-8 mhwc-value">
                             <span>{status.resistance.ice}</span>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-5 offset-1">
+                    <div className="row mhwc-dragon">
+                        <div className="col-4 mhwc-name">
                             <span>龍</span>
                         </div>
-                        <div className="col">
+                        <div className="col-8 mhwc-value">
                             <span>{status.resistance.dragon}</span>
                         </div>
                     </div>
                 </div>
             </div>
         ), (
-            <div key="skills" className="row mhwc-item">
+            <div key="skills" className="row mhwc-item mhwc-skills">
                 <div className="col-12 mhwc-name">
                     <span>技能</span>
                 </div>
@@ -792,16 +820,48 @@ export default class Main extends Component {
                         return b.level - a.level;
                     }).map((data) => {
                         return (
-                            <div key={data.name} className="row">
-                                <div className="col-11 offset-1">
+                            <div key={data.name} className="row mhwc-skill">
+                                <div className="col-12 mhwc-name">
                                     <span>{data.name} Lv.{data.level}</span>
                                 </div>
-                                <div className="col-10 offset-2">
+                                <div className="col-12 mhwc-value">
                                     <span>{data.description}</span>
                                 </div>
                             </div>
                         );
                     })}
+                </div>
+            </div>
+        ), (
+            <div key="extraInfo" className="row mhwc-item mhwc-extra_info">
+                <div className="col-12 mhwc-name">
+                    <span>額外資訊</span>
+                </div>
+                <div className="col-12 mhwc-value">
+                    <div className="row">
+                        <div className="col-4 mhwc-name">
+                            <span>基礎傷害</span>
+                        </div>
+                        <div className="col-8 mhwc-value">
+                            <span>{status.extraInfo.basicAttack}</span>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-4 mhwc-name">
+                            <span>基礎會心傷害</span>
+                        </div>
+                        <div className="col-8 mhwc-value">
+                            <span>{status.extraInfo.basicCriticalAttack}</span>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-4 mhwc-name">
+                            <span>期望值</span>
+                        </div>
+                        <div className="col-8 mhwc-value">
+                            <span>{status.extraInfo.expectedValue}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         )];
@@ -817,7 +877,7 @@ export default class Main extends Component {
                 </div>
 
                 <div className="row mhwc-container">
-                    <div className="col mhwc-skills">
+                    <div className="col mhwc-unselected_skills">
                         <div className="mhwc-section_name">
                             <span>備選技能</span>
                         </div>
