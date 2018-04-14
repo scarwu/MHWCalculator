@@ -332,34 +332,7 @@ export default class CharacterStatus extends Component {
                     <span>{status.stamina}</span>
                 </div>
             </div>
-        ), (
-            <div key="attack" className="row mhwc-item mhwc-attack">
-                <div className="col-4 mhwc-name">
-                    <span>攻擊力</span>
-                </div>
-                <div className="col-8 mhwc-value">
-                    <span>{status.attack}</span>
-                </div>
-            </div>
-        ), (
-            <div key="criticalRate" className="row mhwc-item mhwc-critical_rate">
-                <div className="col-4 mhwc-name">
-                    <span>會心率</span>
-                </div>
-                <div className="col-8 mhwc-value">
-                    <span>{status.critical.rate}%</span>
-                </div>
-            </div>
-        ), (
-            <div key="criticalMultiple" className="row mhwc-item mhwc-critical_multiple">
-                <div className="col-4 mhwc-name">
-                    <span>會心倍數</span>
-                </div>
-                <div className="col-8 mhwc-value">
-                    <span>{status.critical.multiple}x</span>
-                </div>
-            </div>
-        ), (
+        ), (null !== status.sharpness) ? (
             <div key="sharpness" className="row mhwc-item mhwc-sharpness">
                 <div className="col-4 mhwc-name">
                     <span>斬位</span>
@@ -380,33 +353,53 @@ export default class CharacterStatus extends Component {
                     </div>
                 </div>
             </div>
-        ), (
-            <div key="element" className="row mhwc-item mhwc-element">
-                <div className="col-12 mhwc-name">
-                    <span>屬性</span>
+        ) : false, (
+            <div key="attack" className="row mhwc-item mhwc-attack">
+                <div className="col-4 mhwc-name">
+                    <span>攻擊力</span>
                 </div>
-                <div className="col-12 mhwc-value">
-                    <div className="row">
-                        <div className="col-4 mhwc-name">
-                            <span>{Lang[status.element.type]}</span>
-                        </div>
-                        <div className="col-8 mhwc-value">
-                            {status.element.isHidden ? (
-                                <span>({status.element.value})</span>
-                            ) : (
-                                <span>{status.element.value}</span>
-                            )}
-                        </div>
-                    </div>
+                <div className="col-8 mhwc-value">
+                    <span>{status.attack}</span>
                 </div>
             </div>
         ), (
+            <div key="element" className="row mhwc-item mhwc-element">
+                <div className="col-4 mhwc-name">
+                    <span>{Lang[status.element.type]}屬性</span>
+                </div>
+                <div className="col-8 mhwc-value">
+                    {status.element.isHidden ? (
+                        <span>({status.element.value})</span>
+                    ) : (
+                        <span>{status.element.value}</span>
+                    )}
+                </div>
+            </div>
+        ), (null !== status.elderseal) ? (
             <div key="elderseal" className="row mhwc-item mhwc-elderseal">
                 <div className="col-4 mhwc-name">
                     <span>龍封力</span>
                 </div>
                 <div className="col-8 mhwc-value">
                     <span>{Lang[status.elderseal.affinity]}</span>
+                </div>
+            </div>
+        ) : false, (
+            <div key="criticalRate" className="row mhwc-item mhwc-critical_rate">
+                <div className="col-4 mhwc-name">
+                    <span>會心率</span>
+                </div>
+                <div className="col-8 mhwc-value">
+                    <span>{status.critical.rate}%</span>
+                </div>
+            </div>
+        ), (
+            <div key="criticalMultiple" className="row mhwc-item mhwc-critical_multiple">
+                <div className="col-4 mhwc-name">
+                    <span>會心倍數</span>
+                </div>
+                <div className="col-8 mhwc-value">
+                    <span>{status.critical.multiple}x</span>
                 </div>
             </div>
         ), (

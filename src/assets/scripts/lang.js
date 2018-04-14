@@ -9,7 +9,6 @@
  */
 
 export default {
-    none: '無',
     low: '小',
     medium: '中',
     high: '大',
@@ -17,5 +16,10 @@ export default {
     water: '水',
     thunder: '雷',
     ice: '冰',
-    dragon: '龍'
+    dragon: '龍',
+    helm: '頭',
+    chest: '身',
+    arm: '手',
+    waist: '腰',
+    leg: '腳'
 };
