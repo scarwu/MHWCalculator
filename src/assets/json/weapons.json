@@ -1,5 +1,5 @@
-{
-    "鉻鋼剃刀 II": {
+[
+    {
         "name": "鉻鋼剃刀 II",
         "rare": null,
         "type": "greatSword",
@@ -35,7 +35,7 @@
             }
         ]
     },
-    "滅鬼凶器": {
+    {
         "name": "滅鬼凶器",
         "rare": null,
         "type": "greatSword",
@@ -68,7 +68,7 @@
             }
         ]
     },
-    "雷光懲罰者 III": {
+    {
         "name": "雷光懲罰者 III",
         "rare": null,
         "type": "greatSword",
@@ -101,7 +101,7 @@
             }
         ]
     },
-    "霜炎 II": {
+    {
         "name": "霜炎 II",
         "rare": null,
         "type": "greatSword",
@@ -134,7 +134,7 @@
             }
         ]
     },
-    "凶豺龍鉤爪 III": {
+    {
         "name": "凶豺龍鉤爪 III",
         "rare": null,
         "type": "greatSword",
@@ -170,7 +170,7 @@
             }
         ]
     },
-    "馬拉多之鐵 III": {
+    {
         "name": "馬拉多之鐵 III",
         "rare": null,
         "type": "greatSword",
@@ -199,7 +199,7 @@
         },
         "slots": []
     },
-    "熔岩之炎 II": {
+    {
         "name": "熔岩之炎 II",
         "rare": null,
         "type": "greatSword",
@@ -235,7 +235,7 @@
             }
         ]
     },
-    "曼陀羅之炎 III": {
+    {
         "name": "曼陀羅之炎 III",
         "rare": null,
         "type": "greatSword",
@@ -271,7 +271,7 @@
             }
         ]
     },
-    "火龍煌劍": {
+    {
         "name": "火龍煌劍",
         "rare": null,
         "type": "greatSword",
@@ -304,7 +304,7 @@
             }
         ]
     },
-    "大龍顎 II": {
+    {
         "name": "大龍顎 II",
         "rare": null,
         "type": "greatSword",
@@ -337,7 +337,7 @@
             }
         ]
     },
-    "魔物的憤怒": {
+    {
         "name": "魔物的憤怒",
         "rare": null,
         "type": "greatSword",
@@ -370,7 +370,7 @@
             }
         ]
     },
-    "蠻顎大劍": {
+    {
         "name": "蠻顎大劍",
         "rare": null,
         "type": "greatSword",
@@ -399,7 +399,7 @@
         },
         "slots": []
     },
-    "激流巨像 III": {
+    {
         "name": "激流巨像 III",
         "rare": null,
         "type": "greatSword",
@@ -432,7 +432,7 @@
             }
         ]
     },
-    "土砂龍粉碎者 III": {
+    {
         "name": "土砂龍粉碎者 III",
         "rare": null,
         "type": "hammer",
@@ -468,7 +468,7 @@
             }
         ]
     },
-    "塊劍拉多巴爾喀 III": {
+    {
         "name": "塊劍拉多巴爾喀 III",
         "rare": null,
         "type": "greatSword",
@@ -497,7 +497,7 @@
         },
         "slots": []
     },
-    "龍骨大劍 III": {
+    {
         "name": "龍骨大劍 III",
         "rare": null,
         "type": "greatSword",
@@ -533,7 +533,7 @@
             }
         ]
     },
-    "召雷劍【麒麟王】": {
+    {
         "name": "召雷劍【麒麟王】",
         "rare": null,
         "type": "greatSword",
@@ -562,7 +562,7 @@
         },
         "slots": []
     },
-    "熔山龍大劍 II": {
+    {
         "name": "熔山龍大劍 II",
         "rare": null,
         "type": "greatSword",
@@ -595,7 +595,7 @@
             }
         ]
     },
-    "鋼龍凍大劍": {
+    {
         "name": "鋼龍凍大劍",
         "rare": null,
         "type": "greatSword",
@@ -628,7 +628,7 @@
             }
         ]
     },
-    "冥燈龍大劍": {
+    {
         "name": "冥燈龍大劍",
         "rare": null,
         "type": "greatSword",
@@ -664,7 +664,7 @@
             }
         ]
     },
-    "龍顎劍【大牙】": {
+    {
         "name": "龍顎劍【大牙】",
         "rare": null,
         "type": "greatSword",
@@ -697,7 +697,7 @@
             }
         ]
     },
-    "痛苦之劍": {
+    {
         "name": "痛苦之劍",
         "rare": null,
         "type": "greatSword",
@@ -726,7 +726,7 @@
         },
         "slots": []
     },
-    "龍熱機關式【鋼翼】改": {
+    {
         "name": "龍熱機關式【鋼翼】改",
         "rare": 7,
         "type": "greatSword",
@@ -762,7 +762,7 @@
             }
         ]
     },
-    "鐵刀【神樂】 II": {
+    {
         "name": "鐵刀【神樂】 II",
         "rare": null,
         "type": "longSword",
@@ -798,7 +798,7 @@
             }
         ]
     },
-    "滅盡一刀": {
+    {
         "name": "滅盡一刀",
         "rare": null,
         "type": "longSword",
@@ -831,7 +831,7 @@
             }
         ]
     },
-    "眩惑刀【閃】 III": {
+    {
         "name": "眩惑刀【閃】 III",
         "rare": null,
         "type": "longSword",
@@ -864,7 +864,7 @@
             }
         ]
     },
-    "星空迅刀 III": {
+    {
         "name": "星空迅刀 III",
         "rare": null,
         "type": "longSword",
@@ -893,7 +893,7 @@
         },
         "slots": []
     },
-    "爆鎚太刀 II": {
+    {
         "name": "爆鎚太刀 II",
         "rare": null,
         "type": "longSword",
@@ -929,7 +929,7 @@
             }
         ]
     },
-    "飛龍刀【葵】": {
+    {
         "name": "飛龍刀【葵】",
         "rare": null,
         "type": "longSword",
@@ -962,7 +962,7 @@
             }
         ]
     },
-    "飛龍刀【藍染】": {
+    {
         "name": "飛龍刀【藍染】",
         "rare": null,
         "type": "longSword",
@@ -995,7 +995,7 @@
             }
         ]
     },
-    "骨鐮 II": {
+    {
         "name": "骨鐮 II",
         "rare": null,
         "type": "longSword",
@@ -1028,7 +1028,7 @@
             }
         ]
     },
-    "爆鱗刀赤紅利刃": {
+    {
         "name": "爆鱗刀赤紅利刃",
         "rare": null,
         "type": "longSword",
@@ -1064,7 +1064,7 @@
             }
         ]
     },
-    "蠻顎龍偃月刀 III": {
+    {
         "name": "蠻顎龍偃月刀 III",
         "rare": null,
         "type": "longSword",
@@ -1093,7 +1093,7 @@
         },
         "slots": []
     },
-    "深土太刀 III": {
+    {
         "name": "深土太刀 III",
         "rare": null,
         "type": "longSword",
@@ -1126,7 +1126,7 @@
             }
         ]
     },
-    "屍套龍太刀 II": {
+    {
         "name": "屍套龍太刀 II",
         "rare": null,
         "type": "longSword",
@@ -1159,7 +1159,7 @@
             }
         ]
     },
-    "飛雷龍之牙 III": {
+    {
         "name": "飛雷龍之牙 III",
         "rare": null,
         "type": "longSword",
@@ -1192,7 +1192,7 @@
             }
         ]
     },
-    "幻光刀": {
+    {
         "name": "幻光刀",
         "rare": null,
         "type": "longSword",
@@ -1221,7 +1221,7 @@
         },
         "slots": []
     },
-    "黑色偃月刀 III": {
+    {
         "name": "黑色偃月刀 III",
         "rare": null,
         "type": "longSword",
@@ -1254,7 +1254,7 @@
             }
         ]
     },
-    "龍骨刀 III": {
+    {
         "name": "龍骨刀 III",
         "rare": null,
         "type": "longSword",
@@ -1287,7 +1287,7 @@
             }
         ]
     },
-    "熔山龍太刀 II": {
+    {
         "name": "熔山龍太刀 II",
         "rare": null,
         "type": "longSword",
@@ -1320,7 +1320,7 @@
             }
         ]
     },
-    "帝王刀【陽炎】": {
+    {
         "name": "帝王刀【陽炎】",
         "rare": null,
         "type": "longSword",
@@ -1349,7 +1349,7 @@
         },
         "slots": []
     },
-    "冥燈龍太刀": {
+    {
         "name": "冥燈龍太刀",
         "rare": null,
         "type": "longSword",
@@ -1385,7 +1385,7 @@
             }
         ]
     },
-    "天上天下無雙刀": {
+    {
         "name": "天上天下無雙刀",
         "rare": null,
         "type": "longSword",
@@ -1418,7 +1418,7 @@
             }
         ]
     },
-    "悲慘痛苦太刀": {
+    {
         "name": "悲慘痛苦太刀",
         "rare": null,
         "type": "longSword",
@@ -1447,7 +1447,7 @@
         },
         "slots": []
     },
-    "鉻鋼切刀 II": {
+    {
         "name": "鉻鋼切刀 II",
         "rare": null,
         "type": "swordAndShield",
@@ -1483,7 +1483,7 @@
             }
         ]
     },
-    "毀滅之尖兵": {
+    {
         "name": "毀滅之尖兵",
         "rare": null,
         "type": "swordAndShield",
@@ -1516,7 +1516,7 @@
             }
         ]
     },
-    "日冕短劍": {
+    {
         "name": "日冕短劍",
         "rare": null,
         "type": "swordAndShield",
@@ -1549,7 +1549,7 @@
             }
         ]
     },
-    "至尊劍": {
+    {
         "name": "至尊劍",
         "rare": null,
         "type": "swordAndShield",
@@ -1582,7 +1582,7 @@
             }
         ]
     },
-    "盛開曼陀羅 III": {
+    {
         "name": "盛開曼陀羅 III",
         "rare": null,
         "type": "swordAndShield",
@@ -1618,7 +1618,7 @@
             }
         ]
     },
-    "瑪拉多戰斧 III": {
+    {
         "name": "瑪拉多戰斧 III",
         "rare": null,
         "type": "swordAndShield",
@@ -1647,7 +1647,7 @@
         },
         "slots": []
     },
-    "洶湧奔流 III": {
+    {
         "name": "洶湧奔流 III",
         "rare": null,
         "type": "swordAndShield",
@@ -1680,7 +1680,7 @@
             }
         ]
     },
-    "冰凌三星劍": {
+    {
         "name": "冰凌三星劍",
         "rare": null,
         "type": "swordAndShield",
@@ -1713,7 +1713,7 @@
             }
         ]
     },
-    "皇家薔薇": {
+    {
         "name": "皇家薔薇",
         "rare": null,
         "type": "swordAndShield",
@@ -1746,7 +1746,7 @@
             }
         ]
     },
-    "浮空龍戰斧 III": {
+    {
         "name": "浮空龍戰斧 III",
         "rare": null,
         "type": "swordAndShield",
@@ -1782,7 +1782,7 @@
             }
         ]
     },
-    "大地巴龍刀 II": {
+    {
         "name": "大地巴龍刀 II",
         "rare": null,
         "type": "swordAndShield",
@@ -1815,7 +1815,7 @@
             }
         ]
     },
-    "骨鎚龍棍棒 III": {
+    {
         "name": "骨鎚龍棍棒 III",
         "rare": null,
         "type": "swordAndShield",
@@ -1844,7 +1844,7 @@
         },
         "slots": []
     },
-    "凶豺龍銳劍 III": {
+    {
         "name": "凶豺龍銳劍 III",
         "rare": null,
         "type": "swordAndShield",
@@ -1869,7 +1869,7 @@
         },
         "slots": []
     },
-    "凶豺龍棍棒 III": {
+    {
         "name": "凶豺龍棍棒 III",
         "rare": null,
         "type": "swordAndShield",
@@ -1905,7 +1905,7 @@
             }
         ]
     },
-    "雷光戰狂 III": {
+    {
         "name": "雷光戰狂 III",
         "rare": null,
         "type": "swordAndShield",
@@ -1938,7 +1938,7 @@
             }
         ]
     },
-    "土砂龍棍棒 III": {
+    {
         "name": "土砂龍棍棒 III",
         "rare": null,
         "type": "swordAndShield",
@@ -1974,7 +1974,7 @@
             }
         ]
     },
-    "蠻顎龍追尋者": {
+    {
         "name": "蠻顎龍追尋者",
         "rare": null,
         "type": "swordAndShield",
@@ -2003,7 +2003,7 @@
         },
         "slots": []
     },
-    "龍骨劍 III": {
+    {
         "name": "龍骨劍 III",
         "rare": null,
         "type": "swordAndShield",
@@ -2036,7 +2036,7 @@
             }
         ]
     },
-    "雷光刀 II": {
+    {
         "name": "雷光刀 II",
         "rare": null,
         "type": "swordAndShield",
@@ -2065,7 +2065,7 @@
         },
         "slots": []
     },
-    "炎王紋章": {
+    {
         "name": "炎王紋章",
         "rare": null,
         "type": "swordAndShield",
@@ -2094,7 +2094,7 @@
         },
         "slots": []
     },
-    "冥燈龍劍 I": {
+    {
         "name": "冥燈龍劍 I",
         "rare": null,
         "type": "swordAndShield",
@@ -2130,7 +2130,7 @@
             }
         ]
     },
-    "致命寬劍 II": {
+    {
         "name": "致命寬劍 II",
         "rare": null,
         "type": "swordAndShield",
@@ -2159,7 +2159,7 @@
         },
         "slots": []
     },
-    "鉻鋼雙刀 II": {
+    {
         "name": "鉻鋼雙刀 II",
         "rare": null,
         "type": "dualSlades",
@@ -2195,7 +2195,7 @@
             }
         ]
     },
-    "殘滅之爪。": {
+    {
         "name": "殘滅之爪。",
         "rare": null,
         "type": "dualSlades",
@@ -2228,7 +2228,7 @@
             }
         ]
     },
-    "決鬥者對劍 III": {
+    {
         "name": "決鬥者對劍 III",
         "rare": null,
         "type": "dualSlades",
@@ -2261,7 +2261,7 @@
             }
         ]
     },
-    "爆鱗雙斧赤紅巨星": {
+    {
         "name": "爆鱗雙斧赤紅巨星",
         "rare": null,
         "type": "dualSlades",
@@ -2294,7 +2294,7 @@
             }
         ]
     },
-    "冰結鏈劍 II": {
+    {
         "name": "冰結鏈劍 II",
         "rare": null,
         "type": "dualSlades",
@@ -2327,7 +2327,7 @@
             }
         ]
     },
-    "奧秘雙劍 III": {
+    {
         "name": "奧秘雙劍 III",
         "rare": null,
         "type": "dualSlades",
@@ -2356,7 +2356,7 @@
         },
         "slots": []
     },
-    "神聖佩劍": {
+    {
         "name": "神聖佩劍",
         "rare": null,
         "type": "dualSlades",
@@ -2389,7 +2389,7 @@
             }
         ]
     },
-    "強斧 II": {
+    {
         "name": "強斧 II",
         "rare": null,
         "type": "dualSlades",
@@ -2422,7 +2422,7 @@
             }
         ]
     },
-    "蠻顎龍颶風 III": {
+    {
         "name": "蠻顎龍颶風 III",
         "rare": null,
         "type": "dualSlades",
@@ -2451,7 +2451,7 @@
         },
         "slots": []
     },
-    "爆鎚棍棒 II": {
+    {
         "name": "爆鎚棍棒 II",
         "rare": null,
         "type": "dualSlades",
@@ -2484,7 +2484,7 @@
             }
         ]
     },
-    "泥岩龍斬斧 III": {
+    {
         "name": "泥岩龍斬斧 III",
         "rare": null,
         "type": "dualSlades",
@@ -2517,7 +2517,7 @@
             }
         ]
     },
-    "溶岩颶風 II": {
+    {
         "name": "溶岩颶風 II",
         "rare": null,
         "type": "dualSlades",
@@ -2553,7 +2553,7 @@
             }
         ]
     },
-    "黑色收割者 III": {
+    {
         "name": "黑色收割者 III",
         "rare": null,
         "type": "dualSlades",
@@ -2586,7 +2586,7 @@
             }
         ]
     },
-    "飛雷龍之爪 III": {
+    {
         "name": "飛雷龍之爪 III",
         "rare": null,
         "type": "dualSlades",
@@ -2619,7 +2619,7 @@
             }
         ]
     },
-    "罪【真】": {
+    {
         "name": "罪【真】",
         "rare": null,
         "type": "dualSlades",
@@ -2648,7 +2648,7 @@
         },
         "slots": []
     },
-    "封龍劍【超絕一門】": {
+    {
         "name": "封龍劍【超絕一門】",
         "rare": null,
         "type": "dualSlades",
@@ -2684,7 +2684,7 @@
             }
         ]
     },
-    "迅雷": {
+    {
         "name": "迅雷",
         "rare": null,
         "type": "dualSlades",
@@ -2713,7 +2713,7 @@
         },
         "slots": []
     },
-    "熔山龍鉤爪 II": {
+    {
         "name": "熔山龍鉤爪 II",
         "rare": null,
         "type": "dualSlades",
@@ -2746,7 +2746,7 @@
             }
         ]
     },
-    "冰炎劍維爾瑪閃焰": {
+    {
         "name": "冰炎劍維爾瑪閃焰",
         "rare": null,
         "type": "dualSlades",
@@ -2779,7 +2779,7 @@
             }
         ]
     },
-    "冥燈龍雙劍": {
+    {
         "name": "冥燈龍雙劍",
         "rare": null,
         "type": "dualSlades",
@@ -2815,7 +2815,7 @@
             }
         ]
     },
-    "憤怒捕食者": {
+    {
         "name": "憤怒捕食者",
         "rare": null,
         "type": "dualSlades",
@@ -2844,7 +2844,7 @@
         },
         "slots": []
     },
-    "大鬼鐵 II": {
+    {
         "name": "大鬼鐵 II",
         "rare": null,
         "type": "hammer",
@@ -2880,7 +2880,7 @@
             }
         ]
     },
-    "潰滅一擊": {
+    {
         "name": "潰滅一擊",
         "rare": null,
         "type": "hammer",
@@ -2913,7 +2913,7 @@
             }
         ]
     },
-    "慟泣冰河": {
+    {
         "name": "慟泣冰河",
         "rare": 7,
         "type": "hammer",
@@ -2946,7 +2946,7 @@
             }
         ]
     },
-    "激流強鎚 III": {
+    {
         "name": "激流強鎚 III",
         "rare": null,
         "type": "hammer",
@@ -2979,7 +2979,7 @@
             }
         ]
     },
-    "馬拉多戰鎚 III": {
+    {
         "name": "馬拉多戰鎚 III",
         "rare": null,
         "type": "hammer",
@@ -3008,7 +3008,7 @@
         },
         "slots": []
     },
-    "花之女神": {
+    {
         "name": "花之女神",
         "rare": null,
         "type": "hammer",
@@ -3044,7 +3044,7 @@
             }
         ]
     },
-    "雷光強鎚 III": {
+    {
         "name": "雷光強鎚 III",
         "rare": null,
         "type": "hammer",
@@ -3077,7 +3077,7 @@
             }
         ]
     },
-    "大地之岩 II": {
+    {
         "name": "大地之岩 II",
         "rare": null,
         "type": "hammer",
@@ -3110,7 +3110,7 @@
             }
         ]
     },
-    "惡靈禍根": {
+    {
         "name": "惡靈禍根",
         "rare": null,
         "type": "hammer",
@@ -3143,7 +3143,7 @@
             }
         ]
     },
-    "骨鎚龍擊鎚 III": {
+    {
         "name": "骨鎚龍擊鎚 III",
         "rare": null,
         "type": "hammer",
@@ -3172,7 +3172,7 @@
         },
         "slots": []
     },
-    "爆鎚粉碎者 II": {
+    {
         "name": "爆鎚粉碎者 II",
         "rare": null,
         "type": "hammer",
@@ -3205,7 +3205,7 @@
             }
         ]
     },
-    "衝擊釘鎚 III": {
+    {
         "name": "衝擊釘鎚 III",
         "rare": null,
         "type": "hammer",
@@ -3234,7 +3234,7 @@
         },
         "slots": []
     },
-    "爆鎚戰鎚 II": {
+    {
         "name": "爆鎚戰鎚 II",
         "rare": null,
         "type": "hammer",
@@ -3267,7 +3267,7 @@
             }
         ]
     },
-    "蠻顎龍戰鎚 III": {
+    {
         "name": "蠻顎龍戰鎚 III",
         "rare": null,
         "type": "hammer",
@@ -3296,7 +3296,7 @@
         },
         "slots": []
     },
-    "龍骨大鎚 III": {
+    {
         "name": "龍骨大鎚 III",
         "rare": null,
         "type": "hammer",
@@ -3329,7 +3329,7 @@
             }
         ]
     },
-    "活火爆發熔山龍爆鎚": {
+    {
         "name": "活火爆發熔山龍爆鎚",
         "rare": null,
         "type": "hammer",
@@ -3362,7 +3362,7 @@
             }
         ]
     },
-    "巨大鋼龍錘": {
+    {
         "name": "巨大鋼龍錘",
         "rare": null,
         "type": "hammer",
@@ -3395,7 +3395,7 @@
             }
         ]
     },
-    "冥燈龍大鎚": {
+    {
         "name": "冥燈龍大鎚",
         "rare": null,
         "type": "hammer",
@@ -3431,7 +3431,7 @@
             }
         ]
     },
-    "電擊鎚": {
+    {
         "name": "電擊鎚",
         "rare": null,
         "type": "hammer",
@@ -3464,7 +3464,7 @@
             }
         ]
     },
-    "混沌之鎚": {
+    {
         "name": "混沌之鎚",
         "rare": null,
         "type": "hammer",
@@ -3493,7 +3493,7 @@
         },
         "slots": []
     },
-    "威猛風笛 II": {
+    {
         "name": "威猛風笛 II",
         "rare": null,
         "type": "huntingHorn",
@@ -3529,7 +3529,7 @@
             }
         ]
     },
-    "寂滅的章節": {
+    {
         "name": "寂滅的章節",
         "rare": null,
         "type": "huntingHorn",
@@ -3562,7 +3562,7 @@
             }
         ]
     },
-    "雷鼓 III": {
+    {
         "name": "雷鼓 III",
         "rare": null,
         "type": "huntingHorn",
@@ -3595,7 +3595,7 @@
             }
         ]
     },
-    "星空皮鼓 III": {
+    {
         "name": "星空皮鼓 III",
         "rare": null,
         "type": "huntingHorn",
@@ -3624,7 +3624,7 @@
         },
         "slots": []
     },
-    "皇家戰笛": {
+    {
         "name": "皇家戰笛",
         "rare": null,
         "type": "huntingHorn",
@@ -3657,7 +3657,7 @@
             }
         ]
     },
-    "激流銅鑼 III": {
+    {
         "name": "激流銅鑼 III",
         "rare": null,
         "type": "huntingHorn",
@@ -3690,7 +3690,7 @@
             }
         ]
     },
-    "冰凌琴弦": {
+    {
         "name": "冰凌琴弦",
         "rare": null,
         "type": "huntingHorn",
@@ -3719,7 +3719,7 @@
         },
         "slots": []
     },
-    "堅骨號角 II": {
+    {
         "name": "堅骨號角 II",
         "rare": null,
         "type": "huntingHorn",
@@ -3752,7 +3752,7 @@
             }
         ]
     },
-    "岩賊龍號角 II": {
+    {
         "name": "岩賊龍號角 II",
         "rare": null,
         "type": "huntingHorn",
@@ -3788,7 +3788,7 @@
             }
         ]
     },
-    "蠻顎龍長號 III": {
+    {
         "name": "蠻顎龍長號 III",
         "rare": null,
         "type": "huntingHorn",
@@ -3817,7 +3817,7 @@
         },
         "slots": []
     },
-    "曼陀羅號角 III": {
+    {
         "name": "曼陀羅號角 III",
         "rare": null,
         "type": "huntingHorn",
@@ -3853,7 +3853,7 @@
             }
         ]
     },
-    "浮空龍長號 III": {
+    {
         "name": "浮空龍長號 III",
         "rare": null,
         "type": "huntingHorn",
@@ -3889,7 +3889,7 @@
             }
         ]
     },
-    "爆鱗鼓赤紅星光": {
+    {
         "name": "爆鱗鼓赤紅星光",
         "rare": null,
         "type": "huntingHorn",
@@ -3925,7 +3925,7 @@
             }
         ]
     },
-    "女王笛巨蜂": {
+    {
         "name": "女王笛巨蜂",
         "rare": null,
         "type": "huntingHorn",
@@ -3961,7 +3961,7 @@
             }
         ]
     },
-    "骨鎚龍號角 III": {
+    {
         "name": "骨鎚龍號角 III",
         "rare": null,
         "type": "huntingHorn",
@@ -3990,7 +3990,7 @@
         },
         "slots": []
     },
-    "龍骨古笛 III": {
+    {
         "name": "龍骨古笛 III",
         "rare": null,
         "type": "huntingHorn",
@@ -4026,7 +4026,7 @@
             }
         ]
     },
-    "雷光笛 II": {
+    {
         "name": "雷光笛 II",
         "rare": null,
         "type": "huntingHorn",
@@ -4055,7 +4055,7 @@
         },
         "slots": []
     },
-    "炎王豎琴": {
+    {
         "name": "炎王豎琴",
         "rare": null,
         "type": "huntingHorn",
@@ -4084,7 +4084,7 @@
         },
         "slots": []
     },
-    "冥燈龍狩獵笛": {
+    {
         "name": "冥燈龍狩獵笛",
         "rare": null,
         "type": "huntingHorn",
@@ -4120,7 +4120,7 @@
             }
         ]
     },
-    "深邃之鎖": {
+    {
         "name": "深邃之鎖",
         "rare": null,
         "type": "huntingHorn",
@@ -4149,7 +4149,7 @@
         },
         "slots": []
     },
-    "鉻鋼長槍 II": {
+    {
         "name": "鉻鋼長槍 II",
         "rare": null,
         "type": "lance",
@@ -4185,7 +4185,7 @@
             }
         ]
     },
-    "亡滅之腕": {
+    {
         "name": "亡滅之腕",
         "rare": null,
         "type": "lance",
@@ -4218,7 +4218,7 @@
             }
         ]
     },
-    "風漂龍斧槍 II": {
+    {
         "name": "風漂龍斧槍 II",
         "rare": null,
         "type": "lance",
@@ -4247,7 +4247,7 @@
         },
         "slots": []
     },
-    "搔鳥尖槍 III": {
+    {
         "name": "搔鳥尖槍 III",
         "rare": null,
         "type": "lance",
@@ -4276,7 +4276,7 @@
         },
         "slots": []
     },
-    "岩賊龍刺針 II": {
+    {
         "name": "岩賊龍刺針 II",
         "rare": null,
         "type": "lance",
@@ -4312,7 +4312,7 @@
             }
         ]
     },
-    "雷光長槍 III": {
+    {
         "name": "雷光長槍 III",
         "rare": null,
         "type": "lance",
@@ -4345,7 +4345,7 @@
             }
         ]
     },
-    "曼陀羅長槍 III": {
+    {
         "name": "曼陀羅長槍 III",
         "rare": null,
         "type": "lance",
@@ -4381,7 +4381,7 @@
             }
         ]
     },
-    "蒼色日珥": {
+    {
         "name": "蒼色日珥",
         "rare": null,
         "type": "lance",
@@ -4414,7 +4414,7 @@
             }
         ]
     },
-    "堅骨槍 II": {
+    {
         "name": "堅骨槍 II",
         "rare": null,
         "type": "lance",
@@ -4447,7 +4447,7 @@
             }
         ]
     },
-    "死神的哀愁": {
+    {
         "name": "死神的哀愁",
         "rare": null,
         "type": "lance",
@@ -4480,7 +4480,7 @@
             }
         ]
     },
-    "黑色刺針 III": {
+    {
         "name": "黑色刺針 III",
         "rare": null,
         "type": "lance",
@@ -4513,7 +4513,7 @@
             }
         ]
     },
-    "土砂龍刺針 III": {
+    {
         "name": "土砂龍刺針 III",
         "rare": null,
         "type": "lance",
@@ -4549,7 +4549,7 @@
             }
         ]
     },
-    "慘爪刺針 II": {
+    {
         "name": "慘爪刺針 II",
         "rare": null,
         "type": "lance",
@@ -4578,7 +4578,7 @@
         },
         "slots": []
     },
-    "激流尖刺 III": {
+    {
         "name": "激流尖刺 III",
         "rare": null,
         "type": "lance",
@@ -4611,7 +4611,7 @@
             }
         ]
     },
-    "龍骨槍 III": {
+    {
         "name": "龍骨槍 III",
         "rare": null,
         "type": "lance",
@@ -4647,7 +4647,7 @@
             }
         ]
     },
-    "爆鱗槍赤紅巨星": {
+    {
         "name": "爆鱗槍赤紅巨星",
         "rare": null,
         "type": "lance",
@@ -4676,7 +4676,7 @@
         },
         "slots": []
     },
-    "雷槍【建御雷】": {
+    {
         "name": "雷槍【建御雷】",
         "rare": null,
         "type": "lance",
@@ -4705,7 +4705,7 @@
         },
         "slots": []
     },
-    "祈願鋼龍槍": {
+    {
         "name": "祈願鋼龍槍",
         "rare": null,
         "type": "lance",
@@ -4738,7 +4738,7 @@
             }
         ]
     },
-    "冥燈龍長槍": {
+    {
         "name": "冥燈龍長槍",
         "rare": null,
         "type": "lance",
@@ -4774,7 +4774,7 @@
             }
         ]
     },
-    "遠古巴別塔": {
+    {
         "name": "遠古巴別塔",
         "rare": null,
         "type": "lance",
@@ -4807,7 +4807,7 @@
             }
         ]
     },
-    "亞特羅西斯塔": {
+    {
         "name": "亞特羅西斯塔",
         "rare": null,
         "type": "lance",
@@ -4836,7 +4836,7 @@
         },
         "slots": []
     },
-    "鉻鋼銃槍 II": {
+    {
         "name": "鉻鋼銃槍 II",
         "rare": null,
         "type": "gunlance",
@@ -4872,7 +4872,7 @@
             }
         ]
     },
-    "燒滅種火": {
+    {
         "name": "燒滅種火",
         "rare": null,
         "type": "gunlance",
@@ -4905,7 +4905,7 @@
             }
         ]
     },
-    "飛雷銃槍【蜻蜓切】": {
+    {
         "name": "飛雷銃槍【蜻蜓切】",
         "rare": null,
         "type": "gunlance",
@@ -4938,7 +4938,7 @@
             }
         ]
     },
-    "藍色戰車": {
+    {
         "name": "藍色戰車",
         "rare": null,
         "type": "gunlance",
@@ -4971,7 +4971,7 @@
             }
         ]
     },
-    "皇家銃槍": {
+    {
         "name": "皇家銃槍",
         "rare": null,
         "type": "gunlance",
@@ -5004,7 +5004,7 @@
             }
         ]
     },
-    "泥岩龍銃槍 III": {
+    {
         "name": "泥岩龍銃槍 III",
         "rare": null,
         "type": "gunlance",
@@ -5037,7 +5037,7 @@
             }
         ]
     },
-    "風漂龍加農砲 II": {
+    {
         "name": "風漂龍加農砲 II",
         "rare": null,
         "type": "gunlance",
@@ -5066,7 +5066,7 @@
         },
         "slots": []
     },
-    "大骨銃槍【龍尾】 II": {
+    {
         "name": "大骨銃槍【龍尾】 II",
         "rare": null,
         "type": "gunlance",
@@ -5099,7 +5099,7 @@
             }
         ]
     },
-    "爆鱗龍銃槍 II": {
+    {
         "name": "爆鱗龍銃槍 II",
         "rare": null,
         "type": "gunlance",
@@ -5132,7 +5132,7 @@
             }
         ]
     },
-    "牙龍銃槍【大喰】 III": {
+    {
         "name": "牙龍銃槍【大喰】 III",
         "rare": null,
         "type": "gunlance",
@@ -5168,7 +5168,7 @@
             }
         ]
     },
-    "牙龍銃槍【黑頭巾】 III": {
+    {
         "name": "牙龍銃槍【黑頭巾】 III",
         "rare": null,
         "type": "gunlance",
@@ -5197,7 +5197,7 @@
         },
         "slots": []
     },
-    "屍套龍火槍 II": {
+    {
         "name": "屍套龍火槍 II",
         "rare": null,
         "type": "gunlance",
@@ -5230,7 +5230,7 @@
             }
         ]
     },
-    "土砂龍破壞砲 III": {
+    {
         "name": "土砂龍破壞砲 III",
         "rare": null,
         "type": "gunlance",
@@ -5259,7 +5259,7 @@
         },
         "slots": []
     },
-    "蠻顎龍加農砲 III": {
+    {
         "name": "蠻顎龍加農砲 III",
         "rare": null,
         "type": "gunlance",
@@ -5288,7 +5288,7 @@
         },
         "slots": []
     },
-    "龍骨銃槍 III": {
+    {
         "name": "龍骨銃槍 III",
         "rare": null,
         "type": "gunlance",
@@ -5324,7 +5324,7 @@
             }
         ]
     },
-    "驚天動地熔山龍銃槍": {
+    {
         "name": "驚天動地熔山龍銃槍",
         "rare": null,
         "type": "gunlance",
@@ -5353,7 +5353,7 @@
         },
         "slots": []
     },
-    "鋼龍爪銃槍": {
+    {
         "name": "鋼龍爪銃槍",
         "rare": null,
         "type": "gunlance",
@@ -5386,7 +5386,7 @@
             }
         ]
     },
-    "冥燈龍銃槍": {
+    {
         "name": "冥燈龍銃槍",
         "rare": null,
         "type": "gunlance",
@@ -5422,7 +5422,7 @@
             }
         ]
     },
-    "暴銃槍格拉支利德": {
+    {
         "name": "暴銃槍格拉支利德",
         "rare": null,
         "type": "gunlance",
@@ -5451,7 +5451,7 @@
         },
         "slots": []
     },
-    "合金制完成劍斧 II": {
+    {
         "name": "合金制完成劍斧 II",
         "rare": null,
         "type": "switchAxe",
@@ -5487,7 +5487,7 @@
             }
         ]
     },
-    "斷滅的一閃": {
+    {
         "name": "斷滅的一閃",
         "rare": null,
         "type": "switchAxe",
@@ -5520,7 +5520,7 @@
             }
         ]
     },
-    "亡靈之柱": {
+    {
         "name": "亡靈之柱",
         "rare": null,
         "type": "switchAxe",
@@ -5549,7 +5549,7 @@
         },
         "slots": []
     },
-    "雷光迅斧 III": {
+    {
         "name": "雷光迅斧 III",
         "rare": null,
         "type": "switchAxe",
@@ -5582,7 +5582,7 @@
             }
         ]
     },
-    "動力迅斧 II": {
+    {
         "name": "動力迅斧 II",
         "rare": null,
         "type": "switchAxe",
@@ -5615,7 +5615,7 @@
             }
         ]
     },
-    "凶豺龍掠奪者 III": {
+    {
         "name": "凶豺龍掠奪者 III",
         "rare": null,
         "type": "switchAxe",
@@ -5651,7 +5651,7 @@
             }
         ]
     },
-    "爆鱗龍劍斧 II": {
+    {
         "name": "爆鱗龍劍斧 II",
         "rare": null,
         "type": "switchAxe",
@@ -5684,7 +5684,7 @@
             }
         ]
     },
-    "火龍斧飛龍牙 II": {
+    {
         "name": "火龍斧飛龍牙 II",
         "rare": null,
         "type": "switchAxe",
@@ -5717,7 +5717,7 @@
             }
         ]
     },
-    "重擊斬斧 II": {
+    {
         "name": "重擊斬斧 II",
         "rare": null,
         "type": "switchAxe",
@@ -5746,7 +5746,7 @@
             }
         ]
     },
-    "屍套龍劍斧 II": {
+    {
         "name": "屍套龍劍斧 II",
         "rare": null,
         "type": "switchAxe",
@@ -5779,7 +5779,7 @@
             }
         ]
     },
-    "泥岩龍劍斧 III": {
+    {
         "name": "泥岩龍劍斧 III",
         "rare": null,
         "type": "switchAxe",
@@ -5812,7 +5812,7 @@
             }
         ]
     },
-    "浮空龍斬斧 III": {
+    {
         "name": "浮空龍斬斧 III",
         "rare": null,
         "type": "switchAxe",
@@ -5845,7 +5845,7 @@
             }
         ]
     },
-    "土砂龍劍斧 III": {
+    {
         "name": "土砂龍劍斧 III",
         "rare": null,
         "type": "switchAxe",
@@ -5881,7 +5881,7 @@
             }
         ]
     },
-    "惡靈": {
+    {
         "name": "惡靈",
         "rare": null,
         "type": "switchAxe",
@@ -5914,7 +5914,7 @@
             }
         ]
     },
-    "蠻顎劍斧": {
+    {
         "name": "蠻顎劍斧",
         "rare": null,
         "type": "switchAxe",
@@ -5943,7 +5943,7 @@
         },
         "slots": []
     },
-    "龍骨劍斧 III": {
+    {
         "name": "龍骨劍斧 III",
         "rare": null,
         "type": "switchAxe",
@@ -5979,7 +5979,7 @@
             }
         ]
     },
-    "斷雷斧麒麟": {
+    {
         "name": "斷雷斧麒麟",
         "rare": null,
         "type": "switchAxe",
@@ -6008,7 +6008,7 @@
         },
         "slots": []
     },
-    "炎王城寨": {
+    {
         "name": "炎王城寨",
         "rare": null,
         "type": "switchAxe",
@@ -6037,7 +6037,7 @@
         },
         "slots": []
     },
-    "冥燈龍劍斧": {
+    {
         "name": "冥燈龍劍斧",
         "rare": null,
         "type": "switchAxe",
@@ -6073,7 +6073,7 @@
             }
         ]
     },
-    "恐怖暴君": {
+    {
         "name": "恐怖暴君",
         "rare": null,
         "type": "switchAxe",
@@ -6102,7 +6102,7 @@
         },
         "slots": []
     },
-    "鉻鋼守護者 II": {
+    {
         "name": "鉻鋼守護者 II",
         "rare": null,
         "type": "chargeBlade",
@@ -6138,7 +6138,7 @@
             }
         ]
     },
-    "帶來毀滅的一把武器": {
+    {
         "name": "帶來毀滅的一把武器",
         "rare": null,
         "type": "chargeBlade",
@@ -6171,7 +6171,7 @@
             }
         ]
     },
-    "焰斧鶴王": {
+    {
         "name": "焰斧鶴王",
         "rare": null,
         "type": "chargeBlade",
@@ -6204,7 +6204,7 @@
             }
         ]
     },
-    "深坑泥岩 III": {
+    {
         "name": "深坑泥岩 III",
         "rare": null,
         "type": "chargeBlade",
@@ -6237,7 +6237,7 @@
             }
         ]
     },
-    "寒霜巨人 II": {
+    {
         "name": "寒霜巨人 II",
         "rare": null,
         "type": "chargeBlade",
@@ -6273,7 +6273,7 @@
             }
         ]
     },
-    "火鎧盾斧": {
+    {
         "name": "火鎧盾斧",
         "rare": null,
         "type": "chargeBlade",
@@ -6309,7 +6309,7 @@
             }
         ]
     },
-    "強骨兵裝 II": {
+    {
         "name": "強骨兵裝 II",
         "rare": null,
         "type": "chargeBlade",
@@ -6342,7 +6342,7 @@
             }
         ]
     },
-    "暴君銅盾 II": {
+    {
         "name": "暴君銅盾 II",
         "rare": null,
         "type": "chargeBlade",
@@ -6371,7 +6371,7 @@
         },
         "slots": []
     },
-    "凶豺龍盾斧 III": {
+    {
         "name": "凶豺龍盾斧 III",
         "rare": null,
         "type": "chargeBlade",
@@ -6407,7 +6407,7 @@
             }
         ]
     },
-    "岩賊龍盾 II": {
+    {
         "name": "岩賊龍盾 II",
         "rare": null,
         "type": "chargeBlade",
@@ -6443,7 +6443,7 @@
             }
         ]
     },
-    "凶顎龍盾斧 III": {
+    {
         "name": "凶顎龍盾斧 III",
         "rare": null,
         "type": "chargeBlade",
@@ -6472,7 +6472,7 @@
         },
         "slots": []
     },
-    "屍套龍盾斧 II": {
+    {
         "name": "屍套龍盾斧 II",
         "rare": null,
         "type": "chargeBlade",
@@ -6505,7 +6505,7 @@
             }
         ]
     },
-    "飛雷龍之腕 III": {
+    {
         "name": "飛雷龍之腕 III",
         "rare": null,
         "type": "chargeBlade",
@@ -6538,7 +6538,7 @@
             }
         ]
     },
-    "憎【忿恨】": {
+    {
         "name": "憎【忿恨】",
         "rare": null,
         "type": "chargeBlade",
@@ -6567,7 +6567,7 @@
         },
         "slots": []
     },
-    "龍骨盾斧 III": {
+    {
         "name": "龍骨盾斧 III",
         "rare": null,
         "type": "chargeBlade",
@@ -6603,7 +6603,7 @@
             }
         ]
     },
-    "捲土重來熔山龍盾斧": {
+    {
         "name": "捲土重來熔山龍盾斧",
         "rare": null,
         "type": "chargeBlade",
@@ -6632,7 +6632,7 @@
         },
         "slots": []
     },
-    "鋼龍幻夢": {
+    {
         "name": "鋼龍幻夢",
         "rare": null,
         "type": "chargeBlade",
@@ -6668,7 +6668,7 @@
             }
         ]
     },
-    "冥燈龍盾斧": {
+    {
         "name": "冥燈龍盾斧",
         "rare": null,
         "type": "chargeBlade",
@@ -6704,7 +6704,7 @@
             }
         ]
     },
-    "德斯特涅塔": {
+    {
         "name": "德斯特涅塔",
         "rare": null,
         "type": "chargeBlade",
@@ -6733,7 +6733,7 @@
         },
         "slots": []
     },
-    "鉻鋼長刀 II": {
+    {
         "name": "鉻鋼長刀 II",
         "rare": null,
         "type": "insectGlaive",
@@ -6769,7 +6769,7 @@
             }
         ]
     },
-    "撲滅導燈": {
+    {
         "name": "撲滅導燈",
         "rare": null,
         "type": "insectGlaive",
@@ -6802,7 +6802,7 @@
             }
         ]
     },
-    "火龍棍【炎舞】": {
+    {
         "name": "火龍棍【炎舞】",
         "rare": null,
         "type": "insectGlaive",
@@ -6835,7 +6835,7 @@
             }
         ]
     },
-    "星空長刀 III": {
+    {
         "name": "星空長刀 III",
         "rare": null,
         "type": "insectGlaive",
@@ -6864,7 +6864,7 @@
         },
         "slots": []
     },
-    "利刃長刀 III": {
+    {
         "name": "利刃長刀 III",
         "rare": null,
         "type": "insectGlaive",
@@ -6897,7 +6897,7 @@
             }
         ]
     },
-    "凍寒疾風刀 II": {
+    {
         "name": "凍寒疾風刀 II",
         "rare": null,
         "type": "insectGlaive",
@@ -6933,7 +6933,7 @@
             }
         ]
     },
-    "曼陀羅長刀 III": {
+    {
         "name": "曼陀羅長刀 III",
         "rare": null,
         "type": "insectGlaive",
@@ -6969,7 +6969,7 @@
             }
         ]
     },
-    "岩賊龍長鞭 II": {
+    {
         "name": "岩賊龍長鞭 II",
         "rare": null,
         "type": "insectGlaive",
@@ -7005,7 +7005,7 @@
             }
         ]
     },
-    "飛空棍 II": {
+    {
         "name": "飛空棍 II",
         "rare": null,
         "type": "insectGlaive",
@@ -7038,7 +7038,7 @@
             }
         ]
     },
-    "屍套龍操蟲棍 II": {
+    {
         "name": "屍套龍操蟲棍 II",
         "rare": null,
         "type": "insectGlaive",
@@ -7071,7 +7071,7 @@
             }
         ]
     },
-    "蠻顎棍翼龍杆刀": {
+    {
         "name": "蠻顎棍翼龍杆刀",
         "rare": null,
         "type": "insectGlaive",
@@ -7100,7 +7100,7 @@
         },
         "slots": []
     },
-    "激流長刀 III": {
+    {
         "name": "激流長刀 III",
         "rare": null,
         "type": "insectGlaive",
@@ -7133,7 +7133,7 @@
             }
         ]
     },
-    "暴君長刀 II": {
+    {
         "name": "暴君長刀 II",
         "rare": null,
         "type": "insectGlaive",
@@ -7166,7 +7166,7 @@
             }
         ]
     },
-    "飛雷龍之柱 III": {
+    {
         "name": "飛雷龍之柱 III",
         "rare": null,
         "type": "insectGlaive",
@@ -7199,7 +7199,7 @@
             }
         ]
     },
-    "惡【V ICE】": {
+    {
         "name": "惡【V ICE】",
         "rare": null,
         "type": "insectGlaive",
@@ -7232,7 +7232,7 @@
             }
         ]
     },
-    "龍骨棍 III": {
+    {
         "name": "龍骨棍 III",
         "rare": null,
         "type": "insectGlaive",
@@ -7268,7 +7268,7 @@
             }
         ]
     },
-    "碧綠神鳴": {
+    {
         "name": "碧綠神鳴",
         "rare": null,
         "type": "insectGlaive",
@@ -7297,7 +7297,7 @@
         },
         "slots": []
     },
-    "冰體鋼龍棍": {
+    {
         "name": "冰體鋼龍棍",
         "rare": null,
         "type": "insectGlaive",
@@ -7330,7 +7330,7 @@
             }
         ]
     },
-    "冥燈龍長刀": {
+    {
         "name": "冥燈龍長刀",
         "rare": null,
         "type": "insectGlaive",
@@ -7366,7 +7366,7 @@
             }
         ]
     },
-    "污穢暴風雨": {
+    {
         "name": "污穢暴風雨",
         "rare": null,
         "type": "insectGlaive",
@@ -7395,7 +7395,7 @@
         },
         "slots": []
     },
-    "鉻鋼迅擊弩 II": {
+    {
         "name": "鉻鋼迅擊弩 II",
         "rare": null,
         "type": "lightBowgun",
@@ -7414,7 +7414,7 @@
         },
         "slots": []
     },
-    "破滅引金": {
+    {
         "name": "破滅引金",
         "rare": null,
         "type": "lightBowgun",
@@ -7433,7 +7433,7 @@
         },
         "slots": []
     },
-    "浮空龍颶風砲 III": {
+    {
         "name": "浮空龍颶風砲 III",
         "rare": null,
         "type": "lightBowgun",
@@ -7452,7 +7452,7 @@
         },
         "slots": []
     },
-    "爆鱗龍颶風砲 II": {
+    {
         "name": "爆鱗龍颶風砲 II",
         "rare": null,
         "type": "lightBowgun",
@@ -7471,7 +7471,7 @@
         },
         "slots": []
     },
-    "凶豺龍火砲 III": {
+    {
         "name": "凶豺龍火砲 III",
         "rare": null,
         "type": "lightBowgun",
@@ -7490,7 +7490,7 @@
         },
         "slots": []
     },
-    "火龍破壞砲 II": {
+    {
         "name": "火龍破壞砲 II",
         "rare": null,
         "type": "lightBowgun",
@@ -7509,7 +7509,7 @@
         },
         "slots": []
     },
-    "雷光迅擊弩 III": {
+    {
         "name": "雷光迅擊弩 III",
         "rare": null,
         "type": "lightBowgun",
@@ -7528,7 +7528,7 @@
         },
         "slots": []
     },
-    "寒霜迅擊弩 II": {
+    {
         "name": "寒霜迅擊弩 II",
         "rare": null,
         "type": "lightBowgun",
@@ -7547,7 +7547,7 @@
         },
         "slots": []
     },
-    "狙擊射手 II": {
+    {
         "name": "狙擊射手 II",
         "rare": null,
         "type": "lightBowgun",
@@ -7566,7 +7566,7 @@
         },
         "slots": []
     },
-    "骷髏的吶喊": {
+    {
         "name": "骷髏的吶喊",
         "rare": null,
         "type": "lightBowgun",
@@ -7585,7 +7585,7 @@
         },
         "slots": []
     },
-    "蠻顎龍破壞砲 III": {
+    {
         "name": "蠻顎龍破壞砲 III",
         "rare": null,
         "type": "lightBowgun",
@@ -7604,7 +7604,7 @@
         },
         "slots": []
     },
-    "泥岩龍輕弩 III": {
+    {
         "name": "泥岩龍輕弩 III",
         "rare": null,
         "type": "lightBowgun",
@@ -7623,7 +7623,7 @@
         },
         "slots": []
     },
-    "熔岩輕弩 II": {
+    {
         "name": "熔岩輕弩 II",
         "rare": null,
         "type": "lightBowgun",
@@ -7642,7 +7642,7 @@
         },
         "slots": []
     },
-    "土砂龍射手 III": {
+    {
         "name": "土砂龍射手 III",
         "rare": null,
         "type": "lightBowgun",
@@ -7661,7 +7661,7 @@
         },
         "slots": []
     },
-    "業【羯磨】": {
+    {
         "name": "業【羯磨】",
         "rare": null,
         "type": "lightBowgun",
@@ -7680,7 +7680,7 @@
         },
         "slots": []
     },
-    "龍骨弩 III": {
+    {
         "name": "龍骨弩 III",
         "rare": null,
         "type": "lightBowgun",
@@ -7699,7 +7699,7 @@
         },
         "slots": []
     },
-    "大鬼島": {
+    {
         "name": "大鬼島",
         "rare": null,
         "type": "lightBowgun",
@@ -7718,7 +7718,7 @@
         },
         "slots": []
     },
-    "麒麟筒【三角】": {
+    {
         "name": "麒麟筒【三角】",
         "rare": null,
         "type": "lightBowgun",
@@ -7737,7 +7737,7 @@
         },
         "slots": []
     },
-    "鋼龍冰蜂弩": {
+    {
         "name": "鋼龍冰蜂弩",
         "rare": null,
         "type": "lightBowgun",
@@ -7756,7 +7756,7 @@
         },
         "slots": []
     },
-    "冥燈龍輕弩槍": {
+    {
         "name": "冥燈龍輕弩槍",
         "rare": null,
         "type": "lightBowgun",
@@ -7775,7 +7775,7 @@
         },
         "slots": []
     },
-    "巨型十字槍": {
+    {
         "name": "巨型十字槍",
         "rare": null,
         "type": "lightBowgun",
@@ -7794,7 +7794,7 @@
         },
         "slots": []
     },
-    "瘋狂的悲嘆": {
+    {
         "name": "瘋狂的悲嘆",
         "rare": null,
         "type": "lightBowgun",
@@ -7813,7 +7813,7 @@
         },
         "slots": []
     },
-    "鉻鋼突擊弩 II": {
+    {
         "name": "鉻鋼突擊弩 II",
         "rare": null,
         "type": "heavyBowgun",
@@ -7832,7 +7832,7 @@
         },
         "slots": []
     },
-    "擊滅砲火": {
+    {
         "name": "擊滅砲火",
         "rare": null,
         "type": "heavyBowgun",
@@ -7851,7 +7851,7 @@
         },
         "slots": []
     },
-    "激流加農砲 III": {
+    {
         "name": "激流加農砲 III",
         "rare": null,
         "type": "heavyBowgun",
@@ -7870,7 +7870,7 @@
         },
         "slots": []
     },
-    "長尾重裝弩 III": {
+    {
         "name": "長尾重裝弩 III",
         "rare": null,
         "type": "heavyBowgun",
@@ -7889,7 +7889,7 @@
         },
         "slots": []
     },
-    "冰凌薔薇": {
+    {
         "name": "冰凌薔薇",
         "rare": null,
         "type": "heavyBowgun",
@@ -7908,7 +7908,7 @@
         },
         "slots": []
     },
-    "牙龍重弩【暴食】": {
+    {
         "name": "牙龍重弩【暴食】",
         "rare": null,
         "type": "heavyBowgun",
@@ -7927,7 +7927,7 @@
         },
         "slots": []
     },
-    "蠻顎重弩黑火砲": {
+    {
         "name": "蠻顎重弩黑火砲",
         "rare": null,
         "type": "heavyBowgun",
@@ -7946,7 +7946,7 @@
         },
         "slots": []
     },
-    "動能發射器 II": {
+    {
         "name": "動能發射器 II",
         "rare": null,
         "type": "heavyBowgun",
@@ -7965,7 +7965,7 @@
         },
         "slots": []
     },
-    "重角轟砲": {
+    {
         "name": "重角轟砲",
         "rare": null,
         "type": "heavyBowgun",
@@ -7984,7 +7984,7 @@
         },
         "slots": []
     },
-    "曼陀羅爆破砲 III": {
+    {
         "name": "曼陀羅爆破砲 III",
         "rare": null,
         "type": "heavyBowgun",
@@ -8003,7 +8003,7 @@
         },
         "slots": []
     },
-    "骨鎚龍加農砲 III": {
+    {
         "name": "骨鎚龍加農砲 III",
         "rare": null,
         "type": "heavyBowgun",
@@ -8022,7 +8022,7 @@
         },
         "slots": []
     },
-    "岩賊龍砲 II": {
+    {
         "name": "岩賊龍砲 II",
         "rare": null,
         "type": "heavyBowgun",
@@ -8041,7 +8041,7 @@
         },
         "slots": []
     },
-    "飛雷龍之針 III": {
+    {
         "name": "飛雷龍之針 III",
         "rare": null,
         "type": "heavyBowgun",
@@ -8060,7 +8060,7 @@
         },
         "slots": []
     },
-    "龍骨砲 III": {
+    {
         "name": "龍骨砲 III",
         "rare": null,
         "type": "heavyBowgun",
@@ -8079,7 +8079,7 @@
         },
         "slots": []
     },
-    "迅雷閃擊": {
+    {
         "name": "迅雷閃擊",
         "rare": null,
         "type": "heavyBowgun",
@@ -8098,7 +8098,7 @@
         },
         "slots": []
     },
-    "熔山龍重弩槍 II": {
+    {
         "name": "熔山龍重弩槍 II",
         "rare": null,
         "type": "heavyBowgun",
@@ -8117,7 +8117,7 @@
         },
         "slots": []
     },
-    "炎王灼紅巨砲": {
+    {
         "name": "炎王灼紅巨砲",
         "rare": null,
         "type": "heavyBowgun",
@@ -8136,7 +8136,7 @@
         },
         "slots": []
     },
-    "冥燈龍重弩槍": {
+    {
         "name": "冥燈龍重弩槍",
         "rare": null,
         "type": "heavyBowgun",
@@ -8155,7 +8155,7 @@
         },
         "slots": []
     },
-    "黑暗左右": {
+    {
         "name": "黑暗左右",
         "rare": null,
         "type": "heavyBowgun",
@@ -8174,7 +8174,7 @@
         },
         "slots": []
     },
-    "合金弓 II": {
+    {
         "name": "合金弓 II",
         "rare": null,
         "type": "bow",
@@ -8200,7 +8200,7 @@
             }
         ]
     },
-    "必滅一矢": {
+    {
         "name": "必滅一矢",
         "rare": null,
         "type": "bow",
@@ -8223,7 +8223,7 @@
             }
         ]
     },
-    "星空迅擊弓 III": {
+    {
         "name": "星空迅擊弓 III",
         "rare": null,
         "type": "bow",
@@ -8242,7 +8242,7 @@
         },
         "slots": []
     },
-    "重弓巨靈勇士": {
+    {
         "name": "重弓巨靈勇士",
         "rare": 8,
         "type": "bow",
@@ -8261,7 +8261,7 @@
         },
         "slots": []
     },
-    "公主弓矢 III": {
+    {
         "name": "公主弓矢 III",
         "rare": null,
         "type": "bow",
@@ -8287,7 +8287,7 @@
             }
         ]
     },
-    "火龍強弓 III": {
+    {
         "name": "火龍強弓 III",
         "rare": null,
         "type": "bow",
@@ -8310,7 +8310,7 @@
             }
         ]
     },
-    "激流射手 III": {
+    {
         "name": "激流射手 III",
         "rare": null,
         "type": "bow",
@@ -8333,7 +8333,7 @@
             }
         ]
     },
-    "冰凌銀蕨": {
+    {
         "name": "冰凌銀蕨",
         "rare": null,
         "type": "bow",
@@ -8352,7 +8352,7 @@
         },
         "slots": []
     },
-    "勇氣獵弓 II": {
+    {
         "name": "勇氣獵弓 II",
         "rare": 6,
         "type": "bow",
@@ -8375,7 +8375,7 @@
             }
         ]
     },
-    "屍套龍弓 II": {
+    {
         "name": "屍套龍弓 II",
         "rare": null,
         "type": "bow",
@@ -8398,7 +8398,7 @@
             }
         ]
     },
-    "角王弓疾風": {
+    {
         "name": "角王弓疾風",
         "rare": 8,
         "type": "bow",
@@ -8424,7 +8424,7 @@
             }
         ]
     },
-    "曼陀羅弓 III": {
+    {
         "name": "曼陀羅弓 III",
         "rare": null,
         "type": "bow",
@@ -8450,7 +8450,7 @@
             }
         ]
     },
-    "蠻顎龍射手 III": {
+    {
         "name": "蠻顎龍射手 III",
         "rare": null,
         "type": "bow",
@@ -8469,7 +8469,7 @@
         },
         "slots": []
     },
-    "飛雷弓【羽羽矢】": {
+    {
         "name": "飛雷弓【羽羽矢】",
         "rare": null,
         "type": "bow",
@@ -8492,7 +8492,7 @@
             }
         ]
     },
-    "龍骨弓 III": {
+    {
         "name": "龍骨弓 III",
         "rare": null,
         "type": "bow",
@@ -8518,7 +8518,7 @@
             }
         ]
     },
-    "鋼龍強弓": {
+    {
         "name": "鋼龍強弓",
         "rare": null,
         "type": "bow",
@@ -8544,7 +8544,7 @@
             }
         ]
     },
-    "冥燈龍大弓": {
+    {
         "name": "冥燈龍大弓",
         "rare": null,
         "type": "bow",
@@ -8570,7 +8570,7 @@
             }
         ]
     },
-    "巨型獵弓": {
+    {
         "name": "巨型獵弓",
         "rare": 8,
         "type": "bow",
@@ -8593,7 +8593,7 @@
             }
         ]
     },
-    "阿羅伊的戰弓": {
+    {
         "name": "阿羅伊的戰弓",
         "rare": null,
         "type": "bow",
@@ -8616,7 +8616,7 @@
             }
         ]
     },
-    "惡棍之弓": {
+    {
         "name": "惡棍之弓",
         "rare": null,
         "type": "bow",
@@ -8635,4 +8635,4 @@
         },
         "slots": []
     }
-}
+]

@@ -15,14 +15,63 @@ import Charms from '../../json/charms.json';
 import Armors from '../../json/armors.json';
 import Weapons from '../../json/weapons.json';
 import Sets from '../../json/sets.json';
+import Enhances from '../../json/enhances.json';
 
 /**
  * Set Helper
  */
 class SetHelper {
 
-    constructor (mapping) {
-        this.mapping = mapping;
+    constructor (list) {
+        this.mapping = {};
+
+        list.map((data) => {
+            this.mapping[data.name] = data;
+        });
+
+        // Filter Conditional
+        this.filterSkillKey = null;
+    }
+
+    getKeys = () => {
+        return Object.keys(this.mapping);
+    };
+
+    getItems = () => {
+        return Object.values(this.mapping).filter((data) => {
+            if (null !== this.filterSkillKey) {
+                if (this.filterSkillKey !== data.skill.key) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
+    };
+
+    getInfo = (key) => {
+        return undefined !== this.mapping[key]
+            ? this.mapping[key] : null;
+    };
+
+    hasSkill = (key) => {
+        this.filterSkillKey = key;
+
+        return this;
+    }
+}
+
+/**
+ * Enhance Helper
+ */
+class EnhanceHelper {
+
+    constructor (list) {
+        this.mapping = {};
+
+        list.map((data) => {
+            this.mapping[data.name] = data;
+        });
 
         // Filter Conditional
         this.filterSkillKey = null;
@@ -61,8 +110,12 @@ class SetHelper {
  */
 class WeaponHelper {
 
-    constructor (mapping) {
-        this.mapping = mapping;
+    constructor (list) {
+        this.mapping = {};
+
+        list.map((data) => {
+            this.mapping[data.name] = data;
+        });
 
         // Filter Conditional
         this.filterType = null;
@@ -136,8 +189,12 @@ class WeaponHelper {
  */
 class ArmorHelper {
 
-    constructor (mapping) {
-        this.mapping = mapping;
+    constructor (list) {
+        this.mapping = {};
+
+        list.map((data) => {
+            this.mapping[data.name] = data;
+        });
 
         // Filter Conditional
         this.filterSkillKey = null;
@@ -187,8 +244,12 @@ class ArmorHelper {
  */
 class CharmHelper {
 
-    constructor (mapping) {
-        this.mapping = mapping;
+    constructor (list) {
+        this.mapping = {};
+
+        list.map((data) => {
+            this.mapping[data.name] = data;
+        });
 
         // Filter Conditional
         this.filterSkillKey = null;
@@ -238,8 +299,12 @@ class CharmHelper {
  */
 class JewelHelper {
 
-    constructor (mapping) {
-        this.mapping = mapping;
+    constructor (list) {
+        this.mapping = {};
+
+        list.map((data) => {
+            this.mapping[data.name] = data;
+        });
 
         // Filter Conditional
         this.filterSkillKey = null;
@@ -278,8 +343,12 @@ class JewelHelper {
  */
 class SkillHelper {
 
-    constructor (mapping) {
-        this.mapping = mapping;
+    constructor (list) {
+        this.mapping = {};
+
+        list.map((data) => {
+            this.mapping[data.name] = data;
+        });
     }
 
     getKeys = () => {
@@ -298,6 +367,7 @@ class SkillHelper {
 
 export default {
     set: new SetHelper(Sets),
+    enhance: new EnhanceHelper(Enhances),
     weapon: new WeaponHelper(Weapons),
     armor: new ArmorHelper(Armors),
     charm: new CharmHelper(Charms),

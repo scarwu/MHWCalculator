@@ -300,7 +300,7 @@ export default class Main extends Component {
                             if (null !== equips.weapon.slotKeys
                                 && null !== equips.weapon.slotKeys[index]) {
 
-                                jewel = DataSet.jewel.getInfo(equips.weapon.slotKeys[index])
+                                jewel = DataSet.jewel.getInfo(equips.weapon.slotKeys[index]);
                             }
 
                             return (
@@ -330,7 +330,7 @@ export default class Main extends Component {
                                 if (null !== equips.weapon.enhanceKeys
                                     && null !== equips.weapon.enhanceKeys[index]) {
 
-                                    enhance = equips.weapon.enhanceKeys[index]
+                                    enhance = DataSet.enhance.getInfo(equips.weapon.enhanceKeys[index])
                                 }
 
                                 return (
@@ -340,7 +340,7 @@ export default class Main extends Component {
                                         </div>
                                         <div className="col-8 mhwc-value">
                                             {null !== enhance ? (
-                                                <span>{enhance}</span>
+                                                <span>{enhance.name}</span>
                                             ) : (
                                                 <span>&nbsp;-&nbsp;</span>
                                             )}

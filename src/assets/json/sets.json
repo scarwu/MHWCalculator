@@ -1,1 +1,229 @@
-{}
+[
+    {
+        "name": "蠻顎龍之力",
+        "skills": [
+            {
+                "key": "振奮",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "慘爪龍之力",
+        "skills": [
+            {
+                "key": "拔刀術【力】",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "風漂龍的恩惠",
+        "skills": [
+            {
+                "key": "幸運",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "幻獸的恩惠",
+        "skills": [
+            {
+                "key": "捕獲名人",
+                "require": 4
+            }
+        ]
+    },
+    {
+        "name": "角龍之力",
+        "skills": [
+            {
+                "key": "鈍器能手",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "火龍之力",
+        "skills": [
+            {
+                "key": "會心攻擊【屬性】",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "蠻顎龍的鬥志",
+        "skills": [
+            {
+                "key": "振奮",
+                "require": 2
+            },
+            {
+                "key": "突破耐力上限",
+                "require": 4
+            }
+        ]
+    },
+    {
+        "name": "熔山龍的奧秘",
+        "skills": [
+            {
+                "key": "會心攻擊【特殊】",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "櫻火龍的奧秘",
+        "skills": [
+            {
+                "key": "毒傷害強化",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "風漂龍的恩竉",
+        "skills": [
+            {
+                "key": "幸運",
+                "require": 2
+            },
+            {
+                "key": "解放弓的蓄力階段",
+                "require": 4
+            }
+        ]
+    },
+    {
+        "name": "角龍之奧祕",
+        "skills": [
+            {
+                "key": "鈍器能手",
+                "require": 2
+            },
+            {
+                "key": "無屬性強化",
+                "require": 4
+            }
+        ]
+    },
+    {
+        "name": "慘爪龍的奧祕",
+        "skills": [
+            {
+                "key": "拔刀術【力】",
+                "require": 2
+            },
+            {
+                "key": "剛刃研磨",
+                "require": 4
+            }
+        ]
+    },
+    {
+        "name": "火龍奧祕",
+        "skills": [
+            {
+                "key": "會心攻擊【屬性】",
+                "require": 2
+            },
+            {
+                "key": "心眼／彈導強化",
+                "require": 4
+            }
+        ]
+    },
+    {
+        "name": "爆鎚龍的守護",
+        "skills": [
+            {
+                "key": "防禦強化",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "爆鱗龍的守護",
+        "skills": [
+            {
+                "key": "毅力",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "屍套龍的命脈",
+        "skills": [
+            {
+                "key": "超回復力",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "滅盡龍的飢餓",
+        "skills": [
+            {
+                "key": "加速再生",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "炎王龍的武技",
+        "skills": [
+            {
+                "key": "達人藝",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "鋼龍的飛翅",
+        "skills": [
+            {
+                "key": "風壓完全無效",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "冥燈龍的神秘",
+        "skills": [
+            {
+                "key": "利刃／彈藥節約",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "麒麟的恩寵",
+        "skills": [
+            {
+                "key": "捕獲名人",
+                "require": 3
+            }
+        ]
+    },
+    {
+        "name": "公會的引導",
+        "skills": [
+            {
+                "key": "強運",
+                "require": 4
+            }
+        ]
+    },
+    {
+        "name": "調查團的引導",
+        "skills": [
+            {
+                "key": "剝取名人",
+                "require": 4
+            }
+        ]
+    }
+]
