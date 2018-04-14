@@ -3665,7 +3665,7 @@
     },
     {
         "name": "威猛風笛 II",
-        "rare": null,
+        "rare": 6,
         "type": "huntingHorn",
         "series": "礦石素材",
         "attack": 756,
@@ -3702,7 +3702,7 @@
     },
     {
         "name": "寂滅的章節",
-        "rare": null,
+        "rare": 8,
         "type": "huntingHorn",
         "series": "滅盡龍",
         "attack": 882,
@@ -3738,7 +3738,7 @@
     },
     {
         "name": "雷鼓 III",
-        "rare": null,
+        "rare": 6,
         "type": "huntingHorn",
         "series": "雷屬性",
         "attack": 756,
@@ -3772,7 +3772,7 @@
     },
     {
         "name": "星空皮鼓 III",
-        "rare": null,
+        "rare": 6,
         "type": "huntingHorn",
         "series": "騷鳥",
         "attack": 714,
@@ -3802,7 +3802,7 @@
     },
     {
         "name": "皇家戰笛",
-        "rare": null,
+        "rare": 7,
         "type": "huntingHorn",
         "series": "雌火龍",
         "attack": 798,
@@ -3836,7 +3836,7 @@
     },
     {
         "name": "激流銅鑼 III",
-        "rare": null,
+        "rare": 6,
         "type": "huntingHorn",
         "series": "水屬性",
         "attack": 756,
@@ -3870,7 +3870,7 @@
     },
     {
         "name": "冰凌琴弦",
-        "rare": null,
+        "rare": 7,
         "type": "huntingHorn",
         "series": "風漂龍",
         "attack": 672,
@@ -3900,7 +3900,7 @@
     },
     {
         "name": "堅骨號角 II",
-        "rare": null,
+        "rare": 6,
         "type": "huntingHorn",
         "series": "駭骨素材",
         "attack": 798,
@@ -3934,7 +3934,7 @@
     },
     {
         "name": "岩賊龍號角 II",
-        "rare": null,
+        "rare": 7,
         "type": "huntingHorn",
         "series": "岩賊龍",
         "attack": 798,
@@ -3971,7 +3971,7 @@
     },
     {
         "name": "蠻顎龍長號 III",
-        "rare": null,
+        "rare": 6,
         "type": "huntingHorn",
         "series": "蠻顎龍",
         "attack": 882,
@@ -4001,7 +4001,7 @@
     },
     {
         "name": "曼陀羅號角 III",
-        "rare": null,
+        "rare": 6,
         "type": "huntingHorn",
         "series": "毒妖鳥",
         "attack": 714,
@@ -4038,7 +4038,7 @@
     },
     {
         "name": "浮空龍長號 III",
-        "rare": null,
+        "rare": 6,
         "type": "huntingHorn",
         "series": "浮空龍",
         "attack": 714,
@@ -4075,7 +4075,7 @@
     },
     {
         "name": "爆鱗鼓赤紅星光",
-        "rare": null,
+        "rare": 8,
         "type": "huntingHorn",
         "series": "爆鱗龍",
         "attack": 840,
@@ -4112,7 +4112,7 @@
     },
     {
         "name": "女王笛巨蜂",
-        "rare": null,
+        "rare": 7,
         "type": "huntingHorn",
         "series": "巨蜂",
         "attack": 672,
@@ -4149,7 +4149,7 @@
     },
     {
         "name": "骨鎚龍號角 III",
-        "rare": null,
+        "rare": 6,
         "type": "huntingHorn",
         "series": "骨鎚龍",
         "attack": 798,
@@ -4179,7 +4179,7 @@
     },
     {
         "name": "龍骨古笛 III",
-        "rare": null,
+        "rare": 6,
         "type": "huntingHorn",
         "series": "龍骨",
         "attack": 672,
@@ -4218,7 +4218,7 @@
     },
     {
         "name": "雷光笛 II",
-        "rare": null,
+        "rare": 7,
         "type": "huntingHorn",
         "series": "麒麟",
         "attack": 672,
@@ -4248,7 +4248,7 @@
     },
     {
         "name": "炎王豎琴",
-        "rare": null,
+        "rare": 8,
         "type": "huntingHorn",
         "series": "黑鋼",
         "attack": 798,
@@ -4278,7 +4278,7 @@
     },
     {
         "name": "冥燈龍狩獵笛",
-        "rare": null,
+        "rare": 8,
         "type": "huntingHorn",
         "series": "冥燈龍",
         "attack": 714,
@@ -4317,7 +4317,7 @@
     },
     {
         "name": "深邃之鎖",
-        "rare": null,
+        "rare": 7,
         "type": "huntingHorn",
         "series": "恐暴龍",
         "attack": 924,
@@ -4349,7 +4349,7 @@
     },
     {
         "name": "鉻鋼長槍 II",
-        "rare": null,
+        "rare": 6,
         "type": "lance",
         "series": "礦石素材",
         "attack": 414,
@@ -4386,7 +4386,7 @@
     },
     {
         "name": "亡滅之腕",
-        "rare": null,
+        "rare": 8,
         "type": "lance",
         "series": "滅盡龍",
         "attack": 483,
@@ -4422,7 +4422,7 @@
     },
     {
         "name": "風漂龍斧槍 II",
-        "rare": null,
+        "rare": 7,
         "type": "lance",
         "series": "風漂龍",
         "attack": 368,
@@ -4452,7 +4452,7 @@
     },
     {
         "name": "搔鳥尖槍 III",
-        "rare": null,
+        "rare": 6,
         "type": "lance",
         "series": "搔鳥",
         "attack": 391,
@@ -4482,7 +4482,7 @@
     },
     {
         "name": "岩賊龍刺針 II",
-        "rare": null,
+        "rare": 7,
         "type": "lance",
         "series": "岩賊龍",
         "attack": 391,
@@ -4519,7 +4519,7 @@
     },
     {
         "name": "雷光長槍 III",
-        "rare": null,
+        "rare": 6,
         "type": "lance",
         "series": "雷屬性",
         "attack": 414,
@@ -4553,7 +4553,7 @@
     },
     {
         "name": "曼陀羅長槍 III",
-        "rare": null,
+        "rare": 6,
         "type": "lance",
         "series": "毒妖鳥",
         "attack": 391,
@@ -4590,7 +4590,7 @@
     },
     {
         "name": "蒼色日珥",
-        "rare": null,
+        "rare": 8,
         "type": "lance",
         "series": "火龍",
         "attack": 437,
@@ -4624,7 +4624,7 @@
     },
     {
         "name": "堅骨槍 II",
-        "rare": null,
+        "rare": 6,
         "type": "lance",
         "series": "駭骨素材",
         "attack": 437,
@@ -4658,7 +4658,7 @@
     },
     {
         "name": "死神的哀愁",
-        "rare": null,
+        "rare": 8,
         "type": "lance",
         "series": "屍套龍",
         "attack": 460,
@@ -4694,7 +4694,7 @@
     },
     {
         "name": "黑色刺針 III",
-        "rare": null,
+        "rare": 6,
         "type": "lance",
         "series": "巨甲蟲",
         "attack": 368,
@@ -4728,7 +4728,7 @@
     },
     {
         "name": "土砂龍刺針 III",
-        "rare": null,
+        "rare": 6,
         "type": "lance",
         "series": "土砂龍",
         "attack": 460,
@@ -4765,7 +4765,7 @@
     },
     {
         "name": "慘爪刺針 II",
-        "rare": null,
+        "rare": 7,
         "type": "lance",
         "series": "慘爪龍",
         "attack": 391,
@@ -4795,7 +4795,7 @@
     },
     {
         "name": "激流尖刺 III",
-        "rare": null,
+        "rare": 6,
         "type": "lance",
         "series": "水屬性",
         "attack": 437,
@@ -4829,7 +4829,7 @@
     },
     {
         "name": "龍骨槍 III",
-        "rare": null,
+        "rare": 6,
         "type": "lance",
         "series": "龍骨",
         "attack": 368,
@@ -4868,7 +4868,7 @@
     },
     {
         "name": "爆鱗槍赤紅巨星",
-        "rare": null,
+        "rare": 8,
         "type": "lance",
         "series": "爆鱗龍",
         "attack": 460,
@@ -4898,7 +4898,7 @@
     },
     {
         "name": "雷槍【建御雷】",
-        "rare": null,
+        "rare": 8,
         "type": "lance",
         "series": "幻獸",
         "attack": 368,
@@ -4928,7 +4928,7 @@
     },
     {
         "name": "祈願鋼龍槍",
-        "rare": null,
+        "rare": 8,
         "type": "lance",
         "series": "黑鋼",
         "attack": 414,
@@ -4962,7 +4962,7 @@
     },
     {
         "name": "冥燈龍長槍",
-        "rare": null,
+        "rare": 8,
         "type": "lance",
         "series": "冥燈龍",
         "attack": 391,
@@ -5001,7 +5001,7 @@
     },
     {
         "name": "遠古巴別塔",
-        "rare": null,
+        "rare": 8,
         "type": "lance",
         "series": "工房武器",
         "attack": 460,
@@ -5035,7 +5035,7 @@
     },
     {
         "name": "亞特羅西斯塔",
-        "rare": null,
+        "rare": 7,
         "type": "lance",
         "series": "恐暴龍",
         "attack": 529,
@@ -5067,7 +5067,7 @@
     },
     {
         "name": "鉻鋼銃槍 II",
-        "rare": null,
+        "rare": 6,
         "type": "gunlance",
         "series": "礦石素材",
         "attack": 414,
@@ -5104,7 +5104,7 @@
     },
     {
         "name": "燒滅種火",
-        "rare": null,
+        "rare": 8,
         "type": "gunlance",
         "series": "滅盡龍",
         "attack": 483,
@@ -5140,7 +5140,7 @@
     },
     {
         "name": "飛雷銃槍【蜻蜓切】",
-        "rare": null,
+        "rare": 7,
         "type": "gunlance",
         "series": "飛雷龍",
         "attack": 414,
@@ -5174,7 +5174,7 @@
     },
     {
         "name": "藍色戰車",
-        "rare": null,
+        "rare": 8,
         "type": "gunlance",
         "series": "火龍",
         "attack": 437,
@@ -5208,7 +5208,7 @@
     },
     {
         "name": "皇家銃槍",
-        "rare": null,
+        "rare": 7,
         "type": "gunlance",
         "series": "雌火龍",
         "attack": 437,
@@ -5242,7 +5242,7 @@
     },
     {
         "name": "泥岩龍銃槍 III",
-        "rare": null,
+        "rare": 6,
         "type": "gunlance",
         "series": "泥魚龍",
         "attack": 437,
@@ -5276,7 +5276,7 @@
     },
     {
         "name": "風漂龍加農砲 II",
-        "rare": null,
+        "rare": 7,
         "type": "gunlance",
         "series": "風漂龍",
         "attack": 368,
@@ -5306,7 +5306,7 @@
     },
     {
         "name": "大骨銃槍【龍尾】 II",
-        "rare": null,
+        "rare": 6,
         "type": "gunlance",
         "series": "駭骨素材",
         "attack": 437,
@@ -5340,7 +5340,7 @@
     },
     {
         "name": "爆鱗龍銃槍 II",
-        "rare": null,
+        "rare": 7,
         "type": "gunlance",
         "series": "爆鱗龍",
         "attack": 460,
@@ -5374,7 +5374,7 @@
     },
     {
         "name": "牙龍銃槍【大喰】 III",
-        "rare": null,
+        "rare": 6,
         "type": "gunlance",
         "series": "大凶豺龍",
         "attack": 437,
@@ -5411,7 +5411,7 @@
     },
     {
         "name": "牙龍銃槍【黑頭巾】 III",
-        "rare": null,
+        "rare": 6,
         "type": "gunlance",
         "series": "大凶顎龍",
         "attack": 368,
@@ -5441,7 +5441,7 @@
     },
     {
         "name": "屍套龍火槍 II",
-        "rare": null,
+        "rare": 7,
         "type": "gunlance",
         "series": "屍套龍",
         "attack": 460,
@@ -5477,7 +5477,7 @@
     },
     {
         "name": "土砂龍破壞砲 III",
-        "rare": null,
+        "rare": 6,
         "type": "gunlance",
         "series": "土砂龍",
         "attack": 460,
@@ -5507,7 +5507,7 @@
     },
     {
         "name": "蠻顎龍加農砲 III",
-        "rare": null,
+        "rare": 6,
         "type": "gunlance",
         "series": "蠻顎龍",
         "attack": 483,
@@ -5537,7 +5537,7 @@
     },
     {
         "name": "龍骨銃槍 III",
-        "rare": null,
+        "rare": 6,
         "type": "gunlance",
         "series": "龍骨",
         "attack": 368,
@@ -5576,7 +5576,7 @@
     },
     {
         "name": "驚天動地熔山龍銃槍",
-        "rare": null,
+        "rare": 8,
         "type": "gunlance",
         "series": "熔山龍",
         "attack": 460,
@@ -5606,7 +5606,7 @@
     },
     {
         "name": "鋼龍爪銃槍",
-        "rare": null,
+        "rare": 8,
         "type": "gunlance",
         "series": "黑鋼",
         "attack": 414,
@@ -5640,7 +5640,7 @@
     },
     {
         "name": "冥燈龍銃槍",
-        "rare": null,
+        "rare": 8,
         "type": "gunlance",
         "series": "冥燈龍",
         "attack": 391,
@@ -5678,8 +5678,8 @@
         ]
     },
     {
-        "name": "暴銃槍格拉支利德",
-        "rare": null,
+        "name": "暴銃槍格拉古利德",
+        "rare": 7,
         "type": "gunlance",
         "series": "恐暴龍",
         "attack": 529,
@@ -5710,8 +5710,8 @@
         "slots": []
     },
     {
-        "name": "合金制完成劍斧 II",
-        "rare": null,
+        "name": "合金製完成劍斧 II",
+        "rare": 6,
         "type": "switchAxe",
         "series": "礦石素材",
         "attack": 630,
@@ -5748,7 +5748,7 @@
     },
     {
         "name": "斷滅的一閃",
-        "rare": null,
+        "rare": 8,
         "type": "switchAxe",
         "series": "滅盡龍",
         "attack": 700,
@@ -5784,7 +5784,7 @@
     },
     {
         "name": "亡靈之柱",
-        "rare": null,
+        "rare": 7,
         "type": "switchAxe",
         "series": "風漂龍",
         "attack": 560,
@@ -5814,7 +5814,7 @@
     },
     {
         "name": "雷光迅斧 III",
-        "rare": null,
+        "rare": 6,
         "type": "switchAxe",
         "series": "雷屬性",
         "attack": 630,
@@ -5848,7 +5848,7 @@
     },
     {
         "name": "動力迅斧 II",
-        "rare": null,
+        "rare": 7,
         "type": "switchAxe",
         "series": "爆鎚龍",
         "attack": 735,
@@ -5882,7 +5882,7 @@
     },
     {
         "name": "凶豺龍掠奪者 III",
-        "rare": null,
+        "rare": 6,
         "type": "switchAxe",
         "series": "大凶豺龍",
         "attack": 665,
@@ -5919,7 +5919,7 @@
     },
     {
         "name": "爆鱗龍劍斧 II",
-        "rare": null,
+        "rare": 7,
         "type": "switchAxe",
         "series": "爆鱗龍",
         "attack": 700,
@@ -5953,7 +5953,7 @@
     },
     {
         "name": "火龍斧飛龍牙 II",
-        "rare": null,
+        "rare": 7,
         "type": "switchAxe",
         "series": "火龍",
         "attack": 665,
@@ -5987,7 +5987,7 @@
     },
     {
         "name": "重擊斬斧 II",
-        "rare": null,
+        "rare": 6,
         "type": "switchAxe",
         "series": "駭骨素材",
         "attack": 665,
@@ -6016,7 +6016,7 @@
     },
     {
         "name": "屍套龍劍斧 II",
-        "rare": null,
+        "rare": 7,
         "type": "switchAxe",
         "series": "屍套龍",
         "attack": 700,
@@ -6052,7 +6052,7 @@
     },
     {
         "name": "泥岩龍劍斧 III",
-        "rare": null,
+        "rare": 7,
         "type": "switchAxe",
         "series": "泥魚龍",
         "attack": 665,
@@ -6086,7 +6086,7 @@
     },
     {
         "name": "浮空龍斬斧 III",
-        "rare": null,
+        "rare": 7,
         "type": "switchAxe",
         "series": "浮空龍",
         "attack": 595,
@@ -6120,7 +6120,7 @@
     },
     {
         "name": "土砂龍劍斧 III",
-        "rare": null,
+        "rare": 6,
         "type": "switchAxe",
         "series": "土砂龍",
         "attack": 735,
@@ -6157,7 +6157,7 @@
     },
     {
         "name": "惡靈",
-        "rare": null,
+        "rare": 8,
         "type": "switchAxe",
         "series": "角龍",
         "attack": 805,
@@ -6191,7 +6191,7 @@
     },
     {
         "name": "蠻顎劍斧",
-        "rare": null,
+        "rare": 7,
         "type": "switchAxe",
         "series": "蠻顎龍",
         "attack": 735,
@@ -6221,7 +6221,7 @@
     },
     {
         "name": "龍骨劍斧 III",
-        "rare": null,
+        "rare": 6,
         "type": "switchAxe",
         "series": "龍骨",
         "attack": 560,
@@ -6260,7 +6260,7 @@
     },
     {
         "name": "斷雷斧麒麟",
-        "rare": null,
+        "rare": 8,
         "type": "switchAxe",
         "series": "麒麟",
         "attack": 560,
@@ -6290,7 +6290,7 @@
     },
     {
         "name": "炎王城寨",
-        "rare": null,
+        "rare": 8,
         "type": "switchAxe",
         "series": "黑鋼",
         "attack": 665,
@@ -6320,7 +6320,7 @@
     },
     {
         "name": "冥燈龍劍斧",
-        "rare": null,
+        "rare": 8,
         "type": "switchAxe",
         "series": "冥燈龍",
         "attack": 595,
@@ -6359,7 +6359,7 @@
     },
     {
         "name": "恐怖暴君",
-        "rare": null,
+        "rare": 7,
         "type": "switchAxe",
         "series": "恐暴龍",
         "attack": 770,
@@ -6390,8 +6390,8 @@
         "slots": []
     },
     {
-        "name": "鉻鋼守護者 II",
-        "rare": null,
+        "name": "鉻鐵守護者 II",
+        "rare": 6,
         "type": "chargeBlade",
         "series": "礦石素材",
         "attack": 648,
@@ -6428,7 +6428,7 @@
     },
     {
         "name": "帶來毀滅的一把武器",
-        "rare": null,
+        "rare": 8,
         "type": "chargeBlade",
         "series": "滅盡龍",
         "attack": 756,
@@ -6464,7 +6464,7 @@
     },
     {
         "name": "焰斧鶴王",
-        "rare": null,
+        "rare": 7,
         "type": "chargeBlade",
         "series": "火龍",
         "attack": 684,
@@ -6498,7 +6498,7 @@
     },
     {
         "name": "深坑泥岩 III",
-        "rare": null,
+        "rare": 6,
         "type": "chargeBlade",
         "series": "泥魚龍",
         "attack": 684,
@@ -6532,7 +6532,7 @@
     },
     {
         "name": "寒霜巨人 II",
-        "rare": null,
+        "rare": 6,
         "type": "chargeBlade",
         "series": "冰屬性",
         "attack": 612,
@@ -6569,7 +6569,7 @@
     },
     {
         "name": "火鎧盾斧",
-        "rare": null,
+        "rare": 7,
         "type": "chargeBlade",
         "series": "雌火龍",
         "attack": 684,
@@ -6606,7 +6606,7 @@
     },
     {
         "name": "強骨兵裝 II",
-        "rare": null,
+        "rare": 6,
         "type": "chargeBlade",
         "series": "駭骨素材",
         "attack": 684,
@@ -6640,7 +6640,7 @@
     },
     {
         "name": "暴君銅盾 II",
-        "rare": null,
+        "rare": 7,
         "type": "chargeBlade",
         "series": "角龍",
         "attack": 828,
@@ -6670,7 +6670,7 @@
     },
     {
         "name": "凶豺龍盾斧 III",
-        "rare": null,
+        "rare": 6,
         "type": "chargeBlade",
         "series": "大凶豺龍",
         "attack": 684,
@@ -6707,7 +6707,7 @@
     },
     {
         "name": "岩賊龍盾 II",
-        "rare": null,
+        "rare": 7,
         "type": "chargeBlade",
         "series": "岩賊龍",
         "attack": 612,
@@ -6744,7 +6744,7 @@
     },
     {
         "name": "凶顎龍盾斧 III",
-        "rare": null,
+        "rare": 6,
         "type": "chargeBlade",
         "series": "大凶顎龍",
         "attack": 576,
@@ -6774,7 +6774,7 @@
     },
     {
         "name": "屍套龍盾斧 II",
-        "rare": null,
+        "rare": 7,
         "type": "chargeBlade",
         "series": "屍套龍",
         "attack": 684,
@@ -6810,7 +6810,7 @@
     },
     {
         "name": "飛雷龍之腕 III",
-        "rare": null,
+        "rare": 6,
         "type": "chargeBlade",
         "series": "飛雷龍",
         "attack": 648,
@@ -6844,7 +6844,7 @@
     },
     {
         "name": "憎【忿恨】",
-        "rare": null,
+        "rare": 8,
         "type": "chargeBlade",
         "series": "慘爪龍",
         "attack": 576,
@@ -6874,7 +6874,7 @@
     },
     {
         "name": "龍骨盾斧 III",
-        "rare": null,
+        "rare": 6,
         "type": "chargeBlade",
         "series": "龍骨",
         "attack": 576,
@@ -6913,7 +6913,7 @@
     },
     {
         "name": "捲土重來熔山龍盾斧",
-        "rare": null,
+        "rare": 8,
         "type": "chargeBlade",
         "series": "熔山龍",
         "attack": 756,
@@ -6943,7 +6943,7 @@
     },
     {
         "name": "鋼龍幻夢",
-        "rare": null,
+        "rare": 8,
         "type": "chargeBlade",
         "series": "黑鋼",
         "attack": 648,
@@ -6980,7 +6980,7 @@
     },
     {
         "name": "冥燈龍盾斧",
-        "rare": null,
+        "rare": 8,
         "type": "chargeBlade",
         "series": "冥燈龍",
         "attack": 648,
@@ -7019,7 +7019,7 @@
     },
     {
         "name": "德斯特涅塔",
-        "rare": null,
+        "rare": 7,
         "type": "chargeBlade",
         "series": "恐暴龍",
         "attack": 792,
@@ -7051,7 +7051,7 @@
     },
     {
         "name": "鉻鋼長刀 II",
-        "rare": null,
+        "rare": 6,
         "type": "insectGlaive",
         "series": "礦石素材",
         "attack": 558,
@@ -7088,7 +7088,7 @@
     },
     {
         "name": "撲滅導燈",
-        "rare": null,
+        "rare": 8,
         "type": "insectGlaive",
         "series": "滅盡龍",
         "attack": 651,
@@ -7124,7 +7124,7 @@
     },
     {
         "name": "火龍棍【炎舞】",
-        "rare": null,
+        "rare": 7,
         "type": "insectGlaive",
         "series": "火龍",
         "attack": 589,
@@ -7158,7 +7158,7 @@
     },
     {
         "name": "星空長刀 III",
-        "rare": null,
+        "rare": 6,
         "type": "insectGlaive",
         "series": "搔鳥",
         "attack": 527,
@@ -7188,7 +7188,7 @@
     },
     {
         "name": "利刃長刀 III",
-        "rare": null,
+        "rare": 6,
         "type": "insectGlaive",
         "series": "眩鳥",
         "attack": 558,
@@ -7222,7 +7222,7 @@
     },
     {
         "name": "凍寒疾風刀 II",
-        "rare": null,
+        "rare": 6,
         "type": "insectGlaive",
         "series": "冰屬性",
         "attack": 527,
@@ -7259,7 +7259,7 @@
     },
     {
         "name": "曼陀羅長刀 III",
-        "rare": null,
+        "rare": 6,
         "type": "insectGlaive",
         "series": "毒妖鳥",
         "attack": 527,
@@ -7296,7 +7296,7 @@
     },
     {
         "name": "岩賊龍長鞭 II",
-        "rare": null,
+        "rare": 7,
         "type": "insectGlaive",
         "series": "岩賊龍",
         "attack": 527,
@@ -7333,7 +7333,7 @@
     },
     {
         "name": "飛空棍 II",
-        "rare": null,
+        "rare": 6,
         "type": "insectGlaive",
         "series": "駭骨素材",
         "attack": 589,
@@ -7367,7 +7367,7 @@
     },
     {
         "name": "屍套龍操蟲棍 II",
-        "rare": null,
+        "rare": 7,
         "type": "insectGlaive",
         "series": "屍套龍",
         "attack": 620,
@@ -7402,8 +7402,8 @@
         ]
     },
     {
-        "name": "蠻顎棍翼龍杆刀",
-        "rare": null,
+        "name": "蠻顎棍翼龍桿刀",
+        "rare": 7,
         "type": "insectGlaive",
         "series": "蠻顎龍",
         "attack": 651,
@@ -7433,7 +7433,7 @@
     },
     {
         "name": "激流長刀 III",
-        "rare": null,
+        "rare": 6,
         "type": "insectGlaive",
         "series": "水屬性",
         "attack": 589,
@@ -7467,7 +7467,7 @@
     },
     {
         "name": "暴君長刀 II",
-        "rare": null,
+        "rare": 7,
         "type": "insectGlaive",
         "series": "角龍",
         "attack": 713,
@@ -7501,7 +7501,7 @@
     },
     {
         "name": "飛雷龍之柱 III",
-        "rare": null,
+        "rare": 6,
         "type": "insectGlaive",
         "series": "飛雷龍",
         "attack": 558,
@@ -7534,8 +7534,8 @@
         ]
     },
     {
-        "name": "惡【V ICE】",
-        "rare": null,
+        "name": "惡【VICE】",
+        "rare": 8,
         "type": "insectGlaive",
         "series": "慘爪龍",
         "attack": 496,
@@ -7569,7 +7569,7 @@
     },
     {
         "name": "龍骨棍 III",
-        "rare": null,
+        "rare": 6,
         "type": "insectGlaive",
         "series": "龍骨",
         "attack": 496,
@@ -7608,7 +7608,7 @@
     },
     {
         "name": "碧綠神鳴",
-        "rare": null,
+        "rare": 8,
         "type": "insectGlaive",
         "series": "麒麟",
         "attack": 496,
@@ -7638,7 +7638,7 @@
     },
     {
         "name": "冰體鋼龍棍",
-        "rare": null,
+        "rare": 8,
         "type": "insectGlaive",
         "series": "黑鋼",
         "attack": 558,
@@ -7672,7 +7672,7 @@
     },
     {
         "name": "冥燈龍長刀",
-        "rare": null,
+        "rare": 8,
         "type": "insectGlaive",
         "series": "冥燈龍",
         "attack": 558,
@@ -7711,7 +7711,7 @@
     },
     {
         "name": "污穢暴風雨",
-        "rare": null,
+        "rare": 7,
         "type": "insectGlaive",
         "series": "恐暴龍",
         "attack": 682,
@@ -7743,7 +7743,7 @@
     },
     {
         "name": "鉻鋼迅擊弩 II",
-        "rare": null,
+        "rare": 6,
         "type": "lightBowgun",
         "series": "礦石素材",
         "attack": 234,
@@ -7751,21 +7751,22 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "破滅引金",
-        "rare": null,
+        "rare": 8,
         "type": "lightBowgun",
         "series": "滅盡龍",
         "attack": 260,
@@ -7773,21 +7774,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "浮空龍颶風砲 III",
-        "rare": null,
+        "rare": 6,
         "type": "lightBowgun",
         "series": "浮空龍",
         "attack": 221,
@@ -7795,21 +7794,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "爆鱗龍颶風砲 II",
-        "rare": null,
+        "rare": 7,
         "type": "lightBowgun",
         "series": "爆鱗龍",
         "attack": 260,
@@ -7817,21 +7814,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "凶豺龍火砲 III",
-        "rare": null,
+        "rare": 6,
         "type": "lightBowgun",
         "series": "大凶豺龍",
         "attack": 247,
@@ -7839,21 +7834,22 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 2
+            }
+        ]
     },
     {
         "name": "火龍破壞砲 II",
-        "rare": null,
+        "rare": 7,
         "type": "lightBowgun",
         "series": "火龍",
         "attack": 247,
@@ -7861,21 +7857,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "雷光迅擊弩 III",
-        "rare": null,
+        "rare": 6,
         "type": "lightBowgun",
         "series": "雷屬性",
         "attack": 234,
@@ -7883,21 +7877,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "寒霜迅擊弩 II",
-        "rare": null,
+        "rare": 6,
         "type": "lightBowgun",
         "series": "冰屬性",
         "attack": 247,
@@ -7905,21 +7897,15 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
+        "elderseal": null,
         "slots": []
     },
     {
         "name": "狙擊射手 II",
-        "rare": null,
+        "rare": 6,
         "type": "lightBowgun",
         "series": "駭骨素材",
         "attack": 247,
@@ -7927,21 +7913,19 @@
         "defense": 10,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
     },
     {
         "name": "骷髏的吶喊",
-        "rare": null,
+        "rare": 8,
         "type": "lightBowgun",
         "series": "屍套龍",
         "attack": 260,
@@ -7949,21 +7933,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 2
+            }
+        ]
     },
     {
         "name": "蠻顎龍破壞砲 III",
-        "rare": null,
+        "rare": 6,
         "type": "lightBowgun",
         "series": "蠻顎龍",
         "attack": 273,
@@ -7971,21 +7953,15 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
+        "elderseal": null,
         "slots": []
     },
     {
         "name": "泥岩龍輕弩 III",
-        "rare": null,
+        "rare": 6,
         "type": "lightBowgun",
         "series": "泥魚龍",
         "attack": 247,
@@ -7993,21 +7969,22 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "熔岩輕弩 II",
-        "rare": null,
+        "rare": 7,
         "type": "lightBowgun",
         "series": "熔岩龍",
         "attack": 234,
@@ -8015,21 +7992,22 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 2
+            }
+        ]
     },
     {
         "name": "土砂龍射手 III",
-        "rare": null,
+        "rare": 6,
         "type": "lightBowgun",
         "series": "土砂龍",
         "attack": 260,
@@ -8037,21 +8015,19 @@
         "defense": 15,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "業【羯磨】",
-        "rare": null,
+        "rare": 8,
         "type": "lightBowgun",
         "series": "慘爪龍",
         "attack": 234,
@@ -8059,21 +8035,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "龍骨弩 III",
-        "rare": null,
+        "rare": 6,
         "type": "lightBowgun",
         "series": "龍骨",
         "attack": 208,
@@ -8081,21 +8055,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "大鬼島",
-        "rare": null,
+        "rare": 8,
         "type": "lightBowgun",
         "series": "工房武器",
         "attack": 221,
@@ -8103,21 +8075,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "麒麟筒【三角】",
-        "rare": null,
+        "rare": 8,
         "type": "lightBowgun",
         "series": "麒麟",
         "attack": 208,
@@ -8125,21 +8095,15 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
+        "elderseal": null,
         "slots": []
     },
     {
         "name": "鋼龍冰蜂弩",
-        "rare": null,
+        "rare": 8,
         "type": "lightBowgun",
         "series": "黑鋼",
         "attack": 234,
@@ -8147,21 +8111,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 2
+            }
+        ]
     },
     {
         "name": "冥燈龍輕弩槍",
-        "rare": null,
+        "rare": 8,
         "type": "lightBowgun",
         "series": "冥燈龍",
         "attack": 234,
@@ -8169,21 +8131,22 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 3
+            }
+        ]
     },
     {
         "name": "巨型十字槍",
-        "rare": null,
+        "rare": 8,
         "type": "lightBowgun",
         "series": "工房武器",
         "attack": 260,
@@ -8191,21 +8154,19 @@
         "defense": 20,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
     },
     {
         "name": "瘋狂的悲嘆",
-        "rare": null,
+        "rare": 7,
         "type": "lightBowgun",
         "series": "恐暴龍",
         "attack": 299,
@@ -8213,21 +8174,15 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
+        "elderseal": null,
         "slots": []
     },
     {
         "name": "鉻鋼突擊弩 II",
-        "rare": null,
+        "rare": 6,
         "type": "heavyBowgun",
         "series": "礦石素材",
         "attack": 255,
@@ -8235,21 +8190,22 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "擊滅砲火",
-        "rare": null,
+        "rare": 8,
         "type": "heavyBowgun",
         "series": "滅盡龍",
         "attack": 285,
@@ -8257,21 +8213,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "激流加農砲 III",
-        "rare": null,
+        "rare": 6,
         "type": "heavyBowgun",
         "series": "水屬性",
         "attack": 255,
@@ -8279,21 +8233,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "長尾重裝弩 III",
-        "rare": null,
+        "rare": 6,
         "type": "heavyBowgun",
         "series": "眩鳥",
         "attack": 255,
@@ -8301,21 +8253,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "冰凌薔薇",
-        "rare": null,
+        "rare": 8,
         "type": "heavyBowgun",
         "series": "風漂龍",
         "attack": 255,
@@ -8323,21 +8273,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "牙龍重弩【暴食】",
-        "rare": null,
+        "rare": 7,
         "type": "heavyBowgun",
         "series": "大凶豺龍",
         "attack": 270,
@@ -8345,21 +8293,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "蠻顎重弩黑火砲",
-        "rare": null,
+        "rare": 7,
         "type": "heavyBowgun",
         "series": "蠻顎龍",
         "attack": 300,
@@ -8367,21 +8313,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "動能發射器 II",
-        "rare": null,
+        "rare": 6,
         "type": "heavyBowgun",
         "series": "駭骨素材",
         "attack": 270,
@@ -8389,21 +8333,19 @@
         "defense": 10,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
     },
     {
         "name": "重角轟砲",
-        "rare": null,
+        "rare": 8,
         "type": "heavyBowgun",
         "series": "角龍",
         "attack": 330,
@@ -8411,21 +8353,19 @@
         "defense": 15,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "曼陀羅爆破砲 III",
-        "rare": null,
+        "rare": 6,
         "type": "heavyBowgun",
         "series": "毒妖鳥",
         "attack": 255,
@@ -8433,21 +8373,22 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "骨鎚龍加農砲 III",
-        "rare": null,
+        "rare": 6,
         "type": "heavyBowgun",
         "series": "骨鎚龍",
         "attack": 270,
@@ -8455,21 +8396,15 @@
         "defense": 20,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
+        "elderseal": null,
         "slots": []
     },
     {
         "name": "岩賊龍砲 II",
-        "rare": null,
+        "rare": 7,
         "type": "heavyBowgun",
         "series": "岩賊龍",
         "attack": 255,
@@ -8477,21 +8412,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "飛雷龍之針 III",
-        "rare": null,
+        "rare": 6,
         "type": "heavyBowgun",
         "series": "飛雷龍",
         "attack": 255,
@@ -8499,21 +8432,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "龍骨砲 III",
-        "rare": null,
+        "rare": 6,
         "type": "heavyBowgun",
         "series": "龍骨",
         "attack": 255,
@@ -8521,21 +8452,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "迅雷閃擊",
-        "rare": null,
+        "rare": 8,
         "type": "heavyBowgun",
         "series": "麒麟",
         "attack": 255,
@@ -8543,21 +8472,19 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
     },
     {
         "name": "熔山龍重弩槍 II",
-        "rare": null,
+        "rare": 7,
         "type": "heavyBowgun",
         "series": "熔山龍",
         "attack": 315,
@@ -8565,21 +8492,19 @@
         "defense": 20,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 2
+            }
+        ]
     },
     {
         "name": "炎王灼紅巨砲",
-        "rare": null,
+        "rare": 8,
         "type": "heavyBowgun",
         "series": "黑鋼",
         "attack": 270,
@@ -8587,21 +8512,15 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
+        "elderseal": null,
         "slots": []
     },
     {
         "name": "冥燈龍重弩槍",
-        "rare": null,
+        "rare": 8,
         "type": "heavyBowgun",
         "series": "冥燈龍",
         "attack": 255,
@@ -8609,21 +8528,22 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 3
+            }
+        ]
     },
     {
         "name": "黑暗左右",
-        "rare": null,
+        "rare": 7,
         "type": "heavyBowgun",
         "series": "恐暴龍",
         "attack": 345,
@@ -8631,21 +8551,15 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
+            "attack": null,
             "status": null
         },
-        "elderseal": {
-            "affinity": "high"
-        },
+        "elderseal": null,
         "slots": []
     },
     {
         "name": "合金弓 II",
-        "rare": null,
+        "rare": 6,
         "type": "bow",
         "series": "礦石素材",
         "attack": 204,
@@ -8672,7 +8586,7 @@
     },
     {
         "name": "必滅一矢",
-        "rare": null,
+        "rare": 8,
         "type": "bow",
         "series": "滅盡龍",
         "attack": 240,
@@ -8698,7 +8612,7 @@
     },
     {
         "name": "星空迅擊弓 III",
-        "rare": null,
+        "rare": 6,
         "type": "bow",
         "series": "搔鳥",
         "attack": 204,
@@ -8738,7 +8652,7 @@
     },
     {
         "name": "公主弓矢 III",
-        "rare": null,
+        "rare": 6,
         "type": "bow",
         "series": "雌火龍",
         "attack": 216,
@@ -8767,7 +8681,7 @@
     },
     {
         "name": "火龍強弓 III",
-        "rare": null,
+        "rare": 7,
         "type": "bow",
         "series": "火龍",
         "attack": 216,
@@ -8791,7 +8705,7 @@
     },
     {
         "name": "激流射手 III",
-        "rare": null,
+        "rare": 6,
         "type": "bow",
         "series": "水屬性",
         "attack": 204,
@@ -8815,7 +8729,7 @@
     },
     {
         "name": "冰凌銀蕨",
-        "rare": null,
+        "rare": 8,
         "type": "bow",
         "series": "風漂龍",
         "attack": 180,
@@ -8859,7 +8773,7 @@
     },
     {
         "name": "屍套龍弓 II",
-        "rare": null,
+        "rare": 7,
         "type": "bow",
         "series": "屍套龍",
         "attack": 228,
@@ -8912,7 +8826,7 @@
     },
     {
         "name": "曼陀羅弓 III",
-        "rare": null,
+        "rare": 6,
         "type": "bow",
         "series": "毒妖鳥",
         "attack": 204,
@@ -8939,7 +8853,7 @@
     },
     {
         "name": "蠻顎龍射手 III",
-        "rare": null,
+        "rare": 6,
         "type": "bow",
         "series": "蠻顎龍",
         "attack": 240,
@@ -8959,7 +8873,7 @@
     },
     {
         "name": "飛雷弓【羽羽矢】",
-        "rare": null,
+        "rare": 7,
         "type": "bow",
         "series": "飛雷龍",
         "attack": 204,
@@ -8983,7 +8897,7 @@
     },
     {
         "name": "龍骨弓 III",
-        "rare": null,
+        "rare": 6,
         "type": "bow",
         "series": "龍骨",
         "attack": 180,
@@ -9012,7 +8926,7 @@
     },
     {
         "name": "鋼龍強弓",
-        "rare": null,
+        "rare": 8,
         "type": "bow",
         "series": "黑鋼",
         "attack": 204,
@@ -9039,7 +8953,7 @@
     },
     {
         "name": "冥燈龍大弓",
-        "rare": null,
+        "rare": 8,
         "type": "bow",
         "series": "冥燈龍",
         "attack": 204,
@@ -9091,8 +9005,30 @@
         ]
     },
     {
+        "name": "惡棍之弓",
+        "rare": 7,
+        "type": "bow",
+        "series": "恐暴龍",
+        "attack": 276,
+        "criticalRate": -25,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "high"
+        },
+        "slots": []
+    },
+    {
         "name": "阿羅伊的戰弓",
-        "rare": null,
+        "rare": 6,
         "type": "bow",
         "series": "阿羅伊",
         "attack": 192,
@@ -9113,27 +9049,5 @@
                 "size": 3
             }
         ]
-    },
-    {
-        "name": "惡棍之弓",
-        "rare": null,
-        "type": "bow",
-        "series": "恐暴龍",
-        "attack": 276,
-        "criticalRate": -25,
-        "defense": 0,
-        "sharpness": null,
-        "element": {
-            "attack": {
-                "type": "dragon",
-                "value": 210,
-                "isHidden": false
-            },
-            "status": null
-        },
-        "elderseal": {
-            "affinity": "high"
-        },
-        "slots": []
     }
 ]

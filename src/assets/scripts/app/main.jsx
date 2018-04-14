@@ -291,36 +291,38 @@ export default class Main extends Component {
                         <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch('weapon')}}></a>
                     </div>
 
-                    <div className="col-12 mhwc-slots">
-                        {weaponInfo.slots.sort((a, b) => {
-                            return a.size < b.size;
-                        }).map((data, index) => {
-                            let jewel = null;
+                    {null !== equips.weapon.slotKeys ? (
+                        <div className="col-12 mhwc-slots">
+                            {weaponInfo.slots.sort((a, b) => {
+                                return a.size < b.size;
+                            }).map((data, index) => {
+                                let jewel = null;
 
-                            if (null !== equips.weapon.slotKeys
-                                && null !== equips.weapon.slotKeys[index]) {
+                                if (null !== equips.weapon.slotKeys
+                                    && null !== equips.weapon.slotKeys[index]) {
 
-                                jewel = DataSet.jewel.getInfo(equips.weapon.slotKeys[index]);
-                            }
+                                    jewel = DataSet.jewel.getInfo(equips.weapon.slotKeys[index]);
+                                }
 
-                            return (
-                                <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                    <div className="col-4 mhwc-name">
-                                        <span>插槽 {index + 1} - [{data.size}]</span>
+                                return (
+                                    <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                        <div className="col-4 mhwc-name">
+                                            <span>插槽 {index + 1} - [{data.size}]</span>
+                                        </div>
+                                        <div className="col-8 mhwc-value">
+                                            {null !== jewel ? (
+                                                <span>[{jewel.size}] {jewel.name}</span>
+                                            ) : (
+                                                <span>&nbsp;-&nbsp;</span>
+                                            )}
+
+                                            <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSlotSwitch('weapon', index)}}></a>
+                                        </div>
                                     </div>
-                                    <div className="col-8 mhwc-value">
-                                        {null !== jewel ? (
-                                            <span>[{jewel.size}] {jewel.name}</span>
-                                        ) : (
-                                            <span>&nbsp;-&nbsp;</span>
-                                        )}
-
-                                        <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSlotSwitch('weapon', index)}}></a>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
+                                );
+                            })}
+                        </div>
+                    ) : false}
 
                     {null !== weaponEnhances ? (
                         <div className="col-12 mhwc-enhances">
@@ -385,36 +387,38 @@ export default class Main extends Component {
                             <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch(equipType)}}></a>
                         </div>
 
-                        <div className="col-12 mhwc-slots">
-                            {equipInfo.slots.sort((a, b) => {
-                                return a.size < b.size;
-                            }).map((data, index) => {
-                                let jewel = null;
+                        {null !== equips[equipType].slotKeys ? (
+                            <div className="col-12 mhwc-slots">
+                                {equipInfo.slots.sort((a, b) => {
+                                    return a.size < b.size;
+                                }).map((data, index) => {
+                                    let jewel = null;
 
-                                if (null !== equips.weapon.slotKeys
-                                    && null !== equips.weapon.slotKeys[index]) {
+                                    if (null !== equips[equipType].slotKeys
+                                        && null !== equips[equipType].slotKeys[index]) {
 
-                                    jewel = DataSet.jewel.getInfo(equips.weapon.slotKeys[index])
-                                }
+                                        jewel = DataSet.jewel.getInfo(equips[equipType].slotKeys[index])
+                                    }
 
-                                return (
-                                    <div key={data.key + '_' + index} className="row mhwc-jewel">
-                                        <div className="col-4 mhwc-name">
-                                            <span>插槽 {index + 1} - [{data.size}]</span>
+                                    return (
+                                        <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                            <div className="col-4 mhwc-name">
+                                                <span>插槽 {index + 1} - [{data.size}]</span>
+                                            </div>
+                                            <div className="col-8 mhwc-value">
+                                                {null !== jewel ? (
+                                                    <span>[{jewel.size}] {jewel.name}</span>
+                                                ) : (
+                                                    <span>&nbsp;-&nbsp;</span>
+                                                )}
+
+                                                <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSlotSwitch(equipType, index)}}></a>
+                                            </div>
                                         </div>
-                                        <div className="col-8 mhwc-value">
-                                            {null !== jewel ? (
-                                                <span>[{jewel.size}] {jewel.name}</span>
-                                            ) : (
-                                                <span>&nbsp;-&nbsp;</span>
-                                            )}
-
-                                            <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSlotSwitch(equipType, index)}}></a>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
+                                    );
+                                })}
+                            </div>
+                        ) : false}
                     </div>
                 ) );
             } else {

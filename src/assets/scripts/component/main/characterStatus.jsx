@@ -134,6 +134,10 @@ export default class CharacterStatus extends Component {
 
         // Skills from Slots
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+            if (null === equips[equipType].slotKeys) {
+                return false;
+            }
+
             Object.values(equips[equipType].slotKeys).map((slotKey) => {
                 if (null === slotKey) {
                     return false;
@@ -362,20 +366,33 @@ export default class CharacterStatus extends Component {
                     <span>{status.attack}</span>
                 </div>
             </div>
-        ), (
-            <div key="element" className="row mhwc-item mhwc-element">
+        ), (null !== status.element.attack) ? (
+            <div key="elementAttack" className="row mhwc-item mhwc-element_attack">
                 <div className="col-4 mhwc-name">
-                    <span>{Lang[status.element.type]}屬性</span>
+                    <span>{Lang[status.element.attack.type]}屬性</span>
                 </div>
                 <div className="col-8 mhwc-value">
-                    {status.element.isHidden ? (
-                        <span>({status.element.value})</span>
+                    {status.element.attack.isHidden ? (
+                        <span>({status.element.attack.value})</span>
                     ) : (
-                        <span>{status.element.value}</span>
+                        <span>{status.element.attack.value}</span>
                     )}
                 </div>
             </div>
-        ), (null !== status.elderseal) ? (
+        ) : false, (null !== status.element.status) ? (
+            <div key="elementStatus" className="row mhwc-item mhwc-element_status">
+                <div className="col-4 mhwc-name">
+                    <span>{Lang[status.element.status.type]}屬性</span>
+                </div>
+                <div className="col-8 mhwc-value">
+                    {status.element.status.isHidden ? (
+                        <span>({status.element.status.value})</span>
+                    ) : (
+                        <span>{status.element.status.value}</span>
+                    )}
+                </div>
+            </div>
+        ) : false, (null !== status.elderseal) ? (
             <div key="elderseal" className="row mhwc-item mhwc-elderseal">
                 <div className="col-4 mhwc-name">
                     <span>龍封力</span>
