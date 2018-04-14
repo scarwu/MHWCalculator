@@ -1,7 +1,7 @@
 [
     {
         "name": "鉻鋼剃刀 II",
-        "rare": null,
+        "rare": 6,
         "type": "greatSword",
         "series": "礦石素材",
         "attack": 864,
@@ -19,9 +19,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 420,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 420,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -35,7 +38,7 @@
     },
     {
         "name": "滅鬼凶器",
-        "rare": null,
+        "rare": 8,
         "type": "greatSword",
         "series": "滅盡龍",
         "attack": 1008,
@@ -53,9 +56,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -68,7 +74,7 @@
     },
     {
         "name": "雷光懲罰者 III",
-        "rare": null,
+        "rare": 6,
         "type": "greatSword",
         "series": "雷屬性",
         "attack": 912,
@@ -86,9 +92,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -99,7 +108,7 @@
     },
     {
         "name": "霜炎 II",
-        "rare": null,
+        "rare": 6,
         "type": "greatSword",
         "series": "冰屬性",
         "attack": 768,
@@ -117,9 +126,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 390,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 390,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -130,7 +142,7 @@
     },
     {
         "name": "凶豺龍鉤爪 III",
-        "rare": null,
+        "rare": 6,
         "type": "greatSword",
         "series": "大凶豺龍",
         "attack": 912,
@@ -148,9 +160,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 300,
-            "isHidden": true
+            "attack": {
+                "type": "water",
+                "value": 300,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -164,7 +179,7 @@
     },
     {
         "name": "馬拉多之鐵 III",
-        "rare": null,
+        "rare": 6,
         "type": "greatSword",
         "series": "大凶顎龍",
         "attack": 768,
@@ -182,16 +197,19 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 450,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 450,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "熔岩之炎 II",
-        "rare": null,
+        "rare": 7,
         "type": "greatSword",
         "series": "熔岩龍",
         "attack": 864,
@@ -209,9 +227,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 330,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 330,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -225,7 +246,7 @@
     },
     {
         "name": "曼陀羅之炎 III",
-        "rare": null,
+        "rare": 6,
         "type": "greatSword",
         "series": "毒妖鳥",
         "attack": 816,
@@ -243,9 +264,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 540,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 540,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -259,7 +283,7 @@
     },
     {
         "name": "火龍煌劍",
-        "rare": null,
+        "rare": 8,
         "type": "greatSword",
         "series": "火龍",
         "attack": 912,
@@ -277,9 +301,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -290,7 +317,7 @@
     },
     {
         "name": "大龍顎 II",
-        "rare": null,
+        "rare": 6,
         "type": "greatSword",
         "series": "駭骨素材",
         "attack": 912,
@@ -308,9 +335,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 300,
-            "isHidden": true
+            "attack": {
+                "type": "ice",
+                "value": 300,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -321,7 +351,7 @@
     },
     {
         "name": "魔物的憤怒",
-        "rare": null,
+        "rare": 8,
         "type": "greatSword",
         "series": "屍套龍",
         "attack": 960,
@@ -339,9 +369,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 300,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 300,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "medium"
@@ -354,7 +387,7 @@
     },
     {
         "name": "蠻顎大劍",
-        "rare": null,
+        "rare": 7,
         "type": "greatSword",
         "series": "蠻顎龍",
         "attack": 1008,
@@ -372,16 +405,19 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 480,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 480,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "激流巨像 III",
-        "rare": null,
+        "rare": 6,
         "type": "greatSword",
         "series": "水屬性",
         "attack": 912,
@@ -399,9 +435,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 300,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 300,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -412,7 +451,7 @@
     },
     {
         "name": "土砂龍粉碎者 III",
-        "rare": null,
+        "rare": 6,
         "type": "hammer",
         "series": "土砂龍",
         "attack": 1040,
@@ -430,9 +469,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 390,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 390,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -446,7 +488,7 @@
     },
     {
         "name": "塊劍拉多巴爾喀 III",
-        "rare": null,
+        "rare": 6,
         "type": "greatSword",
         "series": "骨鎚龍",
         "attack": 912,
@@ -464,16 +506,19 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 270,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 270,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "龍骨大劍 III",
-        "rare": null,
+        "rare": 6,
         "type": "greatSword",
         "series": "龍骨",
         "attack": 768,
@@ -491,9 +536,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 420,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 420,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -509,7 +557,7 @@
     },
     {
         "name": "召雷劍【麒麟王】",
-        "rare": null,
+        "rare": 8,
         "type": "greatSword",
         "series": "幻獸",
         "attack": 768,
@@ -527,16 +575,19 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 540,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 540,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "熔山龍大劍 II",
-        "rare": null,
+        "rare": 7,
         "type": "greatSword",
         "series": "熔山龍",
         "attack": 1056,
@@ -554,9 +605,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 420,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 420,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -567,7 +621,7 @@
     },
     {
         "name": "鋼龍凍大劍",
-        "rare": null,
+        "rare": 8,
         "type": "greatSword",
         "series": "黑鋼",
         "attack": 864,
@@ -585,9 +639,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -598,7 +655,7 @@
     },
     {
         "name": "冥燈龍大劍",
-        "rare": null,
+        "rare": 8,
         "type": "greatSword",
         "series": "冥燈龍",
         "attack": 816,
@@ -616,9 +673,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -634,7 +694,7 @@
     },
     {
         "name": "龍顎劍【大牙】",
-        "rare": null,
+        "rare": 8,
         "type": "greatSword",
         "series": "工房武器",
         "attack": 960,
@@ -652,9 +712,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 330,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 330,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -665,7 +728,7 @@
     },
     {
         "name": "痛苦之劍",
-        "rare": null,
+        "rare": 7,
         "type": "greatSword",
         "series": "恐暴龍",
         "attack": 1104,
@@ -683,9 +746,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -712,9 +778,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 510,
-            "isHidden": true
+            "attack": {
+                "type": "fire",
+                "value": 510,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -728,7 +797,7 @@
     },
     {
         "name": "鐵刀【神樂】 II",
-        "rare": null,
+        "rare": 6,
         "type": "longSword",
         "series": "礦石素材",
         "attack": 594,
@@ -746,9 +815,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 180,
-            "isHidden": true
+            "attack": {
+                "type": "water",
+                "value": 180,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -762,7 +834,7 @@
     },
     {
         "name": "滅盡一刀",
-        "rare": null,
+        "rare": 8,
         "type": "longSword",
         "series": "滅盡龍",
         "attack": 693,
@@ -780,9 +852,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 120,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 120,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -795,7 +870,7 @@
     },
     {
         "name": "眩惑刀【閃】 III",
-        "rare": null,
+        "rare": 6,
         "type": "longSword",
         "series": "眩鳥",
         "attack": 594,
@@ -813,9 +888,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 360,
-            "isHidden": true
+            "attack": {
+                "type": "thunder",
+                "value": 360,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -826,7 +904,7 @@
     },
     {
         "name": "星空迅刀 III",
-        "rare": null,
+        "rare": 6,
         "type": "longSword",
         "series": "搔鳥",
         "attack": 561,
@@ -844,16 +922,19 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 270,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 270,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "爆鎚太刀 II",
-        "rare": null,
+        "rare": 7,
         "type": "longSword",
         "series": "爆鎚龍",
         "attack": 660,
@@ -871,9 +952,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 120,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 120,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -887,7 +971,7 @@
     },
     {
         "name": "飛龍刀【葵】",
-        "rare": null,
+        "rare": 7,
         "type": "longSword",
         "series": "雌火龍",
         "attack": 627,
@@ -905,9 +989,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 330,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 330,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -918,7 +1005,7 @@
     },
     {
         "name": "飛龍刀【藍染】",
-        "rare": null,
+        "rare": 8,
         "type": "longSword",
         "series": "火龍",
         "attack": 627,
@@ -936,9 +1023,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -949,7 +1039,7 @@
     },
     {
         "name": "骨鐮 II",
-        "rare": null,
+        "rare": 6,
         "type": "longSword",
         "series": "駭骨素材",
         "attack": 627,
@@ -967,9 +1057,12 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 270,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 270,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -980,7 +1073,7 @@
     },
     {
         "name": "爆鱗刀赤紅利刃",
-        "rare": null,
+        "rare": 8,
         "type": "longSword",
         "series": "爆鱗龍",
         "attack": 660,
@@ -998,9 +1091,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 210,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 210,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -1014,7 +1110,7 @@
     },
     {
         "name": "蠻顎龍偃月刀 III",
-        "rare": null,
+        "rare": 6,
         "type": "longSword",
         "series": "蠻顎龍",
         "attack": 693,
@@ -1032,16 +1128,19 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 390,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 390,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "深土太刀 III",
-        "rare": null,
+        "rare": 6,
         "type": "longSword",
         "series": "泥魚龍",
         "attack": 627,
@@ -1059,9 +1158,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 360,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 360,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -1072,7 +1174,7 @@
     },
     {
         "name": "屍套龍太刀 II",
-        "rare": null,
+        "rare": 7,
         "type": "longSword",
         "series": "屍套龍",
         "attack": 660,
@@ -1090,9 +1192,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "medium"
@@ -1105,7 +1210,7 @@
     },
     {
         "name": "飛雷龍之牙 III",
-        "rare": null,
+        "rare": 6,
         "type": "longSword",
         "series": "飛雷龍",
         "attack": 594,
@@ -1123,9 +1228,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -1136,7 +1244,7 @@
     },
     {
         "name": "幻光刀",
-        "rare": null,
+        "rare": 8,
         "type": "longSword",
         "series": "風漂龍",
         "attack": 528,
@@ -1154,16 +1262,19 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 360,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 360,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "黑色偃月刀 III",
-        "rare": null,
+        "rare": 6,
         "type": "longSword",
         "series": "巨甲蟲",
         "attack": 528,
@@ -1181,9 +1292,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 240,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 240,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -1194,7 +1308,7 @@
     },
     {
         "name": "龍骨刀 III",
-        "rare": null,
+        "rare": 6,
         "type": "longSword",
         "series": "龍骨",
         "attack": 528,
@@ -1212,9 +1326,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 420,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 420,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -1227,7 +1344,7 @@
     },
     {
         "name": "熔山龍太刀 II",
-        "rare": null,
+        "rare": 7,
         "type": "longSword",
         "series": "熔山龍",
         "attack": 726,
@@ -1245,9 +1362,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 360,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 360,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -1258,7 +1378,7 @@
     },
     {
         "name": "帝王刀【陽炎】",
-        "rare": null,
+        "rare": 8,
         "type": "longSword",
         "series": "黑鋼",
         "attack": 627,
@@ -1276,16 +1396,19 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 300,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 300,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "冥燈龍太刀",
-        "rare": null,
+        "rare": 8,
         "type": "longSword",
         "series": "冥燈龍",
         "attack": 594,
@@ -1303,9 +1426,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -1321,7 +1447,7 @@
     },
     {
         "name": "天上天下無雙刀",
-        "rare": null,
+        "rare": 8,
         "type": "longSword",
         "series": "工房武器",
         "attack": 693,
@@ -1339,9 +1465,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": true
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -1354,7 +1483,7 @@
     },
     {
         "name": "悲慘痛苦太刀",
-        "rare": null,
+        "rare": 7,
         "type": "longSword",
         "series": "恐暴龍",
         "attack": 759,
@@ -1372,9 +1501,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -1383,7 +1515,7 @@
     },
     {
         "name": "鉻鋼切刀 II",
-        "rare": null,
+        "rare": 6,
         "type": "swordAndShield",
         "series": "礦石素材",
         "attack": 252,
@@ -1401,9 +1533,12 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 240,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 240,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -1417,7 +1552,7 @@
     },
     {
         "name": "毀滅之尖兵",
-        "rare": null,
+        "rare": 8,
         "type": "swordAndShield",
         "series": "滅盡龍",
         "attack": 294,
@@ -1435,9 +1570,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -1450,7 +1588,7 @@
     },
     {
         "name": "日冕短劍",
-        "rare": null,
+        "rare": 7,
         "type": "swordAndShield",
         "series": "火龍",
         "attack": 266,
@@ -1468,9 +1606,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -1481,7 +1622,7 @@
     },
     {
         "name": "至尊劍",
-        "rare": null,
+        "rare": 7,
         "type": "swordAndShield",
         "series": "工房武器",
         "attack": 280,
@@ -1499,9 +1640,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 330,
-            "isHidden": true
+            "attack": {
+                "type": "thunder",
+                "value": 330,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -1511,69 +1655,8 @@
         ]
     },
     {
-        "name": "盛開曼陀羅 III",
-        "rare": null,
-        "type": "swordAndShield",
-        "series": "毒妖鳥",
-        "attack": 238,
-        "criticalRate": 0,
-        "defense": 0,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 90,
-                "orange": 120,
-                "yellow": 40,
-                "green": 50,
-                "blue": 100,
-                "white": 0
-            }
-        },
-        "element": {
-            "type": "posion",
-            "value": 390,
-            "isHidden": false
-        },
-        "elderseal": null,
-        "slots": [
-            {
-                "size": 2
-            },
-            {
-                "size": 1
-            }
-        ]
-    },
-    {
-        "name": "瑪拉多戰斧 III",
-        "rare": null,
-        "type": "swordAndShield",
-        "series": "大凶顎龍",
-        "attack": 224,
-        "criticalRate": 20,
-        "defense": 0,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 80,
-                "orange": 50,
-                "yellow": 60,
-                "green": 120,
-                "blue": 50,
-                "white": 40
-            }
-        },
-        "element": {
-            "type": "paralysis",
-            "value": 240,
-            "isHidden": false
-        },
-        "elderseal": null,
-        "slots": []
-    },
-    {
         "name": "洶湧奔流 III",
-        "rare": null,
+        "rare": 6,
         "type": "swordAndShield",
         "series": "水屬性",
         "attack": 252,
@@ -1591,9 +1674,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -1604,7 +1690,7 @@
     },
     {
         "name": "冰凌三星劍",
-        "rare": null,
+        "rare": 8,
         "type": "swordAndShield",
         "series": "風漂龍",
         "attack": 224,
@@ -1622,9 +1708,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 330,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 330,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -1635,7 +1724,7 @@
     },
     {
         "name": "皇家薔薇",
-        "rare": null,
+        "rare": 7,
         "type": "swordAndShield",
         "series": "雌火龍",
         "attack": 266,
@@ -1653,9 +1742,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 240,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 240,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -1666,7 +1758,7 @@
     },
     {
         "name": "浮空龍戰斧 III",
-        "rare": null,
+        "rare": 6,
         "type": "swordAndShield",
         "series": "浮空龍",
         "attack": 238,
@@ -1684,9 +1776,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 330,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 330,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -1699,8 +1794,75 @@
         ]
     },
     {
+        "name": "盛開曼陀羅 III",
+        "rare": 6,
+        "type": "swordAndShield",
+        "series": "毒妖鳥",
+        "attack": 238,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 90,
+                "orange": 120,
+                "yellow": 40,
+                "green": 50,
+                "blue": 100,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 390,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
+        "name": "瑪拉多戰斧 III",
+        "rare": 6,
+        "type": "swordAndShield",
+        "series": "大凶顎龍",
+        "attack": 224,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 80,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 50,
+                "white": 40
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 240,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
         "name": "大地巴龍刀 II",
-        "rare": null,
+        "rare": 6,
         "type": "swordAndShield",
         "series": "駭骨素材",
         "attack": 266,
@@ -1718,9 +1880,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 300,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 300,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -1731,7 +1896,7 @@
     },
     {
         "name": "骨鎚龍棍棒 III",
-        "rare": null,
+        "rare": 6,
         "type": "swordAndShield",
         "series": "骨鎚龍",
         "attack": 266,
@@ -1749,41 +1914,21 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 210,
-            "isHidden": false
-        },
-        "elderseal": null,
-        "slots": []
-    },
-    {
-        "name": "凶豺龍銳劍 III",
-        "rare": null,
-        "type": "swordAndShield",
-        "series": "大凶豺龍",
-        "attack": 210,
-        "criticalRate": 0,
-        "defense": 0,
-        "sharpness": {
-            "value": 250,
-            "steps": {
-                "red": 80,
-                "orange": 70,
-                "yellow": 30,
-                "green": 120,
-                "blue": 0,
-                "white": 0
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 210,
+                "isHidden": false
             }
         },
-        "element": null,
         "elderseal": null,
         "slots": []
     },
     {
         "name": "凶豺龍棍棒 III",
-        "rare": null,
+        "rare": 6,
         "type": "swordAndShield",
-        "series": "凶豺龍",
+        "series": "大凶豺龍",
         "attack": 266,
         "criticalRate": 0,
         "defense": 0,
@@ -1799,9 +1944,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 360,
-            "isHidden": true
+            "attack": {
+                "type": "water",
+                "value": 360,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -1815,7 +1963,7 @@
     },
     {
         "name": "雷光戰狂 III",
-        "rare": null,
+        "rare": 6,
         "type": "swordAndShield",
         "series": "雷屬性",
         "attack": 266,
@@ -1833,9 +1981,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -1846,7 +1997,7 @@
     },
     {
         "name": "土砂龍棍棒 III",
-        "rare": null,
+        "rare": 6,
         "type": "swordAndShield",
         "series": "土砂龍",
         "attack": 294,
@@ -1864,9 +2015,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 180,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 180,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -1880,7 +2034,7 @@
     },
     {
         "name": "蠻顎龍追尋者",
-        "rare": null,
+        "rare": 7,
         "type": "swordAndShield",
         "series": "蠻顎龍",
         "attack": 294,
@@ -1898,16 +2052,19 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "龍骨劍 III",
-        "rare": null,
+        "rare": 6,
         "type": "swordAndShield",
         "series": "龍骨",
         "attack": 196,
@@ -1925,9 +2082,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 450,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 450,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -1940,7 +2100,7 @@
     },
     {
         "name": "雷光刀 II",
-        "rare": null,
+        "rare": 7,
         "type": "swordAndShield",
         "series": "幻獸",
         "attack": 224,
@@ -1958,16 +2118,19 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 300,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 300,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "炎王紋章",
-        "rare": null,
+        "rare": 8,
         "type": "swordAndShield",
         "series": "黑鋼",
         "attack": 266,
@@ -1985,18 +2148,21 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 240,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 240,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
     },
     {
-        "name": "冥燈龍劍 I",
-        "rare": null,
+        "name": "冥燈龍劍",
+        "rare": 8,
         "type": "swordAndShield",
-        "series": "冥燈龍劍",
+        "series": "冥燈龍",
         "attack": 238,
         "criticalRate": 15,
         "defense": 0,
@@ -2012,9 +2178,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -2029,8 +2198,8 @@
         ]
     },
     {
-        "name": "致命寬劍 II",
-        "rare": null,
+        "name": "致命寬劍",
+        "rare": 7,
         "type": "swordAndShield",
         "series": "恐暴龍",
         "attack": 308,
@@ -2048,9 +2217,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -2059,7 +2231,7 @@
     },
     {
         "name": "鉻鋼雙刀 II",
-        "rare": null,
+        "rare": 6,
         "type": "dualSlades",
         "series": "鑛石素材",
         "attack": 252,
@@ -2077,9 +2249,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 270,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 270,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -2093,7 +2268,7 @@
     },
     {
         "name": "殘滅之爪。",
-        "rare": null,
+        "rare": 8,
         "type": "dualSlades",
         "series": "滅盡龍",
         "attack": 294,
@@ -2111,9 +2286,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 120,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 120,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -2126,7 +2304,7 @@
     },
     {
         "name": "決鬥者對劍 III",
-        "rare": null,
+        "rare": 6,
         "type": "dualSlades",
         "series": "眩鳥",
         "attack": 252,
@@ -2144,9 +2322,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 210,
-            "isHidden": true
+            "attack": {
+                "type": "thunder",
+                "value": 210,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -2157,7 +2338,7 @@
     },
     {
         "name": "爆鱗雙斧赤紅巨星",
-        "rare": null,
+        "rare": 8,
         "type": "dualSlades",
         "series": "爆鱗龍",
         "attack": 280,
@@ -2175,9 +2356,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 150,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 150,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -2188,7 +2372,7 @@
     },
     {
         "name": "冰結鏈劍 II",
-        "rare": null,
+        "rare": 6,
         "type": "dualSlades",
         "series": "冰屬系",
         "attack": 252,
@@ -2206,9 +2390,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -2219,7 +2406,7 @@
     },
     {
         "name": "奧秘雙劍 III",
-        "rare": null,
+        "rare": 6,
         "type": "dualSlades",
         "series": "搔鳥",
         "attack": 238,
@@ -2237,16 +2424,19 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 120,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 120,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "神聖佩劍",
-        "rare": null,
+        "rare": 7,
         "type": "dualSlades",
         "series": "工房武器",
         "attack": 252,
@@ -2264,9 +2454,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 120,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 120,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -2277,7 +2470,7 @@
     },
     {
         "name": "強斧 II",
-        "rare": null,
+        "rare": 6,
         "type": "dualSlades",
         "series": "駭骨素材",
         "attack": 266,
@@ -2295,9 +2488,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 180,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 180,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -2308,7 +2504,7 @@
     },
     {
         "name": "蠻顎龍颶風 III",
-        "rare": null,
+        "rare": 7,
         "type": "dualSlades",
         "series": "蠻顎龍",
         "attack": 294,
@@ -2326,16 +2522,19 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "爆鎚棍棒 II",
-        "rare": null,
+        "rare": 7,
         "type": "dualSlades",
         "series": "角龍",
         "attack": 322,
@@ -2353,9 +2552,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 90,
-            "isHidden": true
+            "attack": {
+                "type": "ice",
+                "value": 90,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -2366,7 +2568,7 @@
     },
     {
         "name": "泥岩龍斬斧 III",
-        "rare": null,
+        "rare": 6,
         "type": "dualSlades",
         "series": "泥魚龍",
         "attack": 266,
@@ -2384,9 +2586,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -2397,7 +2602,7 @@
     },
     {
         "name": "溶岩颶風 II",
-        "rare": null,
+        "rare": 7,
         "type": "dualSlades",
         "series": "溶岩龍",
         "attack": 252,
@@ -2415,9 +2620,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -2431,7 +2639,7 @@
     },
     {
         "name": "黑色收割者 III",
-        "rare": null,
+        "rare": 6,
         "type": "dualSlades",
         "series": "巨甲蟲",
         "attack": 224,
@@ -2449,9 +2657,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 90,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 90,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -2462,7 +2673,7 @@
     },
     {
         "name": "飛雷龍之爪 III",
-        "rare": null,
+        "rare": 6,
         "type": "dualSlades",
         "series": "飛雷龍",
         "attack": 252,
@@ -2480,9 +2691,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -2493,7 +2707,7 @@
     },
     {
         "name": "罪【真】",
-        "rare": null,
+        "rare": 8,
         "type": "dualSlades",
         "series": "慘爪龍",
         "attack": 224,
@@ -2511,16 +2725,19 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 180,
-            "isHidden": true
+            "attack": {
+                "type": "fire",
+                "value": 180,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "封龍劍【超絕一門】",
-        "rare": null,
+        "rare": 7,
         "type": "dualSlades",
         "series": "龍骨",
         "attack": 196,
@@ -2538,9 +2755,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -2556,7 +2776,7 @@
     },
     {
         "name": "迅雷",
-        "rare": null,
+        "rare": 8,
         "type": "dualSlades",
         "series": "幻獸",
         "attack": 224,
@@ -2574,16 +2794,19 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "熔山龍鉤爪 II",
-        "rare": null,
+        "rare": 7,
         "type": "dualSlades",
         "series": "熔山龍",
         "attack": 308,
@@ -2601,9 +2824,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 210,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 210,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -2614,7 +2840,7 @@
     },
     {
         "name": "冰炎劍維爾瑪閃焰",
-        "rare": null,
+        "rare": 8,
         "type": "dualSlades",
         "series": "黑鋼",
         "attack": 252,
@@ -2632,9 +2858,16 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": {
+                "type": "blast",
+                "value": 240,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -2645,7 +2878,7 @@
     },
     {
         "name": "冥燈龍雙劍",
-        "rare": null,
+        "rare": 8,
         "type": "dualSlades",
         "series": "冥燈龍",
         "attack": 238,
@@ -2663,9 +2896,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -2681,7 +2917,7 @@
     },
     {
         "name": "憤怒捕食者",
-        "rare": null,
+        "rare": 7,
         "type": "dualSlades",
         "series": "恐暴龍",
         "attack": 308,
@@ -2699,9 +2935,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -2710,7 +2949,7 @@
     },
     {
         "name": "大鬼鐵 II",
-        "rare": null,
+        "rare": 6,
         "type": "hammer",
         "series": "礦石素材",
         "attack": 936,
@@ -2728,9 +2967,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 270,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 270,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -2744,7 +2986,7 @@
     },
     {
         "name": "潰滅一擊",
-        "rare": null,
+        "rare": 8,
         "type": "hammer",
         "series": "滅盡龍",
         "attack": 1092,
@@ -2762,9 +3004,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 120,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 120,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -2795,9 +3040,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 450,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 450,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -2808,7 +3056,7 @@
     },
     {
         "name": "激流強鎚 III",
-        "rare": null,
+        "rare": 6,
         "type": "hammer",
         "series": "水屬性",
         "attack": 936,
@@ -2826,9 +3074,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -2839,7 +3090,7 @@
     },
     {
         "name": "馬拉多戰鎚 III",
-        "rare": null,
+        "rare": 6,
         "type": "hammer",
         "series": "大凶顎龍",
         "attack": 832,
@@ -2857,16 +3108,19 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 390,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 390,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "花之女神",
-        "rare": null,
+        "rare": 7,
         "type": "hammer",
         "series": "毒妖鳥",
         "attack": 936,
@@ -2884,9 +3138,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 540,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 540,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -2900,7 +3157,7 @@
     },
     {
         "name": "雷光強鎚 III",
-        "rare": null,
+        "rare": 6,
         "type": "hammer",
         "series": "雷屬性",
         "attack": 988,
@@ -2918,9 +3175,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 300,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 300,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -2931,7 +3191,7 @@
     },
     {
         "name": "大地之岩 II",
-        "rare": null,
+        "rare": 6,
         "type": "hammer",
         "series": "駭骨素材",
         "attack": 988,
@@ -2949,9 +3209,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 420,
-            "isHidden": true
+            "attack": {
+                "type": "thunder",
+                "value": 420,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -2962,7 +3225,7 @@
     },
     {
         "name": "惡靈禍根",
-        "rare": null,
+        "rare": 8,
         "type": "hammer",
         "series": "屍套龍",
         "attack": 1040,
@@ -2980,9 +3243,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "medium"
@@ -2995,7 +3261,7 @@
     },
     {
         "name": "骨鎚龍擊鎚 III",
-        "rare": null,
+        "rare": 6,
         "type": "hammer",
         "series": "骨鎚龍",
         "attack": 988,
@@ -3013,16 +3279,19 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 270,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 270,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "爆鎚粉碎者 II",
-        "rare": null,
+        "rare": 7,
         "type": "hammer",
         "series": "爆鎚龍",
         "attack": 1092,
@@ -3040,9 +3309,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 120,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 120,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -3053,7 +3325,7 @@
     },
     {
         "name": "衝擊釘鎚 III",
-        "rare": null,
+        "rare": 6,
         "type": "hammer",
         "series": "搔鳥",
         "attack": 884,
@@ -3071,16 +3343,19 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 360,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 360,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "爆鎚戰鎚 II",
-        "rare": null,
+        "rare": 7,
         "type": "hammer",
         "series": "角龍",
         "attack": 1196,
@@ -3098,9 +3373,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 150,
-            "isHidden": true
+            "attack": {
+                "type": "ice",
+                "value": 150,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -3110,13 +3388,50 @@
         ]
     },
     {
+        "name": "土砂龍粉碎者 III",
+        "rare": 6,
+        "type": "hammer",
+        "series": "土砂龍",
+        "attack": 1040,
+        "criticalRate": -10,
+        "defense": 15,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 120,
+                "yellow": 40,
+                "green": 50,
+                "blue": 80,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 390,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
         "name": "蠻顎龍戰鎚 III",
-        "rare": null,
+        "rare": 6,
         "type": "hammer",
         "series": "蠻顎龍",
         "attack": 1092,
         "criticalRate": -20,
-        "defense": 15,
+        "defense": 0,
         "sharpness": {
             "value": 350,
             "steps": {
@@ -3129,16 +3444,19 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 450,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 450,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
     },
     {
         "name": "龍骨大鎚 III",
-        "rare": null,
+        "rare": 6,
         "type": "hammer",
         "series": "龍骨",
         "attack": 832,
@@ -3156,9 +3474,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 420,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 420,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -3171,7 +3492,7 @@
     },
     {
         "name": "活火爆發熔山龍爆鎚",
-        "rare": null,
+        "rare": 8,
         "type": "hammer",
         "series": "熔山龍",
         "attack": 1144,
@@ -3189,9 +3510,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 420,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 420,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -3202,7 +3526,7 @@
     },
     {
         "name": "巨大鋼龍錘",
-        "rare": null,
+        "rare": 8,
         "type": "hammer",
         "series": "黑鋼",
         "attack": 1040,
@@ -3220,9 +3544,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -3233,7 +3560,7 @@
     },
     {
         "name": "冥燈龍大鎚",
-        "rare": null,
+        "rare": 8,
         "type": "hammer",
         "series": "冥燈龍",
         "attack": 884,
@@ -3251,9 +3578,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -3269,7 +3599,7 @@
     },
     {
         "name": "電擊鎚",
-        "rare": null,
+        "rare": 8,
         "type": "hammer",
         "series": "工房武器",
         "attack": 936,
@@ -3287,9 +3617,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 210,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 210,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -3300,7 +3633,7 @@
     },
     {
         "name": "混沌之鎚",
-        "rare": null,
+        "rare": 7,
         "type": "hammer",
         "series": "恐暴龍",
         "attack": 1196,
@@ -3318,9 +3651,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -3347,9 +3683,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 270,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 270,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -3381,9 +3720,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -3414,9 +3756,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -3445,9 +3790,12 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 360,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 360,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": []
@@ -3472,9 +3820,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -3503,9 +3854,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -3534,9 +3888,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 360,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 360,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -3561,9 +3918,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 240,
-            "isHidden": true
+            "attack": {
+                "type": "ice",
+                "value": 240,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -3592,9 +3952,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 150,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 150,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -3626,9 +3989,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 450,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 450,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -3653,9 +4019,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 540,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 540,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -3687,9 +4056,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 570,
-            "isHidden": true
+            "attack": {
+                "type": "water",
+                "value": 570,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -3721,9 +4093,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 210,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 210,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -3755,9 +4130,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 300,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 300,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -3789,9 +4167,12 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 270,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 270,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
@@ -3816,9 +4197,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 420,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 420,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -3852,9 +4236,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 540,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 540,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -3879,9 +4266,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 390,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 390,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
@@ -3906,9 +4296,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -3942,9 +4335,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -3971,9 +4367,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 270,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 270,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -4005,9 +4404,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -4038,9 +4440,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 360,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 360,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -4065,9 +4470,12 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 360,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 360,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": []
@@ -4092,9 +4500,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 210,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 210,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -4126,9 +4537,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -4157,9 +4571,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 540,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 540,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -4191,9 +4608,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 300,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 300,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -4222,9 +4642,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 240,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 240,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -4253,9 +4676,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "medium"
@@ -4286,9 +4712,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 240,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 240,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -4317,9 +4746,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 390,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 390,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -4351,9 +4783,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 210,
-            "isHidden": true
+            "attack": {
+                "type": "fire",
+                "value": 210,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -4378,9 +4813,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 300,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 300,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -4409,9 +4847,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 420,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 420,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -4445,9 +4886,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 210,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 210,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
@@ -4472,9 +4916,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 540,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 540,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -4499,9 +4946,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -4530,9 +4980,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -4566,9 +5019,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 330,
-            "isHidden": true
+            "attack": {
+                "type": "fire",
+                "value": 330,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -4597,9 +5053,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -4626,9 +5085,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 270,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 270,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -4660,9 +5122,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -4693,9 +5158,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -4724,9 +5192,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -4755,9 +5226,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 330,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 330,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -4786,9 +5260,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 360,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 360,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -4817,9 +5294,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 360,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 360,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -4844,9 +5324,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -4875,9 +5358,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 210,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 210,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -4906,9 +5392,12 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 300,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 300,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -4940,9 +5429,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 450,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 450,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
@@ -4967,9 +5459,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "medium"
@@ -5000,9 +5495,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 390,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 390,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": []
@@ -5027,9 +5525,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 450,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 450,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -5054,9 +5555,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 420,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 420,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -5090,9 +5594,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 420,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 420,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
@@ -5117,9 +5624,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -5148,9 +5658,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -5184,9 +5697,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -5213,9 +5729,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 420,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 420,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -5247,9 +5766,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -5280,9 +5802,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 300,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 300,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -5307,9 +5832,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -5338,9 +5866,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 120,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 120,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -5369,9 +5900,12 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 240,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 240,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -5403,9 +5937,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 180,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 180,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -5434,9 +5971,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -5494,9 +6034,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "medium"
@@ -5527,9 +6070,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 300,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 300,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -5558,9 +6104,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 420,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 420,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -5589,9 +6138,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 300,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 300,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -5623,9 +6175,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 180,
-            "isHidden": true
+            "attack": {
+                "type": "ice",
+                "value": 180,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -5654,9 +6209,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 300,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 300,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -5681,9 +6239,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 330,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 330,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -5717,9 +6278,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 420,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 420,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -5744,9 +6308,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 300,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 300,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
@@ -5771,9 +6338,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -5807,9 +6377,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -5836,9 +6409,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 270,
-            "isHidden": true
+            "attack": {
+                "type": "thunder",
+                "value": 270,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -5870,9 +6446,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -5903,9 +6482,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -5934,9 +6516,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -5965,9 +6550,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -5999,9 +6587,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 330,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 330,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -6033,9 +6624,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 240,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 240,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -6064,9 +6658,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 180,
-            "isHidden": true
+            "attack": {
+                "type": "ice",
+                "value": 180,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -6091,9 +6688,12 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 180,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 180,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -6125,9 +6725,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 180,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 180,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -6159,9 +6762,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 300,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 300,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
@@ -6186,9 +6792,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "medium"
@@ -6219,9 +6828,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -6250,9 +6862,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 180,
-            "isHidden": true
+            "attack": {
+                "type": "fire",
+                "value": 180,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -6277,9 +6892,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 360,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 360,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -6313,9 +6931,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 210,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 210,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": []
@@ -6340,9 +6961,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -6374,9 +6998,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -6410,9 +7037,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -6439,9 +7069,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 270,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 270,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -6473,9 +7106,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -6506,9 +7142,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -6537,9 +7176,12 @@
             }
         },
         "element": {
-            "type": "sleep",
-            "value": 210,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "value": 210,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": []
@@ -6564,9 +7206,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 300,
-            "isHidden": true
+            "attack": {
+                "type": "thunder",
+                "value": 300,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -6595,9 +7240,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -6629,9 +7277,12 @@
             }
         },
         "element": {
-            "type": "posion",
-            "value": 390,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "posion",
+                "value": 390,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -6663,9 +7314,12 @@
             }
         },
         "element": {
-            "type": "blast",
-            "value": 150,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 150,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -6697,9 +7351,12 @@
             }
         },
         "element": {
-            "type": "paralysis",
-            "value": 210,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "value": 210,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -6728,9 +7385,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "medium"
@@ -6761,9 +7421,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -6788,9 +7451,12 @@
             }
         },
         "element": {
-            "type": "water",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -6819,9 +7485,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 180,
-            "isHidden": true
+            "attack": {
+                "type": "ice",
+                "value": 180,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -6850,9 +7519,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -6881,9 +7553,12 @@
             }
         },
         "element": {
-            "type": "fire",
-            "value": 150,
-            "isHidden": true
+            "attack": {
+                "type": "fire",
+                "value": 150,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -6912,9 +7587,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 390,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 390,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -6948,9 +7626,12 @@
             }
         },
         "element": {
-            "type": "thunder",
-            "value": 360,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 360,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -6975,9 +7656,12 @@
             }
         },
         "element": {
-            "type": "ice",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -7006,9 +7690,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 120,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 120,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -7042,9 +7729,12 @@
             }
         },
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7061,9 +7751,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7080,9 +7773,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7099,9 +7795,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7118,9 +7817,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7137,9 +7839,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7156,9 +7861,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7175,9 +7883,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7194,9 +7905,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7213,9 +7927,12 @@
         "defense": 10,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7232,9 +7949,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7251,9 +7971,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7270,9 +7993,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7289,9 +8015,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7308,9 +8037,12 @@
         "defense": 15,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7327,9 +8059,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7346,9 +8081,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7365,9 +8103,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7384,9 +8125,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7403,9 +8147,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7422,9 +8169,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7441,9 +8191,12 @@
         "defense": 20,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7460,9 +8213,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7479,9 +8235,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7498,9 +8257,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7517,9 +8279,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7536,9 +8301,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7555,9 +8323,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7574,9 +8345,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7593,9 +8367,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7612,9 +8389,12 @@
         "defense": 10,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7631,9 +8411,12 @@
         "defense": 15,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7650,9 +8433,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7669,9 +8455,12 @@
         "defense": 20,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7688,9 +8477,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7707,9 +8499,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7726,9 +8521,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7745,9 +8543,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7764,9 +8565,12 @@
         "defense": 20,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7783,9 +8587,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7802,9 +8609,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7821,9 +8631,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7840,9 +8653,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "thunder",
-            "value": 150,
-            "isHidden": true
+            "attack": {
+                "type": "thunder",
+                "value": 150,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -7864,9 +8680,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
@@ -7887,9 +8706,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "blast",
-            "value": 270,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 270,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": []
@@ -7904,9 +8726,12 @@
         "defense": 30,
         "sharpness": null,
         "element": {
-            "type": "fire",
-            "value": 150,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 150,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -7921,9 +8746,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 240,
-            "isHidden": true
+            "attack": {
+                "type": "dragon",
+                "value": 240,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -7947,9 +8775,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "fire",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -7968,9 +8799,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "water",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "water",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -7989,9 +8823,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "ice",
-            "value": 390,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 390,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -8006,9 +8843,12 @@
         "defense": 10,
         "sharpness": null,
         "element": {
-            "type": "water",
-            "value": 360,
-            "isHidden": true
+            "attack": {
+                "type": "water",
+                "value": 360,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -8027,9 +8867,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "medium"
@@ -8050,9 +8893,12 @@
         "defense": 15,
         "sharpness": null,
         "element": {
-            "type": "ice",
-            "value": 150,
-            "isHidden": true
+            "attack": {
+                "type": "ice",
+                "value": 150,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -8074,9 +8920,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "blast",
-            "value": 240,
-            "isHidden": true
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 240,
+                "isHidden": true
+            }
         },
         "elderseal": null,
         "slots": [
@@ -8098,9 +8947,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "fire",
-            "value": 390,
-            "isHidden": false
+            "attack": {
+                "type": "fire",
+                "value": 390,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": []
@@ -8115,9 +8967,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "thunder",
-            "value": 270,
-            "isHidden": false
+            "attack": {
+                "type": "thunder",
+                "value": 270,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -8136,9 +8991,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 420,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 420,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -8162,9 +9020,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "ice",
-            "value": 240,
-            "isHidden": false
+            "attack": {
+                "type": "ice",
+                "value": 240,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -8186,9 +9047,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 180,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 180,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "low"
@@ -8212,9 +9076,12 @@
         "defense": 20,
         "sharpness": null,
         "element": {
-            "type": "blast",
-            "value": 150,
-            "isHidden": false
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "value": 150,
+                "isHidden": false
+            }
         },
         "elderseal": null,
         "slots": [
@@ -8233,9 +9100,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "thunder",
-            "value": 240,
-            "isHidden": true
+            "attack": {
+                "type": "thunder",
+                "value": 240,
+                "isHidden": true
+            },
+            "status": null
         },
         "elderseal": null,
         "slots": [
@@ -8254,9 +9124,12 @@
         "defense": 0,
         "sharpness": null,
         "element": {
-            "type": "dragon",
-            "value": 210,
-            "isHidden": false
+            "attack": {
+                "type": "dragon",
+                "value": 210,
+                "isHidden": false
+            },
+            "status": null
         },
         "elderseal": {
             "affinity": "high"
