@@ -147,7 +147,7 @@ export default class Main extends Component {
      */
     componentWillMount () {
         this.setState({
-            equips: Constant.testEquipsSetting[1]
+            equips: Constant.testEquipsSetting[2]
         });
     }
 

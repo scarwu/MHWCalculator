@@ -143,16 +143,22 @@ export default class CharacterStatus extends Component {
 
                     break;
                 case 'sharpness':
-                    status.sharpness.value += data.value;
-
-                    break;
-                case 'element':
-                    if (status.element.type !== data.type) {
+                    if (null == status.sharpness) {
                         break;
                     }
 
-                    status.element.value += data.value;
-                    status.element.value *= data.multiple;
+                    status.sharpness.value += data.value;
+
+                    break;
+                case 'elementAttack':
+                    if (null === status.element.attack
+                        || status.element.attack.type !== data.type) {
+
+                        break;
+                    }
+
+                    status.element.attack.value += data.value;
+                    status.element.attack.value *= data.multiple;
 
                     break;
                 case 'resistance':
@@ -212,9 +218,17 @@ export default class CharacterStatus extends Component {
         }
 
         if (null !== enableElement) {
-            status.element.value *= enableElement.multiple;
-            status.element.value = parseInt(Math.round(status.element.value));
-            status.element.isHidden = false;
+            if (null !== status.element.status) {
+                status.element.attack.value *= enableElement.multiple;
+                status.element.attack.value = parseInt(Math.round(status.element.attack.value));
+                status.element.attack.isHidden = false;
+            }
+
+            if (null !== status.element.status) {
+                status.element.status.value *= enableElement.multiple;
+                status.element.status.value = parseInt(Math.round(status.element.status.value));
+                status.element.status.isHidden = false;
+            }
         }
 
         attackMultiples.map((multiple) => {

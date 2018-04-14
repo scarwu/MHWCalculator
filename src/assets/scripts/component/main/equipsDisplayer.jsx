@@ -81,6 +81,12 @@ export default class EquipsDisplayer extends Component {
         let ContentBlocks = [];
 
         console.log(DataSet.weaponHelper.getApplyedInfo(equips.weapon));
+        console.log(DataSet.armorHelper.getApplyedInfo(equips.helm));
+        console.log(DataSet.armorHelper.getApplyedInfo(equips.chest));
+        console.log(DataSet.armorHelper.getApplyedInfo(equips.arm));
+        console.log(DataSet.armorHelper.getApplyedInfo(equips.waist));
+        console.log(DataSet.armorHelper.getApplyedInfo(equips.leg));
+        console.log(DataSet.charmHelper.getApplyedInfo(equips.charm));
 
         // Weapon
         if (null !== equips.weapon) {
@@ -117,7 +123,7 @@ export default class EquipsDisplayer extends Component {
                                 if (null !== equips.weapon.enhanceKeys
                                     && null !== equips.weapon.enhanceKeys[index]) {
 
-                                    enhance = DataSet.enhanceHelper.getInfo(equips.weapon.enhanceKeys[index])
+                                    enhance = DataSet.enhanceHelper.getInfo(equips.weapon.enhanceKeys[index]);
                                 }
 
                                 return (

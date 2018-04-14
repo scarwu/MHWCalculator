@@ -15656,8 +15656,8 @@
         "price": 12000
     },
     {
-        "name": "屍套龍頭盔α",
-        "series": "屍套龍α",
+        "name": "烏爾德頭盔α",
+        "series": "烏爾德α",
         "type": "helm",
         "rare": 8,
         "gender": "general",
@@ -15686,8 +15686,8 @@
         "price": 16000
     },
     {
-        "name": "屍套龍鎧甲α",
-        "series": "屍套龍α",
+        "name": "烏爾德鎧甲α",
+        "series": "烏爾德α",
         "type": "chest",
         "rare": 8,
         "gender": "general",
@@ -15720,8 +15720,8 @@
         "price": 16000
     },
     {
-        "name": "屍套龍腕甲α",
-        "series": "屍套龍α",
+        "name": "烏爾德腕甲α",
+        "series": "烏爾德α",
         "type": "arm",
         "rare": 8,
         "gender": "general",
@@ -15754,8 +15754,8 @@
         "price": 16000
     },
     {
-        "name": "屍套龍腰甲α",
-        "series": "屍套龍α",
+        "name": "烏爾德腰甲α",
+        "series": "烏爾德α",
         "type": "waist",
         "rare": 8,
         "gender": "general",
@@ -15788,7 +15788,7 @@
         "price": 16000
     },
     {
-        "name": "屍套龍護腿α",
+        "name": "烏爾德護腿α",
         "series": "屍套龍α",
         "type": "leg",
         "rare": 8,
@@ -15822,8 +15822,8 @@
         "price": 16000
     },
     {
-        "name": "屍套龍頭盔β",
-        "series": "屍套龍β",
+        "name": "烏爾德頭盔β",
+        "series": "烏爾德β",
         "type": "helm",
         "rare": 8,
         "gender": "general",
@@ -15852,8 +15852,8 @@
         "price": 16000
     },
     {
-        "name": "屍套龍鎧甲β",
-        "series": "屍套龍β",
+        "name": "烏爾德鎧甲β",
+        "series": "烏爾德β",
         "type": "chest",
         "rare": 8,
         "gender": "general",
@@ -15885,8 +15885,8 @@
         "price": 16000
     },
     {
-        "name": "屍套龍腕甲β",
-        "series": "屍套龍β",
+        "name": "烏爾德腕甲β",
+        "series": "烏爾德β",
         "type": "arm",
         "rare": 8,
         "gender": "general",
@@ -15921,8 +15921,8 @@
         "price": 16000
     },
     {
-        "name": "屍套龍腰甲β",
-        "series": "屍套龍β",
+        "name": "烏爾德腰甲β",
+        "series": "烏爾德β",
         "type": "waist",
         "rare": 8,
         "gender": "general",
@@ -15954,8 +15954,8 @@
         "price": 16000
     },
     {
-        "name": "屍套龍護腿β",
-        "series": "屍套龍β",
+        "name": "烏爾德護腿β",
+        "series": "烏爾德β",
         "type": "leg",
         "rare": 8,
         "gender": "general",
@@ -16305,7 +16305,7 @@
         "price": 16000
     },
     {
-        "name": "帝王頭α",
+        "name": "帝王皇冠α",
         "series": "帝王α",
         "type": "helm",
         "rare": 8,
@@ -16331,7 +16331,7 @@
         "price": 16000
     },
     {
-        "name": "帝王身α",
+        "name": "帝王鎧甲α",
         "series": "帝王α",
         "type": "chest",
         "rare": 8,
@@ -16361,7 +16361,7 @@
         "price": 16000
     },
     {
-        "name": "帝王手α",
+        "name": "帝王腕甲α",
         "series": "帝王α",
         "type": "arm",
         "rare": 8,
@@ -16391,7 +16391,7 @@
         "price": 16000
     },
     {
-        "name": "帝王腰α",
+        "name": "帝王腰甲α",
         "series": "帝王α",
         "type": "waist",
         "rare": 8,
@@ -16421,7 +16421,7 @@
         "price": 16000
     },
     {
-        "name": "帝王腳α",
+        "name": "帝王護腿α",
         "series": "帝王α",
         "type": "leg",
         "rare": 8,
@@ -16451,7 +16451,7 @@
         "price": 16000
     },
     {
-        "name": "帝王頭β",
+        "name": "帝王皇冠β",
         "series": "帝王β",
         "type": "helm",
         "rare": 8,
@@ -16481,7 +16481,7 @@
         "price": 16000
     },
     {
-        "name": "帝王身β",
+        "name": "帝王鎧甲β",
         "series": "帝王β",
         "type": "chest",
         "rare": 8,
@@ -16514,7 +16514,7 @@
         "price": 16000
     },
     {
-        "name": "帝王手β",
+        "name": "帝王腕甲β",
         "series": "帝王β",
         "type": "arm",
         "rare": 8,
@@ -16544,7 +16544,7 @@
         "price": 16000
     },
     {
-        "name": "帝王腰β",
+        "name": "帝王腰甲β",
         "series": "帝王β",
         "type": "waist",
         "rare": 8,
@@ -16574,7 +16574,7 @@
         "price": 16000
     },
     {
-        "name": "帝王腳β",
+        "name": "帝王護腿β",
         "series": "帝王β",
         "type": "leg",
         "rare": 8,
@@ -16604,7 +16604,7 @@
         "price": 16000
     },
     {
-        "name": "鋼龍頭α",
+        "name": "鋼龍強力α",
         "series": "鋼龍α",
         "type": "helm",
         "rare": 8,
@@ -16634,7 +16634,7 @@
         "price": 16000
     },
     {
-        "name": "鋼龍身α",
+        "name": "鋼龍恐懼α",
         "series": "鋼龍α",
         "type": "chest",
         "rare": 8,
@@ -16664,7 +16664,7 @@
         "price": 16000
     },
     {
-        "name": "鋼龍手α",
+        "name": "鋼龍剛強α",
         "series": "鋼龍α",
         "type": "arm",
         "rare": 8,
@@ -16694,7 +16694,7 @@
         "price": 16000
     },
     {
-        "name": "鋼龍腰α",
+        "name": "鋼龍安穩α",
         "series": "鋼龍α",
         "type": "waist",
         "rare": 8,
@@ -16724,7 +16724,7 @@
         "price": 16000
     },
     {
-        "name": "鋼龍腳α",
+        "name": "鋼龍踏實α",
         "series": "鋼龍α",
         "type": "leg",
         "rare": 8,
@@ -16754,7 +16754,7 @@
         "price": 16000
     },
     {
-        "name": "鋼龍頭β",
+        "name": "鋼龍強力β",
         "series": "鋼龍β",
         "type": "helm",
         "rare": 8,
@@ -16790,7 +16790,7 @@
         "price": 16000
     },
     {
-        "name": "鋼龍身β",
+        "name": "鋼龍恐懼β",
         "series": "鋼龍β",
         "type": "chest",
         "rare": 8,
@@ -16820,7 +16820,7 @@
         "price": 16000
     },
     {
-        "name": "鋼龍手β",
+        "name": "鋼龍剛強β",
         "series": "鋼龍β",
         "type": "arm",
         "rare": 8,
@@ -16850,7 +16850,7 @@
         "price": 16000
     },
     {
-        "name": "鋼龍腰β",
+        "name": "鋼龍安穩β",
         "series": "鋼龍β",
         "type": "waist",
         "rare": 8,
@@ -16883,7 +16883,7 @@
         "price": 16000
     },
     {
-        "name": "鋼龍腳β",
+        "name": "鋼龍踏實β",
         "series": "鋼龍β",
         "type": "leg",
         "rare": 8,

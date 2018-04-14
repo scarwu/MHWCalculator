@@ -115,11 +115,11 @@ export default {
         {
             weapon: {
                 key: '罪【真】',
-                slotKeys: null,
                 enhanceKeys: {
                     0: '賦予回復能力',
                     1: null
                 },
+                slotKeys: null,
                 isLock: false
             },
             helm: {
@@ -165,13 +165,13 @@ export default {
         {
             weapon: {
                 key: '龍熱機關式【鋼翼】改',
-                slotKeys: {
-                    0: '奪氣珠',
-                    1: '奪氣珠'
-                },
                 enhanceKeys: {
                     0: '賦予回復能力',
                     1: '強化鑲嵌槽'
+                },
+                slotKeys: {
+                    0: '奪氣珠',
+                    1: '奪氣珠'
                 },
                 isLock: false
             },
@@ -190,7 +190,7 @@ export default {
                 isLock: false
             },
             arm: {
-                key: '帝王手β',
+                key: '帝王腕甲β',
                 slotKeys: {
                     0: 'KO珠'
                 },
@@ -209,6 +209,66 @@ export default {
                 slotKeys: {
                     0: '攻擊珠',
                     1: '攻擊珠'
+                },
+                isLock: false
+            },
+            charm: {
+                key: '匠之護石 III',
+                isLock: false
+            }
+        },
+        {
+            weapon: {
+                key: '搔鳥尖槍 III',
+                enhanceKeys: {
+                    0: '強化攻擊力',
+                    1: '強化攻擊力',
+                    2: '強化攻擊力'
+                },
+                slotKeys: null,
+                isLock: false
+            },
+            helm: {
+                key: '鋼龍強力β',
+                slotKeys: {
+                    0: null,
+                    1: null,
+                    2: null
+                },
+                isLock: false
+            },
+            chest: {
+                key: '大馬士革鎧甲β',
+                slotKeys: {
+                    0: null,
+                    1: null,
+                    2: null
+                },
+                isLock: false
+            },
+            arm: {
+                key: '烏爾德腕甲β',
+                slotKeys: {
+                    0: null,
+                    1: null,
+                    2: null
+                },
+                isLock: false
+            },
+            waist: {
+                key: '麒麟腰環β',
+                slotKeys: {
+                    0: null,
+                    1: null,
+                    2: null
+                },
+                isLock: false
+            },
+            leg: {
+                key: '燕尾蝶腳β',
+                slotKeys: {
+                    0: null,
+                    1: null
                 },
                 isLock: false
             },

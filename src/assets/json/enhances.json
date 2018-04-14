@@ -63,19 +63,25 @@
             {
                 "level": 1,
                 "reaction": {
-                    "defense": 10
+                    "defense": {
+                        "value": 10
+                    }
                 }
             },
             {
                 "level": 2,
                 "reaction": {
-                    "defense": 20
+                    "defense": {
+                        "value": 20
+                    }
                 }
             },
             {
                 "level": 3,
                 "reaction": {
-                    "defense": 30
+                    "defense": {
+                        "value": 30
+                    }
                 }
             }
         ]
