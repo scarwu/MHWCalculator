@@ -221,9 +221,9 @@ export default {
             weapon: {
                 key: '搔鳥尖槍 III',
                 enhanceKeys: {
-                    0: '強化攻擊力',
-                    1: '強化攻擊力',
-                    2: '強化攻擊力'
+                    0: '強化鑲嵌槽',
+                    1: '強化鑲嵌槽',
+                    2: '強化鑲嵌槽'
                 },
                 slotKeys: null,
                 isLock: false

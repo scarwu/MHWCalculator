@@ -53,6 +53,18 @@ $function_bar-height: 40px;
     }
 }
 
+.mhwc-selector {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid #333;
+    background-color: white;
+
+    @include border-radius(5px);
+}
+
 .mhwc-container {
     height: calc(100vh - (#{$header-height} + #{$footer-height}));
 
@@ -111,13 +123,6 @@ $function_bar-height: 40px;
             border: 1px solid #333;
             height: 60px;
             line-height: 50px;
-
-            -webkit-touch-callout: none; /* iOS Safari */
-            -webkit-user-select: none; /* Safari */
-            -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
 
             @include border-radius(5px);
         }

@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Main Module
+ * Equipments Displayer
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -25,7 +25,8 @@ export default class EquipsDisplayer extends Component {
 
     // Default Props
     static defaultProps = {
-        equips: Constant.defaultEquips
+        equips: Constant.defaultEquips,
+        onOpenSelector: (data) => {}
     };
 
     // Initial State
@@ -47,14 +48,17 @@ export default class EquipsDisplayer extends Component {
     };
 
     handleEquipSwitch = (equipType) => {
+        this.props.onOpenSelector({});
         console.log('EquipSwitch', equipType);
     };
 
     handleEquipSlotSwitch = (equipType, index) => {
+        this.props.onOpenSelector({});
         console.log('EquipSlotSwitch', equipType, index);
     };
 
     handleWeaponEnhanceSwitch = (index) => {
+        this.props.onOpenSelector({});
         console.log('WeaponEnhanceSwitch', index);
     };
 
@@ -80,26 +84,9 @@ export default class EquipsDisplayer extends Component {
         let equips = this.state.equips;
         let ContentBlocks = [];
 
-        console.log(DataSet.weaponHelper.getApplyedInfo(equips.weapon));
-        console.log(DataSet.armorHelper.getApplyedInfo(equips.helm));
-        console.log(DataSet.armorHelper.getApplyedInfo(equips.chest));
-        console.log(DataSet.armorHelper.getApplyedInfo(equips.arm));
-        console.log(DataSet.armorHelper.getApplyedInfo(equips.waist));
-        console.log(DataSet.armorHelper.getApplyedInfo(equips.leg));
-        console.log(DataSet.charmHelper.getApplyedInfo(equips.charm));
-
         // Weapon
         if (null !== equips.weapon) {
-            let weaponInfo = DataSet.weaponHelper.getInfo(equips.weapon.key);
-            let weaponEnhances = null;
-
-            if (8 === weaponInfo.rare) {
-                weaponEnhances = [...Array(1).keys()];
-            } else if (7 === weaponInfo.rare) {
-                weaponEnhances = [...Array(2).keys()];
-            } else if (6 === weaponInfo.rare) {
-                weaponEnhances = [...Array(3).keys()];
-            }
+            let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
 
             ContentBlocks.push((
                 <div key="weapon" className="row mhwc-equip">
@@ -115,25 +102,17 @@ export default class EquipsDisplayer extends Component {
                         <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch('weapon')}}></a>
                     </div>
 
-                    {null !== weaponEnhances ? (
+                    {0 !== weaponInfo.enhances.length ? (
                         <div className="col-12 mhwc-enhances">
-                            {weaponEnhances.map((data, index) => {
-                                let enhance = null;
-
-                                if (null !== equips.weapon.enhanceKeys
-                                    && null !== equips.weapon.enhanceKeys[index]) {
-
-                                    enhance = DataSet.enhanceHelper.getInfo(equips.weapon.enhanceKeys[index]);
-                                }
-
+                            {weaponInfo.enhances.map((data, index) => {
                                 return (
                                     <div key={data.key + '_' + index} className="row mhwc-enhance">
                                         <div className="col-4 mhwc-name">
                                             <span>強化 {index + 1}</span>
                                         </div>
                                         <div className="col-8 mhwc-value">
-                                            {null !== enhance ? (
-                                                <span>{enhance.name}</span>
+                                            {null !== data.key ? (
+                                                <span>{data.key}</span>
                                             ) : (
                                                 <span>&nbsp;-&nbsp;</span>
                                             )}
@@ -146,27 +125,17 @@ export default class EquipsDisplayer extends Component {
                         </div>
                     ) : false}
 
-                    {null !== equips.weapon.slotKeys ? (
+                    {0 !== weaponInfo.slots.length ? (
                         <div className="col-12 mhwc-slots">
-                            {weaponInfo.slots.sort((a, b) => {
-                                return a.size < b.size;
-                            }).map((data, index) => {
-                                let jewel = null;
-
-                                if (null !== equips.weapon.slotKeys
-                                    && null !== equips.weapon.slotKeys[index]) {
-
-                                    jewel = DataSet.jewelHelper.getInfo(equips.weapon.slotKeys[index]);
-                                }
-
+                            {weaponInfo.slots.map((data, index) => {
                                 return (
                                     <div key={data.key + '_' + index} className="row mhwc-jewel">
                                         <div className="col-4 mhwc-name">
                                             <span>插槽 {index + 1} - [{data.size}]</span>
                                         </div>
                                         <div className="col-8 mhwc-value">
-                                            {null !== jewel ? (
-                                                <span>[{jewel.size}] {jewel.name}</span>
+                                            {null !== data.key ? (
+                                                <span>[{data.size}] {data.key}</span>
                                             ) : (
                                                 <span>&nbsp;-&nbsp;</span>
                                             )}
@@ -195,7 +164,7 @@ export default class EquipsDisplayer extends Component {
         // Armors
         ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
             if (null !== equips[equipType]) {
-                let equipInfo = DataSet.armorHelper.getInfo(equips[equipType].key);
+                let equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
 
                 ContentBlocks.push((
                     <div key={'equip_' + equipType} className="row mhwc-equip">
@@ -211,27 +180,17 @@ export default class EquipsDisplayer extends Component {
                             <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch(equipType)}}></a>
                         </div>
 
-                        {null !== equips[equipType].slotKeys ? (
+                        {0 !== equipInfo.slots.length ? (
                             <div className="col-12 mhwc-slots">
-                                {equipInfo.slots.sort((a, b) => {
-                                    return a.size < b.size;
-                                }).map((data, index) => {
-                                    let jewel = null;
-
-                                    if (null !== equips[equipType].slotKeys
-                                        && null !== equips[equipType].slotKeys[index]) {
-
-                                        jewel = DataSet.jewelHelper.getInfo(equips[equipType].slotKeys[index])
-                                    }
-
+                                {equipInfo.slots.map((data, index) => {
                                     return (
                                         <div key={data.key + '_' + index} className="row mhwc-jewel">
                                             <div className="col-4 mhwc-name">
                                                 <span>插槽 {index + 1} - [{data.size}]</span>
                                             </div>
                                             <div className="col-8 mhwc-value">
-                                                {null !== jewel ? (
-                                                    <span>[{jewel.size}] {jewel.name}</span>
+                                                {null !== data.key ? (
+                                                    <span>[{data.size}] {data.name}</span>
                                                 ) : (
                                                     <span>&nbsp;-&nbsp;</span>
                                                 )}
@@ -260,7 +219,7 @@ export default class EquipsDisplayer extends Component {
 
         // Charm
         if (null !== equips.charm) {
-            let charmInfo = DataSet.charmHelper.getInfo(equips.charm.key);
+            let charmInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
 
             ContentBlocks.push((
                 <div key="charm" className="row mhwc-equip">

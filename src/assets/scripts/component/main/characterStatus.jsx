@@ -43,6 +43,14 @@ export default class CharacterStatus extends Component {
         let status = this.state.status;
         let tempSkills = {};
 
+        console.log(DataSet.weaponHelper.getApplyedInfo(equips.weapon));
+        console.log(DataSet.armorHelper.getApplyedInfo(equips.helm));
+        console.log(DataSet.armorHelper.getApplyedInfo(equips.chest));
+        console.log(DataSet.armorHelper.getApplyedInfo(equips.arm));
+        console.log(DataSet.armorHelper.getApplyedInfo(equips.waist));
+        console.log(DataSet.armorHelper.getApplyedInfo(equips.leg));
+        console.log(DataSet.charmHelper.getApplyedInfo(equips.charm));
+
         equips.weapon.info = DataSet.weaponHelper.getInfo(equips.weapon.key);
         equips.helm.info = DataSet.armorHelper.getInfo(equips.helm.key);
         equips.chest.info = DataSet.armorHelper.getInfo(equips.chest.key);

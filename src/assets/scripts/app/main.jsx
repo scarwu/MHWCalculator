@@ -24,6 +24,7 @@ import Constant from 'constant';
 import Lang from 'lang';
 
 // Load Components
+import ItemSelector from 'component/main/itemSelector';
 import EquipsDisplayer from 'component/main/equipsDisplayer';
 import CharacterStatus from 'component/main/characterStatus';
 
@@ -140,6 +141,23 @@ export default class Main extends Component {
 
     handleEquipSearch = () => {
         console.log('EquipSearch');
+    };
+
+    handleSelectorOpen = (data) => {
+        this.setState({
+            isShowSelector: true,
+            selector: data
+        });
+    };
+
+    handleSelectorClose = () => {
+        this.setState({
+            isShowSelector: false
+        });
+    };
+
+    handleSelectorPickup = (data) => {
+
     };
 
     /**
@@ -285,7 +303,8 @@ export default class Main extends Component {
                         </div>
 
                         <div className="mhwc-list">
-                            <EquipsDisplayer equips={this.state.equips} />
+                            <EquipsDisplayer equips={this.state.equips}
+                                onOpenSelector={this.handleSelectorOpen} />
                         </div>
                     </div>
 
@@ -315,6 +334,12 @@ export default class Main extends Component {
                         </a>
                     </div>
                 </div>
+
+                {this.state.isShowSelector ? (
+                    <ItemSelector data={this.state.selector}
+                        onPickup={this.handleSelectorPickup}
+                        onClose={this.handleSelectorClose} />
+                ) : false}
             </div>
         );
     }
