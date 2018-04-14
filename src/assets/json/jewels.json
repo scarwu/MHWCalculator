@@ -1,7 +1,7 @@
 [
     {
         "name": "KO珠",
-        "rare": null,
+        "rare": 6,
         "size": 2,
         "skill": {
             "key": "KO術",
@@ -10,7 +10,7 @@
     },
     {
         "name": "増彈珠",
-        "rare": null,
+        "rare": 7,
         "size": 2,
         "skill": {
             "key": "砲彈裝填數UP",
@@ -19,7 +19,7 @@
     },
     {
         "name": "體術珠",
-        "rare": null,
+        "rare": 6,
         "size": 2,
         "skill": {
             "key": "體術",
@@ -28,7 +28,7 @@
     },
     {
         "name": "體力珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "體力增強",
@@ -37,7 +37,7 @@
     },
     {
         "name": "火炎珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "火屬性攻擊強化",
@@ -46,7 +46,7 @@
     },
     {
         "name": "心眼珠",
-        "rare": null,
+        "rare": 8,
         "size": 2,
         "skill": {
             "key": "心眼／彈導強化",
@@ -55,7 +55,7 @@
     },
     {
         "name": "友愛珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "廣域化",
@@ -64,7 +64,7 @@
     },
     {
         "name": "加護珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "精靈加護",
@@ -73,7 +73,7 @@
     },
     {
         "name": "全開珠",
-        "rare": null,
+        "rare": 7,
         "size": 2,
         "skill": {
             "key": "力量解放",
@@ -82,7 +82,7 @@
     },
     {
         "name": "早氣珠",
-        "rare": null,
+        "rare": 7,
         "size": 2,
         "skill": {
             "key": "耐力急速回復",
@@ -91,7 +91,7 @@
     },
     {
         "name": "早復珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "回復速度",
@@ -100,7 +100,7 @@
     },
     {
         "name": "匠珠",
-        "rare": null,
+        "rare": 8,
         "size": 3,
         "skill": {
             "key": "匠",
@@ -109,7 +109,7 @@
     },
     {
         "name": "地學珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "地質學",
@@ -118,7 +118,7 @@
     },
     {
         "name": "冰結珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "冰屬性攻擊強化",
@@ -127,7 +127,7 @@
     },
     {
         "name": "攻擊珠",
-        "rare": null,
+        "rare": 7,
         "size": 1,
         "skill": {
             "key": "攻擊",
@@ -136,7 +136,7 @@
     },
     {
         "name": "快吃珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "快吃",
@@ -145,7 +145,7 @@
     },
     {
         "name": "投石珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "投射器裝填數UP",
@@ -154,7 +154,7 @@
     },
     {
         "name": "防音珠",
-        "rare": null,
+        "rare": 6,
         "size": 3,
         "skill": {
             "key": "耳塞",
@@ -163,7 +163,7 @@
     },
     {
         "name": "防禦珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "防禦",
@@ -172,7 +172,7 @@
     },
     {
         "name": "防風珠",
-        "rare": null,
+        "rare": 6,
         "size": 2,
         "skill": {
             "key": "風壓耐性",
@@ -181,7 +181,7 @@
     },
     {
         "name": "昂揚珠",
-        "rare": null,
+        "rare": 7,
         "size": 2,
         "skill": {
             "key": "強化持續",
@@ -190,7 +190,7 @@
     },
     {
         "name": "指示珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "指示隨從",
@@ -199,7 +199,7 @@
     },
     {
         "name": "底力珠",
-        "rare": null,
+        "rare": 7,
         "size": 2,
         "skill": {
             "key": "火場怪力",
@@ -208,7 +208,7 @@
     },
     {
         "name": "治癒珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "體力回復量UP",
@@ -217,7 +217,7 @@
     },
     {
         "name": "沼渡珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "適應水場",
@@ -226,7 +226,7 @@
     },
     {
         "name": "拔刀珠",
-        "rare": null,
+        "rare": 8,
         "size": 2,
         "skill": {
             "key": "拔刀術【技】",
@@ -235,7 +235,7 @@
     },
     {
         "name": "威嚇珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "威嚇",
@@ -244,7 +244,7 @@
     },
     {
         "name": "研磨珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "砥石使用高速化",
@@ -253,7 +253,7 @@
     },
     {
         "name": "持續珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "道具使用強化",
@@ -262,7 +262,7 @@
     },
     {
         "name": "重擊珠",
-        "rare": null,
+        "rare": 6,
         "size": 2,
         "skill": {
             "key": "破壞王",
@@ -271,7 +271,7 @@
     },
     {
         "name": "耐火珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "火耐性",
@@ -280,7 +280,7 @@
     },
     {
         "name": "耐瘴珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "瘴氣耐性",
@@ -289,7 +289,7 @@
     },
     {
         "name": "耐衝珠",
-        "rare": null,
+        "rare": 6,
         "size": 3,
         "skill": {
             "key": "減輕膽怯",
@@ -298,7 +298,7 @@
     },
     {
         "name": "耐震珠",
-        "rare": null,
+        "rare": 6,
         "size": 2,
         "skill": {
             "key": "耐震",
@@ -307,7 +307,7 @@
     },
     {
         "name": "耐水珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "水耐性",
@@ -316,7 +316,7 @@
     },
     {
         "name": "耐絕珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "昏厥耐性",
@@ -325,7 +325,7 @@
     },
     {
         "name": "耐屬珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "屬性異常狀態耐性",
@@ -334,7 +334,7 @@
     },
     {
         "name": "耐毒珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "毒耐性",
@@ -343,7 +343,7 @@
     },
     {
         "name": "耐爆珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "爆破異常狀態的耐性",
@@ -352,7 +352,7 @@
     },
     {
         "name": "耐冰珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "冰耐性",
@@ -361,7 +361,7 @@
     },
     {
         "name": "耐防珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "防御力DOWN耐性",
@@ -370,7 +370,7 @@
     },
     {
         "name": "耐麻珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "麻痺耐性",
@@ -379,7 +379,7 @@
     },
     {
         "name": "耐眠珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "睡眠耐性",
@@ -388,7 +388,7 @@
     },
     {
         "name": "耐雷珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "雷耐性",
@@ -397,7 +397,7 @@
     },
     {
         "name": "耐龍珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "龍耐性",
@@ -406,7 +406,7 @@
     },
     {
         "name": "耐裂珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "裂傷耐性",
@@ -415,7 +415,7 @@
     },
     {
         "name": "挑戰珠",
-        "rare": null,
+        "rare": 7,
         "size": 2,
         "skill": {
             "key": "挑戰者",
@@ -424,7 +424,7 @@
     },
     {
         "name": "毒珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "毒屬性強化",
@@ -433,7 +433,7 @@
     },
     {
         "name": "毒瓶珠",
-        "rare": null,
+        "rare": 6,
         "size": 3,
         "skill": {
             "key": "毒瓶追加",
@@ -442,7 +442,7 @@
     },
     {
         "name": "飛燕珠",
-        "rare": null,
+        "rare": 5,
         "size": 2,
         "skill": {
             "key": "飛燕",
@@ -451,7 +451,7 @@
     },
     {
         "name": "流水珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "水屬性攻擊強化",
@@ -460,7 +460,7 @@
     },
     {
         "name": "迴避珠",
-        "rare": null,
+        "rare": 6,
         "size": 2,
         "skill": {
             "key": "迴避性能",
@@ -469,7 +469,7 @@
     },
     {
         "name": "逆上珠",
-        "rare": null,
+        "rare": 7,
         "size": 2,
         "skill": {
             "key": "怨恨",
@@ -478,7 +478,7 @@
     },
     {
         "name": "逆境珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "不屈",
@@ -487,7 +487,7 @@
     },
     {
         "name": "剛刃珠",
-        "rare": null,
+        "rare": 7,
         "size": 2,
         "skill": {
             "key": "剛刃研磨",
@@ -496,7 +496,7 @@
     },
     {
         "name": "茸好珠",
-        "rare": null,
+        "rare": 8,
         "size": 1,
         "skill": {
             "key": "最愛菇類",
@@ -505,7 +505,7 @@
     },
     {
         "name": "特射珠",
-        "rare": null,
+        "rare": 7,
         "size": 1,
         "skill": {
             "key": "特殊射擊強化",
@@ -514,7 +514,7 @@
     },
     {
         "name": "破龍珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "龍屬性攻擊強化",
@@ -523,7 +523,7 @@
     },
     {
         "name": "砲手珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "砲擊手",
@@ -532,7 +532,7 @@
     },
     {
         "name": "砲術珠",
-        "rare": null,
+        "rare": 8,
         "size": 1,
         "skill": {
             "key": "砲術",
@@ -541,7 +541,7 @@
     },
     {
         "name": "眠瓶珠",
-        "rare": null,
+        "rare": 7,
         "size": 3,
         "skill": {
             "key": "睡眠瓶追加",
@@ -550,7 +550,7 @@
     },
     {
         "name": "貫通珠",
-        "rare": null,
+        "rare": 8,
         "size": 3,
         "skill": {
             "key": "貫通彈・龍之箭強化",
@@ -559,7 +559,7 @@
     },
     {
         "name": "強弓珠",
-        "rare": null,
+        "rare": 8,
         "size": 2,
         "skill": {
             "key": "解放弓的蓄力階段",
@@ -568,7 +568,7 @@
     },
     {
         "name": "強走珠",
-        "rare": null,
+        "rare": 8,
         "size": 2,
         "skill": {
             "key": "跑者",
@@ -577,7 +577,7 @@
     },
     {
         "name": "強彈珠",
-        "rare": null,
+        "rare": 7,
         "size": 3,
         "skill": {
             "key": "通常彈・通常箭強化",
@@ -586,7 +586,7 @@
     },
     {
         "name": "強壁珠",
-        "rare": null,
+        "rare": 7,
         "size": 2,
         "skill": {
             "key": "防禦強化",
@@ -595,7 +595,7 @@
     },
     {
         "name": "速納珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "收刀術",
@@ -604,7 +604,7 @@
     },
     {
         "name": "麻痺珠",
-        "rare": null,
+        "rare": 7,
         "size": 1,
         "skill": {
             "key": "麻痺屬性強化",
@@ -613,7 +613,7 @@
     },
     {
         "name": "絕路珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "死裡逃生",
@@ -622,7 +622,7 @@
     },
     {
         "name": "渾身珠",
-        "rare": null,
+        "rare": 7,
         "size": 2,
         "skill": {
             "key": "精神抖擻",
@@ -631,7 +631,7 @@
     },
     {
         "name": "散彈珠",
-        "rare": null,
+        "rare": 8,
         "size": 3,
         "skill": {
             "key": "散彈・剛射強化",
@@ -640,7 +640,7 @@
     },
     {
         "name": "植學珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "植生學",
@@ -649,7 +649,7 @@
     },
     {
         "name": "短縮珠",
-        "rare": null,
+        "rare": 8,
         "size": 2,
         "skill": {
             "key": "集中",
@@ -658,7 +658,7 @@
     },
     {
         "name": "超心珠",
-        "rare": null,
+        "rare": 8,
         "size": 2,
         "skill": {
             "key": "超會心",
@@ -667,7 +667,7 @@
     },
     {
         "name": "痛擊珠",
-        "rare": null,
+        "rare": 6,
         "size": 2,
         "skill": {
             "key": "弱點特效",
@@ -676,7 +676,7 @@
     },
     {
         "name": "無擊珠",
-        "rare": null,
+        "rare": 6,
         "size": 2,
         "skill": {
             "key": "無屬性強化",
@@ -685,7 +685,7 @@
     },
     {
         "name": "無傷珠",
-        "rare": null,
+        "rare": 7,
         "size": 2,
         "skill": {
             "key": "無傷",
@@ -694,7 +694,7 @@
     },
     {
         "name": "無食珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "飢餓耐性",
@@ -703,7 +703,7 @@
     },
     {
         "name": "煙復珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "綿花孢子草的知識",
@@ -712,7 +712,7 @@
     },
     {
         "name": "解放珠",
-        "rare": null,
+        "rare": 8,
         "size": 3,
         "skill": {
             "key": "屬性解放／裝填擴充",
@@ -721,7 +721,7 @@
     },
     {
         "name": "滑走珠",
-        "rare": null,
+        "rare": 6,
         "size": 2,
         "skill": {
             "key": "滑走強化",
@@ -730,7 +730,7 @@
     },
     {
         "name": "嗅覺珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "追蹤達人",
@@ -739,7 +739,7 @@
     },
     {
         "name": "鼓笛珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "吹笛名人",
@@ -748,7 +748,7 @@
     },
     {
         "name": "節食珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "滿足感",
@@ -757,7 +757,7 @@
     },
     {
         "name": "達人珠",
-        "rare": null,
+        "rare": 7,
         "size": 1,
         "skill": {
             "key": "看破",
@@ -766,7 +766,7 @@
     },
     {
         "name": "跳躍珠",
-        "rare": null,
+        "rare": 6,
         "size": 2,
         "skill": {
             "key": "迴避距離UP",
@@ -775,7 +775,7 @@
     },
     {
         "name": "痺瓶珠",
-        "rare": null,
+        "rare": 7,
         "size": 3,
         "skill": {
             "key": "麻痺瓶追加",
@@ -784,7 +784,7 @@
     },
     {
         "name": "雷光珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "雷屬性攻擊強化",
@@ -793,7 +793,7 @@
     },
     {
         "name": "睡眠珠",
-        "rare": null,
+        "rare": 7,
         "size": 1,
         "skill": {
             "key": "睡眠屬性強化",
@@ -802,7 +802,7 @@
     },
     {
         "name": "奪氣珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "奪取耐力",
@@ -811,7 +811,7 @@
     },
     {
         "name": "潛伏珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "潛伏",
@@ -820,7 +820,7 @@
     },
     {
         "name": "標本珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "昆蟲標本達人",
@@ -829,7 +829,7 @@
     },
     {
         "name": "整備珠",
-        "rare": null,
+        "rare": 5,
         "size": 1,
         "skill": {
             "key": "整備",
@@ -838,7 +838,7 @@
     },
     {
         "name": "龍封珠",
-        "rare": null,
+        "rare": 7,
         "size": 3,
         "skill": {
             "key": "龍封力強化",
@@ -847,7 +847,7 @@
     },
     {
         "name": "爆師珠",
-        "rare": null,
+        "rare": 6,
         "size": 1,
         "skill": {
             "key": "炸彈客",
@@ -856,7 +856,7 @@
     },
     {
         "name": "爆破珠",
-        "rare": null,
+        "rare": 7,
         "size": 1,
         "skill": {
             "key": "爆破屬性強化",
@@ -865,7 +865,7 @@
     },
     {
         "name": "爆瓶珠",
-        "rare": null,
+        "rare": 7,
         "size": 3,
         "skill": {
             "key": "爆破瓶追加",
@@ -874,7 +874,7 @@
     },
     {
         "name": "鐵壁珠",
-        "rare": null,
+        "rare": 7,
         "size": 1,
         "skill": {
             "key": "防禦性能",

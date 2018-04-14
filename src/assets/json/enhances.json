@@ -43,7 +43,7 @@
                 "level": 2,
                 "reaction": {
                     "criticalRate": {
-                        "value": 20
+                        "value": 15
                     }
                 }
             },
@@ -51,7 +51,7 @@
                 "level": 3,
                 "reaction": {
                     "criticalRate": {
-                        "value": 30
+                        "value": 20
                     }
                 }
             }
@@ -87,7 +87,7 @@
                 "level": 1,
                 "reaction": {
                     "addSlot": {
-                        "value": 1
+                        "size": 1
                     }
                 }
             },
@@ -95,7 +95,7 @@
                 "level": 2,
                 "reaction": {
                     "addSlot": {
-                        "value": 2
+                        "size": 2
                     }
                 }
             },
@@ -103,7 +103,7 @@
                 "level": 3,
                 "reaction": {
                     "addSlot": {
-                        "value": 3
+                        "size": 3
                     }
                 }
             }
