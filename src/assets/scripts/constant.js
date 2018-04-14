@@ -50,8 +50,69 @@ export default {
         heavyBowgun: 1.5,
         bow: 1.2
     },
-    defaultSets: {
-        '狂暴雙刀': {
+    defaultEquips: {
+        weapon: null,
+        helm: null,
+        chest: null,
+        arm: null,
+        waist: null,
+        leg: null,
+        charm: null
+    },
+    defaultStatus: {
+        health: 100,
+        stamina: 100,
+        attack: 15, // 力量護符+6 力量之爪+9
+        critical: {
+            rate: 0,
+            multiple: {
+                positive: 1.25,
+                nagetive: 0.75
+            }
+        },
+        sharpness: {
+            value: 0,
+            steps: {
+                red: 0,
+                orange: 0,
+                yellow: 0,
+                green: 0,
+                blue: 0,
+                white: 0
+            }
+        },
+        element: {
+            attack: {
+                type: null,
+                value: 0,
+                isHidden: null
+            },
+            status: {
+                type: null,
+                value: 0,
+                isHidden: null
+            }
+        },
+        elderseal: {
+            affinity: null
+        },
+        defense: 31, // 守護護符+10 守護之爪+20
+        resistance: {
+            fire: 0,
+            water: 0,
+            thunder: 0,
+            ice: 0,
+            dragon: 0
+        },
+        skills: [],
+        extraInfo: {
+            basicAttack: 0,
+            basicCriticalAttack: 0,
+            expectedValue: 0
+        }
+    },
+    testEquipsSetting: [
+        {
             weapon: {
                 key: '罪【真】',
                 slotKeys: null,
@@ -101,7 +162,7 @@ export default {
                 isLock: false
             }
         },
-        '破壞大劍': {
+        {
             weapon: {
                 key: '龍熱機關式【鋼翼】改',
                 slotKeys: {
@@ -110,7 +171,7 @@ export default {
                 },
                 enhanceKeys: {
                     0: '賦予回復能力',
-                    1: null
+                    1: '強化鑲嵌槽'
                 },
                 isLock: false
             },
@@ -156,5 +217,5 @@ export default {
                 isLock: false
             }
         }
-    }
+    ]
 };

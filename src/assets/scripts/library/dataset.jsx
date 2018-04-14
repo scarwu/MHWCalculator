@@ -58,7 +58,7 @@ class SetHelper {
         this.filterSkillKey = key;
 
         return this;
-    }
+    };
 }
 
 /**
@@ -102,7 +102,7 @@ class EnhanceHelper {
         this.filterSkillKey = key;
 
         return this;
-    }
+    };
 }
 
 /**
@@ -138,6 +138,37 @@ class WeaponHelper {
 
     getItems = () => {
         return Object.values(this.mapping);
+    };
+
+    // Applyed Info
+    getApplyedInfo = (extend) => {
+        let info = this.getInfo(extend.key);
+
+        if (null !== extend.enhances) {
+            let enhanceTimes = [];
+
+            if (8 === info.rare) {
+                enhanceTimes = [...Array(1).keys()];
+            } else if (7 === info.rare) {
+                enhanceTimes = [...Array(2).keys()];
+            } else if (6 === info.rare) {
+                enhanceTimes = [...Array(3).keys()];
+            }
+
+            enhanceTimes.map((data, index) => {
+
+            });
+        }
+
+        if (null !== extend.slots) {
+            info.slots.sort((a, b) => {
+                return a.size < b.size;
+            }).map(() => {
+
+            });
+        }
+
+        return info;
     };
 
     // Conditional Functions
@@ -236,7 +267,7 @@ class ArmorHelper {
         this.filterSkillKey = key;
 
         return this;
-    }
+    };
 }
 
 /**
@@ -291,7 +322,7 @@ class CharmHelper {
         this.filterSkillKey = key;
 
         return this;
-    }
+    };
 }
 
 /**
@@ -335,7 +366,7 @@ class JewelHelper {
         this.filterSkillKey = key;
 
         return this;
-    }
+    };
 }
 
 /**
@@ -365,12 +396,20 @@ class SkillHelper {
     };
 }
 
+let setHelper = new SetHelper(Sets);
+let enhanceHelper = new EnhanceHelper(Enhances);
+let weaponHelper = new WeaponHelper(Weapons);
+let armorHelper = new ArmorHelper(Armors);
+let charmHelper = new CharmHelper(Charms);
+let jewelHelper = new JewelHelper(Jewels);
+let skillHelper = new SkillHelper(Skills);
+
 export default {
-    set: new SetHelper(Sets),
-    enhance: new EnhanceHelper(Enhances),
-    weapon: new WeaponHelper(Weapons),
-    armor: new ArmorHelper(Armors),
-    charm: new CharmHelper(Charms),
-    jewel: new JewelHelper(Jewels),
-    skill: new SkillHelper(Skills)
+    setHelper: setHelper,
+    enhanceHelper: enhanceHelper,
+    weaponHelper: weaponHelper,
+    armorHelper: armorHelper,
+    charmHelper: charmHelper,
+    jewelHelper: jewelHelper,
+    skillHelper: skillHelper
 };

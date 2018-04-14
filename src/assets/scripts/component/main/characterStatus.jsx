@@ -12,7 +12,7 @@
 import React, { Component } from 'react';
 
 // Load Core Libraries
-import Status from 'core/status';
+import Event from 'core/event';
 
 // Load Custom Libraries
 import DataSet from 'library/dataset';
@@ -21,70 +21,17 @@ import DataSet from 'library/dataset';
 import Constant from 'constant';
 import Lang from 'lang';
 
-var defaultEquips = {
-    weapon: null,
-    helm: null,
-    chest: null,
-    arm: null,
-    waist: null,
-    leg: null,
-    charm: null
-};
-
-var defaultStatus = {
-    health: 100,
-    stamina: 100,
-    attack: 15, // 力量護符+6 力量之爪+9
-    critical: {
-        rate: 0,
-        multiple: 1.25
-    },
-    sharpness: {
-        value: 0,
-        steps: {
-            red: 0,
-            orange: 0,
-            yellow: 0,
-            green: 0,
-            blue: 0,
-            white: 0
-        }
-    },
-    element: {
-        type: null,
-        value: 0,
-        isHidden: null
-    },
-    elderseal: {
-        affinity: null
-    },
-    defense: 31, // 守護護符+10 守護之爪+20
-    resistance: {
-        fire: 0,
-        water: 0,
-        thunder: 0,
-        ice: 0,
-        dragon: 0
-    },
-    skills: [],
-    extraInfo: {
-        basicAttack: 0,
-        basicCriticalAttack: 0,
-        expectedValue: 0
-    }
-};
-
 export default class CharacterStatus extends Component {
 
     // Default Props
     static defaultProps = {
-        equips: defaultEquips
+        equips: Constant.defaultEquips
     };
 
     // Initial State
     state = {
-        equips: null,
-        status: null
+        equips: Constant.defaultEquips,
+        status: Constant.defaultStatus
     };
 
     /**
@@ -93,16 +40,16 @@ export default class CharacterStatus extends Component {
     generateStatus = () => {
 
         let equips = this.state.equips;
-        let status = defaultStatus;
+        let status = this.state.status;
         let tempSkills = {};
 
-        equips.weapon.info = DataSet.weapon.getInfo(equips.weapon.key);
-        equips.helm.info = DataSet.armor.getInfo(equips.helm.key);
-        equips.chest.info = DataSet.armor.getInfo(equips.chest.key);
-        equips.arm.info = DataSet.armor.getInfo(equips.arm.key);
-        equips.waist.info = DataSet.armor.getInfo(equips.waist.key);
-        equips.leg.info = DataSet.armor.getInfo(equips.leg.key);
-        equips.charm.info = DataSet.charm.getInfo(equips.charm.key);
+        equips.weapon.info = DataSet.weaponHelper.getInfo(equips.weapon.key);
+        equips.helm.info = DataSet.armorHelper.getInfo(equips.helm.key);
+        equips.chest.info = DataSet.armorHelper.getInfo(equips.chest.key);
+        equips.arm.info = DataSet.armorHelper.getInfo(equips.arm.key);
+        equips.waist.info = DataSet.armorHelper.getInfo(equips.waist.key);
+        equips.leg.info = DataSet.armorHelper.getInfo(equips.leg.key);
+        equips.charm.info = DataSet.charmHelper.getInfo(equips.charm.key);
 
         status.critical.rate = equips.weapon.info.criticalRate;
         status.sharpness = equips.weapon.info.sharpness;
@@ -143,7 +90,7 @@ export default class CharacterStatus extends Component {
                     return false;
                 }
 
-                let jewel = DataSet.jewel.getInfo(slotKey);
+                let jewel = DataSet.jewelHelper.getInfo(slotKey);
 
                 if (undefined === tempSkills[jewel.skill.key]) {
                     tempSkills[jewel.skill.key] = 0;
@@ -159,7 +106,7 @@ export default class CharacterStatus extends Component {
         let defenseMultiples = [];
 
         for (let key in tempSkills) {
-            let skill = DataSet.skill.getInfo(key);
+            let skill = DataSet.skillHelper.getInfo(key);
             let level = tempSkills[key];
 
             status.skills.push({
@@ -192,7 +139,7 @@ export default class CharacterStatus extends Component {
 
                     break;
                 case 'criticalMultiple':
-                    status.critical.multiple = data.value;
+                    status.critical.multiple.positive = data.value;
 
                     break;
                 case 'sharpness':
@@ -244,8 +191,12 @@ export default class CharacterStatus extends Component {
             }
         }
 
-        if (status.critical.rate < 0) {
-            status.critical.multiple = 0.75;
+        let currentCriticalMultiple = 0;
+
+        if (0 <= status.critical.rate) {
+            currentCriticalMultiple = status.critical.multiple.positive;
+        } else {
+            currentCriticalMultiple = status.critical.multiple.nagetive;
         }
 
         // Last Status Completion
@@ -276,7 +227,7 @@ export default class CharacterStatus extends Component {
 
         // Expected Value
         let basicAttack = status.attack / Constant.weaponMultiple[weaponType];
-        let basicCriticalAttack = basicAttack * status.critical.multiple;
+        let basicCriticalAttack = basicAttack * currentCriticalMultiple;
         let expectedValue = (basicAttack * (100 - Math.abs(status.critical.rate)) / 100)
             + (basicCriticalAttack * Math.abs(status.critical.rate) / 100);
 
@@ -311,6 +262,9 @@ export default class CharacterStatus extends Component {
         });
     }
 
+    /**
+     * Render Functions
+     */
     render () {
         let status = this.state.status;
 
@@ -416,7 +370,11 @@ export default class CharacterStatus extends Component {
                     <span>會心倍數</span>
                 </div>
                 <div className="col-8 mhwc-value">
-                    <span>{status.critical.multiple}x</span>
+                    {(0 <= status.critical.rate) ? (
+                        <span>{status.critical.multiple.positive}x</span>
+                    ) : (
+                        <span>{status.critical.multiple.nagetive}x</span>
+                    )}
                 </div>
             </div>
         ), (
