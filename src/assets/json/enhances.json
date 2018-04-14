@@ -1,22 +1,129 @@
 [
     {
-        "name": "賦予回復能力",
-        "list": null
+        "name": "強化攻擊力",
+        "list": [
+            {
+                "level": 1,
+                "reaction": {
+                    "attack": {
+                        "value": 5
+                    }
+                }
+            },
+            {
+                "level": 2,
+                "reaction": {
+                    "attack": {
+                        "value": 10
+                    }
+                }
+            },
+            {
+                "level": 3,
+                "reaction": {
+                    "attack": {
+                        "value": 15
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name": "強化會心率",
+        "list": [
+            {
+                "level": 1,
+                "reaction": {
+                    "criticalRate": {
+                        "value": 10
+                    }
+                }
+            },
+            {
+                "level": 2,
+                "reaction": {
+                    "criticalRate": {
+                        "value": 20
+                    }
+                }
+            },
+            {
+                "level": 3,
+                "reaction": {
+                    "criticalRate": {
+                        "value": 30
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name": "強化防禦力",
+        "list": [
+            {
+                "level": 1,
+                "reaction": {
+                    "defense": 10
+                }
+            },
+            {
+                "level": 2,
+                "reaction": {
+                    "defense": 20
+                }
+            },
+            {
+                "level": 3,
+                "reaction": {
+                    "defense": 30
+                }
+            }
+        ]
+    },
+    {
+        "name": "強化鑲嵌槽",
+        "list": [
+            {
+                "level": 1,
+                "reaction": {
+                    "addSlot": {
+                        "value": 1
+                    }
+                }
+            },
+            {
+                "level": 2,
+                "reaction": {
+                    "addSlot": {
+                        "value": 2
+                    }
+                }
+            },
+            {
+                "level": 3,
+                "reaction": {
+                    "addSlot": {
+                        "value": 3
+                    }
+                }
+            }
+        ]
     },
     {
         "name": "賦予回復能力",
-        "list": null
-    },
-    {
-        "name": "賦予回復能力",
-        "list": null
-    },
-    {
-        "name": "賦予回復能力",
-        "list": null
-    },
-    {
-        "name": "賦予回復能力",
-        "list": null
+        "list": [
+            {
+                "level": 1,
+                "reaction": null
+            },
+            {
+                "level": 2,
+                "reaction": null
+            },
+            {
+                "level": 3,
+                "reaction": null
+            }
+        ]
     }
 ]
