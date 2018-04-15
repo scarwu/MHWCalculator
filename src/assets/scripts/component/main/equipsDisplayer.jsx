@@ -25,13 +25,13 @@ export default class EquipsDisplayer extends Component {
 
     // Default Props
     static defaultProps = {
-        equips: Constant.defaultEquips,
+        equips: Constant.getDefaultEquips(),
         onOpenSelector: (data) => {}
     };
 
     // Initial State
     state = {
-        equips: Constant.defaultEquips
+        equips: Constant.getDefaultEquips()
     };
 
     /**
@@ -47,19 +47,8 @@ export default class EquipsDisplayer extends Component {
         });
     };
 
-    handleEquipSwitch = (equipType) => {
-        this.props.onOpenSelector({});
-        console.log('EquipSwitch', equipType);
-    };
-
-    handleEquipSlotSwitch = (equipType, index) => {
-        this.props.onOpenSelector({});
-        console.log('EquipSlotSwitch', equipType, index);
-    };
-
-    handleWeaponEnhanceSwitch = (index) => {
-        this.props.onOpenSelector({});
-        console.log('WeaponEnhanceSwitch', index);
+    handleEquipSwitch = (data) => {
+        this.props.onOpenSelector(data);
     };
 
     /**
@@ -72,6 +61,13 @@ export default class EquipsDisplayer extends Component {
     }
 
     componentWillReceiveProps (nextProps) {
+        let prevEquips = JSON.stringify(this.props.equips);
+        let nextEquips = JSON.stringify(nextProps.equips);
+
+        if (prevEquips === nextEquips) {
+            return false;
+        }
+
         this.setState({
             equips: this.props.equips
         });
@@ -85,6 +81,10 @@ export default class EquipsDisplayer extends Component {
         let ContentBlocks = [];
 
         // Weapon
+        let weaponSelectorData = {
+            equipType: 'weapon'
+        };
+
         if (null !== equips.weapon) {
             let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
 
@@ -92,19 +92,27 @@ export default class EquipsDisplayer extends Component {
                 <div key="weapon" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         {equips.weapon.isLock ? (
-                            <a className="fa fa-lock" onClick={() => {this.handleEquipLockToggle('weapon')}}></a>
+                            <a className="fa fa-lock"
+                                onClick={() => {this.handleEquipLockToggle('weapon')}}></a>
                         ) : (
-                            <a className="fa fa-unlock-alt" onClick={() => {this.handleEquipLockToggle('weapon')}}></a>
+                            <a className="fa fa-unlock-alt"
+                                onClick={() => {this.handleEquipLockToggle('weapon')}}></a>
                         )}
                         &nbsp;
                         <span>{weaponInfo.name}</span>
 
-                        <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch('weapon')}}></a>
+                        <a className="mhwc-exchnage fa fa-exchange"
+                            onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}></a>
                     </div>
 
                     {0 !== weaponInfo.enhances.length ? (
                         <div className="col-12 mhwc-enhances">
                             {weaponInfo.enhances.map((data, index) => {
+                                let enhanceSelectorData = {
+                                    equipType: 'weapon',
+                                    enhanceIndex: index
+                                };
+
                                 return (
                                     <div key={data.key + '_' + index} className="row mhwc-enhance">
                                         <div className="col-4 mhwc-name">
@@ -117,7 +125,8 @@ export default class EquipsDisplayer extends Component {
                                                 <span>&nbsp;-&nbsp;</span>
                                             )}
 
-                                            <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleWeaponEnhanceSwitch(index)}}></a>
+                                            <a className="mhwc-exchnage fa fa-exchange"
+                                                onClick={() => {this.handleEquipSwitch(enhanceSelectorData)}}></a>
                                         </div>
                                     </div>
                                 );
@@ -128,6 +137,12 @@ export default class EquipsDisplayer extends Component {
                     {0 !== weaponInfo.slots.length ? (
                         <div className="col-12 mhwc-slots">
                             {weaponInfo.slots.map((data, index) => {
+                                let jewelSelectorData = {
+                                    equipType: 'weapon',
+                                    slotSize: data.size,
+                                    slotIndex: index
+                                };
+
                                 return (
                                     <div key={data.key + '_' + index} className="row mhwc-jewel">
                                         <div className="col-4 mhwc-name">
@@ -140,7 +155,8 @@ export default class EquipsDisplayer extends Component {
                                                 <span>&nbsp;-&nbsp;</span>
                                             )}
 
-                                            <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSlotSwitch('weapon', index)}}></a>
+                                            <a className="mhwc-exchnage fa fa-exchange"
+                                                onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}></a>
                                         </div>
                                     </div>
                                 );
@@ -155,7 +171,8 @@ export default class EquipsDisplayer extends Component {
                     <div className="col-12 mhwc-name">
                         <span>&nbsp;-&nbsp;</span>
 
-                        <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch('weapon')}}></a>
+                        <a className="mhwc-exchnage fa fa-exchange"
+                            onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}></a>
                     </div>
                 </div>
             ));
@@ -163,6 +180,10 @@ export default class EquipsDisplayer extends Component {
 
         // Armors
         ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+            let equipSelectorData = {
+                equipType: equipType
+            };
+
             if (null !== equips[equipType]) {
                 let equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
 
@@ -170,19 +191,28 @@ export default class EquipsDisplayer extends Component {
                     <div key={'equip_' + equipType} className="row mhwc-equip">
                         <div className="col-12 mhwc-name">
                             {equips[equipType].isLock ? (
-                                <a className="fa fa-lock" onClick={() => {this.handleEquipLockToggle(equipType)}}></a>
+                                <a className="fa fa-lock"
+                                    onClick={() => {this.handleEquipLockToggle(equipType)}}></a>
                             ) : (
-                                <a className="fa fa-unlock-alt" onClick={() => {this.handleEquipLockToggle(equipType)}}></a>
+                                <a className="fa fa-unlock-alt"
+                                    onClick={() => {this.handleEquipLockToggle(equipType)}}></a>
                             )}
                             &nbsp;
                             <span>{equipInfo.name}</span>
 
-                            <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch(equipType)}}></a>
+                            <a className="mhwc-exchnage fa fa-exchange"
+                                onClick={() => {this.handleEquipSwitch(equipSelectorData)}}></a>
                         </div>
 
                         {0 !== equipInfo.slots.length ? (
                             <div className="col-12 mhwc-slots">
                                 {equipInfo.slots.map((data, index) => {
+                                    let jewelSelectorData = {
+                                        equipType: equipType,
+                                        slotSize: data.size,
+                                        slotIndex: index
+                                    };
+
                                     return (
                                         <div key={data.key + '_' + index} className="row mhwc-jewel">
                                             <div className="col-4 mhwc-name">
@@ -195,7 +225,8 @@ export default class EquipsDisplayer extends Component {
                                                     <span>&nbsp;-&nbsp;</span>
                                                 )}
 
-                                                <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSlotSwitch(equipType, index)}}></a>
+                                                <a className="mhwc-exchnage fa fa-exchange"
+                                                    onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}></a>
                                             </div>
                                         </div>
                                     );
@@ -210,7 +241,8 @@ export default class EquipsDisplayer extends Component {
                         <div className="col-12 mhwc-name">
                             <span>&nbsp;-&nbsp;</span>
 
-                            <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch(equipType)}}></a>
+                            <a className="mhwc-exchnage fa fa-exchange"
+                                onClick={() => {this.handleEquipSwitch(equipSelectorData)}}></a>
                         </div>
                     </div>
                 ));
@@ -218,6 +250,10 @@ export default class EquipsDisplayer extends Component {
         });
 
         // Charm
+        let charmSelectorData = {
+            equipType: 'charm'
+        };
+
         if (null !== equips.charm) {
             let charmInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
 
@@ -225,14 +261,17 @@ export default class EquipsDisplayer extends Component {
                 <div key="charm" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         {equips.charm.isLock ? (
-                            <a className="fa fa-lock" onClick={() => {this.handleEquipLockToggle('charm')}}></a>
+                            <a className="fa fa-lock"
+                                onClick={() => {this.handleEquipLockToggle('charm')}}></a>
                         ) : (
-                            <a className="fa fa-unlock-alt" onClick={() => {this.handleEquipLockToggle('charm')}}></a>
+                            <a className="fa fa-unlock-alt"
+                                onClick={() => {this.handleEquipLockToggle('charm')}}></a>
                         )}
                         &nbsp;
                         <span>{charmInfo.name}</span>
 
-                        <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch('charm')}}></a>
+                        <a className="mhwc-exchnage fa fa-exchange"
+                            onClick={() => {this.handleEquipSwitch(charmSelectorData)}}></a>
                     </div>
                 </div>
             ));
@@ -242,7 +281,8 @@ export default class EquipsDisplayer extends Component {
                     <div className="col-12 mhwc-name">
                         <span>&nbsp;-&nbsp;</span>
 
-                        <a className="mhwc-exchnage fa fa-exchange" onClick={() => {this.handleEquipSwitch('charm')}}></a>
+                        <a className="mhwc-exchnage fa fa-exchange"
+                            onClick={() => {this.handleEquipSwitch(charmSelectorData)}}></a>
                     </div>
                 </div>
             ));

@@ -55,10 +55,10 @@ $function_bar-height: 40px;
 
 .mhwc-selector {
     position: fixed;
-    top: 20px;
+    top: 20px + $header-height;
     left: 20px;
     right: 20px;
-    bottom: 20px;
+    bottom: 20px + $footer-height;
     border: 1px solid #333;
     background-color: white;
 

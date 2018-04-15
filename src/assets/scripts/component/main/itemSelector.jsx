@@ -51,9 +51,35 @@ export default class ItemSelector extends Component {
      * Lifecycle Functions
      */
     componentWillMount () {
+        let data = this.props.data;
+        let list = null;
+
+        console.log(data);
+
+        if (undefined !== data.slotIndex) {
+
+        } else if (undefined !== data.enhanceIndex) {
+
+        } else if ('weapon' === data.equipType) {
+
+        } else if ('helm' === data.equipType
+            || 'chest' === data.equipType
+            || 'arm' === data.equipType
+            || 'waist' === data.equipType
+            || 'leg' === data.equipType) {
+
+
+        } else if ('charm' === data.equipType) {
+
+        }
+
         this.setState({
-            data: this.props.data
+            list: list
         });
+    }
+
+    componentDidMount () {
+        this.props.onClose();
     }
 
     componentWillReceiveProps (nextProps) {

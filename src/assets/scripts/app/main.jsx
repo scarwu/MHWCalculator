@@ -40,7 +40,7 @@ export default class Main extends Component {
         skillSegment: null,
         selectedSkills: [],
         candidateList: [],
-        equips: Constant.defaultEquips
+        equips: Constant.getDefaultEquips()
     };
 
     /**

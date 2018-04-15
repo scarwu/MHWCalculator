@@ -25,13 +25,13 @@ export default class CharacterStatus extends Component {
 
     // Default Props
     static defaultProps = {
-        equips: Constant.defaultEquips
+        equips: Constant.getDefaultEquips()
     };
 
     // Initial State
     state = {
-        equips: Constant.defaultEquips,
-        status: Constant.defaultStatus
+        equips: Constant.getDefaultEquips(),
+        status: Constant.getDefaultStatus()
     };
 
     /**
@@ -40,7 +40,7 @@ export default class CharacterStatus extends Component {
     generateStatus = () => {
 
         let equips = this.state.equips;
-        let status = this.state.status;
+        let status = Constant.getDefaultStatus();
         let tempSkills = {};
 
         console.log(DataSet.weaponHelper.getApplyedInfo(equips.weapon));
@@ -277,6 +277,13 @@ export default class CharacterStatus extends Component {
     }
 
     componentWillReceiveProps (nextProps) {
+        let prevEquips = JSON.stringify(this.props.equips);
+        let nextEquips = JSON.stringify(nextProps.equips);
+
+        if (prevEquips === nextEquips) {
+            return false;
+        }
+
         this.setState({
             equips: this.props.equips
         }, () => {
