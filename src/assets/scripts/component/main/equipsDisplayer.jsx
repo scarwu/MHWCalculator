@@ -15,6 +15,7 @@ import React, { Component } from 'react';
 import Event from 'core/event';
 
 // Load Custom Libraries
+import Misc from 'library/misc';
 import DataSet from 'library/dataset';
 
 // Load Constant & Lang
@@ -25,13 +26,13 @@ export default class EquipsDisplayer extends Component {
 
     // Default Props
     static defaultProps = {
-        equips: Constant.getDefaultEquips(),
+        equips: Misc.deepCopy(Constant.defaultEquips),
         onOpenSelector: (data) => {}
     };
 
     // Initial State
     state = {
-        equips: Constant.getDefaultEquips()
+        equips: Misc.deepCopy(Constant.defaultEquips)
     };
 
     /**

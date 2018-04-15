@@ -15,6 +15,7 @@ import React, { Component } from 'react';
 import Event from 'core/event';
 
 // Load Custom Libraries
+import Misc from 'library/misc';
 import DataSet from 'library/dataset';
 
 // Load Constant & Lang
@@ -119,6 +120,36 @@ export default class ItemSelector extends Component {
     /**
      * Render Functions
      */
+    renderSharpnessBar = (data) => {
+        let basicValue = 0;
+
+        ['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
+            basicValue += data.steps[step];
+        });
+
+        if (400 >= basicValue) {
+            basicValue = 400;
+        }
+
+        return (
+            <div className="mhwc-bar">
+                <div className="mhwc-steps">
+                    {['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
+                        return (
+                            <div key={'sharpness_' + step} className="mhwc-step" style={{
+                                width: (data.steps[step] / basicValue * 100) + '%'
+                            }}></div>
+                        );
+                    })}
+                </div>
+
+                <div className="mhwc-mask" style={{
+                    width: ((basicValue - data.value) / basicValue * 100) + '%'
+                }}></div>
+            </div>
+        );
+    };
+
     renderTable = () => {
         let segment = this.state.textSegment;
 
@@ -152,27 +183,23 @@ export default class ItemSelector extends Component {
                                 return false;
                             }
 
+                            let originalSharpness = null;
+                            let enhancedSharpness = null;
+
+                            if (null !== data.sharpness) {
+                                originalSharpness = Misc.deepCopy(data.sharpness);
+                                enhancedSharpness = Misc.deepCopy(data.sharpness);
+                                enhancedSharpness.value += 50;
+                            }
+
                             return (
                                 <tr key={index}>
                                     <td><span>{data.name}</span></td>
                                     <td><span>{Lang[data.type]}</span></td>
                                     <td><span>{data.rare}</span></td>
                                     <td>
-                                        {null !== data.sharpness ? (
-                                            <div className="mhwc-steps">
-                                                {['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
-                                                    return (
-                                                        <div key={'sharpness_' + step} className="mhwc-step" style={{
-                                                            width: (data.sharpness.steps[step] / 4) + '%'
-                                                        }}></div>
-                                                    );
-                                                })}
-
-                                                <div className="mhwc-mask" style={{
-                                                    width: ((400 - data.sharpness.value) / 4) + '%'
-                                                }}></div>
-                                            </div>
-                                        ) :  false}
+                                        {null !== data.sharpness ? this.renderSharpnessBar(originalSharpness) :  false}
+                                        {null !== data.sharpness ? this.renderSharpnessBar(enhancedSharpness) :  false}
                                     </td>
                                     <td><span>{data.attack}</span></td>
                                     <td>

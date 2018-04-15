@@ -15,6 +15,7 @@ import React, { Component } from 'react';
 import Event from 'core/event';
 
 // Load Custom Libraries
+import Misc from 'library/misc';
 import DataSet from 'library/dataset';
 
 // Load Constant & Lang
@@ -25,13 +26,13 @@ export default class CharacterStatus extends Component {
 
     // Default Props
     static defaultProps = {
-        equips: Constant.getDefaultEquips()
+        equips: Misc.deepCopy(Constant.defaultEquips)
     };
 
     // Initial State
     state = {
-        equips: Constant.getDefaultEquips(),
-        status: Constant.getDefaultStatus()
+        equips: Misc.deepCopy(Constant.defaultEquips),
+        status: Misc.deepCopy(Constant.defaultStatus)
     };
 
     /**
@@ -40,7 +41,7 @@ export default class CharacterStatus extends Component {
     generateStatus = () => {
 
         let equips = this.state.equips;
-        let status = Constant.getDefaultStatus();
+        let status = Misc.deepCopy(Constant.defaultStatus);
         let tempSkills = {};
 
         console.log(DataSet.weaponHelper.getApplyedInfo(equips.weapon));
@@ -294,6 +295,36 @@ export default class CharacterStatus extends Component {
     /**
      * Render Functions
      */
+    renderSharpnessBar = (data) => {
+        let basicValue = 0;
+
+        ['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
+            basicValue += data.steps[step];
+        });
+
+        if (400 >= basicValue) {
+            basicValue = 400;
+        }
+
+        return (
+            <div className="mhwc-bar">
+                <div className="mhwc-steps">
+                    {['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
+                        return (
+                            <div key={'sharpness_' + step} className="mhwc-step" style={{
+                                width: (data.steps[step] / basicValue * 100) + '%'
+                            }}></div>
+                        );
+                    })}
+                </div>
+
+                <div className="mhwc-mask" style={{
+                    width: ((basicValue - data.value) / basicValue * 100) + '%'
+                }}></div>
+            </div>
+        );
+    };
+
     render () {
         let status = this.state.status;
 
@@ -325,19 +356,7 @@ export default class CharacterStatus extends Component {
                     <span>斬位</span>
                 </div>
                 <div className="col-8 mhwc-value">
-                    <div className="col-12 mhwc-steps">
-                        {['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
-                            return (
-                                <div key={'sharpness_' + step} className="mhwc-step" style={{
-                                    width: (status.sharpness.steps[step] / 4) + '%'
-                                }}></div>
-                            );
-                        })}
-
-                        <div className="mhwc-mask" style={{
-                            width: ((400 - status.sharpness.value) / 4) + '%'
-                        }}></div>
-                    </div>
+                    {this.renderSharpnessBar(status.sharpness)}
                 </div>
             </div>
         ) : false, (

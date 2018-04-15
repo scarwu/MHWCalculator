@@ -17,6 +17,7 @@ import Status from 'core/status';
 import Event from 'core/event';
 
 // Load Custom Libraries
+import Misc from 'library/misc';
 import DataSet from 'library/dataset';
 
 // Load Constant & Lang
@@ -40,7 +41,7 @@ export default class Main extends Component {
         skillSegment: null,
         selectedSkills: [],
         candidateList: [],
-        equips: Constant.getDefaultEquips()
+        equips: Misc.deepCopy(Constant.defaultEquips)
     };
 
     /**
@@ -202,7 +203,7 @@ export default class Main extends Component {
                 isLock: false
             };
 
-            info = DataSet.weaponHelper.getInfo(equips[data.equipType].key);
+            info = DataSet.armorHelper.getInfo(equips[data.equipType].key);
 
             for (let i = 0; i < info.slots.length; i++) {
                 equips.weapon.slotKeys[i] = null;

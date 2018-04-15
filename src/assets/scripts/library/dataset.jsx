@@ -203,7 +203,7 @@ class WeaponHelper {
 
                     break;
                 case 'criticalRate':
-                    info.critical.rate += data.value;
+                    info.criticalRate += data.value;
 
                     break;
                 case 'defense':

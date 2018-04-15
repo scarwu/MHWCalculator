@@ -54,39 +54,50 @@ $function_bar-height: 40px;
 }
 
 @mixin mhwc-sharpness() {
-    .mhwc-steps {
+    .mhwc-bar {
         position: relative;
         border: 1px solid black;
         width: 100%;
-        height: 21px;
+        height: 100%;
         background-color: black;
 
-        .mhwc-step {
-            display: inline-block;
-            height: 19px;
+        @include font-size(0);
 
-            &:nth-child(1) {
-                background-color: red;
-            }
+        .mhwc-steps {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
 
-            &:nth-child(2) {
-                background-color: orange;
-            }
+            .mhwc-step {
+                float: left;
+                display: block;
+                height: 100%;
 
-            &:nth-child(3) {
-                background-color: yellow;
-            }
+                &:nth-child(1) {
+                    background-color: red;
+                }
 
-            &:nth-child(4) {
-                background-color: green;
-            }
+                &:nth-child(2) {
+                    background-color: orange;
+                }
 
-            &:nth-child(5) {
-                background-color: blue;
-            }
+                &:nth-child(3) {
+                    background-color: yellow;
+                }
 
-            &:nth-child(6) {
-                background-color: white;
+                &:nth-child(4) {
+                    background-color: green;
+                }
+
+                &:nth-child(5) {
+                    background-color: blue;
+                }
+
+                &:nth-child(6) {
+                    background-color: white;
+                }
             }
         }
 
@@ -94,7 +105,7 @@ $function_bar-height: 40px;
             position: absolute;
             top: 0;
             right: 0;
-            height: 19px;
+            height: 100%;
             background-color: black;
         }
     }
@@ -131,7 +142,7 @@ $function_bar-height: 40px;
             height: $function_bar-height;
             width: 20px;
             top: 10px;
-            right: 15px;
+            right: 20px;
             text-align: center;
         }
     }
@@ -154,7 +165,9 @@ $function_bar-height: 40px;
                 }
 
                 td {
-                    padding: 5px 0;
+                    padding: 0 5px;
+                    height: 40px;
+                    line-height: 40px;
                 }
             }
 
@@ -172,7 +185,9 @@ $function_bar-height: 40px;
                 }
 
                 td {
-                    padding: 5px 0;
+                    padding: 0 5px;
+                    height: 40px;
+                    line-height: 40px;
                 }
             }
 
@@ -180,62 +195,64 @@ $function_bar-height: 40px;
 
                 // 名稱
                 td:nth-child(1) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 類型
                 td:nth-child(2) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 稀有度
                 td:nth-child(3) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 斬位
                 td:nth-child(4) {
-                    width: calc((100% - 20px) / 1x);
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    width: 10%;
                 }
 
                 // 攻擊力
                 td:nth-child(5) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 攻擊屬性
                 td:nth-child(6) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 狀態屬性
                 td:nth-child(7) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 龍封力
                 td:nth-child(8) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 會心率
                 td:nth-child(9) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 防禦
                 td:nth-child(10) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 插槽
                 td:nth-child(11) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 td:nth-child(12) {
-                    width: 20px;
-                    text-align: center;
+                    padding-right: 5px;
+                    text-align: right;
                 }
             }
 
@@ -243,62 +260,62 @@ $function_bar-height: 40px;
 
                 // 名稱
                 td:nth-child(1) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 稀有度
                 td:nth-child(2) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 防禦
                 td:nth-child(3) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 火抗性
                 td:nth-child(4) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 水抗性
                 td:nth-child(5) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 雷抗性
                 td:nth-child(6) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 冰抗性
                 td:nth-child(7) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 龍抗性
                 td:nth-child(8) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 插槽
                 td:nth-child(9) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 套裝
                 td:nth-child(10) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 // 技能
                 td:nth-child(11) {
-                    width: calc((100% - 20px) / 1x);
+
                 }
 
                 td:nth-child(12) {
-                    width: 20px;
-                    text-align: center;
+                    padding-right: 5px;
+                    text-align: right;
                 }
             }
 
@@ -306,22 +323,22 @@ $function_bar-height: 40px;
 
                 // 名稱
                 td:nth-child(1) {
-                    width: calc((100% - 20px) / 3);
+
                 }
 
                 // 稀有度
                 td:nth-child(2) {
-                    width: calc((100% - 20px) / 3);
+
                 }
 
                 // 技能
                 td:nth-child(3) {
-                    width: calc((100% - 20px) / 3);
+
                 }
 
                 td:nth-child(4) {
-                    width: 20px;
-                    text-align: center;
+                    padding-right: 5px;
+                    text-align: right;
                 }
             }
 
@@ -329,27 +346,27 @@ $function_bar-height: 40px;
 
                 // 名稱
                 td:nth-child(1) {
-                    width: calc((100% - 20px) / 4);
+
                 }
 
                 // 稀有度
                 td:nth-child(2) {
-                    width: calc((100% - 20px) / 4);
+
                 }
 
                 // 大小
                 td:nth-child(3) {
-                    width: calc((100% - 20px) / 4);
+
                 }
 
                 // 技能
                 td:nth-child(4) {
-                    width: calc((100% - 20px) / 4);
+
                 }
 
                 td:nth-child(5) {
-                    width: 20px;
-                    text-align: center;
+                    padding-right: 5px;
+                    text-align: right;
                 }
             }
 
@@ -357,16 +374,28 @@ $function_bar-height: 40px;
 
                 // 名稱
                 td:nth-child(1) {
-                    width: calc((100% - 20px) / 1);
+
                 }
 
                 td:nth-child(2) {
-                    width: 20px;
-                    text-align: center;
+                    padding-right: 5px;
+                    text-align: right;
                 }
             }
 
             @include mhwc-sharpness();
+
+            .mhwc-bar {
+                height: 15px;
+
+                &:nth-child(1) {
+                    // border-bottom: none;
+                }
+
+                &:nth-child(2) {
+                    // border-top: none;
+                }
+            }
         }
 
         &::-webkit-scrollbar {
