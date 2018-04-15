@@ -157,8 +157,6 @@ export default class Main extends Component {
     };
 
     handleSelectorPickup = (data) => {
-        console.log(data);
-
         let equips = this.state.equips;
         let info = null;
         let times = null
@@ -215,8 +213,6 @@ export default class Main extends Component {
                 isLock: false
             };
         }
-
-        console.log(equips);
 
         this.setState({
             equips: equips
