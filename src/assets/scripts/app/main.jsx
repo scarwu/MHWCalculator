@@ -162,34 +162,72 @@ export default class Main extends Component {
         let info = null;
         let times = null
 
-        if (undefined !== data.slotIndex) {
-            equips[data.equipType].slotKeys[data.slotIndex] = data.slotKey;
-        } else if (undefined !== data.enhanceIndex) {
-            equips[data.equipType].enhanceKeys[data.enhanceIndex] = data.enhanceKey;
-        } else if ('weapon' === data.equipType) {
-            equips.weapon = {
-                key: data.equipKey,
-                enhanceKeys: {},
-                slotKeys: {},
-                isLock: false
-            };
+        if ('weapon' === data.equipType) {
+            if (undefined !== data.enhanceIndex) {
+                info = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
 
-            info = DataSet.weaponHelper.getInfo(equips.weapon.key);
+                if (null === equips.weapon.enhanceKeys) {
+                    equips.weapon.enhanceKeys = {};
+                }
 
-            if (8 === info.rare) {
-                times = 1;
-            } else if (7 === info.rare) {
-                times = 2;
-            } else if (6 === info.rare) {
-                times = 3;
-            }
+                if (8 === info.rare) {
+                    times = 1;
+                } else if (7 === info.rare) {
+                    times = 2;
+                } else if (6 === info.rare) {
+                    times = 3;
+                }
 
-            for (let i = 0; i < times; i++) {
-                equips.weapon.enhanceKeys[i] = null;
-            }
+                for (let i = 0; i < times; i++) {
+                    if (undefined !== equips.weapon.enhanceKeys[i]) {
+                        continue;
+                    }
 
-            for (let i = 0; i < info.slots.length; i++) {
-                equips.weapon.slotKeys[i] = null;
+                    equips.weapon.enhanceKeys[i] = null;
+                }
+
+                equips.weapon.enhanceKeys[data.enhanceIndex] = data.enhanceKey;
+            } else if (undefined !== data.slotIndex) {
+                info = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
+
+                if (null === equips.weapon.slotKeys) {
+                    equips.weapon.slotKeys = {};
+                }
+
+                for (let i = 0; i < info.slots.length; i++) {
+                    if (undefined !== equips.weapon.slotKeys[i]) {
+                        continue;
+                    }
+
+                    equips.weapon.slotKeys[i] = null;
+                }
+
+                equips.weapon.slotKeys[data.slotIndex] = data.slotKey;
+            } else {
+                equips.weapon = {
+                    key: data.equipKey,
+                    enhanceKeys: {},
+                    slotKeys: {},
+                    isLock: false
+                };
+
+                info = DataSet.weaponHelper.getInfo(equips.weapon.key);
+
+                if (8 === info.rare) {
+                    times = 1;
+                } else if (7 === info.rare) {
+                    times = 2;
+                } else if (6 === info.rare) {
+                    times = 3;
+                }
+
+                for (let i = 0; i < times; i++) {
+                    equips.weapon.enhanceKeys[i] = null;
+                }
+
+                for (let i = 0; i < info.slots.length; i++) {
+                    equips.weapon.slotKeys[i] = null;
+                }
             }
         } else if ('helm' === data.equipType
             || 'chest' === data.equipType
@@ -197,16 +235,34 @@ export default class Main extends Component {
             || 'waist' === data.equipType
             || 'leg' === data.equipType) {
 
-            equips[data.equipType] = {
-                key: data.equipKey,
-                slotKeys: {},
-                isLock: false
-            };
+            if (undefined !== data.slotIndex) {
+                info = DataSet.armorHelper.getApplyedInfo(equips[data.equipType]);
 
-            info = DataSet.armorHelper.getInfo(equips[data.equipType].key);
+                if (null === equips[data.equipType].slotKeys) {
+                    equips[data.equipType].slotKeys = {};
+                }
 
-            for (let i = 0; i < info.slots.length; i++) {
-                equips.weapon.slotKeys[i] = null;
+                for (let i = 0; i < info.slots.length; i++) {
+                    if (undefined !== equips[data.equipType].slotKeys[i]) {
+                        continue;
+                    }
+
+                    equips[data.equipType].slotKeys[i] = null;
+                }
+
+                equips[data.equipType].slotKeys[data.slotIndex] = data.slotKey;
+            } else {
+                equips[data.equipType] = {
+                    key: data.equipKey,
+                    slotKeys: {},
+                    isLock: false
+                };
+
+                info = DataSet.armorHelper.getInfo(equips[data.equipType].key);
+
+                for (let i = 0; i < info.slots.length; i++) {
+                    equips[data.equipType].slotKeys[i] = null;
+                }
             }
         } else if ('charm' === data.equipType) {
             equips.chram = {

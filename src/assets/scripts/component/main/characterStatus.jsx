@@ -44,13 +44,13 @@ export default class CharacterStatus extends Component {
         let status = Misc.deepCopy(Constant.defaultStatus);
         let tempSkills = {};
 
-        console.log(DataSet.weaponHelper.getApplyedInfo(equips.weapon));
-        console.log(DataSet.armorHelper.getApplyedInfo(equips.helm));
-        console.log(DataSet.armorHelper.getApplyedInfo(equips.chest));
-        console.log(DataSet.armorHelper.getApplyedInfo(equips.arm));
-        console.log(DataSet.armorHelper.getApplyedInfo(equips.waist));
-        console.log(DataSet.armorHelper.getApplyedInfo(equips.leg));
-        console.log(DataSet.charmHelper.getApplyedInfo(equips.charm));
+        // console.log(DataSet.weaponHelper.getApplyedInfo(equips.weapon));
+        // console.log(DataSet.armorHelper.getApplyedInfo(equips.helm));
+        // console.log(DataSet.armorHelper.getApplyedInfo(equips.chest));
+        // console.log(DataSet.armorHelper.getApplyedInfo(equips.arm));
+        // console.log(DataSet.armorHelper.getApplyedInfo(equips.waist));
+        // console.log(DataSet.armorHelper.getApplyedInfo(equips.leg));
+        // console.log(DataSet.charmHelper.getApplyedInfo(equips.charm));
 
         equips.weapon.info = DataSet.weaponHelper.getInfo(equips.weapon.key);
         equips.helm.info = DataSet.armorHelper.getInfo(equips.helm.key);

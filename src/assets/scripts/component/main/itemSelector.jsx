@@ -47,10 +47,10 @@ export default class ItemSelector extends Component {
     handleItemPickup = (itemKey) => {
         let data = this.props.data;
 
-        if (undefined !== data.slotIndex) {
-            data.soltKey = itemKey;
-        } else if (undefined !== data.enhanceIndex) {
+        if (undefined !== data.enhanceIndex) {
             data.enhanceKey = itemKey;
+        } else if (undefined !== data.slotIndex) {
+            data.soltKey = itemKey;
         } else {
             data.equipKey = itemKey;
         }
@@ -78,17 +78,17 @@ export default class ItemSelector extends Component {
         let mode = null;
         let list = [];
 
-        if (undefined !== data.slotIndex) {
+        if (undefined !== data.enhanceIndex) {
+            mode = 'enhance';
+            list = DataSet.enhanceHelper.getItems();
+        } else if (undefined !== data.slotIndex) {
             mode = 'jewel';
 
-            for (let i = 3; i >= data.slotSize; i--) {
+            for (let i = data.slotSize; i >= 1; i--) {
                 list = list.concat(DataSet.jewelHelper.sizeIsEqualThen(i).getItems().sort((a, b) => {
                     return b.rare - a.rare;
                 }));
             }
-        } else if (undefined !== data.enhanceIndex) {
-            mode = 'enhance';
-            list = DataSet.enhanceHelper.getItems();
         } else if ('weapon' === data.equipType) {
             mode = 'weapon';
             list = DataSet.weaponHelper.getItems();
