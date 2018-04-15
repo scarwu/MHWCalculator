@@ -25,5 +25,19 @@ export default {
     chest: '身',
     arm: '手',
     waist: '腰',
-    leg: '腳'
+    leg: '腳',
+    greatSword: '大劍',
+    longSword: '太刀',
+    swordAndShield: '片手劍',
+    dualSlades: '雙劍',
+    hammer: '大錘',
+    huntingHorn: '狩獵笛',
+    lance: '長槍',
+    gunlance: '銃槍',
+    switchAxe: '斬擊斧',
+    chargeBlade: '充能斧',
+    insectGlaive: '操蟲棍',
+    lightBowgun: '輕弩',
+    heavyBowgun: '重弩',
+    bow: '弓'
 };

@@ -320,6 +320,7 @@ class ArmorHelper {
         });
 
         // Filter Conditional
+        this.filterType = null;
         this.filterSkillKey = null;
     }
 
@@ -329,6 +330,12 @@ class ArmorHelper {
 
     getItems = () => {
         return Object.values(this.mapping).filter((data) => {
+            if (null !== this.filterType) {
+                if (this.filterType !== data.type) {
+                    return false;
+                }
+            }
+
             let isSkip = true;
 
             if (null !== this.filterSkillKey) {
@@ -420,6 +427,12 @@ class ArmorHelper {
     };
 
     // Conditional Functions
+    typeIs = (text) => {
+        this.filterType = text;
+
+        return this;
+    };
+
     hasSkill = (key) => {
         this.filterSkillKey = key;
 
@@ -530,6 +543,8 @@ class JewelHelper {
 
         // Filter Conditional
         this.filterSkillKey = null;
+        this.filterSize = null;
+        this.filterSizeCondition = null;
     }
 
     getKeys = () => {
@@ -544,6 +559,23 @@ class JewelHelper {
                 }
             }
 
+            if (null !== this.filterSize) {
+                switch (this.filterSizeCondition) {
+                case 'equal':
+                    if (this.filterSize !== data.size) {
+                        return false;
+                    }
+
+                    break;
+                case 'greaterEqual':
+                    if (this.filterSize > data.size) {
+                        return false;
+                    }
+
+                    break;
+                }
+            }
+
             return true;
         });
     };
@@ -555,6 +587,20 @@ class JewelHelper {
 
     hasSkill = (key) => {
         this.filterSkillKey = key;
+
+        return this;
+    };
+
+    sizeIsGreaterEqualThen = (value) => {
+        this.filterSize = value;
+        this.filterSizeCondition = 'greaterEqual';
+
+        return this;
+    };
+
+    sizeIsEqualThen = (value) => {
+        this.filterSize = value;
+        this.filterSizeCondition = 'equal';
 
         return this;
     };
