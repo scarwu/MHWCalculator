@@ -62,15 +62,8 @@ export default class EquipsDisplayer extends Component {
     }
 
     componentWillReceiveProps (nextProps) {
-        let prevEquips = JSON.stringify(this.props.equips);
-        let nextEquips = JSON.stringify(nextProps.equips);
-
-        if (prevEquips === nextEquips) {
-            return false;
-        }
-
         this.setState({
-            equips: nextEquips
+            equips: nextProps.equips
         });
     }
 

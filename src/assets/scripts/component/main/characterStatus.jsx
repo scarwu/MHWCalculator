@@ -278,15 +278,8 @@ export default class CharacterStatus extends Component {
     }
 
     componentWillReceiveProps (nextProps) {
-        let prevEquips = JSON.stringify(this.props.equips);
-        let nextEquips = JSON.stringify(nextProps.equips);
-
-        if (prevEquips === nextEquips) {
-            return false;
-        }
-
         this.setState({
-            equips: nextProps
+            equips: nextProps.equips
         }, () => {
             this.generateStatus();
         });

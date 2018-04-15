@@ -265,7 +265,7 @@ export default class Main extends Component {
                 }
             }
         } else if ('charm' === data.equipType) {
-            equips.chram = {
+            equips.charm = {
                 key: data.equipKey,
                 isLock: false
             };
