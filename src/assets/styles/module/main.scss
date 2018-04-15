@@ -110,26 +110,263 @@ $function_bar-height: 40px;
     background-color: white;
 
     @include border-radius(5px);
-    @include font-size(1.4);
-
-    @include mhwc-sharpness();
+    @include font-size(1.6);
 
     .mhwc-function_bar {
+        position: relative;
+        margin-top: 5px;
         padding: 0 10px;
         height: $function_bar-height;
+        line-height: $function_bar-height;
+
+        input {
+            width: 250px;
+            height: $function_bar-height - 10px;
+            padding: 0 5px;
+        }
+
+        a {
+            position: absolute;
+
+            height: $function_bar-height;
+            width: 20px;
+            top: 10px;
+            right: 15px;
+            text-align: center;
+        }
     }
 
     .mhwc-list {
         position: absolute;
-
         top: 5px + $function_bar-height;
         left: 5px;
         right: 5px;
         bottom: 5px;
+        padding: 0 5px;
         overflow-y: scroll;
 
         table {
             width: 100%;
+
+            thead {
+                tr {
+                    border-bottom: 1px solid #333;
+                }
+
+                td {
+                    padding: 5px 0;
+                }
+            }
+
+            tbody {
+                tr {
+                    border-bottom: 1px solid #ccc;
+
+                    &:hover {
+                        background-color: #eee;
+                    }
+                }
+
+                tr:nth-last-child(1) {
+                    border-bottom: none;
+                }
+
+                td {
+                    padding: 5px 0;
+                }
+            }
+
+            &.mhwc-weapon_table {
+
+                // 名稱
+                td:nth-child(1) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 類型
+                td:nth-child(2) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 稀有度
+                td:nth-child(3) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 斬位
+                td:nth-child(4) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 攻擊力
+                td:nth-child(5) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 攻擊屬性
+                td:nth-child(6) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 狀態屬性
+                td:nth-child(7) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 龍封力
+                td:nth-child(8) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 會心率
+                td:nth-child(9) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 防禦
+                td:nth-child(10) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 插槽
+                td:nth-child(11) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                td:nth-child(12) {
+                    width: 20px;
+                    text-align: center;
+                }
+            }
+
+            &.mhwc-armor_table {
+
+                // 名稱
+                td:nth-child(1) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 稀有度
+                td:nth-child(2) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 防禦
+                td:nth-child(3) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 火抗性
+                td:nth-child(4) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 水抗性
+                td:nth-child(5) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 雷抗性
+                td:nth-child(6) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 冰抗性
+                td:nth-child(7) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 龍抗性
+                td:nth-child(8) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 插槽
+                td:nth-child(9) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 套裝
+                td:nth-child(10) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                // 技能
+                td:nth-child(11) {
+                    width: calc((100% - 20px) / 1x);
+                }
+
+                td:nth-child(12) {
+                    width: 20px;
+                    text-align: center;
+                }
+            }
+
+            &.mhwc-charm_table {
+
+                // 名稱
+                td:nth-child(1) {
+                    width: calc((100% - 20px) / 3);
+                }
+
+                // 稀有度
+                td:nth-child(2) {
+                    width: calc((100% - 20px) / 3);
+                }
+
+                // 技能
+                td:nth-child(3) {
+                    width: calc((100% - 20px) / 3);
+                }
+
+                td:nth-child(4) {
+                    width: 20px;
+                    text-align: center;
+                }
+            }
+
+            &.mhwc-jewel_table {
+
+                // 名稱
+                td:nth-child(1) {
+                    width: calc((100% - 20px) / 4);
+                }
+
+                // 稀有度
+                td:nth-child(2) {
+                    width: calc((100% - 20px) / 4);
+                }
+
+                // 大小
+                td:nth-child(3) {
+                    width: calc((100% - 20px) / 4);
+                }
+
+                // 技能
+                td:nth-child(4) {
+                    width: calc((100% - 20px) / 4);
+                }
+
+                td:nth-child(5) {
+                    width: 20px;
+                    text-align: center;
+                }
+            }
+
+            &.mhwc-enhance_table {
+
+                // 名稱
+                td:nth-child(1) {
+                    width: calc((100% - 20px) / 1);
+                }
+
+                td:nth-child(2) {
+                    width: 20px;
+                    text-align: center;
+                }
+            }
+
+            @include mhwc-sharpness();
         }
 
         &::-webkit-scrollbar {
@@ -206,6 +443,10 @@ $function_bar-height: 40px;
             line-height: 50px;
 
             @include border-radius(5px);
+
+            &:hover {
+                background-color: #eee;
+            }
         }
 
         .mhwc-skill_name {

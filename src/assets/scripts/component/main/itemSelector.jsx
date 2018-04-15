@@ -32,7 +32,8 @@ export default class ItemSelector extends Component {
 
     // Initial State
     state = {
-        data: {}
+        data: {},
+        textSegment: null
     };
 
     /**
@@ -57,6 +58,17 @@ export default class ItemSelector extends Component {
         this.props.onClose();
     };
 
+    handleTextInput = () => {
+        let segment = this.refs.textSegment.value;
+
+        if (0 === segment.length) {
+            segment = null;
+        }
+
+        this.setState({
+            textSegment: segment
+        });
+    };
     /**
      * Lifecycle Functions
      */
@@ -108,10 +120,12 @@ export default class ItemSelector extends Component {
      * Render Functions
      */
     renderTable = () => {
+        let segment = this.state.textSegment;
+
         switch (this.state.mode) {
         case 'weapon':
             return (
-                <table>
+                <table className="mhwc-weapon_table">
                     <thead>
                         <tr>
                             <td>名稱</td>
@@ -119,17 +133,27 @@ export default class ItemSelector extends Component {
                             <td>稀有度</td>
                             <td>斬位</td>
                             <td>攻擊力</td>
-                            <td>屬性</td>
+                            <td>攻擊屬性</td>
+                            <td>狀態屬性</td>
                             <td>龍封力</td>
                             <td>會心率</td>
                             <td>防禦</td>
                             <td>插槽</td>
+                            <td></td>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.list.map((data) => {
+                        {this.state.list.map((data, index) => {
+
+                            // Search Keyword
+                            if (null !== segment
+                                && !data.name.toLowerCase().match(segment.toLowerCase())) {
+
+                                return false;
+                            }
+
                             return (
-                                <tr>
+                                <tr key={index}>
                                     <td><span>{data.name}</span></td>
                                     <td><span>{Lang[data.type]}</span></td>
                                     <td><span>{data.rare}</span></td>
@@ -152,26 +176,24 @@ export default class ItemSelector extends Component {
                                     </td>
                                     <td><span>{data.attack}</span></td>
                                     <td>
-                                        <div>
-                                            {null !== data.element.attack ? [(
-                                                <span>{Lang[data.element.attack.type]}</span>
-                                            ), data.element.attack.isHidden ? (
-                                                <span>({data.element.attack.value})</span>
-                                            ) : (
-                                                <span>{data.element.attack.value}</span>
-                                            )] : false}
+                                        {null !== data.element.attack ? [(
+                                            <span>{Lang[data.element.attack.type]}</span>
+                                        ), data.element.attack.isHidden ? (
+                                            <span>({data.element.attack.value})</span>
+                                        ) : (
+                                            <span>{data.element.attack.value}</span>
+                                        )] : false}
 
-                                        </div>
-                                        <div>
-                                            {null !== data.element.status ? [(
-                                                <span>{Lang[data.element.status.type]}: </span>
-                                            ), data.element.status.isHidden ? (
-                                                <span>({data.element.status.value})</span>
-                                            ) : (
-                                                <span>{data.element.status.value}</span>
-                                            )] : false}
+                                    </td>
+                                    <td>
+                                        {null !== data.element.status ? [(
+                                            <span>{Lang[data.element.status.type]}</span>
+                                        ), data.element.status.isHidden ? (
+                                            <span>({data.element.status.value})</span>
+                                        ) : (
+                                            <span>{data.element.status.value}</span>
+                                        )] : false}
 
-                                        </div>
                                     </td>
                                     <td>
                                         {null !== data.elderseal ? (
@@ -187,6 +209,10 @@ export default class ItemSelector extends Component {
                                             );
                                         })}
                                     </td>
+                                    <td>
+                                        <a className="fa fa-check"
+                                            onClick={() => {this.handleItemPickup(data.name)}}></a>
+                                    </td>
                                 </tr>
                             );
                         })}
@@ -195,53 +221,54 @@ export default class ItemSelector extends Component {
             );
         case 'armor':
             return (
-                <table>
+                <table className="mhwc-armor_table">
                     <thead>
                         <tr>
                             <td>名稱</td>
                             <td>稀有度</td>
                             <td>防禦</td>
-                            <td>抗性</td>
+                            <td>{Lang['fire']}抗性</td>
+                            <td>{Lang['water']}抗性</td>
+                            <td>{Lang['thunder']}抗性</td>
+                            <td>{Lang['ice']}抗性</td>
+                            <td>{Lang['dragon']}抗性</td>
                             <td>插槽</td>
-                            <td>技能</td>
                             <td>套裝</td>
+                            <td>技能</td>
+                            <td></td>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.list.map((data) => {
+                        {this.state.list.map((data, index) => {
+
+                            // Search Keyword
+                            if (null !== segment
+                                && !data.name.toLowerCase().match(segment.toLowerCase())) {
+
+                                return false;
+                            }
+
                             return (
-                                <tr>
+                                <tr key={index}>
                                     <td><span>{data.name}</span></td>
                                     <td><span>{data.rare}</span></td>
                                     <td><span>{data.defense}</span></td>
-                                    <td>
-                                        <div>
-                                            <span>{Lang['fire']}</span>
-                                            <span>{data.resistance.fire}</span>
-                                        </div>
-                                        <div>
-                                            <span>{Lang['water']}</span>
-                                            <span>{data.resistance.water}</span>
-                                        </div>
-                                        <div>
-                                            <span>{Lang['thunder']}</span>
-                                            <span>{data.resistance.thunder}</span>
-                                        </div>
-                                        <div>
-                                            <span>{Lang['ice']}</span>
-                                            <span>{data.resistance.ice}</span>
-                                        </div>
-                                        <div>
-                                            <span>{Lang['dragon']}</span>
-                                            <span>{data.resistance.dragon}</span>
-                                        </div>
-                                    </td>
+                                    <td><span>{data.resistance.fire}</span></td>
+                                    <td><span>{data.resistance.water}</span></td>
+                                    <td><span>{data.resistance.thunder}</span></td>
+                                    <td><span>{data.resistance.ice}</span></td>
+                                    <td><span>{data.resistance.dragon}</span></td>
                                     <td>
                                         {data.slots.map((data) => {
                                             return (
                                                 <span>[{data.size}]</span>
                                             );
                                         })}
+                                    </td>
+                                    <td>
+                                        {null !== data.set ? (
+                                            <span>{data.set.key}</span>
+                                        ) : false}
                                     </td>
                                     <td>
                                         {data.skills.map((data) => {
@@ -253,9 +280,8 @@ export default class ItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        {null !== data.set ? (
-                                            <span>{data.set.key}</span>
-                                        ) : false}
+                                        <a className="fa fa-check"
+                                            onClick={() => {this.handleItemPickup(data.name)}}></a>
                                     </td>
                                 </tr>
                             );
@@ -265,18 +291,27 @@ export default class ItemSelector extends Component {
             );
         case 'charm':
             return (
-                <table>
+                <table className="mhwc-charm_table">
                     <thead>
                         <tr>
                             <td>名稱</td>
                             <td>稀有度</td>
                             <td>技能</td>
+                            <td></td>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.list.map((data) => {
+                        {this.state.list.map((data, index) => {
+
+                            // Search Keyword
+                            if (null !== segment
+                                && !data.name.toLowerCase().match(segment.toLowerCase())) {
+
+                                return false;
+                            }
+
                             return (
-                                <tr>
+                                <tr key={index}>
                                     <td><span>{data.name}</span></td>
                                     <td><span>{data.rare}</span></td>
                                     <td>
@@ -288,6 +323,10 @@ export default class ItemSelector extends Component {
                                             );
                                         })}
                                     </td>
+                                    <td>
+                                        <a className="fa fa-check"
+                                            onClick={() => {this.handleItemPickup(data.name)}}></a>
+                                    </td>
                                 </tr>
                             );
                         })}
@@ -296,24 +335,37 @@ export default class ItemSelector extends Component {
             );
         case 'jewel':
             return (
-                <table>
+                <table className="mhwc-jeweln_table">
                     <thead>
                         <tr>
                             <td>名稱</td>
                             <td>稀有度</td>
                             <td>大小</td>
                             <td>技能</td>
+                            <td></td>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.list.map((data) => {
+                        {this.state.list.map((data, index) => {
+
+                            // Search Keyword
+                            if (null !== segment
+                                && !data.name.toLowerCase().match(segment.toLowerCase())) {
+
+                                return false;
+                            }
+
                             return (
-                                <tr>
+                                <tr key={index}>
                                     <td><span>{data.name}</span></td>
                                     <td><span>{data.rare}</span></td>
                                     <td><span>{data.size}</span></td>
                                     <td>
                                         <span>{data.skill.key} Lv.{data.skill.level}</span>
+                                    </td>
+                                    <td>
+                                        <a className="fa fa-check"
+                                            onClick={() => {this.handleItemPickup(data.name)}}></a>
                                     </td>
                                 </tr>
                             );
@@ -323,17 +375,30 @@ export default class ItemSelector extends Component {
             );
         case 'enhance':
             return (
-                <table>
+                <table className="mhwc-enhance_table">
                     <thead>
                         <tr>
                             <td>名稱</td>
+                            <td></td>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.list.map((data) => {
+                        {this.state.list.map((data, index) => {
+
+                            // Search Keyword
+                            if (null !== segment
+                                && !data.name.toLowerCase().match(segment.toLowerCase())) {
+
+                                return false;
+                            }
+
                             return (
-                                <tr>
+                                <tr key={index}>
                                     <td>{data.name}</td>
+                                    <td>
+                                        <a className="fa fa-check"
+                                            onClick={() => {this.handleItemPickup(data.name)}}></a>
+                                    </td>
                                 </tr>
                             );
                         })}
@@ -347,6 +412,8 @@ export default class ItemSelector extends Component {
         return (
             <div className="mhwc-selector">
                 <div className="mhwc-function_bar">
+                    <input className="mhwc-text_segment" type="text"
+                        ref="textSegment" onChange={this.handleTextInput} />
                     <a className="fa fa-times" onClick={this.handleWindowClose}></a>
                 </div>
                 <div className="mhwc-list">

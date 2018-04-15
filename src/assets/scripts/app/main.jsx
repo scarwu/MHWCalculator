@@ -157,7 +157,7 @@ export default class Main extends Component {
     };
 
     handleSelectorPickup = (data) => {
-
+        console.log(data);
     };
 
     /**
