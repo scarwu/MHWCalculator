@@ -70,7 +70,7 @@ export default class EquipsDisplayer extends Component {
         }
 
         this.setState({
-            equips: this.props.equips
+            equips: nextEquips
         });
     }
 
@@ -221,7 +221,7 @@ export default class EquipsDisplayer extends Component {
                                             </div>
                                             <div className="col-8 mhwc-value">
                                                 {null !== data.key ? (
-                                                    <span>[{data.size}] {data.name}</span>
+                                                    <span>[{data.size}] {data.key}</span>
                                                 ) : (
                                                     <span>&nbsp;-&nbsp;</span>
                                                 )}

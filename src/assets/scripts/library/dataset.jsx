@@ -228,11 +228,14 @@ class WeaponHelper {
             let jewelInfo = null;
             let skillKey = null;
 
+
             if (null !== extend.slotKeys
                 && null !== extend.slotKeys[index]) {
 
                 jewelKey = extend.slotKeys[index];
+                console.log(jewelKey);
                 jewelInfo = jewelHelper.getInfo(jewelKey);
+                console.log(jewelInfo);
                 skillKey = jewelInfo.skill.key;
             }
 

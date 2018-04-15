@@ -160,7 +160,7 @@ export default class Main extends Component {
     handleSelectorPickup = (data) => {
         let equips = this.state.equips;
         let info = null;
-        let times = null
+        let times = null;
 
         if ('weapon' === data.equipType) {
             if (undefined !== data.enhanceIndex) {

@@ -286,7 +286,7 @@ export default class CharacterStatus extends Component {
         }
 
         this.setState({
-            equips: this.props.equips
+            equips: nextProps
         }, () => {
             this.generateStatus();
         });

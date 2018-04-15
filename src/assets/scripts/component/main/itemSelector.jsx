@@ -50,7 +50,7 @@ export default class ItemSelector extends Component {
         if (undefined !== data.enhanceIndex) {
             data.enhanceKey = itemKey;
         } else if (undefined !== data.slotIndex) {
-            data.soltKey = itemKey;
+            data.slotKey = itemKey;
         } else {
             data.equipKey = itemKey;
         }
@@ -113,7 +113,7 @@ export default class ItemSelector extends Component {
 
     componentWillReceiveProps (nextProps) {
         this.setState({
-            data: this.props.data
+            data: nextProps
         });
     }
 
@@ -204,21 +204,21 @@ export default class ItemSelector extends Component {
                                     <td><span>{data.attack}</span></td>
                                     <td>
                                         {null !== data.element.attack ? [(
-                                            <span>{Lang[data.element.attack.type]}</span>
+                                            <span key="type">{Lang[data.element.attack.type]}</span>
                                         ), data.element.attack.isHidden ? (
-                                            <span>({data.element.attack.value})</span>
+                                            <span key="value_1">({data.element.attack.value})</span>
                                         ) : (
-                                            <span>{data.element.attack.value}</span>
+                                            <span key="value_2">{data.element.attack.value}</span>
                                         )] : false}
 
                                     </td>
                                     <td>
                                         {null !== data.element.status ? [(
-                                            <span>{Lang[data.element.status.type]}</span>
+                                            <span key="type">{Lang[data.element.status.type]}</span>
                                         ), data.element.status.isHidden ? (
-                                            <span>({data.element.status.value})</span>
+                                            <span key="value_1">({data.element.status.value})</span>
                                         ) : (
-                                            <span>{data.element.status.value}</span>
+                                            <span key="value_2">{data.element.status.value}</span>
                                         )] : false}
 
                                     </td>
@@ -230,9 +230,9 @@ export default class ItemSelector extends Component {
                                     <td><span>{data.criticalRate}</span></td>
                                     <td><span>{data.defense}</span></td>
                                     <td>
-                                        {data.slots.map((data) => {
+                                        {data.slots.map((data, index) => {
                                             return (
-                                                <span>[{data.size}]</span>
+                                                <span key={index}>[{data.size}]</span>
                                             );
                                         })}
                                     </td>
@@ -286,9 +286,9 @@ export default class ItemSelector extends Component {
                                     <td><span>{data.resistance.ice}</span></td>
                                     <td><span>{data.resistance.dragon}</span></td>
                                     <td>
-                                        {data.slots.map((data) => {
+                                        {data.slots.map((data, index) => {
                                             return (
-                                                <span>[{data.size}]</span>
+                                                <span key={index}>[{data.size}]</span>
                                             );
                                         })}
                                     </td>
@@ -298,9 +298,9 @@ export default class ItemSelector extends Component {
                                         ) : false}
                                     </td>
                                     <td>
-                                        {data.skills.map((data) => {
+                                        {data.skills.map((data, index) => {
                                             return (
-                                                <div>
+                                                <div key={index}>
                                                     <span>{data.key} Lv.{data.level}</span>
                                                 </div>
                                             );
@@ -342,9 +342,9 @@ export default class ItemSelector extends Component {
                                     <td><span>{data.name}</span></td>
                                     <td><span>{data.rare}</span></td>
                                     <td>
-                                        {data.skills.map((data) => {
+                                        {data.skills.map((data, index) => {
                                             return (
-                                                <div>
+                                                <div key={index}>
                                                     <span>{data.key} Lv.{data.level}</span>
                                                 </div>
                                             );
