@@ -174,6 +174,10 @@ class WeaponHelper {
                 key: enhanceKey
             });
 
+            if (null === enhanceKey) {
+                return false;
+            }
+
             if (undefined === enhanceLevelMapping[enhanceKey]) {
                 enhanceLevelMapping[enhanceKey] = 0;
             }
