@@ -281,7 +281,7 @@ export default class Main extends Component {
      */
     componentWillMount () {
         this.setState({
-            equips: Constant.testEquipsSetting[2]
+            equips: Constant.testEquipsSetting[1]
         });
     }
 
@@ -420,7 +420,8 @@ export default class Main extends Component {
 
                         <div className="mhwc-list">
                             <EquipsDisplayer equips={this.state.equips}
-                                onOpenSelector={this.handleSelectorOpen} />
+                                onOpenSelector={this.handleSelectorOpen}
+                                onPickup={this.handleSelectorPickup} />
                         </div>
                     </div>
 
