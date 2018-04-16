@@ -164,7 +164,7 @@ class WeaponHelper {
             let enhanceKey = null;
 
             if (null !== extend.enhanceKeys
-                && null !== extend.enhanceKeys[index]) {
+                && 'string' === typeof extend.enhanceKeys[index]) {
 
                 enhanceKey = extend.enhanceKeys[index];
             }
@@ -230,8 +230,7 @@ class WeaponHelper {
 
 
             if (null !== extend.slotKeys
-                && null !== extend.slotKeys[index]) {
-
+                && 'string' === typeof extend.slotKeys[index]) {
                 jewelKey = extend.slotKeys[index];
                 jewelInfo = jewelHelper.getInfo(jewelKey);
                 skillKey = jewelInfo.skill.key;
@@ -389,7 +388,7 @@ class ArmorHelper {
             let skillKey = null;
 
             if (null !== extend.slotKeys
-                && null !== extend.slotKeys[index]) {
+                && 'string' === typeof extend.slotKeys[index]) {
 
                 jewelKey = extend.slotKeys[index];
                 jewelInfo = jewelHelper.getInfo(jewelKey);
