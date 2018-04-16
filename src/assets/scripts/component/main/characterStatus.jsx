@@ -42,70 +42,47 @@ export default class CharacterStatus extends Component {
 
         let equips = this.state.equips;
         let status = Misc.deepCopy(Constant.defaultStatus);
-        let tempSkills = {};
 
-        // console.log(DataSet.weaponHelper.getApplyedInfo(equips.weapon));
-        // console.log(DataSet.armorHelper.getApplyedInfo(equips.helm));
-        // console.log(DataSet.armorHelper.getApplyedInfo(equips.chest));
-        // console.log(DataSet.armorHelper.getApplyedInfo(equips.arm));
-        // console.log(DataSet.armorHelper.getApplyedInfo(equips.waist));
-        // console.log(DataSet.armorHelper.getApplyedInfo(equips.leg));
-        // console.log(DataSet.charmHelper.getApplyedInfo(equips.charm));
+        let info = {};
 
-        equips.weapon.info = DataSet.weaponHelper.getInfo(equips.weapon.key);
-        equips.helm.info = DataSet.armorHelper.getInfo(equips.helm.key);
-        equips.chest.info = DataSet.armorHelper.getInfo(equips.chest.key);
-        equips.arm.info = DataSet.armorHelper.getInfo(equips.arm.key);
-        equips.waist.info = DataSet.armorHelper.getInfo(equips.waist.key);
-        equips.leg.info = DataSet.armorHelper.getInfo(equips.leg.key);
-        equips.charm.info = DataSet.charmHelper.getInfo(equips.charm.key);
+        info.weapon = (null !== equips.weapon.key)
+            ? DataSet.weaponHelper.getApplyedInfo(equips.weapon) : null;
 
-        status.critical.rate = equips.weapon.info.criticalRate;
-        status.sharpness = equips.weapon.info.sharpness;
-        status.element = equips.weapon.info.element;
-        status.elderseal = equips.weapon.info.elderseal;
+        ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+            info[equipType] = (null !== equips[equipType].key)
+                ? DataSet.armorHelper.getApplyedInfo(equips[equipType]) : null;
+        });
+
+        info.charm = (null !== equips.charm.key)
+            ? DataSet.charmHelper.getApplyedInfo(equips.charm) : null;
+
+        status.critical.rate = info.weapon.criticalRate;
+        status.sharpness = info.weapon.sharpness;
+        status.element = info.weapon.element;
+        status.elderseal = info.weapon.elderseal;
 
         // Defense
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
-            status.defense += equips[equipType].info.defense;
+            status.defense += info[equipType].defense;
         });
 
         // Resistance
         ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
             Constant.elements.map((elementType) => {
-                status.resistance[elementType] += equips[equipType].info.resistance[elementType];
+                status.resistance[elementType] += info[equipType].resistance[elementType];
             });
         });
 
-        // Skills from Equips
-        ['helm', 'chest', 'arm', 'waist', 'leg', 'charm'].map((equipType) => {
-            equips[equipType].info.skills.map((data) => {
-                if (undefined === tempSkills[data.key]) {
-                    tempSkills[data.key] = 0;
+        // Skills
+        let allSkills = {};
+
+        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].map((equipType) => {
+            info[equipType].skills.map((skill) => {
+                if ('number' !== typeof allSkills[skill.key]) {
+                    allSkills[skill.key] = 0;
                 }
 
-                tempSkills[data.key] += data.level;
-            });
-        });
-
-        // Skills from Slots
-        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
-            if (null === equips[equipType].slotKeys) {
-                return false;
-            }
-
-            Object.values(equips[equipType].slotKeys).map((slotKey) => {
-                if (null === slotKey) {
-                    return false;
-                }
-
-                let jewel = DataSet.jewelHelper.getInfo(slotKey);
-
-                if (undefined === tempSkills[jewel.skill.key]) {
-                    tempSkills[jewel.skill.key] = 0;
-                }
-
-                tempSkills[jewel.skill.key] += 1;
+                allSkills[skill.key] += skill.level;
             });
         });
 
@@ -114,9 +91,14 @@ export default class CharacterStatus extends Component {
         let attackMultiples = [];
         let defenseMultiples = [];
 
-        for (let key in tempSkills) {
+        for (let key in allSkills) {
             let skill = DataSet.skillHelper.getInfo(key);
-            let level = tempSkills[key];
+            let level = allSkills[key];
+
+            // Fix Skill Level Overflow
+            if (level > skill.list.length) {
+                level = skill.list.length;
+            }
 
             status.skills.push({
                 name: skill.name,
@@ -215,8 +197,8 @@ export default class CharacterStatus extends Component {
         }
 
         // Last Status Completion
-        let weaponAttack = equips.weapon.info.attack;
-        let weaponType = equips.weapon.info.type;
+        let weaponAttack = info.weapon.attack;
+        let weaponType = info.weapon.type;
 
         status.attack *= Constant.weaponMultiple[weaponType]; // 武器倍率
 

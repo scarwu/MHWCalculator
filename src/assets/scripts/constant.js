@@ -51,13 +51,41 @@ export default {
         bow: 1.2
     },
     defaultEquips: {
-        weapon: null,
-        helm: null,
-        chest: null,
-        arm: null,
-        waist: null,
-        leg: null,
-        charm: null
+        weapon: {
+            key: null,
+            enhanceKeys: {},
+            slotKeys: {},
+            isLock: false
+        },
+        helm: {
+            key: null,
+            slotKeys: {},
+            isLock: false
+        },
+        chest: {
+            key: null,
+            slotKeys: {},
+            isLock: false
+        },
+        arm: {
+            key: null,
+            slotKeys: {},
+            isLock: false
+        },
+        waist: {
+            key: null,
+            slotKeys: {},
+            isLock: false
+        },
+        leg: {
+            key: null,
+            slotKeys: {},
+            isLock: false
+        },
+        charm: {
+            key: null,
+            isLock: false
+        }
     },
     defaultStatus: {
         health: 100,

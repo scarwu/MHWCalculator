@@ -85,25 +85,25 @@ export default class EquipsDisplayer extends Component {
             equipKey: null
         };
 
-        if (null !== equips.weapon) {
+        if (null !== equips.weapon.key) {
             let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
 
             ContentBlocks.push((
                 <div key="weapon" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
-                        <a onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}>
+                        <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}>
                             <span>{weaponInfo.name}</span>
                         </a>
 
-                        <a onClick={() => {this.handleEquipLockToggle('weapon')}}>
+                        <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(weaponSelectorData)}}>
+                            <i className="fa fa-times"></i>
+                        </a>
+                        <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('weapon')}}>
                             {equips.weapon.isLock ? (
                                 <i className="fa fa-lock"></i>
                             ) : (
                                 <i className="fa fa-unlock-alt"></i>
                             )}
-                        </a>
-                        <a onClick={() => {this.handleEquipEmpty(weaponSelectorData)}}>
-                            <span><i className="fa fa-times"></i></span>
                         </a>
                     </div>
 
@@ -126,13 +126,13 @@ export default class EquipsDisplayer extends Component {
                                                 {null !== data.key ? (
                                                     <span>{data.key}</span>
                                                 ) : (
-                                                    <span><i className="fa fa-plus"></i></span>
+                                                    <span>---</span>
                                                 )}
                                             </a>
 
                                             {null !== data.key ? (
-                                                <a onClick={() => {this.handleEquipEmpty(enhanceSelectorData)}}>
-                                                    <span><i className="fa fa-times"></i></span>
+                                                <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(enhanceSelectorData)}}>
+                                                    <i className="fa fa-times"></i>
                                                 </a>
                                             ) : false}
                                         </div>
@@ -162,13 +162,13 @@ export default class EquipsDisplayer extends Component {
                                                 {null !== data.key ? (
                                                     <span>[{data.size}] {data.key}</span>
                                                 ) : (
-                                                    <span><i className="fa fa-plus"></i></span>
+                                                    <span>---</span>
                                                 )}
                                             </a>
 
                                             {null !== data.key ? (
-                                                <a onClick={() => {this.handleEquipEmpty(jewelSelectorData)}}>
-                                                    <span><i className="fa fa-times"></i></span>
+                                                <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(jewelSelectorData)}}>
+                                                    <i className="fa fa-times"></i>
                                                 </a>
                                             ) : false}
                                         </div>
@@ -184,7 +184,7 @@ export default class EquipsDisplayer extends Component {
                 <div key="weapon" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}>
-                            <span><i className="fa fa-plus"></i></span>
+                            <span>---</span>
                         </a>
                     </div>
                 </div>
@@ -198,25 +198,25 @@ export default class EquipsDisplayer extends Component {
                 equipKey: null
             };
 
-            if (null !== equips[equipType]) {
+            if (null !== equips[equipType].key) {
                 let equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
 
                 ContentBlocks.push((
                     <div key={'equip_' + equipType} className="row mhwc-equip">
                         <div className="col-12 mhwc-name">
-                            <a onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
+                            <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
                                 <span>{equipInfo.name}</span>
                             </a>
 
-                            <a onClick={() => {this.handleEquipLockToggle(equipType)}}>
+                            <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(equipSelectorData)}}>
+                                <i className="fa fa-times"></i>
+                            </a>
+                            <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle(equipType)}}>
                                 {equips[equipType].isLock ? (
                                     <i className="fa fa-lock"></i>
                                 ) : (
                                     <i className="fa fa-unlock-alt"></i>
                                 )}
-                            </a>
-                            <a onClick={() => {this.handleEquipEmpty(equipSelectorData)}}>
-                                <span><i className="fa fa-times"></i></span>
                             </a>
                         </div>
 
@@ -240,13 +240,13 @@ export default class EquipsDisplayer extends Component {
                                                     {null !== data.key ? (
                                                         <span>[{data.size}] {data.key}</span>
                                                     ) : (
-                                                        <span><i className="fa fa-plus"></i></span>
+                                                        <span>---</span>
                                                     )}
                                                 </a>
 
                                                 {null !== data.key ? (
-                                                    <a onClick={() => {this.handleEquipEmpty(jewelSelectorData)}}>
-                                                        <span><i className="fa fa-times"></i></span>
+                                                    <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(jewelSelectorData)}}>
+                                                        <i className="fa fa-times"></i>
                                                     </a>
                                                 ) : false}
                                             </div>
@@ -261,8 +261,8 @@ export default class EquipsDisplayer extends Component {
                 ContentBlocks.push((
                     <div key={'equip_' + equipType} className="row mhwc-equip">
                         <div className="col-12 mhwc-name">
-                            <a onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
-                                <span><i className="fa fa-plus"></i></span>
+                            <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
+                                <span>---</span>
                             </a>
                         </div>
                     </div>
@@ -276,7 +276,7 @@ export default class EquipsDisplayer extends Component {
             equipKey: null
         };
 
-        if (null !== equips.charm) {
+        if (null !== equips.charm.key) {
             let charmInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
 
             ContentBlocks.push((
@@ -286,15 +286,15 @@ export default class EquipsDisplayer extends Component {
                             <span>{charmInfo.name}</span>
                         </a>
 
-                        <a onClick={() => {this.handleEquipLockToggle('charm')}}>
+                        <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(charmSelectorData)}}>
+                            <i className="fa fa-times"></i>
+                        </a>
+                        <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('charm')}}>
                             {equips.charm.isLock ? (
                                 <i className="fa fa-lock"></i>
                             ) : (
                                 <i className="fa fa-unlock-alt"></i>
                             )}
-                        </a>
-                        <a onClick={() => {this.handleEquipEmpty(charmSelectorData)}}>
-                            <span><i className="fa fa-times"></i></span>
                         </a>
                     </div>
                 </div>
@@ -304,7 +304,7 @@ export default class EquipsDisplayer extends Component {
                 <div key="charm" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a onClick={() => {this.handleEquipSwitch(charmSelectorData)}}>
-                            <span><i className="fa fa-plus"></i></span>
+                            <span>---</span>
                         </a>
                     </div>
                 </div>

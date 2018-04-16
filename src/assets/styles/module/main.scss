@@ -555,6 +555,30 @@ $function_bar-height: 40px;
     }
 
     .mhwc-equips {
+        .mhwc-equip_name {
+            &:hover {
+                color: #666;
+            }
+        }
+
+        .mhwc-icon {
+            display: inline-block;
+            margin-left: 2px;
+            width: 20px;
+            height: 20px;
+            float: right;
+            line-height: 20px;
+            text-align: center;
+            color: white;
+            background-color: #ccc;
+
+            @include border-radius(3px);
+
+            &:hover {
+                background-color: #666;
+            }
+        }
+
         .mhwc-equip {
             margin: 5px 5px 5px 10px;
             padding: 5px;
@@ -567,10 +591,9 @@ $function_bar-height: 40px;
 
                 @include nowrap();
 
-                // .mhwc-exchnage {
-                //     float: right;
-                //     line-height: 33px;
-                // }
+                .mhwc-icon {
+                    margin-top: 6.5px;
+                }
             }
 
             .mhwc-value {
@@ -601,10 +624,7 @@ $function_bar-height: 40px;
             }
 
             .mhwc-value {
-                // .mhwc-exchnage {
-                //     float: right;
-                //     line-height: 21px;
-                // }
+
             }
         }
 
@@ -620,10 +640,7 @@ $function_bar-height: 40px;
             }
 
             .mhwc-value {
-                // .mhwc-exchnage {
-                //     float: right;
-                //     line-height: 21px;
-                // }
+
             }
         }
     }
