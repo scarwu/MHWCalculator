@@ -161,13 +161,17 @@ export default class Main extends Component {
         let equips = this.state.equips;
 
         if (undefined !== data.enhanceIndex) {
-            if ('object' !== typeof equips.weapon.enhanceKeys) {
+            if ('object' !== typeof equips.weapon.enhanceKeys
+                || null === equips.weapon.enhanceKeys) {
+
                 equips.weapon.enhanceKeys = {};
             }
 
             equips.weapon.enhanceKeys[data.enhanceIndex] = data.enhanceKey;
         } else if (undefined !== data.slotIndex) {
-            if ('object' !== typeof equips[data.equipType].slotKeys) {
+            if ('object' !== typeof equips[data.equipType].slotKeys
+                || null === equips.weapon.slotKeys) {
+
                 equips[data.equipType].slotKeys = {};
             }
 
@@ -207,7 +211,7 @@ export default class Main extends Component {
      */
     componentWillMount () {
         this.setState({
-            equips: Constant.testEquipsSetting[1]
+            equips: Constant.testEquipsSetting[0]
         });
     }
 

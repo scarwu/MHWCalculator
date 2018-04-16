@@ -231,6 +231,7 @@ class WeaponHelper {
 
             if (null !== extend.slotKeys
                 && 'string' === typeof extend.slotKeys[index]) {
+
                 jewelKey = extend.slotKeys[index];
                 jewelInfo = jewelHelper.getInfo(jewelKey);
                 skillKey = jewelInfo.skill.key;

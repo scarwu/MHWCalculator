@@ -32,7 +32,23 @@ export default class CharacterStatus extends Component {
     // Initial State
     state = {
         equips: Misc.deepCopy(Constant.defaultEquips),
-        status: Misc.deepCopy(Constant.defaultStatus)
+        status: Misc.deepCopy(Constant.defaultStatus),
+        passiveSkills: {}
+    };
+
+    /**
+     * Handle Functions
+     */
+    handlePassiveSkillToggle = (skillKey) => {
+        let passiveSkills = this.state.passiveSkills;
+
+        passiveSkills[skillKey].isActive = !passiveSkills[skillKey].isActive;
+
+        this.setState({
+            passiveSkills: passiveSkills,
+        }, () => {
+            this.generateStatus();
+        });
     };
 
     /**
@@ -41,6 +57,7 @@ export default class CharacterStatus extends Component {
     generateStatus = () => {
 
         let equips = this.state.equips;
+        let passiveSkills = this.state.passiveSkills;
         let status = Misc.deepCopy(Constant.defaultStatus);
 
         let info = {};
@@ -78,7 +95,7 @@ export default class CharacterStatus extends Component {
 
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].map((equipType) => {
             info[equipType].skills.map((skill) => {
-                if ('number' !== typeof allSkills[skill.key]) {
+                if (undefined === allSkills[skill.key]) {
                     allSkills[skill.key] = 0;
                 }
 
@@ -91,9 +108,9 @@ export default class CharacterStatus extends Component {
         let attackMultiples = [];
         let defenseMultiples = [];
 
-        for (let key in allSkills) {
-            let skill = DataSet.skillHelper.getInfo(key);
-            let level = allSkills[key];
+        for (let skillKey in allSkills) {
+            let skill = DataSet.skillHelper.getInfo(skillKey);
+            let level = allSkills[skillKey];
 
             // Fix Skill Level Overflow
             if (level > skill.list.length) {
@@ -107,7 +124,15 @@ export default class CharacterStatus extends Component {
             });
 
             if ('passive' === skill.type) {
-                continue;
+                if (undefined === passiveSkills[skill.name]) {
+                    passiveSkills[skill.name] = {
+                        isActive: false
+                    };
+                }
+
+                if (false === passiveSkills[skill.name].isActive) {
+                    continue;
+                }
             }
 
             if (undefined === skill.list[level - 1].reaction) {
@@ -244,7 +269,8 @@ export default class CharacterStatus extends Component {
         status.defense = parseInt(Math.round(status.defense));
 
         this.setState({
-            status: status
+            status: status,
+            passiveSkills: passiveSkills
         });
     };
 
@@ -253,7 +279,8 @@ export default class CharacterStatus extends Component {
      */
     componentWillMount () {
         this.setState({
-            equips: this.props.equips
+            equips: this.props.equips,
+            passiveSkills: {}
         }, () => {
             this.generateStatus();
         });
@@ -261,7 +288,8 @@ export default class CharacterStatus extends Component {
 
     componentWillReceiveProps (nextProps) {
         this.setState({
-            equips: nextProps.equips
+            equips: nextProps.equips,
+            passiveSkills: {}
         }, () => {
             this.generateStatus();
         });
@@ -302,6 +330,7 @@ export default class CharacterStatus extends Component {
 
     render () {
         let status = this.state.status;
+        let passiveSkills = this.state.passiveSkills;
 
         if (null === status) {
             return false;
@@ -442,6 +471,16 @@ export default class CharacterStatus extends Component {
                             <div key={data.name} className="row mhwc-skill">
                                 <div className="col-12 mhwc-name">
                                     <span>{data.name} Lv.{data.level}</span>
+
+                                    {undefined !== passiveSkills[data.name] ? (
+                                        <a className="mhwc-icon" onClick={() => {this.handlePassiveSkillToggle(data.name)}}>
+                                            {passiveSkills[data.name].isActive ? (
+                                                <i className="fa fa-eye"></i>
+                                            ) : (
+                                                <i className="fa fa-eye-slash"></i>
+                                            )}
+                                        </a>
+                                    ) : false}
                                 </div>
                                 <div className="col-12 mhwc-value">
                                     <span>{data.description}</span>
