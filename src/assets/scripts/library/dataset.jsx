@@ -147,6 +147,14 @@ class WeaponHelper {
     getApplyedInfo = (extend) => {
         let info = this.getInfo(extend.key);
 
+        if (null !== info.element.attack) {
+            info.element.attack.value = info.element.attack.minValue;
+        }
+
+        if (null !== info.element.status) {
+            info.element.status.value = info.element.status.minValue;
+        }
+
         // Handle Enhance
         let enhanceLevelMapping = {};
         let enhanceTimes = 0;

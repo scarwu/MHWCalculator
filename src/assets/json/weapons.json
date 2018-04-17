@@ -22,7 +22,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": 510,
                 "isHidden": true
             }
         },
@@ -58,7 +59,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -94,7 +96,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -128,7 +131,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": 510,
                 "isHidden": false
             },
             "status": null
@@ -162,7 +166,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 390,
                 "isHidden": true
             },
             "status": null
@@ -200,7 +205,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 450,
+                "minValue": 450,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -229,7 +235,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 330,
+                "minValue": 330,
+                "maxValue": 430,
                 "isHidden": false
             },
             "status": null
@@ -267,7 +274,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 540,
+                "minValue": 540,
+                "maxValue": 660,
                 "isHidden": false
             }
         },
@@ -303,7 +311,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -337,7 +346,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 390,
                 "isHidden": true
             },
             "status": null
@@ -371,7 +381,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 390,
                 "isHidden": false
             },
             "status": null
@@ -407,7 +418,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 480,
+                "minValue": 480,
+                "maxValue": 620,
                 "isHidden": false
             },
             "status": null
@@ -437,7 +449,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": null,
                 "isHidden": false
             },
             "status": null
@@ -472,7 +485,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 330,
                 "isHidden": false
             }
         },
@@ -501,7 +515,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": 550,
                 "isHidden": false
             },
             "status": null
@@ -540,7 +555,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 540,
+                "minValue": 540,
+                "maxValue": 690,
                 "isHidden": false
             },
             "status": null
@@ -571,7 +587,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -604,7 +621,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -638,7 +656,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -678,7 +697,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 330,
+                "minValue": 330,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -711,7 +731,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -743,7 +764,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 510,
+                "minValue": 510,
+                "maxValue": 660,
                 "isHidden": true
             },
             "status": null
@@ -780,7 +802,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": true
             },
             "status": null
@@ -817,7 +840,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 120,
+                "minValue": 120,
+                "maxValue": 160,
                 "isHidden": false
             },
             "status": null
@@ -853,7 +877,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 470,
                 "isHidden": true
             },
             "status": null
@@ -888,7 +913,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 330,
                 "isHidden": true
             }
         },
@@ -917,7 +943,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 120,
+                "minValue": 120,
+                "maxValue": 160,
                 "isHidden": false
             },
             "status": null
@@ -955,7 +982,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 330,
+                "minValue": 330,
+                "maxValue": 410,
                 "isHidden": false
             }
         },
@@ -988,7 +1016,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -1023,7 +1052,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 330,
                 "isHidden": true
             }
         },
@@ -1057,7 +1087,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -1093,7 +1124,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": 510,
                 "isHidden": false
             },
             "status": null
@@ -1123,7 +1155,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 470,
                 "isHidden": false
             },
             "status": null
@@ -1157,7 +1190,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -1193,7 +1227,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -1227,7 +1262,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 470,
                 "isHidden": false
             },
             "status": null
@@ -1258,7 +1294,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -1291,7 +1328,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": 550,
                 "isHidden": false
             },
             "status": null
@@ -1328,7 +1366,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -1362,7 +1401,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -1391,7 +1431,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -1430,7 +1471,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": true
             },
             "status": null
@@ -1466,7 +1508,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -1499,7 +1542,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 330,
                 "isHidden": true
             }
         },
@@ -1535,7 +1579,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -1571,7 +1616,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -1605,7 +1651,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 330,
+                "minValue": 330,
+                "maxValue": 430,
                 "isHidden": true
             },
             "status": null
@@ -1639,7 +1686,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -1673,7 +1721,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 330,
+                "minValue": 330,
+                "maxValue": 430,
                 "isHidden": false
             },
             "status": null
@@ -1708,7 +1757,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 300,
                 "isHidden": false
             }
         },
@@ -1742,7 +1792,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 330,
+                "minValue": 330,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -1779,7 +1830,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": 480,
                 "isHidden": false
             }
         },
@@ -1816,7 +1868,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -1846,7 +1899,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -1880,7 +1934,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 260,
                 "isHidden": false
             }
         },
@@ -1909,7 +1964,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 470,
                 "isHidden": true
             },
             "status": null
@@ -1946,7 +2002,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -1981,7 +2038,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -2017,7 +2075,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -2047,7 +2106,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 450,
+                "minValue": 450,
+                "maxValue": 580,
                 "isHidden": false
             },
             "status": null
@@ -2083,7 +2143,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 470,
                 "isHidden": false
             },
             "status": null
@@ -2114,7 +2175,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -2143,7 +2205,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -2182,7 +2245,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -2215,7 +2279,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 330,
                 "isHidden": true
             }
         },
@@ -2251,7 +2316,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 120,
+                "minValue": 120,
+                "maxValue": 160,
                 "isHidden": false
             },
             "status": null
@@ -2287,7 +2353,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": true
             },
             "status": null
@@ -2322,7 +2389,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -2355,7 +2423,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -2390,7 +2459,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 120,
+                "minValue": 120,
+                "maxValue": 150,
                 "isHidden": true
             }
         },
@@ -2419,7 +2489,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 120,
+                "minValue": 120,
+                "maxValue": 160,
                 "isHidden": false
             },
             "status": null
@@ -2454,7 +2525,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -2487,7 +2559,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -2517,7 +2590,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 90,
+                "minValue": 90,
+                "maxValue": 120,
                 "isHidden": true
             },
             "status": null
@@ -2551,7 +2625,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -2585,7 +2660,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -2623,7 +2699,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 90,
+                "minValue": 90,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -2656,7 +2733,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -2690,7 +2768,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": true
             },
             "status": null
@@ -2720,7 +2799,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -2759,7 +2839,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -2790,7 +2871,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -2823,7 +2905,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": {
@@ -2861,7 +2944,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -2900,7 +2984,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -2933,7 +3018,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -2969,7 +3055,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 120,
+                "minValue": 120,
+                "maxValue": 160,
                 "isHidden": false
             },
             "status": null
@@ -3005,7 +3092,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 450,
+                "minValue": 450,
+                "maxValue": 580,
                 "isHidden": false
             },
             "status": null
@@ -3039,7 +3127,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -3074,7 +3163,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -3104,7 +3194,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 540,
+                "minValue": 540,
+                "maxValue": 660,
                 "isHidden": false
             }
         },
@@ -3140,7 +3231,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 390,
                 "isHidden": false
             },
             "status": null
@@ -3174,7 +3266,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": 550,
                 "isHidden": true
             },
             "status": null
@@ -3208,7 +3301,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -3245,7 +3339,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 330,
                 "isHidden": false
             }
         },
@@ -3274,7 +3369,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 120,
+                "minValue": 120,
+                "maxValue": 160,
                 "isHidden": false
             },
             "status": null
@@ -3309,7 +3405,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 440,
                 "isHidden": true
             }
         },
@@ -3338,7 +3435,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": true
             },
             "status": null
@@ -3373,7 +3471,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -3409,7 +3508,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 450,
+                "minValue": 450,
+                "maxValue": 580,
                 "isHidden": false
             },
             "status": null
@@ -3439,7 +3539,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": 550,
                 "isHidden": false
             },
             "status": null
@@ -3476,7 +3577,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -3509,7 +3611,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -3543,7 +3646,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -3583,7 +3687,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -3616,7 +3721,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -3649,7 +3755,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -3685,7 +3792,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -3721,7 +3829,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -3756,7 +3865,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 440,
                 "isHidden": true
             }
         },
@@ -3785,7 +3895,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -3819,7 +3930,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -3853,7 +3965,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 470,
                 "isHidden": false
             },
             "status": null
@@ -3883,7 +3996,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": true
             },
             "status": null
@@ -3918,7 +4032,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -3954,7 +4069,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 450,
+                "minValue": 450,
+                "maxValue": 580,
                 "isHidden": false
             },
             "status": null
@@ -3985,7 +4101,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 540,
+                "minValue": 540,
+                "maxValue": 660,
                 "isHidden": false
             }
         },
@@ -4021,7 +4138,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 570,
+                "minValue": 570,
+                "maxValue": 730,
                 "isHidden": true
             },
             "status": null
@@ -4059,7 +4177,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -4096,7 +4215,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -4133,7 +4253,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 330,
                 "isHidden": false
             }
         },
@@ -4162,7 +4283,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": 550,
                 "isHidden": false
             },
             "status": null
@@ -4183,7 +4305,7 @@
         "name": "雷光笛 II",
         "rare": 7,
         "type": "huntingHorn",
-        "series": "麒麟",
+        "series": "幻獸",
         "attack": 672,
         "criticalRate": 0,
         "defense": 0,
@@ -4201,7 +4323,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 540,
+                "minValue": 540,
+                "maxValue": 690,
                 "isHidden": false
             },
             "status": null
@@ -4232,7 +4355,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -4261,7 +4385,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -4300,7 +4425,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -4333,7 +4459,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -4369,7 +4496,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -4405,7 +4533,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 470,
                 "isHidden": false
             },
             "status": null
@@ -4436,7 +4565,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 440,
                 "isHidden": true
             }
         },
@@ -4466,7 +4596,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -4502,7 +4633,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -4537,7 +4669,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 540,
+                "minValue": 540,
+                "maxValue": 660,
                 "isHidden": false
             }
         },
@@ -4573,7 +4706,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 390,
                 "isHidden": false
             },
             "status": null
@@ -4608,7 +4742,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 300,
                 "isHidden": true
             }
         },
@@ -4641,7 +4776,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -4678,7 +4814,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -4712,7 +4849,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -4748,7 +4886,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": true
             },
             "status": null
@@ -4778,7 +4917,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 390,
                 "isHidden": false
             },
             "status": null
@@ -4812,7 +4952,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": 550,
                 "isHidden": false
             },
             "status": null
@@ -4852,7 +4993,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -4881,7 +5023,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 540,
+                "minValue": 540,
+                "maxValue": 690,
                 "isHidden": false
             },
             "status": null
@@ -4911,7 +5054,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -4945,7 +5089,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -4984,7 +5129,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 330,
+                "minValue": 330,
+                "maxValue": 430,
                 "isHidden": true
             },
             "status": null
@@ -5018,7 +5164,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -5051,7 +5198,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -5087,7 +5235,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -5123,7 +5272,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -5157,7 +5307,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -5192,7 +5343,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 330,
+                "minValue": 330,
+                "maxValue": 410,
                 "isHidden": false
             }
         },
@@ -5225,7 +5377,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 470,
                 "isHidden": false
             },
             "status": null
@@ -5259,7 +5412,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 470,
                 "isHidden": false
             },
             "status": null
@@ -5289,7 +5443,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -5324,7 +5479,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -5358,7 +5514,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 370,
                 "isHidden": true
             }
         },
@@ -5395,7 +5552,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 450,
+                "minValue": 450,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -5424,7 +5582,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -5461,7 +5620,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -5490,7 +5650,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 450,
+                "minValue": 450,
+                "maxValue": 580,
                 "isHidden": false
             },
             "status": null
@@ -5520,7 +5681,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": 550,
                 "isHidden": false
             },
             "status": null
@@ -5560,7 +5722,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -5589,7 +5752,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -5623,7 +5787,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -5662,7 +5827,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -5695,7 +5861,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": 510,
                 "isHidden": true
             }
         },
@@ -5731,7 +5898,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -5767,7 +5935,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 390,
                 "isHidden": false
             },
             "status": null
@@ -5797,7 +5966,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -5831,7 +6001,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 120,
+                "minValue": 120,
+                "maxValue": 160,
                 "isHidden": false
             },
             "status": null
@@ -5866,7 +6037,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 300,
                 "isHidden": true
             }
         },
@@ -5903,7 +6075,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -5936,7 +6109,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -6002,7 +6176,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -6038,7 +6213,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 390,
                 "isHidden": false
             },
             "status": null
@@ -6073,7 +6249,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -6107,7 +6284,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -6143,7 +6321,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": true
             },
             "status": null
@@ -6177,7 +6356,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 390,
                 "isHidden": false
             },
             "status": null
@@ -6207,7 +6387,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 330,
+                "minValue": 330,
+                "maxValue": 430,
                 "isHidden": false
             },
             "status": null
@@ -6228,7 +6409,7 @@
         "name": "斷雷斧麒麟",
         "rare": 8,
         "type": "switchAxe",
-        "series": "麒麟",
+        "series": "幻獸",
         "attack": 560,
         "criticalRate": 0,
         "defense": 0,
@@ -6246,7 +6427,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": 550,
                 "isHidden": false
             },
             "status": null
@@ -6277,7 +6459,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -6306,7 +6489,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -6345,7 +6529,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -6377,7 +6562,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": true
             },
             "status": null
@@ -6414,7 +6600,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -6450,7 +6637,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -6484,7 +6672,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -6518,7 +6707,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -6556,7 +6746,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 330,
+                "minValue": 330,
+                "maxValue": 410,
                 "isHidden": false
             }
         },
@@ -6593,7 +6784,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -6626,7 +6818,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": true
             },
             "status": null
@@ -6657,7 +6850,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": true
             }
         },
@@ -6694,7 +6888,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -6731,7 +6926,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -6760,7 +6956,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -6796,7 +6993,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -6830,7 +7028,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": true
             },
             "status": null
@@ -6860,7 +7059,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 470,
                 "isHidden": false
             },
             "status": null
@@ -6900,7 +7100,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -6929,7 +7130,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -6966,7 +7168,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -7005,7 +7208,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -7038,7 +7242,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -7074,7 +7279,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -7110,7 +7316,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -7145,7 +7352,8 @@
             "attack": null,
             "status": {
                 "type": "sleep",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 260,
                 "isHidden": true
             }
         },
@@ -7174,7 +7382,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 300,
+                "minValue": 300,
+                "maxValue": 390,
                 "isHidden": true
             },
             "status": null
@@ -7208,7 +7417,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -7246,7 +7456,8 @@
             "attack": null,
             "status": {
                 "type": "posion",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": 480,
                 "isHidden": false
             }
         },
@@ -7283,7 +7494,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -7320,7 +7532,8 @@
             "attack": null,
             "status": {
                 "type": "paralysis",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -7353,7 +7566,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -7389,7 +7603,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -7419,7 +7634,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -7453,7 +7669,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": true
             },
             "status": null
@@ -7487,7 +7704,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -7521,7 +7739,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": true
             },
             "status": null
@@ -7555,7 +7774,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": 510,
                 "isHidden": false
             },
             "status": null
@@ -7576,7 +7796,7 @@
         "name": "碧綠神鳴",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "麒麟",
+        "series": "幻獸",
         "attack": 496,
         "criticalRate": 0,
         "defense": 0,
@@ -7594,7 +7814,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": 470,
                 "isHidden": false
             },
             "status": null
@@ -7624,7 +7845,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -7658,7 +7880,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 120,
+                "minValue": 120,
+                "maxValue": 160,
                 "isHidden": false
             },
             "status": null
@@ -7697,7 +7920,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -8055,7 +8279,7 @@
         "name": "麒麟筒【三角】",
         "rare": 8,
         "type": "lightBowgun",
-        "series": "麒麟",
+        "series": "幻獸",
         "attack": 208,
         "criticalRate": 0,
         "defense": 0,
@@ -8432,7 +8656,7 @@
         "name": "迅雷閃擊",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "麒麟",
+        "series": "幻獸",
         "attack": 255,
         "criticalRate": 0,
         "defense": 0,
@@ -8535,7 +8759,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": true
             },
             "status": null
@@ -8562,7 +8787,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -8589,7 +8815,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -8608,7 +8835,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -8628,7 +8856,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": true
             },
             "status": null
@@ -8657,7 +8886,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -8681,7 +8911,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -8705,7 +8936,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": 510,
                 "isHidden": false
             },
             "status": null
@@ -8725,7 +8957,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "value": 360,
+                "minValue": 360,
+                "maxValue": null,
                 "isHidden": true
             },
             "status": null
@@ -8749,7 +8982,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -8775,7 +9009,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": true
             },
             "status": null
@@ -8803,7 +9038,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": null,
                 "isHidden": true
             }
         },
@@ -8829,7 +9065,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "value": 390,
+                "minValue": 390,
+                "maxValue": 510,
                 "isHidden": false
             },
             "status": null
@@ -8849,7 +9086,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 270,
+                "minValue": 270,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -8873,7 +9111,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 420,
+                "minValue": 420,
+                "maxValue": 550,
                 "isHidden": false
             },
             "status": null
@@ -8902,7 +9141,8 @@
         "element": {
             "attack": {
                 "type": "ice",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -8929,7 +9169,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 180,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -8959,7 +9200,8 @@
             "attack": null,
             "status": {
                 "type": "blast",
-                "value": 150,
+                "minValue": 150,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -8982,7 +9224,8 @@
         "element": {
             "attack": {
                 "type": "dragon",
-                "value": 210,
+                "minValue": 210,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -8993,10 +9236,10 @@
         "slots": []
     },
     {
-        "name": "阿羅伊的戰弓",
+        "name": "亞蘿伊的戰弓",
         "rare": 6,
         "type": "bow",
-        "series": "阿羅伊",
+        "series": "亞蘿伊",
         "attack": 192,
         "criticalRate": 30,
         "defense": 0,
@@ -9004,7 +9247,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "value": 240,
+                "minValue": 310,
+                "maxValue": null,
                 "isHidden": true
             },
             "status": null

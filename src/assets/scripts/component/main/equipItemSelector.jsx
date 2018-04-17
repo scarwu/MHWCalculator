@@ -202,9 +202,9 @@ export default class EquipItemSelector extends Component {
                                         {null !== data.element.attack ? [(
                                             <span key="type">{Lang[data.element.attack.type]}</span>
                                         ), data.element.attack.isHidden ? (
-                                            <span key="value_1">({data.element.attack.value})</span>
+                                            <span key="value_1">({data.element.attack.minValue}-{data.element.attack.maxValue})</span>
                                         ) : (
-                                            <span key="value_2">{data.element.attack.value}</span>
+                                            <span key="value_2">{data.element.attack.minValue}-{data.element.attack.maxValue}</span>
                                         )] : false}
 
                                     </td>
@@ -212,9 +212,9 @@ export default class EquipItemSelector extends Component {
                                         {null !== data.element.status ? [(
                                             <span key="type">{Lang[data.element.status.type]}</span>
                                         ), data.element.status.isHidden ? (
-                                            <span key="value_1">({data.element.status.value})</span>
+                                            <span key="value_1">({data.element.status.minValue}-{data.element.status.maxValue})</span>
                                         ) : (
-                                            <span key="value_2">{data.element.status.value}</span>
+                                            <span key="value_2">{data.element.status.minValue}-{data.element.status.maxValue}</span>
                                         )] : false}
 
                                     </td>

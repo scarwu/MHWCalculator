@@ -191,6 +191,25 @@ export default class CharacterStatus extends Component {
                     status.element.attack.value += data.value;
                     status.element.attack.value *= data.multiple;
 
+                    if (status.element.attack.value > status.element.attack.maxValue) {
+                        status.element.attack.value = status.element.attack.maxValue;
+                    }
+
+                    break;
+                case 'elementStatus':
+                    if (null === status.element.status
+                        || status.element.status.type !== data.type) {
+
+                        break;
+                    }
+
+                    status.element.status.value += data.value;
+                    status.element.status.value *= data.multiple;
+
+                    if (status.element.status.value > status.element.status.maxValue) {
+                        status.element.status.value = status.element.status.maxValue;
+                    }
+
                     break;
                 case 'resistance':
                     if ('all' === data.type) {
