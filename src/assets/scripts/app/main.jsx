@@ -168,7 +168,17 @@ export default class Main extends Component {
 
             if ('weapon' === equipType) {
                 equipInfo = DataSet.weaponHelper.getApplyedInfo(equips.waepon);
+                equipInfo.skills.map((skill) => {
+                    if (undefined === dataMap[skill.key]) {
+                        return false;
+                    }
 
+                    dataMap[skill.key].level -= skill.level;
+
+                    if (0 >= dataMap[skill.key].level) {
+                        delete dataMap[skill.key];
+                    }
+                });
             } else if ('helm' === equipType
                 || 'chest' === equipType
                 || 'arm' === equipType
@@ -177,10 +187,35 @@ export default class Main extends Component {
 
                 equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
 
+                Object.keys(dataMap).map((skillKey) => {
+                    delete dataMap[skillKey].equips[equipType];
+                });
+
+                equipInfo.skills.map((skill) => {
+                    if (undefined === dataMap[skill.key]) {
+                        return false;
+                    }
+
+                    dataMap[skill.key].level -= skill.level;
+
+                    if (0 >= dataMap[skill.key].level) {
+                        delete dataMap[skill.key];
+                    }
+                });
             } else if ('charm' === equipType) {
                 equipInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
+
+                Object.keys(dataMap).map((skillKey) => {
+                    delete dataMap[skillKey][equipType];
+                });
+
+                equipInfo.skills.map((skill) => {
+                    delete dataMap[skill.key].equips[equipType];
+                });
             }
         });
+
+        console.log(dataMap);
     };
 
     handleSkillSelectorOpen = (data) => {
