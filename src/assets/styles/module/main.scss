@@ -438,13 +438,19 @@ $function_bar-height: 40px;
             padding: 0 10px;
             height: $function_bar-height;
 
-            div {
-                padding: 0 2px;
+            div:nth-child(1) {
+                padding-right: 2.5px;
+            }
+
+            div:nth-child(2) {
+                padding-left: 2.5px;
             }
 
             a {
                 display: inline-block;
                 width: 100%;
+                height: 40px;
+                line-height: 40px;
                 border: 1px solid #333;
                 text-align: center;
 
@@ -605,6 +611,22 @@ $function_bar-height: 40px;
             }
         }
 
+        .mhwc-enhances {
+            margin-top: 5px;
+            padding: 5px;
+            border: 1px solid #333;
+
+            @include border-radius(5px);
+
+            .mhwc-name {
+                @include nowrap();
+            }
+
+            .mhwc-value {
+
+            }
+        }
+
         .mhwc-slots {
             margin-top: 5px;
             padding: 5px;
@@ -621,7 +643,7 @@ $function_bar-height: 40px;
             }
         }
 
-        .mhwc-enhances {
+        .mhwc-properties {
             margin-top: 5px;
             padding: 5px;
             border: 1px solid #333;

@@ -33,6 +33,7 @@ export default class CharacterStatus extends Component {
     state = {
         equips: Misc.deepCopy(Constant.defaultEquips),
         status: Misc.deepCopy(Constant.defaultStatus),
+        extraInfo: Misc.deepCopy(Constant.defaultExtraInfo),
         passiveSkills: {}
     };
 
@@ -213,14 +214,6 @@ export default class CharacterStatus extends Component {
             }
         }
 
-        let currentCriticalMultiple = 0;
-
-        if (0 <= status.critical.rate) {
-            currentCriticalMultiple = status.critical.multiple.positive;
-        } else {
-            currentCriticalMultiple = status.critical.multiple.nagetive;
-        }
-
         // Last Status Completion
         let weaponAttack = info.weapon.attack;
         let weaponType = info.weapon.type;
@@ -255,15 +248,6 @@ export default class CharacterStatus extends Component {
             status.defense *= multiple;
         });
 
-        // Expected Value
-        let basicAttack = status.attack / Constant.weaponMultiple[weaponType];
-        let basicCriticalAttack = basicAttack * currentCriticalMultiple;
-        let expectedValue = (basicAttack * (100 - Math.abs(status.critical.rate)) / 100)
-            + (basicCriticalAttack * Math.abs(status.critical.rate) / 100);
-
-        status.extraInfo.basicAttack = parseInt(Math.round(basicAttack));
-        status.extraInfo.basicCriticalAttack = parseInt(Math.round(basicCriticalAttack));
-        status.extraInfo.expectedValue = parseInt(Math.round(expectedValue));
 
         status.attack = parseInt(Math.round(status.attack));
         status.defense = parseInt(Math.round(status.defense));
@@ -271,6 +255,33 @@ export default class CharacterStatus extends Component {
         this.setState({
             status: status,
             passiveSkills: passiveSkills
+        }, () => {
+            this.generateExtraInfo();
+        });
+    };
+
+    generateExtraInfo = () => {
+        let equips = this.state.equips;
+        let status = this.state.status;
+        let extraInfo = Misc.deepCopy(Constant.defaultExtraInfo);
+
+        let weaponInfo = (null !== equips.weapon.key)
+            ? DataSet.weaponHelper.getApplyedInfo(equips.weapon) : null;
+        let currentCriticalMultiple = (0 <= status.critical.rate)
+            ? status.critical.multiple.positive
+            : status.critical.multiple.nagetive;
+
+        let basicAttack = status.attack / Constant.weaponMultiple[weaponInfo.type];
+        let basicCriticalAttack = basicAttack * currentCriticalMultiple;
+        let expectedValue = (basicAttack * (100 - Math.abs(status.critical.rate)) / 100)
+            + (basicCriticalAttack * Math.abs(status.critical.rate) / 100);
+
+        extraInfo.basicAttack = parseInt(Math.round(basicAttack));
+        extraInfo.basicCriticalAttack = parseInt(Math.round(basicCriticalAttack));
+        extraInfo.expectedValue = parseInt(Math.round(expectedValue));
+
+        this.setState({
+            extraInfo: extraInfo
         });
     };
 
@@ -330,6 +341,7 @@ export default class CharacterStatus extends Component {
 
     render () {
         let status = this.state.status;
+        let extraInfo = this.state.extraInfo;
         let passiveSkills = this.state.passiveSkills;
 
         if (null === status) {
@@ -432,7 +444,7 @@ export default class CharacterStatus extends Component {
         ), (
             <div key="defense" className="row mhwc-item mhwc-defense">
                 <div className="col-4 mhwc-name">
-                    <span>防禦</span>
+                    <span>防禦力</span>
                 </div>
                 <div className="col-8 mhwc-value">
                     <span>{status.defense}</span>
@@ -501,7 +513,7 @@ export default class CharacterStatus extends Component {
                             <span>基礎傷害</span>
                         </div>
                         <div className="col-8 mhwc-value">
-                            <span>{status.extraInfo.basicAttack}</span>
+                            <span>{extraInfo.basicAttack}</span>
                         </div>
                     </div>
                     <div className="row">
@@ -509,7 +521,7 @@ export default class CharacterStatus extends Component {
                             <span>基礎會心傷害</span>
                         </div>
                         <div className="col-8 mhwc-value">
-                            <span>{status.extraInfo.basicCriticalAttack}</span>
+                            <span>{extraInfo.basicCriticalAttack}</span>
                         </div>
                     </div>
                     <div className="row">
@@ -517,7 +529,7 @@ export default class CharacterStatus extends Component {
                             <span>期望值</span>
                         </div>
                         <div className="col-8 mhwc-value">
-                            <span>{status.extraInfo.expectedValue}</span>
+                            <span>{extraInfo.expectedValue}</span>
                         </div>
                     </div>
                 </div>

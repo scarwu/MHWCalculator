@@ -177,6 +177,33 @@ export default class EquipsDisplayer extends Component {
                             })}
                         </div>
                     ) : false}
+
+                    <div className="col-12 mhwc-properties">
+                        <div className="row mhwc-item mhwc-attack">
+                            <div className="col-4 mhwc-name">
+                                <span>攻擊力</span>
+                            </div>
+                            <div className="col-8 mhwc-value">
+                                <span>{weaponInfo.attack}</span>
+                            </div>
+                        </div>
+                        <div className="row mhwc-item mhwc-criticalRate">
+                            <div className="col-4 mhwc-name">
+                                <span>會心率</span>
+                            </div>
+                            <div className="col-8 mhwc-value">
+                                <span>{weaponInfo.criticalRate}</span>
+                            </div>
+                        </div>
+                        <div className="row mhwc-item mhwc-defense">
+                            <div className="col-4 mhwc-name">
+                                <span>防禦力</span>
+                            </div>
+                            <div className="col-8 mhwc-value">
+                                <span>{weaponInfo.defense}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             ));
         } else {
@@ -255,6 +282,17 @@ export default class EquipsDisplayer extends Component {
                                 })}
                             </div>
                         ) : false}
+
+                        <div className="col-12 mhwc-properties">
+                            <div className="row mhwc-item mhwc-defense">
+                                <div className="col-4 mhwc-name">
+                                    <span>防禦力</span>
+                                </div>
+                                <div className="col-8 mhwc-value">
+                                    <span>{equipInfo.defense}</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 ) );
             } else {

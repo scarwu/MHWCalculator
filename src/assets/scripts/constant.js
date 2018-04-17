@@ -132,12 +132,12 @@ export default {
             ice: 0,
             dragon: 0
         },
-        skills: [],
-        extraInfo: {
-            basicAttack: 0,
-            basicCriticalAttack: 0,
-            expectedValue: 0
-        }
+        skills: []
+    },
+    defaultExtraInfo: {
+        basicAttack: 0,
+        basicCriticalAttack: 0,
+        expectedValue: 0
     },
     testEquipsSetting: [
         {
