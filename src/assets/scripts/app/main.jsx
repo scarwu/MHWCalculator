@@ -358,34 +358,43 @@ export default class Main extends Component {
 
         return skills.map((data, index) => {
             let skill = DataSet.skillHelper.getInfo(data.key);
+            console.log(skill);
 
             return (
-                <div key={skill.name} className="row mhwc-skill_item">
-                    <div className="col-1">
-                        <div className="col-12">
-                            <a className="fa fa-chevron-up" onClick={() => {this.handleSkillMoveUp(index)}}></a>
-                        </div>
-                        <div className="col-12">
-                            <a className="fa fa-chevron-down" onClick={() => {this.handleSkillMoveDown(index)}}></a>
-                        </div>
-                    </div>
-
-                    <div className="col-6">
-                        <span className="mhwc-skill_name">{skill.name}</span>
-                    </div>
-
-                    <div className="col-4">
-                        <a className="fa fa-minus" onClick={() => {this.handleSkillLevelDown(index)}}></a>
-                        &nbsp;
-                        <span className="mhwc-skill_level">
-                            {data.level} / {skill.list.length}
+                <div key={skill.name} className="row mhwc-item">
+                    <div className="col-12 mhwc-name">
+                        <span>
+                            {skill.name}
+                            &nbsp;
+                            Lv.{data.level} / {skill.list.length}
                         </span>
-                        &nbsp;
-                        <a className="fa fa-plus" onClick={() => {this.handleSkillLevelUp(index)}}></a>
-                    </div>
 
-                    <div className="col-1">
-                        <a className="fa fa-times" onClick={() => {this.handleSkillRemove(index)}}></a>
+                        <div className="mhwc-icons_bundle mhwc-skill_remove">
+                            <a className="mhwc-icon" onClick={() => {this.handleSkillRemove(index)}}>
+                                <i className="fa fa-times"></i>
+                            </a>
+                        </div>
+
+                        <div className="mhwc-icons_bundle mhwc-position_control">
+                            <a className="mhwc-icon" onClick={() => {this.handleSkillMoveUp(index)}}>
+                                <i className="fa fa-chevron-up"></i>
+                            </a>
+                            <a className="mhwc-icon" onClick={() => {this.handleSkillMoveDown(index)}}>
+                                <i className="fa fa-chevron-down"></i>
+                            </a>
+                        </div>
+
+                        <div className="mhwc-icons_bundle mhwc-level_control">
+                            <a className="mhwc-icon" onClick={() => {this.handleSkillLevelDown(index)}}>
+                                <i className="fa fa-minus"></i>
+                            </a>
+                            <a className="mhwc-icon" onClick={() => {this.handleSkillLevelUp(index)}}>
+                                <i className="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col-12 mhwc-value">
+                        <span>{skill.list[data.level - 1].description}</span>
                     </div>
                 </div>
             );
