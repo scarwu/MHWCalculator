@@ -657,6 +657,26 @@ $function_bar-height: 40px;
             .mhwc-value {
 
             }
+
+            .mhwc-sharpness {
+                @include mhwc-sharpness();
+            }
+        }
+
+        .mhwc-skills {
+            margin-top: 5px;
+            padding: 5px;
+            border: 1px solid #333;
+
+            @include border-radius(5px);
+
+            .mhwc-name {
+                @include nowrap();
+            }
+
+            .mhwc-value {
+
+            }
         }
     }
 
