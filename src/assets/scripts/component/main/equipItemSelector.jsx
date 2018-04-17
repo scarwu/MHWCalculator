@@ -34,6 +34,7 @@ export default class EquipItemSelector extends Component {
     // Initial State
     state = {
         data: {},
+        list: [],
         textSegment: null
     };
 
@@ -70,6 +71,7 @@ export default class EquipItemSelector extends Component {
             textSegment: segment
         });
     };
+
     /**
      * Lifecycle Functions
      */
@@ -108,12 +110,6 @@ export default class EquipItemSelector extends Component {
         this.setState({
             mode: mode,
             list: list
-        });
-    }
-
-    componentWillReceiveProps (nextProps) {
-        this.setState({
-            data: nextProps
         });
     }
 

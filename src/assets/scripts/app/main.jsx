@@ -124,7 +124,26 @@ export default class Main extends Component {
     };
 
     handleSkillSelectorPickup = (data) => {
+        let skills = this.state.skills;
 
+        skills.push({
+            key: data.skillKey,
+            level: 1
+        });
+
+        this.setState({
+            skills: skills
+        });
+    };
+
+    handleSkillRemove = (index) => {
+        let skills = this.state.skills;
+
+        delete skills[index];
+
+        this.setState({
+            skills: skills
+        });
     };
 
     handleEquipSelectorOpen = (data) => {
@@ -233,7 +252,7 @@ export default class Main extends Component {
                     </div>
 
                     <div className="col-1">
-                        <a className="fa fa-times" onClick={() => {this.handleSkillUnselect(index)}}></a>
+                        <a className="fa fa-times" onClick={() => {this.handleSkillRemove(index)}}></a>
                     </div>
                 </div>
             );
@@ -323,7 +342,7 @@ export default class Main extends Component {
                 </div>
 
                 {this.state.isShowSkillSelector ? (
-                    <SkillItemSelector skills={this.state.skills}
+                    <SkillItemSelector data={this.state.skills}
                         onPickup={this.handleSkillSelectorPickup}
                         onClose={this.handleSkillSelectorClose} />
                 ) : false}
