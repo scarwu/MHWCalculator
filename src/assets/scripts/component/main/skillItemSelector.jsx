@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Item Selector
+ * Skill Item Selector
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -22,7 +22,7 @@ import DataSet from 'library/dataset';
 import Constant from 'constant';
 import Lang from 'lang';
 
-export default class ItemSelector extends Component {
+export default class SkillItemSelector extends Component {
 
     // Default Props
     static defaultProps = {

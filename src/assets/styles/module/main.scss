@@ -425,25 +425,34 @@ $function_bar-height: 40px;
         @include font-size(1.8);
     }
 
-    .mhwc-unselected_skills,
-    .mhwc-selected_skills,
-    .mhwc-canditate_equips,
-    .mhwc-equips,
-    .mhwc-status {
+    > .mhwc-skills,
+    > .mhwc-bundles,
+    > .mhwc-equips,
+    > .mhwc-status {
         position: relative;
         height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
     }
 
-    .mhwc-unselected_skills,
-    .mhwc-selected_skills {
+    > .mhwc-skills {
         .mhwc-function_bar {
             padding: 0 10px;
             height: $function_bar-height;
 
-            input {
+            div {
+                padding: 0 2px;
+            }
+
+            a {
+                display: inline-block;
                 width: 100%;
-                height: $function_bar-height - 10px;
-                padding: 0 5px;
+                border: 1px solid #333;
+                text-align: center;
+
+                @include border-radius(5px);
+
+                &:hover {
+                    background-color: #ccc;
+                }
             }
         }
 
@@ -487,23 +496,7 @@ $function_bar-height: 40px;
         }
     }
 
-    .mhwc-unselected_skills {
-        .mhwc-skill_item {
-            > div:nth-child(1) {
-                padding: 0 5px;
-
-                span {
-                    @include nowrap();
-                }
-            }
-
-            > div:nth-child(2) {
-                text-align: center;
-            }
-        }
-    }
-
-    .mhwc-selected_skills {
+    > .mhwc-skills {
         .mhwc-skill_item {
             > div:nth-child(1) {
                 line-height: 25px;
@@ -528,9 +521,9 @@ $function_bar-height: 40px;
         }
     }
 
-    .mhwc-canditate_equips,
-    .mhwc-equips,
-    .mhwc-status {
+    > .mhwc-bundles,
+    > .mhwc-equips,
+    > .mhwc-status {
         .mhwc-list {
             overflow-y: scroll;
             height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
@@ -550,11 +543,11 @@ $function_bar-height: 40px;
         }
     }
 
-    .mhwc-canditate_equips {
+    > .mhwc-bundles {
 
     }
 
-    .mhwc-equips {
+    > .mhwc-equips {
         .mhwc-equip_name {
             &:hover {
                 color: #666;
@@ -645,7 +638,7 @@ $function_bar-height: 40px;
         }
     }
 
-    .mhwc-status {
+    > .mhwc-status {
         .mhwc-icon {
             display: inline-block;
             margin-left: 2px;
