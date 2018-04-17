@@ -402,6 +402,8 @@ export default class EquipItemSelector extends Component {
                     <thead>
                         <tr>
                             <td>名稱</td>
+                            <td>等級</td>
+                            <td>說明</td>
                             <td></td>
                         </tr>
                     </thead>
@@ -418,6 +420,24 @@ export default class EquipItemSelector extends Component {
                             return (
                                 <tr key={index}>
                                     <td>{data.name}</td>
+                                    <td>
+                                        {data.list.map((data, index) => {
+                                            return (
+                                                <div key={index}>
+                                                    <span>Lv.{data.level}</span>
+                                                </div>
+                                            );
+                                        })}
+                                    </td>
+                                    <td>
+                                        {data.list.map((data, index) => {
+                                            return (
+                                                <div key={index}>
+                                                    <span>{data.description}</span>
+                                                </div>
+                                            );
+                                        })}
+                                    </td>
                                     <td>
                                         <a className="fa fa-check"
                                             onClick={() => {this.handleItemPickup(data.name)}}></a>
