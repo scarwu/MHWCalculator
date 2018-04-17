@@ -358,7 +358,6 @@ export default class Main extends Component {
 
         return skills.map((data, index) => {
             let skill = DataSet.skillHelper.getInfo(data.key);
-            console.log(skill);
 
             return (
                 <div key={skill.name} className="row mhwc-item">
