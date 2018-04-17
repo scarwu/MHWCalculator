@@ -108,7 +108,79 @@ export default class Main extends Component {
     };
 
     handleEquipSearch = () => {
-        console.log('EquipSearch');
+        let skills = this.state.skills;
+        let equips = this.state.equips;
+        let dataMap = {};
+
+        skills.map((data) => {
+            dataMap[data.key] = {
+                level: data.level,
+                equips: {
+                    helm: {},
+                    chest: {},
+                    arm: {},
+                    waist: {},
+                    leg: {},
+                    charm: {},
+                    jewel: {}
+                }
+            };
+
+            DataSet.armorHelper.hasSkill(data.key).getItems().map((equip) => {
+                equip.skills.map((skill) => {
+                    if (skill.key !== data.key) {
+                        return false;
+                    }
+
+                    dataMap[data.key].equips[equip.type][equip.name] = skill.level;
+                });
+            });
+
+            DataSet.charmHelper.hasSkill(data.key).getItems().map((equip) => {
+                equip.skills.map((skill) => {
+                    if (skill.key !== data.key) {
+                        return false;
+                    }
+
+                    dataMap[data.key].equips.charm[equip.name] = skill.level;
+                });
+            });
+
+            DataSet.jewelHelper.hasSkill(data.key).getItems().map((equip) => {
+                dataMap[data.key].equips.jewel[equip.name] = equip.skill.level;
+            });
+        });
+
+        console.log(dataMap);
+
+        Object.keys(equips).map((equipType) => {
+            let equip = equips[equipType];
+
+            if (null === equip.key) {
+                return false;
+            }
+
+            if (false === equip.isLock) {
+                return false;
+            }
+
+            let equipInfo = null;
+
+            if ('weapon' === equipType) {
+                equipInfo = DataSet.weaponHelper.getApplyedInfo(equips.waepon);
+
+            } else if ('helm' === equipType
+                || 'chest' === equipType
+                || 'arm' === equipType
+                || 'waist' === equipType
+                || 'leg' === equipType) {
+
+                equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
+
+            } else if ('charm' === equipType) {
+                equipInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
+            }
+        });
     };
 
     handleSkillSelectorOpen = (data) => {
@@ -213,7 +285,33 @@ export default class Main extends Component {
      */
     componentWillMount () {
         this.setState({
-            equips: Constant.testEquipsSetting[0]
+            equips: Constant.testEquipsSetting[0],
+            skills: [
+                {
+                    key: '攻擊',
+                    level: 7
+                },
+                {
+                    key: '看破',
+                    level: 4
+                },
+                {
+                    key: '弱點特效',
+                    level: 3
+                },
+                {
+                    key: '減輕膽怯',
+                    level: 2
+                },
+                {
+                    key: '超會心',
+                    level: 1
+                },
+                {
+                    key: '無屬性強化',
+                    level: 1
+                }
+            ]
         });
     }
 

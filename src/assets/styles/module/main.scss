@@ -500,6 +500,10 @@ $function_bar-height: 40px;
                 text-align: center;
 
                 @include border-radius(5px);
+
+                &:hover {
+                    background-color: #eee;
+                }
             }
         }
 
@@ -701,6 +705,10 @@ $function_bar-height: 40px;
 
             .mhwc-sharpness {
                 @include mhwc-sharpness();
+
+                .mhwc-bar {
+                    height: 21px;
+                }
             }
         }
 

@@ -294,7 +294,7 @@ export default class EquipsDisplayer extends Component {
                                         return b.level - a.level;
                                     }).map((data) => {
                                         return (
-                                            <div key={data.name} className="row mhwc-skill">
+                                            <div key={data.key} className="row mhwc-skill">
                                                 <div className="col-12 mhwc-name">
                                                     <span>{data.key} Lv.{data.level}</span>
                                                 </div>
@@ -422,7 +422,7 @@ export default class EquipsDisplayer extends Component {
                                             return b.level - a.level;
                                         }).map((data) => {
                                             return (
-                                                <div key={data.name} className="row mhwc-skill">
+                                                <div key={data.key} className="row mhwc-skill">
                                                     <div className="col-12 mhwc-name">
                                                         <span>{data.key} Lv.{data.level}</span>
                                                     </div>
@@ -489,7 +489,7 @@ export default class EquipsDisplayer extends Component {
                                     return b.level - a.level;
                                 }).map((data) => {
                                     return (
-                                        <div key={data.name} className="row mhwc-skill">
+                                        <div key={data.key} className="row mhwc-skill">
                                             <div className="col-12 mhwc-name">
                                                 <span>{data.key} Lv.{data.level}</span>
                                             </div>
