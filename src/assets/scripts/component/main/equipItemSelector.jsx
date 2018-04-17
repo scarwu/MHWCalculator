@@ -233,8 +233,11 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        <a className="fa fa-check"
-                                            onClick={() => {this.handleItemPickup(data.name)}}></a>
+                                        <a className="mhwc-icon"
+                                            onClick={() => {this.handleItemPickup(data.name)}}>
+
+                                            <i className="fa fa-check"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             );
@@ -303,8 +306,11 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        <a className="fa fa-check"
-                                            onClick={() => {this.handleItemPickup(data.name)}}></a>
+                                        <a className="mhwc-icon"
+                                            onClick={() => {this.handleItemPickup(data.name)}}>
+
+                                            <i className="fa fa-check"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             );
@@ -347,8 +353,11 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        <a className="fa fa-check"
-                                            onClick={() => {this.handleItemPickup(data.name)}}></a>
+                                        <a className="mhwc-icon"
+                                            onClick={() => {this.handleItemPickup(data.name)}}>
+
+                                            <i className="fa fa-check"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             );
@@ -387,8 +396,11 @@ export default class EquipItemSelector extends Component {
                                         <span>{data.skill.key} Lv.{data.skill.level}</span>
                                     </td>
                                     <td>
-                                        <a className="fa fa-check"
-                                            onClick={() => {this.handleItemPickup(data.name)}}></a>
+                                        <a className="mhwc-icon"
+                                            onClick={() => {this.handleItemPickup(data.name)}}>
+
+                                            <i className="fa fa-check"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             );
@@ -439,8 +451,11 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        <a className="fa fa-check"
-                                            onClick={() => {this.handleItemPickup(data.name)}}></a>
+                                        <a className="mhwc-icon"
+                                            onClick={() => {this.handleItemPickup(data.name)}}>
+
+                                            <i className="fa fa-check"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             );
@@ -457,7 +472,10 @@ export default class EquipItemSelector extends Component {
                 <div className="mhwc-function_bar">
                     <input className="mhwc-text_segment" type="text"
                         ref="textSegment" onChange={this.handleTextInput} />
-                    <a className="fa fa-times" onClick={this.handleWindowClose}></a>
+
+                    <a className="mhwc-icon" onClick={this.handleWindowClose}>
+                        <i className="fa fa-times"></i>
+                    </a>
                 </div>
                 <div className="mhwc-list">
                     {this.renderTable()}

@@ -74,18 +74,28 @@ export default class CharacterStatus extends Component {
         info.charm = (null !== equips.charm.key)
             ? DataSet.charmHelper.getApplyedInfo(equips.charm) : null;
 
-        status.critical.rate = info.weapon.criticalRate;
-        status.sharpness = info.weapon.sharpness;
-        status.element = info.weapon.element;
-        status.elderseal = info.weapon.elderseal;
+        if (null !== info.weapon) {
+            status.critical.rate = info.weapon.criticalRate;
+            status.sharpness = info.weapon.sharpness;
+            status.element = info.weapon.element;
+            status.elderseal = info.weapon.elderseal;
+        }
 
         // Defense
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+            if (null === info[equipType]) {
+                return false;
+            }
+
             status.defense += info[equipType].defense;
         });
 
         // Resistance
         ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+            if (null === info[equipType]) {
+                return false;
+            }
+
             Constant.elements.map((elementType) => {
                 status.resistance[elementType] += info[equipType].resistance[elementType];
             });
@@ -95,6 +105,10 @@ export default class CharacterStatus extends Component {
         let allSkills = {};
 
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].map((equipType) => {
+            if (null === info[equipType]) {
+                return false;
+            }
+
             info[equipType].skills.map((skill) => {
                 if (undefined === allSkills[skill.key]) {
                     allSkills[skill.key] = 0;
@@ -215,15 +229,19 @@ export default class CharacterStatus extends Component {
         }
 
         // Last Status Completion
-        let weaponAttack = info.weapon.attack;
-        let weaponType = info.weapon.type;
+        if (null !== info.weapon) {
+            let weaponAttack = info.weapon.attack;
+            let weaponType = info.weapon.type;
 
-        status.attack *= Constant.weaponMultiple[weaponType]; // 武器倍率
+            status.attack *= Constant.weaponMultiple[weaponType]; // 武器倍率
 
-        if (null == enableElement && null !== noneElementAttackMutiple) {
-            status.attack += weaponAttack * noneElementAttackMutiple.value;
+            if (null == enableElement && null !== noneElementAttackMutiple) {
+                status.attack += weaponAttack * noneElementAttackMutiple.value;
+            } else {
+                status.attack += weaponAttack;
+            }
         } else {
-            status.attack += weaponAttack;
+            status.attack = 0;
         }
 
         if (null !== enableElement) {
@@ -265,20 +283,22 @@ export default class CharacterStatus extends Component {
         let status = this.state.status;
         let extraInfo = Misc.deepCopy(Constant.defaultExtraInfo);
 
-        let weaponInfo = (null !== equips.weapon.key)
-            ? DataSet.weaponHelper.getApplyedInfo(equips.weapon) : null;
-        let currentCriticalMultiple = (0 <= status.critical.rate)
-            ? status.critical.multiple.positive
-            : status.critical.multiple.nagetive;
+        if (null !== equips.weapon.key) {
+            let weaponInfo = (null !== equips.weapon.key)
+                ? DataSet.weaponHelper.getApplyedInfo(equips.weapon) : null;
+            let currentCriticalMultiple = (0 <= status.critical.rate)
+                ? status.critical.multiple.positive
+                : status.critical.multiple.nagetive;
 
-        let basicAttack = status.attack / Constant.weaponMultiple[weaponInfo.type];
-        let basicCriticalAttack = basicAttack * currentCriticalMultiple;
-        let expectedValue = (basicAttack * (100 - Math.abs(status.critical.rate)) / 100)
-            + (basicCriticalAttack * Math.abs(status.critical.rate) / 100);
+            let basicAttack = status.attack / Constant.weaponMultiple[weaponInfo.type];
+            let basicCriticalAttack = basicAttack * currentCriticalMultiple;
+            let expectedValue = (basicAttack * (100 - Math.abs(status.critical.rate)) / 100)
+                + (basicCriticalAttack * Math.abs(status.critical.rate) / 100);
 
-        extraInfo.basicAttack = parseInt(Math.round(basicAttack));
-        extraInfo.basicCriticalAttack = parseInt(Math.round(basicCriticalAttack));
-        extraInfo.expectedValue = parseInt(Math.round(expectedValue));
+            extraInfo.basicAttack = parseInt(Math.round(basicAttack));
+            extraInfo.basicCriticalAttack = parseInt(Math.round(basicCriticalAttack));
+            extraInfo.expectedValue = parseInt(Math.round(expectedValue));
+        }
 
         this.setState({
             extraInfo: extraInfo

@@ -98,17 +98,7 @@ export default {
                 nagetive: 0.75
             }
         },
-        sharpness: {
-            value: 0,
-            steps: {
-                red: 0,
-                orange: 0,
-                yellow: 0,
-                green: 0,
-                blue: 0,
-                white: 0
-            }
-        },
+        sharpness: null,
         element: {
             attack: {
                 type: null,

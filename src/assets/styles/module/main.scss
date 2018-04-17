@@ -136,23 +136,35 @@ $function_bar-height: 40px;
             padding: 0 5px;
         }
 
-        a {
-            position: absolute;
+        .mhwc-icon {
+            margin-top: 10px;
+        }
+    }
 
-            height: $function_bar-height;
-            width: 20px;
-            top: 10px;
-            right: 20px;
-            text-align: center;
+    .mhwc-icon {
+        display: inline-block;
+        margin-left: 2px;
+        width: 20px;
+        height: 20px;
+        float: right;
+        line-height: 20px;
+        text-align: center;
+        color: white;
+        background-color: #ccc;
+
+        @include border-radius(3px);
+
+        &:hover {
+            background-color: #666;
         }
     }
 
     .mhwc-list {
         position: absolute;
-        top: 5px + $function_bar-height;
+        top: 10px + $function_bar-height;
         left: 5px;
         right: 5px;
-        bottom: 5px;
+        bottom: 10px;
         padding: 0 5px;
         overflow-y: scroll;
 
@@ -393,6 +405,29 @@ $function_bar-height: 40px;
                 }
             }
 
+            &.mhwc-skill_table {
+
+                // 名稱
+                td:nth-child(1) {
+
+                }
+
+                // 等級
+                td:nth-child(2) {
+
+                }
+
+                // 說明
+                td:nth-child(3) {
+
+                }
+
+                td:nth-child(4) {
+                    padding-right: 5px;
+                    text-align: right;
+                }
+            }
+
             @include mhwc-sharpness();
 
             .mhwc-bar {
@@ -465,10 +500,6 @@ $function_bar-height: 40px;
                 text-align: center;
 
                 @include border-radius(5px);
-
-                &:hover {
-                    background-color: #ccc;
-                }
             }
         }
 

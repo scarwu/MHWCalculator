@@ -99,7 +99,7 @@ export default class SkillItemSelector extends Component {
         let segment = this.state.textSegment;
 
         return (
-            <table className="mhwc-weapon_table">
+            <table className="mhwc-skill_table">
                 <thead>
                     <tr>
                         <td>名稱</td>
@@ -140,8 +140,11 @@ export default class SkillItemSelector extends Component {
                                     })}
                                 </td>
                                 <td>
-                                    <a className="fa fa-check"
-                                        onClick={() => {this.handleItemPickup(data.name)}}></a>
+                                    <a className="mhwc-icon"
+                                        onClick={() => {this.handleItemPickup(data.name)}}>
+
+                                        <i className="fa fa-check"></i>
+                                    </a>
                                 </td>
                             </tr>
                         );
@@ -157,7 +160,10 @@ export default class SkillItemSelector extends Component {
                 <div className="mhwc-function_bar">
                     <input className="mhwc-text_segment" type="text"
                         ref="textSegment" onChange={this.handleTextInput} />
-                    <a className="fa fa-times" onClick={this.handleWindowClose}></a>
+
+                    <a className="mhwc-icon" onClick={this.handleWindowClose}>
+                        <i className="fa fa-times"></i>
+                    </a>
                 </div>
                 <div className="mhwc-list">
                     {this.renderTable()}
