@@ -450,7 +450,7 @@
             "attack": {
                 "type": "water",
                 "minValue": 300,
-                "maxValue": null,
+                "maxValue": 390,
                 "isHidden": false
             },
             "status": null
@@ -2911,7 +2911,8 @@
             },
             "status": {
                 "type": "blast",
-                "value": 240,
+                "minValue": 240,
+                "maxValue": null,
                 "isHidden": false
             }
         },
@@ -8958,7 +8959,7 @@
             "attack": {
                 "type": "water",
                 "minValue": 360,
-                "maxValue": null,
+                "maxValue": 470,
                 "isHidden": true
             },
             "status": null
@@ -9247,8 +9248,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "minValue": 310,
-                "maxValue": null,
+                "minValue": 240,
+                "maxValue": 310,
                 "isHidden": true
             },
             "status": null
