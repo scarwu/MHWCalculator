@@ -303,14 +303,15 @@ export default class CharacterStatus extends Component {
         let extraInfo = Misc.deepCopy(Constant.defaultExtraInfo);
 
         if (null !== equips.weapon.key) {
-            let weaponInfo = (null !== equips.weapon.key)
-                ? DataSet.weaponHelper.getApplyedInfo(equips.weapon) : null;
-            let currentCriticalMultiple = (0 <= status.critical.rate)
+            let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
+            let weaponMultiple = Constant.weaponMultiple[weaponInfo.type];
+            let sharpnessMultiple = this.getSharpnessMultiple(status.sharpness);
+            let criticalMultiple = (0 <= status.critical.rate)
                 ? status.critical.multiple.positive
                 : status.critical.multiple.nagetive;
 
-            let basicAttack = status.attack / Constant.weaponMultiple[weaponInfo.type];
-            let basicCriticalAttack = basicAttack * currentCriticalMultiple;
+            let basicAttack = (status.attack / weaponMultiple) * sharpnessMultiple.raw;
+            let basicCriticalAttack = basicAttack * criticalMultiple;
             let expectedValue = (basicAttack * (100 - Math.abs(status.critical.rate)) / 100)
                 + (basicCriticalAttack * Math.abs(status.critical.rate) / 100);
 
@@ -322,6 +323,39 @@ export default class CharacterStatus extends Component {
         this.setState({
             extraInfo: extraInfo
         });
+    };
+
+    getSharpnessMultiple = (data) => {
+        if (null === data) {
+            return {
+                raw: 1,
+                element: 1
+            };
+        }
+
+        let currentStep = null;
+        let currentValue = 0;
+
+        for (let stepKey in data.steps) {
+            currentStep = stepKey;
+            currentValue += data.steps[stepKey];
+            console.log(currentStep, currentValue);
+
+            if (currentValue >= data.value) {
+                break;
+            }
+        }
+
+        console.log(data);
+        console.log(currentStep, {
+            raw: Constant.sharpnessMultiple.raw[currentStep],
+            element: Constant.sharpnessMultiple.element[currentStep]
+        });
+
+        return {
+            raw: Constant.sharpnessMultiple.raw[currentStep],
+            element: Constant.sharpnessMultiple.element[currentStep]
+        };
     };
 
     /**

@@ -23,7 +23,7 @@ export default {
             yellow: 1.00,
             green: 1.05,
             blue: 1.20,
-            whit: 1.32
+            white: 1.32
         },
         element: {
             red: 0.25,

@@ -79,40 +79,14 @@ export default class Main extends Component {
         });
     };
 
-    handleSkillMoveUp = (index) => {
-        let skills = this.state.skills;
-
-        if (0 === index) {
-            return false;
-        }
-
-        [skills[index], skills[index - 1]] = [skills[index - 1], skills[index]];
-
-        this.setState({
-            skills: skills
-        });
-    };
-
-    handleSkillMoveDown = (index) => {
-        let skills = this.state.skills;
-
-        if (skills.length - 1 === index) {
-            return false;
-        }
-
-        [skills[index], skills[index + 1]] = [skills[index + 1], skills[index]];
-
-        this.setState({
-            skills: skills
-        });
-    };
-
     handleEquipSearch = () => {
         let skills = this.state.skills;
         let equips = this.state.equips;
         let dataMap = {};
 
-        skills.map((data) => {
+        skills.sort((a, b) => {
+            return b.level - a.level;
+        }).map((data) => {
             dataMap[data.key] = {
                 level: data.level,
                 equips: {
@@ -368,27 +342,15 @@ export default class Main extends Component {
                             Lv.{data.level} / {skill.list.length}
                         </span>
 
-                        <div className="mhwc-icons_bundle mhwc-skill_remove">
-                            <a className="mhwc-icon" onClick={() => {this.handleSkillRemove(index)}}>
-                                <i className="fa fa-times"></i>
-                            </a>
-                        </div>
-
-                        <div className="mhwc-icons_bundle mhwc-position_control">
-                            <a className="mhwc-icon" onClick={() => {this.handleSkillMoveUp(index)}}>
-                                <i className="fa fa-chevron-up"></i>
-                            </a>
-                            <a className="mhwc-icon" onClick={() => {this.handleSkillMoveDown(index)}}>
-                                <i className="fa fa-chevron-down"></i>
-                            </a>
-                        </div>
-
-                        <div className="mhwc-icons_bundle mhwc-level_control">
+                        <div className="mhwc-icons_bundle">
                             <a className="mhwc-icon" onClick={() => {this.handleSkillLevelDown(index)}}>
                                 <i className="fa fa-minus"></i>
                             </a>
                             <a className="mhwc-icon" onClick={() => {this.handleSkillLevelUp(index)}}>
                                 <i className="fa fa-plus"></i>
+                            </a>
+                            <a className="mhwc-icon" onClick={() => {this.handleSkillRemove(index)}}>
+                                <i className="fa fa-times"></i>
                             </a>
                         </div>
                     </div>
