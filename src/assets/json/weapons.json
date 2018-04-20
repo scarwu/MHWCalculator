@@ -206,7 +206,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 450,
-                "maxValue": null,
+                "maxValue": 550,
                 "isHidden": false
             }
         },
@@ -463,6 +463,44 @@
         ]
     },
     {
+        "name": "土砂龍粉碎者 III (大劍)",
+        "rare": 6,
+        "type": "greatSword",
+        "series": "土砂龍",
+        "attack": 960,
+        "criticalRate": -20,
+        "defense": 25,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 120,
+                "yellow": 40,
+                "green": 50,
+                "blue": 80,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 360,
+                "maxValue": 480,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
         "name": "塊劍拉多巴爾喀 III",
         "rare": 6,
         "type": "greatSword",
@@ -588,7 +626,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 420,
-                "maxValue": null,
+                "maxValue": 510,
                 "isHidden": false
             }
         },
@@ -698,7 +736,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 330,
-                "maxValue": null,
+                "maxValue": 410,
                 "isHidden": true
             }
         },
@@ -1088,7 +1126,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 260,
                 "isHidden": false
             }
         },
@@ -1295,7 +1333,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 240,
-                "maxValue": null,
+                "maxValue": 300,
                 "isHidden": true
             }
         },
@@ -1367,7 +1405,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 360,
-                "maxValue": null,
+                "maxValue": 440,
                 "isHidden": false
             }
         },
@@ -1402,7 +1440,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 300,
-                "maxValue": null,
+                "maxValue": 370,
                 "isHidden": false
             }
         },
@@ -1793,7 +1831,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 330,
-                "maxValue": null,
+                "maxValue": 410,
                 "isHidden": true
             }
         },
@@ -1869,7 +1907,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 240,
-                "maxValue": null,
+                "maxValue": 300,
                 "isHidden": false
             }
         },
@@ -1900,7 +1938,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 300,
-                "maxValue": null,
+                "maxValue": 370,
                 "isHidden": true
             }
         },
@@ -2039,7 +2077,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 180,
-                "maxValue": null,
+                "maxValue": 230,
                 "isHidden": true
             }
         },
@@ -2176,7 +2214,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 240,
-                "maxValue": null,
+                "maxValue": 300,
                 "isHidden": false
             }
         },
@@ -2390,7 +2428,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 150,
-                "maxValue": null,
+                "maxValue": 190,
                 "isHidden": false
             }
         },
@@ -2526,7 +2564,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 180,
-                "maxValue": null,
+                "maxValue": 230,
                 "isHidden": true
             }
         },
@@ -2700,7 +2738,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 90,
-                "maxValue": null,
+                "maxValue": 120,
                 "isHidden": true
             }
         },
@@ -2872,7 +2910,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 260,
                 "isHidden": false
             }
         },
@@ -2912,7 +2950,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 240,
-                "maxValue": null,
+                "maxValue": 300,
                 "isHidden": false
             }
         },
@@ -3020,7 +3058,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 330,
                 "isHidden": true
             }
         },
@@ -3165,7 +3203,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 390,
-                "maxValue": null,
+                "maxValue": 480,
                 "isHidden": false
             }
         },
@@ -3450,7 +3488,7 @@
         ]
     },
     {
-        "name": "土砂龍粉碎者 III",
+        "name": "土砂龍粉碎者 III (大槌)",
         "rare": 6,
         "type": "hammer",
         "series": "土砂龍",
@@ -3473,7 +3511,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 390,
-                "maxValue": null,
+                "maxValue": 480,
                 "isHidden": true
             }
         },
@@ -3579,7 +3617,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 420,
-                "maxValue": null,
+                "maxValue": 510,
                 "isHidden": false
             }
         },
@@ -3689,7 +3727,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 260,
                 "isHidden": false
             }
         },
@@ -3757,7 +3795,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 330,
                 "isHidden": true
             }
         },
@@ -4034,7 +4072,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 150,
-                "maxValue": null,
+                "maxValue": 190,
                 "isHidden": false
             }
         },
@@ -4179,7 +4217,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 260,
                 "isHidden": false
             }
         },
@@ -4217,7 +4255,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 300,
-                "maxValue": null,
+                "maxValue": 370,
                 "isHidden": false
             }
         },
@@ -4357,7 +4395,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 390,
-                "maxValue": null,
+                "maxValue": 480,
                 "isHidden": false
             }
         },
@@ -4461,7 +4499,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 330,
                 "isHidden": true
             }
         },
@@ -4598,7 +4636,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 260,
                 "isHidden": false
             }
         },
@@ -4816,7 +4854,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 240,
-                "maxValue": null,
+                "maxValue": 300,
                 "isHidden": true
             }
         },
@@ -4851,7 +4889,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 390,
-                "maxValue": null,
+                "maxValue": 480,
                 "isHidden": true
             }
         },
@@ -4995,7 +5033,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 260,
                 "isHidden": false
             }
         },
@@ -5200,7 +5238,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 330,
                 "isHidden": true
             }
         },
@@ -5481,7 +5519,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 260,
                 "isHidden": false
             }
         },
@@ -5554,7 +5592,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 450,
-                "maxValue": null,
+                "maxValue": 550,
                 "isHidden": false
             }
         },
@@ -5622,7 +5660,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 390,
-                "maxValue": null,
+                "maxValue": 480,
                 "isHidden": true
             }
         },
@@ -5724,7 +5762,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 420,
-                "maxValue": null,
+                "maxValue": 510,
                 "isHidden": false
             }
         },
@@ -6077,7 +6115,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 180,
-                "maxValue": null,
+                "maxValue": 230,
                 "isHidden": false
             }
         },
@@ -6251,7 +6289,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 420,
-                "maxValue": null,
+                "maxValue": 510,
                 "isHidden": true
             }
         },
@@ -6286,7 +6324,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 300,
-                "maxValue": null,
+                "maxValue": 370,
                 "isHidden": true
             }
         },
@@ -6461,7 +6499,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 300,
-                "maxValue": null,
+                "maxValue": 370,
                 "isHidden": false
             }
         },
@@ -6786,7 +6824,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 240,
-                "maxValue": null,
+                "maxValue": 300,
                 "isHidden": true
             }
         },
@@ -6890,7 +6928,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 180,
-                "maxValue": null,
+                "maxValue": 230,
                 "isHidden": false
             }
         },
@@ -6928,7 +6966,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 300,
-                "maxValue": null,
+                "maxValue": 370,
                 "isHidden": false
             }
         },
@@ -7102,7 +7140,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 260,
                 "isHidden": false
             }
         },
@@ -7244,7 +7282,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 330,
                 "isHidden": true
             }
         },
@@ -7496,7 +7534,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 150,
-                "maxValue": null,
+                "maxValue": 190,
                 "isHidden": false
             }
         },
@@ -7534,7 +7572,7 @@
             "status": {
                 "type": "paralysis",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 260,
                 "isHidden": true
             }
         },
@@ -8817,7 +8855,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 330,
                 "isHidden": true
             }
         },
@@ -9040,7 +9078,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 240,
-                "maxValue": null,
+                "maxValue": 300,
                 "isHidden": true
             }
         },
@@ -9202,7 +9240,7 @@
             "status": {
                 "type": "blast",
                 "minValue": 150,
-                "maxValue": null,
+                "maxValue": 190,
                 "isHidden": false
             }
         },
