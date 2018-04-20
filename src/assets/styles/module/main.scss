@@ -741,6 +741,17 @@ $function_bar-height: 40px;
             .row:nth-last-child(1) .mhwc-value {
                 margin-bottom: 0;
             }
+
+            .mhwc-tuning {
+                margin: 5px;
+                padding: 0 5px;
+                height: 21px;
+                width: 50px;
+                line-height: 21px;
+                border: 1px solid #333;
+
+                @include border-radius(5px);
+            }
         }
     }
 }

@@ -34,7 +34,12 @@ export default class CharacterStatus extends Component {
         equips: Misc.deepCopy(Constant.defaultEquips),
         status: Misc.deepCopy(Constant.defaultStatus),
         extraInfo: Misc.deepCopy(Constant.defaultExtraInfo),
-        passiveSkills: {}
+        passiveSkills: {},
+        tuning: {
+            attack: 5,
+            criticalRate: 10,
+            criticalMultiple: 0.1
+        }
     };
 
     /**
@@ -52,11 +57,37 @@ export default class CharacterStatus extends Component {
         });
     };
 
+    handleTuningChange = () => {
+        let tuningAttack = this.refs.tuningAttack.value;
+        let tuningCriticalRate = this.refs.tuningCriticalRate.value;
+        let tuningCriticalMultiple = this.refs.tuningCriticalMultiple.value;
+
+        tuningAttack = parseInt(tuningAttack, 10);
+        tuningCriticalRate = parseInt(tuningCriticalRate, 10);
+        tuningCriticalMultiple = parseInt(tuningCriticalMultiple, 10);
+
+        tuningAttack = (NaN !== tuningAttack)
+            ? tuningAttack : 0;
+        tuningCriticalRate = (NaN !== tuningCriticalRate)
+            ? tuningCriticalRate : 0;
+        tuningCriticalMultiple = (NaN !== tuningCriticalMultiple)
+            ? tuningCriticalMultiple : 0;
+
+        this.setState({
+            tuning: {
+                attack: tuningAttack,
+                criticalRate: tuningCriticalRate,
+                criticalMultiple: tuningCriticalMultiple
+            }
+        }, () => {
+            this.generateExtraInfo();
+        });
+    };
+
     /**
      * Generate Functions
      */
     generateStatus = () => {
-
         let equips = this.state.equips;
         let passiveSkills = this.state.passiveSkills;
         let status = Misc.deepCopy(Constant.defaultStatus);
@@ -299,30 +330,88 @@ export default class CharacterStatus extends Component {
 
     generateExtraInfo = () => {
         let equips = this.state.equips;
-        let status = this.state.status;
+        let status = Misc.deepCopy(this.state.status);
         let extraInfo = Misc.deepCopy(Constant.defaultExtraInfo);
+
+        let result = this.getBasicExtraInfo(equips, status, {});
+
+        extraInfo.basicAttack = result.basicAttack;
+        extraInfo.basicCriticalAttack = result.basicCriticalAttack;
+        extraInfo.expectedValue = result.expectedValue;
+
+        let tuning = this.state.tuning;
+
+        // Attck Tuning
+        status = Misc.deepCopy(this.state.status);
+        result = this.getBasicExtraInfo(equips, status, {
+            attack: tuning.attack
+        });
+
+        extraInfo.perNAttackExpectedValue = result.expectedValue - extraInfo.expectedValue;
+
+        // Critical Rate Tuning
+        status = Misc.deepCopy(this.state.status);
+        result = this.getBasicExtraInfo(equips, status, {
+            criticalRate: tuning.criticalRate
+        });
+
+        extraInfo.perNCriticalRateExpectedValue = result.expectedValue - extraInfo.expectedValue;
+
+        // Critical Multiple Tuning
+        status = Misc.deepCopy(this.state.status);
+        result = this.getBasicExtraInfo(equips, status, {
+            criticalMultiple: tuning.criticalMultiple
+        });
+
+        extraInfo.perNCriticalMultipleExpectedValue = result.expectedValue - extraInfo.expectedValue;
+
+        this.setState({
+            extraInfo: extraInfo
+        });
+    };
+
+    getBasicExtraInfo = (equips, status, tuning) => {
+        let basicAttack = 0;
+        let basicCriticalAttack = 0;
+        let expectedValue = 0;
 
         if (null !== equips.weapon.key) {
             let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
             let weaponMultiple = Constant.weaponMultiple[weaponInfo.type];
             let sharpnessMultiple = this.getSharpnessMultiple(status.sharpness);
+
+            if (undefined !== tuning.criticalRate) {
+                status.critical.rate += tuning.criticalRate;
+            }
+
+            if (undefined !== tuning.criticalMultiple) {
+                status.critical.multiple.positive += tuning.criticalMultiple;
+            }
+
             let criticalMultiple = (0 <= status.critical.rate)
                 ? status.critical.multiple.positive
                 : status.critical.multiple.nagetive;
 
-            let basicAttack = (status.attack / weaponMultiple) * sharpnessMultiple.raw;
-            let basicCriticalAttack = basicAttack * criticalMultiple;
-            let expectedValue = (basicAttack * (100 - Math.abs(status.critical.rate)) / 100)
+            basicAttack = (status.attack / weaponMultiple) * sharpnessMultiple.raw;
+
+            if (undefined !== tuning.attack) {
+                basicAttack += tuning.attack
+            }
+
+            basicCriticalAttack = basicAttack * criticalMultiple;
+            expectedValue = (basicAttack * (100 - Math.abs(status.critical.rate)) / 100)
                 + (basicCriticalAttack * Math.abs(status.critical.rate) / 100);
 
-            extraInfo.basicAttack = parseInt(Math.round(basicAttack));
-            extraInfo.basicCriticalAttack = parseInt(Math.round(basicCriticalAttack));
-            extraInfo.expectedValue = parseInt(Math.round(expectedValue));
+            basicAttack = parseInt(Math.round(basicAttack));
+            basicCriticalAttack = parseInt(Math.round(basicCriticalAttack));
+            expectedValue = parseInt(Math.round(expectedValue));
         }
 
-        this.setState({
-            extraInfo: extraInfo
-        });
+        return {
+            basicAttack: basicAttack,
+            basicCriticalAttack: basicCriticalAttack,
+            expectedValue: expectedValue
+        }
     };
 
     getSharpnessMultiple = (data) => {
@@ -339,18 +428,11 @@ export default class CharacterStatus extends Component {
         for (let stepKey in data.steps) {
             currentStep = stepKey;
             currentValue += data.steps[stepKey];
-            console.log(currentStep, currentValue);
 
             if (currentValue >= data.value) {
                 break;
             }
         }
-
-        console.log(data);
-        console.log(currentStep, {
-            raw: Constant.sharpnessMultiple.raw[currentStep],
-            element: Constant.sharpnessMultiple.element[currentStep]
-        });
 
         return {
             raw: Constant.sharpnessMultiple.raw[currentStep],
@@ -603,6 +685,39 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="col-8 mhwc-value">
                             <span>{extraInfo.expectedValue}</span>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12 mhwc-name">
+                            <span>每</span>
+                            <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.attack}
+                                ref="tuningAttack" onChange={this.handleTuningChange} />
+                            <span>點攻擊力期望值</span>
+                        </div>
+                        <div className="col-12 mhwc-value">
+                            <span>{extraInfo.perNAttackExpectedValue}</span>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12 mhwc-name">
+                            <span>每</span>
+                            <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.criticalRate}
+                                ref="tuningCriticalRate" onChange={this.handleTuningChange} />
+                            <span>點會心率期望值</span>
+                        </div>
+                        <div className="col-12 mhwc-value">
+                            <span>{extraInfo.perNCriticalRateExpectedValue}</span>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12 mhwc-name">
+                            <span>每</span>
+                            <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.criticalMultiple}
+                                ref="tuningCriticalMultiple" onChange={this.handleTuningChange} />
+                            <span>點會心倍數期望值</span>
+                        </div>
+                        <div className="col-12 mhwc-value">
+                            <span>{extraInfo.perNCriticalMultipleExpectedValue}</span>
                         </div>
                     </div>
                 </div>

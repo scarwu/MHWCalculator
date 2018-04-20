@@ -127,7 +127,10 @@ export default {
     defaultExtraInfo: {
         basicAttack: 0,
         basicCriticalAttack: 0,
-        expectedValue: 0
+        expectedValue: 0,
+        perNAttackExpectedValue: 0,
+        perNCriticalRateExpectedValue: 0,
+        perNCriticalMultipleExpectedValue: 0
     },
     testEquipsSetting: [
         {
