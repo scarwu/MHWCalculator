@@ -64,7 +64,7 @@ export default class CharacterStatus extends Component {
 
         tuningAttack = parseInt(tuningAttack, 10);
         tuningCriticalRate = parseInt(tuningCriticalRate, 10);
-        tuningCriticalMultiple = parseInt(tuningCriticalMultiple, 10);
+        tuningCriticalMultiple = parseFloat(tuningCriticalMultiple);
 
         tuningAttack = (NaN !== tuningAttack)
             ? tuningAttack : 0;
