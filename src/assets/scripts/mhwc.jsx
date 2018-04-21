@@ -29,6 +29,7 @@ ReactDOM.render((
     <Router>
         <div>
             <Route exact path="/" component={MainPage} />
+            <Route exact path="/:base64" component={MainPage} />
         </div>
     </Router>
 ), document.getElementById('ot-router'));

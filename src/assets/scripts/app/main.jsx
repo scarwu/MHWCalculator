@@ -286,15 +286,29 @@ export default class Main extends Component {
 
         this.setState({
             equips: equips
+        }, () => {
+            this.refershUrlHash();
         });
+    };
+
+    refershUrlHash = () => {
+        let equips = Misc.deepCopy(this.state.equips);
+        let base64 = Misc.base64.encode(JSON.stringify(equips));
+
+        window.location.hash = `#/${base64}`;
     };
 
     /**
      * Lifecycle Functions
      */
     componentWillMount () {
+        let base64 = this.props.match.params.base64;
+        let equips = (undefined !== base64)
+            ? JSON.parse(Misc.base64.decode(base64))
+            : Misc.deepCopy(Constant.testEquipsSetting[0]);
+
         this.setState({
-            equips: Constant.testEquipsSetting[0],
+            equips: equips,
             skills: [
                 {
                     key: '攻擊',
@@ -321,6 +335,8 @@ export default class Main extends Component {
                     level: 1
                 }
             ]
+        }, () => {
+            this.refershUrlHash();
         });
     }
 
