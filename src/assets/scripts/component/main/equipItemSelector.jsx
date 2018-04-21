@@ -86,10 +86,12 @@ export default class EquipItemSelector extends Component {
         } else if (undefined !== data.slotIndex) {
             mode = 'jewel';
 
-            for (let i = data.slotSize; i >= 1; i--) {
-                list = list.concat(DataSet.jewelHelper.sizeIsEqualThen(i).getItems().sort((a, b) => {
-                    return b.rare - a.rare;
-                }));
+            for (let size = data.slotSize; size >= 1; size--) {
+                for (let rare = 8; rare >= 5; rare--) {
+                    list = list.concat(
+                        DataSet.jewelHelper.rareIs(rare).sizeIsEqualThen(size).getItems()
+                    );
+                }
             }
         } else if ('weapon' === data.equipType) {
             mode = 'weapon';
@@ -103,9 +105,11 @@ export default class EquipItemSelector extends Component {
                 'insectGlaive', 'bow',
                 'lightBowgun', 'heavyBowgun'
             ].map((weaponType) => {
-                list = list.concat(DataSet.weaponHelper.typeIs(weaponType).getItems().sort((a, b) => {
-                    return b.rare - a.rare;
-                }));
+                for (let rare = 8; rare >= 5; rare--) {
+                    list = list.concat(
+                        DataSet.weaponHelper.typeIs(weaponType).rareIs(rare).getItems()
+                    );
+                }
             });
         } else if ('helm' === data.equipType
             || 'chest' === data.equipType
@@ -114,9 +118,12 @@ export default class EquipItemSelector extends Component {
             || 'leg' === data.equipType) {
 
             mode = 'armor';
-            list = DataSet.armorHelper.typeIs(data.equipType).getItems().sort((a, b) => {
-                return b.rare - a.rare;
-            });
+
+            for (let rare = 8; rare >= 5; rare--) {
+                list = list.concat(
+                    DataSet.armorHelper.typeIs(data.equipType).rareIs(rare).getItems()
+                );
+            }
         } else if ('charm' === data.equipType) {
             mode = 'charm';
             list = DataSet.charmHelper.getItems();

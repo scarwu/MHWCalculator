@@ -5697,6 +5697,134 @@
         "price": 4000
     },
     {
+        "name": "岩賊龍頭盔α",
+        "series": "岩賊龍α",
+        "type": "helm",
+        "rare": 5,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": 2,
+            "water": 0,
+            "thunder": -3,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "爆破異常狀態的耐性",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 6000
+    },
+    {
+        "name": "岩賊龍鎧甲α",
+        "series": "岩賊龍α",
+        "type": "chest",
+        "rare": 5,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": 2,
+            "water": 0,
+            "thunder": -3,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "爆破屬性強化",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 6000
+    },
+    {
+        "name": "岩賊龍腕甲α",
+        "series": "岩賊龍α",
+        "type": "arm",
+        "rare": 5,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": 2,
+            "water": 0,
+            "thunder": -3,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "炸彈客",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 6000
+    },
+    {
+        "name": "岩賊龍腰甲α",
+        "series": "岩賊龍α",
+        "type": "waist",
+        "rare": 5,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": 2,
+            "water": 0,
+            "thunder": -3,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "砲術",
+                "level": 2
+            },
+            {
+                "key": "爆破異常狀態的耐性",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 6000
+    },
+    {
+        "name": "岩賊龍護腿α",
+        "series": "岩賊龍α",
+        "type": "leg",
+        "rare": 5,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": 2,
+            "water": 0,
+            "thunder": -3,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "砲彈裝填數UP",
+                "level": 1
+            },
+            {
+                "key": "爆破屬性強化",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 6000
+    },
+    {
         "name": "岩賊龍頭盔β",
         "series": "岩賊龍β",
         "type": "helm",
@@ -5830,134 +5958,6 @@
         "skills": [
             {
                 "key": "砲彈裝填數UP",
-                "level": 1
-            }
-        ],
-        "set": null,
-        "price": 6000
-    },
-    {
-        "name": "岩賊龍頭盔α",
-        "series": "岩賊龍α",
-        "type": "helm",
-        "rare": 5,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": 2,
-            "water": 0,
-            "thunder": -3,
-            "ice": 0,
-            "dragon": 2
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "爆破異常狀態的耐性",
-                "level": 2
-            }
-        ],
-        "set": null,
-        "price": 6000
-    },
-    {
-        "name": "岩賊龍鎧甲α",
-        "series": "岩賊龍α",
-        "type": "chest",
-        "rare": 5,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": 2,
-            "water": 0,
-            "thunder": -3,
-            "ice": 0,
-            "dragon": 2
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "爆破屬性強化",
-                "level": 2
-            }
-        ],
-        "set": null,
-        "price": 6000
-    },
-    {
-        "name": "岩賊龍腕甲α",
-        "series": "岩賊龍α",
-        "type": "arm",
-        "rare": 5,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": 2,
-            "water": 0,
-            "thunder": -3,
-            "ice": 0,
-            "dragon": 2
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "炸彈客",
-                "level": 2
-            }
-        ],
-        "set": null,
-        "price": 6000
-    },
-    {
-        "name": "岩賊龍腰甲α",
-        "series": "岩賊龍α",
-        "type": "waist",
-        "rare": 5,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": 2,
-            "water": 0,
-            "thunder": -3,
-            "ice": 0,
-            "dragon": 2
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "砲術",
-                "level": 2
-            },
-            {
-                "key": "爆破異常狀態的耐性",
-                "level": 1
-            }
-        ],
-        "set": null,
-        "price": 6000
-    },
-    {
-        "name": "岩賊龍護腿α",
-        "series": "岩賊龍α",
-        "type": "leg",
-        "rare": 5,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": 2,
-            "water": 0,
-            "thunder": -3,
-            "ice": 0,
-            "dragon": 2
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "砲彈裝填數UP",
-                "level": 1
-            },
-            {
-                "key": "爆破屬性強化",
                 "level": 1
             }
         ],
@@ -7369,6 +7369,134 @@
         "price": 9000
     },
     {
+        "name": "鑄鐵頭盔α",
+        "series": "鑄鐵α",
+        "type": "helm",
+        "rare": 6,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": -2,
+            "water": 0,
+            "thunder": 3,
+            "ice": -1,
+            "dragon": 0
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "雷屬性攻擊強化",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 9000
+    },
+    {
+        "name": "鑄鐵鎧甲α",
+        "series": "鑄鐵α",
+        "type": "chest",
+        "rare": 6,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": -2,
+            "water": 0,
+            "thunder": 3,
+            "ice": -1,
+            "dragon": 0
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "雷耐性",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 9000
+    },
+    {
+        "name": "鑄鐵腕甲α",
+        "series": "鑄鐵α",
+        "type": "arm",
+        "rare": 6,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": -2,
+            "water": 0,
+            "thunder": 3,
+            "ice": -1,
+            "dragon": 0
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "體力增強",
+                "level": 2
+            },
+            {
+                "key": "雷屬性攻擊強化",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 9000
+    },
+    {
+        "name": "鑄鐵腰甲α",
+        "series": "鑄鐵α",
+        "type": "waist",
+        "rare": 6,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": -2,
+            "water": 0,
+            "thunder": 3,
+            "ice": -1,
+            "dragon": 0
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "風壓耐性",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 9000
+    },
+    {
+        "name": "鑄鐵護腿α",
+        "series": "鑄鐵α",
+        "type": "leg",
+        "rare": 6,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": -2,
+            "water": 0,
+            "thunder": 3,
+            "ice": -1,
+            "dragon": 0
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "防禦",
+                "level": 2
+            },
+            {
+                "key": "風壓耐性",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 9000
+    },
+    {
         "name": "鑄鐵頭盔β",
         "series": "鑄鐵β",
         "type": "helm",
@@ -7509,134 +7637,6 @@
         "price": 9000
     },
     {
-        "name": "鑄鐵頭盔α",
-        "series": "鑄鐵α",
-        "type": "helm",
-        "rare": 6,
-        "gender": "general",
-        "defense": 82,
-        "resistance": {
-            "fire": -2,
-            "water": 0,
-            "thunder": 3,
-            "ice": -1,
-            "dragon": 0
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "雷屬性攻擊強化",
-                "level": 2
-            }
-        ],
-        "set": null,
-        "price": 9000
-    },
-    {
-        "name": "鑄鐵鎧甲α",
-        "series": "鑄鐵α",
-        "type": "chest",
-        "rare": 6,
-        "gender": "general",
-        "defense": 82,
-        "resistance": {
-            "fire": -2,
-            "water": 0,
-            "thunder": 3,
-            "ice": -1,
-            "dragon": 0
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "雷耐性",
-                "level": 2
-            }
-        ],
-        "set": null,
-        "price": 9000
-    },
-    {
-        "name": "鑄鐵腕甲α",
-        "series": "鑄鐵α",
-        "type": "arm",
-        "rare": 6,
-        "gender": "general",
-        "defense": 82,
-        "resistance": {
-            "fire": -2,
-            "water": 0,
-            "thunder": 3,
-            "ice": -1,
-            "dragon": 0
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "體力增強",
-                "level": 2
-            },
-            {
-                "key": "雷屬性攻擊強化",
-                "level": 1
-            }
-        ],
-        "set": null,
-        "price": 9000
-    },
-    {
-        "name": "鑄鐵腰甲α",
-        "series": "鑄鐵α",
-        "type": "waist",
-        "rare": 6,
-        "gender": "general",
-        "defense": 82,
-        "resistance": {
-            "fire": -2,
-            "water": 0,
-            "thunder": 3,
-            "ice": -1,
-            "dragon": 0
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "風壓耐性",
-                "level": 2
-            }
-        ],
-        "set": null,
-        "price": 9000
-    },
-    {
-        "name": "鑄鐵護腿α",
-        "series": "鑄鐵α",
-        "type": "leg",
-        "rare": 6,
-        "gender": "general",
-        "defense": 82,
-        "resistance": {
-            "fire": -2,
-            "water": 0,
-            "thunder": 3,
-            "ice": -1,
-            "dragon": 0
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "防禦",
-                "level": 2
-            },
-            {
-                "key": "風壓耐性",
-                "level": 1
-            }
-        ],
-        "set": null,
-        "price": 9000
-    },
-    {
         "name": "艾路頭套α",
         "series": "艾路頭套α",
         "type": "helm",
@@ -7686,156 +7686,6 @@
             }
         ],
         "set": null,
-        "price": 9000
-    },
-    {
-        "name": "風漂龍頭盔β",
-        "series": "風漂龍β",
-        "type": "helm",
-        "rare": 6,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": -1,
-            "water": 2,
-            "thunder": -3,
-            "ice": 3,
-            "dragon": 0
-        },
-        "slots": [
-            {
-                "size": 1
-            }
-        ],
-        "skills": [
-            {
-                "key": "精靈加護",
-                "level": 2
-            }
-        ],
-        "set": {
-            "key": "風漂龍的恩竉"
-        },
-        "price": 9000
-    },
-    {
-        "name": "風漂龍鎧甲β",
-        "series": "風漂龍β",
-        "type": "chest",
-        "rare": 6,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": -1,
-            "water": 2,
-            "thunder": -3,
-            "ice": 3,
-            "dragon": 0
-        },
-        "slots": [
-            {
-                "size": 1
-            }
-        ],
-        "skills": [
-            {
-                "key": "迴避性能",
-                "level": 2
-            }
-        ],
-        "set": {
-            "key": "風漂龍的恩竉"
-        },
-        "price": 9000
-    },
-    {
-        "name": "風漂龍腕甲β",
-        "series": "風漂龍β",
-        "type": "arm",
-        "rare": 6,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": -1,
-            "water": 2,
-            "thunder": -3,
-            "ice": 3,
-            "dragon": 0
-        },
-        "slots": [
-            {
-                "size": 3
-            }
-        ],
-        "skills": [
-            {
-                "key": "飛燕",
-                "level": 1
-            }
-        ],
-        "set": {
-            "key": "風漂龍的恩竉"
-        },
-        "price": 9000
-    },
-    {
-        "name": "風漂龍腰甲β",
-        "series": "風漂龍β",
-        "type": "waist",
-        "rare": 6,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": -1,
-            "water": 2,
-            "thunder": -3,
-            "ice": 3,
-            "dragon": 0
-        },
-        "slots": [
-            {
-                "size": 2
-            }
-        ],
-        "skills": [
-            {
-                "key": "冰屬性攻擊強化",
-                "level": 2
-            }
-        ],
-        "set": {
-            "key": "風漂龍的恩竉"
-        },
-        "price": 9000
-    },
-    {
-        "name": "風漂龍護腿β",
-        "series": "風漂龍β",
-        "type": "leg",
-        "rare": 6,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": -1,
-            "water": 2,
-            "thunder": -3,
-            "ice": 3,
-            "dragon": 0
-        },
-        "slots": [
-            {
-                "size": 3
-            }
-        ],
-        "skills": [
-            {
-                "key": "冰耐性",
-                "level": 2
-            }
-        ],
-        "set": {
-            "key": "風漂龍的恩竉"
-        },
         "price": 9000
     },
     {
@@ -7989,108 +7839,108 @@
         "price": 9000
     },
     {
-        "name": "角龍頭盔β",
-        "series": "角龍β",
+        "name": "風漂龍頭盔β",
+        "series": "風漂龍β",
         "type": "helm",
         "rare": 6,
         "gender": "general",
         "defense": 86,
         "resistance": {
-            "fire": 3,
-            "water": -2,
-            "thunder": 0,
-            "ice": -3,
-            "dragon": 2
+            "fire": -1,
+            "water": 2,
+            "thunder": -3,
+            "ice": 3,
+            "dragon": 0
         },
         "slots": [
             {
-                "size": 2
+                "size": 1
             }
         ],
         "skills": [
             {
-                "key": "拔刀術【技】",
+                "key": "精靈加護",
                 "level": 2
             }
         ],
         "set": {
-            "key": "角龍之奧祕"
+            "key": "風漂龍的恩竉"
         },
         "price": 9000
     },
     {
-        "name": "角龍鎧甲β",
-        "series": "角龍β",
+        "name": "風漂龍鎧甲β",
+        "series": "風漂龍β",
         "type": "chest",
         "rare": 6,
         "gender": "general",
         "defense": 86,
         "resistance": {
-            "fire": 3,
-            "water": -2,
-            "thunder": 0,
-            "ice": -3,
-            "dragon": 2
+            "fire": -1,
+            "water": 2,
+            "thunder": -3,
+            "ice": 3,
+            "dragon": 0
         },
         "slots": [
             {
-                "size": 2
+                "size": 1
             }
         ],
         "skills": [
             {
-                "key": "KO術",
+                "key": "迴避性能",
                 "level": 2
             }
         ],
         "set": {
-            "key": "角龍之奧祕"
+            "key": "風漂龍的恩竉"
         },
         "price": 9000
     },
     {
-        "name": "角龍腕甲β",
-        "series": "角龍β",
+        "name": "風漂龍腕甲β",
+        "series": "風漂龍β",
         "type": "arm",
         "rare": 6,
         "gender": "general",
         "defense": 86,
         "resistance": {
-            "fire": 3,
-            "water": -2,
-            "thunder": 0,
-            "ice": -3,
-            "dragon": 2
+            "fire": -1,
+            "water": 2,
+            "thunder": -3,
+            "ice": 3,
+            "dragon": 0
         },
         "slots": [
             {
-                "size": 2
+                "size": 3
             }
         ],
         "skills": [
             {
-                "key": "火場怪力",
-                "level": 2
+                "key": "飛燕",
+                "level": 1
             }
         ],
         "set": {
-            "key": "角龍之奧祕"
+            "key": "風漂龍的恩竉"
         },
         "price": 9000
     },
     {
-        "name": "角龍腰甲β",
-        "series": "角龍β",
+        "name": "風漂龍腰甲β",
+        "series": "風漂龍β",
         "type": "waist",
         "rare": 6,
         "gender": "general",
         "defense": 86,
         "resistance": {
-            "fire": 3,
-            "water": -2,
-            "thunder": 0,
-            "ice": -3,
-            "dragon": 2
+            "fire": -1,
+            "water": 2,
+            "thunder": -3,
+            "ice": 3,
+            "dragon": 0
         },
         "slots": [
             {
@@ -8099,45 +7949,42 @@
         ],
         "skills": [
             {
-                "key": "跑者",
+                "key": "冰屬性攻擊強化",
                 "level": 2
             }
         ],
         "set": {
-            "key": "角龍之奧祕"
+            "key": "風漂龍的恩竉"
         },
         "price": 9000
     },
     {
-        "name": "角龍護腿β",
-        "series": "角龍β",
+        "name": "風漂龍護腿β",
+        "series": "風漂龍β",
         "type": "leg",
         "rare": 6,
         "gender": "general",
         "defense": 86,
         "resistance": {
-            "fire": 3,
-            "water": -2,
-            "thunder": 0,
-            "ice": -3,
-            "dragon": 2
+            "fire": -1,
+            "water": 2,
+            "thunder": -3,
+            "ice": 3,
+            "dragon": 0
         },
         "slots": [
             {
-                "size": 1
-            },
-            {
-                "size": 1
+                "size": 3
             }
         ],
         "skills": [
             {
-                "key": "耐震",
+                "key": "冰耐性",
                 "level": 2
             }
         ],
         "set": {
-            "key": "角龍之奧祕"
+            "key": "風漂龍的恩竉"
         },
         "price": 9000
     },
@@ -8284,6 +8131,159 @@
             {
                 "key": "KO術",
                 "level": 1
+            }
+        ],
+        "set": {
+            "key": "角龍之奧祕"
+        },
+        "price": 9000
+    },
+    {
+        "name": "角龍頭盔β",
+        "series": "角龍β",
+        "type": "helm",
+        "rare": 6,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": 3,
+            "water": -2,
+            "thunder": 0,
+            "ice": -3,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "key": "拔刀術【技】",
+                "level": 2
+            }
+        ],
+        "set": {
+            "key": "角龍之奧祕"
+        },
+        "price": 9000
+    },
+    {
+        "name": "角龍鎧甲β",
+        "series": "角龍β",
+        "type": "chest",
+        "rare": 6,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": 3,
+            "water": -2,
+            "thunder": 0,
+            "ice": -3,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "key": "KO術",
+                "level": 2
+            }
+        ],
+        "set": {
+            "key": "角龍之奧祕"
+        },
+        "price": 9000
+    },
+    {
+        "name": "角龍腕甲β",
+        "series": "角龍β",
+        "type": "arm",
+        "rare": 6,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": 3,
+            "water": -2,
+            "thunder": 0,
+            "ice": -3,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "key": "火場怪力",
+                "level": 2
+            }
+        ],
+        "set": {
+            "key": "角龍之奧祕"
+        },
+        "price": 9000
+    },
+    {
+        "name": "角龍腰甲β",
+        "series": "角龍β",
+        "type": "waist",
+        "rare": 6,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": 3,
+            "water": -2,
+            "thunder": 0,
+            "ice": -3,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "key": "跑者",
+                "level": 2
+            }
+        ],
+        "set": {
+            "key": "角龍之奧祕"
+        },
+        "price": 9000
+    },
+    {
+        "name": "角龍護腿β",
+        "series": "角龍β",
+        "type": "leg",
+        "rare": 6,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": 3,
+            "water": -2,
+            "thunder": 0,
+            "ice": -3,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "耐震",
+                "level": 2
             }
         ],
         "set": {
@@ -9463,159 +9463,6 @@
         "price": 9000
     },
     {
-        "name": "火龍魂頭盔β",
-        "series": "火龍魂β",
-        "type": "helm",
-        "rare": 7,
-        "gender": "general",
-        "defense": 82,
-        "resistance": {
-            "fire": 3,
-            "water": 2,
-            "thunder": 3,
-            "ice": -3,
-            "dragon": -4
-        },
-        "slots": [
-            {
-                "size": 1
-            },
-            {
-                "size": 1
-            }
-        ],
-        "skills": [
-            {
-                "key": "超會心",
-                "level": 1
-            }
-        ],
-        "set": {
-            "key": "火龍奧祕"
-        },
-        "price": 12000
-    },
-    {
-        "name": "火龍魂鎧甲β",
-        "series": "火龍魂β",
-        "type": "chest",
-        "rare": 7,
-        "gender": "general",
-        "defense": 82,
-        "resistance": {
-            "fire": 3,
-            "water": 2,
-            "thunder": 3,
-            "ice": -3,
-            "dragon": -4
-        },
-        "slots": [
-            {
-                "size": 2
-            }
-        ],
-        "skills": [
-            {
-                "key": "屬性解放／裝填擴充",
-                "level": 1
-            }
-        ],
-        "set": {
-            "key": "火龍奧祕"
-        },
-        "price": 12000
-    },
-    {
-        "name": "火龍魂腕甲β",
-        "series": "火龍魂β",
-        "type": "arm",
-        "rare": 7,
-        "gender": "general",
-        "defense": 82,
-        "resistance": {
-            "fire": 3,
-            "water": 2,
-            "thunder": 3,
-            "ice": -3,
-            "dragon": -4
-        },
-        "slots": [
-            {
-                "size": 2
-            }
-        ],
-        "skills": [
-            {
-                "key": "集中",
-                "level": 1
-            }
-        ],
-        "set": {
-            "key": "火龍奧祕"
-        },
-        "price": 12000
-    },
-    {
-        "name": "火龍魂腰甲β",
-        "series": "火龍魂β",
-        "type": "waist",
-        "rare": 7,
-        "gender": "general",
-        "defense": 82,
-        "resistance": {
-            "fire": 3,
-            "water": 2,
-            "thunder": 3,
-            "ice": -3,
-            "dragon": -4
-        },
-        "slots": [
-            {
-                "size": 3
-            }
-        ],
-        "skills": [
-            {
-                "key": "風壓耐性",
-                "level": 2
-            }
-        ],
-        "set": {
-            "key": "火龍奧祕"
-        },
-        "price": 12000
-    },
-    {
-        "name": "火龍魂護腿β",
-        "series": "火龍魂β",
-        "type": "leg",
-        "rare": 7,
-        "gender": "general",
-        "defense": 82,
-        "resistance": {
-            "fire": 3,
-            "water": 2,
-            "thunder": 3,
-            "ice": -3,
-            "dragon": -4
-        },
-        "slots": [
-            {
-                "size": 1
-            }
-        ],
-        "skills": [
-            {
-                "key": "集中",
-                "level": 1
-            }
-        ],
-        "set": {
-            "key": "火龍奧祕"
-        },
-        "price": 12000
-    },
-    {
         "name": "火龍魂頭盔α",
         "series": "火龍魂α",
         "type": "helm",
@@ -9774,6 +9621,159 @@
         "price": 12000
     },
     {
+        "name": "火龍魂頭盔β",
+        "series": "火龍魂β",
+        "type": "helm",
+        "rare": 7,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": 3,
+            "water": 2,
+            "thunder": 3,
+            "ice": -3,
+            "dragon": -4
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "超會心",
+                "level": 1
+            }
+        ],
+        "set": {
+            "key": "火龍奧祕"
+        },
+        "price": 12000
+    },
+    {
+        "name": "火龍魂鎧甲β",
+        "series": "火龍魂β",
+        "type": "chest",
+        "rare": 7,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": 3,
+            "water": 2,
+            "thunder": 3,
+            "ice": -3,
+            "dragon": -4
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "key": "屬性解放／裝填擴充",
+                "level": 1
+            }
+        ],
+        "set": {
+            "key": "火龍奧祕"
+        },
+        "price": 12000
+    },
+    {
+        "name": "火龍魂腕甲β",
+        "series": "火龍魂β",
+        "type": "arm",
+        "rare": 7,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": 3,
+            "water": 2,
+            "thunder": 3,
+            "ice": -3,
+            "dragon": -4
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "key": "集中",
+                "level": 1
+            }
+        ],
+        "set": {
+            "key": "火龍奧祕"
+        },
+        "price": 12000
+    },
+    {
+        "name": "火龍魂腰甲β",
+        "series": "火龍魂β",
+        "type": "waist",
+        "rare": 7,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": 3,
+            "water": 2,
+            "thunder": 3,
+            "ice": -3,
+            "dragon": -4
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "key": "風壓耐性",
+                "level": 2
+            }
+        ],
+        "set": {
+            "key": "火龍奧祕"
+        },
+        "price": 12000
+    },
+    {
+        "name": "火龍魂護腿β",
+        "series": "火龍魂β",
+        "type": "leg",
+        "rare": 7,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": 3,
+            "water": 2,
+            "thunder": 3,
+            "ice": -3,
+            "dragon": -4
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "集中",
+                "level": 1
+            }
+        ],
+        "set": {
+            "key": "火龍奧祕"
+        },
+        "price": 12000
+    },
+    {
         "name": "骷髏面罩α",
         "series": "骷髏α",
         "type": "helm",
@@ -9795,6 +9795,146 @@
         "skills": [
             {
                 "key": "匠",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "杜賓頭盔α",
+        "series": "杜賓α",
+        "type": "helm",
+        "rare": 7,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": -2,
+            "water": 0,
+            "thunder": -1,
+            "ice": -1,
+            "dragon": 4
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "屬性解放／裝填擴充",
+                "level": 1
+            },
+            {
+                "key": "龍耐性",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "杜賓鎧甲α",
+        "series": "杜賓α",
+        "type": "chest",
+        "rare": 7,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": -2,
+            "water": 0,
+            "thunder": -1,
+            "ice": -1,
+            "dragon": 4
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "攻擊",
+                "level": 2
+            },
+            {
+                "key": "最愛菇類",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "杜賓腕甲α",
+        "series": "杜賓α",
+        "type": "arm",
+        "rare": 7,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": -2,
+            "water": 0,
+            "thunder": -1,
+            "ice": -1,
+            "dragon": 4
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "耐力急速回復",
+                "level": 2
+            },
+            {
+                "key": "最愛菇類",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "杜賓腰甲α",
+        "series": "杜賓α",
+        "type": "waist",
+        "rare": 7,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": -2,
+            "water": 0,
+            "thunder": -1,
+            "ice": -1,
+            "dragon": 4
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "龍耐性",
+                "level": 2
+            },
+            {
+                "key": "攻擊",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "杜賓護腿α",
+        "series": "杜賓α",
+        "type": "leg",
+        "rare": 7,
+        "gender": "general",
+        "defense": 86,
+        "resistance": {
+            "fire": -2,
+            "water": 0,
+            "thunder": -1,
+            "ice": -1,
+            "dragon": 4
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "攻擊",
+                "level": 2
+            },
+            {
+                "key": "耐力急速回復",
                 "level": 1
             }
         ],
@@ -9947,146 +10087,6 @@
         ],
         "set": null,
         "price": 9000
-    },
-    {
-        "name": "杜賓頭盔α",
-        "series": "杜賓α",
-        "type": "helm",
-        "rare": 7,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": -2,
-            "water": 0,
-            "thunder": -1,
-            "ice": -1,
-            "dragon": 4
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "屬性解放／裝填擴充",
-                "level": 1
-            },
-            {
-                "key": "龍耐性",
-                "level": 1
-            }
-        ],
-        "set": null,
-        "price": 12000
-    },
-    {
-        "name": "杜賓鎧甲α",
-        "series": "杜賓α",
-        "type": "chest",
-        "rare": 7,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": -2,
-            "water": 0,
-            "thunder": -1,
-            "ice": -1,
-            "dragon": 4
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "攻擊",
-                "level": 2
-            },
-            {
-                "key": "最愛菇類",
-                "level": 1
-            }
-        ],
-        "set": null,
-        "price": 12000
-    },
-    {
-        "name": "杜賓腕甲α",
-        "series": "杜賓α",
-        "type": "arm",
-        "rare": 7,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": -2,
-            "water": 0,
-            "thunder": -1,
-            "ice": -1,
-            "dragon": 4
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "耐力急速回復",
-                "level": 2
-            },
-            {
-                "key": "最愛菇類",
-                "level": 1
-            }
-        ],
-        "set": null,
-        "price": 12000
-    },
-    {
-        "name": "杜賓腰甲α",
-        "series": "杜賓α",
-        "type": "waist",
-        "rare": 7,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": -2,
-            "water": 0,
-            "thunder": -1,
-            "ice": -1,
-            "dragon": 4
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "龍耐性",
-                "level": 2
-            },
-            {
-                "key": "攻擊",
-                "level": 1
-            }
-        ],
-        "set": null,
-        "price": 12000
-    },
-    {
-        "name": "杜賓護腿α",
-        "series": "杜賓α",
-        "type": "leg",
-        "rare": 7,
-        "gender": "general",
-        "defense": 86,
-        "resistance": {
-            "fire": -2,
-            "water": 0,
-            "thunder": -1,
-            "ice": -1,
-            "dragon": 4
-        },
-        "slots": [],
-        "skills": [
-            {
-                "key": "攻擊",
-                "level": 2
-            },
-            {
-                "key": "耐力急速回復",
-                "level": 1
-            }
-        ],
-        "set": null,
-        "price": 12000
     },
     {
         "name": "爆鎚龍頭盔α",

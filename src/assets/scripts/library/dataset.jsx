@@ -122,6 +122,7 @@ class WeaponHelper {
 
         // Filter Conditional
         this.filterType = null;
+        this.filterRare = null;
         this.filterElementType = null;
         this.filterAttack = null;
         this.filterCriticalRate = null;
@@ -138,6 +139,12 @@ class WeaponHelper {
         return Object.values(this.mapping).filter((data) => {
             if (null !== this.filterType) {
                 if (this.filterType !== data.type) {
+                    return false;
+                }
+            }
+
+            if (null !== this.filterRare) {
+                if (this.filterRare !== data.rare) {
                     return false;
                 }
             }
@@ -291,6 +298,12 @@ class WeaponHelper {
         return this;
     };
 
+    rareIs = (number) => {
+        this.filterRare = number;
+
+        return this;
+    };
+
     elementTypeIs = (text) => {
         this.filterElementType = text;
 
@@ -342,6 +355,7 @@ class ArmorHelper {
 
         // Filter Conditional
         this.filterType = null;
+        this.filterRare = null;
         this.filterSkillKey = null;
     }
 
@@ -353,6 +367,12 @@ class ArmorHelper {
         return Object.values(this.mapping).filter((data) => {
             if (null !== this.filterType) {
                 if (this.filterType !== data.type) {
+                    return false;
+                }
+            }
+
+            if (null !== this.filterRare) {
+                if (this.filterRare !== data.rare) {
                     return false;
                 }
             }
@@ -450,6 +470,12 @@ class ArmorHelper {
     // Conditional Functions
     typeIs = (text) => {
         this.filterType = text;
+
+        return this;
+    };
+
+    rareIs = (number) => {
+        this.filterRare = number;
 
         return this;
     };
@@ -564,6 +590,7 @@ class JewelHelper {
 
         // Filter Conditional
         this.filterSkillKey = null;
+        this.filterRare = null;
         this.filterSize = null;
         this.filterSizeCondition = null;
     }
@@ -574,6 +601,12 @@ class JewelHelper {
 
     getItems = () => {
         return Object.values(this.mapping).filter((data) => {
+            if (null !== this.filterRare) {
+                if (this.filterRare !== data.rare) {
+                    return false;
+                }
+            }
+
             if (null !== this.filterSkillKey) {
                 if (this.filterSkillKey !== data.skill.key) {
                     return false;
@@ -604,6 +637,13 @@ class JewelHelper {
     getInfo = (key) => {
         return undefined !== this.mapping[key]
             ? JSON.parse(JSON.stringify(this.mapping[key])) : null;
+    };
+
+    // Conditional Functions
+    rareIs = (number) => {
+        this.filterRare = number;
+
+        return this;
     };
 
     hasSkill = (key) => {
