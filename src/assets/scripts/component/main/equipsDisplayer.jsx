@@ -199,7 +199,7 @@ export default class EquipsDisplayer extends Component {
                     ) : false}
 
                     <div className="col-12 mhwc-properties">
-                        {(null !== status.sharpness) ? (
+                        {(null !== weaponInfo.sharpness) ? (
                             <div className="row mhwc-item mhwc-sharpness">
                                 <div className="col-4 mhwc-name">
                                     <span>斬位</span>
