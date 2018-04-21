@@ -93,7 +93,20 @@ export default class EquipItemSelector extends Component {
             }
         } else if ('weapon' === data.equipType) {
             mode = 'weapon';
-            list = DataSet.weaponHelper.getItems();
+
+            [
+                'greatSword', 'longSword',
+                'swordAndShield', 'dualSlades',
+                'hammer', 'huntingHorn',
+                'lance', 'gunlance',
+                'switchAxe', 'chargeBlade',
+                'insectGlaive', 'bow',
+                'lightBowgun', 'heavyBowgun'
+            ].map((weaponType) => {
+                list = list.concat(DataSet.weaponHelper.typeIs(weaponType).getItems().sort((a, b) => {
+                    return b.rare - a.rare;
+                }));
+            });
         } else if ('helm' === data.equipType
             || 'chest' === data.equipType
             || 'arm' === data.equipType
@@ -101,7 +114,9 @@ export default class EquipItemSelector extends Component {
             || 'leg' === data.equipType) {
 
             mode = 'armor';
-            list = DataSet.armorHelper.typeIs(data.equipType).getItems();
+            list = DataSet.armorHelper.typeIs(data.equipType).getItems().sort((a, b) => {
+                return b.rare - a.rare;
+            });
         } else if ('charm' === data.equipType) {
             mode = 'charm';
             list = DataSet.charmHelper.getItems();

@@ -135,7 +135,15 @@ class WeaponHelper {
     };
 
     getItems = () => {
-        return Object.values(this.mapping);
+        return Object.values(this.mapping).filter((data) => {
+            if (null !== this.filterType) {
+                if (this.filterType !== data.type) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
     };
 
     getInfo = (key) => {
@@ -433,7 +441,7 @@ class ArmorHelper {
         });
 
         info.skills = info.skills.sort((a, b) => {
-            return a.level < b.level;
+            return b.level - a.level;
         });
 
         return info;

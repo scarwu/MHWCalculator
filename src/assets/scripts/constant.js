@@ -137,8 +137,7 @@ export default {
             weapon: {
                 key: '罪【真】',
                 enhanceKeys: {
-                    0: '賦予回復能力',
-                    1: null
+                    0: '賦予回復能力'
                 },
                 slotKeys: null,
                 isLock: false
@@ -251,46 +250,27 @@ export default {
             },
             helm: {
                 key: '鋼龍強力β',
-                slotKeys: {
-                    0: null,
-                    1: null,
-                    2: null
-                },
+                slotKeys: {},
                 isLock: false
             },
             chest: {
                 key: '大馬士革鎧甲β',
-                slotKeys: {
-                    0: null,
-                    1: null,
-                    2: null
-                },
+                slotKeys: {},
                 isLock: false
             },
             arm: {
                 key: '烏爾德腕甲β',
-                slotKeys: {
-                    0: null,
-                    1: null,
-                    2: null
-                },
+                slotKeys: {},
                 isLock: false
             },
             waist: {
                 key: '麒麟腰環β',
-                slotKeys: {
-                    0: null,
-                    1: null,
-                    2: null
-                },
+                slotKeys: {},
                 isLock: false
             },
             leg: {
                 key: '燕尾蝶腳β',
-                slotKeys: {
-                    0: null,
-                    1: null
-                },
+                slotKeys: {},
                 isLock: false
             },
             charm: {

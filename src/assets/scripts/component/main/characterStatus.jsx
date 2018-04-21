@@ -688,35 +688,35 @@ export default class CharacterStatus extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12 mhwc-name">
+                        <div className="col-8 mhwc-name">
                             <span>每</span>
                             <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.attack}
                                 ref="tuningAttack" onChange={this.handleTuningChange} />
                             <span>點攻擊力期望值</span>
                         </div>
-                        <div className="col-12 mhwc-value">
+                        <div className="col-4 mhwc-value">
                             <span>{extraInfo.perNAttackExpectedValue}</span>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12 mhwc-name">
+                        <div className="col-8 mhwc-name">
                             <span>每</span>
                             <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.criticalRate}
                                 ref="tuningCriticalRate" onChange={this.handleTuningChange} />
                             <span>點會心率期望值</span>
                         </div>
-                        <div className="col-12 mhwc-value">
+                        <div className="col-4 mhwc-value">
                             <span>{extraInfo.perNCriticalRateExpectedValue}</span>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12 mhwc-name">
+                        <div className="col-8 mhwc-name">
                             <span>每</span>
                             <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.criticalMultiple}
                                 ref="tuningCriticalMultiple" onChange={this.handleTuningChange} />
                             <span>點會心倍數期望值</span>
                         </div>
-                        <div className="col-12 mhwc-value">
+                        <div className="col-4 mhwc-value">
                             <span>{extraInfo.perNCriticalMultipleExpectedValue}</span>
                         </div>
                     </div>

@@ -6108,37 +6108,6 @@
         "price": 4000
     },
     {
-        "name": "孑孓頭α",
-        "series": "孑孓α",
-        "type": "helm",
-        "rare": 5,
-        "gender": "general",
-        "defense": 84,
-        "resistance": {
-            "fire": 0,
-            "water": 4,
-            "thunder": 0,
-            "ice": 0,
-            "dragon": 4
-        },
-        "slots": [
-            {
-                "size": 1
-            },
-            {
-                "size": 1
-            }
-        ],
-        "skills": [
-            {
-                "key": "廣域化",
-                "level": 2
-            }
-        ],
-        "set": null,
-        "price": 4000
-    },
-    {
         "name": "墨鏡α",
         "series": "墨鏡α",
         "type": "helm",
@@ -6167,6 +6136,68 @@
             {
                 "key": "昏厥耐性",
                 "level": 1
+            }
+        ],
+        "set": null,
+        "price": 4000
+    },
+    {
+        "name": "扒手龍頭套α",
+        "series": "扒手龍頭套α",
+        "type": "helm",
+        "rare": 5,
+        "gender": "general",
+        "defense": 46,
+        "resistance": {
+            "fire": 2,
+            "water": 0,
+            "thunder": 2,
+            "ice": 3,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "搬運達人",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 4000
+    },
+    {
+        "name": "孑孓頭α",
+        "series": "孑孓α",
+        "type": "helm",
+        "rare": 5,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 0,
+            "water": 4,
+            "thunder": 0,
+            "ice": 0,
+            "dragon": 4
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "廣域化",
+                "level": 2
             }
         ],
         "set": null,
@@ -13866,8 +13897,8 @@
         "price": 9000
     },
     {
-        "name": "公會頭盔α",
-        "series": "公會α",
+        "name": "公會十字頭飾α",
+        "series": "公會十字α",
         "type": "helm",
         "rare": 8,
         "gender": "general",
@@ -13900,8 +13931,8 @@
         "price": 16000
     },
     {
-        "name": "公會鎧甲α",
-        "series": "公會α",
+        "name": "公會十字戰衣α",
+        "series": "公會十字α",
         "type": "chest",
         "rare": 8,
         "gender": "general",
@@ -13934,8 +13965,8 @@
         "price": 16000
     },
     {
-        "name": "公會腕甲α",
-        "series": "公會α",
+        "name": "公會十字腕甲α",
+        "series": "公會十字α",
         "type": "arm",
         "rare": 8,
         "gender": "general",
@@ -13968,8 +13999,8 @@
         "price": 16000
     },
     {
-        "name": "公會腰甲α",
-        "series": "公會α",
+        "name": "公會十字腰甲α",
+        "series": "公會十字α",
         "type": "waist",
         "rare": 8,
         "gender": "general",
@@ -14002,8 +14033,8 @@
         "price": 16000
     },
     {
-        "name": "公會護腿α",
-        "series": "公會α",
+        "name": "公會十字靴α",
+        "series": "公會十字α",
         "type": "leg",
         "rare": 8,
         "gender": "general",
@@ -14036,8 +14067,8 @@
         "price": 16000
     },
     {
-        "name": "公會頭盔β",
-        "series": "公會β",
+        "name": "公會十字頭飾β",
+        "series": "公會十字β",
         "type": "helm",
         "rare": 8,
         "gender": "general",
@@ -14072,8 +14103,8 @@
         "price": 16000
     },
     {
-        "name": "公會鎧甲β",
-        "series": "公會β",
+        "name": "公會十字戰衣β",
+        "series": "公會十字β",
         "type": "chest",
         "rare": 8,
         "gender": "general",
@@ -14102,8 +14133,8 @@
         "price": 16000
     },
     {
-        "name": "公會腕甲β",
-        "series": "公會β",
+        "name": "公會十字腕甲β",
+        "series": "公會十字β",
         "type": "arm",
         "rare": 8,
         "gender": "general",
@@ -14132,8 +14163,8 @@
         "price": 16000
     },
     {
-        "name": "公會腰甲β",
-        "series": "公會β",
+        "name": "公會十字腰甲β",
+        "series": "公會十字β",
         "type": "waist",
         "rare": 8,
         "gender": "general",
@@ -14168,8 +14199,8 @@
         "price": 16000
     },
     {
-        "name": "公會護腿β",
-        "series": "公會β",
+        "name": "公會十字靴β",
+        "series": "公會十字β",
         "type": "leg",
         "rare": 8,
         "gender": "general",
@@ -14198,8 +14229,8 @@
         "price": 16000
     },
     {
-        "name": "追尋者頭盔α",
-        "series": "追尋者α",
+        "name": "追蹤者頭盔α",
+        "series": "追蹤者α",
         "type": "helm",
         "rare": 8,
         "gender": "general",
@@ -14232,8 +14263,8 @@
         "price": 20000
     },
     {
-        "name": "追尋者鎧甲α",
-        "series": "追尋者α",
+        "name": "追蹤者鎧甲α",
+        "series": "追蹤者α",
         "type": "chest",
         "rare": 8,
         "gender": "general",
@@ -14262,8 +14293,8 @@
         "price": 20000
     },
     {
-        "name": "追尋者腕甲α",
-        "series": "追尋者α",
+        "name": "追蹤者腕甲α",
+        "series": "追蹤者α",
         "type": "arm",
         "rare": 8,
         "gender": "general",
@@ -14296,8 +14327,8 @@
         "price": 20000
     },
     {
-        "name": "追尋者腰甲α",
-        "series": "追尋者α",
+        "name": "追蹤者腰甲α",
+        "series": "追蹤者α",
         "type": "waist",
         "rare": 8,
         "gender": "general",
@@ -14330,8 +14361,8 @@
         "price": 20000
     },
     {
-        "name": "追尋者護腿α",
-        "series": "追尋者α",
+        "name": "追蹤者護腿α",
+        "series": "追蹤者α",
         "type": "leg",
         "rare": 8,
         "gender": "general",
@@ -14360,8 +14391,8 @@
         "price": 20000
     },
     {
-        "name": "追尋者頭盔β",
-        "series": "追尋者β",
+        "name": "追蹤者頭盔β",
+        "series": "追蹤者β",
         "type": "helm",
         "rare": 8,
         "gender": "general",
@@ -14390,8 +14421,8 @@
         "price": 20000
     },
     {
-        "name": "追尋者鎧甲β",
-        "series": "追尋者β",
+        "name": "追蹤者鎧甲β",
+        "series": "追蹤者β",
         "type": "chest",
         "rare": 8,
         "gender": "general",
@@ -14420,8 +14451,8 @@
         "price": 20000
     },
     {
-        "name": "追尋者腕甲β",
-        "series": "追尋者β",
+        "name": "追蹤者腕甲β",
+        "series": "追蹤者β",
         "type": "arm",
         "rare": 8,
         "gender": "general",
@@ -14450,8 +14481,8 @@
         "price": 20000
     },
     {
-        "name": "追尋者腰甲β",
-        "series": "追尋者β",
+        "name": "追蹤者腰甲β",
+        "series": "追蹤者β",
         "type": "waist",
         "rare": 8,
         "gender": "general",
@@ -14480,8 +14511,8 @@
         "price": 20000
     },
     {
-        "name": "追尋者護腿β",
-        "series": "追尋者β",
+        "name": "追蹤者護腿β",
+        "series": "追蹤者β",
         "type": "leg",
         "rare": 8,
         "gender": "general",
@@ -14508,5 +14539,796 @@
             "key": "調查團的引導"
         },
         "price": 20000
+    },
+    {
+        "name": "殘虐頭盔α",
+        "series": "殘虐α",
+        "type": "helm",
+        "rare": 7,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": -3,
+            "ice": 2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "破壞王",
+                "level": 1
+            },
+            {
+                "key": "匠",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "殘虐鎧甲α",
+        "series": "殘虐α",
+        "type": "chest",
+        "rare": 7,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": -3,
+            "ice": 2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "key": "快吃",
+                "level": 1
+            },
+            {
+                "key": "匠",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "殘虐腕甲α",
+        "series": "殘虐α",
+        "type": "arm",
+        "rare": 7,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": -3,
+            "ice": 2,
+            "dragon": -3
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "力量解放",
+                "level": 2
+            },
+            {
+                "key": "破壞王",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "殘虐腰甲α",
+        "series": "殘虐α",
+        "type": "waist",
+        "rare": 7,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": -3,
+            "ice": 2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "力量解放",
+                "level": 1
+            },
+            {
+                "key": "匠",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "殘虐護腿α",
+        "series": "殘虐α",
+        "type": "leg",
+        "rare": 7,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": -3,
+            "ice": 2,
+            "dragon": -3
+        },
+        "slots": [],
+        "skills": [
+            {
+                "key": "快吃",
+                "level": 2
+            },
+            {
+                "key": "破壞王",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "殘虐頭盔β",
+        "series": "殘虐β",
+        "type": "helm",
+        "rare": 7,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": -3,
+            "ice": 2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "破壞王",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "殘虐鎧甲β",
+        "series": "殘虐β",
+        "type": "chest",
+        "rare": 7,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": -3,
+            "ice": 2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "key": "快吃",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "殘虐腕甲β",
+        "series": "殘虐β",
+        "type": "arm",
+        "rare": 7,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": -3,
+            "ice": 2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "key": "力量解放",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "殘虐腰甲β",
+        "series": "殘虐β",
+        "type": "waist",
+        "rare": 7,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": -3,
+            "ice": 2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "力量解放",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "殘虐護腿β",
+        "series": "殘虐β",
+        "type": "leg",
+        "rare": 7,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": -3,
+            "ice": 2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "快吃",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 12000
+    },
+    {
+        "name": "爛輝龍鎧羅頭盔α",
+        "series": "爛輝龍鎧羅α",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "屬性解放／裝填擴充",
+                "level": 1
+            },
+            {
+                "key": "挑戰者",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 20000
+    },
+    {
+        "name": "爛輝龍鎧羅鎧甲α",
+        "series": "爛輝龍鎧羅α",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "昏厥耐性",
+                "level": 2
+            },
+            {
+                "key": "超會心",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 20000
+    },
+    {
+        "name": "爛輝龍鎧羅腕甲α",
+        "series": "爛輝龍鎧羅α",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "屬性解放／裝填擴充",
+                "level": 1
+            },
+            {
+                "key": "強化持續",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 20000
+    },
+    {
+        "name": "爛輝龍鎧羅腰甲α",
+        "series": "爛輝龍鎧羅α",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "屬性解放／裝填擴充",
+                "level": 1
+            },
+            {
+                "key": "匠",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 20000
+    },
+    {
+        "name": "爛輝龍鎧羅護腿α",
+        "series": "爛輝龍鎧羅α",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "廣域化",
+                "level": 2
+            },
+            {
+                "key": "無傷",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 20000
+    },
+    {
+        "name": "爛輝龍鎧羅頭盔β",
+        "series": "爛輝龍鎧羅β",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "屬性解放／裝填擴充",
+                "level": 1
+            },
+            {
+                "key": "挑戰者",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 20000
+    },
+    {
+        "name": "爛輝龍鎧羅鎧甲β",
+        "series": "爛輝龍鎧羅β",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "昏厥耐性",
+                "level": 2
+            },
+            {
+                "key": "超會心",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 20000
+    },
+    {
+        "name": "爛輝龍鎧羅腕甲β",
+        "series": "爛輝龍鎧羅β",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "屬性解放／裝填擴充",
+                "level": 1
+            },
+            {
+                "key": "強化持續",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 20000
+    },
+    {
+        "name": "爛輝龍鎧羅腰甲β",
+        "series": "爛輝龍鎧羅β",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "屬性解放／裝填擴充",
+                "level": 1
+            },
+            {
+                "key": "匠",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 20000
+    },
+    {
+        "name": "爛輝龍鎧羅護腿β",
+        "series": "爛輝龍鎧羅β",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "廣域化",
+                "level": 2
+            },
+            {
+                "key": "無傷",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 20000
+    },
+    {
+        "name": "巴魯特頭飾α",
+        "series": "巴魯特α",
+        "type": "helm",
+        "rare": 5,
+        "gender": "general",
+        "defense": 78,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": 4,
+            "ice": 1,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "蜂蜜獵人",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 4000
+    },
+    {
+        "name": "巴魯特服飾α",
+        "series": "巴魯特α",
+        "type": "chest",
+        "rare": 5,
+        "gender": "general",
+        "defense": 78,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": 4,
+            "ice": 1,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "收刀術",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 4000
+    },
+    {
+        "name": "巴魯特腕甲α",
+        "series": "巴魯特α",
+        "type": "arm",
+        "rare": 5,
+        "gender": "general",
+        "defense": 78,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": 4,
+            "ice": 1,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "麻痺耐性",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 4000
+    },
+    {
+        "name": "巴魯特腰甲α",
+        "series": "巴魯特α",
+        "type": "waist",
+        "rare": 5,
+        "gender": "general",
+        "defense": 78,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": 4,
+            "ice": 1,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "導蟲反應距離UP",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 4000
+    },
+    {
+        "name": "巴魯特護腿α",
+        "series": "巴魯特α",
+        "type": "leg",
+        "rare": 5,
+        "gender": "general",
+        "defense": 78,
+        "resistance": {
+            "fire": 1,
+            "water": 1,
+            "thunder": 4,
+            "ice": 1,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "key": "回復速度",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 4000
     }
 ]
