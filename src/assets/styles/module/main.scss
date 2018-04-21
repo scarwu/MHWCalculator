@@ -20,8 +20,13 @@ $function_bar-height: 40px;
     padding: 0 10px;
     height: $header-height;
 
-    > div {
+    > a {
         margin: 0 auto;
+        color: #333;
+
+        &:hover {
+            color: #666;
+        }
     }
 
     h1 {

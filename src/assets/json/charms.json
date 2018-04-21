@@ -11,7 +11,7 @@
     },
     {
         "name": "體術護石 III",
-        "rare": null,
+        "rare": 7,
         "skills": [
             {
                 "key": "體術",
@@ -30,8 +30,8 @@
         ]
     },
     {
-        "name": "小胃口護石 I",
-        "rare": null,
+        "name": "小胃口護石",
+        "rare": 3,
         "skills": [
             {
                 "key": "滿足感",
@@ -50,8 +50,8 @@
         ]
     },
     {
-        "name": "心靜自然涼護石 I",
-        "rare": null,
+        "name": "心靜自然涼護石",
+        "rare": 7,
         "skills": [
             {
                 "key": "熱傷害無效",
@@ -64,8 +64,8 @@
         ]
     },
     {
-        "name": "不屈護石 I",
-        "rare": null,
+        "name": "不屈護石",
+        "rare": 3,
         "skills": [
             {
                 "key": "不屈",
@@ -125,7 +125,7 @@
     },
     {
         "name": "匠之護石 III",
-        "rare": null,
+        "rare": 8,
         "skills": [
             {
                 "key": "匠",
@@ -155,7 +155,7 @@
     },
     {
         "name": "耳塞護石 III",
-        "rare": null,
+        "rare": 8,
         "skills": [
             {
                 "key": "耳塞",
@@ -165,7 +165,7 @@
     },
     {
         "name": "攻擊護石 III",
-        "rare": null,
+        "rare": 7,
         "skills": [
             {
                 "key": "攻擊",
@@ -194,8 +194,8 @@
         ]
     },
     {
-        "name": "吹笛護石 I",
-        "rare": null,
+        "name": "吹笛護石",
+        "rare": 3,
         "skills": [
             {
                 "key": "吹笛名人",
@@ -205,7 +205,7 @@
     },
     {
         "name": "防禦護石 III",
-        "rare": null,
+        "rare": 6,
         "skills": [
             {
                 "key": "防禦",
@@ -264,8 +264,8 @@
         ]
     },
     {
-        "name": "泥浴護石 I",
-        "rare": null,
+        "name": "泥浴護石",
+        "rare": 5,
         "skills": [
             {
                 "key": "泥耐性",
@@ -338,8 +338,8 @@
         ]
     },
     {
-        "name": "狩獵生活護石 I",
-        "rare": null,
+        "name": "狩獵生活護石",
+        "rare": 5,
         "skills": [
             {
                 "key": "烤肉名人",
@@ -542,8 +542,8 @@
         ]
     },
     {
-        "name": "毒瓶護石 I",
-        "rare": null,
+        "name": "毒瓶護石",
+        "rare": 8,
         "skills": [
             {
                 "key": "毒瓶追加",
@@ -552,8 +552,8 @@
         ]
     },
     {
-        "name": "風水護石 I",
-        "rare": null,
+        "name": "風水護石",
+        "rare": 8,
         "skills": [
             {
                 "key": "探索者的幸運",
@@ -576,8 +576,8 @@
         ]
     },
     {
-        "name": "追風護石 I",
-        "rare": null,
+        "name": "順風護石",
+        "rare": 3,
         "skills": [
             {
                 "key": "攻擊",
@@ -600,8 +600,8 @@
         ]
     },
     {
-        "name": "疾風護石 I",
-        "rare": null,
+        "name": "疾風護石",
+        "rare": 8,
         "skills": [
             {
                 "key": "滑走強化",
@@ -614,8 +614,8 @@
         ]
     },
     {
-        "name": "追踨護石 I",
-        "rare": null,
+        "name": "追踨護石",
+        "rare": 3,
         "skills": [
             {
                 "key": "追蹤達人",
@@ -674,8 +674,8 @@
         ]
     },
     {
-        "name": "貫通彈護石 I",
-        "rare": null,
+        "name": "貫通彈護石",
+        "rare": 8,
         "skills": [
             {
                 "key": "貫通彈・龍之箭強化",
@@ -694,8 +694,8 @@
         ]
     },
     {
-        "name": "堅守護石 I",
-        "rare": null,
+        "name": "堅守護石",
+        "rare": 8,
         "skills": [
             {
                 "key": "防禦強化",
@@ -708,8 +708,8 @@
         ]
     },
     {
-        "name": "採集鐵人護石 I",
-        "rare": null,
+        "name": "採集鐵人護石",
+        "rare": 5,
         "skills": [
             {
                 "key": "採集達人",
@@ -722,8 +722,8 @@
         ]
     },
     {
-        "name": "陷阱彈護石 I",
-        "rare": null,
+        "name": "陷阱彈護石",
+        "rare": 5,
         "skills": [
             {
                 "key": "異臭名人",
@@ -736,8 +736,8 @@
         ]
     },
     {
-        "name": "通常彈護石 I",
-        "rare": null,
+        "name": "通常彈護石",
+        "rare": 7,
         "skills": [
             {
                 "key": "通常彈・通常箭強化",
@@ -746,8 +746,8 @@
         ]
     },
     {
-        "name": "麻痺瓶護石 I",
-        "rare": null,
+        "name": "麻痺瓶護石",
+        "rare": 8,
         "skills": [
             {
                 "key": "麻痺瓶追加",
@@ -766,8 +766,8 @@
         ]
     },
     {
-        "name": "散彈護石 I",
-        "rare": null,
+        "name": "散彈護石",
+        "rare": 8,
         "skills": [
             {
                 "key": "散彈・剛射強化",
@@ -796,8 +796,8 @@
         ]
     },
     {
-        "name": "超心護石 I",
-        "rare": null,
+        "name": "超心護石",
+        "rare": 8,
         "skills": [
             {
                 "key": "超會心",
@@ -836,8 +836,8 @@
         ]
     },
     {
-        "name": "滅龍護石 I",
-        "rare": null,
+        "name": "滅龍護石",
+        "rare": 8,
         "skills": [
             {
                 "key": "龍封力強化",
@@ -870,8 +870,8 @@
         ]
     },
     {
-        "name": "裝填護石 I",
-        "rare": null,
+        "name": "裝填護石",
+        "rare": 3,
         "skills": [
             {
                 "key": "砲彈裝填數UP",
@@ -930,8 +930,8 @@
         ]
     },
     {
-        "name": "睡眠瓶護石 I",
-        "rare": null,
+        "name": "睡眠瓶護石",
+        "rare": 8,
         "skills": [
             {
                 "key": "睡眠瓶追加",
@@ -970,8 +970,8 @@
         ]
     },
     {
-        "name": "調查達人護石 I",
-        "rare": null,
+        "name": "調查達人護石",
+        "rare": 7,
         "skills": [
             {
                 "key": "導蟲反應距離UP",
@@ -984,8 +984,8 @@
         ]
     },
     {
-        "name": "騎手護石 I",
-        "rare": null,
+        "name": "騎手護石",
+        "rare": 7,
         "skills": [
             {
                 "key": "騎乘名人",
@@ -1028,8 +1028,8 @@
         ]
     },
     {
-        "name": "爆破瓶護石 I",
-        "rare": null,
+        "name": "爆破瓶護石",
+        "rare": 8,
         "skills": [
             {
                 "key": "爆破瓶追加",
@@ -1048,8 +1048,8 @@
         ]
     },
     {
-        "name": "籌備護石 I",
-        "rare": null,
+        "name": "籌備護石",
+        "rare": 5,
         "skills": [
             {
                 "key": "搬運達人",

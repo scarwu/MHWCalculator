@@ -382,9 +382,9 @@ export default class Main extends Component {
         return (
             <div id="main" className="container-fluid">
                 <div className="row mhwc-header">
-                    <div>
+                    <a href="./">
                         <h1>Monster Hunter: World Calculator</h1>
-                    </div>
+                    </a>
                 </div>
 
                 <div className="row mhwc-container">
