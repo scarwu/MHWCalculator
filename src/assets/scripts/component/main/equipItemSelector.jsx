@@ -110,6 +110,10 @@ export default class EquipItemSelector extends Component {
                         DataSet.weaponHelper.typeIs(weaponType).rareIs(rare).getItems()
                     );
                 }
+
+                list = list.concat(
+                    DataSet.weaponHelper.typeIs(weaponType).rareIs(0).getItems()
+                );
             });
         } else if ('helm' === data.equipType
             || 'chest' === data.equipType
@@ -124,6 +128,10 @@ export default class EquipItemSelector extends Component {
                     DataSet.armorHelper.typeIs(data.equipType).rareIs(rare).getItems()
                 );
             }
+
+            list = list.concat(
+                DataSet.armorHelper.typeIs(data.equipType).rareIs(0).getItems()
+            );
         } else if ('charm' === data.equipType) {
             mode = 'charm';
             list = DataSet.charmHelper.getItems();

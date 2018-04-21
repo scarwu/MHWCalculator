@@ -8,8 +8,9 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Constant
+// Load Constant & Lang
 import Constant from 'constant';
+import Lang from 'lang';
 
 // Load JSON Data
 import Skills from '../../json/skills.json';
@@ -118,6 +119,35 @@ class WeaponHelper {
 
         list.map((data) => {
             this.mapping[data.name] = data;
+
+            if (0 === data.slots.length) {
+                return true;
+            }
+
+            let slots = data.slots.sort((a, b) => {
+                return b.size - a.size;
+            });
+
+            let slotEquipData = {
+                name: slots.map((slot) => {
+                    return '[' + slot.size + ']';
+                }).join(' ') + ' 插槽' + Lang[data.type],
+                rare: 0,
+                type: data.type,
+                series: "插槽",
+                attack: 0,
+                criticalRate: 0,
+                defense: 0,
+                sharpness: null,
+                element: {
+                    attack: null,
+                    status: null
+                },
+                elderseal: null,
+                slots: slots
+            };
+
+            this.mapping[slotEquipData.name] = slotEquipData;
         });
 
         // Filter Conditional
@@ -351,6 +381,38 @@ class ArmorHelper {
 
         list.map((data) => {
             this.mapping[data.name] = data;
+
+            if (0 === data.slots.length) {
+                return true;
+            }
+
+            let slots = data.slots.sort((a, b) => {
+                return b.size - a.size;
+            });
+
+            let slotEquipData = {
+                name: slots.map((slot) => {
+                    return '[' + slot.size + ']';
+                }).join(' ') + ' 插槽' + Lang[data.type],
+                series: "插槽",
+                type: data.type,
+                rare: 0,
+                gender: "general",
+                defense: 0,
+                resistance: {
+                    fire: 0,
+                    water: 0,
+                    thunder: 0,
+                    ice: 0,
+                    dragon: 0
+                },
+                slots: slots,
+                skills: [],
+                set: null,
+                price: 0
+            };
+
+            this.mapping[slotEquipData.name] = slotEquipData;
         });
 
         // Filter Conditional
