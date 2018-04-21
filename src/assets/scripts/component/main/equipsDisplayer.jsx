@@ -76,30 +76,20 @@ export default class EquipsDisplayer extends Component {
      * Render Functions
      */
     renderSharpnessBar = (data) => {
-        let basicValue = 0;
-
-        ['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
-            basicValue += data.steps[step];
-        });
-
-        if (400 >= basicValue) {
-            basicValue = 400;
-        }
-
         return (
             <div className="mhwc-bar">
                 <div className="mhwc-steps">
                     {['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
                         return (
                             <div key={'sharpness_' + step} className="mhwc-step" style={{
-                                width: (data.steps[step] / basicValue * 100) + '%'
+                                width: (data.steps[step] / 4) + '%'
                             }}></div>
                         );
                     })}
                 </div>
 
                 <div className="mhwc-mask" style={{
-                    width: ((basicValue - data.value) / basicValue * 100) + '%'
+                    width: ((400 - data.value) / 4) + '%'
                 }}></div>
             </div>
         );

@@ -222,11 +222,11 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "value": 390,
+            "value": 350,
             "steps": {
                 "red": 90,
-                "orange": 80,
-                "yellow": 80,
+                "orange": 60,
+                "yellow": 60,
                 "green": 100,
                 "blue": 60,
                 "white": 30
@@ -1676,13 +1676,13 @@
         "criticalRate": 0,
         "defense": 20,
         "sharpness": {
-            "value": 300,
+            "value": 350,
             "steps": {
-                "red": 80,
-                "orange": 50,
-                "yellow": 50,
-                "green": 80,
-                "blue": 90,
+                "red": 90,
+                "orange": 120,
+                "yellow": 40,
+                "green": 50,
+                "blue": 100,
                 "white": 0
             }
         },
@@ -2895,13 +2895,13 @@
         "criticalRate": -20,
         "defense": 20,
         "sharpness": {
-            "value": 300,
+            "value": 350,
             "steps": {
                 "red": 180,
                 "orange": 30,
                 "yellow": 60,
-                "green": 80,
-                "blue": 0,
+                "green": 90,
+                "blue": 40,
                 "white": 0
             }
         },
@@ -5080,9 +5080,9 @@
         "criticalRate": 10,
         "defense": 0,
         "sharpness": {
-            "value": 340,
+            "value": 350,
             "steps": {
-                "red": 80,
+                "red": 90,
                 "orange": 60,
                 "yellow": 80,
                 "green": 80,
@@ -5298,11 +5298,11 @@
         "criticalRate": 20,
         "defense": 0,
         "sharpness": {
-            "value": 390,
+            "value": 350,
             "steps": {
                 "red": 100,
-                "orange": 80,
-                "yellow": 80,
+                "orange": 60,
+                "yellow": 60,
                 "green": 100,
                 "blue": 50,
                 "white": 30
@@ -5886,12 +5886,12 @@
         "criticalRate": 0,
         "defense": 0,
         "sharpness": {
-            "value": 200,
+            "value": 350,
             "steps": {
                 "red": 60,
                 "orange": 60,
                 "yellow": 20,
-                "green": 0,
+                "green": 150,
                 "blue": 90,
                 "white": 20
             }
@@ -6382,11 +6382,11 @@
         "criticalRate": -20,
         "defense": 0,
         "sharpness": {
-            "value": 340,
+            "value": 350,
             "steps": {
                 "red": 110,
                 "orange": 120,
-                "yellow": 30,
+                "yellow": 40,
                 "green": 50,
                 "blue": 80,
                 "white": 0
