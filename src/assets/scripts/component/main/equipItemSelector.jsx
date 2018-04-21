@@ -178,8 +178,9 @@ export default class EquipItemSelector extends Component {
                     <thead>
                         <tr>
                             <td>名稱</td>
-                            <td>類型</td>
+                            <td>衍生</td>
                             <td>稀有度</td>
+                            <td>類型</td>
                             <td>斬位</td>
                             <td>攻擊力</td>
                             <td>攻擊屬性</td>
@@ -213,8 +214,9 @@ export default class EquipItemSelector extends Component {
                             return (
                                 <tr key={index}>
                                     <td><span>{data.name}</span></td>
-                                    <td><span>{Lang[data.type]}</span></td>
+                                    <td><span>{data.series}</span></td>
                                     <td><span>{data.rare}</span></td>
+                                    <td><span>{Lang[data.type]}</span></td>
                                     <td>
                                         {null !== data.sharpness ? this.renderSharpnessBar(originalSharpness) :  false}
                                         {null !== data.sharpness ? this.renderSharpnessBar(enhancedSharpness) :  false}
@@ -273,6 +275,7 @@ export default class EquipItemSelector extends Component {
                     <thead>
                         <tr>
                             <td>名稱</td>
+                            <td>衍生</td>
                             <td>稀有度</td>
                             <td>防禦</td>
                             <td>{Lang['fire']}抗性</td>
@@ -299,6 +302,7 @@ export default class EquipItemSelector extends Component {
                             return (
                                 <tr key={index}>
                                     <td><span>{data.name}</span></td>
+                                    <td><span>{data.series}</span></td>
                                     <td><span>{data.rare}</span></td>
                                     <td><span>{data.defense}</span></td>
                                     <td><span>{data.resistance.fire}</span></td>

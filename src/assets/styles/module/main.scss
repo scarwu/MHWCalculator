@@ -209,149 +209,27 @@ $function_bar-height: 40px;
 
             &.mhwc-weapon_table {
 
-                // 名稱
-                td:nth-child(1) {
-
-                }
-
-                // 類型
-                td:nth-child(2) {
-
-                }
-
-                // 稀有度
-                td:nth-child(3) {
-
-                }
-
                 // 斬位
-                td:nth-child(4) {
+                td:nth-child(5) {
                     padding-top: 5px;
                     padding-bottom: 5px;
                     width: 10%;
                 }
 
-                // 攻擊力
-                td:nth-child(5) {
-
-                }
-
-                // 攻擊屬性
-                td:nth-child(6) {
-
-                }
-
-                // 狀態屬性
-                td:nth-child(7) {
-
-                }
-
-                // 龍封力
-                td:nth-child(8) {
-
-                }
-
-                // 會心率
-                td:nth-child(9) {
-
-                }
-
-                // 防禦
-                td:nth-child(10) {
-
-                }
-
-                // 插槽
-                td:nth-child(11) {
-
-                }
-
-                td:nth-child(12) {
+                td:nth-child(13) {
                     padding-right: 5px;
                     text-align: right;
                 }
             }
 
             &.mhwc-armor_table {
-
-                // 名稱
-                td:nth-child(1) {
-
-                }
-
-                // 稀有度
-                td:nth-child(2) {
-
-                }
-
-                // 防禦
-                td:nth-child(3) {
-
-                }
-
-                // 火抗性
-                td:nth-child(4) {
-
-                }
-
-                // 水抗性
-                td:nth-child(5) {
-
-                }
-
-                // 雷抗性
-                td:nth-child(6) {
-
-                }
-
-                // 冰抗性
-                td:nth-child(7) {
-
-                }
-
-                // 龍抗性
-                td:nth-child(8) {
-
-                }
-
-                // 插槽
-                td:nth-child(9) {
-
-                }
-
-                // 套裝
-                td:nth-child(10) {
-
-                }
-
-                // 技能
-                td:nth-child(11) {
-
-                }
-
-                td:nth-child(12) {
+                td:nth-child(13) {
                     padding-right: 5px;
                     text-align: right;
                 }
             }
 
             &.mhwc-charm_table {
-
-                // 名稱
-                td:nth-child(1) {
-
-                }
-
-                // 稀有度
-                td:nth-child(2) {
-
-                }
-
-                // 技能
-                td:nth-child(3) {
-
-                }
-
                 td:nth-child(4) {
                     padding-right: 5px;
                     text-align: right;
@@ -359,27 +237,6 @@ $function_bar-height: 40px;
             }
 
             &.mhwc-jewel_table {
-
-                // 名稱
-                td:nth-child(1) {
-
-                }
-
-                // 稀有度
-                td:nth-child(2) {
-
-                }
-
-                // 大小
-                td:nth-child(3) {
-
-                }
-
-                // 技能
-                td:nth-child(4) {
-
-                }
-
                 td:nth-child(5) {
                     padding-right: 5px;
                     text-align: right;
@@ -388,21 +245,6 @@ $function_bar-height: 40px;
 
             &.mhwc-enhance_table {
 
-                // 名稱
-                td:nth-child(1) {
-
-                }
-
-                // 等級
-                td:nth-child(2) {
-
-                }
-
-                // 說明
-                td:nth-child(3) {
-
-                }
-
                 td:nth-child(4) {
                     padding-right: 5px;
                     text-align: right;
@@ -410,22 +252,6 @@ $function_bar-height: 40px;
             }
 
             &.mhwc-skill_table {
-
-                // 名稱
-                td:nth-child(1) {
-
-                }
-
-                // 等級
-                td:nth-child(2) {
-
-                }
-
-                // 說明
-                td:nth-child(3) {
-
-                }
-
                 td:nth-child(4) {
                     padding-right: 5px;
                     text-align: right;
@@ -436,14 +262,6 @@ $function_bar-height: 40px;
 
             .mhwc-bar {
                 height: 15px;
-
-                &:nth-child(1) {
-                    // border-bottom: none;
-                }
-
-                &:nth-child(2) {
-                    // border-top: none;
-                }
             }
         }
 
