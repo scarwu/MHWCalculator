@@ -128,7 +128,7 @@ export default class EquipsDisplayer extends Component {
                     </div>
 
                     {0 !== weaponInfo.enhances.length ? (
-                        <div className="col-12 mhwc-enhances">
+                        <div className="col-12 mhwc-item mhwc-enhances">
                             {weaponInfo.enhances.map((data, index) => {
                                 let enhanceSelectorData = {
                                     equipType: 'weapon',
@@ -163,7 +163,7 @@ export default class EquipsDisplayer extends Component {
                     ) : false}
 
                     {0 !== weaponInfo.slots.length ? (
-                        <div className="col-12 mhwc-slots">
+                        <div className="col-12 mhwc-item mhwc-slots">
                             {weaponInfo.slots.map((data, index) => {
                                 let jewelSelectorData = {
                                     equipType: 'weapon',
@@ -198,77 +198,88 @@ export default class EquipsDisplayer extends Component {
                         </div>
                     ) : false}
 
-                    <div className="col-12 mhwc-properties">
-                        {(null !== weaponInfo.sharpness) ? (
-                            <div className="row mhwc-item mhwc-sharpness">
-                                <div className="col-4 mhwc-name">
-                                    <span>斬位</span>
-                                </div>
-                                <div className="col-8 mhwc-value">
-                                    {this.renderSharpnessBar(weaponInfo.sharpness)}
-                                </div>
-                            </div>
-                        ) : false}
-                        <div className="row mhwc-attack">
-                            <div className="col-4 mhwc-name">
-                                <span>攻擊力</span>
-                            </div>
-                            <div className="col-8 mhwc-value">
-                                <span>{weaponInfo.attack}</span>
-                            </div>
+                    <div className="col-12 mhwc-item mhwc-properties">
+                        <div className="col-12 mhwc-name">
+                            <span>數值</span>
                         </div>
-                        {(null !== weaponInfo.element.attack) ? (
-                            <div className="row mhwc-element_attack">
+                        <div className="col-12 mhwc-value">
+                            <div className="row">
                                 <div className="col-4 mhwc-name">
-                                    <span>{Lang[weaponInfo.element.attack.type]}屬性</span>
+                                    <span>攻擊力</span>
                                 </div>
                                 <div className="col-8 mhwc-value">
-                                    {weaponInfo.element.attack.isHidden ? (
-                                        <span>({weaponInfo.element.attack.value})</span>
-                                    ) : (
-                                        <span>{weaponInfo.element.attack.value}</span>
-                                    )}
+                                    <span>{weaponInfo.attack}</span>
                                 </div>
                             </div>
-                        ) : false}
-                        {(null !== weaponInfo.element.status) ? (
-                            <div className="row mhwc-element_status">
+
+                            {(null !== weaponInfo.sharpness) ? (
+                                <div className="row mhwc-sharpness">
+                                    <div className="col-4 mhwc-name">
+                                        <span>斬位</span>
+                                    </div>
+                                    <div className="col-8 mhwc-value">
+                                        {this.renderSharpnessBar(weaponInfo.sharpness)}
+                                    </div>
+                                </div>
+                            ) : false}
+
+                            <div className="row">
                                 <div className="col-4 mhwc-name">
-                                    <span>{Lang[weaponInfo.element.status.type]}屬性</span>
+                                    <span>會心率</span>
                                 </div>
                                 <div className="col-8 mhwc-value">
-                                    {weaponInfo.element.status.isHidden ? (
-                                        <span>({weaponInfo.element.status.value})</span>
-                                    ) : (
-                                        <span>{weaponInfo.element.status.value}</span>
-                                    )}
+                                    <span>{weaponInfo.criticalRate}%</span>
                                 </div>
                             </div>
-                        ) : false}
-                        {(null !== weaponInfo.elderseal) ? (
-                            <div className="row mhwc-elderseal">
+
+                            {(null !== weaponInfo.element.attack) ? (
+                                <div className="row">
+                                    <div className="col-4 mhwc-name">
+                                        <span>{Lang[weaponInfo.element.attack.type]}屬性</span>
+                                    </div>
+                                    <div className="col-8 mhwc-value">
+                                        {weaponInfo.element.attack.isHidden ? (
+                                            <span>({weaponInfo.element.attack.value})</span>
+                                        ) : (
+                                            <span>{weaponInfo.element.attack.value}</span>
+                                        )}
+                                    </div>
+                                </div>
+                            ) : false}
+
+                            {(null !== weaponInfo.element.status) ? (
+                                <div className="row">
+                                    <div className="col-4 mhwc-name">
+                                        <span>{Lang[weaponInfo.element.status.type]}屬性</span>
+                                    </div>
+                                    <div className="col-8 mhwc-value">
+                                        {weaponInfo.element.status.isHidden ? (
+                                            <span>({weaponInfo.element.status.value})</span>
+                                        ) : (
+                                            <span>{weaponInfo.element.status.value}</span>
+                                        )}
+                                    </div>
+                                </div>
+                            ) : false}
+
+                            {(null !== weaponInfo.elderseal) ? (
+                                <div className="row">
+                                    <div className="col-4 mhwc-name">
+                                        <span>龍封力</span>
+                                    </div>
+                                    <div className="col-8 mhwc-value">
+                                        <span>{Lang[weaponInfo.elderseal.affinity]}</span>
+                                    </div>
+                                </div>
+                            ) : false}
+
+                            <div className="row">
                                 <div className="col-4 mhwc-name">
-                                    <span>龍封力</span>
+                                    <span>防禦力</span>
                                 </div>
                                 <div className="col-8 mhwc-value">
-                                    <span>{Lang[weaponInfo.elderseal.affinity]}</span>
+                                    <span>{weaponInfo.defense}</span>
                                 </div>
-                            </div>
-                        ) : false}
-                        <div className="row mhwc-criticalRate">
-                            <div className="col-4 mhwc-name">
-                                <span>會心率</span>
-                            </div>
-                            <div className="col-8 mhwc-value">
-                                <span>{weaponInfo.criticalRate}</span>
-                            </div>
-                        </div>
-                        <div className="row mhwc-defense">
-                            <div className="col-4 mhwc-name">
-                                <span>防禦力</span>
-                            </div>
-                            <div className="col-8 mhwc-value">
-                                <span>{weaponInfo.defense}</span>
                             </div>
                         </div>
                     </div>
@@ -342,7 +353,7 @@ export default class EquipsDisplayer extends Component {
                         </div>
 
                         {0 !== equipInfo.slots.length ? (
-                            <div className="col-12 mhwc-slots">
+                            <div className="col-12 mhwc-item mhwc-slots">
                                 {equipInfo.slots.map((data, index) => {
                                     let jewelSelectorData = {
                                         equipType: equipType,
@@ -377,32 +388,37 @@ export default class EquipsDisplayer extends Component {
                             </div>
                         ) : false}
 
-                        <div className="col-12 mhwc-properties">
-                            <div className="row mhwc-item mhwc-defense">
-                                <div className="col-4 mhwc-name">
-                                    <span>防禦力</span>
-                                </div>
-                                <div className="col-8 mhwc-value">
-                                    <span>{equipInfo.defense}</span>
-                                </div>
+                        <div className="col-12 mhwc-item mhwc-properties">
+                            <div className="col-12 mhwc-name">
+                                <span>數值</span>
                             </div>
-
-                            {Constant.elements.map((elementType) => {
-                                return (
-                                    <div key={elementType} className="row mhwc-resistance">
-                                        <div className="col-4 mhwc-name">
-                                            <span>{Lang[elementType]}抗性</span>
-                                        </div>
-                                        <div className="col-8 mhwc-value">
-                                            <span>{equipInfo.resistance[elementType]}</span>
-                                        </div>
+                            <div className="col-12 mhwc-value">
+                                <div className="row mhwc-defense">
+                                    <div className="col-4 mhwc-name">
+                                        <span>防禦力</span>
                                     </div>
-                                );
-                            })}
+                                    <div className="col-8 mhwc-value">
+                                        <span>{equipInfo.defense}</span>
+                                    </div>
+                                </div>
+
+                                {Constant.elements.map((elementType) => {
+                                    return (
+                                        <div key={elementType} className="row mhwc-resistance">
+                                            <div className="col-4 mhwc-name">
+                                                <span>{Lang[elementType]}抗性</span>
+                                            </div>
+                                            <div className="col-8 mhwc-value">
+                                                <span>{equipInfo.resistance[elementType]}</span>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
                         </div>
 
                         {0 !== equipInfo.skills.length ? (
-                            <div className="col-12 mhwc-skills">
+                            <div className="col-12 mhwc-item mhwc-skills">
                                 <div className="row">
                                     <div className="col-12 mhwc-name">
                                         <span>技能</span>
@@ -469,7 +485,7 @@ export default class EquipsDisplayer extends Component {
                         </a>
                     </div>
 
-                    <div className="col-12 mhwc-skills">
+                    <div className="col-12 mhwc-item mhwc-skills">
                         <div className="row">
                             <div className="col-12 mhwc-name">
                                 <span>技能</span>

@@ -305,6 +305,39 @@ $function_bar-height: 40px;
         height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
     }
 
+    > .mhwc-bundles,
+    > .mhwc-equips,
+    > .mhwc-status {
+        .mhwc-list {
+            overflow-y: scroll;
+            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                height: 5px;
+                // background: rgba(0, 0, 0, 0.1);
+                background: white;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0.1);
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    > .mhwc-equips,
+    > .mhwc-status {
+        .mhwc-sharpness {
+            @include mhwc-sharpness();
+
+            .mhwc-bar {
+                height: 21px;
+            }
+        }
+    }
+
     > .mhwc-skills {
         .mhwc-function_bar {
             padding: 0 10px;
@@ -359,7 +392,7 @@ $function_bar-height: 40px;
             @include border-radius(5px);
 
             .mhwc-name {
-                line-height: 50px;
+                line-height: 33px;
 
                 @include mhwc-icon();
 
@@ -378,30 +411,12 @@ $function_bar-height: 40px;
 
                 @include border-radius(5px);
             }
-        }
 
-    }
-
-    > .mhwc-bundles,
-    > .mhwc-equips,
-    > .mhwc-status {
-        .mhwc-list {
-            overflow-y: scroll;
-            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
-
-            &::-webkit-scrollbar {
-                width: 5px;
-                height: 5px;
-                // background: rgba(0, 0, 0, 0.1);
-                background: white;
-            }
-
-            &::-webkit-scrollbar-thumb {
-                background: rgba(0, 0, 0, 0.1);
-                -webkit-border-radius: 10px;
-                border-radius: 10px;
+            > .mhwc-value {
+                margin-top: 5px;
             }
         }
+
     }
 
     > .mhwc-bundles {
@@ -440,70 +455,51 @@ $function_bar-height: 40px;
 
                 @include border-radius(5px);
             }
+        }
 
-            .row .mhwc-value {
-                margin-bottom: 5px;
+        .mhwc-item {
+            margin-top: 5px;
+            padding: 5px;
+            border: 1px solid #333;
+
+            @include border-radius(5px);
+
+            .mhwc-name {
+                line-height: 33px;
+
+                @include nowrap();
+
+                .mhwc-icon {
+                    margin-top: 6.5px;
+                }
             }
 
-            .row:nth-last-child(1) .mhwc-value {
-                margin-bottom: 0;
+            .mhwc-value {
+                padding: 5px;
+                border: 1px solid #333;
+
+                @include border-radius(5px);
+            }
+
+            .row {
+                margin-top: 5px;
+
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
             }
         }
 
         .mhwc-enhances {
-            margin-top: 5px;
-            padding: 5px;
-            border: 1px solid #333;
 
-            @include border-radius(5px);
-
-            .mhwc-name {
-                @include nowrap();
-            }
-
-            .mhwc-value {
-
-            }
         }
 
         .mhwc-slots {
-            margin-top: 5px;
-            padding: 5px;
-            border: 1px solid #333;
 
-            @include border-radius(5px);
-
-            .mhwc-name {
-                @include nowrap();
-            }
-
-            .mhwc-value {
-
-            }
         }
 
         .mhwc-properties {
-            margin-top: 5px;
-            padding: 5px;
-            border: 1px solid #333;
 
-            @include border-radius(5px);
-
-            .mhwc-name {
-                @include nowrap();
-            }
-
-            .mhwc-value {
-
-            }
-
-            .mhwc-sharpness {
-                @include mhwc-sharpness();
-
-                .mhwc-bar {
-                    height: 21px;
-                }
-            }
         }
 
         .mhwc-skills {
@@ -518,7 +514,7 @@ $function_bar-height: 40px;
             }
 
             .mhwc-value {
-
+                margin-top: 5px;
             }
         }
     }
@@ -549,22 +545,30 @@ $function_bar-height: 40px;
 
                 @include border-radius(5px);
             }
+
+            > .mhwc-value {
+                margin-top: 5px;
+            }
+
+            .row {
+                margin-top: 5px;
+
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
+            }
         }
 
-        .mhwc-sharpness {
-            @include mhwc-sharpness();
+        .mhwc-skills {
+            .mhwc-value {
+                margin-top: 5px;
+            }
         }
 
-        .mhwc-resistance,
+        .mhwc-normal,
+        .mhwc-attack,
+        .mhwc-defense,
         .mhwc-extra_info {
-            .row .mhwc-value {
-                margin-bottom: 5px;
-            }
-
-            .row:nth-last-child(1) .mhwc-value {
-                margin-bottom: 0;
-            }
-
             .mhwc-tuning {
                 margin: 5px;
                 padding: 0 5px;
