@@ -36,9 +36,10 @@ export default class CharacterStatus extends Component {
         extraInfo: Misc.deepCopy(Constant.defaultExtraInfo),
         passiveSkills: {},
         tuning: {
-            attack: 5,
-            criticalRate: 10,
-            criticalMultiple: 0.1
+            rawAttack: 5,
+            rawCriticalRate: 10,
+            rawCriticalMultiple: 0.1,
+            elementAttack: 100
         }
     };
 
@@ -58,26 +59,31 @@ export default class CharacterStatus extends Component {
     };
 
     handleTuningChange = () => {
-        let tuningAttack = this.refs.tuningAttack.value;
-        let tuningCriticalRate = this.refs.tuningCriticalRate.value;
-        let tuningCriticalMultiple = this.refs.tuningCriticalMultiple.value;
+        let tuningRawAttack = this.refs.tuningRawAttack.value;
+        let tuningElementAttack = this.refs.tuningElementAttack.value;
+        let tuningRawCriticalRate = this.refs.tuningRawCriticalRate.value;
+        let tuningRawCriticalMultiple = this.refs.tuningRawCriticalMultiple.value;
 
-        tuningAttack = parseInt(tuningAttack, 10);
-        tuningCriticalRate = parseInt(tuningCriticalRate, 10);
-        tuningCriticalMultiple = parseFloat(tuningCriticalMultiple);
+        tuningRawAttack = parseInt(tuningRawAttack, 10);
+        tuningRawCriticalRate = parseInt(tuningRawCriticalRate, 10);
+        tuningRawCriticalMultiple = parseFloat(tuningRawCriticalMultiple);
+        tuningElementAttack = parseInt(tuningElementAttack, 10);
 
-        tuningAttack = (NaN !== tuningAttack)
-            ? tuningAttack : 0;
-        tuningCriticalRate = (NaN !== tuningCriticalRate)
-            ? tuningCriticalRate : 0;
-        tuningCriticalMultiple = (NaN !== tuningCriticalMultiple)
-            ? tuningCriticalMultiple : 0;
+        tuningRawAttack = !isNaN(tuningRawAttack)
+            ? tuningRawAttack : 0;
+        tuningRawCriticalRate = !isNaN(tuningRawCriticalRate)
+            ? tuningRawCriticalRate : 0;
+        tuningRawCriticalMultiple = !isNaN(tuningRawCriticalMultiple)
+            ? tuningRawCriticalMultiple : 0;
+        tuningElementAttack = !isNaN(tuningElementAttack)
+            ? tuningElementAttack : 0;
 
         this.setState({
             tuning: {
-                attack: tuningAttack,
-                criticalRate: tuningCriticalRate,
-                criticalMultiple: tuningCriticalMultiple
+                rawAttack: tuningRawAttack,
+                rawCriticalRate: tuningRawCriticalRate,
+                rawCriticalMultiple: tuningRawCriticalMultiple,
+                elementAttack: tuningElementAttack
             }
         }, () => {
             this.generateExtraInfo();
@@ -335,35 +341,46 @@ export default class CharacterStatus extends Component {
 
         let result = this.getBasicExtraInfo(equips, status, {});
 
-        extraInfo.basicAttack = result.basicAttack;
-        extraInfo.basicCriticalAttack = result.basicCriticalAttack;
+        extraInfo.rawAttack = result.rawAttack;
+        extraInfo.rawCriticalAttack = result.rawCriticalAttack;
+        extraInfo.rawExpectedValue = result.rawExpectedValue;
+        extraInfo.elementAttack = result.elementAttack;
+        extraInfo.elementEexpectedValue = result.elementEexpectedValue;
         extraInfo.expectedValue = result.expectedValue;
 
         let tuning = this.state.tuning;
 
-        // Attck Tuning
+        // Raw Attack Tuning
         status = Misc.deepCopy(this.state.status);
         result = this.getBasicExtraInfo(equips, status, {
-            attack: tuning.attack
+            rawAttack: tuning.rawAttack
         });
 
-        extraInfo.perNAttackExpectedValue = result.expectedValue - extraInfo.expectedValue;
+        extraInfo.perNRawAttackExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
 
         // Critical Rate Tuning
         status = Misc.deepCopy(this.state.status);
         result = this.getBasicExtraInfo(equips, status, {
-            criticalRate: tuning.criticalRate
+            rawCriticalRate: tuning.rawCriticalRate
         });
 
-        extraInfo.perNCriticalRateExpectedValue = result.expectedValue - extraInfo.expectedValue;
+        extraInfo.perNRawCriticalRateExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
 
         // Critical Multiple Tuning
         status = Misc.deepCopy(this.state.status);
         result = this.getBasicExtraInfo(equips, status, {
-            criticalMultiple: tuning.criticalMultiple
+            rawCriticalMultiple: tuning.rawCriticalMultiple
         });
 
-        extraInfo.perNCriticalMultipleExpectedValue = result.expectedValue - extraInfo.expectedValue;
+        extraInfo.perNRawCriticalMultipleExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
+
+        // Element Attack Tuning
+        status = Misc.deepCopy(this.state.status);
+        result = this.getBasicExtraInfo(equips, status, {
+            elementAttack: tuning.elementAttack
+        });
+
+        extraInfo.perNElementAttackExpectedValue = result.elementExpectedValue - extraInfo.elementExpectedValue;
 
         this.setState({
             extraInfo: extraInfo
@@ -371,8 +388,11 @@ export default class CharacterStatus extends Component {
     };
 
     getBasicExtraInfo = (equips, status, tuning) => {
-        let basicAttack = 0;
-        let basicCriticalAttack = 0;
+        let rawAttack = 0;
+        let rawCriticalAttack = 0;
+        let rawExpectedValue = 0;
+        let elementAttack = 0;
+        let elementExpectedValue = 0;
         let expectedValue = 0;
 
         if (null !== equips.weapon.key) {
@@ -380,36 +400,60 @@ export default class CharacterStatus extends Component {
             let weaponMultiple = Constant.weaponMultiple[weaponInfo.type];
             let sharpnessMultiple = this.getSharpnessMultiple(status.sharpness);
 
-            if (undefined !== tuning.criticalRate) {
-                status.critical.rate += tuning.criticalRate;
+            rawAttack = (status.attack / weaponMultiple);
+
+            if (undefined !== tuning.rawAttack) {
+                rawAttack += tuning.rawAttack;
             }
 
-            if (undefined !== tuning.criticalMultiple) {
-                status.critical.multiple.positive += tuning.criticalMultiple;
+            if (undefined !== tuning.rawCriticalRate) {
+                status.critical.rate += tuning.rawCriticalRate;
+            }
+
+            if (undefined !== tuning.rawCriticalMultiple) {
+                status.critical.multiple.positive += tuning.rawCriticalMultiple;
             }
 
             let criticalMultiple = (0 <= status.critical.rate)
                 ? status.critical.multiple.positive
                 : status.critical.multiple.nagetive;
 
-            basicAttack = (status.attack / weaponMultiple) * sharpnessMultiple.raw;
+            if (null !== status.element.attack
+                && !status.element.attack.isHidden) {
 
-            if (undefined !== tuning.attack) {
-                basicAttack += tuning.attack
+                elementAttack = status.element.attack.value;
+
+                if (undefined !== tuning.elementAttack) {
+                    elementAttack += tuning.elementAttack;
+                }
+
+                elementAttack = elementAttack / 10;
             }
 
-            basicCriticalAttack = basicAttack * criticalMultiple;
-            expectedValue = (basicAttack * (100 - Math.abs(status.critical.rate)) / 100)
-                + (basicCriticalAttack * Math.abs(status.critical.rate) / 100);
+            rawAttack *= sharpnessMultiple.raw;
+            rawCriticalAttack = rawAttack * criticalMultiple;
+            rawExpectedValue = (rawAttack * (100 - Math.abs(status.critical.rate)) / 100)
+                + (rawCriticalAttack * Math.abs(status.critical.rate) / 100);
 
-            basicAttack = parseInt(Math.round(basicAttack));
-            basicCriticalAttack = parseInt(Math.round(basicCriticalAttack));
+            elementAttack *= sharpnessMultiple.element;
+            elementExpectedValue = elementAttack;
+
+            expectedValue = rawExpectedValue + elementExpectedValue;
+
+            rawAttack = parseInt(Math.round(rawAttack));
+            rawCriticalAttack = parseInt(Math.round(rawCriticalAttack));
+            rawExpectedValue = parseInt(Math.round(rawExpectedValue));
+            elementAttack = parseInt(Math.round(elementAttack));
+            elementExpectedValue = parseInt(Math.round(elementExpectedValue));
             expectedValue = parseInt(Math.round(expectedValue));
         }
 
         return {
-            basicAttack: basicAttack,
-            basicCriticalAttack: basicCriticalAttack,
+            rawAttack: rawAttack,
+            rawCriticalAttack: rawCriticalAttack,
+            rawExpectedValue: rawExpectedValue,
+            elementAttack: elementAttack,
+            elementExpectedValue: elementExpectedValue,
             expectedValue: expectedValue
         }
     };
@@ -658,7 +702,7 @@ export default class CharacterStatus extends Component {
                             <span>基礎傷害</span>
                         </div>
                         <div className="col-8 mhwc-value">
-                            <span>{extraInfo.basicAttack}</span>
+                            <span>{extraInfo.rawAttack}</span>
                         </div>
                     </div>
                     <div className="row">
@@ -666,12 +710,36 @@ export default class CharacterStatus extends Component {
                             <span>基礎會心傷害</span>
                         </div>
                         <div className="col-8 mhwc-value">
-                            <span>{extraInfo.basicCriticalAttack}</span>
+                            <span>{extraInfo.rawCriticalAttack}</span>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-4 mhwc-name">
-                            <span>期望值</span>
+                            <span>基礎期望值</span>
+                        </div>
+                        <div className="col-8 mhwc-value">
+                            <span>{extraInfo.rawExpectedValue}</span>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-4 mhwc-name">
+                            <span>屬性傷害</span>
+                        </div>
+                        <div className="col-8 mhwc-value">
+                            <span>{extraInfo.elementAttack}</span>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-4 mhwc-name">
+                            <span>屬性期望值</span>
+                        </div>
+                        <div className="col-8 mhwc-value">
+                            <span>{extraInfo.elementExpectedValue}</span>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-4 mhwc-name">
+                            <span>總期望值</span>
                         </div>
                         <div className="col-8 mhwc-value">
                             <span>{extraInfo.expectedValue}</span>
@@ -680,34 +748,45 @@ export default class CharacterStatus extends Component {
                     <div className="row">
                         <div className="col-8 mhwc-name">
                             <span>每</span>
-                            <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.attack}
-                                ref="tuningAttack" onChange={this.handleTuningChange} />
-                            <span>點攻擊力期望值</span>
+                            <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.rawAttack}
+                                ref="tuningRawAttack" onChange={this.handleTuningChange} />
+                            <span>點基礎攻擊力期望值</span>
                         </div>
                         <div className="col-4 mhwc-value">
-                            <span>{extraInfo.perNAttackExpectedValue}</span>
+                            <span>{extraInfo.perNRawAttackExpectedValue}</span>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-8 mhwc-name">
                             <span>每</span>
-                            <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.criticalRate}
-                                ref="tuningCriticalRate" onChange={this.handleTuningChange} />
+                            <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.rawCriticalRate}
+                                ref="tuningRawCriticalRate" onChange={this.handleTuningChange} />
                             <span>點會心率期望值</span>
                         </div>
                         <div className="col-4 mhwc-value">
-                            <span>{extraInfo.perNCriticalRateExpectedValue}</span>
+                            <span>{extraInfo.perNRawCriticalRateExpectedValue}</span>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-8 mhwc-name">
                             <span>每</span>
-                            <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.criticalMultiple}
-                                ref="tuningCriticalMultiple" onChange={this.handleTuningChange} />
+                            <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.rawCriticalMultiple}
+                                ref="tuningRawCriticalMultiple" onChange={this.handleTuningChange} />
                             <span>點會心倍數期望值</span>
                         </div>
                         <div className="col-4 mhwc-value">
-                            <span>{extraInfo.perNCriticalMultipleExpectedValue}</span>
+                            <span>{extraInfo.perNRawCriticalMultipleExpectedValue}</span>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-8 mhwc-name">
+                            <span>每</span>
+                            <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.elementAttack}
+                                ref="tuningElementAttack" onChange={this.handleTuningChange} />
+                            <span>點屬性攻擊力期望值</span>
+                        </div>
+                        <div className="col-4 mhwc-value">
+                            <span>{extraInfo.perNElementAttackExpectedValue}</span>
                         </div>
                     </div>
                 </div>

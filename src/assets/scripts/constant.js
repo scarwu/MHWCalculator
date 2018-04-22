@@ -125,12 +125,16 @@ export default {
         skills: []
     },
     defaultExtraInfo: {
-        basicAttack: 0,
-        basicCriticalAttack: 0,
+        rawAttack: 0,
+        rawCriticalAttack: 0,
+        rawExpectedValue: 0,
+        elementAttack: 0,
+        elementExpectedValue: 0,
         expectedValue: 0,
-        perNAttackExpectedValue: 0,
-        perNCriticalRateExpectedValue: 0,
-        perNCriticalMultipleExpectedValue: 0
+        perNRawAttackExpectedValue: 0,
+        perNRawCriticalRateExpectedValue: 0,
+        perNRawCriticalMultipleExpectedValue: 0,
+        perNElementAttackExpectedValue: 0
     },
     testEquipsSetting: [
         {

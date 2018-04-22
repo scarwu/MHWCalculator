@@ -418,6 +418,7 @@ class ArmorHelper {
         // Filter Conditional
         this.filterType = null;
         this.filterRare = null;
+        this.filterSet = null;
         this.filterSkillKey = null;
     }
 
@@ -435,6 +436,12 @@ class ArmorHelper {
 
             if (null !== this.filterRare) {
                 if (this.filterRare !== data.rare) {
+                    return false;
+                }
+            }
+
+            if (null !== this.filterSet) {
+                if (this.filterSet !== data.set) {
                     return false;
                 }
             }
@@ -538,6 +545,12 @@ class ArmorHelper {
 
     rareIs = (number) => {
         this.filterRare = number;
+
+        return this;
+    };
+
+    setIs = (text) => {
+        this.filterSet = text;
 
         return this;
     };
