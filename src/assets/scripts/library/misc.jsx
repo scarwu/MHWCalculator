@@ -51,6 +51,8 @@ let Base64 = {
             output = output + this._keyStr.charAt(enc1) + this._keyStr.charAt(enc2) + this._keyStr.charAt(enc3) + this._keyStr.charAt(enc4);
         }
 
+        output = output.replace('+', '-').replace('/', '_');
+
         return output;
     },
 
@@ -66,6 +68,7 @@ let Base64 = {
         let enc4;
         let i = 0;
 
+        input = input.replace('-', '+').replace('_', '/');
         input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
 
         while (i < input.length) {

@@ -59,24 +59,15 @@ export default class CharacterStatus extends Component {
     };
 
     handleTuningChange = () => {
-        let tuningRawAttack = this.refs.tuningRawAttack.value;
-        let tuningElementAttack = this.refs.tuningElementAttack.value;
-        let tuningRawCriticalRate = this.refs.tuningRawCriticalRate.value;
-        let tuningRawCriticalMultiple = this.refs.tuningRawCriticalMultiple.value;
+        let tuningRawAttack = parseInt(this.refs.tuningRawAttack.value, 10);
+        let tuningRawCriticalRate = parseFloat(this.refs.tuningRawCriticalRate.value);
+        let tuningRawCriticalMultiple = parseInt(this.refs.tuningRawCriticalMultiple.value, 10);
+        let tuningElementAttack = parseInt(this.refs.tuningElementAttack.value, 10);
 
-        tuningRawAttack = parseInt(tuningRawAttack, 10);
-        tuningRawCriticalRate = parseInt(tuningRawCriticalRate, 10);
-        tuningRawCriticalMultiple = parseFloat(tuningRawCriticalMultiple);
-        tuningElementAttack = parseInt(tuningElementAttack, 10);
-
-        tuningRawAttack = !isNaN(tuningRawAttack)
-            ? tuningRawAttack : 0;
-        tuningRawCriticalRate = !isNaN(tuningRawCriticalRate)
-            ? tuningRawCriticalRate : 0;
-        tuningRawCriticalMultiple = !isNaN(tuningRawCriticalMultiple)
-            ? tuningRawCriticalMultiple : 0;
-        tuningElementAttack = !isNaN(tuningElementAttack)
-            ? tuningElementAttack : 0;
+        tuningRawAttack = !isNaN(tuningRawAttack) ? tuningRawAttack : 0;
+        tuningRawCriticalRate = !isNaN(tuningRawCriticalRate) ? tuningRawCriticalRate : 0;
+        tuningRawCriticalMultiple = !isNaN(tuningRawCriticalMultiple) ? tuningRawCriticalMultiple : 0;
+        tuningElementAttack = !isNaN(tuningElementAttack) ? tuningElementAttack : 0;
 
         this.setState({
             tuning: {
@@ -345,7 +336,7 @@ export default class CharacterStatus extends Component {
         extraInfo.rawCriticalAttack = result.rawCriticalAttack;
         extraInfo.rawExpectedValue = result.rawExpectedValue;
         extraInfo.elementAttack = result.elementAttack;
-        extraInfo.elementEexpectedValue = result.elementEexpectedValue;
+        extraInfo.elementExpectedValue = result.elementExpectedValue;
         extraInfo.expectedValue = result.expectedValue;
 
         let tuning = this.state.tuning;
@@ -357,6 +348,7 @@ export default class CharacterStatus extends Component {
         });
 
         extraInfo.perNRawAttackExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
+        extraInfo.perNRawAttackExpectedValue = Math.round(extraInfo.perNRawAttackExpectedValue * 100) / 100;
 
         // Critical Rate Tuning
         status = Misc.deepCopy(this.state.status);
@@ -365,6 +357,7 @@ export default class CharacterStatus extends Component {
         });
 
         extraInfo.perNRawCriticalRateExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
+        extraInfo.perNRawCriticalRateExpectedValue = Math.round(extraInfo.perNRawCriticalRateExpectedValue * 100) / 100;
 
         // Critical Multiple Tuning
         status = Misc.deepCopy(this.state.status);
@@ -373,6 +366,7 @@ export default class CharacterStatus extends Component {
         });
 
         extraInfo.perNRawCriticalMultipleExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
+        extraInfo.perNRawCriticalMultipleExpectedValue = Math.round(extraInfo.perNRawCriticalMultipleExpectedValue * 100) / 100;
 
         // Element Attack Tuning
         status = Misc.deepCopy(this.state.status);
@@ -381,6 +375,7 @@ export default class CharacterStatus extends Component {
         });
 
         extraInfo.perNElementAttackExpectedValue = result.elementExpectedValue - extraInfo.elementExpectedValue;
+        extraInfo.perNElementAttackExpectedValue = Math.round(extraInfo.perNElementAttackExpectedValue * 100) / 100;
 
         this.setState({
             extraInfo: extraInfo
@@ -440,12 +435,12 @@ export default class CharacterStatus extends Component {
 
             expectedValue = rawExpectedValue + elementExpectedValue;
 
-            rawAttack = parseInt(Math.round(rawAttack));
-            rawCriticalAttack = parseInt(Math.round(rawCriticalAttack));
-            rawExpectedValue = parseInt(Math.round(rawExpectedValue));
-            elementAttack = parseInt(Math.round(elementAttack));
-            elementExpectedValue = parseInt(Math.round(elementExpectedValue));
-            expectedValue = parseInt(Math.round(expectedValue));
+            rawAttack = Math.round(rawAttack * 100) / 100;
+            rawCriticalAttack = Math.round(rawCriticalAttack * 100) / 100;
+            rawExpectedValue = Math.round(rawExpectedValue * 100) / 100;
+            elementAttack = Math.round(elementAttack * 100) / 100;
+            elementExpectedValue = Math.round(elementExpectedValue * 100) / 100;
+            expectedValue = Math.round(expectedValue * 100) / 100;
         }
 
         return {
