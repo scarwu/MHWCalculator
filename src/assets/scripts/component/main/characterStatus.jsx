@@ -118,7 +118,9 @@ export default class CharacterStatus extends Component {
             status.defense += info[equipType].defense;
         });
 
-        // Resistance
+        // Resistance & Set
+        let setMapping = {};
+
         ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
             if (null === info[equipType]) {
                 return false;
@@ -127,6 +129,16 @@ export default class CharacterStatus extends Component {
             Constant.elements.map((elementType) => {
                 status.resistance[elementType] += info[equipType].resistance[elementType];
             });
+
+            if (null !== info[equipType].set) {
+                let setKey = info[equipType].set.key;
+
+                if (undefined === setMapping[setKey]) {
+                    setMapping[setKey] = 0;
+                }
+
+                setMapping[setKey]++;
+            }
         });
 
         // Skills
@@ -143,6 +155,33 @@ export default class CharacterStatus extends Component {
                 }
 
                 allSkills[skill.key] += skill.level;
+            });
+        });
+
+        Object.keys(setMapping).map((setKey) => {
+            let setCount = setMapping[setKey];
+            let setInfo = DataSet.setHelper.getInfo(setKey);
+
+            setInfo.skills.map((skill) => {
+                if (skill.require > setCount) {
+                    return false;
+                }
+
+                let skillInfo = DataSet.skillHelper.getInfo(skill.key);
+
+                status.sets.push({
+                    name: `${setKey} (${skill.require})`,
+                    skill: {
+                        name: skillInfo.name,
+                        level: 1
+                    }
+                });
+
+                if (undefined === allSkills[skill.key]) {
+                    allSkills[skill.key] = 0;
+                }
+
+                allSkills[skill.key] += 1;
             });
         });
 
@@ -575,7 +614,7 @@ export default class CharacterStatus extends Component {
                     {null !== status.sharpness ? (
                         <div className="row mhwc-sharpness">
                             <div className="col-4 mhwc-name">
-                                <span>斬位</span>
+                                <span>銳利度</span>
                             </div>
                             <div className="col-8 mhwc-value">
                                 {this.renderSharpnessBar(status.sharpness)}
@@ -676,7 +715,27 @@ export default class CharacterStatus extends Component {
                     })}
                 </div>
             </div>
-        ), (
+        ), (0 !== status.sets.length) ? (
+            <div key="sets" className="row mhwc-item mhwc-sets">
+                <div className="col-12 mhwc-name">
+                    <span>套裝</span>
+                </div>
+                <div className="col-12 mhwc-value">
+                    {status.sets.map((data) => {
+                        return (
+                            <div key={data.name} className="row mhwc-set">
+                                <div className="col-12 mhwc-name">
+                                    <span>{data.name}</span>
+                                </div>
+                                <div className="col-12 mhwc-value">
+                                    <span>{data.skill.name} Lv.{data.skill.level}</span>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        ) : false, (0 !== status.skills.length) ? (
             <div key="skills" className="row mhwc-item mhwc-skills">
                 <div className="col-12 mhwc-name">
                     <span>技能</span>
@@ -708,7 +767,7 @@ export default class CharacterStatus extends Component {
                     })}
                 </div>
             </div>
-        ), (
+        ) : false, (
             <div key="extraInfo" className="row mhwc-item mhwc-extra_info">
                 <div className="col-12 mhwc-name">
                     <span>額外資訊</span>

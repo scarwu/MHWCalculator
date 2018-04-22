@@ -214,8 +214,8 @@ $function_bar-height: 40px;
 
             &.mhwc-weapon_table {
 
-                // 斬位
-                td:nth-child(5) {
+                // 銳利度
+                td:nth-child(6) {
                     padding-top: 5px;
                     padding-bottom: 5px;
                     width: 10%;
@@ -442,8 +442,6 @@ $function_bar-height: 40px;
             .mhwc-name {
                 line-height: 33px;
 
-                @include nowrap();
-
                 .mhwc-icon {
                     margin-top: 6.5px;
                 }
@@ -499,20 +497,12 @@ $function_bar-height: 40px;
         }
 
         .mhwc-properties {
-
+            > .mhwc-value {
+                margin-top: 5px;
+            }
         }
 
         .mhwc-skills {
-            margin-top: 5px;
-            padding: 5px;
-            border: 1px solid #333;
-
-            @include border-radius(5px);
-
-            .mhwc-name {
-                @include nowrap();
-            }
-
             .mhwc-value {
                 margin-top: 5px;
             }

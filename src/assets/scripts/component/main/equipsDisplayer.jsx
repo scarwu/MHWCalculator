@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Equipments Displayer
+ * Equips Displayer
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -215,7 +215,7 @@ export default class EquipsDisplayer extends Component {
                             {(null !== weaponInfo.sharpness) ? (
                                 <div className="row mhwc-sharpness">
                                     <div className="col-4 mhwc-name">
-                                        <span>斬位</span>
+                                        <span>銳利度</span>
                                     </div>
                                     <div className="col-8 mhwc-value">
                                         {this.renderSharpnessBar(weaponInfo.sharpness)}
@@ -286,26 +286,24 @@ export default class EquipsDisplayer extends Component {
 
                     {0 !== weaponInfo.skills.length ? (
                         <div className="col-12 mhwc-skills">
-                            <div className="row">
-                                <div className="col-12 mhwc-name">
-                                    <span>技能</span>
-                                </div>
-                                <div className="col-12 mhwc-value">
-                                    {weaponInfo.skills.sort((a, b) => {
-                                        return b.level - a.level;
-                                    }).map((data) => {
-                                        return (
-                                            <div key={data.key} className="row mhwc-skill">
-                                                <div className="col-12 mhwc-name">
-                                                    <span>{data.key} Lv.{data.level}</span>
-                                                </div>
-                                                <div className="col-12 mhwc-value">
-                                                    <span>{data.description}</span>
-                                                </div>
+                            <div className="col-12 mhwc-name">
+                                <span>技能</span>
+                            </div>
+                            <div className="col-12 mhwc-value">
+                                {weaponInfo.skills.sort((a, b) => {
+                                    return b.level - a.level;
+                                }).map((data) => {
+                                    return (
+                                        <div key={data.key} className="row mhwc-skill">
+                                            <div className="col-12 mhwc-name">
+                                                <span>{data.key} Lv.{data.level}</span>
                                             </div>
-                                        );
-                                    })}
-                                </div>
+                                            <div className="col-12 mhwc-value">
+                                                <span>{data.description}</span>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     ) : false}
@@ -417,28 +415,39 @@ export default class EquipsDisplayer extends Component {
                             </div>
                         </div>
 
+                        {null !== equipInfo.set ? (
+                            <div className="col-12 mhwc-item mhwc-set">
+                                <div className="row">
+                                    <div className="col-4 mhwc-name">
+                                        <span>套裝</span>
+                                    </div>
+                                    <div className="col-8 mhwc-value">
+                                        <span>{equipInfo.set.key}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        ) : false}
+
                         {0 !== equipInfo.skills.length ? (
                             <div className="col-12 mhwc-item mhwc-skills">
-                                <div className="row">
-                                    <div className="col-12 mhwc-name">
-                                        <span>技能</span>
-                                    </div>
-                                    <div className="col-12 mhwc-value">
-                                        {equipInfo.skills.sort((a, b) => {
-                                            return b.level - a.level;
-                                        }).map((data) => {
-                                            return (
-                                                <div key={data.key} className="row mhwc-skill">
-                                                    <div className="col-12 mhwc-name">
-                                                        <span>{data.key} Lv.{data.level}</span>
-                                                    </div>
-                                                    <div className="col-12 mhwc-value">
-                                                        <span>{data.description}</span>
-                                                    </div>
+                                <div className="col-12 mhwc-name">
+                                    <span>技能</span>
+                                </div>
+                                <div className="col-12 mhwc-value">
+                                    {equipInfo.skills.sort((a, b) => {
+                                        return b.level - a.level;
+                                    }).map((data) => {
+                                        return (
+                                            <div key={data.key} className="row mhwc-skill">
+                                                <div className="col-12 mhwc-name">
+                                                    <span>{data.key} Lv.{data.level}</span>
                                                 </div>
-                                            );
-                                        })}
-                                    </div>
+                                                <div className="col-12 mhwc-value">
+                                                    <span>{data.description}</span>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         ) : false}
@@ -486,26 +495,24 @@ export default class EquipsDisplayer extends Component {
                     </div>
 
                     <div className="col-12 mhwc-item mhwc-skills">
-                        <div className="row">
-                            <div className="col-12 mhwc-name">
-                                <span>技能</span>
-                            </div>
-                            <div className="col-12 mhwc-value">
-                                {charmInfo.skills.sort((a, b) => {
-                                    return b.level - a.level;
-                                }).map((data) => {
-                                    return (
-                                        <div key={data.key} className="row mhwc-skill">
-                                            <div className="col-12 mhwc-name">
-                                                <span>{data.key} Lv.{data.level}</span>
-                                            </div>
-                                            <div className="col-12 mhwc-value">
-                                                <span>{data.description}</span>
-                                            </div>
+                        <div className="col-12 mhwc-name">
+                            <span>技能</span>
+                        </div>
+                        <div className="col-12 mhwc-value">
+                            {charmInfo.skills.sort((a, b) => {
+                                return b.level - a.level;
+                            }).map((data) => {
+                                return (
+                                    <div key={data.key} className="row mhwc-skill">
+                                        <div className="col-12 mhwc-name">
+                                            <span>{data.key} Lv.{data.level}</span>
                                         </div>
-                                    );
-                                })}
-                            </div>
+                                        <div className="col-12 mhwc-value">
+                                            <span>{data.description}</span>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

@@ -175,17 +175,17 @@ export default class EquipItemSelector extends Component {
                 <table className="mhwc-weapon_table">
                     <thead>
                         <tr>
+                            <td>類型</td>
                             <td>名稱</td>
                             <td>衍生</td>
                             <td>稀有度</td>
-                            <td>類型</td>
-                            <td>斬位</td>
                             <td>攻擊力</td>
+                            <td>銳利度</td>
+                            <td>會心率</td>
                             <td>攻擊屬性</td>
                             <td>狀態屬性</td>
                             <td>龍封力</td>
-                            <td>會心率</td>
-                            <td>防禦</td>
+                            <td>防禦力</td>
                             <td>插槽</td>
                             <td></td>
                         </tr>
@@ -211,15 +211,16 @@ export default class EquipItemSelector extends Component {
 
                             return (
                                 <tr key={index}>
+                                    <td><span>{Lang[data.type]}</span></td>
                                     <td><span>{data.name}</span></td>
                                     <td><span>{data.series}</span></td>
                                     <td><span>{data.rare}</span></td>
-                                    <td><span>{Lang[data.type]}</span></td>
+                                    <td><span>{data.attack}</span></td>
                                     <td>
                                         {null !== data.sharpness ? this.renderSharpnessBar(originalSharpness) :  false}
                                         {null !== data.sharpness ? this.renderSharpnessBar(enhancedSharpness) :  false}
                                     </td>
-                                    <td><span>{data.attack}</span></td>
+                                    <td><span>{data.criticalRate}%</span></td>
                                     <td>
                                         {null !== data.element.attack ? [(
                                             <span key="type">{Lang[data.element.attack.type]}</span>
@@ -245,7 +246,6 @@ export default class EquipItemSelector extends Component {
                                             <span>{Lang[data.elderseal.affinity]}</span>
                                         ) : false}
                                     </td>
-                                    <td><span>{data.criticalRate}</span></td>
                                     <td><span>{data.defense}</span></td>
                                     <td>
                                         {data.slots.map((data, index) => {
@@ -275,7 +275,7 @@ export default class EquipItemSelector extends Component {
                             <td>名稱</td>
                             <td>衍生</td>
                             <td>稀有度</td>
-                            <td>防禦</td>
+                            <td>防禦力</td>
                             <td>{Lang['fire']}抗性</td>
                             <td>{Lang['water']}抗性</td>
                             <td>{Lang['thunder']}抗性</td>

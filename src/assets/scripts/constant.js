@@ -100,20 +100,10 @@ export default {
         },
         sharpness: null,
         element: {
-            attack: {
-                type: null,
-                value: 0,
-                isHidden: null
-            },
-            status: {
-                type: null,
-                value: 0,
-                isHidden: null
-            }
+            attack: null,
+            status: null
         },
-        elderseal: {
-            affinity: null
-        },
+        elderseal: null,
         defense: 31, // 守護護符+10 守護之爪+20
         resistance: {
             fire: 0,
@@ -122,6 +112,7 @@ export default {
             ice: 0,
             dragon: 0
         },
+        sets: [],
         skills: []
     },
     defaultExtraInfo: {
