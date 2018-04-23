@@ -54,38 +54,39 @@ export default {
         weapon: {
             key: null,
             enhanceKeys: {},
-            slotKeys: {},
-            isLock: false
+            slotKeys: {}
         },
         helm: {
             key: null,
-            slotKeys: {},
-            isLock: false
+            slotKeys: {}
         },
         chest: {
             key: null,
-            slotKeys: {},
-            isLock: false
+            slotKeys: {}
         },
         arm: {
             key: null,
-            slotKeys: {},
-            isLock: false
+            slotKeys: {}
         },
         waist: {
             key: null,
-            slotKeys: {},
-            isLock: false
+            slotKeys: {}
         },
         leg: {
             key: null,
-            slotKeys: {},
-            isLock: false
+            slotKeys: {}
         },
         charm: {
-            key: null,
-            isLock: false
+            key: null
         }
+    },
+    defaultEquipsLock: {
+        weapon: false,
+        helm: false,
+        chest: false,
+        waist: false,
+        leg: false,
+        charm: false
     },
     defaultStatus: {
         health: 100,
@@ -134,47 +135,40 @@ export default {
                 enhanceKeys: {
                     0: '賦予回復能力'
                 },
-                slotKeys: null,
-                isLock: false
+                slotKeys: null
             },
             helm: {
                 key: '龍王的獨眼α',
                 slotKeys: {
                     0: '耐衝珠'
-                },
-                isLock: false
+                }
             },
             chest: {
                 key: '杜賓鎧甲β',
                 slotKeys: {
                     0: '痛擊珠'
-                },
-                isLock: false
+                }
             },
             arm: {
                 key: '異種大型鋼爪α',
                 slotKeys: {
                     0: '達人珠'
-                },
-                isLock: false
+                }
             },
             waist: {
                 key: '慘爪龍腰甲β',
                 slotKeys: {
                     0: '無擊珠'
-                },
-                isLock: false
+                }
             },
             leg: {
                 key: '杜賓護腿β',
                 slotKeys: {
                     0: '達人珠'
-                },
-                isLock: false
+                }
             },
             charm: {
-                key: '攻擊護石 III',
-                isLock: false
+                key: '攻擊護石 III'
             }
         },
         {
@@ -187,49 +181,42 @@ export default {
                 slotKeys: {
                     0: '奪氣珠',
                     1: '奪氣珠'
-                },
-                isLock: false
+                }
             },
             helm: {
                 key: '龍王的獨眼α',
                 slotKeys: {
                     0: 'KO珠'
-                },
-                isLock: false
+                }
             },
             chest: {
                 key: '爆鎚龍鎧甲α',
                 slotKeys: {
                     0: '達人珠'
-                },
-                isLock: false
+                }
             },
             arm: {
                 key: '帝王腕甲β',
                 slotKeys: {
                     0: 'KO珠'
-                },
-                isLock: false
+                }
             },
             waist: {
                 key: '爆鎚龍腰甲β',
                 slotKeys: {
                     0: '無擊珠',
                     1: '達人珠'
-                },
-                isLock: false
+                }
             },
             leg: {
                 key: '死神護腿β',
                 slotKeys: {
                     0: '攻擊珠',
                     1: '攻擊珠'
-                },
-                isLock: false
+                }
             },
             charm: {
-                key: '匠之護石 III',
-                isLock: false
+                key: '匠之護石 III'
             }
         },
         {
@@ -240,37 +227,30 @@ export default {
                     1: '強化鑲嵌槽',
                     2: '強化鑲嵌槽'
                 },
-                slotKeys: null,
-                isLock: false
+                slotKeys: null
             },
             helm: {
                 key: '鋼龍強力β',
-                slotKeys: {},
-                isLock: false
+                slotKeys: {}
             },
             chest: {
                 key: '大馬士革鎧甲β',
-                slotKeys: {},
-                isLock: false
+                slotKeys: {}
             },
             arm: {
                 key: '烏爾德腕甲β',
-                slotKeys: {},
-                isLock: false
+                slotKeys: {}
             },
             waist: {
                 key: '麒麟腰環β',
-                slotKeys: {},
-                isLock: false
+                slotKeys: {}
             },
             leg: {
                 key: '燕尾蝶腳β',
-                slotKeys: {},
-                isLock: false
+                slotKeys: {}
             },
             charm: {
-                key: '匠之護石 III',
-                isLock: false
+                key: '匠之護石 III'
             }
         }
     ]

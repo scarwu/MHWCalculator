@@ -41,6 +41,7 @@ export default class Main extends Component {
     state = {
         skills: [],
         equips: Misc.deepCopy(Constant.defaultEquips),
+        equipsLock: Misc.deepCopy(Constant.defaultEquipsLock),
         equipSelector: {},
         isShowEquipSelector: false,
         isShowSkillSelector: false
@@ -82,6 +83,7 @@ export default class Main extends Component {
     handleEquipSearch = () => {
         let skills = this.state.skills;
         let equips = this.state.equips;
+        let equipsLock = this.state.equipsLock;
         let dataMap = {};
 
         skills.sort((a, b) => {
@@ -125,16 +127,18 @@ export default class Main extends Component {
             });
         });
 
+        console.log(equipsLock);
         console.log(dataMap);
 
         Object.keys(equips).map((equipType) => {
             let equip = equips[equipType];
+            let isLock = equipsLock[equipType];
 
             if (null === equip.key) {
                 return false;
             }
 
-            if (false === equip.isLock) {
+            if (false === isLock) {
                 return false;
             }
 
@@ -192,6 +196,16 @@ export default class Main extends Component {
         console.log(dataMap);
     };
 
+    handleEquipsLockToggle = (equipType) => {
+        let equipsLock = this.state.equipsLock;
+
+        equipsLock[equipType] = !equipsLock[equipType];
+
+        this.setState({
+            equipsLock: equipsLock
+        });
+    };
+
     handleSkillSelectorOpen = (data) => {
         this.setState({
             isShowSkillSelector: true
@@ -242,6 +256,7 @@ export default class Main extends Component {
 
     handleEquipSelectorPickup = (data) => {
         let equips = this.state.equips;
+        let equipsLock = this.state.equipsLock;
 
         if (undefined !== data.enhanceIndex) {
             if ('object' !== typeof equips.weapon.enhanceKeys
@@ -263,9 +278,10 @@ export default class Main extends Component {
             equips.weapon = {
                 key: data.equipKey,
                 enhanceKeys: {},
-                slotKeys: {},
-                isLock: false
+                slotKeys: {}
             };
+
+            equipsLock.weapon = false;
         } else if ('helm' === data.equipType
             || 'chest' === data.equipType
             || 'arm' === data.equipType
@@ -274,18 +290,21 @@ export default class Main extends Component {
 
             equips[data.equipType] = {
                 key: data.equipKey,
-                slotKeys: {},
-                isLock: false
+                slotKeys: {}
             };
+
+            equipsLock[data.equipType] = false;
         } else if ('charm' === data.equipType) {
             equips.charm = {
-                key: data.equipKey,
-                isLock: false
+                key: data.equipKey
             };
+
+            equipsLock.charm = false;
         }
 
         this.setState({
-            equips: equips
+            equips: equips,
+            equipsLock: equipsLock
         }, () => {
             this.refershUrlHash();
         });
@@ -428,6 +447,8 @@ export default class Main extends Component {
 
                         <div className="mhwc-list">
                             <EquipsDisplayer equips={this.state.equips}
+                                equipsLock={this.state.equipsLock}
+                                onToggleEquipsLock={this.handleEquipsLockToggle}
                                 onOpenSelector={this.handleEquipSelectorOpen}
                                 onPickup={this.handleEquipSelectorPickup} />
                         </div>

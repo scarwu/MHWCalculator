@@ -27,26 +27,23 @@ export default class EquipsDisplayer extends Component {
     // Default Props
     static defaultProps = {
         equips: Misc.deepCopy(Constant.defaultEquips),
+        equipsLock: Misc.deepCopy(Constant.defaultEquipsLock),
+        onToggleEquipsLock: (equipType) => {},
         onOpenSelector: (data) => {},
         onPickup: (data) => {}
     };
 
     // Initial State
     state = {
-        equips: Misc.deepCopy(Constant.defaultEquips)
+        equips: Misc.deepCopy(Constant.defaultEquips),
+        equipsLock: Misc.deepCopy(Constant.defaultEquipsLock)
     };
 
     /**
      * Handle Functions
      */
     handleEquipLockToggle = (equipType) => {
-        let equips = this.state.equips;
-
-        equips[equipType].isLock = !equips[equipType].isLock;
-
-        this.setState({
-            equips: equips
-        });
+        this.props.onToggleEquipsLock(equipType);
     };
 
     handleEquipSwitch = (data) => {
@@ -62,13 +59,15 @@ export default class EquipsDisplayer extends Component {
      */
     componentWillMount () {
         this.setState({
-            equips: this.props.equips
+            equips: this.props.equips,
+            equipsLock: this.props.equipsLock
         });
     }
 
     componentWillReceiveProps (nextProps) {
         this.setState({
-            equips: nextProps.equips
+            equips: nextProps.equips,
+            equipsLock: nextProps.equipsLock
         });
     }
 
@@ -97,6 +96,7 @@ export default class EquipsDisplayer extends Component {
 
     render () {
         let equips = this.state.equips;
+        let equipsLock = this.state.equipsLock;
         let ContentBlocks = [];
 
         // Weapon
@@ -119,7 +119,7 @@ export default class EquipsDisplayer extends Component {
                             <i className="fa fa-times"></i>
                         </a>
                         <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('weapon')}}>
-                            {equips.weapon.isLock ? (
+                            {equipsLock.weapon ? (
                                 <i className="fa fa-lock"></i>
                             ) : (
                                 <i className="fa fa-unlock-alt"></i>
@@ -342,7 +342,7 @@ export default class EquipsDisplayer extends Component {
                                 <i className="fa fa-times"></i>
                             </a>
                             <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle(equipType)}}>
-                                {equips[equipType].isLock ? (
+                                {equipsLock[equipType] ? (
                                     <i className="fa fa-lock"></i>
                                 ) : (
                                     <i className="fa fa-unlock-alt"></i>

@@ -187,8 +187,10 @@ export default class CharacterStatus extends Component {
 
         let noneElementAttackMutiple = null;
         let enableElement = null;
-        let attackMultiples = [];
-        let defenseMultiples = [];
+        let elementAttack = null;
+        let elementStatus = null;
+        let attackMultipleList = [];
+        let defenseMultipleList = [];
 
         for (let skillKey in allSkills) {
             let skill = DataSet.skillHelper.getInfo(skillKey);
@@ -255,12 +257,7 @@ export default class CharacterStatus extends Component {
                         break;
                     }
 
-                    status.element.attack.value += data.value;
-                    status.element.attack.value *= data.multiple;
-
-                    if (status.element.attack.value > status.element.attack.maxValue) {
-                        status.element.attack.value = status.element.attack.maxValue;
-                    }
+                    elementAttack = data;
 
                     break;
                 case 'elementStatus':
@@ -270,12 +267,7 @@ export default class CharacterStatus extends Component {
                         break;
                     }
 
-                    status.element.status.value += data.value;
-                    status.element.status.value *= data.multiple;
-
-                    if (status.element.status.value > status.element.status.maxValue) {
-                        status.element.status.value = status.element.status.maxValue;
-                    }
+                    elementStatus = data;
 
                     break;
                 case 'resistance':
@@ -297,7 +289,7 @@ export default class CharacterStatus extends Component {
 
                     break;
                 case 'attackMultiple':
-                    attackMultiples.push(data.value);
+                    attackMultipleList.push(data.value);
 
                     break;
                 case 'defenseMultiple':
@@ -307,7 +299,7 @@ export default class CharacterStatus extends Component {
                         break;
                     }
 
-                    defenseMultiples.push(data.value);
+                    defenseMultipleList.push(data.value);
 
                     break;
                 }
@@ -330,28 +322,51 @@ export default class CharacterStatus extends Component {
             status.attack = 0;
         }
 
-        if (null !== enableElement) {
-            if (null !== status.element.status) {
+        // Attack Element
+        if (null !== status.element.attack) {
+            if (null !== enableElement) {
                 status.element.attack.value *= enableElement.multiple;
-                status.element.attack.value = parseInt(Math.round(status.element.attack.value));
                 status.element.attack.isHidden = false;
             }
 
-            if (null !== status.element.status) {
-                status.element.status.value *= enableElement.multiple;
-                status.element.status.value = parseInt(Math.round(status.element.status.value));
-                status.element.status.isHidden = false;
+            if (null !== elementAttack) {
+                status.element.attack.value += elementAttack.value;
+                status.element.attack.value *= elementAttack.multiple;
+
+                if (status.element.attack.value > status.element.attack.maxValue) {
+                    status.element.attack.value = status.element.attack.maxValue;
+                }
             }
+
+            status.element.attack.value = parseInt(Math.round(status.element.attack.value));
         }
 
-        attackMultiples.map((multiple) => {
+        // Status Element
+        if (null !== status.element.status) {
+            if (null !== enableElement) {
+                status.element.status.value *= enableElement.multiple;
+                status.element.status.isHidden = false;
+            }
+
+            if (null !== elementStatus) {
+                status.element.status.value += elementStatus.value;
+                status.element.status.value *= elementStatus.multiple;
+
+                if (status.element.status.value > status.element.status.maxValue) {
+                    status.element.status.value = status.element.status.maxValue;
+                }
+            }
+
+            status.element.status.value = parseInt(Math.round(status.element.status.value));
+        }
+
+        attackMultipleList.map((multiple) => {
             status.attack *= multiple;
         });
 
-        defenseMultiples.map((multiple) => {
+        defenseMultipleList.map((multiple) => {
             status.defense *= multiple;
         });
-
 
         status.attack = parseInt(Math.round(status.attack));
         status.defense = parseInt(Math.round(status.defense));
