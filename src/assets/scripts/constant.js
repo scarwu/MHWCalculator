@@ -135,7 +135,7 @@ export default {
                 enhanceKeys: {
                     0: '賦予回復能力'
                 },
-                slotKeys: null
+                slotKeys: {}
             },
             helm: {
                 key: '龍王的獨眼α',
@@ -227,7 +227,7 @@ export default {
                     1: '強化鑲嵌槽',
                     2: '強化鑲嵌槽'
                 },
-                slotKeys: null
+                slotKeys: {}
             },
             helm: {
                 key: '鋼龍強力β',

@@ -60,8 +60,8 @@ export default class CharacterStatus extends Component {
 
     handleTuningChange = () => {
         let tuningRawAttack = parseInt(this.refs.tuningRawAttack.value, 10);
-        let tuningRawCriticalRate = parseFloat(this.refs.tuningRawCriticalRate.value);
-        let tuningRawCriticalMultiple = parseInt(this.refs.tuningRawCriticalMultiple.value, 10);
+        let tuningRawCriticalRate = parseFloat(this.refs.tuningRawCriticalRate.value, 10);
+        let tuningRawCriticalMultiple = parseFloat(this.refs.tuningRawCriticalMultiple.value);
         let tuningElementAttack = parseInt(this.refs.tuningElementAttack.value, 10);
 
         tuningRawAttack = !isNaN(tuningRawAttack) ? tuningRawAttack : 0;
