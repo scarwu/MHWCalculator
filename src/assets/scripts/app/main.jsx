@@ -52,7 +52,7 @@ export default class Main extends Component {
      */
     handleSkillLevelDown = (index) => {
         let skills = this.state.skills;
-        let skill = DataSet.skillHelper.getInfo(skills[index].key);
+        let skill = DataSet.skillHelper.getInfo(skills[index].name);
 
         if (1 === skills[index].level) {
             return false;
@@ -67,7 +67,7 @@ export default class Main extends Component {
 
     handleSkillLevelUp = (index) => {
         let skills = this.state.skills;
-        let skill = DataSet.skillHelper.getInfo(skills[index].key);
+        let skill = DataSet.skillHelper.getInfo(skills[index].name);
 
         if (skill.list.length === skills[index].level) {
             return false;
@@ -89,7 +89,7 @@ export default class Main extends Component {
         skills.sort((a, b) => {
             return b.level - a.level;
         }).map((data) => {
-            dataMap[data.key] = {
+            dataMap[data.name] = {
                 level: data.level,
                 equips: {
                     helm: {},
@@ -102,39 +102,39 @@ export default class Main extends Component {
                 }
             };
 
-            DataSet.armorHelper.hasSkill(data.key).getItems().map((equip) => {
+            DataSet.armorHelper.hasSkill(data.name).getItems().map((equip) => {
                 equip.skills.map((skill) => {
-                    if (skill.key !== data.key) {
+                    if (skill.name !== data.name) {
                         return false;
                     }
 
-                    dataMap[data.key].equips[equip.type][equip.name] = skill.level;
+                    dataMap[data.name].equips[equip.type][equip.name] = skill.level;
                 });
             });
 
-            DataSet.charmHelper.hasSkill(data.key).getItems().map((equip) => {
+            DataSet.charmHelper.hasSkill(data.name).getItems().map((equip) => {
                 equip.skills.map((skill) => {
-                    if (skill.key !== data.key) {
+                    if (skill.name !== data.name) {
                         return false;
                     }
 
-                    dataMap[data.key].equips.charm[equip.name] = skill.level;
+                    dataMap[data.name].equips.charm[equip.name] = skill.level;
                 });
             });
 
-            DataSet.jewelHelper.hasSkill(data.key).getItems().map((equip) => {
-                dataMap[data.key].equips.jewel[equip.name] = equip.skill.level;
+            DataSet.jewelHelper.hasSkill(data.name).getItems().map((equip) => {
+                dataMap[data.name].equips.jewel[equip.name] = equip.skill.level;
             });
         });
 
         console.log(equipsLock);
         console.log(dataMap);
 
-        Object.keys(equips).map((equipType) => {
+        Object.names(equips).map((equipType) => {
             let equip = equips[equipType];
             let isLock = equipsLock[equipType];
 
-            if (null === equip.key) {
+            if (null === equip.name) {
                 return false;
             }
 
@@ -147,14 +147,14 @@ export default class Main extends Component {
             if ('weapon' === equipType) {
                 equipInfo = DataSet.weaponHelper.getApplyedInfo(equips.waepon);
                 equipInfo.skills.map((skill) => {
-                    if (undefined === dataMap[skill.key]) {
+                    if (undefined === dataMap[skill.name]) {
                         return false;
                     }
 
-                    dataMap[skill.key].level -= skill.level;
+                    dataMap[skill.name].level -= skill.level;
 
-                    if (0 >= dataMap[skill.key].level) {
-                        delete dataMap[skill.key];
+                    if (0 >= dataMap[skill.name].level) {
+                        delete dataMap[skill.name];
                     }
                 });
             } else if ('helm' === equipType
@@ -165,30 +165,30 @@ export default class Main extends Component {
 
                 equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
 
-                Object.keys(dataMap).map((skillKey) => {
-                    delete dataMap[skillKey].equips[equipType];
+                Object.names(dataMap).map((skillName) => {
+                    delete dataMap[skillName].equips[equipType];
                 });
 
                 equipInfo.skills.map((skill) => {
-                    if (undefined === dataMap[skill.key]) {
+                    if (undefined === dataMap[skill.name]) {
                         return false;
                     }
 
-                    dataMap[skill.key].level -= skill.level;
+                    dataMap[skill.name].level -= skill.level;
 
-                    if (0 >= dataMap[skill.key].level) {
-                        delete dataMap[skill.key];
+                    if (0 >= dataMap[skill.name].level) {
+                        delete dataMap[skill.name];
                     }
                 });
             } else if ('charm' === equipType) {
                 equipInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
 
-                Object.keys(dataMap).map((skillKey) => {
-                    delete dataMap[skillKey][equipType];
+                Object.names(dataMap).map((skillName) => {
+                    delete dataMap[skillName][equipType];
                 });
 
                 equipInfo.skills.map((skill) => {
-                    delete dataMap[skill.key].equips[equipType];
+                    delete dataMap[skill.name].equips[equipType];
                 });
             }
         });
@@ -222,7 +222,7 @@ export default class Main extends Component {
         let skills = this.state.skills;
 
         skills.push({
-            key: data.skillKey,
+            name: data.skillName,
             level: 1
         });
 
@@ -259,26 +259,26 @@ export default class Main extends Component {
         let equipsLock = this.state.equipsLock;
 
         if (undefined !== data.enhanceIndex) {
-            if ('object' !== typeof equips.weapon.enhanceKeys
-                || null === equips.weapon.enhanceKeys) {
+            if ('object' !== typeof equips.weapon.enhanceNames
+                || null === equips.weapon.enhanceNames) {
 
-                equips.weapon.enhanceKeys = {};
+                equips.weapon.enhanceNames = {};
             }
 
-            equips.weapon.enhanceKeys[data.enhanceIndex] = data.enhanceKey;
+            equips.weapon.enhanceNames[data.enhanceIndex] = data.enhanceName;
         } else if (undefined !== data.slotIndex) {
-            if ('object' !== typeof equips[data.equipType].slotKeys
-                || null === equips.weapon.slotKeys) {
+            if ('object' !== typeof equips[data.equipType].slotNames
+                || null === equips.weapon.slotNames) {
 
-                equips[data.equipType].slotKeys = {};
+                equips[data.equipType].slotNames = {};
             }
 
-            equips[data.equipType].slotKeys[data.slotIndex] = data.slotKey;
+            equips[data.equipType].slotNames[data.slotIndex] = data.slotName;
         } else if ('weapon' === data.equipType) {
             equips.weapon = {
-                key: data.equipKey,
-                enhanceKeys: {},
-                slotKeys: {}
+                name: data.equipName,
+                enhanceNames: {},
+                slotNames: {}
             };
 
             equipsLock.weapon = false;
@@ -289,14 +289,14 @@ export default class Main extends Component {
             || 'leg' === data.equipType) {
 
             equips[data.equipType] = {
-                key: data.equipKey,
-                slotKeys: {}
+                name: data.equipName,
+                slotNames: {}
             };
 
             equipsLock[data.equipType] = false;
         } else if ('charm' === data.equipType) {
             equips.charm = {
-                key: data.equipKey
+                name: data.equipName
             };
 
             equipsLock.charm = false;
@@ -330,27 +330,27 @@ export default class Main extends Component {
             equips: equips,
             skills: [
                 {
-                    key: '攻擊',
+                    name: '攻擊',
                     level: 7
                 },
                 {
-                    key: '看破',
+                    name: '看破',
                     level: 4
                 },
                 {
-                    key: '弱點特效',
+                    name: '弱點特效',
                     level: 3
                 },
                 {
-                    key: '減輕膽怯',
+                    name: '減輕膽怯',
                     level: 2
                 },
                 {
-                    key: '超會心',
+                    name: '超會心',
                     level: 1
                 },
                 {
-                    key: '無屬性強化',
+                    name: '無屬性強化',
                     level: 1
                 }
             ]
@@ -366,7 +366,7 @@ export default class Main extends Component {
         let skills = this.state.skills;
 
         return skills.map((data, index) => {
-            let skill = DataSet.skillHelper.getInfo(data.key);
+            let skill = DataSet.skillHelper.getInfo(data.name);
 
             return (
                 <div key={skill.name} className="row mhwc-item">

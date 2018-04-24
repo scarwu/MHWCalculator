@@ -45,9 +45,9 @@ export default class SkillItemSelector extends Component {
         this.props.onClose();
     };
 
-    handleItemPickup = (itemKey) => {
+    handleItemPickup = (itemName) => {
         this.props.onPickup({
-            skillKey: itemKey
+            skillName: itemName
         });
         this.props.onClose();
     };
@@ -72,12 +72,12 @@ export default class SkillItemSelector extends Component {
         let list = [];
 
         data = data.map((skill) => {
-            return skill.key;
+            return skill.name;
         });
 
-        DataSet.skillHelper.getKeys().sort().map((skillKey) => {
+        DataSet.skillHelper.getNames().sort().map((skillName) => {
 
-            let skill = DataSet.skillHelper.getInfo(skillKey);
+            let skill = DataSet.skillHelper.getInfo(skillName);
 
             // Skip Selected Skills
             if (-1 !== data.indexOf(skill.name)) {
@@ -111,7 +111,7 @@ export default class SkillItemSelector extends Component {
                 <tbody>
                     {this.state.list.map((data, index) => {
 
-                        // Search Keyword
+                        // Search Nameword
                         if (null !== segment
                             && !data.name.toLowerCase().match(segment.toLowerCase())) {
 

@@ -58,32 +58,32 @@ export default {
     },
     defaultEquips: {
         weapon: {
-            key: null,
-            enhanceKeys: {},
-            slotKeys: {}
+            name: null,
+            enhanceNames: {},
+            slotNames: {}
         },
         helm: {
-            key: null,
-            slotKeys: {}
+            name: null,
+            slotNames: {}
         },
         chest: {
-            key: null,
-            slotKeys: {}
+            name: null,
+            slotNames: {}
         },
         arm: {
-            key: null,
-            slotKeys: {}
+            name: null,
+            slotNames: {}
         },
         waist: {
-            key: null,
-            slotKeys: {}
+            name: null,
+            slotNames: {}
         },
         leg: {
-            key: null,
-            slotKeys: {}
+            name: null,
+            slotNames: {}
         },
         charm: {
-            key: null
+            name: null
         }
     },
     defaultEquipsLock: {
@@ -137,126 +137,126 @@ export default {
     testEquipsSetting: [
         {
             weapon: {
-                key: '罪【真】',
-                enhanceKeys: {
+                name: '罪【真】',
+                enhanceNames: {
                     0: '賦予回復能力'
                 },
-                slotKeys: {}
+                slotNames: {}
             },
             helm: {
-                key: '龍王的獨眼α',
-                slotKeys: {
+                name: '龍王的獨眼α',
+                slotNames: {
                     0: '耐衝珠'
                 }
             },
             chest: {
-                key: '杜賓鎧甲β',
-                slotKeys: {
+                name: '杜賓鎧甲β',
+                slotNames: {
                     0: '痛擊珠'
                 }
             },
             arm: {
-                key: '異種大型鋼爪α',
-                slotKeys: {
+                name: '異種大型鋼爪α',
+                slotNames: {
                     0: '達人珠'
                 }
             },
             waist: {
-                key: '慘爪龍腰甲β',
-                slotKeys: {
+                name: '慘爪龍腰甲β',
+                slotNames: {
                     0: '無擊珠'
                 }
             },
             leg: {
-                key: '杜賓護腿β',
-                slotKeys: {
+                name: '杜賓護腿β',
+                slotNames: {
                     0: '達人珠'
                 }
             },
             charm: {
-                key: '攻擊護石 III'
+                name: '攻擊護石 III'
             }
         },
         {
             weapon: {
-                key: '龍熱機關式【鋼翼】改',
-                enhanceKeys: {
+                name: '龍熱機關式【鋼翼】改',
+                enhanceNames: {
                     0: '賦予回復能力',
                     1: '強化鑲嵌槽'
                 },
-                slotKeys: {
+                slotNames: {
                     0: '奪氣珠',
                     1: '奪氣珠'
                 }
             },
             helm: {
-                key: '龍王的獨眼α',
-                slotKeys: {
+                name: '龍王的獨眼α',
+                slotNames: {
                     0: 'KO珠'
                 }
             },
             chest: {
-                key: '爆鎚龍鎧甲α',
-                slotKeys: {
+                name: '爆鎚龍鎧甲α',
+                slotNames: {
                     0: '達人珠'
                 }
             },
             arm: {
-                key: '帝王腕甲β',
-                slotKeys: {
+                name: '帝王腕甲β',
+                slotNames: {
                     0: 'KO珠'
                 }
             },
             waist: {
-                key: '爆鎚龍腰甲β',
-                slotKeys: {
+                name: '爆鎚龍腰甲β',
+                slotNames: {
                     0: '無擊珠',
                     1: '達人珠'
                 }
             },
             leg: {
-                key: '死神護腿β',
-                slotKeys: {
+                name: '死神護腿β',
+                slotNames: {
                     0: '攻擊珠',
                     1: '攻擊珠'
                 }
             },
             charm: {
-                key: '匠之護石 III'
+                name: '匠之護石 III'
             }
         },
         {
             weapon: {
-                key: '搔鳥尖槍 III',
-                enhanceKeys: {
+                name: '搔鳥尖槍 III',
+                enhanceNames: {
                     0: '強化鑲嵌槽',
                     1: '強化鑲嵌槽',
                     2: '強化鑲嵌槽'
                 },
-                slotKeys: {}
+                slotNames: {}
             },
             helm: {
-                key: '鋼龍強力β',
-                slotKeys: {}
+                name: '鋼龍強力β',
+                slotNames: {}
             },
             chest: {
-                key: '大馬士革鎧甲β',
-                slotKeys: {}
+                name: '大馬士革鎧甲β',
+                slotNames: {}
             },
             arm: {
-                key: '烏爾德腕甲β',
-                slotKeys: {}
+                name: '烏爾德腕甲β',
+                slotNames: {}
             },
             waist: {
-                key: '麒麟腰環β',
-                slotKeys: {}
+                name: '麒麟腰環β',
+                slotNames: {}
             },
             leg: {
-                key: '燕尾蝶腳β',
-                slotKeys: {}
+                name: '燕尾蝶腳β',
+                slotNames: {}
             },
             charm: {
-                key: '匠之護石 III'
+                name: '匠之護石 III'
             }
         }
     ]

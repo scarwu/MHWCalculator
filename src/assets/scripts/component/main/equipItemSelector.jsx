@@ -45,15 +45,15 @@ export default class EquipItemSelector extends Component {
         this.props.onClose();
     };
 
-    handleItemPickup = (itemKey) => {
+    handleItemPickup = (itemName) => {
         let data = this.props.data;
 
         if (undefined !== data.enhanceIndex) {
-            data.enhanceKey = itemKey;
+            data.enhanceName = itemName;
         } else if (undefined !== data.slotIndex) {
-            data.slotKey = itemKey;
+            data.slotName = itemName;
         } else {
-            data.equipKey = itemKey;
+            data.equipName = itemName;
         }
 
         this.props.onPickup(data);
@@ -193,7 +193,7 @@ export default class EquipItemSelector extends Component {
                     <tbody>
                         {this.state.list.map((data, index) => {
 
-                            // Search Keyword
+                            // Search Nameword
                             if (null !== segment
                                 && !data.name.toLowerCase().match(segment.toLowerCase())) {
 
@@ -290,7 +290,7 @@ export default class EquipItemSelector extends Component {
                     <tbody>
                         {this.state.list.map((data, index) => {
 
-                            // Search Keyword
+                            // Search Nameword
                             if (null !== segment
                                 && !data.name.toLowerCase().match(segment.toLowerCase())) {
 
@@ -317,14 +317,14 @@ export default class EquipItemSelector extends Component {
                                     </td>
                                     <td>
                                         {null !== data.set ? (
-                                            <span>{data.set.key}</span>
+                                            <span>{data.set.name}</span>
                                         ) : false}
                                     </td>
                                     <td>
                                         {data.skills.map((data, index) => {
                                             return (
                                                 <div key={index}>
-                                                    <span>{data.key} Lv.{data.level}</span>
+                                                    <span>{data.name} Lv.{data.level}</span>
                                                 </div>
                                             );
                                         })}
@@ -356,7 +356,7 @@ export default class EquipItemSelector extends Component {
                     <tbody>
                         {this.state.list.map((data, index) => {
 
-                            // Search Keyword
+                            // Search Nameword
                             if (null !== segment
                                 && !data.name.toLowerCase().match(segment.toLowerCase())) {
 
@@ -371,7 +371,7 @@ export default class EquipItemSelector extends Component {
                                         {data.skills.map((data, index) => {
                                             return (
                                                 <div key={index}>
-                                                    <span>{data.key} Lv.{data.level}</span>
+                                                    <span>{data.name} Lv.{data.level}</span>
                                                 </div>
                                             );
                                         })}
@@ -404,7 +404,7 @@ export default class EquipItemSelector extends Component {
                     <tbody>
                         {this.state.list.map((data, index) => {
 
-                            // Search Keyword
+                            // Search Nameword
                             if (null !== segment
                                 && !data.name.toLowerCase().match(segment.toLowerCase())) {
 
@@ -417,7 +417,7 @@ export default class EquipItemSelector extends Component {
                                     <td><span>{data.rare}</span></td>
                                     <td><span>{data.size}</span></td>
                                     <td>
-                                        <span>{data.skill.key} Lv.{data.skill.level}</span>
+                                        <span>{data.skill.name} Lv.{data.skill.level}</span>
                                     </td>
                                     <td>
                                         <a className="mhwc-icon"
@@ -446,7 +446,7 @@ export default class EquipItemSelector extends Component {
                     <tbody>
                         {this.state.list.map((data, index) => {
 
-                            // Search Keyword
+                            // Search Nameword
                             if (null !== segment
                                 && !data.name.toLowerCase().match(segment.toLowerCase())) {
 

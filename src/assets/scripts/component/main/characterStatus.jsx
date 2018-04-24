@@ -46,10 +46,10 @@ export default class CharacterStatus extends Component {
     /**
      * Handle Functions
      */
-    handlePassiveSkillToggle = (skillKey) => {
+    handlePassiveSkillToggle = (skillName) => {
         let passiveSkills = this.state.passiveSkills;
 
-        passiveSkills[skillKey].isActive = !passiveSkills[skillKey].isActive;
+        passiveSkills[skillName].isActive = !passiveSkills[skillName].isActive;
 
         this.setState({
             passiveSkills: passiveSkills,
@@ -91,15 +91,15 @@ export default class CharacterStatus extends Component {
 
         let info = {};
 
-        info.weapon = (null !== equips.weapon.key)
+        info.weapon = (null !== equips.weapon.name)
             ? DataSet.weaponHelper.getApplyedInfo(equips.weapon) : null;
 
         ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
-            info[equipType] = (null !== equips[equipType].key)
+            info[equipType] = (null !== equips[equipType].name)
                 ? DataSet.armorHelper.getApplyedInfo(equips[equipType]) : null;
         });
 
-        info.charm = (null !== equips.charm.key)
+        info.charm = (null !== equips.charm.name)
             ? DataSet.charmHelper.getApplyedInfo(equips.charm) : null;
 
         if (null !== info.weapon) {
@@ -131,13 +131,13 @@ export default class CharacterStatus extends Component {
             });
 
             if (null !== info[equipType].set) {
-                let setKey = info[equipType].set.key;
+                let setName = info[equipType].set.name;
 
-                if (undefined === setMapping[setKey]) {
-                    setMapping[setKey] = 0;
+                if (undefined === setMapping[setName]) {
+                    setMapping[setName] = 0;
                 }
 
-                setMapping[setKey]++;
+                setMapping[setName]++;
             }
         });
 
@@ -150,38 +150,38 @@ export default class CharacterStatus extends Component {
             }
 
             info[equipType].skills.map((skill) => {
-                if (undefined === allSkills[skill.key]) {
-                    allSkills[skill.key] = 0;
+                if (undefined === allSkills[skill.name]) {
+                    allSkills[skill.name] = 0;
                 }
 
-                allSkills[skill.key] += skill.level;
+                allSkills[skill.name] += skill.level;
             });
         });
 
-        Object.keys(setMapping).map((setKey) => {
-            let setCount = setMapping[setKey];
-            let setInfo = DataSet.setHelper.getInfo(setKey);
+        Object.keys(setMapping).map((setName) => {
+            let setCount = setMapping[setName];
+            let setInfo = DataSet.setHelper.getInfo(setName);
 
             setInfo.skills.map((skill) => {
                 if (skill.require > setCount) {
                     return false;
                 }
 
-                let skillInfo = DataSet.skillHelper.getInfo(skill.key);
+                let skillInfo = DataSet.skillHelper.getInfo(skill.name);
 
                 status.sets.push({
-                    name: `${setKey} (${skill.require})`,
+                    name: `${setName} (${skill.require})`,
                     skill: {
                         name: skillInfo.name,
                         level: 1
                     }
                 });
 
-                if (undefined === allSkills[skill.key]) {
-                    allSkills[skill.key] = 0;
+                if (undefined === allSkills[skill.name]) {
+                    allSkills[skill.name] = 0;
                 }
 
-                allSkills[skill.key] += 1;
+                allSkills[skill.name] += 1;
             });
         });
 
@@ -192,9 +192,9 @@ export default class CharacterStatus extends Component {
         let attackMultipleList = [];
         let defenseMultipleList = [];
 
-        for (let skillKey in allSkills) {
-            let skill = DataSet.skillHelper.getInfo(skillKey);
-            let level = allSkills[skillKey];
+        for (let skillName in allSkills) {
+            let skill = DataSet.skillHelper.getInfo(skillName);
+            let level = allSkills[skillName];
 
             // Fix Skill Level Overflow
             if (level > skill.list.length) {
@@ -444,7 +444,7 @@ export default class CharacterStatus extends Component {
         let elementExpectedValue = 0;
         let expectedValue = 0;
 
-        if (null !== equips.weapon.key) {
+        if (null !== equips.weapon.name) {
             let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
             let weaponMultiple = Constant.weaponMultiple[weaponInfo.type];
             let sharpnessMultiple = this.getSharpnessMultiple(status.sharpness);
@@ -518,9 +518,9 @@ export default class CharacterStatus extends Component {
         let currentStep = null;
         let currentValue = 0;
 
-        for (let stepKey in data.steps) {
-            currentStep = stepKey;
-            currentValue += data.steps[stepKey];
+        for (let stepName in data.steps) {
+            currentStep = stepName;
+            currentValue += data.steps[stepName];
 
             if (currentValue >= data.value) {
                 break;

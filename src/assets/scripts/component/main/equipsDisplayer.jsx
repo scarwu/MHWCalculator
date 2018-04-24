@@ -102,10 +102,10 @@ export default class EquipsDisplayer extends Component {
         // Weapon
         let weaponSelectorData = {
             equipType: 'weapon',
-            equipKey: null
+            equipName: null
         };
 
-        if (null !== equips.weapon.key) {
+        if (null !== equips.weapon.name) {
             let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
 
             ContentBlocks.push((
@@ -133,24 +133,24 @@ export default class EquipsDisplayer extends Component {
                                 let enhanceSelectorData = {
                                     equipType: 'weapon',
                                     enhanceIndex: index,
-                                    enhanceKey: null
+                                    enhanceName: null
                                 };
 
                                 return (
-                                    <div key={data.key + '_' + index} className="row mhwc-enhance">
+                                    <div key={data.name + '_' + index} className="row mhwc-enhance">
                                         <div className="col-4 mhwc-name">
                                             <span>強化 {index + 1}</span>
                                         </div>
                                         <div className="col-8 mhwc-value">
                                             <a onClick={() => {this.handleEquipSwitch(enhanceSelectorData)}}>
-                                                {null !== data.key ? (
-                                                    <span>{data.key}</span>
+                                                {null !== data.name ? (
+                                                    <span>{data.name}</span>
                                                 ) : (
-                                                    <span>***</span>
+                                                    <span>---</span>
                                                 )}
                                             </a>
 
-                                            {null !== data.key ? (
+                                            {null !== data.name ? (
                                                 <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(enhanceSelectorData)}}>
                                                     <i className="fa fa-times"></i>
                                                 </a>
@@ -169,24 +169,24 @@ export default class EquipsDisplayer extends Component {
                                     equipType: 'weapon',
                                     slotSize: data.size,
                                     slotIndex: index,
-                                    slotKey: null
+                                    slotName: null
                                 };
 
                                 return (
-                                    <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                    <div key={data.name + '_' + index} className="row mhwc-jewel">
                                         <div className="col-4 mhwc-name">
                                             <span>插槽 {index + 1} - [{data.size}]</span>
                                         </div>
                                         <div className="col-8 mhwc-value">
                                             <a onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}>
-                                                {null !== data.key ? (
-                                                    <span>[{data.size}] {data.key}</span>
+                                                {null !== data.name ? (
+                                                    <span>[{data.size}] {data.name}</span>
                                                 ) : (
-                                                    <span>***</span>
+                                                    <span>---</span>
                                                 )}
                                             </a>
 
-                                            {null !== data.key ? (
+                                            {null !== data.name ? (
                                                 <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(jewelSelectorData)}}>
                                                     <i className="fa fa-times"></i>
                                                 </a>
@@ -294,9 +294,9 @@ export default class EquipsDisplayer extends Component {
                                     return b.level - a.level;
                                 }).map((data) => {
                                     return (
-                                        <div key={data.key} className="row mhwc-skill">
+                                        <div key={data.name} className="row mhwc-skill">
                                             <div className="col-12 mhwc-name">
-                                                <span>{data.key} Lv.{data.level}</span>
+                                                <span>{data.name} Lv.{data.level}</span>
                                             </div>
                                             <div className="col-12 mhwc-value">
                                                 <span>{data.description}</span>
@@ -314,7 +314,7 @@ export default class EquipsDisplayer extends Component {
                 <div key="weapon" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}>
-                            <span>{Lang['weapon']} - ***</span>
+                            <span>{Lang['weapon']} ---</span>
                         </a>
                     </div>
                 </div>
@@ -325,10 +325,10 @@ export default class EquipsDisplayer extends Component {
         ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
             let equipSelectorData = {
                 equipType: equipType,
-                equipKey: null
+                equipName: null
             };
 
-            if (null !== equips[equipType].key) {
+            if (null !== equips[equipType].name) {
                 let equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
 
                 ContentBlocks.push((
@@ -357,24 +357,24 @@ export default class EquipsDisplayer extends Component {
                                         equipType: equipType,
                                         slotSize: data.size,
                                         slotIndex: index,
-                                        slotKey: null
+                                        slotName: null
                                     };
 
                                     return (
-                                        <div key={data.key + '_' + index} className="row mhwc-jewel">
+                                        <div key={data.name + '_' + index} className="row mhwc-jewel">
                                             <div className="col-4 mhwc-name">
                                                 <span>插槽 {index + 1} - [{data.size}]</span>
                                             </div>
                                             <div className="col-8 mhwc-value">
                                                 <a onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}>
-                                                    {null !== data.key ? (
-                                                        <span>[{data.size}] {data.key}</span>
+                                                    {null !== data.name ? (
+                                                        <span>[{data.size}] {data.name}</span>
                                                     ) : (
-                                                        <span>***</span>
+                                                        <span>---</span>
                                                     )}
                                                 </a>
 
-                                                {null !== data.key ? (
+                                                {null !== data.name ? (
                                                     <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(jewelSelectorData)}}>
                                                         <i className="fa fa-times"></i>
                                                     </a>
@@ -422,7 +422,7 @@ export default class EquipsDisplayer extends Component {
                                         <span>套裝</span>
                                     </div>
                                     <div className="col-8 mhwc-value">
-                                        <span>{equipInfo.set.key}</span>
+                                        <span>{equipInfo.set.name}</span>
                                     </div>
                                 </div>
                             </div>
@@ -438,9 +438,9 @@ export default class EquipsDisplayer extends Component {
                                         return b.level - a.level;
                                     }).map((data) => {
                                         return (
-                                            <div key={data.key} className="row mhwc-skill">
+                                            <div key={data.name} className="row mhwc-skill">
                                                 <div className="col-12 mhwc-name">
-                                                    <span>{data.key} Lv.{data.level}</span>
+                                                    <span>{data.name} Lv.{data.level}</span>
                                                 </div>
                                                 <div className="col-12 mhwc-value">
                                                     <span>{data.description}</span>
@@ -458,7 +458,7 @@ export default class EquipsDisplayer extends Component {
                     <div key={'equip_' + equipType} className="row mhwc-equip">
                         <div className="col-12 mhwc-name">
                             <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
-                                <span>{Lang[equipType]} - ***</span>
+                                <span>{Lang[equipType]} ---</span>
                             </a>
                         </div>
                     </div>
@@ -469,10 +469,10 @@ export default class EquipsDisplayer extends Component {
         // Charm
         let charmSelectorData = {
             equipType: 'charm',
-            equipKey: null
+            equipName: null
         };
 
-        if (null !== equips.charm.key) {
+        if (null !== equips.charm.name) {
             let charmInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
 
             ContentBlocks.push((
@@ -503,9 +503,9 @@ export default class EquipsDisplayer extends Component {
                                 return b.level - a.level;
                             }).map((data) => {
                                 return (
-                                    <div key={data.key} className="row mhwc-skill">
+                                    <div key={data.name} className="row mhwc-skill">
                                         <div className="col-12 mhwc-name">
-                                            <span>{data.key} Lv.{data.level}</span>
+                                            <span>{data.name} Lv.{data.level}</span>
                                         </div>
                                         <div className="col-12 mhwc-value">
                                             <span>{data.description}</span>
@@ -522,7 +522,7 @@ export default class EquipsDisplayer extends Component {
                 <div key="charm" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a onClick={() => {this.handleEquipSwitch(charmSelectorData)}}>
-                            <span>{Lang['charm']} - ***</span>
+                            <span>{Lang['charm']} ---</span>
                         </a>
                     </div>
                 </div>

@@ -34,17 +34,17 @@ class SetHelper {
         });
 
         // Filter Conditional
-        this.filterSkillKey = null;
+        this.filterSkillName = null;
     }
 
-    getKeys = () => {
+    getNames = () => {
         return Object.keys(this.mapping);
     };
 
     getItems = () => {
         return Object.values(this.mapping).filter((data) => {
-            if (null !== this.filterSkillKey) {
-                if (this.filterSkillKey !== data.skill.key) {
+            if (null !== this.filterSkillName) {
+                if (this.filterSkillName !== data.skill.name) {
                     return false;
                 }
             }
@@ -53,13 +53,13 @@ class SetHelper {
         });
     };
 
-    getInfo = (key) => {
-        return undefined !== this.mapping[key]
-            ? JSON.parse(JSON.stringify(this.mapping[key])) : null;
+    getInfo = (name) => {
+        return undefined !== this.mapping[name]
+            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
     };
 
-    hasSkill = (key) => {
-        this.filterSkillKey = key;
+    hasSkill = (name) => {
+        this.filterSkillName = name;
 
         return this;
     };
@@ -78,17 +78,17 @@ class EnhanceHelper {
         });
 
         // Filter Conditional
-        this.filterSkillKey = null;
+        this.filterSkillName = null;
     }
 
-    getKeys = () => {
+    getNames = () => {
         return Object.keys(this.mapping);
     };
 
     getItems = () => {
         return Object.values(this.mapping).filter((data) => {
-            if (null !== this.filterSkillKey) {
-                if (this.filterSkillKey !== data.skill.key) {
+            if (null !== this.filterSkillName) {
+                if (this.filterSkillName !== data.skill.name) {
                     return false;
                 }
             }
@@ -97,13 +97,13 @@ class EnhanceHelper {
         });
     };
 
-    getInfo = (key) => {
-        return undefined !== this.mapping[key]
-            ? JSON.parse(JSON.stringify(this.mapping[key])) : null;
+    getInfo = (name) => {
+        return undefined !== this.mapping[name]
+            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
     };
 
-    hasSkill = (key) => {
-        this.filterSkillKey = key;
+    hasSkill = (name) => {
+        this.filterSkillName = name;
 
         return this;
     };
@@ -161,7 +161,7 @@ class WeaponHelper {
         this.filterSlotCount = null;
     }
 
-    getKeys = () => {
+    getNames = () => {
         return Object.keys(this.mapping);
     };
 
@@ -183,14 +183,14 @@ class WeaponHelper {
         });
     };
 
-    getInfo = (key) => {
-        return (undefined !== this.mapping[key])
-            ? JSON.parse(JSON.stringify(this.mapping[key])) : null;
+    getInfo = (name) => {
+        return (undefined !== this.mapping[name])
+            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
     };
 
     // Applyed Info
     getApplyedInfo = (extend) => {
-        let info = this.getInfo(extend.key);
+        let info = this.getInfo(extend.name);
 
         if (null !== info.element.attack) {
             info.element.attack.value = info.element.attack.minValue;
@@ -214,33 +214,33 @@ class WeaponHelper {
         }
 
         enhanceTimes.map((data, index) => {
-            let enhanceKey = null;
+            let enhanceName = null;
 
-            if (null !== extend.enhanceKeys
-                && 'string' === typeof extend.enhanceKeys[index]) {
+            if (null !== extend.enhanceNames
+                && 'string' === typeof extend.enhanceNames[index]) {
 
-                enhanceKey = extend.enhanceKeys[index];
+                enhanceName = extend.enhanceNames[index];
             }
 
             // Update Info
             info.enhances.push({
-                key: enhanceKey
+                name: enhanceName
             });
 
-            if (null === enhanceKey) {
+            if (null === enhanceName) {
                 return false;
             }
 
-            if (undefined === enhanceLevelMapping[enhanceKey]) {
-                enhanceLevelMapping[enhanceKey] = 0;
+            if (undefined === enhanceLevelMapping[enhanceName]) {
+                enhanceLevelMapping[enhanceName] = 0;
             }
 
-            enhanceLevelMapping[enhanceKey] += 1;
+            enhanceLevelMapping[enhanceName] += 1;
         });
 
-        Object.keys(enhanceLevelMapping).map((enhanceKey) => {
-            let enhanceLevel = enhanceLevelMapping[enhanceKey];
-            let enhanceInfo = enhanceHelper.getInfo(enhanceKey);
+        Object.keys(enhanceLevelMapping).map((enhanceName) => {
+            let enhanceLevel = enhanceLevelMapping[enhanceName];
+            let enhanceInfo = enhanceHelper.getInfo(enhanceName);
 
             if (null === enhanceInfo.list[enhanceLevel - 1].reaction) {
                 return false;
@@ -277,42 +277,41 @@ class WeaponHelper {
         let skillLevelMapping = {};
 
         info.slots.map((data, index) => {
-            let jewelKey = null;
+            let jewelName = null;
             let jewelInfo = null;
-            let skillKey = null;
+            let skillName = null;
 
+            if (null !== extend.slotNames
+                && 'string' === typeof extend.slotNames[index]) {
 
-            if (null !== extend.slotKeys
-                && 'string' === typeof extend.slotKeys[index]) {
-
-                jewelKey = extend.slotKeys[index];
-                jewelInfo = jewelHelper.getInfo(jewelKey);
-                skillKey = jewelInfo.skill.key;
+                jewelName = extend.slotNames[index];
+                jewelInfo = jewelHelper.getInfo(jewelName);
+                skillName = jewelInfo.skill.name;
             }
 
             // Update Info
-            info.slots[index].key = jewelKey;
+            info.slots[index].name = jewelName;
 
-            if (null === skillKey) {
+            if (null === skillName) {
                 return false;
             }
 
-            if (undefined === skillLevelMapping[skillKey]) {
-                skillLevelMapping[skillKey] = 0;
+            if (undefined === skillLevelMapping[skillName]) {
+                skillLevelMapping[skillName] = 0;
             }
 
-            skillLevelMapping[skillKey] += jewelInfo.skill.level;
+            skillLevelMapping[skillName] += jewelInfo.skill.level;
         });
 
         // Reset Skill
         info.skills = [];
 
-        Object.keys(skillLevelMapping).map((skillKey) => {
-            let skillLevel = skillLevelMapping[skillKey];
-            let skillInfo = skillHelper.getInfo(skillKey);
+        Object.keys(skillLevelMapping).map((skillName) => {
+            let skillLevel = skillLevelMapping[skillName];
+            let skillInfo = skillHelper.getInfo(skillName);
 
             info.skills.push({
-                key: skillKey,
+                name: skillName,
                 level: skillLevel,
                 description: skillInfo.list[skillLevel - 1].description
             });
@@ -419,10 +418,10 @@ class ArmorHelper {
         this.filterType = null;
         this.filterRare = null;
         this.filterSet = null;
-        this.filterSkillKey = null;
+        this.filterSkillName = null;
     }
 
-    getKeys = () => {
+    getNames = () => {
         return Object.keys(this.mapping);
     };
 
@@ -448,9 +447,9 @@ class ArmorHelper {
 
             let isSkip = true;
 
-            if (null !== this.filterSkillKey) {
+            if (null !== this.filterSkillName) {
                 for (let index in data.skills) {
-                    if (this.filterSkillKey !== data.skills[index].key) {
+                    if (this.filterSkillName !== data.skills[index].name) {
                         continue;
                     }
 
@@ -466,64 +465,64 @@ class ArmorHelper {
         });
     };
 
-    getInfo = (key) => {
-        return undefined !== this.mapping[key]
-            ? JSON.parse(JSON.stringify(this.mapping[key])) : null;
+    getInfo = (name) => {
+        return undefined !== this.mapping[name]
+            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
     };
 
     // Applyed Info
     getApplyedInfo = (extend) => {
-        let info = this.getInfo(extend.key);
+        let info = this.getInfo(extend.name);
 
         // Handler Skill & Slot
         let skillLevelMapping = {};
 
         info.skills.map((data, index) => {
-            let skillKey = data.key;
+            let skillName = data.name;
 
-            if (undefined === skillLevelMapping[skillKey]) {
-                skillLevelMapping[skillKey] = 0;
+            if (undefined === skillLevelMapping[skillName]) {
+                skillLevelMapping[skillName] = 0;
             }
 
-            skillLevelMapping[skillKey] += data.level;
+            skillLevelMapping[skillName] += data.level;
         });
 
         info.slots.map((data, index) => {
-            let jewelKey = null;
+            let jewelName = null;
             let jewelInfo = null;
-            let skillKey = null;
+            let skillName = null;
 
-            if (null !== extend.slotKeys
-                && 'string' === typeof extend.slotKeys[index]) {
+            if (null !== extend.slotNames
+                && 'string' === typeof extend.slotNames[index]) {
 
-                jewelKey = extend.slotKeys[index];
-                jewelInfo = jewelHelper.getInfo(jewelKey);
-                skillKey = jewelInfo.skill.key;
+                jewelName = extend.slotNames[index];
+                jewelInfo = jewelHelper.getInfo(jewelName);
+                skillName = jewelInfo.skill.name;
             }
 
             // Update Info
-            info.slots[index].key = jewelKey;
+            info.slots[index].name = jewelName;
 
-            if (null === skillKey) {
+            if (null === skillName) {
                 return false;
             }
 
-            if (undefined === skillLevelMapping[skillKey]) {
-                skillLevelMapping[skillKey] = 0;
+            if (undefined === skillLevelMapping[skillName]) {
+                skillLevelMapping[skillName] = 0;
             }
 
-            skillLevelMapping[skillKey] += jewelInfo.skill.level;
+            skillLevelMapping[skillName] += jewelInfo.skill.level;
         });
 
         // Reset Skill
         info.skills = [];
 
-        Object.keys(skillLevelMapping).map((skillKey) => {
-            let skillLevel = skillLevelMapping[skillKey];
-            let skillInfo = skillHelper.getInfo(skillKey);
+        Object.keys(skillLevelMapping).map((skillName) => {
+            let skillLevel = skillLevelMapping[skillName];
+            let skillInfo = skillHelper.getInfo(skillName);
 
             info.skills.push({
-                key: skillKey,
+                name: skillName,
                 level: skillLevel,
                 description: skillInfo.list[skillLevel - 1].description
             });
@@ -555,8 +554,8 @@ class ArmorHelper {
         return this;
     };
 
-    hasSkill = (key) => {
-        this.filterSkillKey = key;
+    hasSkill = (name) => {
+        this.filterSkillName = name;
 
         return this;
     };
@@ -575,10 +574,10 @@ class CharmHelper {
         });
 
         // Filter Conditional
-        this.filterSkillKey = null;
+        this.filterSkillName = null;
     }
 
-    getKeys = () => {
+    getNames = () => {
         return Object.keys(this.mapping);
     };
 
@@ -586,9 +585,9 @@ class CharmHelper {
         return Object.values(this.mapping).filter((data) => {
             let isSkip = true;
 
-            if (null !== this.filterSkillKey) {
+            if (null !== this.filterSkillName) {
                 for (let index in data.skills) {
-                    if (this.filterSkillKey !== data.skills[index].key) {
+                    if (this.filterSkillName !== data.skills[index].name) {
                         continue;
                     }
 
@@ -604,37 +603,37 @@ class CharmHelper {
         });
     };
 
-    getInfo = (key) => {
-        return undefined !== this.mapping[key]
-            ? JSON.parse(JSON.stringify(this.mapping[key])) : null;
+    getInfo = (name) => {
+        return undefined !== this.mapping[name]
+            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
     };
 
     // Applyed Info
     getApplyedInfo = (extend) => {
-        let info = this.getInfo(extend.key);
+        let info = this.getInfo(extend.name);
 
         // Handler Skill & Slot
         let skillLevelMapping = {};
 
         info.skills.map((data, index) => {
-            let skillKey = data.key;
+            let skillName = data.name;
 
-            if (undefined === skillLevelMapping[skillKey]) {
-                skillLevelMapping[skillKey] = 0;
+            if (undefined === skillLevelMapping[skillName]) {
+                skillLevelMapping[skillName] = 0;
             }
 
-            skillLevelMapping[skillKey] += data.level;
+            skillLevelMapping[skillName] += data.level;
         });
 
         // Reset Skill
         info.skills = [];
 
-        Object.keys(skillLevelMapping).map((skillKey) => {
-            let skillLevel = skillLevelMapping[skillKey];
-            let skillInfo = skillHelper.getInfo(skillKey);
+        Object.keys(skillLevelMapping).map((skillName) => {
+            let skillLevel = skillLevelMapping[skillName];
+            let skillInfo = skillHelper.getInfo(skillName);
 
             info.skills.push({
-                key: skillKey,
+                name: skillName,
                 level: skillLevel,
                 description: skillInfo.list[skillLevel - 1].description
             });
@@ -644,8 +643,8 @@ class CharmHelper {
     };
 
     // Conditional Functions
-    hasSkill = (key) => {
-        this.filterSkillKey = key;
+    hasSkill = (name) => {
+        this.filterSkillName = name;
 
         return this;
     };
@@ -664,13 +663,13 @@ class JewelHelper {
         });
 
         // Filter Conditional
-        this.filterSkillKey = null;
+        this.filterSkillName = null;
         this.filterRare = null;
         this.filterSize = null;
         this.filterSizeCondition = null;
     }
 
-    getKeys = () => {
+    getNames = () => {
         return Object.keys(this.mapping);
     };
 
@@ -682,8 +681,8 @@ class JewelHelper {
                 }
             }
 
-            if (null !== this.filterSkillKey) {
-                if (this.filterSkillKey !== data.skill.key) {
+            if (null !== this.filterSkillName) {
+                if (this.filterSkillName !== data.skill.name) {
                     return false;
                 }
             }
@@ -709,9 +708,9 @@ class JewelHelper {
         });
     };
 
-    getInfo = (key) => {
-        return undefined !== this.mapping[key]
-            ? JSON.parse(JSON.stringify(this.mapping[key])) : null;
+    getInfo = (name) => {
+        return undefined !== this.mapping[name]
+            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
     };
 
     // Conditional Functions
@@ -721,8 +720,8 @@ class JewelHelper {
         return this;
     };
 
-    hasSkill = (key) => {
-        this.filterSkillKey = key;
+    hasSkill = (name) => {
+        this.filterSkillName = name;
 
         return this;
     };
@@ -755,7 +754,7 @@ class SkillHelper {
         });
     }
 
-    getKeys = () => {
+    getNames = () => {
         return Object.keys(this.mapping);
     };
 
@@ -763,9 +762,9 @@ class SkillHelper {
         return Object.values(this.mapping);
     };
 
-    getInfo = (key) => {
-        return undefined !== this.mapping[key]
-            ? JSON.parse(JSON.stringify(this.mapping[key])) : null;
+    getInfo = (name) => {
+        return undefined !== this.mapping[name]
+            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
     };
 }
 

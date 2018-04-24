@@ -4,7 +4,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "KO術",
+                "name": "KO術",
                 "level": 3
             }
         ]
@@ -14,7 +14,7 @@
         "rare": 7,
         "skills": [
             {
-                "key": "體術",
+                "name": "體術",
                 "level": 3
             }
         ]
@@ -24,7 +24,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "體力增強",
+                "name": "體力增強",
                 "level": 3
             }
         ]
@@ -34,7 +34,7 @@
         "rare": 3,
         "skills": [
             {
-                "key": "滿足感",
+                "name": "滿足感",
                 "level": 1
             }
         ]
@@ -44,7 +44,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "火屬性攻擊強化",
+                "name": "火屬性攻擊強化",
                 "level": 3
             }
         ]
@@ -54,11 +54,11 @@
         "rare": 7,
         "skills": [
             {
-                "key": "熱傷害無效",
+                "name": "熱傷害無效",
                 "level": 1
             },
             {
-                "key": "適應瘴氣環境",
+                "name": "適應瘴氣環境",
                 "level": 1
             }
         ]
@@ -68,7 +68,7 @@
         "rare": 3,
         "skills": [
             {
-                "key": "不屈",
+                "name": "不屈",
                 "level": 1
             }
         ]
@@ -78,7 +78,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "廣域化",
+                "name": "廣域化",
                 "level": 3
             }
         ]
@@ -88,7 +88,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "精靈加護",
+                "name": "精靈加護",
                 "level": 3
             }
         ]
@@ -98,7 +98,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "力量解放",
+                "name": "力量解放",
                 "level": 2
             }
         ]
@@ -108,7 +108,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "耐力急速回復",
+                "name": "耐力急速回復",
                 "level": 2
             }
         ]
@@ -118,7 +118,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "回復速度",
+                "name": "回復速度",
                 "level": 3
             }
         ]
@@ -128,7 +128,7 @@
         "rare": 8,
         "skills": [
             {
-                "key": "匠",
+                "name": "匠",
                 "level": 3
             }
         ]
@@ -138,7 +138,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "地質學",
+                "name": "地質學",
                 "level": 3
             }
         ]
@@ -148,7 +148,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "冰屬性攻擊強化",
+                "name": "冰屬性攻擊強化",
                 "level": 3
             }
         ]
@@ -158,7 +158,7 @@
         "rare": 8,
         "skills": [
             {
-                "key": "耳塞",
+                "name": "耳塞",
                 "level": 3
             }
         ]
@@ -168,7 +168,7 @@
         "rare": 7,
         "skills": [
             {
-                "key": "攻擊",
+                "name": "攻擊",
                 "level": 3
             }
         ]
@@ -178,7 +178,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "快吃",
+                "name": "快吃",
                 "level": 3
             }
         ]
@@ -188,7 +188,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "投射器裝填數UP",
+                "name": "投射器裝填數UP",
                 "level": 3
             }
         ]
@@ -198,7 +198,7 @@
         "rare": 3,
         "skills": [
             {
-                "key": "吹笛名人",
+                "name": "吹笛名人",
                 "level": 1
             }
         ]
@@ -208,7 +208,7 @@
         "rare": 6,
         "skills": [
             {
-                "key": "防禦",
+                "name": "防禦",
                 "level": 3
             }
         ]
@@ -218,7 +218,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "風壓耐性",
+                "name": "風壓耐性",
                 "level": 3
             }
         ]
@@ -228,7 +228,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "昆蟲標本達人",
+                "name": "昆蟲標本達人",
                 "level": 3
             }
         ]
@@ -238,7 +238,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "強化持續",
+                "name": "強化持續",
                 "level": 2
             }
         ]
@@ -248,7 +248,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "火場怪力",
+                "name": "火場怪力",
                 "level": 2
             }
         ]
@@ -258,7 +258,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "體力回復量UP",
+                "name": "體力回復量UP",
                 "level": 3
             }
         ]
@@ -268,11 +268,11 @@
         "rare": 5,
         "skills": [
             {
-                "key": "泥耐性",
+                "name": "泥耐性",
                 "level": 1
             },
             {
-                "key": "飛身躍入",
+                "name": "飛身躍入",
                 "level": 1
             }
         ]
@@ -282,7 +282,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "適應水場",
+                "name": "適應水場",
                 "level": 3
             }
         ]
@@ -292,7 +292,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "拔刀術【技】",
+                "name": "拔刀術【技】",
                 "level": 2
             }
         ]
@@ -302,7 +302,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "威嚇",
+                "name": "威嚇",
                 "level": 3
             }
         ]
@@ -312,7 +312,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "砥石使用高速化",
+                "name": "砥石使用高速化",
                 "level": 3
             }
         ]
@@ -322,7 +322,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "指示隨從",
+                "name": "指示隨從",
                 "level": 3
             }
         ]
@@ -332,7 +332,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "道具使用強化",
+                "name": "道具使用強化",
                 "level": 3
             }
         ]
@@ -342,11 +342,11 @@
         "rare": 5,
         "skills": [
             {
-                "key": "烤肉名人",
+                "name": "烤肉名人",
                 "level": 1
             },
             {
-                "key": "釣魚名人",
+                "name": "釣魚名人",
                 "level": 1
             }
         ]
@@ -356,7 +356,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "破壞王",
+                "name": "破壞王",
                 "level": 2
             }
         ]
@@ -366,7 +366,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "瘴氣耐性",
+                "name": "瘴氣耐性",
                 "level": 3
             }
         ]
@@ -376,7 +376,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "火耐性",
+                "name": "火耐性",
                 "level": 3
             }
         ]
@@ -386,7 +386,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "減輕膽怯",
+                "name": "減輕膽怯",
                 "level": 2
             }
         ]
@@ -396,7 +396,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "耐震",
+                "name": "耐震",
                 "level": 2
             }
         ]
@@ -406,7 +406,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "水耐性",
+                "name": "水耐性",
                 "level": 3
             }
         ]
@@ -416,7 +416,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "昏厥耐性",
+                "name": "昏厥耐性",
                 "level": 3
             }
         ]
@@ -426,7 +426,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "屬性異常狀態耐性",
+                "name": "屬性異常狀態耐性",
                 "level": 3
             }
         ]
@@ -436,7 +436,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "毒耐性",
+                "name": "毒耐性",
                 "level": 3
             }
         ]
@@ -446,7 +446,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "爆破異常狀態的耐性",
+                "name": "爆破異常狀態的耐性",
                 "level": 3
             }
         ]
@@ -456,7 +456,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "冰耐性",
+                "name": "冰耐性",
                 "level": 3
             }
         ]
@@ -466,7 +466,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "防御力DOWN耐性",
+                "name": "防御力DOWN耐性",
                 "level": 3
             }
         ]
@@ -476,7 +476,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "睡眠耐性",
+                "name": "睡眠耐性",
                 "level": 3
             }
         ]
@@ -486,7 +486,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "雷耐性",
+                "name": "雷耐性",
                 "level": 3
             }
         ]
@@ -496,7 +496,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "龍耐性",
+                "name": "龍耐性",
                 "level": 3
             }
         ]
@@ -506,7 +506,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "裂傷耐性",
+                "name": "裂傷耐性",
                 "level": 3
             }
         ]
@@ -516,7 +516,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "麻痺耐性",
+                "name": "麻痺耐性",
                 "level": 3
             }
         ]
@@ -526,7 +526,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "挑戰者",
+                "name": "挑戰者",
                 "level": 2
             }
         ]
@@ -536,7 +536,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "毒屬性強化",
+                "name": "毒屬性強化",
                 "level": 3
             }
         ]
@@ -546,7 +546,7 @@
         "rare": 8,
         "skills": [
             {
-                "key": "毒瓶追加",
+                "name": "毒瓶追加",
                 "level": 1
             }
         ]
@@ -556,11 +556,11 @@
         "rare": 8,
         "skills": [
             {
-                "key": "探索者的幸運",
+                "name": "探索者的幸運",
                 "level": 1
             },
             {
-                "key": "察覺",
+                "name": "察覺",
                 "level": 1
             }
         ]
@@ -570,7 +570,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "水屬性攻擊強化",
+                "name": "水屬性攻擊強化",
                 "level": 3
             }
         ]
@@ -580,11 +580,11 @@
         "rare": 3,
         "skills": [
             {
-                "key": "攻擊",
+                "name": "攻擊",
                 "level": 1
             },
             {
-                "key": "精靈加護",
+                "name": "精靈加護",
                 "level": 1
             }
         ]
@@ -594,7 +594,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "迴避性能",
+                "name": "迴避性能",
                 "level": 3
             }
         ]
@@ -604,11 +604,11 @@
         "rare": 8,
         "skills": [
             {
-                "key": "滑走強化",
+                "name": "滑走強化",
                 "level": 1
             },
             {
-                "key": "飛燕",
+                "name": "飛燕",
                 "level": 1
             }
         ]
@@ -618,7 +618,7 @@
         "rare": 3,
         "skills": [
             {
-                "key": "追蹤達人",
+                "name": "追蹤達人",
                 "level": 1
             }
         ]
@@ -628,7 +628,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "特殊射擊強化",
+                "name": "特殊射擊強化",
                 "level": 2
             }
         ]
@@ -638,7 +638,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "收刀術",
+                "name": "收刀術",
                 "level": 3
             }
         ]
@@ -648,7 +648,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "龍屬性攻擊強化",
+                "name": "龍屬性攻擊強化",
                 "level": 3
             }
         ]
@@ -658,7 +658,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "砲擊手",
+                "name": "砲擊手",
                 "level": 2
             }
         ]
@@ -668,7 +668,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "砲術",
+                "name": "砲術",
                 "level": 3
             }
         ]
@@ -678,7 +678,7 @@
         "rare": 8,
         "skills": [
             {
-                "key": "貫通彈・龍之箭強化",
+                "name": "貫通彈・龍之箭強化",
                 "level": 1
             }
         ]
@@ -688,7 +688,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "跑者",
+                "name": "跑者",
                 "level": 2
             }
         ]
@@ -698,11 +698,11 @@
         "rare": 8,
         "skills": [
             {
-                "key": "防禦強化",
+                "name": "防禦強化",
                 "level": 1
             },
             {
-                "key": "死裡逃生",
+                "name": "死裡逃生",
                 "level": 1
             }
         ]
@@ -712,11 +712,11 @@
         "rare": 5,
         "skills": [
             {
-                "key": "採集達人",
+                "name": "採集達人",
                 "level": 1
             },
             {
-                "key": "剝取鐵人",
+                "name": "剝取鐵人",
                 "level": 1
             }
         ]
@@ -726,11 +726,11 @@
         "rare": 5,
         "skills": [
             {
-                "key": "異臭名人",
+                "name": "異臭名人",
                 "level": 1
             },
             {
-                "key": "閃光強化",
+                "name": "閃光強化",
                 "level": 1
             }
         ]
@@ -740,7 +740,7 @@
         "rare": 7,
         "skills": [
             {
-                "key": "通常彈・通常箭強化",
+                "name": "通常彈・通常箭強化",
                 "level": 1
             }
         ]
@@ -750,7 +750,7 @@
         "rare": 8,
         "skills": [
             {
-                "key": "麻痺瓶追加",
+                "name": "麻痺瓶追加",
                 "level": 1
             }
         ]
@@ -760,7 +760,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "精神抖擻",
+                "name": "精神抖擻",
                 "level": 2
             }
         ]
@@ -770,7 +770,7 @@
         "rare": 8,
         "skills": [
             {
-                "key": "散彈・剛射強化",
+                "name": "散彈・剛射強化",
                 "level": 1
             }
         ]
@@ -780,7 +780,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "集中",
+                "name": "集中",
                 "level": 2
             }
         ]
@@ -790,7 +790,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "植生學",
+                "name": "植生學",
                 "level": 3
             }
         ]
@@ -800,7 +800,7 @@
         "rare": 8,
         "skills": [
             {
-                "key": "超會心",
+                "name": "超會心",
                 "level": 1
             }
         ]
@@ -810,7 +810,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "弱點特效",
+                "name": "弱點特效",
                 "level": 2
             }
         ]
@@ -820,7 +820,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "無傷",
+                "name": "無傷",
                 "level": 2
             }
         ]
@@ -830,7 +830,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "綿花孢子草的知識",
+                "name": "綿花孢子草的知識",
                 "level": 3
             }
         ]
@@ -840,11 +840,11 @@
         "rare": 8,
         "skills": [
             {
-                "key": "龍封力強化",
+                "name": "龍封力強化",
                 "level": 1
             },
             {
-                "key": "龍屬性攻擊強化",
+                "name": "龍屬性攻擊強化",
                 "level": 1
             }
         ]
@@ -854,7 +854,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "最愛菇類",
+                "name": "最愛菇類",
                 "level": 2
             }
         ]
@@ -864,7 +864,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "整備",
+                "name": "整備",
                 "level": 3
             }
         ]
@@ -874,7 +874,7 @@
         "rare": 3,
         "skills": [
             {
-                "key": "砲彈裝填數UP",
+                "name": "砲彈裝填數UP",
                 "level": 1
             }
         ]
@@ -884,7 +884,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "看破",
+                "name": "看破",
                 "level": 3
             }
         ]
@@ -894,7 +894,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "迴避距離UP",
+                "name": "迴避距離UP",
                 "level": 2
             }
         ]
@@ -904,7 +904,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "麻痺屬性強化",
+                "name": "麻痺屬性強化",
                 "level": 3
             }
         ]
@@ -914,7 +914,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "雷屬性攻擊強化",
+                "name": "雷屬性攻擊強化",
                 "level": 3
             }
         ]
@@ -924,7 +924,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "睡眠屬性強化",
+                "name": "睡眠屬性強化",
                 "level": 3
             }
         ]
@@ -934,7 +934,7 @@
         "rare": 8,
         "skills": [
             {
-                "key": "睡眠瓶追加",
+                "name": "睡眠瓶追加",
                 "level": 1
             }
         ]
@@ -944,7 +944,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "奪取耐力",
+                "name": "奪取耐力",
                 "level": 3
             }
         ]
@@ -954,7 +954,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "怨恨",
+                "name": "怨恨",
                 "level": 2
             }
         ]
@@ -964,7 +964,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "潛伏",
+                "name": "潛伏",
                 "level": 3
             }
         ]
@@ -974,11 +974,11 @@
         "rare": 7,
         "skills": [
             {
-                "key": "導蟲反應距離UP",
+                "name": "導蟲反應距離UP",
                 "level": 1
             },
             {
-                "key": "研究者",
+                "name": "研究者",
                 "level": 1
             }
         ]
@@ -988,11 +988,11 @@
         "rare": 7,
         "skills": [
             {
-                "key": "騎乘名人",
+                "name": "騎乘名人",
                 "level": 1
             },
             {
-                "key": "跳躍鐵人",
+                "name": "跳躍鐵人",
                 "level": 1
             }
         ]
@@ -1002,7 +1002,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "飢餓耐性",
+                "name": "飢餓耐性",
                 "level": 3
             }
         ]
@@ -1012,7 +1012,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "炸彈客",
+                "name": "炸彈客",
                 "level": 3
             }
         ]
@@ -1022,7 +1022,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "爆破屬性強化",
+                "name": "爆破屬性強化",
                 "level": 3
             }
         ]
@@ -1032,7 +1032,7 @@
         "rare": 8,
         "skills": [
             {
-                "key": "爆破瓶追加",
+                "name": "爆破瓶追加",
                 "level": 1
             }
         ]
@@ -1042,7 +1042,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "屬性解放／裝填擴充",
+                "name": "屬性解放／裝填擴充",
                 "level": 2
             }
         ]
@@ -1052,11 +1052,11 @@
         "rare": 5,
         "skills": [
             {
-                "key": "搬運達人",
+                "name": "搬運達人",
                 "level": 1
             },
             {
-                "key": "蜂蜜獵人",
+                "name": "蜂蜜獵人",
                 "level": 1
             }
         ]
@@ -1066,7 +1066,7 @@
         "rare": null,
         "skills": [
             {
-                "key": "防禦性能",
+                "name": "防禦性能",
                 "level": 3
             }
         ]
