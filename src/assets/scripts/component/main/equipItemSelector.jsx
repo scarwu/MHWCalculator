@@ -104,7 +104,7 @@ export default class EquipItemSelector extends Component {
                 'switchAxe', 'chargeBlade',
                 'insectGlaive', 'bow',
                 'lightBowgun', 'heavyBowgun'
-            ].map((weaponType) => {
+            ].forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
                     list = list.concat(
                         DataSet.weaponHelper.typeIs(weaponType).rareIs(rare).getItems()

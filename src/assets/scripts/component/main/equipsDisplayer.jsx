@@ -322,7 +322,7 @@ export default class EquipsDisplayer extends Component {
         }
 
         // Armors
-        ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+        ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             let equipSelectorData = {
                 equipType: equipType,
                 equipName: null

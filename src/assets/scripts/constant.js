@@ -78,13 +78,13 @@ export default {
     ],
     defaultBundle: {
         equips: {},
-        slots: {
+        slotSizeCount: {
             1: 0,
             2: 0,
             3: 0
         },
-        skills: {},
-        jewels: {},
+        skillLevel: {},
+        jewelCount: {},
         lostPart: []
     },
     defaultEquips: {

@@ -236,6 +236,7 @@ export default class Main extends Component {
             skills: skills
         }, () => {
             this.refershUrlHash();
+            this.handleCandidateBundlesSearch();
         });
     }
 

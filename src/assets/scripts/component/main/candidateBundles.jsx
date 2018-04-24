@@ -10,6 +10,7 @@
 
 // Load Libraries
 import React, { Component } from 'react';
+import MD5 from 'md5';
 
 // Load Core Libraries
 import Event from 'core/event';
@@ -32,7 +33,7 @@ export default class CandidateBundles extends Component {
 
     // Initial State
     state = {
-        data: {},
+        data: null,
         bundleList: []
     };
 
@@ -56,16 +57,16 @@ export default class CandidateBundles extends Component {
 
         let requireEquips = [];
         let requireSkills = {};
-        let generation = [];
+        let pervGeneration = {};
         let bundle = Misc.deepCopy(Constant.defaultBundle);
 
         skills.sort((a, b) => {
             return b.level - a.level;
-        }).map((skill) => {
+        }).forEach((skill) => {
             requireSkills[skill.name] = skill.level;
         });
 
-        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].map((equipType) => {
+        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
             if (false === equipsLock[equipType]) {
                 if ('weapon' !== equipType) {
                     requireEquips.push(equipType);
@@ -81,22 +82,22 @@ export default class CandidateBundles extends Component {
 
                 bundle.equips[equipType] = equipInfo.name;
 
-                equipInfo.skills.map((skill) => {
-                    if (undefined === bundle.skills[skill.name]) {
-                        bundle.skills[skill.name] = 0
+                equipInfo.skills.forEach((skill) => {
+                    if (undefined === bundle.skillLevel[skill.name]) {
+                        bundle.skillLevel[skill.name] = 0
                     }
 
-                    bundle.skills[skill.name] += skill.level;
+                    bundle.skillLevel[skill.name] += skill.level;
                 });
 
-                equipInfo.slots.map((slot) => {
-                    bundle.slots[slot.size] += 1;
+                equipInfo.slots.forEach((slot) => {
+                    bundle.slotSizeCount[slot.size] += 1;
 
-                    if (undefined === bundle.jewels[slot.name]) {
-                        bundle.jewels[slot.name] = 0;
+                    if (undefined === bundle.jewelCount[slot.name]) {
+                        bundle.jewelCount[slot.name] = 0;
                     }
 
-                    bundle.jewels[slot.name] += 1;
+                    bundle.jewelCount[slot.name] += 1;
                 });
             } else if ('helm' === equipType
                 || 'chest' === equipType
@@ -108,154 +109,180 @@ export default class CandidateBundles extends Component {
 
                 bundle.equips[equipType] = equipInfo.name;
 
-                equipInfo.skills.map((skill) => {
-                    if (undefined === bundle.skills[skill.name]) {
-                        bundle.skills[skill.name] = 0
+                equipInfo.skills.forEach((skill) => {
+                    if (undefined === bundle.skillLevel[skill.name]) {
+                        bundle.skillLevel[skill.name] = 0
                     }
 
-                    bundle.skills[skill.name] += skill.level;
+                    bundle.skillLevel[skill.name] += skill.level;
                 });
 
-                equipInfo.slots.map((slot) => {
-                    bundle.slots[slot.size] += 1;
+                equipInfo.slots.forEach((slot) => {
+                    bundle.slotSizeCount[slot.size] += 1;
 
-                    if (undefined === bundle.jewels[slot.name]) {
-                        bundle.jewels[slot.name] = 0;
+                    if (undefined === bundle.jewelCount[slot.name]) {
+                        bundle.jewelCount[slot.name] = 0;
                     }
 
-                    bundle.jewels[slot.name] += 1;
+                    bundle.jewelCount[slot.name] += 1;
                 });
             } else if ('charm' === equipType) {
                 equipInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
 
                 bundle.equips[equipType] = equipInfo.name;
 
-                equipInfo.skills.map((skill) => {
-                    if (undefined === bundle.skills[skill.name]) {
-                        bundle.skills[skill.name] = 0
+                equipInfo.skills.forEach((skill) => {
+                    if (undefined === bundle.skillLevel[skill.name]) {
+                        bundle.skillLevel[skill.name] = 0
                     }
 
-                    bundle.skills[skill.name] += skill.level;
+                    bundle.skillLevel[skill.name] += skill.level;
                 });
             }
         });
 
-        generation.push(bundle);
+        pervGeneration[this.generateBundleHash(bundle)] = bundle;
 
         console.log(requireSkills);
         console.log(requireEquips);
-        console.log(generation);
+        console.log(pervGeneration);
 
-        // let dataMap = {};
+        Object.keys(requireSkills).forEach((skillName) => {
+            let skillLevel = requireSkills[skillName];
 
-        // skills.sort((a, b) => {
-        //     return b.level - a.level;
-        // }).map((data) => {
-        //     dataMap[data.name] = {
-        //         level: data.level,
-        //         equips: {
-        //             helm: {},
-        //             chest: {},
-        //             arm: {},
-        //             waist: {},
-        //             leg: {},
-        //             charm: {},
-        //             jewel: {}
-        //         }
-        //     };
+            requireEquips.forEach((equipType) => {
+                let candidateEquips = []
 
-        //     DataSet.armorHelper.hasSkill(data.name).getItems().map((equip) => {
-        //         equip.skills.map((skill) => {
-        //             if (skill.name !== data.name) {
-        //                 return false;
-        //             }
+                if ('helm' === equipType
+                    || 'chest' === equipType
+                    || 'arm' === equipType
+                    || 'waist' === equipType
+                    || 'leg' === equipType) {
 
-        //             dataMap[data.name].equips[equip.type][equip.name] = skill.level;
-        //         });
-        //     });
+                    DataSet.armorHelper.typeIs(equipType).hasSkill(skillName).getItems().forEach((equip) => {
+                        let candidateEquip = {
+                            name: equip.name,
+                            skillLevel: 0,
+                            slotSizeCount: {
+                                1: 0,
+                                2: 0,
+                                3: 0
+                            }
+                        };
 
-        //     DataSet.charmHelper.hasSkill(data.name).getItems().map((equip) => {
-        //         equip.skills.map((skill) => {
-        //             if (skill.name !== data.name) {
-        //                 return false;
-        //             }
+                        equip.skills.forEach((skill) => {
+                            if (skill.name !== skillName) {
+                                return false;
+                            }
 
-        //             dataMap[data.name].equips.charm[equip.name] = skill.level;
-        //         });
-        //     });
+                            candidateEquip.skillLevel = skill.level;
+                        });
 
-        //     DataSet.jewelHelper.hasSkill(data.name).getItems().map((equip) => {
-        //         dataMap[data.name].equips.jewel[equip.name] = equip.skill.level;
-        //     });
-        // });
+                        equip.slots.forEach((slot) => {
+                            candidateEquip.slotSizeCount[slot.size] += 1;
+                        });
 
-        // console.log(equipsLock);
-        // console.log(dataMap);
+                        candidateEquips.push(candidateEquip);
+                    });
+                } else if ('charm' === equipType) {
+                    DataSet.charmHelper.hasSkill(skillName).getItems().forEach((equip) => {
+                        let candidateEquip = {
+                            name: equip.name,
+                            skillLevel: 0,
+                            slotSizeCount: {
+                                1: 0,
+                                2: 0,
+                                3: 0
+                            }
+                        };
 
-        // Object.names(equips).map((equipType) => {
-        //     let equip = equips[equipType];
-        //     let isLock = equipsLock[equipType];
+                        equip.skills.forEach((skill) => {
+                            if (skill.name !== skillName) {
+                                return false;
+                            }
 
-        //     if (null === equip.name) {
-        //         return false;
-        //     }
+                            candidateEquip.skillLevel = skill.level;
+                        });
 
-        //     if (false === isLock) {
-        //         return false;
-        //     }
+                        candidateEquips.push(candidateEquip);
+                    });
+                }
 
-        //     let equipInfo = null;
+                candidateEquips.push({
+                    name: null,
+                    skillLevel: 0,
+                    slotSizeCount: {
+                        1: 0,
+                        2: 0,
+                        3: 0
+                    }
+                });
 
-        //     if ('weapon' === equipType) {
-        //         equipInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
-        //         equipInfo.skills.map((skill) => {
-        //             if (undefined === dataMap[skill.name]) {
-        //                 return false;
-        //             }
+                if (0 === candidateEquips.length) {
+                    return false;
+                }
 
-        //             dataMap[skill.name].level -= skill.level;
+                console.log(skillName, equipType, candidateEquips);
 
-        //             if (0 >= dataMap[skill.name].level) {
-        //                 delete dataMap[skill.name];
-        //             }
-        //         });
-        //     } else if ('helm' === equipType
-        //         || 'chest' === equipType
-        //         || 'arm' === equipType
-        //         || 'waist' === equipType
-        //         || 'leg' === equipType) {
+                let nextGeneration = {};
 
-        //         equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
+                candidateEquips.forEach((equip) => {
+                    let equipName = equip.name;
+                    let skillLevel = equip.skillLevel;
+                    let slotSizeCount = equip.slotSizeCount;
 
-        //         Object.names(dataMap).map((skillName) => {
-        //             delete dataMap[skillName].equips[equipType];
-        //         });
+                    Object.keys(pervGeneration).forEach((hash) => {
+                        let bundle = Misc.deepCopy(pervGeneration[hash]);
+                        // let bundle = pervGeneration[hash];
 
-        //         equipInfo.skills.map((skill) => {
-        //             if (undefined === dataMap[skill.name]) {
-        //                 return false;
-        //             }
+                        if (undefined === bundle.equips[equipType]) {
+                            bundle.equips[equipType] = null;
+                        }
 
-        //             dataMap[skill.name].level -= skill.level;
+                        if (undefined === bundle.skillLevel[skillName]
+                            || bundle.skillLevel[skillName] < skillLevel) {
 
-        //             if (0 >= dataMap[skill.name].level) {
-        //                 delete dataMap[skill.name];
-        //             }
-        //         });
-        //     } else if ('charm' === equipType) {
-        //         equipInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
+                            if (null !== bundle.equips[equipType]) {
+                                return false;
+                            }
 
-        //         Object.names(dataMap).map((skillName) => {
-        //             delete dataMap[skillName][equipType];
-        //         });
+                            bundle.equips[equipType] = equipName;
 
-        //         equipInfo.skills.map((skill) => {
-        //             delete dataMap[skill.name].equips[equipType];
-        //         });
-        //     }
-        // });
+                            if (undefined === bundle.skillLevel[skillName]) {
+                                bundle.skillLevel[skillName] = 0
+                            }
 
-        // console.log(dataMap);
+                            bundle.skillLevel[skillName] += skillLevel;
+
+                            for (let size = 1; size <= 3; size++) {
+                                bundle.slotSizeCount[size] += slotSizeCount[size];
+                            }
+                        }
+
+                        if (undefined !== bundle.skillLevel[skillName]
+                            && bundle.skillLevel[skillName] <= skillLevel) {
+
+                            console.log(bundle);
+
+                            nextGeneration[this.generateBundleHash(bundle)] = bundle;
+                        }
+                    });
+                });
+
+                if (0 < Object.keys(nextGeneration).length) {
+                    pervGeneration = Misc.deepCopy(nextGeneration);
+                }
+            });
+        });
+
+        console.log(pervGeneration);
+    };
+
+    generateBundleHash = (bundle) => {
+        return MD5(JSON.stringify({
+            equips: bundle.equips,
+            jewelCount: bundle.jewelCount
+        }));
     };
 
     /**

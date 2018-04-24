@@ -75,7 +75,7 @@ export default class SkillItemSelector extends Component {
             return skill.name;
         });
 
-        DataSet.skillHelper.getNames().sort().map((skillName) => {
+        DataSet.skillHelper.getNames().sort().forEach((skillName) => {
 
             let skill = DataSet.skillHelper.getInfo(skillName);
 

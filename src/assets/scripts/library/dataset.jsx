@@ -29,7 +29,7 @@ class SetHelper {
     constructor (list) {
         this.mapping = {};
 
-        list.map((data) => {
+        list.forEach((data) => {
             this.mapping[data.name] = data;
         });
 
@@ -73,7 +73,7 @@ class EnhanceHelper {
     constructor (list) {
         this.mapping = {};
 
-        list.map((data) => {
+        list.forEach((data) => {
             this.mapping[data.name] = data;
         });
 
@@ -117,7 +117,7 @@ class WeaponHelper {
     constructor (list) {
         this.mapping = {};
 
-        list.map((data) => {
+        list.forEach((data) => {
             this.mapping[data.name] = data;
 
             if (0 === data.slots.length) {
@@ -213,7 +213,7 @@ class WeaponHelper {
             enhanceTimes = [...Array(3).keys()];
         }
 
-        enhanceTimes.map((data, index) => {
+        enhanceTimes.forEach((data, index) => {
             let enhanceName = null;
 
             if (null !== extend.enhanceNames
@@ -238,7 +238,7 @@ class WeaponHelper {
             enhanceLevelMapping[enhanceName] += 1;
         });
 
-        Object.keys(enhanceLevelMapping).map((enhanceName) => {
+        Object.keys(enhanceLevelMapping).forEach((enhanceName) => {
             let enhanceLevel = enhanceLevelMapping[enhanceName];
             let enhanceInfo = enhanceHelper.getInfo(enhanceName);
 
@@ -246,7 +246,7 @@ class WeaponHelper {
                 return false;
             }
 
-            Object.keys(enhanceInfo.list[enhanceLevel - 1].reaction).map((reactionType) => {
+            Object.keys(enhanceInfo.list[enhanceLevel - 1].reaction).forEach((reactionType) => {
                 let data = enhanceInfo.list[enhanceLevel - 1].reaction[reactionType];
 
                 switch (reactionType) {
@@ -276,7 +276,7 @@ class WeaponHelper {
         // Handler Slot
         let skillLevelMapping = {};
 
-        info.slots.map((data, index) => {
+        info.slots.forEach((data, index) => {
             let jewelName = null;
             let jewelInfo = null;
             let skillName = null;
@@ -306,7 +306,7 @@ class WeaponHelper {
         // Reset Skill
         info.skills = [];
 
-        Object.keys(skillLevelMapping).map((skillName) => {
+        Object.keys(skillLevelMapping).forEach((skillName) => {
             let skillLevel = skillLevelMapping[skillName];
             let skillInfo = skillHelper.getInfo(skillName);
 
@@ -378,7 +378,7 @@ class ArmorHelper {
     constructor (list) {
         this.mapping = {};
 
-        list.map((data) => {
+        list.forEach((data) => {
             this.mapping[data.name] = data;
 
             if (0 === data.slots.length) {
@@ -477,7 +477,7 @@ class ArmorHelper {
         // Handler Skill & Slot
         let skillLevelMapping = {};
 
-        info.skills.map((data, index) => {
+        info.skills.forEach((data, index) => {
             let skillName = data.name;
 
             if (undefined === skillLevelMapping[skillName]) {
@@ -487,7 +487,7 @@ class ArmorHelper {
             skillLevelMapping[skillName] += data.level;
         });
 
-        info.slots.map((data, index) => {
+        info.slots.forEach((data, index) => {
             let jewelName = null;
             let jewelInfo = null;
             let skillName = null;
@@ -517,7 +517,7 @@ class ArmorHelper {
         // Reset Skill
         info.skills = [];
 
-        Object.keys(skillLevelMapping).map((skillName) => {
+        Object.keys(skillLevelMapping).forEach((skillName) => {
             let skillLevel = skillLevelMapping[skillName];
             let skillInfo = skillHelper.getInfo(skillName);
 
@@ -569,7 +569,7 @@ class CharmHelper {
     constructor (list) {
         this.mapping = {};
 
-        list.map((data) => {
+        list.forEach((data) => {
             this.mapping[data.name] = data;
         });
 
@@ -615,7 +615,7 @@ class CharmHelper {
         // Handler Skill & Slot
         let skillLevelMapping = {};
 
-        info.skills.map((data, index) => {
+        info.skills.forEach((data, index) => {
             let skillName = data.name;
 
             if (undefined === skillLevelMapping[skillName]) {
@@ -628,7 +628,7 @@ class CharmHelper {
         // Reset Skill
         info.skills = [];
 
-        Object.keys(skillLevelMapping).map((skillName) => {
+        Object.keys(skillLevelMapping).forEach((skillName) => {
             let skillLevel = skillLevelMapping[skillName];
             let skillInfo = skillHelper.getInfo(skillName);
 
@@ -658,7 +658,7 @@ class JewelHelper {
     constructor (list) {
         this.mapping = {};
 
-        list.map((data) => {
+        list.forEach((data) => {
             this.mapping[data.name] = data;
         });
 
@@ -749,7 +749,7 @@ class SkillHelper {
     constructor (list) {
         this.mapping = {};
 
-        list.map((data) => {
+        list.forEach((data) => {
             this.mapping[data.name] = data;
         });
     }

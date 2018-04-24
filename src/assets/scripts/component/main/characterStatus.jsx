@@ -94,7 +94,7 @@ export default class CharacterStatus extends Component {
         info.weapon = (null !== equips.weapon.name)
             ? DataSet.weaponHelper.getApplyedInfo(equips.weapon) : null;
 
-        ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+        ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             info[equipType] = (null !== equips[equipType].name)
                 ? DataSet.armorHelper.getApplyedInfo(equips[equipType]) : null;
         });
@@ -110,7 +110,7 @@ export default class CharacterStatus extends Component {
         }
 
         // Defense
-        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             if (null === info[equipType]) {
                 return false;
             }
@@ -121,12 +121,12 @@ export default class CharacterStatus extends Component {
         // Resistance & Set
         let setMapping = {};
 
-        ['helm', 'chest', 'arm', 'waist', 'leg'].map((equipType) => {
+        ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             if (null === info[equipType]) {
                 return false;
             }
 
-            Constant.elements.map((elementType) => {
+            Constant.elements.forEach((elementType) => {
                 status.resistance[elementType] += info[equipType].resistance[elementType];
             });
 
@@ -144,12 +144,12 @@ export default class CharacterStatus extends Component {
         // Skills
         let allSkills = {};
 
-        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].map((equipType) => {
+        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
             if (null === info[equipType]) {
                 return false;
             }
 
-            info[equipType].skills.map((skill) => {
+            info[equipType].skills.forEach((skill) => {
                 if (undefined === allSkills[skill.name]) {
                     allSkills[skill.name] = 0;
                 }
@@ -158,11 +158,11 @@ export default class CharacterStatus extends Component {
             });
         });
 
-        Object.keys(setMapping).map((setName) => {
+        Object.keys(setMapping).forEach((setName) => {
             let setCount = setMapping[setName];
             let setInfo = DataSet.setHelper.getInfo(setName);
 
-            setInfo.skills.map((skill) => {
+            setInfo.skills.forEach((skill) => {
                 if (skill.require > setCount) {
                     return false;
                 }
@@ -272,7 +272,7 @@ export default class CharacterStatus extends Component {
                     break;
                 case 'resistance':
                     if ('all' === data.type) {
-                        elements.map((elementType) => {
+                        elements.forEach((elementType) => {
                             status.resistance[elementType] += data.value;
                         });
                     } else {
@@ -360,11 +360,11 @@ export default class CharacterStatus extends Component {
             status.element.status.value = parseInt(Math.round(status.element.status.value));
         }
 
-        attackMultipleList.map((multiple) => {
+        attackMultipleList.forEach((multiple) => {
             status.attack *= multiple;
         });
 
-        defenseMultipleList.map((multiple) => {
+        defenseMultipleList.forEach((multiple) => {
             status.defense *= multiple;
         });
 
