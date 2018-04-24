@@ -55,6 +55,7 @@ export default class CandidateBundles extends Component {
         let equips = data.equips;
         let equipsLock = data.equipsLock;
 
+        // Create 1st Generation & Extra Info
         let requireEquips = [];
         let requireSkills = {};
         let pervGeneration = {};
@@ -70,6 +71,7 @@ export default class CandidateBundles extends Component {
             if (false === equipsLock[equipType]) {
                 if ('weapon' !== equipType) {
                     requireEquips.push(equipType);
+                    bundle.lostPartCount += 1;
                 }
 
                 return false;
@@ -91,13 +93,15 @@ export default class CandidateBundles extends Component {
                 });
 
                 equipInfo.slots.forEach((slot) => {
-                    bundle.slotSizeCount[slot.size] += 1;
+                    if (null === slot.name) {
+                        bundle.slotSizeCount[slot.size] += 1;
+                    } else {
+                        if (undefined === bundle.jewelCount[slot.name]) {
+                            bundle.jewelCount[slot.name] = 0;
+                        }
 
-                    if (undefined === bundle.jewelCount[slot.name]) {
-                        bundle.jewelCount[slot.name] = 0;
+                        bundle.jewelCount[slot.name] += 1;
                     }
-
-                    bundle.jewelCount[slot.name] += 1;
                 });
             } else if ('helm' === equipType
                 || 'chest' === equipType
@@ -118,13 +122,15 @@ export default class CandidateBundles extends Component {
                 });
 
                 equipInfo.slots.forEach((slot) => {
-                    bundle.slotSizeCount[slot.size] += 1;
+                    if (null === slot.name) {
+                        bundle.slotSizeCount[slot.size] += 1;
+                    } else {
+                        if (undefined === bundle.jewelCount[slot.name]) {
+                            bundle.jewelCount[slot.name] = 0;
+                        }
 
-                    if (undefined === bundle.jewelCount[slot.name]) {
-                        bundle.jewelCount[slot.name] = 0;
+                        bundle.jewelCount[slot.name] += 1;
                     }
-
-                    bundle.jewelCount[slot.name] += 1;
                 });
             } else if ('charm' === equipType) {
                 equipInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
@@ -147,11 +153,20 @@ export default class CandidateBundles extends Component {
         console.log(requireEquips);
         console.log(pervGeneration);
 
-        Object.keys(requireSkills).forEach((skillName) => {
+        // Create Next Generation with Skill Equips
+        console.log('Create Next Generation with Skill Equips');
+
+        Object.keys(requireSkills).forEach((skillName, index) => {
+            if (1 < index) {
+                return false;
+            }
+
             let skillLevel = requireSkills[skillName];
 
             requireEquips.forEach((equipType) => {
-                let candidateEquips = []
+
+                // Get Candidate Equips
+                let equips = null;
 
                 if ('helm' === equipType
                     || 'chest' === equipType
@@ -159,123 +174,109 @@ export default class CandidateBundles extends Component {
                     || 'waist' === equipType
                     || 'leg' === equipType) {
 
-                    DataSet.armorHelper.typeIs(equipType).hasSkill(skillName).getItems().forEach((equip) => {
-                        let candidateEquip = {
-                            name: equip.name,
-                            skillLevel: 0,
-                            slotSizeCount: {
-                                1: 0,
-                                2: 0,
-                                3: 0
-                            }
-                        };
-
-                        equip.skills.forEach((skill) => {
-                            if (skill.name !== skillName) {
-                                return false;
-                            }
-
-                            candidateEquip.skillLevel = skill.level;
-                        });
-
-                        equip.slots.forEach((slot) => {
-                            candidateEquip.slotSizeCount[slot.size] += 1;
-                        });
-
-                        candidateEquips.push(candidateEquip);
-                    });
+                    equips = DataSet.armorHelper.typeIs(equipType).hasSkill(skillName).getItems();
                 } else if ('charm' === equipType) {
-                    DataSet.charmHelper.hasSkill(skillName).getItems().forEach((equip) => {
-                        let candidateEquip = {
-                            name: equip.name,
-                            skillLevel: 0,
-                            slotSizeCount: {
-                                1: 0,
-                                2: 0,
-                                3: 0
-                            }
-                        };
-
-                        equip.skills.forEach((skill) => {
-                            if (skill.name !== skillName) {
-                                return false;
-                            }
-
-                            candidateEquip.skillLevel = skill.level;
-                        });
-
-                        candidateEquips.push(candidateEquip);
-                    });
+                    equips = DataSet.charmHelper.hasSkill(skillName).getItems();
                 }
 
-                candidateEquips.push({
-                    name: null,
-                    skillLevel: 0,
-                    slotSizeCount: {
-                        1: 0,
-                        2: 0,
-                        3: 0
-                    }
-                });
+                let candidateEquips = this.createCandidateEquips(equips, skillName);
 
                 if (0 === candidateEquips.length) {
                     return false;
                 }
 
-                console.log(skillName, equipType, candidateEquips);
+                console.log(skillName, skillLevel, equipType, candidateEquips);
 
-                let nextGeneration = {};
-
-                candidateEquips.forEach((equip) => {
-                    let equipName = equip.name;
-                    let skillLevel = equip.skillLevel;
-                    let slotSizeCount = equip.slotSizeCount;
-
-                    Object.keys(pervGeneration).forEach((hash) => {
-                        let bundle = Misc.deepCopy(pervGeneration[hash]);
-                        // let bundle = pervGeneration[hash];
-
-                        if (undefined === bundle.equips[equipType]) {
-                            bundle.equips[equipType] = null;
-                        }
-
-                        if (undefined === bundle.skillLevel[skillName]
-                            || bundle.skillLevel[skillName] < skillLevel) {
-
-                            if (null !== bundle.equips[equipType]) {
-                                return false;
-                            }
-
-                            bundle.equips[equipType] = equipName;
-
-                            if (undefined === bundle.skillLevel[skillName]) {
-                                bundle.skillLevel[skillName] = 0
-                            }
-
-                            bundle.skillLevel[skillName] += skillLevel;
-
-                            for (let size = 1; size <= 3; size++) {
-                                bundle.slotSizeCount[size] += slotSizeCount[size];
-                            }
-                        }
-
-                        if (undefined !== bundle.skillLevel[skillName]
-                            && bundle.skillLevel[skillName] <= skillLevel) {
-
-                            console.log(bundle);
-
-                            nextGeneration[this.generateBundleHash(bundle)] = bundle;
-                        }
-                    });
-                });
+                // Create Next Generation
+                let nextGeneration = this.createNextGenerationBySkillEquip(
+                    pervGeneration, equipType, candidateEquips, skillName, skillLevel);
 
                 if (0 < Object.keys(nextGeneration).length) {
                     pervGeneration = Misc.deepCopy(nextGeneration);
                 }
             });
+
+            // Skip Loser & Create Next Generation
+            console.log('Skip Loser & Create Next Generation: ' + skillName);
+
+            let nextGeneration = this.createNextGenerationBySkill(
+                pervGeneration, skillName, skillLevel);
+
+            if (0 < Object.keys(nextGeneration).length) {
+                pervGeneration = Misc.deepCopy(nextGeneration);
+            }
         });
 
-        console.log(pervGeneration);
+        // Create Next Generation with Slot Equips
+        console.log('Create Next Generation with Slot Equips');
+
+        // requireEquips.forEach((equipType) => {
+        //     if ('charm' === equipType) {
+        //         return false;
+        //     }
+
+        //     // Get Candidate Equips
+        //     let equips = DataSet.armorHelper.typeIs(equipType).rareIs(0).getItems();
+        //     let candidateEquips = this.createCandidateEquips(equips, null);
+
+        //     if (0 === candidateEquips.length) {
+        //         return false;
+        //     }
+
+        //     console.log(equipType, candidateEquips);
+
+        //     // Create Next Generation
+        //     let nextGeneration = this.createNextGenerationBySlotEquip(
+        //         pervGeneration, equipType, candidateEquips);
+
+        //     if (0 < Object.keys(nextGeneration).length) {
+        //         pervGeneration = Misc.deepCopy(nextGeneration);
+        //     }
+        // });
+
+        // Last Clean with All Skills
+        console.log('Last Clean with All Skills');
+
+        // Object.keys(requireSkills).forEach((skillName, index) => {
+        //     if (1 < index) {
+        //         return false;
+        //     }
+
+        //     let skillLevel = requireSkills[skillName];
+
+        //     // Skip Loser & Create Next Generation
+        //     console.log('Skip Loser & Create Next Generation: ' + skillName);
+
+        //     let nextGeneration = this.createNextGenerationBySkill(
+        //         pervGeneration, skillName, skillLevel);
+
+        //     if (0 < Object.keys(nextGeneration).length) {
+        //         pervGeneration = Misc.deepCopy(nextGeneration);
+        //     }
+        // });
+
+        // Last Clean with Incompleted Bundle
+        console.log('Last Clean with Incompleted Bundle');
+
+        let nextGeneration = {};
+
+        Object.keys(pervGeneration).forEach((hash) => {
+            let bundle = Misc.deepCopy(pervGeneration[hash]);
+
+            if (0 !== bundle.lostPartCount) {
+                return false;
+            }
+
+            nextGeneration[hash] = bundle;
+        });
+
+        console.log(Object.keys(pervGeneration).length)
+
+        let lastGeneration = Object.values(pervGeneration).sort((a, b) => {
+            return b.defense - a.defense;
+        }).slice(0, 100);
+
+        console.log(lastGeneration);
     };
 
     generateBundleHash = (bundle) => {
@@ -283,6 +284,185 @@ export default class CandidateBundles extends Component {
             equips: bundle.equips,
             jewelCount: bundle.jewelCount
         }));
+    };
+
+    createCandidateEquips = (equips, skillName) => {
+        let defaultCandidateEquip = {
+            name: null,
+            defense: 0,
+            skillLevel: 0,
+            slotSizeCount: {
+                1: 0,
+                2: 0,
+                3: 0
+            }
+        };
+
+        let candidateEquips = []
+
+        equips.forEach((equip) => {
+            let candidateEquip = Misc.deepCopy(defaultCandidateEquip);
+
+            // Set Name & Defense
+            candidateEquip.name = equip.name;
+            candidateEquip.defense = equip.defense;
+
+            // Set Skills
+            if (null !== skillName) {
+                equip.skills.forEach((skill) => {
+                    if (skill.name !== skillName) {
+                        return false;
+                    }
+
+                    candidateEquip.skillLevel = skill.level;
+                });
+            }
+
+            // Set Slots
+            if (undefined !== equip.slots) {
+                equip.slots.forEach((slot) => {
+                    candidateEquip.slotSizeCount[slot.size] += 1;
+                });
+            }
+
+            candidateEquips.push(candidateEquip);
+        });
+
+        // Push Empty Equip
+        if (null !== skillName) {
+            candidateEquips.push(Misc.deepCopy(defaultCandidateEquip));
+        }
+
+        return candidateEquips;
+    };
+
+    createNextGenerationBySkillEquip = (pervGeneration, equipType, candidateEquips, skillName, skillLevel) => {
+        let nextGeneration = {};
+
+        candidateEquips.forEach((equip) => {
+            Object.keys(pervGeneration).forEach((hash) => {
+                let bundle = Misc.deepCopy(pervGeneration[hash]);
+
+                if (undefined === bundle.equips[equipType]) {
+                    bundle.equips[equipType] = null;
+                }
+
+                if (undefined === bundle.skillLevel[skillName]) {
+                    bundle.skillLevel[skillName] = 0;
+                }
+
+                if (bundle.skillLevel[skillName] < skillLevel) {
+                    if (null !== bundle.equips[equipType]) {
+                        nextGeneration[hash] = bundle;
+
+                        return false;
+                    }
+
+                    if (null !== equip.name) {
+                        bundle.equips[equipType] = equip.name;
+                        bundle.defense += equip.defense;
+
+                        if (undefined === bundle.skillLevel[skillName]) {
+                            bundle.skillLevel[skillName] = 0
+                        }
+
+                        bundle.skillLevel[skillName] += equip.skillLevel;
+
+                        for (let size = 1; size <= 3; size++) {
+                            bundle.slotSizeCount[size] += equip.slotSizeCount[size];
+                        }
+
+                        bundle.lostPartCount -= 1;
+                    }
+
+                    if (bundle.skillLevel[skillName] <= skillLevel) {
+                        nextGeneration[this.generateBundleHash(bundle)] = bundle;
+                    }
+                }
+            });
+        });
+
+        return nextGeneration;
+    };
+
+    createNextGenerationBySlotEquip = (pervGeneration, equipType, candidateEquips) => {
+        let nextGeneration = {};
+
+        candidateEquips.forEach((equip) => {
+            Object.keys(pervGeneration).forEach((hash) => {
+                let bundle = Misc.deepCopy(pervGeneration[hash]);
+
+                if (undefined === bundle.equips[equipType]) {
+                    bundle.equips[equipType] = null;
+                }
+
+                if (null !== bundle.equips[equipType]) {
+                    nextGeneration[hash] = bundle;
+
+                    return false;
+                }
+
+                if (null !== equip.name) {
+                    bundle.equips[equipType] = equip.name;
+                    bundle.defense += equip.defense;
+
+                    for (let size = 1; size <= 3; size++) {
+                        bundle.slotSizeCount[size] += equip.slotSizeCount[size];
+                    }
+
+                    bundle.lostPartCount -= 1;
+                }
+
+                nextGeneration[this.generateBundleHash(bundle)] = bundle;
+            });
+        });
+
+        return nextGeneration;
+    };
+
+    createNextGenerationBySkill = (pervGeneration, skillName, skillLevel) => {
+        let nextGeneration = {};
+
+        // Get Jewel
+        let jewel = DataSet.jewelHelper.hasSkill(skillName).getItems();
+        jewel = (0 !== jewel.length) ? jewel[0] : null;
+
+        Object.keys(pervGeneration).forEach((hash) => {
+            let bundle = Misc.deepCopy(pervGeneration[hash]);
+            let skillDiffLevel = skillLevel - bundle.skillLevel[skillName];
+
+            if (null === jewel && 0 !== skillDiffLevel) {
+                // console.log('無法提昇: 沒珠');
+
+                return false;
+            }
+
+            if (0 === bundle.lostPartCount
+                && 0 !== skillDiffLevel) {
+
+                if (skillDiffLevel > bundle.slotSizeCount[jewel.size]) {
+                    // console.log('無法提昇: 沒槽');
+
+                    return false;
+                }
+
+                if (undefined === bundle.skillLevel[skillName]) {
+                    bundle.skillLevel[skillName] = 0;
+                }
+
+                if (undefined === bundle.jewelCount[jewel.name]) {
+                    bundle.jewelCount[jewel.name] = 0;
+                }
+
+                bundle.skillLevel[skillName] += skillDiffLevel;
+                bundle.jewelCount[jewel.name] += skillDiffLevel;
+                bundle.slotSizeCount[jewel.size] -= skillDiffLevel;
+            }
+
+            nextGeneration[this.generateBundleHash(bundle)] = bundle;
+        });
+
+        return nextGeneration;
     };
 
     /**

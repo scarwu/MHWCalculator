@@ -34,15 +34,19 @@ class SetHelper {
         });
 
         // Filter Conditional
-        this.filterSkillName = null;
+        this.resetFilter();
     }
+
+    resetFilter = () => {
+        this.filterSkillName = null;
+    };
 
     getNames = () => {
         return Object.keys(this.mapping);
     };
 
     getItems = () => {
-        return Object.values(this.mapping).filter((data) => {
+        let result = Object.values(this.mapping).filter((data) => {
             if (null !== this.filterSkillName) {
                 if (this.filterSkillName !== data.skill.name) {
                     return false;
@@ -51,6 +55,10 @@ class SetHelper {
 
             return true;
         });
+
+        this.resetFilter();
+
+        return result;
     };
 
     getInfo = (name) => {
@@ -78,15 +86,19 @@ class EnhanceHelper {
         });
 
         // Filter Conditional
-        this.filterSkillName = null;
+        this.resetFilter();
     }
+
+    resetFilter = () => {
+        this.filterSkillName = null;
+    };
 
     getNames = () => {
         return Object.keys(this.mapping);
     };
 
     getItems = () => {
-        return Object.values(this.mapping).filter((data) => {
+        let result = Object.values(this.mapping).filter((data) => {
             if (null !== this.filterSkillName) {
                 if (this.filterSkillName !== data.skill.name) {
                     return false;
@@ -95,6 +107,10 @@ class EnhanceHelper {
 
             return true;
         });
+
+        this.resetFilter();
+
+        return result;
     };
 
     getInfo = (name) => {
@@ -151,6 +167,10 @@ class WeaponHelper {
         });
 
         // Filter Conditional
+        this.resetFilter();
+    }
+
+    resetFilter = () => {
         this.filterType = null;
         this.filterRare = null;
         this.filterElementType = null;
@@ -159,14 +179,14 @@ class WeaponHelper {
         this.filterDefense = null;
         this.filterElementValue = null;
         this.filterSlotCount = null;
-    }
+    };
 
     getNames = () => {
         return Object.keys(this.mapping);
     };
 
     getItems = () => {
-        return Object.values(this.mapping).filter((data) => {
+        let result = Object.values(this.mapping).filter((data) => {
             if (null !== this.filterType) {
                 if (this.filterType !== data.type) {
                     return false;
@@ -181,6 +201,10 @@ class WeaponHelper {
 
             return true;
         });
+
+        this.resetFilter();
+
+        return result;
     };
 
     getInfo = (name) => {
@@ -415,18 +439,22 @@ class ArmorHelper {
         });
 
         // Filter Conditional
+        this.resetFilter();
+    }
+
+    resetFilter = () => {
         this.filterType = null;
         this.filterRare = null;
         this.filterSet = null;
         this.filterSkillName = null;
-    }
+    };
 
     getNames = () => {
         return Object.keys(this.mapping);
     };
 
     getItems = () => {
-        return Object.values(this.mapping).filter((data) => {
+        let result = Object.values(this.mapping).filter((data) => {
             if (null !== this.filterType) {
                 if (this.filterType !== data.type) {
                     return false;
@@ -463,6 +491,10 @@ class ArmorHelper {
 
             return true;
         });
+
+        this.resetFilter();
+
+        return result;
     };
 
     getInfo = (name) => {
@@ -574,15 +606,19 @@ class CharmHelper {
         });
 
         // Filter Conditional
-        this.filterSkillName = null;
+        this.resetFilter();
     }
+
+    resetFilter = () => {
+        this.filterSkillName = null;
+    };
 
     getNames = () => {
         return Object.keys(this.mapping);
     };
 
     getItems = () => {
-        return Object.values(this.mapping).filter((data) => {
+        let result = Object.values(this.mapping).filter((data) => {
             let isSkip = true;
 
             if (null !== this.filterSkillName) {
@@ -601,6 +637,10 @@ class CharmHelper {
 
             return true;
         });
+
+        this.resetFilter();
+
+        return result;
     };
 
     getInfo = (name) => {
@@ -663,18 +703,22 @@ class JewelHelper {
         });
 
         // Filter Conditional
+        this.resetFilter();
+    }
+
+    resetFilter = () => {
         this.filterSkillName = null;
         this.filterRare = null;
         this.filterSize = null;
         this.filterSizeCondition = null;
-    }
+    };
 
     getNames = () => {
         return Object.keys(this.mapping);
     };
 
     getItems = () => {
-        return Object.values(this.mapping).filter((data) => {
+        let result = Object.values(this.mapping).filter((data) => {
             if (null !== this.filterRare) {
                 if (this.filterRare !== data.rare) {
                     return false;
@@ -706,6 +750,10 @@ class JewelHelper {
 
             return true;
         });
+
+        this.resetFilter();
+
+        return result;
     };
 
     getInfo = (name) => {

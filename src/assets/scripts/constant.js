@@ -78,6 +78,7 @@ export default {
     ],
     defaultBundle: {
         equips: {},
+        defense: 0,
         slotSizeCount: {
             1: 0,
             2: 0,
@@ -85,7 +86,7 @@ export default {
         },
         skillLevel: {},
         jewelCount: {},
-        lostPart: []
+        lostPartCount: 0
     },
     defaultEquips: {
         weapon: {
