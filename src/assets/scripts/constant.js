@@ -50,10 +50,41 @@ export default {
         heavyBowgun: 1.5,
         bow: 1.2
     },
+    defaultSkills: [
+        {
+            name: '攻擊',
+            level: 7
+        },
+        {
+            name: '看破',
+            level: 4
+        },
+        {
+            name: '弱點特效',
+            level: 3
+        },
+        {
+            name: '減輕膽怯',
+            level: 2
+        },
+        {
+            name: '超會心',
+            level: 1
+        },
+        {
+            name: '無屬性強化',
+            level: 1
+        }
+    ],
     defaultBundle: {
         equips: {},
-        slots: {},
+        slots: {
+            1: 0,
+            2: 0,
+            3: 0
+        },
         skills: {},
+        jewels: {},
         lostPart: []
     },
     defaultEquips: {
@@ -90,6 +121,7 @@ export default {
         weapon: false,
         helm: false,
         chest: false,
+        arm: false,
         waist: false,
         leg: false,
         charm: false
