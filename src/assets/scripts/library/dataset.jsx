@@ -131,7 +131,7 @@ class WeaponHelper {
             let slotEquipData = {
                 name: slots.map((slot) => {
                     return '[' + slot.size + ']';
-                }).join(' ') + ' 插槽' + Lang[data.type],
+                }).join('') + ' 插槽' + Lang[data.type],
                 rare: 0,
                 type: data.type,
                 series: "插槽",
@@ -393,7 +393,7 @@ class ArmorHelper {
             let slotEquipData = {
                 name: slots.map((slot) => {
                     return '[' + slot.size + ']';
-                }).join(' ') + ' 插槽' + Lang[data.type],
+                }).join('') + ' 插槽' + Lang[data.type],
                 series: "插槽",
                 type: data.type,
                 rare: 0,

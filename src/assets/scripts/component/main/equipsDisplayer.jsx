@@ -112,7 +112,7 @@ export default class EquipsDisplayer extends Component {
                 <div key="weapon" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}>
-                            <span>{weaponInfo.name}</span>
+                            <span>{Lang['weapon']} - {weaponInfo.name}</span>
                         </a>
 
                         <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(weaponSelectorData)}}>
@@ -146,7 +146,7 @@ export default class EquipsDisplayer extends Component {
                                                 {null !== data.key ? (
                                                     <span>{data.key}</span>
                                                 ) : (
-                                                    <span>---</span>
+                                                    <span>***</span>
                                                 )}
                                             </a>
 
@@ -182,7 +182,7 @@ export default class EquipsDisplayer extends Component {
                                                 {null !== data.key ? (
                                                     <span>[{data.size}] {data.key}</span>
                                                 ) : (
-                                                    <span>---</span>
+                                                    <span>***</span>
                                                 )}
                                             </a>
 
@@ -314,7 +314,7 @@ export default class EquipsDisplayer extends Component {
                 <div key="weapon" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}>
-                            <span>---</span>
+                            <span>{Lang['weapon']} - ***</span>
                         </a>
                     </div>
                 </div>
@@ -335,7 +335,7 @@ export default class EquipsDisplayer extends Component {
                     <div key={'equip_' + equipType} className="row mhwc-equip">
                         <div className="col-12 mhwc-name">
                             <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
-                                <span>{equipInfo.name}</span>
+                                <span>{Lang[equipType]} - {equipInfo.name}</span>
                             </a>
 
                             <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(equipSelectorData)}}>
@@ -370,7 +370,7 @@ export default class EquipsDisplayer extends Component {
                                                     {null !== data.key ? (
                                                         <span>[{data.size}] {data.key}</span>
                                                     ) : (
-                                                        <span>---</span>
+                                                        <span>***</span>
                                                     )}
                                                 </a>
 
@@ -458,7 +458,7 @@ export default class EquipsDisplayer extends Component {
                     <div key={'equip_' + equipType} className="row mhwc-equip">
                         <div className="col-12 mhwc-name">
                             <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
-                                <span>---</span>
+                                <span>{Lang[equipType]} - ***</span>
                             </a>
                         </div>
                     </div>
@@ -479,7 +479,7 @@ export default class EquipsDisplayer extends Component {
                 <div key="charm" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a onClick={() => {this.handleEquipSwitch(charmSelectorData)}}>
-                            <span>{charmInfo.name}</span>
+                            <span>{Lang['charm']} - {charmInfo.name}</span>
                         </a>
 
                         <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(charmSelectorData)}}>
@@ -522,7 +522,7 @@ export default class EquipsDisplayer extends Component {
                 <div key="charm" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a onClick={() => {this.handleEquipSwitch(charmSelectorData)}}>
-                            <span>---</span>
+                            <span>{Lang['charm']} - ***</span>
                         </a>
                     </div>
                 </div>

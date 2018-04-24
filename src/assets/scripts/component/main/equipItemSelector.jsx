@@ -216,7 +216,7 @@ export default class EquipItemSelector extends Component {
                                     <td><span>{data.series}</span></td>
                                     <td><span>{data.rare}</span></td>
                                     <td><span>{data.attack}</span></td>
-                                    <td>
+                                    <td className="mhwc-sharpness">
                                         {null !== data.sharpness ? this.renderSharpnessBar(originalSharpness) :  false}
                                         {null !== data.sharpness ? this.renderSharpnessBar(enhancedSharpness) :  false}
                                     </td>
