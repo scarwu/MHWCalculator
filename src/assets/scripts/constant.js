@@ -50,6 +50,12 @@ export default {
         heavyBowgun: 1.5,
         bow: 1.2
     },
+    defaultBundle: {
+        equips: {},
+        slots: {},
+        skills: {},
+        lostPart: []
+    },
     defaultEquips: {
         weapon: {
             key: null,

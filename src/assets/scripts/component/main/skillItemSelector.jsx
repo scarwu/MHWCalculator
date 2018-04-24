@@ -157,16 +157,18 @@ export default class SkillItemSelector extends Component {
     render () {
         return (
             <div className="mhwc-selector">
-                <div className="mhwc-function_bar">
-                    <input className="mhwc-text_segment" type="text"
-                        ref="textSegment" onChange={this.handleTextInput} />
+                <div className="mhwc-dialog">
+                    <div className="mhwc-function_bar">
+                        <input className="mhwc-text_segment" type="text"
+                            ref="textSegment" onChange={this.handleTextInput} />
 
-                    <a className="mhwc-icon" onClick={this.handleWindowClose}>
-                        <i className="fa fa-times"></i>
-                    </a>
-                </div>
-                <div className="mhwc-list">
-                    {this.renderTable()}
+                        <a className="mhwc-icon" onClick={this.handleWindowClose}>
+                            <i className="fa fa-times"></i>
+                        </a>
+                    </div>
+                    <div className="mhwc-list">
+                        {this.renderTable()}
+                    </div>
                 </div>
             </div>
         );

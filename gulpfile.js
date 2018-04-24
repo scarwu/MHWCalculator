@@ -215,7 +215,6 @@ gulp.task('clean:release', function (callback) {
 gulp.task('clean:all', function (callback) {
     return del([
         'src/boot',
-        'docs',
         'node_modules'
     ], callback);
 });

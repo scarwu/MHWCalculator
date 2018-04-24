@@ -19,13 +19,14 @@ $function_bar-height: 40px;
 .mhwc-header {
     padding: 0 10px;
     height: $header-height;
+    background-color: #333;
 
     > a {
         margin: 0 auto;
-        color: #333;
+        color: #ccc;
 
         &:hover {
-            color: #666;
+            color: white;
         }
     }
 
@@ -42,9 +43,12 @@ $function_bar-height: 40px;
 .mhwc-footer {
     padding: 0 10px;
     height: $footer-height;
+    background-color: #333;
+    color: #ccc;
 
     > div:nth-child(1) {
         margin: 0 auto;
+        padding-top: 5px;
         text-align: center;
 
         @include font-size(1.4);
@@ -52,9 +56,18 @@ $function_bar-height: 40px;
 
     > div:nth-child(2) {
         margin: 0 auto;
+        padding-bottom: 5px;
         text-align: center;
 
         @include font-size(1.2);
+
+        a {
+            color: #ccc;
+
+            &:hover {
+                color: white;
+            }
+        }
     }
 }
 
@@ -138,15 +151,26 @@ $function_bar-height: 40px;
 
 .mhwc-selector {
     position: fixed;
-    top: 20px + $header-height;
-    left: 20px;
-    right: 20px;
-    bottom: 20px + $footer-height;
-    border: 1px solid #333;
-    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
 
-    @include border-radius(5px);
-    @include font-size(1.6);
+    .mhwc-dialog {
+        position: absolute;
+        top: 20px + $header-height;
+        left: 20px;
+        right: 20px;
+        bottom: 20px + $footer-height;
+        z-index: 200;
+        border: 1px solid #333;
+        background-color: white;
+
+        @include border-radius(5px);
+        @include font-size(1.6);
+    }
 
     .mhwc-function_bar {
         position: relative;
@@ -293,6 +317,8 @@ $function_bar-height: 40px;
         height: $section_name-height;
         line-height: 40px;
         text-align: center;
+        background-color: #666;
+        color: white;
 
         @include font-size(1.8);
     }
@@ -340,7 +366,7 @@ $function_bar-height: 40px;
 
     > .mhwc-skills {
         .mhwc-function_bar {
-            padding: 0 10px;
+            padding: 5px 10px;
             height: $function_bar-height;
 
             div:nth-child(1) {
@@ -354,8 +380,8 @@ $function_bar-height: 40px;
             a {
                 display: inline-block;
                 width: 100%;
-                height: 40px;
-                line-height: 40px;
+                height: 35px;
+                line-height: 35px;
                 border: 1px solid #333;
                 text-align: center;
 
