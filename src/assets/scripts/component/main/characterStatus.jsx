@@ -463,6 +463,8 @@ export default class CharacterStatus extends Component {
                 status.critical.multiple.positive += tuning.rawCriticalMultiple;
             }
 
+            let criticalRate = (100 >= status.critical.rate)
+                ? Math.abs(status.critical.rate) : 100;
             let criticalMultiple = (0 <= status.critical.rate)
                 ? status.critical.multiple.positive
                 : status.critical.multiple.nagetive;
@@ -481,8 +483,8 @@ export default class CharacterStatus extends Component {
 
             rawAttack *= sharpnessMultiple.raw;
             rawCriticalAttack = rawAttack * criticalMultiple;
-            rawExpectedValue = (rawAttack * (100 - Math.abs(status.critical.rate)) / 100)
-                + (rawCriticalAttack * Math.abs(status.critical.rate) / 100);
+            rawExpectedValue = (rawAttack * (100 - criticalRate) / 100)
+                + (rawCriticalAttack * criticalRate / 100);
 
             elementAttack *= sharpnessMultiple.element;
             elementExpectedValue = elementAttack;
