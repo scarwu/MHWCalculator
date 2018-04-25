@@ -86,7 +86,8 @@ export default {
         },
         skillLevel: {},
         jewelCount: {},
-        lostPartCount: 0
+        lostPartCount: 0,
+        isCompleted: false
     },
     defaultEquips: {
         weapon: {
