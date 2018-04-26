@@ -140,12 +140,12 @@ export default {
     },
     defaultEquipsLock: {
         weapon: false,
-        helm: true,
-        chest: true,
+        helm: false,
+        chest: false,
         arm: false,
-        waist: true,
-        leg: true,
-        charm: true
+        waist: false,
+        leg: false,
+        charm: false
     },
     defaultStatus: {
         health: 100,
