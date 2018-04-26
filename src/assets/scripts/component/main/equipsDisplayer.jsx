@@ -179,8 +179,8 @@ export default class EquipsDisplayer extends Component {
                                         </div>
                                         <div className="col-8 mhwc-value">
                                             <a onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}>
-                                                {null !== data.name ? (
-                                                    <span>[{data.size}] {data.name}</span>
+                                                {null !== data.jewel ? (
+                                                    <span>[{data.jewel.size}] {data.jewel.name}</span>
                                                 ) : (
                                                     <span>---</span>
                                                 )}
@@ -367,8 +367,8 @@ export default class EquipsDisplayer extends Component {
                                             </div>
                                             <div className="col-8 mhwc-value">
                                                 <a onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}>
-                                                    {null !== data.name ? (
-                                                        <span>[{data.size}] {data.name}</span>
+                                                    {null !== data.jewel ? (
+                                                        <span>[{data.jewel.size}] {data.jewel.name}</span>
                                                     ) : (
                                                         <span>---</span>
                                                     )}

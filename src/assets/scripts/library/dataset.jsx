@@ -314,7 +314,10 @@ class WeaponHelper {
             }
 
             // Update Info
-            info.slots[index].name = jewelName;
+            info.slots[index].jewel = {
+                name: jewelName,
+                size: jewelInfo.size
+            };
 
             if (null === skillName) {
                 return false;
@@ -533,7 +536,10 @@ class ArmorHelper {
             }
 
             // Update Info
-            info.slots[index].name = jewelName;
+            info.slots[index].jewel = {
+                name: jewelName,
+                size: jewelInfo.size
+            };
 
             if (null === skillName) {
                 return false;
