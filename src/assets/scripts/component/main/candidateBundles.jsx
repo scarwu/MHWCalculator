@@ -218,14 +218,14 @@ export default class CandidateBundles extends Component {
                     pervGeneration = Misc.deepCopy(nextGeneration);
                 }
 
-                nextGeneration = this.createNextGenerationBySkills(pervGeneration, usedSkills, true);
+                nextGeneration = this.createNextGenerationBySkills(pervGeneration, usedSkills, requireEquipsCount);
 
                 if (0 < Object.keys(nextGeneration).length) {
                     pervGeneration = Misc.deepCopy(nextGeneration);
                 }
             });
 
-            nextGeneration = this.createNextGenerationBySkills(pervGeneration, usedSkills, false);
+            nextGeneration = this.createNextGenerationBySkills(pervGeneration, usedSkills);
 
             if (0 < Object.keys(nextGeneration).length) {
                 pervGeneration = Misc.deepCopy(nextGeneration);
@@ -243,7 +243,7 @@ export default class CandidateBundles extends Component {
         Object.keys(pervGeneration).forEach((hash) => {
             let bundle = Misc.deepCopy(pervGeneration[hash]);
 
-            if (requireEquipsCount === bundle.euqipCount) {
+            if (Object.keys(usedSkills).length === bundle.completedSkillCount) {
                 completedGeneration[hash] = bundle;
             } else {
                 incompletedGeneration[hash] = bundle;
@@ -281,14 +281,14 @@ export default class CandidateBundles extends Component {
                     pervGeneration = Misc.deepCopy(nextGeneration);
                 }
 
-                nextGeneration = this.createNextGenerationBySkills(pervGeneration, usedSkills, true);
+                nextGeneration = this.createNextGenerationBySkills(pervGeneration, usedSkills, requireEquipsCount);
 
                 if (0 < Object.keys(nextGeneration).length) {
                     pervGeneration = Misc.deepCopy(nextGeneration);
                 }
             });
 
-            nextGeneration = this.createNextGenerationBySkills(pervGeneration, usedSkills, false);
+            nextGeneration = this.createNextGenerationBySkills(pervGeneration, usedSkills);
 
             if (0 < Object.keys(nextGeneration).length) {
                 pervGeneration = Misc.deepCopy(nextGeneration);
@@ -296,28 +296,31 @@ export default class CandidateBundles extends Component {
         }
 
         // Last Clean with In-completed Bundle
-        console.log('Last Clean with In-completed Bundle');
+        // console.log('Last Clean with In-completed Bundle');
 
-        nextGeneration = {};
+        // nextGeneration = {};
 
-        Object.keys(pervGeneration).forEach((hash) => {
-            let bundle = Misc.deepCopy(pervGeneration[hash]);
+        // Object.keys(pervGeneration).forEach((hash) => {
+        //     let bundle = Misc.deepCopy(pervGeneration[hash]);
 
-            if (requireEquipsCount !== bundle.euqipCount) {
-                return false;
-            }
+        //     if (requireEquipsCount !== bundle.euqipCount) {
+        //         return false;
+        //     }
 
-            nextGeneration[hash] = bundle;
-        });
+        //     nextGeneration[hash] = bundle;
+        // });
 
-        if (0 < Object.keys(nextGeneration).length) {
-            pervGeneration = Misc.deepCopy(nextGeneration);
-        }
+        // if (0 < Object.keys(nextGeneration).length) {
+        //     pervGeneration = Misc.deepCopy(nextGeneration);
+        // }
 
         console.log('Final Generations:', Object.keys(pervGeneration).length)
 
         let lastGeneration = Object.values(pervGeneration).sort((a, b) => {
-            return b.defense - a.defense;
+            let valueA = (7 - a.euqipCount) * 1000 + a.defense;
+            let valueB = (7 - b.euqipCount) * 1000 + b.defense;
+
+            return valueB - valueA;
         }).slice(0, 100);
 
         console.log(lastGeneration);
@@ -359,35 +362,33 @@ export default class CandidateBundles extends Component {
         return candidateEquip;
     };
 
-    addCandidateEquipToBundle = (candidateEquip, bundle) => {
-        if (undefined === bundle.equips[candidateEquip.type]) {
-            bundle.equips[candidateEquip.type] = null;
+    addCandidateEquipToBundle = (bundle, candidateEquip) => {
+        if (null === candidateEquip.name) {
+            return bundle;
         }
 
-        if (undefined === bundle.skills[skillName]) {
-            bundle.skills[skillName] = 0;
+        if (null !== bundle.equips[candidateEquip.type]) {
+            return bundle;
         }
 
-        if (null !== candidateEquip.name) {
-            bundle.equips[candidateEquip.type] = candidateEquip.name;
-            bundle.defense += candidateEquip.defense;
+        bundle.equips[candidateEquip.type] = candidateEquip.name;
+        bundle.defense += candidateEquip.defense;
 
-            Object.keys(candidateEquip.skills).forEach((skillName) => {
-                let skillLevel = candidateEquip.skills[skillName];
+        Object.keys(candidateEquip.skills).forEach((skillName) => {
+            let skillLevel = candidateEquip.skills[skillName];
 
-                if (undefined === bundle.skills[skillName]) {
-                    bundle.skills[skillName] = 0
-                }
-
-                bundle.skills[skillName] += skillLevel;
-            });
-
-            for (let size = 1; size <= 3; size++) {
-                bundle.remainingSlotCount[size] += candidateEquip.ownSlotCount[size];
+            if (undefined === bundle.skills[skillName]) {
+                bundle.skills[skillName] = 0
             }
 
-            bundle.euqipCount += 1;
+            bundle.skills[skillName] += skillLevel;
+        });
+
+        for (let size = 1; size <= 3; size++) {
+            bundle.remainingSlotCount[size] += candidateEquip.ownSlotCount[size];
         }
+
+        bundle.euqipCount += 1;
 
         return bundle;
     };
@@ -413,6 +414,14 @@ export default class CandidateBundles extends Component {
             Object.keys(pervGeneration).forEach((hash) => {
                 let bundle = Misc.deepCopy(pervGeneration[hash]);
 
+                if (undefined === bundle.equips[equipType]) {
+                    bundle.equips[equipType] = null;
+                }
+
+                if (undefined === bundle.skills[skillName]) {
+                    bundle.skills[skillName] = 0;
+                }
+
                 if (null !== bundle.equips[equipType]
                     || skillLevel === bundle.skills[skillName]) {
 
@@ -421,9 +430,9 @@ export default class CandidateBundles extends Component {
                     return false;
                 }
 
-                bundle = this.addCandidateEquipToBundle(candidateEquip, bundle);
+                bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
-                if (skillLevel > bundle.skills[skillName]) {
+                if (skillLevel < bundle.skills[skillName]) {
                     bundle = Misc.deepCopy(pervGeneration[hash]);
                 }
 
@@ -447,13 +456,17 @@ export default class CandidateBundles extends Component {
             Object.keys(pervGeneration).forEach((hash) => {
                 let bundle = Misc.deepCopy(pervGeneration[hash]);
 
+                if (undefined === bundle.equips[equipType]) {
+                    bundle.equips[equipType] = null;
+                }
+
                 if (null !== bundle.equips[equipType]) {
                     nextGeneration[hash] = bundle;
 
                     return false;
                 }
 
-                bundle = this.addCandidateEquipToBundle(candidateEquip, bundle);
+                bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
                 nextGeneration[this.generateBundleHash(bundle)] = bundle;
             });
@@ -462,7 +475,49 @@ export default class CandidateBundles extends Component {
         return nextGeneration;
     };
 
-    createNextGenerationBySkills = (pervGeneration, skills, withPartCheck = false) => {
+    addJewelToBundleSpecificSkill = (bundle, skillName, skillLevel) => {
+        let skillDiffLevel = skillLevel - bundle.skills[skillName];
+
+        if (0 === skillDiffLevel) {
+            return bundle;
+        }
+
+        // Get Jewel
+        let jewel = DataSet.jewelHelper.hasSkill(skillName).getItems();
+        jewel = (0 !== jewel.length) ? jewel[0] : null;
+
+        if (null === jewel && 0 !== skillDiffLevel) {
+            console.log('無法提昇: 沒珠');
+
+            return false;
+        }
+
+        if (skillDiffLevel > bundle.remainingSlotCount[jewel.size]) {
+            console.log('無法提昇: 沒槽');
+
+            return false;
+        }
+
+        if (undefined === bundle.skills[skillName]) {
+            bundle.skills[skillName] = 0;
+        }
+
+        if (undefined === bundle.jewels[jewel.name]) {
+            bundle.jewels[jewel.name] = 0;
+        }
+
+        bundle.skills[skillName] += skillDiffLevel;
+        bundle.jewels[jewel.name] += skillDiffLevel;
+        bundle.remainingSlotCount[jewel.size] -= skillDiffLevel;
+
+        if (skillLevel === bundle.skills[skillName]) {
+            bundle.completedSkillCount += 1;
+        }
+
+        return bundle;
+    };
+
+    createNextGenerationBySkills = (pervGeneration, skills, requireEquipsCount = null) => {
         let nextGeneration = {};
 
         console.log('Skills:', Object.keys(pervGeneration).length, Object.keys(skills).join(' '));
@@ -471,7 +526,9 @@ export default class CandidateBundles extends Component {
             let bundle = Misc.deepCopy(pervGeneration[hash]);
 
             // In-completed Bundle force into Next Generation
-            if (true === withPartCheck && requireEquipsCount !== bundle.euqipCount) {
+            if (null !== requireEquipsCount
+                && requireEquipsCount !== bundle.euqipCount) {
+
                 nextGeneration[hash] = bundle;
 
                 return false;
@@ -485,37 +542,12 @@ export default class CandidateBundles extends Component {
                 }
 
                 let skillLevel = skills[skillName];
-                let skillDiffLevel = skillLevel - bundle.skills[skillName];
 
-                // Get Jewel
-                let jewel = DataSet.jewelHelper.hasSkill(skillName).getItems();
-                jewel = (0 !== jewel.length) ? jewel[0] : null;
+                bundle = this.addJewelToBundleSpecificSkill(bundle, skillName, skillLevel);
 
-                if (null === jewel && 0 !== skillDiffLevel) {
+                if (false === bundle) {
                     isSkip = true;
-                    console.log('無法提昇: 沒珠');
-
-                    return false;
                 }
-
-                if (skillDiffLevel > bundle.remainingSlotCount[jewel.size]) {
-                    isSkip = true;
-                    console.log('無法提昇: 沒槽');
-
-                    return false;
-                }
-
-                if (undefined === bundle.skills[skillName]) {
-                    bundle.skills[skillName] = 0;
-                }
-
-                if (undefined === bundle.jewels[jewel.name]) {
-                    bundle.jewels[jewel.name] = 0;
-                }
-
-                bundle.skills[skillName] += skillDiffLevel;
-                bundle.jewels[jewel.name] += skillDiffLevel;
-                bundle.remainingSlotCount[jewel.size] -= skillDiffLevel;
             });
 
             if (false === isSkip) {
