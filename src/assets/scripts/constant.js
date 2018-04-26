@@ -76,18 +76,29 @@ export default {
             level: 1
         }
     ],
-    defaultBundle: {
-        equips: {},
+    defaultCandidateEquip: {
+        name: null,
+        type: null,
         defense: 0,
-        slotSizeCount: {
+        skills: {},
+        ownSlotCount: {
+            1: 0,
+            2: 0,
+            3: 0
+        }
+    },
+    defaultBundle: {
+        defense: 0,
+        equips: {},
+        skills: {},
+        jewels: {},
+        remainingSlotCount: {
             1: 0,
             2: 0,
             3: 0
         },
-        skillLevel: {},
-        jewelCount: {},
-        lostPartCount: 0,
-        isCompleted: false
+        euqipCount: 0,
+        completedSkillCount: 0
     },
     defaultEquips: {
         weapon: {

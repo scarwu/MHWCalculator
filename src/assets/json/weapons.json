@@ -802,8 +802,8 @@
         "element": {
             "attack": {
                 "type": "fire",
-                "minValue": 240,
-                "maxValue": 310,
+                "minValue": 510,
+                "maxValue": 660,
                 "isHidden": true
             },
             "status": null
