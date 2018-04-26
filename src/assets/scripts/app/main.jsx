@@ -44,7 +44,6 @@ export default class Main extends Component {
         equips: Misc.deepCopy(Constant.defaultEquips),
         equipsLock: Misc.deepCopy(Constant.defaultEquipsLock),
         equipSelector: {},
-        search: null,
         isShowEquipSelector: false,
         isShowSkillSelector: false
     };
@@ -87,13 +86,11 @@ export default class Main extends Component {
         let equips = this.state.equips;
         let equipsLock = this.state.equipsLock;
 
-        this.setState({
-            search: {
-                skills: Misc.deepCopy(skills),
-                equips: Misc.deepCopy(equips),
-                equipsLock: Misc.deepCopy(equipsLock)
-            }
-        });
+        Event.trigger('SearchCandidateEquips', Misc.deepCopy({
+            skills: skills,
+            equips: equips,
+            equipsLock: equipsLock
+        }));
     };
 
     handleCandidateBundlePickup = (bundle) => {
@@ -236,7 +233,6 @@ export default class Main extends Component {
             skills: skills
         }, () => {
             this.refershUrlHash();
-            this.handleCandidateBundlesSearch();
         });
     }
 
@@ -317,7 +313,7 @@ export default class Main extends Component {
                         </div>
 
                         <div className="mhwc-list">
-                            <CandidateBundles data={this.state.search}
+                            <CandidateBundles
                                 onPickup={this.handleCandidateBundlePickup} />
                         </div>
                     </div>

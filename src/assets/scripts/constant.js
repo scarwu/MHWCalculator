@@ -89,7 +89,15 @@ export default {
     },
     defaultBundle: {
         defense: 0,
-        equips: {},
+        equips: {
+            weapon: null,
+            helm: null,
+            chest: null,
+            arm: null,
+            waist: null,
+            leg: null,
+            charm: null
+        },
         skills: {},
         jewels: {},
         remainingSlotCount: {
@@ -132,12 +140,12 @@ export default {
     },
     defaultEquipsLock: {
         weapon: false,
-        helm: false,
-        chest: false,
+        helm: true,
+        chest: true,
         arm: false,
-        waist: false,
-        leg: false,
-        charm: false
+        waist: true,
+        leg: true,
+        charm: true
     },
     defaultStatus: {
         health: 100,

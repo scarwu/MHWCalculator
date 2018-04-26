@@ -486,7 +486,7 @@ export default class EquipsDisplayer extends Component {
                             <i className="fa fa-times"></i>
                         </a>
                         <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('charm')}}>
-                            {equips.charm.isLock ? (
+                            {equipsLock.charm ? (
                                 <i className="fa fa-lock"></i>
                             ) : (
                                 <i className="fa fa-unlock-alt"></i>
