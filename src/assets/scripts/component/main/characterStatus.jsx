@@ -112,7 +112,7 @@ export default class CharacterStatus extends Component {
         // Defense
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             if (null === info[equipType]) {
-                return false;
+                return;
             }
 
             status.defense += info[equipType].defense;
@@ -123,7 +123,7 @@ export default class CharacterStatus extends Component {
 
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             if (null === info[equipType]) {
-                return false;
+                return;
             }
 
             Constant.elements.forEach((elementType) => {
@@ -146,7 +146,7 @@ export default class CharacterStatus extends Component {
 
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
             if (null === info[equipType]) {
-                return false;
+                return;
             }
 
             info[equipType].skills.forEach((skill) => {
@@ -164,7 +164,7 @@ export default class CharacterStatus extends Component {
 
             setInfo.skills.forEach((skill) => {
                 if (skill.require > setCount) {
-                    return false;
+                    return;
                 }
 
                 let skillInfo = DataSet.skillHelper.getInfo(skill.name);

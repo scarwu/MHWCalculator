@@ -81,7 +81,7 @@ export default class SkillItemSelector extends Component {
 
             // Skip Selected Skills
             if (-1 !== data.indexOf(skill.name)) {
-                return false;
+                return;
             }
 
             list.push(skill);

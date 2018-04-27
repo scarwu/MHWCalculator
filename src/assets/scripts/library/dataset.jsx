@@ -301,22 +301,24 @@ class WeaponHelper {
         let skillLevelMapping = {};
 
         info.slots.forEach((data, index) => {
-            let jewelName = null;
             let jewelInfo = null;
+            let jewelName = null;
+            let jewelSize = null;
             let skillName = null;
 
             if (null !== extend.slotNames
                 && 'string' === typeof extend.slotNames[index]) {
 
+                jewelInfo = jewelHelper.getInfo(extend.slotNames[index]);
                 jewelName = extend.slotNames[index];
-                jewelInfo = jewelHelper.getInfo(jewelName);
+                jewelSize = jewelInfo.size;
                 skillName = jewelInfo.skill.name;
             }
 
             // Update Info
             info.slots[index].jewel = {
                 name: jewelName,
-                size: jewelInfo.size
+                size: jewelSize
             };
 
             if (null === skillName) {
@@ -523,22 +525,24 @@ class ArmorHelper {
         });
 
         info.slots.forEach((data, index) => {
-            let jewelName = null;
             let jewelInfo = null;
+            let jewelName = null;
+            let jewelSize = null;
             let skillName = null;
 
             if (null !== extend.slotNames
                 && 'string' === typeof extend.slotNames[index]) {
 
+                jewelInfo = jewelHelper.getInfo(extend.slotNames[index]);
                 jewelName = extend.slotNames[index];
-                jewelInfo = jewelHelper.getInfo(jewelName);
+                jewelSize = jewelInfo.size;
                 skillName = jewelInfo.skill.name;
             }
 
             // Update Info
             info.slots[index].jewel = {
                 name: jewelName,
-                size: jewelInfo.size
+                size: jewelSize
             };
 
             if (null === skillName) {
