@@ -138,7 +138,9 @@ export default class Main extends Component {
         delete skills[index];
 
         this.setState({
-            skills: skills
+            skills: skills.filter((skill) => {
+                return (null !== skill);
+            })
         });
     };
 

@@ -60,6 +60,7 @@ export default class CandidateBundles extends Component {
         // Create 1st BundleList & Extra Info
         let requireEquips = [];
         let requireSkills = {};
+        let correspondJewels = {};
         let pervBundleList = {};
         let nextBundleList = {};
         let lastBundleList = {};
@@ -69,6 +70,14 @@ export default class CandidateBundles extends Component {
             return b.level - a.level;
         }).forEach((skill) => {
             requireSkills[skill.name] = skill.level;
+
+            let jewel = DataSet.jewelHelper.hasSkill(skill.name).getItems();
+            jewel = (0 !== jewel.length) ? jewel[0] : null;
+
+            correspondJewels[skill.name] = (null !== jewel) ? {
+                name: jewel.name,
+                size: jewel.size,
+            } : null;
         });
 
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
@@ -160,6 +169,7 @@ export default class CandidateBundles extends Component {
 
         console.log(requireSkills);
         console.log(requireEquips);
+        console.log(correspondJewels);
         console.log(pervBundleList);
 
         // Create Next BundleList with Skill Equips
@@ -217,10 +227,12 @@ export default class CandidateBundles extends Component {
 
                 // Create Next BundleList By Skills
                 pervBundleList = this.createNextBundleListBySkills(
-                    pervBundleList, usedSkills, requireEquipsCount, true
+                    pervBundleList, usedSkills, correspondJewels, requireEquipsCount, true
                 );
 
                 // Find Compeleted Bundle into Last BundleList
+                console.log('Find Compeleted Bundle');
+
                 nextBundleList = {};
 
                 Object.keys(pervBundleList).forEach((hash) => {
@@ -244,16 +256,18 @@ export default class CandidateBundles extends Component {
 
             // Create Next BundleList By Skills
             // pervBundleList = this.createNextBundleListBySkills(
-            //     pervBundleList, usedSkills, null, false
+            //     pervBundleList, usedSkills, correspondJewels, null, false
             // );
         });
 
         // Create Next BundleList By Skills
         pervBundleList = this.createNextBundleListBySkills(
-            pervBundleList, usedSkills, null, true
+            pervBundleList, usedSkills, correspondJewels, null, true
         );
 
         // Find Compeleted Bundle into Last BundleList
+        console.log('Find Compeleted Bundle');
+
         nextBundleList = {};
 
         Object.keys(pervBundleList).forEach((hash) => {
@@ -274,9 +288,8 @@ export default class CandidateBundles extends Component {
             'Next BundleList:', Object.keys(nextBundleList).length
         );
 
+        // Create Next BundleList with Slot Equips
         if (0 === Object.keys(lastBundleList).length) {
-
-            // Create Next BundleList with Slot Equips
             requireEquips.forEach((equipType) => {
                 if ('charm' === equipType) {
                     return false;
@@ -297,14 +310,17 @@ export default class CandidateBundles extends Component {
 
                 // Create Next BundleList By Skills
                 pervBundleList = this.createNextBundleListBySkills(
-                    pervBundleList, usedSkills, requireEquipsCount, true
+                    pervBundleList, usedSkills, correspondJewels, requireEquipsCount, true
                 );
             });
 
             // Create Next BundleList By Skills
             pervBundleList = this.createNextBundleListBySkills(
-                pervBundleList, usedSkills, null, true
+                pervBundleList, usedSkills, correspondJewels, null, true
             );
+
+            // Find Compeleted Bundle into Last BundleList
+            console.log('Find Compeleted Bundle');
 
             Object.keys(pervBundleList).forEach((hash) => {
                 let bundle = Misc.deepCopy(pervBundleList[hash]);
@@ -530,19 +546,16 @@ export default class CandidateBundles extends Component {
         return nextBundleList;
     };
 
-    addJewelToBundleBySpecificSkill = (bundle, skillName, skillLevel, isAllowLargerSlot = false) => {
-        let diffSkillLevel = skillLevel - bundle.skills[skillName];
+    addJewelToBundleBySpecificSkill = (bundle, skill, jewel, isAllowLargerSlot = false) => {
+        let diffSkillLevel = skill.level - bundle.skills[skill.name];
 
         if (0 === diffSkillLevel) {
             return bundle;
         }
 
         // Get Jewel
-        let jewel = DataSet.jewelHelper.hasSkill(skillName).getItems();
-        jewel = (0 !== jewel.length) ? jewel[0] : null;
-
-        if (null === jewel && 0 !== diffSkillLevel) {
-            // console.log('Failed - No Jewel', skillName);
+        if (null === jewel.name && 0 !== diffSkillLevel) {
+            // console.log('Failed - No Jewel', skill.name);
 
             return false;
         }
@@ -561,7 +574,7 @@ export default class CandidateBundles extends Component {
                 }
 
                 if (diffSkillLevel > bundle.remainingSlotCount[currentSlotSize]) {
-                    // console.log('Failed - No Slots', skillName);
+                    // console.log('Failed - No Slots', skill.name);
 
                     return false;
                 }
@@ -585,24 +598,24 @@ export default class CandidateBundles extends Component {
                 }
 
                 if (3 < currentSlotSize) {
-                    // console.log('Failed - No Slots', skillName);
+                    // console.log('Failed - No Slots', skill.name);
 
                     return false;
                 }
             }
         }
 
-        if (undefined === bundle.skills[skillName]) {
-            bundle.skills[skillName] = 0;
+        if (undefined === bundle.skills[skill.name]) {
+            bundle.skills[skill.name] = 0;
         }
 
         if (undefined === bundle.jewels[jewel.name]) {
             bundle.jewels[jewel.name] = 0;
         }
 
-        diffSkillLevel = skillLevel - bundle.skills[skillName];
+        diffSkillLevel = skill.level - bundle.skills[skill.name];
 
-        bundle.skills[skillName] += diffSkillLevel;
+        bundle.skills[skill.name] += diffSkillLevel;
         bundle.jewels[jewel.name] += diffSkillLevel;
 
         Object.keys(usedSlotCount).forEach((slotSize) => {
@@ -612,7 +625,7 @@ export default class CandidateBundles extends Component {
         return bundle;
     };
 
-    createNextBundleListBySkills = (pervBundleList, skills, requireEquipsCount = null, isAllowLargerSlot = false) => {
+    createNextBundleListBySkills = (pervBundleList, skills, correspondJewels, requireEquipsCount = null, isAllowLargerSlot = false) => {
         let nextBundleList = {};
 
         console.log(
@@ -622,9 +635,37 @@ export default class CandidateBundles extends Component {
             requireEquipsCount
         );
 
+        let orderList = [];
+
+        Object.keys(skills).forEach((skillName) => {
+            let skillLevel = skills[skillName];
+            let jewel = correspondJewels[skillName];
+
+            orderList.push({
+                skill: {
+                    name: skillName,
+                    level: skillLevel
+                },
+                jewel: (null !== jewel) ? {
+                    name: jewel.name,
+                    size: jewel.size
+                } : {
+                    name: null,
+                    size: 0
+                }
+            });
+        });
+
+        orderList = orderList.sort((a, b) => {
+            let valueA = (4 - a.jewel.size) * 100 + a.skill.level;
+            let valueB = (4 - b.jewel.size) * 100 + b.skill.level;
+
+            return valueB - valueA;
+        });
+
         Object.keys(pervBundleList).forEach((hash) => {
             let bundle = Misc.deepCopy(pervBundleList[hash]);
-            bundle = this.resetCompletedSkillCount(bundle, skills);
+            // bundle = this.resetCompletedSkillCount(bundle, skills);
 
             // In-completed Bundle force into Next BundleList
             if (null !== requireEquipsCount
@@ -636,37 +677,20 @@ export default class CandidateBundles extends Component {
             }
 
             let isSkip = false;
-            let orderList = [];
 
-            Object.keys(skills).forEach((skillName) => {
-                let skillLevel = skills[skillName];
-
-                // Get Jewel
-                let jewel = DataSet.jewelHelper.hasSkill(skillName).getItems();
-                jewel = (0 !== jewel.length) ? jewel[0] : null;
-
-                orderList.push({
-                    skillName: skillName,
-                    skillLevel: skillLevel,
-                    jewelSize: (null !== jewel) ? jewel.size : 0
-                });
-            });
-
-            orderList = orderList.sort((a, b) => {
-                let valueA = (4 - a.jewelSize) * 100 + a.skillLevel;
-                let valueB = (4 - b.jewelSize) * 100 + b.skillLevel;
-
-                return valueB - valueA;
-            }).forEach((order) => {
+            orderList.forEach((order) => {
                 if (true === isSkip) {
                     return false;
                 }
 
-                let skillName = order.skillName;
-                let skillLevel = order.skillLevel;
+                if (undefined !== bundle.skills[order.skill.name]
+                    && order.skill.level === bundle.skills[order.skill.name]) {
+
+                    return false;
+                }
 
                 bundle = this.addJewelToBundleBySpecificSkill(
-                    bundle, skillName, skillLevel, isAllowLargerSlot
+                    bundle, order.skill, order.jewel, isAllowLargerSlot
                 );
 
                 if (false === bundle) {
