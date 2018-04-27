@@ -61,8 +61,8 @@ export default class CandidateBundles extends Component {
         let requireEquips = [];
         let requireSkills = {};
         let pervBundleList = {};
-        let completedBundleList = {};
-        let incompletedBundleList = {};
+        let nextBundleList = {};
+        let lastBundleList = {};
         let bundle = Misc.deepCopy(Constant.defaultBundle);
 
         skills.sort((a, b) => {
@@ -194,94 +194,87 @@ export default class CandidateBundles extends Component {
                 let candidateEquips = this.createCandidateEquips(equips, equipType);
 
                 // Add Empty Equip
-                let candidateEquip = Misc.deepCopy(Constant.defaultCandidateEquip);
-                candidateEquip.type = equipType;
+                if ('charm' === equipType &&
+                    skillName === lastSkillName) {
 
-                candidateEquips.push(candidateEquip);
+                    // pass
+                } else {
+                    let candidateEquip = Misc.deepCopy(Constant.defaultCandidateEquip);
+                    candidateEquip.type = equipType;
+
+                    candidateEquips.push(candidateEquip);
+                }
 
                 if (0 === candidateEquips.length) {
                     return false;
                 }
 
                 // Create Next BundleList By Skill Equips
-                pervBundleList = Misc.deepCopy(this.createNextBundleListBySkillEquips(
+                pervBundleList = this.createNextBundleListBySkillEquips(
                     pervBundleList, equipType, candidateEquips,
                     skillName, skillLevel
-                ));
-
-                // console.log(pervBundleList);
-
-                // let nextBundleList = {};
-
-                // Object.keys(pervBundleList).forEach((hash) => {
-                //     let bundle = Misc.deepCopy(pervBundleList[hash]);
-
-                //     if (Object.keys(requireSkills).length === bundle.completedSkillCount) {
-                //         completedBundleList[hash] = bundle;
-                //     } else {
-                //         nextBundleList[hash] = bundle;
-                //     }
-                // });
-
-                // pervBundleList = Misc.deepCopy(nextBundleList);
-
-                // let nextBundleList = {};
-
-                // Object.keys(pervBundleList).forEach((hash) => {
-                //     let bundle = Misc.deepCopy(pervBundleList[hash]);
-
-                //     if (undefined === bundle.skills[skillName]) {
-                //         bundle.skills[skillName] = 0;
-                //     }
-
-                //     if (skillLevel === bundle.skills[skillName]) {
-                //         bundle.completedSkillCount += 1;
-                //     }
-
-                //     nextBundleList[hash] = bundle;
-                // });
-
-                // pervBundleList = Misc.deepCopy(nextBundleList);
+                );
 
                 // Create Next BundleList By Skills
-                pervBundleList = Misc.deepCopy(this.createNextBundleListBySkills(
+                pervBundleList = this.createNextBundleListBySkills(
                     pervBundleList, usedSkills, requireEquipsCount, true
-                ));
+                );
 
-                // console.log(pervBundleList);
+                // Find Compeleted Bundle into Last BundleList
+                nextBundleList = {};
+
+                Object.keys(pervBundleList).forEach((hash) => {
+                    let bundle = Misc.deepCopy(pervBundleList[hash]);
+                    bundle = this.resetCompletedSkillCount(bundle, requireSkills);
+
+                    if (Object.keys(requireSkills).length === bundle.completedSkillCount) {
+                        lastBundleList[hash] = bundle;
+                    } else {
+                        nextBundleList[hash] = bundle;
+                    }
+                });
+
+                pervBundleList = Misc.deepCopy(nextBundleList);
+
+                console.log(
+                    'Last BundleList:', Object.keys(lastBundleList).length,
+                    'Next BundleList:', Object.keys(nextBundleList).length
+                );
             });
 
             // Create Next BundleList By Skills
-            // pervBundleList = Misc.deepCopy(this.createNextBundleListBySkills(
+            // pervBundleList = this.createNextBundleListBySkills(
             //     pervBundleList, usedSkills, null, false
-            // ));
-
-            // console.log(Object.keys(pervBundleList).length, pervBundleList);
-            // console.log('BundleCount', Object.keys(pervBundleList).length);
+            // );
         });
 
         // Create Next BundleList By Skills
-        pervBundleList = Misc.deepCopy(this.createNextBundleListBySkills(
+        pervBundleList = this.createNextBundleListBySkills(
             pervBundleList, usedSkills, null, true
-        ));
+        );
 
-        // console.log(pervBundleList);
-
-        // Devide BundleList
-        console.log('Devide BundleList');
+        // Find Compeleted Bundle into Last BundleList
+        nextBundleList = {};
 
         Object.keys(pervBundleList).forEach((hash) => {
             let bundle = Misc.deepCopy(pervBundleList[hash]);
+            bundle = this.resetCompletedSkillCount(bundle, requireSkills);
 
             if (Object.keys(usedSkills).length === bundle.completedSkillCount) {
-                completedBundleList[hash] = bundle;
+                lastBundleList[hash] = bundle;
             } else {
-                incompletedBundleList[hash] = bundle;
+                nextBundleList[hash] = bundle;
             }
         });
 
-        if (0 === Object.keys(completedBundleList).length) {
-            pervBundleList = Misc.deepCopy(incompletedBundleList);
+        pervBundleList = Misc.deepCopy(nextBundleList);
+
+        console.log(
+            'Last BundleList:', Object.keys(lastBundleList).length,
+            'Next BundleList:', Object.keys(nextBundleList).length
+        );
+
+        if (0 === Object.keys(lastBundleList).length) {
 
             // Create Next BundleList with Slot Equips
             requireEquips.forEach((equipType) => {
@@ -298,43 +291,39 @@ export default class CandidateBundles extends Component {
                 }
 
                 // Create Next BundleList By Slot Equips
-                pervBundleList = Misc.deepCopy(this.createNextBundleListBySlotEquips(
+                pervBundleList = this.createNextBundleListBySlotEquips(
                     pervBundleList, equipType, candidateEquips
-                ));
+                );
 
                 // Create Next BundleList By Skills
-                pervBundleList = Misc.deepCopy(this.createNextBundleListBySkills(
+                pervBundleList = this.createNextBundleListBySkills(
                     pervBundleList, usedSkills, requireEquipsCount, true
-                ));
+                );
             });
 
             // Create Next BundleList By Skills
-            pervBundleList = Misc.deepCopy(this.createNextBundleListBySkills(
+            pervBundleList = this.createNextBundleListBySkills(
                 pervBundleList, usedSkills, null, true
-            ));
+            );
 
             Object.keys(pervBundleList).forEach((hash) => {
                 let bundle = Misc.deepCopy(pervBundleList[hash]);
+                bundle = this.resetCompletedSkillCount(bundle);
 
                 if (Object.keys(usedSkills).length === bundle.completedSkillCount) {
-                    completedBundleList[hash] = bundle;
+                    lastBundleList[hash] = bundle;
                 }
             });
         }
 
-        console.log('Completed BundleList:', Object.keys(completedBundleList).length);
-        console.log('In-Completed BundleList:', Object.keys(incompletedBundleList).length);
+        console.log('Last BundleList:', Object.keys(lastBundleList).length);
 
-        pervBundleList = Misc.deepCopy(completedBundleList);
-
-        console.log('Final BundleLists:', Object.keys(pervBundleList).length)
-
-        let lastBundleList = Object.values(pervBundleList).sort((a, b) => {
+        lastBundleList = Object.values(lastBundleList).sort((a, b) => {
             let valueA = (8 - a.euqipCount) * 1000 + a.defense;
             let valueB = (8 - b.euqipCount) * 1000 + b.defense;
 
             return valueB - valueA;
-        }).slice(0, 100);
+        }).slice(0, 25);
 
         console.log(lastBundleList);
 
@@ -344,10 +333,26 @@ export default class CandidateBundles extends Component {
     };
 
     generateBundleHash = (bundle) => {
-        return MD5(JSON.stringify({
-            equips: bundle.equips,
-            jewels: bundle.jewels
-        }));
+        let equips = {};
+        let jewels = {};
+
+        Object.keys(bundle.equips).forEach((equipType) => {
+            if (null === bundle.equips[equipType]) {
+                return false;
+            }
+
+            equips[equipType] = bundle.equips[equipType];
+        });
+
+        Object.keys(bundle.jewels).sort().forEach((jewelName) => {
+            if (0 === bundle.jewels[jewelName]) {
+                return false;
+            }
+
+            jewels[jewelName] = bundle.jewels[jewelName];
+        });
+
+        return MD5(JSON.stringify([equips, jewels]));
     };
 
     convertEquipToCandidateEquip = (equip) => {
@@ -472,7 +477,7 @@ export default class CandidateBundles extends Component {
                 if (null !== bundle.equips[equipType]
                     || skillLevel === bundle.skills[skillName]) {
 
-                    nextBundleList[hash] = bundle;
+                    nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
                     return false;
                 }
@@ -482,10 +487,6 @@ export default class CandidateBundles extends Component {
 
                 if (skillLevel < bundle.skills[skillName]) {
                     bundle = Misc.deepCopy(pervBundleList[hash]);
-                }
-
-                if (skillLevel === bundle.skills[skillName]) {
-                    bundle.completedSkillCount += 1;
                 }
 
                 nextBundleList[this.generateBundleHash(bundle)] = bundle;
@@ -514,7 +515,7 @@ export default class CandidateBundles extends Component {
                 }
 
                 if (null !== bundle.equips[equipType]) {
-                    nextBundleList[hash] = bundle;
+                    nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
                     return false;
                 }
@@ -608,10 +609,6 @@ export default class CandidateBundles extends Component {
             bundle.remainingSlotCount[slotSize] -= usedSlotCount[slotSize];
         });
 
-        if (skillLevel === bundle.skills[skillName]) {
-            bundle.completedSkillCount += 1;
-        }
-
         return bundle;
     };
 
@@ -633,7 +630,7 @@ export default class CandidateBundles extends Component {
             if (null !== requireEquipsCount
                 && requireEquipsCount !== bundle.euqipCount) {
 
-                nextBundleList[hash] = bundle;
+                nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
                 return false;
             }
@@ -719,14 +716,6 @@ export default class CandidateBundles extends Component {
                     <div className="col-12 mhwc-value">
                         <div className="row">
                             <div className="col-4 mhwc-name">
-                                <span>防禦力</span>
-                            </div>
-                            <div className="col-8 mhwc-value">
-                                <span>{data.defense}</span>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-4 mhwc-name">
                                 <span>裝備</span>
                             </div>
                             <div className="col-8 mhwc-value">
@@ -749,6 +738,28 @@ export default class CandidateBundles extends Component {
                                         let jewelCount = data.jewels[jewelName];
 
                                         return `${jewelName} x ${jewelCount}`;
+                                    }).join(', ')
+                                }</span>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-4 mhwc-name">
+                                <span>防禦力</span>
+                            </div>
+                            <div className="col-8 mhwc-value">
+                                <span>{data.defense}</span>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-4 mhwc-name">
+                                <span>技能</span>
+                            </div>
+                            <div className="col-8 mhwc-value">
+                                <span>{
+                                    Object.keys(data.skills).map((skillName) => {
+                                        let skillCount = data.skills[skillName];
+
+                                        return `${skillName} Lv.${skillCount}`;
                                     }).join(', ')
                                 }</span>
                             </div>
