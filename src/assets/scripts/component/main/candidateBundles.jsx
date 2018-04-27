@@ -41,6 +41,8 @@ export default class CandidateBundles extends Component {
      * Handle Functions
      */
     handleBundlePickup = (index) => {
+        let bundleList = this.state.bundleList;
+
         this.props.onPickup(bundleList[index]);
     };
 
@@ -335,6 +337,10 @@ export default class CandidateBundles extends Component {
         }).slice(0, 100);
 
         console.log(lastBundleList);
+
+        this.setState({
+            bundleList: lastBundleList
+        });
     };
 
     generateBundleHash = (bundle) => {
@@ -535,7 +541,7 @@ export default class CandidateBundles extends Component {
         jewel = (0 !== jewel.length) ? jewel[0] : null;
 
         if (null === jewel && 0 !== diffSkillLevel) {
-            console.log('Failed: No Jewel:', skillName);
+            // console.log('Failed - No Jewel', skillName);
 
             return false;
         }
@@ -549,17 +555,26 @@ export default class CandidateBundles extends Component {
 
         while (true) {
             if (false === isAllowLargerSlot) {
-                if (0 < diffSkillLevel - bundle.remainingSlotCount[currentSlotSize]) {
-                    console.log('Failed: No Slots', skillName);
+                if (0 === bundle.remainingSlotCount[currentSlotSize]) {
+                    return false;
+                }
+
+                if (diffSkillLevel > bundle.remainingSlotCount[currentSlotSize]) {
+                    // console.log('Failed - No Slots', skillName);
 
                     return false;
                 }
 
                 break;
             } else {
-                if (0 <= diffSkillLevel - bundle.remainingSlotCount[currentSlotSize]) {
-                    usedSlotCount[currentSlotSize] = bundle.remainingSlotCount[currentSlotSize];
-                    diffSkillLevel -= bundle.remainingSlotCount[currentSlotSize];
+                if (0 !== bundle.remainingSlotCount[currentSlotSize]) {
+                    if (diffSkillLevel > bundle.remainingSlotCount[currentSlotSize]) {
+                        usedSlotCount[currentSlotSize] = bundle.remainingSlotCount[currentSlotSize];
+                        diffSkillLevel -= bundle.remainingSlotCount[currentSlotSize];
+                    } else {
+                        usedSlotCount[currentSlotSize] = diffSkillLevel;
+                        diffSkillLevel = 0;
+                    }
                 }
 
                 currentSlotSize += 1;
@@ -569,7 +584,7 @@ export default class CandidateBundles extends Component {
                 }
 
                 if (3 < currentSlotSize) {
-                    console.log('Failed: No Slots', skillName);
+                    // console.log('Failed - No Slots', skillName);
 
                     return false;
                 }
@@ -584,8 +599,10 @@ export default class CandidateBundles extends Component {
             bundle.jewels[jewel.name] = 0;
         }
 
-        bundle.skills[skillName] += skillLevel - bundle.skills[skillName];
-        bundle.jewels[jewel.name] += skillLevel - bundle.skills[skillName];
+        diffSkillLevel = skillLevel - bundle.skills[skillName];
+
+        bundle.skills[skillName] += diffSkillLevel;
+        bundle.jewels[jewel.name] += diffSkillLevel;
 
         Object.keys(usedSlotCount).forEach((slotSize) => {
             bundle.remainingSlotCount[slotSize] -= usedSlotCount[slotSize];
@@ -684,10 +701,68 @@ export default class CandidateBundles extends Component {
     /**
      * Render Functions
      */
+    renderBundleItems = () => {
+        let bundleList = this.state.bundleList;
+
+        return bundleList.map((data, index) => {
+            return (
+                <div key={index} className="row mhwc-item">
+                    <div className="col-12 mhwc-name">
+                        <span>備選 {index + 1}</span>
+
+                        <div className="mhwc-icons_bundle">
+                            <a className="mhwc-icon" onClick={() => {this.handleBundlePickup(index)}}>
+                                <i className="fa fa-check"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col-12 mhwc-value">
+                        <div className="row">
+                            <div className="col-4 mhwc-name">
+                                <span>防禦力</span>
+                            </div>
+                            <div className="col-8 mhwc-value">
+                                <span>{data.defense}</span>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-4 mhwc-name">
+                                <span>裝備</span>
+                            </div>
+                            <div className="col-8 mhwc-value">
+                                <span>{
+                                    Object.values(data.equips).filter((equipName) => {
+                                        return (null !== equipName);
+                                    }).map((equipName) => {
+                                        return equipName;
+                                    }).join(', ')
+                                }</span>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-4 mhwc-name">
+                                <span>裝飾珠</span>
+                            </div>
+                            <div className="col-8 mhwc-value">
+                                <span>{
+                                    Object.keys(data.jewels).map((jewelName) => {
+                                        let jewelCount = data.jewels[jewelName];
+
+                                        return `${jewelName} x ${jewelCount}`;
+                                    }).join(', ')
+                                }</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        });
+    };
+
     render () {
         return (
             <div className="mhwc-candidate_bundles">
-
+                {this.renderBundleItems()}
             </div>
         );
     }

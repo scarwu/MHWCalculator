@@ -409,11 +409,49 @@ $function_bar-height: 40px;
                 margin-top: 5px;
             }
         }
-
     }
 
     > .mhwc-bundles {
+        .mhwc-item {
+            margin: 5px 5px 10px 10px;
+            padding: 5px 5px 15px 5px;
+            border: 1px solid #999;
+            background-color: #eee;
 
+            @include border-radius(5px);
+
+            .mhwc-name {
+                line-height: 33px;
+
+                .mhwc-icons_bundle {
+                    float: right;
+
+                    .mhwc-icon {
+                        float: none;
+                    }
+                }
+            }
+
+            .mhwc-value {
+                padding: 5px;
+                border: 1px solid #999;
+                background-color: white;
+
+                @include border-radius(5px);
+            }
+
+            > .mhwc-value {
+                margin-top: 5px;
+            }
+
+            .row {
+                margin-top: 5px;
+
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
+            }
+        }
     }
 
     > .mhwc-equips {

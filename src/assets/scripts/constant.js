@@ -142,10 +142,10 @@ export default {
         weapon: false,
         helm: false,
         chest: false,
-        arm: true,
-        waist: true,
-        leg: true,
-        charm: true
+        arm: false,
+        waist: false,
+        leg: false,
+        charm: false
     },
     defaultStatus: {
         health: 100,
