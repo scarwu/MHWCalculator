@@ -7259,6 +7259,44 @@
         "slots": []
     },
     {
+        "name": "但丁的魔劍",
+        "rare": 8,
+        "type": "chargeBlade",
+        "series": "但丁",
+        "attack": 720,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 40,
+                "orange": 50,
+                "yellow": 50,
+                "green": 80,
+                "blue": 180,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 150,
+                "maxValue": 200,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
         "name": "鉻鋼長刀 II",
         "rare": 6,
         "type": "insectGlaive",

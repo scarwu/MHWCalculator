@@ -85,10 +85,10 @@ export default {
             1: 0,
             2: 0,
             3: 0
-        }
+        },
+        expectedValue: 0
     },
     defaultBundle: {
-        defense: 0,
         equips: {
             weapon: null,
             helm: null,
@@ -98,15 +98,20 @@ export default {
             leg: null,
             charm: null
         },
-        skills: {},
         jewels: {},
-        remainingSlotCount: {
-            1: 0,
-            2: 0,
-            3: 0
-        },
-        euqipCount: 0,
-        completedSkillCount: 0
+        defense: 0,
+        skills: {},
+        meta: {
+            expectedValue: 0,
+            euqipCount: 0,
+            completedSkillCount: 0,
+            remainingSlotCount: {
+                1: 0,
+                2: 0,
+                3: 0,
+                all: 0
+            }
+        }
     },
     defaultEquips: {
         weapon: {

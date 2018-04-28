@@ -15330,5 +15330,164 @@
         ],
         "set": null,
         "price": 4000
+    },
+    {
+        "name": "但丁假髮α",
+        "series": "但丁α",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 3,
+            "water": -3,
+            "thunder": 3,
+            "ice": -3,
+            "dragon": 3
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "弱點特效",
+                "level": 1
+            },
+            {
+                "name": "看破",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 16000
+    },
+    {
+        "name": "但丁風衣α",
+        "series": "但丁α",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 3,
+            "water": -3,
+            "thunder": 3,
+            "ice": -3,
+            "dragon": 3
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "迴避性能",
+                "level": 1
+            },
+            {
+                "name": "看破",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 16000
+    },
+    {
+        "name": "但丁手套α",
+        "series": "但丁α",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 3,
+            "water": -3,
+            "thunder": 3,
+            "ice": -3,
+            "dragon": 3
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "迴避性能",
+                "level": 1
+            },
+            {
+                "name": "特殊射擊強化",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 16000
+    },
+    {
+        "name": "但丁皮帶α",
+        "series": "但丁α",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 3,
+            "water": -3,
+            "thunder": 3,
+            "ice": -3,
+            "dragon": 3
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "迴避性能",
+                "level": 1
+            },
+            {
+                "name": "力量解放",
+                "level": 1
+            }
+        ],
+        "set": null,
+        "price": 16000
+    },
+    {
+        "name": "但丁皮庫靴α",
+        "series": "但丁α",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 3,
+            "water": -3,
+            "thunder": 3,
+            "ice": -3,
+            "dragon": 3
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "弱點特效",
+                "level": 2
+            }
+        ],
+        "set": null,
+        "price": 16000
     }
 ]
