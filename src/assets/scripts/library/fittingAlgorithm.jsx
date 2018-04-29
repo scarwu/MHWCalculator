@@ -29,6 +29,7 @@ export default class FittingAlgorithm {
         let requireEquips = [];
         let requireSkills = {};
         let correspondJewels = {};
+        let candidateEquips = {};
         let pervBundleList = {};
         let nextBundleList = {};
         let lastBundleList = {};
@@ -125,9 +126,9 @@ export default class FittingAlgorithm {
         console.log(pervBundleList);
 
         // Create CandidateEquips
-        console.log('Create Candidate Equips');
+        console.log('Create Candidate Equips with Skill Equips');
 
-        let candidateEquips = {};
+        candidateEquips = {};
 
         requireEquips.forEach((equipType) => {
 
@@ -166,9 +167,11 @@ export default class FittingAlgorithm {
 
         console.log(candidateEquips);
 
+        // Create Next BundleList By Skill Equips
+        console.log('Create Next BundleList By Skill Equips');
+
         requireEquips.forEach((equipType) => {
 
-            // Create Next BundleList By Skill Equips
             nextBundleList = {};
 
             Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
@@ -285,31 +288,40 @@ export default class FittingAlgorithm {
 
         console.log('Last BundleList - One:', Object.keys(lastBundleList).length);
 
-        // Create Next BundleList with Slot Equips
         if (0 === Object.keys(lastBundleList).length) {
+            console.log('Create Candidate Equips with Slot Equips');
+
+            candidateEquips = {};
+
             requireEquips.forEach((equipType) => {
                 if ('charm' === equipType) {
                     return;
                 }
 
+                candidateEquips[equipType] = {};
+
                 // Get Candidate Equips
                 let equips = DataSet.armorHelper.typeIs(equipType).rareIs(0).getItems();
-                let candidateEquips = this.createCandidateEquips(equips, equipType);
 
-                if (0 === candidateEquips.length) {
-                    return;
-                }
+                // Convert Equip to Candidate Equip and Append It
+                equips.forEach((equip) => {
+                    let candidateEquip = this.convertEquipToCandidateEquip(equip);
+                    candidateEquip.type = equipType;
 
-                // Create Next BundleList By Slot Equips
-                let nextBundleList = {};
+                    candidateEquips[equipType][candidateEquip.name] = candidateEquip;
+                });
+            });
 
-                console.log(
-                    'CreateNextBundleListBySlotEquips:',
-                    Object.keys(pervBundleList).length,
-                    equipType, candidateEquips
-                );
+            console.log(candidateEquips);
 
-                candidateEquips.forEach((candidateEquip) => {
+            // Create Next BundleList By Slot Equips
+            console.log('Create Next BundleList By Slot Equips');
+
+            requireEquips.forEach((equipType) => {
+
+                nextBundleList = {};
+
+                Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
                     Object.keys(pervBundleList).forEach((hash) => {
                         let bundle = Misc.deepCopy(pervBundleList[hash]);
 
@@ -317,7 +329,15 @@ export default class FittingAlgorithm {
                             bundle.equips[equipType] = null;
                         }
 
+                        // Check Equip & Skill
                         if (null !== bundle.equips[equipType]) {
+                            nextBundleList[this.generateBundleHash(bundle)] = bundle;
+
+                            return;
+                        }
+
+                        // Check Candidate Equip
+                        if (null === candidateEquip.name) {
                             nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
                             return;

@@ -228,7 +228,7 @@ export default class Main extends Component {
         let equips = (undefined !== base64)
             ? JSON.parse(Misc.base64.decode(base64))
             : Misc.deepCopy(Constant.testEquipsSetting[0]);
-        let skills = Misc.deepCopy(Constant.testSkillsSetting[1]);
+        let skills = Misc.deepCopy(Constant.testSkillsSetting[0]);
 
         this.setState({
             equips: equips,
