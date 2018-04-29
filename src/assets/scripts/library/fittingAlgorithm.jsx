@@ -85,7 +85,7 @@ export default class FittingAlgorithm {
             // Add Jewels info to Bundle
             if (undefined !== equipInfo.slots) {
                 equipInfo.slots.forEach((slot) => {
-                    if (null === slot.jewel) {
+                    if (null === slot.jewel.name) {
                         return;
                     }
 
@@ -125,7 +125,7 @@ export default class FittingAlgorithm {
         console.log(correspondJewels);
         console.log(prevBundleList);
 
-        // Create CandidateEquips
+        // Create Candidate Equips
         console.log('Create Candidate Equips with Skill Equips');
 
         candidateEquips = {};
