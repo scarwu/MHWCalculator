@@ -92,46 +92,29 @@ export default class CandidateBundles extends Component {
             let equipInfo = null;
             let candidateEquip = null;
 
+            // Get Equipment Info
             if ('weapon' === equipType) {
-
-                // Get Equipment Info
                 equipInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
-
-                // Convert Equip to Candidate Equip
-                candidateEquip = this.convertEquipToCandidateEquip(equipInfo);
-
-                // Add Candidate Equip to Bundle
-                bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
-
-                // Add Jewels info to Bundle
-                equipInfo.slots.forEach((slot) => {
-                    if (null === slot.jewel) {
-                        return;
-                    }
-
-                    if (undefined === bundle.jewels[slot.jewel.name]) {
-                        bundle.jewels[slot.jewel.name] = 0;
-                    }
-
-                    bundle.meta.remainingSlotCount[slot.size] -= 1;
-                    bundle.jewels[slot.jewel.name] += 1;
-                });
             } else if ('helm' === equipType
                 || 'chest' === equipType
                 || 'arm' === equipType
                 || 'waist' === equipType
                 || 'leg' === equipType) {
 
-                // Get Equipment Info
                 equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
+            } else if ('charm' === equipType) {
+                equipInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
+                equipInfo.type = equipType;
+            }
 
-                // Convert Equip to Candidate Equip
-                candidateEquip = this.convertEquipToCandidateEquip(equipInfo);
+            // Convert Equip to Candidate Equip
+            candidateEquip = this.convertEquipToCandidateEquip(equipInfo);
 
-                // Add Candidate Equip to Bundle
-                bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
+            // Add Candidate Equip to Bundle
+            bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
-                // Add Jewels info to Bundle
+            // Add Jewels info to Bundle
+            if (undefined !== equipInfo.slots) {
                 equipInfo.slots.forEach((slot) => {
                     if (null === slot.jewel) {
                         return;
@@ -144,28 +127,29 @@ export default class CandidateBundles extends Component {
                     bundle.meta.remainingSlotCount[slot.size] -= 1;
                     bundle.jewels[slot.jewel.name] += 1;
                 });
-            } else if ('charm' === equipType) {
-
-                // Get Equipment Info
-                equipInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
-                equipInfo.type = equipType;
-
-                // Convert Equip to Candidate Equip
-                candidateEquip = this.convertEquipToCandidateEquip(equipInfo);
-
-                // Add Candidate Equip to Bundle
-                bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
             }
         });
 
         // Reset Equip Count & Completed Skill Count
         bundle.meta.euqipCount = 0;
-        bundle = this.resetBundleCompeletedSkills(bundle, requireSkills);
+        bundle.meta.completedSkillCount = 0;
+
+        Object.keys(requireSkills).forEach((skillName, index) => {
+            let skillLevel = requireSkills[skillName];
+
+            if (undefined === bundle.skills[skillName]) {
+                bundle.skills[skillName] = 0;
+            }
+
+            if (skillLevel === bundle.skills[skillName]) {
+                bundle.meta.completedSkillCount += 1;
+            }
+        });
 
         pervBundleList[this.generateBundleHash(bundle)] = bundle;
 
-        let requireEquipsCount = requireEquips.length;
-        let requireSkillsCount = Object.keys(requireSkills).length;
+        let requireEquipCount = requireEquips.length;
+        let requireSkillCount = Object.keys(requireSkills).length;
 
         console.log(requireSkills);
         console.log(requireEquips);
@@ -225,10 +209,8 @@ export default class CandidateBundles extends Component {
                 console.log(
                     'CreateNextBundleListBySkillEquips:',
                     Object.keys(pervBundleList).length,
-                    equipType,
-                    candidateEquips,
-                    skillName,
-                    skillLevel
+                    equipType, candidateEquips,
+                    skillName, skillLevel
                 );
 
                 candidateEquips.forEach((candidateEquip) => {
@@ -257,45 +239,24 @@ export default class CandidateBundles extends Component {
                         bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
                         // If Equips Is Full Then Do Fully Check
-                        if (Object.keys(requireEquips).length === bundle.meta.euqipCount) {
+                        if (requireEquipCount === bundle.meta.euqipCount) {
 
-                            // Add Jewel to Bundle
-                            let isSkip = false;
+                            // Completed Bundle By Skills
+                            bundle = this.completeBundleBySkills(bundle, requireSkills, correspondJewels);
 
-                            Object.keys(requireSkills).forEach((skillName) => {
-                                if (true === isSkip) {
-                                    return;
-                                }
-
-                                let skillLevel = requireSkills[skillName];
-
-                                bundle = this.addJewelToBundleBySpecificSkill(bundle, {
-                                    name: skillName,
-                                    level: skillLevel
-                                }, correspondJewels[skillName], true);
-
-                                if (false === bundle) {
-                                    isSkip = true;
-                                }
-                            });
-
-                            if (true === isSkip) {
+                            if (false === bundle) {
                                 return;
                             }
 
-                            // Reset Compeleted Skills of Bundle
-                            bundle = this.resetBundleCompeletedSkills(bundle, requireSkills);
-
-                            if (Object.keys(requireSkills).length === bundle.meta.completedSkillCount) {
+                            if (requireSkillCount === bundle.meta.completedSkillCount) {
                                 lastBundleList[this.generateBundleHash(bundle)] = bundle;
                             }
 
                             return;
                         }
 
+                        // Reset & Add Bundle to Next Run
                         if (skillLevel < bundle.skills[skillName]) {
-
-                            // Reset & Add Bundle to Next Run
                             bundle = Misc.deepCopy(pervBundleList[hash]);
                             nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
@@ -306,13 +267,11 @@ export default class CandidateBundles extends Component {
                             bundle.meta.completedSkillCount += 1;
                         }
 
-                        if (Object.keys(requireSkills).length === bundle.meta.completedSkillCount) {
+                        if (requireSkillCount === bundle.meta.completedSkillCount) {
                             lastBundleList[this.generateBundleHash(bundle)] = bundle;
-
-                            return;
+                        } else {
+                            nextBundleList[this.generateBundleHash(bundle)] = bundle;
                         }
-
-                        nextBundleList[this.generateBundleHash(bundle)] = bundle;
                     });
                 });
 
@@ -322,42 +281,22 @@ export default class CandidateBundles extends Component {
             console.log('Last BundleList:', Object.keys(lastBundleList).length);
         });
 
-        // Find Compeleted Bundle into Last BundleList
-        console.log('Find Compeleted Bundle');
+        // Find Completed Bundle into Last BundleList
+        console.log('Find Completed Bundle');
 
         nextBundleList = {};
 
         Object.keys(pervBundleList).forEach((hash) => {
             let bundle = Misc.deepCopy(pervBundleList[hash]);
 
-            // Add Jewel to Bundle
-            let isSkip = false;
+            // Completed Bundle By Skills
+            bundle = this.completeBundleBySkills(bundle, requireSkills, correspondJewels);
 
-            Object.keys(requireSkills).forEach((skillName) => {
-                if (true === isSkip) {
-                    return;
-                }
-
-                let skillLevel = requireSkills[skillName];
-
-                bundle = this.addJewelToBundleBySpecificSkill(bundle, {
-                    name: skillName,
-                    level: skillLevel
-                }, correspondJewels[skillName], true);
-
-                if (false === bundle) {
-                    isSkip = true;
-                }
-            });
-
-            if (true === isSkip) {
+            if (false === bundle) {
                 return;
             }
 
-            // Reset Compeleted Skills of Bundle
-            bundle = this.resetBundleCompeletedSkills(bundle, requireSkills);
-
-            if (Object.keys(requireSkills).length === bundle.meta.completedSkillCount) {
+            if (requireSkillCount === bundle.meta.completedSkillCount) {
                 lastBundleList[this.generateBundleHash(bundle)] = bundle;
             } else {
                 nextBundleList[this.generateBundleHash(bundle)] = bundle;
@@ -389,8 +328,7 @@ export default class CandidateBundles extends Component {
                 console.log(
                     'CreateNextBundleListBySlotEquips:',
                     Object.keys(pervBundleList).length,
-                    equipType,
-                    candidateEquips
+                    equipType, candidateEquips
                 );
 
                 candidateEquips.forEach((candidateEquip) => {
@@ -411,36 +349,16 @@ export default class CandidateBundles extends Component {
                         bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
                         // If Equips Is Full Then Do Fully Check
-                        if (Object.keys(requireEquips).length === bundle.meta.euqipCount) {
+                        if (requireEquipCount === bundle.meta.euqipCount) {
 
-                            // Add Jewel to Bundle
-                            let isSkip = false;
+                            // Completed Bundle By Skills
+                            bundle = this.completeBundleBySkills(bundle, requireSkills, correspondJewels);
 
-                            Object.keys(requireSkills).forEach((skillName) => {
-                                if (true === isSkip) {
-                                    return;
-                                }
-
-                                let skillLevel = requireSkills[skillName];
-
-                                bundle = this.addJewelToBundleBySpecificSkill(bundle, {
-                                    name: skillName,
-                                    level: skillLevel
-                                }, correspondJewels[skillName], true);
-
-                                if (false === bundle) {
-                                    isSkip = true;
-                                }
-                            });
-
-                            if (true === isSkip) {
+                            if (false === bundle) {
                                 return;
                             }
 
-                            // Reset Compeleted Skills of Bundle
-                            bundle = this.resetBundleCompeletedSkills(bundle, requireSkills);
-
-                            if (Object.keys(requireSkills).length === bundle.meta.completedSkillCount) {
+                            if (requireSkillCount === bundle.meta.completedSkillCount) {
                                 lastBundleList[this.generateBundleHash(bundle)] = bundle;
                             }
 
@@ -454,40 +372,20 @@ export default class CandidateBundles extends Component {
                 pervBundleList = nextBundleList;
             });
 
-            // Find Compeleted Bundle into Last BundleList
-            console.log('Find Compeleted Bundle');
+            // Find Completed Bundle into Last BundleList
+            console.log('Find Completed Bundle');
 
             Object.keys(pervBundleList).forEach((hash) => {
                 let bundle = Misc.deepCopy(pervBundleList[hash]);
 
-                // Add Jewel to Bundle
-                let isSkip = false;
+                // Completed Bundle By Skills
+                bundle = this.completeBundleBySkills(bundle, requireSkills, correspondJewels);
 
-                Object.keys(requireSkills).forEach((skillName) => {
-                    if (true === isSkip) {
-                        return;
-                    }
-
-                    let skillLevel = requireSkills[skillName];
-
-                    bundle = this.addJewelToBundleBySpecificSkill(bundle, {
-                        name: skillName,
-                        level: skillLevel
-                    }, correspondJewels[skillName], true);
-
-                    if (false === bundle) {
-                        isSkip = true;
-                    }
-                });
-
-                if (true === isSkip) {
+                if (false === bundle) {
                     return;
                 }
 
-                // Reset Compeleted Skills of Bundle
-                bundle = this.resetBundleCompeletedSkills(bundle, requireSkills);
-
-                if (Object.keys(requireSkills).length === bundle.meta.completedSkillCount) {
+                if (requireSkillCount === bundle.meta.completedSkillCount) {
                     lastBundleList[this.generateBundleHash(bundle)] = bundle;
                 }
             });
@@ -617,10 +515,8 @@ export default class CandidateBundles extends Component {
             return bundle;
         }
 
-        // Get Jewel
+        // Failed - No Jewel
         if (null === jewel.name && 0 !== diffSkillLevel) {
-            // console.log('Failed - No Jewel', skill.name);
-
             return false;
         }
 
@@ -686,20 +582,40 @@ export default class CandidateBundles extends Component {
         return bundle;
     };
 
-    resetBundleCompeletedSkills = (bundle, skills) => {
+    completeBundleBySkills = (bundle, skills, jewels) => {
+
+        let isSkip = false;
+
+        // Reset Completed Skill Count
         bundle.meta.completedSkillCount = 0;
 
-        Object.keys(skills).forEach((skillName, index) => {
+        Object.keys(skills).forEach((skillName) => {
+            if (true === isSkip) {
+                return;
+            }
+
             let skillLevel = skills[skillName];
 
-            if (undefined === bundle.skills[skillName]) {
-                bundle.skills[skillName] = 0;
+            // Add Jewel to Bundle
+            bundle = this.addJewelToBundleBySpecificSkill(bundle, {
+                name: skillName,
+                level: skillLevel
+            }, jewels[skillName], true);
+
+            if (false === bundle) {
+                isSkip = true;
+
+                return;
             }
 
             if (skillLevel === bundle.skills[skillName]) {
                 bundle.meta.completedSkillCount += 1;
             }
         });
+
+        if (true === isSkip) {
+            return false;
+        }
 
         return bundle;
     };
