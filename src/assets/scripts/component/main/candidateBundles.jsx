@@ -57,6 +57,7 @@ export default class CandidateBundles extends Component {
             let stopTime = new Date().getTime();
 
             console.log('Time Cheker: ', (stopTime - startTime) / 1000);
+            console.log(bundleList);
 
             this.setState({
                 bundleList: bundleList

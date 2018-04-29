@@ -55,6 +55,7 @@ export default {
         type: null,
         defense: 0,
         skills: {},
+        setName: null,
         ownSlotCount: {
             1: 0,
             2: 0,
@@ -75,6 +76,7 @@ export default {
         jewels: {},
         defense: 0,
         skills: {},
+        sets: {},
         meta: {
             expectedValue: 0,
             euqipCount: 0,

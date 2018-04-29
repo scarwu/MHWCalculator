@@ -475,7 +475,9 @@ class ArmorHelper {
             }
 
             if (null !== this.filterSet) {
-                if (this.filterSet !== data.set) {
+                if (null === data.set
+                    || this.filterSet !== data.set.name) {
+
                     return false;
                 }
             }
