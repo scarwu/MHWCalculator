@@ -235,6 +235,8 @@ class WeaponHelper {
             enhanceTimes = [...Array(2).keys()];
         } else if (6 === info.rare) {
             enhanceTimes = [...Array(3).keys()];
+        } else {
+            enhanceTimes = [];
         }
 
         enhanceTimes.forEach((data, index) => {

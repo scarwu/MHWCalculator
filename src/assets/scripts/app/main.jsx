@@ -25,8 +25,9 @@ import Constant from 'constant';
 import Lang from 'lang';
 
 // Load Components
-import EquipItemSelector from 'component/main/equipItemSelector';
+import SetItemSelector from 'component/main/setItemSelector';
 import SkillItemSelector from 'component/main/skillItemSelector';
+import EquipItemSelector from 'component/main/equipItemSelector';
 import CandidateBundles from 'component/main/candidateBundles';
 import EquipsDisplayer from 'component/main/equipsDisplayer';
 import CharacterStatus from 'component/main/characterStatus';
@@ -40,20 +41,87 @@ export default class Main extends Component {
 
     // Initial State
     state = {
+        sets: [],
         skills: [],
         equips: Misc.deepCopy(Constant.defaultEquips),
         equipsLock: Misc.deepCopy(Constant.defaultEquipsLock),
         equipSelector: {},
-        isShowEquipSelector: false,
-        isShowSkillSelector: false
+        isShowSetSelector: false,
+        isShowSkillSelector: false,
+        isShowEquipSelector: false
     };
 
     /**
      * Handle Functions
      */
+    handleSetLevelDown = (index) => {
+        let sets = this.state.sets;
+
+        if (1 === sets[index].step) {
+            return false;
+        }
+
+        sets[index].step -= 1;
+
+        this.setState({
+            sets: sets
+        });
+    };
+
+    handleSetLevelUp = (index) => {
+        let sets = this.state.sets;
+        let setInfo = DataSet.setHelper.getInfo(sets[index].name);
+
+        if (setInfo.skills.length === sets[index].step) {
+            return false;
+        }
+
+        sets[index].step += 1;
+
+        this.setState({
+            sets: sets
+        });
+    };
+
+    handleSetSelectorOpen = (data) => {
+        this.setState({
+            isShowSetSelector: true
+        });
+    };
+
+    handleSetSelectorClose = () => {
+        this.setState({
+            isShowSetSelector: false
+        });
+    };
+
+    handleSetSelectorPickup = (data) => {
+        let sets = this.state.sets;
+
+        sets.push({
+            name: data.setName,
+            step: 1
+        });
+
+        this.setState({
+            sets: sets
+        });
+    };
+
+    handleSetRemove = (index) => {
+        let sets = this.state.sets;
+
+        delete sets[index];
+
+        this.setState({
+            sets: sets.filter((set) => {
+                return (null !== set);
+            })
+        });
+    };
+
     handleSkillLevelDown = (index) => {
         let skills = this.state.skills;
-        let skill = DataSet.skillHelper.getInfo(skills[index].name);
 
         if (1 === skills[index].level) {
             return false;
@@ -68,9 +136,9 @@ export default class Main extends Component {
 
     handleSkillLevelUp = (index) => {
         let skills = this.state.skills;
-        let skill = DataSet.skillHelper.getInfo(skills[index].name);
+        let skillInfo = DataSet.skillHelper.getInfo(skills[index].name);
 
-        if (skill.list.length === skills[index].level) {
+        if (skillInfo.list.length === skills[index].level) {
             return false;
         }
 
@@ -78,32 +146,6 @@ export default class Main extends Component {
 
         this.setState({
             skills: skills
-        });
-    };
-
-    handleCandidateBundlesSearch = () => {
-        let skills = this.state.skills;
-        let equips = this.state.equips;
-        let equipsLock = this.state.equipsLock;
-
-        Event.trigger('SearchCandidateEquips', Misc.deepCopy({
-            skills: skills,
-            equips: equips,
-            equipsLock: equipsLock
-        }));
-    };
-
-    handleCandidateBundlePickup = (bundle) => {
-
-    };
-
-    handleEquipsLockToggle = (equipType) => {
-        let equipsLock = this.state.equipsLock;
-
-        equipsLock[equipType] = !equipsLock[equipType];
-
-        this.setState({
-            equipsLock: equipsLock
         });
     };
 
@@ -141,6 +183,43 @@ export default class Main extends Component {
             skills: skills.filter((skill) => {
                 return (null !== skill);
             })
+        });
+    };
+
+    handleCandidateBundlesSearch = () => {
+        let sets = this.state.sets;
+        let skills = this.state.skills;
+        let equips = this.state.equips;
+        let equipsLock = this.state.equipsLock;
+
+        let currentEquips = {};
+
+        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
+            if (false === equipsLock[equipType]) {
+                return;
+            }
+
+            currentEquips[equipType] = equips[equipType];
+        });
+
+        Event.trigger('SearchCandidateEquips', Misc.deepCopy({
+            equips: currentEquips,
+            sets: sets,
+            skills: skills
+        }));
+    };
+
+    handleCandidateBundlePickup = (bundle) => {
+
+    };
+
+    handleEquipsLockToggle = (equipType) => {
+        let equipsLock = this.state.equipsLock;
+
+        equipsLock[equipType] = !equipsLock[equipType];
+
+        this.setState({
+            equipsLock: equipsLock
         });
     };
 
@@ -213,6 +292,22 @@ export default class Main extends Component {
         });
     };
 
+    handleRequireConditionRefresh = () => {
+        this.setState({
+            sets: [],
+            skills: []
+        });
+    };
+
+    handleEquipsDisplayerRefresh = () => {
+        this.setState({
+            equips: Misc.deepCopy(Constant.defaultEquips),
+            equipsLock: Misc.deepCopy(Constant.defaultEquipsLock)
+        }, () => {
+            this.refershUrlHash();
+        });
+    };
+
     refershUrlHash = () => {
         let equips = Misc.deepCopy(this.state.equips);
         let base64 = Misc.base64.encode(JSON.stringify(equips));
@@ -228,11 +323,12 @@ export default class Main extends Component {
         let equips = (undefined !== base64)
             ? JSON.parse(Misc.base64.decode(base64))
             : Misc.deepCopy(Constant.testEquipsSetting[0]);
-        let skills = Misc.deepCopy(Constant.testSkillsSetting[0]);
+        let require = Misc.deepCopy(Constant.testRequireSetting[1]);
 
         this.setState({
-            equips: equips,
-            skills: skills
+            sets: require.sets,
+            skills: require.skills,
+            equips: equips
         }, () => {
             this.refershUrlHash();
         });
@@ -241,19 +337,63 @@ export default class Main extends Component {
     /**
      * Render Functions
      */
+    renderSelectedSetItems = () => {
+        let sets = this.state.sets;
+
+        return sets.map((data, index) => {
+            let setInfo = DataSet.setHelper.getInfo(data.name);
+            let setRequire = setInfo.skills[data.step - 1].require;
+
+            return (
+                <div key={setInfo.name} className="row mhwc-item">
+                    <div className="col-12 mhwc-name">
+                        <span>
+                            {setInfo.name} x {setRequire}
+                        </span>
+
+                        <div className="mhwc-icons_bundle">
+                            <a className="mhwc-icon" onClick={() => {this.handleSetLevelDown(index)}}>
+                                <i className="fa fa-minus"></i>
+                            </a>
+                            <a className="mhwc-icon" onClick={() => {this.handleSetLevelUp(index)}}>
+                                <i className="fa fa-plus"></i>
+                            </a>
+                            <a className="mhwc-icon" onClick={() => {this.handleSetRemove(index)}}>
+                                <i className="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col-12 mhwc-value">
+                        {setInfo.skills.map((set) => {
+                            if (setRequire < set.require) {
+                                return false;
+                            }
+
+                            return (
+                                <div key={set.name}>
+                                    <span>({set.require}) {set.name}</span>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            );
+        });
+    };
+
     renderSelectedSkillItems = () => {
         let skills = this.state.skills;
 
         return skills.map((data, index) => {
-            let skill = DataSet.skillHelper.getInfo(data.name);
+            let skillInfo = DataSet.skillHelper.getInfo(data.name);
 
             return (
-                <div key={skill.name} className="row mhwc-item">
+                <div key={skillInfo.name} className="row mhwc-item">
                     <div className="col-12 mhwc-name">
                         <span>
-                            {skill.name}
+                            {skillInfo.name}
                             &nbsp;
-                            Lv.{data.level} / {skill.list.length}
+                            Lv.{data.level} / {skillInfo.list.length}
                         </span>
 
                         <div className="mhwc-icons_bundle">
@@ -269,7 +409,7 @@ export default class Main extends Component {
                         </div>
                     </div>
                     <div className="col-12 mhwc-value">
-                        <span>{skill.list[data.level - 1].description}</span>
+                        <span>{skillInfo.list[data.level - 1].description}</span>
                     </div>
                 </div>
             );
@@ -288,23 +428,31 @@ export default class Main extends Component {
                 <div className="row mhwc-container">
                     <div className="col mhwc-skills">
                         <div className="mhwc-section_name">
-                            <span>已選技能</span>
+                            <a className="fa fa-refresh" onClick={this.handleRequireConditionRefresh}></a>
+                            &nbsp;
+                            <span>需求條件</span>
                         </div>
 
                         <div className="row mhwc-function_bar">
-                            <div className="col-6">
-                                <a onClick={this.handleSkillSelectorOpen}>
-                                    <i className="fa fa-plus"></i>
+                            <div className="col-4">
+                                <a onClick={this.handleSetSelectorOpen}>
+                                    <i className="fa fa-plus"></i> 套裝
                                 </a>
                             </div>
-                            <div className="col-6">
+                            <div className="col-4">
+                                <a onClick={this.handleSkillSelectorOpen}>
+                                    <i className="fa fa-plus"></i> 技能
+                                </a>
+                            </div>
+                            <div className="col-4">
                                 <a onClick={this.handleCandidateBundlesSearch}>
-                                    <i className="fa fa-search"></i>
+                                    <i className="fa fa-search"></i> 搜尋
                                 </a>
                             </div>
                         </div>
 
                         <div className="mhwc-list">
+                            {this.renderSelectedSetItems()}
                             {this.renderSelectedSkillItems()}
                         </div>
                     </div>
@@ -322,6 +470,8 @@ export default class Main extends Component {
 
                     <div className="col mhwc-equips">
                         <div className="mhwc-section_name">
+                            <a className="fa fa-refresh" onClick={this.handleEquipsDisplayerRefresh}></a>
+                            &nbsp;
                             <span>已選裝備</span>
                         </div>
 
@@ -360,6 +510,12 @@ export default class Main extends Component {
                         </a>
                     </div>
                 </div>
+
+                {this.state.isShowSetSelector ? (
+                    <SetItemSelector data={this.state.sets}
+                        onPickup={this.handleSetSelectorPickup}
+                        onClose={this.handleSetSelectorClose} />
+                ) : false}
 
                 {this.state.isShowSkillSelector ? (
                     <SkillItemSelector data={this.state.skills}

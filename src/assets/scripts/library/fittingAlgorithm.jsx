@@ -23,10 +23,11 @@ export default class FittingAlgorithm {
     /**
      * Search
      */
-    search = (skills, equips, equipsLock) => {
+    search = (equips, sets, skills) => {
 
         // Create 1st BundleList & Extra Info
         let requireEquips = [];
+        let requireSets = {};
         let requireSkills = {};
         let correspondJewels = {};
         let candidateEquips = {};
@@ -50,7 +51,7 @@ export default class FittingAlgorithm {
         });
 
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
-            if (false === equipsLock[equipType]) {
+            if (undefined === equips[equipType]) {
                 if ('weapon' !== equipType) {
                     requireEquips.push(equipType);
                 }
@@ -124,6 +125,44 @@ export default class FittingAlgorithm {
         console.log(requireEquips);
         console.log(correspondJewels);
         console.log(prevBundleList);
+
+        // Create Candidate Equips
+        console.log('Create Candidate Equips with Set Equips');
+
+        candidateEquips = {};
+
+        requireEquips.forEach((equipType) => {
+            if ('charm' === equipType) {
+                return;
+            }
+
+            candidateEquips[equipType] = {};
+
+            // Create Candidate Equips
+            Object.keys(requireSets).forEach((setName) => {
+                let equips = DataSet.armorHelper.typeIs(equipType).hasSet(setName).getItems();
+
+                // Convert Equip to Candidate Equip and Append It
+                equips.forEach((equip) => {
+                    let candidateEquip = this.convertEquipToCandidateEquip(equip);
+                    candidateEquip.type = equipType;
+
+                    candidateEquips[equipType][candidateEquip.name] = candidateEquip;
+                });
+            });
+
+            // Append Empty Candidate Equip
+            let candidateEquip = Misc.deepCopy(Constant.defaultCandidateEquip);
+            candidateEquip.type = equipType;
+
+            candidateEquips[equipType]['empty'] = candidateEquip;
+        });
+
+        console.log(candidateEquips);
+
+
+
+
 
         // Create Candidate Equips
         console.log('Create Candidate Equips with Skill Equips');

@@ -53,7 +53,7 @@ export default class CandidateBundles extends Component {
         Event.on('SearchCandidateEquips', 'CandidateBundles', (data) => {
 
             let startTime = new Date().getTime();
-            let bundleList = FA.search(data.skills, data.equips, data.equipsLock);
+            let bundleList = FA.search(data.equips, data.sets, data.skills);
             let stopTime = new Date().getTime();
 
             console.log('Time Cheker: ', (stopTime - startTime) / 1000);
