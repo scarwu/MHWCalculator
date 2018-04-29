@@ -30,7 +30,7 @@ export default class FittingAlgorithm {
         let requireSkills = {};
         let correspondJewels = {};
         let candidateEquips = {};
-        let pervBundleList = {};
+        let prevBundleList = {};
         let nextBundleList = {};
         let lastBundleList = {};
         let bundle = Misc.deepCopy(Constant.defaultBundle);
@@ -115,7 +115,7 @@ export default class FittingAlgorithm {
             }
         });
 
-        pervBundleList[this.generateBundleHash(bundle)] = bundle;
+        prevBundleList[this.generateBundleHash(bundle)] = bundle;
 
         let requireEquipCount = requireEquips.length;
         let requireSkillCount = Object.keys(requireSkills).length;
@@ -123,7 +123,7 @@ export default class FittingAlgorithm {
         console.log(requireSkills);
         console.log(requireEquips);
         console.log(correspondJewels);
-        console.log(pervBundleList);
+        console.log(prevBundleList);
 
         // Create CandidateEquips
         console.log('Create Candidate Equips with Skill Equips');
@@ -172,11 +172,13 @@ export default class FittingAlgorithm {
 
         requireEquips.forEach((equipType) => {
 
+            console.log('Bundle List:', equipType, Object.keys(prevBundleList).length);
+
             nextBundleList = {};
 
             Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
-                Object.keys(pervBundleList).forEach((hash) => {
-                    let bundle = Misc.deepCopy(pervBundleList[hash]);
+                Object.keys(prevBundleList).forEach((hash) => {
+                    let bundle = Misc.deepCopy(prevBundleList[hash]);
 
                     if (undefined === bundle.equips[equipType]) {
                         bundle.equips[equipType] = null;
@@ -213,7 +215,7 @@ export default class FittingAlgorithm {
                         let skillLevel = requireSkills[skillName];
 
                         if (skillLevel < bundle.skills[skillName]) {
-                            bundle = Misc.deepCopy(pervBundleList[hash]);
+                            bundle = Misc.deepCopy(prevBundleList[hash]);
                             nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
                             isSkip = true;
@@ -257,7 +259,7 @@ export default class FittingAlgorithm {
                 });
             });
 
-            pervBundleList = nextBundleList;
+            prevBundleList = nextBundleList;
 
             console.log('Last BundleList - Zero:', Object.keys(lastBundleList).length);
         });
@@ -267,8 +269,8 @@ export default class FittingAlgorithm {
 
         nextBundleList = {};
 
-        Object.keys(pervBundleList).forEach((hash) => {
-            let bundle = Misc.deepCopy(pervBundleList[hash]);
+        Object.keys(prevBundleList).forEach((hash) => {
+            let bundle = Misc.deepCopy(prevBundleList[hash]);
 
             // Completed Bundle By Skills
             bundle = this.completeBundleBySkills(bundle, requireSkills, correspondJewels);
@@ -284,7 +286,7 @@ export default class FittingAlgorithm {
             }
         });
 
-        pervBundleList = nextBundleList;
+        prevBundleList = nextBundleList;
 
         console.log('Last BundleList - One:', Object.keys(lastBundleList).length);
 
@@ -318,12 +320,17 @@ export default class FittingAlgorithm {
             console.log('Create Next BundleList By Slot Equips');
 
             requireEquips.forEach((equipType) => {
+                if ('charm' === equipType) {
+                    return;
+                }
+
+                console.log('Bundle List:', equipType, Object.keys(prevBundleList).length);
 
                 nextBundleList = {};
 
                 Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
-                    Object.keys(pervBundleList).forEach((hash) => {
-                        let bundle = Misc.deepCopy(pervBundleList[hash]);
+                    Object.keys(prevBundleList).forEach((hash) => {
+                        let bundle = Misc.deepCopy(prevBundleList[hash]);
 
                         if (undefined === bundle.equips[equipType]) {
                             bundle.equips[equipType] = null;
@@ -367,14 +374,14 @@ export default class FittingAlgorithm {
                     });
                 });
 
-                pervBundleList = nextBundleList;
+                prevBundleList = nextBundleList;
             });
 
             // Find Completed Bundle into Last BundleList
             console.log('Find Completed Bundle');
 
-            Object.keys(pervBundleList).forEach((hash) => {
-                let bundle = Misc.deepCopy(pervBundleList[hash]);
+            Object.keys(prevBundleList).forEach((hash) => {
+                let bundle = Misc.deepCopy(prevBundleList[hash]);
 
                 // Completed Bundle By Skills
                 bundle = this.completeBundleBySkills(bundle, requireSkills, correspondJewels);

@@ -343,6 +343,43 @@ export default {
                 name: '剛刃研磨',
                 level: 1
             }
+        ], [
+            {
+                name: '水屬性攻擊強化',
+                level: 4
+            },
+            {
+                name: '體術',
+                level: 4
+            },
+            {
+                name: '屬性解放／裝填擴充',
+                level: 3
+            },
+            {
+                name: '弱點特效',
+                level: 3
+            },
+            {
+                name: '看破',
+                level: 2
+            },
+            {
+                name: '耐力急速回復',
+                level: 2
+            },
+            {
+                name: '通常彈・通常箭強化',
+                level: 1
+            },
+            {
+                name: '散彈・剛射強化',
+                level: 1
+            },
+            {
+                name: '解放弓的蓄力階段',
+                level: 1
+            }
         ]
     ]
 };
