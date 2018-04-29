@@ -151,13 +151,13 @@ $function_bar-height: 40px;
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
+        width: 0;
+        height: 0;
     }
 
-    &::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.1);
-    }
+    // &::-webkit-scrollbar-thumb {
+    //     background: rgba(0, 0, 0, 0.1);
+    // }
 }
 
 .mhwc-selector {
@@ -346,7 +346,7 @@ $function_bar-height: 40px;
 
     > .mhwc-skills {
         .mhwc-function_bar {
-            padding: 5px 10px;
+            padding: 5px 5px;
             height: $function_bar-height;
 
             div:nth-child(1) {
@@ -360,8 +360,8 @@ $function_bar-height: 40px;
             a {
                 display: inline-block;
                 width: 100%;
-                height: 35px;
-                line-height: 35px;
+                height: 30px;
+                line-height: 30px;
                 border: 1px solid #999;
                 text-align: center;
 
@@ -378,7 +378,7 @@ $function_bar-height: 40px;
         }
 
         .mhwc-item {
-            margin: 5px 5px 10px 10px;
+            margin: 5px 5px 10px 5px;
             padding: 5px 5px 15px 5px;
             border: 1px solid #999;
             background-color: #eee;
@@ -413,7 +413,7 @@ $function_bar-height: 40px;
 
     > .mhwc-bundles {
         .mhwc-item {
-            margin: 5px 5px 10px 10px;
+            margin: 5px 5px 10px 5px;
             padding: 5px 5px 15px 5px;
             border: 1px solid #999;
             background-color: #eee;
@@ -462,7 +462,7 @@ $function_bar-height: 40px;
         }
 
         .mhwc-equip {
-            margin: 5px 5px 10px 10px;
+            margin: 5px 5px 10px 5px;
             padding: 5px 5px 15px 5px;
             border: 1px solid #999;
             background-color: #ccc;
@@ -544,7 +544,7 @@ $function_bar-height: 40px;
 
     > .mhwc-status {
         .mhwc-item {
-            margin: 5px 5px 10px 10px;
+            margin: 5px 5px 10px 5px;
             padding: 5px 5px 15px 5px;
             border: 1px solid #999;
             background-color: #eee;

@@ -51,8 +51,15 @@ export default class CandidateBundles extends Component {
         let FA = new FittingAlgorithm();
 
         Event.on('SearchCandidateEquips', 'CandidateBundles', (data) => {
+
+            let startTime = new Date().getTime();
+            let bundleList = FA.search(data.skills, data.equips, data.equipsLock);
+            let stopTime = new Date().getTime();
+
+            console.log('Time Cheker: ', (stopTime - startTime) / 1000);
+
             this.setState({
-                bundleList: FA.search(data.skills, data.equips, data.equipsLock)
+                bundleList: bundleList
             });
         });
     }

@@ -50,32 +50,6 @@ export default {
         heavyBowgun: 1.5,
         bow: 1.2
     },
-    defaultSkills: [
-        {
-            name: '攻擊',
-            level: 7
-        },
-        {
-            name: '看破',
-            level: 4
-        },
-        {
-            name: '弱點特效',
-            level: 3
-        },
-        {
-            name: '減輕膽怯',
-            level: 2
-        },
-        {
-            name: '超會心',
-            level: 1
-        },
-        {
-            name: '無屬性強化',
-            level: 1
-        }
-    ],
     defaultCandidateEquip: {
         name: null,
         type: null,
@@ -104,7 +78,7 @@ export default {
         meta: {
             expectedValue: 0,
             euqipCount: 0,
-            completedSkillCount: 0,
+            completedSkills: {},
             remainingSlotCount: {
                 1: 0,
                 2: 0,
@@ -317,5 +291,58 @@ export default {
                 name: '匠之護石 III'
             }
         }
+    ],
+    testSkillsSetting: [
+        [
+            {
+                name: '攻擊',
+                level: 7
+            },
+            {
+                name: '看破',
+                level: 4
+            },
+            {
+                name: '弱點特效',
+                level: 3
+            },
+            {
+                name: '減輕膽怯',
+                level: 2
+            },
+            {
+                name: '超會心',
+                level: 1
+            },
+            {
+                name: '無屬性強化',
+                level: 1
+            }
+        ], [
+            {
+                name: '匠',
+                level: 5
+            },
+            {
+                name: '看破',
+                level: 5
+            },
+            {
+                name: '弱點特效',
+                level: 3
+            },
+            {
+                name: '精神抖擻',
+                level: 3
+            },
+            {
+                name: '攻擊',
+                level: 2
+            },
+            {
+                name: '剛刃研磨',
+                level: 1
+            }
+        ]
     ]
 };
