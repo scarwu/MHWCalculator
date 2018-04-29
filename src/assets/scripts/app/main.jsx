@@ -323,7 +323,7 @@ export default class Main extends Component {
         let equips = (undefined !== base64)
             ? JSON.parse(Misc.base64.decode(base64))
             : Misc.deepCopy(Constant.testEquipsSetting[0]);
-        let require = Misc.deepCopy(Constant.testRequireSetting[1]);
+        let require = Misc.deepCopy(Constant.testRequireSetting[0]);
 
         this.setState({
             sets: require.sets,
