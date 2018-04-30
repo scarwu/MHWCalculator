@@ -177,6 +177,17 @@ gulp.task('release:copy:boot', function () {
         .pipe(gulp.dest('docs'));
 });
 
+// Replace
+gulp.task('release:replace:index', function () {
+    var timestamp = (new Date()).getTime().toString();
+
+    return gulp.src('docs/index.html')
+        .pipe($.replace(
+            '?timestamp', '?' + timestamp
+        ))
+        .pipe(gulp.dest('docs'));
+});
+
 // Optimize
 gulp.task('release:optimize:scripts', function () {
     return gulp.src('docs/assets/scripts/**/*')
@@ -243,6 +254,8 @@ gulp.task('release', function (callback) {
 
     run('clean:release', 'prepare', [
         'release:copy:boot',
+    ], [
+        'release:replace:index'
     ], [
         'release:optimize:images',
         'release:optimize:scripts',

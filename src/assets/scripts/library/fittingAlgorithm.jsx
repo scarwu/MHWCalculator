@@ -150,13 +150,15 @@ export default class FittingAlgorithm {
                         let candidateEquip = this.convertEquipToCandidateEquip(equip);
                         candidateEquip.type = equipType;
 
-                        // Set Used Candidate Equip Name
+                        // Check Used Equips
                         if (true === usedEquips[candidateEquip.name]) {
                             return;
                         }
 
+                        // Set Used Candidate Equip Name
                         usedEquips[candidateEquip.name] = true;
 
+                        // Set Candidate Equip
                         candidateEquips[equipType][candidateEquip.name] = candidateEquip;
                     });
                 });
@@ -168,7 +170,11 @@ export default class FittingAlgorithm {
                 candidateEquips[equipType]['empty'] = candidateEquip;
             });
 
-            console.log(candidateEquips);
+            console.log('Set - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
+            console.log('Set - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
+            console.log('Set - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
+            console.log('Set - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
+            console.log('Set - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
 
             conditionEquips.forEach((equipType) => {
                 if ('charm' === equipType) {
@@ -307,13 +313,15 @@ export default class FittingAlgorithm {
                     let candidateEquip = this.convertEquipToCandidateEquip(equip);
                     candidateEquip.type = equipType;
 
-                    // Set Used Candidate Equip Name
+                    // Check Used Equips
                     if (true === usedEquips[candidateEquip.name]) {
                         return;
                     }
 
+                    // Set Used Candidate Equip Name
                     usedEquips[candidateEquip.name] = true;
 
+                    // Set Candidate Equip
                     candidateEquips[equipType][candidateEquip.name] = candidateEquip;
                 });
             });
@@ -325,7 +333,12 @@ export default class FittingAlgorithm {
             candidateEquips[equipType]['empty'] = candidateEquip;
         });
 
-        console.log(candidateEquips);
+        console.log('Skill - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
+        console.log('Skill - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
+        console.log('Skill - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
+        console.log('Skill - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
+        console.log('Skill - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
+        console.log('Skill - charm', Object.keys(candidateEquips.charm).length, candidateEquips.charm);
 
         // Create Next BundleList By Skill Equips
         console.log('Create Next BundleList By Skill Equips');
@@ -472,18 +485,24 @@ export default class FittingAlgorithm {
                     let candidateEquip = this.convertEquipToCandidateEquip(equip);
                     candidateEquip.type = equipType;
 
-                    // Set Used Candidate Equip Name
+                    // Check Used Equips
                     if (true === usedEquips[candidateEquip.name]) {
                         return;
                     }
 
+                    // Set Used Candidate Equip Name
                     usedEquips[candidateEquip.name] = true;
 
+                    // Set Candidate Equip
                     candidateEquips[equipType][candidateEquip.name] = candidateEquip;
                 });
             });
 
-            console.log(candidateEquips);
+            console.log('Slot - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
+            console.log('Slot - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
+            console.log('Slot - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
+            console.log('Slot - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
+            console.log('Slot - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
 
             // Create Next BundleList By Slot Equips
             console.log('Create Next BundleList By Slot Equips');

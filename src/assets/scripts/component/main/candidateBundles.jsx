@@ -56,7 +56,7 @@ export default class CandidateBundles extends Component {
             let bundleList = FA.search(data.equips, data.sets, data.skills);
             let stopTime = new Date().getTime();
 
-            console.log('Time Cheker: ', (stopTime - startTime) / 1000);
+            console.log('Time Checker: ', (stopTime - startTime) / 1000);
             console.log(bundleList);
 
             this.setState({
