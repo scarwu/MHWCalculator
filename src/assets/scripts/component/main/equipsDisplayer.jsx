@@ -310,20 +310,19 @@ export default class EquipsDisplayer extends Component {
                                 <span>技能</span>
                             </div>
                             <div className="col-12 mhwc-value">
-                                {weaponInfo.skills.sort((a, b) => {
-                                    return b.level - a.level;
-                                }).map((data) => {
-                                    return (
-                                        <div key={data.name} className="row mhwc-skill">
-                                            <div className="col-12 mhwc-name">
-                                                <span>{data.name} Lv.{data.level}</span>
+                                <div className="row">
+                                    {weaponInfo.skills.sort((a, b) => {
+                                        return b.level - a.level;
+                                    }).map((data) => {
+                                        return (
+                                            <div key={data.name} className="col-6">
+                                                <div className="mhwc-value">
+                                                    <span>{data.name} Lv.{data.level}</span>
+                                                </div>
                                             </div>
-                                            <div className="col-12 mhwc-value">
-                                                <span>{data.description}</span>
-                                            </div>
-                                        </div>
-                                    );
-                                })}
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
                     ) : false}
