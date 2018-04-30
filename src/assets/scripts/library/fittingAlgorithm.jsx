@@ -26,16 +26,19 @@ export default class FittingAlgorithm {
     search = (equips, sets, skills) => {
 
         // Create 1st BundleList & Extra Info
-        let conditionEquips = [];
-        let conditionSets = {};
-        let conditionSkills = {};
-        let correspondJewels = {};
+        this.conditionEquips = [];
+        this.conditionSets = {};
+        this.conditionSkills = {};
+        this.correspondJewels = {};
+        this.usedEquips = {};
+
         let candidateEquips = {};
         let prevBundleList = {};
         let nextBundleList = {};
         let lastBundleList = {};
         let bundle = Misc.deepCopy(Constant.defaultBundle);
-        let usedEquips = {};
+
+        let conditionExpectedValue = 0;
 
         sets.sort((setA, setB) => {
             let setInfoA = DataSet.setHelper.getInfo(setA.name);
@@ -45,27 +48,34 @@ export default class FittingAlgorithm {
         }).forEach((set) => {
             let setInfo = DataSet.setHelper.getInfo(set.name);
 
-            conditionSets[set.name] = setInfo.skills[set.step - 1].require;
+            this.conditionSets[set.name] = setInfo.skills[set.step - 1].require;
         });
 
         skills.sort((a, b) => {
             return b.level - a.level;
         }).forEach((skill) => {
-            conditionSkills[skill.name] = skill.level;
+            this.conditionSkills[skill.name] = skill.level;
 
             let jewelInfo = DataSet.jewelHelper.hasSkill(skill.name).getItems();
             let jewel = (0 !== jewelInfo.length) ? jewelInfo[0] : null;
 
-            correspondJewels[skill.name] = (null !== jewel) ? {
+            this.correspondJewels[skill.name] = (null !== jewel) ? {
                 name: jewel.name,
                 size: jewel.size,
             } : null;
+
+            // Increase Expected Value
+            if (null !== jewel) {
+                conditionExpectedValue += skill.level * jewel.size; // 1, 2, 3
+            } else {
+                conditionExpectedValue += skill.level * 4;
+            }
         });
 
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
             if (undefined === equips[equipType]) {
                 if ('weapon' !== equipType) {
-                    conditionEquips.push(equipType);
+                    this.conditionEquips.push(equipType);
                 }
 
                 return;
@@ -112,7 +122,7 @@ export default class FittingAlgorithm {
             }
 
             // Set Used Candidate Equip
-            usedEquips[candidateEquip.name] = true;
+            this.usedEquips[candidateEquip.name] = true;
         });
 
         // Reset Equip Count
@@ -120,47 +130,36 @@ export default class FittingAlgorithm {
 
         prevBundleList[this.generateBundleHash(bundle)] = bundle;
 
-        let requireEquipCount = conditionEquips.length;
-        let requireSkillCount = Object.keys(conditionSkills).length;
+        let requireEquipCount = this.conditionEquips.length;
+        let requireSkillCount = Object.keys(this.conditionSkills).length;
 
-        console.log(conditionSkills);
-        console.log(conditionEquips);
-        console.log(correspondJewels);
+        console.log(this.conditionSkills);
+        console.log(this.conditionEquips);
+        console.log(this.correspondJewels);
+        console.log(conditionExpectedValue);
         console.log(prevBundleList);
 
         // Create Candidate Equips
-        if (0 !== Object.keys(conditionSets).length) {
+        if (0 !== Object.keys(this.conditionSets).length) {
             console.log('Create Candidate Equips with Set Equips');
 
             candidateEquips = {};
 
-            conditionEquips.forEach((equipType) => {
+            this.conditionEquips.forEach((equipType) => {
                 if ('charm' === equipType) {
                     return;
                 }
 
-                candidateEquips[equipType] = {};
+                if (undefined === candidateEquips[equipType]) {
+                    candidateEquips[equipType] = {};
+                }
 
                 // Create Candidate Equips
-                Object.keys(conditionSets).forEach((setName) => {
+                Object.keys(this.conditionSets).forEach((setName) => {
                     let equips = DataSet.armorHelper.typeIs(equipType).setIs(setName).getItems();
 
-                    // Convert Equip to Candidate Equip and Append It
-                    equips.forEach((equip) => {
-                        let candidateEquip = this.convertEquipToCandidateEquip(equip);
-                        candidateEquip.type = equipType;
-
-                        // Check Used Equips
-                        if (true === usedEquips[candidateEquip.name]) {
-                            return;
-                        }
-
-                        // Set Used Candidate Equip Name
-                        usedEquips[candidateEquip.name] = true;
-
-                        // Set Candidate Equip
-                        candidateEquips[equipType][candidateEquip.name] = candidateEquip;
-                    });
+                    // Get Candidate Equips
+                    candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
                 });
 
                 // Append Empty Candidate Equip
@@ -176,7 +175,7 @@ export default class FittingAlgorithm {
             console.log('Set - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
             console.log('Set - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
 
-            conditionEquips.forEach((equipType) => {
+            this.conditionEquips.forEach((equipType) => {
                 if ('charm' === equipType) {
                     return;
                 }
@@ -211,7 +210,7 @@ export default class FittingAlgorithm {
                         bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
                         // Sets
-                        let setRequire = conditionSets[candidateEquip.setName];
+                        let setRequire = this.conditionSets[candidateEquip.setName];
 
                         if (undefined === bundle.sets[candidateEquip.setName]) {
                             bundle.sets[candidateEquip.setName] = 0;
@@ -231,10 +230,10 @@ export default class FittingAlgorithm {
                 prevBundleList = nextBundleList;
             });
 
-            Object.keys(conditionSets).forEach((setName) => {
+            Object.keys(this.conditionSets).forEach((setName) => {
                 nextBundleList = {};
 
-                let setRequire = conditionSets[setName];
+                let setRequire = this.conditionSets[setName];
 
                 Object.keys(prevBundleList).forEach((hash) => {
                     let bundle = Misc.deepCopy(prevBundleList[hash]);
@@ -268,11 +267,11 @@ export default class FittingAlgorithm {
             bundle.meta.completedSkills = {};
 
             Object.keys(bundle.skills).forEach((skillName) => {
-                if (undefined === conditionSkills[skillName]) {
+                if (undefined === this.conditionSkills[skillName]) {
                     return;
                 }
 
-                let skillLevel = conditionSkills[skillName];
+                let skillLevel = this.conditionSkills[skillName];
 
                 if (skillLevel === bundle.skills[skillName]) {
                     bundle.meta.completedSkills[skillName] = true;
@@ -289,12 +288,13 @@ export default class FittingAlgorithm {
 
         candidateEquips = {};
 
-        conditionEquips.forEach((equipType) => {
-
-            candidateEquips[equipType] = {};
+        this.conditionEquips.forEach((equipType) => {
+            if (undefined === candidateEquips[equipType]) {
+                candidateEquips[equipType] = {};
+            }
 
             // Create Candidate Equips
-            Object.keys(conditionSkills).forEach((skillName) => {
+            Object.keys(this.conditionSkills).forEach((skillName) => {
                 let equips = null;
 
                 if ('helm' === equipType
@@ -308,22 +308,8 @@ export default class FittingAlgorithm {
                     equips = DataSet.charmHelper.hasSkill(skillName).getItems();
                 }
 
-                // Convert Equip to Candidate Equip and Append It
-                equips.forEach((equip) => {
-                    let candidateEquip = this.convertEquipToCandidateEquip(equip);
-                    candidateEquip.type = equipType;
-
-                    // Check Used Equips
-                    if (true === usedEquips[candidateEquip.name]) {
-                        return;
-                    }
-
-                    // Set Used Candidate Equip Name
-                    usedEquips[candidateEquip.name] = true;
-
-                    // Set Candidate Equip
-                    candidateEquips[equipType][candidateEquip.name] = candidateEquip;
-                });
+                // Get Candidate Equips
+                candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
             });
 
             // Append Empty Candidate Equip
@@ -343,13 +329,15 @@ export default class FittingAlgorithm {
         // Create Next BundleList By Skill Equips
         console.log('Create Next BundleList By Skill Equips');
 
-        conditionEquips.forEach((equipType) => {
+        this.conditionEquips.forEach((equipType) => {
 
             console.log('Skill - Bundle List:', equipType, Object.keys(prevBundleList).length);
 
             nextBundleList = {};
 
-            Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
+            Object.values(candidateEquips[equipType]).sort((a, b) => {
+                return b.expectedValue - a.expectedValue;
+            }).forEach((candidateEquip) => {
                 Object.keys(prevBundleList).forEach((hash) => {
                     let bundle = Misc.deepCopy(prevBundleList[hash]);
 
@@ -381,11 +369,11 @@ export default class FittingAlgorithm {
                             return;
                         }
 
-                        if (undefined == conditionSkills[skillName]) {
+                        if (undefined == this.conditionSkills[skillName]) {
                             return;
                         }
 
-                        let skillLevel = conditionSkills[skillName];
+                        let skillLevel = this.conditionSkills[skillName];
 
                         if (skillLevel < bundle.skills[skillName]) {
                             bundle = Misc.deepCopy(prevBundleList[hash]);
@@ -415,7 +403,7 @@ export default class FittingAlgorithm {
                     if (requireEquipCount === bundle.meta.euqipCount) {
 
                         // Completed Bundle By Skills
-                        bundle = this.completeBundleBySkills(bundle, conditionSkills, correspondJewels);
+                        bundle = this.completeBundleBySkills(bundle);
 
                         if (false === bundle) {
                             return;
@@ -448,7 +436,7 @@ export default class FittingAlgorithm {
             let bundle = Misc.deepCopy(prevBundleList[hash]);
 
             // Completed Bundle By Skills
-            bundle = this.completeBundleBySkills(bundle, conditionSkills, correspondJewels);
+            bundle = this.completeBundleBySkills(bundle);
 
             if (false === bundle) {
                 return;
@@ -470,32 +458,19 @@ export default class FittingAlgorithm {
 
             candidateEquips = {};
 
-            conditionEquips.forEach((equipType) => {
+            this.conditionEquips.forEach((equipType) => {
                 if ('charm' === equipType) {
                     return;
                 }
 
-                candidateEquips[equipType] = {};
+                if (undefined === candidateEquips[equipType]) {
+                    candidateEquips[equipType] = {};
+                }
 
-                // Get Candidate Equips
                 let equips = DataSet.armorHelper.typeIs(equipType).rareIs(0).getItems();
 
-                // Convert Equip to Candidate Equip and Append It
-                equips.forEach((equip) => {
-                    let candidateEquip = this.convertEquipToCandidateEquip(equip);
-                    candidateEquip.type = equipType;
-
-                    // Check Used Equips
-                    if (true === usedEquips[candidateEquip.name]) {
-                        return;
-                    }
-
-                    // Set Used Candidate Equip Name
-                    usedEquips[candidateEquip.name] = true;
-
-                    // Set Candidate Equip
-                    candidateEquips[equipType][candidateEquip.name] = candidateEquip;
-                });
+                // Get Candidate Equips
+                candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
             });
 
             console.log('Slot - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
@@ -507,7 +482,7 @@ export default class FittingAlgorithm {
             // Create Next BundleList By Slot Equips
             console.log('Create Next BundleList By Slot Equips');
 
-            conditionEquips.forEach((equipType) => {
+            this.conditionEquips.forEach((equipType) => {
                 if ('charm' === equipType) {
                     return;
                 }
@@ -545,7 +520,7 @@ export default class FittingAlgorithm {
                         if (requireEquipCount === bundle.meta.euqipCount) {
 
                             // Completed Bundle By Skills
-                            bundle = this.completeBundleBySkills(bundle, conditionSkills, correspondJewels);
+                            bundle = this.completeBundleBySkills(bundle);
 
                             if (false === bundle) {
                                 return;
@@ -574,7 +549,7 @@ export default class FittingAlgorithm {
                 let bundle = Misc.deepCopy(prevBundleList[hash]);
 
                 // Completed Bundle By Skills
-                bundle = this.completeBundleBySkills(bundle, conditionSkills, correspondJewels);
+                bundle = this.completeBundleBySkills(bundle);
 
                 if (false === bundle) {
                     return;
@@ -627,16 +602,21 @@ export default class FittingAlgorithm {
     /**
      * Create Candidate Equips
      */
-    createCandidateEquips = (equips, equipType) => {
-        let candidateEquips = [];
-
+    createCandidateEquips = (equips, equipType, candidateEquips = {}) => {
         equips.forEach((equip) => {
-            equip.type = equipType;
-
-            // Convert Equip to Candidate Equip
             let candidateEquip = this.convertEquipToCandidateEquip(equip);
+            candidateEquip.type = equipType;
 
-            candidateEquips.push(candidateEquip);
+            // Check Used Equips
+            if (true === this.usedEquips[candidateEquip.name]) {
+                return;
+            }
+
+            // Set Used Candidate Equip Name
+            this.usedEquips[candidateEquip.name] = true;
+
+            // Set Candidate Equip
+            candidateEquips[candidateEquip.name] = candidateEquip;
         });
 
         return candidateEquips;
@@ -667,10 +647,24 @@ export default class FittingAlgorithm {
 
         equip.skills.forEach((skill) => {
             candidateEquip.skills[skill.name] = skill.level;
+
+            // Increase Expected Value
+            if (undefined !== this.correspondJewels[skill.name]) {
+                let jewel = this.correspondJewels[skill.name];
+
+                if (null !== jewel) {
+                    candidateEquip.expectedValue += skill.level * jewel.size; // 1, 2, 3
+                } else {
+                    candidateEquip.expectedValue += skill.level * 4;
+                }
+            }
         });
 
         equip.slots.forEach((slot) => {
             candidateEquip.ownSlotCount[slot.size] += 1;
+
+            // Increase Expected Value
+            candidateEquip.expectedValue += slot.size;
         });
 
         return candidateEquip;
@@ -715,7 +709,10 @@ export default class FittingAlgorithm {
             bundle.meta.remainingSlotCount[size] += candidateEquip.ownSlotCount[size];
         }
 
+        // Increase Equip Count
         bundle.meta.euqipCount += 1;
+
+        // Increase Expected Value
         bundle.meta.expectedValue += candidateEquip.expectedValue;
 
         return bundle;
@@ -724,15 +721,15 @@ export default class FittingAlgorithm {
     /**
      * Complete Bundle By Skills
      */
-    completeBundleBySkills = (bundle, skills, jewels) => {
+    completeBundleBySkills = (bundle) => {
         let isSkip = false;
 
-        Object.keys(skills).forEach((skillName) => {
+        Object.keys(this.conditionSkills).forEach((skillName) => {
             if (true === isSkip) {
                 return;
             }
 
-            let skillLevel = skills[skillName];
+            let skillLevel = this.conditionSkills[skillName];
 
             if (undefined === bundle.skills[skillName]) {
                 bundle.skills[skillName] = 0
@@ -742,7 +739,7 @@ export default class FittingAlgorithm {
             bundle = this.addJewelToBundleBySpecificSkill(bundle, {
                 name: skillName,
                 level: skillLevel
-            }, jewels[skillName], true);
+            }, this.correspondJewels[skillName], true);
 
             if (false === bundle) {
                 isSkip = true;
