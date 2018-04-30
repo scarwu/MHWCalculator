@@ -413,7 +413,7 @@ export default {
                 },
                 {
                     name: '看破',
-                    level: 3
+                    level: 2
                 },
                 {
                     name: '弱點特效',

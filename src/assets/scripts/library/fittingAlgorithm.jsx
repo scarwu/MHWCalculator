@@ -39,10 +39,11 @@ export default class FittingAlgorithm {
         let bundle = Misc.deepCopy(Constant.defaultBundle);
 
         let conditionExpectedValue = 0;
+        let maxEquipsExpectedValue = {};
 
-        sets.sort((setA, setB) => {
-            let setInfoA = DataSet.setHelper.getInfo(setA.name);
-            let setInfoB = DataSet.setHelper.getInfo(setB.name);
+        sets.sort((a, b) => {
+            let setInfoA = DataSet.setHelper.getInfo(a.name);
+            let setInfoB = DataSet.setHelper.getInfo(b.name);
 
             return setInfoB.skills.pop().require - setInfoA.skills.pop().require;
         }).forEach((set) => {
@@ -319,12 +320,15 @@ export default class FittingAlgorithm {
             candidateEquips[equipType]['empty'] = candidateEquip;
         });
 
+        maxEquipsExpectedValue = this.cerateMaxEquipsExpectedValue(candidateEquips);
+
         console.log('Skill - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
         console.log('Skill - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
         console.log('Skill - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
         console.log('Skill - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
         console.log('Skill - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
         console.log('Skill - charm', Object.keys(candidateEquips.charm).length, candidateEquips.charm);
+        console.log('Equips Expected Value', maxEquipsExpectedValue);
 
         // Create Next BundleList By Skill Equips
         console.log('Create Next BundleList By Skill Equips');
@@ -335,9 +339,7 @@ export default class FittingAlgorithm {
 
             nextBundleList = {};
 
-            Object.values(candidateEquips[equipType]).sort((a, b) => {
-                return b.expectedValue - a.expectedValue;
-            }).forEach((candidateEquip) => {
+            Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
                 Object.keys(prevBundleList).forEach((hash) => {
                     let bundle = Misc.deepCopy(prevBundleList[hash]);
 
@@ -361,6 +363,11 @@ export default class FittingAlgorithm {
 
                     // Add Candidate Equip to Bundle
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
+
+                    // Check Bundle Have a Future
+                    if (false === this.isBundleHavaFuture(bundle, maxEquipsExpectedValue, conditionExpectedValue)) {
+                        return;
+                    }
 
                     let isSkip = false;
 
@@ -473,11 +480,14 @@ export default class FittingAlgorithm {
                 candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
             });
 
+            maxEquipsExpectedValue = this.cerateMaxEquipsExpectedValue(candidateEquips);
+
             console.log('Slot - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
             console.log('Slot - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
             console.log('Slot - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
             console.log('Slot - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
             console.log('Slot - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
+            console.log('Equips Expected Value', maxEquipsExpectedValue);
 
             // Create Next BundleList By Slot Equips
             console.log('Create Next BundleList By Slot Equips');
@@ -515,6 +525,11 @@ export default class FittingAlgorithm {
 
                         // Add Candidate Equip to Bundle
                         bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
+
+                        // Check Bundle Have a Future
+                        if (false === this.isBundleHavaFuture(bundle, maxEquipsExpectedValue, conditionExpectedValue)) {
+                            return;
+                        }
 
                         // If Equips Is Full Then Do Fully Check
                         if (requireEquipCount === bundle.meta.euqipCount) {
@@ -599,6 +614,26 @@ export default class FittingAlgorithm {
         return MD5(JSON.stringify([equips, jewels]));
     };
 
+    cerateMaxEquipsExpectedValue = (candidateEquips) => {
+        let maxEquipsExpectedValue = {};
+
+        Object.keys(candidateEquips).forEach((equipType) => {
+            if (undefined === maxEquipsExpectedValue[equipType]) {
+                maxEquipsExpectedValue[equipType] = 0;
+            }
+
+            Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
+                if (maxEquipsExpectedValue[equipType] > candidateEquip.expectedValue) {
+                    return;
+                }
+
+                maxEquipsExpectedValue[equipType] = candidateEquip.expectedValue;
+            });
+        });
+
+        return maxEquipsExpectedValue
+    };
+
     /**
      * Create Candidate Equips
      */
@@ -668,6 +703,37 @@ export default class FittingAlgorithm {
         });
 
         return candidateEquip;
+    };
+
+    isBundleHavaFuture = (bundle, maxEquipsExpectedValue, conditionExpectedValue) => {
+
+        let currentExpectedValue = bundle.meta.expectedValue;
+
+        if (currentExpectedValue >= conditionExpectedValue) {
+            return true;
+        }
+
+        let isHaveFuture = false;
+
+        Object.keys(maxEquipsExpectedValue).forEach((equipType) => {
+            if (true === isHaveFuture) {
+                return;
+            }
+
+            if (undefined === bundle.equips[equipType]
+                || null !== bundle.equips[equipType]) {
+
+                return;
+            }
+
+            currentExpectedValue += maxEquipsExpectedValue[equipType];
+
+            if (currentExpectedValue >= conditionExpectedValue) {
+                isHaveFuture = true;
+            }
+        });
+
+        return isHaveFuture;
     };
 
     /**
