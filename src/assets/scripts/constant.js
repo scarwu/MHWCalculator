@@ -432,6 +432,34 @@ export default {
                     level: 1
                 }
             ]
+        }, {
+            sets: [],
+            skills: [
+                {
+                    name: '匠',
+                    level: 5
+                },
+                {
+                    name: '攻擊',
+                    level: 6
+                },
+                {
+                    name: '弱點特效',
+                    level: 3
+                },
+                {
+                    name: '超會心',
+                    level: 3
+                },
+                {
+                    name: '剛刃研磨',
+                    level: 1
+                },
+                {
+                    name: '無屬性強化',
+                    level: 1
+                }
+            ]
         }
     ]
 };

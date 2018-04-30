@@ -227,9 +227,8 @@ export default class Main extends Component {
 
             let equipInfo = null;
 
-            if ('waepon' === equipType) {
+            if ('weapon' === equipType) {
                 equipInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
-
                 equipInfo.slots.forEach((data, index) => {
                     slotMap[data.size].push({
                         type: equipType,
@@ -243,7 +242,6 @@ export default class Main extends Component {
                 || 'leg' === equipType) {
 
                 equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
-
                 equipInfo.slots.forEach((data, index) => {
                     slotMap[data.size].push({
                         type: equipType,
@@ -394,7 +392,7 @@ export default class Main extends Component {
         let equips = (undefined !== base64)
             ? JSON.parse(Misc.base64.decode(base64))
             : Misc.deepCopy(Constant.testEquipsSetting[0]);
-        let require = Misc.deepCopy(Constant.testRequireSetting[3]);
+        let require = Misc.deepCopy(Constant.testRequireSetting[4]);
 
         this.setState({
             sets: require.sets,

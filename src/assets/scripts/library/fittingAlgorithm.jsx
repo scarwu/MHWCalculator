@@ -96,6 +96,7 @@ export default class FittingAlgorithm {
             // Get Equipment Info
             if ('weapon' === equipType) {
                 equipInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
+                equipInfo.type = equipType;
             } else if ('helm' === equipType
                 || 'chest' === equipType
                 || 'arm' === equipType
