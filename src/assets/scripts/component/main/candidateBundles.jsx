@@ -56,7 +56,9 @@ export default class CandidateBundles extends Component {
         Event.on('SearchCandidateEquips', 'CandidateBundles', (data) => {
             this.setState({
                 isSearching: true
-            }, () => {
+            });
+
+            setTimeout(() => {
                 let startTime = new Date().getTime();
                 let bundleList = FA.search(data.equips, data.sets, data.skills);
                 let stopTime = new Date().getTime();
@@ -71,7 +73,7 @@ export default class CandidateBundles extends Component {
                     searchTime: searchTime,
                     isSearching: false
                 });
-            });
+            }, 100);
         });
     }
 

@@ -305,7 +305,7 @@ export default class EquipsDisplayer extends Component {
                     </div>
 
                     {0 !== weaponInfo.skills.length ? (
-                        <div className="col-12 mhwc-skills">
+                        <div className="col-12 mhwc-item mhwc-skills">
                             <div className="col-12 mhwc-name">
                                 <span>技能</span>
                             </div>
