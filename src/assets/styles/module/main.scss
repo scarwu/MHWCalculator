@@ -507,6 +507,19 @@ $function_bar-height: 40px;
         .mhwc-equips {
             > .mhwc-value {
                 margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-name {
+                        margin: 2.5px;
+                    }
+
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+                    }
+                }
             }
         }
 

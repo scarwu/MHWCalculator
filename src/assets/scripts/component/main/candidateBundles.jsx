@@ -102,18 +102,23 @@ export default class CandidateBundles extends Component {
                             <span>裝備</span>
                         </div>
                         <div className="col-12 mhwc-value">
+                            <div className="row">
                             {Object.keys(data.equips).map((euqipType) => {
-                                return (null !== data.equips[euqipType]) ? (
-                                    <div key={euqipType} className="row">
-                                        <div className="col-4 mhwc-name">
+                                return (null !== data.equips[euqipType]) ? [(
+                                    <div key={'weapon_1'} className="col-2">
+                                        <div className="mhwc-name">
                                             <span>{Lang[euqipType]}</span>
                                         </div>
-                                        <div className="col-8 mhwc-value">
+                                    </div>
+                                ), (
+                                    <div key={'weapon_2'} className="col-4">
+                                        <div className="mhwc-value">
                                             <span>{data.equips[euqipType]}</span>
                                         </div>
                                     </div>
-                                ) : false;
+                                )] : false;
                             })}
+                            </div>
                         </div>
                     </div>
 
