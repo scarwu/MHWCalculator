@@ -25,7 +25,6 @@ export default class FittingAlgorithm {
      */
     search = (equips, sets, skills) => {
 
-        // Create 1st BundleList & Extra Info
         this.conditionEquips = [];
         this.conditionSets = {};
         this.conditionSkills = {};
@@ -33,14 +32,15 @@ export default class FittingAlgorithm {
         this.usedEquips = {};
 
         let candidateEquips = {};
+        let conditionExpectedValue = 0;
+        let maxEquipsExpectedValue = {};
+
         let prevBundleList = {};
         let nextBundleList = {};
         let lastBundleList = {};
         let bundle = Misc.deepCopy(Constant.defaultBundle);
 
-        let conditionExpectedValue = 0;
-        let maxEquipsExpectedValue = {};
-
+        // Create Info by Sets
         sets.sort((a, b) => {
             let setInfoA = DataSet.setHelper.getInfo(a.name);
             let setInfoB = DataSet.setHelper.getInfo(b.name);
@@ -52,6 +52,7 @@ export default class FittingAlgorithm {
             this.conditionSets[set.name] = setInfo.skills[set.step - 1].require;
         });
 
+        // Create Info by Skills
         skills.sort((a, b) => {
             return b.level - a.level;
         }).forEach((skill) => {
@@ -73,6 +74,7 @@ export default class FittingAlgorithm {
             }
         });
 
+        // Create First Bundle
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
             if (undefined === equips[equipType]) {
                 if ('weapon' !== equipType) {
@@ -140,8 +142,9 @@ export default class FittingAlgorithm {
         console.log(conditionExpectedValue);
         console.log(prevBundleList);
 
-        // Create Candidate Equips
         if (0 !== Object.keys(this.conditionSets).length) {
+
+            // Create Candidate Equips
             console.log('Create Candidate Equips with Set Equips');
 
             candidateEquips = {};
@@ -365,7 +368,7 @@ export default class FittingAlgorithm {
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
                     // Check Bundle Have a Future
-                    if (false === this.isBundleHavaFuture(bundle, maxEquipsExpectedValue, conditionExpectedValue)) {
+                    if (false === this.isBundleHaveFuture(bundle, maxEquipsExpectedValue, conditionExpectedValue)) {
                         return;
                     }
 
@@ -461,6 +464,8 @@ export default class FittingAlgorithm {
         console.log('Result - BundleList (One):', Object.keys(lastBundleList).length);
 
         if (0 === Object.keys(lastBundleList).length) {
+
+            // Create Candidate Equips
             console.log('Create Candidate Equips with Slot Equips');
 
             candidateEquips = {};
@@ -527,7 +532,7 @@ export default class FittingAlgorithm {
                         bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
                         // Check Bundle Have a Future
-                        if (false === this.isBundleHavaFuture(bundle, maxEquipsExpectedValue, conditionExpectedValue)) {
+                        if (false === this.isBundleHaveFuture(bundle, maxEquipsExpectedValue, conditionExpectedValue)) {
                             return;
                         }
 
@@ -614,6 +619,9 @@ export default class FittingAlgorithm {
         return MD5(JSON.stringify([equips, jewels]));
     };
 
+    /**
+     * Cerate Max Equips Expected Value
+     */
     cerateMaxEquipsExpectedValue = (candidateEquips) => {
         let maxEquipsExpectedValue = {};
 
@@ -705,7 +713,12 @@ export default class FittingAlgorithm {
         return candidateEquip;
     };
 
-    isBundleHavaFuture = (bundle, maxEquipsExpectedValue, conditionExpectedValue) => {
+    /**
+     * Is Bundle Have Future
+     *
+     * Thisi is magic function, which is see through the future
+     */
+    isBundleHaveFuture = (bundle, maxEquipsExpectedValue, conditionExpectedValue) => {
 
         let currentExpectedValue = bundle.meta.expectedValue;
 
@@ -713,10 +726,10 @@ export default class FittingAlgorithm {
             return true;
         }
 
-        let isHaveFuture = false;
+        let haveFuture = false;
 
         Object.keys(maxEquipsExpectedValue).forEach((equipType) => {
-            if (true === isHaveFuture) {
+            if (true === haveFuture) {
                 return;
             }
 
@@ -729,11 +742,11 @@ export default class FittingAlgorithm {
             currentExpectedValue += maxEquipsExpectedValue[equipType];
 
             if (currentExpectedValue >= conditionExpectedValue) {
-                isHaveFuture = true;
+                haveFuture = true;
             }
         });
 
-        return isHaveFuture;
+        return haveFuture;
     };
 
     /**

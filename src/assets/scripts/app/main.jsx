@@ -426,7 +426,7 @@ export default class Main extends Component {
                 </div>
 
                 <div className="row mhwc-container">
-                    <div className="col mhwc-skills">
+                    <div className="col mhwc-conditions">
                         <div className="mhwc-section_name">
                             <a className="fa fa-refresh" onClick={this.handleRequireConditionRefresh}></a>
                             &nbsp;

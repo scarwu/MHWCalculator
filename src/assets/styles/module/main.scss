@@ -325,7 +325,7 @@ $function_bar-height: 40px;
         @include font-size(1.8);
     }
 
-    > .mhwc-skills,
+    > .mhwc-conditions,
     > .mhwc-bundles,
     > .mhwc-equips,
     > .mhwc-status {
@@ -350,7 +350,7 @@ $function_bar-height: 40px;
         }
     }
 
-    > .mhwc-skills {
+    > .mhwc-conditions {
         .mhwc-function_bar {
             padding: 5px 2.5px;
             height: $function_bar-height;
@@ -414,11 +414,17 @@ $function_bar-height: 40px;
     }
 
     > .mhwc-bundles {
-        .mhwc-item {
+        .mhwc-bundle_name {
+            &:hover {
+                color: #666;
+            }
+        }
+
+        .mhwc-bundle {
             margin: 5px 5px 10px 5px;
             padding: 5px 5px 15px 5px;
             border: 1px solid #999;
-            background-color: #eee;
+            background-color: #ccc;
 
             @include border-radius(5px);
 
@@ -441,9 +447,32 @@ $function_bar-height: 40px;
 
                 @include border-radius(5px);
             }
+        }
 
-            > .mhwc-value {
-                margin-top: 5px;
+        .mhwc-item {
+            margin-top: 5px;
+            padding: 5px;
+            border: 1px solid #999;
+            background-color: #eee;
+
+            @include border-radius(5px);
+
+            .mhwc-name {
+                line-height: 33px;
+
+                @include nowrap();
+
+                .mhwc-icon {
+                    margin-top: 6.5px;
+                }
+            }
+
+            .mhwc-value {
+                padding: 5px;
+                border: 1px solid #999;
+                background-color: white;
+
+                @include border-radius(5px);
             }
 
             .row {
@@ -451,6 +480,46 @@ $function_bar-height: 40px;
 
                 &:nth-child(1) {
                     margin-top: 0;
+                }
+            }
+        }
+
+        .mhwc-defense {
+
+        }
+
+        .mhwc-equips {
+            > .mhwc-value {
+                margin-top: 5px;
+            }
+        }
+
+        .mhwc-jewels {
+            > .mhwc-value {
+                margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+                    }
+                }
+            }
+        }
+
+        .mhwc-skills {
+            > .mhwc-value {
+                margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+                    }
                 }
             }
         }
@@ -537,7 +606,7 @@ $function_bar-height: 40px;
             }
         }
 
-        .mhwc-skills {
+        .mhwc-conditions {
             .mhwc-value {
                 margin-top: 5px;
             }
@@ -584,7 +653,7 @@ $function_bar-height: 40px;
             }
         }
 
-        .mhwc-skills {
+        .mhwc-conditions {
             .mhwc-value {
                 margin-top: 5px;
             }
