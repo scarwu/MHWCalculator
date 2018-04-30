@@ -216,13 +216,13 @@ export default class EquipsDisplayer extends Component {
                                 </div>
 
                                 {(null !== weaponInfo.sharpness) ? [(
-                                    <div className="col-2">
+                                    <div key={'sharpness_1'} className="col-2">
                                         <div className="mhwc-name">
                                             <span>銳利度</span>
                                         </div>
                                     </div>
                                 ), (
-                                    <div className="col-4">
+                                    <div key={'sharpness_2'} className="col-4">
                                         <div className="mhwc-value mhwc-sharpness">
                                             {this.renderSharpnessBar(weaponInfo.sharpness)}
                                         </div>
@@ -241,13 +241,13 @@ export default class EquipsDisplayer extends Component {
                                 </div>
 
                                 {(null !== weaponInfo.element.attack) ? [(
-                                    <div className="col-2">
+                                    <div key={'attackElement_1'} className="col-2">
                                         <div className="mhwc-name">
                                             <span>{Lang[weaponInfo.element.attack.type]}屬性</span>
                                         </div>
                                     </div>
                                 ), (
-                                    <div className="col-4">
+                                    <div key={'attackElement_2'} className="col-4">
                                         <div className="mhwc-value">
                                             {weaponInfo.element.attack.isHidden ? (
                                                 <span>({weaponInfo.element.attack.value})</span>
@@ -259,13 +259,13 @@ export default class EquipsDisplayer extends Component {
                                 )] : false}
 
                                 {(null !== weaponInfo.element.status) ? [(
-                                    <div className="col-2">
+                                    <div key={'statusElement_1'} className="col-2">
                                         <div className="mhwc-name">
                                             <span>{Lang[weaponInfo.element.status.type]}屬性</span>
                                         </div>
                                     </div>
                                 ), (
-                                    <div className="col-4">
+                                    <div key={'statusElement_2'} className="col-4">
                                         <div className="mhwc-value">
                                             {weaponInfo.element.status.isHidden ? (
                                                 <span>({weaponInfo.element.status.value})</span>
@@ -277,13 +277,13 @@ export default class EquipsDisplayer extends Component {
                                 )] : false}
 
                                 {(null !== weaponInfo.elderseal) ? [(
-                                    <div className="col-2">
+                                    <div key={'elderseal_1'} className="col-2">
                                         <div className="mhwc-name">
                                             <span>龍封力</span>
                                         </div>
                                     </div>
                                 ), (
-                                    <div className="col-4">
+                                    <div key={'elderseal_2'} className="col-4">
                                         <div className="mhwc-value">
                                             <span>{Lang[weaponInfo.elderseal.affinity]}</span>
                                         </div>

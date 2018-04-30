@@ -638,13 +638,13 @@ export default class CharacterStatus extends Component {
                         </div>
 
                         {null !== status.sharpness ? [(
-                            <div className="col-2">
+                            <div key={'sharpness_1'} className="col-2">
                                 <div className="mhwc-name">
                                     <span>銳利度</span>
                                 </div>
                             </div>
                         ), (
-                            <div className="col-4">
+                            <div key={'sharpness_2'} className="col-4">
                                 <div className="mhwc-value mhwc-sharpness">
                                     {this.renderSharpnessBar(status.sharpness)}
                                 </div>
@@ -678,13 +678,13 @@ export default class CharacterStatus extends Component {
                         </div>
 
                         {null !== status.element.attack ? [(
-                            <div className="col-2">
+                            <div key={'attackElement_1'} className="col-2">
                                 <div className="mhwc-name">
                                     <span>{Lang[status.element.attack.type]}屬性</span>
                                 </div>
                             </div>
                         ), (
-                            <div className="col-4">
+                            <div key={'attackElement_2'} className="col-4">
                                 <div className="mhwc-value">
                                     {status.element.attack.isHidden ? (
                                         <span>({status.element.attack.value})</span>
@@ -696,13 +696,13 @@ export default class CharacterStatus extends Component {
                         )] : false}
 
                         {null !== status.element.status ? [(
-                            <div className="col-2">
+                            <div key={'statusEelement_1'} className="col-2">
                                 <div className="mhwc-name">
                                     <span>{Lang[status.element.status.type]}屬性</span>
                                 </div>
                             </div>
                         ), (
-                            <div className="col-4">
+                            <div key={'statusEelement_2'} className="col-4">
                                 <div className="mhwc-value">
                                     {status.element.status.isHidden ? (
                                         <span>({status.element.status.value})</span>
@@ -714,13 +714,13 @@ export default class CharacterStatus extends Component {
                         )] : false}
 
                         {null !== status.elderseal ? [(
-                            <div className="col-2">
+                            <div key={'elderseal_1'} className="col-2">
                                 <div className="mhwc-name">
                                     <span>龍封力</span>
                                 </div>
                             </div>
                         ), (
-                            <div className="col-4">
+                            <div key={'elderseal_2'} className="col-4">
                                 <div className="mhwc-value">
                                     <span>{Lang[status.elderseal.affinity]}</span>
                                 </div>
