@@ -619,12 +619,34 @@ $function_bar-height: 40px;
         .mhwc-properties {
             > .mhwc-value {
                 margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-name {
+                        margin: 2.5px;
+                    }
+
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+                    }
+                }
             }
         }
 
-        .mhwc-conditions {
-            .mhwc-value {
+        .mhwc-skills {
+            > .mhwc-value {
                 margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+                    }
+                }
             }
         }
     }
@@ -669,7 +691,28 @@ $function_bar-height: 40px;
             }
         }
 
-        .mhwc-conditions {
+        .mhwc-normal,
+        .mhwc-attack,
+        .mhwc-defense {
+            > .mhwc-value {
+                margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-name {
+                        margin: 2.5px;
+                    }
+
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+                    }
+                }
+            }
+        }
+
+        .mhwc-skills {
             .mhwc-value {
                 margin-top: 5px;
             }

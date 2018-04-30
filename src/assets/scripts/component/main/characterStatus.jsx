@@ -594,21 +594,27 @@ export default class CharacterStatus extends Component {
                     <span>一般</span>
                 </div>
                 <div className="col-12 mhwc-value">
-                    <div className="row mhwc-health">
-                        <div className="col-4 mhwc-name">
-                            <span>體力</span>
+                    <div className="row">
+                        <div className="col-2">
+                            <div className="mhwc-name">
+                                <span>體力</span>
+                            </div>
                         </div>
-                        <div className="col-8 mhwc-value">
-                            <span>{status.health}</span>
+                        <div className="col-4">
+                            <div className="mhwc-value">
+                                <span>{status.health}</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="row mhwc-stamina">
-                        <div className="col-4 mhwc-name">
-                            <span>耐力</span>
+                        <div className="col-2">
+                            <div className="mhwc-name">
+                                <span>耐力</span>
+                            </div>
                         </div>
-                        <div className="col-8 mhwc-value">
-                            <span>{status.stamina}</span>
+                        <div className="col-4">
+                            <div className="mhwc-value">
+                                <span>{status.health}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -620,87 +626,107 @@ export default class CharacterStatus extends Component {
                 </div>
                 <div className="col-12 mhwc-value">
                     <div className="row">
-                        <div className="col-4 mhwc-name">
-                            <span>攻擊力</span>
-                        </div>
-                        <div className="col-8 mhwc-value">
-                            <span>{status.attack}</span>
-                        </div>
-                    </div>
-
-                    {null !== status.sharpness ? (
-                        <div className="row mhwc-sharpness">
-                            <div className="col-4 mhwc-name">
-                                <span>銳利度</span>
-                            </div>
-                            <div className="col-8 mhwc-value">
-                                {this.renderSharpnessBar(status.sharpness)}
+                        <div className="col-2">
+                            <div className="mhwc-name">
+                                <span>攻擊力</span>
                             </div>
                         </div>
-                    ) : false}
-
-                    <div className="row">
-                        <div className="col-4 mhwc-name">
-                            <span>會心率</span>
-                        </div>
-                        <div className="col-8 mhwc-value">
-                            <span>{status.critical.rate}%</span>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-4 mhwc-name">
-                            <span>會心倍數</span>
-                        </div>
-                        <div className="col-8 mhwc-value">
-                            {(0 <= status.critical.rate) ? (
-                                <span>{status.critical.multiple.positive}x</span>
-                            ) : (
-                                <span>{status.critical.multiple.nagetive}x</span>
-                            )}
-                        </div>
-                    </div>
-
-                    {null !== status.element.attack ? (
-                        <div className="row">
-                            <div className="col-4 mhwc-name">
-                                <span>{Lang[status.element.attack.type]}屬性</span>
+                        <div className="col-4">
+                            <div className="mhwc-value">
+                                <span>{status.attack}</span>
                             </div>
-                            <div className="col-8 mhwc-value">
-                                {status.element.attack.isHidden ? (
-                                    <span>({status.element.attack.value})</span>
+                        </div>
+
+                        {null !== status.sharpness ? [(
+                            <div className="col-2">
+                                <div className="mhwc-name">
+                                    <span>銳利度</span>
+                                </div>
+                            </div>
+                        ), (
+                            <div className="col-4">
+                                <div className="mhwc-value mhwc-sharpness">
+                                    {this.renderSharpnessBar(status.sharpness)}
+                                </div>
+                            </div>
+                        )] : false}
+
+                        <div className="col-2">
+                            <div className="mhwc-name">
+                                <span>會心率</span>
+                            </div>
+                        </div>
+                        <div className="col-4">
+                            <div className="mhwc-value">
+                                <span>{status.critical.rate}%</span>
+                            </div>
+                        </div>
+
+                        <div className="col-2">
+                            <div className="mhwc-name">
+                                <span>會心倍數</span>
+                            </div>
+                        </div>
+                        <div className="col-4">
+                            <div className="mhwc-value">
+                                {(0 <= status.critical.rate) ? (
+                                    <span>{status.critical.multiple.positive}x</span>
                                 ) : (
-                                    <span>{status.element.attack.value}</span>
+                                    <span>{status.critical.multiple.nagetive}x</span>
                                 )}
                             </div>
                         </div>
-                    ) : false}
 
-                    {null !== status.element.status ? (
-                        <div className="row">
-                            <div className="col-4 mhwc-name">
-                                <span>{Lang[status.element.status.type]}屬性</span>
+                        {null !== status.element.attack ? [(
+                            <div className="col-2">
+                                <div className="mhwc-name">
+                                    <span>{Lang[status.element.attack.type]}屬性</span>
+                                </div>
                             </div>
-                            <div className="col-8 mhwc-value">
-                                {status.element.status.isHidden ? (
-                                    <span>({status.element.status.value})</span>
-                                ) : (
-                                    <span>{status.element.status.value}</span>
-                                )}
+                        ), (
+                            <div className="col-4">
+                                <div className="mhwc-value">
+                                    {status.element.attack.isHidden ? (
+                                        <span>({status.element.attack.value})</span>
+                                    ) : (
+                                        <span>{status.element.attack.value}</span>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    ) : false}
+                        )] : false}
 
-                    {null !== status.elderseal ? (
-                        <div className="row">
-                            <div className="col-4 mhwc-name">
-                                <span>龍封力</span>
+                        {null !== status.element.status ? [(
+                            <div className="col-2">
+                                <div className="mhwc-name">
+                                    <span>{Lang[status.element.status.type]}屬性</span>
+                                </div>
                             </div>
-                            <div className="col-8 mhwc-value">
-                                <span>{Lang[status.elderseal.affinity]}</span>
+                        ), (
+                            <div className="col-4">
+                                <div className="mhwc-value">
+                                    {status.element.status.isHidden ? (
+                                        <span>({status.element.status.value})</span>
+                                    ) : (
+                                        <span>{status.element.status.value}</span>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    ) : false}
+                        )] : false}
+
+                        {null !== status.elderseal ? [(
+                            <div className="col-2">
+                                <div className="mhwc-name">
+                                    <span>龍封力</span>
+                                </div>
+                            </div>
+                        ), (
+                            <div className="col-4">
+                                <div className="mhwc-value">
+                                    <span>{Lang[status.elderseal.affinity]}</span>
+                                </div>
+                            </div>
+                        )] : false}
+                    </div>
                 </div>
             </div>
         ), (
@@ -710,26 +736,33 @@ export default class CharacterStatus extends Component {
                 </div>
                 <div className="col-12 mhwc-value">
                     <div className="row">
-                        <div className="col-4 mhwc-name">
-                            <span>防禦力</span>
-                        </div>
-                        <div className="col-8 mhwc-value">
-                            <span>{status.defense}</span>
-                        </div>
-                    </div>
-
-                    {Constant.elements.map((elementType) => {
-                        return (
-                            <div key={'resistance_' + elementType} className="row">
-                                <div className="col-4 mhwc-name">
-                                    <span>{Lang[elementType]}抗性</span>
-                                </div>
-                                <div className="col-8 mhwc-value">
-                                    <span>{status.resistance[elementType]}</span>
-                                </div>
+                        <div className="col-2">
+                            <div className="mhwc-name">
+                                <span>防禦力</span>
                             </div>
-                        );
-                    })}
+                        </div>
+                        <div className="col-4">
+                            <div className="mhwc-value">
+                                <span>{status.defense}</span>
+                            </div>
+                        </div>
+
+                        {Constant.elements.map((elementType) => {
+                            return [(
+                                <div key={elementType + '_1'} className="col-2">
+                                    <div className="mhwc-name">
+                                        <span>{Lang[elementType]}抗性</span>
+                                    </div>
+                                </div>
+                            ),(
+                                <div key={elementType + '_2'} className="col-4">
+                                    <div className="mhwc-value">
+                                        <span>{status.resistance[elementType]}</span>
+                                    </div>
+                                </div>
+                            )];
+                        })}
+                    </div>
                 </div>
             </div>
         ), (0 !== status.sets.length) ? (
