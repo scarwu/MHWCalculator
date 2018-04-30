@@ -25,6 +25,12 @@ export default class FittingAlgorithm {
      */
     search = (equips, sets, skills) => {
 
+        if (0 === sets.length
+            && 0 === skills.length) {
+
+            return [];
+        }
+
         this.conditionEquips = [];
         this.conditionSets = {};
         this.conditionSkills = {};
