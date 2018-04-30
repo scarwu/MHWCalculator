@@ -136,16 +136,16 @@ export default class FittingAlgorithm {
         let requireEquipCount = this.conditionEquips.length;
         let requireSkillCount = Object.keys(this.conditionSkills).length;
 
-        console.log(this.conditionSkills);
-        console.log(this.conditionEquips);
-        console.log(this.correspondJewels);
-        console.log(conditionExpectedValue);
-        console.log(prevBundleList);
+        Misc.log(this.conditionSkills);
+        Misc.log(this.conditionEquips);
+        Misc.log(this.correspondJewels);
+        Misc.log(conditionExpectedValue);
+        Misc.log(prevBundleList);
 
         if (0 !== Object.keys(this.conditionSets).length) {
 
             // Create Candidate Equips
-            console.log('Create Candidate Equips with Set Equips');
+            Misc.log('Create Candidate Equips with Set Equips');
 
             candidateEquips = {};
 
@@ -173,18 +173,18 @@ export default class FittingAlgorithm {
                 candidateEquips[equipType]['empty'] = candidateEquip;
             });
 
-            console.log('Set - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
-            console.log('Set - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
-            console.log('Set - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
-            console.log('Set - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
-            console.log('Set - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
+            Misc.log('Set - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
+            Misc.log('Set - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
+            Misc.log('Set - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
+            Misc.log('Set - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
+            Misc.log('Set - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
 
             this.conditionEquips.forEach((equipType) => {
                 if ('charm' === equipType) {
                     return;
                 }
 
-                console.log('Set - Bundle List:', equipType, Object.keys(prevBundleList).length);
+                Misc.log('Set - Bundle List:', equipType, Object.keys(prevBundleList).length);
 
                 nextBundleList = {};
 
@@ -252,7 +252,7 @@ export default class FittingAlgorithm {
                 prevBundleList = nextBundleList;
             });
 
-            console.log('Set - BundleList:', Object.keys(prevBundleList).length);
+            Misc.log('Set - BundleList:', Object.keys(prevBundleList).length);
 
             // Sets Require Equips is Overflow
             if (0 === Object.keys(prevBundleList).length) {
@@ -261,7 +261,7 @@ export default class FittingAlgorithm {
         }
 
         // Completed Skills
-        console.log('Reset Completed Skills');
+        Misc.log('Reset Completed Skills');
 
         nextBundleList = {};
 
@@ -288,7 +288,7 @@ export default class FittingAlgorithm {
         prevBundleList = nextBundleList;
 
         // Create Candidate Equips
-        console.log('Create Candidate Equips with Skill Equips');
+        Misc.log('Create Candidate Equips with Skill Equips');
 
         candidateEquips = {};
 
@@ -325,20 +325,20 @@ export default class FittingAlgorithm {
 
         maxEquipsExpectedValue = this.cerateMaxEquipsExpectedValue(candidateEquips);
 
-        console.log('Skill - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
-        console.log('Skill - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
-        console.log('Skill - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
-        console.log('Skill - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
-        console.log('Skill - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
-        console.log('Skill - charm', Object.keys(candidateEquips.charm).length, candidateEquips.charm);
-        console.log('Equips Expected Value', maxEquipsExpectedValue);
+        Misc.log('Skill - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
+        Misc.log('Skill - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
+        Misc.log('Skill - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
+        Misc.log('Skill - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
+        Misc.log('Skill - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
+        Misc.log('Skill - charm', Object.keys(candidateEquips.charm).length, candidateEquips.charm);
+        Misc.log('Equips Expected Value', maxEquipsExpectedValue);
 
         // Create Next BundleList By Skill Equips
-        console.log('Create Next BundleList By Skill Equips');
+        Misc.log('Create Next BundleList By Skill Equips');
 
         this.conditionEquips.forEach((equipType) => {
 
-            console.log('Skill - Bundle List:', equipType, Object.keys(prevBundleList).length);
+            Misc.log('Skill - Bundle List:', equipType, Object.keys(prevBundleList).length);
 
             nextBundleList = {};
 
@@ -432,13 +432,13 @@ export default class FittingAlgorithm {
 
             prevBundleList = nextBundleList;
 
-            console.log('Result - BundleList (Zero):', Object.keys(lastBundleList).length);
+            Misc.log('Result - BundleList (Zero):', Object.keys(lastBundleList).length);
         });
 
-        console.log('Skill - BundleList:', Object.keys(prevBundleList).length);
+        Misc.log('Skill - BundleList:', Object.keys(prevBundleList).length);
 
         // Find Completed Bundle into Last BundleList
-        console.log('Find Completed Bundle');
+        Misc.log('Find Completed Bundle');
 
         nextBundleList = {};
 
@@ -461,12 +461,12 @@ export default class FittingAlgorithm {
 
         prevBundleList = nextBundleList;
 
-        console.log('Result - BundleList (One):', Object.keys(lastBundleList).length);
+        Misc.log('Result - BundleList (One):', Object.keys(lastBundleList).length);
 
         if (0 === Object.keys(lastBundleList).length) {
 
             // Create Candidate Equips
-            console.log('Create Candidate Equips with Slot Equips');
+            Misc.log('Create Candidate Equips with Slot Equips');
 
             candidateEquips = {};
 
@@ -487,22 +487,22 @@ export default class FittingAlgorithm {
 
             maxEquipsExpectedValue = this.cerateMaxEquipsExpectedValue(candidateEquips);
 
-            console.log('Slot - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
-            console.log('Slot - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
-            console.log('Slot - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
-            console.log('Slot - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
-            console.log('Slot - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
-            console.log('Equips Expected Value', maxEquipsExpectedValue);
+            Misc.log('Slot - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
+            Misc.log('Slot - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
+            Misc.log('Slot - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
+            Misc.log('Slot - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
+            Misc.log('Slot - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
+            Misc.log('Equips Expected Value', maxEquipsExpectedValue);
 
             // Create Next BundleList By Slot Equips
-            console.log('Create Next BundleList By Slot Equips');
+            Misc.log('Create Next BundleList By Slot Equips');
 
             this.conditionEquips.forEach((equipType) => {
                 if ('charm' === equipType) {
                     return;
                 }
 
-                console.log('Slot - Bundle List:', equipType, Object.keys(prevBundleList).length);
+                Misc.log('Slot - Bundle List:', equipType, Object.keys(prevBundleList).length);
 
                 nextBundleList = {};
 
@@ -560,10 +560,10 @@ export default class FittingAlgorithm {
                 prevBundleList = nextBundleList;
             });
 
-            console.log('Slot - BundleList:', Object.keys(prevBundleList).length);
+            Misc.log('Slot - BundleList:', Object.keys(prevBundleList).length);
 
             // Find Completed Bundle into Last BundleList
-            console.log('Find Completed Bundle');
+            Misc.log('Find Completed Bundle');
 
             Object.keys(prevBundleList).forEach((hash) => {
                 let bundle = Misc.deepCopy(prevBundleList[hash]);
@@ -580,7 +580,7 @@ export default class FittingAlgorithm {
                 }
             });
 
-            console.log('Result - BundleList (Two):', Object.keys(lastBundleList).length);
+            Misc.log('Result - BundleList (Two):', Object.keys(lastBundleList).length);
         }
 
         lastBundleList = Object.values(lastBundleList).sort((a, b) => {

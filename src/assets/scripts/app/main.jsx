@@ -210,7 +210,78 @@ export default class Main extends Component {
     };
 
     handleCandidateBundlePickup = (bundle) => {
+        let equips = Misc.deepCopy(this.state.equips);
+        let slotMap = {
+            1: [],
+            2: [],
+            3: []
+        }
 
+        Object.keys(bundle.equips).forEach((equipType) => {
+            if (null === bundle.equips[equipType]) {
+                return;
+            }
+
+            equips[equipType].name = bundle.equips[equipType];
+            equips[equipType].slotNames = {};
+
+            let equipInfo = null;
+
+            if ('waepon' === equipType) {
+                equipInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
+
+                equipInfo.slots.forEach((data, index) => {
+                    slotMap[data.size].push({
+                        type: equipType,
+                        index: index
+                    });
+                });
+            } else if ('helm' === equipType
+                || 'chest' === equipType
+                || 'arm' === equipType
+                || 'waist' === equipType
+                || 'leg' === equipType) {
+
+                equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
+
+                equipInfo.slots.forEach((data, index) => {
+                    slotMap[data.size].push({
+                        type: equipType,
+                        index: index
+                    });
+                });
+            }
+        });
+
+        Object.keys(bundle.jewels).sort((a, b) => {
+            let jewelInfoA = DataSet.jewelHelper.getInfo(a);
+            let jewelInfoB = DataSet.jewelHelper.getInfo(b);
+
+            return jewelInfoA.size - jewelInfoB.size;
+        }).forEach((jewelName) => {
+            let jewelInfo = DataSet.jewelHelper.getInfo(jewelName);
+            let currentSize = jewelInfo.size;
+
+            let jewelCount = bundle.jewels[jewelName];
+            let data = null
+
+            for (let i = 0; i < jewelCount; i++) {
+                if (0 === slotMap[currentSize].length) {
+                    currentSize++;
+                }
+
+                data = slotMap[currentSize].shift();
+
+                equips[data.type].slotNames[data.index] = jewelName;
+            }
+        });
+
+        this.setState({
+            equips: equips,
+            equipsLock: Misc.deepCopy(Constant.defaultEquipsLock)
+        }, () => {
+            this.refershUrlHash();
+        });
     };
 
     handleEquipsLockToggle = (equipType) => {

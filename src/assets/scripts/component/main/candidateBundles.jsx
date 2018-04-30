@@ -15,6 +15,7 @@ import React, { Component } from 'react';
 import Event from 'core/event';
 
 // Load Custom Libraries
+import Misc from 'library/misc';
 import FittingAlgorithm from 'library/fittingAlgorithm';
 
 // Load Constant & Lang
@@ -32,7 +33,9 @@ export default class CandidateBundles extends Component {
     // Initial State
     state = {
         bundleList: [],
-        bundleLimit: 25
+        bundleLimit: 25,
+        searchTime: null,
+        isSearching: false
     };
 
     /**
@@ -51,16 +54,23 @@ export default class CandidateBundles extends Component {
         let FA = new FittingAlgorithm();
 
         Event.on('SearchCandidateEquips', 'CandidateBundles', (data) => {
-
-            let startTime = new Date().getTime();
-            let bundleList = FA.search(data.equips, data.sets, data.skills);
-            let stopTime = new Date().getTime();
-
-            console.log('Time Checker: ', (stopTime - startTime) / 1000);
-            console.log(bundleList);
-
             this.setState({
-                bundleList: bundleList
+                isSearching: true
+            }, () => {
+                let startTime = new Date().getTime();
+                let bundleList = FA.search(data.equips, data.sets, data.skills);
+                let stopTime = new Date().getTime();
+
+                let searchTime = (stopTime - startTime) / 1000;
+
+                Misc.log('Bundle List:', bundleList);
+                Misc.log('Search Time:', searchTime);
+
+                this.setState({
+                    bundleList: bundleList,
+                    searchTime: searchTime,
+                    isSearching: false
+                });
             });
         });
     }
@@ -169,6 +179,22 @@ export default class CandidateBundles extends Component {
     render () {
         return (
             <div className="mhwc-candidate_bundles">
+                {true === this.state.isSearching ? (
+                    <div className="mhwc-mask">
+                        <i className="fa fa-spin fa-cog"></i>
+                    </div>
+                ) : false}
+
+                {(null !== this.state.searchTime) ? (
+                    <div className="row mhwc-bundle">
+                        <div className="col-12 mhwc-name">
+                            <span className="mhwc-bundle_name" >
+                                搜尋花費 {this.state.searchTime} 秒，並找出 {this.state.bundleList.length} 筆結果。
+                            </span>
+                        </div>
+                    </div>
+                ) : false}
+
                 {this.renderBundleItems()}
             </div>
         );

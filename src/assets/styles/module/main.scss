@@ -414,6 +414,22 @@ $function_bar-height: 40px;
     }
 
     > .mhwc-bundles {
+
+        .mhwc-mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            line-height: 100vh;
+            text-align: center;
+
+            @include font-size(6);
+        }
+
         .mhwc-bundle_name {
             &:hover {
                 color: #666;

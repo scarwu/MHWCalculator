@@ -8,7 +8,7 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-var ENVIRONMENT = 'development';    // production | development | testing
+var ENVIRONMENT = 'development'; // production | development | testing
 var WEBPACK_NEED_WATCH = false;
 
 var gulp = require('gulp');
@@ -184,6 +184,10 @@ gulp.task('release:replace:index', function () {
     return gulp.src('docs/index.html')
         .pipe($.replace(
             '?timestamp', '?' + timestamp
+        )).pipe($.replace(
+            'development', 'production'
+        )).pipe($.replace(
+            '(new Date()).getTime().toString()', timestamp
         ))
         .pipe(gulp.dest('docs'));
 });

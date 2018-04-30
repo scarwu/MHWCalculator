@@ -8,6 +8,14 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+function log (...params) {
+    if ('development' !== window.mhwc.env) {
+        return;
+    }
+
+    console.log.apply(this, params);
+}
+
 function deepCopy (data) {
     return JSON.parse(JSON.stringify(data));
 }
@@ -157,6 +165,7 @@ let Base64 = {
 }
 
 module.exports = {
+    log: log,
     deepCopy: deepCopy,
     base64: Base64
 };
