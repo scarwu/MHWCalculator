@@ -88,7 +88,7 @@ export default class CandidateBundles extends Component {
             return (
                 <div key={index} className="row mhwc-bundle">
                     <div className="col-12 mhwc-name">
-                        <span className="mhwc-bundle_name" >備選 {index + 1}</span>
+                        <span className="mhwc-bundle_name">備選 {index + 1}</span>
 
                         <div className="mhwc-icons_bundle">
                             <a className="mhwc-icon" onClick={() => {this.handleBundlePickUp(index)}}>
@@ -197,9 +197,9 @@ export default class CandidateBundles extends Component {
                 ) : false}
 
                 {(null !== this.state.searchTime) ? (
-                    <div className="row mhwc-bundle">
-                        <div className="col-12 mhwc-name">
-                            <span className="mhwc-bundle_name" >
+                    <div className="row mhwc-search_info">
+                        <div className="col-12">
+                            <span>
                                 搜尋花費 {this.state.searchTime} 秒，並找出 {this.state.bundleList.length} 筆結果。
                             </span>
                         </div>

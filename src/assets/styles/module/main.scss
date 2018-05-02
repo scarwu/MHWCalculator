@@ -430,6 +430,16 @@ $function_bar-height: 40px;
             @include font-size(6);
         }
 
+        .mhwc-search_info {
+            margin: 5px 5px 10px 5px;
+            padding: 0 5px;
+            border: 1px solid #999;
+            background-color: #eee;
+            line-height: 28px;
+
+            @include border-radius(5px);
+        }
+
         .mhwc-bundle_name {
             &:hover {
                 color: #666;
