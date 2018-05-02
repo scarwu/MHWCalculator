@@ -35,7 +35,7 @@ export default class SetItemSelector extends Component {
     state = {
         data: {},
         list: [],
-        textSegment: null
+        segment: null
     };
 
     /**
@@ -52,15 +52,13 @@ export default class SetItemSelector extends Component {
         this.props.onClose();
     };
 
-    handleTextInput = () => {
-        let segment = this.refs.textSegment.value;
+    handleSegmentInput = () => {
+        let segment = this.refs.segment.value;
 
-        if (0 === segment.length) {
-            segment = null;
-        }
+        segment = (0 !== segment.length) ? segment.trim() : null;
 
         this.setState({
-            textSegment: segment
+            segment: segment
         });
     };
 
@@ -96,23 +94,33 @@ export default class SetItemSelector extends Component {
      * Render Functions
      */
     renderTable = () => {
-        let segment = this.state.textSegment;
+        let segment = this.state.segment;
 
         return (
             <table className="mhwc-set_table">
                 <thead>
                     <tr>
                         <td>名稱</td>
-                        <td>等級</td>
+                        <td>技能</td>
+                        <td>說明</td>
                         <td></td>
                     </tr>
                 </thead>
                 <tbody>
                     {this.state.list.map((data, index) => {
 
+                        // Create Text
+                        let text = data.name;
+
+                        data.skills.forEach((data) => {
+                            let skillInfo = DataSet.skillHelper.getInfo(data.name);
+
+                            text += data.name + skillInfo.list[0].description;
+                        })
+
                         // Search Nameword
                         if (null !== segment
-                            && !data.name.toLowerCase().match(segment.toLowerCase())) {
+                            && !text.toLowerCase().match(segment.toLowerCase())) {
 
                             return false;
                         }
@@ -125,6 +133,17 @@ export default class SetItemSelector extends Component {
                                         return (
                                             <div key={index}>
                                                 <span>({data.require}) {data.name}</span>
+                                            </div>
+                                        );
+                                    })}
+                                </td>
+                                <td>
+                                    {data.skills.map((data, index) => {
+                                        let skillInfo = DataSet.skillHelper.getInfo(data.name);
+
+                                        return (
+                                            <div key={index}>
+                                                <span>{skillInfo.list[0].description}</span>
                                             </div>
                                         );
                                     })}
@@ -150,7 +169,7 @@ export default class SetItemSelector extends Component {
                 <div className="mhwc-dialog">
                     <div className="mhwc-function_bar">
                         <input className="mhwc-text_segment" type="text"
-                            ref="textSegment" onChange={this.handleTextInput} />
+                            ref="segment" onChange={this.handleSegmentInput} />
 
                         <a className="mhwc-icon" onClick={this.handleWindowClose}>
                             <i className="fa fa-times"></i>

@@ -35,7 +35,7 @@ export default class EquipItemSelector extends Component {
     state = {
         data: {},
         list: [],
-        textSegment: null
+        segment: null
     };
 
     /**
@@ -60,15 +60,13 @@ export default class EquipItemSelector extends Component {
         this.props.onClose();
     };
 
-    handleTextInput = () => {
-        let segment = this.refs.textSegment.value;
+    handleSegmentInput = () => {
+        let segment = this.refs.segment.value;
 
-        if (0 === segment.length) {
-            segment = null;
-        }
+        segment = (0 !== segment.length) ? segment.trim() : null;
 
         this.setState({
-            textSegment: segment
+            segment: segment
         });
     };
 
@@ -167,7 +165,7 @@ export default class EquipItemSelector extends Component {
     };
 
     renderTable = () => {
-        let segment = this.state.textSegment;
+        let segment = this.state.segment;
 
         switch (this.state.mode) {
         case 'weapon':
@@ -193,9 +191,22 @@ export default class EquipItemSelector extends Component {
                     <tbody>
                         {this.state.list.map((data, index) => {
 
+                            // Create Text
+                            let text = data.name;
+
+                            text += Lang[data.type];
+
+                            if (null !== data.element.attack) {
+                                text += Lang[data.element.attack.type];
+                            }
+
+                            if (null !== data.element.status) {
+                                text += Lang[data.element.status.type];
+                            }
+
                             // Search Nameword
                             if (null !== segment
-                                && !data.name.toLowerCase().match(segment.toLowerCase())) {
+                                && !text.toLowerCase().match(segment.toLowerCase())) {
 
                                 return false;
                             }
@@ -290,9 +301,20 @@ export default class EquipItemSelector extends Component {
                     <tbody>
                         {this.state.list.map((data, index) => {
 
+                            // Create Text
+                            let text = data.name;
+
+                            if (null !== data.set) {
+                                text += data.set.name;
+                            }
+
+                            data.skills.forEach((data) => {
+                                text += data.name;
+                            })
+
                             // Search Nameword
                             if (null !== segment
-                                && !data.name.toLowerCase().match(segment.toLowerCase())) {
+                                && !text.toLowerCase().match(segment.toLowerCase())) {
 
                                 return false;
                             }
@@ -356,9 +378,16 @@ export default class EquipItemSelector extends Component {
                     <tbody>
                         {this.state.list.map((data, index) => {
 
+                            // Create Text
+                            let text = data.name;
+
+                            data.skills.forEach((data) => {
+                                text += data.name;
+                            })
+
                             // Search Nameword
                             if (null !== segment
-                                && !data.name.toLowerCase().match(segment.toLowerCase())) {
+                                && !text.toLowerCase().match(segment.toLowerCase())) {
 
                                 return false;
                             }
@@ -404,9 +433,14 @@ export default class EquipItemSelector extends Component {
                     <tbody>
                         {this.state.list.map((data, index) => {
 
+                            // Create Text
+                            let text = data.name;
+
+                            text += data.skill.name;
+
                             // Search Nameword
                             if (null !== segment
-                                && !data.name.toLowerCase().match(segment.toLowerCase())) {
+                                && !text.toLowerCase().match(segment.toLowerCase())) {
 
                                 return false;
                             }
@@ -446,9 +480,16 @@ export default class EquipItemSelector extends Component {
                     <tbody>
                         {this.state.list.map((data, index) => {
 
+                            // Create Text
+                            let text = data.name;
+
+                            data.list.forEach((data) => {
+                                text += data.description;
+                            })
+
                             // Search Nameword
                             if (null !== segment
-                                && !data.name.toLowerCase().match(segment.toLowerCase())) {
+                                && !text.toLowerCase().match(segment.toLowerCase())) {
 
                                 return false;
                             }
@@ -496,7 +537,7 @@ export default class EquipItemSelector extends Component {
                 <div className="mhwc-dialog">
                     <div className="mhwc-function_bar">
                         <input className="mhwc-text_segment" type="text"
-                            ref="textSegment" onChange={this.handleTextInput} />
+                            ref="segment" onChange={this.handleSegmentInput} />
 
                         <a className="mhwc-icon" onClick={this.handleWindowClose}>
                             <i className="fa fa-times"></i>
