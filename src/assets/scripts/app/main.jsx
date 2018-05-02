@@ -302,6 +302,9 @@ export default class Main extends Component {
             }
         });
 
+        // Set Equips Data to Status
+        Status.set('equips', equips);
+
         this.setState({
             equips: equips,
             equipsLock: Misc.deepCopy(Constant.defaultEquipsLock)
@@ -335,7 +338,6 @@ export default class Main extends Component {
 
     handleEquipSelectorPickup = (data) => {
         let equips = this.state.equips;
-        let equipsLock = this.state.equipsLock;
 
         if (undefined !== data.enhanceIndex) {
             if ('object' !== typeof equips.weapon.enhanceNames
@@ -359,8 +361,6 @@ export default class Main extends Component {
                 enhanceNames: {},
                 slotNames: {}
             };
-
-            equipsLock.weapon = false;
         } else if ('helm' === data.equipType
             || 'chest' === data.equipType
             || 'arm' === data.equipType
@@ -371,40 +371,46 @@ export default class Main extends Component {
                 name: data.equipName,
                 slotNames: {}
             };
-
-            equipsLock[data.equipType] = false;
         } else if ('charm' === data.equipType) {
             equips.charm = {
                 name: data.equipName
             };
-
-            equipsLock.charm = false;
         }
 
+        // Set Equips Data to Status
+        Status.set('equips', equips);
+
         this.setState({
-            equips: equips,
-            equipsLock: equipsLock
+            equips: equips
         }, () => {
             this.refershUrlHash();
         });
     };
 
     handleRequireConditionRefresh = () => {
+        let sets = [];
+        let skills = [];
 
         // Set Sets & Skills Data to Status
-        Status.set('sets', []);
-        Status.set('skills', []);
+        Status.set('sets', sets);
+        Status.set('skills', skills);
 
         this.setState({
-            sets: [],
-            skills: []
+            sets: sets,
+            skills: skills
         });
     };
 
     handleEquipsDisplayerRefresh = () => {
+        let equips = Misc.deepCopy(Constant.defaultEquips);
+        let equipsLock = Misc.deepCopy(Constant.defaultEquipsLock);
+
+        // Set Equips Data to Status
+        Status.set('equips', equips);
+
         this.setState({
-            equips: Misc.deepCopy(Constant.defaultEquips),
-            equipsLock: Misc.deepCopy(Constant.defaultEquipsLock)
+            equips: equips,
+            equipsLock: equipsLock
         }, () => {
             this.refershUrlHash();
         });
@@ -422,12 +428,6 @@ export default class Main extends Component {
      */
     componentWillMount () {
 
-        // Get Equips Data from URL Base64
-        let base64 = this.props.match.params.base64;
-        let equips = (undefined !== base64)
-            ? JSON.parse(Misc.base64.decode(base64))
-            : Misc.deepCopy(Constant.testEquipsSetting[0]);
-
         // Get Sets & Skills Data from Status
         let require = Misc.deepCopy(Constant.testRequireSetting[0]);
         let sets = Status.get('sets');
@@ -440,6 +440,16 @@ export default class Main extends Component {
         if (undefined === skills) {
             skills = require.skills;
         }
+
+        // Get Equips Data from URL Base64
+        let base64 = this.props.match.params.base64;
+        let equips = Status.get('equips');
+
+        equips = (undefined !== base64)
+            ? JSON.parse(Misc.base64.decode(base64))
+            : (undefined !== equips)
+                ? equips
+                : Misc.deepCopy(Constant.testEquipsSetting[0]);
 
         this.setState({
             sets: sets,

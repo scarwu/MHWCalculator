@@ -133,51 +133,55 @@ export default class CandidateBundles extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 mhwc-item mhwc-jewels">
-                        <div className="col-12 mhwc-name">
-                            <span>裝飾珠</span>
-                        </div>
-                        <div className="col-12 mhwc-value">
-                            <div className="row">
-                                {Object.keys(data.jewels).sort((a, b) => {
-                                    return data.jewels[b] - data.jewels[a];
-                                }).map((jewelName) => {
-                                    let jewelCount = data.jewels[jewelName];
+                    {(0 !== Object.keys(data.jewels).length) ? (
+                        <div className="col-12 mhwc-item mhwc-jewels">
+                            <div className="col-12 mhwc-name">
+                                <span>裝飾珠</span>
+                            </div>
+                            <div className="col-12 mhwc-value">
+                                <div className="row">
+                                    {Object.keys(data.jewels).sort((a, b) => {
+                                        return data.jewels[b] - data.jewels[a];
+                                    }).map((jewelName) => {
+                                        let jewelCount = data.jewels[jewelName];
 
-                                    return (
-                                        <div key={jewelName} className="col-4">
-                                            <div className="mhwc-value">
-                                                <span>{`${jewelName} x ${jewelCount}`}</span>
+                                        return (
+                                            <div key={jewelName} className="col-4">
+                                                <div className="mhwc-value">
+                                                    <span>{`${jewelName} x ${jewelCount}`}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    );
-                                })}
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    ) : false}
 
-                    <div className="col-12 mhwc-item mhwc-skills">
-                        <div className="col-12 mhwc-name">
-                            <span>技能</span>
-                        </div>
-                        <div className="col-12 mhwc-value">
-                            <div className="row">
-                                {Object.keys(data.skills).sort((a, b) => {
-                                    return data.skills[b] - data.skills[a];
-                                }).map((skillName) => {
-                                    let skillCount = data.skills[skillName];;
+                    {(0 !== Object.keys(data.skills).length) ? (
+                        <div className="col-12 mhwc-item mhwc-skills">
+                            <div className="col-12 mhwc-name">
+                                <span>技能</span>
+                            </div>
+                            <div className="col-12 mhwc-value">
+                                <div className="row">
+                                    {Object.keys(data.skills).sort((a, b) => {
+                                        return data.skills[b] - data.skills[a];
+                                    }).map((skillName) => {
+                                        let skillCount = data.skills[skillName];;
 
-                                    return (
-                                        <div key={skillName} className="col-6">
-                                            <div className="mhwc-value">
-                                                <span>{`${skillName} Lv.${skillCount}`}</span>
+                                        return (
+                                            <div key={skillName} className="col-6">
+                                                <div className="mhwc-value">
+                                                    <span>{`${skillName} Lv.${skillCount}`}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    );
-                                })}
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    ) : false}
                 </div>
             );
         });
