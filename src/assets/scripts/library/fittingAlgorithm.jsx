@@ -35,6 +35,7 @@ export default class FittingAlgorithm {
         this.conditionSets = {};
         this.conditionSkills = {};
         this.correspondJewels = {};
+        this.skipSkills = {};
         this.usedEquips = {};
 
         let candidateEquips = {};
@@ -62,6 +63,12 @@ export default class FittingAlgorithm {
         skills.sort((a, b) => {
             return b.level - a.level;
         }).forEach((skill) => {
+            if (0 === skill.level) {
+                this.skipSkills[skill.name] = true;
+
+                return;
+            }
+
             this.conditionSkills[skill.name] = skill.level;
 
             let jewelInfo = DataSet.jewelHelper.hasSkill(skill.name).getItems();
@@ -657,6 +664,11 @@ export default class FittingAlgorithm {
             let candidateEquip = this.convertEquipToCandidateEquip(equip);
             candidateEquip.type = equipType;
 
+            // Check is Skip Equips
+            if (true === this.isSkipCandidateEquip(candidateEquip)) {
+                return;
+            }
+
             // Check Used Equips
             if (true === this.usedEquips[candidateEquip.name]) {
                 return;
@@ -718,6 +730,25 @@ export default class FittingAlgorithm {
         });
 
         return candidateEquip;
+    };
+
+    isSkipCandidateEquip = (candidateEquip) => {
+
+        let isSkip = false;
+
+        Object.keys(candidateEquip.skills).forEach((skillName) => {
+            if (true === isSkip) {
+                return;
+            }
+
+            if (undefined !== this.skipSkills[skillName]
+                && true === this.skipSkills[skillName]) {
+
+                isSkip = true;
+            }
+        });
+
+        return isSkip;
     };
 
     /**

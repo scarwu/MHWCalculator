@@ -54,7 +54,7 @@ export default class Main extends Component {
     /**
      * Handle Functions
      */
-    handleSetLevelDown = (index) => {
+    handleSetStepDown = (index) => {
         let sets = this.state.sets;
 
         if (1 === sets[index].step) {
@@ -63,12 +63,15 @@ export default class Main extends Component {
 
         sets[index].step -= 1;
 
+        // Set Sets Data to Status
+        Status.set('sets', sets);
+
         this.setState({
             sets: sets
         });
     };
 
-    handleSetLevelUp = (index) => {
+    handleSetStepUp = (index) => {
         let sets = this.state.sets;
         let setInfo = DataSet.setHelper.getInfo(sets[index].name);
 
@@ -77,6 +80,9 @@ export default class Main extends Component {
         }
 
         sets[index].step += 1;
+
+        // Set Sets Data to Status
+        Status.set('sets', sets);
 
         this.setState({
             sets: sets
@@ -103,6 +109,9 @@ export default class Main extends Component {
             step: 1
         });
 
+        // Set Sets Data to Status
+        Status.set('sets', sets);
+
         this.setState({
             sets: sets
         });
@@ -113,21 +122,29 @@ export default class Main extends Component {
 
         delete sets[index];
 
+        sets = sets.filter((set) => {
+            return (null !== set);
+        });
+
+        // Set Sets Data to Status
+        Status.set('sets', sets);
+
         this.setState({
-            sets: sets.filter((set) => {
-                return (null !== set);
-            })
+            sets: sets
         });
     };
 
     handleSkillLevelDown = (index) => {
         let skills = this.state.skills;
 
-        if (1 === skills[index].level) {
+        if (0 === skills[index].level) {
             return false;
         }
 
         skills[index].level -= 1;
+
+        // Set Sets Data to Status
+        Status.set('skills', skills);
 
         this.setState({
             skills: skills
@@ -143,6 +160,9 @@ export default class Main extends Component {
         }
 
         skills[index].level += 1;
+
+        // Set Sets Data to Status
+        Status.set('skills', skills);
 
         this.setState({
             skills: skills
@@ -169,6 +189,9 @@ export default class Main extends Component {
             level: 1
         });
 
+        // Set Sets Data to Status
+        Status.set('skills', skills);
+
         this.setState({
             skills: skills
         });
@@ -179,10 +202,15 @@ export default class Main extends Component {
 
         delete skills[index];
 
+        skills = skills.filter((skill) => {
+            return (null !== skill);
+        });
+
+        // Set Sets Data to Status
+        Status.set('skills', skills);
+
         this.setState({
-            skills: skills.filter((skill) => {
-                return (null !== skill);
-            })
+            skills: skills
         });
     };
 
@@ -362,6 +390,11 @@ export default class Main extends Component {
     };
 
     handleRequireConditionRefresh = () => {
+
+        // Set Sets & Skills Data to Status
+        Status.set('sets', []);
+        Status.set('skills', []);
+
         this.setState({
             sets: [],
             skills: []
@@ -388,15 +421,29 @@ export default class Main extends Component {
      * Lifecycle Functions
      */
     componentWillMount () {
+
+        // Get Equips Data from URL Base64
         let base64 = this.props.match.params.base64;
         let equips = (undefined !== base64)
             ? JSON.parse(Misc.base64.decode(base64))
             : Misc.deepCopy(Constant.testEquipsSetting[0]);
-        let require = Misc.deepCopy(Constant.testRequireSetting[4]);
+
+        // Get Sets & Skills Data from Status
+        let require = Misc.deepCopy(Constant.testRequireSetting[0]);
+        let sets = Status.get('sets');
+        let skills = Status.get('skills');
+
+        if (undefined === sets) {
+            sets = require.sets;
+        }
+
+        if (undefined === skills) {
+            skills = require.skills;
+        }
 
         this.setState({
-            sets: require.sets,
-            skills: require.skills,
+            sets: sets,
+            skills: skills,
             equips: equips
         }, () => {
             this.refershUrlHash();
@@ -421,10 +468,10 @@ export default class Main extends Component {
                         </span>
 
                         <div className="mhwc-icons_bundle">
-                            <a className="mhwc-icon" onClick={() => {this.handleSetLevelDown(index)}}>
+                            <a className="mhwc-icon" onClick={() => {this.handleSetStepDown(index)}}>
                                 <i className="fa fa-minus"></i>
                             </a>
-                            <a className="mhwc-icon" onClick={() => {this.handleSetLevelUp(index)}}>
+                            <a className="mhwc-icon" onClick={() => {this.handleSetStepUp(index)}}>
                                 <i className="fa fa-plus"></i>
                             </a>
                             <a className="mhwc-icon" onClick={() => {this.handleSetRemove(index)}}>
@@ -478,7 +525,11 @@ export default class Main extends Component {
                         </div>
                     </div>
                     <div className="col-12 mhwc-value">
-                        <span>{skillInfo.list[data.level - 1].description}</span>
+                        <span>
+                            {(0 !== data.level)
+                                ? skillInfo.list[data.level - 1].description
+                                : '此技能將不會出現在備選中'}
+                        </span>
                     </div>
                 </div>
             );
