@@ -101,12 +101,27 @@ export default class Main extends Component {
         });
     };
 
-    handleSetSelectorPickup = (data) => {
+    handleSetSelectorPickUp = (data) => {
         let sets = this.state.sets;
 
         sets.push({
             name: data.setName,
             step: 1
+        });
+
+        // Set Sets Data to Status
+        Status.set('sets', sets);
+
+        this.setState({
+            sets: sets
+        });
+    };
+
+    handleSetSelectorThrowDown = (data) => {
+        let sets = this.state.sets;
+
+        sets = sets.filter((set) => {
+            return set.name !== data.setName;
         });
 
         // Set Sets Data to Status
@@ -181,12 +196,27 @@ export default class Main extends Component {
         });
     };
 
-    handleSkillSelectorPickup = (data) => {
+    handleSkillSelectorPickUp = (data) => {
         let skills = this.state.skills;
 
         skills.push({
             name: data.skillName,
             level: 1
+        });
+
+        // Set Sets Data to Status
+        Status.set('skills', skills);
+
+        this.setState({
+            skills: skills
+        });
+    };
+
+    handleSkillSelectorThrowDown = (data) => {
+        let skills = this.state.skills;
+
+        skills = skills.filter((skill) => {
+            return skill.name !== data.skillName;
         });
 
         // Set Sets Data to Status
@@ -237,7 +267,7 @@ export default class Main extends Component {
         }));
     };
 
-    handleCandidateBundlePickup = (bundle) => {
+    handleCandidateBundlePickUp = (bundle) => {
         let equips = Misc.deepCopy(this.state.equips);
         let slotMap = {
             1: [],
@@ -294,6 +324,8 @@ export default class Main extends Component {
             for (let i = 0; i < jewelCount; i++) {
                 if (0 === slotMap[currentSize].length) {
                     currentSize++;
+
+                    continue;
                 }
 
                 data = slotMap[currentSize].shift();
@@ -336,7 +368,7 @@ export default class Main extends Component {
         });
     };
 
-    handleEquipSelectorPickup = (data) => {
+    handleEquipSelectorPickUp = (data) => {
         let equips = this.state.equips;
 
         if (undefined !== data.enhanceIndex) {
@@ -594,7 +626,7 @@ export default class Main extends Component {
 
                         <div className="mhwc-list">
                             <CandidateBundles
-                                onPickup={this.handleCandidateBundlePickup} />
+                                onPickUp={this.handleCandidateBundlePickUp} />
                         </div>
                     </div>
 
@@ -610,7 +642,7 @@ export default class Main extends Component {
                                 equipsLock={this.state.equipsLock}
                                 onToggleEquipsLock={this.handleEquipsLockToggle}
                                 onOpenSelector={this.handleEquipSelectorOpen}
-                                onPickup={this.handleEquipSelectorPickup} />
+                                onPickUp={this.handleEquipSelectorPickUp} />
                         </div>
                     </div>
 
@@ -643,19 +675,21 @@ export default class Main extends Component {
 
                 {this.state.isShowSetSelector ? (
                     <SetItemSelector data={this.state.sets}
-                        onPickup={this.handleSetSelectorPickup}
+                        onPickUp={this.handleSetSelectorPickUp}
+                        onThrowDown={this.handleSetSelectorThrowDown}
                         onClose={this.handleSetSelectorClose} />
                 ) : false}
 
                 {this.state.isShowSkillSelector ? (
                     <SkillItemSelector data={this.state.skills}
-                        onPickup={this.handleSkillSelectorPickup}
+                        onPickUp={this.handleSkillSelectorPickUp}
+                        onThrowDown={this.handleSkillSelectorThrowDown}
                         onClose={this.handleSkillSelectorClose} />
                 ) : false}
 
                 {this.state.isShowEquipSelector ? (
                     <EquipItemSelector data={this.state.equipSelector}
-                        onPickup={this.handleEquipSelectorPickup}
+                        onPickUp={this.handleEquipSelectorPickUp}
                         onClose={this.handleEquipSelectorClose} />
                 ) : false}
             </div>

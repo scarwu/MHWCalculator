@@ -27,7 +27,7 @@ export default class EquipItemSelector extends Component {
     // Default Props
     static defaultProps = {
         data: {},
-        onPickup: (data) => {},
+        onPickUp: (data) => {},
         onClose: () => {}
     };
 
@@ -45,7 +45,7 @@ export default class EquipItemSelector extends Component {
         this.props.onClose();
     };
 
-    handleItemPickup = (itemName) => {
+    handleItemPickUp = (itemName) => {
         let data = this.props.data;
 
         if (undefined !== data.enhanceIndex) {
@@ -56,7 +56,7 @@ export default class EquipItemSelector extends Component {
             data.equipName = itemName;
         }
 
-        this.props.onPickup(data);
+        this.props.onPickUp(data);
         this.props.onClose();
     };
 
@@ -266,11 +266,13 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        <a className="mhwc-icon"
-                                            onClick={() => {this.handleItemPickup(data.name)}}>
+                                        {(this.props.data.equipName !== data.name) ? (
+                                            <a className="mhwc-icon"
+                                                onClick={() => {this.handleItemPickUp(data.name)}}>
 
-                                            <i className="fa fa-check"></i>
-                                        </a>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        ) : false}
                                     </td>
                                 </tr>
                             );
@@ -352,11 +354,13 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        <a className="mhwc-icon"
-                                            onClick={() => {this.handleItemPickup(data.name)}}>
+                                        {(this.props.data.equipName !== data.name) ? (
+                                            <a className="mhwc-icon"
+                                                onClick={() => {this.handleItemPickUp(data.name)}}>
 
-                                            <i className="fa fa-check"></i>
-                                        </a>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        ) : false}
                                     </td>
                                 </tr>
                             );
@@ -406,11 +410,13 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        <a className="mhwc-icon"
-                                            onClick={() => {this.handleItemPickup(data.name)}}>
+                                        {(this.props.data.equipName !== data.name) ? (
+                                            <a className="mhwc-icon"
+                                                onClick={() => {this.handleItemPickUp(data.name)}}>
 
-                                            <i className="fa fa-check"></i>
-                                        </a>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        ) : false}
                                     </td>
                                 </tr>
                             );
@@ -454,11 +460,13 @@ export default class EquipItemSelector extends Component {
                                         <span>{data.skill.name} Lv.{data.skill.level}</span>
                                     </td>
                                     <td>
-                                        <a className="mhwc-icon"
-                                            onClick={() => {this.handleItemPickup(data.name)}}>
+                                        {(this.props.data.jewelName !== data.name) ? (
+                                            <a className="mhwc-icon"
+                                                onClick={() => {this.handleItemPickUp(data.name)}}>
 
-                                            <i className="fa fa-check"></i>
-                                        </a>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        ) : false}
                                     </td>
                                 </tr>
                             );
@@ -516,11 +524,13 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        <a className="mhwc-icon"
-                                            onClick={() => {this.handleItemPickup(data.name)}}>
+                                        {(this.props.data.enhanceName !== data.name) ? (
+                                            <a className="mhwc-icon"
+                                                onClick={() => {this.handleItemPickUp(data.name)}}>
 
-                                            <i className="fa fa-check"></i>
-                                        </a>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        ) : false}
                                     </td>
                                 </tr>
                             );

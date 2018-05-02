@@ -27,7 +27,8 @@ export default class SetItemSelector extends Component {
     // Default Props
     static defaultProps = {
         data: {},
-        onPickup: (data) => {},
+        onPickUp: (data) => {},
+        onThrowDown: (data) => {},
         onClose: () => {}
     };
 
@@ -45,11 +46,16 @@ export default class SetItemSelector extends Component {
         this.props.onClose();
     };
 
-    handleItemPickup = (itemName) => {
-        this.props.onPickup({
+    handleItemPickUp = (itemName) => {
+        this.props.onPickUp({
             setName: itemName
         });
-        this.props.onClose();
+    };
+
+    handleItemThrowDown = (itemName) => {
+        this.props.onThrowDown({
+            setName: itemName
+        });
     };
 
     handleSegmentInput = () => {
@@ -62,12 +68,9 @@ export default class SetItemSelector extends Component {
         });
     };
 
-    /**
-     * Lifecycle Functions
-     */
-    componentWillMount () {
-        let data = this.props.data;
-        let list = [];
+    initList = (data) => {
+        let selectedList = [];
+        let unselectedList = [];
 
         data = data.map((set) => {
             return set.name;
@@ -79,20 +82,75 @@ export default class SetItemSelector extends Component {
 
             // Skip Selected Sets
             if (-1 !== data.indexOf(set.name)) {
-                return;
+                selectedList.push(set);
+            } else {
+                unselectedList.push(set);
             }
-
-            list.push(set);
         });
 
         this.setState({
-            list: list
+            selectedList: selectedList,
+            unselectedList: unselectedList
         });
+    };
+
+    /**
+     * Lifecycle Functions
+     */
+    componentWillMount () {
+        this.initList(this.props.data);
+    }
+
+    componentWillReceiveProps (nextProps) {
+        this.initList(nextProps.data);
     }
 
     /**
      * Render Functions
      */
+    renderRow = (data, isSelect) => {
+        return (
+            <tr key={data.name}>
+                <td><span>{data.name}</span></td>
+                <td>
+                    {data.skills.map((skill, index) => {
+                        return (
+                            <div key={index}>
+                                <span>({skill.require}) {skill.name}</span>
+                            </div>
+                        );
+                    })}
+                </td>
+                <td>
+                    {data.skills.map((skill, index) => {
+                        let skillInfo = DataSet.skillHelper.getInfo(skill.name);
+
+                        return (
+                            <div key={index}>
+                                <span>{skillInfo.list[0].description}</span>
+                            </div>
+                        );
+                    })}
+                </td>
+                <td>
+                    {isSelect ? (
+                        <a className="mhwc-icon"
+                            onClick={() => {this.handleItemThrowDown(data.name)}}>
+
+                            <i className="fa fa-times"></i>
+                        </a>
+                    ) : (
+                        <a className="mhwc-icon"
+                            onClick={() => {this.handleItemPickUp(data.name)}}>
+
+                            <i className="fa fa-check"></i>
+                        </a>
+                    )}
+                </td>
+            </tr>
+        );
+    };
+
     renderTable = () => {
         let segment = this.state.segment;
 
@@ -107,7 +165,11 @@ export default class SetItemSelector extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.list.map((data, index) => {
+                    {this.state.selectedList.map((data, index) => {
+                        return this.renderRow(data, true);
+                    })}
+
+                    {this.state.unselectedList.map((data, index) => {
 
                         // Create Text
                         let text = data.name;
@@ -125,38 +187,7 @@ export default class SetItemSelector extends Component {
                             return false;
                         }
 
-                        return (
-                            <tr key={index}>
-                                <td><span>{data.name}</span></td>
-                                <td>
-                                    {data.skills.map((data, index) => {
-                                        return (
-                                            <div key={index}>
-                                                <span>({data.require}) {data.name}</span>
-                                            </div>
-                                        );
-                                    })}
-                                </td>
-                                <td>
-                                    {data.skills.map((data, index) => {
-                                        let skillInfo = DataSet.skillHelper.getInfo(data.name);
-
-                                        return (
-                                            <div key={index}>
-                                                <span>{skillInfo.list[0].description}</span>
-                                            </div>
-                                        );
-                                    })}
-                                </td>
-                                <td>
-                                    <a className="mhwc-icon"
-                                        onClick={() => {this.handleItemPickup(data.name)}}>
-
-                                        <i className="fa fa-check"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        );
+                        return this.renderRow(data, false);
                     })}
                 </tbody>
             </table>

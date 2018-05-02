@@ -27,7 +27,7 @@ export default class CandidateBundles extends Component {
     // Default Props
     static defaultProps = {
         data: {},
-        onPickup: (data) => {}
+        onPickUp: (data) => {}
     };
 
     // Initial State
@@ -41,10 +41,10 @@ export default class CandidateBundles extends Component {
     /**
      * Handle Functions
      */
-    handleBundlePickup = (index) => {
+    handleBundlePickUp = (index) => {
         let bundleList = this.state.bundleList;
 
-        this.props.onPickup(bundleList[index]);
+        this.props.onPickUp(bundleList[index]);
     };
 
     /**
@@ -91,7 +91,7 @@ export default class CandidateBundles extends Component {
                         <span className="mhwc-bundle_name" >備選 {index + 1}</span>
 
                         <div className="mhwc-icons_bundle">
-                            <a className="mhwc-icon" onClick={() => {this.handleBundlePickup(index)}}>
+                            <a className="mhwc-icon" onClick={() => {this.handleBundlePickUp(index)}}>
                                 <i className="fa fa-check"></i>
                             </a>
                         </div>

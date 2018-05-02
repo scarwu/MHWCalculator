@@ -30,7 +30,7 @@ export default class EquipsDisplayer extends Component {
         equipsLock: Misc.deepCopy(Constant.defaultEquipsLock),
         onToggleEquipsLock: (equipType) => {},
         onOpenSelector: (data) => {},
-        onPickup: (data) => {}
+        onPickUp: (data) => {}
     };
 
     // Initial State
@@ -51,7 +51,7 @@ export default class EquipsDisplayer extends Component {
     };
 
     handleEquipEmpty = (data) => {
-        this.props.onPickup(data);
+        this.props.onPickUp(data);
     };
 
     /**
@@ -102,6 +102,11 @@ export default class EquipsDisplayer extends Component {
         // Weapon
         let weaponSelectorData = {
             equipType: 'weapon',
+            equipName: equips.weapon.name
+        };
+
+        let emptyWeaponSelectorData = {
+            equipType: 'weapon',
             equipName: null
         };
 
@@ -115,7 +120,7 @@ export default class EquipsDisplayer extends Component {
                             <span>{Lang['weapon']} - {weaponInfo.name}</span>
                         </a>
 
-                        <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(weaponSelectorData)}}>
+                        <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyWeaponSelectorData)}}>
                             <i className="fa fa-times"></i>
                         </a>
                         <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('weapon')}}>
@@ -131,6 +136,12 @@ export default class EquipsDisplayer extends Component {
                         <div className="col-12 mhwc-item mhwc-enhances">
                             {weaponInfo.enhances.map((data, index) => {
                                 let enhanceSelectorData = {
+                                    equipType: 'weapon',
+                                    enhanceIndex: index,
+                                    enhanceName: data.name
+                                };
+
+                                let emptyEnhanceSelectorData = {
                                     equipType: 'weapon',
                                     enhanceIndex: index,
                                     enhanceName: null
@@ -151,7 +162,7 @@ export default class EquipsDisplayer extends Component {
                                             </a>
 
                                             {null !== data.name ? (
-                                                <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(enhanceSelectorData)}}>
+                                                <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyEnhanceSelectorData)}}>
                                                     <i className="fa fa-times"></i>
                                                 </a>
                                             ) : false}
@@ -166,6 +177,13 @@ export default class EquipsDisplayer extends Component {
                         <div className="col-12 mhwc-item mhwc-slots">
                             {weaponInfo.slots.map((data, index) => {
                                 let jewelSelectorData = {
+                                    equipType: 'weapon',
+                                    slotSize: data.size,
+                                    slotIndex: index,
+                                    slotName: data.jewel.name
+                                };
+
+                                let emptyJewelSelectorData = {
                                     equipType: 'weapon',
                                     slotSize: data.size,
                                     slotIndex: index,
@@ -186,8 +204,8 @@ export default class EquipsDisplayer extends Component {
                                                 )}
                                             </a>
 
-                                            {null !== data.name ? (
-                                                <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(jewelSelectorData)}}>
+                                            {null !== data.jewel.name ? (
+                                                <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}}>
                                                     <i className="fa fa-times"></i>
                                                 </a>
                                             ) : false}
@@ -344,6 +362,11 @@ export default class EquipsDisplayer extends Component {
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             let equipSelectorData = {
                 equipType: equipType,
+                equipName: equips[equipType].name
+            };
+
+            let emptyEquipSelectorData = {
+                equipType: equipType,
                 equipName: null
             };
 
@@ -357,7 +380,7 @@ export default class EquipsDisplayer extends Component {
                                 <span>{Lang[equipType]} - {equipInfo.name}</span>
                             </a>
 
-                            <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(equipSelectorData)}}>
+                            <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyEquipSelectorData)}}>
                                 <i className="fa fa-times"></i>
                             </a>
                             <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle(equipType)}}>
@@ -373,6 +396,13 @@ export default class EquipsDisplayer extends Component {
                             <div className="col-12 mhwc-item mhwc-slots">
                                 {equipInfo.slots.map((data, index) => {
                                     let jewelSelectorData = {
+                                        equipType: equipType,
+                                        slotSize: data.size,
+                                        slotIndex: index,
+                                        slotName: data.jewel.name
+                                    };
+
+                                    let emptyJewelSelectorData = {
                                         equipType: equipType,
                                         slotSize: data.size,
                                         slotIndex: index,
@@ -393,8 +423,8 @@ export default class EquipsDisplayer extends Component {
                                                     )}
                                                 </a>
 
-                                                {null !== data.name ? (
-                                                    <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(jewelSelectorData)}}>
+                                                {null !== data.jewel.name ? (
+                                                    <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}}>
                                                         <i className="fa fa-times"></i>
                                                     </a>
                                                 ) : false}
@@ -494,6 +524,11 @@ export default class EquipsDisplayer extends Component {
         // Charm
         let charmSelectorData = {
             equipType: 'charm',
+            equipName: equips.charm.name
+        };
+
+        let emptyCharmSelectorData = {
+            equipType: 'charm',
             equipName: null
         };
 
@@ -507,7 +542,7 @@ export default class EquipsDisplayer extends Component {
                             <span>{Lang['charm']} - {charmInfo.name}</span>
                         </a>
 
-                        <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(charmSelectorData)}}>
+                        <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyCharmSelectorData)}}>
                             <i className="fa fa-times"></i>
                         </a>
                         <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('charm')}}>

@@ -27,7 +27,8 @@ export default class SkillItemSelector extends Component {
     // Default Props
     static defaultProps = {
         data: {},
-        onPickup: (data) => {},
+        onPickUp: (data) => {},
+        onThrowDown: (data) => {},
         onClose: () => {}
     };
 
@@ -45,11 +46,16 @@ export default class SkillItemSelector extends Component {
         this.props.onClose();
     };
 
-    handleItemPickup = (itemName) => {
-        this.props.onPickup({
+    handleItemPickUp = (itemName) => {
+        this.props.onPickUp({
             skillName: itemName
         });
-        this.props.onClose();
+    };
+
+    handleItemThrowDown = (itemName) => {
+        this.props.onThrowDown({
+            skillName: itemName
+        });
     };
 
     handleSegmentInput = () => {
@@ -62,12 +68,9 @@ export default class SkillItemSelector extends Component {
         });
     };
 
-    /**
-     * Lifecycle Functions
-     */
-    componentWillMount () {
-        let data = this.props.data;
-        let list = [];
+    initList = (data) => {
+        let selectedList = [];
+        let unselectedList = [];
 
         data = data.map((skill) => {
             return skill.name;
@@ -79,20 +82,73 @@ export default class SkillItemSelector extends Component {
 
             // Skip Selected Skills
             if (-1 !== data.indexOf(skill.name)) {
-                return;
+                selectedList.push(skill);
+            } else {
+                unselectedList.push(skill);
             }
-
-            list.push(skill);
         });
 
         this.setState({
-            list: list
+            selectedList: selectedList,
+            unselectedList: unselectedList
         });
+    };
+
+    /**
+     * Lifecycle Functions
+     */
+    componentWillMount () {
+        this.initList(this.props.data);
+    }
+
+    componentWillReceiveProps (nextProps) {
+        this.initList(nextProps.data);
     }
 
     /**
      * Render Functions
      */
+    renderRow = (data, isSelect) => {
+        return (
+            <tr key={data.name}>
+                <td><span>{data.name}</span></td>
+                <td>
+                    {data.list.map((skill, index) => {
+                        return (
+                            <div key={index}>
+                                <span>Lv.{skill.level}</span>
+                            </div>
+                        );
+                    })}
+                </td>
+                <td>
+                    {data.list.map((skill, index) => {
+                        return (
+                            <div key={index}>
+                                <span>{skill.description}</span>
+                            </div>
+                        );
+                    })}
+                </td>
+                <td>
+                    {isSelect ? (
+                        <a className="mhwc-icon"
+                            onClick={() => {this.handleItemThrowDown(data.name)}}>
+
+                            <i className="fa fa-times"></i>
+                        </a>
+                    ) : (
+                        <a className="mhwc-icon"
+                            onClick={() => {this.handleItemPickUp(data.name)}}>
+
+                            <i className="fa fa-check"></i>
+                        </a>
+                    )}
+                </td>
+            </tr>
+        );
+    };
+
     renderTable = () => {
         let segment = this.state.segment;
 
@@ -107,7 +163,11 @@ export default class SkillItemSelector extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.list.map((data, index) => {
+                    {this.state.selectedList.map((data, index) => {
+                        return this.renderRow(data, true);
+                    })}
+
+                    {this.state.unselectedList.map((data, index) => {
 
                         // Create Text
                         let text = data.name;
@@ -123,36 +183,7 @@ export default class SkillItemSelector extends Component {
                             return false;
                         }
 
-                        return (
-                            <tr key={index}>
-                                <td><span>{data.name}</span></td>
-                                <td>
-                                    {data.list.map((data, index) => {
-                                        return (
-                                            <div key={index}>
-                                                <span>Lv.{data.level}</span>
-                                            </div>
-                                        );
-                                    })}
-                                </td>
-                                <td>
-                                    {data.list.map((data, index) => {
-                                        return (
-                                            <div key={index}>
-                                                <span>{data.description}</span>
-                                            </div>
-                                        );
-                                    })}
-                                </td>
-                                <td>
-                                    <a className="mhwc-icon"
-                                        onClick={() => {this.handleItemPickup(data.name)}}>
-
-                                        <i className="fa fa-check"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        );
+                        return this.renderRow(data, false);
                     })}
                 </tbody>
             </table>
