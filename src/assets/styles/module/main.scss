@@ -304,7 +304,11 @@ $panel-height: 40px;
 
             .mhwc-sharpness {
                 .mhwc-bar {
-                    height: 15px;
+                    height: 15.5px;
+                }
+
+                .mhwc-bar:nth-child(2) {
+                    margin-top: -1px;
                 }
             }
         }
@@ -349,7 +353,18 @@ $panel-height: 40px;
         }
     }
 
-    > .mhwc-equips,
+    > .mhwc-equips {
+        .mhwc-sharpness {
+            .mhwc-bar {
+                height: 11px;
+            }
+
+            .mhwc-bar:nth-child(2) {
+                margin-top: -1px;
+            }
+        }
+    }
+
     > .mhwc-status {
         .mhwc-sharpness {
             .mhwc-bar {

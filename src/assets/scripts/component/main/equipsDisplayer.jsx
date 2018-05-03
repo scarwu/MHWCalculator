@@ -113,6 +113,15 @@ export default class EquipsDisplayer extends Component {
         if (null !== equips.weapon.name) {
             let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
 
+            let originalSharpness = null;
+            let enhancedSharpness = null;
+
+            if (null !== weaponInfo.sharpness) {
+                originalSharpness = Misc.deepCopy(weaponInfo.sharpness);
+                enhancedSharpness = Misc.deepCopy(weaponInfo.sharpness);
+                enhancedSharpness.value += 50;
+            }
+
             ContentBlocks.push((
                 <div key="weapon" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
@@ -244,7 +253,8 @@ export default class EquipsDisplayer extends Component {
                                 ), (
                                     <div key={'sharpness_2'} className="col-4">
                                         <div className="mhwc-value mhwc-sharpness">
-                                            {this.renderSharpnessBar(weaponInfo.sharpness)}
+                                            {this.renderSharpnessBar(originalSharpness)}
+                                            {this.renderSharpnessBar(enhancedSharpness)}
                                         </div>
                                     </div>
                                 )] : false}
