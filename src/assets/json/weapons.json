@@ -1558,6 +1558,41 @@
         "slots": []
     },
     {
+        "name": "蒼星的太刀【舞龍】",
+        "rare": 7,
+        "type": "longSword",
+        "series": "蒼星",
+        "attack": 495,
+        "criticalRate": 30,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 120,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 70
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 180,
+                "maxValue": 230,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
         "name": "鉻鋼切刀 II",
         "rare": 6,
         "type": "swordAndShield",

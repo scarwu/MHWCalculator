@@ -9843,7 +9843,11 @@
             "ice": -1,
             "dragon": 4
         },
-        "slots": [],
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
         "skills": [
             {
                 "name": "攻擊",
@@ -9899,7 +9903,11 @@
             "ice": -1,
             "dragon": 4
         },
-        "slots": [],
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
         "skills": [
             {
                 "name": "龍耐性",
@@ -15489,5 +15497,145 @@
         ],
         "set": null,
         "price": 16000
+    },
+    {
+        "name": "蒼星之將【頭盔】α",
+        "series": "蒼星α",
+        "type": "helm",
+        "rare": 7,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 0,
+            "ice": 0,
+            "dragon": 3
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "挑戰者",
+                "level": 1
+            }
+        ],
+        "set": "火龍奧祕",
+        "price": 12000
+    },
+    {
+        "name": "蒼星之將【鎧甲】α",
+        "series": "蒼星α",
+        "type": "chest",
+        "rare": 7,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 0,
+            "ice": 0,
+            "dragon": 3
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "匠",
+                "level": 1
+            }
+        ],
+        "set": "火龍奧祕",
+        "price": 12000
+    },
+    {
+        "name": "蒼星之將【腕甲】α",
+        "series": "蒼星α",
+        "type": "arm",
+        "rare": 7,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 0,
+            "ice": 0,
+            "dragon": 3
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "體力回復量UP",
+                "level": 2
+            }
+        ],
+        "set": "火龍奧祕",
+        "price": 12000
+    },
+    {
+        "name": "蒼星之將【腰帶】α",
+        "series": "蒼星α",
+        "type": "waist",
+        "rare": 7,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 0,
+            "ice": 0,
+            "dragon": 3
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "匠",
+                "level": 1
+            }
+        ],
+        "set": "火龍奧祕",
+        "price": 12000
+    },
+    {
+        "name": "蒼星之將【腿甲】α",
+        "series": "蒼星α",
+        "type": "leg",
+        "rare": 7,
+        "gender": "general",
+        "defense": 82,
+        "resistance": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 0,
+            "ice": 0,
+            "dragon": 3
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "超會心",
+                "level": 1
+            }
+        ],
+        "set": "火龍奧祕",
+        "price": 12000
     }
 ]
