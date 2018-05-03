@@ -24,8 +24,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "合金鎧甲α",
@@ -48,8 +47,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "合金腕甲α",
@@ -76,8 +74,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "合金腰甲α",
@@ -104,8 +101,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "合金護腿α",
@@ -128,8 +124,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "合金頭盔β",
@@ -156,8 +151,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "合金鎧甲β",
@@ -184,8 +178,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "合金腕甲β",
@@ -212,8 +205,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "合金腰甲β",
@@ -240,8 +232,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "合金護腿β",
@@ -268,8 +259,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "浮空龍頭盔α",
@@ -292,8 +282,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "浮空龍鎧甲α",
@@ -320,8 +309,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "浮空龍腕甲α",
@@ -344,8 +332,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "浮空龍腰甲α",
@@ -368,8 +355,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "浮空龍護腿α",
@@ -396,8 +382,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "浮空龍頭盔β",
@@ -424,8 +409,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "浮空龍鎧甲β",
@@ -452,8 +436,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "浮空龍腕甲β",
@@ -480,8 +463,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "浮空龍腰甲β",
@@ -508,8 +490,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "浮空龍護腿β",
@@ -539,8 +520,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "獨角仙護頭α",
@@ -567,8 +547,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "獨角仙上身α",
@@ -595,8 +574,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "獨角仙護袖α",
@@ -627,8 +605,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "獨角仙護腰具α",
@@ -659,8 +636,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "獨角仙腳α",
@@ -691,8 +667,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "獨角仙護頭β",
@@ -719,8 +694,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "獨角仙上身β",
@@ -747,8 +721,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "獨角仙護袖β",
@@ -778,8 +751,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "獨角仙護腰具β",
@@ -809,8 +781,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "獨角仙腳β",
@@ -840,8 +811,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "飛雷龍頭盔α",
@@ -864,8 +834,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "飛雷龍鎧甲α",
@@ -892,8 +861,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "飛雷龍腕甲α",
@@ -916,8 +884,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "飛雷龍腰甲α",
@@ -944,8 +911,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "飛雷龍護腿α",
@@ -972,8 +938,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "飛雷龍頭盔β",
@@ -1000,8 +965,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "飛雷龍鎧甲β",
@@ -1028,8 +992,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "飛雷龍腕甲β",
@@ -1056,8 +1019,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "飛雷龍腰甲β",
@@ -1087,8 +1049,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "飛雷龍護腿β",
@@ -1118,8 +1079,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "咬魚靴α",
@@ -1146,8 +1106,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "咬魚靴β",
@@ -1178,8 +1137,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "兇顎龍頭盔α",
@@ -1206,8 +1164,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "兇顎龍鎧甲α",
@@ -1230,8 +1187,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "兇顎龍腕甲α",
@@ -1254,8 +1210,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "兇顎龍腰甲α",
@@ -1282,8 +1237,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "兇顎龍護腿α",
@@ -1306,8 +1260,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "兇顎龍頭盔β",
@@ -1334,8 +1287,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "兇顎龍鎧甲β",
@@ -1362,8 +1314,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "兇顎龍腕甲β",
@@ -1390,8 +1341,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "兇顎龍腰甲β",
@@ -1418,8 +1368,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "兇顎龍護腿β",
@@ -1446,8 +1395,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "搔鳥頭盔α",
@@ -1474,8 +1422,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "搔鳥鎧甲α",
@@ -1502,8 +1449,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "搔鳥腕甲α",
@@ -1530,8 +1476,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "搔鳥腰甲α",
@@ -1554,8 +1499,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "搔鳥護腿α",
@@ -1582,8 +1526,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "搔鳥頭盔β",
@@ -1613,8 +1556,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "搔鳥鎧甲β",
@@ -1641,8 +1583,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "搔鳥腕甲β",
@@ -1669,8 +1610,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "搔鳥腰甲β",
@@ -1697,8 +1637,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "搔鳥護腿β",
@@ -1725,8 +1664,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "冠突龍護手α",
@@ -1753,8 +1691,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "冠突龍護手β",
@@ -1781,8 +1718,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "凶豺龍頭盔α",
@@ -1805,8 +1741,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "凶豺龍鎧甲α",
@@ -1829,8 +1764,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "凶豺龍腕甲α",
@@ -1857,8 +1791,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "凶豺龍腰甲α",
@@ -1885,8 +1818,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "凶豺龍護腿α",
@@ -1913,8 +1845,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "凶豺龍頭盔β",
@@ -1941,8 +1872,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "凶豺龍鎧甲β",
@@ -1969,8 +1899,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "凶豺龍腕甲β",
@@ -1997,8 +1926,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "凶豺龍腰甲β",
@@ -2025,8 +1953,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "凶豺龍護腿β",
@@ -2053,8 +1980,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "蠻顎龍頭盔α",
@@ -2083,8 +2009,7 @@
         ],
         "set": {
             "name": "蠻顎龍的鬥志"
-        },
-        "price": 6000
+        }
     },
     {
         "name": "蠻顎龍鎧甲α",
@@ -2113,8 +2038,7 @@
         ],
         "set": {
             "name": "蠻顎龍的鬥志"
-        },
-        "price": 6000
+        }
     },
     {
         "name": "蠻顎龍腕甲α",
@@ -2143,8 +2067,7 @@
         ],
         "set": {
             "name": "蠻顎龍的鬥志"
-        },
-        "price": 6000
+        }
     },
     {
         "name": "蠻顎龍腰甲α",
@@ -2173,8 +2096,7 @@
         ],
         "set": {
             "name": "蠻顎龍的鬥志"
-        },
-        "price": 6000
+        }
     },
     {
         "name": "蠻顎龍護腿α",
@@ -2199,8 +2121,7 @@
         ],
         "set": {
             "name": "蠻顎龍的鬥志"
-        },
-        "price": 6000
+        }
     },
     {
         "name": "蠻顎龍頭盔β",
@@ -2229,8 +2150,7 @@
         ],
         "set": {
             "name": "蠻顎龍的鬥志"
-        },
-        "price": 6000
+        }
     },
     {
         "name": "蠻顎龍鎧甲β",
@@ -2262,8 +2182,7 @@
         ],
         "set": {
             "name": "蠻顎龍的鬥志"
-        },
-        "price": 6000
+        }
     },
     {
         "name": "蠻顎龍腕甲β",
@@ -2292,8 +2211,7 @@
         ],
         "set": {
             "name": "蠻顎龍的鬥志"
-        },
-        "price": 6000
+        }
     },
     {
         "name": "蠻顎龍腰甲β",
@@ -2322,8 +2240,7 @@
         ],
         "set": {
             "name": "蠻顎龍的鬥志"
-        },
-        "price": 6000
+        }
     },
     {
         "name": "蠻顎龍護腿β",
@@ -2352,8 +2269,7 @@
         ],
         "set": {
             "name": "蠻顎龍的鬥志"
-        },
-        "price": 6000
+        }
     },
     {
         "name": "貓蜥龍護目鏡α",
@@ -2380,8 +2296,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "貓蜥龍護目鏡β",
@@ -2408,8 +2323,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "泥魚龍頭盔α",
@@ -2432,8 +2346,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "泥魚龍鎧甲α",
@@ -2460,8 +2373,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "泥魚龍腕甲α",
@@ -2488,8 +2400,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "泥魚龍腰甲α",
@@ -2512,8 +2423,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "泥魚龍護腿α",
@@ -2536,8 +2446,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "泥魚龍頭盔β",
@@ -2564,8 +2473,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "泥魚龍鎧甲β",
@@ -2592,8 +2500,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "泥魚龍腕甲β",
@@ -2620,8 +2527,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "泥魚龍腰甲β",
@@ -2648,8 +2554,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "泥魚龍護腿β",
@@ -2676,8 +2581,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "巨甲蟲頭盔α",
@@ -2704,8 +2608,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨甲蟲鎧甲α",
@@ -2732,8 +2635,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨甲蟲腕甲α",
@@ -2760,8 +2662,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨甲蟲腰甲α",
@@ -2788,8 +2689,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨甲蟲護腿α",
@@ -2816,8 +2716,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨甲蟲頭盔β",
@@ -2844,8 +2743,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨甲蟲鎧甲β",
@@ -2872,8 +2770,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨甲蟲腕甲β",
@@ -2900,8 +2797,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨甲蟲腰甲β",
@@ -2928,8 +2824,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨甲蟲護腿β",
@@ -2956,8 +2851,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "鎖甲頭盔α",
@@ -2984,8 +2878,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "鎖甲鎧甲α",
@@ -3008,8 +2901,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "鎖甲腕甲α",
@@ -3032,8 +2924,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "鎖甲腰甲α",
@@ -3056,8 +2947,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "鎖甲護腿α",
@@ -3080,8 +2970,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "鎖甲頭盔β",
@@ -3108,8 +2997,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "鎖甲鎧甲β",
@@ -3131,8 +3019,7 @@
             }
         ],
         "skills": [],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "鎖甲腕甲β",
@@ -3154,8 +3041,7 @@
             }
         ],
         "skills": [],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "鎖甲腰甲β",
@@ -3177,8 +3063,7 @@
             }
         ],
         "skills": [],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "鎖甲護腿β",
@@ -3200,8 +3085,7 @@
             }
         ],
         "skills": [],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "眩鳥頭盔α",
@@ -3228,8 +3112,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "眩鳥鎧甲α",
@@ -3256,8 +3139,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "眩鳥腕甲α",
@@ -3284,8 +3166,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "眩鳥腰甲α",
@@ -3312,8 +3193,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "眩鳥護腿α",
@@ -3336,8 +3216,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "眩鳥頭盔β",
@@ -3364,8 +3243,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "眩鳥鎧甲β",
@@ -3395,8 +3273,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "眩鳥腕甲β",
@@ -3423,8 +3300,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "眩鳥腰甲β",
@@ -3451,8 +3327,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "眩鳥護腿β",
@@ -3479,8 +3354,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "燕尾蝶護頭α",
@@ -3507,8 +3381,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "燕尾蝶上身α",
@@ -3535,8 +3408,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "燕尾蝶護袖α",
@@ -3567,8 +3439,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "燕尾蝶護腰具α",
@@ -3599,8 +3470,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "燕尾蝶腳α",
@@ -3631,8 +3501,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "燕尾蝶護頭β",
@@ -3659,8 +3528,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "燕尾蝶上身β",
@@ -3687,8 +3555,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "燕尾蝶護袖β",
@@ -3718,8 +3585,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "燕尾蝶護腰具β",
@@ -3749,8 +3615,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "燕尾蝶腳β",
@@ -3780,8 +3645,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "獵人頭盔α",
@@ -3808,8 +3672,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "獵人鎧甲α",
@@ -3832,8 +3695,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "獵人腕甲α",
@@ -3856,8 +3718,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "獵人腰甲α",
@@ -3884,8 +3745,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "獵人護腿α",
@@ -3912,8 +3772,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "獵人頭盔β",
@@ -3940,8 +3799,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "獵人鎧甲β",
@@ -3968,8 +3826,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "獵人腕甲β",
@@ -3996,8 +3853,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "獵人腰甲β",
@@ -4024,8 +3880,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "獵人護腿β",
@@ -4052,8 +3907,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "毒妖鳥頭盔α",
@@ -4076,8 +3930,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "毒妖鳥鎧甲α",
@@ -4104,8 +3957,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "毒妖鳥腕甲α",
@@ -4132,8 +3984,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "毒妖鳥腰甲α",
@@ -4156,8 +4007,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "毒妖鳥護腿α",
@@ -4184,8 +4034,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "毒妖鳥頭盔β",
@@ -4215,8 +4064,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "毒妖鳥鎧甲β",
@@ -4243,8 +4091,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "毒妖鳥腕甲β",
@@ -4274,8 +4121,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "毒妖鳥腰甲β",
@@ -4302,8 +4148,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "毒妖鳥護腿β",
@@ -4330,8 +4175,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "骨製頭盔α",
@@ -4358,8 +4202,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "骨製鎧甲α",
@@ -4382,8 +4225,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "骨製腕甲α",
@@ -4410,8 +4252,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "骨製腰甲α",
@@ -4438,8 +4279,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "骨製護腿α",
@@ -4462,8 +4302,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "骨製頭盔β",
@@ -4490,8 +4329,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "骨製鎧甲β",
@@ -4518,8 +4356,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "骨製腕甲β",
@@ -4546,8 +4383,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "骨製腰甲β",
@@ -4574,8 +4410,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "骨製護腿β",
@@ -4602,8 +4437,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "土砂龍頭盔α",
@@ -4626,8 +4460,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "土砂龍鎧甲α",
@@ -4650,8 +4483,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "土砂龍腕甲α",
@@ -4678,8 +4510,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "土砂龍腰甲α",
@@ -4706,8 +4537,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "土砂龍護腿α",
@@ -4734,8 +4564,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "土砂龍頭盔β",
@@ -4762,8 +4591,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "土砂龍鎧甲β",
@@ -4790,8 +4618,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "土砂龍腕甲β",
@@ -4818,8 +4645,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "土砂龍腰甲β",
@@ -4846,8 +4672,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "土砂龍護腿β",
@@ -4877,8 +4702,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "菌豬頭套頭",
@@ -4901,8 +4725,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 3000
+        "set": null
     },
     {
         "name": "巨蜂頭盔α",
@@ -4929,8 +4752,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨蜂鎧甲α",
@@ -4953,8 +4775,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨蜂腕甲α",
@@ -4977,8 +4798,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨蜂腰甲α",
@@ -5001,8 +4821,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨蜂護腿α",
@@ -5029,8 +4848,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨蜂頭盔β",
@@ -5057,8 +4875,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨蜂鎧甲β",
@@ -5085,8 +4902,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨蜂腕甲β",
@@ -5113,8 +4929,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨蜂腰甲β",
@@ -5141,8 +4956,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巨蜂護腿β",
@@ -5169,8 +4983,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "雌火龍頭盔α",
@@ -5197,8 +5010,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "雌火龍鎧甲α",
@@ -5225,8 +5037,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "雌火龍腕甲α",
@@ -5249,8 +5060,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "雌火龍腰甲α",
@@ -5277,8 +5087,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "雌火龍護腿α",
@@ -5301,8 +5110,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "雌火龍頭盔β",
@@ -5333,8 +5141,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "雌火龍鎧甲β",
@@ -5365,8 +5172,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "雌火龍腕甲β",
@@ -5393,8 +5199,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "雌火龍腰甲β",
@@ -5425,8 +5230,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "雌火龍護腿β",
@@ -5453,8 +5257,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "皮製頭飾α",
@@ -5477,8 +5280,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "皮製服飾α",
@@ -5501,8 +5303,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "皮製手套α",
@@ -5525,8 +5326,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "皮製皮帶α",
@@ -5549,8 +5349,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "皮製長褲α",
@@ -5573,8 +5372,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "皮製頭飾β",
@@ -5601,8 +5399,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "皮製服飾β",
@@ -5624,8 +5421,7 @@
             }
         ],
         "skills": [],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "皮製手套β",
@@ -5647,8 +5443,7 @@
             }
         ],
         "skills": [],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "皮製皮帶β",
@@ -5670,8 +5465,7 @@
             }
         ],
         "skills": [],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "皮製長褲β",
@@ -5693,8 +5487,7 @@
             }
         ],
         "skills": [],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "岩賊龍頭盔α",
@@ -5717,8 +5510,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "岩賊龍鎧甲α",
@@ -5741,8 +5533,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "岩賊龍腕甲α",
@@ -5765,8 +5556,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "岩賊龍腰甲α",
@@ -5793,8 +5583,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "岩賊龍護腿α",
@@ -5821,8 +5610,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "岩賊龍頭盔β",
@@ -5849,8 +5637,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "岩賊龍鎧甲β",
@@ -5877,8 +5664,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "岩賊龍腕甲β",
@@ -5905,8 +5691,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "岩賊龍腰甲β",
@@ -5933,8 +5718,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "岩賊龍護腿β",
@@ -5961,8 +5745,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "酸翼龍斗篷α",
@@ -5989,8 +5772,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "酸翼龍斗篷β",
@@ -6017,8 +5799,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "突擊龍角α",
@@ -6045,8 +5826,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "突擊龍角β",
@@ -6073,8 +5853,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "封印的眼帶α",
@@ -6104,8 +5883,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "墨鏡α",
@@ -6138,8 +5916,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "扒手龍頭套α",
@@ -6169,8 +5946,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "孑孓頭α",
@@ -6200,8 +5976,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "熔山龍頭盔α",
@@ -6230,8 +6005,7 @@
         ],
         "set": {
             "name": "熔山龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "熔山龍鎧甲α",
@@ -6260,8 +6034,7 @@
         ],
         "set": {
             "name": "熔山龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "熔山龍腕甲α",
@@ -6290,8 +6063,7 @@
         ],
         "set": {
             "name": "熔山龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "熔山龍腰甲α",
@@ -6320,8 +6092,7 @@
         ],
         "set": {
             "name": "熔山龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "熔山龍護腿α",
@@ -6350,8 +6121,7 @@
         ],
         "set": {
             "name": "熔山龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "熔山龍頭盔β",
@@ -6380,8 +6150,7 @@
         ],
         "set": {
             "name": "熔山龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "熔山龍鎧甲β",
@@ -6410,8 +6179,7 @@
         ],
         "set": {
             "name": "熔山龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "熔山龍腕甲β",
@@ -6440,8 +6208,7 @@
         ],
         "set": {
             "name": "熔山龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "熔山龍腰甲β",
@@ -6470,8 +6237,7 @@
         ],
         "set": {
             "name": "熔山龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "熔山龍護腿β",
@@ -6500,8 +6266,7 @@
         ],
         "set": {
             "name": "熔山龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "骨鎚龍頭盔α",
@@ -6524,8 +6289,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "骨鎚龍鎧甲α",
@@ -6552,8 +6316,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "骨鎚龍腕甲α",
@@ -6580,8 +6343,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "骨鎚龍腰甲α",
@@ -6604,8 +6366,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "骨鎚龍護腿α",
@@ -6628,8 +6389,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "骨鎚龍頭盔β",
@@ -6656,8 +6416,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "骨鎚龍鎧甲β",
@@ -6684,8 +6443,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "骨鎚龍腕甲β",
@@ -6716,8 +6474,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "骨鎚龍腰甲β",
@@ -6744,8 +6501,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "骨鎚龍護腿β",
@@ -6772,8 +6528,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 6000
+        "set": null
     },
     {
         "name": "火龍心頭盔α",
@@ -6802,8 +6557,7 @@
         ],
         "set": {
             "name": "櫻火龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍心鎧甲α",
@@ -6828,8 +6582,7 @@
         ],
         "set": {
             "name": "櫻火龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍心腕甲α",
@@ -6854,8 +6607,7 @@
         ],
         "set": {
             "name": "櫻火龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍心腰甲α",
@@ -6884,8 +6636,7 @@
         ],
         "set": {
             "name": "櫻火龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍心護腿α",
@@ -6914,8 +6665,7 @@
         ],
         "set": {
             "name": "櫻火龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍心頭盔β",
@@ -6944,8 +6694,7 @@
         ],
         "set": {
             "name": "櫻火龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍心鎧甲β",
@@ -6977,8 +6726,7 @@
         ],
         "set": {
             "name": "櫻火龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍心腕甲β",
@@ -7007,8 +6755,7 @@
         ],
         "set": {
             "name": "櫻火龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍心腰甲β",
@@ -7037,8 +6784,7 @@
         ],
         "set": {
             "name": "櫻火龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍心護腿β",
@@ -7067,8 +6813,7 @@
         ],
         "set": {
             "name": "櫻火龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "熔岩龍頭盔α",
@@ -7095,8 +6840,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "熔岩龍鎧甲α",
@@ -7123,8 +6867,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "熔岩龍腕甲α",
@@ -7155,8 +6898,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "熔岩龍腰甲α",
@@ -7183,8 +6925,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "熔岩龍護腿α",
@@ -7215,8 +6956,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "熔岩龍頭盔β",
@@ -7250,8 +6990,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "熔岩龍鎧甲β",
@@ -7281,8 +7020,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "熔岩龍腕甲β",
@@ -7309,8 +7047,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "熔岩龍腰甲β",
@@ -7337,8 +7074,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "熔岩龍護腿β",
@@ -7365,8 +7101,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "鑄鐵頭盔α",
@@ -7389,8 +7124,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "鑄鐵鎧甲α",
@@ -7413,8 +7147,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "鑄鐵腕甲α",
@@ -7441,8 +7174,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "鑄鐵腰甲α",
@@ -7465,8 +7197,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "鑄鐵護腿α",
@@ -7493,8 +7224,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "鑄鐵頭盔β",
@@ -7521,8 +7251,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "鑄鐵鎧甲β",
@@ -7549,8 +7278,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "鑄鐵腕甲β",
@@ -7577,8 +7305,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "鑄鐵腰甲β",
@@ -7605,8 +7332,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "鑄鐵護腿β",
@@ -7633,8 +7359,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "艾路頭套α",
@@ -7657,8 +7382,7 @@
                 "level": 3
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "知性眼鏡α",
@@ -7685,8 +7409,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "風漂龍頭盔α",
@@ -7715,8 +7438,7 @@
         ],
         "set": {
             "name": "風漂龍的恩竉"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "風漂龍鎧甲α",
@@ -7745,8 +7467,7 @@
         ],
         "set": {
             "name": "風漂龍的恩竉"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "風漂龍腕甲α",
@@ -7775,8 +7496,7 @@
         ],
         "set": {
             "name": "風漂龍的恩竉"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "風漂龍腰甲α",
@@ -7805,8 +7525,7 @@
         ],
         "set": {
             "name": "風漂龍的恩竉"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "風漂龍護腿α",
@@ -7835,8 +7554,7 @@
         ],
         "set": {
             "name": "風漂龍的恩竉"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "風漂龍頭盔β",
@@ -7865,8 +7583,7 @@
         ],
         "set": {
             "name": "風漂龍的恩竉"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "風漂龍鎧甲β",
@@ -7895,8 +7612,7 @@
         ],
         "set": {
             "name": "風漂龍的恩竉"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "風漂龍腕甲β",
@@ -7925,8 +7641,7 @@
         ],
         "set": {
             "name": "風漂龍的恩竉"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "風漂龍腰甲β",
@@ -7955,8 +7670,7 @@
         ],
         "set": {
             "name": "風漂龍的恩竉"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "風漂龍護腿β",
@@ -7985,8 +7699,7 @@
         ],
         "set": {
             "name": "風漂龍的恩竉"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "角龍頭盔α",
@@ -8015,8 +7728,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "角龍鎧甲α",
@@ -8045,8 +7757,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "角龍腕甲α",
@@ -8075,8 +7786,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "角龍腰甲α",
@@ -8105,8 +7815,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "角龍護腿α",
@@ -8135,8 +7844,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "角龍頭盔β",
@@ -8165,8 +7873,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "角龍鎧甲β",
@@ -8195,8 +7902,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "角龍腕甲β",
@@ -8225,8 +7931,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "角龍腰甲β",
@@ -8255,8 +7960,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "角龍護腿β",
@@ -8288,8 +7992,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "礦石頭盔α",
@@ -8316,8 +8019,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "礦石鎧甲α",
@@ -8344,8 +8046,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "礦石腕甲α",
@@ -8372,8 +8073,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "礦石腰甲α",
@@ -8400,8 +8100,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "礦石護腿α",
@@ -8428,8 +8127,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "礦石頭盔β",
@@ -8456,8 +8154,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "礦石鎧甲β",
@@ -8488,8 +8185,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "礦石腕甲β",
@@ -8516,8 +8212,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "礦石腰甲β",
@@ -8544,8 +8239,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "礦石護腿β",
@@ -8572,8 +8266,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "慘爪龍頭盔α",
@@ -8602,8 +8295,7 @@
         ],
         "set": {
             "name": "慘爪龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "慘爪龍鎧甲α",
@@ -8632,8 +8324,7 @@
         ],
         "set": {
             "name": "慘爪龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "慘爪龍腕甲α",
@@ -8662,8 +8353,7 @@
         ],
         "set": {
             "name": "慘爪龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "慘爪龍腰甲α",
@@ -8692,8 +8382,7 @@
         ],
         "set": {
             "name": "慘爪龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "慘爪龍護腿α",
@@ -8722,8 +8411,7 @@
         ],
         "set": {
             "name": "慘爪龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "慘爪龍頭盔β",
@@ -8752,8 +8440,7 @@
         ],
         "set": {
             "name": "慘爪龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "慘爪龍鎧甲β",
@@ -8782,8 +8469,7 @@
         ],
         "set": {
             "name": "慘爪龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "慘爪龍腕甲β",
@@ -8812,8 +8498,7 @@
         ],
         "set": {
             "name": "慘爪龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "慘爪龍腰甲β",
@@ -8842,8 +8527,7 @@
         ],
         "set": {
             "name": "慘爪龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "慘爪龍護腿β",
@@ -8872,8 +8556,7 @@
         ],
         "set": {
             "name": "慘爪龍的奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍頭盔α",
@@ -8902,8 +8585,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍鎧甲α",
@@ -8932,8 +8614,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍腕甲α",
@@ -8962,8 +8643,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍腰甲α",
@@ -8992,8 +8672,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍護腿α",
@@ -9022,8 +8701,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍頭盔β",
@@ -9052,8 +8730,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍鎧甲β",
@@ -9082,8 +8759,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍腕甲β",
@@ -9112,8 +8788,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍腰甲β",
@@ -9142,8 +8817,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "火龍護腿β",
@@ -9172,8 +8846,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "旅團頭盔α",
@@ -9200,8 +8873,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "旅團鎧甲α",
@@ -9228,8 +8900,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "旅團腕甲α",
@@ -9256,8 +8927,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "旅團腰甲α",
@@ -9284,8 +8954,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "旅團護腿α",
@@ -9316,8 +8985,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "旅團頭盔β",
@@ -9344,8 +9012,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "旅團鎧甲β",
@@ -9375,8 +9042,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "旅團腕甲β",
@@ -9403,8 +9069,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "旅團腰甲β",
@@ -9431,8 +9096,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "旅團護腿β",
@@ -9459,8 +9123,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "火龍魂頭盔α",
@@ -9489,8 +9152,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "火龍魂鎧甲α",
@@ -9523,8 +9185,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "火龍魂腕甲α",
@@ -9557,8 +9218,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "火龍魂腰甲α",
@@ -9587,8 +9247,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "火龍魂護腿α",
@@ -9617,8 +9276,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "火龍魂頭盔β",
@@ -9650,8 +9308,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "火龍魂鎧甲β",
@@ -9680,8 +9337,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "火龍魂腕甲β",
@@ -9710,8 +9366,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "火龍魂腰甲β",
@@ -9740,8 +9395,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "火龍魂護腿β",
@@ -9770,8 +9424,7 @@
         ],
         "set": {
             "name": "火龍奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "骷髏面罩α",
@@ -9798,8 +9451,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "杜賓頭盔α",
@@ -9826,8 +9478,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "杜賓鎧甲α",
@@ -9858,8 +9509,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "杜賓腕甲α",
@@ -9886,8 +9536,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "杜賓腰甲α",
@@ -9918,8 +9567,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "杜賓護腿α",
@@ -9946,8 +9594,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "杜賓頭盔β",
@@ -9974,8 +9621,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "杜賓鎧甲β",
@@ -10002,8 +9648,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "杜賓腕甲β",
@@ -10037,8 +9682,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "杜賓腰甲β",
@@ -10065,8 +9709,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "杜賓護腿β",
@@ -10093,8 +9736,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 9000
+        "set": null
     },
     {
         "name": "爆鎚龍頭盔α",
@@ -10123,8 +9765,7 @@
         ],
         "set": {
             "name": "爆鎚龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鎚龍鎧甲α",
@@ -10153,8 +9794,7 @@
         ],
         "set": {
             "name": "爆鎚龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鎚龍腕甲α",
@@ -10187,8 +9827,7 @@
         ],
         "set": {
             "name": "爆鎚龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鎚龍腰甲α",
@@ -10224,8 +9863,7 @@
         ],
         "set": {
             "name": "爆鎚龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鎚龍護腿α",
@@ -10254,8 +9892,7 @@
         ],
         "set": {
             "name": "爆鎚龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鎚龍頭盔β",
@@ -10287,8 +9924,7 @@
         ],
         "set": {
             "name": "爆鎚龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鎚龍鎧甲β",
@@ -10317,8 +9953,7 @@
         ],
         "set": {
             "name": "爆鎚龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鎚龍腕甲β",
@@ -10347,8 +9982,7 @@
         ],
         "set": {
             "name": "爆鎚龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鎚龍腰甲β",
@@ -10380,8 +10014,7 @@
         ],
         "set": {
             "name": "爆鎚龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鎚龍護腿β",
@@ -10410,8 +10043,7 @@
         ],
         "set": {
             "name": "爆鎚龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "大馬士革頭盔α",
@@ -10442,8 +10074,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "大馬士革鎧甲α",
@@ -10474,8 +10105,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "大馬士革腕甲α",
@@ -10502,8 +10132,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "大馬士革腰甲α",
@@ -10534,8 +10163,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "大馬士革護腿α",
@@ -10566,8 +10194,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "大馬士革頭盔β",
@@ -10594,8 +10221,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "大馬士革鎧甲β",
@@ -10628,8 +10254,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "大馬士革腕甲β",
@@ -10656,8 +10281,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "大馬士革腰甲β",
@@ -10690,8 +10314,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "大馬士革護腿β",
@@ -10718,8 +10341,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "暴君角龍頭盔α",
@@ -10748,8 +10370,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "暴君角龍鎧甲α",
@@ -10778,8 +10399,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "暴君角龍腕甲α",
@@ -10808,8 +10428,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "暴君角龍腰甲α",
@@ -10838,8 +10457,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "暴君角龍護腿α",
@@ -10872,8 +10490,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "暴君角龍頭盔β",
@@ -10902,8 +10519,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "暴君角龍鎧甲β",
@@ -10935,8 +10551,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "暴君角龍腕甲β",
@@ -10968,8 +10583,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "暴君角龍腰甲β",
@@ -10998,8 +10612,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "暴君角龍護腿β",
@@ -11028,8 +10641,7 @@
         ],
         "set": {
             "name": "角龍之奧祕"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "死神頭盔α",
@@ -11060,8 +10672,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "死神鎧甲α",
@@ -11088,8 +10699,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "死神腕甲α",
@@ -11120,8 +10730,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "死神腰甲α",
@@ -11148,8 +10757,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "死神護腿α",
@@ -11176,8 +10784,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "死神頭盔β",
@@ -11204,8 +10811,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "死神鎧甲β",
@@ -11232,8 +10838,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "死神腕甲β",
@@ -11263,8 +10868,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "死神腰甲β",
@@ -11294,8 +10898,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "死神護腿β",
@@ -11325,8 +10928,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "爆鱗龍頭盔α",
@@ -11359,8 +10961,7 @@
         ],
         "set": {
             "name": "爆鱗龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鱗龍鎧甲α",
@@ -11389,8 +10990,7 @@
         ],
         "set": {
             "name": "爆鱗龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鱗龍腕甲α",
@@ -11419,8 +11019,7 @@
         ],
         "set": {
             "name": "爆鱗龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鱗龍腰甲α",
@@ -11453,8 +11052,7 @@
         ],
         "set": {
             "name": "爆鱗龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鱗龍護腿α",
@@ -11487,8 +11085,7 @@
         ],
         "set": {
             "name": "爆鱗龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鱗龍頭盔β",
@@ -11520,8 +11117,7 @@
         ],
         "set": {
             "name": "爆鱗龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鱗龍鎧甲β",
@@ -11553,8 +11149,7 @@
         ],
         "set": {
             "name": "爆鱗龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鱗龍腕甲β",
@@ -11583,8 +11178,7 @@
         ],
         "set": {
             "name": "爆鱗龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鱗龍腰甲β",
@@ -11613,8 +11207,7 @@
         ],
         "set": {
             "name": "爆鱗龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "爆鱗龍護腿β",
@@ -11643,8 +11236,7 @@
         ],
         "set": {
             "name": "爆鱗龍的守護"
-        },
-        "price": 12000
+        }
     },
     {
         "name": "龍封的耳環α",
@@ -11674,8 +11266,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐頭盔α",
@@ -11706,8 +11297,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐鎧甲α",
@@ -11738,8 +11328,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐腕甲α",
@@ -11766,8 +11355,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐腰甲α",
@@ -11798,8 +11386,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐護腿α",
@@ -11826,8 +11413,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐頭盔β",
@@ -11857,8 +11443,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐鎧甲β",
@@ -11885,8 +11470,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐腕甲β",
@@ -11913,8 +11497,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐腰甲β",
@@ -11944,8 +11527,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐護腿β",
@@ -11975,8 +11557,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "烏爾德頭盔α",
@@ -12005,8 +11586,7 @@
         ],
         "set": {
             "name": "屍套龍的命脈"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "烏爾德鎧甲α",
@@ -12039,8 +11619,7 @@
         ],
         "set": {
             "name": "屍套龍的命脈"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "烏爾德腕甲α",
@@ -12073,8 +11652,7 @@
         ],
         "set": {
             "name": "屍套龍的命脈"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "烏爾德腰甲α",
@@ -12107,8 +11685,7 @@
         ],
         "set": {
             "name": "屍套龍的命脈"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "烏爾德護腿α",
@@ -12141,8 +11718,7 @@
         ],
         "set": {
             "name": "屍套龍的命脈"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "烏爾德頭盔β",
@@ -12171,8 +11747,7 @@
         ],
         "set": {
             "name": "屍套龍的命脈"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "烏爾德鎧甲β",
@@ -12204,8 +11779,7 @@
         ],
         "set": {
             "name": "屍套龍的命脈"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "烏爾德腕甲β",
@@ -12240,8 +11814,7 @@
         ],
         "set": {
             "name": "屍套龍的命脈"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "烏爾德腰甲β",
@@ -12273,8 +11846,7 @@
         ],
         "set": {
             "name": "屍套龍的命脈"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "烏爾德護腿β",
@@ -12306,8 +11878,7 @@
         ],
         "set": {
             "name": "屍套龍的命脈"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "戰紋頭盔α",
@@ -12340,8 +11911,7 @@
         ],
         "set": {
             "name": "滅盡龍的飢餓"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "戰紋鎧甲α",
@@ -12374,8 +11944,7 @@
         ],
         "set": {
             "name": "滅盡龍的飢餓"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "戰紋腕甲α",
@@ -12404,8 +11973,7 @@
         ],
         "set": {
             "name": "滅盡龍的飢餓"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "戰紋腰甲α",
@@ -12434,8 +12002,7 @@
         ],
         "set": {
             "name": "滅盡龍的飢餓"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "戰紋護腿α",
@@ -12468,8 +12035,7 @@
         ],
         "set": {
             "name": "滅盡龍的飢餓"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "戰紋頭盔β",
@@ -12501,8 +12067,7 @@
         ],
         "set": {
             "name": "滅盡龍的飢餓"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "戰紋鎧甲β",
@@ -12534,8 +12099,7 @@
         ],
         "set": {
             "name": "滅盡龍的飢餓"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "戰紋腕甲β",
@@ -12564,8 +12128,7 @@
         ],
         "set": {
             "name": "滅盡龍的飢餓"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "戰紋腰甲β",
@@ -12594,8 +12157,7 @@
         ],
         "set": {
             "name": "滅盡龍的飢餓"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "戰紋護腿β",
@@ -12624,8 +12186,7 @@
         ],
         "set": {
             "name": "滅盡龍的飢餓"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "帝王皇冠α",
@@ -12650,8 +12211,7 @@
         ],
         "set": {
             "name": "炎王龍的武技"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "帝王鎧甲α",
@@ -12680,8 +12240,7 @@
         ],
         "set": {
             "name": "炎王龍的武技"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "帝王腕甲α",
@@ -12710,8 +12269,7 @@
         ],
         "set": {
             "name": "炎王龍的武技"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "帝王腰甲α",
@@ -12740,8 +12298,7 @@
         ],
         "set": {
             "name": "炎王龍的武技"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "帝王護腿α",
@@ -12770,8 +12327,7 @@
         ],
         "set": {
             "name": "炎王龍的武技"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "帝王皇冠β",
@@ -12800,8 +12356,7 @@
         ],
         "set": {
             "name": "炎王龍的武技"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "帝王鎧甲β",
@@ -12833,8 +12388,7 @@
         ],
         "set": {
             "name": "炎王龍的武技"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "帝王腕甲β",
@@ -12863,8 +12417,7 @@
         ],
         "set": {
             "name": "炎王龍的武技"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "帝王腰甲β",
@@ -12893,8 +12446,7 @@
         ],
         "set": {
             "name": "炎王龍的武技"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "帝王護腿β",
@@ -12923,8 +12475,7 @@
         ],
         "set": {
             "name": "炎王龍的武技"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "鋼龍強力α",
@@ -12953,8 +12504,7 @@
         ],
         "set": {
             "name": "鋼龍的飛翅"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "鋼龍恐懼α",
@@ -12983,8 +12533,7 @@
         ],
         "set": {
             "name": "鋼龍的飛翅"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "鋼龍剛強α",
@@ -13013,8 +12562,7 @@
         ],
         "set": {
             "name": "鋼龍的飛翅"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "鋼龍安穩α",
@@ -13043,8 +12591,7 @@
         ],
         "set": {
             "name": "鋼龍的飛翅"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "鋼龍踏實α",
@@ -13073,8 +12620,7 @@
         ],
         "set": {
             "name": "鋼龍的飛翅"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "鋼龍強力β",
@@ -13109,8 +12655,7 @@
         ],
         "set": {
             "name": "鋼龍的飛翅"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "鋼龍恐懼β",
@@ -13139,8 +12684,7 @@
         ],
         "set": {
             "name": "鋼龍的飛翅"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "鋼龍剛強β",
@@ -13169,8 +12713,7 @@
         ],
         "set": {
             "name": "鋼龍的飛翅"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "鋼龍安穩β",
@@ -13202,8 +12745,7 @@
         ],
         "set": {
             "name": "鋼龍的飛翅"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "鋼龍踏實β",
@@ -13232,8 +12774,7 @@
         ],
         "set": {
             "name": "鋼龍的飛翅"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "龍王的獨眼α",
@@ -13260,8 +12801,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "異種大型頭飾α",
@@ -13294,8 +12834,7 @@
         ],
         "set": {
             "name": "冥燈龍的神秘"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "異種大型皮α",
@@ -13328,8 +12867,7 @@
         ],
         "set": {
             "name": "冥燈龍的神秘"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "異種大型鋼爪α",
@@ -13362,8 +12900,7 @@
         ],
         "set": {
             "name": "冥燈龍的神秘"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "異種大型脊椎α",
@@ -13396,8 +12933,7 @@
         ],
         "set": {
             "name": "冥燈龍的神秘"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "異種大型靴α",
@@ -13430,8 +12966,7 @@
         ],
         "set": {
             "name": "冥燈龍的神秘"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "異種大型頭飾β",
@@ -13460,8 +12995,7 @@
         ],
         "set": {
             "name": "冥燈龍的神秘"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "異種大型皮β",
@@ -13493,8 +13027,7 @@
         ],
         "set": {
             "name": "冥燈龍的神秘"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "異種大型鋼爪β",
@@ -13523,8 +13056,7 @@
         ],
         "set": {
             "name": "冥燈龍的神秘"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "異種大型脊椎β",
@@ -13556,8 +13088,7 @@
         ],
         "set": {
             "name": "冥燈龍的神秘"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "異種大型靴β",
@@ -13589,8 +13120,7 @@
         ],
         "set": {
             "name": "冥燈龍的神秘"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "麒麟角α",
@@ -13619,8 +13149,7 @@
         ],
         "set": {
             "name": "麒麟的恩寵"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "麒麟服飾α",
@@ -13649,8 +13178,7 @@
         ],
         "set": {
             "name": "麒麟的恩寵"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "麒麟長腕甲α",
@@ -13679,8 +13207,7 @@
         ],
         "set": {
             "name": "麒麟的恩寵"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "麒麟腰環α",
@@ -13709,8 +13236,7 @@
         ],
         "set": {
             "name": "麒麟的恩寵"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "麒麟護脛α",
@@ -13739,8 +13265,7 @@
         ],
         "set": {
             "name": "麒麟的恩寵"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "麒麟角β",
@@ -13769,8 +13294,7 @@
         ],
         "set": {
             "name": "麒麟的恩寵"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "麒麟服飾β",
@@ -13799,8 +13323,7 @@
         ],
         "set": {
             "name": "麒麟的恩寵"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "麒麟長腕甲β",
@@ -13832,8 +13355,7 @@
         ],
         "set": {
             "name": "麒麟的恩寵"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "麒麟腰環β",
@@ -13868,8 +13390,7 @@
         ],
         "set": {
             "name": "麒麟的恩寵"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "麒麟護脛β",
@@ -13901,8 +13422,7 @@
         ],
         "set": {
             "name": "麒麟的恩寵"
-        },
-        "price": 9000
+        }
     },
     {
         "name": "公會十字頭飾α",
@@ -13935,8 +13455,7 @@
         ],
         "set": {
             "name": "公會的引導"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "公會十字戰衣α",
@@ -13969,8 +13488,7 @@
         ],
         "set": {
             "name": "公會的引導"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "公會十字腕甲α",
@@ -14003,8 +13521,7 @@
         ],
         "set": {
             "name": "公會的引導"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "公會十字腰甲α",
@@ -14037,8 +13554,7 @@
         ],
         "set": {
             "name": "公會的引導"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "公會十字靴α",
@@ -14071,8 +13587,7 @@
         ],
         "set": {
             "name": "公會的引導"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "公會十字頭飾β",
@@ -14107,8 +13622,7 @@
         ],
         "set": {
             "name": "公會的引導"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "公會十字戰衣β",
@@ -14137,8 +13651,7 @@
         ],
         "set": {
             "name": "公會的引導"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "公會十字腕甲β",
@@ -14167,8 +13680,7 @@
         ],
         "set": {
             "name": "公會的引導"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "公會十字腰甲β",
@@ -14203,8 +13715,7 @@
         ],
         "set": {
             "name": "公會的引導"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "公會十字靴β",
@@ -14233,8 +13744,7 @@
         ],
         "set": {
             "name": "公會的引導"
-        },
-        "price": 16000
+        }
     },
     {
         "name": "追蹤者頭盔α",
@@ -14267,8 +13777,7 @@
         ],
         "set": {
             "name": "調查團的引導"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "追蹤者鎧甲α",
@@ -14297,8 +13806,7 @@
         ],
         "set": {
             "name": "調查團的引導"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "追蹤者腕甲α",
@@ -14331,8 +13839,7 @@
         ],
         "set": {
             "name": "調查團的引導"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "追蹤者腰甲α",
@@ -14365,8 +13872,7 @@
         ],
         "set": {
             "name": "調查團的引導"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "追蹤者護腿α",
@@ -14395,8 +13901,7 @@
         ],
         "set": {
             "name": "調查團的引導"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "追蹤者頭盔β",
@@ -14425,8 +13930,7 @@
         ],
         "set": {
             "name": "調查團的引導"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "追蹤者鎧甲β",
@@ -14455,8 +13959,7 @@
         ],
         "set": {
             "name": "調查團的引導"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "追蹤者腕甲β",
@@ -14485,8 +13988,7 @@
         ],
         "set": {
             "name": "調查團的引導"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "追蹤者腰甲β",
@@ -14515,8 +14017,7 @@
         ],
         "set": {
             "name": "調查團的引導"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "追蹤者護腿β",
@@ -14545,8 +14046,7 @@
         ],
         "set": {
             "name": "調查團的引導"
-        },
-        "price": 20000
+        }
     },
     {
         "name": "殘虐頭盔α",
@@ -14577,8 +14077,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐鎧甲α",
@@ -14609,8 +14108,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐腕甲α",
@@ -14637,8 +14135,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐腰甲α",
@@ -14669,8 +14166,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐護腿α",
@@ -14697,8 +14193,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐頭盔β",
@@ -14728,8 +14223,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐鎧甲β",
@@ -14756,8 +14250,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐腕甲β",
@@ -14784,8 +14277,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐腰甲β",
@@ -14815,8 +14307,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "殘虐護腿β",
@@ -14846,8 +14337,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 12000
+        "set": null
     },
     {
         "name": "爛輝龍鎧羅頭盔α",
@@ -14878,8 +14368,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 20000
+        "set": null
     },
     {
         "name": "爛輝龍鎧羅鎧甲α",
@@ -14910,8 +14399,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 20000
+        "set": null
     },
     {
         "name": "爛輝龍鎧羅腕甲α",
@@ -14942,8 +14430,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 20000
+        "set": null
     },
     {
         "name": "爛輝龍鎧羅腰甲α",
@@ -14974,8 +14461,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 20000
+        "set": null
     },
     {
         "name": "爛輝龍鎧羅護腿α",
@@ -15006,8 +14492,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 20000
+        "set": null
     },
     {
         "name": "爛輝龍鎧羅頭盔β",
@@ -15041,8 +14526,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 20000
+        "set": null
     },
     {
         "name": "爛輝龍鎧羅鎧甲β",
@@ -15076,8 +14560,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 20000
+        "set": null
     },
     {
         "name": "爛輝龍鎧羅腕甲β",
@@ -15111,8 +14594,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 20000
+        "set": null
     },
     {
         "name": "爛輝龍鎧羅腰甲β",
@@ -15146,8 +14628,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 20000
+        "set": null
     },
     {
         "name": "爛輝龍鎧羅護腿β",
@@ -15181,8 +14662,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 20000
+        "set": null
     },
     {
         "name": "巴魯特頭飾α",
@@ -15212,8 +14692,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巴魯特服飾α",
@@ -15243,8 +14722,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巴魯特腕甲α",
@@ -15274,8 +14752,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巴魯特腰甲α",
@@ -15305,8 +14782,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "巴魯特護腿α",
@@ -15336,8 +14812,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 4000
+        "set": null
     },
     {
         "name": "但丁假髮α",
@@ -15368,8 +14843,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 16000
+        "set": null
     },
     {
         "name": "但丁風衣α",
@@ -15400,8 +14874,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 16000
+        "set": null
     },
     {
         "name": "但丁手套α",
@@ -15432,8 +14905,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 16000
+        "set": null
     },
     {
         "name": "但丁皮帶α",
@@ -15464,8 +14936,7 @@
                 "level": 1
             }
         ],
-        "set": null,
-        "price": 16000
+        "set": null
     },
     {
         "name": "但丁皮褲靴α",
@@ -15495,8 +14966,7 @@
                 "level": 2
             }
         ],
-        "set": null,
-        "price": 16000
+        "set": null
     },
     {
         "name": "蒼星之將【頭盔】α",
@@ -15523,8 +14993,7 @@
                 "level": 1
             }
         ],
-        "set": "火龍奧祕",
-        "price": 12000
+        "set": "火龍奧祕"
     },
     {
         "name": "蒼星之將【鎧甲】α",
@@ -15551,8 +15020,7 @@
                 "level": 1
             }
         ],
-        "set": "火龍奧祕",
-        "price": 12000
+        "set": "火龍奧祕"
     },
     {
         "name": "蒼星之將【腕甲】α",
@@ -15579,8 +15047,7 @@
                 "level": 2
             }
         ],
-        "set": "火龍奧祕",
-        "price": 12000
+        "set": "火龍奧祕"
     },
     {
         "name": "蒼星之將【腰帶】α",
@@ -15607,8 +15074,7 @@
                 "level": 1
             }
         ],
-        "set": "火龍奧祕",
-        "price": 12000
+        "set": "火龍奧祕"
     },
     {
         "name": "蒼星之將【腿甲】α",
@@ -15635,7 +15101,6 @@
                 "level": 1
             }
         ],
-        "set": "火龍奧祕",
-        "price": 12000
+        "set": "火龍奧祕"
     }
 ]
