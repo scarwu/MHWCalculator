@@ -10,7 +10,7 @@
 $header-height: 60px;
 $footer-height: 50px;
 $section_name-height: 40px;
-$function_bar-height: 40px;
+$panel-height: 40px;
 
 & {
     height: 100vh;
@@ -183,27 +183,28 @@ $function_bar-height: 40px;
         @include font-size(1.6);
     }
 
-    .mhwc-function_bar {
+    .mhwc-panel {
         position: relative;
         margin-top: 5px;
         padding: 0 10px;
-        height: $function_bar-height;
-        line-height: $function_bar-height;
+        height: $panel-height;
+        line-height: $panel-height;
 
         input {
             width: 250px;
-            height: $function_bar-height - 10px;
+            height: $panel-height - 10px;
             padding: 0 5px;
         }
 
         .mhwc-icon {
             margin-top: 10px;
+            margin-right: 5px;
         }
     }
 
     .mhwc-list {
         position: absolute;
-        top: 10px + $function_bar-height;
+        top: 10px + $panel-height;
         left: 5px;
         right: 5px;
         bottom: 10px;
@@ -333,7 +334,14 @@ $function_bar-height: 40px;
         height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
     }
 
-    > .mhwc-bundles,
+
+    > .mhwc-conditions,
+    > .mhwc-bundles {
+        .mhwc-list {
+            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height} + #{$panel-height}));
+        }
+    }
+
     > .mhwc-equips,
     > .mhwc-status {
         .mhwc-list {
@@ -351,9 +359,9 @@ $function_bar-height: 40px;
     }
 
     > .mhwc-conditions {
-        .mhwc-function_bar {
+        .mhwc-panel {
             padding: 5px 2.5px;
-            height: $function_bar-height;
+            height: $panel-height;
 
             div {
                 padding: 0 2.5px;
@@ -373,10 +381,6 @@ $function_bar-height: 40px;
                     background-color: #eee;
                 }
             }
-        }
-
-        .mhwc-list {
-            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height} + #{$function_bar-height}));
         }
 
         .mhwc-item {
@@ -414,6 +418,20 @@ $function_bar-height: 40px;
     }
 
     > .mhwc-bundles {
+        .mhwc-panel {
+            height: $panel-height;
+
+            .mhwc-search_info {
+                width: 100%;
+                margin: 5px 5px;
+                padding: 0 5px;
+                border: 1px solid #999;
+                background-color: #eee;
+                line-height: 28px;
+
+                @include border-radius(5px);
+            }
+        }
 
         .mhwc-mask {
             position: fixed;
@@ -428,16 +446,6 @@ $function_bar-height: 40px;
             text-align: center;
 
             @include font-size(6);
-        }
-
-        .mhwc-search_info {
-            margin: 5px 5px 10px 5px;
-            padding: 0 5px;
-            border: 1px solid #999;
-            background-color: #eee;
-            line-height: 28px;
-
-            @include border-radius(5px);
         }
 
         .mhwc-bundle_name {
@@ -582,8 +590,12 @@ $function_bar-height: 40px;
             .mhwc-name {
                 line-height: 33px;
 
-                .mhwc-icon {
-                    margin-top: 6.5px;
+                .mhwc-icons_bundle {
+                    float: right;
+
+                    .mhwc-icon {
+                        float: none;
+                    }
                 }
             }
 

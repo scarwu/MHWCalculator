@@ -321,7 +321,9 @@ export default class Main extends Component {
             let jewelCount = bundle.jewels[jewelName];
             let data = null
 
-            for (let i = 0; i < jewelCount; i++) {
+            let jewelIndex = 0;
+
+            while (jewelIndex < jewelCount) {
                 if (0 === slotMap[currentSize].length) {
                     currentSize++;
 
@@ -331,6 +333,8 @@ export default class Main extends Component {
                 data = slotMap[currentSize].shift();
 
                 equips[data.type].slotNames[data.index] = jewelName;
+
+                jewelIndex++;
             }
         });
 
@@ -338,8 +342,7 @@ export default class Main extends Component {
         Status.set('equips', equips);
 
         this.setState({
-            equips: equips,
-            equipsLock: Misc.deepCopy(Constant.defaultEquipsLock)
+            equips: equips
         }, () => {
             this.refershUrlHash();
         });
@@ -583,7 +586,7 @@ export default class Main extends Component {
             <div id="main" className="container-fluid">
                 <div className="row mhwc-header">
                     <a href="./">
-                        <h1>Monster Hunter: World Calculator</h1>
+                        <h1>Monster Hunter: World - Calculator</h1>
                     </a>
                 </div>
 
@@ -595,7 +598,7 @@ export default class Main extends Component {
                             <span>需求條件</span>
                         </div>
 
-                        <div className="row mhwc-function_bar">
+                        <div className="row mhwc-panel">
                             <div className="col-4">
                                 <a onClick={this.handleSetSelectorOpen}>
                                     <i className="fa fa-plus"></i> 套裝
@@ -624,10 +627,8 @@ export default class Main extends Component {
                             <span>備選裝備</span>
                         </div>
 
-                        <div className="mhwc-list">
-                            <CandidateBundles
-                                onPickUp={this.handleCandidateBundlePickUp} />
-                        </div>
+                        <CandidateBundles
+                            onPickUp={this.handleCandidateBundlePickUp} />
                     </div>
 
                     <div className="col mhwc-equips">
@@ -637,13 +638,11 @@ export default class Main extends Component {
                             <span>已選裝備</span>
                         </div>
 
-                        <div className="mhwc-list">
-                            <EquipsDisplayer equips={this.state.equips}
-                                equipsLock={this.state.equipsLock}
-                                onToggleEquipsLock={this.handleEquipsLockToggle}
-                                onOpenSelector={this.handleEquipSelectorOpen}
-                                onPickUp={this.handleEquipSelectorPickUp} />
-                        </div>
+                        <EquipsDisplayer equips={this.state.equips}
+                            equipsLock={this.state.equipsLock}
+                            onToggleEquipsLock={this.handleEquipsLockToggle}
+                            onOpenSelector={this.handleEquipSelectorOpen}
+                            onPickUp={this.handleEquipSelectorPickUp} />
                     </div>
 
                     <div className="col mhwc-status">
@@ -651,9 +650,7 @@ export default class Main extends Component {
                             <span>狀態</span>
                         </div>
 
-                        <div className="mhwc-list">
-                            <CharacterStatus equips={this.state.equips} />
-                        </div>
+                        <CharacterStatus equips={this.state.equips} />
                     </div>
                 </div>
 

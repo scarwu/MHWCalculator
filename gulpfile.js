@@ -55,7 +55,9 @@ var compileTask = {
         if ('production' === ENVIRONMENT) {
             var definePlugin = new webpack.DefinePlugin({
                 'process.env': {
-                    'NODE_ENV': JSON.stringify('production')
+                    'ENV': "'production'",
+                    'BUILD_TIME': postfix,
+                    'NODE_ENV': "'production'"
                 }
             });
 
@@ -179,16 +181,8 @@ gulp.task('release:copy:boot', function () {
 
 // Replace
 gulp.task('release:replace:index', function () {
-    var timestamp = (new Date()).getTime().toString();
-
     return gulp.src('docs/index.html')
-        .pipe($.replace(
-            '?timestamp', '?' + timestamp
-        )).pipe($.replace(
-            'development', 'production'
-        )).pipe($.replace(
-            '(new Date()).getTime().toString()', timestamp
-        ))
+        .pipe($.replace('?timestamp', '?' + (new Date()).getTime().toString()))
         .pipe(gulp.dest('docs'));
 });
 

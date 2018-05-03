@@ -188,8 +188,8 @@ export default class CandidateBundles extends Component {
     };
 
     render () {
-        return (
-            <div className="mhwc-candidate_bundles">
+        return [(
+            <div key={'bar'} className="row mhwc-panel">
                 {true === this.state.isSearching ? (
                     <div className="mhwc-mask">
                         <i className="fa fa-spin fa-cog"></i>
@@ -205,9 +205,11 @@ export default class CandidateBundles extends Component {
                         </div>
                     </div>
                 ) : false}
-
+            </div>
+        ), (
+            <div key="list" className="mhwc-list">
                 {this.renderBundleItems()}
             </div>
-        );
+        )];
     }
 }

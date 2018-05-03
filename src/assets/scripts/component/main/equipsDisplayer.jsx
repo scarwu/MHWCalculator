@@ -120,16 +120,18 @@ export default class EquipsDisplayer extends Component {
                             <span>{Lang['weapon']} - {weaponInfo.name}</span>
                         </a>
 
-                        <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyWeaponSelectorData)}}>
-                            <i className="fa fa-times"></i>
-                        </a>
-                        <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('weapon')}}>
-                            {equipsLock.weapon ? (
-                                <i className="fa fa-lock"></i>
-                            ) : (
-                                <i className="fa fa-unlock-alt"></i>
-                            )}
-                        </a>
+                        <div className="mhwc-icons_bundle">
+                            <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('weapon')}}>
+                                {equipsLock.weapon ? (
+                                    <i className="fa fa-lock"></i>
+                                ) : (
+                                    <i className="fa fa-unlock-alt"></i>
+                                )}
+                            </a>
+                            <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyWeaponSelectorData)}}>
+                                <i className="fa fa-times"></i>
+                            </a>
+                        </div>
                     </div>
 
                     {0 !== weaponInfo.enhances.length ? (
@@ -380,16 +382,18 @@ export default class EquipsDisplayer extends Component {
                                 <span>{Lang[equipType]} - {equipInfo.name}</span>
                             </a>
 
-                            <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyEquipSelectorData)}}>
-                                <i className="fa fa-times"></i>
-                            </a>
-                            <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle(equipType)}}>
-                                {equipsLock[equipType] ? (
-                                    <i className="fa fa-lock"></i>
-                                ) : (
-                                    <i className="fa fa-unlock-alt"></i>
-                                )}
-                            </a>
+                            <div className="mhwc-icons_bundle">
+                                <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle(equipType)}}>
+                                    {equipsLock[equipType] ? (
+                                        <i className="fa fa-lock"></i>
+                                    ) : (
+                                        <i className="fa fa-unlock-alt"></i>
+                                    )}
+                                </a>
+                                <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyEquipSelectorData)}}>
+                                    <i className="fa fa-times"></i>
+                                </a>
+                            </div>
                         </div>
 
                         {0 !== equipInfo.slots.length ? (
@@ -542,16 +546,18 @@ export default class EquipsDisplayer extends Component {
                             <span>{Lang['charm']} - {charmInfo.name}</span>
                         </a>
 
-                        <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyCharmSelectorData)}}>
-                            <i className="fa fa-times"></i>
-                        </a>
-                        <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('charm')}}>
-                            {equipsLock.charm ? (
-                                <i className="fa fa-lock"></i>
-                            ) : (
-                                <i className="fa fa-unlock-alt"></i>
-                            )}
-                        </a>
+                        <div className="mhwc-icons_bundle">
+                            <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('charm')}}>
+                                {equipsLock.charm ? (
+                                    <i className="fa fa-lock"></i>
+                                ) : (
+                                    <i className="fa fa-unlock-alt"></i>
+                                )}
+                            </a>
+                            <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyCharmSelectorData)}}>
+                                <i className="fa fa-times"></i>
+                            </a>
+                        </div>
                     </div>
 
                     <div className="col-12 mhwc-item mhwc-skills">
@@ -588,6 +594,10 @@ export default class EquipsDisplayer extends Component {
             ));
         }
 
-        return ContentBlocks;
+        return (
+            <div className="mhwc-list">
+                {ContentBlocks}
+            </div>
+        );
     }
 }

@@ -8,8 +8,11 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+// Load Config
+import Config from 'config';
+
 function log (...params) {
-    if ('development' !== window.mhwc.env) {
+    if ('development' !== Config.env) {
         return;
     }
 

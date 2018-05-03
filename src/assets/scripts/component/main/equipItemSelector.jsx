@@ -545,7 +545,7 @@ export default class EquipItemSelector extends Component {
         return (
             <div className="mhwc-selector">
                 <div className="mhwc-dialog">
-                    <div className="mhwc-function_bar">
+                    <div className="mhwc-panel">
                         <input className="mhwc-text_segment" type="text"
                             ref="segment" onChange={this.handleSegmentInput} />
 

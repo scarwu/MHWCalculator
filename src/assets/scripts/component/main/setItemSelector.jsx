@@ -137,13 +137,13 @@ export default class SetItemSelector extends Component {
                         <a className="mhwc-icon"
                             onClick={() => {this.handleItemThrowDown(data.name)}}>
 
-                            <i className="fa fa-times"></i>
+                            <i className="fa fa-minus"></i>
                         </a>
                     ) : (
                         <a className="mhwc-icon"
                             onClick={() => {this.handleItemPickUp(data.name)}}>
 
-                            <i className="fa fa-check"></i>
+                            <i className="fa fa-plus"></i>
                         </a>
                     )}
                 </td>
@@ -166,6 +166,23 @@ export default class SetItemSelector extends Component {
                 </thead>
                 <tbody>
                     {this.state.selectedList.map((data, index) => {
+
+                        // Create Text
+                        let text = data.name;
+
+                        data.skills.forEach((data) => {
+                            let skillInfo = DataSet.skillHelper.getInfo(data.name);
+
+                            text += data.name + skillInfo.list[0].description;
+                        })
+
+                        // Search Nameword
+                        if (null !== segment
+                            && !text.toLowerCase().match(segment.toLowerCase())) {
+
+                            return false;
+                        }
+
                         return this.renderRow(data, true);
                     })}
 
@@ -198,7 +215,7 @@ export default class SetItemSelector extends Component {
         return (
             <div className="mhwc-selector">
                 <div className="mhwc-dialog">
-                    <div className="mhwc-function_bar">
+                    <div className="mhwc-panel">
                         <input className="mhwc-text_segment" type="text"
                             ref="segment" onChange={this.handleSegmentInput} />
 

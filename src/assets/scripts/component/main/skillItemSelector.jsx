@@ -135,13 +135,13 @@ export default class SkillItemSelector extends Component {
                         <a className="mhwc-icon"
                             onClick={() => {this.handleItemThrowDown(data.name)}}>
 
-                            <i className="fa fa-times"></i>
+                            <i className="fa fa-minus"></i>
                         </a>
                     ) : (
                         <a className="mhwc-icon"
                             onClick={() => {this.handleItemPickUp(data.name)}}>
 
-                            <i className="fa fa-check"></i>
+                            <i className="fa fa-plus"></i>
                         </a>
                     )}
                 </td>
@@ -164,6 +164,21 @@ export default class SkillItemSelector extends Component {
                 </thead>
                 <tbody>
                     {this.state.selectedList.map((data, index) => {
+
+                        // Create Text
+                        let text = data.name;
+
+                        data.list.forEach((data) => {
+                            text += data.name + data.description;
+                        })
+
+                        // Search Nameword
+                        if (null !== segment
+                            && !text.toLowerCase().match(segment.toLowerCase())) {
+
+                            return false;
+                        }
+
                         return this.renderRow(data, true);
                     })}
 
@@ -194,7 +209,7 @@ export default class SkillItemSelector extends Component {
         return (
             <div className="mhwc-selector">
                 <div className="mhwc-dialog">
-                    <div className="mhwc-function_bar">
+                    <div className="mhwc-panel">
                         <input className="mhwc-text_segment" type="text"
                             ref="segment" onChange={this.handleSegmentInput} />
 
