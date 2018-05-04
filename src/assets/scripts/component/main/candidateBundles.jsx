@@ -47,6 +47,15 @@ export default class CandidateBundles extends Component {
         this.props.onPickUp(bundleList[index]);
     };
 
+    handleLimitChange = () => {
+        let bundleLimit = parseInt(this.refs.bundleLimit.value, 10);
+        bundleLimit = !isNaN(bundleLimit) ? bundleLimit : 0;
+
+        this.setState({
+            bundleLimit: bundleLimit
+        });
+    };
+
     /**
      * Lifecycle Functions
      */
@@ -225,7 +234,7 @@ export default class CandidateBundles extends Component {
                     <div className="row mhwc-search_info">
                         <div className="col-12">
                             <span>
-                                搜尋花費 {this.state.searchTime} 秒，並找出 {this.state.bundleList.length} 筆結果。
+                                搜尋花費 {this.state.searchTime} 秒，並出 <input type="text" defaultValue={this.state.bundleLimit} ref="bundleLimit" onChange={this.handleLimitChange} /> / {this.state.bundleList.length} 筆結果。
                             </span>
                         </div>
                     </div>
