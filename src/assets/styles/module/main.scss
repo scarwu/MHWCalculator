@@ -191,9 +191,22 @@ $panel-height: 40px;
         line-height: $panel-height;
 
         input {
+            margin: 0 5px;
+            padding: 0 5px;
             width: 250px;
             height: $panel-height - 10px;
+            border: 1px solid #666;
+
+            @include border-radius(5px);
+        }
+
+        select {
+            margin: 0 5px;
             padding: 0 5px;
+            height: $panel-height - 10px;
+            border: 1px solid #666;
+
+            @include border-radius(5px);
         }
 
         .mhwc-icon {
@@ -248,13 +261,13 @@ $panel-height: 40px;
             &.mhwc-weapon_table {
 
                 // 銳利度
-                td:nth-child(6) {
+                td:nth-child(5) {
                     padding-top: 5px;
                     padding-bottom: 5px;
                     width: 10%;
                 }
 
-                td:nth-child(13) {
+                td:nth-child(12) {
                     padding-right: 5px;
                     text-align: right;
                 }

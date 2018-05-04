@@ -22,6 +22,17 @@ import DataSet from 'library/dataset';
 import Constant from 'constant';
 import Lang from 'lang';
 
+// Weapon Type List
+var weaponTypeList = [
+    'greatSword', 'longSword',
+    'swordAndShield', 'dualSlades',
+    'hammer', 'huntingHorn',
+    'lance', 'gunlance',
+    'switchAxe', 'chargeBlade',
+    'insectGlaive', 'bow',
+    'lightBowgun', 'heavyBowgun'
+];
+
 export default class EquipItemSelector extends Component {
 
     // Default Props
@@ -33,8 +44,9 @@ export default class EquipItemSelector extends Component {
 
     // Initial State
     state = {
-        data: {},
+        mode: null,
         list: [],
+        type: null,
         segment: null
     };
 
@@ -70,6 +82,14 @@ export default class EquipItemSelector extends Component {
         });
     };
 
+    handleTypeChange = () => {
+        let type = this.refs.type.value;
+
+        this.setState({
+            type: type
+        });
+    };
+
     /**
      * Lifecycle Functions
      */
@@ -77,6 +97,7 @@ export default class EquipItemSelector extends Component {
         let data = this.props.data;
         let mode = null;
         let list = [];
+        let type = null;
 
         if (undefined !== data.enhanceIndex) {
             mode = 'enhance';
@@ -93,16 +114,9 @@ export default class EquipItemSelector extends Component {
             }
         } else if ('weapon' === data.equipType) {
             mode = 'weapon';
+            type = weaponTypeList[0];
 
-            [
-                'greatSword', 'longSword',
-                'swordAndShield', 'dualSlades',
-                'hammer', 'huntingHorn',
-                'lance', 'gunlance',
-                'switchAxe', 'chargeBlade',
-                'insectGlaive', 'bow',
-                'lightBowgun', 'heavyBowgun'
-            ].forEach((weaponType) => {
+            weaponTypeList.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
                     list = list.concat(
                         DataSet.weaponHelper.typeIs(weaponType).rareIs(rare).getItems()
@@ -120,6 +134,7 @@ export default class EquipItemSelector extends Component {
             || 'leg' === data.equipType) {
 
             mode = 'armor';
+            type = data.equipType;
 
             for (let rare = 8; rare >= 5; rare--) {
                 list = list.concat(
@@ -137,7 +152,8 @@ export default class EquipItemSelector extends Component {
 
         this.setState({
             mode: mode,
-            list: list
+            list: list,
+            type: type
         });
     }
 
@@ -173,7 +189,6 @@ export default class EquipItemSelector extends Component {
                 <table className="mhwc-weapon_table">
                     <thead>
                         <tr>
-                            <td>類型</td>
                             <td>名稱</td>
                             <td>衍生</td>
                             <td>稀有度</td>
@@ -190,6 +205,10 @@ export default class EquipItemSelector extends Component {
                     </thead>
                     <tbody>
                         {this.state.list.map((data, index) => {
+
+                            if (data.type !== this.state.type) {
+                                return;
+                            }
 
                             // Create Text
                             let text = data.name;
@@ -222,7 +241,6 @@ export default class EquipItemSelector extends Component {
 
                             return (
                                 <tr key={index}>
-                                    <td><span>{Lang[data.type]}</span></td>
                                     <td><span>{data.name}</span></td>
                                     <td><span>{data.series}</span></td>
                                     <td><span>{data.rare}</span></td>
@@ -548,6 +566,16 @@ export default class EquipItemSelector extends Component {
                     <div className="mhwc-panel">
                         <input className="mhwc-text_segment" type="text"
                             ref="segment" onChange={this.handleSegmentInput} />
+
+                        {'weapon' === this.state.mode ? (
+                            <select defaultValue={this.state.type} ref="type" onChange={this.handleTypeChange}>
+                                {weaponTypeList.map((type) => {
+                                    return (
+                                        <option key={type} value={type}>{Lang[type]}</option>
+                                    );
+                                })}
+                            </select>
+                        ) : false}
 
                         <a className="mhwc-icon" onClick={this.handleWindowClose}>
                             <i className="fa fa-times"></i>
