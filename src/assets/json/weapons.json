@@ -9371,5 +9371,5324 @@
                 "size": 3
             }
         ]
+    },
+    {
+        "name": "鎧羅炎．痺賊",
+        "rare": 7,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 768,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅炎．毒妖",
+        "rare": 7,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 864,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "poison",
+                "minValue": 540,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅炎．熔岩",
+        "rare": 7,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 912,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅炎．王",
+        "rare": 7,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 912,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅炎．骨鎚",
+        "rare": 7,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 912,
+        "criticalRate": 10,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅炎．屍套",
+        "rare": 7,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 960,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅炎．賊",
+        "rare": 7,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 960,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅炎．熔山",
+        "rare": 7,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 1008,
+        "criticalRate": -20,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅炎．土砂",
+        "rare": 7,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 1008,
+        "criticalRate": -20,
+        "defense": 25,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
+        "name": "鎧羅炎．？",
+        "rare": 7,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 0,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅炎．冰",
+        "rare": 8,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 912,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 510,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅炎．睡眠",
+        "rare": 8,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 912,
+        "criticalRate": 0,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅炎．水",
+        "rare": 8,
+        "type": "greatSword",
+        "series": "爛輝龍",
+        "attack": 912,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 540,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅劍．黑甲",
+        "rare": 7,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 528,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍．泥魚",
+        "rare": 7,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 660,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍．風漂",
+        "rare": 7,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 528,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍．搔",
+        "rare": 7,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 561,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍．飛雷",
+        "rare": 7,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 594,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍．眩",
+        "rare": 7,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 627,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍．屍套",
+        "rare": 7,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 660,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍．爆鎚",
+        "rare": 7,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 660,
+        "criticalRate": 0,
+        "defense": 40,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 120,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
+        "name": "鎧羅劍．蠻顎",
+        "rare": 7,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 693,
+        "criticalRate": -10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍．熔山",
+        "rare": 7,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 726,
+        "criticalRate": -20,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍．麻痺",
+        "rare": 8,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 561,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅劍．毒",
+        "rare": 8,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 627,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "poison",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅劍．水",
+        "rare": 8,
+        "type": "longSword",
+        "series": "爛輝龍",
+        "attack": 627,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅切刀．幻",
+        "rare": 7,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 224,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅切刀．痺賊",
+        "rare": 7,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 224,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅切刀．風漂",
+        "rare": 7,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 224,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅切刀．浮空",
+        "rare": 7,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 252,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅切刀．毒妖",
+        "rare": 7,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 252,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "poison",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
+        "name": "鎧羅切刀．賊",
+        "rare": 7,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 266,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅切刀．王",
+        "rare": 7,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 266,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 180,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅切刀．骨鎚",
+        "rare": 7,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 266,
+        "criticalRate": 10,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅切刀．蠻顎",
+        "rare": 7,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 294,
+        "criticalRate": -20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅切刀．土砂",
+        "rare": 7,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 308,
+        "criticalRate": -10,
+        "defense": 25,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 180,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
+        "name": "鎧羅切刀．龍",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 224,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "low"
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅切刀．爆破",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 238,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅切刀．水",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": "爛輝龍",
+        "attack": 266,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅小刀．黑甲",
+        "rare": 7,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 238,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 90,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅小刀．搔",
+        "rare": 7,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 238,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 90,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅小刀．慘爪",
+        "rare": 7,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 252,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 90,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅小刀．熔岩",
+        "rare": 7,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 266,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 150,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
+        "name": "鎧羅小刀．眩",
+        "rare": 7,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 266,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅小刀．泥魚",
+        "rare": 7,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 266,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅小刀．熔山",
+        "rare": 7,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 280,
+        "criticalRate": -20,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅小刀．蠻顎",
+        "rare": 7,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 294,
+        "criticalRate": -20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅小刀．角",
+        "rare": 7,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 322,
+        "criticalRate": -10,
+        "defense": 25,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 150,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅小刀．冰",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 266,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅小刀．毒",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 266,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "poison",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅小刀．水",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 266,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅小刀．飛雷",
+        "rare": 7,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 252,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 150,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅大錘．痺賊",
+        "rare": 7,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 832,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue":   390,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅大錘．搔",
+        "rare": 7,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 884,
+        "criticalRate": 35,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅大錘．毒妖",
+        "rare": 7,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 988,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "poison",
+                "minValue": 540,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅大錘．骨鎚",
+        "rare": 7,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 988,
+        "criticalRate": 10,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅大錘．屍套",
+        "rare": 7,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 1040,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅大錘．蠻顎",
+        "rare": 7,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 1040,
+        "criticalRate": -20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅大錘．爆鎚",
+        "rare": 7,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 1092,
+        "criticalRate": 0,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 120,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅大錘．土砂",
+        "rare": 7,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 1092,
+        "criticalRate": -10,
+        "defense": 25,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
+        "name": "鎧羅大錘．角",
+        "rare": 7,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 1144,
+        "criticalRate": -25,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 90,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅大錘．？",
+        "rare": 7,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 0,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅大錘．冰",
+        "rare": 8,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 988,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 510,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅大錘．雷",
+        "rare": 8,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 988,
+        "criticalRate": 0,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 480,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅大錘．水",
+        "rare": 8,
+        "type": "hammer",
+        "series": "爛輝龍",
+        "attack": 988,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅風笛．幻",
+        "rare": 7,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 630,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 540,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅風笛．飛甲",
+        "rare": 7,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 672,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅風笛．風漂",
+        "rare": 7,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 672,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅風笛．浮空",
+        "rare": 7,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 714,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅風笛．搔",
+        "rare": 7,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 714,
+        "criticalRate": 35,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅風笛．毒妖",
+        "rare": 7,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 756,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "poison",
+                "minValue": 540,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
+        "name": "鎧羅風笛．岩賊",
+        "rare": 7,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 798,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 150,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅風笛．骨鎚",
+        "rare": 7,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 798,
+        "criticalRate": 10,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅風笛．蠻顎",
+        "rare": 7,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 840,
+        "criticalRate": -20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅風笛．？",
+        "rare": 7,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 0,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅風笛．水",
+        "rare": 8,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 714,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 630,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅風笛．龍",
+        "rare": 8,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 756,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 540,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅風笛．麻痺",
+        "rare": 8,
+        "type": "huntingHorn",
+        "series": "爛輝龍",
+        "attack": 840,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅之尖．王",
+        "rare": 7,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 368,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅之尖．黑甲",
+        "rare": 7,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 368,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅之尖．風漂",
+        "rare": 7,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 368,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅之尖．岩賊",
+        "rare": 7,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 391,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅之尖．屍套",
+        "rare": 7,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 391,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": []
+    },
+    {
+        "name": "鎧羅之尖．毒妖",
+        "rare": 7,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 391,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "poison",
+                "minValue": 540,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
+        "name": "鎧羅之尖．搔",
+        "rare": 7,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 391,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅之尖．慘爪",
+        "rare": 7,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 437,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 90,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅之尖．土砂",
+        "rare": 7,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 437,
+        "criticalRate": -20,
+        "defense": 25,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅之尖．？",
+        "rare": 7,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 0,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅之尖．雷",
+        "rare": 8,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 368,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 600,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅之尖．睡眠",
+        "rare": 8,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 414,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅之尖．水",
+        "rare": 8,
+        "type": "lance",
+        "series": "爛輝龍",
+        "attack": 437,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅銃槍．風漂",
+        "rare": 7,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 368,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅銃槍．痺賊",
+        "rare": 7,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 368,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅銃槍．飛雷",
+        "rare": 7,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 391,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅銃槍．土砂",
+        "rare": 7,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 391,
+        "criticalRate": -10,
+        "defense": 25,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅銃槍．王",
+        "rare": 7,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 414,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅銃槍．爆鱗",
+        "rare": 7,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 414,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅銃槍．泥魚",
+        "rare": 7,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 437,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅銃槍．賊",
+        "rare": 7,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 437,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 180,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅銃槍．屍套",
+        "rare": 7,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 460,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": []
+    },
+    {
+        "name": "鎧羅銃槍．蠻顎",
+        "rare": 7,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 460,
+        "criticalRate": -20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅銃槍．水",
+        "rare": 8,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 437,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅銃槍．睡眠",
+        "rare": 8,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 437,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅銃槍．毒",
+        "rare": 8,
+        "type": "gunLance",
+        "series": "爛輝龍",
+        "attack": 460,
+        "criticalRate": 15,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "poison",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅劍斧．風漂",
+        "rare": 7,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 560,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍斧．屍套",
+        "rare": 7,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 595,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍斧．浮空",
+        "rare": 7,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 595,
+        "criticalRate": 25,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍斧．爆鱗",
+        "rare": 7,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 630,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 180,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍斧．賊",
+        "rare": 7,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 665,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 150,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍斧．王",
+        "rare": 7,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 665,
+        "criticalRate": 15,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍斧．泥魚",
+        "rare": 7,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 665,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍斧．爆鎚",
+        "rare": 7,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 735,
+        "criticalRate": 10,
+        "defense": 40,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 120,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍斧．土砂",
+        "rare": 7,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 735,
+        "criticalRate": -20,
+        "defense": 25,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 180,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍斧．角",
+        "rare": 7,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 805,
+        "criticalRate": -30,
+        "defense": 25,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅劍斧．雷",
+        "rare": 8,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 560,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 480,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅劍斧．睡眠",
+        "rare": 8,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 665,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅劍斧．麻痺",
+        "rare": 8,
+        "type": "switchAxe",
+        "series": "爛輝龍",
+        "attack": 735,
+        "criticalRate": 0,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅兵裝．痺賊",
+        "rare": 7,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 576,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 150,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅兵裝．慘爪",
+        "rare": 7,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 684,
+        "criticalRate": 25,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 90,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅兵裝．岩賊",
+        "rare": 7,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 684,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 90,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅兵裝．屍套",
+        "rare": 7,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 684,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 120,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": []
+    },
+    {
+        "name": "鎧羅兵裝．賊",
+        "rare": 7,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 684,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 90,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅兵裝．王",
+        "rare": 7,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 684,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 120,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅兵裝．泥魚",
+        "rare": 7,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 684,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 120,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅兵裝．飛雷",
+        "rare": 7,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 684,
+        "criticalRate": 15,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 90,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅兵裝．角",
+        "rare": 7,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 828,
+        "criticalRate": -30,
+        "defense": 25,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅兵裝．？",
+        "rare": 7,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 0,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅兵裝．冰",
+        "rare": 8,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 648,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅兵裝．睡眠",
+        "rare": 8,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 684,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅兵裝．雷",
+        "rare": 8,
+        "type": "chargeBlade",
+        "series": "爛輝龍",
+        "attack": 684,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅長刀．屍套",
+        "rare": 7,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 527,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 180,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": []
+    },
+    {
+        "name": "鎧羅長刀．搔",
+        "rare": 7,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 527,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅長刀．慘爪",
+        "rare": 7,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 558,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 90,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅長刀．岩賊",
+        "rare": 7,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 558,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 150,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 2
+            }
+        ]
+    },
+    {
+        "name": "鎧羅長刀．飛雷",
+        "rare": 7,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 558,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅長刀．毒妖",
+        "rare": 7,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 558,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "poison",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ]
+    },
+    {
+        "name": "鎧羅長刀．眩",
+        "rare": 7,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 589,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅長刀．王",
+        "rare": 7,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 589,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅長刀．角",
+        "rare": 7,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 713,
+        "criticalRate": -30,
+        "defense": 25,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅長刀．？",
+        "rare": 7,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 0,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅長刀．冰",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 527,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅長刀．麻痺",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 620,
+        "criticalRate": 0,
+        "defense": 30,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅長刀．水",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": "爛輝龍",
+        "attack": 620,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 0,
+                "orange": 0,
+                "yellow": 0,
+                "green": 0,
+                "blue": 0,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅弓．風漂",
+        "rare": 7,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 180,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅弓．飛雷",
+        "rare": 7,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 204,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅弓．搔",
+        "rare": 7,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 204,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 150,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅弓．王",
+        "rare": 7,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 216,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅弓．女王",
+        "rare": 7,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 216,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "low"
+        },
+        "slots": []
+    },
+    {
+        "name": "鎧羅弓．毒妖",
+        "rare": 7,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 216,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅弓．屍套",
+        "rare": 7,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 228,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": []
+    },
+    {
+        "name": "鎧羅弓．蠻顎",
+        "rare": 7,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 252,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅弓．角",
+        "rare": 7,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 264,
+        "criticalRate": -20,
+        "defense": 25,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅弓．？",
+        "rare": 7,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 0,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅弓．雷",
+        "rare": 8,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 228,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅弓．水",
+        "rare": 8,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 228,
+        "criticalRate": 0,
+        "defense": 30,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅弓．爆破",
+        "rare": 8,
+        "type": "bow",
+        "series": "爛輝龍",
+        "attack": 240,
+        "criticalRate": 0,
+        "defense": 30,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅迅擊弩．浮空",
+        "rare": 7,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 221,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅迅擊弩．慘爪",
+        "rare": 7,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 234,
+        "criticalRate": 30,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅迅擊弩．熔岩",
+        "rare": 7,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 247,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅迅擊弩．王",
+        "rare": 7,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 247,
+        "criticalRate": 25,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅迅擊弩．泥魚",
+        "rare": 7,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 247,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅迅擊弩．爆鱗",
+        "rare": 7,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 260,
+        "criticalRate": -20,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅迅擊弩．屍套",
+        "rare": 7,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 260,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅迅擊弩．賊",
+        "rare": 7,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 260,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅迅擊弩．土砂",
+        "rare": 7,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 260,
+        "criticalRate": -10,
+        "defense": 25,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅迅擊弩．蠻顎",
+        "rare": 7,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 273,
+        "criticalRate": -10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅迅擊弩．迫擊",
+        "rare": 8,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 247,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅迅擊弩．狙擊",
+        "rare": 8,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 260,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅迅擊弩．射擊",
+        "rare": 8,
+        "type": "lightBowgun",
+        "series": "爛輝龍",
+        "attack": 273,
+        "criticalRate": -10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅突擊弩．眩",
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 255,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅突擊弩．飛雷",
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 255,
+        "criticalRate": 25,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅突擊弩．賊",
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 270,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅突擊弩．毒妖",
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 270,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅突擊弩．骨鎚",
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 270,
+        "criticalRate": 0,
+        "defense": 25,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅突擊弩．岩賊",
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 285,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅突擊弩．蠻顎",
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 300,
+        "criticalRate": -10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅突擊弩．熔山",
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 315,
+        "criticalRate": -10,
+        "defense": 30,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅突擊弩．角",
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 330,
+        "criticalRate": -10,
+        "defense": 25,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅突擊弩．？",
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 0,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅突擊弩．援擊",
+        "rare": 8,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 270,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅突擊弩．爆擊",
+        "rare": 8,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 285,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
+    },
+    {
+        "name": "鎧羅突擊弩．冷擊",
+        "rare": 8,
+        "type": "heavyBowgun",
+        "series": "爛輝龍",
+        "attack": 285,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ]
     }
 ]
