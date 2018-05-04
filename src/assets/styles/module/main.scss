@@ -556,21 +556,8 @@ $panel-height: 40px;
             }
         }
 
-        .mhwc-jewels {
-            > .mhwc-value {
-                margin-top: 5px;
-                padding: 2.5px;
-
-                .row {
-                    .mhwc-value {
-                        margin: 2.5px;
-
-                        @include nowrap();
-                    }
-                }
-            }
-        }
-
+        .mhwc-jewels,
+        .mhwc-slots,
         .mhwc-skills {
             > .mhwc-value {
                 margin-top: 5px;

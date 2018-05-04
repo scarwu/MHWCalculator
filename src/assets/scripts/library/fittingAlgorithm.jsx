@@ -302,7 +302,7 @@ export default class FittingAlgorithm {
         prevBundleList = nextBundleList;
 
         // Create Candidate Equips
-        Misc.log('Create Candidate Equips with Skill Equips');
+        Misc.log('Create Candidate Equips');
 
         candidateEquips = {};
 
@@ -315,6 +315,7 @@ export default class FittingAlgorithm {
             Object.keys(this.conditionSkills).forEach((skillName) => {
                 let equips = null;
 
+                // Get Equips With Skill
                 if ('helm' === equipType
                     || 'chest' === equipType
                     || 'arm' === equipType
@@ -328,6 +329,15 @@ export default class FittingAlgorithm {
 
                 // Get Candidate Equips
                 candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
+
+                if ('charm' !== equipType) {
+
+                    // Get Equips With Slot
+                    equips = DataSet.armorHelper.typeIs(equipType).rareIs(0).getItems();
+
+                    // Get Candidate Equips
+                    candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
+                }
             });
 
             // Append Empty Candidate Equip
@@ -339,20 +349,20 @@ export default class FittingAlgorithm {
 
         maxEquipsExpectedValue = this.cerateMaxEquipsExpectedValue(candidateEquips);
 
-        Misc.log('Skill - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
-        Misc.log('Skill - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
-        Misc.log('Skill - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
-        Misc.log('Skill - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
-        Misc.log('Skill - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
-        Misc.log('Skill - charm', Object.keys(candidateEquips.charm).length, candidateEquips.charm);
+        Misc.log('Equip Helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
+        Misc.log('Equip Chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
+        Misc.log('Equip Arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
+        Misc.log('Equip Waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
+        Misc.log('Equip Leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
+        Misc.log('Equip Charm', Object.keys(candidateEquips.charm).length, candidateEquips.charm);
         Misc.log('Equips Expected Value', maxEquipsExpectedValue);
 
-        // Create Next BundleList By Skill Equips
-        Misc.log('Create Next BundleList By Skill Equips');
+        // Create Next BundleList
+        Misc.log('Create Next BundleList');
 
         this.conditionEquips.forEach((equipType) => {
 
-            Misc.log('Skill - Bundle List:', equipType, Object.keys(prevBundleList).length);
+            Misc.log('Bundle List:', equipType, Object.keys(prevBundleList).length);
 
             nextBundleList = {};
 
@@ -449,7 +459,7 @@ export default class FittingAlgorithm {
             Misc.log('Result - BundleList (Zero):', Object.keys(lastBundleList).length);
         });
 
-        Misc.log('Skill - BundleList:', Object.keys(prevBundleList).length);
+        Misc.log('BundleList:', Object.keys(prevBundleList).length);
 
         // Find Completed Bundle into Last BundleList
         Misc.log('Find Completed Bundle');
@@ -476,126 +486,6 @@ export default class FittingAlgorithm {
         prevBundleList = nextBundleList;
 
         Misc.log('Result - BundleList (One):', Object.keys(lastBundleList).length);
-
-        if (0 === Object.keys(lastBundleList).length) {
-
-            // Create Candidate Equips
-            Misc.log('Create Candidate Equips with Slot Equips');
-
-            candidateEquips = {};
-
-            this.conditionEquips.forEach((equipType) => {
-                if ('charm' === equipType) {
-                    return;
-                }
-
-                if (undefined === candidateEquips[equipType]) {
-                    candidateEquips[equipType] = {};
-                }
-
-                let equips = DataSet.armorHelper.typeIs(equipType).rareIs(0).getItems();
-
-                // Get Candidate Equips
-                candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
-            });
-
-            maxEquipsExpectedValue = this.cerateMaxEquipsExpectedValue(candidateEquips);
-
-            Misc.log('Slot - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
-            Misc.log('Slot - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
-            Misc.log('Slot - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
-            Misc.log('Slot - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
-            Misc.log('Slot - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
-            Misc.log('Equips Expected Value', maxEquipsExpectedValue);
-
-            // Create Next BundleList By Slot Equips
-            Misc.log('Create Next BundleList By Slot Equips');
-
-            this.conditionEquips.forEach((equipType) => {
-                if ('charm' === equipType) {
-                    return;
-                }
-
-                Misc.log('Slot - Bundle List:', equipType, Object.keys(prevBundleList).length);
-
-                nextBundleList = {};
-
-                Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
-                    Object.keys(prevBundleList).forEach((hash) => {
-                        let bundle = Misc.deepCopy(prevBundleList[hash]);
-
-                        if (undefined === bundle.equips[equipType]) {
-                            bundle.equips[equipType] = null;
-                        }
-
-                        // Check Equip Part is Used
-                        if (null !== bundle.equips[equipType]) {
-                            nextBundleList[this.generateBundleHash(bundle)] = bundle;
-
-                            return;
-                        }
-
-                        // Check Candidate Equip Name
-                        if (null === candidateEquip.name) {
-                            nextBundleList[this.generateBundleHash(bundle)] = bundle;
-
-                            return;
-                        }
-
-                        // Add Candidate Equip to Bundle
-                        bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
-
-                        // Check Bundle Have a Future
-                        if (false === this.isBundleHaveFuture(bundle, maxEquipsExpectedValue, conditionExpectedValue)) {
-                            return;
-                        }
-
-                        // If Equips Is Full Then Do Fully Check
-                        if (requireEquipCount === bundle.meta.euqipCount) {
-
-                            // Completed Bundle By Skills
-                            bundle = this.completeBundleBySkills(bundle);
-
-                            if (false === bundle) {
-                                return;
-                            }
-
-                            if (requireSkillCount === Object.keys(bundle.meta.completedSkills).length) {
-                                lastBundleList[this.generateBundleHash(bundle)] = bundle;
-                            }
-
-                            return;
-                        }
-
-                        nextBundleList[this.generateBundleHash(bundle)] = bundle;
-                    });
-                });
-
-                prevBundleList = nextBundleList;
-            });
-
-            Misc.log('Slot - BundleList:', Object.keys(prevBundleList).length);
-
-            // Find Completed Bundle into Last BundleList
-            Misc.log('Find Completed Bundle');
-
-            Object.keys(prevBundleList).forEach((hash) => {
-                let bundle = Misc.deepCopy(prevBundleList[hash]);
-
-                // Completed Bundle By Skills
-                bundle = this.completeBundleBySkills(bundle);
-
-                if (false === bundle) {
-                    return;
-                }
-
-                if (requireSkillCount === Object.keys(bundle.meta.completedSkills).length) {
-                    lastBundleList[this.generateBundleHash(bundle)] = bundle;
-                }
-            });
-
-            Misc.log('Result - BundleList (Two):', Object.keys(lastBundleList).length);
-        }
 
         lastBundleList = Object.values(lastBundleList).sort((a, b) => {
             let valueA = (8 - a.meta.euqipCount) * 1000 + a.defense;

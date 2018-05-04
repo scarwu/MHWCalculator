@@ -133,6 +133,31 @@ export default class CandidateBundles extends Component {
                         </div>
                     </div>
 
+                    <div className="col-12 mhwc-item mhwc-slots">
+                        <div className="col-12 mhwc-name">
+                            <span>剩餘插槽</span>
+                        </div>
+                        <div className="col-12 mhwc-value">
+                            <div className="row">
+                                {Object.keys(data.meta.remainingSlotCount).map((slotSize) => {
+                                    if ('all' === slotSize) {
+                                        return;
+                                    }
+
+                                    let slotCount = data.meta.remainingSlotCount[slotSize];
+
+                                    return (
+                                        <div key={slotSize} className="col-4">
+                                            <div className="mhwc-value">
+                                                <span>{`[${slotSize}] x ${slotCount}`}</span>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+
                     {(0 !== Object.keys(data.jewels).length) ? (
                         <div className="col-12 mhwc-item mhwc-jewels">
                             <div className="col-12 mhwc-name">
