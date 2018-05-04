@@ -1,5 +1,5 @@
 src/boot
 node_modules
 .sass-cache
-crawler/vendor
+scripts/vendor
 temp

@@ -2,6 +2,9 @@
     {
         "name": "體力增強",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -35,6 +38,9 @@
     {
         "name": "體力回復量UP",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -53,6 +59,9 @@
     {
         "name": "KO術",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -71,6 +80,9 @@
     {
         "name": "體術",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -97,6 +109,9 @@
     {
         "name": "力量解放",
         "type": "passive",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -148,6 +163,9 @@
     {
         "name": "水屬性攻擊強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -209,6 +227,9 @@
     {
         "name": "火屬性攻擊強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -270,6 +291,9 @@
     {
         "name": "心眼／彈導強化",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": true,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -280,6 +304,9 @@
     {
         "name": "火耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -319,6 +346,9 @@
     {
         "name": "水耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -358,6 +388,9 @@
     {
         "name": "不屈",
         "type": "passive",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -376,6 +409,9 @@
     {
         "name": "火場怪力",
         "type": "passive",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -442,6 +478,9 @@
     {
         "name": "加速再生",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -452,6 +491,9 @@
     {
         "name": "冰耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -491,6 +533,9 @@
     {
         "name": "地質學",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -509,6 +554,9 @@
     {
         "name": "回復速度",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -527,6 +575,9 @@
     {
         "name": "冰屬性攻擊強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -588,6 +639,9 @@
     {
         "name": "收刀術",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -606,6 +660,9 @@
     {
         "name": "耳塞",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -632,6 +689,9 @@
     {
         "name": "死裡逃生",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -642,6 +702,9 @@
     {
         "name": "匠",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -693,6 +756,9 @@
     {
         "name": "攻擊",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -774,6 +840,9 @@
     {
         "name": "吹笛名人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -784,6 +853,9 @@
     {
         "name": "防禦強化",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": true,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -794,6 +866,9 @@
     {
         "name": "投射器裝填數UP",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -812,6 +887,9 @@
     {
         "name": "防御力DOWN耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -830,6 +908,9 @@
     {
         "name": "防禦",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -915,6 +996,9 @@
     {
         "name": "利刃／彈藥節約",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -925,6 +1009,9 @@
     {
         "name": "快吃",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -943,6 +1030,9 @@
     {
         "name": "防禦性能",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -969,6 +1059,9 @@
     {
         "name": "拔刀術【力】",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -979,6 +1072,9 @@
     {
         "name": "泥耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -989,6 +1085,9 @@
     {
         "name": "拔刀術【技】",
         "type": "passive",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1022,6 +1121,9 @@
     {
         "name": "幸運",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1032,6 +1134,9 @@
     {
         "name": "昏厥耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1050,6 +1155,9 @@
     {
         "name": "昆蟲標本達人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1068,6 +1176,9 @@
     {
         "name": "看破",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1137,6 +1248,9 @@
     {
         "name": "指示隨從",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1163,6 +1277,9 @@
     {
         "name": "飛身躍入",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1173,6 +1290,9 @@
     {
         "name": "炸彈客",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1191,6 +1311,9 @@
     {
         "name": "毒屬性強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1209,6 +1332,9 @@
     {
         "name": "耐力急速回復",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1227,6 +1353,9 @@
     {
         "name": "風壓完全無效",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1237,6 +1366,9 @@
     {
         "name": "風壓耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1263,6 +1395,9 @@
     {
         "name": "突破耐力上限",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1278,6 +1413,9 @@
     {
         "name": "耐震",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1296,6 +1434,9 @@
     {
         "name": "飛燕",
         "type": "passive",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1311,6 +1452,9 @@
     {
         "name": "毒耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1329,6 +1473,9 @@
     {
         "name": "威嚇",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1347,6 +1494,9 @@
     {
         "name": "研究者",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1357,6 +1507,9 @@
     {
         "name": "毒傷害強化",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1367,6 +1520,9 @@
     {
         "name": "挑戰者",
         "type": "passive",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1433,6 +1589,9 @@
     {
         "name": "怨恨",
         "type": "passive",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1484,6 +1643,9 @@
     {
         "name": "毒瓶追加",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1494,6 +1656,9 @@
     {
         "name": "砲術",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1512,6 +1677,9 @@
     {
         "name": "迴避性能",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1538,6 +1706,9 @@
     {
         "name": "破壞王",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1556,6 +1727,9 @@
     {
         "name": "剝取名人",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1566,6 +1740,9 @@
     {
         "name": "迴避距離UP",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1584,6 +1761,9 @@
     {
         "name": "振奮",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1594,6 +1774,9 @@
     {
         "name": "追蹤達人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1604,6 +1787,9 @@
     {
         "name": "剝取鐵人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1614,6 +1800,9 @@
     {
         "name": "砲擊手",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1628,6 +1817,9 @@
     {
         "name": "剛刃研磨",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": true,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1638,6 +1830,9 @@
     {
         "name": "砥石使用高速化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1656,6 +1851,9 @@
     {
         "name": "砲彈裝填數UP",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1666,6 +1864,9 @@
     {
         "name": "烤肉名人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1676,6 +1877,9 @@
     {
         "name": "飢餓耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1694,6 +1898,9 @@
     {
         "name": "特殊射擊強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1708,6 +1915,9 @@
     {
         "name": "弱點特效",
         "type": "passive",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1741,6 +1951,9 @@
     {
         "name": "閃光強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1751,6 +1964,9 @@
     {
         "name": "捕獲名人",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1761,6 +1977,9 @@
     {
         "name": "採集達人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1771,6 +1990,9 @@
     {
         "name": "異臭名人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1781,6 +2003,9 @@
     {
         "name": "貫通彈・龍之箭強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1791,6 +2016,9 @@
     {
         "name": "強化持續",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1809,6 +2037,9 @@
     {
         "name": "釣魚名人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1819,6 +2050,9 @@
     {
         "name": "通常彈・通常箭強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1829,6 +2063,9 @@
     {
         "name": "麻痺耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1847,6 +2084,9 @@
     {
         "name": "麻痺屬性強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1865,6 +2105,9 @@
     {
         "name": "探索者的幸運",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1875,6 +2118,9 @@
     {
         "name": "強運",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1885,6 +2131,9 @@
     {
         "name": "麻痺瓶追加",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1895,6 +2144,9 @@
     {
         "name": "跑者",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1913,6 +2165,9 @@
     {
         "name": "集中",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1931,6 +2186,9 @@
     {
         "name": "植生學",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1953,6 +2211,9 @@
     {
         "name": "鈍器能手",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -1963,6 +2224,9 @@
     {
         "name": "最愛菇類",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1981,6 +2245,9 @@
     {
         "name": "裂傷耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -1999,6 +2266,9 @@
     {
         "name": "無屬性強化",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": true,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -2014,6 +2284,9 @@
     {
         "name": "無傷",
         "type": "passive",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2047,6 +2320,9 @@
     {
         "name": "散彈・剛射強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2057,6 +2333,9 @@
     {
         "name": "減輕膽怯",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2075,6 +2354,9 @@
     {
         "name": "超會心",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2108,6 +2390,9 @@
     {
         "name": "超回復力",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -2118,6 +2403,9 @@
     {
         "name": "雷屬性攻擊強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2179,6 +2467,9 @@
     {
         "name": "道具使用強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2197,6 +2488,9 @@
     {
         "name": "搬運達人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2207,6 +2501,9 @@
     {
         "name": "滑走強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2217,6 +2514,9 @@
     {
         "name": "跳躍鐵人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2227,6 +2527,9 @@
     {
         "name": "達人藝",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -2237,6 +2540,9 @@
     {
         "name": "會心攻擊【屬性】",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -2247,6 +2553,9 @@
     {
         "name": "蜂蜜獵人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2257,6 +2566,9 @@
     {
         "name": "解放弓的蓄力階段",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": true,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -2267,6 +2579,9 @@
     {
         "name": "會心攻擊【特殊】",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -2277,6 +2592,9 @@
     {
         "name": "雷耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2316,6 +2634,9 @@
     {
         "name": "睡眠屬性強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2334,6 +2655,9 @@
     {
         "name": "睡眠耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2352,6 +2676,9 @@
     {
         "name": "察覺",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2362,6 +2689,9 @@
     {
         "name": "滿足感",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2372,6 +2702,9 @@
     {
         "name": "奪取耐力",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2390,6 +2723,9 @@
     {
         "name": "精靈加護",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2408,6 +2744,9 @@
     {
         "name": "綿花孢子草的知識",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2426,6 +2765,9 @@
     {
         "name": "精神抖擻",
         "type": "passive",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2459,6 +2801,9 @@
     {
         "name": "睡眠瓶追加",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -2469,22 +2814,25 @@
     {
         "name": "廣域化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
-                "description": "給予周圍的同伴1/3的效果"
+                "description": "給予周圍的同伴1\/3的效果"
             },
             {
                 "level": 2,
-                "description": "給予大範圍的同伴1/3的效果"
+                "description": "給予大範圍的同伴1\/3的效果"
             },
             {
                 "level": 3,
-                "description": "給予大範圍的同伴2/3的效果"
+                "description": "給予大範圍的同伴2\/3的效果"
             },
             {
                 "level": 4,
-                "description": "給予極大範圍的同伴2/3的效果"
+                "description": "給予極大範圍的同伴2\/3的效果"
             },
             {
                 "level": 5,
@@ -2495,6 +2843,9 @@
     {
         "name": "適應瘴氣環境",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2505,6 +2856,9 @@
     {
         "name": "潛伏",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2523,6 +2877,9 @@
     {
         "name": "熱傷害無效",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2533,6 +2890,9 @@
     {
         "name": "適應水場",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2551,6 +2911,9 @@
     {
         "name": "毅力",
         "type": "active",
+        "fromSet": true,
+        "fromJewel": false,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -2561,6 +2924,9 @@
     {
         "name": "龍耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2600,6 +2966,9 @@
     {
         "name": "龍屬性攻擊強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2661,6 +3030,9 @@
     {
         "name": "導蟲反應距離UP",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2671,6 +3043,9 @@
     {
         "name": "整備",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2689,6 +3064,9 @@
     {
         "name": "瘴氣耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2707,6 +3085,9 @@
     {
         "name": "龍封力強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2717,6 +3098,9 @@
     {
         "name": "騎乘名人",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2727,6 +3111,9 @@
     {
         "name": "攀岩者",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2737,6 +3124,9 @@
     {
         "name": "爆破屬性強化",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2755,6 +3145,9 @@
     {
         "name": "蹲下移動速度UP",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": false,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2765,6 +3158,9 @@
     {
         "name": "爆破異常狀態的耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
@@ -2783,6 +3179,9 @@
     {
         "name": "爆破瓶追加",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": false,
         "list": [
             {
                 "level": 1,
@@ -2793,10 +3192,13 @@
     {
         "name": "屬性解放／裝填擴充",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,
-                "description": "激發出1/3的隱藏屬性／增加部分彈藥裝填數",
+                "description": "激發出1\/3的隱藏屬性／增加部分彈藥裝填數",
                 "reaction": {
                     "enableElement": {
                         "multiple": 0.3333
@@ -2805,7 +3207,7 @@
             },
             {
                 "level": 2,
-                "description": "激發出2/3的隱藏屬性／增加多數彈藥裝填數",
+                "description": "激發出2\/3的隱藏屬性／增加多數彈藥裝填數",
                 "reaction": {
                     "enableElement": {
                         "multiple": 0.6666
@@ -2826,6 +3228,9 @@
     {
         "name": "屬性異常狀態耐性",
         "type": "active",
+        "fromSet": false,
+        "fromJewel": true,
+        "fromArmor": true,
         "list": [
             {
                 "level": 1,

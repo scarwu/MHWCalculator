@@ -80,6 +80,10 @@ export default class SkillItemSelector extends Component {
 
             let skill = DataSet.skillHelper.getInfo(skillName);
 
+            if (false === skill.fromJewel && false === skill.fromArmor) {
+                return;
+            }
+
             // Skip Selected Skills
             if (-1 !== data.indexOf(skill.name)) {
                 selectedList.push(skill);
