@@ -38,7 +38,7 @@ export default {
         greatSword: 4.8,
         longSword: 3.3,
         swordAndShield: 1.4,
-        dualSlades: 1.4,
+        dualBlades: 1.4,
         hammer: 5.2,
         huntingHorn: 4.2,
         lance: 2.3,

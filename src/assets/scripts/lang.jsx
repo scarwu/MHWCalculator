@@ -31,7 +31,7 @@ export default {
     greatSword: '大劍',
     longSword: '太刀',
     swordAndShield: '片手劍',
-    dualSlades: '雙劍',
+    dualBlades: '雙劍',
     hammer: '大錘',
     huntingHorn: '狩獵笛',
     lance: '長槍',

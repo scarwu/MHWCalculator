@@ -25,7 +25,7 @@ import Lang from 'lang';
 // Weapon Type List
 var weaponTypeList = [
     'greatSword', 'longSword',
-    'swordAndShield', 'dualSlades',
+    'swordAndShield', 'dualBlades',
     'hammer', 'huntingHorn',
     'lance', 'gunlance',
     'switchAxe', 'chargeBlade',

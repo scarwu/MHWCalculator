@@ -2332,7 +2332,7 @@
     {
         "name": "鉻鋼雙刀 II",
         "rare": 6,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "鑛石素材",
         "attack": 252,
         "criticalRate": 0,
@@ -2370,7 +2370,7 @@
     {
         "name": "殘滅之爪。",
         "rare": 8,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "滅盡龍",
         "attack": 294,
         "criticalRate": 0,
@@ -2407,7 +2407,7 @@
     {
         "name": "決鬥者對劍 III",
         "rare": 6,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "眩鳥",
         "attack": 252,
         "criticalRate": 0,
@@ -2442,7 +2442,7 @@
     {
         "name": "爆鱗雙斧赤紅巨星",
         "rare": 8,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "爆鱗龍",
         "attack": 280,
         "criticalRate": -10,
@@ -2477,7 +2477,7 @@
     {
         "name": "冰結鏈劍 II",
         "rare": 6,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "冰屬系",
         "attack": 252,
         "criticalRate": 0,
@@ -2512,7 +2512,7 @@
     {
         "name": "奧秘雙劍 III",
         "rare": 6,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "搔鳥",
         "attack": 238,
         "criticalRate": 20,
@@ -2543,7 +2543,7 @@
     {
         "name": "神聖佩劍",
         "rare": 7,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "工房武器",
         "attack": 252,
         "criticalRate": 0,
@@ -2578,7 +2578,7 @@
     {
         "name": "強斧 II",
         "rare": 6,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "駭骨素材",
         "attack": 266,
         "criticalRate": 0,
@@ -2613,7 +2613,7 @@
     {
         "name": "蠻顎龍颶風 III",
         "rare": 7,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "蠻顎龍",
         "attack": 294,
         "criticalRate": -20,
@@ -2644,7 +2644,7 @@
     {
         "name": "爆鎚棍棒 II",
         "rare": 7,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "角龍",
         "attack": 322,
         "criticalRate": -10,
@@ -2679,7 +2679,7 @@
     {
         "name": "泥岩龍斬斧 III",
         "rare": 6,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "泥魚龍",
         "attack": 266,
         "criticalRate": 0,
@@ -2714,7 +2714,7 @@
     {
         "name": "溶岩颶風 II",
         "rare": 7,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "溶岩龍",
         "attack": 252,
         "criticalRate": 0,
@@ -2752,7 +2752,7 @@
     {
         "name": "黑色收割者 III",
         "rare": 6,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "巨甲蟲",
         "attack": 224,
         "criticalRate": 0,
@@ -2787,7 +2787,7 @@
     {
         "name": "飛雷龍之爪 III",
         "rare": 6,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "飛雷龍",
         "attack": 252,
         "criticalRate": 10,
@@ -2822,7 +2822,7 @@
     {
         "name": "罪【真】",
         "rare": 8,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "慘爪龍",
         "attack": 224,
         "criticalRate": 20,
@@ -2853,7 +2853,7 @@
     {
         "name": "封龍劍【超絕一門】",
         "rare": 7,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "龍骨",
         "attack": 196,
         "criticalRate": 0,
@@ -2893,7 +2893,7 @@
     {
         "name": "迅雷",
         "rare": 8,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "幻獸",
         "attack": 224,
         "criticalRate": 0,
@@ -2924,7 +2924,7 @@
     {
         "name": "熔山龍鉤爪 II",
         "rare": 7,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "熔山龍",
         "attack": 308,
         "criticalRate": -20,
@@ -2959,7 +2959,7 @@
     {
         "name": "冰炎劍維爾瑪閃焰",
         "rare": 8,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "黑鋼",
         "attack": 252,
         "criticalRate": 10,
@@ -2999,7 +2999,7 @@
     {
         "name": "冥燈龍雙劍",
         "rare": 8,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "冥燈龍",
         "attack": 238,
         "criticalRate": 15,
@@ -3039,7 +3039,7 @@
     {
         "name": "憤怒捕食者",
         "rare": 7,
-        "type": "dualSlades",
+        "type": "dualBlades",
         "series": "恐暴龍",
         "attack": 308,
         "criticalRate": -20,
@@ -9383,12 +9383,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9414,12 +9414,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9445,12 +9445,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9476,12 +9476,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9507,12 +9507,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9538,12 +9538,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9569,12 +9569,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9604,12 +9604,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9635,12 +9635,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9670,12 +9670,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9696,12 +9696,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 60,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 70,
+                "white": 40
             }
         },
         "element": {
@@ -9731,12 +9731,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 80,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 50,
+                "white": 40
             }
         },
         "element": {
@@ -9766,12 +9766,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 150,
+                "orange": 100,
+                "yellow": 30,
+                "green": 30,
+                "blue": 60,
+                "white": 30
             }
         },
         "element": {
@@ -9801,12 +9801,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9832,12 +9832,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9863,12 +9863,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9894,12 +9894,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9925,12 +9925,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9956,12 +9956,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -9987,12 +9987,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10020,12 +10020,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10055,12 +10055,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10086,12 +10086,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10117,12 +10117,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
             }
         },
         "element": {
@@ -10152,12 +10152,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 60,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 70,
+                "white": 40
             }
         },
         "element": {
@@ -10187,12 +10187,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 200,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 50,
+                "white": 40
             }
         },
         "element": {
@@ -10222,12 +10222,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10253,12 +10253,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10284,12 +10284,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10315,12 +10315,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10346,12 +10346,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10381,12 +10381,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10412,12 +10412,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10443,12 +10443,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10474,12 +10474,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10505,12 +10505,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10540,12 +10540,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 160,
+                "orange": 80,
+                "yellow": 20,
+                "green": 20,
+                "blue": 80,
+                "white": 40
             }
         },
         "element": {
@@ -10577,12 +10577,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
             }
         },
         "element": {
@@ -10612,12 +10612,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 160,
+                "orange": 80,
+                "yellow": 20,
+                "green": 20,
+                "blue": 80,
+                "white": 40
             }
         },
         "element": {
@@ -10647,12 +10647,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10678,12 +10678,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10709,12 +10709,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10740,12 +10740,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10775,12 +10775,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10806,12 +10806,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10837,12 +10837,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10868,12 +10868,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10899,12 +10899,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -10913,6 +10913,37 @@
                 "minValue": 150,
                 "maxValue": null,
                 "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": []
+    },
+    {
+        "name": "鎧羅小刀．飛雷",
+        "rare": 7,
+        "type": "dualBlades",
+        "series": "爛輝龍",
+        "attack": 252,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 150,
+                "maxValue": null,
+                "isHidden": false
             },
             "status": null
         },
@@ -10930,12 +10961,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 50,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 80,
+                "white": 40
             }
         },
         "element": {
@@ -10965,12 +10996,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 50,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 80,
+                "white": 40
             }
         },
         "element": {
@@ -11000,12 +11031,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 190,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 60,
+                "white": 40
             }
         },
         "element": {
@@ -11025,37 +11056,6 @@
         ]
     },
     {
-        "name": "鎧羅小刀．飛雷",
-        "rare": 7,
-        "type": "dualBlades",
-        "series": "爛輝龍",
-        "attack": 252,
-        "criticalRate": 10,
-        "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
-            }
-        },
-        "element": {
-            "attack": {
-                "type": "thunder",
-                "minValue": 150,
-                "maxValue": null,
-                "isHidden": false
-            },
-            "status": null
-        },
-        "elderseal": null,
-        "slots": []
-    },
-    {
         "name": "鎧羅大錘．痺賊",
         "rare": 7,
         "type": "hammer",
@@ -11066,12 +11066,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11097,12 +11097,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11128,12 +11128,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11159,12 +11159,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11190,12 +11190,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11221,12 +11221,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11252,12 +11252,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11283,12 +11283,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11318,12 +11318,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11349,12 +11349,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11375,12 +11375,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 190,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 60,
+                "white": 40
             }
         },
         "element": {
@@ -11410,12 +11410,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 150,
+                "orange": 100,
+                "yellow": 30,
+                "green": 30,
+                "blue": 60,
+                "white": 30
             }
         },
         "element": {
@@ -11445,12 +11445,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 80,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 50,
+                "white": 40
             }
         },
         "element": {
@@ -11480,12 +11480,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11511,12 +11511,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11542,12 +11542,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11573,12 +11573,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11604,12 +11604,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11635,12 +11635,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11670,12 +11670,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11701,12 +11701,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11732,12 +11732,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11763,12 +11763,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11789,12 +11789,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
             }
         },
         "element": {
@@ -11824,12 +11824,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 240,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 70
             }
         },
         "element": {
@@ -11861,11 +11861,11 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
+                "red": 50,
+                "orange": 50,
+                "yellow": 50,
+                "green": 80,
+                "blue": 170,
                 "white": 0
             }
         },
@@ -11896,12 +11896,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11927,12 +11927,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11958,12 +11958,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -11989,12 +11989,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12020,12 +12020,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12053,12 +12053,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12088,12 +12088,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12119,12 +12119,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 60,
+                "orange": 120,
+                "yellow": 80,
+                "green": 60,
+                "blue": 30,
+                "white": 50
             }
         },
         "element": {
@@ -12150,12 +12150,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12181,12 +12181,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12207,11 +12207,11 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
+                "red": 110,
+                "orange": 20,
+                "yellow": 20,
+                "green": 140,
+                "blue": 110,
                 "white": 0
             }
         },
@@ -12242,12 +12242,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 90,
+                "orange": 60,
+                "yellow": 60,
+                "green": 100,
+                "blue": 60,
+                "white": 30
             }
         },
         "element": {
@@ -12277,12 +12277,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 70,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 60,
+                "white": 40
             }
         },
         "element": {
@@ -12304,7 +12304,7 @@
     {
         "name": "鎧羅銃槍．風漂",
         "rare": 7,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 368,
         "criticalRate": 10,
@@ -12312,12 +12312,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12335,7 +12335,7 @@
     {
         "name": "鎧羅銃槍．痺賊",
         "rare": 7,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 368,
         "criticalRate": 10,
@@ -12343,12 +12343,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12366,7 +12366,7 @@
     {
         "name": "鎧羅銃槍．飛雷",
         "rare": 7,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 391,
         "criticalRate": 20,
@@ -12374,12 +12374,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12397,7 +12397,7 @@
     {
         "name": "鎧羅銃槍．土砂",
         "rare": 7,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 391,
         "criticalRate": -10,
@@ -12405,12 +12405,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12428,7 +12428,7 @@
     {
         "name": "鎧羅銃槍．王",
         "rare": 7,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 414,
         "criticalRate": 20,
@@ -12436,11 +12436,11 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
+                "red": 80,
+                "orange": 50,
+                "yellow": 50,
+                "green": 80,
+                "blue": 140,
                 "white": 0
             }
         },
@@ -12459,7 +12459,7 @@
     {
         "name": "鎧羅銃槍．爆鱗",
         "rare": 7,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 414,
         "criticalRate": 0,
@@ -12467,12 +12467,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12490,7 +12490,7 @@
     {
         "name": "鎧羅銃槍．泥魚",
         "rare": 7,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 437,
         "criticalRate": 0,
@@ -12498,12 +12498,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12521,7 +12521,7 @@
     {
         "name": "鎧羅銃槍．賊",
         "rare": 7,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 437,
         "criticalRate": 0,
@@ -12529,12 +12529,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12552,7 +12552,7 @@
     {
         "name": "鎧羅銃槍．屍套",
         "rare": 7,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 460,
         "criticalRate": 10,
@@ -12560,12 +12560,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12585,7 +12585,7 @@
     {
         "name": "鎧羅銃槍．蠻顎",
         "rare": 7,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 460,
         "criticalRate": -20,
@@ -12593,12 +12593,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12616,7 +12616,7 @@
     {
         "name": "鎧羅銃槍．水",
         "rare": 8,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 437,
         "criticalRate": 0,
@@ -12624,12 +12624,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 70,
+                "orange": 60,
+                "yellow": 60,
+                "green": 100,
+                "blue": 80,
+                "white": 30
             }
         },
         "element": {
@@ -12651,7 +12651,7 @@
     {
         "name": "鎧羅銃槍．睡眠",
         "rare": 8,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 437,
         "criticalRate": 0,
@@ -12659,12 +12659,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 180,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 70,
+                "white": 40
             }
         },
         "element": {
@@ -12686,7 +12686,7 @@
     {
         "name": "鎧羅銃槍．毒",
         "rare": 8,
-        "type": "gunLance",
+        "type": "gunlance",
         "series": "爛輝龍",
         "attack": 460,
         "criticalRate": 15,
@@ -12694,12 +12694,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 60,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 70,
+                "white": 40
             }
         },
         "element": {
@@ -12729,12 +12729,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12760,12 +12760,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12793,12 +12793,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12824,12 +12824,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12855,12 +12855,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12886,12 +12886,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12917,12 +12917,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12948,12 +12948,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -12979,12 +12979,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13010,12 +13010,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 90,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 60,
+                "white": 20
             }
         },
         "element": {
@@ -13041,12 +13041,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 120,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 70
             }
         },
         "element": {
@@ -13076,12 +13076,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 60,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 70,
+                "white": 40
             }
         },
         "element": {
@@ -13111,11 +13111,11 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
+                "red": 110,
+                "orange": 100,
+                "yellow": 40,
+                "green": 40,
+                "blue": 110,
                 "white": 0
             }
         },
@@ -13146,12 +13146,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13177,12 +13177,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13208,12 +13208,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13239,12 +13239,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13272,12 +13272,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13303,12 +13303,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13334,12 +13334,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13365,12 +13365,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13396,12 +13396,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 90,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 60,
+                "white": 20
             }
         },
         "element": {
@@ -13427,12 +13427,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13453,12 +13453,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 60,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 70,
+                "white": 40
             }
         },
         "element": {
@@ -13488,12 +13488,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 70,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 60,
+                "white": 40
             }
         },
         "element": {
@@ -13523,12 +13523,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 70,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 60,
+                "white": 40
             }
         },
         "element": {
@@ -13558,12 +13558,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13591,12 +13591,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13622,12 +13622,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13653,12 +13653,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13688,12 +13688,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13719,12 +13719,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13754,12 +13754,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13785,12 +13785,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13816,12 +13816,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13847,12 +13847,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 10,
+                "orange": 10,
+                "yellow": 10,
+                "green": 10,
+                "blue": 10,
+                "white": 10
             }
         },
         "element": {
@@ -13873,12 +13873,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
             }
         },
         "element": {
@@ -13908,11 +13908,11 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
+                "red": 70,
+                "orange": 50,
+                "yellow": 50,
+                "green": 80,
+                "blue": 150,
                 "white": 0
             }
         },
@@ -13943,12 +13943,12 @@
         "sharpness": {
             "value": 350,
             "steps": {
-                "red": 0,
-                "orange": 0,
-                "yellow": 0,
-                "green": 0,
-                "blue": 0,
-                "white": 0
+                "red": 70,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 60,
+                "white": 40
             }
         },
         "element": {
