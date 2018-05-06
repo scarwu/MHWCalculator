@@ -17,7 +17,7 @@ export default {
     thunder: '雷',
     ice: '冰',
     dragon: '龍',
-    posion: '毒',
+    poison: '毒',
     paralysis: '麻痺',
     sleep: '睡眠',
     blast: '爆破',

@@ -112,7 +112,7 @@ export default class EquipsDisplayer extends Component {
 
         if (null !== equips.weapon.name) {
             let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
-
+            Misc.log(weaponInfo);
             let originalSharpness = null;
             let enhancedSharpness = null;
 

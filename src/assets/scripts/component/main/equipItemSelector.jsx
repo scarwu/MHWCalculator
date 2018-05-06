@@ -116,6 +116,10 @@ export default class EquipItemSelector extends Component {
             mode = 'weapon';
             type = weaponTypeList[0];
 
+            if (null !== data.equipName) {
+                type = DataSet.weaponHelper.getInfo(data.equipName).type;
+            }
+
             weaponTypeList.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
                     list = list.concat(
@@ -237,6 +241,18 @@ export default class EquipItemSelector extends Component {
                                 originalSharpness = Misc.deepCopy(data.sharpness);
                                 enhancedSharpness = Misc.deepCopy(data.sharpness);
                                 enhancedSharpness.value += 50;
+                            }
+
+                            if (null !== data.element.attack
+                                && null === data.element.attack.maxValue) {
+
+                                data.element.attack.maxValue = '?';
+                            }
+
+                            if (null !== data.element.status
+                                && null === data.element.status.maxValue) {
+
+                                data.element.status.maxValue = '?';
                             }
 
                             return (
