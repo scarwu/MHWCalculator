@@ -9380,17 +9380,7 @@
         "attack": 768,
         "criticalRate": 30,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -9411,17 +9401,7 @@
         "attack": 864,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -9442,17 +9422,7 @@
         "attack": 912,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
@@ -9473,22 +9443,12 @@
         "attack": 912,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
                 "minValue": 240,
-                "maxValue": null,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -9504,17 +9464,7 @@
         "attack": 912,
         "criticalRate": 10,
         "defense": 30,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -9535,22 +9485,12 @@
         "attack": 960,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "dragon",
                 "minValue": 300,
-                "maxValue": null,
+                "maxValue": 390,
                 "isHidden": false
             },
             "status": null
@@ -9566,17 +9506,7 @@
         "attack": 960,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "water",
@@ -9601,17 +9531,7 @@
         "attack": 1008,
         "criticalRate": -20,
         "defense": 30,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -9632,17 +9552,7 @@
         "attack": 1008,
         "criticalRate": -20,
         "defense": 25,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -9667,17 +9577,7 @@
         "attack": 0,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": null
@@ -9798,17 +9698,7 @@
         "attack": 528,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -9829,17 +9719,7 @@
         "attack": 660,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "water",
@@ -9860,17 +9740,7 @@
         "attack": 528,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "ice",
@@ -9891,17 +9761,7 @@
         "attack": 561,
         "criticalRate": 20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -9922,22 +9782,12 @@
         "attack": 594,
         "criticalRate": 30,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "thunder",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -9953,17 +9803,7 @@
         "attack": 627,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "thunder",
@@ -9984,17 +9824,7 @@
         "attack": 660,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "dragon",
@@ -10017,22 +9847,12 @@
         "attack": 660,
         "criticalRate": 0,
         "defense": 40,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
                 "minValue": 120,
-                "maxValue": null,
+                "maxValue": 160,
                 "isHidden": false
             },
             "status": null
@@ -10052,22 +9872,12 @@
         "attack": 693,
         "criticalRate": -10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
                 "minValue": 390,
-                "maxValue": null,
+                "maxValue": 510,
                 "isHidden": false
             },
             "status": null
@@ -10083,17 +9893,7 @@
         "attack": 726,
         "criticalRate": -20,
         "defense": 30,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -10219,22 +10019,12 @@
         "attack": 224,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "thunder",
                 "minValue": 360,
-                "maxValue": null,
+                "maxValue": 460,
                 "isHidden": false
             },
             "status": null
@@ -10250,17 +10040,7 @@
         "attack": 224,
         "criticalRate": 30,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -10281,22 +10061,12 @@
         "attack": 224,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "ice",
                 "minValue": 330,
-                "maxValue": null,
+                "maxValue": 430,
                 "isHidden": false
             },
             "status": null
@@ -10312,17 +10082,7 @@
         "attack": 252,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -10343,17 +10103,7 @@
         "attack": 252,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -10378,22 +10128,12 @@
         "attack": 266,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "water",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -10409,22 +10149,12 @@
         "attack": 266,
         "criticalRate": 30,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
                 "minValue": 180,
-                "maxValue": null,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -10440,23 +10170,13 @@
         "attack": 266,
         "criticalRate": 10,
         "defense": 30,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
                 "type": "sleep",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 260,
                 "isHidden": false
             }
         },
@@ -10471,17 +10191,7 @@
         "attack": 294,
         "criticalRate": -20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
@@ -10502,17 +10212,7 @@
         "attack": 308,
         "criticalRate": -10,
         "defense": 25,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -10552,7 +10252,7 @@
             "attack": {
                 "type": "dragon",
                 "minValue": 450,
-                "maxValue": null,
+                "maxValue": 580,
                 "isHidden": true
             },
             "status": null
@@ -10624,7 +10324,7 @@
             "attack": {
                 "type": "water",
                 "minValue": 420,
-                "maxValue": null,
+                "maxValue": 550,
                 "isHidden": true
             },
             "status": null
@@ -10644,17 +10344,7 @@
         "attack": 238,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -10675,17 +10365,7 @@
         "attack": 238,
         "criticalRate": 20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -10706,17 +10386,7 @@
         "attack": 252,
         "criticalRate": 20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
@@ -10737,22 +10407,12 @@
         "attack": 266,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
                 "minValue": 150,
-                "maxValue": null,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -10772,22 +10432,12 @@
         "attack": 266,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "thunder",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 270,
                 "isHidden": true
             },
             "status": null
@@ -10803,17 +10453,7 @@
         "attack": 266,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "water",
@@ -10834,17 +10474,7 @@
         "attack": 280,
         "criticalRate": -20,
         "defense": 30,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -10865,17 +10495,7 @@
         "attack": 294,
         "criticalRate": -20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
@@ -10896,22 +10516,12 @@
         "attack": 322,
         "criticalRate": -10,
         "defense": 25,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "ice",
                 "minValue": 150,
-                "maxValue": null,
+                "maxValue": 200,
                 "isHidden": true
             },
             "status": null
@@ -10927,22 +10537,12 @@
         "attack": 252,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "thunder",
                 "minValue": 150,
-                "maxValue": null,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -11063,17 +10663,7 @@
         "attack": 832,
         "criticalRate": 30,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -11094,23 +10684,13 @@
         "attack": 884,
         "criticalRate": 35,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
                 "type": "sleep",
                 "minValue": 360,
-                "maxValue": null,
+                "maxValue": 440,
                 "isHidden": true
             }
         },
@@ -11125,17 +10705,7 @@
         "attack": 988,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -11156,17 +10726,7 @@
         "attack": 988,
         "criticalRate": 10,
         "defense": 30,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -11187,17 +10747,7 @@
         "attack": 1040,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "dragon",
@@ -11218,17 +10768,7 @@
         "attack": 1040,
         "criticalRate": -20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
@@ -11249,17 +10789,7 @@
         "attack": 1092,
         "criticalRate": 0,
         "defense": 30,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
@@ -11280,17 +10810,7 @@
         "attack": 1092,
         "criticalRate": -10,
         "defense": 25,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -11315,17 +10835,7 @@
         "attack": 1144,
         "criticalRate": -25,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "ice",
@@ -11346,17 +10856,7 @@
         "attack": 0,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": null
@@ -11422,7 +10922,7 @@
             "attack": {
                 "type": "thunder",
                 "minValue": 480,
-                "maxValue": null,
+                "maxValue": 580,
                 "isHidden": true
             },
             "status": null
@@ -11457,7 +10957,7 @@
             "attack": {
                 "type": "water",
                 "minValue": 360,
-                "maxValue": null,
+                "maxValue": 470,
                 "isHidden": true
             },
             "status": null
@@ -11477,22 +10977,12 @@
         "attack": 630,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "thunder",
                 "minValue": 540,
-                "maxValue": null,
+                "maxValue": 640,
                 "isHidden": false
             },
             "status": null
@@ -11508,17 +10998,7 @@
         "attack": 672,
         "criticalRate": 30,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -11539,17 +11019,7 @@
         "attack": 672,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "ice",
@@ -11570,22 +11040,12 @@
         "attack": 714,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "water",
                 "minValue": 420,
-                "maxValue": null,
+                "maxValue": 550,
                 "isHidden": false
             },
             "status": null
@@ -11601,17 +11061,7 @@
         "attack": 714,
         "criticalRate": 35,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -11632,23 +11082,13 @@
         "attack": 756,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
                 "type": "poison",
                 "minValue": 540,
-                "maxValue": null,
+                "maxValue": 660,
                 "isHidden": false
             }
         },
@@ -11667,17 +11107,7 @@
         "attack": 798,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -11698,17 +11128,7 @@
         "attack": 798,
         "criticalRate": 10,
         "defense": 30,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -11729,22 +11149,12 @@
         "attack": 840,
         "criticalRate": -20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
                 "minValue": 450,
-                "maxValue": null,
+                "maxValue": 580,
                 "isHidden": false
             },
             "status": null
@@ -11760,17 +11170,7 @@
         "attack": 0,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": null
@@ -11836,7 +11236,7 @@
             "attack": {
                 "type": "dragon",
                 "minValue": 540,
-                "maxValue": null,
+                "maxValue": 690,
                 "isHidden": true
             },
             "status": null
@@ -11893,17 +11293,7 @@
         "attack": 368,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
@@ -11924,17 +11314,7 @@
         "attack": 368,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -11955,17 +11335,7 @@
         "attack": 368,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "ice",
@@ -11986,17 +11356,7 @@
         "attack": 391,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -12017,22 +11377,12 @@
         "attack": 391,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "dragon",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -12050,17 +11400,7 @@
         "attack": 391,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -12085,17 +11425,7 @@
         "attack": 391,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -12147,17 +11477,7 @@
         "attack": 437,
         "criticalRate": -20,
         "defense": 25,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -12178,17 +11498,7 @@
         "attack": 0,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": null
@@ -12219,7 +11529,7 @@
             "attack": {
                 "type": "thunder",
                 "minValue": 600,
-                "maxValue": null,
+                "maxValue": 700,
                 "isHidden": true
             },
             "status": null
@@ -12309,17 +11619,7 @@
         "attack": 368,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "ice",
@@ -12340,17 +11640,7 @@
         "attack": 368,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -12371,22 +11661,12 @@
         "attack": 391,
         "criticalRate": 20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "thunder",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
@@ -12402,17 +11682,7 @@
         "attack": 391,
         "criticalRate": -10,
         "defense": 25,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -12448,7 +11718,7 @@
             "attack": {
                 "type": "fire",
                 "minValue": 240,
-                "maxValue": null,
+                "maxValue": 310,
                 "isHidden": false
             },
             "status": null
@@ -12464,17 +11734,7 @@
         "attack": 414,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -12495,17 +11755,7 @@
         "attack": 437,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "water",
@@ -12526,17 +11776,7 @@
         "attack": 437,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -12557,17 +11797,7 @@
         "attack": 460,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "dragon",
@@ -12590,17 +11820,7 @@
         "attack": 460,
         "criticalRate": -20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
@@ -12707,7 +11927,7 @@
             "status": {
                 "type": "poison",
                 "minValue": 450,
-                "maxValue": null,
+                "maxValue": 550,
                 "isHidden": true
             }
         },
@@ -12726,22 +11946,12 @@
         "attack": 560,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "ice",
                 "minValue": 300,
-                "maxValue": null,
+                "maxValue": 390,
                 "isHidden": false
             },
             "status": null
@@ -12757,17 +11967,7 @@
         "attack": 595,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "dragon",
@@ -12790,17 +11990,7 @@
         "attack": 595,
         "criticalRate": 25,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -12821,17 +12011,7 @@
         "attack": 630,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -12852,23 +12032,13 @@
         "attack": 665,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
                 "type": "sleep",
                 "minValue": 150,
-                "maxValue": null,
+                "maxValue": 190,
                 "isHidden": false
             }
         },
@@ -12883,22 +12053,12 @@
         "attack": 665,
         "criticalRate": 15,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 270,
                 "isHidden": false
             },
             "status": null
@@ -12914,17 +12074,7 @@
         "attack": 665,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "water",
@@ -12945,22 +12095,12 @@
         "attack": 735,
         "criticalRate": 10,
         "defense": 40,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
                 "minValue": 120,
-                "maxValue": null,
+                "maxValue": 160,
                 "isHidden": false
             },
             "status": null
@@ -12976,17 +12116,7 @@
         "attack": 735,
         "criticalRate": -20,
         "defense": 25,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -13143,17 +12273,7 @@
         "attack": 576,
         "criticalRate": 30,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -13174,22 +12294,12 @@
         "attack": 684,
         "criticalRate": 25,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
                 "minValue": 90,
-                "maxValue": null,
+                "maxValue": 120,
                 "isHidden": true
             },
             "status": null
@@ -13205,17 +12315,7 @@
         "attack": 684,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -13236,17 +12336,7 @@
         "attack": 684,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "dragon",
@@ -13269,17 +12359,7 @@
         "attack": 684,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -13300,17 +12380,7 @@
         "attack": 684,
         "criticalRate": 20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
@@ -13331,17 +12401,7 @@
         "attack": 684,
         "criticalRate": 10,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "water",
@@ -13362,22 +12422,12 @@
         "attack": 684,
         "criticalRate": 15,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "thunder",
                 "minValue": 90,
-                "maxValue": null,
+                "maxValue": 120,
                 "isHidden": false
             },
             "status": null
@@ -13408,7 +12458,7 @@
             "attack": {
                 "type": "ice",
                 "minValue": 210,
-                "maxValue": null,
+                "maxValue": 270,
                 "isHidden": true
             },
             "status": null
@@ -13424,17 +12474,7 @@
         "attack": 0,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": null
@@ -13465,7 +12505,7 @@
             "attack": {
                 "type": "ice",
                 "minValue": 390,
-                "maxValue": null,
+                "maxValue": 490,
                 "isHidden": true
             },
             "status": null
@@ -13501,7 +12541,7 @@
             "status": {
                 "type": "sleep",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 330,
                 "isHidden": true
             }
         },
@@ -13535,7 +12575,7 @@
             "attack": {
                 "type": "thunder",
                 "minValue": 420,
-                "maxValue": null,
+                "maxValue": 520,
                 "isHidden": true
             },
             "status": null
@@ -13555,22 +12595,12 @@
         "attack": 527,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "dragon",
                 "minValue": 180,
-                "maxValue": null,
+                "maxValue": 320,
                 "isHidden": false
             },
             "status": null
@@ -13588,17 +12618,7 @@
         "attack": 527,
         "criticalRate": 30,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -13619,17 +12639,7 @@
         "attack": 558,
         "criticalRate": 20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
@@ -13650,17 +12660,7 @@
         "attack": 558,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
@@ -13685,17 +12685,7 @@
         "attack": 558,
         "criticalRate": 20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "thunder",
@@ -13716,23 +12706,13 @@
         "attack": 558,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": {
                 "type": "poison",
                 "minValue": 390,
-                "maxValue": null,
+                "maxValue": 480,
                 "isHidden": false
             }
         },
@@ -13751,17 +12731,7 @@
         "attack": 589,
         "criticalRate": 0,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "thunder",
@@ -13782,17 +12752,7 @@
         "attack": 589,
         "criticalRate": 20,
         "defense": 20,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "fire",
@@ -13813,17 +12773,7 @@
         "attack": 713,
         "criticalRate": -30,
         "defense": 25,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": {
                 "type": "ice",
@@ -13844,17 +12794,7 @@
         "attack": 0,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": {
-            "value": 350,
-            "steps": {
-                "red": 10,
-                "orange": 10,
-                "yellow": 10,
-                "green": 10,
-                "blue": 10,
-                "white": 10
-            }
-        },
+        "sharpness": null,
         "element": {
             "attack": null,
             "status": null
@@ -14108,7 +13048,7 @@
             "attack": {
                 "type": "dragon",
                 "minValue": 270,
-                "maxValue": null,
+                "maxValue": 350,
                 "isHidden": false
             },
             "status": null
