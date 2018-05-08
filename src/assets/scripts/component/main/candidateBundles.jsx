@@ -143,30 +143,32 @@ export default class CandidateBundles extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 mhwc-item mhwc-slots">
-                        <div className="col-12 mhwc-name">
-                            <span>剩餘插槽</span>
-                        </div>
-                        <div className="col-12 mhwc-value">
-                            <div className="row">
-                                {Object.keys(data.meta.remainingSlotCount).map((slotSize) => {
-                                    if ('all' === slotSize) {
-                                        return;
-                                    }
+                    {(0 < data.meta.remainingSlotCount.all) ? (
+                        <div className="col-12 mhwc-item mhwc-slots">
+                            <div className="col-12 mhwc-name">
+                                <span>剩餘插槽</span>
+                            </div>
+                            <div className="col-12 mhwc-value">
+                                <div className="row">
+                                    {Object.keys(data.meta.remainingSlotCount).map((slotSize) => {
+                                        if ('all' === slotSize) {
+                                            return;
+                                        }
 
-                                    let slotCount = data.meta.remainingSlotCount[slotSize];
+                                        let slotCount = data.meta.remainingSlotCount[slotSize];
 
-                                    return (
-                                        <div key={slotSize} className="col-4">
-                                            <div className="mhwc-value">
-                                                <span>{`[${slotSize}] x ${slotCount}`}</span>
+                                        return (slotCount > 0) ? (
+                                            <div key={slotSize} className="col-4">
+                                                <div className="mhwc-value">
+                                                    <span>{`[${slotSize}] x ${slotCount}`}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    );
-                                })}
+                                        ) : false;
+                                    })}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    ) : false}
 
                     {(0 !== Object.keys(data.jewels).length) ? (
                         <div className="col-12 mhwc-item mhwc-jewels">

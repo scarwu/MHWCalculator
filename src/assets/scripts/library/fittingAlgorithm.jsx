@@ -38,11 +38,12 @@ export default class FittingAlgorithm {
         this.skipSkills = {};
         this.usedEquips = {};
         this.usedEquipTypes = {};
+        this.conditionExpectedValue = 0;
+        this.conditionExpectedLevel = 0;
+        this.maxEquipsExpectedValue = {};
+        this.maxEquipsExpectedLevel = {};
 
         let candidateEquips = {};
-        let conditionExpectedValue = 0;
-        let maxEquipsExpectedValue = {};
-
         let lastBundleLimit = 200;
         let prevBundleList = {};
         let nextBundleList = {};
@@ -81,12 +82,14 @@ export default class FittingAlgorithm {
                 size: jewel.size,
             } : null;
 
-            // Increase Expected Value
+            // Increase Expected Value & Level
             if (null !== jewel) {
-                conditionExpectedValue += skill.level * jewel.size; // 1, 2, 3
+                this.conditionExpectedValue += skill.level * jewel.size; // 1, 2, 3
             } else {
-                conditionExpectedValue += skill.level * 4;
+                this.conditionExpectedValue += skill.level * 4;
             }
+
+            this.conditionExpectedLevel += skill.level;
         });
 
         // Create First Bundle
@@ -137,6 +140,7 @@ export default class FittingAlgorithm {
 
                     bundle.jewels[slot.jewel.name] += 1;
                     bundle.meta.remainingSlotCount[slot.size] -= 1;
+                    bundle.meta.remainingSlotCount.all -= 1;
                 });
             }
 
@@ -152,15 +156,16 @@ export default class FittingAlgorithm {
         let requireEquipCount = this.conditionEquips.length;
         let requireSkillCount = Object.keys(this.conditionSkills).length;
 
-        Misc.log(this.conditionSkills);
-        Misc.log(this.conditionEquips);
-        Misc.log(this.correspondJewels);
-        Misc.log(conditionExpectedValue);
-        Misc.log(prevBundleList);
+        Misc.log('Condition Skills:', this.conditionSkills);
+        Misc.log('Condition Equips:', this.conditionEquips);
+        Misc.log('Correspond Jewels:', this.correspondJewels);
+        Misc.log('Condition Expected Value:', this.conditionExpectedValue);
+        Misc.log('Condition Expected Level:', this.conditionExpectedLevel);
+        Misc.log('Init - Bundle List:', prevBundleList);
 
         if (0 !== Object.keys(this.conditionSets).length) {
 
-            // Create Candidate Equips
+            // Create Candidate Equips with Set Equips
             Misc.log('Create Candidate Equips with Set Equips');
 
             candidateEquips = {};
@@ -189,18 +194,20 @@ export default class FittingAlgorithm {
                 candidateEquips[equipType]['empty'] = candidateEquip;
             });
 
-            Misc.log('Set - helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
-            Misc.log('Set - chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
-            Misc.log('Set - arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
-            Misc.log('Set - waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
-            Misc.log('Set - leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
+            this.conditionEquips.forEach((equipType) => {
+                if ('charm' === equipType) {
+                    return;
+                }
+
+                Misc.log('Equip Count:', equipType, Object.keys(candidateEquips[equipType]).length, candidateEquips[equipType]);
+            });
 
             this.conditionEquips.forEach((equipType) => {
                 if ('charm' === equipType) {
                     return;
                 }
 
-                Misc.log('Set - Bundle List:', equipType, Object.keys(prevBundleList).length);
+                Misc.log('Bundle Count:', equipType, Object.keys(prevBundleList).length);
 
                 nextBundleList = {};
 
@@ -268,7 +275,7 @@ export default class FittingAlgorithm {
                 prevBundleList = nextBundleList;
             });
 
-            Misc.log('Set - BundleList:', Object.keys(prevBundleList).length);
+            Misc.log('Bundle Count:', Object.keys(prevBundleList).length);
 
             // Sets Require Equips is Overflow
             if (0 === Object.keys(prevBundleList).length) {
@@ -303,8 +310,8 @@ export default class FittingAlgorithm {
 
         prevBundleList = nextBundleList;
 
-        // Create Candidate Equips
-        Misc.log('Create Candidate Equips');
+        // Create Candidate Equips with Skill & Slot Equips
+        Misc.log('Create Candidate Equips with Skill & Slot Equips');
 
         candidateEquips = {};
 
@@ -349,15 +356,32 @@ export default class FittingAlgorithm {
             candidateEquips[equipType]['empty'] = candidateEquip;
         });
 
-        maxEquipsExpectedValue = this.cerateMaxEquipsExpectedValue(candidateEquips);
+        Object.keys(candidateEquips).forEach((equipType) => {
+            if (undefined === this.maxEquipsExpectedValue[equipType]) {
+                this.maxEquipsExpectedValue[equipType] = 0;
+            }
 
-        Misc.log('Equip Helm', Object.keys(candidateEquips.helm).length, candidateEquips.helm);
-        Misc.log('Equip Chest', Object.keys(candidateEquips.chest).length, candidateEquips.chest);
-        Misc.log('Equip Arm', Object.keys(candidateEquips.arm).length, candidateEquips.arm);
-        Misc.log('Equip Waist', Object.keys(candidateEquips.waist).length, candidateEquips.waist);
-        Misc.log('Equip Leg', Object.keys(candidateEquips.leg).length, candidateEquips.leg);
-        Misc.log('Equip Charm', Object.keys(candidateEquips.charm).length, candidateEquips.charm);
-        Misc.log('Equips Expected Value', maxEquipsExpectedValue);
+            if (undefined === this.maxEquipsExpectedLevel[equipType]) {
+                this.maxEquipsExpectedLevel[equipType] = 0;
+            }
+
+            Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
+                if (this.maxEquipsExpectedValue[equipType] <= candidateEquip.expectedValue) {
+                    this.maxEquipsExpectedValue[equipType] = candidateEquip.expectedValue;
+                }
+
+                if (this.maxEquipsExpectedLevel[equipType] <= candidateEquip.expectedLevel) {
+                    this.maxEquipsExpectedLevel[equipType] = candidateEquip.expectedLevel;
+                }
+            });
+        });
+
+        this.conditionEquips.forEach((equipType) => {
+            Misc.log('Equip Count:', equipType, Object.keys(candidateEquips[equipType]).length, candidateEquips[equipType]);
+        });
+
+        Misc.log('Equips Expected Value:', this.maxEquipsExpectedValue);
+        Misc.log('Equips Expected Level:', this.maxEquipsExpectedLevel);
 
         // Create Next BundleList
         Misc.log('Create Next BundleList');
@@ -369,7 +393,7 @@ export default class FittingAlgorithm {
                 return;
             }
 
-            Misc.log('Bundle List:', equipType, Object.keys(prevBundleList).length);
+            Misc.log('Bundle Count:', equipType, Object.keys(prevBundleList).length);
 
             this.usedEquipTypes[equipType] = true;
 
@@ -409,7 +433,7 @@ export default class FittingAlgorithm {
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
                     // Check Bundle Have a Future
-                    if (false === this.isBundleHaveFuture(bundle, maxEquipsExpectedValue, conditionExpectedValue)) {
+                    if (false === this.isBundleHaveFuture(bundle)) {
                         return;
                     }
 
@@ -452,7 +476,7 @@ export default class FittingAlgorithm {
                     }
 
                     // If Equips Expected Value Is Full Then Do Fully Check
-                    if (bundle.meta.expectedValue >= conditionExpectedValue) {
+                    if (bundle.meta.expectedValue >= this.conditionExpectedValue) {
 
                     //     // Completed Bundle By Skills
                     //     let tempBundle = this.completeBundleBySkills(bundle);
@@ -493,7 +517,7 @@ export default class FittingAlgorithm {
 
             prevBundleList = nextBundleList;
 
-            Misc.log('Result - BundleList (Zero):', Object.keys(lastBundleList).length);
+            Misc.log('Result - Bundle Count (Pre):', Object.keys(lastBundleList).length);
 
             if (lastBundleLimit <= Object.keys(lastBundleList).length) {
                 isFinish = true;
@@ -510,11 +534,6 @@ export default class FittingAlgorithm {
         Object.keys(prevBundleList).forEach((hash) => {
             let bundle = Misc.deepCopy(prevBundleList[hash]);
 
-            // Check Expected Value
-            if (bundle.meta.expectedValue < conditionExpectedValue) {
-                return;
-            }
-
             // Completed Bundle By Skills
             bundle = this.completeBundleBySkills(bundle);
 
@@ -527,7 +546,7 @@ export default class FittingAlgorithm {
             }
         });
 
-        Misc.log('Result - BundleList (One):', Object.keys(lastBundleList).length);
+        Misc.log('Result - Bundle Count (Final):', Object.keys(lastBundleList).length);
 
         lastBundleList = Object.values(lastBundleList).sort((a, b) => {
             let valueA = (8 - a.meta.euqipCount) * 1000 + a.defense;
@@ -563,29 +582,6 @@ export default class FittingAlgorithm {
         });
 
         return MD5(JSON.stringify([equips, jewels]));
-    };
-
-    /**
-     * Cerate Max Equips Expected Value
-     */
-    cerateMaxEquipsExpectedValue = (candidateEquips) => {
-        let maxEquipsExpectedValue = {};
-
-        Object.keys(candidateEquips).forEach((equipType) => {
-            if (undefined === maxEquipsExpectedValue[equipType]) {
-                maxEquipsExpectedValue[equipType] = 0;
-            }
-
-            Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
-                if (maxEquipsExpectedValue[equipType] > candidateEquip.expectedValue) {
-                    return;
-                }
-
-                maxEquipsExpectedValue[equipType] = candidateEquip.expectedValue;
-            });
-        });
-
-        return maxEquipsExpectedValue
     };
 
     /**
@@ -642,7 +638,7 @@ export default class FittingAlgorithm {
         equip.skills.forEach((skill) => {
             candidateEquip.skills[skill.name] = skill.level;
 
-            // Increase Expected Value
+            // Increase Expected Value & Level
             if (undefined !== this.correspondJewels[skill.name]) {
                 let jewel = this.correspondJewels[skill.name];
 
@@ -651,14 +647,17 @@ export default class FittingAlgorithm {
                 } else {
                     candidateEquip.expectedValue += skill.level * 4;
                 }
+
+                candidateEquip.expectedLevel += skill.level;
             }
         });
 
         equip.slots.forEach((slot) => {
             candidateEquip.ownSlotCount[slot.size] += 1;
 
-            // Increase Expected Value
+            // Increase Expected Value & Level
             candidateEquip.expectedValue += slot.size;
+            candidateEquip.expectedLevel += 1;
         });
 
         return candidateEquip;
@@ -688,17 +687,19 @@ export default class FittingAlgorithm {
      *
      * Thisi is magic function, which is see through the future
      */
-    isBundleHaveFuture = (bundle, maxEquipsExpectedValue, conditionExpectedValue) => {
-
+    isBundleHaveFuture = (bundle) => {
         let currentExpectedValue = bundle.meta.expectedValue;
+        let currentExpectedLevel = bundle.meta.expectedLevel;
 
-        if (currentExpectedValue >= conditionExpectedValue) {
+        if (currentExpectedValue >= this.conditionExpectedValue
+            && currentExpectedLevel >= this.conditionExpectedLevel) {
+
             return true;
         }
 
         let haveFuture = false;
 
-        Object.keys(maxEquipsExpectedValue).forEach((equipType) => {
+        this.conditionEquips.forEach((equipType) => {
             if (true === haveFuture) {
                 return;
             }
@@ -713,9 +714,12 @@ export default class FittingAlgorithm {
                 return;
             }
 
-            currentExpectedValue += maxEquipsExpectedValue[equipType];
+            currentExpectedValue += this.maxEquipsExpectedValue[equipType];
+            currentExpectedLevel += this.maxEquipsExpectedLevel[equipType];
 
-            if (currentExpectedValue >= conditionExpectedValue) {
+            if (currentExpectedValue >= this.conditionExpectedValue
+                && currentExpectedLevel >= this.conditionExpectedLevel) {
+
                 haveFuture = true;
             }
         });
@@ -760,13 +764,15 @@ export default class FittingAlgorithm {
 
         for (let size = 1; size <= 3; size++) {
             bundle.meta.remainingSlotCount[size] += candidateEquip.ownSlotCount[size];
+            bundle.meta.remainingSlotCount.all += candidateEquip.ownSlotCount[size];
         }
 
         // Increase Equip Count
         bundle.meta.euqipCount += 1;
 
-        // Increase Expected Value
+        // Increase Expected Value & Level
         bundle.meta.expectedValue += candidateEquip.expectedValue;
+        bundle.meta.expectedLevel += candidateEquip.expectedLevel;
 
         return bundle;
     };
@@ -792,7 +798,7 @@ export default class FittingAlgorithm {
             bundle = this.addJewelToBundleBySpecificSkill(bundle, {
                 name: skillName,
                 level: skillLevel
-            }, this.correspondJewels[skillName], true);
+            }, this.correspondJewels[skillName]);
 
             if (false === bundle) {
                 isSkip = true;
@@ -815,7 +821,7 @@ export default class FittingAlgorithm {
     /**
      * Add Jewel To Bundle By Specific Skill
      */
-    addJewelToBundleBySpecificSkill = (bundle, skill, jewel, isAllowLargerSlot = false) => {
+    addJewelToBundleBySpecificSkill = (bundle, skill, jewel) => {
         let diffSkillLevel = skill.level - bundle.skills[skill.name];
 
         if (0 === diffSkillLevel) {
@@ -834,35 +840,25 @@ export default class FittingAlgorithm {
             3: 0
         };
 
-        if (true === isAllowLargerSlot) {
-            while (true) {
-                if (0 !== bundle.meta.remainingSlotCount[currentSlotSize]) {
-                    if (diffSkillLevel > bundle.meta.remainingSlotCount[currentSlotSize]) {
-                        usedSlotCount[currentSlotSize] = bundle.meta.remainingSlotCount[currentSlotSize];
-                        diffSkillLevel -= bundle.meta.remainingSlotCount[currentSlotSize];
-                    } else {
-                        usedSlotCount[currentSlotSize] = diffSkillLevel;
-                        diffSkillLevel = 0;
-                    }
-                }
-
-                currentSlotSize += 1;
-
-                if (0 === diffSkillLevel) {
-                    break;
-                }
-
-                // Failed - No Slots
-                if (3 < currentSlotSize) {
-                    return false;
+        while (true) {
+            if (0 !== bundle.meta.remainingSlotCount[currentSlotSize]) {
+                if (diffSkillLevel > bundle.meta.remainingSlotCount[currentSlotSize]) {
+                    usedSlotCount[currentSlotSize] = bundle.meta.remainingSlotCount[currentSlotSize];
+                    diffSkillLevel -= bundle.meta.remainingSlotCount[currentSlotSize];
+                } else {
+                    usedSlotCount[currentSlotSize] = diffSkillLevel;
+                    diffSkillLevel = 0;
                 }
             }
-        } else {
+
+            currentSlotSize += 1;
+
+            if (0 === diffSkillLevel) {
+                break;
+            }
 
             // Failed - No Slots
-            if (0 === bundle.meta.remainingSlotCount[currentSlotSize]
-                || diffSkillLevel > bundle.meta.remainingSlotCount[currentSlotSize]) {
-
+            if (3 < currentSlotSize) {
                 return false;
             }
         }
@@ -882,6 +878,7 @@ export default class FittingAlgorithm {
 
         Object.keys(usedSlotCount).forEach((slotSize) => {
             bundle.meta.remainingSlotCount[slotSize] -= usedSlotCount[slotSize];
+            bundle.meta.remainingSlotCount.all -= usedSlotCount[slotSize];
         });
 
         return bundle;

@@ -61,7 +61,8 @@ export default {
             2: 0,
             3: 0
         },
-        expectedValue: 0
+        expectedValue: 0,
+        expectedLevel: 0
     },
     defaultBundle: {
         equips: {
@@ -79,6 +80,7 @@ export default {
         sets: {},
         meta: {
             expectedValue: 0,
+            expectedLevel: 0,
             euqipCount: 0,
             completedSkills: {},
             remainingSlotCount: {
