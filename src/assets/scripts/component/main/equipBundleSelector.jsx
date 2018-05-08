@@ -44,8 +44,10 @@ export default class EquipBundleSelector extends Component {
         this.props.onClose();
     };
 
-    handleBundleSave = () => {
-        let bundleName = this.refs.bundleName.value;
+    handleBundleSave = (index) => {
+        let bundleName = (null !== index)
+            ? this.refs['bundleName_' + index].value
+            : this.refs.bundleName.value;
 
         if (0 === bundleName.length) {
             return;
@@ -53,18 +55,31 @@ export default class EquipBundleSelector extends Component {
 
         let equipBundleList = this.state.equipBundleList;
 
-        equipBundleList.push({
-            name: bundleName,
-            equips: this.state.equips
-        });
+        if (null !== index) {
+            let equipBundle = equipBundleList[index];
 
-        // Set Equip Bundle List Data to Status
-        Status.set('equipBundleList', equipBundleList);
+            equipBundle.name = bundleName;
 
-        this.setState({
-            equips: null,
-            equipBundleList: equipBundleList
-        });
+            // Set Equip Bundle List Data to Status
+            Status.set('equipBundleList', equipBundleList);
+
+            this.setState({
+                equipBundleList: equipBundleList
+            });
+        } else {
+            equipBundleList.push({
+                name: bundleName,
+                equips: this.state.equips
+            });
+
+            // Set Equip Bundle List Data to Status
+            Status.set('equipBundleList', equipBundleList);
+
+            this.setState({
+                equips: null,
+                equipBundleList: equipBundleList
+            });
+        }
     };
 
     handleBundleRemove = (index) => {
@@ -154,7 +169,7 @@ export default class EquipBundleSelector extends Component {
     renderRow = (data, index) => {
         return (
             <tr key={data.name}>
-                <td><span>{data.name}</span></td>
+                <td><input type="text" ref={'bundleName_' + index} defaultValue={data.name} /></td>
                 <td><span>{data.equips.weapon.name}</span></td>
                 <td><span>{data.equips.helm.name}</span></td>
                 <td><span>{data.equips.chest.name}</span></td>
@@ -165,14 +180,19 @@ export default class EquipBundleSelector extends Component {
                 <td>
                     <div className="mhwc-icons_bundle">
                         <a className="mhwc-icon"
+                            onClick={() => {this.handleBundlePickUp(index)}}>
+
+                            <i className="fa fa-check"></i>
+                        </a>
+                        <a className="mhwc-icon"
                             onClick={() => {this.handleBundleRemove(index)}}>
 
                             <i className="fa fa-times"></i>
                         </a>
                         <a className="mhwc-icon"
-                            onClick={() => {this.handleBundlePickUp(index)}}>
+                            onClick={() => {this.handleBundleSave(index)}}>
 
-                            <i className="fa fa-check"></i>
+                            <i className="fa fa-floppy-o"></i>
                         </a>
                     </div>
                 </td>
@@ -212,7 +232,7 @@ export default class EquipBundleSelector extends Component {
                             <td><span>{equips.charm.name}</span></td>
                             <td>
                                 <a className="mhwc-icon"
-                                    onClick={() => {this.handleBundleSave()}}>
+                                    onClick={() => {this.handleBundleSave(null)}}>
 
                                     <i className="fa fa-floppy-o"></i>
                                 </a>
