@@ -315,6 +315,31 @@ $panel-height: 40px;
                 }
             }
 
+            &.mhwc-equip_bundle_table {
+                input {
+                    margin: 0 5px;
+                    padding: 0 5px;
+                    height: 33px;
+                    line-height: 21px;
+                    border: 1px solid #333;
+
+                    @include border-radius(5px);
+                }
+
+                td:nth-child(9) {
+                    padding-right: 5px;
+                    text-align: right;
+                }
+
+                .mhwc-icons_bundle {
+                    float: right;
+
+                    .mhwc-icon {
+                        float: none;
+                    }
+                }
+            }
+
             .mhwc-sharpness {
                 .mhwc-bar {
                     height: 15.5px;

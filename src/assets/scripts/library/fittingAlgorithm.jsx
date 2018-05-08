@@ -362,12 +362,12 @@ export default class FittingAlgorithm {
         // Create Next BundleList
         Misc.log('Create Next BundleList');
 
-        // let isFinish = false;
+        let isFinish = false;
 
         this.conditionEquips.forEach((equipType) => {
-            // if (true === isFinish) {
-            //     return;
-            // }
+            if (true === isFinish) {
+                return;
+            }
 
             Misc.log('Bundle List:', equipType, Object.keys(prevBundleList).length);
 
@@ -376,14 +376,14 @@ export default class FittingAlgorithm {
             nextBundleList = {};
 
             Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
-                // if (true === isFinish) {
-                //     return;
-                // }
+                if (true === isFinish) {
+                    return;
+                }
 
                 Object.keys(prevBundleList).forEach((hash) => {
-                    // if (true === isFinish) {
-                    //     return;
-                    // }
+                    if (true === isFinish) {
+                        return;
+                    }
 
                     let bundle = Misc.deepCopy(prevBundleList[hash]);
 
@@ -452,7 +452,7 @@ export default class FittingAlgorithm {
                     }
 
                     // If Equips Expected Value Is Full Then Do Fully Check
-                    // if (bundle.meta.expectedValue >= conditionExpectedValue) {
+                    if (bundle.meta.expectedValue >= conditionExpectedValue) {
 
                     //     // Completed Bundle By Skills
                     //     let tempBundle = this.completeBundleBySkills(bundle);
@@ -468,7 +468,7 @@ export default class FittingAlgorithm {
                     //             return;
                     //         }
                     //     }
-                    // }
+                    }
 
                     // If Equips Is Full Then Do Fully Check
                     if (requireEquipCount === bundle.meta.euqipCount) {
@@ -495,20 +495,25 @@ export default class FittingAlgorithm {
 
             Misc.log('Result - BundleList (Zero):', Object.keys(lastBundleList).length);
 
-            // if (lastBundleLimit <= Object.keys(lastBundleList).length) {
-            //     isFinish = true;
-            // }
+            if (lastBundleLimit <= Object.keys(lastBundleList).length) {
+                isFinish = true;
+            }
         });
 
-        Misc.log('BundleList:', Object.keys(prevBundleList).length);
-
         // Find Completed Bundle into Last BundleList
-        Misc.log('Find Completed Bundle');
+        Misc.log('Find Completed Bundles');
+
+        Misc.log('Bundle List:', Object.keys(prevBundleList).length);
 
         nextBundleList = {};
 
         Object.keys(prevBundleList).forEach((hash) => {
             let bundle = Misc.deepCopy(prevBundleList[hash]);
+
+            // Check Expected Value
+            if (bundle.meta.expectedValue < conditionExpectedValue) {
+                return;
+            }
 
             // Completed Bundle By Skills
             bundle = this.completeBundleBySkills(bundle);
@@ -519,12 +524,8 @@ export default class FittingAlgorithm {
 
             if (requireSkillCount === Object.keys(bundle.meta.completedSkills).length) {
                 lastBundleList[this.generateBundleHash(bundle)] = bundle;
-            } else {
-                nextBundleList[this.generateBundleHash(bundle)] = bundle;
             }
         });
-
-        prevBundleList = nextBundleList;
 
         Misc.log('Result - BundleList (One):', Object.keys(lastBundleList).length);
 

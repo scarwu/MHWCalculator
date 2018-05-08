@@ -25,6 +25,7 @@ import Constant from 'constant';
 import Lang from 'lang';
 
 // Load Components
+import EquipBundleSelector from 'component/main/equipBundleSelector';
 import SetItemSelector from 'component/main/setItemSelector';
 import SkillItemSelector from 'component/main/skillItemSelector';
 import EquipItemSelector from 'component/main/equipItemSelector';
@@ -46,6 +47,7 @@ export default class Main extends Component {
         equips: Misc.deepCopy(Constant.defaultEquips),
         equipsLock: Misc.deepCopy(Constant.defaultEquipsLock),
         equipSelector: {},
+        isShowEquipBundleSelector: false,
         isShowSetSelector: false,
         isShowSkillSelector: false,
         isShowEquipSelector: false
@@ -451,9 +453,25 @@ export default class Main extends Component {
         });
     };
 
-    handleEquipsDisplayerList = () => {
+    handleEquipBundleSelectorOpen = () => {
+        this.setState({
+            isShowEquipBundleSelector: true
+        });
+    };
 
-    }
+    handleEquipBundleSelectorClose = () => {
+        this.setState({
+            isShowEquipBundleSelector: false
+        });
+    };
+
+    handleEquipBundlePickUp = (equips) => {
+        this.setState({
+            equips: equips
+        }, () => {
+            this.refershUrlHash();
+        });
+    };
 
     refershUrlHash = () => {
         let equips = Misc.deepCopy(this.state.equips);
@@ -650,8 +668,8 @@ export default class Main extends Component {
                                 </a>
                             </div>
                             <div className="col-6">
-                                <a onClick={this.handleEquipsDisplayerList}>
-                                    <i className="fa fa-list-alt"></i> 列表
+                                <a onClick={this.handleEquipBundleSelectorOpen}>
+                                    <i className="fa fa-th-list"></i> 列表
                                 </a>
                             </div>
                         </div>
@@ -687,6 +705,13 @@ export default class Main extends Component {
                         </a>
                     </div>
                 </div>
+
+                {this.state.isShowEquipBundleSelector ? (
+                    <EquipBundleSelector
+                        data={this.state.equips}
+                        onPickUp={this.handleEquipBundlePickUp}
+                        onClose={this.handleEquipBundleSelectorClose} />
+                ) : false}
 
                 {this.state.isShowSetSelector ? (
                     <SetItemSelector data={this.state.sets}
