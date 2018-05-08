@@ -353,13 +353,13 @@ $panel-height: 40px;
 
 
     > .mhwc-conditions,
-    > .mhwc-bundles {
+    > .mhwc-bundles,
+    > .mhwc-equips {
         .mhwc-list {
             height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height} + #{$panel-height}));
         }
     }
 
-    > .mhwc-equips,
     > .mhwc-status {
         .mhwc-list {
             height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
@@ -599,6 +599,30 @@ $panel-height: 40px;
     }
 
     > .mhwc-equips {
+        .mhwc-panel {
+            padding: 5px 2.5px;
+            height: $panel-height;
+
+            div {
+                padding: 0 2.5px;
+            }
+
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                border: 1px solid #999;
+                text-align: center;
+
+                @include border-radius(5px);
+
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+        }
+
         .mhwc-equip_name {
             &:hover {
                 color: #666;

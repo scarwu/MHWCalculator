@@ -451,6 +451,10 @@ export default class Main extends Component {
         });
     };
 
+    handleEquipsDisplayerList = () => {
+
+    }
+
     refershUrlHash = () => {
         let equips = Misc.deepCopy(this.state.equips);
         let base64 = Misc.base64.encode(JSON.stringify(equips));
@@ -593,23 +597,26 @@ export default class Main extends Component {
                 <div className="row mhwc-container">
                     <div className="col mhwc-conditions">
                         <div className="mhwc-section_name">
-                            <a className="fa fa-refresh" onClick={this.handleRequireConditionRefresh}></a>
-                            &nbsp;
                             <span>需求條件</span>
                         </div>
 
                         <div className="row mhwc-panel">
-                            <div className="col-4">
-                                <a onClick={this.handleSetSelectorOpen}>
-                                    <i className="fa fa-plus"></i> 套裝
+                            <div className="col-3">
+                                <a onClick={this.handleRequireConditionRefresh}>
+                                    <i className="fa fa-refresh"></i> 重置
                                 </a>
                             </div>
-                            <div className="col-4">
+                            <div className="col-3">
                                 <a onClick={this.handleSkillSelectorOpen}>
                                     <i className="fa fa-plus"></i> 技能
                                 </a>
                             </div>
-                            <div className="col-4">
+                            <div className="col-3">
+                                <a onClick={this.handleSetSelectorOpen}>
+                                    <i className="fa fa-plus"></i> 套裝
+                                </a>
+                            </div>
+                            <div className="col-3">
                                 <a onClick={this.handleCandidateBundlesSearch}>
                                     <i className="fa fa-search"></i> 搜尋
                                 </a>
@@ -633,9 +640,20 @@ export default class Main extends Component {
 
                     <div className="col mhwc-equips">
                         <div className="mhwc-section_name">
-                            <a className="fa fa-refresh" onClick={this.handleEquipsDisplayerRefresh}></a>
-                            &nbsp;
                             <span>已選裝備</span>
+                        </div>
+
+                        <div className="row mhwc-panel">
+                            <div className="col-6">
+                                <a onClick={this.handleEquipsDisplayerRefresh}>
+                                    <i className="fa fa-refresh"></i> 重置
+                                </a>
+                            </div>
+                            <div className="col-6">
+                                <a onClick={this.handleEquipsDisplayerList}>
+                                    <i className="fa fa-list-alt"></i> 列表
+                                </a>
+                            </div>
                         </div>
 
                         <EquipsDisplayer equips={this.state.equips}

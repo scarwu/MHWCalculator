@@ -16,6 +16,7 @@ import Event from 'core/event';
 
 // Load Custom Libraries
 import Misc from 'library/misc';
+import DataSet from 'library/dataset';
 import FittingAlgorithm from 'library/fittingAlgorithm';
 
 // Load Constant & Lang
@@ -178,11 +179,12 @@ export default class CandidateBundles extends Component {
                                         return data.jewels[b] - data.jewels[a];
                                     }).map((jewelName) => {
                                         let jewelCount = data.jewels[jewelName];
+                                        let jewelInfo = DataSet.jewelHelper.getInfo(jewelName);
 
                                         return (
                                             <div key={jewelName} className="col-4">
                                                 <div className="mhwc-value">
-                                                    <span>{`${jewelName} x ${jewelCount}`}</span>
+                                                    <span>{`[${jewelInfo.size}] ${jewelName} x ${jewelCount}`}</span>
                                                 </div>
                                             </div>
                                         );

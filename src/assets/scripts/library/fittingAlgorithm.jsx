@@ -37,11 +37,13 @@ export default class FittingAlgorithm {
         this.correspondJewels = {};
         this.skipSkills = {};
         this.usedEquips = {};
+        this.usedEquipTypes = {};
 
         let candidateEquips = {};
         let conditionExpectedValue = 0;
         let maxEquipsExpectedValue = {};
 
+        let lastBundleLimit = 200;
         let prevBundleList = {};
         let nextBundleList = {};
         let lastBundleList = {};
@@ -360,14 +362,29 @@ export default class FittingAlgorithm {
         // Create Next BundleList
         Misc.log('Create Next BundleList');
 
+        // let isFinish = false;
+
         this.conditionEquips.forEach((equipType) => {
+            // if (true === isFinish) {
+            //     return;
+            // }
 
             Misc.log('Bundle List:', equipType, Object.keys(prevBundleList).length);
+
+            this.usedEquipTypes[equipType] = true;
 
             nextBundleList = {};
 
             Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
+                // if (true === isFinish) {
+                //     return;
+                // }
+
                 Object.keys(prevBundleList).forEach((hash) => {
+                    // if (true === isFinish) {
+                    //     return;
+                    // }
+
                     let bundle = Misc.deepCopy(prevBundleList[hash]);
 
                     if (undefined === bundle.equips[equipType]) {
@@ -396,6 +413,7 @@ export default class FittingAlgorithm {
                         return;
                     }
 
+                    // Count & Check Skills from Candidate Equip
                     let isSkip = false;
 
                     Object.keys(candidateEquip.skills).forEach((skillName) => {
@@ -433,6 +451,25 @@ export default class FittingAlgorithm {
                         return;
                     }
 
+                    // If Equips Expected Value Is Full Then Do Fully Check
+                    // if (bundle.meta.expectedValue >= conditionExpectedValue) {
+
+                    //     // Completed Bundle By Skills
+                    //     let tempBundle = this.completeBundleBySkills(bundle);
+
+                    //     if (false === tempBundle) {
+                    //         if (requireEquipCount === bundle.meta.euqipCount) {
+                    //             return;
+                    //         }
+                    //     } else {
+                    //         if (requireSkillCount === Object.keys(tempBundle.meta.completedSkills).length) {
+                    //             lastBundleList[this.generateBundleHash(tempBundle)] = tempBundle;
+
+                    //             return;
+                    //         }
+                    //     }
+                    // }
+
                     // If Equips Is Full Then Do Fully Check
                     if (requireEquipCount === bundle.meta.euqipCount) {
 
@@ -457,6 +494,10 @@ export default class FittingAlgorithm {
             prevBundleList = nextBundleList;
 
             Misc.log('Result - BundleList (Zero):', Object.keys(lastBundleList).length);
+
+            // if (lastBundleLimit <= Object.keys(lastBundleList).length) {
+            //     isFinish = true;
+            // }
         });
 
         Misc.log('BundleList:', Object.keys(prevBundleList).length);
@@ -492,7 +533,7 @@ export default class FittingAlgorithm {
             let valueB = (8 - b.meta.euqipCount) * 1000 + b.defense;
 
             return valueB - valueA;
-        }).slice(0, 200);
+        }).slice(0, lastBundleLimit);
 
         return lastBundleList;
     };
@@ -658,6 +699,10 @@ export default class FittingAlgorithm {
 
         Object.keys(maxEquipsExpectedValue).forEach((equipType) => {
             if (true === haveFuture) {
+                return;
+            }
+
+            if (true === this.usedEquipTypes[equipType]) {
                 return;
             }
 
