@@ -604,6 +604,10 @@ $panel-height: 40px;
                         margin: 2.5px;
 
                         @include nowrap();
+
+                        span {
+                            background-color: white;
+                        }
                     }
                 }
             }
@@ -621,6 +625,10 @@ $panel-height: 40px;
                         margin: 2.5px;
 
                         @include nowrap();
+
+                        span {
+                            background-color: white;
+                        }
                     }
                 }
             }
@@ -821,6 +829,10 @@ $panel-height: 40px;
                         margin: 2.5px;
 
                         @include nowrap();
+
+                        span {
+                            background-color: white;
+                        }
                     }
                 }
             }
