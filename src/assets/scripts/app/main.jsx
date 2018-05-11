@@ -423,6 +423,29 @@ export default class Main extends Component {
         }, () => {
             this.refershUrlHash();
         });
+    };handleEquipSelectorPickUp
+
+    handleEquipSelectorToggle = (data) => {
+        let ignoreEquips = Status.get('ignoreEquips');
+
+        if (undefined === ignoreEquips) {
+            ignoreEquips = {};
+        }
+
+        if (undefined === ignoreEquips[data.mode]) {
+            ignoreEquips[data.mode] = {};
+        }
+
+        if (undefined === ignoreEquips[data.mode][data.name]) {
+            ignoreEquips[data.mode][data.name] = true;
+        } else {
+            delete ignoreEquips[data.mode][data.name];
+        }
+
+        // Set Ignore Equips Data to Status
+        Status.set('ignoreEquips', ignoreEquips);
+
+        this.forceUpdate();
     };
 
     handleRequireConditionRefresh = () => {
@@ -731,6 +754,7 @@ export default class Main extends Component {
                 {this.state.isShowEquipSelector ? (
                     <EquipItemSelector data={this.state.equipSelector}
                         onPickUp={this.handleEquipSelectorPickUp}
+                        onToggle={this.handleEquipSelectorToggle}
                         onClose={this.handleEquipSelectorClose} />
                 ) : false}
             </div>
