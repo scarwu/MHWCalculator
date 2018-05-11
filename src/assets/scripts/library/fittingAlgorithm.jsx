@@ -31,6 +31,7 @@ export default class FittingAlgorithm {
             return [];
         }
 
+        this.ignoreEquips = ignoreEquips;
         this.conditionEquips = [];
         this.conditionSets = {};
         this.conditionSkills = {};
@@ -156,6 +157,7 @@ export default class FittingAlgorithm {
         let requireEquipCount = this.conditionEquips.length;
         let requireSkillCount = Object.keys(this.conditionSkills).length;
 
+        Misc.log('Ignore Equips', this.ignoreEquips);
         Misc.log('Condition Skills:', this.conditionSkills);
         Misc.log('Condition Equips:', this.conditionEquips);
         Misc.log('Correspond Jewels:', this.correspondJewels);

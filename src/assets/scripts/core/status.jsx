@@ -12,32 +12,32 @@ var prefix = 'mhwcStatus';
 var storage = window.localStorage;
 
 function get (key) {
-    if (undefined === storage[prefix]) {
+    if (undefined === storage[`${prefix}:${key}`]) {
         return undefined;
     }
 
-    let dataSet = JSON.parse(storage[prefix]);
+    let dataSet = JSON.parse(storage[`${prefix}:${key}`]);
 
-    return dataSet[key];
+    return dataSet;
 }
 
 function set (key, value) {
-    let dataSet = (undefined !== storage[prefix])
-        ? JSON.parse(storage[prefix]) : {};
+    let dataSet = (undefined !== storage[`${prefix}:${key}`])
+        ? JSON.parse(storage[`${prefix}:${key}`]) : {};
 
-    dataSet[key] = value;
+    dataSet = value;
 
-    storage[prefix] = JSON.stringify(dataSet);
+    storage[`${prefix}:${key}`] = JSON.stringify(dataSet);
 }
 
 function has (key) {
-    if (undefined === storage[prefix]) {
+    if (undefined === storage[`${prefix}:${key}`]) {
         return undefined;
     }
 
-    let dataSet = JSON.parse(storage[prefix]);
+    let dataSet = JSON.parse(storage[`${prefix}:${key}`]);
 
-    return undefined !== dataSet[key];
+    return undefined !== dataSet;
 }
 
 module.exports = {
