@@ -173,8 +173,8 @@ $panel-height: 40px;
         width: 40px;
         line-height: 20px;
         text-align: center;
-        color: white;
-        background-color: #ccc;
+        color: #333;
+        background-color: white;
         border: 1px solid #999;
 
         @include border-radius(3px);
