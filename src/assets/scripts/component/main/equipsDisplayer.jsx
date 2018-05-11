@@ -135,7 +135,7 @@ export default class EquipsDisplayer extends Component {
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName={equipsLock.weapon ? 'lock' : 'unlock-alt'}
-                                altName={equipsLock.weapon ? '鎖定' : '解除'}
+                                altName={equipsLock.weapon ? '解除' : '鎖定'}
                                 onClick={() => {this.handleEquipLockToggle('weapon')}} />
                             <FunctionalIcon
                                 iconName="times" altName="清除"
@@ -399,7 +399,7 @@ export default class EquipsDisplayer extends Component {
                             <div className="mhwc-icons_bundle">
                                 <FunctionalIcon
                                     iconName={equipsLock[equipType] ? 'lock' : 'unlock-alt'}
-                                    altName={equipsLock[equipType] ? '鎖定' : '解除'}
+                                    altName={equipsLock[equipType] ? '解除' : '鎖定'}
                                     onClick={() => {this.handleEquipLockToggle(equipType)}} />
                                 <FunctionalIcon
                                     iconName="times" altName="清除"
@@ -562,7 +562,7 @@ export default class EquipsDisplayer extends Component {
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName={equipsLock.charm ? 'lock' : 'unlock-alt'}
-                                altName={equipsLock.charm ? '鎖定' : '解除'}
+                                altName={equipsLock.charm ? '解除' : '鎖定'}
                                 onClick={() => {this.handleEquipLockToggle('charm')}} />
                             <FunctionalIcon
                                 iconName="times" altName="清除"

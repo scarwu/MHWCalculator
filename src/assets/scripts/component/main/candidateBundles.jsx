@@ -105,7 +105,7 @@ export default class CandidateBundles extends Component {
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="check" altName="確認"
+                                iconName="check" altName="裝備"
                                 onClick={() => {this.handleBundlePickUp(index)}} />
                         </div>
                     </div>

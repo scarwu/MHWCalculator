@@ -147,6 +147,7 @@ $panel-height: 40px;
 }
 
 .mhwc-functional_icon {
+    position: relative;
     display: inline-block;
     margin-left: 2px;
 
@@ -160,9 +161,32 @@ $panel-height: 40px;
         background-color: #ccc;
 
         @include border-radius(3px);
+    }
 
-        &:hover {
+    div {
+        position: absolute;
+        display: none;
+        top: 22px;
+        left: -10px;
+        z-index: 3000;
+        height: 22px;
+        width: 40px;
+        line-height: 20px;
+        text-align: center;
+        color: white;
+        background-color: #ccc;
+        border: 1px solid #999;
+
+        @include border-radius(3px);
+    }
+
+    &:hover {
+        a {
             background-color: #666;
+        }
+
+        div {
+            display: block;
         }
     }
 }
