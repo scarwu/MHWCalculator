@@ -73,7 +73,7 @@ export default class CandidateBundles extends Component {
 
             setTimeout(() => {
                 let startTime = new Date().getTime();
-                let bundleList = FA.search(data.equips, data.sets, data.skills);
+                let bundleList = FA.search(data.equips, data.ignoreEquips, data.sets, data.skills);
                 let stopTime = new Date().getTime();
 
                 let searchTime = (stopTime - startTime) / 1000;

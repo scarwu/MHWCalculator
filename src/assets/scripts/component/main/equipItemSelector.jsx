@@ -78,9 +78,9 @@ export default class EquipItemSelector extends Component {
         this.props.onClose();
     };
 
-    handleItemToggle = (itemName) => {
+    handleItemToggle = (itemType, itemName) => {
         this.props.onToggle({
-            mode: this.state.mode,
+            type: itemType,
             name: itemName
         });
     };
@@ -117,30 +117,15 @@ export default class EquipItemSelector extends Component {
 
         if (undefined !== data.enhanceIndex) {
             mode = 'enhance';
-
-            DataSet.enhanceHelper.getItems().forEach((data) => {
-                if (undefined !== ignoreEquips[mode]
-                    && true === ignoreEquips[mode][data.name]) {
-
-                    ignoreList.push(data);
-                } else {
-                    includeList.push(data);
-                }
-            });
+            includeList = DataSet.enhanceHelper.getItems();
         } else if (undefined !== data.slotIndex) {
             mode = 'jewel';
 
             for (let size = data.slotSize; size >= 1; size--) {
                 for (let rare = 8; rare >= 5; rare--) {
-                    DataSet.jewelHelper.rareIs(rare).sizeIsEqualThen(size).getItems().forEach((data) => {
-                        if (undefined !== ignoreEquips[mode]
-                            && true === ignoreEquips[mode][data.name]) {
-
-                            ignoreList.push(data);
-                        } else {
-                            includeList.push(data);
-                        }
-                    });
+                    includeList = includeList.concat(
+                        DataSet.jewelHelper.rareIs(rare).sizeIsEqualThen(size).getItems()
+                    );
                 }
             }
         } else if ('weapon' === data.equipType) {
@@ -153,24 +138,24 @@ export default class EquipItemSelector extends Component {
 
             weaponTypeList.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
-                    DataSet.weaponHelper.typeIs(weaponType).rareIs(rare).getItems().forEach((data) => {
-                        if (undefined !== ignoreEquips[mode]
-                            && true === ignoreEquips[mode][data.name]) {
+                    DataSet.weaponHelper.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
+                        if (undefined !== ignoreEquips['weapon']
+                            && true === ignoreEquips['weapon'][equip.name]) {
 
-                            ignoreList.push(data);
+                            ignoreList.push(equip);
                         } else {
-                            includeList.push(data);
+                            includeList.push(equip);
                         }
                     });
                 }
 
-                DataSet.weaponHelper.typeIs(weaponType).rareIs(0).getItems().forEach((data) => {
-                    if (undefined !== ignoreEquips[mode]
-                        && true === ignoreEquips[mode][data.name]) {
+                DataSet.weaponHelper.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
+                    if (undefined !== ignoreEquips['weapon']
+                        && true === ignoreEquips['weapon'][equip.name]) {
 
-                        ignoreList.push(data);
+                        ignoreList.push(equip);
                     } else {
-                        includeList.push(data);
+                        includeList.push(equip);
                     }
                 });
             });
@@ -184,36 +169,36 @@ export default class EquipItemSelector extends Component {
             type = data.equipType;
 
             for (let rare = 8; rare >= 5; rare--) {
-                DataSet.armorHelper.typeIs(data.equipType).rareIs(rare).getItems().forEach((data) => {
-                    if (undefined !== ignoreEquips[mode]
-                        && true === ignoreEquips[mode][data.name]) {
+                DataSet.armorHelper.typeIs(data.equipType).rareIs(rare).getItems().forEach((equip) => {
+                    if (undefined !== ignoreEquips[equip.type]
+                        && true === ignoreEquips[equip.type][equip.name]) {
 
-                        ignoreList.push(data);
+                        ignoreList.push(equip);
                     } else {
-                        includeList.push(data);
+                        includeList.push(equip);
                     }
                 });
             }
 
-            DataSet.armorHelper.typeIs(data.equipType).rareIs(0).getItems().forEach((data) => {
-                if (undefined !== ignoreEquips[mode]
-                    && true === ignoreEquips[mode][data.name]) {
+            DataSet.armorHelper.typeIs(data.equipType).rareIs(0).getItems().forEach((equip) => {
+                if (undefined !== ignoreEquips[equip.type]
+                    && true === ignoreEquips[equip.type][equip.name]) {
 
-                    ignoreList.push(data);
+                    ignoreList.push(equip);
                 } else {
-                    includeList.push(data);
+                    includeList.push(equip);
                 }
             });
         } else if ('charm' === data.equipType) {
             mode = 'charm';
 
-            DataSet.charmHelper.getItems().forEach((data) => {
-                if (undefined !== ignoreEquips[mode]
-                    && true === ignoreEquips[mode][data.name]) {
+            DataSet.charmHelper.getItems().forEach((equip) => {
+                if (undefined !== ignoreEquips['charm']
+                    && true === ignoreEquips['charm'][equip.name]) {
 
-                    ignoreList.push(data);
+                    ignoreList.push(equip);
                 } else {
-                    includeList.push(data);
+                    includeList.push(equip);
                 }
             });
         }
@@ -331,7 +316,7 @@ export default class EquipItemSelector extends Component {
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
                             altName={isIgnore ? '引入' : '排除'}
-                            onClick={() => {this.handleItemToggle(data.name)}} />
+                            onClick={() => {this.handleItemToggle('weapon', data.name)}} />
 
                         {(this.props.data.equipName !== data.name) ? (
                             <FunctionalIcon
@@ -441,7 +426,7 @@ export default class EquipItemSelector extends Component {
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
                             altName={isIgnore ? '引入' : '排除'}
-                            onClick={() => {this.handleItemToggle(data.name)}} />
+                            onClick={() => {this.handleItemToggle(data.type, data.name)}} />
 
                         {(this.props.data.equipName !== data.name) ? (
                             <FunctionalIcon
@@ -527,7 +512,7 @@ export default class EquipItemSelector extends Component {
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
                             altName={isIgnore ? '引入' : '排除'}
-                            onClick={() => {this.handleItemToggle(data.name)}} />
+                            onClick={() => {this.handleItemToggle('charm', data.name)}} />
 
                         {(this.props.data.equipName !== data.name) ? (
                             <FunctionalIcon
@@ -581,7 +566,7 @@ export default class EquipItemSelector extends Component {
         );
     };
 
-    renderJewelRow = (data, index, isIgnore) => {
+    renderJewelRow = (data, index) => {
         return (
             <tr key={index}>
                 <td><span>{data.name}</span></td>
@@ -592,11 +577,6 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
-                            iconName={isIgnore ? 'star-o' : 'star'}
-                            altName={isIgnore ? '引入' : '排除'}
-                            onClick={() => {this.handleItemToggle(data.name)}} />
-
                         {(this.props.data.jewelName !== data.name) ? (
                             <FunctionalIcon
                                 iconName="check" altName="選取"
@@ -637,23 +617,19 @@ export default class EquipItemSelector extends Component {
                             return false;
                         }
 
-                        return this.renderJewelRow(data, index, false);
-                    })}
-
-                    {this.state.ignoreList.map((data, index) => {
-                        return this.renderJewelRow(data, index, true);
+                        return this.renderJewelRow(data, index);
                     })}
                 </tbody>
             </table>
         );
     };
 
-    renderEnhanceRow = (data, index, isIgnore) => {
+    renderEnhanceRow = (data, index) => {
         return (
             <tr key={index}>
                 <td>{data.name}</td>
                 <td>
-                    {data.includeList.map((data, index) => {
+                    {data.list.map((data, index) => {
                         return (
                             <div key={index}>
                                 <span>Lv.{data.level}</span>
@@ -662,7 +638,7 @@ export default class EquipItemSelector extends Component {
                     })}
                 </td>
                 <td>
-                    {data.includeList.map((data, index) => {
+                    {data.list.map((data, index) => {
                         return (
                             <div key={index}>
                                 <span>{data.description}</span>
@@ -672,11 +648,6 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
-                            iconName={isIgnore ? 'star-o' : 'star'}
-                            altName={isIgnore ? '引入' : '排除'}
-                            onClick={() => {this.handleItemToggle(data.name)}} />
-
                         {(this.props.data.enhanceName !== data.name) ? (
                             <FunctionalIcon
                                 iconName="check" altName="選取"
@@ -707,7 +678,7 @@ export default class EquipItemSelector extends Component {
                         // Create Text
                         let text = data.name;
 
-                        data.includeList.forEach((data) => {
+                        data.list.forEach((data) => {
                             text += data.description;
                         })
 
@@ -718,11 +689,7 @@ export default class EquipItemSelector extends Component {
                             return false;
                         }
 
-                        return this.renderEnhanceRow(data, index, false);
-                    })}
-
-                    {this.state.ignoreList.map((data, index) => {
-                        return this.renderEnhanceRow(data, index, true);
+                        return this.renderEnhanceRow(data, index);
                     })}
                 </tbody>
             </table>

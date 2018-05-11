@@ -23,7 +23,7 @@ export default class FittingAlgorithm {
     /**
      * Search
      */
-    search = (equips, sets, skills) => {
+    search = (equips, ignoreEquips, sets, skills) => {
 
         if (0 === sets.length
             && 0 === skills.length) {
@@ -552,6 +552,14 @@ export default class FittingAlgorithm {
      */
     createCandidateEquips = (equips, equipType, candidateEquips = {}) => {
         equips.forEach((equip) => {
+
+            // Check Equip is in Ignore Equips
+            if (undefined !== this.ignoreEquips[equipType]
+                && true === this.ignoreEquips[equipType][equip.name]) {
+
+                return;
+            }
+
             let candidateEquip = this.convertEquipToCandidateEquip(equip);
             candidateEquip.type = equipType;
 

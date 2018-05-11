@@ -435,20 +435,22 @@ export default class Main extends Component {
     };handleEquipSelectorPickUp
 
     handleEquipSelectorToggle = (data) => {
+        console.log(data);
+
         let ignoreEquips = Status.get('ignoreEquips');
 
         if (undefined === ignoreEquips) {
             ignoreEquips = {};
         }
 
-        if (undefined === ignoreEquips[data.mode]) {
-            ignoreEquips[data.mode] = {};
+        if (undefined === ignoreEquips[data.type]) {
+            ignoreEquips[data.type] = {};
         }
 
-        if (undefined === ignoreEquips[data.mode][data.name]) {
-            ignoreEquips[data.mode][data.name] = true;
+        if (undefined === ignoreEquips[data.type][data.name]) {
+            ignoreEquips[data.type][data.name] = true;
         } else {
-            delete ignoreEquips[data.mode][data.name];
+            delete ignoreEquips[data.type][data.name];
         }
 
         // Set Ignore Equips Data to Status
