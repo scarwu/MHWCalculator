@@ -25,6 +25,7 @@ import Constant from 'constant';
 import Lang from 'lang';
 
 // Load Components
+import FunctionalIcon from 'component/main/functionalIcon';
 import EquipBundleSelector from 'component/main/equipBundleSelector';
 import SetItemSelector from 'component/main/setItemSelector';
 import SkillItemSelector from 'component/main/skillItemSelector';
@@ -535,15 +536,15 @@ export default class Main extends Component {
                         </span>
 
                         <div className="mhwc-icons_bundle">
-                            <a className="mhwc-icon" onClick={() => {this.handleSetStepDown(index)}}>
-                                <i className="fa fa-minus"></i>
-                            </a>
-                            <a className="mhwc-icon" onClick={() => {this.handleSetStepUp(index)}}>
-                                <i className="fa fa-plus"></i>
-                            </a>
-                            <a className="mhwc-icon" onClick={() => {this.handleSetRemove(index)}}>
-                                <i className="fa fa-times"></i>
-                            </a>
+                            <FunctionalIcon
+                                iconName="minus" altName="降低"
+                                onClick={() => {this.handleSetStepDown(index)}} />
+                            <FunctionalIcon
+                                iconName="plus" altName="提升"
+                                onClick={() => {this.handleSetStepUp(index)}} />
+                            <FunctionalIcon
+                                iconName="times" altName="清除"
+                                onClick={() => {this.handleSetRemove(index)}} />
                         </div>
                     </div>
                     <div className="col-12 mhwc-value">
@@ -580,15 +581,15 @@ export default class Main extends Component {
                         </span>
 
                         <div className="mhwc-icons_bundle">
-                            <a className="mhwc-icon" onClick={() => {this.handleSkillLevelDown(index)}}>
-                                <i className="fa fa-minus"></i>
-                            </a>
-                            <a className="mhwc-icon" onClick={() => {this.handleSkillLevelUp(index)}}>
-                                <i className="fa fa-plus"></i>
-                            </a>
-                            <a className="mhwc-icon" onClick={() => {this.handleSkillRemove(index)}}>
-                                <i className="fa fa-times"></i>
-                            </a>
+                            <FunctionalIcon
+                                iconName="minus" altName="降低"
+                                onClick={() => {this.handleSkillLevelDown(index)}} />
+                            <FunctionalIcon
+                                iconName="plus" altName="提升"
+                                onClick={() => {this.handleSkillLevelUp(index)}} />
+                            <FunctionalIcon
+                                iconName="times" altName="清除"
+                                onClick={() => {this.handleSkillRemove(index)}} />
                         </div>
                     </div>
                     <div className="col-12 mhwc-value">

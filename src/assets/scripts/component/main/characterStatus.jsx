@@ -22,6 +22,9 @@ import DataSet from 'library/dataset';
 import Constant from 'constant';
 import Lang from 'lang';
 
+// Load Components
+import FunctionalIcon from 'component/main/functionalIcon';
+
 export default class CharacterStatus extends Component {
 
     // Default Props
@@ -803,15 +806,14 @@ export default class CharacterStatus extends Component {
                                         <div className="col-12 mhwc-name">
                                             <span>{data.name} Lv.{data.level}</span>
 
-                                            {undefined !== passiveSkills[data.name] ? (
-                                                <a className="mhwc-icon" onClick={() => {this.handlePassiveSkillToggle(data.name)}}>
-                                                    {passiveSkills[data.name].isActive ? (
-                                                        <i className="fa fa-eye"></i>
-                                                    ) : (
-                                                        <i className="fa fa-eye-slash"></i>
-                                                    )}
-                                                </a>
-                                            ) : false}
+                                            <div className="mhwc-icons_bundle">
+                                                {undefined !== passiveSkills[data.name] ? (
+                                                    <FunctionalIcon
+                                                        iconName={passiveSkills[data.name].isActive ? 'eye' : 'eye-slash'}
+                                                        altName={passiveSkills[data.name].isActive ? '發動' : '停止'}
+                                                        onClick={() => {this.handlePassiveSkillToggle(data.name)}} />
+                                                ) : false}
+                                            </div>
                                         </div>
                                         <div className="col-12 mhwc-value">
                                             <span>{data.description}</span>

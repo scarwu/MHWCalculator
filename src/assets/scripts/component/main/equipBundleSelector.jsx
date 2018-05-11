@@ -22,6 +22,9 @@ import Misc from 'library/misc';
 import Constant from 'constant';
 import Lang from 'lang';
 
+// Load Components
+import FunctionalIcon from 'component/main/functionalIcon';
+
 export default class EquipBundleSelector extends Component {
 
     // Default Props
@@ -179,21 +182,15 @@ export default class EquipBundleSelector extends Component {
                 <td><span>{data.equips.charm.name}</span></td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        <a className="mhwc-icon"
-                            onClick={() => {this.handleBundlePickUp(index)}}>
-
-                            <i className="fa fa-check"></i>
-                        </a>
-                        <a className="mhwc-icon"
-                            onClick={() => {this.handleBundleRemove(index)}}>
-
-                            <i className="fa fa-times"></i>
-                        </a>
-                        <a className="mhwc-icon"
-                            onClick={() => {this.handleBundleSave(index)}}>
-
-                            <i className="fa fa-floppy-o"></i>
-                        </a>
+                        <FunctionalIcon
+                            iconName="check" altName="選取"
+                            onClick={() => {this.handleBundlePickUp(index)}} />
+                        <FunctionalIcon
+                            iconName="times" altName="移除"
+                            onClick={() => {this.handleBundleRemove(index)}} />
+                        <FunctionalIcon
+                            iconName="floppy-o" altName="儲存"
+                            onClick={() => {this.handleBundleSave(index)}} />
                     </div>
                 </td>
             </tr>
@@ -231,11 +228,11 @@ export default class EquipBundleSelector extends Component {
                             <td><span>{equips.leg.name}</span></td>
                             <td><span>{equips.charm.name}</span></td>
                             <td>
-                                <a className="mhwc-icon"
-                                    onClick={() => {this.handleBundleSave(null)}}>
-
-                                    <i className="fa fa-floppy-o"></i>
-                                </a>
+                                <div className="mhwc-icons_bundle">
+                                    <FunctionalIcon
+                                        iconName="floppy-o" altName="儲存"
+                                        onClick={() => {this.handleBundleSave(null)}} />
+                                </div>
                             </td>
                         </tr>
                     ) : false}

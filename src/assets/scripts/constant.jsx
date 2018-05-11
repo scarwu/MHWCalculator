@@ -81,7 +81,7 @@ export default {
         meta: {
             expectedValue: 0,
             expectedLevel: 0,
-            euqipCount: 0,
+            equipCount: 0,
             completedSkills: {},
             remainingSlotCount: {
                 1: 0,

@@ -22,6 +22,9 @@ import DataSet from 'library/dataset';
 import Constant from 'constant';
 import Lang from 'lang';
 
+// Load Components
+import FunctionalIcon from 'component/main/functionalIcon';
+
 // Weapon Type List
 var weaponTypeList = [
     'greatSword', 'longSword',
@@ -300,13 +303,13 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        {(this.props.data.equipName !== data.name) ? (
-                                            <a className="mhwc-icon"
-                                                onClick={() => {this.handleItemPickUp(data.name)}}>
-
-                                                <i className="fa fa-check"></i>
-                                            </a>
-                                        ) : false}
+                                        <div className="mhwc-icons_bundle">
+                                            {(this.props.data.equipName !== data.name) ? (
+                                                <FunctionalIcon
+                                                    iconName="check" altName="選取"
+                                                    onClick={() => {this.handleItemPickUp(data.name)}} />
+                                            ) : false}
+                                        </div>
                                     </td>
                                 </tr>
                             );
@@ -388,13 +391,13 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        {(this.props.data.equipName !== data.name) ? (
-                                            <a className="mhwc-icon"
-                                                onClick={() => {this.handleItemPickUp(data.name)}}>
-
-                                                <i className="fa fa-check"></i>
-                                            </a>
-                                        ) : false}
+                                        <div className="mhwc-icons_bundle">
+                                            {(this.props.data.equipName !== data.name) ? (
+                                                <FunctionalIcon
+                                                    iconName="check" altName="選取"
+                                                    onClick={() => {this.handleItemPickUp(data.name)}} />
+                                            ) : false}
+                                        </div>
                                     </td>
                                 </tr>
                             );
@@ -444,13 +447,13 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        {(this.props.data.equipName !== data.name) ? (
-                                            <a className="mhwc-icon"
-                                                onClick={() => {this.handleItemPickUp(data.name)}}>
-
-                                                <i className="fa fa-check"></i>
-                                            </a>
-                                        ) : false}
+                                        <div className="mhwc-icons_bundle">
+                                            {(this.props.data.equipName !== data.name) ? (
+                                                <FunctionalIcon
+                                                    iconName="check" altName="選取"
+                                                    onClick={() => {this.handleItemPickUp(data.name)}} />
+                                            ) : false}
+                                        </div>
                                     </td>
                                 </tr>
                             );
@@ -494,13 +497,13 @@ export default class EquipItemSelector extends Component {
                                         <span>{data.skill.name} Lv.{data.skill.level}</span>
                                     </td>
                                     <td>
-                                        {(this.props.data.jewelName !== data.name) ? (
-                                            <a className="mhwc-icon"
-                                                onClick={() => {this.handleItemPickUp(data.name)}}>
-
-                                                <i className="fa fa-check"></i>
-                                            </a>
-                                        ) : false}
+                                        <div className="mhwc-icons_bundle">
+                                            {(this.props.data.jewelName !== data.name) ? (
+                                                <FunctionalIcon
+                                                    iconName="check" altName="選取"
+                                                    onClick={() => {this.handleItemPickUp(data.name)}} />
+                                            ) : false}
+                                        </div>
                                     </td>
                                 </tr>
                             );
@@ -558,13 +561,13 @@ export default class EquipItemSelector extends Component {
                                         })}
                                     </td>
                                     <td>
-                                        {(this.props.data.enhanceName !== data.name) ? (
-                                            <a className="mhwc-icon"
-                                                onClick={() => {this.handleItemPickUp(data.name)}}>
-
-                                                <i className="fa fa-check"></i>
-                                            </a>
-                                        ) : false}
+                                        <div className="mhwc-icons_bundle">
+                                            {(this.props.data.enhanceName !== data.name) ? (
+                                                <FunctionalIcon
+                                                    iconName="check" altName="選取"
+                                                    onClick={() => {this.handleItemPickUp(data.name)}} />
+                                            ) : false}
+                                        </div>
                                     </td>
                                 </tr>
                             );
@@ -593,9 +596,11 @@ export default class EquipItemSelector extends Component {
                             </select>
                         ) : false}
 
-                        <a className="mhwc-icon" onClick={this.handleWindowClose}>
-                            <i className="fa fa-times"></i>
-                        </a>
+                        <div className="mhwc-icons_bundle">
+                            <FunctionalIcon
+                                iconName="times" altName="關閉"
+                                onClick={this.handleWindowClose} />
+                        </div>
                     </div>
                     <div className="mhwc-list">
                         {this.renderTable()}

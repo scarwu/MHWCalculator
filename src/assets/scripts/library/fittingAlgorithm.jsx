@@ -149,7 +149,7 @@ export default class FittingAlgorithm {
         });
 
         // Reset Equip Count
-        bundle.meta.euqipCount = 0;
+        bundle.meta.equipCount = 0;
 
         prevBundleList[this.generateBundleHash(bundle)] = bundle;
 
@@ -462,7 +462,7 @@ export default class FittingAlgorithm {
                     }
 
                     // If Equips Is Full Then Do Fully Check
-                    if (requireEquipCount === bundle.meta.euqipCount) {
+                    if (requireEquipCount === bundle.meta.equipCount) {
 
                         // Completed Bundle By Skills
                         bundle = this.completeBundleBySkills(bundle);
@@ -512,8 +512,8 @@ export default class FittingAlgorithm {
         Misc.log('Result - Bundle Count (Final):', Object.keys(lastBundleList).length);
 
         lastBundleList = Object.values(lastBundleList).sort((a, b) => {
-            let valueA = (8 - a.meta.euqipCount) * 1000 + a.defense;
-            let valueB = (8 - b.meta.euqipCount) * 1000 + b.defense;
+            let valueA = (8 - a.meta.equipCount) * 1000 + a.defense;
+            let valueB = (8 - b.meta.equipCount) * 1000 + b.defense;
 
             return valueB - valueA;
         }).slice(0, lastBundleLimit);
@@ -731,7 +731,7 @@ export default class FittingAlgorithm {
         }
 
         // Increase Equip Count
-        bundle.meta.euqipCount += 1;
+        bundle.meta.equipCount += 1;
 
         // Increase Expected Value & Level
         bundle.meta.expectedValue += candidateEquip.expectedValue;

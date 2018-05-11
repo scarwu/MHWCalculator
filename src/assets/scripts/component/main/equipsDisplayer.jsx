@@ -22,6 +22,9 @@ import DataSet from 'library/dataset';
 import Constant from 'constant';
 import Lang from 'lang';
 
+// Load Components
+import FunctionalIcon from 'component/main/functionalIcon';
+
 export default class EquipsDisplayer extends Component {
 
     // Default Props
@@ -130,16 +133,13 @@ export default class EquipsDisplayer extends Component {
                         </a>
 
                         <div className="mhwc-icons_bundle">
-                            <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('weapon')}}>
-                                {equipsLock.weapon ? (
-                                    <i className="fa fa-lock"></i>
-                                ) : (
-                                    <i className="fa fa-unlock-alt"></i>
-                                )}
-                            </a>
-                            <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyWeaponSelectorData)}}>
-                                <i className="fa fa-times"></i>
-                            </a>
+                            <FunctionalIcon
+                                iconName={equipsLock.weapon ? 'lock' : 'unlock-alt'}
+                                altName={equipsLock.weapon ? '鎖定' : '解除'}
+                                onClick={() => {this.handleEquipLockToggle('weapon')}} />
+                            <FunctionalIcon
+                                iconName="times" altName="清除"
+                                onClick={() => {this.handleEquipEmpty(emptyWeaponSelectorData)}} />
                         </div>
                     </div>
 
@@ -172,11 +172,13 @@ export default class EquipsDisplayer extends Component {
                                                 )}
                                             </a>
 
-                                            {null !== data.name ? (
-                                                <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyEnhanceSelectorData)}}>
-                                                    <i className="fa fa-times"></i>
-                                                </a>
-                                            ) : false}
+                                            <div className="mhwc-icons_bundle">
+                                                {null !== data.name ? (
+                                                    <FunctionalIcon
+                                                        iconName="times" altName="清除"
+                                                        onClick={() => {this.handleEquipEmpty(emptyEnhanceSelectorData)}} />
+                                                ) : false}
+                                            </div>
                                         </div>
                                     </div>
                                 );
@@ -215,11 +217,13 @@ export default class EquipsDisplayer extends Component {
                                                 )}
                                             </a>
 
-                                            {null !== data.jewel.name ? (
-                                                <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}}>
-                                                    <i className="fa fa-times"></i>
-                                                </a>
-                                            ) : false}
+                                            <div className="mhwc-icons_bundle">
+                                                {null !== data.jewel.name ? (
+                                                    <FunctionalIcon
+                                                        iconName="times" altName="清除"
+                                                        onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}} />
+                                                ) : false}
+                                            </div>
                                         </div>
                                     </div>
                                 );
@@ -393,16 +397,13 @@ export default class EquipsDisplayer extends Component {
                             </a>
 
                             <div className="mhwc-icons_bundle">
-                                <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle(equipType)}}>
-                                    {equipsLock[equipType] ? (
-                                        <i className="fa fa-lock"></i>
-                                    ) : (
-                                        <i className="fa fa-unlock-alt"></i>
-                                    )}
-                                </a>
-                                <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyEquipSelectorData)}}>
-                                    <i className="fa fa-times"></i>
-                                </a>
+                                <FunctionalIcon
+                                    iconName={equipsLock[equipType] ? 'lock' : 'unlock-alt'}
+                                    altName={equipsLock[equipType] ? '鎖定' : '解除'}
+                                    onClick={() => {this.handleEquipLockToggle(equipType)}} />
+                                <FunctionalIcon
+                                    iconName="times" altName="清除"
+                                    onClick={() => {this.handleEquipEmpty(emptyEquipSelectorData)}} />
                             </div>
                         </div>
 
@@ -437,11 +438,13 @@ export default class EquipsDisplayer extends Component {
                                                     )}
                                                 </a>
 
-                                                {null !== data.jewel.name ? (
-                                                    <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}}>
-                                                        <i className="fa fa-times"></i>
-                                                    </a>
-                                                ) : false}
+                                                <div className="mhwc-icons_bundle">
+                                                    {null !== data.jewel.name ? (
+                                                        <FunctionalIcon
+                                                            iconName="times" altName="清除"
+                                                            onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}} />
+                                                    ) : false}
+                                                </div>
                                             </div>
                                         </div>
                                     );
@@ -557,16 +560,13 @@ export default class EquipsDisplayer extends Component {
                         </a>
 
                         <div className="mhwc-icons_bundle">
-                            <a className="mhwc-icon" onClick={() => {this.handleEquipLockToggle('charm')}}>
-                                {equipsLock.charm ? (
-                                    <i className="fa fa-lock"></i>
-                                ) : (
-                                    <i className="fa fa-unlock-alt"></i>
-                                )}
-                            </a>
-                            <a className="mhwc-icon" onClick={() => {this.handleEquipEmpty(emptyCharmSelectorData)}}>
-                                <i className="fa fa-times"></i>
-                            </a>
+                            <FunctionalIcon
+                                iconName={equipsLock.charm ? 'lock' : 'unlock-alt'}
+                                altName={equipsLock.charm ? '鎖定' : '解除'}
+                                onClick={() => {this.handleEquipLockToggle('charm')}} />
+                            <FunctionalIcon
+                                iconName="times" altName="清除"
+                                onClick={() => {this.handleEquipEmpty(emptyCharmSelectorData)}} />
                         </div>
                     </div>
 

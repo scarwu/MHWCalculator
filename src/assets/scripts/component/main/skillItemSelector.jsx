@@ -22,6 +22,9 @@ import DataSet from 'library/dataset';
 import Constant from 'constant';
 import Lang from 'lang';
 
+// Load Components
+import FunctionalIcon from 'component/main/functionalIcon';
+
 export default class SkillItemSelector extends Component {
 
     // Default Props
@@ -135,19 +138,17 @@ export default class SkillItemSelector extends Component {
                     })}
                 </td>
                 <td>
-                    {isSelect ? (
-                        <a className="mhwc-icon"
-                            onClick={() => {this.handleItemThrowDown(data.name)}}>
-
-                            <i className="fa fa-minus"></i>
-                        </a>
-                    ) : (
-                        <a className="mhwc-icon"
-                            onClick={() => {this.handleItemPickUp(data.name)}}>
-
-                            <i className="fa fa-plus"></i>
-                        </a>
-                    )}
+                    <div className="mhwc-icons_bundle">
+                        {isSelect ? (
+                            <FunctionalIcon
+                                iconName="minus" altName="移除"
+                                onClick={() => {this.handleItemThrowDown(data.name)}} />
+                        ) : (
+                            <FunctionalIcon
+                                iconName="plus" altName="新增"
+                                onClick={() => {this.handleItemPickUp(data.name)}} />
+                        )}
+                    </div>
                 </td>
             </tr>
         );
@@ -217,9 +218,11 @@ export default class SkillItemSelector extends Component {
                         <input className="mhwc-text_segment" type="text"
                             ref="segment" onChange={this.handleSegmentInput} />
 
-                        <a className="mhwc-icon" onClick={this.handleWindowClose}>
-                            <i className="fa fa-times"></i>
-                        </a>
+                        <div className="mhwc-icons_bundle">
+                            <FunctionalIcon
+                                iconName="times" altName="關閉"
+                                onClick={this.handleWindowClose} />
+                        </div>
                     </div>
                     <div className="mhwc-list">
                         {this.renderTable()}

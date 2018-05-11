@@ -23,6 +23,9 @@ import FittingAlgorithm from 'library/fittingAlgorithm';
 import Constant from 'constant';
 import Lang from 'lang';
 
+// Load Components
+import FunctionalIcon from 'component/main/functionalIcon';
+
 export default class CandidateBundles extends Component {
 
     // Default Props
@@ -101,9 +104,9 @@ export default class CandidateBundles extends Component {
                         <span className="mhwc-bundle_name">備選 {index + 1}</span>
 
                         <div className="mhwc-icons_bundle">
-                            <a className="mhwc-icon" onClick={() => {this.handleBundlePickUp(index)}}>
-                                <i className="fa fa-check"></i>
-                            </a>
+                            <FunctionalIcon
+                                iconName="check" altName="確認"
+                                onClick={() => {this.handleBundlePickUp(index)}} />
                         </div>
                     </div>
 
