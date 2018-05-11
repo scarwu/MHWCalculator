@@ -253,6 +253,7 @@ export default class Main extends Component {
         let equips = this.state.equips;
         let equipsLock = this.state.equipsLock;
 
+        // Create Current Equips
         let currentEquips = {};
 
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
@@ -263,8 +264,16 @@ export default class Main extends Component {
             currentEquips[equipType] = equips[equipType];
         });
 
+        // Get Ignore Equips
+        let ignoreEquips = Status.get('ignoreEquips');
+
+        if (undefined === ignoreEquips) {
+            ignoreEquips = {};
+        }
+
         Event.trigger('SearchCandidateEquips', Misc.deepCopy({
             equips: currentEquips,
+            ignoreEquips: ignoreEquips,
             sets: sets,
             skills: skills
         }));
@@ -738,21 +747,24 @@ export default class Main extends Component {
                 ) : false}
 
                 {this.state.isShowSetSelector ? (
-                    <SetItemSelector data={this.state.sets}
+                    <SetItemSelector
+                        data={this.state.sets}
                         onPickUp={this.handleSetSelectorPickUp}
                         onThrowDown={this.handleSetSelectorThrowDown}
                         onClose={this.handleSetSelectorClose} />
                 ) : false}
 
                 {this.state.isShowSkillSelector ? (
-                    <SkillItemSelector data={this.state.skills}
+                    <SkillItemSelector
+                        data={this.state.skills}
                         onPickUp={this.handleSkillSelectorPickUp}
                         onThrowDown={this.handleSkillSelectorThrowDown}
                         onClose={this.handleSkillSelectorClose} />
                 ) : false}
 
                 {this.state.isShowEquipSelector ? (
-                    <EquipItemSelector data={this.state.equipSelector}
+                    <EquipItemSelector
+                        data={this.state.equipSelector}
                         onPickUp={this.handleEquipSelectorPickUp}
                         onToggle={this.handleEquipSelectorToggle}
                         onClose={this.handleEquipSelectorClose} />

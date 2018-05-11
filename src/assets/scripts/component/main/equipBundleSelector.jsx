@@ -109,11 +109,7 @@ export default class EquipBundleSelector extends Component {
         this.props.onClose();
     };
 
-    /**
-     * Lifecycle Functions
-     */
-    componentWillMount () {
-        let equips = this.props.data;
+    initState = (equips) => {
         let equipBundleList = Status.get('equipBundleList');
 
         if (null === equips.weapon.name
@@ -137,33 +133,17 @@ export default class EquipBundleSelector extends Component {
             equips: equips,
             equipBundleList: equipBundleList
         });
+    };
+
+    /**
+     * Lifecycle Functions
+     */
+    componentWillMount () {
+        this.initState(this.props.data);
     }
 
     componentWillReceiveProps (nextProps) {
-        let equips = nextProps.data;
-        let equipBundleList = Status.get('equipBundleList');
-
-        if (null === equips.weapon.name
-            && null === equips.helm.name
-            && null === equips.chest.name
-            && null === equips.arm.name
-            && null === equips.waist.name
-            && null === equips.leg.name
-            && null === equips.charm.name) {
-
-            equips = null;
-        }
-
-        if (null === equipBundleList
-            || undefined === equipBundleList) {
-
-            equipBundleList = [];
-        }
-
-        this.setState({
-            equips: equips,
-            equipBundleList: Status.get('equipBundleList')
-        });
+        this.initState(nextProps.data);
     }
 
     /**
@@ -248,9 +228,11 @@ export default class EquipBundleSelector extends Component {
             <div className="mhwc-selector">
                 <div className="mhwc-dialog">
                     <div className="mhwc-panel">
-                        <a className="mhwc-icon" onClick={this.handleWindowClose}>
-                            <i className="fa fa-times"></i>
-                        </a>
+                        <div className="mhwc-icons_bundle">
+                            <FunctionalIcon
+                                iconName="times" altName="關閉"
+                                onClick={this.handleWindowClose} />
+                        </div>
                     </div>
                     <div className="mhwc-list">
                         {this.renderTable()}
