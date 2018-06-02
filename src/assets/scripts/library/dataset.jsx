@@ -352,6 +352,11 @@ class WeaponHelper {
             let skillLevel = skillLevelMapping[skillName];
             let skillInfo = skillHelper.getInfo(skillName);
 
+            // Fix Skill Level Overflow
+            if (skillLevel > skillInfo.list.length) {
+                skillLevel = skillInfo.list.length;
+            }
+
             info.skills.push({
                 name: skillName,
                 level: skillLevel,
@@ -453,8 +458,7 @@ class ArmorHelper {
                 },
                 slots: slots,
                 skills: [],
-                set: null,
-                price: 0
+                set: null
             };
 
             this.mapping[slotEquipData.name] = slotEquipData;
@@ -700,6 +704,11 @@ class CharmHelper {
         Object.keys(skillLevelMapping).forEach((skillName) => {
             let skillLevel = skillLevelMapping[skillName];
             let skillInfo = skillHelper.getInfo(skillName);
+
+            // Fix Skill Level Overflow
+            if (skillLevel > skillInfo.list.length) {
+                skillLevel = skillInfo.list.length;
+            }
 
             info.skills.push({
                 name: skillName,
