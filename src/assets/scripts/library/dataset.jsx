@@ -160,7 +160,8 @@ class WeaponHelper {
                     status: null
                 },
                 elderseal: null,
-                slots: slots
+                slots: slots,
+                skills: []
             };
 
             this.mapping[slotEquipData.name] = slotEquipData;

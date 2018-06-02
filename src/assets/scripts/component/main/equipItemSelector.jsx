@@ -312,6 +312,15 @@ export default class EquipItemSelector extends Component {
                     })}
                 </td>
                 <td>
+                    {data.skills.map((data, index) => {
+                        return (
+                            <div key={index}>
+                                <span>{data.name} Lv.{data.level}</span>
+                            </div>
+                        );
+                    })}
+                </td>
+                <td>
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
@@ -347,6 +356,7 @@ export default class EquipItemSelector extends Component {
                         <td>龍封力</td>
                         <td>防禦力</td>
                         <td>插槽</td>
+                        <td>技能</td>
                         <td></td>
                     </tr>
                 </thead>
