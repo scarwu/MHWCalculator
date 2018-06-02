@@ -15112,5 +15112,325 @@
         "set": {
             "name": "火龍奧祕"
         }
+    },
+    {
+        "name": "皇后琴眩α",
+        "series": "皇后α",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "迴避距離UP",
+                "level": 2
+            },
+            {
+                "name": "整備",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "皇后鎧甲α",
+        "series": "皇后α",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "無傷",
+                "level": 2
+            },
+            {
+                "name": "體力增強",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "皇后腕甲α",
+        "series": "皇后α",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "廣域化",
+                "level": 2
+            },
+            {
+                "name": "爆破屬性強化",
+                "level": 2
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "皇后腰甲α",
+        "series": "皇后α",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "整備",
+                "level": 2
+            },
+            {
+                "name": "爆破屬性強化",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "皇后護腿α",
+        "series": "皇后α",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "體力增強",
+                "level": 2
+            },
+            {
+                "name": "廣域化",
+                "level": 2
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "皇后琴眩β",
+        "series": "皇后β",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "迴避距離UP",
+                "level": 2
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "皇后鎧甲β",
+        "series": "皇后β",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "無傷",
+                "level": 2
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "皇后腕甲β",
+        "series": "皇后β",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "廣域化",
+                "level": 2
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "皇后腰甲β",
+        "series": "皇后β",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "整備",
+                "level": 2
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "皇后護腿β",
+        "series": "皇后β",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "體力增強2",
+                "level": 2
+            }
+        ],
+        "set": null
     }
 ]

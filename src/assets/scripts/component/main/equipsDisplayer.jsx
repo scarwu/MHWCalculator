@@ -113,6 +113,10 @@ export default class EquipsDisplayer extends Component {
             equipName: null
         };
 
+        if (null === DataSet.weaponHelper.getInfo(equips.weapon.name)) {
+            equips.weapon.name = null;
+        }
+
         if (null !== equips.weapon.name) {
             let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
 
@@ -386,6 +390,10 @@ export default class EquipsDisplayer extends Component {
                 equipName: null
             };
 
+            if (null === DataSet.armorHelper.getInfo(equips[equipType].name)) {
+                equips[equipType].name = null;
+            }
+
             if (null !== equips[equipType].name) {
                 let equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
 
@@ -548,6 +556,10 @@ export default class EquipsDisplayer extends Component {
             equipType: 'charm',
             equipName: null
         };
+
+        if (null === DataSet.charmHelper.getInfo(equips.charm.name)) {
+            equips.charm.name = null;
+        }
 
         if (null !== equips.charm.name) {
             let charmInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
