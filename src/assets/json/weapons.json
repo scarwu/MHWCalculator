@@ -36,7 +36,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "滅鬼凶器",
@@ -74,7 +74,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "雷光懲罰者 III",
@@ -110,7 +110,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "霜炎 II",
@@ -146,7 +146,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "凶豺龍鉤爪 III",
@@ -185,7 +185,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "馬拉多之鐵 III",
@@ -217,7 +217,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "熔岩之炎 II",
@@ -256,7 +256,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "曼陀羅之炎 III",
@@ -295,7 +295,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "火龍煌劍",
@@ -331,7 +331,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "大龍顎 II",
@@ -367,7 +367,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "魔物的憤怒",
@@ -405,7 +405,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎大劍",
@@ -437,7 +437,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "激流巨像 III",
@@ -473,7 +473,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "土砂龍粉碎者 III (大劍)",
@@ -512,7 +512,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "塊劍拉多巴爾喀 III",
@@ -544,7 +544,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨大劍 III",
@@ -585,7 +585,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "召雷劍【麒麟王】",
@@ -617,7 +617,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "熔山龍大劍 II",
@@ -653,7 +653,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鋼龍凍大劍",
@@ -689,7 +689,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍大劍",
@@ -730,7 +730,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍顎劍【大牙】",
@@ -766,7 +766,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "痛苦之劍",
@@ -800,7 +800,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍熱機關式【鋼翼】改",
@@ -839,7 +839,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鐵刀【神樂】 II",
@@ -878,7 +878,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "滅盡一刀",
@@ -916,7 +916,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "眩惑刀【閃】 III",
@@ -952,7 +952,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "星空迅刀 III",
@@ -984,7 +984,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "爆鎚太刀 II",
@@ -1023,7 +1023,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "飛龍刀【葵】",
@@ -1059,7 +1059,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "飛龍刀【藍染】",
@@ -1095,7 +1095,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "骨鐮 II",
@@ -1131,7 +1131,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "爆鱗刀赤紅利刃",
@@ -1170,7 +1170,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎龍偃月刀 III",
@@ -1202,7 +1202,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "深土太刀 III",
@@ -1238,7 +1238,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "屍套龍太刀 II",
@@ -1276,7 +1276,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "飛雷龍之牙 III",
@@ -1312,7 +1312,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "幻光刀",
@@ -1344,7 +1344,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "黑色偃月刀 III",
@@ -1380,7 +1380,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨刀 III",
@@ -1418,7 +1418,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "熔山龍太刀 II",
@@ -1454,7 +1454,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "帝王刀【陽炎】",
@@ -1486,7 +1486,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍太刀",
@@ -1527,7 +1527,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "天上天下無雙刀",
@@ -1565,7 +1565,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "悲慘痛苦太刀",
@@ -1599,7 +1599,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蒼星的太刀【舞龍】",
@@ -1635,7 +1635,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鉻鋼切刀 II",
@@ -1674,7 +1674,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "毀滅之尖兵",
@@ -1712,7 +1712,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "日冕短劍",
@@ -1748,7 +1748,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "至尊劍",
@@ -1784,7 +1784,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "洶湧奔流 III",
@@ -1820,7 +1820,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冰凌三星劍",
@@ -1856,7 +1856,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "皇家薔薇",
@@ -1892,7 +1892,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "浮空龍戰斧 III",
@@ -1931,7 +1931,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "盛開曼陀羅 III",
@@ -1970,7 +1970,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "瑪拉多戰斧 III",
@@ -2002,7 +2002,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "大地巴龍刀 II",
@@ -2038,7 +2038,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "骨鎚龍棍棒 III",
@@ -2070,7 +2070,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "凶豺龍棍棒 III",
@@ -2109,7 +2109,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "雷光戰狂 III",
@@ -2145,7 +2145,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "土砂龍棍棒 III",
@@ -2184,7 +2184,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎龍追尋者",
@@ -2216,7 +2216,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨劍 III",
@@ -2254,7 +2254,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "雷光刀 II",
@@ -2286,7 +2286,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "炎王紋章",
@@ -2318,7 +2318,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍劍",
@@ -2359,7 +2359,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "致命寬劍",
@@ -2393,7 +2393,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鉻鋼雙刀 II",
@@ -2432,7 +2432,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "殘滅之爪。",
@@ -2470,7 +2470,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "決鬥者對劍 III",
@@ -2506,7 +2506,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "爆鱗雙斧赤紅巨星",
@@ -2542,7 +2542,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冰結鏈劍 II",
@@ -2578,7 +2578,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "奧秘雙劍 III",
@@ -2610,7 +2610,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "神聖佩劍",
@@ -2646,7 +2646,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "強斧 II",
@@ -2682,7 +2682,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎龍颶風 III",
@@ -2714,7 +2714,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "爆鎚棍棒 II",
@@ -2750,7 +2750,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "泥岩龍斬斧 III",
@@ -2786,7 +2786,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "溶岩颶風 II",
@@ -2825,7 +2825,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "黑色收割者 III",
@@ -2861,7 +2861,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "飛雷龍之爪 III",
@@ -2897,7 +2897,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "罪【真】",
@@ -2929,7 +2929,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "封龍劍【超絕一門】",
@@ -2970,7 +2970,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "迅雷",
@@ -3002,7 +3002,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "熔山龍鉤爪 II",
@@ -3038,7 +3038,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冰炎劍維爾瑪閃焰",
@@ -3079,7 +3079,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍雙劍",
@@ -3120,7 +3120,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "憤怒捕食者",
@@ -3154,7 +3154,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "大鬼鐵 II",
@@ -3193,7 +3193,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "潰滅一擊",
@@ -3231,7 +3231,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "慟泣冰河",
@@ -3267,7 +3267,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "激流強鎚 III",
@@ -3303,7 +3303,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "馬拉多戰鎚 III",
@@ -3335,7 +3335,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "花之女神",
@@ -3374,7 +3374,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "雷光強鎚 III",
@@ -3410,7 +3410,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "大地之岩 II",
@@ -3446,7 +3446,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "惡靈禍根",
@@ -3484,7 +3484,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "骨鎚龍擊鎚 III",
@@ -3516,7 +3516,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "爆鎚粉碎者 II",
@@ -3552,7 +3552,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "衝擊釘鎚 III",
@@ -3584,7 +3584,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "爆鎚戰鎚 II",
@@ -3620,7 +3620,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "土砂龍粉碎者 III (大槌)",
@@ -3659,7 +3659,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎龍戰鎚 III",
@@ -3691,7 +3691,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨大鎚 III",
@@ -3729,7 +3729,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "活火爆發熔山龍爆鎚",
@@ -3765,7 +3765,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "巨大鋼龍錘",
@@ -3801,7 +3801,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍大鎚",
@@ -3842,7 +3842,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "電擊鎚",
@@ -3878,7 +3878,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "混沌之鎚",
@@ -3912,7 +3912,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "威猛風笛 II",
@@ -3951,7 +3951,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "寂滅的章節",
@@ -3989,7 +3989,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "雷鼓 III",
@@ -4025,7 +4025,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "星空皮鼓 III",
@@ -4057,7 +4057,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "皇家戰笛",
@@ -4093,7 +4093,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "激流銅鑼 III",
@@ -4129,7 +4129,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冰凌琴弦",
@@ -4161,7 +4161,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "堅骨號角 II",
@@ -4197,7 +4197,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "岩賊龍號角 II",
@@ -4236,7 +4236,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎龍長號 III",
@@ -4268,7 +4268,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "曼陀羅號角 III",
@@ -4307,7 +4307,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "浮空龍長號 III",
@@ -4346,7 +4346,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "爆鱗鼓赤紅星光",
@@ -4385,7 +4385,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "女王笛巨蜂",
@@ -4424,7 +4424,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "骨鎚龍號角 III",
@@ -4456,7 +4456,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨古笛 III",
@@ -4497,7 +4497,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "雷光笛 II",
@@ -4529,7 +4529,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "炎王豎琴",
@@ -4561,7 +4561,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍狩獵笛",
@@ -4602,7 +4602,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "深邃之鎖",
@@ -4636,7 +4636,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鉻鋼長槍 II",
@@ -4675,7 +4675,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "亡滅之腕",
@@ -4713,7 +4713,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "風漂龍斧槍 II",
@@ -4745,7 +4745,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "搔鳥尖槍 III",
@@ -4777,7 +4777,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "岩賊龍刺針 II",
@@ -4816,7 +4816,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "雷光長槍 III",
@@ -4852,7 +4852,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "曼陀羅長槍 III",
@@ -4891,7 +4891,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蒼色日珥",
@@ -4927,7 +4927,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "堅骨槍 II",
@@ -4963,7 +4963,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "死神的哀愁",
@@ -5001,7 +5001,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "黑色刺針 III",
@@ -5037,7 +5037,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "土砂龍刺針 III",
@@ -5076,7 +5076,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "慘爪刺針 II",
@@ -5108,7 +5108,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "激流尖刺 III",
@@ -5144,7 +5144,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨槍 III",
@@ -5185,7 +5185,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "爆鱗槍赤紅巨星",
@@ -5217,7 +5217,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "雷槍【建御雷】",
@@ -5249,7 +5249,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "祈願鋼龍槍",
@@ -5285,7 +5285,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍長槍",
@@ -5326,7 +5326,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "遠古巴別塔",
@@ -5362,7 +5362,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "亞特羅西斯塔",
@@ -5396,7 +5396,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鉻鋼銃槍 II",
@@ -5435,7 +5435,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "燒滅種火",
@@ -5473,7 +5473,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "飛雷銃槍【蜻蜓切】",
@@ -5509,7 +5509,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "藍色戰車",
@@ -5545,7 +5545,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "皇家銃槍",
@@ -5581,7 +5581,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "泥岩龍銃槍 III",
@@ -5617,7 +5617,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "風漂龍加農砲 II",
@@ -5649,7 +5649,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "大骨銃槍【龍尾】 II",
@@ -5685,7 +5685,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "爆鱗龍銃槍 II",
@@ -5721,7 +5721,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "牙龍銃槍【大喰】 III",
@@ -5760,7 +5760,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "牙龍銃槍【黑頭巾】 III",
@@ -5792,7 +5792,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "屍套龍火槍 II",
@@ -5830,7 +5830,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "土砂龍破壞砲 III",
@@ -5862,7 +5862,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎龍加農砲 III",
@@ -5894,7 +5894,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨銃槍 III",
@@ -5935,7 +5935,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "驚天動地熔山龍銃槍",
@@ -5967,7 +5967,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鋼龍爪銃槍",
@@ -6003,7 +6003,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍銃槍",
@@ -6044,7 +6044,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "暴銃槍格拉古利德",
@@ -6078,7 +6078,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "合金製完成劍斧 II",
@@ -6117,7 +6117,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "斷滅的一閃",
@@ -6155,7 +6155,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "亡靈之柱",
@@ -6187,7 +6187,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "雷光迅斧 III",
@@ -6223,7 +6223,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "動力迅斧 II",
@@ -6259,7 +6259,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "凶豺龍掠奪者 III",
@@ -6298,7 +6298,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "爆鱗龍劍斧 II",
@@ -6334,7 +6334,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "火龍斧飛龍牙 II",
@@ -6370,7 +6370,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "重擊斬斧 II",
@@ -6403,7 +6403,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "屍套龍劍斧 II",
@@ -6441,7 +6441,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "泥岩龍劍斧 III",
@@ -6477,7 +6477,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "浮空龍斬斧 III",
@@ -6513,7 +6513,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "土砂龍劍斧 III",
@@ -6552,7 +6552,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "惡靈",
@@ -6588,7 +6588,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎劍斧",
@@ -6620,7 +6620,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨劍斧 III",
@@ -6661,7 +6661,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "斷雷斧麒麟",
@@ -6693,7 +6693,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "炎王城寨",
@@ -6725,7 +6725,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍劍斧",
@@ -6766,7 +6766,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "恐怖暴君",
@@ -6800,7 +6800,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鉻鐵守護者 II",
@@ -6839,7 +6839,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "帶來毀滅的一把武器",
@@ -6877,7 +6877,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "焰斧鶴王",
@@ -6913,7 +6913,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "深坑泥岩 III",
@@ -6949,7 +6949,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "寒霜巨人 II",
@@ -6988,7 +6988,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "火鎧盾斧",
@@ -7027,7 +7027,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "強骨兵裝 II",
@@ -7063,7 +7063,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "暴君銅盾 II",
@@ -7095,7 +7095,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "凶豺龍盾斧 III",
@@ -7134,7 +7134,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "岩賊龍盾 II",
@@ -7173,7 +7173,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "凶顎龍盾斧 III",
@@ -7205,7 +7205,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "屍套龍盾斧 II",
@@ -7243,7 +7243,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "飛雷龍之腕 III",
@@ -7279,7 +7279,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "憎【忿恨】",
@@ -7311,7 +7311,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨盾斧 III",
@@ -7352,7 +7352,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "捲土重來熔山龍盾斧",
@@ -7384,7 +7384,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鋼龍幻夢",
@@ -7423,7 +7423,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍盾斧",
@@ -7464,7 +7464,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "德斯特涅塔",
@@ -7498,7 +7498,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "但丁的魔劍",
@@ -7537,7 +7537,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鉻鋼長刀 II",
@@ -7576,7 +7576,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "撲滅導燈",
@@ -7614,7 +7614,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "火龍棍【炎舞】",
@@ -7650,7 +7650,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "星空長刀 III",
@@ -7682,7 +7682,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "利刃長刀 III",
@@ -7718,7 +7718,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "凍寒疾風刀 II",
@@ -7757,7 +7757,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "曼陀羅長刀 III",
@@ -7796,7 +7796,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "岩賊龍長鞭 II",
@@ -7835,7 +7835,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "飛空棍 II",
@@ -7871,7 +7871,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "屍套龍操蟲棍 II",
@@ -7909,7 +7909,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎棍翼龍桿刀",
@@ -7941,7 +7941,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "激流長刀 III",
@@ -7977,7 +7977,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "暴君長刀 II",
@@ -8013,7 +8013,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "飛雷龍之柱 III",
@@ -8049,7 +8049,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "惡【VICE】",
@@ -8085,7 +8085,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨棍 III",
@@ -8126,7 +8126,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "碧綠神鳴",
@@ -8158,7 +8158,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冰體鋼龍棍",
@@ -8194,7 +8194,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍長刀",
@@ -8235,7 +8235,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "污穢暴風雨",
@@ -8269,7 +8269,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鉻鋼迅擊弩 II",
@@ -8293,7 +8293,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "破滅引金",
@@ -8314,7 +8314,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "浮空龍颶風砲 III",
@@ -8335,7 +8335,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "爆鱗龍颶風砲 II",
@@ -8356,7 +8356,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "凶豺龍火砲 III",
@@ -8380,7 +8380,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "火龍破壞砲 II",
@@ -8401,7 +8401,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "雷光迅擊弩 III",
@@ -8422,7 +8422,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "寒霜迅擊弩 II",
@@ -8439,7 +8439,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "狙擊射手 II",
@@ -8460,7 +8460,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "骷髏的吶喊",
@@ -8481,7 +8481,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎龍破壞砲 III",
@@ -8498,7 +8498,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "泥岩龍輕弩 III",
@@ -8522,7 +8522,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "熔岩輕弩 II",
@@ -8546,7 +8546,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "土砂龍射手 III",
@@ -8567,7 +8567,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "業【羯磨】",
@@ -8588,7 +8588,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨弩 III",
@@ -8609,7 +8609,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "大鬼島",
@@ -8630,7 +8630,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "麒麟筒【三角】",
@@ -8647,7 +8647,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鋼龍冰蜂弩",
@@ -8668,7 +8668,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍輕弩槍",
@@ -8692,7 +8692,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "巨型十字槍",
@@ -8713,7 +8713,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "瘋狂的悲嘆",
@@ -8730,7 +8730,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鉻鋼突擊弩 II",
@@ -8754,7 +8754,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "擊滅砲火",
@@ -8775,7 +8775,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "激流加農砲 III",
@@ -8796,7 +8796,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "長尾重裝弩 III",
@@ -8817,7 +8817,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冰凌薔薇",
@@ -8838,7 +8838,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "牙龍重弩【暴食】",
@@ -8859,7 +8859,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎重弩黑火砲",
@@ -8880,7 +8880,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "動能發射器 II",
@@ -8901,7 +8901,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "重角轟砲",
@@ -8922,7 +8922,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "曼陀羅爆破砲 III",
@@ -8946,7 +8946,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "骨鎚龍加農砲 III",
@@ -8963,7 +8963,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "岩賊龍砲 II",
@@ -8984,7 +8984,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "飛雷龍之針 III",
@@ -9005,7 +9005,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨砲 III",
@@ -9026,7 +9026,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "迅雷閃擊",
@@ -9047,7 +9047,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "熔山龍重弩槍 II",
@@ -9068,7 +9068,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "炎王灼紅巨砲",
@@ -9085,7 +9085,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍重弩槍",
@@ -9109,7 +9109,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "黑暗左右",
@@ -9126,7 +9126,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "合金弓 II",
@@ -9155,7 +9155,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "必滅一矢",
@@ -9183,7 +9183,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "星空迅擊弓 III",
@@ -9205,7 +9205,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "重弓巨靈勇士",
@@ -9227,7 +9227,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "公主弓矢 III",
@@ -9258,7 +9258,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "火龍強弓 III",
@@ -9284,7 +9284,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "激流射手 III",
@@ -9310,7 +9310,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冰凌銀蕨",
@@ -9332,7 +9332,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "勇氣獵弓 II",
@@ -9358,7 +9358,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "屍套龍弓 II",
@@ -9386,7 +9386,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "角王弓疾風",
@@ -9415,7 +9415,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "曼陀羅弓 III",
@@ -9444,7 +9444,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "蠻顎龍射手 III",
@@ -9466,7 +9466,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "飛雷弓【羽羽矢】",
@@ -9492,7 +9492,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "龍骨弓 III",
@@ -9523,7 +9523,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鋼龍強弓",
@@ -9552,7 +9552,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "冥燈龍大弓",
@@ -9583,7 +9583,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "巨型獵弓",
@@ -9609,7 +9609,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "惡棍之弓",
@@ -9633,7 +9633,7 @@
             "affinity": "high"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "亞蘿伊的戰弓",
@@ -9659,7 +9659,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．痺賊",
@@ -9681,7 +9681,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．毒妖",
@@ -9703,7 +9703,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．熔岩",
@@ -9725,7 +9725,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．王",
@@ -9747,7 +9747,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．骨鎚",
@@ -9769,7 +9769,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．屍套",
@@ -9791,7 +9791,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．賊",
@@ -9817,7 +9817,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．熔山",
@@ -9839,7 +9839,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．土砂",
@@ -9865,7 +9865,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．？",
@@ -9882,7 +9882,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．冰",
@@ -9918,7 +9918,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．睡眠",
@@ -9954,7 +9954,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅炎．水",
@@ -9990,7 +9990,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．黑甲",
@@ -10012,7 +10012,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．泥魚",
@@ -10034,7 +10034,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．風漂",
@@ -10056,7 +10056,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．搔",
@@ -10078,7 +10078,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．飛雷",
@@ -10100,7 +10100,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．眩",
@@ -10122,7 +10122,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．屍套",
@@ -10146,7 +10146,7 @@
             "affinity": "medium"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．爆鎚",
@@ -10172,7 +10172,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．蠻顎",
@@ -10194,7 +10194,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．熔山",
@@ -10216,7 +10216,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．麻痺",
@@ -10252,7 +10252,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．毒",
@@ -10288,7 +10288,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍．水",
@@ -10324,7 +10324,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．幻",
@@ -10346,7 +10346,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．痺賊",
@@ -10368,7 +10368,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．風漂",
@@ -10390,7 +10390,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．浮空",
@@ -10412,7 +10412,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．毒妖",
@@ -10438,7 +10438,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．賊",
@@ -10460,7 +10460,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．王",
@@ -10482,7 +10482,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．骨鎚",
@@ -10504,7 +10504,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．蠻顎",
@@ -10526,7 +10526,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．土砂",
@@ -10552,7 +10552,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．龍",
@@ -10590,7 +10590,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．爆破",
@@ -10626,7 +10626,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅切刀．水",
@@ -10662,7 +10662,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．黑甲",
@@ -10684,7 +10684,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．搔",
@@ -10706,7 +10706,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．慘爪",
@@ -10728,7 +10728,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．熔岩",
@@ -10754,7 +10754,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．眩",
@@ -10776,7 +10776,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．泥魚",
@@ -10798,7 +10798,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．熔山",
@@ -10820,7 +10820,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．蠻顎",
@@ -10842,7 +10842,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．角",
@@ -10864,7 +10864,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．飛雷",
@@ -10886,7 +10886,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．冰",
@@ -10922,7 +10922,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．毒",
@@ -10958,7 +10958,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅小刀．水",
@@ -10994,7 +10994,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．痺賊",
@@ -11016,7 +11016,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．搔",
@@ -11038,7 +11038,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．毒妖",
@@ -11060,7 +11060,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．骨鎚",
@@ -11082,7 +11082,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．屍套",
@@ -11104,7 +11104,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．蠻顎",
@@ -11126,7 +11126,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．爆鎚",
@@ -11148,7 +11148,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．土砂",
@@ -11174,7 +11174,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．角",
@@ -11196,7 +11196,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．？",
@@ -11213,7 +11213,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．冰",
@@ -11249,7 +11249,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．雷",
@@ -11285,7 +11285,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅大錘．水",
@@ -11321,7 +11321,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．幻",
@@ -11343,7 +11343,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．飛甲",
@@ -11365,7 +11365,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．風漂",
@@ -11387,7 +11387,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．浮空",
@@ -11409,7 +11409,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．搔",
@@ -11431,7 +11431,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．毒妖",
@@ -11457,7 +11457,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．岩賊",
@@ -11479,7 +11479,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．骨鎚",
@@ -11501,7 +11501,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．蠻顎",
@@ -11523,7 +11523,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．？",
@@ -11540,7 +11540,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．水",
@@ -11576,7 +11576,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．龍",
@@ -11614,7 +11614,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅風笛．麻痺",
@@ -11650,7 +11650,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．王",
@@ -11672,7 +11672,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．黑甲",
@@ -11694,7 +11694,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．風漂",
@@ -11716,7 +11716,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．岩賊",
@@ -11738,7 +11738,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．屍套",
@@ -11762,7 +11762,7 @@
             "affinity": "medium"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．毒妖",
@@ -11788,7 +11788,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．搔",
@@ -11810,7 +11810,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．慘爪",
@@ -11842,7 +11842,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．土砂",
@@ -11864,7 +11864,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．？",
@@ -11881,7 +11881,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．雷",
@@ -11917,7 +11917,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．睡眠",
@@ -11953,7 +11953,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅之尖．水",
@@ -11989,7 +11989,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．風漂",
@@ -12011,7 +12011,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．痺賊",
@@ -12033,7 +12033,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．飛雷",
@@ -12055,7 +12055,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．土砂",
@@ -12077,7 +12077,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．王",
@@ -12109,7 +12109,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．爆鱗",
@@ -12131,7 +12131,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．泥魚",
@@ -12153,7 +12153,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．賊",
@@ -12175,7 +12175,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．屍套",
@@ -12199,7 +12199,7 @@
             "affinity": "medium"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．蠻顎",
@@ -12221,7 +12221,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．水",
@@ -12257,7 +12257,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．睡眠",
@@ -12293,7 +12293,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅銃槍．毒",
@@ -12329,7 +12329,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．風漂",
@@ -12351,7 +12351,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．屍套",
@@ -12375,7 +12375,7 @@
             "affinity": "medium"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．浮空",
@@ -12397,7 +12397,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．爆鱗",
@@ -12419,7 +12419,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．賊",
@@ -12441,7 +12441,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．王",
@@ -12463,7 +12463,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．泥魚",
@@ -12485,7 +12485,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．爆鎚",
@@ -12507,7 +12507,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．土砂",
@@ -12529,7 +12529,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．角",
@@ -12561,7 +12561,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．雷",
@@ -12597,7 +12597,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．睡眠",
@@ -12633,7 +12633,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅劍斧．麻痺",
@@ -12669,7 +12669,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．痺賊",
@@ -12691,7 +12691,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．慘爪",
@@ -12713,7 +12713,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．岩賊",
@@ -12735,7 +12735,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．屍套",
@@ -12759,7 +12759,7 @@
             "affinity": "medium"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．賊",
@@ -12781,7 +12781,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．王",
@@ -12803,7 +12803,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．泥魚",
@@ -12825,7 +12825,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．飛雷",
@@ -12847,7 +12847,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．角",
@@ -12879,7 +12879,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．？",
@@ -12896,7 +12896,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．冰",
@@ -12932,7 +12932,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．睡眠",
@@ -12968,7 +12968,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅兵裝．雷",
@@ -13004,7 +13004,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．屍套",
@@ -13028,7 +13028,7 @@
             "affinity": "medium"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．搔",
@@ -13050,7 +13050,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．慘爪",
@@ -13072,7 +13072,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．岩賊",
@@ -13098,7 +13098,7 @@
                 "size": 2
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．飛雷",
@@ -13120,7 +13120,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．毒妖",
@@ -13146,7 +13146,7 @@
                 "size": 1
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．眩",
@@ -13168,7 +13168,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．王",
@@ -13190,7 +13190,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．角",
@@ -13212,7 +13212,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．？",
@@ -13229,7 +13229,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．冰",
@@ -13265,7 +13265,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．麻痺",
@@ -13301,7 +13301,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅長刀．水",
@@ -13337,7 +13337,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．風漂",
@@ -13359,7 +13359,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．飛雷",
@@ -13381,7 +13381,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．搔",
@@ -13403,7 +13403,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．王",
@@ -13425,7 +13425,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．女王",
@@ -13449,7 +13449,7 @@
             "affinity": "low"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．毒妖",
@@ -13471,7 +13471,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．屍套",
@@ -13495,7 +13495,7 @@
             "affinity": "medium"
         },
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．蠻顎",
@@ -13517,7 +13517,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．角",
@@ -13539,7 +13539,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．？",
@@ -13556,7 +13556,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．雷",
@@ -13582,7 +13582,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．水",
@@ -13608,7 +13608,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅弓．爆破",
@@ -13634,7 +13634,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．浮空",
@@ -13651,7 +13651,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．慘爪",
@@ -13668,7 +13668,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．熔岩",
@@ -13685,7 +13685,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．王",
@@ -13702,7 +13702,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．泥魚",
@@ -13719,7 +13719,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．爆鱗",
@@ -13736,7 +13736,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．屍套",
@@ -13753,7 +13753,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．賊",
@@ -13770,7 +13770,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．土砂",
@@ -13787,7 +13787,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．蠻顎",
@@ -13804,7 +13804,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．迫擊",
@@ -13825,7 +13825,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．狙擊",
@@ -13846,7 +13846,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅迅擊弩．射擊",
@@ -13867,7 +13867,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．眩",
@@ -13884,7 +13884,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．飛雷",
@@ -13901,7 +13901,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．賊",
@@ -13918,7 +13918,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．毒妖",
@@ -13935,7 +13935,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．骨鎚",
@@ -13952,7 +13952,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．岩賊",
@@ -13969,7 +13969,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．蠻顎",
@@ -13986,7 +13986,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．熔山",
@@ -14003,7 +14003,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．角",
@@ -14020,7 +14020,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．？",
@@ -14037,7 +14037,7 @@
         },
         "elderseal": null,
         "slots": [],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．援擊",
@@ -14058,7 +14058,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．爆擊",
@@ -14079,7 +14079,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "鎧羅突擊弩．冷擊",
@@ -14100,7 +14100,7 @@
                 "size": 3
             }
         ],
-        "skill": null
+        "skills": []
     },
     {
         "name": "皇后盔．炎妃",
@@ -14129,11 +14129,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "毅力",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后盔．滅盡",
         "rare": 8,
@@ -14161,11 +14162,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "加速再生",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后盔．冥燈",
         "rare": 8,
@@ -14193,11 +14195,12 @@
                 "size": 3
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后劍．炎妃",
         "rare": 8,
@@ -14225,11 +14228,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "毅力",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后劍．滅盡",
         "rare": 8,
@@ -14257,11 +14261,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "加速再生",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后劍．冥燈",
         "rare": 8,
@@ -14289,11 +14294,12 @@
                 "size": 3
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后銳劍．炎妃",
         "rare": 8,
@@ -14321,11 +14327,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "毅力",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后銳劍．滅盡",
         "rare": 8,
@@ -14353,11 +14360,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "加速再生",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后銳劍．冥燈",
         "rare": 8,
@@ -14385,11 +14393,12 @@
                 "size": 3
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后小刀．炎妃",
         "rare": 8,
@@ -14414,11 +14423,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "毅力",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后小刀．滅盡",
         "rare": 8,
@@ -14443,11 +14453,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "加速再生",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后小刀．冥燈",
         "rare": 8,
@@ -14475,11 +14486,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后鏈錘．炎妃",
         "rare": 8,
@@ -14507,11 +14519,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "毅力",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后鏈錘．滅盡",
         "rare": 8,
@@ -14539,11 +14552,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "加速再生",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后鏈錘．冥燈",
         "rare": 8,
@@ -14571,11 +14585,12 @@
                 "size": 3
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
-    },
+        "skills": [
+                {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+]    },
     {
         "name": "皇后鼓．炎妃",
         "rare": 8,
@@ -14600,10 +14615,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "毅力",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后鼓．滅盡",
@@ -14629,10 +14646,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "加速再生",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后鼓．冥燈",
@@ -14661,10 +14680,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后長槍．炎妃",
@@ -14693,10 +14714,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "毅力",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后長槍．滅盡",
@@ -14725,10 +14748,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "加速再生",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后長槍．冥燈",
@@ -14757,10 +14782,12 @@
                 "size": 3
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后杖．炎妃",
@@ -14786,10 +14813,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "毅力",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后杖．滅盡",
@@ -14815,10 +14844,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "加速再生",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后杖．冥燈",
@@ -14847,10 +14878,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后斧．炎妃",
@@ -14879,10 +14912,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "毅力",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后斧．滅盡",
@@ -14911,10 +14946,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "加速再生",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后斧．冥燈",
@@ -14943,10 +14980,12 @@
                 "size": 3
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后武器．炎妃",
@@ -14975,10 +15014,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "毅力",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后武器．滅盡",
@@ -15007,10 +15048,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "加速再生",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后武器．冥燈",
@@ -15039,10 +15082,12 @@
                 "size": 3
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后長鞭．炎妃",
@@ -15068,10 +15113,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "毅力",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后長鞭．滅盡",
@@ -15097,10 +15144,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "加速再生",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后長鞭．冥燈",
@@ -15129,10 +15178,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后甲殼．炎妃",
@@ -15153,10 +15204,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "毅力",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后甲殼．滅盡",
@@ -15177,10 +15230,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "加速再生",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后甲殼．冥燈",
@@ -15204,10 +15259,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后加農砲．炎妃",
@@ -15228,10 +15285,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "毅力",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后加農砲．滅盡",
@@ -15252,10 +15311,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "加速再生",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后加農砲．冥燈",
@@ -15279,10 +15340,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后弓．炎妃",
@@ -15311,10 +15374,12 @@
                 "size": 1
             }
         ],
-        "skill": {
-            "name": "毅力",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "毅力",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后弓．滅盡",
@@ -15343,10 +15408,12 @@
                 "size": 2
             }
         ],
-        "skill": {
-            "name": "加速再生",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "加速再生",
+                "level": 1
+            }
+        ]
     },
     {
         "name": "皇后弓．冥燈",
@@ -15375,9 +15442,11 @@
                 "size": 3
             }
         ],
-        "skill": {
-            "name": "利刃／彈藥節約",
-            "level": 1
-        }
+        "skills": [
+            {
+                "name": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
     }
 ]

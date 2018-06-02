@@ -302,6 +302,16 @@ class WeaponHelper {
         // Handler Slot
         let skillLevelMapping = {};
 
+        info.skills.forEach((data, index) => {
+            let skillName = data.name;
+
+            if (undefined === skillLevelMapping[skillName]) {
+                skillLevelMapping[skillName] = 0;
+            }
+
+            skillLevelMapping[skillName] += data.level;
+        });
+
         info.slots.forEach((data, index) => {
             let jewelInfo = null;
             let jewelName = null;
@@ -346,6 +356,10 @@ class WeaponHelper {
                 level: skillLevel,
                 description: skillInfo.list[skillLevel - 1].description
             });
+        });
+
+        info.skills = info.skills.sort((a, b) => {
+            return b.level - a.level;
         });
 
         return info;
@@ -691,6 +705,10 @@ class CharmHelper {
                 level: skillLevel,
                 description: skillInfo.list[skillLevel - 1].description
             });
+        });
+
+        info.skills = info.skills.sort((a, b) => {
+            return b.level - a.level;
         });
 
         return info;
