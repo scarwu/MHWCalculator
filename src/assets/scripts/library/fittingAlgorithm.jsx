@@ -802,7 +802,7 @@ export default class FittingAlgorithm {
         }
 
         // Failed - No Jewel
-        if (null === jewel.name && 0 !== diffSkillLevel) {
+        if (null === jewel && 0 !== diffSkillLevel) {
             return false;
         }
 
