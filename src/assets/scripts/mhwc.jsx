@@ -32,4 +32,4 @@ ReactDOM.render((
             <Route exact path="/:base64" component={MainPage} />
         </div>
     </Router>
-), document.getElementById('ot-router'));
+), document.getElementById('mhwc-router'));
