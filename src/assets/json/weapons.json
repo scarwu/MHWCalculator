@@ -14110,7 +14110,17 @@
         "attack": 864,
         "criticalRate": 20,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14134,7 +14144,8 @@
                 "name": "毅力",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后盔．滅盡",
         "rare": 8,
@@ -14143,7 +14154,17 @@
         "attack": 912,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14167,7 +14188,8 @@
                 "name": "加速再生",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后盔．冥燈",
         "rare": 8,
@@ -14176,7 +14198,17 @@
         "attack": 864,
         "criticalRate": 10,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14200,7 +14232,8 @@
                 "name": "利刃／彈藥節約",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后劍．炎妃",
         "rare": 8,
@@ -14209,7 +14242,17 @@
         "attack": 594,
         "criticalRate": 20,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14233,7 +14276,8 @@
                 "name": "毅力",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后劍．滅盡",
         "rare": 8,
@@ -14242,7 +14286,17 @@
         "attack": 627,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14266,7 +14320,8 @@
                 "name": "加速再生",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后劍．冥燈",
         "rare": 8,
@@ -14275,7 +14330,17 @@
         "attack": 594,
         "criticalRate": 10,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14299,7 +14364,8 @@
                 "name": "利刃／彈藥節約",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后銳劍．炎妃",
         "rare": 8,
@@ -14308,7 +14374,17 @@
         "attack": 252,
         "criticalRate": 20,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 90,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 100
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14332,7 +14408,8 @@
                 "name": "毅力",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后銳劍．滅盡",
         "rare": 8,
@@ -14341,7 +14418,17 @@
         "attack": 266,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 90,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 100
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14365,7 +14452,8 @@
                 "name": "加速再生",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后銳劍．冥燈",
         "rare": 8,
@@ -14374,7 +14462,17 @@
         "attack": 252,
         "criticalRate": 10,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 90,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 100
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14398,7 +14496,8 @@
                 "name": "利刃／彈藥節約",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后小刀．炎妃",
         "rare": 8,
@@ -14407,7 +14506,17 @@
         "attack": 266,
         "criticalRate": 20,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 90,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 100
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14428,7 +14537,8 @@
                 "name": "毅力",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后小刀．滅盡",
         "rare": 8,
@@ -14437,7 +14547,17 @@
         "attack": 280,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 90,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 100
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14458,7 +14578,8 @@
                 "name": "加速再生",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后小刀．冥燈",
         "rare": 8,
@@ -14467,7 +14588,17 @@
         "attack": 266,
         "criticalRate": 10,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 90,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 100
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14491,7 +14622,8 @@
                 "name": "利刃／彈藥節約",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后鏈錘．炎妃",
         "rare": 8,
@@ -14500,7 +14632,17 @@
         "attack": 936,
         "criticalRate": 20,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14524,7 +14666,8 @@
                 "name": "毅力",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后鏈錘．滅盡",
         "rare": 8,
@@ -14533,7 +14676,17 @@
         "attack": 988,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14557,7 +14710,8 @@
                 "name": "加速再生",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后鏈錘．冥燈",
         "rare": 8,
@@ -14566,7 +14720,17 @@
         "attack": 936,
         "criticalRate": 10,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14590,7 +14754,8 @@
                 "name": "利刃／彈藥節約",
                 "level": 1
             }
-]    },
+        ]
+    },
     {
         "name": "皇后鼓．炎妃",
         "rare": 8,
@@ -14599,7 +14764,17 @@
         "attack": 798,
         "criticalRate": 20,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14630,7 +14805,17 @@
         "attack": 840,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14661,7 +14846,17 @@
         "attack": 798,
         "criticalRate": 10,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14695,7 +14890,17 @@
         "attack": 414,
         "criticalRate": 20,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14729,7 +14934,17 @@
         "attack": 437,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14763,7 +14978,17 @@
         "attack": 414,
         "criticalRate": 10,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14797,7 +15022,17 @@
         "attack": 437,
         "criticalRate": 20,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 90
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14828,7 +15063,17 @@
         "attack": 460,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 90
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14859,7 +15104,17 @@
         "attack": 437,
         "criticalRate": 10,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 90
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14893,7 +15148,17 @@
         "attack": 630,
         "criticalRate": 20,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14927,7 +15192,17 @@
         "attack": 665,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14961,7 +15236,17 @@
         "attack": 630,
         "criticalRate": 10,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -14995,7 +15280,17 @@
         "attack": 648,
         "criticalRate": 20,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 90,
+                "blue": 30,
+                "white": 90
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -15029,7 +15324,17 @@
         "attack": 684,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 90,
+                "blue": 30,
+                "white": 90
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -15063,7 +15368,17 @@
         "attack": 648,
         "criticalRate": 10,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 90,
+                "blue": 30,
+                "white": 90
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -15097,7 +15412,17 @@
         "attack": 589,
         "criticalRate": 20,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 90,
+                "blue": 30,
+                "white": 90
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -15128,7 +15453,17 @@
         "attack": 620,
         "criticalRate": 0,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 90,
+                "blue": 30,
+                "white": 90
+            }
+        },
         "element": {
             "attack": null,
             "status": {
@@ -15159,7 +15494,17 @@
         "attack": 589,
         "criticalRate": 10,
         "defense": 0,
-        "sharpness": null,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 90,
+                "blue": 30,
+                "white": 90
+            }
+        },
         "element": {
             "attack": null,
             "status": {
