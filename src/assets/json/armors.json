@@ -11689,7 +11689,7 @@
     },
     {
         "name": "烏爾德護腿α",
-        "series": "屍套龍α",
+        "series": "烏爾德α",
         "type": "leg",
         "rare": 8,
         "gender": "general",
@@ -15451,6 +15451,345 @@
         ],
         "set": {
             "name": "炎妃龍的恩寵"
+        }
+    },
+    {
+        "name": "烏爾德頭盔γ",
+        "series": "烏爾德γ",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -4,
+            "water": 4,
+            "thunder": 1,
+            "ice": -1,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "體力回復量UP",
+                "level": 2
+            },
+            {
+                "name": "龍屬性攻擊強化",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "屍套龍的命脈"
+        }
+    },
+    {
+        "name": "烏爾德鎧甲γ",
+        "series": "烏爾德γ",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -4,
+            "water": 4,
+            "thunder": 1,
+            "ice": -1,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "無傷",
+                "level": 1
+            },
+            {
+                "name": "體力回復量UP",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "屍套龍的命脈"
+        }
+    },
+    {
+        "name": "烏爾德腕甲γ",
+        "series": "烏爾德γ",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -4,
+            "water": 4,
+            "thunder": 1,
+            "ice": -1,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "龍屬性攻擊強化",
+                "level": 3
+            }
+        ],
+        "set": {
+            "name": "屍套龍的命脈"
+        }
+    },
+    {
+        "name": "烏爾德腰甲γ",
+        "series": "烏爾德γ",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -4,
+            "water": 4,
+            "thunder": 1,
+            "ice": -1,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "回復速度",
+                "level": 2
+            },
+            {
+                "name": "龍屬性攻擊強化",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "屍套龍的命脈"
+        }
+    },
+    {
+        "name": "烏爾德護腿γ",
+        "series": "烏爾德γ",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -4,
+            "water": 4,
+            "thunder": 1,
+            "ice": -1,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "無傷",
+                "level": 1
+            },
+            {
+                "name": "回復速度",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "屍套龍的命脈"
+        }
+    },
+    {
+        "name": "麒麟角γ",
+        "series": "麒麟γ",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -3,
+            "water": -2,
+            "thunder": 4,
+            "ice": -2,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "屬性異常狀態耐性",
+                "level": 1
+            },
+            {
+                "name": "雷屬性攻擊強化",
+                "level": 3
+            }
+        ],
+        "set": {
+            "name": "麒麟的恩寵"
+        }
+    },
+    {
+        "name": "麒麟服飾γ",
+        "series": "麒麟γ",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -3,
+            "water": -2,
+            "thunder": 4,
+            "ice": -2,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "屬性解放／裝填擴充",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "麒麟的恩寵"
+        }
+    },
+    {
+        "name": "麒麟長腕甲γ",
+        "series": "麒麟γ",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -3,
+            "water": -2,
+            "thunder": 4,
+            "ice": -2,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "屬性異常狀態耐性",
+                "level": 1
+            },
+            {
+                "name": "屬性解放／裝填擴充",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "麒麟的恩寵"
+        }
+    },
+    {
+        "name": "麒麟腰環γ",
+        "series": "麒麟γ",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -3,
+            "water": -2,
+            "thunder": 4,
+            "ice": -2,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "跑者",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "麒麟的恩寵"
+        }
+    },
+    {
+        "name": "麒麟護脛γ",
+        "series": "麒麟γ",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -3,
+            "water": -2,
+            "thunder": 4,
+            "ice": -2,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "屬性異常狀態耐性",
+                "level": 1
+            },
+            {
+                "name": "雷屬性攻擊強化",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "麒麟的恩寵"
         }
     }
 ]
