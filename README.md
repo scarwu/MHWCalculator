@@ -1,6 +1,6 @@
 # Monster Hunter: World - Calculator
 
-## Devlopment
+## Development
 
 ### Install Env Tools
 
