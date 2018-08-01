@@ -83,6 +83,7 @@ gulp.task('copy:static', function () {
     return gulp.src([
             'src/static/**/*'
         ])
+        .pipe($.replace('?timestamp', '?' + (new Date()).getTime().toString()))
         .pipe(gulp.dest('src/boot'));
 });
 
