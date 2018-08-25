@@ -12817,8 +12817,8 @@
         "element": {
             "attack": {
                 "type": "water",
-                "minValue": 120,
-                "maxValue": null,
+                "minValue": 180,
+                "maxValue": 230,
                 "isHidden": false
             },
             "status": null
@@ -12839,8 +12839,8 @@
         "element": {
             "attack": {
                 "type": "thunder",
-                "minValue": 90,
-                "maxValue": 120,
+                "minValue": 150,
+                "maxValue": 200,
                 "isHidden": false
             },
             "status": null
@@ -15793,5 +15793,43 @@
                 "level": 1
             }
         ]
+    },
+    {
+        "name": "穿心槍蓋博爾格．真",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": "蓋博爾格",
+        "attack": 589,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 60,
+                "orange": 60,
+                "yellow": 20,
+                "green": 150,
+                "blue": 90,
+                "white": 20
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 300,
+                "maxValue": 390,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "high"
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": []
     }
 ]
