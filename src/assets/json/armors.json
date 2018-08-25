@@ -15791,5 +15791,589 @@
         "set": {
             "name": "麒麟的恩寵"
         }
+    },
+    {
+        "name": "潛水夫修羅α",
+        "series": "潛水夫α",
+        "type": "helm",
+        "rare": 5,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 4,
+            "thunder": 1,
+            "ice": 1,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "跑者",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "潛水夫服裝α",
+        "series": "潛水夫α",
+        "type": "chest",
+        "rare": 5,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 4,
+            "thunder": 1,
+            "ice": 1,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "看破",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "潛水夫腕甲α",
+        "series": "潛水夫α",
+        "type": "arm",
+        "rare": 5,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 4,
+            "thunder": 1,
+            "ice": 1,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "收刀術",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "潛水夫皮帶α",
+        "series": "潛水夫α",
+        "type": "waist",
+        "rare": 5,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 4,
+            "thunder": 1,
+            "ice": 1,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "適應水場",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "潛水夫靴α",
+        "series": "潛水夫α",
+        "type": "leg",
+        "rare": 5,
+        "gender": "general",
+        "defense": 84,
+        "resistance": {
+            "fire": 1,
+            "water": 4,
+            "thunder": 1,
+            "ice": 1,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "飢餓耐性",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "獨角仙后護頭α",
+        "series": "獨角仙后α",
+        "type": "helm",
+        "rare": 5,
+        "gender": "female",
+        "defense": 80,
+        "resistance": {
+            "fire": -1,
+            "water": -1,
+            "thunder": 2,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "昏厥耐性",
+                "level": 2
+            },
+            {
+                "name": "防禦",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "獨角仙后上身α",
+        "series": "獨角仙后α",
+        "type": "chest",
+        "rare": 5,
+        "gender": "female",
+        "defense": 80,
+        "resistance": {
+            "fire": -1,
+            "water": -1,
+            "thunder": 2,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [],
+        "skills": [
+            {
+                "name": "體力增強",
+                "level": 2
+            },
+            {
+                "name": "昏厥耐性",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "獨角仙后護袖α",
+        "series": "獨角仙后α",
+        "type": "arm",
+        "rare": 5,
+        "gender": "female",
+        "defense": 80,
+        "resistance": {
+            "fire": -1,
+            "water": -1,
+            "thunder": 2,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [],
+        "skills": [
+            {
+                "name": "看破",
+                "level": 2
+            },
+            {
+                "name": "體力增強",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "獨角仙后護腰具α",
+        "series": "獨角仙后α",
+        "type": "waist",
+        "rare": 5,
+        "gender": "female",
+        "defense": 80,
+        "resistance": {
+            "fire": -1,
+            "water": -1,
+            "thunder": 2,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "防禦",
+                "level": 2
+            },
+            {
+                "name": "跑者",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "獨角仙后腳α",
+        "series": "獨角仙后α",
+        "type": "leg",
+        "rare": 5,
+        "gender": "female",
+        "defense": 80,
+        "resistance": {
+            "fire": -1,
+            "water": -1,
+            "thunder": 2,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [],
+        "skills": [
+            {
+                "name": "跑者",
+                "level": 2
+            },
+            {
+                "name": "看破",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "獨角仙后護頭β",
+        "series": "獨角仙后β",
+        "type": "helm",
+        "rare": 5,
+        "gender": "female",
+        "defense": 80,
+        "resistance": {
+            "fire": -1,
+            "water": -1,
+            "thunder": 2,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "昏厥耐性",
+                "level": 2
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "獨角仙后上身β",
+        "series": "獨角仙后β",
+        "type": "chest",
+        "rare": 5,
+        "gender": "female",
+        "defense": 80,
+        "resistance": {
+            "fire": -1,
+            "water": -1,
+            "thunder": 2,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "體力增強",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "獨角仙后護袖β",
+        "series": "獨角仙后β",
+        "type": "arm",
+        "rare": 5,
+        "gender": "female",
+        "defense": 80,
+        "resistance": {
+            "fire": -1,
+            "water": -1,
+            "thunder": 2,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "看破",
+                "level": 2
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "獨角仙后護腰具β",
+        "series": "獨角仙后β",
+        "type": "waist",
+        "rare": 5,
+        "gender": "female",
+        "defense": 80,
+        "resistance": {
+            "fire": -1,
+            "water": -1,
+            "thunder": 2,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "防禦",
+                "level": 2
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "獨角仙后腳β",
+        "series": "獨角仙后β",
+        "type": "leg",
+        "rare": 5,
+        "gender": "female",
+        "defense": 80,
+        "resistance": {
+            "fire": -1,
+            "water": -1,
+            "thunder": 2,
+            "ice": 0,
+            "dragon": 2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "跑者",
+                "level": 2
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "騰龍戰盔α",
+        "series": "騰龍α",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -2,
+            "water": -2,
+            "thunder": 3,
+            "ice": -2,
+            "dragon": 4
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "超會心",
+                "level": 1
+            },
+            {
+                "name": "飛燕",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "龍騎士之證"
+        }
+    },
+    {
+        "name": "騰龍戰鎧α",
+        "series": "騰龍α",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -2,
+            "water": -2,
+            "thunder": 3,
+            "ice": -2,
+            "dragon": 4
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "看破",
+                "level": 2
+            },
+            {
+                "name": "超會心",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "龍騎士之證"
+        }
+    },
+    {
+        "name": "騰龍腕甲α",
+        "series": "騰龍α",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -2,
+            "water": -2,
+            "thunder": 3,
+            "ice": -2,
+            "dragon": 4
+        },
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "看破",
+                "level": 2
+            },
+            {
+                "name": "攻擊",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "龍騎士之證"
+        }
+    },
+    {
+        "name": "騰龍腰甲α",
+        "series": "騰龍α",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -2,
+            "water": -2,
+            "thunder": 3,
+            "ice": -2,
+            "dragon": 4
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "看破",
+                "level": 2
+            },
+            {
+                "name": "強化持續",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "龍騎士之證"
+        }
+    },
+    {
+        "name": "騰龍護腿α",
+        "series": "騰龍α",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": -2,
+            "water": -2,
+            "thunder": 3,
+            "ice": -2,
+            "dragon": 4
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "攻擊",
+                "level": 2
+            },
+            {
+                "name": "超會心",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "龍騎士之證"
+        }
     }
 ]
