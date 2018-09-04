@@ -16375,5 +16375,321 @@
         "set": {
             "name": "龍騎士之證"
         }
+    },
+    {
+        "name": "帝王皇冠γ",
+        "series": "帝王γ",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 3,
+            "water": -3,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "看破",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "炎王龍的武技"
+        }
+    },
+    {
+        "name": "帝王鎧甲γ",
+        "series": "帝王γ",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 3,
+            "water": -3,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "力量解放",
+                "level": 2
+            },
+            {
+                "name": "弱點特效",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "炎王龍的武技"
+        }
+    },
+    {
+        "name": "帝王腕甲γ",
+        "series": "帝王γ",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 3,
+            "water": -3,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "看破",
+                "level": 3
+            }
+        ],
+        "set": {
+            "name": "炎王龍的武技"
+        }
+    },
+    {
+        "name": "帝王腰甲γ",
+        "series": "帝王γ",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 3,
+            "water": -3,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "力量解放",
+                "level": 3
+            }
+        ],
+        "set": {
+            "name": "炎王龍的武技"
+        }
+    },
+    {
+        "name": "帝王護腿γ",
+        "series": "帝王γ",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 3,
+            "water": -3,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": 1
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "看破",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "炎王龍的武技"
+        }
+    },
+    {
+        "name": "鋼龍強力γ",
+        "series": "鋼龍γ",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 0,
+            "water": 2,
+            "thunder": -3,
+            "ice": 4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "匠",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "鋼龍的飛翅"
+        }
+    },
+    {
+        "name": "鋼龍恐懼γ",
+        "series": "鋼龍γ",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 0,
+            "water": 2,
+            "thunder": -3,
+            "ice": 4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "冰屬性攻擊強化",
+                "level": 3
+            },
+            {
+                "name": "迴避距離UP",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "鋼龍的飛翅"
+        }
+    },
+    {
+        "name": "鋼龍剛強γ",
+        "series": "鋼龍γ",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 0,
+            "water": 2,
+            "thunder": -3,
+            "ice": 4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "集中",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "鋼龍的飛翅"
+        }
+    },
+    {
+        "name": "鋼龍安穩γ",
+        "series": "鋼龍γ",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 0,
+            "water": 2,
+            "thunder": -3,
+            "ice": 4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "匠",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "鋼龍的飛翅"
+        }
+    },
+    {
+        "name": "鋼龍踏實γ",
+        "series": "鋼龍γ",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 92,
+        "resistance": {
+            "fire": 0,
+            "water": 2,
+            "thunder": -3,
+            "ice": 4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "迴避性能",
+                "level": 3
+            }
+        ],
+        "set": {
+            "name": "鋼龍的飛翅"
+        }
     }
 ]
