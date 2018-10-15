@@ -16691,5 +16691,179 @@
         "set": {
             "name": "鋼龍的飛翅"
         }
+    },
+    {
+        "name": "皇后琴眩γ",
+        "series": "皇后γ",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "廣域化",
+                "level": 2
+            },
+            {
+                "name": "無傷",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "炎妃龍的恩寵"
+        }
+    },
+    {
+        "name": "皇后鎧甲γ",
+        "series": "皇后γ",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "耳塞",
+                "level": 2
+            },
+            {
+                "name": "整備",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "炎妃龍的恩寵"
+        }
+    },
+    {
+        "name": "皇后腕甲γ",
+        "series": "皇后γ",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "挑戰者",
+                "level": 2
+            },
+            {
+                "name": "迴避距離",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "炎妃龍的恩寵"
+        }
+    },
+    {
+        "name": "皇后腰甲γ",
+        "series": "皇后γ",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "迴避性能",
+                "level": 2
+            },
+            {
+                "name": "體力",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "炎妃龍的恩寵"
+        }
+    },
+    {
+        "name": "皇后護腿γ",
+        "series": "皇后γ",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 1,
+            "ice": -3,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "耳塞",
+                "level": 2
+            },
+            {
+                "name": "挑戰者",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "炎妃龍的恩寵"
+        }
     }
 ]
