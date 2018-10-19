@@ -119,7 +119,7 @@ gulp.task('copy:vendor:scripts', function () {
  */
 gulp.task('style:sass', function() {
     return compileTask.sass([
-        'src/assets/styles/mhwc.{sass,scss}',
+        'src/assets/styles/main.{sass,scss}',
     ], 'src/boot/assets/styles');
 });
 
@@ -128,7 +128,7 @@ gulp.task('style:sass', function() {
  */
 gulp.task('complex:webpack', function () {
     var result = compileTask.webpack(
-        'src/assets/scripts/mhwc.jsx',
+        'src/assets/scripts/main.jsx',
         'src/boot/assets/scripts'
     );
 

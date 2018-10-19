@@ -13,7 +13,7 @@ var path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        mhwc: './src/assets/scripts/mhwc.jsx'
+        main: './src/assets/scripts/main.jsx'
     },
     output: {
         filename: '[name].min.js'
