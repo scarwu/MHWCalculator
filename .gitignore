@@ -1,3 +1,4 @@
+.DS_Store
 src/boot
 node_modules
 .sass-cache
