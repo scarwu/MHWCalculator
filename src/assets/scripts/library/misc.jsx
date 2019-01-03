@@ -167,7 +167,7 @@ let Base64 = {
     }
 }
 
-module.exports = {
+export default {
     log: log,
     deepCopy: deepCopy,
     base64: Base64

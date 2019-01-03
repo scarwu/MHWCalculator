@@ -13,7 +13,6 @@ var WEBPACK_NEED_WATCH = false;
 
 var gulp = require('gulp');
 var del = require('del');
-var run = require('run-sequence');
 var $ = require('gulp-load-plugins')();
 var process = require('process');
 var webpackStream = require('webpack-stream');
@@ -101,17 +100,6 @@ gulp.task('copy:vendor:fonts', function () {
             'node_modules/font-awesome/fonts/*.{otf,eot,svg,ttf,woff,woff2}'
         ])
         .pipe(gulp.dest('src/boot/assets/fonts/vendor'));
-});
-
-gulp.task('copy:vendor:scripts', function () {
-    return gulp.src([
-            'node_modules/modernizr/modernizr.js'
-        ])
-        .pipe($.rename(function (path) {
-            path.basename = path.basename.split('.')[0];
-            path.extname = '.min.js';
-        }))
-        .pipe(gulp.dest('src/boot/assets/scripts/vendor'));
 });
 
 /**
@@ -231,40 +219,28 @@ gulp.task('clean:all', function (callback) {
 /**
  * Bundled Tasks
  */
-gulp.task('prepare', function (callback) {
-    run('clean', [
-        'copy:static'
-    ], [
-        'copy:assets:fonts',
-        'copy:assets:images',
-        'copy:vendor:fonts',
-        'copy:vendor:scripts'
-    ], [
-        'style:sass',
-        'complex:webpack'
-    ], callback);
-});
+gulp.task('prepare', gulp.series('clean',
+    gulp.parallel('copy:static'),
+    gulp.parallel('copy:assets:fonts', 'copy:assets:images', 'copy:vendor:fonts'),
+    gulp.parallel('style:sass', 'complex:webpack')
+));
 
-gulp.task('release', function (callback) {
+gulp.task('release', gulp.series((callback) => {
 
     // Warrning: Change ENVIRONMENT to Prodctuion
     ENVIRONMENT = 'production';
 
-    run('clean:release', 'prepare', [
-        'release:copy:boot',
-    ], [
-        'release:replace:index'
-    ], [
-        'release:optimize:images',
-        'release:optimize:scripts',
-        'release:optimize:styles'
-    ], callback);
-});
+    callback();
+}, 'clean:release', 'prepare',
+    gulp.parallel('release:copy:boot'),
+    gulp.parallel('release:replace:index'),
+    gulp.parallel('release:optimize:images', 'release:optimize:scripts', 'release:optimize:styles')
+));
 
-gulp.task('default', function (callback) {
+gulp.task('default', gulp.series((callback) => {
 
     // Webpack need watch
     WEBPACK_NEED_WATCH = true;
 
-    run('prepare', 'watch', callback);
-});
+    callback();
+}, 'prepare', 'watch'));
