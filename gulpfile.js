@@ -98,15 +98,15 @@ function copyVendorFonts() {
  */
 function watch() {
 
-    // Start LiveReload
-    $.livereload.listen();
-
     // Watch Files
     gulp.watch('src/boot/**/*').on('change', $.livereload.changed);
     gulp.watch('src/static/**/*', copyStatic);
     gulp.watch('src/assets/fonts/*', copyAssetsFonts);
     gulp.watch('src/assets/images/**/*', copyAssetsImages);
     gulp.watch('src/assets/styles/**/*.{sass,scss}', compileSass);
+
+    // Start LiveReload
+    $.livereload.listen();
 }
 
 /**
@@ -119,7 +119,7 @@ function releaseCopyBoot() {
 
 function releaseReplaceIndex() {
     return gulp.src('docs/index.html')
-        .pipe($.replace('?timestamp', '?' + (new Date()).getTime().toString()))
+        .pipe($.replace('?timestamp', '?' + postfix))
         .pipe(gulp.dest('docs'));
 }
 
@@ -168,15 +168,20 @@ gulp.task('cleanAll', () => {
 /**
  * Bundled Tasks
  */
-gulp.task('prepare', gulp.series('clean',
-    gulp.parallel(copyStatic),
-    gulp.parallel(copyAssetsFonts, copyAssetsImages, copyVendorFonts),
+gulp.task('prepare', gulp.series(
+    'clean',
+    gulp.parallel(copyStatic, copyAssetsFonts, copyAssetsImages, copyVendorFonts),
     gulp.parallel(compileSass, compileWebpack)
 ));
 
-gulp.task('release', gulp.series(setEnv, 'cleanRelease', 'prepare',
-    gulp.parallel(releaseCopyBoot),
-    gulp.parallel(releaseReplaceIndex)
+gulp.task('release', gulp.series(
+    setEnv,
+    'cleanRelease', 'prepare',
+    releaseCopyBoot, releaseReplaceIndex
 ));
 
-gulp.task('default', gulp.series(setWatch, 'prepare', watch));
+gulp.task('default', gulp.series(
+    setWatch,
+    'prepare',
+    watch
+));
