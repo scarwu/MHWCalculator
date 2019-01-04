@@ -145,38 +145,26 @@ function setWatch(callback) {
 /**
  * Clean Temp Folders
  */
-gulp.task('clean', () => {
-    return del([
-        'src/boot'
-    ]);
-});
+function cleanBoot () {
+    return del('src/boot');
+}
 
-gulp.task('cleanRelease', () => {
-    return del([
-        'src/boot',
-        'docs'
-    ]);
-});
-
-gulp.task('cleanAll', () => {
-    return del([
-        'src/boot',
-        'node_modules'
-    ]);
-});
+function cleanDocs () {
+    return del('docs');
+}
 
 /**
  * Bundled Tasks
  */
 gulp.task('prepare', gulp.series(
-    'clean',
+    cleanBoot,
     gulp.parallel(copyStatic, copyAssetsFonts, copyAssetsImages, copyVendorFonts),
     gulp.parallel(compileSass, compileWebpack)
 ));
 
 gulp.task('release', gulp.series(
-    setEnv,
-    'cleanRelease', 'prepare',
+    setEnv, cleanDocs,
+    'prepare',
     releaseCopyBoot, releaseReplaceIndex
 ));
 
