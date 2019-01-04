@@ -19,7 +19,7 @@ import Status from 'core/status';
 import Misc from 'libraries/misc';
 
 // Load Components
-import FunctionalIcon from 'components/functionalIcon';
+import FunctionalIcon from 'components/common/functionalIcon';
 
 // Load Constant & Lang
 import Constant from 'constant';
