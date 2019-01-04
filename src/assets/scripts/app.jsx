@@ -23,10 +23,12 @@ import DataSet from 'libraries/dataset';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
+
 import EquipBundleSelector from 'components/dialog/equipBundleSelector';
 import SetItemSelector from 'components/dialog/setItemSelector';
 import SkillItemSelector from 'components/dialog/skillItemSelector';
 import EquipItemSelector from 'components/dialog/equipItemSelector';
+
 import CandidateBundles from 'components/candidateBundles';
 import EquipsDisplayer from 'components/equipsDisplayer';
 import CharacterStatus from 'components/characterStatus';
@@ -433,7 +435,7 @@ export default class Main extends Component {
         }, () => {
             this.refershUrlHash();
         });
-    };handleEquipSelectorPickUp
+    };
 
     handleEquipSelectorToggle = (data) => {
         let ignoreEquips = Status.get('ignoreEquips');

@@ -12,11 +12,9 @@
 import Config from 'config';
 
 function log(...params) {
-    if ('development' !== Config.env) {
-        return;
+    if ('production' !== Config.env) {
+        console.log.apply(this, params);
     }
-
-    console.log.apply(this, params);
 }
 
 function deepCopy(data) {

@@ -19,7 +19,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
+    "babel-loader": "^8.0.5",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
