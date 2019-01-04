@@ -8,22 +8,22 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-var ENVIRONMENT = 'development'; // production | development | testing
-var WEBPACK_NEED_WATCH = false;
+let ENVIRONMENT = 'development'; // production | development | testing
+let WEBPACK_NEED_WATCH = false;
 
-var gulp = require('gulp');
-var del = require('del');
-var $ = require('gulp-load-plugins')();
-var process = require('process');
-var webpackStream = require('webpack-stream');
-var webpack = require('webpack');
-var webpackConfig = require('./webpack.config.js');
+let gulp = require('gulp');
+let del = require('del');
+let $ = require('gulp-load-plugins')();
+let process = require('process');
+let webpackStream = require('webpack-stream');
+let webpack = require('webpack');
+let webpackConfig = require('./webpack.config.js');
 
-var postfix = (new Date()).getTime().toString();
+let postfix = (new Date()).getTime().toString();
 
 function createSrcAndDest(path) {
-    var src = path.replace(process.env.PWD + '/', '');
-    var dest = src.replace('src/assets', 'src/boot/assets').split('/');
+    let src = path.replace(process.env.PWD + '/', '');
+    let dest = src.replace('src/assets', 'src/boot/assets').split('/');
 
     dest.pop();
 
@@ -38,10 +38,12 @@ function handleCompileError(event) {
 }
 
 // Assets Compile Task
-var compileTask = {
+let compileTask = {
     sass: function (src, dest) {
         return gulp.src(src)
-            .pipe($.sass().on('error', handleCompileError))
+            .pipe($.sass({
+                outputStyle: ('production' === ENVIRONMENT) ? 'compressed' : 'expanded'
+            }).on('error', handleCompileError))
             .pipe($.replace('../fonts/', '../../assets/fonts/vendor/'))
             .pipe($.autoprefixer())
             .pipe($.rename(function (path) {
@@ -52,7 +54,7 @@ var compileTask = {
     },
     webpack: function (src, dest) {
         if ('production' === ENVIRONMENT) {
-            var definePlugin = new webpack.DefinePlugin({
+            let definePlugin = new webpack.DefinePlugin({
                 'process.env': {
                     'ENV': "'production'",
                     'BUILD_TIME': postfix,
@@ -78,55 +80,55 @@ var compileTask = {
 /**
  * Copy Files & Folders
  */
-gulp.task('copy:static', function () {
+function copyStatic() {
     return gulp.src([
             'src/static/**/*'
         ])
         .pipe(gulp.dest('src/boot'));
-});
+}
 
-gulp.task('copy:assets:fonts', function () {
+function copyAssetsFonts() {
     return gulp.src('src/assets/fonts/*')
         .pipe(gulp.dest('src/boot/assets/fonts'));
-});
+}
 
-gulp.task('copy:assets:images', function () {
+function copyAssetsImages() {
     return gulp.src('src/assets/images/**/*')
         .pipe(gulp.dest('src/boot/assets/images'));
-});
+}
 
-gulp.task('copy:vendor:fonts', function () {
+function copyVendorFonts() {
     return gulp.src([
             'node_modules/font-awesome/fonts/*.{otf,eot,svg,ttf,woff,woff2}'
         ])
         .pipe(gulp.dest('src/boot/assets/fonts/vendor'));
-});
+}
 
 /**
  * Styles
  */
-gulp.task('style:sass', function() {
+function styleSass() {
     return compileTask.sass([
         'src/assets/styles/main.{sass,scss}',
     ], 'src/boot/assets/styles');
-});
+}
 
 /**
  * Complex
  */
-gulp.task('complex:webpack', function () {
-    var result = compileTask.webpack(
+function complexWebpack() {
+    let result = compileTask.webpack(
         'src/assets/scripts/main.jsx',
         'src/boot/assets/scripts'
     );
 
     return WEBPACK_NEED_WATCH ? true : result;
-});
+}
 
 /**
  * Watching Files
  */
-gulp.task('watch', function () {
+function watch() {
 
     // Start LiveReload
     $.livereload.listen();
@@ -137,110 +139,97 @@ gulp.task('watch', function () {
 
     // Static Files
     gulp.watch('src/assets/fonts/*', [
-        'copy:assets:fonts'
+        'copyAssetsFonts'
     ]);
 
     gulp.watch('src/assets/images/**/*', [
-        'copy:assets:images'
+        'copyAssetsImages'
     ]);
 
     gulp.watch([
         'src/static/**/*'
     ], [
-        'copy:static'
+        'copyStatic'
     ]);
 
     // Pre Compile Files
     gulp.watch('src/assets/styles/**/*.{sass,scss}', [
-        'style:sass'
+        styleSass
     ]);
-});
+}
 
 /**
  * Release
  */
 // Copy
-gulp.task('release:copy:boot', function () {
+function releaseCopyBoot() {
     return gulp.src([
             'src/boot/**/*'
         ])
         .pipe(gulp.dest('docs'));
-});
+}
 
 // Replace
-gulp.task('release:replace:index', function () {
+function releaseReplaceIndex() {
     return gulp.src('docs/index.html')
         .pipe($.replace('?timestamp', '?' + (new Date()).getTime().toString()))
         .pipe(gulp.dest('docs'));
-});
+}
 
-// Optimize
-gulp.task('release:optimize:scripts', function () {
-    return gulp.src('docs/assets/scripts/**/*')
-        .pipe($.uglify())
-        .pipe(gulp.dest('docs/assets/scripts'));
-});
+/**
+ * Set Variables
+ */
+function setEnv(callback) {
 
-gulp.task('release:optimize:styles', function () {
-    return gulp.src('docs/assets/styles/**/*')
-        .pipe($.cssnano())
-        .pipe(gulp.dest('docs/assets/styles'));
-});
+    // Warrning: Change ENVIRONMENT to Prodctuion
+    ENVIRONMENT = 'production';
 
-gulp.task('release:optimize:images', function () {
-    return gulp.src('docs/assets/images/**/*')
-        .pipe($.imagemin())
-        .pipe(gulp.dest('docs/assets/images'));
-});
+    callback();
+}
+
+function setWatch(callback) {
+
+    // Webpack need watch
+    WEBPACK_NEED_WATCH = true;
+
+    callback();
+}
 
 /**
  * Clean Temp Folders
  */
-gulp.task('clean', function (callback) {
+gulp.task('clean', () => {
     return del([
         'src/boot'
-    ], callback);
+    ]);
 });
 
-gulp.task('clean:release', function (callback) {
+gulp.task('cleanRelease', () => {
     return del([
         'src/boot',
         'docs'
-    ], callback);
+    ]);
 });
 
-gulp.task('clean:all', function (callback) {
+gulp.task('cleanAll', () => {
     return del([
         'src/boot',
         'node_modules'
-    ], callback);
+    ]);
 });
 
 /**
  * Bundled Tasks
  */
 gulp.task('prepare', gulp.series('clean',
-    gulp.parallel('copy:static'),
-    gulp.parallel('copy:assets:fonts', 'copy:assets:images', 'copy:vendor:fonts'),
-    gulp.parallel('style:sass', 'complex:webpack')
+    gulp.parallel(copyStatic),
+    gulp.parallel(copyAssetsFonts, copyAssetsImages, copyVendorFonts),
+    gulp.parallel(styleSass, complexWebpack)
 ));
 
-gulp.task('release', gulp.series((callback) => {
-
-    // Warrning: Change ENVIRONMENT to Prodctuion
-    ENVIRONMENT = 'production';
-
-    callback();
-}, 'clean:release', 'prepare',
-    gulp.parallel('release:copy:boot'),
-    gulp.parallel('release:replace:index'),
-    gulp.parallel('release:optimize:images', 'release:optimize:scripts', 'release:optimize:styles')
+gulp.task('release', gulp.series(setEnv, 'cleanRelease', 'prepare',
+    gulp.parallel(releaseCopyBoot),
+    gulp.parallel(releaseReplaceIndex)
 ));
 
-gulp.task('default', gulp.series((callback) => {
-
-    // Webpack need watch
-    WEBPACK_NEED_WATCH = true;
-
-    callback();
-}, 'prepare', 'watch'));
+gulp.task('default', gulp.series(setWatch, 'prepare', watch));
