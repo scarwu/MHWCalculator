@@ -13,9 +13,9 @@ import React, { Component } from 'react';
 
 // Load Core Libraries
 import Event from 'core/event';
+import Helper from 'core/helper';
 
 // Load Custom Libraries
-import Misc from 'libraries/misc';
 import DataSet from 'libraries/dataset';
 
 // Load Components
@@ -29,14 +29,14 @@ export default class CharacterStatus extends Component {
 
     // Default Props
     static defaultProps = {
-        equips: Misc.deepCopy(Constant.defaultEquips)
+        equips: Helper.deepCopy(Constant.defaultEquips)
     };
 
     // Initial State
     state = {
-        equips: Misc.deepCopy(Constant.defaultEquips),
-        status: Misc.deepCopy(Constant.defaultStatus),
-        extraInfo: Misc.deepCopy(Constant.defaultExtraInfo),
+        equips: Helper.deepCopy(Constant.defaultEquips),
+        status: Helper.deepCopy(Constant.defaultStatus),
+        extraInfo: Helper.deepCopy(Constant.defaultExtraInfo),
         passiveSkills: {},
         tuning: {
             rawAttack: 5,
@@ -90,7 +90,7 @@ export default class CharacterStatus extends Component {
     generateStatus = () => {
         let equips = this.state.equips;
         let passiveSkills = this.state.passiveSkills;
-        let status = Misc.deepCopy(Constant.defaultStatus);
+        let status = Helper.deepCopy(Constant.defaultStatus);
 
         let info = {};
 
@@ -384,8 +384,8 @@ export default class CharacterStatus extends Component {
 
     generateExtraInfo = () => {
         let equips = this.state.equips;
-        let status = Misc.deepCopy(this.state.status);
-        let extraInfo = Misc.deepCopy(Constant.defaultExtraInfo);
+        let status = Helper.deepCopy(this.state.status);
+        let extraInfo = Helper.deepCopy(Constant.defaultExtraInfo);
 
         let result = this.getBasicExtraInfo(equips, status, {});
 
@@ -399,7 +399,7 @@ export default class CharacterStatus extends Component {
         let tuning = this.state.tuning;
 
         // Raw Attack Tuning
-        status = Misc.deepCopy(this.state.status);
+        status = Helper.deepCopy(this.state.status);
         result = this.getBasicExtraInfo(equips, status, {
             rawAttack: tuning.rawAttack
         });
@@ -408,7 +408,7 @@ export default class CharacterStatus extends Component {
         extraInfo.perNRawAttackExpectedValue = Math.round(extraInfo.perNRawAttackExpectedValue * 100) / 100;
 
         // Critical Rate Tuning
-        status = Misc.deepCopy(this.state.status);
+        status = Helper.deepCopy(this.state.status);
         result = this.getBasicExtraInfo(equips, status, {
             rawCriticalRate: tuning.rawCriticalRate
         });
@@ -417,7 +417,7 @@ export default class CharacterStatus extends Component {
         extraInfo.perNRawCriticalRateExpectedValue = Math.round(extraInfo.perNRawCriticalRateExpectedValue * 100) / 100;
 
         // Critical Multiple Tuning
-        status = Misc.deepCopy(this.state.status);
+        status = Helper.deepCopy(this.state.status);
         result = this.getBasicExtraInfo(equips, status, {
             rawCriticalMultiple: tuning.rawCriticalMultiple
         });
@@ -426,7 +426,7 @@ export default class CharacterStatus extends Component {
         extraInfo.perNRawCriticalMultipleExpectedValue = Math.round(extraInfo.perNRawCriticalMultipleExpectedValue * 100) / 100;
 
         // Element Attack Tuning
-        status = Misc.deepCopy(this.state.status);
+        status = Helper.deepCopy(this.state.status);
         result = this.getBasicExtraInfo(equips, status, {
             elementAttack: tuning.elementAttack
         });

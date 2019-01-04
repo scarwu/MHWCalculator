@@ -8,7 +8,7 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-export default class Base64 {
+class Base64 {
 
     // private property
     _keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
@@ -146,3 +146,8 @@ export default class Base64 {
         return str;
     };
 }
+
+// Export Default
+let base64 = new Base64();
+
+export default base64;

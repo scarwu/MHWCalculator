@@ -15,9 +15,9 @@ import { Link } from 'react-router-dom';
 // Load Core Libraries
 import Status from 'core/status';
 import Event from 'core/event';
+import Helper from 'core/helper';
 
 // Load Custom Libraries
-import Misc from 'libraries/misc';
 import Base64 from 'libraries/base64';
 import DataSet from 'libraries/dataset';
 
@@ -46,8 +46,8 @@ export default class Main extends Component {
     state = {
         sets: [],
         skills: [],
-        equips: Misc.deepCopy(Constant.defaultEquips),
-        equipsLock: Misc.deepCopy(Constant.defaultEquipsLock),
+        equips: Helper.deepCopy(Constant.defaultEquips),
+        equipsLock: Helper.deepCopy(Constant.defaultEquipsLock),
         equipSelector: {},
         isShowEquipBundleSelector: false,
         isShowSetSelector: false,
@@ -272,7 +272,7 @@ export default class Main extends Component {
             ignoreEquips = {};
         }
 
-        Event.trigger('SearchCandidateEquips', Misc.deepCopy({
+        Event.trigger('SearchCandidateEquips', Helper.deepCopy({
             equips: currentEquips,
             ignoreEquips: ignoreEquips,
             sets: sets,
@@ -281,7 +281,7 @@ export default class Main extends Component {
     };
 
     handleCandidateBundlePickUp = (bundle) => {
-        let equips = Misc.deepCopy(this.state.equips);
+        let equips = Helper.deepCopy(this.state.equips);
         let slotMap = {
             1: [],
             2: [],
@@ -473,8 +473,8 @@ export default class Main extends Component {
     };
 
     handleEquipsDisplayerRefresh = () => {
-        let equips = Misc.deepCopy(Constant.defaultEquips);
-        let equipsLock = Misc.deepCopy(Constant.defaultEquipsLock);
+        let equips = Helper.deepCopy(Constant.defaultEquips);
+        let equipsLock = Helper.deepCopy(Constant.defaultEquipsLock);
 
         // Set Equips Data to Status
         Status.set('equips', equips);
@@ -508,10 +508,8 @@ export default class Main extends Component {
     };
 
     refershUrlHash = () => {
-        let base64 = new Base64();
-
-        let equips = Misc.deepCopy(this.state.equips);
-        let hash = base64.encode(JSON.stringify(equips));
+        let equips = Helper.deepCopy(this.state.equips);
+        let hash = Base64.encode(JSON.stringify(equips));
 
         window.location.hash = `#/${hash}`;
     };
@@ -522,10 +520,9 @@ export default class Main extends Component {
     componentWillMount () {
 
         // Get Sets & Skills Data from Status
-        let require = Misc.deepCopy(Constant.testRequireSetting[0]);
+        let require = Helper.deepCopy(Constant.testRequireSetting[0]);
         let sets = Status.get('sets');
         let skills = Status.get('skills');
-        let base64 = new Base64();
 
         if (undefined === sets) {
             sets = require.sets;
@@ -540,10 +537,10 @@ export default class Main extends Component {
         let equips = Status.get('equips');
 
         equips = (undefined !== hash)
-            ? JSON.parse(base64.decode(hash))
+            ? JSON.parse(Base64.decode(hash))
             : (undefined !== equips)
                 ? equips
-                : Misc.deepCopy(Constant.testEquipsSetting[0]);
+                : Helper.deepCopy(Constant.testEquipsSetting[0]);
 
         this.setState({
             sets: sets,

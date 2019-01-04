@@ -14,9 +14,9 @@ import React, { Component } from 'react';
 // Load Core Libraries
 import Event from 'core/event';
 import Status from 'core/status';
+import Helper from 'core/helper';
 
 // Load Custom Libraries
-import Misc from 'libraries/misc';
 import DataSet from 'libraries/dataset';
 
 // Load Components
@@ -250,8 +250,8 @@ export default class EquipItemSelector extends Component {
         let enhancedSharpness = null;
 
         if (null !== data.sharpness) {
-            originalSharpness = Misc.deepCopy(data.sharpness);
-            enhancedSharpness = Misc.deepCopy(data.sharpness);
+            originalSharpness = Helper.deepCopy(data.sharpness);
+            enhancedSharpness = Helper.deepCopy(data.sharpness);
             enhancedSharpness.value += 50;
         }
 

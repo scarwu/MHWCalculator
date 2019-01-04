@@ -13,9 +13,9 @@ import React, { Component } from 'react';
 
 // Load Core Libraries
 import Event from 'core/event';
+import Helper from 'core/helper';
 
 // Load Custom Libraries
-import Misc from 'libraries/misc';
 import DataSet from 'libraries/dataset';
 
 // Load Components
@@ -29,8 +29,8 @@ export default class EquipsDisplayer extends Component {
 
     // Default Props
     static defaultProps = {
-        equips: Misc.deepCopy(Constant.defaultEquips),
-        equipsLock: Misc.deepCopy(Constant.defaultEquipsLock),
+        equips: Helper.deepCopy(Constant.defaultEquips),
+        equipsLock: Helper.deepCopy(Constant.defaultEquipsLock),
         onToggleEquipsLock: (equipType) => {},
         onOpenSelector: (data) => {},
         onPickUp: (data) => {}
@@ -38,8 +38,8 @@ export default class EquipsDisplayer extends Component {
 
     // Initial State
     state = {
-        equips: Misc.deepCopy(Constant.defaultEquips),
-        equipsLock: Misc.deepCopy(Constant.defaultEquipsLock)
+        equips: Helper.deepCopy(Constant.defaultEquips),
+        equipsLock: Helper.deepCopy(Constant.defaultEquipsLock)
     };
 
     /**
@@ -124,8 +124,8 @@ export default class EquipsDisplayer extends Component {
             let enhancedSharpness = null;
 
             if (null !== weaponInfo.sharpness) {
-                originalSharpness = Misc.deepCopy(weaponInfo.sharpness);
-                enhancedSharpness = Misc.deepCopy(weaponInfo.sharpness);
+                originalSharpness = Helper.deepCopy(weaponInfo.sharpness);
+                enhancedSharpness = Helper.deepCopy(weaponInfo.sharpness);
                 enhancedSharpness.value += 50;
             }
 

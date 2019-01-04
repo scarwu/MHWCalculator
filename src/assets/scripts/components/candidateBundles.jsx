@@ -13,9 +13,9 @@ import React, { Component } from 'react';
 
 // Load Core Libraries
 import Event from 'core/event';
+import Helper from 'core/helper';
 
 // Load Custom Libraries
-import Misc from 'libraries/misc';
 import DataSet from 'libraries/dataset';
 import FittingAlgorithm from 'libraries/fittingAlgorithm';
 
@@ -64,8 +64,6 @@ export default class CandidateBundles extends Component {
      * Lifecycle Functions
      */
     componentDidMount () {
-        let FA = new FittingAlgorithm();
-
         Event.on('SearchCandidateEquips', 'CandidateBundles', (data) => {
             this.setState({
                 isSearching: true
@@ -73,13 +71,13 @@ export default class CandidateBundles extends Component {
 
             setTimeout(() => {
                 let startTime = new Date().getTime();
-                let bundleList = FA.search(data.equips, data.ignoreEquips, data.sets, data.skills);
+                let bundleList = FittingAlgorithm.search(data.equips, data.ignoreEquips, data.sets, data.skills);
                 let stopTime = new Date().getTime();
 
                 let searchTime = (stopTime - startTime) / 1000;
 
-                Misc.log('Bundle List:', bundleList);
-                Misc.log('Search Time:', searchTime);
+                Helper.log('Bundle List:', bundleList);
+                Helper.log('Search Time:', searchTime);
 
                 this.setState({
                     bundleList: bundleList,

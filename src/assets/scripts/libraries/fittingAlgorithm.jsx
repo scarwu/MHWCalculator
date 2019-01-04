@@ -11,14 +11,16 @@
 // Load Libraries
 import MD5 from 'md5';
 
+// Load Core
+import Helper from 'core/helper';
+
 // Load Custom Libraries
-import Misc from 'libraries/misc';
 import DataSet from 'libraries/dataset';
 
 // Load Constant & Lang
 import Constant from 'constant';
 
-export default class FittingAlgorithm {
+class FittingAlgorithm {
 
     /**
      * Search
@@ -49,7 +51,7 @@ export default class FittingAlgorithm {
         let prevBundleList = {};
         let nextBundleList = {};
         let lastBundleList = {};
-        let bundle = Misc.deepCopy(Constant.defaultBundle);
+        let bundle = Helper.deepCopy(Constant.defaultBundle);
 
         // Create Info by Sets
         sets.sort((a, b) => {
@@ -157,18 +159,18 @@ export default class FittingAlgorithm {
         let requireEquipCount = this.conditionEquips.length;
         let requireSkillCount = Object.keys(this.conditionSkills).length;
 
-        Misc.log('Ignore Equips', this.ignoreEquips);
-        Misc.log('Condition Skills:', this.conditionSkills);
-        Misc.log('Condition Equips:', this.conditionEquips);
-        Misc.log('Correspond Jewels:', this.correspondJewels);
-        Misc.log('Condition Expected Value:', this.conditionExpectedValue);
-        Misc.log('Condition Expected Level:', this.conditionExpectedLevel);
-        Misc.log('Init - Bundle List:', prevBundleList);
+        Helper.log('Ignore Equips', this.ignoreEquips);
+        Helper.log('Condition Skills:', this.conditionSkills);
+        Helper.log('Condition Equips:', this.conditionEquips);
+        Helper.log('Correspond Jewels:', this.correspondJewels);
+        Helper.log('Condition Expected Value:', this.conditionExpectedValue);
+        Helper.log('Condition Expected Level:', this.conditionExpectedLevel);
+        Helper.log('Init - Bundle List:', prevBundleList);
 
         if (0 !== Object.keys(this.conditionSets).length) {
 
             // Create Candidate Equips with Set Equips
-            Misc.log('Create Candidate Equips with Set Equips');
+            Helper.log('Create Candidate Equips with Set Equips');
 
             candidateEquips = {};
 
@@ -190,7 +192,7 @@ export default class FittingAlgorithm {
                 });
 
                 // Append Empty Candidate Equip
-                let candidateEquip = Misc.deepCopy(Constant.defaultCandidateEquip);
+                let candidateEquip = Helper.deepCopy(Constant.defaultCandidateEquip);
                 candidateEquip.type = equipType;
 
                 candidateEquips[equipType]['empty'] = candidateEquip;
@@ -201,7 +203,7 @@ export default class FittingAlgorithm {
                     return;
                 }
 
-                Misc.log('Equip Count:', equipType, Object.keys(candidateEquips[equipType]).length, candidateEquips[equipType]);
+                Helper.log('Equip Count:', equipType, Object.keys(candidateEquips[equipType]).length, candidateEquips[equipType]);
             });
 
             this.conditionEquips.forEach((equipType) => {
@@ -209,13 +211,13 @@ export default class FittingAlgorithm {
                     return;
                 }
 
-                Misc.log('Bundle Count:', equipType, Object.keys(prevBundleList).length);
+                Helper.log('Bundle Count:', equipType, Object.keys(prevBundleList).length);
 
                 nextBundleList = {};
 
                 Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
                     Object.keys(prevBundleList).forEach((hash) => {
-                        let bundle = Misc.deepCopy(prevBundleList[hash]);
+                        let bundle = Helper.deepCopy(prevBundleList[hash]);
 
                         if (undefined === bundle.equips[equipType]) {
                             bundle.equips[equipType] = null;
@@ -246,7 +248,7 @@ export default class FittingAlgorithm {
                         }
 
                         if (setRequire < bundle.sets[candidateEquip.setName]) {
-                            bundle = Misc.deepCopy(prevBundleList[hash]);
+                            bundle = Helper.deepCopy(prevBundleList[hash]);
                             nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
                             return;
@@ -265,7 +267,7 @@ export default class FittingAlgorithm {
                 let setRequire = this.conditionSets[setName];
 
                 Object.keys(prevBundleList).forEach((hash) => {
-                    let bundle = Misc.deepCopy(prevBundleList[hash]);
+                    let bundle = Helper.deepCopy(prevBundleList[hash]);
 
                     if (setRequire !== bundle.sets[setName]) {
                         return;
@@ -277,7 +279,7 @@ export default class FittingAlgorithm {
                 prevBundleList = nextBundleList;
             });
 
-            Misc.log('Bundle Count:', Object.keys(prevBundleList).length);
+            Helper.log('Bundle Count:', Object.keys(prevBundleList).length);
 
             // Sets Require Equips is Overflow
             if (0 === Object.keys(prevBundleList).length) {
@@ -286,12 +288,12 @@ export default class FittingAlgorithm {
         }
 
         // Completed Skills
-        Misc.log('Reset Completed Skills');
+        Helper.log('Reset Completed Skills');
 
         nextBundleList = {};
 
         Object.keys(prevBundleList).forEach((hash) => {
-            let bundle = Misc.deepCopy(prevBundleList[hash]);
+            let bundle = Helper.deepCopy(prevBundleList[hash]);
 
             bundle.meta.completedSkills = {};
 
@@ -313,7 +315,7 @@ export default class FittingAlgorithm {
         prevBundleList = nextBundleList;
 
         // Create Candidate Equips with Skill & Slot Equips
-        Misc.log('Create Candidate Equips with Skill & Slot Equips');
+        Helper.log('Create Candidate Equips with Skill & Slot Equips');
 
         candidateEquips = {};
 
@@ -352,7 +354,7 @@ export default class FittingAlgorithm {
             });
 
             // Append Empty Candidate Equip
-            let candidateEquip = Misc.deepCopy(Constant.defaultCandidateEquip);
+            let candidateEquip = Helper.deepCopy(Constant.defaultCandidateEquip);
             candidateEquip.type = equipType;
 
             candidateEquips[equipType]['empty'] = candidateEquip;
@@ -379,17 +381,17 @@ export default class FittingAlgorithm {
         });
 
         this.conditionEquips.forEach((equipType) => {
-            Misc.log('Equip Count:', equipType, Object.keys(candidateEquips[equipType]).length, candidateEquips[equipType]);
+            Helper.log('Equip Count:', equipType, Object.keys(candidateEquips[equipType]).length, candidateEquips[equipType]);
         });
 
-        Misc.log('Equips Expected Value:', this.maxEquipsExpectedValue);
-        Misc.log('Equips Expected Level:', this.maxEquipsExpectedLevel);
+        Helper.log('Equips Expected Value:', this.maxEquipsExpectedValue);
+        Helper.log('Equips Expected Level:', this.maxEquipsExpectedLevel);
 
         // Create Next BundleList
-        Misc.log('Create Next BundleList');
+        Helper.log('Create Next BundleList');
 
         this.conditionEquips.forEach((equipType) => {
-            Misc.log('Bundle Count:', equipType, Object.keys(prevBundleList).length);
+            Helper.log('Bundle Count:', equipType, Object.keys(prevBundleList).length);
 
             this.usedEquipTypes[equipType] = true;
 
@@ -397,7 +399,7 @@ export default class FittingAlgorithm {
 
             Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
                 Object.keys(prevBundleList).forEach((hash) => {
-                    let bundle = Misc.deepCopy(prevBundleList[hash]);
+                    let bundle = Helper.deepCopy(prevBundleList[hash]);
 
                     if (undefined === bundle.equips[equipType]) {
                         bundle.equips[equipType] = null;
@@ -440,7 +442,7 @@ export default class FittingAlgorithm {
                         let skillLevel = this.conditionSkills[skillName];
 
                         if (skillLevel < bundle.skills[skillName]) {
-                            bundle = Misc.deepCopy(prevBundleList[hash]);
+                            bundle = Helper.deepCopy(prevBundleList[hash]);
                             nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
                             isSkip = true;
@@ -486,18 +488,18 @@ export default class FittingAlgorithm {
 
             prevBundleList = nextBundleList;
 
-            Misc.log('Result - Bundle Count (Pre):', Object.keys(lastBundleList).length);
+            Helper.log('Result - Bundle Count (Pre):', Object.keys(lastBundleList).length);
         });
 
         // Find Completed Bundle into Last BundleList
-        Misc.log('Find Completed Bundles');
+        Helper.log('Find Completed Bundles');
 
-        Misc.log('Bundle List:', Object.keys(prevBundleList).length);
+        Helper.log('Bundle List:', Object.keys(prevBundleList).length);
 
         nextBundleList = {};
 
         Object.keys(prevBundleList).forEach((hash) => {
-            let bundle = Misc.deepCopy(prevBundleList[hash]);
+            let bundle = Helper.deepCopy(prevBundleList[hash]);
 
             // Completed Bundle By Skills
             bundle = this.completeBundleBySkills(bundle);
@@ -511,7 +513,7 @@ export default class FittingAlgorithm {
             }
         });
 
-        Misc.log('Result - Bundle Count (Final):', Object.keys(lastBundleList).length);
+        Helper.log('Result - Bundle Count (Final):', Object.keys(lastBundleList).length);
 
         lastBundleList = Object.values(lastBundleList).sort((a, b) => {
             let valueA = (8 - a.meta.equipCount) * 1000 + a.defense;
@@ -589,7 +591,7 @@ export default class FittingAlgorithm {
      * Convert Equip To Candidate Equip
      */
     convertEquipToCandidateEquip = (equip) => {
-        let candidateEquip = Misc.deepCopy(Constant.defaultCandidateEquip);
+        let candidateEquip = Helper.deepCopy(Constant.defaultCandidateEquip);
 
         // Set Name, Type & Defense
         candidateEquip.name = equip.name;
@@ -856,4 +858,9 @@ export default class FittingAlgorithm {
 
         return bundle;
     };
-};
+}
+
+// Export Default
+let fa = new FittingAlgorithm();
+
+export default fa;

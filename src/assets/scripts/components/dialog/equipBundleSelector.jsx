@@ -14,9 +14,7 @@ import React, { Component } from 'react';
 // Load Core Libraries
 import Event from 'core/event';
 import Status from 'core/status';
-
-// Load Custom Libraries
-import Misc from 'libraries/misc';
+import Helper from 'core/helper';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';

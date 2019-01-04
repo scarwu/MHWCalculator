@@ -13,10 +13,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
 
-// Load Core Libraries
-import Status from 'core/status';
-import Event from 'core/event';
-
 // Load App
 import App from 'app';
 

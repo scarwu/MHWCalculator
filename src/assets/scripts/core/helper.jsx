@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Misc Libray
+ * Helper
  *
  * @package     MHW Calculator
  * @author      Scar Wu

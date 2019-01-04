@@ -13,9 +13,9 @@ import React, { Component } from 'react';
 
 // Load Core Libraries
 import Event from 'core/event';
+import Helper from 'core/helper';
 
 // Load Custom Libraries
-import Misc from 'libraries/misc';
 import DataSet from 'libraries/dataset';
 
 // Load Components
