@@ -145,11 +145,11 @@ function setWatch(callback) {
 /**
  * Clean Temp Folders
  */
-function cleanBoot () {
+function cleanBoot() {
     return del('src/boot');
 }
 
-function cleanDocs () {
+function cleanDocs() {
     return del('docs');
 }
 
