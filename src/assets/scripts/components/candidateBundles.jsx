@@ -15,16 +15,16 @@ import React, { Component } from 'react';
 import Event from 'core/event';
 
 // Load Custom Libraries
-import Misc from 'library/misc';
-import DataSet from 'library/dataset';
-import FittingAlgorithm from 'library/fittingAlgorithm';
+import Misc from 'libraries/misc';
+import DataSet from 'libraries/dataset';
+import FittingAlgorithm from 'libraries/fittingAlgorithm';
+
+// Load Components
+import FunctionalIcon from 'components/functionalIcon';
 
 // Load Constant & Lang
 import Constant from 'constant';
 import Lang from 'lang';
-
-// Load Components
-import FunctionalIcon from 'component/main/functionalIcon';
 
 export default class CandidateBundles extends Component {
 

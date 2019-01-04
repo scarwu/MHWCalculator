@@ -16,14 +16,14 @@ import Event from 'core/event';
 import Status from 'core/status';
 
 // Load Custom Libraries
-import Misc from 'library/misc';
+import Misc from 'libraries/misc';
+
+// Load Components
+import FunctionalIcon from 'components/functionalIcon';
 
 // Load Constant & Lang
 import Constant from 'constant';
 import Lang from 'lang';
-
-// Load Components
-import FunctionalIcon from 'component/main/functionalIcon';
 
 export default class EquipBundleSelector extends Component {
 

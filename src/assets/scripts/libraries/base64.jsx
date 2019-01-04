@@ -25,7 +25,7 @@ export default class Base64 {
         let enc4;
         let i = 0;
 
-        input = this._utf8_encode(input);
+        input = this._utf8Encode(input);
 
         while (i < input.length) {
 
@@ -47,9 +47,7 @@ export default class Base64 {
             output = output + this._keyStr.charAt(enc1) + this._keyStr.charAt(enc2) + this._keyStr.charAt(enc3) + this._keyStr.charAt(enc4);
         }
 
-        output = output.replace(/\+/g, '-').replace(/\//g, '_');
-
-        return output;
+        return output.replace(/\+/g, '-').replace(/\//g, '_');
     };
 
     // public method for decoding
@@ -65,7 +63,7 @@ export default class Base64 {
         let i = 0;
 
         input = input.replace(/\-/g, '+').replace(/\_/g, '/');
-        input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+        input = input.replace(/[^A-Za-z0-9\+\/\=]/g, '');
 
         while (i < input.length) {
 
@@ -89,20 +87,18 @@ export default class Base64 {
             }
         }
 
-        output = this._utf8_decode(output);
-
-        return output;
+        return this._utf8Decode(output);
     };
 
     // private method for UTF-8 encoding
-    _utf8_encode = (string) => {
-        let utftext = "";
+    _utf8Encode = (str) => {
+        let utftext = '';
 
-        string = string.replace(/\r\n/g, "\n");
+        str = str.replace(/\r\n/g, '\n');
 
-        for (let n = 0; n < string.length; n++) {
+        for (let n = 0; n < str.length; n++) {
 
-            let c = string.charCodeAt(n);
+            let c = str.charCodeAt(n);
 
             if (c < 128) {
                 utftext += String.fromCharCode(c);
@@ -120,8 +116,8 @@ export default class Base64 {
     };
 
     // private method for UTF-8 decoding
-    _utf8_decode = (utftext) => {
-        let string = "";
+    _utf8Decode = (utftext) => {
+        let str = '';
         let i = 0;
         let c = 0;
         let c1 = 0;
@@ -133,20 +129,20 @@ export default class Base64 {
             c = utftext.charCodeAt(i);
 
             if (c < 128) {
-                string += String.fromCharCode(c);
+                str += String.fromCharCode(c);
                 i++;
             } else if ((c > 191) && (c < 224)) {
                 c2 = utftext.charCodeAt(i + 1);
-                string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+                str += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
                 i += 2;
             } else {
                 c2 = utftext.charCodeAt(i + 1);
                 c3 = utftext.charCodeAt(i + 2);
-                string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+                str += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
                 i += 3;
             }
         }
 
-        return string;
+        return str;
     };
 }

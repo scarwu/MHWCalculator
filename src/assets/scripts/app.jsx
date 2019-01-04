@@ -17,23 +17,23 @@ import Status from 'core/status';
 import Event from 'core/event';
 
 // Load Custom Libraries
-import Misc from 'library/misc';
-import Base64 from 'library/base64';
-import DataSet from 'library/dataset';
+import Misc from 'libraries/misc';
+import Base64 from 'libraries/base64';
+import DataSet from 'libraries/dataset';
+
+// Load Components
+import FunctionalIcon from 'components/functionalIcon';
+import EquipBundleSelector from 'components/equipBundleSelector';
+import SetItemSelector from 'components/setItemSelector';
+import SkillItemSelector from 'components/skillItemSelector';
+import EquipItemSelector from 'components/equipItemSelector';
+import CandidateBundles from 'components/candidateBundles';
+import EquipsDisplayer from 'components/equipsDisplayer';
+import CharacterStatus from 'components/characterStatus';
 
 // Load Constant & Lang
 import Constant from 'constant';
 import Lang from 'lang';
-
-// Load Components
-import FunctionalIcon from 'component/main/functionalIcon';
-import EquipBundleSelector from 'component/main/equipBundleSelector';
-import SetItemSelector from 'component/main/setItemSelector';
-import SkillItemSelector from 'component/main/skillItemSelector';
-import EquipItemSelector from 'component/main/equipItemSelector';
-import CandidateBundles from 'component/main/candidateBundles';
-import EquipsDisplayer from 'component/main/equipsDisplayer';
-import CharacterStatus from 'component/main/characterStatus';
 
 export default class Main extends Component {
 

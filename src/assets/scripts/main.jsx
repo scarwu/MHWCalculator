@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Application Bootstrap
+ * Bootstrap
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -17,19 +17,15 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import Status from 'core/status';
 import Event from 'core/event';
 
-// Load Config & Constant
-import Config from 'config';
-import Constant from 'constant';
-
-// Load Apps
-import MainPage from 'app/main';
+// Load App
+import App from 'app';
 
 // Router
 ReactDOM.render((
     <Router>
         <div>
-            <Route exact path="/" component={MainPage} />
-            <Route exact path="/:hash" component={MainPage} />
+            <Route exact path="/" component={App} />
+            <Route exact path="/:hash" component={App} />
         </div>
     </Router>
 ), document.getElementById('mhwc-router'));

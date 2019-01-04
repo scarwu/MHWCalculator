@@ -12,8 +12,8 @@
 import MD5 from 'md5';
 
 // Load Custom Libraries
-import Misc from 'library/misc';
-import DataSet from 'library/dataset';
+import Misc from 'libraries/misc';
+import DataSet from 'libraries/dataset';
 
 // Load Constant & Lang
 import Constant from 'constant';

@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Set Item Selector
+ * Skill Item Selector
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -15,17 +15,17 @@ import React, { Component } from 'react';
 import Event from 'core/event';
 
 // Load Custom Libraries
-import Misc from 'library/misc';
-import DataSet from 'library/dataset';
+import Misc from 'libraries/misc';
+import DataSet from 'libraries/dataset';
+
+// Load Components
+import FunctionalIcon from 'components/functionalIcon';
 
 // Load Constant & Lang
 import Constant from 'constant';
 import Lang from 'lang';
 
-// Load Components
-import FunctionalIcon from 'component/main/functionalIcon';
-
-export default class SetItemSelector extends Component {
+export default class SkillItemSelector extends Component {
 
     // Default Props
     static defaultProps = {
@@ -51,13 +51,13 @@ export default class SetItemSelector extends Component {
 
     handleItemPickUp = (itemName) => {
         this.props.onPickUp({
-            setName: itemName
+            skillName: itemName
         });
     };
 
     handleItemThrowDown = (itemName) => {
         this.props.onThrowDown({
-            setName: itemName
+            skillName: itemName
         });
     };
 
@@ -75,19 +75,23 @@ export default class SetItemSelector extends Component {
         let selectedList = [];
         let unselectedList = [];
 
-        data = data.map((set) => {
-            return set.name;
+        data = data.map((skill) => {
+            return skill.name;
         });
 
-        DataSet.setHelper.getNames().sort().forEach((setName) => {
+        DataSet.skillHelper.getNames().sort().forEach((skillName) => {
 
-            let set = DataSet.setHelper.getInfo(setName);
+            let skill = DataSet.skillHelper.getInfo(skillName);
 
-            // Skip Selected Sets
-            if (-1 !== data.indexOf(set.name)) {
-                selectedList.push(set);
+            if (false === skill.fromJewel && false === skill.fromArmor) {
+                return;
+            }
+
+            // Skip Selected Skills
+            if (-1 !== data.indexOf(skill.name)) {
+                selectedList.push(skill);
             } else {
-                unselectedList.push(set);
+                unselectedList.push(skill);
             }
         });
 
@@ -116,21 +120,19 @@ export default class SetItemSelector extends Component {
             <tr key={data.name}>
                 <td><span>{data.name}</span></td>
                 <td>
-                    {data.skills.map((skill, index) => {
+                    {data.list.map((skill, index) => {
                         return (
                             <div key={index}>
-                                <span>({skill.require}) {skill.name}</span>
+                                <span>Lv.{skill.level}</span>
                             </div>
                         );
                     })}
                 </td>
                 <td>
-                    {data.skills.map((skill, index) => {
-                        let skillInfo = DataSet.skillHelper.getInfo(skill.name);
-
+                    {data.list.map((skill, index) => {
                         return (
                             <div key={index}>
-                                <span>{skillInfo.list[0].description}</span>
+                                <span>{skill.description}</span>
                             </div>
                         );
                     })}
@@ -156,11 +158,11 @@ export default class SetItemSelector extends Component {
         let segment = this.state.segment;
 
         return (
-            <table className="mhwc-set_table">
+            <table className="mhwc-skill_table">
                 <thead>
                     <tr>
                         <td>名稱</td>
-                        <td>技能</td>
+                        <td>等級</td>
                         <td>說明</td>
                         <td></td>
                     </tr>
@@ -171,10 +173,8 @@ export default class SetItemSelector extends Component {
                         // Create Text
                         let text = data.name;
 
-                        data.skills.forEach((data) => {
-                            let skillInfo = DataSet.skillHelper.getInfo(data.name);
-
-                            text += data.name + skillInfo.list[0].description;
+                        data.list.forEach((data) => {
+                            text += data.name + data.description;
                         })
 
                         // Search Nameword
@@ -192,10 +192,8 @@ export default class SetItemSelector extends Component {
                         // Create Text
                         let text = data.name;
 
-                        data.skills.forEach((data) => {
-                            let skillInfo = DataSet.skillHelper.getInfo(data.name);
-
-                            text += data.name + skillInfo.list[0].description;
+                        data.list.forEach((data) => {
+                            text += data.name + data.description;
                         })
 
                         // Search Nameword
