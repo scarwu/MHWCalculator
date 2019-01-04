@@ -8,82 +8,69 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-let ENVIRONMENT = 'development'; // production | development | testing
-let WEBPACK_NEED_WATCH = false;
-
 let gulp = require('gulp');
 let del = require('del');
 let $ = require('gulp-load-plugins')();
-let process = require('process');
-let webpackStream = require('webpack-stream');
 let webpack = require('webpack');
+let webpackStream = require('webpack-stream');
 let webpackConfig = require('./webpack.config.js');
-
 let postfix = (new Date()).getTime().toString();
 
-function createSrcAndDest(path) {
-    let src = path.replace(process.env.PWD + '/', '');
-    let dest = src.replace('src/assets', 'src/boot/assets').split('/');
+let ENVIRONMENT = 'development';
+let WEBPACK_NEED_WATCH = false;
 
-    dest.pop();
-
-    return {
-        src: src,
-        dest: dest.join('/')
-    };
-}
-
+/**
+ * Compile Style & Script
+ */
 function handleCompileError(event) {
     $.util.log($.util.colors.red(event.message), 'error.');
 }
 
-// Assets Compile Task
-let compileTask = {
-    sass: function (src, dest) {
-        return gulp.src(src)
-            .pipe($.sass({
-                outputStyle: ('production' === ENVIRONMENT) ? 'compressed' : 'expanded'
-            }).on('error', handleCompileError))
-            .pipe($.replace('../fonts/', '../../assets/fonts/vendor/'))
-            .pipe($.autoprefixer())
-            .pipe($.rename(function (path) {
-                path.basename = path.basename.split('.')[0];
-                path.extname = '.min.css';
-            }))
-            .pipe(gulp.dest(dest));
-    },
-    webpack: function (src, dest) {
-        if ('production' === ENVIRONMENT) {
-            let definePlugin = new webpack.DefinePlugin({
-                'process.env': {
-                    'ENV': "'production'",
-                    'BUILD_TIME': postfix,
-                    'NODE_ENV': "'production'"
-                }
-            });
+function compileSass() {
+    return gulp.src('src/assets/styles/main.{sass,scss}')
+        .pipe($.sass({
+            outputStyle: ('production' === ENVIRONMENT) ? 'compressed' : 'expanded'
+        }).on('error', handleCompileError))
+        .pipe($.replace('../fonts/', '../../assets/fonts/vendor/'))
+        .pipe($.autoprefixer())
+        .pipe($.rename(function (path) {
+            path.basename = path.basename.split('.')[0];
+            path.extname = '.min.css';
+        }))
+        .pipe(gulp.dest('src/boot/assets/styles'));
+}
 
-            webpackConfig.mode = ENVIRONMENT;
-            webpackConfig.plugins = webpackConfig.plugins || [];
-            webpackConfig.plugins.push(definePlugin);
-        }
+function compileWebpack() {
+    if ('production' === ENVIRONMENT) {
+        let definePlugin = new webpack.DefinePlugin({
+            'process.env': {
+                'ENV': "'production'",
+                'BUILD_TIME': postfix,
+                'NODE_ENV': "'production'"
+            }
+        });
 
-        if (WEBPACK_NEED_WATCH) {
-            webpackConfig.watch = true;
-        }
-
-        return gulp.src(src)
-            .pipe(webpackStream(webpackConfig, webpack).on('error', handleCompileError))
-            .pipe(gulp.dest(dest));
+        webpackConfig.mode = ENVIRONMENT;
+        webpackConfig.plugins = webpackConfig.plugins || [];
+        webpackConfig.plugins.push(definePlugin);
     }
-};
+
+    if (WEBPACK_NEED_WATCH) {
+        webpackConfig.watch = true;
+    }
+
+    let result = gulp.src('src/assets/scripts/main.jsx')
+        .pipe(webpackStream(webpackConfig, webpack).on('error', handleCompileError))
+        .pipe(gulp.dest('src/boot/assets/scripts'));
+
+    return WEBPACK_NEED_WATCH ? true : result;
+}
 
 /**
  * Copy Files & Folders
  */
 function copyStatic() {
-    return gulp.src([
-            'src/static/**/*'
-        ])
+    return gulp.src('src/static/**/*')
         .pipe(gulp.dest('src/boot'));
 }
 
@@ -98,31 +85,8 @@ function copyAssetsImages() {
 }
 
 function copyVendorFonts() {
-    return gulp.src([
-            'node_modules/font-awesome/fonts/*.{otf,eot,svg,ttf,woff,woff2}'
-        ])
+    return gulp.src('node_modules/font-awesome/fonts/*.{otf,eot,svg,ttf,woff,woff2}')
         .pipe(gulp.dest('src/boot/assets/fonts/vendor'));
-}
-
-/**
- * Styles
- */
-function styleSass() {
-    return compileTask.sass([
-        'src/assets/styles/main.{sass,scss}',
-    ], 'src/boot/assets/styles');
-}
-
-/**
- * Complex
- */
-function complexWebpack() {
-    let result = compileTask.webpack(
-        'src/assets/scripts/main.jsx',
-        'src/boot/assets/scripts'
-    );
-
-    return WEBPACK_NEED_WATCH ? true : result;
 }
 
 /**
@@ -133,43 +97,22 @@ function watch() {
     // Start LiveReload
     $.livereload.listen();
 
-    gulp.watch([
-        'src/boot/**/*'
-    ]).on('change', $.livereload.changed);
-
-    // Static Files
-    gulp.watch('src/assets/fonts/*', [
-        'copyAssetsFonts'
-    ]);
-
-    gulp.watch('src/assets/images/**/*', [
-        'copyAssetsImages'
-    ]);
-
-    gulp.watch([
-        'src/static/**/*'
-    ], [
-        'copyStatic'
-    ]);
-
-    // Pre Compile Files
-    gulp.watch('src/assets/styles/**/*.{sass,scss}', [
-        styleSass
-    ]);
+    // Watch Files
+    gulp.watch('src/boot/**/*').on('change', $.livereload.changed);
+    gulp.watch('src/static/**/*', copyStatic);
+    gulp.watch('src/assets/fonts/*', copyAssetsFonts);
+    gulp.watch('src/assets/images/**/*', copyAssetsImages);
+    gulp.watch('src/assets/styles/**/*.{sass,scss}', compileSass);
 }
 
 /**
  * Release
  */
-// Copy
 function releaseCopyBoot() {
-    return gulp.src([
-            'src/boot/**/*'
-        ])
+    return gulp.src('src/boot/**/*')
         .pipe(gulp.dest('docs'));
 }
 
-// Replace
 function releaseReplaceIndex() {
     return gulp.src('docs/index.html')
         .pipe($.replace('?timestamp', '?' + (new Date()).getTime().toString()))
@@ -224,7 +167,7 @@ gulp.task('cleanAll', () => {
 gulp.task('prepare', gulp.series('clean',
     gulp.parallel(copyStatic),
     gulp.parallel(copyAssetsFonts, copyAssetsImages, copyVendorFonts),
-    gulp.parallel(styleSass, complexWebpack)
+    gulp.parallel(compileSass, compileWebpack)
 ));
 
 gulp.task('release', gulp.series(setEnv, 'cleanRelease', 'prepare',
