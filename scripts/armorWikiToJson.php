@@ -343,7 +343,6 @@ foreach ($urlList as $url) {
     }
 }
 
-
 if (!file_exists("{$root}/../temp")) {
     mkdir("{$root}/../temp");
 }

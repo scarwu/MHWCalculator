@@ -8,10 +8,10 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-var prefix = 'mhwcStatus';
-var storage = window.localStorage;
+let prefix = 'mhwcStatus';
+let storage = window.localStorage;
 
-function get (key) {
+function get(key) {
     if (undefined === storage[`${prefix}:${key}`]) {
         return undefined;
     }
@@ -21,7 +21,7 @@ function get (key) {
     return dataSet;
 }
 
-function set (key, value) {
+function set(key, value) {
     let dataSet = (undefined !== storage[`${prefix}:${key}`])
         ? JSON.parse(storage[`${prefix}:${key}`]) : {};
 
@@ -30,7 +30,7 @@ function set (key, value) {
     storage[`${prefix}:${key}`] = JSON.stringify(dataSet);
 }
 
-function has (key) {
+function has(key) {
     if (undefined === storage[`${prefix}:${key}`]) {
         return undefined;
     }
@@ -40,7 +40,7 @@ function has (key) {
     return undefined !== dataSet;
 }
 
-module.exports = {
+export default {
     get: get,
     set: set,
     has: has

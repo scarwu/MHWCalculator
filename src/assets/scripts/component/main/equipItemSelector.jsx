@@ -27,7 +27,7 @@ import Lang from 'lang';
 import FunctionalIcon from 'component/main/functionalIcon';
 
 // Weapon Type List
-var weaponTypeList = [
+let weaponTypeList = [
     'greatSword', 'longSword',
     'swordAndShield', 'dualBlades',
     'hammer', 'huntingHorn',

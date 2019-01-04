@@ -9,6 +9,6 @@
  */
 
 export default {
-    env: process.env['ENV'] || 'development',
-    buildTime: process.env['BUILD_TIME'] || (new Date()).getTime().toString()
+    env: process.env.ENV || 'development',
+    buildTime: process.env.BUILD_TIME || (new Date()).getTime().toString()
 };

@@ -29,7 +29,7 @@ ReactDOM.render((
     <Router>
         <div>
             <Route exact path="/" component={MainPage} />
-            <Route exact path="/:base64" component={MainPage} />
+            <Route exact path="/:hash" component={MainPage} />
         </div>
     </Router>
 ), document.getElementById('mhwc-router'));

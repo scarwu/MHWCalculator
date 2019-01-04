@@ -18,6 +18,7 @@ import Event from 'core/event';
 
 // Load Custom Libraries
 import Misc from 'library/misc';
+import Base64 from 'library/base64';
 import DataSet from 'library/dataset';
 
 // Load Constant & Lang
@@ -507,10 +508,12 @@ export default class Main extends Component {
     };
 
     refershUrlHash = () => {
-        let equips = Misc.deepCopy(this.state.equips);
-        let base64 = Misc.base64.encode(JSON.stringify(equips));
+        let base64 = new Base64();
 
-        window.location.hash = `#/${base64}`;
+        let equips = Misc.deepCopy(this.state.equips);
+        let hash = base64.encode(JSON.stringify(equips));
+
+        window.location.hash = `#/${hash}`;
     };
 
     /**
@@ -522,6 +525,7 @@ export default class Main extends Component {
         let require = Misc.deepCopy(Constant.testRequireSetting[0]);
         let sets = Status.get('sets');
         let skills = Status.get('skills');
+        let base64 = new Base64();
 
         if (undefined === sets) {
             sets = require.sets;
@@ -532,11 +536,11 @@ export default class Main extends Component {
         }
 
         // Get Equips Data from URL Base64
-        let base64 = this.props.match.params.base64;
+        let hash = this.props.match.params.hash;
         let equips = Status.get('equips');
 
-        equips = (undefined !== base64)
-            ? JSON.parse(Misc.base64.decode(base64))
+        equips = (undefined !== hash)
+            ? JSON.parse(base64.decode(hash))
             : (undefined !== equips)
                 ? equips
                 : Misc.deepCopy(Constant.testEquipsSetting[0]);
