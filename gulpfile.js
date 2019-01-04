@@ -40,7 +40,7 @@ function compileSass() {
         .pipe(gulp.dest('src/boot/assets/styles'));
 }
 
-function compileWebpack() {
+function compileWebpack(callback) {
     if ('production' === ENVIRONMENT) {
         let definePlugin = new webpack.DefinePlugin({
             'process.env': {
@@ -63,7 +63,11 @@ function compileWebpack() {
         .pipe(webpackStream(webpackConfig, webpack).on('error', handleCompileError))
         .pipe(gulp.dest('src/boot/assets/scripts'));
 
-    return WEBPACK_NEED_WATCH ? true : result;
+    if (WEBPACK_NEED_WATCH) {
+        callback();
+    } else {
+        return result;
+    }
 }
 
 /**
