@@ -16865,5 +16865,517 @@
         "set": {
             "name": "炎妃龍的恩寵"
         }
+    },
+    {
+        "name": "絢輝龍鎧羅琴眩γ",
+        "series": "絢輝龍鎧羅γ",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "強化持續",
+                "level": 1
+            },
+            {
+                "name": "昏厥耐性",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "絢輝龍鎧羅鎧甲γ",
+        "series": "絢輝龍鎧羅γ",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "匠",
+                "level": 2
+            },
+            {
+                "name": "挑戰者",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "絢輝龍鎧羅腕甲γ",
+        "series": "絢輝龍鎧羅γ",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "匠",
+                "level": 2
+            },
+            {
+                "name": "體術",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "絢輝龍鎧羅腰甲γ",
+        "series": "絢輝龍鎧羅γ",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "超會心",
+                "level": 1
+            },
+            {
+                "name": "弱點特效",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "絢輝龍鎧羅護腿γ",
+        "series": "絢輝龍鎧羅γ",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 4,
+            "water": -2,
+            "thunder": 3,
+            "ice": -4,
+            "dragon": -2
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "挑戰者",
+                "level": 2
+            },
+            {
+                "name": "熱傷害無效",
+                "level": 1
+            }
+        ],
+        "set": null
+    },
+    {
+        "name": "異形大種頭飾γ",
+        "series": "冥燈幽火γ",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": -3,
+            "water": 2,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": -4
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "屬性異常狀態的耐性",
+                "level": 2
+            },
+            {
+                "name": "強化持續",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "冥燈龍的神秘"
+        }
+    },
+    {
+        "name": "異形大種皮γ",
+        "series": "冥燈幽火γ",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": -3,
+            "water": 2,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": -4
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "減輕膽怯",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "冥燈龍的神秘"
+        }
+    },
+    {
+        "name": "異形大種爪γ",
+        "series": "冥燈幽火γ",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": -3,
+            "water": 2,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": -4
+        },
+        "slots": [
+            {
+                "size": 2
+            },{
+                "size": 2
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "強化持續",
+                "level": 1
+            },
+            {
+                "name": "特殊射擊強化",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "冥燈龍的神秘"
+        }
+    },
+    {
+        "name": "異形大種脊椎γ",
+        "series": "冥燈幽火γ",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": -3,
+            "water": 2,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": -4
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "超會心",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "冥燈龍的神秘"
+        }
+    },
+    {
+        "name": "異形大種護腿γ",
+        "series": "冥燈幽火γ",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": -3,
+            "water": 2,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": -4
+        },
+        "slots": [
+            {
+                "size": 2
+            },
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "超會心",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "冥燈龍的神秘"
+        }
+    },
+    {
+        "name": "鑄島熔岩頭飾γ",
+        "series": "鑄島熔岩γ",
+        "type": "helm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 4,
+            "water": -3,
+            "thunder": -1,
+            "ice": -2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "風壓耐性",
+                "level": 2
+            },
+            {
+                "name": "看破",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "熔山龍的奧秘"
+        }
+    },
+    {
+        "name": "鑄島熔岩皮γ",
+        "series": "鑄島熔岩γ",
+        "type": "chest",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 4,
+            "water": -3,
+            "thunder": -1,
+            "ice": -2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "耐震",
+                "level": 2
+            }
+        ],
+        "set": {
+            "name": "熔山龍的奧秘"
+        }
+    },
+    {
+        "name": "鑄島熔岩鋼爪γ",
+        "series": "鑄島熔岩γ",
+        "type": "arm",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 4,
+            "water": -3,
+            "thunder": -1,
+            "ice": -2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "name": "耳塞",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "熔山龍的奧秘"
+        }
+    },
+    {
+        "name": "鑄島熔岩腰甲γ",
+        "series": "鑄島熔岩γ",
+        "type": "waist",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 4,
+            "water": -3,
+            "thunder": -1,
+            "ice": -2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "炸彈客",
+                "level": 2
+            },
+            {
+                "name": "看破",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "熔山龍的奧秘"
+        }
+    },
+    {
+        "name": "鑄島熔岩護腿γ",
+        "series": "鑄島熔岩γ",
+        "type": "leg",
+        "rare": 8,
+        "gender": "general",
+        "defense": 90,
+        "resistance": {
+            "fire": 4,
+            "water": -3,
+            "thunder": -1,
+            "ice": -2,
+            "dragon": -3
+        },
+        "slots": [
+            {
+                "size": 3
+            },
+            {
+                "size": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "爆破屬性強化",
+                "level": 2
+            },
+            {
+                "name": "看破",
+                "level": 1
+            }
+        ],
+        "set": {
+            "name": "熔山龍的奧秘"
+        }
     }
 ]
