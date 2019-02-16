@@ -161,9 +161,9 @@ export default class SkillItemSelector extends Component {
             <table className="mhwc-skill_table">
                 <thead>
                     <tr>
-                        <td>名稱</td>
-                        <td>等級</td>
-                        <td>說明</td>
+                        <td>{Lang.name}</td>
+                        <td>{Lang.level}</td>
+                        <td>{Lang.description}</td>
                         <td></td>
                     </tr>
                 </thead>

@@ -9,7 +9,29 @@
  */
 
 export default {
+    title: '魔物獵人世界 - 配裝計算機',
+
+    // Statemants
+    skillLevelZero: '此技能將不會出現在備選中',
+
     // Properties
+    name:           '名稱',
+    description:    '說明',
+    level:          '等級',
+    series:         '衍生',
+    rare:           '稀有度',
+    attack:         '攻擊力',
+    elderseal:      '龍封力',
+    defense:        '防禦力',
+    shrapness:      '銳利度',
+    criticalRate:   '會心率',
+    element:        '屬性',
+    attackElement:  '攻擊屬性',
+    statusElement:  '狀態屬性',
+    slot:           '插槽',
+    resistance:     '抗性',
+    set:            '套裝',
+    size:           '大小',
     low:            '小',
     medium:         '中',
     high:           '大',
@@ -66,5 +88,11 @@ export default {
     skill:          '技能',
     set:            '套裝',
     search:         '搜尋',
-    list:           '列表'
+    list:           '列表',
+
+    // Tabs
+    requireCondition:   '需求條件',
+    candidateBundle:    '備選裝備',
+    equipBundle:        '已選裝備',
+    status:             '狀態'
 };

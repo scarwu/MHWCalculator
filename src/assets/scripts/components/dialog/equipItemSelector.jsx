@@ -279,24 +279,29 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td><span>{data.criticalRate}%</span></td>
                 <td>
-                    {null !== data.element.attack ? [(
-                        <span key="type">{Lang[data.element.attack.type]}</span>
-                    ), data.element.attack.isHidden ? (
-                        <span key="value_1">({data.element.attack.minValue}-{data.element.attack.maxValue})</span>
-                    ) : (
-                        <span key="value_2">{data.element.attack.minValue}-{data.element.attack.maxValue}</span>
-                    )] : false}
+                    {null !== data.element.attack ? (
+                        <div>
+                            <span>{Lang[data.element.attack.type]}</span>
+                            &nbsp;
+                            {data.element.attack.isHidden ? (
+                                <span key="value_1">({data.element.attack.minValue}-{data.element.attack.maxValue})</span>
+                            ) : (
+                                <span key="value_2">{data.element.attack.minValue}-{data.element.attack.maxValue}</span>
+                            )}
+                        </div>
+                    ) : false}
 
-                </td>
-                <td>
-                    {null !== data.element.status ? [(
-                        <span key="type">{Lang[data.element.status.type]}</span>
-                    ), data.element.status.isHidden ? (
-                        <span key="value_1">({data.element.status.minValue}-{data.element.status.maxValue})</span>
-                    ) : (
-                        <span key="value_2">{data.element.status.minValue}-{data.element.status.maxValue}</span>
-                    )] : false}
-
+                    {null !== data.element.status ? (
+                        <div>
+                            <span>{Lang[data.element.status.type]}</span>
+                            &nbsp;
+                            {data.element.status.isHidden ? (
+                                <span key="value_1">({data.element.status.minValue}-{data.element.status.maxValue})</span>
+                            ) : (
+                                <span key="value_2">{data.element.status.minValue}-{data.element.status.maxValue}</span>
+                            )}
+                        </div>
+                    ) : false}
                 </td>
                 <td>
                     {null !== data.elderseal ? (
@@ -345,18 +350,17 @@ export default class EquipItemSelector extends Component {
             <table className="mhwc-weapon_table">
                 <thead>
                     <tr>
-                        <td>名稱</td>
-                        <td>衍生</td>
-                        <td>稀有度</td>
-                        <td>攻擊力</td>
-                        <td>銳利度</td>
-                        <td>會心率</td>
-                        <td>攻擊屬性</td>
-                        <td>狀態屬性</td>
-                        <td>龍封力</td>
-                        <td>防禦力</td>
-                        <td>插槽</td>
-                        <td>技能</td>
+                        <td>{Lang.name}</td>
+                        <td>{Lang.series}</td>
+                        <td>{Lang.rare}</td>
+                        <td>{Lang.attack}</td>
+                        <td>{Lang.sharpness}</td>
+                        <td>{Lang.criticalRate}</td>
+                        <td>{Lang.element}</td>
+                        <td>{Lang.elderseal}</td>
+                        <td>{Lang.defense}</td>
+                        <td>{Lang.slot}</td>
+                        <td>{Lang.skill}</td>
                         <td></td>
                     </tr>
                 </thead>
@@ -405,11 +409,13 @@ export default class EquipItemSelector extends Component {
                 <td><span>{data.series}</span></td>
                 <td><span>{data.rare}</span></td>
                 <td><span>{data.defense}</span></td>
-                <td><span>{data.resistance.fire}</span></td>
-                <td><span>{data.resistance.water}</span></td>
-                <td><span>{data.resistance.thunder}</span></td>
-                <td><span>{data.resistance.ice}</span></td>
-                <td><span>{data.resistance.dragon}</span></td>
+                <td>
+                    <div><span>{Lang.fire} {data.resistance.fire}</span></div>
+                    <div><span>{Lang.water} {data.resistance.water}</span></div>
+                    <div><span>{Lang.thunder} {data.resistance.thunder}</span></div>
+                    <div><span>{Lang.ice} {data.resistance.ice}</span></div>
+                    <div><span>{Lang.dragon} {data.resistance.dragon}</span></div>
+                </td>
                 <td>
                     {data.slots.map((data, index) => {
                         return (
@@ -456,18 +462,14 @@ export default class EquipItemSelector extends Component {
             <table className="mhwc-armor_table">
                 <thead>
                     <tr>
-                        <td>名稱</td>
-                        <td>衍生</td>
-                        <td>稀有度</td>
-                        <td>防禦力</td>
-                        <td>{Lang['fire']}抗性</td>
-                        <td>{Lang['water']}抗性</td>
-                        <td>{Lang['thunder']}抗性</td>
-                        <td>{Lang['ice']}抗性</td>
-                        <td>{Lang['dragon']}抗性</td>
-                        <td>插槽</td>
-                        <td>套裝</td>
-                        <td>技能</td>
+                        <td>{Lang.name}</td>
+                        <td>{Lang.series}</td>
+                        <td>{Lang.rare}</td>
+                        <td>{Lang.defense}</td>
+                        <td>{Lang.resistance}</td>
+                        <td>{Lang.slot}</td>
+                        <td>{Lang.set}</td>
+                        <td>{Lang.skill}</td>
                         <td></td>
                     </tr>
                 </thead>
@@ -542,9 +544,9 @@ export default class EquipItemSelector extends Component {
             <table className="mhwc-charm_table">
                 <thead>
                     <tr>
-                        <td>名稱</td>
-                        <td>稀有度</td>
-                        <td>技能</td>
+                        <td>{Lang.name}</td>
+                        <td>{Lang.rare}</td>
+                        <td>{Lang.skill}</td>
                         <td></td>
                     </tr>
                 </thead>
@@ -605,10 +607,10 @@ export default class EquipItemSelector extends Component {
             <table className="mhwc-jewel_table">
                 <thead>
                     <tr>
-                        <td>名稱</td>
-                        <td>稀有度</td>
-                        <td>大小</td>
-                        <td>技能</td>
+                        <td>{Lang.name}</td>
+                        <td>{Lang.rare}</td>
+                        <td>{Lang.size}</td>
+                        <td>{Lang.skill}</td>
                         <td></td>
                     </tr>
                 </thead>
@@ -676,9 +678,9 @@ export default class EquipItemSelector extends Component {
             <table className="mhwc-enhance_table">
                 <thead>
                     <tr>
-                        <td>名稱</td>
-                        <td>等級</td>
-                        <td>說明</td>
+                        <td>{Lang.name}</td>
+                        <td>{Lang.level}</td>
+                        <td>{Lang.description}</td>
                         <td></td>
                     </tr>
                 </thead>

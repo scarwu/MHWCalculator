@@ -9,7 +9,29 @@
  */
 
 export default {
+    title: 'Monster Hunter: World - Calculator',
+
+    // Statemants
+    skillLevelZero: '此技能將不會出現在備選中',
+
     // Properties
+    name:           'Name',
+    description:    'Description',
+    level:          'Level',
+    series:         'Series',
+    rare:           'Rare',
+    attack:         'Attack',
+    elderseal:      'Elderseal',
+    defense:        'Defense',
+    shrapness:      'Shrapness',
+    criticalRate:   'Critical Rate',
+    element:        'Element',
+    attackElement:  'Attack Element',
+    statusElement:  'Status Element',
+    slot:           'Slot',
+    resistance:     'Resistance',
+    set:            'Set',
+    size:           'Size',
     low:            'Low',
     medium:         'Medium',
     high:           'High',
@@ -66,5 +88,11 @@ export default {
     skill:          'Skill',
     set:            'Set',
     search:         'Search',
-    list:           'List'
+    list:           'List',
+
+    // Tabs
+    requireCondition:   'Required Conditions',
+    candidateBundle:    'Candidate Bundles',
+    equipBundle:        'Equiped Bundle',
+    status:             'Status'
 };

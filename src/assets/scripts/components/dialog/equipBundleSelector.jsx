@@ -185,14 +185,14 @@ export default class EquipBundleSelector extends Component {
             <table className="mhwc-equip_bundle_table">
                 <thead>
                     <tr>
-                        <td>名稱</td>
-                        <td>武器 </td>
-                        <td>頭</td>
-                        <td>身</td>
-                        <td>手</td>
-                        <td>腰</td>
-                        <td>腳</td>
-                        <td>護石</td>
+                        <td>{Lang.name}</td>
+                        <td>{Lang.weapon}</td>
+                        <td>{Lang.helm}</td>
+                        <td>{Lang.chest}</td>
+                        <td>{Lang.arm}</td>
+                        <td>{Lang.waist}</td>
+                        <td>{Lang.leg}</td>
+                        <td>{Lang.charm}</td>
                         <td></td>
                     </tr>
                 </thead>

@@ -631,7 +631,7 @@ export default class Main extends Component {
                         <span>
                             {(0 !== data.level)
                                 ? skillInfo.list[data.level - 1].description
-                                : '此技能將不會出現在備選中'}
+                                : Lang.skillLevelZero}
                         </span>
                     </div>
                 </div>
@@ -644,14 +644,14 @@ export default class Main extends Component {
             <div id="main" className="container-fluid">
                 <div className="row mhwc-header">
                     <a href="./">
-                        <h1>Monster Hunter: World - Calculator</h1>
+                        <h1>{Lang.title}</h1>
                     </a>
                 </div>
 
                 <div className="row mhwc-container">
                     <div className="col mhwc-conditions">
                         <div className="mhwc-section_name">
-                            <span>需求條件</span>
+                            <span>{Lang.requireCondition}</span>
                         </div>
 
                         <div className="row mhwc-panel">
@@ -685,7 +685,7 @@ export default class Main extends Component {
 
                     <div className="col mhwc-bundles">
                         <div className="mhwc-section_name">
-                            <span>備選裝備</span>
+                            <span>{Lang.candidateBundle}</span>
                         </div>
 
                         <CandidateBundles
@@ -694,7 +694,7 @@ export default class Main extends Component {
 
                     <div className="col mhwc-equips">
                         <div className="mhwc-section_name">
-                            <span>已選裝備</span>
+                            <span>{Lang.equipBundle}</span>
                         </div>
 
                         <div className="row mhwc-panel">
@@ -719,7 +719,7 @@ export default class Main extends Component {
 
                     <div className="col mhwc-status">
                         <div className="mhwc-section_name">
-                            <span>狀態</span>
+                            <span>{Lang.status}</span>
                         </div>
 
                         <CharacterStatus equips={this.state.equips} />

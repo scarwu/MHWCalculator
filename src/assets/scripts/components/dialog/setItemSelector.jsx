@@ -159,9 +159,9 @@ export default class SetItemSelector extends Component {
             <table className="mhwc-set_table">
                 <thead>
                     <tr>
-                        <td>名稱</td>
-                        <td>技能</td>
-                        <td>說明</td>
+                        <td>{Lang.name}</td>
+                        <td>{Lang.skill}</td>
+                        <td>{Lang.description}</td>
                         <td></td>
                     </tr>
                 </thead>
