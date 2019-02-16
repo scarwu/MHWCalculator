@@ -1,4 +1,14 @@
-[
+'use strict';
+/**
+ * Dataset Enhances
+ *
+ * @package     MHW Calculator
+ * @author      Scar Wu
+ * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @link        https://github.com/scarwu/MHWCalculator
+ */
+
+export default [
     {
         "name": "強化攻擊力",
         "list": [
@@ -147,4 +157,4 @@
             }
         ]
     }
-]
+];

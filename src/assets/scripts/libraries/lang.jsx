@@ -22,7 +22,7 @@ let langs = {
 
 let defaultLang = Constant.defaultLang;
 let browserLnag = navigator.language.replace('-', '');
-let currentLang = 'undefined' !== typeof langs[browserLnag]
+let currentLang = ('undefined' !== typeof langs[browserLnag])
     ? browserLnag : defaultLang;
 
 export default langs[currentLang];

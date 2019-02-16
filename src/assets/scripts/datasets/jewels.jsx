@@ -1,4 +1,14 @@
-[
+'use strict';
+/**
+ * Dataset Jewel
+ *
+ * @package     MHW Calculator
+ * @author      Scar Wu
+ * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @link        https://github.com/scarwu/MHWCalculator
+ */
+
+export default [
     {
         "name": "KO珠",
         "rare": 6,
@@ -881,4 +891,4 @@
             "level": 1
         }
     }
-]
+];

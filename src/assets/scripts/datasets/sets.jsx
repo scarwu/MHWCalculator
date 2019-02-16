@@ -1,4 +1,14 @@
-[
+'use strict';
+/**
+ * Dataset Sets
+ *
+ * @package     MHW Calculator
+ * @author      Scar Wu
+ * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @link        https://github.com/scarwu/MHWCalculator
+ */
+
+export default [
     {
         "name": "蠻顎龍之力",
         "skills": [
@@ -252,4 +262,4 @@
             }
         ]
     }
-]
+];

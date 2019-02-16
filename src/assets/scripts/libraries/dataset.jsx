@@ -14,14 +14,14 @@ import Lang from 'libraries/lang';
 // Load Constant
 import Constant from 'constant';
 
-// Load JSON Data
-import Skills from '../../json/skills.json';
-import Jewels from '../../json/jewels.json';
-import Charms from '../../json/charms.json';
-import Armors from '../../json/armors.json';
-import Weapons from '../../json/weapons.json';
-import Sets from '../../json/sets.json';
-import Enhances from '../../json/enhances.json';
+// Load Datasets
+import Skills from 'datasets/skills';
+import Jewels from 'datasets/jewels';
+import Charms from 'datasets/charms';
+import Armors from 'datasets/armors';
+import Weapons from 'datasets/weapons';
+import Sets from 'datasets/sets';
+import Enhances from 'datasets/enhances';
 
 /**
  * Set Helper

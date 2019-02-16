@@ -1,4 +1,14 @@
-[
+'use strict';
+/**
+ * Dataset Armors
+ *
+ * @package     MHW Calculator
+ * @author      Scar Wu
+ * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @link        https://github.com/scarwu/MHWCalculator
+ */
+
+export default [
     {
         "name": "合金頭盔α",
         "series": "合金α",
@@ -17378,4 +17388,4 @@
             "name": "熔山龍的奧秘"
         }
     }
-]
+];
