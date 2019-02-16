@@ -138,7 +138,7 @@ class WeaponHelper {
         list.forEach((data) => {
             this.mapping[data.name] = data;
 
-            if (0 === data.slots.length) {
+            if (null === data.slots || 0 === data.slots.length) {
                 return true;
             }
 
@@ -305,7 +305,7 @@ class WeaponHelper {
         // Handler Slot
         let skillLevelMapping = {};
 
-        info.skills.forEach((data, index) => {
+        info.skills && info.skills.forEach((data, index) => {
             let skillName = data.name;
 
             if (undefined === skillLevelMapping[skillName]) {
@@ -315,7 +315,7 @@ class WeaponHelper {
             skillLevelMapping[skillName] += data.level;
         });
 
-        info.slots.forEach((data, index) => {
+        info.slots && info.slots.forEach((data, index) => {
             let jewelInfo = null;
             let jewelName = null;
             let jewelSize = null;
@@ -434,7 +434,7 @@ class ArmorHelper {
         list.forEach((data) => {
             this.mapping[data.name] = data;
 
-            if (0 === data.slots.length) {
+            if (null === data.slots || 0 === data.slots.length) {
                 return true;
             }
 
@@ -539,7 +539,7 @@ class ArmorHelper {
         // Handler Skill & Slot
         let skillLevelMapping = {};
 
-        info.skills.forEach((data, index) => {
+        info.skills && info.skills.forEach((data, index) => {
             let skillName = data.name;
 
             if (undefined === skillLevelMapping[skillName]) {
@@ -549,7 +549,7 @@ class ArmorHelper {
             skillLevelMapping[skillName] += data.level;
         });
 
-        info.slots.forEach((data, index) => {
+        info.slots && info.slots.forEach((data, index) => {
             let jewelInfo = null;
             let jewelName = null;
             let jewelSize = null;
@@ -690,7 +690,7 @@ class CharmHelper {
         // Handler Skill & Slot
         let skillLevelMapping = {};
 
-        info.skills.forEach((data, index) => {
+        info.skills || info.skills.forEach((data, index) => {
             let skillName = data.name;
 
             if (undefined === skillLevelMapping[skillName]) {

@@ -83,7 +83,7 @@ export default class SkillItemSelector extends Component {
 
             let skill = DataSet.skillHelper.getInfo(skillName);
 
-            if (false === skill.fromJewel && false === skill.fromArmor) {
+            if (false === skill.from.jewel && false === skill.from.armor) {
                 return;
             }
 
