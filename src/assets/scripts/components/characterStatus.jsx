@@ -685,7 +685,7 @@ export default class CharacterStatus extends Component {
                             {null !== status.element.attack ? [(
                                 <div key={'attackElement_1'} className="col-4">
                                     <div className="mhwc-name">
-                                        <span>{Lang.element} {Lang[status.element.attack.type]}</span>
+                                        <span>{Lang.element}: {Lang[status.element.attack.type]}</span>
                                     </div>
                                 </div>
                             ), (
@@ -703,7 +703,7 @@ export default class CharacterStatus extends Component {
                             {null !== status.element.status ? [(
                                 <div key={'statusEelement_1'} className="col-4">
                                     <div className="mhwc-name">
-                                        <span>{Lang.element} {Lang[status.element.status.type]}</span>
+                                        <span>{Lang.element}: {Lang[status.element.status.type]}</span>
                                     </div>
                                 </div>
                             ), (
@@ -756,7 +756,7 @@ export default class CharacterStatus extends Component {
                                 return [(
                                     <div key={elementType + '_1'} className="col-4">
                                         <div className="mhwc-name">
-                                            <span>{Lang.resistance} {Lang[elementType]}</span>
+                                            <span>{Lang.resistance}: {Lang[elementType]}</span>
                                         </div>
                                     </div>
                                 ),(

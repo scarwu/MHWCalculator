@@ -99,7 +99,7 @@ export default class CandidateBundles extends Component {
             return (
                 <div key={index} className="row mhwc-bundle">
                     <div className="col-12 mhwc-name">
-                        <span className="mhwc-bundle_name">{Lang.bundle} {index + 1}</span>
+                        <span className="mhwc-bundle_name">{Lang.bundle}: {index + 1}</span>
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
