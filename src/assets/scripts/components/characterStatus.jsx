@@ -17,13 +17,13 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import DataSet from 'libraries/dataset';
+import Lang from 'libraries/lang';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
 
 // Load Constant & Lang
 import Constant from 'constant';
-import Lang from 'lang';
 
 export default class CharacterStatus extends Component {
 
@@ -61,7 +61,7 @@ export default class CharacterStatus extends Component {
         });
     };
 
-    handleTuningChange = () => {
+    handleTuningChangse = () => {
         let tuningRawAttack = parseInt(this.refs.tuningRawAttack.value, 10);
         let tuningRawCriticalRate = parseFloat(this.refs.tuningRawCriticalRate.value, 10);
         let tuningRawCriticalMultiple = parseFloat(this.refs.tuningRawCriticalMultiple.value);
@@ -566,7 +566,7 @@ export default class CharacterStatus extends Component {
         return (
             <div className="mhwc-bar">
                 <div className="mhwc-steps">
-                    {['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
+                    {['red', 'orangse', 'yellow', 'green', 'blue', 'white'].map((step) => {
                         return (
                             <div key={'sharpness_' + step} className="mhwc-step" style={{
                                 width: (data.steps[step] / 4) + '%'
@@ -882,7 +882,7 @@ export default class CharacterStatus extends Component {
                             <div className="col-8 mhwc-name">
                                 <span>每</span>
                                 <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.rawAttack}
-                                    ref="tuningRawAttack" onChange={this.handleTuningChange} />
+                                    ref="tuningRawAttack" onChange={this.handleTuningChangse} />
                                 <span>點基礎攻擊力期望值</span>
                             </div>
                             <div className="col-4 mhwc-value">
@@ -893,7 +893,7 @@ export default class CharacterStatus extends Component {
                             <div className="col-8 mhwc-name">
                                 <span>每</span>
                                 <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.rawCriticalRate}
-                                    ref="tuningRawCriticalRate" onChange={this.handleTuningChange} />
+                                    ref="tuningRawCriticalRate" onChange={this.handleTuningChangse} />
                                 <span>點會心率期望值</span>
                             </div>
                             <div className="col-4 mhwc-value">
@@ -904,7 +904,7 @@ export default class CharacterStatus extends Component {
                             <div className="col-8 mhwc-name">
                                 <span>每</span>
                                 <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.rawCriticalMultiple}
-                                    ref="tuningRawCriticalMultiple" onChange={this.handleTuningChange} />
+                                    ref="tuningRawCriticalMultiple" onChange={this.handleTuningChangse} />
                                 <span>點會心倍數期望值</span>
                             </div>
                             <div className="col-4 mhwc-value">
@@ -915,7 +915,7 @@ export default class CharacterStatus extends Component {
                             <div className="col-8 mhwc-name">
                                 <span>每</span>
                                 <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.elementAttack}
-                                    ref="tuningElementAttack" onChange={this.handleTuningChange} />
+                                    ref="tuningElementAttack" onChange={this.handleTuningChangse} />
                                 <span>點屬性攻擊力期望值</span>
                             </div>
                             <div className="col-4 mhwc-value">

@@ -17,14 +17,14 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import DataSet from 'libraries/dataset';
+import Lang from 'libraries/lang';
 import FittingAlgorithm from 'libraries/fittingAlgorithm';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
 
-// Load Constant & Lang
+// Load Constant
 import Constant from 'constant';
-import Lang from 'lang';
 
 export default class CandidateBundles extends Component {
 
@@ -51,7 +51,7 @@ export default class CandidateBundles extends Component {
         this.props.onPickUp(bundleList[index]);
     };
 
-    handleLimitChange = () => {
+    handleLimitChangse = () => {
         let bundleLimit = parseInt(this.refs.bundleLimit.value, 10);
         bundleLimit = !isNaN(bundleLimit) ? bundleLimit : 0;
 
@@ -118,7 +118,7 @@ export default class CandidateBundles extends Component {
                                 return (null !== data.equips[euqipType]) ? [(
                                     <div key={'weapon_1'} className="col-2">
                                         <div className="mhwc-name">
-                                            <span>{Lang[euqipType]}</span>
+                                            <span>{Langs[euqipType]}</span>
                                         </div>
                                     </div>
                                 ), (
@@ -239,7 +239,7 @@ export default class CandidateBundles extends Component {
                     <div className="row mhwc-search_info">
                         <div className="col-12">
                             <span>
-                                搜尋花費 {this.state.searchTime} 秒，並列出 <input type="text" defaultValue={this.state.bundleLimit} ref="bundleLimit" onChange={this.handleLimitChange} /> / {this.state.bundleList.length} 筆結果。
+                                搜尋花費 {this.state.searchTime} 秒，並列出 <input type="text" defaultValue={this.state.bundleLimit} ref="bundleLimit" onChange={this.handleLimitChangse} /> / {this.state.bundleList.length} 筆結果。
                             </span>
                         </div>
                     </div>

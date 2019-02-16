@@ -8,9 +8,11 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Constant & Lang
+// Load Custom Libraries
+import Lang from 'libraries/lang';
+
+// Load Constant
 import Constant from 'constant';
-import Lang from 'lang';
 
 // Load JSON Data
 import Skills from '../../json/skills.json';

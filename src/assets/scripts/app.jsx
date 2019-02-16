@@ -20,6 +20,7 @@ import Helper from 'core/helper';
 // Load Custom Libraries
 import Base64 from 'libraries/base64';
 import DataSet from 'libraries/dataset';
+import Lang from 'libraries/lang';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -33,9 +34,8 @@ import CandidateBundles from 'components/candidateBundles';
 import EquipsDisplayer from 'components/equipsDisplayer';
 import CharacterStatus from 'components/characterStatus';
 
-// Load Constant & Lang
+// Load Constant
 import Constant from 'constant';
-import Lang from 'lang';
 
 export default class Main extends Component {
 

@@ -9,6 +9,7 @@
  */
 
 export default {
+    defaultLang: 'zhTW',
     elements: [
         'fire',
         'water',

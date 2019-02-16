@@ -17,13 +17,13 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import DataSet from 'libraries/dataset';
+import Lang from 'libraries/lang';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
 
-// Load Constant & Lang
+// Load Constant
 import Constant from 'constant';
-import Lang from 'lang';
 
 export default class SkillItemSelector extends Component {
 
