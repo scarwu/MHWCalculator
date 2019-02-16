@@ -371,7 +371,7 @@ $panel-height: 40px;
 
             .mhwc-sharpness {
                 .mhwc-bar {
-                    height: 15.5px;
+                    height: 11px;
                 }
 
                 .mhwc-bar:nth-child(2) {
@@ -435,7 +435,11 @@ $panel-height: 40px;
     > .mhwc-status {
         .mhwc-sharpness {
             .mhwc-bar {
-                height: 21px;
+                height: 11px;
+            }
+
+            .mhwc-bar:nth-child(2) {
+                margin-top: -1px;
             }
         }
     }

@@ -51,7 +51,7 @@ export default class CandidateBundles extends Component {
         this.props.onPickUp(bundleList[index]);
     };
 
-    handleLimitChangse = () => {
+    handleLimitChange = () => {
         let bundleLimit = parseInt(this.refs.bundleLimit.value, 10);
         bundleLimit = !isNaN(bundleLimit) ? bundleLimit : 0;
 
@@ -99,7 +99,7 @@ export default class CandidateBundles extends Component {
             return (
                 <div key={index} className="row mhwc-bundle">
                     <div className="col-12 mhwc-name">
-                        <span className="mhwc-bundle_name">備選 {index + 1}</span>
+                        <span className="mhwc-bundle_name">{Lang.bundle} {index + 1}</span>
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
@@ -110,7 +110,7 @@ export default class CandidateBundles extends Component {
 
                     <div className="col-12 mhwc-item mhwc-equips">
                         <div className="col-12 mhwc-name">
-                            <span>裝備</span>
+                            <span>{Lang.equip}</span>
                         </div>
                         <div className="col-12 mhwc-value">
                             <div className="row">
@@ -136,7 +136,7 @@ export default class CandidateBundles extends Component {
                     <div className="col-12 mhwc-item mhwc-defense">
                         <div className="row">
                             <div className="col-4 mhwc-name">
-                                <span>防禦力</span>
+                                <span>{Lang.defense}</span>
                             </div>
                             <div className="col-8 mhwc-value">
                                 <span>{data.defense}</span>
@@ -147,7 +147,7 @@ export default class CandidateBundles extends Component {
                     {(0 < data.meta.remainingSlotCount.all) ? (
                         <div className="col-12 mhwc-item mhwc-slots">
                             <div className="col-12 mhwc-name">
-                                <span>剩餘插槽</span>
+                                <span>{Lang.remainingSlot}</span>
                             </div>
                             <div className="col-12 mhwc-value">
                                 <div className="row">
@@ -174,7 +174,7 @@ export default class CandidateBundles extends Component {
                     {(0 !== Object.keys(data.jewels).length) ? (
                         <div className="col-12 mhwc-item mhwc-jewels">
                             <div className="col-12 mhwc-name">
-                                <span>裝飾珠</span>
+                                <span>{Lang.jewel}</span>
                             </div>
                             <div className="col-12 mhwc-value">
                                 <div className="row">
@@ -200,7 +200,7 @@ export default class CandidateBundles extends Component {
                     {(0 !== Object.keys(data.skills).length) ? (
                         <div className="col-12 mhwc-item mhwc-skills">
                             <div className="col-12 mhwc-name">
-                                <span>技能</span>
+                                <span>{Lang.skill}</span>
                             </div>
                             <div className="col-12 mhwc-value">
                                 <div className="row">
@@ -239,7 +239,7 @@ export default class CandidateBundles extends Component {
                     <div className="row mhwc-search_info">
                         <div className="col-12">
                             <span>
-                                搜尋花費 {this.state.searchTime} 秒，並列出 <input type="text" defaultValue={this.state.bundleLimit} ref="bundleLimit" onChange={this.handleLimitChangse} /> / {this.state.bundleList.length} 筆結果。
+                                搜尋花費 {this.state.searchTime} 秒，並列出 <input type="text" defaultValue={this.state.bundleLimit} ref="bundleLimit" onChange={this.handleLimitChange} /> / {this.state.bundleList.length} 筆結果。
                             </span>
                         </div>
                     </div>
