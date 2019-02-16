@@ -166,16 +166,18 @@ $panel-height: 40px;
     div {
         position: absolute;
         display: none;
-        top: 22px;
-        left: -10px;
+        top: 0;
+        right: 22px;
         z-index: 3000;
-        height: 22px;
-        width: 40px;
-        line-height: 20px;
+        padding: 0 5px;
+        border: 1px solid #999;
+        height: 20px;
+        // width: 40px;
+        line-height: 18px;
         text-align: center;
         color: #333;
         background-color: white;
-        border: 1px solid #999;
+        pointer-events: none;
 
         @include border-radius(3px);
     }
