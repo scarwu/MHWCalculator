@@ -139,10 +139,10 @@ export default class EquipsDisplayer extends Component {
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName={equipsLock.weapon ? 'lock' : 'unlock-alt'}
-                                altName={equipsLock.weapon ? '解除' : '鎖定'}
+                                altName={equipsLock.weapon ? Lang.unlock : Lang.lock}
                                 onClick={() => {this.handleEquipLockToggle('weapon')}} />
                             <FunctionalIcon
-                                iconName="times" altName="清除"
+                                iconName="times" altName={Lang.clean}
                                 onClick={() => {this.handleEquipEmpty(emptyWeaponSelectorData)}} />
                         </div>
                     </div>
@@ -179,7 +179,7 @@ export default class EquipsDisplayer extends Component {
                                             <div className="mhwc-icons_bundle">
                                                 {null !== data.name ? (
                                                     <FunctionalIcon
-                                                        iconName="times" altName="清除"
+                                                        iconName="times" altName={Lang.clean}
                                                         onClick={() => {this.handleEquipEmpty(emptyEnhanceSelectorData)}} />
                                                 ) : false}
                                             </div>
@@ -224,7 +224,7 @@ export default class EquipsDisplayer extends Component {
                                             <div className="mhwc-icons_bundle">
                                                 {null !== data.jewel.name ? (
                                                     <FunctionalIcon
-                                                        iconName="times" altName="清除"
+                                                        iconName="times" altName={Lang.clean}
                                                         onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}} />
                                                 ) : false}
                                             </div>
@@ -407,10 +407,10 @@ export default class EquipsDisplayer extends Component {
                             <div className="mhwc-icons_bundle">
                                 <FunctionalIcon
                                     iconName={equipsLock[equipType] ? 'lock' : 'unlock-alt'}
-                                    altName={equipsLock[equipType] ? '解除' : '鎖定'}
+                                    altName={equipsLock[equipType] ? Lang.unlock : Lang.unlock}
                                     onClick={() => {this.handleEquipLockToggle(equipType)}} />
                                 <FunctionalIcon
-                                    iconName="times" altName="清除"
+                                    iconName="times" altName={Lang.clean}
                                     onClick={() => {this.handleEquipEmpty(emptyEquipSelectorData)}} />
                             </div>
                         </div>
@@ -449,7 +449,7 @@ export default class EquipsDisplayer extends Component {
                                                 <div className="mhwc-icons_bundle">
                                                     {null !== data.jewel.name ? (
                                                         <FunctionalIcon
-                                                            iconName="times" altName="清除"
+                                                            iconName="times" altName={Lang.clean}
                                                             onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}} />
                                                     ) : false}
                                                 </div>
@@ -574,10 +574,10 @@ export default class EquipsDisplayer extends Component {
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName={equipsLock.charm ? 'lock' : 'unlock-alt'}
-                                altName={equipsLock.charm ? '解除' : '鎖定'}
+                                altName={equipsLock.charm ? Lang.unlock : Lang.lock}
                                 onClick={() => {this.handleEquipLockToggle('charm')}} />
                             <FunctionalIcon
-                                iconName="times" altName="清除"
+                                iconName="times" altName={Lang.clean}
                                 onClick={() => {this.handleEquipEmpty(emptyCharmSelectorData)}} />
                         </div>
                     </div>

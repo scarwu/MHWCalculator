@@ -9,6 +9,7 @@
  */
 
 export default {
+    // Properties
     low:            '小',
     medium:         '中',
     high:           '大',
@@ -41,5 +42,29 @@ export default {
     insectGlaive:   '操蟲棍',
     lightBowgun:    '輕弩',
     heavyBowgun:    '重弩',
-    bow:            '弓'
+    bow:            '弓',
+
+    // Icons
+    active:         '發動',
+    deactive:       '解除',
+    include:        '引入',
+    exclude:        '排除',
+    unlock:         '解除',
+    lock:           '鎖定',
+    equip:          '裝備',
+    remove:         '移除',
+    add:            '新增',
+    close:          '關閉',
+    select:         '選取',
+    save:           '儲存',
+    clean:          '清除',
+    up:             '提升',
+    down:           '降低',
+
+    // Buttons
+    reset:          '重置',
+    skill:          '技能',
+    set:            '套裝',
+    search:         '搜尋',
+    list:           '列表'
 };

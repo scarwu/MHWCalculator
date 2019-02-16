@@ -810,7 +810,7 @@ export default class CharacterStatus extends Component {
                                                 {undefined !== passiveSkills[data.name] ? (
                                                     <FunctionalIcon
                                                         iconName={passiveSkills[data.name].isActive ? 'eye' : 'eye-slash'}
-                                                        altName={passiveSkills[data.name].isActive ? '解除' : '發動'}
+                                                        altName={passiveSkills[data.name].isActive ? Lang.deactive : Lang.active}
                                                         onClick={() => {this.handlePassiveSkillToggle(data.name)}} />
                                                 ) : false}
                                             </div>

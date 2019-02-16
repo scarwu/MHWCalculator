@@ -9,6 +9,7 @@
  */
 
 export default {
+    // Properties
     low:            'Low',
     medium:         'Medium',
     high:           'High',
@@ -41,5 +42,29 @@ export default {
     insectGlaive:   'Insect Glaive',
     lightBowgun:    'Light Bowgun',
     heavyBowgun:    'Heavy Bowgun',
-    bow:            'Bow'
+    bow:            'Bow',
+
+    // Icons
+    active:         'Active',
+    deactive:       'Deactive',
+    include:        'Include',
+    exclude:        'Exclude',
+    unlock:         'Unlock',
+    lock:           'Lock',
+    equip:          'Equip',
+    remove:         'Remove',
+    add:            'Add',
+    close:          'Close',
+    select:         'Select',
+    save:           'Save',
+    clean:          'Clean',
+    up:             'Up',
+    down:           'Down',
+
+    // Buttons
+    reset:          'Reset',
+    skill:          'Skill',
+    set:            'Set',
+    search:         'Search',
+    list:           'List'
 };

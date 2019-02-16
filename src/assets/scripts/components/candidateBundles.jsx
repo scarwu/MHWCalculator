@@ -103,7 +103,7 @@ export default class CandidateBundles extends Component {
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="check" altName="裝備"
+                                iconName="check" altName={Lang.equip}
                                 onClick={() => {this.handleBundlePickUp(index)}} />
                         </div>
                     </div>
@@ -118,7 +118,7 @@ export default class CandidateBundles extends Component {
                                 return (null !== data.equips[euqipType]) ? [(
                                     <div key={'weapon_1'} className="col-2">
                                         <div className="mhwc-name">
-                                            <span>{Langs[euqipType]}</span>
+                                            <span>{Lang[euqipType]}</span>
                                         </div>
                                     </div>
                                 ), (

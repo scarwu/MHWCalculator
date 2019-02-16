@@ -324,12 +324,12 @@ export default class EquipItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
-                            altName={isIgnore ? '引入' : '排除'}
+                            altName={isIgnore ? Lang.include : Lang.exclude}
                             onClick={() => {this.handleItemToggle('weapon', data.name)}} />
 
                         {(this.props.data.equipName !== data.name) ? (
                             <FunctionalIcon
-                                iconName="check" altName="選取"
+                                iconName="check" altName={Lang.select}
                                 onClick={() => {this.handleItemPickUp(data.name)}} />
                         ) : false}
                     </div>
@@ -435,12 +435,12 @@ export default class EquipItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
-                            altName={isIgnore ? '引入' : '排除'}
+                            altName={isIgnore ? Lang.include : Lang.exclude}
                             onClick={() => {this.handleItemToggle(data.type, data.name)}} />
 
                         {(this.props.data.equipName !== data.name) ? (
                             <FunctionalIcon
-                                iconName="check" altName="選取"
+                                iconName="check" altName={Lang.select}
                                 onClick={() => {this.handleItemPickUp(data.name)}} />
                         ) : false}
                     </div>
@@ -521,12 +521,12 @@ export default class EquipItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
-                            altName={isIgnore ? '引入' : '排除'}
+                            altName={isIgnore ? Lang.include : Lang.exclude}
                             onClick={() => {this.handleItemToggle('charm', data.name)}} />
 
                         {(this.props.data.equipName !== data.name) ? (
                             <FunctionalIcon
-                                iconName="check" altName="選取"
+                                iconName="check" altName={Lang.select}
                                 onClick={() => {this.handleItemPickUp(data.name)}} />
                         ) : false}
                     </div>
@@ -589,7 +589,7 @@ export default class EquipItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         {(this.props.data.jewelName !== data.name) ? (
                             <FunctionalIcon
-                                iconName="check" altName="選取"
+                                iconName="check" altName={Lang.select}
                                 onClick={() => {this.handleItemPickUp(data.name)}} />
                         ) : false}
                     </div>
@@ -660,7 +660,7 @@ export default class EquipItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         {(this.props.data.enhanceName !== data.name) ? (
                             <FunctionalIcon
-                                iconName="check" altName="選取"
+                                iconName="check" altName={Lang.select}
                                 onClick={() => {this.handleItemPickUp(data.name)}} />
                         ) : false}
                     </div>
@@ -746,7 +746,7 @@ export default class EquipItemSelector extends Component {
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="times" altName="關閉"
+                                iconName="times" altName={Lang.close}
                                 onClick={this.handleWindowClose} />
                         </div>
                     </div>

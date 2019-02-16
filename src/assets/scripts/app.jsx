@@ -572,13 +572,13 @@ export default class Main extends Component {
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="minus" altName="降低"
+                                iconName="minus" altName={Lang.down}
                                 onClick={() => {this.handleSetStepDown(index)}} />
                             <FunctionalIcon
-                                iconName="plus" altName="提升"
+                                iconName="plus" altName={Lang.up}
                                 onClick={() => {this.handleSetStepUp(index)}} />
                             <FunctionalIcon
-                                iconName="times" altName="清除"
+                                iconName="times" altName={Lang.clean}
                                 onClick={() => {this.handleSetRemove(index)}} />
                         </div>
                     </div>
@@ -617,13 +617,13 @@ export default class Main extends Component {
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="minus" altName="降低"
+                                iconName="minus" altName={Lang.down}
                                 onClick={() => {this.handleSkillLevelDown(index)}} />
                             <FunctionalIcon
-                                iconName="plus" altName="提升"
+                                iconName="plus" altName={Lang.up}
                                 onClick={() => {this.handleSkillLevelUp(index)}} />
                             <FunctionalIcon
-                                iconName="times" altName="清除"
+                                iconName="times" altName={Lang.clean}
                                 onClick={() => {this.handleSkillRemove(index)}} />
                         </div>
                     </div>
@@ -657,22 +657,22 @@ export default class Main extends Component {
                         <div className="row mhwc-panel">
                             <div className="col-3">
                                 <a onClick={this.handleRequireConditionRefresh}>
-                                    <i className="fa fa-refresh"></i> 重置
+                                    <i className="fa fa-refresh"></i> {Lang.reset}
                                 </a>
                             </div>
                             <div className="col-3">
                                 <a onClick={this.handleSkillSelectorOpen}>
-                                    <i className="fa fa-plus"></i> 技能
+                                    <i className="fa fa-plus"></i> {Lang.skill}
                                 </a>
                             </div>
                             <div className="col-3">
                                 <a onClick={this.handleSetSelectorOpen}>
-                                    <i className="fa fa-plus"></i> 套裝
+                                    <i className="fa fa-plus"></i> {Lang.set}
                                 </a>
                             </div>
                             <div className="col-3">
                                 <a onClick={this.handleCandidateBundlesSearch}>
-                                    <i className="fa fa-search"></i> 搜尋
+                                    <i className="fa fa-search"></i> {Lang.search}
                                 </a>
                             </div>
                         </div>
@@ -700,12 +700,12 @@ export default class Main extends Component {
                         <div className="row mhwc-panel">
                             <div className="col-6">
                                 <a onClick={this.handleEquipsDisplayerRefresh}>
-                                    <i className="fa fa-refresh"></i> 重置
+                                    <i className="fa fa-refresh"></i> {Lang.reset}
                                 </a>
                             </div>
                             <div className="col-6">
                                 <a onClick={this.handleEquipBundleSelectorOpen}>
-                                    <i className="fa fa-th-list"></i> 列表
+                                    <i className="fa fa-th-list"></i> {Lang.list}
                                 </a>
                             </div>
                         </div>

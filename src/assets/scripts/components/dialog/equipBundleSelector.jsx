@@ -163,13 +163,13 @@ export default class EquipBundleSelector extends Component {
                 <td>
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
-                            iconName="check" altName="選取"
+                            iconName="check" altName={Lang.select}
                             onClick={() => {this.handleBundlePickUp(index)}} />
                         <FunctionalIcon
-                            iconName="times" altName="移除"
+                            iconName="times" altName={Lang.remove}
                             onClick={() => {this.handleBundleRemove(index)}} />
                         <FunctionalIcon
-                            iconName="floppy-o" altName="儲存"
+                            iconName="floppy-o" altName={Lang.save}
                             onClick={() => {this.handleBundleSave(index)}} />
                     </div>
                 </td>
@@ -210,7 +210,7 @@ export default class EquipBundleSelector extends Component {
                             <td>
                                 <div className="mhwc-icons_bundle">
                                     <FunctionalIcon
-                                        iconName="floppy-o" altName="儲存"
+                                        iconName="floppy-o" altName={Lang.save}
                                         onClick={() => {this.handleBundleSave(null)}} />
                                 </div>
                             </td>
@@ -230,7 +230,7 @@ export default class EquipBundleSelector extends Component {
                     <div className="mhwc-panel">
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="times" altName="關閉"
+                                iconName="times" altName={Lang.close}
                                 onClick={this.handleWindowClose} />
                         </div>
                     </div>

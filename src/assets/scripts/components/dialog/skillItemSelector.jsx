@@ -141,11 +141,11 @@ export default class SkillItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         {isSelect ? (
                             <FunctionalIcon
-                                iconName="minus" altName="移除"
+                                iconName="minus" altName={Lang.remove}
                                 onClick={() => {this.handleItemThrowDown(data.name)}} />
                         ) : (
                             <FunctionalIcon
-                                iconName="plus" altName="新增"
+                                iconName="plus" altName={Lang.add}
                                 onClick={() => {this.handleItemPickUp(data.name)}} />
                         )}
                     </div>
@@ -220,7 +220,7 @@ export default class SkillItemSelector extends Component {
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="times" altName="關閉"
+                                iconName="times" altName={Lang.close}
                                 onClick={this.handleWindowClose} />
                         </div>
                     </div>
