@@ -862,40 +862,4 @@ export default [
         [ 2, '全屬性異常狀態的效果時間減少60%', null ],
         [ 3, '使全屬性異常狀態無效', null ]
     ] ]
-].map((skill) => {
-
-    // Format
-    // [
-    //     0: name,
-    //     1: type,
-    //     2: from [
-    //         0: set,
-    //         1: jewel,
-    //         2: armor
-    //     ],
-    //     3: list [
-    //         [
-    //             0: level,
-    //             1: description,
-    //             2: reaction { ... }
-    //         ],
-    //         [ ... ]
-    //     ]
-    // ]
-    return {
-        name: skill[0],
-        type: skill[1],
-        from: {
-            set: skill[2][0],
-            jewel: skill[2][1],
-            armor: skill[2][2]
-        },
-        list: skill[3].map((item) => {
-            return {
-                level: item[0],
-                description: item[1],
-                reaction: item[2]
-            }
-        })
-    };
-});
+];

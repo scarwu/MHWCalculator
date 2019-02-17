@@ -111,28 +111,4 @@ export default [
     [ '覺醒護石 II', null, [ [ '屬性解放／裝填擴充', 2 ] ] ],
     [ '籌備護石', 5, [ [ '搬運達人', 1 ], [ '蜂蜜獵人', 1 ] ] ],
     [ '鐵壁護石 III', null, [ [ '防禦性能', 3 ] ] ]
-].map((charm) => {
-
-    // Format
-    // [
-    //     0: name,
-    //     1: rare,
-    //     2: skills [
-    //         [
-    //             0: name,
-    //             1: level
-    //         ],
-    //         [ ... ]
-    //     ]
-    // ]
-    return {
-        name: charm[0],
-        rare: charm[1],
-        skills: charm[2].map((skill) => {
-            return {
-                name: skill[0],
-                level: skill[1]
-            };
-        })
-    };
-});
+];

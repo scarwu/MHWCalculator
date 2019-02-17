@@ -107,25 +107,4 @@ export default [
     [ '潛伏珠', 5, 1, [ '潛伏', 1 ] ],
     [ '標本珠', 5, 1, [ '昆蟲標本達人', 1 ] ],
     [ '整備珠', 5, 1, [ '整備', 1 ] ]
-].map((jewel) => {
-
-    // Format
-    // [
-    //     0: name,
-    //     1: rare,
-    //     2: size,
-    //     3: skill [
-    //         0: name,
-    //         1: level
-    //     ]
-    // ]
-    return {
-        name: jewel[0],
-        rare: jewel[1],
-        size: jewel[2],
-        skill: {
-            name: jewel[3][0],
-            level: jewel[3][1]
-        }
-    };
-});
+];

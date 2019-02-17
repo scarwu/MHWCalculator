@@ -34,26 +34,4 @@ export default [
     [ '調查團的引導', [ [ '剝取名人', 4 ] ] ],
     [ '炎妃龍的恩寵', [ [ '突破耐力上限', 2 ], [ '心眼／彈導強化', 4 ] ] ],
     [ '龍騎士之證', [ [ '飛燕【屬性】', 2 ], [ '達人藝', 4 ] ] ]
-].map((set) => {
-
-    // Format
-    // [
-    //     0: name,
-    //     1: skills [
-    //         [
-    //             0: name,
-    //             1: require
-    //         ],
-    //         [ ... ]
-    //     ]
-    // ]
-    return {
-        name: set[0],
-        skills: set[1].map((skill) => {
-            return {
-                name: skill[0],
-                require: skill[1]
-            };
-        })
-    };
-});
+];
