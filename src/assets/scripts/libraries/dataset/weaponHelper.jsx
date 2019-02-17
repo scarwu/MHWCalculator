@@ -10,6 +10,8 @@
 
 // Load Custom Libraries
 import Lang from 'libraries/lang';
+import JewelHelper from 'libraries/dataset/jewelHelper';
+import SkillHelper from 'libraries/dataset/skillHelper';
 import EnhanceHelper from 'libraries/dataset/enhanceHelper';
 
 // Load Constant
@@ -280,7 +282,7 @@ class WeaponHelper {
             if (null !== extend.slotNames
                 && 'string' === typeof extend.slotNames[index]) {
 
-                jewelInfo = jewelHelper.getInfo(extend.slotNames[index]);
+                jewelInfo = JewelHelper.getInfo(extend.slotNames[index]);
                 jewelName = extend.slotNames[index];
                 jewelSize = jewelInfo.size;
                 skillName = jewelInfo.skill.name;
@@ -308,7 +310,7 @@ class WeaponHelper {
 
         Object.keys(skillLevelMapping).forEach((skillName) => {
             let skillLevel = skillLevelMapping[skillName];
-            let skillInfo = skillHelper.getInfo(skillName);
+            let skillInfo = SkillHelper.getInfo(skillName);
 
             // Fix Skill Level Overflow
             if (skillLevel > skillInfo.list.length) {

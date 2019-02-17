@@ -10,6 +10,8 @@
 
 // Load Custom Libraries
 import Lang from 'libraries/lang';
+import JewelHelper from 'libraries/dataset/jewelHelper';
+import SkillHelper from 'libraries/dataset/skillHelper';
 
 // Load Constant
 import Constant from 'constant';
@@ -35,7 +37,7 @@ let dataset = []
                     water: pack[0][4][1],
                     thunder: pack[0][4][2],
                     ice: pack[0][4][3],
-                    gragon: pack[0][4][4]
+                    dragon: pack[0][4][4]
                 },
                 set: (null !== pack[0][5]) ? {
                     name: pack[0][5]
@@ -192,7 +194,7 @@ class ArmorHelper {
             if (null !== extend.slotNames
                 && 'string' === typeof extend.slotNames[index]) {
 
-                jewelInfo = jewelHelper.getInfo(extend.slotNames[index]);
+                jewelInfo = JewelHelper.getInfo(extend.slotNames[index]);
                 jewelName = extend.slotNames[index];
                 jewelSize = jewelInfo.size;
                 skillName = jewelInfo.skill.name;
@@ -220,7 +222,7 @@ class ArmorHelper {
 
         Object.keys(skillLevelMapping).forEach((skillName) => {
             let skillLevel = skillLevelMapping[skillName];
-            let skillInfo = skillHelper.getInfo(skillName);
+            let skillInfo = SkillHelper.getInfo(skillName);
 
             info.skills.push({
                 name: skillName,
@@ -257,211 +259,6 @@ class ArmorHelper {
 
     hasSkill = (name) => {
         this.filterSkillName = name;
-
-        return this;
-    };
-}
-
-/**
- * Charm Helper
- */
-class CharmHelper {
-
-    constructor (list) {
-        this.mapping = {};
-
-        list.forEach((data) => {
-            this.mapping[data.name] = data;
-        });
-
-        // Filter Conditional
-        this.resetFilter();
-    }
-
-    resetFilter = () => {
-        this.filterSkillName = null;
-    };
-
-    getNames = () => {
-        return Object.keys(this.mapping);
-    };
-
-    getItems = () => {
-        let result = Object.values(this.mapping).filter((data) => {
-            let isSkip = true;
-
-            if (null !== this.filterSkillName) {
-                for (let index in data.skills) {
-                    if (this.filterSkillName !== data.skills[index].name) {
-                        continue;
-                    }
-
-                    isSkip = false;
-                }
-
-                if (isSkip) {
-                    return false;
-                }
-            }
-
-            return true;
-        });
-
-        this.resetFilter();
-
-        return result;
-    };
-
-    getInfo = (name) => {
-        return undefined !== this.mapping[name]
-            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
-    };
-
-    // Applyed Info
-    getApplyedInfo = (extend) => {
-        let info = this.getInfo(extend.name);
-
-        // Handler Skill & Slot
-        let skillLevelMapping = {};
-
-        info.skills || info.skills.forEach((data, index) => {
-            let skillName = data.name;
-
-            if (undefined === skillLevelMapping[skillName]) {
-                skillLevelMapping[skillName] = 0;
-            }
-
-            skillLevelMapping[skillName] += data.level;
-        });
-
-        // Reset Skill
-        info.skills = [];
-
-        Object.keys(skillLevelMapping).forEach((skillName) => {
-            let skillLevel = skillLevelMapping[skillName];
-            let skillInfo = skillHelper.getInfo(skillName);
-
-            // Fix Skill Level Overflow
-            if (skillLevel > skillInfo.list.length) {
-                skillLevel = skillInfo.list.length;
-            }
-
-            info.skills.push({
-                name: skillName,
-                level: skillLevel,
-                description: skillInfo.list[skillLevel - 1].description
-            });
-        });
-
-        info.skills = info.skills.sort((a, b) => {
-            return b.level - a.level;
-        });
-
-        return info;
-    };
-
-    // Conditional Functions
-    hasSkill = (name) => {
-        this.filterSkillName = name;
-
-        return this;
-    };
-}
-
-/**
- * Jewel Helper
- */
-class JewelHelper {
-
-    constructor (list) {
-        this.mapping = {};
-
-        list.forEach((data) => {
-            this.mapping[data.name] = data;
-        });
-
-        // Filter Conditional
-        this.resetFilter();
-    }
-
-    resetFilter = () => {
-        this.filterSkillName = null;
-        this.filterRare = null;
-        this.filterSize = null;
-        this.filterSizeCondition = null;
-    };
-
-    getNames = () => {
-        return Object.keys(this.mapping);
-    };
-
-    getItems = () => {
-        let result = Object.values(this.mapping).filter((data) => {
-            if (null !== this.filterRare) {
-                if (this.filterRare !== data.rare) {
-                    return false;
-                }
-            }
-
-            if (null !== this.filterSkillName) {
-                if (this.filterSkillName !== data.skill.name) {
-                    return false;
-                }
-            }
-
-            if (null !== this.filterSize) {
-                switch (this.filterSizeCondition) {
-                case 'equal':
-                    if (this.filterSize !== data.size) {
-                        return false;
-                    }
-
-                    break;
-                case 'greaterEqual':
-                    if (this.filterSize > data.size) {
-                        return false;
-                    }
-
-                    break;
-                }
-            }
-
-            return true;
-        });
-
-        this.resetFilter();
-
-        return result;
-    };
-
-    getInfo = (name) => {
-        return undefined !== this.mapping[name]
-            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
-    };
-
-    // Conditional Functions
-    rareIs = (number) => {
-        this.filterRare = number;
-
-        return this;
-    };
-
-    hasSkill = (name) => {
-        this.filterSkillName = name;
-
-        return this;
-    };
-
-    sizeIsGreaterEqualThen = (value) => {
-        this.filterSize = value;
-        this.filterSizeCondition = 'greaterEqual';
-
-        return this;
-    };
-
-    sizeIsEqualThen = (value) => {
-        this.filterSize = value;
-        this.filterSizeCondition = 'equal';
 
         return this;
     };

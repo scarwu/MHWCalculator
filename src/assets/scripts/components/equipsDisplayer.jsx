@@ -190,7 +190,7 @@ export default class EquipsDisplayer extends Component {
                         </div>
                     ) : false}
 
-                    {0 !== weaponInfo.slots.length ? (
+                    {(null !== weaponInfo.slots && 0 !== weaponInfo.slots.length) ? (
                         <div className="col-12 mhwc-item mhwc-slots">
                             {weaponInfo.slots.map((data, index) => {
                                 let jewelSelectorData = {
