@@ -567,7 +567,7 @@ export default class Main extends Component {
                 <div key={setInfo.id} className="row mhwc-item">
                     <div className="col-12 mhwc-name">
                         <span>
-                            {setInfo.id} x {setRequire}
+                            {setInfo.name} x {setRequire}
                         </span>
 
                         <div className="mhwc-icons_bundle">
@@ -590,7 +590,7 @@ export default class Main extends Component {
 
                             return (
                                 <div key={set.id}>
-                                    <span>({set.require}) {set.id}</span>
+                                    <span>({set.require}) {set.name}</span>
                                 </div>
                             );
                         })}
@@ -610,7 +610,7 @@ export default class Main extends Component {
                 <div key={skillInfo.id} className="row mhwc-item">
                     <div className="col-12 mhwc-name">
                         <span>
-                            {skillInfo.id}
+                            {skillInfo.name}
                             &nbsp;
                             Lv.{data.level} / {skillInfo.list.length}
                         </span>
