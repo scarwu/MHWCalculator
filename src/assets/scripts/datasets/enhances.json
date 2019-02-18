@@ -1,0 +1,155 @@
+[
+    [
+        "1a60c0632313b4fd541fbd308a8ecba8",
+        "15621738c12f92a14b3fcff38eb0165b",
+        [
+            [
+                1,
+                "b103014974358f74e892fdc5947e6878",
+                {
+                    "attack": {
+                        "value": 5
+                    }
+                }
+            ],
+            [
+                2,
+                "f9a0f32400c5c8c7edaf4515ce3b29a9",
+                {
+                    "attack": {
+                        "value": 10
+                    }
+                }
+            ],
+            [
+                3,
+                "09e759dc24571bce9054009b9f4f9a47",
+                {
+                    "attack": {
+                        "value": 15
+                    }
+                }
+            ]
+        ]
+    ],
+    [
+        "e4cc37e57212c7c9e9f601a55cbb4f86",
+        "e53fd7f54f61d5d76e9101da5788b2c2",
+        [
+            [
+                1,
+                "c4d8f0bdcfee1c7a765fc0ca3ce4f015",
+                {
+                    "criticalRate": {
+                        "value": 10
+                    }
+                }
+            ],
+            [
+                2,
+                "968221d46718535b6cb7b69bec20abfd",
+                {
+                    "criticalRate": {
+                        "value": 15
+                    }
+                }
+            ],
+            [
+                3,
+                "f0c42ff4186aa3daf9f4a74cbd24c79a",
+                {
+                    "criticalRate": {
+                        "value": 20
+                    }
+                }
+            ]
+        ]
+    ],
+    [
+        "ba0ff4256fef294d315bb717621edefb",
+        "b5e3c68c8ce7853e059dff393dbdd382",
+        [
+            [
+                1,
+                "ef7d1a40cdb291849df0f9a68b1ef9aa",
+                {
+                    "defense": {
+                        "value": 10
+                    }
+                }
+            ],
+            [
+                2,
+                "2dc04cc7b783b6513a9e71b87d40b7fd",
+                {
+                    "defense": {
+                        "value": 20
+                    }
+                }
+            ],
+            [
+                3,
+                "6bbca02a6d729571de8282ece20f9033",
+                {
+                    "defense": {
+                        "value": 30
+                    }
+                }
+            ]
+        ]
+    ],
+    [
+        "59dbfbdb1893544fe1b6e4be566360dc",
+        "2883638f4f4c0c4ba40b876322fbe0bf",
+        [
+            [
+                1,
+                "f2bf5c651cbd3f6243a6d43d406d781a",
+                {
+                    "addSlot": {
+                        "size": 1
+                    }
+                }
+            ],
+            [
+                2,
+                "1858b3f005772c661bc2a24d5be10b35",
+                {
+                    "addSlot": {
+                        "size": 2
+                    }
+                }
+            ],
+            [
+                3,
+                "98824704702279cf44ad428429aa498a",
+                {
+                    "addSlot": {
+                        "size": 3
+                    }
+                }
+            ]
+        ]
+    ],
+    [
+        "12c2ebdbee79198c128f2c22870ee5dd",
+        "05cf257975d3f9987746a20aa064b85d",
+        [
+            [
+                1,
+                "463815609c657f12c91c9b6446dbf8dd",
+                null
+            ],
+            [
+                2,
+                "d8b8fda479ca761f3f879a661318ae4f",
+                null
+            ],
+            [
+                3,
+                "2247b8d8e2257e6c12f7d5dda17036fd",
+                null
+            ]
+        ]
+    ]
+]
