@@ -1,9 +1,14 @@
 [
     {
+        "id": "必滅一矢",
         "rare": 8,
         "type": "bow",
-        "series": "滅盡龍",
-        "name": "必滅一矢",
+        "series": {
+            "zhTW": "滅盡龍"
+        },
+        "name": {
+            "zhTW": "必滅一矢"
+        },
         "attack": 240,
         "criticalRate": 0,
         "defense": 0,
@@ -28,10 +33,15 @@
         "skills": null
     },
     {
+        "id": "重弓巨靈勇士",
         "rare": 8,
         "type": "bow",
-        "series": "爆鎚龍",
-        "name": "重弓巨靈勇士",
+        "series": {
+            "zhTW": "爆鎚龍"
+        },
+        "name": {
+            "zhTW": "重弓巨靈勇士"
+        },
         "attack": 228,
         "criticalRate": 0,
         "defense": 30,
@@ -50,10 +60,15 @@
         "skills": null
     },
     {
+        "id": "冰凌銀蕨",
         "rare": 8,
         "type": "bow",
-        "series": "風漂龍",
-        "name": "冰凌銀蕨",
+        "series": {
+            "zhTW": "風漂龍"
+        },
+        "name": {
+            "zhTW": "冰凌銀蕨"
+        },
         "attack": 180,
         "criticalRate": 0,
         "defense": 0,
@@ -72,10 +87,15 @@
         "skills": null
     },
     {
+        "id": "角王弓疾風",
         "rare": 8,
         "type": "bow",
-        "series": "角龍",
-        "name": "角王弓疾風",
+        "series": {
+            "zhTW": "角龍"
+        },
+        "name": {
+            "zhTW": "角王弓疾風"
+        },
         "attack": 264,
         "criticalRate": -30,
         "defense": 15,
@@ -101,10 +121,15 @@
         "skills": null
     },
     {
+        "id": "鋼龍強弓",
         "rare": 8,
         "type": "bow",
-        "series": "黑鋼",
-        "name": "鋼龍強弓",
+        "series": {
+            "zhTW": "黑鋼"
+        },
+        "name": {
+            "zhTW": "鋼龍強弓"
+        },
         "attack": 204,
         "criticalRate": 15,
         "defense": 0,
@@ -130,10 +155,15 @@
         "skills": null
     },
     {
+        "id": "冥燈龍大弓",
         "rare": 8,
         "type": "bow",
-        "series": "冥燈龍",
-        "name": "冥燈龍大弓",
+        "series": {
+            "zhTW": "冥燈龍"
+        },
+        "name": {
+            "zhTW": "冥燈龍大弓"
+        },
         "attack": 204,
         "criticalRate": 15,
         "defense": 0,
@@ -161,10 +191,15 @@
         "skills": null
     },
     {
+        "id": "巨型獵弓",
         "rare": 8,
         "type": "bow",
-        "series": "工房武器",
-        "name": "巨型獵弓",
+        "series": {
+            "zhTW": "工房武器"
+        },
+        "name": {
+            "zhTW": "巨型獵弓"
+        },
         "attack": 228,
         "criticalRate": 0,
         "defense": 20,
@@ -187,10 +222,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅弓．雷",
         "rare": 8,
         "type": "bow",
-        "series": "絢輝龍",
-        "name": "鎧羅弓．雷",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅弓．雷"
+        },
         "attack": 228,
         "criticalRate": 10,
         "defense": 20,
@@ -213,10 +253,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅弓．水",
         "rare": 8,
         "type": "bow",
-        "series": "絢輝龍",
-        "name": "鎧羅弓．水",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅弓．水"
+        },
         "attack": 228,
         "criticalRate": 0,
         "defense": 30,
@@ -239,10 +284,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅弓．爆破",
         "rare": 8,
         "type": "bow",
-        "series": "絢輝龍",
-        "name": "鎧羅弓．爆破",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅弓．爆破"
+        },
         "attack": 240,
         "criticalRate": 0,
         "defense": 30,
@@ -265,10 +315,15 @@
         "skills": null
     },
     {
+        "id": "皇后弓．炎妃",
         "rare": 8,
         "type": "bow",
-        "series": "炎妃龍",
-        "name": "皇后弓．炎妃",
+        "series": {
+            "zhTW": "炎妃龍"
+        },
+        "name": {
+            "zhTW": "皇后弓．炎妃"
+        },
         "attack": 216,
         "criticalRate": 20,
         "defense": 0,
@@ -293,16 +348,21 @@
         ],
         "skills": [
             {
-                "name": "毅力",
+                "id": "毅力",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后弓．滅盡",
         "rare": 8,
         "type": "bow",
-        "series": "炎妃龍．滅盡",
-        "name": "皇后弓．滅盡",
+        "series": {
+            "zhTW": "炎妃龍．滅盡"
+        },
+        "name": {
+            "zhTW": "皇后弓．滅盡"
+        },
         "attack": 228,
         "criticalRate": 0,
         "defense": 0,
@@ -327,16 +387,21 @@
         ],
         "skills": [
             {
-                "name": "加速再生",
+                "id": "加速再生",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后弓．冥燈",
         "rare": 8,
         "type": "bow",
-        "series": "炎妃龍．冥燈",
-        "name": "皇后弓．冥燈",
+        "series": {
+            "zhTW": "炎妃龍．冥燈"
+        },
+        "name": {
+            "zhTW": "皇后弓．冥燈"
+        },
         "attack": 216,
         "criticalRate": 10,
         "defense": 0,
@@ -361,7 +426,7 @@
         ],
         "skills": [
             {
-                "name": "利刃／彈藥節約",
+                "id": "利刃／彈藥節約",
                 "level": 1
             }
         ]

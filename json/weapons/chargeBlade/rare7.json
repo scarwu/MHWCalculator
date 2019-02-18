@@ -1,9 +1,14 @@
 [
     {
+        "id": "焰斧鶴王",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "火龍",
-        "name": "焰斧鶴王",
+        "series": {
+            "zhTW": "火龍"
+        },
+        "name": {
+            "zhTW": "焰斧鶴王"
+        },
         "attack": 684,
         "criticalRate": 20,
         "defense": 0,
@@ -36,10 +41,15 @@
         "skills": null
     },
     {
+        "id": "火鎧盾斧",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "雌火龍",
-        "name": "火鎧盾斧",
+        "series": {
+            "zhTW": "雌火龍"
+        },
+        "name": {
+            "zhTW": "火鎧盾斧"
+        },
         "attack": 684,
         "criticalRate": 0,
         "defense": 0,
@@ -75,10 +85,15 @@
         "skills": null
     },
     {
+        "id": "暴君銅盾 II",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "角龍",
-        "name": "暴君銅盾 II",
+        "series": {
+            "zhTW": "角龍"
+        },
+        "name": {
+            "zhTW": "暴君銅盾 II"
+        },
         "attack": 828,
         "criticalRate": -30,
         "defense": 15,
@@ -107,10 +122,15 @@
         "skills": null
     },
     {
+        "id": "岩賊龍盾 II",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "岩賊龍",
-        "name": "岩賊龍盾 II",
+        "series": {
+            "zhTW": "岩賊龍"
+        },
+        "name": {
+            "zhTW": "岩賊龍盾 II"
+        },
         "attack": 612,
         "criticalRate": 0,
         "defense": 0,
@@ -146,10 +166,15 @@
         "skills": null
     },
     {
+        "id": "屍套龍盾斧 II",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "屍套龍",
-        "name": "屍套龍盾斧 II",
+        "series": {
+            "zhTW": "屍套龍"
+        },
+        "name": {
+            "zhTW": "屍套龍盾斧 II"
+        },
         "attack": 684,
         "criticalRate": 0,
         "defense": 0,
@@ -184,10 +209,15 @@
         "skills": null
     },
     {
+        "id": "德斯特涅塔",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "恐暴龍",
-        "name": "德斯特涅塔",
+        "series": {
+            "zhTW": "恐暴龍"
+        },
+        "name": {
+            "zhTW": "德斯特涅塔"
+        },
         "attack": 792,
         "criticalRate": -25,
         "defense": 0,
@@ -218,10 +248,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅兵裝．痺賊",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "絢輝龍",
-        "name": "鎧羅兵裝．痺賊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅兵裝．痺賊"
+        },
         "attack": 576,
         "criticalRate": 30,
         "defense": 20,
@@ -240,10 +275,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅兵裝．慘爪",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "絢輝龍",
-        "name": "鎧羅兵裝．慘爪",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅兵裝．慘爪"
+        },
         "attack": 684,
         "criticalRate": 25,
         "defense": 20,
@@ -262,10 +302,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅兵裝．岩賊",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "絢輝龍",
-        "name": "鎧羅兵裝．岩賊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅兵裝．岩賊"
+        },
         "attack": 684,
         "criticalRate": 0,
         "defense": 20,
@@ -284,10 +329,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅兵裝．屍套",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "絢輝龍",
-        "name": "鎧羅兵裝．屍套",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅兵裝．屍套"
+        },
         "attack": 684,
         "criticalRate": 10,
         "defense": 20,
@@ -308,10 +358,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅兵裝．賊",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "絢輝龍",
-        "name": "鎧羅兵裝．賊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅兵裝．賊"
+        },
         "attack": 684,
         "criticalRate": 0,
         "defense": 20,
@@ -330,10 +385,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅兵裝．王",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "絢輝龍",
-        "name": "鎧羅兵裝．王",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅兵裝．王"
+        },
         "attack": 684,
         "criticalRate": 20,
         "defense": 20,
@@ -352,10 +412,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅兵裝．泥魚",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "絢輝龍",
-        "name": "鎧羅兵裝．泥魚",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅兵裝．泥魚"
+        },
         "attack": 684,
         "criticalRate": 10,
         "defense": 20,
@@ -374,10 +439,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅兵裝．飛雷",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "絢輝龍",
-        "name": "鎧羅兵裝．飛雷",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅兵裝．飛雷"
+        },
         "attack": 684,
         "criticalRate": 15,
         "defense": 20,
@@ -396,10 +466,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅兵裝．角",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "絢輝龍",
-        "name": "鎧羅兵裝．角",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅兵裝．角"
+        },
         "attack": 828,
         "criticalRate": -30,
         "defense": 25,
@@ -428,10 +503,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅兵裝．？",
         "rare": 7,
         "type": "chargeBlade",
-        "series": "絢輝龍",
-        "name": "鎧羅兵裝．？",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅兵裝．？"
+        },
         "attack": 0,
         "criticalRate": 0,
         "defense": 0,

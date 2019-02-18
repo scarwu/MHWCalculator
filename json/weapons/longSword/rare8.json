@@ -1,9 +1,14 @@
 [
     {
+        "id": "滅盡一刀",
         "rare": 8,
         "type": "longSword",
-        "series": "滅盡龍",
-        "name": "滅盡一刀",
+        "series": {
+            "zhTW": "滅盡龍"
+        },
+        "name": {
+            "zhTW": "滅盡一刀"
+        },
         "attack": 693,
         "criticalRate": 0,
         "defense": 0,
@@ -38,10 +43,15 @@
         "skills": null
     },
     {
+        "id": "飛龍刀【藍染】",
         "rare": 8,
         "type": "longSword",
-        "series": "火龍",
-        "name": "飛龍刀【藍染】",
+        "series": {
+            "zhTW": "火龍"
+        },
+        "name": {
+            "zhTW": "飛龍刀【藍染】"
+        },
         "attack": 627,
         "criticalRate": 15,
         "defense": 0,
@@ -74,10 +84,15 @@
         "skills": null
     },
     {
+        "id": "爆鱗刀赤紅利刃",
         "rare": 8,
         "type": "longSword",
-        "series": "爆鱗龍",
-        "name": "爆鱗刀赤紅利刃",
+        "series": {
+            "zhTW": "爆鱗龍"
+        },
+        "name": {
+            "zhTW": "爆鱗刀赤紅利刃"
+        },
         "attack": 660,
         "criticalRate": -10,
         "defense": 0,
@@ -113,10 +128,15 @@
         "skills": null
     },
     {
+        "id": "幻光刀",
         "rare": 8,
         "type": "longSword",
-        "series": "風漂龍",
-        "name": "幻光刀",
+        "series": {
+            "zhTW": "風漂龍"
+        },
+        "name": {
+            "zhTW": "幻光刀"
+        },
         "attack": 528,
         "criticalRate": 0,
         "defense": 0,
@@ -145,10 +165,15 @@
         "skills": null
     },
     {
+        "id": "帝王刀【陽炎】",
         "rare": 8,
         "type": "longSword",
-        "series": "黑鋼",
-        "name": "帝王刀【陽炎】",
+        "series": {
+            "zhTW": "黑鋼"
+        },
+        "name": {
+            "zhTW": "帝王刀【陽炎】"
+        },
         "attack": 627,
         "criticalRate": 0,
         "defense": 0,
@@ -177,10 +202,15 @@
         "skills": null
     },
     {
+        "id": "冥燈龍太刀",
         "rare": 8,
         "type": "longSword",
-        "series": "冥燈龍",
-        "name": "冥燈龍太刀",
+        "series": {
+            "zhTW": "冥燈龍"
+        },
+        "name": {
+            "zhTW": "冥燈龍太刀"
+        },
         "attack": 594,
         "criticalRate": 15,
         "defense": 0,
@@ -218,10 +248,15 @@
         "skills": null
     },
     {
+        "id": "天上天下無雙刀",
         "rare": 8,
         "type": "longSword",
-        "series": "工房武器",
-        "name": "天上天下無雙刀",
+        "series": {
+            "zhTW": "工房武器"
+        },
+        "name": {
+            "zhTW": "天上天下無雙刀"
+        },
         "attack": 693,
         "criticalRate": 0,
         "defense": 20,
@@ -256,10 +291,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．麻痺",
         "rare": 8,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．麻痺",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．麻痺"
+        },
         "attack": 561,
         "criticalRate": 0,
         "defense": 20,
@@ -292,10 +332,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．毒",
         "rare": 8,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．毒",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．毒"
+        },
         "attack": 627,
         "criticalRate": 10,
         "defense": 20,
@@ -328,10 +373,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．水",
         "rare": 8,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．水",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．水"
+        },
         "attack": 627,
         "criticalRate": 0,
         "defense": 20,
@@ -364,10 +414,15 @@
         "skills": null
     },
     {
+        "id": "皇后劍．炎妃",
         "rare": 8,
         "type": "longSword",
-        "series": "炎妃龍",
-        "name": "皇后劍．炎妃",
+        "series": {
+            "zhTW": "炎妃龍"
+        },
+        "name": {
+            "zhTW": "皇后劍．炎妃"
+        },
         "attack": 594,
         "criticalRate": 20,
         "defense": 0,
@@ -402,16 +457,21 @@
         ],
         "skills": [
             {
-                "name": "毅力",
+                "id": "毅力",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后劍．滅盡",
         "rare": 8,
         "type": "longSword",
-        "series": "炎妃龍．滅盡",
-        "name": "皇后劍．滅盡",
+        "series": {
+            "zhTW": "炎妃龍．滅盡"
+        },
+        "name": {
+            "zhTW": "皇后劍．滅盡"
+        },
         "attack": 627,
         "criticalRate": 0,
         "defense": 0,
@@ -446,16 +506,21 @@
         ],
         "skills": [
             {
-                "name": "加速再生",
+                "id": "加速再生",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后劍．冥燈",
         "rare": 8,
         "type": "longSword",
-        "series": "炎妃龍．冥燈",
-        "name": "皇后劍．冥燈",
+        "series": {
+            "zhTW": "炎妃龍．冥燈"
+        },
+        "name": {
+            "zhTW": "皇后劍．冥燈"
+        },
         "attack": 594,
         "criticalRate": 10,
         "defense": 0,
@@ -490,7 +555,7 @@
         ],
         "skills": [
             {
-                "name": "利刃／彈藥節約",
+                "id": "利刃／彈藥節約",
                 "level": 1
             }
         ]

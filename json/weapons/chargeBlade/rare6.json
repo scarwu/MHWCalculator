@@ -1,9 +1,14 @@
 [
     {
+        "id": "鉻鐵守護者 II",
         "rare": 6,
         "type": "chargeBlade",
-        "series": "礦石素材",
-        "name": "鉻鐵守護者 II",
+        "series": {
+            "zhTW": "礦石素材"
+        },
+        "name": {
+            "zhTW": "鉻鐵守護者 II"
+        },
         "attack": 648,
         "criticalRate": 0,
         "defense": 0,
@@ -39,10 +44,15 @@
         "skills": null
     },
     {
+        "id": "深坑泥岩 III",
         "rare": 6,
         "type": "chargeBlade",
-        "series": "泥魚龍",
-        "name": "深坑泥岩 III",
+        "series": {
+            "zhTW": "泥魚龍"
+        },
+        "name": {
+            "zhTW": "深坑泥岩 III"
+        },
         "attack": 684,
         "criticalRate": 0,
         "defense": 0,
@@ -75,10 +85,15 @@
         "skills": null
     },
     {
+        "id": "寒霜巨人 II",
         "rare": 6,
         "type": "chargeBlade",
-        "series": "冰屬性",
-        "name": "寒霜巨人 II",
+        "series": {
+            "zhTW": "冰屬性"
+        },
+        "name": {
+            "zhTW": "寒霜巨人 II"
+        },
         "attack": 612,
         "criticalRate": 0,
         "defense": 0,
@@ -114,10 +129,15 @@
         "skills": null
     },
     {
+        "id": "強骨兵裝 II",
         "rare": 6,
         "type": "chargeBlade",
-        "series": "駭骨素材",
-        "name": "強骨兵裝 II",
+        "series": {
+            "zhTW": "駭骨素材"
+        },
+        "name": {
+            "zhTW": "強骨兵裝 II"
+        },
         "attack": 684,
         "criticalRate": 0,
         "defense": 10,
@@ -150,10 +170,15 @@
         "skills": null
     },
     {
+        "id": "凶豺龍盾斧 III",
         "rare": 6,
         "type": "chargeBlade",
-        "series": "大凶豺龍",
-        "name": "凶豺龍盾斧 III",
+        "series": {
+            "zhTW": "大凶豺龍"
+        },
+        "name": {
+            "zhTW": "凶豺龍盾斧 III"
+        },
         "attack": 684,
         "criticalRate": 0,
         "defense": 0,
@@ -189,10 +214,15 @@
         "skills": null
     },
     {
+        "id": "凶顎龍盾斧 III",
         "rare": 6,
         "type": "chargeBlade",
-        "series": "大凶顎龍",
-        "name": "凶顎龍盾斧 III",
+        "series": {
+            "zhTW": "大凶顎龍"
+        },
+        "name": {
+            "zhTW": "凶顎龍盾斧 III"
+        },
         "attack": 576,
         "criticalRate": 20,
         "defense": 0,
@@ -221,10 +251,15 @@
         "skills": null
     },
     {
+        "id": "飛雷龍之腕 III",
         "rare": 6,
         "type": "chargeBlade",
-        "series": "飛雷龍",
-        "name": "飛雷龍之腕 III",
+        "series": {
+            "zhTW": "飛雷龍"
+        },
+        "name": {
+            "zhTW": "飛雷龍之腕 III"
+        },
         "attack": 648,
         "criticalRate": 15,
         "defense": 0,
@@ -257,10 +292,15 @@
         "skills": null
     },
     {
+        "id": "龍骨盾斧 III",
         "rare": 6,
         "type": "chargeBlade",
-        "series": "龍骨",
-        "name": "龍骨盾斧 III",
+        "series": {
+            "zhTW": "龍骨"
+        },
+        "name": {
+            "zhTW": "龍骨盾斧 III"
+        },
         "attack": 576,
         "criticalRate": 0,
         "defense": 0,

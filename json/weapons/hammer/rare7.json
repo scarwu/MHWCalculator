@@ -1,9 +1,14 @@
 [
     {
+        "id": "慟泣冰河",
         "rare": 7,
         "type": "hammer",
-        "series": "工房武器",
-        "name": "慟泣冰河",
+        "series": {
+            "zhTW": "工房武器"
+        },
+        "name": {
+            "zhTW": "慟泣冰河"
+        },
         "attack": 936,
         "criticalRate": 0,
         "defense": 0,
@@ -36,10 +41,15 @@
         "skills": null
     },
     {
+        "id": "花之女神",
         "rare": 7,
         "type": "hammer",
-        "series": "毒妖鳥",
-        "name": "花之女神",
+        "series": {
+            "zhTW": "毒妖鳥"
+        },
+        "name": {
+            "zhTW": "花之女神"
+        },
         "attack": 936,
         "criticalRate": 0,
         "defense": 0,
@@ -75,10 +85,15 @@
         "skills": null
     },
     {
+        "id": "爆鎚粉碎者 II",
         "rare": 7,
         "type": "hammer",
-        "series": "爆鎚龍",
-        "name": "爆鎚粉碎者 II",
+        "series": {
+            "zhTW": "爆鎚龍"
+        },
+        "name": {
+            "zhTW": "爆鎚粉碎者 II"
+        },
         "attack": 1092,
         "criticalRate": 0,
         "defense": 30,
@@ -111,10 +126,15 @@
         "skills": null
     },
     {
+        "id": "爆鎚戰鎚 II",
         "rare": 7,
         "type": "hammer",
-        "series": "角龍",
-        "name": "爆鎚戰鎚 II",
+        "series": {
+            "zhTW": "角龍"
+        },
+        "name": {
+            "zhTW": "爆鎚戰鎚 II"
+        },
         "attack": 1196,
         "criticalRate": -25,
         "defense": 15,
@@ -147,10 +167,15 @@
         "skills": null
     },
     {
+        "id": "混沌之鎚",
         "rare": 7,
         "type": "hammer",
-        "series": "恐暴龍",
-        "name": "混沌之鎚",
+        "series": {
+            "zhTW": "恐暴龍"
+        },
+        "name": {
+            "zhTW": "混沌之鎚"
+        },
         "attack": 1196,
         "criticalRate": -30,
         "defense": 0,
@@ -181,10 +206,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．痺賊",
         "rare": 7,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．痺賊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．痺賊"
+        },
         "attack": 832,
         "criticalRate": 30,
         "defense": 20,
@@ -203,10 +233,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．搔",
         "rare": 7,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．搔",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．搔"
+        },
         "attack": 884,
         "criticalRate": 35,
         "defense": 20,
@@ -225,10 +260,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．毒妖",
         "rare": 7,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．毒妖",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．毒妖"
+        },
         "attack": 988,
         "criticalRate": 0,
         "defense": 20,
@@ -247,10 +287,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．骨鎚",
         "rare": 7,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．骨鎚",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．骨鎚"
+        },
         "attack": 988,
         "criticalRate": 10,
         "defense": 30,
@@ -269,10 +314,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．屍套",
         "rare": 7,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．屍套",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．屍套"
+        },
         "attack": 1040,
         "criticalRate": 0,
         "defense": 20,
@@ -291,10 +341,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．蠻顎",
         "rare": 7,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．蠻顎",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．蠻顎"
+        },
         "attack": 1040,
         "criticalRate": -20,
         "defense": 20,
@@ -313,10 +368,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．爆鎚",
         "rare": 7,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．爆鎚",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．爆鎚"
+        },
         "attack": 1092,
         "criticalRate": 0,
         "defense": 30,
@@ -335,10 +395,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．土砂",
         "rare": 7,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．土砂",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．土砂"
+        },
         "attack": 1092,
         "criticalRate": -10,
         "defense": 25,
@@ -361,10 +426,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．角",
         "rare": 7,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．角",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．角"
+        },
         "attack": 1144,
         "criticalRate": -25,
         "defense": 20,
@@ -383,10 +453,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．？",
         "rare": 7,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．？",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．？"
+        },
         "attack": 0,
         "criticalRate": 0,
         "defense": 0,

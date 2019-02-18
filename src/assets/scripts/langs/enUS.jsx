@@ -9,10 +9,10 @@
  */
 
 export default {
-    title: 'Monster Hunter: World - Calculator',
+    title:              'Monster Hunter: World - Calculator',
 
     // Statemants
-    skillLevelZero: '此技能將不會出現在備選中',
+    skillLevelZero:     '此技能將不會出現在備選中',
 
     // Properties
     name:               'Name',

@@ -1,9 +1,14 @@
 [
     {
+        "id": "亡靈之柱",
         "rare": 7,
         "type": "switchAxe",
-        "series": "風漂龍",
-        "name": "亡靈之柱",
+        "series": {
+            "zhTW": "風漂龍"
+        },
+        "name": {
+            "zhTW": "亡靈之柱"
+        },
         "attack": 560,
         "criticalRate": 0,
         "defense": 0,
@@ -32,10 +37,15 @@
         "skills": null
     },
     {
+        "id": "動力迅斧 II",
         "rare": 7,
         "type": "switchAxe",
-        "series": "爆鎚龍",
-        "name": "動力迅斧 II",
+        "series": {
+            "zhTW": "爆鎚龍"
+        },
+        "name": {
+            "zhTW": "動力迅斧 II"
+        },
         "attack": 735,
         "criticalRate": 0,
         "defense": 30,
@@ -68,10 +78,15 @@
         "skills": null
     },
     {
+        "id": "爆鱗龍劍斧 II",
         "rare": 7,
         "type": "switchAxe",
-        "series": "爆鱗龍",
-        "name": "爆鱗龍劍斧 II",
+        "series": {
+            "zhTW": "爆鱗龍"
+        },
+        "name": {
+            "zhTW": "爆鱗龍劍斧 II"
+        },
         "attack": 700,
         "criticalRate": -15,
         "defense": 0,
@@ -104,10 +119,15 @@
         "skills": null
     },
     {
+        "id": "火龍斧飛龍牙 II",
         "rare": 7,
         "type": "switchAxe",
-        "series": "火龍",
-        "name": "火龍斧飛龍牙 II",
+        "series": {
+            "zhTW": "火龍"
+        },
+        "name": {
+            "zhTW": "火龍斧飛龍牙 II"
+        },
         "attack": 665,
         "criticalRate": 15,
         "defense": 0,
@@ -140,10 +160,15 @@
         "skills": null
     },
     {
+        "id": "屍套龍劍斧 II",
         "rare": 7,
         "type": "switchAxe",
-        "series": "屍套龍",
-        "name": "屍套龍劍斧 II",
+        "series": {
+            "zhTW": "屍套龍"
+        },
+        "name": {
+            "zhTW": "屍套龍劍斧 II"
+        },
         "attack": 700,
         "criticalRate": 0,
         "defense": 0,
@@ -178,10 +203,15 @@
         "skills": null
     },
     {
+        "id": "泥岩龍劍斧 III",
         "rare": 7,
         "type": "switchAxe",
-        "series": "泥魚龍",
-        "name": "泥岩龍劍斧 III",
+        "series": {
+            "zhTW": "泥魚龍"
+        },
+        "name": {
+            "zhTW": "泥岩龍劍斧 III"
+        },
         "attack": 665,
         "criticalRate": 0,
         "defense": 0,
@@ -214,10 +244,15 @@
         "skills": null
     },
     {
+        "id": "浮空龍斬斧 III",
         "rare": 7,
         "type": "switchAxe",
-        "series": "浮空龍",
-        "name": "浮空龍斬斧 III",
+        "series": {
+            "zhTW": "浮空龍"
+        },
+        "name": {
+            "zhTW": "浮空龍斬斧 III"
+        },
         "attack": 595,
         "criticalRate": 20,
         "defense": 0,
@@ -250,10 +285,15 @@
         "skills": null
     },
     {
+        "id": "蠻顎劍斧",
         "rare": 7,
         "type": "switchAxe",
-        "series": "蠻顎龍",
-        "name": "蠻顎劍斧",
+        "series": {
+            "zhTW": "蠻顎龍"
+        },
+        "name": {
+            "zhTW": "蠻顎劍斧"
+        },
         "attack": 735,
         "criticalRate": -20,
         "defense": 0,
@@ -282,10 +322,15 @@
         "skills": null
     },
     {
+        "id": "恐怖暴君",
         "rare": 7,
         "type": "switchAxe",
-        "series": "恐暴龍",
-        "name": "恐怖暴君",
+        "series": {
+            "zhTW": "恐暴龍"
+        },
+        "name": {
+            "zhTW": "恐怖暴君"
+        },
         "attack": 770,
         "criticalRate": -25,
         "defense": 0,
@@ -316,10 +361,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．風漂",
         "rare": 7,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．風漂",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．風漂"
+        },
         "attack": 560,
         "criticalRate": 10,
         "defense": 20,
@@ -338,10 +388,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．屍套",
         "rare": 7,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．屍套",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．屍套"
+        },
         "attack": 595,
         "criticalRate": 0,
         "defense": 20,
@@ -362,10 +417,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．浮空",
         "rare": 7,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．浮空",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．浮空"
+        },
         "attack": 595,
         "criticalRate": 25,
         "defense": 20,
@@ -384,10 +444,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．爆鱗",
         "rare": 7,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．爆鱗",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．爆鱗"
+        },
         "attack": 630,
         "criticalRate": 0,
         "defense": 20,
@@ -406,10 +471,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．賊",
         "rare": 7,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．賊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．賊"
+        },
         "attack": 665,
         "criticalRate": 0,
         "defense": 20,
@@ -428,10 +498,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．王",
         "rare": 7,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．王",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．王"
+        },
         "attack": 665,
         "criticalRate": 15,
         "defense": 20,
@@ -450,10 +525,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．泥魚",
         "rare": 7,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．泥魚",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．泥魚"
+        },
         "attack": 665,
         "criticalRate": 0,
         "defense": 20,
@@ -472,10 +552,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．爆鎚",
         "rare": 7,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．爆鎚",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．爆鎚"
+        },
         "attack": 735,
         "criticalRate": 10,
         "defense": 40,
@@ -494,10 +579,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．土砂",
         "rare": 7,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．土砂",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．土砂"
+        },
         "attack": 735,
         "criticalRate": -20,
         "defense": 25,
@@ -516,10 +606,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．角",
         "rare": 7,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．角",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．角"
+        },
         "attack": 805,
         "criticalRate": -30,
         "defense": 25,

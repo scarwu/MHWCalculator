@@ -1,9 +1,14 @@
 [
     {
+        "id": "鉻鋼切刀 II",
         "rare": 6,
         "type": "swordAndShield",
-        "series": "礦石素材",
-        "name": "鉻鋼切刀 II",
+        "series": {
+            "zhTW": "礦石素材"
+        },
+        "name": {
+            "zhTW": "鉻鋼切刀 II"
+        },
         "attack": 252,
         "criticalRate": 0,
         "defense": 0,
@@ -39,10 +44,15 @@
         "skills": null
     },
     {
+        "id": "洶湧奔流 III",
         "rare": 6,
         "type": "swordAndShield",
-        "series": "水屬性",
-        "name": "洶湧奔流 III",
+        "series": {
+            "zhTW": "水屬性"
+        },
+        "name": {
+            "zhTW": "洶湧奔流 III"
+        },
         "attack": 252,
         "criticalRate": 0,
         "defense": 0,
@@ -75,10 +85,15 @@
         "skills": null
     },
     {
+        "id": "浮空龍戰斧 III",
         "rare": 6,
         "type": "swordAndShield",
-        "series": "浮空龍",
-        "name": "浮空龍戰斧 III",
+        "series": {
+            "zhTW": "浮空龍"
+        },
+        "name": {
+            "zhTW": "浮空龍戰斧 III"
+        },
         "attack": 238,
         "criticalRate": 0,
         "defense": 0,
@@ -114,10 +129,15 @@
         "skills": null
     },
     {
+        "id": "盛開曼陀羅 III",
         "rare": 6,
         "type": "swordAndShield",
-        "series": "毒妖鳥",
-        "name": "盛開曼陀羅 III",
+        "series": {
+            "zhTW": "毒妖鳥"
+        },
+        "name": {
+            "zhTW": "盛開曼陀羅 III"
+        },
         "attack": 238,
         "criticalRate": 0,
         "defense": 0,
@@ -153,10 +173,15 @@
         "skills": null
     },
     {
+        "id": "瑪拉多戰斧 III",
         "rare": 6,
         "type": "swordAndShield",
-        "series": "大凶顎龍",
-        "name": "瑪拉多戰斧 III",
+        "series": {
+            "zhTW": "大凶顎龍"
+        },
+        "name": {
+            "zhTW": "瑪拉多戰斧 III"
+        },
         "attack": 224,
         "criticalRate": 20,
         "defense": 0,
@@ -185,10 +210,15 @@
         "skills": null
     },
     {
+        "id": "大地巴龍刀 II",
         "rare": 6,
         "type": "swordAndShield",
-        "series": "駭骨素材",
-        "name": "大地巴龍刀 II",
+        "series": {
+            "zhTW": "駭骨素材"
+        },
+        "name": {
+            "zhTW": "大地巴龍刀 II"
+        },
         "attack": 266,
         "criticalRate": 0,
         "defense": 10,
@@ -221,10 +251,15 @@
         "skills": null
     },
     {
+        "id": "骨鎚龍棍棒 III",
         "rare": 6,
         "type": "swordAndShield",
-        "series": "骨鎚龍",
-        "name": "骨鎚龍棍棒 III",
+        "series": {
+            "zhTW": "骨鎚龍"
+        },
+        "name": {
+            "zhTW": "骨鎚龍棍棒 III"
+        },
         "attack": 266,
         "criticalRate": 0,
         "defense": 20,
@@ -253,10 +288,15 @@
         "skills": null
     },
     {
+        "id": "凶豺龍棍棒 III",
         "rare": 6,
         "type": "swordAndShield",
-        "series": "大凶豺龍",
-        "name": "凶豺龍棍棒 III",
+        "series": {
+            "zhTW": "大凶豺龍"
+        },
+        "name": {
+            "zhTW": "凶豺龍棍棒 III"
+        },
         "attack": 266,
         "criticalRate": 0,
         "defense": 0,
@@ -292,10 +332,15 @@
         "skills": null
     },
     {
+        "id": "雷光戰狂 III",
         "rare": 6,
         "type": "swordAndShield",
-        "series": "雷屬性",
-        "name": "雷光戰狂 III",
+        "series": {
+            "zhTW": "雷屬性"
+        },
+        "name": {
+            "zhTW": "雷光戰狂 III"
+        },
         "attack": 266,
         "criticalRate": 0,
         "defense": 0,
@@ -328,10 +373,15 @@
         "skills": null
     },
     {
+        "id": "土砂龍棍棒 III",
         "rare": 6,
         "type": "swordAndShield",
-        "series": "土砂龍",
-        "name": "土砂龍棍棒 III",
+        "series": {
+            "zhTW": "土砂龍"
+        },
+        "name": {
+            "zhTW": "土砂龍棍棒 III"
+        },
         "attack": 294,
         "criticalRate": -10,
         "defense": 15,
@@ -367,10 +417,15 @@
         "skills": null
     },
     {
+        "id": "龍骨劍 III",
         "rare": 6,
         "type": "swordAndShield",
-        "series": "龍骨",
-        "name": "龍骨劍 III",
+        "series": {
+            "zhTW": "龍骨"
+        },
+        "name": {
+            "zhTW": "龍骨劍 III"
+        },
         "attack": 196,
         "criticalRate": 0,
         "defense": 0,

@@ -1,9 +1,14 @@
 [
     {
+        "id": "鉻鋼迅擊弩 II",
         "rare": 6,
         "type": "lightBowgun",
-        "series": "礦石素材",
-        "name": "鉻鋼迅擊弩 II",
+        "series": {
+            "zhTW": "礦石素材"
+        },
+        "name": {
+            "zhTW": "鉻鋼迅擊弩 II"
+        },
         "attack": 234,
         "criticalRate": 0,
         "defense": 0,
@@ -24,10 +29,15 @@
         "skills": null
     },
     {
+        "id": "浮空龍颶風砲 III",
         "rare": 6,
         "type": "lightBowgun",
-        "series": "浮空龍",
-        "name": "浮空龍颶風砲 III",
+        "series": {
+            "zhTW": "浮空龍"
+        },
+        "name": {
+            "zhTW": "浮空龍颶風砲 III"
+        },
         "attack": 221,
         "criticalRate": 15,
         "defense": 0,
@@ -45,10 +55,15 @@
         "skills": null
     },
     {
+        "id": "凶豺龍火砲 III",
         "rare": 6,
         "type": "lightBowgun",
-        "series": "大凶豺龍",
-        "name": "凶豺龍火砲 III",
+        "series": {
+            "zhTW": "大凶豺龍"
+        },
+        "name": {
+            "zhTW": "凶豺龍火砲 III"
+        },
         "attack": 247,
         "criticalRate": 0,
         "defense": 0,
@@ -69,10 +84,15 @@
         "skills": null
     },
     {
+        "id": "雷光迅擊弩 III",
         "rare": 6,
         "type": "lightBowgun",
-        "series": "雷屬性",
-        "name": "雷光迅擊弩 III",
+        "series": {
+            "zhTW": "雷屬性"
+        },
+        "name": {
+            "zhTW": "雷光迅擊弩 III"
+        },
         "attack": 234,
         "criticalRate": 0,
         "defense": 0,
@@ -90,10 +110,15 @@
         "skills": null
     },
     {
+        "id": "寒霜迅擊弩 II",
         "rare": 6,
         "type": "lightBowgun",
-        "series": "冰屬性",
-        "name": "寒霜迅擊弩 II",
+        "series": {
+            "zhTW": "冰屬性"
+        },
+        "name": {
+            "zhTW": "寒霜迅擊弩 II"
+        },
         "attack": 247,
         "criticalRate": 0,
         "defense": 0,
@@ -107,10 +132,15 @@
         "skills": null
     },
     {
+        "id": "狙擊射手 II",
         "rare": 6,
         "type": "lightBowgun",
-        "series": "駭骨素材",
-        "name": "狙擊射手 II",
+        "series": {
+            "zhTW": "駭骨素材"
+        },
+        "name": {
+            "zhTW": "狙擊射手 II"
+        },
         "attack": 247,
         "criticalRate": 0,
         "defense": 10,
@@ -128,10 +158,15 @@
         "skills": null
     },
     {
+        "id": "蠻顎龍破壞砲 III",
         "rare": 6,
         "type": "lightBowgun",
-        "series": "蠻顎龍",
-        "name": "蠻顎龍破壞砲 III",
+        "series": {
+            "zhTW": "蠻顎龍"
+        },
+        "name": {
+            "zhTW": "蠻顎龍破壞砲 III"
+        },
         "attack": 273,
         "criticalRate": -30,
         "defense": 0,
@@ -145,10 +180,15 @@
         "skills": null
     },
     {
+        "id": "泥岩龍輕弩 III",
         "rare": 6,
         "type": "lightBowgun",
-        "series": "泥魚龍",
-        "name": "泥岩龍輕弩 III",
+        "series": {
+            "zhTW": "泥魚龍"
+        },
+        "name": {
+            "zhTW": "泥岩龍輕弩 III"
+        },
         "attack": 247,
         "criticalRate": 0,
         "defense": 0,
@@ -169,10 +209,15 @@
         "skills": null
     },
     {
+        "id": "土砂龍射手 III",
         "rare": 6,
         "type": "lightBowgun",
-        "series": "土砂龍",
-        "name": "土砂龍射手 III",
+        "series": {
+            "zhTW": "土砂龍"
+        },
+        "name": {
+            "zhTW": "土砂龍射手 III"
+        },
         "attack": 260,
         "criticalRate": -20,
         "defense": 15,
@@ -190,10 +235,15 @@
         "skills": null
     },
     {
+        "id": "龍骨弩 III",
         "rare": 6,
         "type": "lightBowgun",
-        "series": "龍骨",
-        "name": "龍骨弩 III",
+        "series": {
+            "zhTW": "龍骨"
+        },
+        "name": {
+            "zhTW": "龍骨弩 III"
+        },
         "attack": 208,
         "criticalRate": 0,
         "defense": 0,

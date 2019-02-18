@@ -9,10 +9,10 @@
  */
 
 export default {
-    title: '魔物獵人世界 - 配裝計算機',
+    title:              '魔物獵人世界 - 配裝計算機',
 
     // Statemants
-    skillLevelZero: '此技能將不會出現在備選中',
+    skillLevelZero:     '此技能將不會出現在備選中',
 
     // Properties
     name:               '名稱',

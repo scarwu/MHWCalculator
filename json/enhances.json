@@ -4,7 +4,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "基礎攻擊力+5",
+                "description": {
+                    "zhTW": "基礎攻擊力+5"
+                },
                 "reaction": {
                     "attack": {
                         "value": 5
@@ -13,7 +15,9 @@
             },
             {
                 "level": 2,
-                "description": "基礎攻擊力+10",
+                "description": {
+                    "zhTW": "基礎攻擊力+10"
+                },
                 "reaction": {
                     "attack": {
                         "value": 10
@@ -22,7 +26,9 @@
             },
             {
                 "level": 3,
-                "description": "基礎攻擊力+15",
+                "description": {
+                    "zhTW": "基礎攻擊力+15"
+                },
                 "reaction": {
                     "attack": {
                         "value": 15
@@ -36,7 +42,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "會心率+10%",
+                "description": {
+                    "zhTW": "會心率+10%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 10
@@ -45,7 +53,9 @@
             },
             {
                 "level": 2,
-                "description": "會心率+15%",
+                "description": {
+                    "zhTW": "會心率+15%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 15
@@ -54,7 +64,9 @@
             },
             {
                 "level": 3,
-                "description": "會心率+20%",
+                "description": {
+                    "zhTW": "會心率+20%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 20
@@ -68,7 +80,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "防禦力+10",
+                "description": {
+                    "zhTW": "防禦力+10"
+                },
                 "reaction": {
                     "defense": {
                         "value": 10
@@ -77,7 +91,9 @@
             },
             {
                 "level": 2,
-                "description": "防禦力+20",
+                "description": {
+                    "zhTW": "防禦力+20"
+                },
                 "reaction": {
                     "defense": {
                         "value": 20
@@ -86,7 +102,9 @@
             },
             {
                 "level": 3,
-                "description": "防禦力+30",
+                "description": {
+                    "zhTW": "防禦力+30"
+                },
                 "reaction": {
                     "defense": {
                         "value": 30
@@ -100,7 +118,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "1級鑲嵌槽+1",
+                "description": {
+                    "zhTW": "1級鑲嵌槽+1"
+                },
                 "reaction": {
                     "addSlot": {
                         "size": 1
@@ -109,7 +129,9 @@
             },
             {
                 "level": 2,
-                "description": "2級鑲嵌槽+1",
+                "description": {
+                    "zhTW": "2級鑲嵌槽+1"
+                },
                 "reaction": {
                     "addSlot": {
                         "size": 2
@@ -118,7 +140,9 @@
             },
             {
                 "level": 3,
-                "description": "3級鑲嵌槽+1",
+                "description": {
+                    "zhTW": "3級鑲嵌槽+1"
+                },
                 "reaction": {
                     "addSlot": {
                         "size": 3
@@ -132,17 +156,23 @@
         "list": [
             {
                 "level": 1,
-                "description": "造成傷害時回復少量體力",
+                "description": {
+                    "zhTW": "造成傷害時回復少量體力"
+                },
                 "reaction": null
             },
             {
                 "level": 2,
-                "description": "造成傷害時回復少量體力",
+                "description": {
+                    "zhTW": "造成傷害時回復少量體力"
+                },
                 "reaction": null
             },
             {
                 "level": 3,
-                "description": "造成傷害時回復少量體力",
+                "description": {
+                    "zhTW": "造成傷害時回復少量體力"
+                },
                 "reaction": null
             }
         ]

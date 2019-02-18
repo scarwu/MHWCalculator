@@ -1,9 +1,14 @@
 [
     {
+        "id": "擊滅砲火",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "滅盡龍",
-        "name": "擊滅砲火",
+        "series": {
+            "zhTW": "滅盡龍"
+        },
+        "name": {
+            "zhTW": "擊滅砲火"
+        },
         "attack": 285,
         "criticalRate": 0,
         "defense": 0,
@@ -21,10 +26,15 @@
         "skills": null
     },
     {
+        "id": "冰凌薔薇",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "風漂龍",
-        "name": "冰凌薔薇",
+        "series": {
+            "zhTW": "風漂龍"
+        },
+        "name": {
+            "zhTW": "冰凌薔薇"
+        },
         "attack": 255,
         "criticalRate": 0,
         "defense": 0,
@@ -42,10 +52,15 @@
         "skills": null
     },
     {
+        "id": "重角轟砲",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "角龍",
-        "name": "重角轟砲",
+        "series": {
+            "zhTW": "角龍"
+        },
+        "name": {
+            "zhTW": "重角轟砲"
+        },
         "attack": 330,
         "criticalRate": -20,
         "defense": 15,
@@ -63,10 +78,15 @@
         "skills": null
     },
     {
+        "id": "迅雷閃擊",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "幻獸",
-        "name": "迅雷閃擊",
+        "series": {
+            "zhTW": "幻獸"
+        },
+        "name": {
+            "zhTW": "迅雷閃擊"
+        },
         "attack": 255,
         "criticalRate": 0,
         "defense": 0,
@@ -84,10 +104,15 @@
         "skills": null
     },
     {
+        "id": "炎王灼紅巨砲",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "黑鋼",
-        "name": "炎王灼紅巨砲",
+        "series": {
+            "zhTW": "黑鋼"
+        },
+        "name": {
+            "zhTW": "炎王灼紅巨砲"
+        },
         "attack": 270,
         "criticalRate": 0,
         "defense": 0,
@@ -101,10 +126,15 @@
         "skills": null
     },
     {
+        "id": "冥燈龍重弩槍",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "冥燈龍",
-        "name": "冥燈龍重弩槍",
+        "series": {
+            "zhTW": "冥燈龍"
+        },
+        "name": {
+            "zhTW": "冥燈龍重弩槍"
+        },
         "attack": 255,
         "criticalRate": 0,
         "defense": 0,
@@ -125,10 +155,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．援擊",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．援擊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．援擊"
+        },
         "attack": 270,
         "criticalRate": 20,
         "defense": 20,
@@ -146,10 +181,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．爆擊",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．爆擊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．爆擊"
+        },
         "attack": 285,
         "criticalRate": 10,
         "defense": 20,
@@ -167,10 +207,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．冷擊",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．冷擊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．冷擊"
+        },
         "attack": 285,
         "criticalRate": 0,
         "defense": 20,
@@ -188,10 +233,15 @@
         "skills": null
     },
     {
+        "id": "皇后加農砲．炎妃",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "炎妃龍",
-        "name": "皇后加農砲．炎妃",
+        "series": {
+            "zhTW": "炎妃龍"
+        },
+        "name": {
+            "zhTW": "皇后加農砲．炎妃"
+        },
         "attack": 285,
         "criticalRate": 20,
         "defense": 0,
@@ -208,16 +258,21 @@
         ],
         "skills": [
             {
-                "name": "毅力",
+                "id": "毅力",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后加農砲．滅盡",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "炎妃龍．滅盡",
-        "name": "皇后加農砲．滅盡",
+        "series": {
+            "zhTW": "炎妃龍．滅盡"
+        },
+        "name": {
+            "zhTW": "皇后加農砲．滅盡"
+        },
         "attack": 300,
         "criticalRate": 0,
         "defense": 0,
@@ -234,16 +289,21 @@
         ],
         "skills": [
             {
-                "name": "加速再生",
+                "id": "加速再生",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后加農砲．冥燈",
         "rare": 8,
         "type": "heavyBowgun",
-        "series": "炎妃龍．冥燈",
-        "name": "皇后加農砲．冥燈",
+        "series": {
+            "zhTW": "炎妃龍．冥燈"
+        },
+        "name": {
+            "zhTW": "皇后加農砲．冥燈"
+        },
         "attack": 285,
         "criticalRate": 10,
         "defense": 0,
@@ -263,7 +323,7 @@
         ],
         "skills": [
             {
-                "name": "利刃／彈藥節約",
+                "id": "利刃／彈藥節約",
                 "level": 1
             }
         ]

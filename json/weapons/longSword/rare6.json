@@ -1,9 +1,14 @@
 [
     {
+        "id": "鐵刀【神樂】 II",
         "rare": 6,
         "type": "longSword",
-        "series": "礦石素材",
-        "name": "鐵刀【神樂】 II",
+        "series": {
+            "zhTW": "礦石素材"
+        },
+        "name": {
+            "zhTW": "鐵刀【神樂】 II"
+        },
         "attack": 594,
         "criticalRate": 0,
         "defense": 0,
@@ -39,10 +44,15 @@
         "skills": null
     },
     {
+        "id": "眩惑刀【閃】 III",
         "rare": 6,
         "type": "longSword",
-        "series": "眩鳥",
-        "name": "眩惑刀【閃】 III",
+        "series": {
+            "zhTW": "眩鳥"
+        },
+        "name": {
+            "zhTW": "眩惑刀【閃】 III"
+        },
         "attack": 594,
         "criticalRate": 0,
         "defense": 0,
@@ -75,10 +85,15 @@
         "skills": null
     },
     {
+        "id": "星空迅刀 III",
         "rare": 6,
         "type": "longSword",
-        "series": "搔鳥",
-        "name": "星空迅刀 III",
+        "series": {
+            "zhTW": "搔鳥"
+        },
+        "name": {
+            "zhTW": "星空迅刀 III"
+        },
         "attack": 561,
         "criticalRate": 20,
         "defense": 0,
@@ -107,10 +122,15 @@
         "skills": null
     },
     {
+        "id": "骨鐮 II",
         "rare": 6,
         "type": "longSword",
-        "series": "駭骨素材",
-        "name": "骨鐮 II",
+        "series": {
+            "zhTW": "駭骨素材"
+        },
+        "name": {
+            "zhTW": "骨鐮 II"
+        },
         "attack": 627,
         "criticalRate": 0,
         "defense": 10,
@@ -143,10 +163,15 @@
         "skills": null
     },
     {
+        "id": "蠻顎龍偃月刀 III",
         "rare": 6,
         "type": "longSword",
-        "series": "蠻顎龍",
-        "name": "蠻顎龍偃月刀 III",
+        "series": {
+            "zhTW": "蠻顎龍"
+        },
+        "name": {
+            "zhTW": "蠻顎龍偃月刀 III"
+        },
         "attack": 693,
         "criticalRate": -20,
         "defense": 0,
@@ -175,10 +200,15 @@
         "skills": null
     },
     {
+        "id": "深土太刀 III",
         "rare": 6,
         "type": "longSword",
-        "series": "泥魚龍",
-        "name": "深土太刀 III",
+        "series": {
+            "zhTW": "泥魚龍"
+        },
+        "name": {
+            "zhTW": "深土太刀 III"
+        },
         "attack": 627,
         "criticalRate": 0,
         "defense": 0,
@@ -211,10 +241,15 @@
         "skills": null
     },
     {
+        "id": "飛雷龍之牙 III",
         "rare": 6,
         "type": "longSword",
-        "series": "飛雷龍",
-        "name": "飛雷龍之牙 III",
+        "series": {
+            "zhTW": "飛雷龍"
+        },
+        "name": {
+            "zhTW": "飛雷龍之牙 III"
+        },
         "attack": 594,
         "criticalRate": 15,
         "defense": 0,
@@ -247,10 +282,15 @@
         "skills": null
     },
     {
+        "id": "黑色偃月刀 III",
         "rare": 6,
         "type": "longSword",
-        "series": "巨甲蟲",
-        "name": "黑色偃月刀 III",
+        "series": {
+            "zhTW": "巨甲蟲"
+        },
+        "name": {
+            "zhTW": "黑色偃月刀 III"
+        },
         "attack": 528,
         "criticalRate": 0,
         "defense": 0,
@@ -283,10 +323,15 @@
         "skills": null
     },
     {
+        "id": "龍骨刀 III",
         "rare": 6,
         "type": "longSword",
-        "series": "龍骨",
-        "name": "龍骨刀 III",
+        "series": {
+            "zhTW": "龍骨"
+        },
+        "name": {
+            "zhTW": "龍骨刀 III"
+        },
         "attack": 528,
         "criticalRate": 0,
         "defense": 0,

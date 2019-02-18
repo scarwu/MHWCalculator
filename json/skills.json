@@ -1,6 +1,9 @@
 [
     {
-        "name": "體力增強",
+        "id": "體力增強",
+        "name": {
+            "zhTW": "體力增強"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -10,7 +13,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "體力+15",
+                "description": {
+                    "zhTW": "體力+15"
+                },
                 "reaction": {
                     "health": {
                         "value": 15
@@ -19,7 +24,9 @@
             },
             {
                 "level": 2,
-                "description": "體力+30",
+                "description": {
+                    "zhTW": "體力+30"
+                },
                 "reaction": {
                     "health": {
                         "value": 30
@@ -28,7 +35,9 @@
             },
             {
                 "level": 3,
-                "description": "體力+50",
+                "description": {
+                    "zhTW": "體力+50"
+                },
                 "reaction": {
                     "health": {
                         "value": 50
@@ -38,7 +47,10 @@
         ]
     },
     {
-        "name": "體力回復量UP",
+        "id": "體力回復量UP",
+        "name": {
+            "zhTW": "體力回復量UP"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -48,20 +60,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "回復量1.1倍"
+                "description": {
+                    "zhTW": "回復量1.1倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "回復量1.2倍"
+                "description": {
+                    "zhTW": "回復量1.2倍"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "回復量1.3倍"
+                "description": {
+                    "zhTW": "回復量1.3倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "KO術",
+        "id": "KO術",
+        "name": {
+            "zhTW": "KO術"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -71,20 +95,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "昏厥威力1.1倍"
+                "description": {
+                    "zhTW": "昏厥威力1.1倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "昏厥威力1.2倍"
+                "description": {
+                    "zhTW": "昏厥威力1.2倍"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "昏厥威力1.3倍"
+                "description": {
+                    "zhTW": "昏厥威力1.3倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "體術",
+        "id": "體術",
+        "name": {
+            "zhTW": "體術"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -94,28 +130,46 @@
         "list": [
             {
                 "level": 1,
-                "description": "固定耐力消耗量減少10%"
+                "description": {
+                    "zhTW": "固定耐力消耗量減少10%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "固定耐力消耗量減少20%"
+                "description": {
+                    "zhTW": "固定耐力消耗量減少20%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "固定耐力消耗量減少30%"
+                "description": {
+                    "zhTW": "固定耐力消耗量減少30%"
+                },
+                "reaction": null
             },
             {
                 "level": 4,
-                "description": "固定耐力消耗量減少40%"
+                "description": {
+                    "zhTW": "固定耐力消耗量減少40%"
+                },
+                "reaction": null
             },
             {
                 "level": 5,
-                "description": "固定耐力消耗量減少50%"
+                "description": {
+                    "zhTW": "固定耐力消耗量減少50%"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "力量解放",
+        "id": "力量解放",
+        "name": {
+            "zhTW": "力量解放"
+        },
         "type": "passive",
         "from" : {
             "set": false,
@@ -125,7 +179,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "技能發動時，會心率+10%，耐力消耗量減少10%",
+                "description": {
+                    "zhTW": "技能發動時，會心率+10%，耐力消耗量減少10%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 10
@@ -134,7 +190,9 @@
             },
             {
                 "level": 2,
-                "description": "技能發動時，會心率+20%，耐力消耗量減少20%",
+                "description": {
+                    "zhTW": "技能發動時，會心率+20%，耐力消耗量減少20%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 20
@@ -143,7 +201,9 @@
             },
             {
                 "level": 3,
-                "description": "技能發動時，會心率+30%，耐力消耗量減少30%",
+                "description": {
+                    "zhTW": "技能發動時，會心率+30%，耐力消耗量減少30%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 30
@@ -152,7 +212,9 @@
             },
             {
                 "level": 4,
-                "description": "技能發動時，會心率+40%，耐力消耗量減少40%",
+                "description": {
+                    "zhTW": "技能發動時，會心率+40%，耐力消耗量減少40%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 40
@@ -161,7 +223,9 @@
             },
             {
                 "level": 5,
-                "description": "技能發動時，會心率+50%，耐力消耗量減少50%",
+                "description": {
+                    "zhTW": "技能發動時，會心率+50%，耐力消耗量減少50%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 50
@@ -171,7 +235,10 @@
         ]
     },
     {
-        "name": "水屬性攻擊強化",
+        "id": "水屬性攻擊強化",
+        "name": {
+            "zhTW": "水屬性攻擊強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -181,7 +248,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "水屬性攻擊值+30",
+                "description": {
+                    "zhTW": "水屬性攻擊值+30"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "water",
@@ -192,7 +261,9 @@
             },
             {
                 "level": 2,
-                "description": "水屬性攻擊值+60",
+                "description": {
+                    "zhTW": "水屬性攻擊值+60"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "water",
@@ -203,7 +274,9 @@
             },
             {
                 "level": 3,
-                "description": "水屬性攻擊值+100",
+                "description": {
+                    "zhTW": "水屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "water",
@@ -214,7 +287,9 @@
             },
             {
                 "level": 4,
-                "description": "水屬性攻擊值變為1.05倍，水屬性攻擊值+100",
+                "description": {
+                    "zhTW": "水屬性攻擊值變為1.05倍，水屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "water",
@@ -225,7 +300,9 @@
             },
             {
                 "level": 5,
-                "description": "水屬性攻擊值變為1.1倍，水屬性攻擊值+100",
+                "description": {
+                    "zhTW": "水屬性攻擊值變為1.1倍，水屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "water",
@@ -237,7 +314,10 @@
         ]
     },
     {
-        "name": "火屬性攻擊強化",
+        "id": "火屬性攻擊強化",
+        "name": {
+            "zhTW": "火屬性攻擊強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -247,7 +327,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "火屬性攻擊值+30",
+                "description": {
+                    "zhTW": "火屬性攻擊值+30"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "fire",
@@ -258,7 +340,9 @@
             },
             {
                 "level": 2,
-                "description": "火屬性攻擊值+60",
+                "description": {
+                    "zhTW": "火屬性攻擊值+60"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "fire",
@@ -269,7 +353,9 @@
             },
             {
                 "level": 3,
-                "description": "火屬性攻擊值+100",
+                "description": {
+                    "zhTW": "火屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "fire",
@@ -280,7 +366,9 @@
             },
             {
                 "level": 4,
-                "description": "火屬性攻擊值變為1.05倍，火屬性攻擊值+100",
+                "description": {
+                    "zhTW": "火屬性攻擊值變為1.05倍，火屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "fire",
@@ -291,7 +379,9 @@
             },
             {
                 "level": 5,
-                "description": "火屬性攻擊值變為1.1倍，火屬性攻擊值+100",
+                "description": {
+                    "zhTW": "火屬性攻擊值變為1.1倍，火屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "fire",
@@ -303,7 +393,10 @@
         ]
     },
     {
-        "name": "心眼／彈導強化",
+        "id": "心眼／彈導強化",
+        "name": {
+            "zhTW": "心眼／彈導強化"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -313,12 +406,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "攻擊不會被彈開，縮短彈藥、箭矢達到最大威力時的距離"
+                "description": {
+                    "zhTW": "攻擊不會被彈開，縮短彈藥、箭矢達到最大威力時的距離"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "火耐性",
+        "id": "火耐性",
+        "name": {
+            "zhTW": "火耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -328,7 +427,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "火耐性+6",
+                "description": {
+                    "zhTW": "火耐性+6"
+                },
                 "reaction": {
                     "resistance": {
                         "type": "fire",
@@ -338,7 +439,9 @@
             },
             {
                 "level": 2,
-                "description": "火耐性+12",
+                "description": {
+                    "zhTW": "火耐性+12"
+                },
                 "reaction": {
                     "resistance": {
                         "type": "fire",
@@ -348,7 +451,9 @@
             },
             {
                 "level": 3,
-                "description": "火耐性+20、防禦力+10",
+                "description": {
+                    "zhTW": "火耐性+20、防禦力+10"
+                },
                 "reaction": {
                     "defense": {
                         "value": 10
@@ -362,7 +467,10 @@
         ]
     },
     {
-        "name": "水耐性",
+        "id": "水耐性",
+        "name": {
+            "zhTW": "水耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -372,7 +480,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "水耐性+6",
+                "description": {
+                    "zhTW": "水耐性+6"
+                },
                 "reaction": {
                     "resistance": {
                         "type": "water",
@@ -382,7 +492,9 @@
             },
             {
                 "level": 2,
-                "description": "水耐性+12",
+                "description": {
+                    "zhTW": "水耐性+12"
+                },
                 "reaction": {
                     "resistance": {
                         "type": "water",
@@ -392,7 +504,9 @@
             },
             {
                 "level": 3,
-                "description": "水耐性+20、防禦力+10",
+                "description": {
+                    "zhTW": "水耐性+20、防禦力+10"
+                },
                 "reaction": {
                     "defense": {
                         "value": 10
@@ -406,7 +520,10 @@
         ]
     },
     {
-        "name": "不屈",
+        "id": "不屈",
+        "name": {
+            "zhTW": "不屈"
+        },
         "type": "passive",
         "from" : {
             "set": false,
@@ -416,7 +533,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "每次攻擊力1.1倍、防禦力1.15倍",
+                "description": {
+                    "zhTW": "每次攻擊力1.1倍、防禦力1.15倍"
+                },
                 "reaction": {
                     "attackMultiple": {
                         "value": 1.1
@@ -429,7 +548,10 @@
         ]
     },
     {
-        "name": "火場怪力",
+        "id": "火場怪力",
+        "name": {
+            "zhTW": "火場怪力"
+        },
         "type": "passive",
         "from" : {
             "set": false,
@@ -439,7 +561,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "技能發動時，攻擊力1.05倍，防禦力+15",
+                "description": {
+                    "zhTW": "技能發動時，攻擊力1.05倍，防禦力+15"
+                },
                 "reaction": {
                     "attackMultiple": {
                         "value": 1.05
@@ -451,7 +575,9 @@
             },
             {
                 "level": 2,
-                "description": "技能發動時，攻擊力1.1倍，防禦力+20",
+                "description": {
+                    "zhTW": "技能發動時，攻擊力1.1倍，防禦力+20"
+                },
                 "reaction": {
                     "attackMultiple": {
                         "value": 1.1
@@ -463,7 +589,9 @@
             },
             {
                 "level": 3,
-                "description": "技能發動時，攻擊力1.15倍，防禦力+25",
+                "description": {
+                    "zhTW": "技能發動時，攻擊力1.15倍，防禦力+25"
+                },
                 "reaction": {
                     "attackMultiple": {
                         "value": 1.15
@@ -475,7 +603,9 @@
             },
             {
                 "level": 4,
-                "description": "技能發動時，攻擊力1.2倍，防禦力+30",
+                "description": {
+                    "zhTW": "技能發動時，攻擊力1.2倍，防禦力+30"
+                },
                 "reaction": {
                     "attackMultiple": {
                         "value": 1.2
@@ -487,7 +617,9 @@
             },
             {
                 "level": 5,
-                "description": "技能發動時，攻擊力1.3倍，防禦力+40",
+                "description": {
+                    "zhTW": "技能發動時，攻擊力1.3倍，防禦力+40"
+                },
                 "reaction": {
                     "attackMultiple": {
                         "value": 1.3
@@ -500,7 +632,10 @@
         ]
     },
     {
-        "name": "加速再生",
+        "id": "加速再生",
+        "name": {
+            "zhTW": "加速再生"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -510,12 +645,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "若持續攻擊命中魔物，便能回復體力。回復量會依武器種類不同而有所變動"
+                "description": {
+                    "zhTW": "若持續攻擊命中魔物，便能回復體力。回復量會依武器種類不同而有所變動"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "冰耐性",
+        "id": "冰耐性",
+        "name": {
+            "zhTW": "冰耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -525,7 +666,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "冰耐性+6",
+                "description": {
+                    "zhTW": "冰耐性+6"
+                },
                 "reaction": {
                     "resistance": {
                         "type": "ice",
@@ -535,7 +678,9 @@
             },
             {
                 "level": 2,
-                "description": "冰耐性+12",
+                "description": {
+                    "zhTW": "冰耐性+12"
+                },
                 "reaction": {
                     "resistance": {
                         "type": "ice",
@@ -545,7 +690,9 @@
             },
             {
                 "level": 3,
-                "description": "冰耐性+20、防禦力+10",
+                "description": {
+                    "zhTW": "冰耐性+20、防禦力+10"
+                },
                 "reaction": {
                     "defense": {
                         "value": 10
@@ -559,7 +706,10 @@
         ]
     },
     {
-        "name": "地質學",
+        "id": "地質學",
+        "name": {
+            "zhTW": "地質學"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -569,20 +719,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "駭骨採集點的採集次數+1"
+                "description": {
+                    "zhTW": "駭骨採集點的採集次數+1"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "追加特產品採集點的採集次數+1"
+                "description": {
+                    "zhTW": "追加特產品採集點的採集次數+1"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "追加礦石採集點的採集次數+1"
+                "description": {
+                    "zhTW": "追加礦石採集點的採集次數+1"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "回復速度",
+        "id": "回復速度",
+        "name": {
+            "zhTW": "回復速度"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -592,20 +754,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "紅色計量表的自動回復速度2倍"
+                "description": {
+                    "zhTW": "紅色計量表的自動回復速度2倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "紅色計量表的自動回復速度3倍"
+                "description": {
+                    "zhTW": "紅色計量表的自動回復速度3倍"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "紅色計量表的自動回復速度4倍"
+                "description": {
+                    "zhTW": "紅色計量表的自動回復速度4倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "冰屬性攻擊強化",
+        "id": "冰屬性攻擊強化",
+        "name": {
+            "zhTW": "冰屬性攻擊強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -615,7 +789,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "冰屬性攻擊值+30",
+                "description": {
+                    "zhTW": "冰屬性攻擊值+30"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "ice",
@@ -626,7 +802,9 @@
             },
             {
                 "level": 2,
-                "description": "冰屬性攻擊值+60",
+                "description": {
+                    "zhTW": "冰屬性攻擊值+60"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "ice",
@@ -637,7 +815,9 @@
             },
             {
                 "level": 3,
-                "description": "冰屬性攻擊值+100",
+                "description": {
+                    "zhTW": "冰屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "ice",
@@ -648,7 +828,9 @@
             },
             {
                 "level": 4,
-                "description": "冰屬性攻擊值變為1.05倍，冰屬性攻擊值+100",
+                "description": {
+                    "zhTW": "冰屬性攻擊值變為1.05倍，冰屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "ice",
@@ -659,7 +841,9 @@
             },
             {
                 "level": 5,
-                "description": "冰屬性攻擊值變為1.1倍，冰屬性攻擊值+100",
+                "description": {
+                    "zhTW": "冰屬性攻擊值變為1.1倍，冰屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "ice",
@@ -671,7 +855,10 @@
         ]
     },
     {
-        "name": "收刀術",
+        "id": "收刀術",
+        "name": {
+            "zhTW": "收刀術"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -681,20 +868,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "速度小幅上升"
+                "description": {
+                    "zhTW": "速度小幅上升"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "速度上升"
+                "description": {
+                    "zhTW": "速度上升"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "速度大幅上升"
+                "description": {
+                    "zhTW": "速度大幅上升"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "耳塞",
+        "id": "耳塞",
+        "name": {
+            "zhTW": "耳塞"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -704,28 +903,46 @@
         "list": [
             {
                 "level": 1,
-                "description": "小幅減輕咆哮【小】的影響"
+                "description": {
+                    "zhTW": "小幅減輕咆哮【小】的影響"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "減輕咆哮【小】的影響"
+                "description": {
+                    "zhTW": "減輕咆哮【小】的影響"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "使咆哮【小】無效"
+                "description": {
+                    "zhTW": "使咆哮【小】無效"
+                },
+                "reaction": null
             },
             {
                 "level": 4,
-                "description": "使咆哮【小】無效，減輕咆哮【大】的影響"
+                "description": {
+                    "zhTW": "使咆哮【小】無效，減輕咆哮【大】的影響"
+                },
+                "reaction": null
             },
             {
                 "level": 5,
-                "description": "使咆哮【小】【大】無效"
+                "description": {
+                    "zhTW": "使咆哮【小】【大】無效"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "死裡逃生",
+        "id": "死裡逃生",
+        "name": {
+            "zhTW": "死裡逃生"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -735,12 +952,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "技能發動時，大幅延長迴避的無敵時間，並減少耐力消耗量"
+                "description": {
+                    "zhTW": "技能發動時，大幅延長迴避的無敵時間，並減少耐力消耗量"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "匠",
+        "id": "匠",
+        "name": {
+            "zhTW": "匠"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -750,7 +973,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "武器的銳利度+10",
+                "description": {
+                    "zhTW": "武器的銳利度+10"
+                },
                 "reaction": {
                     "sharpness": {
                         "value": 10
@@ -759,7 +984,9 @@
             },
             {
                 "level": 2,
-                "description": "武器的銳利度+20",
+                "description": {
+                    "zhTW": "武器的銳利度+20"
+                },
                 "reaction": {
                     "sharpness": {
                         "value": 20
@@ -768,7 +995,9 @@
             },
             {
                 "level": 3,
-                "description": "武器的銳利度+30",
+                "description": {
+                    "zhTW": "武器的銳利度+30"
+                },
                 "reaction": {
                     "sharpness": {
                         "value": 30
@@ -777,7 +1006,9 @@
             },
             {
                 "level": 4,
-                "description": "武器的銳利度+40",
+                "description": {
+                    "zhTW": "武器的銳利度+40"
+                },
                 "reaction": {
                     "sharpness": {
                         "value": 40
@@ -786,7 +1017,9 @@
             },
             {
                 "level": 5,
-                "description": "武器的銳利度+50",
+                "description": {
+                    "zhTW": "武器的銳利度+50"
+                },
                 "reaction": {
                     "sharpness": {
                         "value": 50
@@ -796,7 +1029,10 @@
         ]
     },
     {
-        "name": "攻擊",
+        "id": "攻擊",
+        "name": {
+            "zhTW": "攻擊"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -806,7 +1042,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "基礎攻擊力+3",
+                "description": {
+                    "zhTW": "基礎攻擊力+3"
+                },
                 "reaction": {
                     "attack": {
                         "value": 3
@@ -815,7 +1053,9 @@
             },
             {
                 "level": 2,
-                "description": "基礎攻擊力+6",
+                "description": {
+                    "zhTW": "基礎攻擊力+6"
+                },
                 "reaction": {
                     "attack": {
                         "value": 6
@@ -824,7 +1064,9 @@
             },
             {
                 "level": 3,
-                "description": "基礎攻擊力+9",
+                "description": {
+                    "zhTW": "基礎攻擊力+9"
+                },
                 "reaction": {
                     "attack": {
                         "value": 9
@@ -833,7 +1075,9 @@
             },
             {
                 "level": 4,
-                "description": "基礎攻擊力+12、會心率+5%",
+                "description": {
+                    "zhTW": "基礎攻擊力+12、會心率+5%"
+                },
                 "reaction": {
                     "attack": {
                         "value": 12
@@ -845,7 +1089,9 @@
             },
             {
                 "level": 5,
-                "description": "基礎攻擊力+15、會心率+5%",
+                "description": {
+                    "zhTW": "基礎攻擊力+15、會心率+5%"
+                },
                 "reaction": {
                     "attack": {
                         "value": 15
@@ -857,7 +1103,9 @@
             },
             {
                 "level": 6,
-                "description": "基礎攻擊力+18、會心率+5%",
+                "description": {
+                    "zhTW": "基礎攻擊力+18、會心率+5%"
+                },
                 "reaction": {
                     "attack": {
                         "value": 18
@@ -869,7 +1117,9 @@
             },
             {
                 "level": 7,
-                "description": "基礎攻擊力+21、會心率+5%",
+                "description": {
+                    "zhTW": "基礎攻擊力+21、會心率+5%"
+                },
                 "reaction": {
                     "attack": {
                         "value": 21
@@ -882,7 +1132,10 @@
         ]
     },
     {
-        "name": "吹笛名人",
+        "id": "吹笛名人",
+        "name": {
+            "zhTW": "吹笛名人"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -892,12 +1145,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "延長狩獵笛旋律效果時間，體力回復量的上升率UP"
+                "description": {
+                    "zhTW": "延長狩獵笛旋律效果時間，體力回復量的上升率UP"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "防禦強化",
+        "id": "防禦強化",
+        "name": {
+            "zhTW": "防禦強化"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -907,12 +1166,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "可以防禦一般無法防禦的攻擊"
+                "description": {
+                    "zhTW": "可以防禦一般無法防禦的攻擊"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "投射器裝填數UP",
+        "id": "投射器裝填數UP",
+        "name": {
+            "zhTW": "投射器裝填數UP"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -922,20 +1187,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "小幅增加在地面或植物取得的彈藥裝填數"
+                "description": {
+                    "zhTW": "小幅增加在地面或植物取得的彈藥裝填數"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "再小幅增加一部份魔物掉落的彈藥裝填數"
+                "description": {
+                    "zhTW": "再小幅增加一部份魔物掉落的彈藥裝填數"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "再小幅增加所有魔物掉落的彈藥裝填數"
+                "description": {
+                    "zhTW": "再小幅增加所有魔物掉落的彈藥裝填數"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "防御力DOWN耐性",
+        "id": "防御力DOWN耐性",
+        "name": {
+            "zhTW": "防御力DOWN耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -945,20 +1222,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "減少防禦力DOWN狀態的時間30%"
+                "description": {
+                    "zhTW": "減少防禦力DOWN狀態的時間30%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "減少防禦力DOWN狀態的時間60%"
+                "description": {
+                    "zhTW": "減少防禦力DOWN狀態的時間60%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "不會變為防禦力DOWN狀態"
+                "description": {
+                    "zhTW": "不會變為防禦力DOWN狀態"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "防禦",
+        "id": "防禦",
+        "name": {
+            "zhTW": "防禦"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -968,7 +1257,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "防禦力+5",
+                "description": {
+                    "zhTW": "防禦力+5"
+                },
                 "reaction": {
                     "defense": {
                         "value": 5
@@ -977,7 +1268,9 @@
             },
             {
                 "level": 2,
-                "description": "防禦力+10",
+                "description": {
+                    "zhTW": "防禦力+10"
+                },
                 "reaction": {
                     "defense": {
                         "value": 10
@@ -986,7 +1279,9 @@
             },
             {
                 "level": 3,
-                "description": "防禦力+15",
+                "description": {
+                    "zhTW": "防禦力+15"
+                },
                 "reaction": {
                     "defense": {
                         "value": 15
@@ -995,7 +1290,9 @@
             },
             {
                 "level": 4,
-                "description": "防禦力+20，全屬性耐性值+3",
+                "description": {
+                    "zhTW": "防禦力+20，全屬性耐性值+3"
+                },
                 "reaction": {
                     "defense": {
                         "value": 20
@@ -1008,7 +1305,9 @@
             },
             {
                 "level": 5,
-                "description": "防禦力+25，全屬性耐性值+3",
+                "description": {
+                    "zhTW": "防禦力+25，全屬性耐性值+3"
+                },
                 "reaction": {
                     "defense": {
                         "value": 25
@@ -1021,7 +1320,9 @@
             },
             {
                 "level": 6,
-                "description": "防禦力+30，全屬性耐性值+3",
+                "description": {
+                    "zhTW": "防禦力+30，全屬性耐性值+3"
+                },
                 "reaction": {
                     "defense": {
                         "value": 30
@@ -1034,7 +1335,9 @@
             },
             {
                 "level": 7,
-                "description": "防禦力+35，全屬性耐性值+3",
+                "description": {
+                    "zhTW": "防禦力+35，全屬性耐性值+3"
+                },
                 "reaction": {
                     "defense": {
                         "value": 35
@@ -1048,7 +1351,10 @@
         ]
     },
     {
-        "name": "利刃／彈藥節約",
+        "id": "利刃／彈藥節約",
+        "name": {
+            "zhTW": "利刃／彈藥節約"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -1058,12 +1364,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "銳利度的消耗降低一半 ／ 有少量機會在射擊時不消耗弩槍的彈藥及弓的瓶"
+                "description": {
+                    "zhTW": "銳利度的消耗降低一半 ／ 有少量機會在射擊時不消耗弩槍的彈藥及弓的瓶"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "快吃",
+        "id": "快吃",
+        "name": {
+            "zhTW": "快吃"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1073,20 +1385,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "速度小幅上升"
+                "description": {
+                    "zhTW": "速度小幅上升"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "速度上升"
+                "description": {
+                    "zhTW": "速度上升"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "速度大幅上升"
+                "description": {
+                    "zhTW": "速度大幅上升"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "防禦性能",
+        "id": "防禦性能",
+        "name": {
+            "zhTW": "防禦性能"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1096,28 +1420,46 @@
         "list": [
             {
                 "level": 1,
-                "description": "小幅減少攻擊的威力"
+                "description": {
+                    "zhTW": "小幅減少攻擊的威力"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "小幅減少攻擊的威力，減少耐力消費量15%"
+                "description": {
+                    "zhTW": "小幅減少攻擊的威力，減少耐力消費量15%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "大幅減少攻擊的威力，減少耐力消費量15%"
+                "description": {
+                    "zhTW": "大幅減少攻擊的威力，減少耐力消費量15%"
+                },
+                "reaction": null
             },
             {
                 "level": 4,
-                "description": "大幅減少攻擊的威力，減少耐力消費量30%"
+                "description": {
+                    "zhTW": "大幅減少攻擊的威力，減少耐力消費量30%"
+                },
+                "reaction": null
             },
             {
                 "level": 5,
-                "description": "極大幅減少攻擊的威力，減少耐力消費量50%"
+                "description": {
+                    "zhTW": "極大幅減少攻擊的威力，減少耐力消費量50%"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "拔刀術【力】",
+        "id": "拔刀術【力】",
+        "name": {
+            "zhTW": "拔刀術【力】"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -1127,12 +1469,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "追加、強化武器拔刀攻擊所引起的昏厥的能力，攻擊力也會小幅提升"
+                "description": {
+                    "zhTW": "追加、強化武器拔刀攻擊所引起的昏厥的能力，攻擊力也會小幅提升"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "泥耐性",
+        "id": "泥耐性",
+        "name": {
+            "zhTW": "泥耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1142,12 +1490,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "減輕移動速度、迴避行動的限制"
+                "description": {
+                    "zhTW": "減輕移動速度、迴避行動的限制"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "拔刀術【技】",
+        "id": "拔刀術【技】",
+        "name": {
+            "zhTW": "拔刀術【技】"
+        },
         "type": "passive",
         "from" : {
             "set": false,
@@ -1157,7 +1511,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "武器拔刀攻擊的會心率+30%",
+                "description": {
+                    "zhTW": "武器拔刀攻擊的會心率+30%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 30
@@ -1166,7 +1522,9 @@
             },
             {
                 "level": 2,
-                "description": "武器拔刀攻擊的會心率+60%",
+                "description": {
+                    "zhTW": "武器拔刀攻擊的會心率+60%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 60
@@ -1175,7 +1533,9 @@
             },
             {
                 "level": 3,
-                "description": "武器拔刀攻擊的會心率+100%",
+                "description": {
+                    "zhTW": "武器拔刀攻擊的會心率+100%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 100
@@ -1185,7 +1545,10 @@
         ]
     },
     {
-        "name": "幸運",
+        "id": "幸運",
+        "name": {
+            "zhTW": "幸運"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -1195,12 +1558,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "完成任務獲得的報酬數量容易變多(從任務中途開始使用不會有效果)"
+                "description": {
+                    "zhTW": "完成任務獲得的報酬數量容易變多(從任務中途開始使用不會有效果)"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "昏厥耐性",
+        "id": "昏厥耐性",
+        "name": {
+            "zhTW": "昏厥耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1210,20 +1579,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "減少昏厥狀態的時間30%"
+                "description": {
+                    "zhTW": "減少昏厥狀態的時間30%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "減少昏厥狀態的時間60%"
+                "description": {
+                    "zhTW": "減少昏厥狀態的時間60%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "不會變為昏厥狀態"
+                "description": {
+                    "zhTW": "不會變為昏厥狀態"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "昆蟲標本達人",
+        "id": "昆蟲標本達人",
+        "name": {
+            "zhTW": "昆蟲標本達人"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1233,20 +1614,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "屍體殘留的機率提高"
+                "description": {
+                    "zhTW": "屍體殘留的機率提高"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "屍體殘留的機率大幅提高"
+                "description": {
+                    "zhTW": "屍體殘留的機率大幅提高"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "必定會有屍體殘留"
+                "description": {
+                    "zhTW": "必定會有屍體殘留"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "看破",
+        "id": "看破",
+        "name": {
+            "zhTW": "看破"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1256,7 +1649,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "會心率+3%",
+                "description": {
+                    "zhTW": "會心率+3%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 3
@@ -1265,7 +1660,9 @@
             },
             {
                 "level": 2,
-                "description": "會心率+6%",
+                "description": {
+                    "zhTW": "會心率+6%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 6
@@ -1274,7 +1671,9 @@
             },
             {
                 "level": 3,
-                "description": "會心率+10%",
+                "description": {
+                    "zhTW": "會心率+10%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 10
@@ -1283,7 +1682,9 @@
             },
             {
                 "level": 4,
-                "description": "會心率+15%",
+                "description": {
+                    "zhTW": "會心率+15%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 15
@@ -1292,7 +1693,9 @@
             },
             {
                 "level": 5,
-                "description": "會心率+20%",
+                "description": {
+                    "zhTW": "會心率+20%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 20
@@ -1301,7 +1704,9 @@
             },
             {
                 "level": 6,
-                "description": "會心率+25%",
+                "description": {
+                    "zhTW": "會心率+25%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 25
@@ -1310,7 +1715,9 @@
             },
             {
                 "level": 7,
-                "description": "會心率+30%",
+                "description": {
+                    "zhTW": "會心率+30%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 30
@@ -1320,7 +1727,10 @@
         ]
     },
     {
-        "name": "指示隨從",
+        "id": "指示隨從",
+        "name": {
+            "zhTW": "指示隨從"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1330,28 +1740,46 @@
         "list": [
             {
                 "level": 1,
-                "description": "隨從的攻擊力與防禦力變為1.05倍"
+                "description": {
+                    "zhTW": "隨從的攻擊力與防禦力變為1.05倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "隨從的攻擊力與防禦力變為1.1倍"
+                "description": {
+                    "zhTW": "隨從的攻擊力與防禦力變為1.1倍"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "隨從的攻擊力與防禦力變為1.15倍"
+                "description": {
+                    "zhTW": "隨從的攻擊力與防禦力變為1.15倍"
+                },
+                "reaction": null
             },
             {
                 "level": 4,
-                "description": "隨從的攻擊力與防禦力變為1.2倍"
+                "description": {
+                    "zhTW": "隨從的攻擊力與防禦力變為1.2倍"
+                },
+                "reaction": null
             },
             {
                 "level": 5,
-                "description": "隨從的攻擊力與防禦力變為1.25倍"
+                "description": {
+                    "zhTW": "隨從的攻擊力與防禦力變為1.25倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "飛身躍入",
+        "id": "飛身躍入",
+        "name": {
+            "zhTW": "飛身躍入"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1361,12 +1789,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "可以發動技能"
+                "description": {
+                    "zhTW": "可以發動技能"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "炸彈客",
+        "id": "炸彈客",
+        "name": {
+            "zhTW": "炸彈客"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1376,20 +1810,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "威力1.1倍"
+                "description": {
+                    "zhTW": "威力1.1倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "威力1.2倍"
+                "description": {
+                    "zhTW": "威力1.2倍"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "威力1.3倍"
+                "description": {
+                    "zhTW": "威力1.3倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "毒屬性強化",
+        "id": "毒屬性強化",
+        "name": {
+            "zhTW": "毒屬性強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1399,20 +1845,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "毒素累積值變為1.05倍，毒素累積值+10"
+                "description": {
+                    "zhTW": "毒素累積值變為1.05倍，毒素累積值+10"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "毒素累積值變為1.1倍，毒素累積值+10"
+                "description": {
+                    "zhTW": "毒素累積值變為1.1倍，毒素累積值+10"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "毒素累積值變為1.2倍，毒素累積值+10"
+                "description": {
+                    "zhTW": "毒素累積值變為1.2倍，毒素累積值+10"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "耐力急速回復",
+        "id": "耐力急速回復",
+        "name": {
+            "zhTW": "耐力急速回復"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1422,20 +1880,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "回復速度1.1倍"
+                "description": {
+                    "zhTW": "回復速度1.1倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "回復速度1.2倍"
+                "description": {
+                    "zhTW": "回復速度1.2倍"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "回復速度1.3倍"
+                "description": {
+                    "zhTW": "回復速度1.3倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "風壓完全無效",
+        "id": "風壓完全無效",
+        "name": {
+            "zhTW": "風壓完全無效"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -1445,12 +1915,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "使全部的風壓無效"
+                "description": {
+                    "zhTW": "使全部的風壓無效"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "風壓耐性",
+        "id": "風壓耐性",
+        "name": {
+            "zhTW": "風壓耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1460,28 +1936,46 @@
         "list": [
             {
                 "level": 1,
-                "description": "小幅減輕風壓【小】"
+                "description": {
+                    "zhTW": "小幅減輕風壓【小】"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "減輕風壓【小】"
+                "description": {
+                    "zhTW": "減輕風壓【小】"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "使風壓【小】無效"
+                "description": {
+                    "zhTW": "使風壓【小】無效"
+                },
+                "reaction": null
             },
             {
                 "level": 4,
-                "description": "使風壓【小】無效，減輕風壓【大】"
+                "description": {
+                    "zhTW": "使風壓【小】無效，減輕風壓【大】"
+                },
+                "reaction": null
             },
             {
                 "level": 5,
-                "description": "使風壓【小】【大】無效"
+                "description": {
+                    "zhTW": "使風壓【小】【大】無效"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "突破耐力上限",
+        "id": "突破耐力上限",
+        "name": {
+            "zhTW": "突破耐力上限"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -1491,7 +1985,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "增加耐力的上限值",
+                "description": {
+                    "zhTW": "增加耐力的上限值"
+                },
                 "reaction": {
                     "stamina": {
                         "value": 50
@@ -1501,7 +1997,10 @@
         ]
     },
     {
-        "name": "耐震",
+        "id": "耐震",
+        "name": {
+            "zhTW": "耐震"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1511,20 +2010,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "使震動【小】無效"
+                "description": {
+                    "zhTW": "使震動【小】無效"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "使震動【小】無效，減輕震動【大】的影響"
+                "description": {
+                    "zhTW": "使震動【小】無效，減輕震動【大】的影響"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "使震動【小】【大】無效"
+                "description": {
+                    "zhTW": "使震動【小】【大】無效"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "飛燕",
+        "id": "飛燕",
+        "name": {
+            "zhTW": "飛燕"
+        },
         "type": "passive",
         "from" : {
             "set": false,
@@ -1534,7 +2045,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "跳躍攻擊的威力變為1.1倍",
+                "description": {
+                    "zhTW": "跳躍攻擊的威力變為1.1倍"
+                },
                 "reaction": {
                     "attackMultiple": {
                         "value": 1.1
@@ -1544,7 +2057,10 @@
         ]
     },
     {
-        "name": "飛燕【屬性】",
+        "id": "飛燕【屬性】",
+        "name": {
+            "zhTW": "飛燕【屬性】"
+        },
         "type": "passive",
         "from" : {
             "set": false,
@@ -1554,12 +2070,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "跳躍攻擊的屬性傷害UP"
+                "description": {
+                    "zhTW": "跳躍攻擊的屬性傷害UP"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "毒耐性",
+        "id": "毒耐性",
+        "name": {
+            "zhTW": "毒耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1569,20 +2091,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "減少中毒狀態的時間30%"
+                "description": {
+                    "zhTW": "減少中毒狀態的時間30%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "減少中毒狀態的時間60%"
+                "description": {
+                    "zhTW": "減少中毒狀態的時間60%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "不會變為中毒狀態"
+                "description": {
+                    "zhTW": "不會變為中毒狀態"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "威嚇",
+        "id": "威嚇",
+        "name": {
+            "zhTW": "威嚇"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1592,20 +2126,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "即使被發現也不容易進入戰鬥狀態"
+                "description": {
+                    "zhTW": "即使被發現也不容易進入戰鬥狀態"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "即使被發現也幾乎不會進入戰鬥狀態"
+                "description": {
+                    "zhTW": "即使被發現也幾乎不會進入戰鬥狀態"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "即使被發現也不會變為戰鬥狀態"
+                "description": {
+                    "zhTW": "即使被發現也不會變為戰鬥狀態"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "研究者",
+        "id": "研究者",
+        "name": {
+            "zhTW": "研究者"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1615,12 +2161,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "更容易調查及研究大型魔物"
+                "description": {
+                    "zhTW": "更容易調查及研究大型魔物"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "毒傷害強化",
+        "id": "毒傷害強化",
+        "name": {
+            "zhTW": "毒傷害強化"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -1630,12 +2182,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "提高對魔物施毒的效果時間"
+                "description": {
+                    "zhTW": "提高對魔物施毒的效果時間"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "挑戰者",
+        "id": "挑戰者",
+        "name": {
+            "zhTW": "挑戰者"
+        },
         "type": "passive",
         "from" : {
             "set": false,
@@ -1645,7 +2203,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "技能發動時，基礎攻擊力+4，會心率+3%",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+4，會心率+3%"
+                },
                 "reaction": {
                     "attack": {
                         "value": 4
@@ -1657,7 +2217,9 @@
             },
             {
                 "level": 2,
-                "description": "技能發動時，基礎攻擊力+8，會心率+6%",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+8，會心率+6%"
+                },
                 "reaction": {
                     "attack": {
                         "value": 8
@@ -1669,7 +2231,9 @@
             },
             {
                 "level": 3,
-                "description": "技能發動時，基礎攻擊力+12，會心率+9%",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+12，會心率+9%"
+                },
                 "reaction": {
                     "attack": {
                         "value": 12
@@ -1681,7 +2245,9 @@
             },
             {
                 "level": 4,
-                "description": "技能發動時，基礎攻擊力+16，會心率+12%",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+16，會心率+12%"
+                },
                 "reaction": {
                     "attack": {
                         "value": 16
@@ -1693,7 +2259,9 @@
             },
             {
                 "level": 5,
-                "description": "技能發動時，基礎攻擊力+20，會心率+15%",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+20，會心率+15%"
+                },
                 "reaction": {
                     "attack": {
                         "value": 20
@@ -1706,7 +2274,10 @@
         ]
     },
     {
-        "name": "怨恨",
+        "id": "怨恨",
+        "name": {
+            "zhTW": "怨恨"
+        },
         "type": "passive",
         "from" : {
             "set": false,
@@ -1716,7 +2287,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "技能發動時，基礎攻擊力+5",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+5"
+                },
                 "reaction": {
                     "attack": {
                         "value": 5
@@ -1725,7 +2298,9 @@
             },
             {
                 "level": 2,
-                "description": "技能發動時，基礎攻擊力+10",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+10"
+                },
                 "reaction": {
                     "attack": {
                         "value": 10
@@ -1734,7 +2309,9 @@
             },
             {
                 "level": 3,
-                "description": "技能發動時，基礎攻擊力+15",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+15"
+                },
                 "reaction": {
                     "attack": {
                         "value": 15
@@ -1743,7 +2320,9 @@
             },
             {
                 "level": 4,
-                "description": "技能發動時，基礎攻擊力+20",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+20"
+                },
                 "reaction": {
                     "attack": {
                         "value": 20
@@ -1752,7 +2331,9 @@
             },
             {
                 "level": 5,
-                "description": "技能發動時，基礎攻擊力+25",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+25"
+                },
                 "reaction": {
                     "attack": {
                         "value": 25
@@ -1762,7 +2343,10 @@
         ]
     },
     {
-        "name": "毒瓶追加",
+        "id": "毒瓶追加",
+        "name": {
+            "zhTW": "毒瓶追加"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1772,12 +2356,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "弓可以裝著毒瓶"
+                "description": {
+                    "zhTW": "弓可以裝著毒瓶"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "砲術",
+        "id": "砲術",
+        "name": {
+            "zhTW": "砲術"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1787,20 +2377,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "對象的攻擊力1.1倍，減少龍擊砲的冷卻時間15%"
+                "description": {
+                    "zhTW": "對象的攻擊力1.1倍，減少龍擊砲的冷卻時間15%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "對象的攻擊力1.2倍，減少龍擊砲的冷卻時間30%"
+                "description": {
+                    "zhTW": "對象的攻擊力1.2倍，減少龍擊砲的冷卻時間30%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "對象的攻擊力1.3倍，減少龍擊砲的冷卻時間50%"
+                "description": {
+                    "zhTW": "對象的攻擊力1.3倍，減少龍擊砲的冷卻時間50%"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "迴避性能",
+        "id": "迴避性能",
+        "name": {
+            "zhTW": "迴避性能"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1810,28 +2412,46 @@
         "list": [
             {
                 "level": 1,
-                "description": "無敵時間極小幅延長"
+                "description": {
+                    "zhTW": "無敵時間極小幅延長"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "無敵時間小幅延長"
+                "description": {
+                    "zhTW": "無敵時間小幅延長"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "延長無敵時間"
+                "description": {
+                    "zhTW": "延長無敵時間"
+                },
+                "reaction": null
             },
             {
                 "level": 4,
-                "description": "大幅延長無敵時間"
+                "description": {
+                    "zhTW": "大幅延長無敵時間"
+                },
+                "reaction": null
             },
             {
                 "level": 5,
-                "description": "極大幅延長無敵時間"
+                "description": {
+                    "zhTW": "極大幅延長無敵時間"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "破壞王",
+        "id": "破壞王",
+        "name": {
+            "zhTW": "破壞王"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1841,20 +2461,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "對部位的累積傷害1.1倍"
+                "description": {
+                    "zhTW": "對部位的累積傷害1.1倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "對部位的累積傷害1.2倍"
+                "description": {
+                    "zhTW": "對部位的累積傷害1.2倍"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "對部位的累積傷害1.3倍"
+                "description": {
+                    "zhTW": "對部位的累積傷害1.3倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "剝取名人",
+        "id": "剝取名人",
+        "name": {
+            "zhTW": "剝取名人"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -1864,12 +2496,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "剝取回數增加1回(從任務中途開始使用不會有效果)"
+                "description": {
+                    "zhTW": "剝取回數增加1回(從任務中途開始使用不會有效果)"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "迴避距離UP",
+        "id": "迴避距離UP",
+        "name": {
+            "zhTW": "迴避距離UP"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1879,20 +2517,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "迴避距離小幅延長"
+                "description": {
+                    "zhTW": "迴避距離小幅延長"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "延長迴避距離"
+                "description": {
+                    "zhTW": "延長迴避距離"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "大幅延長迴避距離"
+                "description": {
+                    "zhTW": "大幅延長迴避距離"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "振奮",
+        "id": "振奮",
+        "name": {
+            "zhTW": "振奮"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -1902,12 +2552,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "體力降低至40%以下時，一定時間內耐力的消耗量會減少"
+                "description": {
+                    "zhTW": "體力降低至40%以下時，一定時間內耐力的消耗量會減少"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "追蹤達人",
+        "id": "追蹤達人",
+        "name": {
+            "zhTW": "追蹤達人"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1917,12 +2573,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "取得痕跡時的計量表上升量1.5倍"
+                "description": {
+                    "zhTW": "取得痕跡時的計量表上升量1.5倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "剝取鐵人",
+        "id": "剝取鐵人",
+        "name": {
+            "zhTW": "剝取鐵人"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1932,12 +2594,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "剝取中，後仰無效"
+                "description": {
+                    "zhTW": "剝取中，後仰無效"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "砲擊手",
+        "id": "砲擊手",
+        "name": {
+            "zhTW": "砲擊手"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1947,16 +2615,25 @@
         "list": [
             {
                 "level": 1,
-                "description": "威力1.1倍"
+                "description": {
+                    "zhTW": "威力1.1倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "威力1.2倍"
+                "description": {
+                    "zhTW": "威力1.2倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "剛刃研磨",
+        "id": "剛刃研磨",
+        "name": {
+            "zhTW": "剛刃研磨"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -1966,12 +2643,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "研磨武器後，一定時間內銳利度不會降低"
+                "description": {
+                    "zhTW": "研磨武器後，一定時間內銳利度不會降低"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "砥石使用高速化",
+        "id": "砥石使用高速化",
+        "name": {
+            "zhTW": "砥石使用高速化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -1981,20 +2664,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "省略研磨動作1次"
+                "description": {
+                    "zhTW": "省略研磨動作1次"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "省略研磨動作2次"
+                "description": {
+                    "zhTW": "省略研磨動作2次"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "省略研磨動作3次"
+                "description": {
+                    "zhTW": "省略研磨動作3次"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "砲彈裝填數UP",
+        "id": "砲彈裝填數UP",
+        "name": {
+            "zhTW": "砲彈裝填數UP"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2004,12 +2699,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "裝填數+1"
+                "description": {
+                    "zhTW": "裝填數+1"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "烤肉名人",
+        "id": "烤肉名人",
+        "name": {
+            "zhTW": "烤肉名人"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2019,12 +2720,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "更容易烤出全熟肉"
+                "description": {
+                    "zhTW": "更容易烤出全熟肉"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "飢餓耐性",
+        "id": "飢餓耐性",
+        "name": {
+            "zhTW": "飢餓耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2034,20 +2741,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "到減少的時間延長30%"
+                "description": {
+                    "zhTW": "到減少的時間延長30%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "到減少的時間延長60%"
+                "description": {
+                    "zhTW": "到減少的時間延長60%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "使耐力最大值的減少無效"
+                "description": {
+                    "zhTW": "使耐力最大值的減少無效"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "特殊射擊強化",
+        "id": "特殊射擊強化",
+        "name": {
+            "zhTW": "特殊射擊強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2057,16 +2776,25 @@
         "list": [
             {
                 "level": 1,
-                "description": "弩的特殊彈藥和弓的龍之箭的威力變為1.1倍"
+                "description": {
+                    "zhTW": "弩的特殊彈藥和弓的龍之箭的威力變為1.1倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "弩的特殊彈藥和弓的龍之箭的威力變為1.2倍"
+                "description": {
+                    "zhTW": "弩的特殊彈藥和弓的龍之箭的威力變為1.2倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "弱點特效",
+        "id": "弱點特效",
+        "name": {
+            "zhTW": "弱點特效"
+        },
         "type": "passive",
         "from" : {
             "set": false,
@@ -2076,7 +2804,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "攻擊有效部份時，會心率+15%",
+                "description": {
+                    "zhTW": "攻擊有效部份時，會心率+15%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 15
@@ -2085,7 +2815,9 @@
             },
             {
                 "level": 2,
-                "description": "攻擊有效部份時，會心率+30%",
+                "description": {
+                    "zhTW": "攻擊有效部份時，會心率+30%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 30
@@ -2094,7 +2826,9 @@
             },
             {
                 "level": 3,
-                "description": "攻擊有效部份時，會心率+50%",
+                "description": {
+                    "zhTW": "攻擊有效部份時，會心率+50%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 50
@@ -2104,7 +2838,10 @@
         ]
     },
     {
-        "name": "閃光強化",
+        "id": "閃光強化",
+        "name": {
+            "zhTW": "閃光強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2114,12 +2851,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "閃光效果的生效率UP"
+                "description": {
+                    "zhTW": "閃光效果的生效率UP"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "捕獲名人",
+        "id": "捕獲名人",
+        "name": {
+            "zhTW": "捕獲名人"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -2129,12 +2872,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "捕獲獲取得的報酬數量變多的機率很高(從任務中途開始使用不會有效果)"
+                "description": {
+                    "zhTW": "捕獲獲取得的報酬數量變多的機率很高(從任務中途開始使用不會有效果)"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "採集達人",
+        "id": "採集達人",
+        "name": {
+            "zhTW": "採集達人"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2144,12 +2893,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "採集行動時，速度上升＆後仰無效"
+                "description": {
+                    "zhTW": "採集行動時，速度上升＆後仰無效"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "異臭名人",
+        "id": "異臭名人",
+        "name": {
+            "zhTW": "異臭名人"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2159,12 +2914,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "提高逃離投射器異臭彈的效果"
+                "description": {
+                    "zhTW": "提高逃離投射器異臭彈的效果"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "貫通彈・龍之箭強化",
+        "id": "貫通彈・龍之箭強化",
+        "name": {
+            "zhTW": "貫通彈・龍之箭強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2174,12 +2935,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "貫通彈、龍之箭的威力UP"
+                "description": {
+                    "zhTW": "貫通彈、龍之箭的威力UP"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "強化持續",
+        "id": "強化持續",
+        "name": {
+            "zhTW": "強化持續"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2189,20 +2956,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "持續時間1.1倍"
+                "description": {
+                    "zhTW": "持續時間1.1倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "持續時間1.2倍"
+                "description": {
+                    "zhTW": "持續時間1.2倍"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "持續時間1.3倍"
+                "description": {
+                    "zhTW": "持續時間1.3倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "釣魚名人",
+        "id": "釣魚名人",
+        "name": {
+            "zhTW": "釣魚名人"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2212,12 +2991,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "延長釣起魚的時間，就更容易釣起大魚"
+                "description": {
+                    "zhTW": "延長釣起魚的時間，就更容易釣起大魚"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "通常彈・通常箭強化",
+        "id": "通常彈・通常箭強化",
+        "name": {
+            "zhTW": "通常彈・通常箭強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2227,12 +3012,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "通常彈、通常箭的威力UP"
+                "description": {
+                    "zhTW": "通常彈、通常箭的威力UP"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "麻痺耐性",
+        "id": "麻痺耐性",
+        "name": {
+            "zhTW": "麻痺耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2242,20 +3033,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "減少麻痺狀態的時間30%"
+                "description": {
+                    "zhTW": "減少麻痺狀態的時間30%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "減少麻痺狀態的時間60%"
+                "description": {
+                    "zhTW": "減少麻痺狀態的時間60%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "不會變為麻痺狀態"
+                "description": {
+                    "zhTW": "不會變為麻痺狀態"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "麻痺屬性強化",
+        "id": "麻痺屬性強化",
+        "name": {
+            "zhTW": "麻痺屬性強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2265,20 +3068,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "麻痺累積值變為1.05倍，麻痺累積值+10"
+                "description": {
+                    "zhTW": "麻痺累積值變為1.05倍，麻痺累積值+10"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "麻痺累積值變為1.1倍，麻痺累積值+10"
+                "description": {
+                    "zhTW": "麻痺累積值變為1.1倍，麻痺累積值+10"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "麻痺累積值變為1.2倍，麻痺累積值+10"
+                "description": {
+                    "zhTW": "麻痺累積值變為1.2倍，麻痺累積值+10"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "探索者的幸運",
+        "id": "探索者的幸運",
+        "name": {
+            "zhTW": "探索者的幸運"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2288,12 +3103,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "發生機率UP"
+                "description": {
+                    "zhTW": "發生機率UP"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "強運",
+        "id": "強運",
+        "name": {
+            "zhTW": "強運"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -2303,12 +3124,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "完成任務獲取得的報酬數量變多的機率很高(從任務中途開始使用不會有效果)"
+                "description": {
+                    "zhTW": "完成任務獲取得的報酬數量變多的機率很高(從任務中途開始使用不會有效果)"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "麻痺瓶追加",
+        "id": "麻痺瓶追加",
+        "name": {
+            "zhTW": "麻痺瓶追加"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2318,12 +3145,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "弓可以裝著麻痺瓶"
+                "description": {
+                    "zhTW": "弓可以裝著麻痺瓶"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "跑者",
+        "id": "跑者",
+        "name": {
+            "zhTW": "跑者"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2333,20 +3166,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "持續耐力消耗量減少15%"
+                "description": {
+                    "zhTW": "持續耐力消耗量減少15%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "持續耐力消耗量減少30%"
+                "description": {
+                    "zhTW": "持續耐力消耗量減少30%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "持續耐力消耗量減少50%"
+                "description": {
+                    "zhTW": "持續耐力消耗量減少50%"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "集中",
+        "id": "集中",
+        "name": {
+            "zhTW": "集中"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2356,20 +3201,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "計量表上升率5%UP，蓄力時間縮短5%"
+                "description": {
+                    "zhTW": "計量表上升率5%UP，蓄力時間縮短5%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "計量表上升率10%UP，蓄力時間縮短10%"
+                "description": {
+                    "zhTW": "計量表上升率10%UP，蓄力時間縮短10%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "計量表上升率20%UP，蓄力時間縮短20%"
+                "description": {
+                    "zhTW": "計量表上升率20%UP，蓄力時間縮短20%"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "植生學",
+        "id": "植生學",
+        "name": {
+            "zhTW": "植生學"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2379,24 +3236,39 @@
         "list": [
             {
                 "level": 1,
-                "description": "草系消耗道具的取得數+1"
+                "description": {
+                    "zhTW": "草系消耗道具的取得數+1"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "追加實、種系消耗道具的取得數+1"
+                "description": {
+                    "zhTW": "追加實、種系消耗道具的取得數+1"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "追加蟲系消耗道具的取得數+1"
+                "description": {
+                    "zhTW": "追加蟲系消耗道具的取得數+1"
+                },
+                "reaction": null
             },
             {
                 "level": 4,
-                "description": "追加菇系消耗道具的取得數+1"
+                "description": {
+                    "zhTW": "追加菇系消耗道具的取得數+1"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "鈍器能手",
+        "id": "鈍器能手",
+        "name": {
+            "zhTW": "鈍器能手"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -2406,12 +3278,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "銳利度愈差攻擊力愈高。遠距離武器的近身攻擊威力與使敵人昏厥的容易度有大幅提升"
+                "description": {
+                    "zhTW": "銳利度愈差攻擊力愈高。遠距離武器的近身攻擊威力與使敵人昏厥的容易度有大幅提升"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "最愛菇類",
+        "id": "最愛菇類",
+        "name": {
+            "zhTW": "最愛菇類"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2421,20 +3299,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "已可食用青菇與毒菇"
+                "description": {
+                    "zhTW": "已可食用青菇與毒菇"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "追加可食用爆炸菇與麻痺菇"
+                "description": {
+                    "zhTW": "追加可食用爆炸菇與麻痺菇"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "追加可食用風茄，鬼爆炸菇與心跳加速菇"
+                "description": {
+                    "zhTW": "追加可食用風茄，鬼爆炸菇與心跳加速菇"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "裂傷耐性",
+        "id": "裂傷耐性",
+        "name": {
+            "zhTW": "裂傷耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2444,20 +3334,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "將減輕裂傷狀態造成的傷害"
+                "description": {
+                    "zhTW": "將減輕裂傷狀態造成的傷害"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "大幅減輕裂傷狀態造成的傷害"
+                "description": {
+                    "zhTW": "大幅減輕裂傷狀態造成的傷害"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "不會變為裂傷狀態"
+                "description": {
+                    "zhTW": "不會變為裂傷狀態"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "無屬性強化",
+        "id": "無屬性強化",
+        "name": {
+            "zhTW": "無屬性強化"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -2467,7 +3369,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "強化裝備中的無屬性武器",
+                "description": {
+                    "zhTW": "強化裝備中的無屬性武器"
+                },
                 "reaction": {
                     "noneElementAttackMutiple": {
                         "value": 1.1
@@ -2477,7 +3381,10 @@
         ]
     },
     {
-        "name": "無傷",
+        "id": "無傷",
+        "name": {
+            "zhTW": "無傷"
+        },
         "type": "passive",
         "from" : {
             "set": false,
@@ -2487,7 +3394,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "技能發動時，基礎攻擊力+5",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+5"
+                },
                 "reaction": {
                     "attack": {
                         "value": 5
@@ -2496,7 +3405,9 @@
             },
             {
                 "level": 2,
-                "description": "技能發動時，基礎攻擊力+10",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+10"
+                },
                 "reaction": {
                     "attack": {
                         "value": 10
@@ -2505,7 +3416,9 @@
             },
             {
                 "level": 3,
-                "description": "技能發動時，基礎攻擊力+20",
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+20"
+                },
                 "reaction": {
                     "attack": {
                         "value": 20
@@ -2515,7 +3428,10 @@
         ]
     },
     {
-        "name": "散彈・剛射強化",
+        "id": "散彈・剛射強化",
+        "name": {
+            "zhTW": "散彈・剛射強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2525,12 +3441,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "散彈、剛射的威力UP"
+                "description": {
+                    "zhTW": "散彈、剛射的威力UP"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "減輕膽怯",
+        "id": "減輕膽怯",
+        "name": {
+            "zhTW": "減輕膽怯"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2540,20 +3462,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "使後仰無效"
+                "description": {
+                    "zhTW": "使後仰無效"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "使後仰無效，將屁股著地減輕為後仰狀態"
+                "description": {
+                    "zhTW": "使後仰無效，將屁股著地減輕為後仰狀態"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "使後仰、屁股著地無效"
+                "description": {
+                    "zhTW": "使後仰、屁股著地無效"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "超會心",
+        "id": "超會心",
+        "name": {
+            "zhTW": "超會心"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2563,7 +3497,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "會心攻擊時的傷害倍率增強為1.3倍",
+                "description": {
+                    "zhTW": "會心攻擊時的傷害倍率增強為1.3倍"
+                },
                 "reaction": {
                     "criticalMultiple": {
                         "value": 1.3
@@ -2572,7 +3508,9 @@
             },
             {
                 "level": 2,
-                "description": "會心攻擊時的傷害倍率增強為1.35倍",
+                "description": {
+                    "zhTW": "會心攻擊時的傷害倍率增強為1.35倍"
+                },
                 "reaction": {
                     "criticalMultiple": {
                         "value": 1.35
@@ -2581,7 +3519,9 @@
             },
             {
                 "level": 3,
-                "description": "會心攻擊時的傷害倍率增強為1.4倍",
+                "description": {
+                    "zhTW": "會心攻擊時的傷害倍率增強為1.4倍"
+                },
                 "reaction": {
                     "criticalMultiple": {
                         "value": 1.4
@@ -2591,7 +3531,10 @@
         ]
     },
     {
-        "name": "超回復力",
+        "id": "超回復力",
+        "name": {
+            "zhTW": "超回復力"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -2601,12 +3544,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "體力在達到計量表的最大值前會持續自動回復"
+                "description": {
+                    "zhTW": "體力在達到計量表的最大值前會持續自動回復"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "雷屬性攻擊強化",
+        "id": "雷屬性攻擊強化",
+        "name": {
+            "zhTW": "雷屬性攻擊強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2616,7 +3565,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "雷屬性攻擊值+30",
+                "description": {
+                    "zhTW": "雷屬性攻擊值+30"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "thunder",
@@ -2627,7 +3578,9 @@
             },
             {
                 "level": 2,
-                "description": "雷屬性攻擊值+60",
+                "description": {
+                    "zhTW": "雷屬性攻擊值+60"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "thunder",
@@ -2638,7 +3591,9 @@
             },
             {
                 "level": 3,
-                "description": "雷屬性攻擊值+100",
+                "description": {
+                    "zhTW": "雷屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "thunder",
@@ -2649,7 +3604,9 @@
             },
             {
                 "level": 4,
-                "description": "雷屬性攻擊值變為1.05倍，雷屬性攻擊值+100",
+                "description": {
+                    "zhTW": "雷屬性攻擊值變為1.05倍，雷屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "thunder",
@@ -2660,7 +3617,9 @@
             },
             {
                 "level": 5,
-                "description": "雷屬性攻擊值變為1.1倍，雷屬性攻擊值+100",
+                "description": {
+                    "zhTW": "雷屬性攻擊值變為1.1倍，雷屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "thunder",
@@ -2672,7 +3631,10 @@
         ]
     },
     {
-        "name": "道具使用強化",
+        "id": "道具使用強化",
+        "name": {
+            "zhTW": "道具使用強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2682,20 +3644,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "效果時間1.1倍"
+                "description": {
+                    "zhTW": "效果時間1.1倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "效果時間1.25倍"
+                "description": {
+                    "zhTW": "效果時間1.25倍"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "效果時間1.5倍"
+                "description": {
+                    "zhTW": "效果時間1.5倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "搬運達人",
+        "id": "搬運達人",
+        "name": {
+            "zhTW": "搬運達人"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2705,117 +3679,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "搬運時的移動速度上升，減輕著地時的反作用力"
+                "description": {
+                    "zhTW": "搬運時的移動速度上升，減輕著地時的反作用力"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "滑走強化",
-        "type": "active",
-        "from" : {
-            "set": false,
-            "jewel": true,
-            "armor": true
+        "id": "滑走強化",
+        "name": {
+            "zhTW": "滑走強化"
         },
-        "list": [
-            {
-                "level": 1,
-                "description": "可發動技能"
-            }
-        ]
-    },
-    {
-        "name": "跳躍鐵人",
-        "type": "active",
-        "from" : {
-            "set": false,
-            "jewel": false,
-            "armor": true
-        },
-        "list": [
-            {
-                "level": 1,
-                "description": "跳躍中，後仰無效"
-            }
-        ]
-    },
-    {
-        "name": "達人藝",
-        "type": "active",
-        "from" : {
-            "set": true,
-            "jewel": false,
-            "armor": false
-        },
-        "list": [
-            {
-                "level": 1,
-                "description": "發生會心攻擊時，不會消耗銳利度"
-            }
-        ]
-    },
-    {
-        "name": "會心攻擊【屬性】",
-        "type": "active",
-        "from" : {
-            "set": true,
-            "jewel": false,
-            "armor": false
-        },
-        "list": [
-            {
-                "level": 1,
-                "description": "因攻擊而出現會心時，所造成的屬性傷害(火、水、雷、冰、龍)會提高"
-            }
-        ]
-    },
-    {
-        "name": "蜂蜜獵人",
-        "type": "active",
-        "from" : {
-            "set": false,
-            "jewel": false,
-            "armor": true
-        },
-        "list": [
-            {
-                "level": 1,
-                "description": "蜂蜜取得數+1"
-            }
-        ]
-    },
-    {
-        "name": "解放弓的蓄力階段",
-        "type": "active",
-        "from" : {
-            "set": true,
-            "jewel": true,
-            "armor": false
-        },
-        "list": [
-            {
-                "level": 1,
-                "description": "弓的蓄力階段增加1個階段"
-            }
-        ]
-    },
-    {
-        "name": "會心攻擊【特殊】",
-        "type": "active",
-        "from" : {
-            "set": true,
-            "jewel": false,
-            "armor": false
-        },
-        "list": [
-            {
-                "level": 1,
-                "description": "因攻擊而出現會心時，所造成的狀態異常值(麻痺、毒、睡眠、爆破)會提高"
-            }
-        ]
-    },
-    {
-        "name": "雷耐性",
         "type": "active",
         "from" : {
             "set": false,
@@ -2825,7 +3700,156 @@
         "list": [
             {
                 "level": 1,
-                "description": "雷耐性+6",
+                "description": {
+                    "zhTW": "可發動技能"
+                },
+                "reaction": null
+            }
+        ]
+    },
+    {
+        "id": "跳躍鐵人",
+        "name": {
+            "zhTW": "跳躍鐵人"
+        },
+        "type": "active",
+        "from" : {
+            "set": false,
+            "jewel": false,
+            "armor": true
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "跳躍中，後仰無效"
+                },
+                "reaction": null
+            }
+        ]
+    },
+    {
+        "id": "達人藝",
+        "name": {
+            "zhTW": "達人藝"
+        },
+        "type": "active",
+        "from" : {
+            "set": true,
+            "jewel": false,
+            "armor": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "發生會心攻擊時，不會消耗銳利度"
+                },
+                "reaction": null
+            }
+        ]
+    },
+    {
+        "id": "會心攻擊【屬性】",
+        "name": {
+            "zhTW": "會心攻擊【屬性】"
+        },
+        "type": "active",
+        "from" : {
+            "set": true,
+            "jewel": false,
+            "armor": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "因攻擊而出現會心時，所造成的屬性傷害(火、水、雷、冰、龍)會提高"
+                },
+                "reaction": null
+            }
+        ]
+    },
+    {
+        "id": "蜂蜜獵人",
+        "name": {
+            "zhTW": "蜂蜜獵人"
+        },
+        "type": "active",
+        "from" : {
+            "set": false,
+            "jewel": false,
+            "armor": true
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "蜂蜜取得數+1"
+                },
+                "reaction": null
+            }
+        ]
+    },
+    {
+        "id": "解放弓的蓄力階段",
+        "name": {
+            "zhTW": "解放弓的蓄力階段"
+        },
+        "type": "active",
+        "from" : {
+            "set": true,
+            "jewel": true,
+            "armor": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "弓的蓄力階段增加1個階段"
+                },
+                "reaction": null
+            }
+        ]
+    },
+    {
+        "id": "會心攻擊【特殊】",
+        "name": {
+            "zhTW": "會心攻擊【特殊】"
+        },
+        "type": "active",
+        "from" : {
+            "set": true,
+            "jewel": false,
+            "armor": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "因攻擊而出現會心時，所造成的狀態異常值(麻痺、毒、睡眠、爆破)會提高"
+                },
+                "reaction": null
+            }
+        ]
+    },
+    {
+        "id": "雷耐性",
+        "name": {
+            "zhTW": "雷耐性"
+        },
+        "type": "active",
+        "from" : {
+            "set": false,
+            "jewel": true,
+            "armor": true
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "雷耐性+6"
+                },
                 "reaction": {
                     "resistance": {
                         "type": "thunder",
@@ -2835,7 +3859,9 @@
             },
             {
                 "level": 2,
-                "description": "雷耐性+12",
+                "description": {
+                    "zhTW": "雷耐性+12"
+                },
                 "reaction": {
                     "resistance": {
                         "type": "thunder",
@@ -2845,7 +3871,9 @@
             },
             {
                 "level": 3,
-                "description": "雷耐性+20、防禦力+10",
+                "description": {
+                    "zhTW": "雷耐性+20、防禦力+10"
+                },
                 "reaction": {
                     "defense": {
                         "value": 10
@@ -2859,7 +3887,10 @@
         ]
     },
     {
-        "name": "睡眠屬性強化",
+        "id": "睡眠屬性強化",
+        "name": {
+            "zhTW": "睡眠屬性強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2869,20 +3900,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "睡眠累積值變為1.05倍，睡眠累積值+10"
+                "description": {
+                    "zhTW": "睡眠累積值變為1.05倍，睡眠累積值+10"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "睡眠累積值變為1.1倍，睡眠累積值+10"
+                "description": {
+                    "zhTW": "睡眠累積值變為1.1倍，睡眠累積值+10"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "睡眠累積值變為1.2倍，睡眠累積值+10"
+                "description": {
+                    "zhTW": "睡眠累積值變為1.2倍，睡眠累積值+10"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "睡眠耐性",
+        "id": "睡眠耐性",
+        "name": {
+            "zhTW": "睡眠耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2892,20 +3935,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "減少睡眠狀態的時間30%"
+                "description": {
+                    "zhTW": "減少睡眠狀態的時間30%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "減少睡眠狀態的時間60%"
+                "description": {
+                    "zhTW": "減少睡眠狀態的時間60%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "不會變為睡眠狀態"
+                "description": {
+                    "zhTW": "不會變為睡眠狀態"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "察覺",
+        "id": "察覺",
+        "name": {
+            "zhTW": "察覺"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2915,12 +3970,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "在生態MAP上標記"
+                "description": {
+                    "zhTW": "在生態MAP上標記"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "滿足感",
+        "id": "滿足感",
+        "name": {
+            "zhTW": "滿足感"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2930,12 +3991,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "效果發動率25%"
+                "description": {
+                    "zhTW": "效果發動率25%"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "奪取耐力",
+        "id": "奪取耐力",
+        "name": {
+            "zhTW": "奪取耐力"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2945,20 +4012,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "減氣威力1.1倍"
+                "description": {
+                    "zhTW": "減氣威力1.1倍"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "減氣威力1.2倍"
+                "description": {
+                    "zhTW": "減氣威力1.2倍"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "減氣威力1.3倍"
+                "description": {
+                    "zhTW": "減氣威力1.3倍"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "精靈加護",
+        "id": "精靈加護",
+        "name": {
+            "zhTW": "精靈加護"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2968,20 +4047,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "效果發動時，傷害減輕15%"
+                "description": {
+                    "zhTW": "效果發動時，傷害減輕15%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "效果發動時，傷害減輕30%"
+                "description": {
+                    "zhTW": "效果發動時，傷害減輕30%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "效果發動時，傷害減輕50%"
+                "description": {
+                    "zhTW": "效果發動時，傷害減輕50%"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "綿花孢子草的知識",
+        "id": "綿花孢子草的知識",
+        "name": {
+            "zhTW": "綿花孢子草的知識"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -2991,20 +4082,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "體力回復20"
+                "description": {
+                    "zhTW": "體力回復20"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "體力回復35"
+                "description": {
+                    "zhTW": "體力回復35"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "體力回復60"
+                "description": {
+                    "zhTW": "體力回復60"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "精神抖擻",
+        "id": "精神抖擻",
+        "name": {
+            "zhTW": "精神抖擻"
+        },
         "type": "passive",
         "from" : {
             "set": false,
@@ -3014,7 +4117,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "效果發動時，會心率+10%",
+                "description": {
+                    "zhTW": "效果發動時，會心率+10%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 10
@@ -3023,7 +4128,9 @@
             },
             {
                 "level": 2,
-                "description": "效果發動時，會心率+20%",
+                "description": {
+                    "zhTW": "效果發動時，會心率+20%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 20
@@ -3032,7 +4139,9 @@
             },
             {
                 "level": 3,
-                "description": "效果發動時，會心率+30%",
+                "description": {
+                    "zhTW": "效果發動時，會心率+30%"
+                },
                 "reaction": {
                     "criticalRate": {
                         "value": 30
@@ -3042,7 +4151,10 @@
         ]
     },
     {
-        "name": "睡眠瓶追加",
+        "id": "睡眠瓶追加",
+        "name": {
+            "zhTW": "睡眠瓶追加"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3052,12 +4164,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "弓可以裝著睡眠瓶"
+                "description": {
+                    "zhTW": "弓可以裝著睡眠瓶"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "廣域化",
+        "id": "廣域化",
+        "name": {
+            "zhTW": "廣域化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3067,28 +4185,46 @@
         "list": [
             {
                 "level": 1,
-                "description": "給予周圍的同伴1\/3的效果"
+                "description": {
+                    "zhTW": "給予周圍的同伴1\/3的效果"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "給予大範圍的同伴1\/3的效果"
+                "description": {
+                    "zhTW": "給予大範圍的同伴1\/3的效果"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "給予大範圍的同伴2\/3的效果"
+                "description": {
+                    "zhTW": "給予大範圍的同伴2\/3的效果"
+                },
+                "reaction": null
             },
             {
                 "level": 4,
-                "description": "給予極大範圍的同伴2\/3的效果"
+                "description": {
+                    "zhTW": "給予極大範圍的同伴2\/3的效果"
+                },
+                "reaction": null
             },
             {
                 "level": 5,
-                "description": "給予極大範圍的同伴同樣的效果"
+                "description": {
+                    "zhTW": "給予極大範圍的同伴同樣的效果"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "適應瘴氣環境",
+        "id": "適應瘴氣環境",
+        "name": {
+            "zhTW": "適應瘴氣環境"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3098,12 +4234,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "使瘴氣霧霾無效，減輕酸造成的傷害"
+                "description": {
+                    "zhTW": "使瘴氣霧霾無效，減輕酸造成的傷害"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "潛伏",
+        "id": "潛伏",
+        "name": {
+            "zhTW": "潛伏"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3113,20 +4255,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "追丟的機率小幅提高"
+                "description": {
+                    "zhTW": "追丟的機率小幅提高"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "追丟的機率提高"
+                "description": {
+                    "zhTW": "追丟的機率提高"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "追丟的機率大幅提高"
+                "description": {
+                    "zhTW": "追丟的機率大幅提高"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "熱傷害無效",
+        "id": "熱傷害無效",
+        "name": {
+            "zhTW": "熱傷害無效"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3136,12 +4290,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "使熱造成的傷害無效"
+                "description": {
+                    "zhTW": "使熱造成的傷害無效"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "適應水場",
+        "id": "適應水場",
+        "name": {
+            "zhTW": "適應水場"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3151,20 +4311,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "即使在水中移動速度也不會減慢"
+                "description": {
+                    "zhTW": "即使在水中移動速度也不會減慢"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "在水中移動速度也不會減慢，提高在水中的迴避性能"
+                "description": {
+                    "zhTW": "在水中移動速度也不會減慢，提高在水中的迴避性能"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "在水中移動速度也不會減慢，大幅提高在水中的迴避性能"
+                "description": {
+                    "zhTW": "在水中移動速度也不會減慢，大幅提高在水中的迴避性能"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "毅力",
+        "id": "毅力",
+        "name": {
+            "zhTW": "毅力"
+        },
         "type": "active",
         "from" : {
             "set": true,
@@ -3174,12 +4346,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "當體力在一定程度以上時，即使承受了超過體力的傷害，也能撐住而不耗盡體力一次"
+                "description": {
+                    "zhTW": "當體力在一定程度以上時，即使承受了超過體力的傷害，也能撐住而不耗盡體力一次"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "龍耐性",
+        "id": "龍耐性",
+        "name": {
+            "zhTW": "龍耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3189,7 +4367,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "龍耐性+6",
+                "description": {
+                    "zhTW": "龍耐性+6"
+                },
                 "reaction": {
                     "resistance": {
                         "type": "dragon",
@@ -3199,7 +4379,9 @@
             },
             {
                 "level": 2,
-                "description": "龍耐性+12",
+                "description": {
+                    "zhTW": "龍耐性+12"
+                },
                 "reaction": {
                     "resistance": {
                         "type": "dragon",
@@ -3209,7 +4391,9 @@
             },
             {
                 "level": 3,
-                "description": "龍耐性+20、防禦力+10",
+                "description": {
+                    "zhTW": "龍耐性+20、防禦力+10"
+                },
                 "reaction": {
                     "defense": {
                         "value": 10
@@ -3223,7 +4407,10 @@
         ]
     },
     {
-        "name": "龍屬性攻擊強化",
+        "id": "龍屬性攻擊強化",
+        "name": {
+            "zhTW": "龍屬性攻擊強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3233,7 +4420,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "龍屬性攻擊值+30",
+                "description": {
+                    "zhTW": "龍屬性攻擊值+30"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "dragon",
@@ -3244,7 +4433,9 @@
             },
             {
                 "level": 2,
-                "description": "龍屬性攻擊值+60",
+                "description": {
+                    "zhTW": "龍屬性攻擊值+60"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "dragon",
@@ -3255,7 +4446,9 @@
             },
             {
                 "level": 3,
-                "description": "龍屬性攻擊值+100",
+                "description": {
+                    "zhTW": "龍屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "dragon",
@@ -3266,7 +4459,9 @@
             },
             {
                 "level": 4,
-                "description": "龍屬性攻擊值變為1.05倍，龍屬性攻擊值+100",
+                "description": {
+                    "zhTW": "龍屬性攻擊值變為1.05倍，龍屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "dragon",
@@ -3277,7 +4472,9 @@
             },
             {
                 "level": 5,
-                "description": "龍屬性攻擊值變為1.1倍，龍屬性攻擊值+100",
+                "description": {
+                    "zhTW": "龍屬性攻擊值變為1.1倍，龍屬性攻擊值+100"
+                },
                 "reaction": {
                     "elementAttack": {
                         "type": "dragon",
@@ -3289,7 +4486,10 @@
         ]
     },
     {
-        "name": "導蟲反應距離UP",
+        "id": "導蟲反應距離UP",
+        "name": {
+            "zhTW": "導蟲反應距離UP"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3299,12 +4499,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "反應距離擴張"
+                "description": {
+                    "zhTW": "反應距離擴張"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "整備",
+        "id": "整備",
+        "name": {
+            "zhTW": "整備"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3314,20 +4520,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "再使用時間縮短5%"
+                "description": {
+                    "zhTW": "再使用時間縮短5%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "再使用時間縮短10%"
+                "description": {
+                    "zhTW": "再使用時間縮短10%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "再使用時間縮短20%"
+                "description": {
+                    "zhTW": "再使用時間縮短20%"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "瘴氣耐性",
+        "id": "瘴氣耐性",
+        "name": {
+            "zhTW": "瘴氣耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3337,20 +4555,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "抑制瘴氣的侵蝕"
+                "description": {
+                    "zhTW": "抑制瘴氣的侵蝕"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "大幅抑制瘴氣的侵蝕"
+                "description": {
+                    "zhTW": "大幅抑制瘴氣的侵蝕"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "使瘴氣侵蝕狀態無效"
+                "description": {
+                    "zhTW": "使瘴氣侵蝕狀態無效"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "龍封力強化",
+        "id": "龍封力強化",
+        "name": {
+            "zhTW": "龍封力強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3360,12 +4590,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "龍封力強化一個階段"
+                "description": {
+                    "zhTW": "龍封力強化一個階段"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "騎乘名人",
+        "id": "騎乘名人",
+        "name": {
+            "zhTW": "騎乘名人"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3375,12 +4611,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "容易騎乘怪物，更容易在騎乘狀態下成功"
+                "description": {
+                    "zhTW": "容易騎乘怪物，更容易在騎乘狀態下成功"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "攀岩者",
+        "id": "攀岩者",
+        "name": {
+            "zhTW": "攀岩者"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3390,12 +4632,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "耐力消耗減少25%"
+                "description": {
+                    "zhTW": "耐力消耗減少25%"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "爆破屬性強化",
+        "id": "爆破屬性強化",
+        "name": {
+            "zhTW": "爆破屬性強化"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3405,20 +4653,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "爆破累積值變為1.05倍，爆破累積值+10"
+                "description": {
+                    "zhTW": "爆破累積值變為1.05倍，爆破累積值+10"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "爆破累積值變為1.1倍，爆破累積值+10"
+                "description": {
+                    "zhTW": "爆破累積值變為1.1倍，爆破累積值+10"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "爆破累積值變為1.2倍，爆破累積值+10"
+                "description": {
+                    "zhTW": "爆破累積值變為1.2倍，爆破累積值+10"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "蹲下移動速度UP",
+        "id": "蹲下移動速度UP",
+        "name": {
+            "zhTW": "蹲下移動速度UP"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3428,12 +4688,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "加快蹲下時的移動速度"
+                "description": {
+                    "zhTW": "加快蹲下時的移動速度"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "爆破異常狀態的耐性",
+        "id": "爆破異常狀態的耐性",
+        "name": {
+            "zhTW": "爆破異常狀態的耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3443,20 +4709,32 @@
         "list": [
             {
                 "level": 1,
-                "description": "延長爆破前的間隔時間，減輕爆破時受到的傷害"
+                "description": {
+                    "zhTW": "延長爆破前的間隔時間，減輕爆破時受到的傷害"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "更加延長爆破前的間隔時間，大幅減輕爆破時遭受的傷害"
+                "description": {
+                    "zhTW": "更加延長爆破前的間隔時間，大幅減輕爆破時遭受的傷害"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "不會變為爆破異常狀態"
+                "description": {
+                    "zhTW": "不會變為爆破異常狀態"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "爆破瓶追加",
+        "id": "爆破瓶追加",
+        "name": {
+            "zhTW": "爆破瓶追加"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3466,12 +4744,18 @@
         "list": [
             {
                 "level": 1,
-                "description": "弓可以裝著爆破瓶"
+                "description": {
+                    "zhTW": "弓可以裝著爆破瓶"
+                },
+                "reaction": null
             }
         ]
     },
     {
-        "name": "屬性解放／裝填擴充",
+        "id": "屬性解放／裝填擴充",
+        "name": {
+            "zhTW": "屬性解放／裝填擴充"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3481,7 +4765,9 @@
         "list": [
             {
                 "level": 1,
-                "description": "激發出1\/3的隱藏屬性／增加部分彈藥裝填數",
+                "description": {
+                    "zhTW": "激發出1\/3的隱藏屬性／增加部分彈藥裝填數"
+                },
                 "reaction": {
                     "enableElement": {
                         "multiple": 0.3333
@@ -3490,7 +4776,9 @@
             },
             {
                 "level": 2,
-                "description": "激發出2\/3的隱藏屬性／增加多數彈藥裝填數",
+                "description": {
+                    "zhTW": "激發出2\/3的隱藏屬性／增加多數彈藥裝填數"
+                },
                 "reaction": {
                     "enableElement": {
                         "multiple": 0.6666
@@ -3499,7 +4787,9 @@
             },
             {
                 "level": 3,
-                "description": "激發出100%的隱藏屬性／幾乎增加所有彈藥裝填數",
+                "description": {
+                    "zhTW": "激發出100%的隱藏屬性／幾乎增加所有彈藥裝填數"
+                },
                 "reaction": {
                     "enableElement": {
                         "multiple": 1
@@ -3509,7 +4799,10 @@
         ]
     },
     {
-        "name": "屬性異常狀態耐性",
+        "id": "屬性異常狀態耐性",
+        "name": {
+            "zhTW": "屬性異常狀態耐性"
+        },
         "type": "active",
         "from" : {
             "set": false,
@@ -3519,15 +4812,24 @@
         "list": [
             {
                 "level": 1,
-                "description": "全屬性異常狀態的效果時間減少30%"
+                "description": {
+                    "zhTW": "全屬性異常狀態的效果時間減少30%"
+                },
+                "reaction": null
             },
             {
                 "level": 2,
-                "description": "全屬性異常狀態的效果時間減少60%"
+                "description": {
+                    "zhTW": "全屬性異常狀態的效果時間減少60%"
+                },
+                "reaction": null
             },
             {
                 "level": 3,
-                "description": "使全屬性異常狀態無效"
+                "description": {
+                    "zhTW": "使全屬性異常狀態無效"
+                },
+                "reaction": null
             }
         ]
     }

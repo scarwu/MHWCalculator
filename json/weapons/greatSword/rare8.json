@@ -1,9 +1,14 @@
 [
     {
+        "id": "滅鬼凶器",
         "rare": 8,
         "type": "greatSword",
-        "series": "滅盡龍",
-        "name": "滅鬼凶器",
+        "series": {
+            "zhTW": "滅盡龍"
+        },
+        "name": {
+            "zhTW": "滅鬼凶器"
+        },
         "attack": 1008,
         "criticalRate": 0,
         "defense": 0,
@@ -38,10 +43,15 @@
         "skills": null
     },
     {
+        "id": "火龍煌劍",
         "rare": 8,
         "type": "greatSword",
-        "series": "火龍",
-        "name": "火龍煌劍",
+        "series": {
+            "zhTW": "火龍"
+        },
+        "name": {
+            "zhTW": "火龍煌劍"
+        },
         "attack": 912,
         "criticalRate": 15,
         "defense": 0,
@@ -74,10 +84,15 @@
         "skills": null
     },
     {
+        "id": "魔物的憤怒",
         "rare": 8,
         "type": "greatSword",
-        "series": "屍套龍",
-        "name": "魔物的憤怒",
+        "series": {
+            "zhTW": "屍套龍"
+        },
+        "name": {
+            "zhTW": "魔物的憤怒"
+        },
         "attack": 960,
         "criticalRate": 0,
         "defense": 0,
@@ -112,10 +127,15 @@
         "skills": null
     },
     {
+        "id": "召雷劍【麒麟王】",
         "rare": 8,
         "type": "greatSword",
-        "series": "幻獸",
-        "name": "召雷劍【麒麟王】",
+        "series": {
+            "zhTW": "幻獸"
+        },
+        "name": {
+            "zhTW": "召雷劍【麒麟王】"
+        },
         "attack": 768,
         "criticalRate": 0,
         "defense": 0,
@@ -144,10 +164,15 @@
         "skills": null
     },
     {
+        "id": "鋼龍凍大劍",
         "rare": 8,
         "type": "greatSword",
-        "series": "黑鋼",
-        "name": "鋼龍凍大劍",
+        "series": {
+            "zhTW": "黑鋼"
+        },
+        "name": {
+            "zhTW": "鋼龍凍大劍"
+        },
         "attack": 864,
         "criticalRate": 10,
         "defense": 0,
@@ -180,10 +205,15 @@
         "skills": null
     },
     {
+        "id": "冥燈龍大劍",
         "rare": 8,
         "type": "greatSword",
-        "series": "冥燈龍",
-        "name": "冥燈龍大劍",
+        "series": {
+            "zhTW": "冥燈龍"
+        },
+        "name": {
+            "zhTW": "冥燈龍大劍"
+        },
         "attack": 816,
         "criticalRate": 15,
         "defense": 0,
@@ -221,10 +251,15 @@
         "skills": null
     },
     {
+        "id": "龍顎劍【大牙】",
         "rare": 8,
         "type": "greatSword",
-        "series": "工房武器",
-        "name": "龍顎劍【大牙】",
+        "series": {
+            "zhTW": "工房武器"
+        },
+        "name": {
+            "zhTW": "龍顎劍【大牙】"
+        },
         "attack": 960,
         "criticalRate": 0,
         "defense": 20,
@@ -257,10 +292,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅炎．冰",
         "rare": 8,
         "type": "greatSword",
-        "series": "絢輝龍",
-        "name": "鎧羅炎．冰",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅炎．冰"
+        },
         "attack": 912,
         "criticalRate": 10,
         "defense": 20,
@@ -293,10 +333,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅炎．睡眠",
         "rare": 8,
         "type": "greatSword",
-        "series": "絢輝龍",
-        "name": "鎧羅炎．睡眠",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅炎．睡眠"
+        },
         "attack": 912,
         "criticalRate": 0,
         "defense": 30,
@@ -329,10 +374,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅炎．水",
         "rare": 8,
         "type": "greatSword",
-        "series": "絢輝龍",
-        "name": "鎧羅炎．水",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅炎．水"
+        },
         "attack": 912,
         "criticalRate": 0,
         "defense": 20,
@@ -365,10 +415,15 @@
         "skills": null
     },
     {
+        "id": "皇后盔．炎妃",
         "rare": 8,
         "type": "greatSword",
-        "series": "炎妃龍",
-        "name": "皇后盔．炎妃",
+        "series": {
+            "zhTW": "炎妃龍"
+        },
+        "name": {
+            "zhTW": "皇后盔．炎妃"
+        },
         "attack": 864,
         "criticalRate": 20,
         "defense": 0,
@@ -403,16 +458,21 @@
         ],
         "skills": [
             {
-                "name": "毅力",
+                "id": "毅力",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后盔．滅盡",
         "rare": 8,
         "type": "greatSword",
-        "series": "炎妃龍．滅盡",
-        "name": "皇后盔．滅盡",
+        "series": {
+            "zhTW": "炎妃龍．滅盡"
+        },
+        "name": {
+            "zhTW": "皇后盔．滅盡"
+        },
         "attack": 912,
         "criticalRate": 0,
         "defense": 0,
@@ -447,16 +507,21 @@
         ],
         "skills": [
             {
-                "name": "加速再生",
+                "id": "加速再生",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后盔．冥燈",
         "rare": 8,
         "type": "greatSword",
-        "series": "炎妃龍．冥燈",
-        "name": "皇后盔．冥燈",
+        "series": {
+            "zhTW": "炎妃龍．冥燈"
+        },
+        "name": {
+            "zhTW": "皇后盔．冥燈"
+        },
         "attack": 864,
         "criticalRate": 10,
         "defense": 0,
@@ -491,7 +556,7 @@
         ],
         "skills": [
             {
-                "name": "利刃／彈藥節約",
+                "id": "利刃／彈藥節約",
                 "level": 1
             }
         ]

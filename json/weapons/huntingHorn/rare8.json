@@ -1,9 +1,14 @@
 [
     {
+        "id": "寂滅的章節",
         "rare": 8,
         "type": "huntingHorn",
-        "series": "滅盡龍",
-        "name": "寂滅的章節",
+        "series": {
+            "zhTW": "滅盡龍"
+        },
+        "name": {
+            "zhTW": "寂滅的章節"
+        },
         "attack": 882,
         "criticalRate": 0,
         "defense": 0,
@@ -38,10 +43,15 @@
         "skills": null
     },
     {
+        "id": "爆鱗鼓赤紅星光",
         "rare": 8,
         "type": "huntingHorn",
-        "series": "爆鱗龍",
-        "name": "爆鱗鼓赤紅星光",
+        "series": {
+            "zhTW": "爆鱗龍"
+        },
+        "name": {
+            "zhTW": "爆鱗鼓赤紅星光"
+        },
         "attack": 840,
         "criticalRate": -10,
         "defense": 0,
@@ -77,10 +87,15 @@
         "skills": null
     },
     {
+        "id": "炎王豎琴",
         "rare": 8,
         "type": "huntingHorn",
-        "series": "黑鋼",
-        "name": "炎王豎琴",
+        "series": {
+            "zhTW": "黑鋼"
+        },
+        "name": {
+            "zhTW": "炎王豎琴"
+        },
         "attack": 798,
         "criticalRate": 0,
         "defense": 0,
@@ -109,10 +124,15 @@
         "skills": null
     },
     {
+        "id": "冥燈龍狩獵笛",
         "rare": 8,
         "type": "huntingHorn",
-        "series": "冥燈龍",
-        "name": "冥燈龍狩獵笛",
+        "series": {
+            "zhTW": "冥燈龍"
+        },
+        "name": {
+            "zhTW": "冥燈龍狩獵笛"
+        },
         "attack": 714,
         "criticalRate": 15,
         "defense": 0,
@@ -150,10 +170,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅風笛．水",
         "rare": 8,
         "type": "huntingHorn",
-        "series": "絢輝龍",
-        "name": "鎧羅風笛．水",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅風笛．水"
+        },
         "attack": 714,
         "criticalRate": 10,
         "defense": 20,
@@ -186,10 +211,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅風笛．龍",
         "rare": 8,
         "type": "huntingHorn",
-        "series": "絢輝龍",
-        "name": "鎧羅風笛．龍",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅風笛．龍"
+        },
         "attack": 756,
         "criticalRate": 0,
         "defense": 20,
@@ -224,10 +254,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅風笛．麻痺",
         "rare": 8,
         "type": "huntingHorn",
-        "series": "絢輝龍",
-        "name": "鎧羅風笛．麻痺",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅風笛．麻痺"
+        },
         "attack": 840,
         "criticalRate": 0,
         "defense": 20,
@@ -260,10 +295,15 @@
         "skills": null
     },
     {
+        "id": "皇后鼓．炎妃",
         "rare": 8,
         "type": "huntingHorn",
-        "series": "炎妃龍",
-        "name": "皇后鼓．炎妃",
+        "series": {
+            "zhTW": "炎妃龍"
+        },
+        "name": {
+            "zhTW": "皇后鼓．炎妃"
+        },
         "attack": 798,
         "criticalRate": 20,
         "defense": 0,
@@ -295,16 +335,21 @@
         ],
         "skills": [
             {
-                "name": "毅力",
+                "id": "毅力",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后鼓．滅盡",
         "rare": 8,
         "type": "huntingHorn",
-        "series": "炎妃龍．滅盡",
-        "name": "皇后鼓．滅盡",
+        "series": {
+            "zhTW": "炎妃龍．滅盡"
+        },
+        "name": {
+            "zhTW": "皇后鼓．滅盡"
+        },
         "attack": 840,
         "criticalRate": 0,
         "defense": 0,
@@ -336,16 +381,21 @@
         ],
         "skills": [
             {
-                "name": "加速再生",
+                "id": "加速再生",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后鼓．冥燈",
         "rare": 8,
         "type": "huntingHorn",
-        "series": "炎妃龍．冥燈",
-        "name": "皇后鼓．冥燈",
+        "series": {
+            "zhTW": "炎妃龍．冥燈"
+        },
+        "name": {
+            "zhTW": "皇后鼓．冥燈"
+        },
         "attack": 798,
         "criticalRate": 10,
         "defense": 0,
@@ -380,7 +430,7 @@
         ],
         "skills": [
             {
-                "name": "利刃／彈藥節約",
+                "id": "利刃／彈藥節約",
                 "level": 1
             }
         ]

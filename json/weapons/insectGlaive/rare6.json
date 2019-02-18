@@ -1,9 +1,14 @@
 [
     {
+        "id": "鉻鋼長刀 II",
         "rare": 6,
         "type": "insectGlaive",
-        "series": "礦石素材",
-        "name": "鉻鋼長刀 II",
+        "series": {
+            "zhTW": "礦石素材"
+        },
+        "name": {
+            "zhTW": "鉻鋼長刀 II"
+        },
         "attack": 558,
         "criticalRate": 0,
         "defense": 0,
@@ -39,10 +44,15 @@
         "skills": null
     },
     {
+        "id": "星空長刀 III",
         "rare": 6,
         "type": "insectGlaive",
-        "series": "搔鳥",
-        "name": "星空長刀 III",
+        "series": {
+            "zhTW": "搔鳥"
+        },
+        "name": {
+            "zhTW": "星空長刀 III"
+        },
         "attack": 527,
         "criticalRate": 20,
         "defense": 0,
@@ -71,10 +81,15 @@
         "skills": null
     },
     {
+        "id": "利刃長刀 III",
         "rare": 6,
         "type": "insectGlaive",
-        "series": "眩鳥",
-        "name": "利刃長刀 III",
+        "series": {
+            "zhTW": "眩鳥"
+        },
+        "name": {
+            "zhTW": "利刃長刀 III"
+        },
         "attack": 558,
         "criticalRate": 0,
         "defense": 0,
@@ -107,10 +122,15 @@
         "skills": null
     },
     {
+        "id": "凍寒疾風刀 II",
         "rare": 6,
         "type": "insectGlaive",
-        "series": "冰屬性",
-        "name": "凍寒疾風刀 II",
+        "series": {
+            "zhTW": "冰屬性"
+        },
+        "name": {
+            "zhTW": "凍寒疾風刀 II"
+        },
         "attack": 527,
         "criticalRate": 0,
         "defense": 0,
@@ -146,10 +166,15 @@
         "skills": null
     },
     {
+        "id": "曼陀羅長刀 III",
         "rare": 6,
         "type": "insectGlaive",
-        "series": "毒妖鳥",
-        "name": "曼陀羅長刀 III",
+        "series": {
+            "zhTW": "毒妖鳥"
+        },
+        "name": {
+            "zhTW": "曼陀羅長刀 III"
+        },
         "attack": 527,
         "criticalRate": 0,
         "defense": 0,
@@ -185,10 +210,15 @@
         "skills": null
     },
     {
+        "id": "飛空棍 II",
         "rare": 6,
         "type": "insectGlaive",
-        "series": "駭骨素材",
-        "name": "飛空棍 II",
+        "series": {
+            "zhTW": "駭骨素材"
+        },
+        "name": {
+            "zhTW": "飛空棍 II"
+        },
         "attack": 589,
         "criticalRate": 0,
         "defense": 10,
@@ -221,10 +251,15 @@
         "skills": null
     },
     {
+        "id": "激流長刀 III",
         "rare": 6,
         "type": "insectGlaive",
-        "series": "水屬性",
-        "name": "激流長刀 III",
+        "series": {
+            "zhTW": "水屬性"
+        },
+        "name": {
+            "zhTW": "激流長刀 III"
+        },
         "attack": 589,
         "criticalRate": 0,
         "defense": 0,
@@ -257,10 +292,15 @@
         "skills": null
     },
     {
+        "id": "飛雷龍之柱 III",
         "rare": 6,
         "type": "insectGlaive",
-        "series": "飛雷龍",
-        "name": "飛雷龍之柱 III",
+        "series": {
+            "zhTW": "飛雷龍"
+        },
+        "name": {
+            "zhTW": "飛雷龍之柱 III"
+        },
         "attack": 558,
         "criticalRate": 10,
         "defense": 0,
@@ -293,10 +333,15 @@
         "skills": null
     },
     {
+        "id": "龍骨棍 III",
         "rare": 6,
         "type": "insectGlaive",
-        "series": "龍骨",
-        "name": "龍骨棍 III",
+        "series": {
+            "zhTW": "龍骨"
+        },
+        "name": {
+            "zhTW": "龍骨棍 III"
+        },
         "attack": 496,
         "criticalRate": 0,
         "defense": 0,

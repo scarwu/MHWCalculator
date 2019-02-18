@@ -1,9 +1,14 @@
 [
     {
+        "id": "合金製完成劍斧 II",
         "rare": 6,
         "type": "switchAxe",
-        "series": "礦石素材",
-        "name": "合金製完成劍斧 II",
+        "series": {
+            "zhTW": "礦石素材"
+        },
+        "name": {
+            "zhTW": "合金製完成劍斧 II"
+        },
         "attack": 630,
         "criticalRate": 0,
         "defense": 0,
@@ -39,10 +44,15 @@
         "skills": null
     },
     {
+        "id": "雷光迅斧 III",
         "rare": 6,
         "type": "switchAxe",
-        "series": "雷屬性",
-        "name": "雷光迅斧 III",
+        "series": {
+            "zhTW": "雷屬性"
+        },
+        "name": {
+            "zhTW": "雷光迅斧 III"
+        },
         "attack": 630,
         "criticalRate": 0,
         "defense": 0,
@@ -75,10 +85,15 @@
         "skills": null
     },
     {
+        "id": "凶豺龍掠奪者 III",
         "rare": 6,
         "type": "switchAxe",
-        "series": "大凶豺龍",
-        "name": "凶豺龍掠奪者 III",
+        "series": {
+            "zhTW": "大凶豺龍"
+        },
+        "name": {
+            "zhTW": "凶豺龍掠奪者 III"
+        },
         "attack": 665,
         "criticalRate": 0,
         "defense": 0,
@@ -114,10 +129,15 @@
         "skills": null
     },
     {
+        "id": "重擊斬斧 II",
         "rare": 6,
         "type": "switchAxe",
-        "series": "駭骨素材",
-        "name": "重擊斬斧 II",
+        "series": {
+            "zhTW": "駭骨素材"
+        },
+        "name": {
+            "zhTW": "重擊斬斧 II"
+        },
         "attack": 665,
         "criticalRate": 10,
         "defense": 10,
@@ -147,10 +167,15 @@
         "skills": null
     },
     {
+        "id": "土砂龍劍斧 III",
         "rare": 6,
         "type": "switchAxe",
-        "series": "土砂龍",
-        "name": "土砂龍劍斧 III",
+        "series": {
+            "zhTW": "土砂龍"
+        },
+        "name": {
+            "zhTW": "土砂龍劍斧 III"
+        },
         "attack": 735,
         "criticalRate": -20,
         "defense": 15,
@@ -186,10 +211,15 @@
         "skills": null
     },
     {
+        "id": "龍骨劍斧 III",
         "rare": 6,
         "type": "switchAxe",
-        "series": "龍骨",
-        "name": "龍骨劍斧 III",
+        "series": {
+            "zhTW": "龍骨"
+        },
+        "name": {
+            "zhTW": "龍骨劍斧 III"
+        },
         "attack": 560,
         "criticalRate": 0,
         "defense": 0,

@@ -1,9 +1,14 @@
 [
     {
+        "id": "燒滅種火",
         "rare": 8,
         "type": "gunlance",
-        "series": "滅盡龍",
-        "name": "燒滅種火",
+        "series": {
+            "zhTW": "滅盡龍"
+        },
+        "name": {
+            "zhTW": "燒滅種火"
+        },
         "attack": 483,
         "criticalRate": 0,
         "defense": 0,
@@ -38,10 +43,15 @@
         "skills": null
     },
     {
+        "id": "藍色戰車",
         "rare": 8,
         "type": "gunlance",
-        "series": "火龍",
-        "name": "藍色戰車",
+        "series": {
+            "zhTW": "火龍"
+        },
+        "name": {
+            "zhTW": "藍色戰車"
+        },
         "attack": 437,
         "criticalRate": 20,
         "defense": 0,
@@ -74,10 +84,15 @@
         "skills": null
     },
     {
+        "id": "驚天動地熔山龍銃槍",
         "rare": 8,
         "type": "gunlance",
-        "series": "熔山龍",
-        "name": "驚天動地熔山龍銃槍",
+        "series": {
+            "zhTW": "熔山龍"
+        },
+        "name": {
+            "zhTW": "驚天動地熔山龍銃槍"
+        },
         "attack": 460,
         "criticalRate": -10,
         "defense": 20,
@@ -106,10 +121,15 @@
         "skills": null
     },
     {
+        "id": "鋼龍爪銃槍",
         "rare": 8,
         "type": "gunlance",
-        "series": "黑鋼",
-        "name": "鋼龍爪銃槍",
+        "series": {
+            "zhTW": "黑鋼"
+        },
+        "name": {
+            "zhTW": "鋼龍爪銃槍"
+        },
         "attack": 414,
         "criticalRate": 10,
         "defense": 0,
@@ -142,10 +162,15 @@
         "skills": null
     },
     {
+        "id": "冥燈龍銃槍",
         "rare": 8,
         "type": "gunlance",
-        "series": "冥燈龍",
-        "name": "冥燈龍銃槍",
+        "series": {
+            "zhTW": "冥燈龍"
+        },
+        "name": {
+            "zhTW": "冥燈龍銃槍"
+        },
         "attack": 391,
         "criticalRate": 10,
         "defense": 0,
@@ -183,10 +208,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅銃槍．水",
         "rare": 8,
         "type": "gunlance",
-        "series": "絢輝龍",
-        "name": "鎧羅銃槍．水",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅銃槍．水"
+        },
         "attack": 437,
         "criticalRate": 0,
         "defense": 20,
@@ -219,10 +249,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅銃槍．睡眠",
         "rare": 8,
         "type": "gunlance",
-        "series": "絢輝龍",
-        "name": "鎧羅銃槍．睡眠",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅銃槍．睡眠"
+        },
         "attack": 437,
         "criticalRate": 0,
         "defense": 20,
@@ -255,10 +290,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅銃槍．毒",
         "rare": 8,
         "type": "gunlance",
-        "series": "絢輝龍",
-        "name": "鎧羅銃槍．毒",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅銃槍．毒"
+        },
         "attack": 460,
         "criticalRate": 15,
         "defense": 20,
@@ -291,10 +331,15 @@
         "skills": null
     },
     {
+        "id": "皇后杖．炎妃",
         "rare": 8,
         "type": "gunlance",
-        "series": "炎妃龍",
-        "name": "皇后杖．炎妃",
+        "series": {
+            "zhTW": "炎妃龍"
+        },
+        "name": {
+            "zhTW": "皇后杖．炎妃"
+        },
         "attack": 437,
         "criticalRate": 20,
         "defense": 0,
@@ -326,16 +371,21 @@
         ],
         "skills": [
             {
-                "name": "毅力",
+                "id": "毅力",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后杖．滅盡",
         "rare": 8,
         "type": "gunlance",
-        "series": "炎妃龍．滅盡",
-        "name": "皇后杖．滅盡",
+        "series": {
+            "zhTW": "炎妃龍．滅盡"
+        },
+        "name": {
+            "zhTW": "皇后杖．滅盡"
+        },
         "attack": 460,
         "criticalRate": 0,
         "defense": 0,
@@ -367,16 +417,21 @@
         ],
         "skills": [
             {
-                "name": "加速再生",
+                "id": "加速再生",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后杖．冥燈",
         "rare": 8,
         "type": "gunlance",
-        "series": "炎妃龍．冥燈",
-        "name": "皇后杖．冥燈",
+        "series": {
+            "zhTW": "炎妃龍．冥燈"
+        },
+        "name": {
+            "zhTW": "皇后杖．冥燈"
+        },
         "attack": 437,
         "criticalRate": 10,
         "defense": 0,
@@ -411,7 +466,7 @@
         ],
         "skills": [
             {
-                "name": "利刃／彈藥節約",
+                "id": "利刃／彈藥節約",
                 "level": 1
             }
         ]

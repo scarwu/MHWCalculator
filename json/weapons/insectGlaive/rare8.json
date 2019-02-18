@@ -1,9 +1,14 @@
 [
     {
+        "id": "撲滅導燈",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "滅盡龍",
-        "name": "撲滅導燈",
+        "series": {
+            "zhTW": "滅盡龍"
+        },
+        "name": {
+            "zhTW": "撲滅導燈"
+        },
         "attack": 651,
         "criticalRate": 0,
         "defense": 0,
@@ -38,10 +43,15 @@
         "skills": null
     },
     {
+        "id": "惡【VICE】",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "慘爪龍",
-        "name": "惡【VICE】",
+        "series": {
+            "zhTW": "慘爪龍"
+        },
+        "name": {
+            "zhTW": "惡【VICE】"
+        },
         "attack": 496,
         "criticalRate": 20,
         "defense": 0,
@@ -74,10 +84,15 @@
         "skills": null
     },
     {
+        "id": "碧綠神鳴",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "幻獸",
-        "name": "碧綠神鳴",
+        "series": {
+            "zhTW": "幻獸"
+        },
+        "name": {
+            "zhTW": "碧綠神鳴"
+        },
         "attack": 496,
         "criticalRate": 0,
         "defense": 0,
@@ -106,10 +121,15 @@
         "skills": null
     },
     {
+        "id": "冰體鋼龍棍",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "黑鋼",
-        "name": "冰體鋼龍棍",
+        "series": {
+            "zhTW": "黑鋼"
+        },
+        "name": {
+            "zhTW": "冰體鋼龍棍"
+        },
         "attack": 558,
         "criticalRate": 10,
         "defense": 0,
@@ -142,10 +162,15 @@
         "skills": null
     },
     {
+        "id": "冥燈龍長刀",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "冥燈龍",
-        "name": "冥燈龍長刀",
+        "series": {
+            "zhTW": "冥燈龍"
+        },
+        "name": {
+            "zhTW": "冥燈龍長刀"
+        },
         "attack": 558,
         "criticalRate": 15,
         "defense": 0,
@@ -183,10 +208,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅長刀．冰",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "絢輝龍",
-        "name": "鎧羅長刀．冰",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅長刀．冰"
+        },
         "attack": 527,
         "criticalRate": 0,
         "defense": 20,
@@ -219,10 +249,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅長刀．麻痺",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "絢輝龍",
-        "name": "鎧羅長刀．麻痺",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅長刀．麻痺"
+        },
         "attack": 620,
         "criticalRate": 0,
         "defense": 30,
@@ -255,10 +290,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅長刀．水",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "絢輝龍",
-        "name": "鎧羅長刀．水",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅長刀．水"
+        },
         "attack": 620,
         "criticalRate": 0,
         "defense": 20,
@@ -291,10 +331,15 @@
         "skills": null
     },
     {
+        "id": "皇后長鞭．炎妃",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "炎妃龍",
-        "name": "皇后長鞭．炎妃",
+        "series": {
+            "zhTW": "炎妃龍"
+        },
+        "name": {
+            "zhTW": "皇后長鞭．炎妃"
+        },
         "attack": 589,
         "criticalRate": 20,
         "defense": 0,
@@ -326,16 +371,21 @@
         ],
         "skills": [
             {
-                "name": "毅力",
+                "id": "毅力",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后長鞭．滅盡",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "炎妃龍．滅盡",
-        "name": "皇后長鞭．滅盡",
+        "series": {
+            "zhTW": "炎妃龍．滅盡"
+        },
+        "name": {
+            "zhTW": "皇后長鞭．滅盡"
+        },
         "attack": 620,
         "criticalRate": 0,
         "defense": 0,
@@ -367,16 +417,21 @@
         ],
         "skills": [
             {
-                "name": "加速再生",
+                "id": "加速再生",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后長鞭．冥燈",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "炎妃龍．冥燈",
-        "name": "皇后長鞭．冥燈",
+        "series": {
+            "zhTW": "炎妃龍．冥燈"
+        },
+        "name": {
+            "zhTW": "皇后長鞭．冥燈"
+        },
         "attack": 589,
         "criticalRate": 10,
         "defense": 0,
@@ -411,16 +466,21 @@
         ],
         "skills": [
             {
-                "name": "利刃／彈藥節約",
+                "id": "利刃／彈藥節約",
                 "level": 1
             }
         ]
     },
     {
+        "id": "穿心槍蓋博爾格．真",
         "rare": 8,
         "type": "insectGlaive",
-        "series": "蓋博爾格",
-        "name": "穿心槍蓋博爾格．真",
+        "series": {
+            "zhTW": "蓋博爾格"
+        },
+        "name": {
+            "zhTW": "穿心槍蓋博爾格．真"
+        },
         "attack": 589,
         "criticalRate": 20,
         "defense": 0,

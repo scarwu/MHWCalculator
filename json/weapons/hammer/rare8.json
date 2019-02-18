@@ -1,9 +1,14 @@
 [
     {
+        "id": "潰滅一擊",
         "rare": 8,
         "type": "hammer",
-        "series": "滅盡龍",
-        "name": "潰滅一擊",
+        "series": {
+            "zhTW": "滅盡龍"
+        },
+        "name": {
+            "zhTW": "潰滅一擊"
+        },
         "attack": 1092,
         "criticalRate": 0,
         "defense": 0,
@@ -38,10 +43,15 @@
         "skills": null
     },
     {
+        "id": "惡靈禍根",
         "rare": 8,
         "type": "hammer",
-        "series": "屍套龍",
-        "name": "惡靈禍根",
+        "series": {
+            "zhTW": "屍套龍"
+        },
+        "name": {
+            "zhTW": "惡靈禍根"
+        },
         "attack": 1040,
         "criticalRate": 0,
         "defense": 0,
@@ -76,10 +86,15 @@
         "skills": null
     },
     {
+        "id": "活火爆發熔山龍爆鎚",
         "rare": 8,
         "type": "hammer",
-        "series": "熔山龍",
-        "name": "活火爆發熔山龍爆鎚",
+        "series": {
+            "zhTW": "熔山龍"
+        },
+        "name": {
+            "zhTW": "活火爆發熔山龍爆鎚"
+        },
         "attack": 1144,
         "criticalRate": -20,
         "defense": 20,
@@ -112,10 +127,15 @@
         "skills": null
     },
     {
+        "id": "巨大鋼龍錘",
         "rare": 8,
         "type": "hammer",
-        "series": "黑鋼",
-        "name": "巨大鋼龍錘",
+        "series": {
+            "zhTW": "黑鋼"
+        },
+        "name": {
+            "zhTW": "巨大鋼龍錘"
+        },
         "attack": 1040,
         "criticalRate": 10,
         "defense": 0,
@@ -148,10 +168,15 @@
         "skills": null
     },
     {
+        "id": "冥燈龍大鎚",
         "rare": 8,
         "type": "hammer",
-        "series": "冥燈龍",
-        "name": "冥燈龍大鎚",
+        "series": {
+            "zhTW": "冥燈龍"
+        },
+        "name": {
+            "zhTW": "冥燈龍大鎚"
+        },
         "attack": 884,
         "criticalRate": 15,
         "defense": 0,
@@ -189,10 +214,15 @@
         "skills": null
     },
     {
+        "id": "電擊鎚",
         "rare": 8,
         "type": "hammer",
-        "series": "工房武器",
-        "name": "電擊鎚",
+        "series": {
+            "zhTW": "工房武器"
+        },
+        "name": {
+            "zhTW": "電擊鎚"
+        },
         "attack": 936,
         "criticalRate": 0,
         "defense": 20,
@@ -225,10 +255,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．冰",
         "rare": 8,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．冰",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．冰"
+        },
         "attack": 988,
         "criticalRate": 0,
         "defense": 20,
@@ -261,10 +296,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．雷",
         "rare": 8,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．雷",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．雷"
+        },
         "attack": 988,
         "criticalRate": 0,
         "defense": 30,
@@ -297,10 +337,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅大錘．水",
         "rare": 8,
         "type": "hammer",
-        "series": "絢輝龍",
-        "name": "鎧羅大錘．水",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．水"
+        },
         "attack": 988,
         "criticalRate": 0,
         "defense": 20,
@@ -333,10 +378,15 @@
         "skills": null
     },
     {
+        "id": "皇后鏈錘．炎妃",
         "rare": 8,
         "type": "hammer",
-        "series": "炎妃龍",
-        "name": "皇后鏈錘．炎妃",
+        "series": {
+            "zhTW": "炎妃龍"
+        },
+        "name": {
+            "zhTW": "皇后鏈錘．炎妃"
+        },
         "attack": 936,
         "criticalRate": 20,
         "defense": 0,
@@ -371,16 +421,21 @@
         ],
         "skills": [
             {
-                "name": "毅力",
+                "id": "毅力",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后鏈錘．滅盡",
         "rare": 8,
         "type": "hammer",
-        "series": "炎妃龍．滅盡",
-        "name": "皇后鏈錘．滅盡",
+        "series": {
+            "zhTW": "炎妃龍．滅盡"
+        },
+        "name": {
+            "zhTW": "皇后鏈錘．滅盡"
+        },
         "attack": 988,
         "criticalRate": 0,
         "defense": 0,
@@ -415,16 +470,21 @@
         ],
         "skills": [
             {
-                "name": "加速再生",
+                "id": "加速再生",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后鏈錘．冥燈",
         "rare": 8,
         "type": "hammer",
-        "series": "炎妃龍．冥燈",
-        "name": "皇后鏈錘．冥燈",
+        "series": {
+            "zhTW": "炎妃龍．冥燈"
+        },
+        "name": {
+            "zhTW": "皇后鏈錘．冥燈"
+        },
         "attack": 936,
         "criticalRate": 10,
         "defense": 0,
@@ -459,7 +519,7 @@
         ],
         "skills": [
             {
-                "name": "利刃／彈藥節約",
+                "id": "利刃／彈藥節約",
                 "level": 1
             }
         ]

@@ -1,9 +1,14 @@
 [
     {
+        "id": "風漂龍斧槍 II",
         "rare": 7,
         "type": "lance",
-        "series": "風漂龍",
-        "name": "風漂龍斧槍 II",
+        "series": {
+            "zhTW": "風漂龍"
+        },
+        "name": {
+            "zhTW": "風漂龍斧槍 II"
+        },
         "attack": 368,
         "criticalRate": 0,
         "defense": 0,
@@ -32,10 +37,15 @@
         "skills": null
     },
     {
+        "id": "岩賊龍刺針 II",
         "rare": 7,
         "type": "lance",
-        "series": "岩賊龍",
-        "name": "岩賊龍刺針 II",
+        "series": {
+            "zhTW": "岩賊龍"
+        },
+        "name": {
+            "zhTW": "岩賊龍刺針 II"
+        },
         "attack": 391,
         "criticalRate": 0,
         "defense": 0,
@@ -71,10 +81,15 @@
         "skills": null
     },
     {
+        "id": "慘爪刺針 II",
         "rare": 7,
         "type": "lance",
-        "series": "慘爪龍",
-        "name": "慘爪刺針 II",
+        "series": {
+            "zhTW": "慘爪龍"
+        },
+        "name": {
+            "zhTW": "慘爪刺針 II"
+        },
         "attack": 391,
         "criticalRate": 30,
         "defense": 0,
@@ -103,10 +118,15 @@
         "skills": null
     },
     {
+        "id": "亞特羅西斯塔",
         "rare": 7,
         "type": "lance",
-        "series": "恐暴龍",
-        "name": "亞特羅西斯塔",
+        "series": {
+            "zhTW": "恐暴龍"
+        },
+        "name": {
+            "zhTW": "亞特羅西斯塔"
+        },
         "attack": 529,
         "criticalRate": -25,
         "defense": 0,
@@ -137,10 +157,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅之尖．王",
         "rare": 7,
         "type": "lance",
-        "series": "絢輝龍",
-        "name": "鎧羅之尖．王",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅之尖．王"
+        },
         "attack": 368,
         "criticalRate": 0,
         "defense": 20,
@@ -159,10 +184,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅之尖．黑甲",
         "rare": 7,
         "type": "lance",
-        "series": "絢輝龍",
-        "name": "鎧羅之尖．黑甲",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅之尖．黑甲"
+        },
         "attack": 368,
         "criticalRate": 10,
         "defense": 20,
@@ -181,10 +211,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅之尖．風漂",
         "rare": 7,
         "type": "lance",
-        "series": "絢輝龍",
-        "name": "鎧羅之尖．風漂",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅之尖．風漂"
+        },
         "attack": 368,
         "criticalRate": 0,
         "defense": 20,
@@ -203,10 +238,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅之尖．岩賊",
         "rare": 7,
         "type": "lance",
-        "series": "絢輝龍",
-        "name": "鎧羅之尖．岩賊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅之尖．岩賊"
+        },
         "attack": 391,
         "criticalRate": 10,
         "defense": 20,
@@ -225,10 +265,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅之尖．屍套",
         "rare": 7,
         "type": "lance",
-        "series": "絢輝龍",
-        "name": "鎧羅之尖．屍套",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅之尖．屍套"
+        },
         "attack": 391,
         "criticalRate": 0,
         "defense": 20,
@@ -249,10 +294,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅之尖．毒妖",
         "rare": 7,
         "type": "lance",
-        "series": "絢輝龍",
-        "name": "鎧羅之尖．毒妖",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅之尖．毒妖"
+        },
         "attack": 391,
         "criticalRate": 0,
         "defense": 20,
@@ -275,10 +325,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅之尖．搔",
         "rare": 7,
         "type": "lance",
-        "series": "絢輝龍",
-        "name": "鎧羅之尖．搔",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅之尖．搔"
+        },
         "attack": 391,
         "criticalRate": 10,
         "defense": 20,
@@ -297,10 +352,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅之尖．慘爪",
         "rare": 7,
         "type": "lance",
-        "series": "絢輝龍",
-        "name": "鎧羅之尖．慘爪",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅之尖．慘爪"
+        },
         "attack": 437,
         "criticalRate": 30,
         "defense": 20,
@@ -329,10 +389,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅之尖．土砂",
         "rare": 7,
         "type": "lance",
-        "series": "絢輝龍",
-        "name": "鎧羅之尖．土砂",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅之尖．土砂"
+        },
         "attack": 437,
         "criticalRate": -20,
         "defense": 25,
@@ -351,10 +416,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅之尖．？",
         "rare": 7,
         "type": "lance",
-        "series": "絢輝龍",
-        "name": "鎧羅之尖．？",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅之尖．？"
+        },
         "attack": 0,
         "criticalRate": 0,
         "defense": 0,

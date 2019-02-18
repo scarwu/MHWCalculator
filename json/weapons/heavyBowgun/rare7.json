@@ -1,9 +1,14 @@
 [
     {
+        "id": "牙龍重弩【暴食】",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "大凶豺龍",
-        "name": "牙龍重弩【暴食】",
+        "series": {
+            "zhTW": "大凶豺龍"
+        },
+        "name": {
+            "zhTW": "牙龍重弩【暴食】"
+        },
         "attack": 270,
         "criticalRate": 0,
         "defense": 0,
@@ -21,10 +26,15 @@
         "skills": null
     },
     {
+        "id": "蠻顎重弩黑火砲",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "蠻顎龍",
-        "name": "蠻顎重弩黑火砲",
+        "series": {
+            "zhTW": "蠻顎龍"
+        },
+        "name": {
+            "zhTW": "蠻顎重弩黑火砲"
+        },
         "attack": 300,
         "criticalRate": -20,
         "defense": 0,
@@ -42,10 +52,15 @@
         "skills": null
     },
     {
+        "id": "岩賊龍砲 II",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "岩賊龍",
-        "name": "岩賊龍砲 II",
+        "series": {
+            "zhTW": "岩賊龍"
+        },
+        "name": {
+            "zhTW": "岩賊龍砲 II"
+        },
         "attack": 255,
         "criticalRate": 0,
         "defense": 0,
@@ -63,10 +78,15 @@
         "skills": null
     },
     {
+        "id": "熔山龍重弩槍 II",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "熔山龍",
-        "name": "熔山龍重弩槍 II",
+        "series": {
+            "zhTW": "熔山龍"
+        },
+        "name": {
+            "zhTW": "熔山龍重弩槍 II"
+        },
         "attack": 315,
         "criticalRate": -20,
         "defense": 20,
@@ -84,10 +104,15 @@
         "skills": null
     },
     {
+        "id": "黑暗左右",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "恐暴龍",
-        "name": "黑暗左右",
+        "series": {
+            "zhTW": "恐暴龍"
+        },
+        "name": {
+            "zhTW": "黑暗左右"
+        },
         "attack": 345,
         "criticalRate": -25,
         "defense": 0,
@@ -101,10 +126,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．眩",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．眩",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．眩"
+        },
         "attack": 255,
         "criticalRate": 10,
         "defense": 20,
@@ -118,10 +148,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．飛雷",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．飛雷",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．飛雷"
+        },
         "attack": 255,
         "criticalRate": 25,
         "defense": 20,
@@ -135,10 +170,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．賊",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．賊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．賊"
+        },
         "attack": 270,
         "criticalRate": 10,
         "defense": 20,
@@ -152,10 +192,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．毒妖",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．毒妖",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．毒妖"
+        },
         "attack": 270,
         "criticalRate": 0,
         "defense": 20,
@@ -169,10 +214,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．骨鎚",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．骨鎚",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．骨鎚"
+        },
         "attack": 270,
         "criticalRate": 0,
         "defense": 25,
@@ -186,10 +236,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．岩賊",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．岩賊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．岩賊"
+        },
         "attack": 285,
         "criticalRate": 0,
         "defense": 20,
@@ -203,10 +258,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．蠻顎",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．蠻顎",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．蠻顎"
+        },
         "attack": 300,
         "criticalRate": -10,
         "defense": 20,
@@ -220,10 +280,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．熔山",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．熔山",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．熔山"
+        },
         "attack": 315,
         "criticalRate": -10,
         "defense": 30,
@@ -237,10 +302,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．角",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．角",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．角"
+        },
         "attack": 330,
         "criticalRate": -10,
         "defense": 25,
@@ -254,10 +324,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅突擊弩．？",
         "rare": 7,
         "type": "heavyBowgun",
-        "series": "絢輝龍",
-        "name": "鎧羅突擊弩．？",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．？"
+        },
         "attack": 0,
         "criticalRate": 0,
         "defense": 0,

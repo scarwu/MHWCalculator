@@ -1,9 +1,14 @@
 [
     {
+        "id": "斷滅的一閃",
         "rare": 8,
         "type": "switchAxe",
-        "series": "滅盡龍",
-        "name": "斷滅的一閃",
+        "series": {
+            "zhTW": "滅盡龍"
+        },
+        "name": {
+            "zhTW": "斷滅的一閃"
+        },
         "attack": 700,
         "criticalRate": 0,
         "defense": 0,
@@ -38,10 +43,15 @@
         "skills": null
     },
     {
+        "id": "惡靈",
         "rare": 8,
         "type": "switchAxe",
-        "series": "角龍",
-        "name": "惡靈",
+        "series": {
+            "zhTW": "角龍"
+        },
+        "name": {
+            "zhTW": "惡靈"
+        },
         "attack": 805,
         "criticalRate": -30,
         "defense": 15,
@@ -74,10 +84,15 @@
         "skills": null
     },
     {
+        "id": "斷雷斧麒麟",
         "rare": 8,
         "type": "switchAxe",
-        "series": "幻獸",
-        "name": "斷雷斧麒麟",
+        "series": {
+            "zhTW": "幻獸"
+        },
+        "name": {
+            "zhTW": "斷雷斧麒麟"
+        },
         "attack": 560,
         "criticalRate": 0,
         "defense": 0,
@@ -106,10 +121,15 @@
         "skills": null
     },
     {
+        "id": "炎王城寨",
         "rare": 8,
         "type": "switchAxe",
-        "series": "黑鋼",
-        "name": "炎王城寨",
+        "series": {
+            "zhTW": "黑鋼"
+        },
+        "name": {
+            "zhTW": "炎王城寨"
+        },
         "attack": 665,
         "criticalRate": 0,
         "defense": 0,
@@ -138,10 +158,15 @@
         "skills": null
     },
     {
+        "id": "冥燈龍劍斧",
         "rare": 8,
         "type": "switchAxe",
-        "series": "冥燈龍",
-        "name": "冥燈龍劍斧",
+        "series": {
+            "zhTW": "冥燈龍"
+        },
+        "name": {
+            "zhTW": "冥燈龍劍斧"
+        },
         "attack": 595,
         "criticalRate": 15,
         "defense": 0,
@@ -179,10 +204,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．雷",
         "rare": 8,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．雷",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．雷"
+        },
         "attack": 560,
         "criticalRate": 10,
         "defense": 20,
@@ -215,10 +245,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．睡眠",
         "rare": 8,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．睡眠",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．睡眠"
+        },
         "attack": 665,
         "criticalRate": 0,
         "defense": 20,
@@ -251,10 +286,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍斧．麻痺",
         "rare": 8,
         "type": "switchAxe",
-        "series": "絢輝龍",
-        "name": "鎧羅劍斧．麻痺",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．麻痺"
+        },
         "attack": 735,
         "criticalRate": 0,
         "defense": 30,
@@ -287,10 +327,15 @@
         "skills": null
     },
     {
+        "id": "皇后斧．炎妃",
         "rare": 8,
         "type": "switchAxe",
-        "series": "炎妃龍",
-        "name": "皇后斧．炎妃",
+        "series": {
+            "zhTW": "炎妃龍"
+        },
+        "name": {
+            "zhTW": "皇后斧．炎妃"
+        },
         "attack": 630,
         "criticalRate": 20,
         "defense": 0,
@@ -325,16 +370,21 @@
         ],
         "skills": [
             {
-                "name": "毅力",
+                "id": "毅力",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后斧．滅盡",
         "rare": 8,
         "type": "switchAxe",
-        "series": "炎妃龍．滅盡",
-        "name": "皇后斧．滅盡",
+        "series": {
+            "zhTW": "炎妃龍．滅盡"
+        },
+        "name": {
+            "zhTW": "皇后斧．滅盡"
+        },
         "attack": 665,
         "criticalRate": 0,
         "defense": 0,
@@ -369,16 +419,21 @@
         ],
         "skills": [
             {
-                "name": "加速再生",
+                "id": "加速再生",
                 "level": 1
             }
         ]
     },
     {
+        "id": "皇后斧．冥燈",
         "rare": 8,
         "type": "switchAxe",
-        "series": "炎妃龍．冥燈",
-        "name": "皇后斧．冥燈",
+        "series": {
+            "zhTW": "炎妃龍．冥燈"
+        },
+        "name": {
+            "zhTW": "皇后斧．冥燈"
+        },
         "attack": 630,
         "criticalRate": 10,
         "defense": 0,
@@ -413,7 +468,7 @@
         ],
         "skills": [
             {
-                "name": "利刃／彈藥節約",
+                "id": "利刃／彈藥節約",
                 "level": 1
             }
         ]

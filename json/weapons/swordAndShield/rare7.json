@@ -1,9 +1,14 @@
 [
     {
+        "id": "日冕短劍",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "火龍",
-        "name": "日冕短劍",
+        "series": {
+            "zhTW": "火龍"
+        },
+        "name": {
+            "zhTW": "日冕短劍"
+        },
         "attack": 266,
         "criticalRate": 20,
         "defense": 0,
@@ -36,10 +41,15 @@
         "skills": null
     },
     {
+        "id": "至尊劍",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "工房武器",
-        "name": "至尊劍",
+        "series": {
+            "zhTW": "工房武器"
+        },
+        "name": {
+            "zhTW": "至尊劍"
+        },
         "attack": 280,
         "criticalRate": 0,
         "defense": 20,
@@ -72,10 +82,15 @@
         "skills": null
     },
     {
+        "id": "皇家薔薇",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "雌火龍",
-        "name": "皇家薔薇",
+        "series": {
+            "zhTW": "雌火龍"
+        },
+        "name": {
+            "zhTW": "皇家薔薇"
+        },
         "attack": 266,
         "criticalRate": 10,
         "defense": 0,
@@ -108,10 +123,15 @@
         "skills": null
     },
     {
+        "id": "蠻顎龍追尋者",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "蠻顎龍",
-        "name": "蠻顎龍追尋者",
+        "series": {
+            "zhTW": "蠻顎龍"
+        },
+        "name": {
+            "zhTW": "蠻顎龍追尋者"
+        },
         "attack": 294,
         "criticalRate": -20,
         "defense": 0,
@@ -140,10 +160,15 @@
         "skills": null
     },
     {
+        "id": "雷光刀 II",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "幻獸",
-        "name": "雷光刀 II",
+        "series": {
+            "zhTW": "幻獸"
+        },
+        "name": {
+            "zhTW": "雷光刀 II"
+        },
         "attack": 224,
         "criticalRate": 0,
         "defense": 0,
@@ -172,10 +197,15 @@
         "skills": null
     },
     {
+        "id": "致命寬劍",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "恐暴龍",
-        "name": "致命寬劍",
+        "series": {
+            "zhTW": "恐暴龍"
+        },
+        "name": {
+            "zhTW": "致命寬劍"
+        },
         "attack": 308,
         "criticalRate": -20,
         "defense": 0,
@@ -206,10 +236,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅切刀．幻",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "絢輝龍",
-        "name": "鎧羅切刀．幻",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅切刀．幻"
+        },
         "attack": 224,
         "criticalRate": 0,
         "defense": 20,
@@ -228,10 +263,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅切刀．痺賊",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "絢輝龍",
-        "name": "鎧羅切刀．痺賊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅切刀．痺賊"
+        },
         "attack": 224,
         "criticalRate": 30,
         "defense": 20,
@@ -250,10 +290,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅切刀．風漂",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "絢輝龍",
-        "name": "鎧羅切刀．風漂",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅切刀．風漂"
+        },
         "attack": 224,
         "criticalRate": 0,
         "defense": 20,
@@ -272,10 +317,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅切刀．浮空",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "絢輝龍",
-        "name": "鎧羅切刀．浮空",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅切刀．浮空"
+        },
         "attack": 252,
         "criticalRate": 0,
         "defense": 20,
@@ -294,10 +344,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅切刀．毒妖",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "絢輝龍",
-        "name": "鎧羅切刀．毒妖",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅切刀．毒妖"
+        },
         "attack": 252,
         "criticalRate": 0,
         "defense": 20,
@@ -320,10 +375,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅切刀．賊",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "絢輝龍",
-        "name": "鎧羅切刀．賊",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅切刀．賊"
+        },
         "attack": 266,
         "criticalRate": 0,
         "defense": 20,
@@ -342,10 +402,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅切刀．王",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "絢輝龍",
-        "name": "鎧羅切刀．王",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅切刀．王"
+        },
         "attack": 266,
         "criticalRate": 30,
         "defense": 20,
@@ -364,10 +429,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅切刀．骨鎚",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "絢輝龍",
-        "name": "鎧羅切刀．骨鎚",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅切刀．骨鎚"
+        },
         "attack": 266,
         "criticalRate": 10,
         "defense": 30,
@@ -386,10 +456,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅切刀．蠻顎",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "絢輝龍",
-        "name": "鎧羅切刀．蠻顎",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅切刀．蠻顎"
+        },
         "attack": 294,
         "criticalRate": -20,
         "defense": 20,
@@ -408,10 +483,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅切刀．土砂",
         "rare": 7,
         "type": "swordAndShield",
-        "series": "絢輝龍",
-        "name": "鎧羅切刀．土砂",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅切刀．土砂"
+        },
         "attack": 308,
         "criticalRate": -10,
         "defense": 25,

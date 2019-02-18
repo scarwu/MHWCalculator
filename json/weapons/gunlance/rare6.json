@@ -1,9 +1,14 @@
 [
     {
+        "id": "鉻鋼銃槍 II",
         "rare": 6,
         "type": "gunlance",
-        "series": "礦石素材",
-        "name": "鉻鋼銃槍 II",
+        "series": {
+            "zhTW": "礦石素材"
+        },
+        "name": {
+            "zhTW": "鉻鋼銃槍 II"
+        },
         "attack": 414,
         "criticalRate": 0,
         "defense": 0,
@@ -39,10 +44,15 @@
         "skills": null
     },
     {
+        "id": "泥岩龍銃槍 III",
         "rare": 6,
         "type": "gunlance",
-        "series": "泥魚龍",
-        "name": "泥岩龍銃槍 III",
+        "series": {
+            "zhTW": "泥魚龍"
+        },
+        "name": {
+            "zhTW": "泥岩龍銃槍 III"
+        },
         "attack": 437,
         "criticalRate": 0,
         "defense": 0,
@@ -75,10 +85,15 @@
         "skills": null
     },
     {
+        "id": "大骨銃槍【龍尾】 II",
         "rare": 6,
         "type": "gunlance",
-        "series": "駭骨素材",
-        "name": "大骨銃槍【龍尾】 II",
+        "series": {
+            "zhTW": "駭骨素材"
+        },
+        "name": {
+            "zhTW": "大骨銃槍【龍尾】 II"
+        },
         "attack": 437,
         "criticalRate": 0,
         "defense": 10,
@@ -111,10 +126,15 @@
         "skills": null
     },
     {
+        "id": "牙龍銃槍【大喰】 III",
         "rare": 6,
         "type": "gunlance",
-        "series": "大凶豺龍",
-        "name": "牙龍銃槍【大喰】 III",
+        "series": {
+            "zhTW": "大凶豺龍"
+        },
+        "name": {
+            "zhTW": "牙龍銃槍【大喰】 III"
+        },
         "attack": 437,
         "criticalRate": 0,
         "defense": 0,
@@ -150,10 +170,15 @@
         "skills": null
     },
     {
+        "id": "牙龍銃槍【黑頭巾】 III",
         "rare": 6,
         "type": "gunlance",
-        "series": "大凶顎龍",
-        "name": "牙龍銃槍【黑頭巾】 III",
+        "series": {
+            "zhTW": "大凶顎龍"
+        },
+        "name": {
+            "zhTW": "牙龍銃槍【黑頭巾】 III"
+        },
         "attack": 368,
         "criticalRate": 10,
         "defense": 0,
@@ -182,10 +207,15 @@
         "skills": null
     },
     {
+        "id": "土砂龍破壞砲 III",
         "rare": 6,
         "type": "gunlance",
-        "series": "土砂龍",
-        "name": "土砂龍破壞砲 III",
+        "series": {
+            "zhTW": "土砂龍"
+        },
+        "name": {
+            "zhTW": "土砂龍破壞砲 III"
+        },
         "attack": 460,
         "criticalRate": -10,
         "defense": 15,
@@ -214,10 +244,15 @@
         "skills": null
     },
     {
+        "id": "蠻顎龍加農砲 III",
         "rare": 6,
         "type": "gunlance",
-        "series": "蠻顎龍",
-        "name": "蠻顎龍加農砲 III",
+        "series": {
+            "zhTW": "蠻顎龍"
+        },
+        "name": {
+            "zhTW": "蠻顎龍加農砲 III"
+        },
         "attack": 483,
         "criticalRate": -20,
         "defense": 0,
@@ -246,10 +281,15 @@
         "skills": null
     },
     {
+        "id": "龍骨銃槍 III",
         "rare": 6,
         "type": "gunlance",
-        "series": "龍骨",
-        "name": "龍骨銃槍 III",
+        "series": {
+            "zhTW": "龍骨"
+        },
+        "name": {
+            "zhTW": "龍骨銃槍 III"
+        },
         "attack": 368,
         "criticalRate": 0,
         "defense": 0,

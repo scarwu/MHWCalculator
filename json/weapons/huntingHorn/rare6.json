@@ -1,9 +1,14 @@
 [
     {
+        "id": "威猛風笛 II",
         "rare": 6,
         "type": "huntingHorn",
-        "series": "礦石素材",
-        "name": "威猛風笛 II",
+        "series": {
+            "zhTW": "礦石素材"
+        },
+        "name": {
+            "zhTW": "威猛風笛 II"
+        },
         "attack": 756,
         "criticalRate": 0,
         "defense": 0,
@@ -39,10 +44,15 @@
         "skills": null
     },
     {
+        "id": "雷鼓 III",
         "rare": 6,
         "type": "huntingHorn",
-        "series": "雷屬性",
-        "name": "雷鼓 III",
+        "series": {
+            "zhTW": "雷屬性"
+        },
+        "name": {
+            "zhTW": "雷鼓 III"
+        },
         "attack": 756,
         "criticalRate": 0,
         "defense": 0,
@@ -75,10 +85,15 @@
         "skills": null
     },
     {
+        "id": "星空皮鼓 III",
         "rare": 6,
         "type": "huntingHorn",
-        "series": "搔鳥",
-        "name": "星空皮鼓 III",
+        "series": {
+            "zhTW": "搔鳥"
+        },
+        "name": {
+            "zhTW": "星空皮鼓 III"
+        },
         "attack": 714,
         "criticalRate": 25,
         "defense": 0,
@@ -107,10 +122,15 @@
         "skills": null
     },
     {
+        "id": "激流銅鑼 III",
         "rare": 6,
         "type": "huntingHorn",
-        "series": "水屬性",
-        "name": "激流銅鑼 III",
+        "series": {
+            "zhTW": "水屬性"
+        },
+        "name": {
+            "zhTW": "激流銅鑼 III"
+        },
         "attack": 756,
         "criticalRate": 0,
         "defense": 0,
@@ -143,10 +163,15 @@
         "skills": null
     },
     {
+        "id": "堅骨號角 II",
         "rare": 6,
         "type": "huntingHorn",
-        "series": "駭骨素材",
-        "name": "堅骨號角 II",
+        "series": {
+            "zhTW": "駭骨素材"
+        },
+        "name": {
+            "zhTW": "堅骨號角 II"
+        },
         "attack": 798,
         "criticalRate": 0,
         "defense": 10,
@@ -179,10 +204,15 @@
         "skills": null
     },
     {
+        "id": "蠻顎龍長號 III",
         "rare": 6,
         "type": "huntingHorn",
-        "series": "蠻顎龍",
-        "name": "蠻顎龍長號 III",
+        "series": {
+            "zhTW": "蠻顎龍"
+        },
+        "name": {
+            "zhTW": "蠻顎龍長號 III"
+        },
         "attack": 882,
         "criticalRate": -20,
         "defense": 0,
@@ -211,10 +241,15 @@
         "skills": null
     },
     {
+        "id": "曼陀羅號角 III",
         "rare": 6,
         "type": "huntingHorn",
-        "series": "毒妖鳥",
-        "name": "曼陀羅號角 III",
+        "series": {
+            "zhTW": "毒妖鳥"
+        },
+        "name": {
+            "zhTW": "曼陀羅號角 III"
+        },
         "attack": 714,
         "criticalRate": 0,
         "defense": 0,
@@ -250,10 +285,15 @@
         "skills": null
     },
     {
+        "id": "浮空龍長號 III",
         "rare": 6,
         "type": "huntingHorn",
-        "series": "浮空龍",
-        "name": "浮空龍長號 III",
+        "series": {
+            "zhTW": "浮空龍"
+        },
+        "name": {
+            "zhTW": "浮空龍長號 III"
+        },
         "attack": 714,
         "criticalRate": 10,
         "defense": 0,
@@ -289,10 +329,15 @@
         "skills": null
     },
     {
+        "id": "骨鎚龍號角 III",
         "rare": 6,
         "type": "huntingHorn",
-        "series": "骨鎚龍",
-        "name": "骨鎚龍號角 III",
+        "series": {
+            "zhTW": "骨鎚龍"
+        },
+        "name": {
+            "zhTW": "骨鎚龍號角 III"
+        },
         "attack": 798,
         "criticalRate": 0,
         "defense": 20,
@@ -321,10 +366,15 @@
         "skills": null
     },
     {
+        "id": "龍骨古笛 III",
         "rare": 6,
         "type": "huntingHorn",
-        "series": "龍骨",
-        "name": "龍骨古笛 III",
+        "series": {
+            "zhTW": "龍骨"
+        },
+        "name": {
+            "zhTW": "龍骨古笛 III"
+        },
         "attack": 672,
         "criticalRate": 0,
         "defense": 0,

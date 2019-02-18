@@ -1,9 +1,14 @@
 [
     {
+        "id": "神聖佩劍",
         "rare": 7,
         "type": "dualBlades",
-        "series": "工房武器",
-        "name": "神聖佩劍",
+        "series": {
+            "zhTW": "工房武器"
+        },
+        "name": {
+            "zhTW": "神聖佩劍"
+        },
         "attack": 252,
         "criticalRate": 0,
         "defense": 0,
@@ -36,10 +41,15 @@
         "skills": null
     },
     {
+        "id": "蠻顎龍颶風 III",
         "rare": 7,
         "type": "dualBlades",
-        "series": "蠻顎龍",
-        "name": "蠻顎龍颶風 III",
+        "series": {
+            "zhTW": "蠻顎龍"
+        },
+        "name": {
+            "zhTW": "蠻顎龍颶風 III"
+        },
         "attack": 294,
         "criticalRate": -20,
         "defense": 0,
@@ -68,10 +78,15 @@
         "skills": null
     },
     {
+        "id": "爆鎚棍棒 II",
         "rare": 7,
         "type": "dualBlades",
-        "series": "角龍",
-        "name": "爆鎚棍棒 II",
+        "series": {
+            "zhTW": "角龍"
+        },
+        "name": {
+            "zhTW": "爆鎚棍棒 II"
+        },
         "attack": 322,
         "criticalRate": -10,
         "defense": 15,
@@ -104,10 +119,15 @@
         "skills": null
     },
     {
+        "id": "溶岩颶風 II",
         "rare": 7,
         "type": "dualBlades",
-        "series": "溶岩龍",
-        "name": "溶岩颶風 II",
+        "series": {
+            "zhTW": "溶岩龍"
+        },
+        "name": {
+            "zhTW": "溶岩颶風 II"
+        },
         "attack": 252,
         "criticalRate": 0,
         "defense": 0,
@@ -143,10 +163,15 @@
         "skills": null
     },
     {
+        "id": "封龍劍【超絕一門】",
         "rare": 7,
         "type": "dualBlades",
-        "series": "龍骨",
-        "name": "封龍劍【超絕一門】",
+        "series": {
+            "zhTW": "龍骨"
+        },
+        "name": {
+            "zhTW": "封龍劍【超絕一門】"
+        },
         "attack": 196,
         "criticalRate": 0,
         "defense": 0,
@@ -184,10 +209,15 @@
         "skills": null
     },
     {
+        "id": "熔山龍鉤爪 II",
         "rare": 7,
         "type": "dualBlades",
-        "series": "熔山龍",
-        "name": "熔山龍鉤爪 II",
+        "series": {
+            "zhTW": "熔山龍"
+        },
+        "name": {
+            "zhTW": "熔山龍鉤爪 II"
+        },
         "attack": 308,
         "criticalRate": -20,
         "defense": 20,
@@ -220,10 +250,15 @@
         "skills": null
     },
     {
+        "id": "憤怒捕食者",
         "rare": 7,
         "type": "dualBlades",
-        "series": "恐暴龍",
-        "name": "憤怒捕食者",
+        "series": {
+            "zhTW": "恐暴龍"
+        },
+        "name": {
+            "zhTW": "憤怒捕食者"
+        },
         "attack": 308,
         "criticalRate": -20,
         "defense": 0,
@@ -254,10 +289,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅小刀．黑甲",
         "rare": 7,
         "type": "dualBlades",
-        "series": "絢輝龍",
-        "name": "鎧羅小刀．黑甲",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅小刀．黑甲"
+        },
         "attack": 238,
         "criticalRate": 0,
         "defense": 20,
@@ -276,10 +316,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅小刀．搔",
         "rare": 7,
         "type": "dualBlades",
-        "series": "絢輝龍",
-        "name": "鎧羅小刀．搔",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅小刀．搔"
+        },
         "attack": 238,
         "criticalRate": 20,
         "defense": 20,
@@ -298,10 +343,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅小刀．慘爪",
         "rare": 7,
         "type": "dualBlades",
-        "series": "絢輝龍",
-        "name": "鎧羅小刀．慘爪",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅小刀．慘爪"
+        },
         "attack": 252,
         "criticalRate": 20,
         "defense": 20,
@@ -320,10 +370,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅小刀．熔岩",
         "rare": 7,
         "type": "dualBlades",
-        "series": "絢輝龍",
-        "name": "鎧羅小刀．熔岩",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅小刀．熔岩"
+        },
         "attack": 266,
         "criticalRate": 0,
         "defense": 20,
@@ -346,10 +401,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅小刀．眩",
         "rare": 7,
         "type": "dualBlades",
-        "series": "絢輝龍",
-        "name": "鎧羅小刀．眩",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅小刀．眩"
+        },
         "attack": 266,
         "criticalRate": 0,
         "defense": 20,
@@ -368,10 +428,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅小刀．泥魚",
         "rare": 7,
         "type": "dualBlades",
-        "series": "絢輝龍",
-        "name": "鎧羅小刀．泥魚",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅小刀．泥魚"
+        },
         "attack": 266,
         "criticalRate": 10,
         "defense": 20,
@@ -390,10 +455,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅小刀．熔山",
         "rare": 7,
         "type": "dualBlades",
-        "series": "絢輝龍",
-        "name": "鎧羅小刀．熔山",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅小刀．熔山"
+        },
         "attack": 280,
         "criticalRate": -20,
         "defense": 30,
@@ -412,10 +482,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅小刀．蠻顎",
         "rare": 7,
         "type": "dualBlades",
-        "series": "絢輝龍",
-        "name": "鎧羅小刀．蠻顎",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅小刀．蠻顎"
+        },
         "attack": 294,
         "criticalRate": -20,
         "defense": 20,
@@ -434,10 +509,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅小刀．角",
         "rare": 7,
         "type": "dualBlades",
-        "series": "絢輝龍",
-        "name": "鎧羅小刀．角",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅小刀．角"
+        },
         "attack": 322,
         "criticalRate": -10,
         "defense": 25,
@@ -456,10 +536,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅小刀．飛雷",
         "rare": 7,
         "type": "dualBlades",
-        "series": "絢輝龍",
-        "name": "鎧羅小刀．飛雷",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅小刀．飛雷"
+        },
         "attack": 252,
         "criticalRate": 10,
         "defense": 20,

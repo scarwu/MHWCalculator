@@ -3,7 +3,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "火龍魂α",
+            "series": {
+                "zhTW": "火龍魂α"
+            },
             "defense": 82,
             "resistance": {
                 "fire": 3,
@@ -13,28 +15,34 @@
                 "dragon": -4
             },
             "set": {
-                "name": "火龍奧秘"
+                "id": "火龍奧秘"
             }
         },
         "list": [
             {
+                "id": "火龍魂頭盔α",
                 "type": "helm",
-                "name": "火龍魂頭盔α",
+                "name": {
+                    "zhTW": "火龍魂頭盔α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "超會心",
+                        "id": "超會心",
                         "level": 1
                     },
                     {
-                        "name": "威嚇",
+                        "id": "威嚇",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "火龍魂鎧甲α",
                 "type": "chest",
-                "name": "火龍魂鎧甲α",
+                "name": {
+                    "zhTW": "火龍魂鎧甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -42,18 +50,21 @@
                 ],
                 "skills": [
                     {
-                        "name": "屬性解放／裝填擴充",
+                        "id": "屬性解放／裝填擴充",
                         "level": 1
                     },
                     {
-                        "name": "威嚇",
+                        "id": "威嚇",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "火龍魂腕甲α",
                 "type": "arm",
-                "name": "火龍魂腕甲α",
+                "name": {
+                    "zhTW": "火龍魂腕甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -61,41 +72,47 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 1
                     },
                     {
-                        "name": "風壓耐性",
+                        "id": "風壓耐性",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "火龍魂腰甲α",
                 "type": "waist",
-                "name": "火龍魂腰甲α",
+                "name": {
+                    "zhTW": "火龍魂腰甲α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "風壓耐性",
+                        "id": "風壓耐性",
                         "level": 2
                     },
                     {
-                        "name": "貫通彈・龍之箭強化",
+                        "id": "貫通彈・龍之箭強化",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "火龍魂護腿α",
                 "type": "leg",
-                "name": "火龍魂護腿α",
+                "name": {
+                    "zhTW": "火龍魂護腿α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 1
                     },
                     {
-                        "name": "攀岩者",
+                        "id": "攀岩者",
                         "level": 1
                     }
                 ]
@@ -106,7 +123,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "火龍魂β",
+            "series": {
+                "zhTW": "火龍魂β"
+            },
             "defense": 82,
             "resistance": {
                 "fire": 3,
@@ -116,13 +135,16 @@
                 "dragon": -4
             },
             "set": {
-                "name": "火龍奧秘"
+                "id": "火龍奧秘"
             }
         },
         "list": [
             {
+                "id": "火龍魂頭盔β",
                 "type": "helm",
-                "name": "火龍魂頭盔β",
+                "name": {
+                    "zhTW": "火龍魂頭盔β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -133,14 +155,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "超會心",
+                        "id": "超會心",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "火龍魂鎧甲β",
                 "type": "chest",
-                "name": "火龍魂鎧甲β",
+                "name": {
+                    "zhTW": "火龍魂鎧甲β"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -148,14 +173,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "屬性解放／裝填擴充",
+                        "id": "屬性解放／裝填擴充",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "火龍魂腕甲β",
                 "type": "arm",
-                "name": "火龍魂腕甲β",
+                "name": {
+                    "zhTW": "火龍魂腕甲β"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -163,14 +191,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "火龍魂腰甲β",
                 "type": "waist",
-                "name": "火龍魂腰甲β",
+                "name": {
+                    "zhTW": "火龍魂腰甲β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -178,14 +209,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "風壓耐性",
+                        "id": "風壓耐性",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "火龍魂護腿β",
                 "type": "leg",
-                "name": "火龍魂護腿β",
+                "name": {
+                    "zhTW": "火龍魂護腿β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -193,7 +227,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 1
                     }
                 ]
@@ -204,7 +238,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "骷髏α",
+            "series": {
+                "zhTW": "骷髏α"
+            },
             "defense": 90,
             "resistance": {
                 "fire": -3,
@@ -217,8 +253,11 @@
         },
         "list": [
             {
+                "id": "骷髏面罩α",
                 "type": "helm",
-                "name": "骷髏面罩α",
+                "name": {
+                    "zhTW": "骷髏面罩α"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -226,7 +265,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "匠",
+                        "id": "匠",
                         "level": 1
                     }
                 ]
@@ -237,7 +276,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "杜賓α",
+            "series": {
+                "zhTW": "杜賓α"
+            },
             "defense": 86,
             "resistance": {
                 "fire": -2,
@@ -250,23 +291,29 @@
         },
         "list": [
             {
+                "id": "杜賓頭盔α",
                 "type": "helm",
-                "name": "杜賓頭盔α",
+                "name": {
+                    "zhTW": "杜賓頭盔α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "屬性解放／裝填擴充",
+                        "id": "屬性解放／裝填擴充",
                         "level": 1
                     },
                     {
-                        "name": "龍耐性",
+                        "id": "龍耐性",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "杜賓鎧甲α",
                 "type": "chest",
-                "name": "杜賓鎧甲α",
+                "name": {
+                    "zhTW": "杜賓鎧甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -274,33 +321,39 @@
                 ],
                 "skills": [
                     {
-                        "name": "攻擊",
+                        "id": "攻擊",
                         "level": 2
                     },
                     {
-                        "name": "最愛菇類",
+                        "id": "最愛菇類",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "杜賓腕甲α",
                 "type": "arm",
-                "name": "杜賓腕甲α",
+                "name": {
+                    "zhTW": "杜賓腕甲α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "耐力急速回復",
+                        "id": "耐力急速回復",
                         "level": 2
                     },
                     {
-                        "name": "最愛菇類",
+                        "id": "最愛菇類",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "杜賓腰甲α",
                 "type": "waist",
-                "name": "杜賓腰甲α",
+                "name": {
+                    "zhTW": "杜賓腰甲α"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -308,26 +361,29 @@
                 ],
                 "skills": [
                     {
-                        "name": "龍耐性",
+                        "id": "龍耐性",
                         "level": 2
                     },
                     {
-                        "name": "攻擊",
+                        "id": "攻擊",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "杜賓護腿α",
                 "type": "leg",
-                "name": "杜賓護腿α",
+                "name": {
+                    "zhTW": "杜賓護腿α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "攻擊",
+                        "id": "攻擊",
                         "level": 2
                     },
                     {
-                        "name": "耐力急速回復",
+                        "id": "耐力急速回復",
                         "level": 1
                     }
                 ]
@@ -338,7 +394,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "杜賓β",
+            "series": {
+                "zhTW": "杜賓β"
+            },
             "defense": 86,
             "resistance": {
                 "fire": -2,
@@ -351,8 +409,11 @@
         },
         "list": [
             {
+                "id": "杜賓頭盔β",
                 "type": "helm",
-                "name": "杜賓頭盔β",
+                "name": {
+                    "zhTW": "杜賓頭盔β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -360,14 +421,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "屬性解放／裝填擴充",
+                        "id": "屬性解放／裝填擴充",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "杜賓鎧甲β",
                 "type": "chest",
-                "name": "杜賓鎧甲β",
+                "name": {
+                    "zhTW": "杜賓鎧甲β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -375,14 +439,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "攻擊",
+                        "id": "攻擊",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "杜賓腕甲β",
                 "type": "arm",
-                "name": "杜賓腕甲β",
+                "name": {
+                    "zhTW": "杜賓腕甲β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -393,18 +460,21 @@
                 ],
                 "skills": [
                     {
-                        "name": "耐力急速回復",
+                        "id": "耐力急速回復",
                         "level": 1
                     },
                     {
-                        "name": "最愛菇類",
+                        "id": "最愛菇類",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "杜賓腰甲β",
                 "type": "waist",
-                "name": "杜賓腰甲β",
+                "name": {
+                    "zhTW": "杜賓腰甲β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -412,14 +482,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "龍耐性",
+                        "id": "龍耐性",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "杜賓護腿β",
                 "type": "leg",
-                "name": "杜賓護腿β",
+                "name": {
+                    "zhTW": "杜賓護腿β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -427,7 +500,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "攻擊",
+                        "id": "攻擊",
                         "level": 2
                     }
                 ]
@@ -438,7 +511,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "爆鎚龍α",
+            "series": {
+                "zhTW": "爆鎚龍α"
+            },
             "defense": 86,
             "resistance": {
                 "fire": 4,
@@ -448,13 +523,16 @@
                 "dragon": -2
             },
             "set": {
-                "name": "爆鎚龍的守護"
+                "id": "爆鎚龍的守護"
             }
         },
         "list": [
             {
+                "id": "爆鎚龍頭盔α",
                 "type": "helm",
-                "name": "爆鎚龍頭盔α",
+                "name": {
+                    "zhTW": "爆鎚龍頭盔α"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -462,14 +540,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "雷耐性",
+                        "id": "雷耐性",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "爆鎚龍鎧甲α",
                 "type": "chest",
-                "name": "爆鎚龍鎧甲α",
+                "name": {
+                    "zhTW": "爆鎚龍鎧甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -477,14 +558,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "破壞王",
+                        "id": "破壞王",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "爆鎚龍腕甲α",
                 "type": "arm",
-                "name": "爆鎚龍腕甲α",
+                "name": {
+                    "zhTW": "爆鎚龍腕甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -492,18 +576,21 @@
                 ],
                 "skills": [
                     {
-                        "name": "防禦性能",
+                        "id": "防禦性能",
                         "level": 1
                     },
                     {
-                        "name": "防禦",
+                        "id": "防禦",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "爆鎚龍腰甲α",
                 "type": "waist",
-                "name": "爆鎚龍腰甲α",
+                "name": {
+                    "zhTW": "爆鎚龍腰甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -514,18 +601,21 @@
                 ],
                 "skills": [
                     {
-                        "name": "破壞王",
+                        "id": "破壞王",
                         "level": 1
                     },
                     {
-                        "name": "雷耐性",
+                        "id": "雷耐性",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "爆鎚龍護腿α",
                 "type": "leg",
-                "name": "爆鎚龍護腿α",
+                "name": {
+                    "zhTW": "爆鎚龍護腿α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -533,7 +623,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "防禦性能",
+                        "id": "防禦性能",
                         "level": 2
                     }
                 ]
@@ -544,7 +634,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "爆鎚龍β",
+            "series": {
+                "zhTW": "爆鎚龍β"
+            },
             "defense": 86,
             "resistance": {
                 "fire": 4,
@@ -554,13 +646,16 @@
                 "dragon": -2
             },
             "set": {
-                "name": "爆鎚龍的守護"
+                "id": "爆鎚龍的守護"
             }
         },
         "list": [
             {
+                "id": "爆鎚龍頭盔β",
                 "type": "helm",
-                "name": "爆鎚龍頭盔β",
+                "name": {
+                    "zhTW": "爆鎚龍頭盔β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -571,14 +666,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "雷耐性",
+                        "id": "雷耐性",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "爆鎚龍鎧甲β",
                 "type": "chest",
-                "name": "爆鎚龍鎧甲β",
+                "name": {
+                    "zhTW": "爆鎚龍鎧甲β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -586,14 +684,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "破壞王",
+                        "id": "破壞王",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "爆鎚龍腕甲β",
                 "type": "arm",
-                "name": "爆鎚龍腕甲β",
+                "name": {
+                    "zhTW": "爆鎚龍腕甲β"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -601,14 +702,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "防禦性能",
+                        "id": "防禦性能",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "爆鎚龍腰甲β",
                 "type": "waist",
-                "name": "爆鎚龍腰甲β",
+                "name": {
+                    "zhTW": "爆鎚龍腰甲β"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -619,14 +723,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "破壞王",
+                        "id": "破壞王",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "爆鎚龍護腿β",
                 "type": "leg",
-                "name": "爆鎚龍護腿β",
+                "name": {
+                    "zhTW": "爆鎚龍護腿β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -634,7 +741,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "防禦性能",
+                        "id": "防禦性能",
                         "level": 1
                     }
                 ]
@@ -645,7 +752,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "大馬士革α",
+            "series": {
+                "zhTW": "大馬士革α"
+            },
             "defense": 86,
             "resistance": {
                 "fire": 4,
@@ -658,8 +767,11 @@
         },
         "list": [
             {
+                "id": "大馬士革頭盔α",
                 "type": "helm",
-                "name": "大馬士革頭盔α",
+                "name": {
+                    "zhTW": "大馬士革頭盔α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -667,18 +779,21 @@
                 ],
                 "skills": [
                     {
-                        "name": "防禦",
+                        "id": "防禦",
                         "level": 2
                     },
                     {
-                        "name": "砥石使用高速化",
+                        "id": "砥石使用高速化",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "大馬士革鎧甲α",
                 "type": "chest",
-                "name": "大馬士革鎧甲α",
+                "name": {
+                    "zhTW": "大馬士革鎧甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -686,33 +801,39 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 2
                     },
                     {
-                        "name": "防禦",
+                        "id": "防禦",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "大馬士革腕甲α",
                 "type": "arm",
-                "name": "大馬士革腕甲α",
+                "name": {
+                    "zhTW": "大馬士革腕甲α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "匠",
+                        "id": "匠",
                         "level": 1
                     },
                     {
-                        "name": "砥石使用高速化",
+                        "id": "砥石使用高速化",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "大馬士革腰甲α",
                 "type": "waist",
-                "name": "大馬士革腰甲α",
+                "name": {
+                    "zhTW": "大馬士革腰甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -720,18 +841,21 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 1
                     },
                     {
-                        "name": "防御力DOWN耐性",
+                        "id": "防御力DOWN耐性",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "大馬士革護腿α",
                 "type": "leg",
-                "name": "大馬士革護腿α",
+                "name": {
+                    "zhTW": "大馬士革護腿α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -739,11 +863,11 @@
                 ],
                 "skills": [
                     {
-                        "name": "防禦",
+                        "id": "防禦",
                         "level": 2
                     },
                     {
-                        "name": "防御力DOWN耐性",
+                        "id": "防御力DOWN耐性",
                         "level": 1
                     }
                 ]
@@ -754,7 +878,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "大馬士革β",
+            "series": {
+                "zhTW": "大馬士革β"
+            },
             "defense": 86,
             "resistance": {
                 "fire": 4,
@@ -767,8 +893,11 @@
         },
         "list": [
             {
+                "id": "大馬士革頭盔β",
                 "type": "helm",
-                "name": "大馬士革頭盔β",
+                "name": {
+                    "zhTW": "大馬士革頭盔β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -776,14 +905,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "防禦",
+                        "id": "防禦",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "大馬士革鎧甲β",
                 "type": "chest",
-                "name": "大馬士革鎧甲β",
+                "name": {
+                    "zhTW": "大馬士革鎧甲β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -797,14 +929,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "大馬士革腕甲β",
                 "type": "arm",
-                "name": "大馬士革腕甲β",
+                "name": {
+                    "zhTW": "大馬士革腕甲β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -812,14 +947,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "匠",
+                        "id": "匠",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "大馬士革腰甲β",
                 "type": "waist",
-                "name": "大馬士革腰甲β",
+                "name": {
+                    "zhTW": "大馬士革腰甲β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -833,14 +971,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "大馬士革護腿β",
                 "type": "leg",
-                "name": "大馬士革護腿β",
+                "name": {
+                    "zhTW": "大馬士革護腿β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -848,7 +989,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "防禦",
+                        "id": "防禦",
                         "level": 2
                     }
                 ]
@@ -859,7 +1000,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "暴君角龍α",
+            "series": {
+                "zhTW": "暴君角龍α"
+            },
             "defense": 82,
             "resistance": {
                 "fire": 2,
@@ -869,13 +1012,16 @@
                 "dragon": 2
             },
             "set": {
-                "name": "角龍之奧秘"
+                "id": "角龍之奧秘"
             }
         },
         "list": [
             {
+                "id": "暴君角龍頭盔α",
                 "type": "helm",
-                "name": "暴君角龍頭盔α",
+                "name": {
+                    "zhTW": "暴君角龍頭盔α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -883,14 +1029,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "暴君角龍鎧甲α",
                 "type": "chest",
-                "name": "暴君角龍鎧甲α",
+                "name": {
+                    "zhTW": "暴君角龍鎧甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -898,44 +1047,53 @@
                 ],
                 "skills": [
                     {
-                        "name": "怨恨",
+                        "id": "怨恨",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "暴君角龍腕甲α",
                 "type": "arm",
-                "name": "暴君角龍腕甲α",
+                "name": {
+                    "zhTW": "暴君角龍腕甲α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 1
                     },
                     {
-                        "name": "跑者",
+                        "id": "跑者",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "暴君角龍腰甲α",
                 "type": "waist",
-                "name": "暴君角龍腰甲α",
+                "name": {
+                    "zhTW": "暴君角龍腰甲α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "怨恨",
+                        "id": "怨恨",
                         "level": 1
                     },
                     {
-                        "name": "破壞王",
+                        "id": "破壞王",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "暴君角龍護腿α",
                 "type": "leg",
-                "name": "暴君角龍護腿α",
+                "name": {
+                    "zhTW": "暴君角龍護腿α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -943,11 +1101,11 @@
                 ],
                 "skills": [
                     {
-                        "name": "通常彈・通常箭強化",
+                        "id": "通常彈・通常箭強化",
                         "level": 1
                     },
                     {
-                        "name": "火場怪力",
+                        "id": "火場怪力",
                         "level": 1
                     }
                 ]
@@ -958,7 +1116,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "暴君角龍β",
+            "series": {
+                "zhTW": "暴君角龍β"
+            },
             "defense": 82,
             "resistance": {
                 "fire": 2,
@@ -968,13 +1128,16 @@
                 "dragon": 2
             },
             "set": {
-                "name": "角龍之奧秘"
+                "id": "角龍之奧秘"
             }
         },
         "list": [
             {
+                "id": "暴君角龍頭盔β",
                 "type": "helm",
-                "name": "暴君角龍頭盔β",
+                "name": {
+                    "zhTW": "暴君角龍頭盔β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -982,14 +1145,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "暴君角龍鎧甲β",
                 "type": "chest",
-                "name": "暴君角龍鎧甲β",
+                "name": {
+                    "zhTW": "暴君角龍鎧甲β"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -1000,14 +1166,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "怨恨",
+                        "id": "怨恨",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "暴君角龍腕甲β",
                 "type": "arm",
-                "name": "暴君角龍腕甲β",
+                "name": {
+                    "zhTW": "暴君角龍腕甲β"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -1018,14 +1187,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "暴君角龍腰甲β",
                 "type": "waist",
-                "name": "暴君角龍腰甲β",
+                "name": {
+                    "zhTW": "暴君角龍腰甲β"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -1033,14 +1205,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "怨恨",
+                        "id": "怨恨",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "暴君角龍護腿β",
                 "type": "leg",
-                "name": "暴君角龍護腿β",
+                "name": {
+                    "zhTW": "暴君角龍護腿β"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -1048,7 +1223,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "通常彈・通常箭強化",
+                        "id": "通常彈・通常箭強化",
                         "level": 1
                     }
                 ]
@@ -1059,7 +1234,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "死神α",
+            "series": {
+                "zhTW": "死神α"
+            },
             "defense": 88,
             "resistance": {
                 "fire": 3,
@@ -1072,8 +1249,11 @@
         },
         "list": [
             {
+                "id": "死神頭盔α",
                 "type": "helm",
-                "name": "死神頭盔α",
+                "name": {
+                    "zhTW": "死神頭盔α"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -1081,33 +1261,39 @@
                 ],
                 "skills": [
                     {
-                        "name": "死裡逃生",
+                        "id": "死裡逃生",
                         "level": 1
                     },
                     {
-                        "name": "看破",
+                        "id": "看破",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "死神鎧甲α",
                 "type": "chest",
-                "name": "死神鎧甲α",
+                "name": {
+                    "zhTW": "死神鎧甲α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "不屈",
+                        "id": "不屈",
                         "level": 1
                     },
                     {
-                        "name": "屬性解放／裝填擴充",
+                        "id": "屬性解放／裝填擴充",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "死神腕甲α",
                 "type": "arm",
-                "name": "死神腕甲α",
+                "name": {
+                    "zhTW": "死神腕甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -1115,41 +1301,47 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 2
                     },
                     {
-                        "name": "龍屬性攻擊強化",
+                        "id": "龍屬性攻擊強化",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "死神腰甲α",
                 "type": "waist",
-                "name": "死神腰甲α",
+                "name": {
+                    "zhTW": "死神腰甲α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "龍屬性攻擊強化",
+                        "id": "龍屬性攻擊強化",
                         "level": 2
                     },
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "死神護腿α",
                 "type": "leg",
-                "name": "死神護腿α",
+                "name": {
+                    "zhTW": "死神護腿α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "匠",
+                        "id": "匠",
                         "level": 2
                     },
                     {
-                        "name": "龍屬性攻擊強化",
+                        "id": "龍屬性攻擊強化",
                         "level": 2
                     }
                 ]
@@ -1160,7 +1352,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "死神β",
+            "series": {
+                "zhTW": "死神β"
+            },
             "defense": 88,
             "resistance": {
                 "fire": 3,
@@ -1173,8 +1367,11 @@
         },
         "list": [
             {
+                "id": "死神頭盔β",
                 "type": "helm",
-                "name": "死神頭盔β",
+                "name": {
+                    "zhTW": "死神頭盔β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1182,14 +1379,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "死裡逃生",
+                        "id": "死裡逃生",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "死神鎧甲β",
                 "type": "chest",
-                "name": "死神鎧甲β",
+                "name": {
+                    "zhTW": "死神鎧甲β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1197,14 +1397,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "不屈",
+                        "id": "不屈",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "死神腕甲β",
                 "type": "arm",
-                "name": "死神腕甲β",
+                "name": {
+                    "zhTW": "死神腕甲β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -1215,14 +1418,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "集中",
+                        "id": "集中",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "死神腰甲β",
                 "type": "waist",
-                "name": "死神腰甲β",
+                "name": {
+                    "zhTW": "死神腰甲β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -1233,14 +1439,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "龍屬性攻擊強化",
+                        "id": "龍屬性攻擊強化",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "死神護腿β",
                 "type": "leg",
-                "name": "死神護腿β",
+                "name": {
+                    "zhTW": "死神護腿β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -1251,7 +1460,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "匠",
+                        "id": "匠",
                         "level": 2
                     }
                 ]
@@ -1262,7 +1471,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "爆鱗龍α",
+            "series": {
+                "zhTW": "爆鱗龍α"
+            },
             "defense": 84,
             "resistance": {
                 "fire": 3,
@@ -1272,13 +1483,16 @@
                 "dragon": -2
             },
             "set": {
-                "name": "爆鱗龍的守護"
+                "id": "爆鱗龍的守護"
             }
         },
         "list": [
             {
+                "id": "爆鱗龍頭盔α",
                 "type": "helm",
-                "name": "爆鱗龍頭盔α",
+                "name": {
+                    "zhTW": "爆鱗龍頭盔α"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -1286,48 +1500,57 @@
                 ],
                 "skills": [
                     {
-                        "name": "耳塞",
+                        "id": "耳塞",
                         "level": 2
                     },
                     {
-                        "name": "爆破屬性強化",
+                        "id": "爆破屬性強化",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "爆鱗龍鎧甲α",
                 "type": "chest",
-                "name": "爆鱗龍鎧甲α",
+                "name": {
+                    "zhTW": "爆鱗龍鎧甲α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "防禦性能",
+                        "id": "防禦性能",
                         "level": 2
                     },
                     {
-                        "name": "爆破異常狀態的耐性",
+                        "id": "爆破異常狀態的耐性",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "爆鱗龍腕甲α",
                 "type": "arm",
-                "name": "爆鱗龍腕甲α",
+                "name": {
+                    "zhTW": "爆鱗龍腕甲α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "拔刀術【技】",
+                        "id": "拔刀術【技】",
                         "level": 2
                     },
                     {
-                        "name": "耳塞",
+                        "id": "耳塞",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "爆鱗龍腰甲α",
                 "type": "waist",
-                "name": "爆鱗龍腰甲α",
+                "name": {
+                    "zhTW": "爆鱗龍腰甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -1335,18 +1558,21 @@
                 ],
                 "skills": [
                     {
-                        "name": "耳塞",
+                        "id": "耳塞",
                         "level": 2
                     },
                     {
-                        "name": "跳躍鐵人",
+                        "id": "跳躍鐵人",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "爆鱗龍護腿α",
                 "type": "leg",
-                "name": "爆鱗龍護腿α",
+                "name": {
+                    "zhTW": "爆鱗龍護腿α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -1354,11 +1580,11 @@
                 ],
                 "skills": [
                     {
-                        "name": "炸彈客",
+                        "id": "炸彈客",
                         "level": 2
                     },
                     {
-                        "name": "拔刀術【技】",
+                        "id": "拔刀術【技】",
                         "level": 1
                     }
                 ]
@@ -1369,7 +1595,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "爆鱗龍β",
+            "series": {
+                "zhTW": "爆鱗龍β"
+            },
             "defense": 84,
             "resistance": {
                 "fire": 3,
@@ -1379,13 +1607,16 @@
                 "dragon": -2
             },
             "set": {
-                "name": "爆鱗龍的守護"
+                "id": "爆鱗龍的守護"
             }
         },
         "list": [
             {
+                "id": "爆鱗龍頭盔β",
                 "type": "helm",
-                "name": "爆鱗龍頭盔β",
+                "name": {
+                    "zhTW": "爆鱗龍頭盔β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1396,14 +1627,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "耳塞",
+                        "id": "耳塞",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "爆鱗龍鎧甲β",
                 "type": "chest",
-                "name": "爆鱗龍鎧甲β",
+                "name": {
+                    "zhTW": "爆鱗龍鎧甲β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -1414,14 +1648,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "防禦性能",
+                        "id": "防禦性能",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "爆鱗龍腕甲β",
                 "type": "arm",
-                "name": "爆鱗龍腕甲β",
+                "name": {
+                    "zhTW": "爆鱗龍腕甲β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1429,14 +1666,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "拔刀術【技】",
+                        "id": "拔刀術【技】",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "爆鱗龍腰甲β",
                 "type": "waist",
-                "name": "爆鱗龍腰甲β",
+                "name": {
+                    "zhTW": "爆鱗龍腰甲β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1444,14 +1684,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "耳塞",
+                        "id": "耳塞",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "爆鱗龍護腿β",
                 "type": "leg",
-                "name": "爆鱗龍護腿β",
+                "name": {
+                    "zhTW": "爆鱗龍護腿β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1459,7 +1702,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "炸彈客",
+                        "id": "炸彈客",
                         "level": 2
                     }
                 ]
@@ -1470,7 +1713,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "龍封的耳環α",
+            "series": {
+                "zhTW": "龍封的耳環α"
+            },
             "defense": 86,
             "resistance": {
                 "fire": 3,
@@ -1483,8 +1728,11 @@
         },
         "list": [
             {
+                "id": "龍封的耳環α",
                 "type": "helm",
-                "name": "龍封的耳環α",
+                "name": {
+                    "zhTW": "龍封的耳環α"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -1495,7 +1743,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "龍封力強化",
+                        "id": "龍封力強化",
                         "level": 1
                     }
                 ]
@@ -1506,7 +1754,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "殘虐α",
+            "series": {
+                "zhTW": "殘虐α"
+            },
             "defense": 84,
             "resistance": {
                 "fire": 1,
@@ -1519,8 +1769,11 @@
         },
         "list": [
             {
+                "id": "殘虐頭盔α",
                 "type": "helm",
-                "name": "殘虐頭盔α",
+                "name": {
+                    "zhTW": "殘虐頭盔α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -1528,18 +1781,21 @@
                 ],
                 "skills": [
                     {
-                        "name": "破壞王",
+                        "id": "破壞王",
                         "level": 1
                     },
                     {
-                        "name": "匠",
+                        "id": "匠",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "殘虐鎧甲α",
                 "type": "chest",
-                "name": "殘虐鎧甲α",
+                "name": {
+                    "zhTW": "殘虐鎧甲α"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -1547,33 +1803,39 @@
                 ],
                 "skills": [
                     {
-                        "name": "快吃",
+                        "id": "快吃",
                         "level": 1
                     },
                     {
-                        "name": "匠",
+                        "id": "匠",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "殘虐腕甲α",
                 "type": "arm",
-                "name": "殘虐腕甲α",
+                "name": {
+                    "zhTW": "殘虐腕甲α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "力量解放",
+                        "id": "力量解放",
                         "level": 2
                     },
                     {
-                        "name": "破壞王",
+                        "id": "破壞王",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "殘虐腰甲α",
                 "type": "waist",
-                "name": "殘虐腰甲α",
+                "name": {
+                    "zhTW": "殘虐腰甲α"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -1581,26 +1843,29 @@
                 ],
                 "skills": [
                     {
-                        "name": "力量解放",
+                        "id": "力量解放",
                         "level": 1
                     },
                     {
-                        "name": "匠",
+                        "id": "匠",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "殘虐護腿α",
                 "type": "leg",
-                "name": "殘虐護腿α",
+                "name": {
+                    "zhTW": "殘虐護腿α"
+                },
                 "slots": null,
                 "skills": [
                     {
-                        "name": "快吃",
+                        "id": "快吃",
                         "level": 2
                     },
                     {
-                        "name": "破壞王",
+                        "id": "破壞王",
                         "level": 1
                     }
                 ]
@@ -1611,7 +1876,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "殘虐β",
+            "series": {
+                "zhTW": "殘虐β"
+            },
             "defense": 84,
             "resistance": {
                 "fire": 1,
@@ -1624,8 +1891,11 @@
         },
         "list": [
             {
+                "id": "殘虐頭盔β",
                 "type": "helm",
-                "name": "殘虐頭盔β",
+                "name": {
+                    "zhTW": "殘虐頭盔β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1636,14 +1906,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "破壞王",
+                        "id": "破壞王",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "殘虐鎧甲β",
                 "type": "chest",
-                "name": "殘虐鎧甲β",
+                "name": {
+                    "zhTW": "殘虐鎧甲β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1651,14 +1924,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "快吃",
+                        "id": "快吃",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "殘虐腕甲β",
                 "type": "arm",
-                "name": "殘虐腕甲β",
+                "name": {
+                    "zhTW": "殘虐腕甲β"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -1666,14 +1942,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "力量解放",
+                        "id": "力量解放",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "殘虐腰甲β",
                 "type": "waist",
-                "name": "殘虐腰甲β",
+                "name": {
+                    "zhTW": "殘虐腰甲β"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1684,14 +1963,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "力量解放",
+                        "id": "力量解放",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "殘虐護腿β",
                 "type": "leg",
-                "name": "殘虐護腿β",
+                "name": {
+                    "zhTW": "殘虐護腿β"
+                },
                 "slots": [
                     {
                         "size": 1
@@ -1702,7 +1984,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "快吃",
+                        "id": "快吃",
                         "level": 2
                     }
                 ]
@@ -1713,7 +1995,9 @@
         "common": {
             "rare": 7,
             "gender": "general",
-            "series": "蒼星α",
+            "series": {
+                "zhTW": "蒼星α"
+            },
             "defense": 82,
             "resistance": {
                 "fire": 2,
@@ -1723,13 +2007,16 @@
                 "dragon": 3
             },
             "set": {
-                "name": "火龍奧秘"
+                "id": "火龍奧秘"
             }
         },
         "list": [
             {
+                "id": "蒼星之將【頭盔】α",
                 "type": "helm",
-                "name": "蒼星之將【頭盔】α",
+                "name": {
+                    "zhTW": "蒼星之將【頭盔】α"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1737,14 +2024,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "挑戰者",
+                        "id": "挑戰者",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "蒼星之將【鎧甲】α",
                 "type": "chest",
-                "name": "蒼星之將【鎧甲】α",
+                "name": {
+                    "zhTW": "蒼星之將【鎧甲】α"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -1752,14 +2042,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "匠",
+                        "id": "匠",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "蒼星之將【腕甲】α",
                 "type": "arm",
-                "name": "蒼星之將【腕甲】α",
+                "name": {
+                    "zhTW": "蒼星之將【腕甲】α"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1767,14 +2060,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "體力回復量UP",
+                        "id": "體力回復量UP",
                         "level": 2
                     }
                 ]
             },
             {
+                "id": "蒼星之將【腰帶】α",
                 "type": "waist",
-                "name": "蒼星之將【腰帶】α",
+                "name": {
+                    "zhTW": "蒼星之將【腰帶】α"
+                },
                 "slots": [
                     {
                         "size": 2
@@ -1782,14 +2078,17 @@
                 ],
                 "skills": [
                     {
-                        "name": "匠",
+                        "id": "匠",
                         "level": 1
                     }
                 ]
             },
             {
+                "id": "蒼星之將【腿甲】α",
                 "type": "leg",
-                "name": "蒼星之將【腿甲】α",
+                "name": {
+                    "zhTW": "蒼星之將【腿甲】α"
+                },
                 "slots": [
                     {
                         "size": 3
@@ -1797,7 +2096,7 @@
                 ],
                 "skills": [
                     {
-                        "name": "超會心",
+                        "id": "超會心",
                         "level": 1
                     }
                 ]

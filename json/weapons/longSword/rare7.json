@@ -1,9 +1,14 @@
 [
     {
+        "id": "爆鎚太刀 II",
         "rare": 7,
         "type": "longSword",
-        "series": "爆鎚龍",
-        "name": "爆鎚太刀 II",
+        "series": {
+            "zhTW": "爆鎚龍"
+        },
+        "name": {
+            "zhTW": "爆鎚太刀 II"
+        },
         "attack": 660,
         "criticalRate": -10,
         "defense": 30,
@@ -39,10 +44,15 @@
         "skills": null
     },
     {
+        "id": "飛龍刀【葵】",
         "rare": 7,
         "type": "longSword",
-        "series": "雌火龍",
-        "name": "飛龍刀【葵】",
+        "series": {
+            "zhTW": "雌火龍"
+        },
+        "name": {
+            "zhTW": "飛龍刀【葵】"
+        },
         "attack": 627,
         "criticalRate": 10,
         "defense": 0,
@@ -75,10 +85,15 @@
         "skills": null
     },
     {
+        "id": "屍套龍太刀 II",
         "rare": 7,
         "type": "longSword",
-        "series": "屍套龍",
-        "name": "屍套龍太刀 II",
+        "series": {
+            "zhTW": "屍套龍"
+        },
+        "name": {
+            "zhTW": "屍套龍太刀 II"
+        },
         "attack": 660,
         "criticalRate": 0,
         "defense": 0,
@@ -113,10 +128,15 @@
         "skills": null
     },
     {
+        "id": "熔山龍太刀 II",
         "rare": 7,
         "type": "longSword",
-        "series": "熔山龍",
-        "name": "熔山龍太刀 II",
+        "series": {
+            "zhTW": "熔山龍"
+        },
+        "name": {
+            "zhTW": "熔山龍太刀 II"
+        },
         "attack": 726,
         "criticalRate": -20,
         "defense": 20,
@@ -149,10 +169,15 @@
         "skills": null
     },
     {
+        "id": "悲慘痛苦太刀",
         "rare": 7,
         "type": "longSword",
-        "series": "恐暴龍",
-        "name": "悲慘痛苦太刀",
+        "series": {
+            "zhTW": "恐暴龍"
+        },
+        "name": {
+            "zhTW": "悲慘痛苦太刀"
+        },
         "attack": 759,
         "criticalRate": -25,
         "defense": 0,
@@ -183,10 +208,15 @@
         "skills": null
     },
     {
+        "id": "蒼星的太刀【舞龍】",
         "rare": 7,
         "type": "longSword",
-        "series": "蒼星",
-        "name": "蒼星的太刀【舞龍】",
+        "series": {
+            "zhTW": "蒼星"
+        },
+        "name": {
+            "zhTW": "蒼星的太刀【舞龍】"
+        },
         "attack": 495,
         "criticalRate": 30,
         "defense": 0,
@@ -219,10 +249,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．黑甲",
         "rare": 7,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．黑甲",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．黑甲"
+        },
         "attack": 528,
         "criticalRate": 0,
         "defense": 20,
@@ -241,10 +276,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．泥魚",
         "rare": 7,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．泥魚",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．泥魚"
+        },
         "attack": 660,
         "criticalRate": 0,
         "defense": 20,
@@ -263,10 +303,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．風漂",
         "rare": 7,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．風漂",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．風漂"
+        },
         "attack": 528,
         "criticalRate": 0,
         "defense": 20,
@@ -285,10 +330,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．搔",
         "rare": 7,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．搔",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．搔"
+        },
         "attack": 561,
         "criticalRate": 20,
         "defense": 20,
@@ -307,10 +357,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．飛雷",
         "rare": 7,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．飛雷",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．飛雷"
+        },
         "attack": 594,
         "criticalRate": 30,
         "defense": 20,
@@ -329,10 +384,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．眩",
         "rare": 7,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．眩",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．眩"
+        },
         "attack": 627,
         "criticalRate": 0,
         "defense": 20,
@@ -351,10 +411,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．屍套",
         "rare": 7,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．屍套",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．屍套"
+        },
         "attack": 660,
         "criticalRate": 10,
         "defense": 20,
@@ -375,10 +440,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．爆鎚",
         "rare": 7,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．爆鎚",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．爆鎚"
+        },
         "attack": 660,
         "criticalRate": 0,
         "defense": 40,
@@ -401,10 +471,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．蠻顎",
         "rare": 7,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．蠻顎",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．蠻顎"
+        },
         "attack": 693,
         "criticalRate": -10,
         "defense": 20,
@@ -423,10 +498,15 @@
         "skills": null
     },
     {
+        "id": "鎧羅劍．熔山",
         "rare": 7,
         "type": "longSword",
-        "series": "絢輝龍",
-        "name": "鎧羅劍．熔山",
+        "series": {
+            "zhTW": "絢輝龍"
+        },
+        "name": {
+            "zhTW": "鎧羅劍．熔山"
+        },
         "attack": 726,
         "criticalRate": -20,
         "defense": 30,
