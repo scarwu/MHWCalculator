@@ -110,7 +110,7 @@ class FittingAlgorithm {
 
             // Get Equipment Info
             if ('weapon' === equipType) {
-                equipInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
+                equipInfo = DataSet.getAppliedWeaponInfo(equips.weapon);
                 equipInfo.type = equipType;
             } else if ('helm' === equipType
                 || 'chest' === equipType
@@ -118,9 +118,9 @@ class FittingAlgorithm {
                 || 'waist' === equipType
                 || 'leg' === equipType) {
 
-                equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
+                equipInfo = DataSet.getAppliedArmorInfo(equips[equipType]);
             } else if ('charm' === equipType) {
-                equipInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
+                equipInfo = DataSet.getAppliedCharmInfo(equips.charm);
                 equipInfo.type = equipType;
             }
 

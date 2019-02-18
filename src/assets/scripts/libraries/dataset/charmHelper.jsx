@@ -90,49 +90,6 @@ class CharmHelper {
             ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
     };
 
-    // Applyed Info
-    getApplyedInfo = (extend) => {
-        let info = this.getInfo(extend.name);
-
-        // Handler Skill & Slot
-        let skillLevelMapping = {};
-
-        info.skills || info.skills.forEach((data, index) => {
-            let skillName = data.name;
-
-            if (undefined === skillLevelMapping[skillName]) {
-                skillLevelMapping[skillName] = 0;
-            }
-
-            skillLevelMapping[skillName] += data.level;
-        });
-
-        // Reset Skill
-        info.skills = [];
-
-        Object.keys(skillLevelMapping).forEach((skillName) => {
-            let skillLevel = skillLevelMapping[skillName];
-            let skillInfo = skillHelper.getInfo(skillName);
-
-            // Fix Skill Level Overflow
-            if (skillLevel > skillInfo.list.length) {
-                skillLevel = skillInfo.list.length;
-            }
-
-            info.skills.push({
-                name: skillName,
-                level: skillLevel,
-                description: skillInfo.list[skillLevel - 1].description
-            });
-        });
-
-        info.skills = info.skills.sort((a, b) => {
-            return b.level - a.level;
-        });
-
-        return info;
-    };
-
     // Conditional Functions
     hasSkill = (name) => {
         this.filterSkillName = name;

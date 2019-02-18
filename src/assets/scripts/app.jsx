@@ -301,7 +301,7 @@ export default class Main extends Component {
             let equipInfo = null;
 
             if ('weapon' === equipType) {
-                equipInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
+                equipInfo = DataSet.getAppliedWeaponInfo(equips.weapon);
                 equipInfo.slots.forEach((data, index) => {
                     slotMap[data.size].push({
                         type: equipType,
@@ -314,7 +314,7 @@ export default class Main extends Component {
                 || 'waist' === equipType
                 || 'leg' === equipType) {
 
-                equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
+                equipInfo = DataSet.getAppliedArmorInfo(equips[equipType]);
                 equipInfo.slots.forEach((data, index) => {
                     slotMap[data.size].push({
                         type: equipType,

@@ -118,7 +118,7 @@ export default class EquipsDisplayer extends Component {
         }
 
         if (null !== equips.weapon.name) {
-            let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
+            let weaponInfo = DataSet.getAppliedWeaponInfo(equips.weapon);
 
             let originalSharpness = null;
             let enhancedSharpness = null;
@@ -395,7 +395,7 @@ export default class EquipsDisplayer extends Component {
             }
 
             if (null !== equips[equipType].name) {
-                let equipInfo = DataSet.armorHelper.getApplyedInfo(equips[equipType]);
+                let equipInfo = DataSet.getAppliedArrmorInfo(equips[equipType]);
 
                 ContentBlocks.push((
                     <div key={'equip_' + equipType} className="row mhwc-equip">
@@ -562,7 +562,7 @@ export default class EquipsDisplayer extends Component {
         }
 
         if (null !== equips.charm.name) {
-            let charmInfo = DataSet.charmHelper.getApplyedInfo(equips.charm);
+            let charmInfo = DataSet.getAppliedChramInfo(equips.charm);
 
             ContentBlocks.push((
                 <div key="charm" className="row mhwc-equip">

@@ -95,15 +95,15 @@ export default class CharacterStatus extends Component {
         let info = {};
 
         info.weapon = (null !== equips.weapon.name)
-            ? DataSet.weaponHelper.getApplyedInfo(equips.weapon) : null;
+            ? DataSet.getAppliedWeaponInfo(equips.weapon) : null;
 
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             info[equipType] = (null !== equips[equipType].name)
-                ? DataSet.armorHelper.getApplyedInfo(equips[equipType]) : null;
+                ? DataSet.getAppliedArmorInfo(equips[equipType]) : null;
         });
 
         info.charm = (null !== equips.charm.name)
-            ? DataSet.charmHelper.getApplyedInfo(equips.charm) : null;
+            ? DataSet.getAppliedCharmInfo(equips.charm) : null;
 
         if (null !== info.weapon) {
             status.critical.rate = info.weapon.criticalRate;
@@ -448,7 +448,7 @@ export default class CharacterStatus extends Component {
         let expectedValue = 0;
 
         if (null !== equips.weapon.name) {
-            let weaponInfo = DataSet.weaponHelper.getApplyedInfo(equips.weapon);
+            let weaponInfo = DataSet.getAppliedWeaponInfo(equips.weapon);
             let weaponMultiple = Constant.weaponMultiple[weaponInfo.type];
             let sharpnessMultiple = this.getSharpnessMultiple(status.sharpness);
 

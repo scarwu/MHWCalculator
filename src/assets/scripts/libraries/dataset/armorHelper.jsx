@@ -10,57 +10,49 @@
 
 // Load Custom Libraries
 import Lang from 'libraries/lang';
-import JewelHelper from 'libraries/dataset/jewelHelper';
-import SkillHelper from 'libraries/dataset/skillHelper';
 
 // Load Constant
 import Constant from 'constant';
 
-// Load Armors
-import Rare5 from 'datasets/armors/rare5';
-import Rare6 from 'datasets/armors/rare6';
-import Rare7 from 'datasets/armors/rare7';
-import Rare8 from 'datasets/armors/rare8';
+// Load Dataset
+import Armors from 'datasets/armors';
 
-let dataset = []
-    .concat(Rare5).concat(Rare6)
-    .concat(Rare7).concat(Rare8)
-    .map((pack) => {
-        return pack[1].map((item) => {
-            return {
-                series: pack[0][0],
-                rare: pack[0][1],
-                gender: pack[0][2],
-                defense: pack[0][3],
-                resistance: {
-                    fire: pack[0][4][0],
-                    water: pack[0][4][1],
-                    thunder: pack[0][4][2],
-                    ice: pack[0][4][3],
-                    dragon: pack[0][4][4]
-                },
-                set: (null !== pack[0][5]) ? {
-                    name: pack[0][5]
-                } : null,
-                name: item[0],
-                type: item[1],
-                slots: (null !== item[2]) ? item[2].map((size) => {
-                    return {
-                        size: size
-                    }
-                }) : null,
-                skills: (null !== item[3]) ? item[3].map((skill) => {
-                    return {
-                        name: skill[0],
-                        level: skill[1]
-                    };
-                }) : null
-            };
-        });
-    })
-    .reduce((armorsA, armorsB) => {
-        return armorsA.concat(armorsB);
+let dataset = Armors.map((pack) => {
+    return pack[1].map((item) => {
+        return {
+            series: pack[0][0],
+            rare: pack[0][1],
+            gender: pack[0][2],
+            defense: pack[0][3],
+            resistance: {
+                fire: pack[0][4][0],
+                water: pack[0][4][1],
+                thunder: pack[0][4][2],
+                ice: pack[0][4][3],
+                dragon: pack[0][4][4]
+            },
+            set: (null !== pack[0][5]) ? {
+                name: pack[0][5]
+            } : null,
+            name: item[0],
+            type: item[1],
+            slots: (null !== item[2]) ? item[2].map((size) => {
+                return {
+                    size: size
+                }
+            }) : null,
+            skills: (null !== item[3]) ? item[3].map((skill) => {
+                return {
+                    name: skill[0],
+                    level: skill[1]
+                };
+            }) : null
+        };
     });
+})
+.reduce((armorsA, armorsB) => {
+    return armorsA.concat(armorsB);
+});
 
 class ArmorHelper {
 
@@ -166,76 +158,6 @@ class ArmorHelper {
     getInfo = (name) => {
         return undefined !== this.mapping[name]
             ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
-    };
-
-    // Applyed Info
-    getApplyedInfo = (extend) => {
-        let info = this.getInfo(extend.name);
-
-        // Handler Skill & Slot
-        let skillLevelMapping = {};
-
-        info.skills && info.skills.forEach((data, index) => {
-            let skillName = data.name;
-
-            if (undefined === skillLevelMapping[skillName]) {
-                skillLevelMapping[skillName] = 0;
-            }
-
-            skillLevelMapping[skillName] += data.level;
-        });
-
-        info.slots && info.slots.forEach((data, index) => {
-            let jewelInfo = null;
-            let jewelName = null;
-            let jewelSize = null;
-            let skillName = null;
-
-            if (null !== extend.slotNames
-                && 'string' === typeof extend.slotNames[index]) {
-
-                jewelInfo = JewelHelper.getInfo(extend.slotNames[index]);
-                jewelName = extend.slotNames[index];
-                jewelSize = jewelInfo.size;
-                skillName = jewelInfo.skill.name;
-            }
-
-            // Update Info
-            info.slots[index].jewel = {
-                name: jewelName,
-                size: jewelSize
-            };
-
-            if (null === skillName) {
-                return false;
-            }
-
-            if (undefined === skillLevelMapping[skillName]) {
-                skillLevelMapping[skillName] = 0;
-            }
-
-            skillLevelMapping[skillName] += jewelInfo.skill.level;
-        });
-
-        // Reset Skill
-        info.skills = [];
-
-        Object.keys(skillLevelMapping).forEach((skillName) => {
-            let skillLevel = skillLevelMapping[skillName];
-            let skillInfo = SkillHelper.getInfo(skillName);
-
-            info.skills.push({
-                name: skillName,
-                level: skillLevel,
-                description: skillInfo.list[skillLevel - 1].description
-            });
-        });
-
-        info.skills = info.skills.sort((a, b) => {
-            return b.level - a.level;
-        });
-
-        return info;
     };
 
     // Conditional Functions
