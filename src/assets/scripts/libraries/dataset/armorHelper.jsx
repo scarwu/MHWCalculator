@@ -15,14 +15,14 @@ import Lang from 'libraries/lang';
 import Constant from 'constant';
 
 // Load Dataset
-import Armors from 'datasets/armors';
+import Armors from 'datasets/armors.json';
 
 let dataset = Armors.map((pack) => {
     return pack[1].map((item) => {
         return {
-            series: pack[0][0],
-            rare: pack[0][1],
-            gender: pack[0][2],
+            rare: pack[0][0],
+            gender: pack[0][1],
+            series: pack[0][2],
             defense: pack[0][3],
             resistance: {
                 fire: pack[0][4][0],
@@ -32,21 +32,22 @@ let dataset = Armors.map((pack) => {
                 dragon: pack[0][4][4]
             },
             set: (null !== pack[0][5]) ? {
-                name: pack[0][5]
+                id: pack[0][5]
             } : null,
-            name: item[0],
+            id: item[0],
             type: item[1],
-            slots: (null !== item[2]) ? item[2].map((size) => {
+            name: item[2],
+            slots: (null !== item[3]) ? item[3].map((size) => {
                 return {
                     size: size
                 }
-            }) : null,
-            skills: (null !== item[3]) ? item[3].map((skill) => {
+            }) : [],
+            skills: (null !== item[4]) ? item[4].map((skill) => {
                 return {
-                    name: skill[0],
+                    id: skill[0],
                     level: skill[1]
                 };
-            }) : null
+            }) : []
         };
     });
 })
@@ -60,38 +61,38 @@ class ArmorHelper {
         this.mapping = {};
 
         list.forEach((data) => {
-            this.mapping[data.name] = data;
+            this.mapping[data.id] = data;
 
-            if (null === data.slots || 0 === data.slots.length) {
-                return true;
-            }
+            // if (null === data.slots || 0 === data.slots.length) {
+            //     return true;
+            // }
 
-            let slots = data.slots.sort((a, b) => {
-                return b.size - a.size;
-            });
+            // let slots = data.slots.sort((a, b) => {
+            //     return b.size - a.size;
+            // });
 
-            let slotEquipData = {
-                name: slots.map((slot) => {
-                    return '[' + slot.size + ']';
-                }).join('') + ' 插槽' + Lang[data.type],
-                series: "插槽",
-                type: data.type,
-                rare: 0,
-                gender: "general",
-                defense: 0,
-                resistance: {
-                    fire: 0,
-                    water: 0,
-                    thunder: 0,
-                    ice: 0,
-                    dragon: 0
-                },
-                slots: slots,
-                skills: [],
-                set: null
-            };
+            // let slotEquipData = {
+            //     name: slots.map((slot) => {
+            //         return '[' + slot.size + ']';
+            //     }).join('') + ' 插槽' + Lang[data.type],
+            //     series: "插槽",
+            //     type: data.type,
+            //     rare: 0,
+            //     gender: "general",
+            //     defense: 0,
+            //     resistance: {
+            //         fire: 0,
+            //         water: 0,
+            //         thunder: 0,
+            //         ice: 0,
+            //         dragon: 0
+            //     },
+            //     slots: slots,
+            //     skills: [],
+            //     set: null
+            // };
 
-            this.mapping[slotEquipData.name] = slotEquipData;
+            // this.mapping[slotEquipData.id] = slotEquipData;
         });
 
         // Filter Conditional
@@ -125,7 +126,7 @@ class ArmorHelper {
 
             if (null !== this.filterSet) {
                 if (null === data.set
-                    || this.filterSet !== data.set.name) {
+                    || this.filterSet !== data.set.id) {
 
                     return false;
                 }
@@ -135,7 +136,7 @@ class ArmorHelper {
 
             if (null !== this.filterSkillName) {
                 for (let index in data.skills) {
-                    if (this.filterSkillName !== data.skills[index].name) {
+                    if (this.filterSkillName !== data.skills[index].id) {
                         continue;
                     }
 

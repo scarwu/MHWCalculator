@@ -12,11 +12,12 @@
 import Constant from 'constant';
 
 // Load Dataset
-import Enhances from 'datasets/enhances';
+import Enhances from 'datasets/enhances.json';
 
 // [
-//     0: name,
-//     1: list [
+//     0: id,
+//     1: name,
+//     2: list [
 //         [
 //             0: level,
 //             1: description,
@@ -27,8 +28,9 @@ import Enhances from 'datasets/enhances';
 // ]
 let dataset = Enhances.map((enhance) => {
     return {
-        name: enhance[0],
-        list: enhance[1].map((item) => {
+        id: enhance[0],
+        name: enhance[1],
+        list: enhance[2].map((item) => {
             return {
                 level: item[0],
                 description: item[1],
@@ -44,7 +46,7 @@ class EnhanceHelper {
         this.mapping = {};
 
         list.forEach((data) => {
-            this.mapping[data.name] = data;
+            this.mapping[data.id] = data;
         });
 
         // Filter Conditional
@@ -62,7 +64,7 @@ class EnhanceHelper {
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
             if (null !== this.filterSkillName) {
-                if (this.filterSkillName !== data.skill.name) {
+                if (this.filterSkillName !== data.skill.id) {
                     return false;
                 }
             }

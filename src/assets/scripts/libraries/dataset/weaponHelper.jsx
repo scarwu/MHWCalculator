@@ -15,9 +15,59 @@ import Lang from 'libraries/lang';
 import Constant from 'constant';
 
 // Load Dataset
-import Weapons from 'datasets/weapons';
+import Weapons from 'datasets/weapons.json';
 
-let dataset = Weapons;
+let dataset = Weapons.map((weapon) => {
+    return {
+        id: weapon[0],
+        rare: weapon[1],
+        type: weapon[2],
+        series: weapon[3],
+        name: weapon[4],
+        attack: weapon[5],
+        criticalRate: weapon[6],
+        defense: weapon[7],
+        sharpness: (null !== weapon[8]) ? {
+            value: weapon[8][0],
+            steps: {
+                red: weapon[8][1][0],
+                orange: weapon[8][1][1],
+                yellow: weapon[8][1][2],
+                green: weapon[8][1][3],
+                blue: weapon[8][1][4],
+                white: weapon[8][1][5]
+            }
+        } : null,
+        element: {
+            attack: (null !== weapon[9][0]) ? {
+                type: weapon[9][0][0],
+                minValue: weapon[9][0][1],
+                maxValue: weapon[9][0][2],
+                isHidden: weapon[9][0][3]
+            } : null,
+            status: (null !== weapon[9][1]) ? {
+                type: weapon[9][1][0],
+                minValue: weapon[9][1][1],
+                maxValue: weapon[9][1][2],
+                isHidden: weapon[9][1][3]
+            } : null
+        },
+        elderseal: (null !== weapon[10]) ? {
+            affinity: weapon[10]
+        } : null,
+        slots: (null !== weapon[11]) ? weapon[11].map((size) => {
+            return {
+                size: size
+            }
+        }) : [],
+        skills: (null !== weapon[12]) ? weapon[12].map((skill) => {
+            return {
+                id: skill[0],
+                level: skill[1]
+            };
+        }) : []
+    };
+});
 
 class WeaponHelper {
 
@@ -25,37 +75,38 @@ class WeaponHelper {
         this.mapping = {};
 
         list.forEach((data) => {
-            this.mapping[data.name] = data;
+            this.mapping[data.id] = data;
 
-            if (null === data.slots || 0 === data.slots.length) {
-                return true;
-            }
+            // if (null === data.slots || 0 === data.slots.length) {
+            //     return true;
+            // }
 
-            let slots = data.slots.sort((a, b) => {
-                return b.size - a.size;
-            });
+            // let slots = data.slots.sort((a, b) => {
+            //     return b.size - a.size;
+            // });
 
-            let slotEquipData = {
-                name: slots.map((slot) => {
-                    return '[' + slot.size + ']';
-                }).join('') + ' 插槽' + Lang[data.type],
-                rare: 0,
-                type: data.type,
-                series: "插槽",
-                attack: 0,
-                criticalRate: 0,
-                defense: 0,
-                sharpness: null,
-                element: {
-                    attack: null,
-                    status: null
-                },
-                elderseal: null,
-                slots: slots,
-                skills: []
-            };
+            // let slotEquipData = {
+            //     id: ,
+            //     name: slots.map((slot) => {
+            //         return '[' + slot.size + ']';
+            //     }).join('') + ' 插槽' + Lang[data.type],
+            //     rare: 0,
+            //     type: data.type,
+            //     series: "插槽",
+            //     attack: 0,
+            //     criticalRate: 0,
+            //     defense: 0,
+            //     sharpness: null,
+            //     element: {
+            //         attack: null,
+            //         status: null
+            //     },
+            //     elderseal: null,
+            //     slots: slots,
+            //     skills: []
+            // };
 
-            this.mapping[slotEquipData.name] = slotEquipData;
+            // this.mapping[slotEquipData.id] = slotEquipData;
         });
 
         // Filter Conditional

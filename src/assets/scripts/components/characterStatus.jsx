@@ -94,15 +94,15 @@ export default class CharacterStatus extends Component {
 
         let info = {};
 
-        info.weapon = (null !== equips.weapon.name)
+        info.weapon = (null !== equips.weapon.id)
             ? DataSet.getAppliedWeaponInfo(equips.weapon) : null;
 
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-            info[equipType] = (null !== equips[equipType].name)
+            info[equipType] = (null !== equips[equipType].id)
                 ? DataSet.getAppliedArmorInfo(equips[equipType]) : null;
         });
 
-        info.charm = (null !== equips.charm.name)
+        info.charm = (null !== equips.charm.id)
             ? DataSet.getAppliedCharmInfo(equips.charm) : null;
 
         if (null !== info.weapon) {
@@ -134,7 +134,7 @@ export default class CharacterStatus extends Component {
             });
 
             if (null !== info[equipType].set) {
-                let setName = info[equipType].set.name;
+                let setName = info[equipType].set.id;
 
                 if (undefined === setMapping[setName]) {
                     setMapping[setName] = 0;
@@ -153,11 +153,11 @@ export default class CharacterStatus extends Component {
             }
 
             info[equipType].skills.forEach((skill) => {
-                if (undefined === allSkills[skill.name]) {
-                    allSkills[skill.name] = 0;
+                if (undefined === allSkills[skill.id]) {
+                    allSkills[skill.id] = 0;
                 }
 
-                allSkills[skill.name] += skill.level;
+                allSkills[skill.id] += skill.level;
             });
         });
 
@@ -170,21 +170,21 @@ export default class CharacterStatus extends Component {
                     return;
                 }
 
-                let skillInfo = DataSet.skillHelper.getInfo(skill.name);
+                let skillInfo = DataSet.skillHelper.getInfo(skill.id);
 
                 status.sets.push({
                     name: `${setName} (${skill.require})`,
                     skill: {
-                        name: skillInfo.name,
+                        name: skillInfo.id,
                         level: 1
                     }
                 });
 
-                if (undefined === allSkills[skill.name]) {
-                    allSkills[skill.name] = 0;
+                if (undefined === allSkills[skill.id]) {
+                    allSkills[skill.id] = 0;
                 }
 
-                allSkills[skill.name] += 1;
+                allSkills[skill.id] += 1;
             });
         });
 
@@ -205,19 +205,19 @@ export default class CharacterStatus extends Component {
             }
 
             status.skills.push({
-                name: skill.name,
+                name: skill.id,
                 level: level,
                 description: skill.list[level - 1].description
             });
 
             if ('passive' === skill.type) {
-                if (undefined === passiveSkills[skill.name]) {
-                    passiveSkills[skill.name] = {
+                if (undefined === passiveSkills[skill.id]) {
+                    passiveSkills[skill.id] = {
                         isActive: false
                     };
                 }
 
-                if (false === passiveSkills[skill.name].isActive) {
+                if (false === passiveSkills[skill.id].isActive) {
                     continue;
                 }
             }
@@ -447,7 +447,7 @@ export default class CharacterStatus extends Component {
         let elementExpectedValue = 0;
         let expectedValue = 0;
 
-        if (null !== equips.weapon.name) {
+        if (null !== equips.weapon.id) {
             let weaponInfo = DataSet.getAppliedWeaponInfo(equips.weapon);
             let weaponMultiple = Constant.weaponMultiple[weaponInfo.type];
             let sharpnessMultiple = this.getSharpnessMultiple(status.sharpness);
@@ -779,12 +779,12 @@ export default class CharacterStatus extends Component {
                         <div className="col-12 mhwc-value">
                             {status.sets.map((data) => {
                                 return (
-                                    <div key={data.name} className="row mhwc-set">
+                                    <div key={data.id} className="row mhwc-set">
                                         <div className="col-12 mhwc-name">
-                                            <span>{data.name}</span>
+                                            <span>{data.id}</span>
                                         </div>
                                         <div className="col-12 mhwc-value">
-                                            <span>{data.skill.name} Lv.{data.skill.level}</span>
+                                            <span>{data.skill.id} Lv.{data.skill.level}</span>
                                         </div>
                                     </div>
                                 );
@@ -803,16 +803,16 @@ export default class CharacterStatus extends Component {
                                 return b.level - a.level;
                             }).map((data) => {
                                 return (
-                                    <div key={data.name} className="row mhwc-skill">
+                                    <div key={data.id} className="row mhwc-skill">
                                         <div className="col-12 mhwc-name">
-                                            <span>{data.name} Lv.{data.level}</span>
+                                            <span>{data.id} Lv.{data.level}</span>
 
                                             <div className="mhwc-icons_bundle">
-                                                {undefined !== passiveSkills[data.name] ? (
+                                                {undefined !== passiveSkills[data.id] ? (
                                                     <FunctionalIcon
-                                                        iconName={passiveSkills[data.name].isActive ? 'eye' : 'eye-slash'}
-                                                        altName={passiveSkills[data.name].isActive ? Lang.deactive : Lang.active}
-                                                        onClick={() => {this.handlePassiveSkillToggle(data.name)}} />
+                                                        iconName={passiveSkills[data.id].isActive ? 'eye' : 'eye-slash'}
+                                                        altName={passiveSkills[data.id].isActive ? Lang.deactive : Lang.active}
+                                                        onClick={() => {this.handlePassiveSkillToggle(data.id)}} />
                                                 ) : false}
                                             </div>
                                         </div>

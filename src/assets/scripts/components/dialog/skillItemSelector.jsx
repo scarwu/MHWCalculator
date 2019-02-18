@@ -76,7 +76,7 @@ export default class SkillItemSelector extends Component {
         let unselectedList = [];
 
         data = data.map((skill) => {
-            return skill.name;
+            return skill.id;
         });
 
         DataSet.skillHelper.getNames().sort().forEach((skillName) => {
@@ -88,7 +88,7 @@ export default class SkillItemSelector extends Component {
             }
 
             // Skip Selected Skills
-            if (-1 !== data.indexOf(skill.name)) {
+            if (-1 !== data.indexOf(skill.id)) {
                 selectedList.push(skill);
             } else {
                 unselectedList.push(skill);
@@ -117,7 +117,7 @@ export default class SkillItemSelector extends Component {
      */
     renderRow = (data, isSelect) => {
         return (
-            <tr key={data.name}>
+            <tr key={data.id}>
                 <td><span>{data.name}</span></td>
                 <td>
                     {data.list.map((skill, index) => {
@@ -142,11 +142,11 @@ export default class SkillItemSelector extends Component {
                         {isSelect ? (
                             <FunctionalIcon
                                 iconName="minus" altName={Lang.remove}
-                                onClick={() => {this.handleItemThrowDown(data.name)}} />
+                                onClick={() => {this.handleItemThrowDown(data.id)}} />
                         ) : (
                             <FunctionalIcon
                                 iconName="plus" altName={Lang.add}
-                                onClick={() => {this.handleItemPickUp(data.name)}} />
+                                onClick={() => {this.handleItemPickUp(data.id)}} />
                         )}
                     </div>
                 </td>
@@ -171,10 +171,10 @@ export default class SkillItemSelector extends Component {
                     {this.state.selectedList.map((data, index) => {
 
                         // Create Text
-                        let text = data.name;
+                        let text = data.id;
 
                         data.list.forEach((data) => {
-                            text += data.name + data.description;
+                            text += data.id + data.description;
                         })
 
                         // Search Nameword
@@ -190,10 +190,10 @@ export default class SkillItemSelector extends Component {
                     {this.state.unselectedList.map((data, index) => {
 
                         // Create Text
-                        let text = data.name;
+                        let text = data.id;
 
                         data.list.forEach((data) => {
-                            text += data.name + data.description;
+                            text += data.id + data.description;
                         })
 
                         // Search Nameword

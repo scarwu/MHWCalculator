@@ -48,11 +48,11 @@ export default class EquipBundleSelector extends Component {
     };
 
     handleBundleSave = (index) => {
-        let bundleName = (null !== index)
-            ? this.refs['bundleName_' + index].value
-            : this.refs.bundleName.value;
+        let bundleId = (null !== index)
+            ? this.refs['bundleId_' + index].value
+            : this.refs.bundleId.value;
 
-        if (0 === bundleName.length) {
+        if (0 === bundleId.length) {
             return;
         }
 
@@ -61,7 +61,7 @@ export default class EquipBundleSelector extends Component {
         if (null !== index) {
             let equipBundle = equipBundleList[index];
 
-            equipBundle.name = bundleName;
+            equipBundle.id = bundleId;
 
             // Set Equip Bundle List Data to Status
             Status.set('equipBundleList', equipBundleList);
@@ -71,7 +71,7 @@ export default class EquipBundleSelector extends Component {
             });
         } else {
             equipBundleList.push({
-                name: bundleName,
+                id: bundleId,
                 equips: this.state.equips
             });
 
@@ -112,13 +112,13 @@ export default class EquipBundleSelector extends Component {
     initState = (equips) => {
         let equipBundleList = Status.get('equipBundleList');
 
-        if (null === equips.weapon.name
-            && null === equips.helm.name
-            && null === equips.chest.name
-            && null === equips.arm.name
-            && null === equips.waist.name
-            && null === equips.leg.name
-            && null === equips.charm.name) {
+        if (null === equips.weapon.id
+            && null === equips.helm.id
+            && null === equips.chest.id
+            && null === equips.arm.id
+            && null === equips.waist.id
+            && null === equips.leg.id
+            && null === equips.charm.id) {
 
             equips = null;
         }
@@ -151,8 +151,8 @@ export default class EquipBundleSelector extends Component {
      */
     renderRow = (data, index) => {
         return (
-            <tr key={data.name}>
-                <td><input type="text" ref={'bundleName_' + index} defaultValue={data.name} /></td>
+            <tr key={data.id}>
+                <td><input type="text" ref={'bundleId_' + index} defaultValue={data.id} /></td>
                 <td><span>{data.equips.weapon.name}</span></td>
                 <td><span>{data.equips.helm.name}</span></td>
                 <td><span>{data.equips.chest.name}</span></td>
@@ -199,7 +199,7 @@ export default class EquipBundleSelector extends Component {
                 <tbody>
                     {null !== equips ? (
                         <tr>
-                            <td><input type="text" ref="bundleName" /></td>
+                            <td><input type="text" ref="bundleId" /></td>
                             <td><span>{equips.weapon.name}</span></td>
                             <td><span>{equips.helm.name}</span></td>
                             <td><span>{equips.chest.name}</span></td>

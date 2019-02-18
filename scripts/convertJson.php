@@ -128,7 +128,7 @@ foreach ($enhances as $enhance) {
     }
 
     // Create ID Hash
-    $enhance['id'] = md5($enhance['id']);
+    // $enhance['id'] = md5($enhance['id']);
 
     // Create Dataset
     // {
@@ -219,7 +219,7 @@ foreach ($skills as $skill) {
     }
 
     // Create ID Hash
-    $skill['id'] = md5($skill['id']);
+    // $skill['id'] = md5($skill['id']);
 
     // Create Dataset
     // {
@@ -308,10 +308,10 @@ foreach ($sets as $set) {
     $set['name'] = $hash;
 
     // Create ID Hash
-    $set['id'] = md5($set['id']);
+    // $set['id'] = md5($set['id']);
 
     foreach (array_keys($set['skills']) as $index) {
-        $set['skills'][$index]['id'] = md5($set['skills'][$index]['id']);
+        // $set['skills'][$index]['id'] = md5($set['skills'][$index]['id']);
     }
 
     // Create Dataset
@@ -340,9 +340,9 @@ foreach ($sets as $set) {
 }
 
 // Handle Weapon Data
-foreach ($weaponsBundle as $name => $weapons) {
-    $datasetMap["weapons/{$name}"] = [];
+$datasetMap['weapons'] = [];
 
+foreach ($weaponsBundle as $name => $weapons) {
     foreach ($weapons as $weapon) {
 
         // Checklist
@@ -380,11 +380,11 @@ foreach ($weaponsBundle as $name => $weapons) {
         $weapon['series'] = $hash;
 
         // Create ID Hash
-        $weapon['id'] = md5($weapon['id']);
+        // $weapon['id'] = md5($weapon['id']);
 
         if (is_array($weapon['skills']) && 0 !== count($weapon['skills'])) {
             foreach (array_keys($weapon['skills']) as $index) {
-                $weapon['skills'][$index]['id'] = md5($weapon['skills'][$index]['id']);
+                // $weapon['skills'][$index]['id'] = md5($weapon['skills'][$index]['id']);
             }
         }
 
@@ -435,7 +435,7 @@ foreach ($weaponsBundle as $name => $weapons) {
         //     ],
         //     "skills": null
         // }
-        $datasetMap["weapons/{$name}"][] = [
+        $datasetMap['weapons'][] = [
             $weapon['id'],
             $weapon['rare'],
             $weapon['type'],
@@ -484,9 +484,9 @@ foreach ($weaponsBundle as $name => $weapons) {
 }
 
 // Handler Armor Data
-foreach ($armorsBundle as $name => $armors) {
-    $datasetMap["armors/{$name}"] = [];
+$datasetMap['armors'] = [];
 
+foreach ($armorsBundle as $name => $armors) {
     foreach ($armors as $armor) {
 
         // Checklist
@@ -534,13 +534,13 @@ foreach ($armorsBundle as $name => $armors) {
             $armor['list'][$listIndex]['name'] = $hash;
 
             // Create ID Hash
-            $armor['list'][$listIndex]['id'] = md5($armor['list'][$listIndex]['name']);
+            // $armor['list'][$listIndex]['id'] = md5($armor['list'][$listIndex]['name']);
 
             if (is_array($armor['list'][$listIndex]['skills'])
                 && 0 !== count($armor['list'][$listIndex]['skills'])) {
 
                 foreach (array_keys($armor['list'][$listIndex]['skills']) as $skillIndex) {
-                    $armor['list'][$listIndex]['skills'][$skillIndex]['id'] = md5($armor['list'][$listIndex]['skills'][$skillIndex]['id']);
+                    // $armor['list'][$listIndex]['skills'][$skillIndex]['id'] = md5($armor['list'][$listIndex]['skills'][$skillIndex]['id']);
                 }
             }
         }
@@ -584,7 +584,7 @@ foreach ($armorsBundle as $name => $armors) {
         //         }
         //     ]
         // }
-        $datasetMap["armors/{$name}"][] = [
+        $datasetMap['armors'][] = [
             [
                 $armor['common']['rare'],
                 $armor['common']['gender'],
@@ -647,10 +647,10 @@ foreach ($charms as $charm) {
     $charm['name'] = $hash;
 
     // Create ID Hash
-    $charm['id'] = md5($charm['id']);
+    // $charm['id'] = md5($charm['id']);
 
     foreach (array_keys($charm['skills']) as $index) {
-        $charm['skills'][$index]['id'] = md5($charm['skills'][$index]['id']);
+        // $charm['skills'][$index]['id'] = md5($charm['skills'][$index]['id']);
     }
 
     // Create Dataset
@@ -710,8 +710,8 @@ foreach ($jewels as $jewel) {
     $jewel['name'] = $hash;
 
     // Create ID Hash
-    $jewel['id'] = md5($jewel['id']);
-    $jewel['skill']['id'] = md5($jewel['skill']['id']);
+    // $jewel['id'] = md5($jewel['id']);
+    // $jewel['skill']['id'] = md5($jewel['skill']['id']);
 
     // Create Dataset
     // {

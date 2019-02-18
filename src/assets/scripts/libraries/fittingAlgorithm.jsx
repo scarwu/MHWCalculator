@@ -55,14 +55,14 @@ class FittingAlgorithm {
 
         // Create Info by Sets
         sets.sort((a, b) => {
-            let setInfoA = DataSet.setHelper.getInfo(a.name);
-            let setInfoB = DataSet.setHelper.getInfo(b.name);
+            let setInfoA = DataSet.setHelper.getInfo(a.id);
+            let setInfoB = DataSet.setHelper.getInfo(b.id);
 
             return setInfoB.skills.pop().require - setInfoA.skills.pop().require;
         }).forEach((set) => {
-            let setInfo = DataSet.setHelper.getInfo(set.name);
+            let setInfo = DataSet.setHelper.getInfo(set.id);
 
-            this.conditionSets[set.name] = setInfo.skills[set.step - 1].require;
+            this.conditionSets[set.id] = setInfo.skills[set.step - 1].require;
         });
 
         // Create Info by Skills
@@ -70,18 +70,18 @@ class FittingAlgorithm {
             return b.level - a.level;
         }).forEach((skill) => {
             if (0 === skill.level) {
-                this.skipSkills[skill.name] = true;
+                this.skipSkills[skill.id] = true;
 
                 return;
             }
 
-            this.conditionSkills[skill.name] = skill.level;
+            this.conditionSkills[skill.id] = skill.level;
 
-            let jewelInfo = DataSet.jewelHelper.hasSkill(skill.name).getItems();
+            let jewelInfo = DataSet.jewelHelper.hasSkill(skill.id).getItems();
             let jewel = (0 !== jewelInfo.length) ? jewelInfo[0] : null;
 
-            this.correspondJewels[skill.name] = (null !== jewel) ? {
-                name: jewel.name,
+            this.correspondJewels[skill.id] = (null !== jewel) ? {
+                name: jewel.id,
                 size: jewel.size,
             } : null;
 
@@ -133,22 +133,22 @@ class FittingAlgorithm {
             // Add Jewels info to Bundle
             if (undefined !== equipInfo.slots) {
                 equipInfo.slots.forEach((slot) => {
-                    if (null === slot.jewel.name) {
+                    if (null === slot.jewel.id) {
                         return;
                     }
 
-                    if (undefined === bundle.jewels[slot.jewel.name]) {
-                        bundle.jewels[slot.jewel.name] = 0;
+                    if (undefined === bundle.jewels[slot.jewel.id]) {
+                        bundle.jewels[slot.jewel.id] = 0;
                     }
 
-                    bundle.jewels[slot.jewel.name] += 1;
+                    bundle.jewels[slot.jewel.id] += 1;
                     bundle.meta.remainingSlotCount[slot.size] -= 1;
                     bundle.meta.remainingSlotCount.all -= 1;
                 });
             }
 
             // Set Used Candidate Equip
-            this.usedEquips[candidateEquip.name] = true;
+            this.usedEquips[candidateEquip.id] = true;
         });
 
         // Reset Equip Count
@@ -231,7 +231,7 @@ class FittingAlgorithm {
                         }
 
                         // Check Candidate Equip Name
-                        if (null === candidateEquip.name) {
+                        if (null === candidateEquip.id) {
                             nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
                             return;
@@ -413,7 +413,7 @@ class FittingAlgorithm {
                     }
 
                     // Check Candidate Equip Name
-                    if (null === candidateEquip.name) {
+                    if (null === candidateEquip.id) {
                         nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
                         return;
@@ -559,7 +559,7 @@ class FittingAlgorithm {
 
             // Check Equip is in Ignore Equips
             if (undefined !== this.ignoreEquips[equipType]
-                && true === this.ignoreEquips[equipType][equip.name]) {
+                && true === this.ignoreEquips[equipType][equip.id]) {
 
                 return;
             }
@@ -573,15 +573,15 @@ class FittingAlgorithm {
             }
 
             // Check Used Equips
-            if (true === this.usedEquips[candidateEquip.name]) {
+            if (true === this.usedEquips[candidateEquip.id]) {
                 return;
             }
 
             // Set Used Candidate Equip Name
-            this.usedEquips[candidateEquip.name] = true;
+            this.usedEquips[candidateEquip.id] = true;
 
             // Set Candidate Equip
-            candidateEquips[candidateEquip.name] = candidateEquip;
+            candidateEquips[candidateEquip.id] = candidateEquip;
         });
 
         return candidateEquips;
@@ -594,12 +594,12 @@ class FittingAlgorithm {
         let candidateEquip = Helper.deepCopy(Constant.defaultCandidateEquip);
 
         // Set Name, Type & Defense
-        candidateEquip.name = equip.name;
+        candidateEquip.id = equip.id;
         candidateEquip.type = equip.type;
         candidateEquip.defense = (undefined !== equip.defense) ? equip.defense : 0;
 
         if (undefined !== equip.set && null !== equip.set) {
-            candidateEquip.setName = equip.set.name;
+            candidateEquip.setName = equip.set.id;
         }
 
         if (undefined === equip.skills) {
@@ -611,11 +611,11 @@ class FittingAlgorithm {
         }
 
         equip.skills.forEach((skill) => {
-            candidateEquip.skills[skill.name] = skill.level;
+            candidateEquip.skills[skill.id] = skill.level;
 
             // Increase Expected Value & Level
-            if (undefined !== this.correspondJewels[skill.name]) {
-                let jewel = this.correspondJewels[skill.name];
+            if (undefined !== this.correspondJewels[skill.id]) {
+                let jewel = this.correspondJewels[skill.id];
 
                 if (null !== jewel) {
                     candidateEquip.expectedValue += skill.level * jewel.size; // 1, 2, 3
@@ -706,7 +706,7 @@ class FittingAlgorithm {
      * Add Candidate Equip To Bundle
      */
     addCandidateEquipToBundle = (bundle, candidateEquip) => {
-        if (null === candidateEquip.name) {
+        if (null === candidateEquip.id) {
             return bundle;
         }
 
@@ -716,7 +716,7 @@ class FittingAlgorithm {
             return bundle;
         }
 
-        bundle.equips[candidateEquip.type] = candidateEquip.name;
+        bundle.equips[candidateEquip.type] = candidateEquip.id;
         bundle.defense += candidateEquip.defense;
 
         if (null !== candidateEquip.setName) {
@@ -797,7 +797,7 @@ class FittingAlgorithm {
      * Add Jewel To Bundle By Specific Skill
      */
     addJewelToBundleBySpecificSkill = (bundle, skill, jewel) => {
-        let diffSkillLevel = skill.level - bundle.skills[skill.name];
+        let diffSkillLevel = skill.level - bundle.skills[skill.id];
 
         if (0 === diffSkillLevel) {
             return bundle;
@@ -838,18 +838,18 @@ class FittingAlgorithm {
             }
         }
 
-        if (undefined === bundle.skills[skill.name]) {
-            bundle.skills[skill.name] = 0;
+        if (undefined === bundle.skills[skill.id]) {
+            bundle.skills[skill.id] = 0;
         }
 
-        if (undefined === bundle.jewels[jewel.name]) {
-            bundle.jewels[jewel.name] = 0;
+        if (undefined === bundle.jewels[jewel.id]) {
+            bundle.jewels[jewel.id] = 0;
         }
 
-        diffSkillLevel = skill.level - bundle.skills[skill.name];
+        diffSkillLevel = skill.level - bundle.skills[skill.id];
 
-        bundle.skills[skill.name] += diffSkillLevel;
-        bundle.jewels[jewel.name] += diffSkillLevel;
+        bundle.skills[skill.id] += diffSkillLevel;
+        bundle.jewels[jewel.id] += diffSkillLevel;
 
         Object.keys(usedSlotCount).forEach((slotSize) => {
             bundle.meta.remainingSlotCount[slotSize] -= usedSlotCount[slotSize];

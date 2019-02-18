@@ -12,14 +12,15 @@
 import Constant from 'constant';
 
 // Load Dataset
-import Charms from 'datasets/charms';
+import Charms from 'datasets/charms.json';
 
 // [
-//     0: name,
-//     1: rare,
-//     2: skills [
+//     0: id,
+//     1: name,
+//     2: rare,
+//     3: skills [
 //         [
-//             0: name,
+//             0: id,
 //             1: level
 //         ],
 //         [ ... ]
@@ -27,11 +28,12 @@ import Charms from 'datasets/charms';
 // ]
 let dataset = Charms.map((charm) => {
     return {
-        name: charm[0],
-        rare: charm[1],
-        skills: charm[2].map((skill) => {
+        id: charm[0],
+        name: charm[1],
+        rare: charm[2],
+        skills: charm[3].map((skill) => {
             return {
-                name: skill[0],
+                id: skill[0],
                 level: skill[1]
             };
         })
@@ -44,7 +46,7 @@ class CharmHelper {
         this.mapping = {};
 
         list.forEach((data) => {
-            this.mapping[data.name] = data;
+            this.mapping[data.id] = data;
         });
 
         // Filter Conditional
@@ -65,7 +67,7 @@ class CharmHelper {
 
             if (null !== this.filterSkillName) {
                 for (let index in data.skills) {
-                    if (this.filterSkillName !== data.skills[index].name) {
+                    if (this.filterSkillName !== data.skills[index].id) {
                         continue;
                     }
 

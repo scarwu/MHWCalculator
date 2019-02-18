@@ -56,7 +56,7 @@ export default {
         type: null,
         defense: 0,
         skills: {},
-        setName: null,
+        setId: null,
         ownSlotCount: {
             1: 0,
             2: 0,
@@ -94,32 +94,32 @@ export default {
     },
     defaultEquips: {
         weapon: {
-            name: null,
-            enhanceNames: {},
-            slotNames: {}
+            id: null,
+            enhanceIds: {},
+            slotIds: {}
         },
         helm: {
-            name: null,
-            slotNames: {}
+            id: null,
+            slotIds: {}
         },
         chest: {
-            name: null,
-            slotNames: {}
+            id: null,
+            slotIds: {}
         },
         arm: {
-            name: null,
-            slotNames: {}
+            id: null,
+            slotIds: {}
         },
         waist: {
-            name: null,
-            slotNames: {}
+            id: null,
+            slotIds: {}
         },
         leg: {
-            name: null,
-            slotNames: {}
+            id: null,
+            slotIds: {}
         },
         charm: {
-            name: null
+            id: null
         }
     },
     defaultEquipsLock: {
@@ -174,126 +174,126 @@ export default {
     testEquipsSetting: [
         {
             weapon: {
-                name: '罪【真】',
-                enhanceNames: {
+                id: '罪【真】',
+                enhanceIds: {
                     0: '賦予回復能力'
                 },
-                slotNames: {}
+                slotIds: {}
             },
             helm: {
-                name: '龍王的獨眼α',
-                slotNames: {
+                id: '龍王的獨眼α',
+                slotIds: {
                     0: '耐衝珠'
                 }
             },
             chest: {
-                name: '杜賓鎧甲β',
-                slotNames: {
+                id: '杜賓鎧甲β',
+                slotIds: {
                     0: '痛擊珠'
                 }
             },
             arm: {
-                name: '異種大型鋼爪α',
-                slotNames: {
+                id: '異種大型鋼爪α',
+                slotIds: {
                     0: '達人珠'
                 }
             },
             waist: {
-                name: '慘爪龍腰甲β',
-                slotNames: {
+                id: '慘爪龍腰甲β',
+                slotIds: {
                     0: '無擊珠'
                 }
             },
             leg: {
-                name: '杜賓護腿β',
-                slotNames: {
+                id: '杜賓護腿β',
+                slotIds: {
                     0: '達人珠'
                 }
             },
             charm: {
-                name: '攻擊護石 III'
+                id: '攻擊護石 III'
             }
         },
         {
             weapon: {
-                name: '龍熱機關式【鋼翼】改',
-                enhanceNames: {
+                id: '龍熱機關式【鋼翼】改',
+                enhanceIds: {
                     0: '賦予回復能力',
                     1: '強化鑲嵌槽'
                 },
-                slotNames: {
+                slotIds: {
                     0: '奪氣珠',
                     1: '奪氣珠'
                 }
             },
             helm: {
-                name: '龍王的獨眼α',
-                slotNames: {
+                id: '龍王的獨眼α',
+                slotIds: {
                     0: 'KO珠'
                 }
             },
             chest: {
-                name: '爆鎚龍鎧甲α',
-                slotNames: {
+                id: '爆鎚龍鎧甲α',
+                slotIds: {
                     0: '達人珠'
                 }
             },
             arm: {
-                name: '帝王腕甲β',
-                slotNames: {
+                id: '帝王腕甲β',
+                slotIds: {
                     0: 'KO珠'
                 }
             },
             waist: {
-                name: '爆鎚龍腰甲β',
-                slotNames: {
+                id: '爆鎚龍腰甲β',
+                slotIds: {
                     0: '無擊珠',
                     1: '達人珠'
                 }
             },
             leg: {
-                name: '死神護腿β',
-                slotNames: {
+                id: '死神護腿β',
+                slotIds: {
                     0: '攻擊珠',
                     1: '攻擊珠'
                 }
             },
             charm: {
-                name: '匠之護石 III'
+                id: '匠之護石 III'
             }
         },
         {
             weapon: {
-                name: '搔鳥尖槍 III',
-                enhanceNames: {
+                id: '搔鳥尖槍 III',
+                enhanceIds: {
                     0: '強化鑲嵌槽',
                     1: '強化鑲嵌槽',
                     2: '強化鑲嵌槽'
                 },
-                slotNames: {}
+                slotIds: {}
             },
             helm: {
-                name: '鋼龍強力β',
-                slotNames: {}
+                id: '鋼龍強力β',
+                slotIds: {}
             },
             chest: {
-                name: '大馬士革鎧甲β',
-                slotNames: {}
+                id: '大馬士革鎧甲β',
+                slotIds: {}
             },
             arm: {
-                name: '烏爾德腕甲β',
-                slotNames: {}
+                id: '烏爾德腕甲β',
+                slotIds: {}
             },
             waist: {
-                name: '麒麟腰環β',
-                slotNames: {}
+                id: '麒麟腰環β',
+                slotIds: {}
             },
             leg: {
-                name: '燕尾蝶腳β',
-                slotNames: {}
+                id: '燕尾蝶腳β',
+                slotIds: {}
             },
             charm: {
-                name: '匠之護石 III'
+                id: '匠之護石 III'
             }
         }
     ],
@@ -302,27 +302,27 @@ export default {
             sets: [],
             skills: [
                 {
-                    name: '攻擊',
+                    id: '攻擊',
                     level: 7
                 },
                 {
-                    name: '看破',
+                    id: '看破',
                     level: 4
                 },
                 {
-                    name: '弱點特效',
+                    id: '弱點特效',
                     level: 3
                 },
                 {
-                    name: '減輕膽怯',
+                    id: '減輕膽怯',
                     level: 2
                 },
                 {
-                    name: '超會心',
+                    id: '超會心',
                     level: 1
                 },
                 {
-                    name: '無屬性強化',
+                    id: '無屬性強化',
                     level: 1
                 }
             ]
@@ -330,27 +330,27 @@ export default {
             sets: [],
             skills: [
                 {
-                    name: '匠',
+                    id: '匠',
                     level: 5
                 },
                 {
-                    name: '看破',
+                    id: '看破',
                     level: 5
                 },
                 {
-                    name: '弱點特效',
+                    id: '弱點特效',
                     level: 3
                 },
                 {
-                    name: '精神抖擻',
+                    id: '精神抖擻',
                     level: 3
                 },
                 {
-                    name: '攻擊',
+                    id: '攻擊',
                     level: 2
                 },
                 {
-                    name: '剛刃研磨',
+                    id: '剛刃研磨',
                     level: 1
                 }
             ]
@@ -358,80 +358,80 @@ export default {
             sets: [],
             skills: [
                 {
-                    name: '水屬性攻擊強化',
+                    id: '水屬性攻擊強化',
                     level: 3
                 },
                 {
-                    name: '體術',
+                    id: '體術',
                     level: 4
                 },
                 {
-                    name: '屬性解放／裝填擴充',
+                    id: '屬性解放／裝填擴充',
                     level: 2
                 },
                 {
-                    name: '弱點特效',
+                    id: '弱點特效',
                     level: 3
                 },
                 {
-                    name: '看破',
+                    id: '看破',
                     level: 2
                 },
                 {
-                    name: '耐力急速回復',
+                    id: '耐力急速回復',
                     level: 2
                 },
                 {
-                    name: '通常彈・通常箭強化',
+                    id: '通常彈・通常箭強化',
                     level: 1
                 },
                 {
-                    name: '散彈・剛射強化',
+                    id: '散彈・剛射強化',
                     level: 1
                 },
                 {
-                    name: '解放弓的蓄力階段',
+                    id: '解放弓的蓄力階段',
                     level: 1
                 }
             ]
         }, {
             sets: [
                 {
-                    name: '火龍奧祕',
+                    id: '火龍奧祕',
                     step: 1
                 }
             ],
             skills: [
                 {
-                    name: '匠',
+                    id: '匠',
                     level: 5
                 },
                 {
-                    name: '攻擊',
+                    id: '攻擊',
                     level: 3
                 },
                 {
-                    name: '火屬性攻擊強化',
+                    id: '火屬性攻擊強化',
                     level: 3
                 },
                 {
-                    name: '看破',
+                    id: '看破',
                     level: 2
                 },
                 {
-                    name: '弱點特效',
+                    id: '弱點特效',
                     level: 3
                 },
                 {
-                    name: '精神抖擻',
+                    id: '精神抖擻',
                     level: 3
                 },
                 {
-                    name: '屬性解放／裝填擴充',
+                    id: '屬性解放／裝填擴充',
                     level: 1
                 },
                 {
-                    name: '強化持續',
+                    id: '強化持續',
                     level: 1
                 }
             ]
@@ -439,27 +439,27 @@ export default {
             sets: [],
             skills: [
                 {
-                    name: '匠',
+                    id: '匠',
                     level: 5
                 },
                 {
-                    name: '攻擊',
+                    id: '攻擊',
                     level: 6
                 },
                 {
-                    name: '弱點特效',
+                    id: '弱點特效',
                     level: 3
                 },
                 {
-                    name: '超會心',
+                    id: '超會心',
                     level: 3
                 },
                 {
-                    name: '剛刃研磨',
+                    id: '剛刃研磨',
                     level: 1
                 },
                 {
-                    name: '無屬性強化',
+                    id: '無屬性強化',
                     level: 1
                 }
             ]

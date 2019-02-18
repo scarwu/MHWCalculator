@@ -79,7 +79,7 @@ export default class Main extends Component {
 
     handleSetStepUp = (index) => {
         let sets = this.state.sets;
-        let setInfo = DataSet.setHelper.getInfo(sets[index].name);
+        let setInfo = DataSet.setHelper.getInfo(sets[index].id);
 
         if (setInfo.skills.length === sets[index].step) {
             return false;
@@ -111,7 +111,7 @@ export default class Main extends Component {
         let sets = this.state.sets;
 
         sets.push({
-            name: data.setName,
+            name: data.setId,
             step: 1
         });
 
@@ -127,7 +127,7 @@ export default class Main extends Component {
         let sets = this.state.sets;
 
         sets = sets.filter((set) => {
-            return set.name !== data.setName;
+            return set.id !== data.setId;
         });
 
         // Set Sets Data to Status
@@ -174,7 +174,7 @@ export default class Main extends Component {
 
     handleSkillLevelUp = (index) => {
         let skills = this.state.skills;
-        let skillInfo = DataSet.skillHelper.getInfo(skills[index].name);
+        let skillInfo = DataSet.skillHelper.getInfo(skills[index].id);
 
         if (skillInfo.list.length === skills[index].level) {
             return false;
@@ -206,7 +206,7 @@ export default class Main extends Component {
         let skills = this.state.skills;
 
         skills.push({
-            name: data.skillName,
+            name: data.skillId,
             level: 1
         });
 
@@ -222,7 +222,7 @@ export default class Main extends Component {
         let skills = this.state.skills;
 
         skills = skills.filter((skill) => {
-            return skill.name !== data.skillName;
+            return skill.id !== data.skillId;
         });
 
         // Set Sets Data to Status
@@ -295,8 +295,8 @@ export default class Main extends Component {
                 return;
             }
 
-            equips[equipType].name = bundle.equips[equipType];
-            equips[equipType].slotNames = {};
+            equips[equipType].id = bundle.equips[equipType];
+            equips[equipType].slotIds = {};
 
             let equipInfo = null;
 
@@ -347,7 +347,7 @@ export default class Main extends Component {
 
                 data = slotMap[currentSize].shift();
 
-                equips[data.type].slotNames[data.index] = jewelName;
+                equips[data.type].slotIds[data.index] = jewelName;
 
                 jewelIndex++;
             }
@@ -390,26 +390,26 @@ export default class Main extends Component {
         let equips = this.state.equips;
 
         if (undefined !== data.enhanceIndex) {
-            if ('object' !== typeof equips.weapon.enhanceNames
-                || null === equips.weapon.enhanceNames) {
+            if ('object' !== typeof equips.weapon.enhanceIds
+                || null === equips.weapon.enhanceIds) {
 
-                equips.weapon.enhanceNames = {};
+                equips.weapon.enhanceIds = {};
             }
 
-            equips.weapon.enhanceNames[data.enhanceIndex] = data.enhanceName;
+            equips.weapon.enhanceIds[data.enhanceIndex] = data.enhanceId;
         } else if (undefined !== data.slotIndex) {
-            if ('object' !== typeof equips[data.equipType].slotNames
-                || null === equips.weapon.slotNames) {
+            if ('object' !== typeof equips[data.equipType].slotIds
+                || null === equips.weapon.slotIds) {
 
-                equips[data.equipType].slotNames = {};
+                equips[data.equipType].slotIds = {};
             }
 
-            equips[data.equipType].slotNames[data.slotIndex] = data.slotName;
+            equips[data.equipType].slotIds[data.slotIndex] = data.slotName;
         } else if ('weapon' === data.equipType) {
             equips.weapon = {
                 name: data.equipName,
-                enhanceNames: {},
-                slotNames: {}
+                enhanceIds: {},
+                slotIds: {}
             };
         } else if ('helm' === data.equipType
             || 'chest' === data.equipType
@@ -419,7 +419,7 @@ export default class Main extends Component {
 
             equips[data.equipType] = {
                 name: data.equipName,
-                slotNames: {}
+                slotIds: {}
             };
         } else if ('charm' === data.equipType) {
             equips.charm = {
@@ -448,10 +448,10 @@ export default class Main extends Component {
             ignoreEquips[data.type] = {};
         }
 
-        if (undefined === ignoreEquips[data.type][data.name]) {
-            ignoreEquips[data.type][data.name] = true;
+        if (undefined === ignoreEquips[data.type][data.id]) {
+            ignoreEquips[data.type][data.id] = true;
         } else {
-            delete ignoreEquips[data.type][data.name];
+            delete ignoreEquips[data.type][data.id];
         }
 
         // Set Ignore Equips Data to Status
@@ -560,14 +560,14 @@ export default class Main extends Component {
         let sets = this.state.sets;
 
         return sets.map((data, index) => {
-            let setInfo = DataSet.setHelper.getInfo(data.name);
+            let setInfo = DataSet.setHelper.getInfo(data.id);
             let setRequire = setInfo.skills[data.step - 1].require;
 
             return (
-                <div key={setInfo.name} className="row mhwc-item">
+                <div key={setInfo.id} className="row mhwc-item">
                     <div className="col-12 mhwc-name">
                         <span>
-                            {setInfo.name} x {setRequire}
+                            {setInfo.id} x {setRequire}
                         </span>
 
                         <div className="mhwc-icons_bundle">
@@ -589,8 +589,8 @@ export default class Main extends Component {
                             }
 
                             return (
-                                <div key={set.name}>
-                                    <span>({set.require}) {set.name}</span>
+                                <div key={set.id}>
+                                    <span>({set.require}) {set.id}</span>
                                 </div>
                             );
                         })}
@@ -604,13 +604,13 @@ export default class Main extends Component {
         let skills = this.state.skills;
 
         return skills.map((data, index) => {
-            let skillInfo = DataSet.skillHelper.getInfo(data.name);
+            let skillInfo = DataSet.skillHelper.getInfo(data.id);
 
             return (
-                <div key={skillInfo.name} className="row mhwc-item">
+                <div key={skillInfo.id} className="row mhwc-item">
                     <div className="col-12 mhwc-name">
                         <span>
-                            {skillInfo.name}
+                            {skillInfo.id}
                             &nbsp;
                             Lv.{data.level} / {skillInfo.list.length}
                         </span>

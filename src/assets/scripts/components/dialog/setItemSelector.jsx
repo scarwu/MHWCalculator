@@ -76,7 +76,7 @@ export default class SetItemSelector extends Component {
         let unselectedList = [];
 
         data = data.map((set) => {
-            return set.name;
+            return set.id;
         });
 
         DataSet.setHelper.getNames().sort().forEach((setName) => {
@@ -84,7 +84,7 @@ export default class SetItemSelector extends Component {
             let set = DataSet.setHelper.getInfo(setName);
 
             // Skip Selected Sets
-            if (-1 !== data.indexOf(set.name)) {
+            if (-1 !== data.indexOf(set.id)) {
                 selectedList.push(set);
             } else {
                 unselectedList.push(set);
@@ -113,20 +113,20 @@ export default class SetItemSelector extends Component {
      */
     renderRow = (data, isSelect) => {
         return (
-            <tr key={data.name}>
+            <tr key={data.id}>
                 <td><span>{data.name}</span></td>
                 <td>
                     {data.skills.map((skill, index) => {
                         return (
                             <div key={index}>
-                                <span>({skill.require}) {skill.name}</span>
+                                <span>({skill.require}) {skill.id}</span>
                             </div>
                         );
                     })}
                 </td>
                 <td>
                     {data.skills.map((skill, index) => {
-                        let skillInfo = DataSet.skillHelper.getInfo(skill.name);
+                        let skillInfo = DataSet.skillHelper.getInfo(skill.id);
 
                         return (
                             <div key={index}>
@@ -140,11 +140,11 @@ export default class SetItemSelector extends Component {
                         {isSelect ? (
                             <FunctionalIcon
                                 iconName="minus" altName={Lang.remove}
-                                onClick={() => {this.handleItemThrowDown(data.name)}} />
+                                onClick={() => {this.handleItemThrowDown(data.id)}} />
                         ) : (
                             <FunctionalIcon
                                 iconName="plus" altName={Lang.add}
-                                onClick={() => {this.handleItemPickUp(data.name)}} />
+                                onClick={() => {this.handleItemPickUp(data.id)}} />
                         )}
                     </div>
                 </td>
@@ -169,12 +169,12 @@ export default class SetItemSelector extends Component {
                     {this.state.selectedList.map((data, index) => {
 
                         // Create Text
-                        let text = data.name;
+                        let text = data.id;
 
                         data.skills.forEach((data) => {
-                            let skillInfo = DataSet.skillHelper.getInfo(data.name);
+                            let skillInfo = DataSet.skillHelper.getInfo(data.id);
 
-                            text += data.name + skillInfo.list[0].description;
+                            text += data.id + skillInfo.list[0].description;
                         })
 
                         // Search Nameword
@@ -190,12 +190,12 @@ export default class SetItemSelector extends Component {
                     {this.state.unselectedList.map((data, index) => {
 
                         // Create Text
-                        let text = data.name;
+                        let text = data.id;
 
                         data.skills.forEach((data) => {
-                            let skillInfo = DataSet.skillHelper.getInfo(data.name);
+                            let skillInfo = DataSet.skillHelper.getInfo(data.id);
 
-                            text += data.name + skillInfo.list[0].description;
+                            text += data.id + skillInfo.list[0].description;
                         })
 
                         // Search Nameword

@@ -12,11 +12,12 @@
 import Constant from 'constant';
 
 // Load Dataset
-import Sets from 'datasets/sets';
+import Sets from 'datasets/sets.json';
 
 // [
-//     0: name,
-//     1: skills [
+//     0: id,
+//     1: name,
+//     2: skills [
 //         [
 //             0: name,
 //             1: require
@@ -26,10 +27,11 @@ import Sets from 'datasets/sets';
 // ]
 let dataset = Sets.map((set) => {
     return {
-        name: set[0],
-        skills: set[1].map((skill) => {
+        id: set[0],
+        name: set[1],
+        skills: set[2].map((skill) => {
             return {
-                name: skill[0],
+                id: skill[0],
                 require: skill[1]
             };
         })
@@ -42,7 +44,7 @@ class SetHelper {
         this.mapping = {};
 
         list.forEach((data) => {
-            this.mapping[data.name] = data;
+            this.mapping[data.id] = data;
         });
 
         // Filter Conditional
@@ -60,7 +62,7 @@ class SetHelper {
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
             if (null !== this.filterSkillName) {
-                if (this.filterSkillName !== data.skill.name) {
+                if (this.filterSkillName !== data.skill.id) {
                     return false;
                 }
             }

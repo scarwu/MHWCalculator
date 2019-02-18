@@ -12,17 +12,18 @@
 import Constant from 'constant';
 
 // Load Dataset
-import Skills from 'datasets/skills';
+import Skills from 'datasets/skills.json';
 
 // [
-//     0: name,
-//     1: type,
-//     2: from [
+//     0: id,
+//     1: name,
+//     2: type,
+//     3: from [
 //         0: set,
 //         1: jewel,
 //         2: armor
 //     ],
-//     3: list [
+//     4: list [
 //         [
 //             0: level,
 //             1: description,
@@ -33,14 +34,15 @@ import Skills from 'datasets/skills';
 // ]
 let dataset = Skills.map((skill) => {
     return {
-        name: skill[0],
-        type: skill[1],
+        id: skill[0],
+        name: skill[1],
+        type: skill[2],
         from: {
-            set: skill[2][0],
-            jewel: skill[2][1],
-            armor: skill[2][2]
+            set: skill[3][0],
+            jewel: skill[3][1],
+            armor: skill[3][2]
         },
-        list: skill[3].map((item) => {
+        list: skill[4].map((item) => {
             return {
                 level: item[0],
                 description: item[1],
@@ -56,7 +58,7 @@ class SkillHelper {
         this.mapping = {};
 
         list.forEach((data) => {
-            this.mapping[data.name] = data;
+            this.mapping[data.id] = data;
         });
     }
 

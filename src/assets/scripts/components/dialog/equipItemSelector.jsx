@@ -140,7 +140,7 @@ export default class EquipItemSelector extends Component {
                 for (let rare = 8; rare >= 5; rare--) {
                     DataSet.weaponHelper.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
                         if (undefined !== ignoreEquips['weapon']
-                            && true === ignoreEquips['weapon'][equip.name]) {
+                            && true === ignoreEquips['weapon'][equip.id]) {
 
                             ignoreList.push(equip);
                         } else {
@@ -151,7 +151,7 @@ export default class EquipItemSelector extends Component {
 
                 DataSet.weaponHelper.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
                     if (undefined !== ignoreEquips['weapon']
-                        && true === ignoreEquips['weapon'][equip.name]) {
+                        && true === ignoreEquips['weapon'][equip.id]) {
 
                         ignoreList.push(equip);
                     } else {
@@ -171,7 +171,7 @@ export default class EquipItemSelector extends Component {
             for (let rare = 8; rare >= 5; rare--) {
                 DataSet.armorHelper.typeIs(data.equipType).rareIs(rare).getItems().forEach((equip) => {
                     if (undefined !== ignoreEquips[equip.type]
-                        && true === ignoreEquips[equip.type][equip.name]) {
+                        && true === ignoreEquips[equip.type][equip.id]) {
 
                         ignoreList.push(equip);
                     } else {
@@ -182,7 +182,7 @@ export default class EquipItemSelector extends Component {
 
             DataSet.armorHelper.typeIs(data.equipType).rareIs(0).getItems().forEach((equip) => {
                 if (undefined !== ignoreEquips[equip.type]
-                    && true === ignoreEquips[equip.type][equip.name]) {
+                    && true === ignoreEquips[equip.type][equip.id]) {
 
                     ignoreList.push(equip);
                 } else {
@@ -194,7 +194,7 @@ export default class EquipItemSelector extends Component {
 
             DataSet.charmHelper.getItems().forEach((equip) => {
                 if (undefined !== ignoreEquips['charm']
-                    && true === ignoreEquips['charm'][equip.name]) {
+                    && true === ignoreEquips['charm'][equip.id]) {
 
                     ignoreList.push(equip);
                 } else {
@@ -268,7 +268,7 @@ export default class EquipItemSelector extends Component {
         }
 
         return (
-            <tr key={index}>
+            <tr key={data.id}>
                 <td><span>{data.name}</span></td>
                 <td><span>{data.series}</span></td>
                 <td><span>{data.rare}</span></td>
@@ -320,7 +320,7 @@ export default class EquipItemSelector extends Component {
                     {data.skills.map((data, index) => {
                         return (
                             <div key={index}>
-                                <span>{data.name} Lv.{data.level}</span>
+                                <span>{data.id} Lv.{data.level}</span>
                             </div>
                         );
                     })}
@@ -330,12 +330,12 @@ export default class EquipItemSelector extends Component {
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
                             altName={isIgnore ? Lang.include : Lang.exclude}
-                            onClick={() => {this.handleItemToggle('weapon', data.name)}} />
+                            onClick={() => {this.handleItemToggle('weapon', data.id)}} />
 
-                        {(this.props.data.equipName !== data.name) ? (
+                        {(this.props.data.equipName !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={Lang.select}
-                                onClick={() => {this.handleItemPickUp(data.name)}} />
+                                onClick={() => {this.handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
                 </td>
@@ -372,7 +372,7 @@ export default class EquipItemSelector extends Component {
                         }
 
                         // Create Text
-                        let text = data.name;
+                        let text = data.id;
 
                         text += Lang[data.type];
 
@@ -404,7 +404,7 @@ export default class EquipItemSelector extends Component {
 
     renderArmorRow = (data, index, isIgnore) => {
         return (
-            <tr key={index}>
+            <tr key={data.id}>
                 <td><span>{data.name}</span></td>
                 <td><span>{data.series}</span></td>
                 <td><span>{data.rare}</span></td>
@@ -425,14 +425,14 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     {null !== data.set ? (
-                        <span>{data.set.name}</span>
+                        <span>{data.set.id}</span>
                     ) : false}
                 </td>
                 <td>
                     {data.skills.map((data, index) => {
                         return (
                             <div key={index}>
-                                <span>{data.name} Lv.{data.level}</span>
+                                <span>{data.id} Lv.{data.level}</span>
                             </div>
                         );
                     })}
@@ -442,12 +442,12 @@ export default class EquipItemSelector extends Component {
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
                             altName={isIgnore ? Lang.include : Lang.exclude}
-                            onClick={() => {this.handleItemToggle(data.type, data.name)}} />
+                            onClick={() => {this.handleItemToggle(data.type, data.id)}} />
 
-                        {(this.props.data.equipName !== data.name) ? (
+                        {(this.props.data.equipName !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={Lang.select}
-                                onClick={() => {this.handleItemPickUp(data.name)}} />
+                                onClick={() => {this.handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
                 </td>
@@ -477,14 +477,14 @@ export default class EquipItemSelector extends Component {
                     {this.state.includeList.map((data, index) => {
 
                         // Create Text
-                        let text = data.name;
+                        let text = data.id;
 
                         if (null !== data.set) {
-                            text += data.set.name;
+                            text += data.set.id;
                         }
 
                         data.skills.forEach((data) => {
-                            text += data.name;
+                            text += data.id;
                         })
 
                         // Search Nameword
@@ -507,14 +507,14 @@ export default class EquipItemSelector extends Component {
 
     renderCharmRow = (data, index, isIgnore) => {
         return (
-            <tr key={index}>
+            <tr key={data.id}>
                 <td><span>{data.name}</span></td>
                 <td><span>{data.rare}</span></td>
                 <td>
                     {data.skills.map((data, index) => {
                         return (
                             <div key={index}>
-                                <span>{data.name} Lv.{data.level}</span>
+                                <span>{data.id} Lv.{data.level}</span>
                             </div>
                         );
                     })}
@@ -524,12 +524,12 @@ export default class EquipItemSelector extends Component {
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
                             altName={isIgnore ? Lang.include : Lang.exclude}
-                            onClick={() => {this.handleItemToggle('charm', data.name)}} />
+                            onClick={() => {this.handleItemToggle('charm', data.id)}} />
 
-                        {(this.props.data.equipName !== data.name) ? (
+                        {(this.props.data.equipName !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={Lang.select}
-                                onClick={() => {this.handleItemPickUp(data.name)}} />
+                                onClick={() => {this.handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
                 </td>
@@ -554,10 +554,10 @@ export default class EquipItemSelector extends Component {
                     {this.state.includeList.map((data, index) => {
 
                         // Create Text
-                        let text = data.name;
+                        let text = data.id;
 
                         data.skills.forEach((data) => {
-                            text += data.name;
+                            text += data.id;
                         })
 
                         // Search Nameword
@@ -580,19 +580,19 @@ export default class EquipItemSelector extends Component {
 
     renderJewelRow = (data, index) => {
         return (
-            <tr key={index}>
+            <tr key={data.id}>
                 <td><span>{data.name}</span></td>
                 <td><span>{data.rare}</span></td>
                 <td><span>{data.size}</span></td>
                 <td>
-                    <span>{data.skill.name} Lv.{data.skill.level}</span>
+                    <span>{data.skill.id} Lv.{data.skill.level}</span>
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        {(this.props.data.jewelName !== data.name) ? (
+                        {(this.props.data.jewelName !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={Lang.select}
-                                onClick={() => {this.handleItemPickUp(data.name)}} />
+                                onClick={() => {this.handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
                 </td>
@@ -618,9 +618,9 @@ export default class EquipItemSelector extends Component {
                     {this.state.includeList.map((data, index) => {
 
                         // Create Text
-                        let text = data.name;
+                        let text = data.id;
 
-                        text += data.skill.name;
+                        text += data.skill.id;
 
                         // Search Nameword
                         if (null !== segment
@@ -639,7 +639,7 @@ export default class EquipItemSelector extends Component {
     renderEnhanceRow = (data, index) => {
         return (
             <tr key={index}>
-                <td>{data.name}</td>
+                <td>{data.id}</td>
                 <td>
                     {data.list.map((data, index) => {
                         return (
@@ -660,10 +660,10 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        {(this.props.data.enhanceName !== data.name) ? (
+                        {(this.props.data.enhanceName !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={Lang.select}
-                                onClick={() => {this.handleItemPickUp(data.name)}} />
+                                onClick={() => {this.handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
                 </td>
@@ -688,7 +688,7 @@ export default class EquipItemSelector extends Component {
                     {this.state.includeList.map((data, index) => {
 
                         // Create Text
-                        let text = data.name;
+                        let text = data.id;
 
                         data.list.forEach((data) => {
                             text += data.description;

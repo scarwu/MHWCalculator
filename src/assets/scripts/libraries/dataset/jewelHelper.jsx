@@ -12,25 +12,27 @@
 import Constant from 'constant';
 
 // Load Dataset
-import Jewels from 'datasets/jewels';
+import Jewels from 'datasets/jewels.json';
 
 // [
-//     0: name,
-//     1: rare,
-//     2: size,
-//     3: skill [
-//         0: name,
+//     0: id,
+//     1: name,
+//     2: rare,
+//     3: size,
+//     4: skill [
+//         0: id,
 //         1: level
 //     ]
 // ]
 let dataset = Jewels.map((jewel) => {
     return {
-        name: jewel[0],
-        rare: jewel[1],
-        size: jewel[2],
+        id: jewel[0],
+        name: jewel[1],
+        rare: jewel[2],
+        size: jewel[3],
         skill: {
-            name: jewel[3][0],
-            level: jewel[3][1]
+            id: jewel[4][0],
+            level: jewel[4][1]
         }
     };
 });
@@ -41,7 +43,7 @@ class JewelHelper {
         this.mapping = {};
 
         list.forEach((data) => {
-            this.mapping[data.name] = data;
+            this.mapping[data.id] = data;
         });
 
         // Filter Conditional
@@ -68,7 +70,7 @@ class JewelHelper {
             }
 
             if (null !== this.filterSkillName) {
-                if (this.filterSkillName !== data.skill.name) {
+                if (this.filterSkillName !== data.skill.id) {
                     return false;
                 }
             }
