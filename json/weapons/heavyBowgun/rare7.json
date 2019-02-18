@@ -1,0 +1,273 @@
+[
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "大凶豺龍",
+        "name": "牙龍重弩【暴食】",
+        "attack": 270,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "蠻顎龍",
+        "name": "蠻顎重弩黑火砲",
+        "attack": 300,
+        "criticalRate": -20,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "岩賊龍",
+        "name": "岩賊龍砲 II",
+        "attack": 255,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "熔山龍",
+        "name": "熔山龍重弩槍 II",
+        "attack": 315,
+        "criticalRate": -20,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 2
+            }
+        ],
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "恐暴龍",
+        "name": "黑暗左右",
+        "attack": 345,
+        "criticalRate": -25,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "絢輝龍",
+        "name": "鎧羅突擊弩．眩",
+        "attack": 255,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "絢輝龍",
+        "name": "鎧羅突擊弩．飛雷",
+        "attack": 255,
+        "criticalRate": 25,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "絢輝龍",
+        "name": "鎧羅突擊弩．賊",
+        "attack": 270,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "絢輝龍",
+        "name": "鎧羅突擊弩．毒妖",
+        "attack": 270,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "絢輝龍",
+        "name": "鎧羅突擊弩．骨鎚",
+        "attack": 270,
+        "criticalRate": 0,
+        "defense": 25,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "絢輝龍",
+        "name": "鎧羅突擊弩．岩賊",
+        "attack": 285,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "絢輝龍",
+        "name": "鎧羅突擊弩．蠻顎",
+        "attack": 300,
+        "criticalRate": -10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "絢輝龍",
+        "name": "鎧羅突擊弩．熔山",
+        "attack": 315,
+        "criticalRate": -10,
+        "defense": 30,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "絢輝龍",
+        "name": "鎧羅突擊弩．角",
+        "attack": 330,
+        "criticalRate": -10,
+        "defense": 25,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    },
+    {
+        "rare": 7,
+        "type": "heavyBowgun",
+        "series": "絢輝龍",
+        "name": "鎧羅突擊弩．？",
+        "attack": 0,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    }
+]

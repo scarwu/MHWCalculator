@@ -1,0 +1,884 @@
+[
+    {
+        "name": "KO珠",
+        "rare": 6,
+        "size": 2,
+        "skill": {
+            "name": "KO術",
+            "level": 1
+        }
+    },
+    {
+        "name": "増彈珠",
+        "rare": 7,
+        "size": 2,
+        "skill": {
+            "name": "砲彈裝填數UP",
+            "level": 1
+        }
+    },
+    {
+        "name": "體術珠",
+        "rare": 6,
+        "size": 2,
+        "skill": {
+            "name": "體術",
+            "level": 1
+        }
+    },
+    {
+        "name": "體力珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "體力增強",
+            "level": 1
+        }
+    },
+    {
+        "name": "火炎珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "火屬性攻擊強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "心眼珠",
+        "rare": 8,
+        "size": 2,
+        "skill": {
+            "name": "心眼／彈導強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "友愛珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "廣域化",
+            "level": 1
+        }
+    },
+    {
+        "name": "加護珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "精靈加護",
+            "level": 1
+        }
+    },
+    {
+        "name": "全開珠",
+        "rare": 7,
+        "size": 2,
+        "skill": {
+            "name": "力量解放",
+            "level": 1
+        }
+    },
+    {
+        "name": "早氣珠",
+        "rare": 7,
+        "size": 2,
+        "skill": {
+            "name": "耐力急速回復",
+            "level": 1
+        }
+    },
+    {
+        "name": "早復珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "回復速度",
+            "level": 1
+        }
+    },
+    {
+        "name": "匠珠",
+        "rare": 8,
+        "size": 3,
+        "skill": {
+            "name": "匠",
+            "level": 1
+        }
+    },
+    {
+        "name": "地學珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "地質學",
+            "level": 1
+        }
+    },
+    {
+        "name": "冰結珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "冰屬性攻擊強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "攻擊珠",
+        "rare": 7,
+        "size": 1,
+        "skill": {
+            "name": "攻擊",
+            "level": 1
+        }
+    },
+    {
+        "name": "快吃珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "快吃",
+            "level": 1
+        }
+    },
+    {
+        "name": "投石珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "投射器裝填數UP",
+            "level": 1
+        }
+    },
+    {
+        "name": "防音珠",
+        "rare": 6,
+        "size": 3,
+        "skill": {
+            "name": "耳塞",
+            "level": 1
+        }
+    },
+    {
+        "name": "防禦珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "防禦",
+            "level": 1
+        }
+    },
+    {
+        "name": "防風珠",
+        "rare": 6,
+        "size": 2,
+        "skill": {
+            "name": "風壓耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "昂揚珠",
+        "rare": 7,
+        "size": 2,
+        "skill": {
+            "name": "強化持續",
+            "level": 1
+        }
+    },
+    {
+        "name": "指示珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "指示隨從",
+            "level": 1
+        }
+    },
+    {
+        "name": "底力珠",
+        "rare": 7,
+        "size": 2,
+        "skill": {
+            "name": "火場怪力",
+            "level": 1
+        }
+    },
+    {
+        "name": "治癒珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "體力回復量UP",
+            "level": 1
+        }
+    },
+    {
+        "name": "沼渡珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "適應水場",
+            "level": 1
+        }
+    },
+    {
+        "name": "拔刀珠",
+        "rare": 8,
+        "size": 2,
+        "skill": {
+            "name": "拔刀術【技】",
+            "level": 1
+        }
+    },
+    {
+        "name": "威嚇珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "威嚇",
+            "level": 1
+        }
+    },
+    {
+        "name": "研磨珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "砥石使用高速化",
+            "level": 1
+        }
+    },
+    {
+        "name": "持續珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "道具使用強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "重擊珠",
+        "rare": 6,
+        "size": 2,
+        "skill": {
+            "name": "破壞王",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐火珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "火耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐瘴珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "瘴氣耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐衝珠",
+        "rare": 6,
+        "size": 3,
+        "skill": {
+            "name": "減輕膽怯",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐震珠",
+        "rare": 6,
+        "size": 2,
+        "skill": {
+            "name": "耐震",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐水珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "水耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐絕珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "昏厥耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐屬珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "屬性異常狀態耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐毒珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "毒耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐爆珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "爆破異常狀態的耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐冰珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "冰耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐防珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "防御力DOWN耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐麻珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "麻痺耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐眠珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "睡眠耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐雷珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "雷耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐龍珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "龍耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "耐裂珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "裂傷耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "挑戰珠",
+        "rare": 7,
+        "size": 2,
+        "skill": {
+            "name": "挑戰者",
+            "level": 1
+        }
+    },
+    {
+        "name": "毒珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "毒屬性強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "毒瓶珠",
+        "rare": 6,
+        "size": 3,
+        "skill": {
+            "name": "毒瓶追加",
+            "level": 1
+        }
+    },
+    {
+        "name": "飛燕珠",
+        "rare": 5,
+        "size": 2,
+        "skill": {
+            "name": "飛燕",
+            "level": 1
+        }
+    },
+    {
+        "name": "流水珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "水屬性攻擊強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "迴避珠",
+        "rare": 6,
+        "size": 2,
+        "skill": {
+            "name": "迴避性能",
+            "level": 1
+        }
+    },
+    {
+        "name": "逆上珠",
+        "rare": 7,
+        "size": 2,
+        "skill": {
+            "name": "怨恨",
+            "level": 1
+        }
+    },
+    {
+        "name": "逆境珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "不屈",
+            "level": 1
+        }
+    },
+    {
+        "name": "剛刃珠",
+        "rare": 7,
+        "size": 2,
+        "skill": {
+            "name": "剛刃研磨",
+            "level": 1
+        }
+    },
+    {
+        "name": "茸好珠",
+        "rare": 8,
+        "size": 1,
+        "skill": {
+            "name": "最愛菇類",
+            "level": 1
+        }
+    },
+    {
+        "name": "特射珠",
+        "rare": 7,
+        "size": 1,
+        "skill": {
+            "name": "特殊射擊強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "破龍珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "龍屬性攻擊強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "砲手珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "砲擊手",
+            "level": 1
+        }
+    },
+    {
+        "name": "砲術珠",
+        "rare": 8,
+        "size": 1,
+        "skill": {
+            "name": "砲術",
+            "level": 1
+        }
+    },
+    {
+        "name": "眠瓶珠",
+        "rare": 7,
+        "size": 3,
+        "skill": {
+            "name": "睡眠瓶追加",
+            "level": 1
+        }
+    },
+    {
+        "name": "貫通珠",
+        "rare": 8,
+        "size": 3,
+        "skill": {
+            "name": "貫通彈・龍之箭強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "強弓珠",
+        "rare": 8,
+        "size": 2,
+        "skill": {
+            "name": "解放弓的蓄力階段",
+            "level": 1
+        }
+    },
+    {
+        "name": "強走珠",
+        "rare": 8,
+        "size": 2,
+        "skill": {
+            "name": "跑者",
+            "level": 1
+        }
+    },
+    {
+        "name": "強彈珠",
+        "rare": 7,
+        "size": 3,
+        "skill": {
+            "name": "通常彈・通常箭強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "強壁珠",
+        "rare": 7,
+        "size": 2,
+        "skill": {
+            "name": "防禦強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "速納珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "收刀術",
+            "level": 1
+        }
+    },
+    {
+        "name": "麻痺珠",
+        "rare": 7,
+        "size": 1,
+        "skill": {
+            "name": "麻痺屬性強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "絕路珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "死裡逃生",
+            "level": 1
+        }
+    },
+    {
+        "name": "渾身珠",
+        "rare": 7,
+        "size": 2,
+        "skill": {
+            "name": "精神抖擻",
+            "level": 1
+        }
+    },
+    {
+        "name": "散彈珠",
+        "rare": 8,
+        "size": 3,
+        "skill": {
+            "name": "散彈・剛射強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "植學珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "植生學",
+            "level": 1
+        }
+    },
+    {
+        "name": "短縮珠",
+        "rare": 8,
+        "size": 2,
+        "skill": {
+            "name": "集中",
+            "level": 1
+        }
+    },
+    {
+        "name": "超心珠",
+        "rare": 8,
+        "size": 2,
+        "skill": {
+            "name": "超會心",
+            "level": 1
+        }
+    },
+    {
+        "name": "痛擊珠",
+        "rare": 6,
+        "size": 2,
+        "skill": {
+            "name": "弱點特效",
+            "level": 1
+        }
+    },
+    {
+        "name": "無擊珠",
+        "rare": 6,
+        "size": 2,
+        "skill": {
+            "name": "無屬性強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "無傷珠",
+        "rare": 7,
+        "size": 2,
+        "skill": {
+            "name": "無傷",
+            "level": 1
+        }
+    },
+    {
+        "name": "無食珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "飢餓耐性",
+            "level": 1
+        }
+    },
+    {
+        "name": "煙復珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "綿花孢子草的知識",
+            "level": 1
+        }
+    },
+    {
+        "name": "解放珠",
+        "rare": 8,
+        "size": 3,
+        "skill": {
+            "name": "屬性解放／裝填擴充",
+            "level": 1
+        }
+    },
+    {
+        "name": "滑走珠",
+        "rare": 6,
+        "size": 2,
+        "skill": {
+            "name": "滑走強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "嗅覺珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "追蹤達人",
+            "level": 1
+        }
+    },
+    {
+        "name": "鼓笛珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "吹笛名人",
+            "level": 1
+        }
+    },
+    {
+        "name": "節食珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "滿足感",
+            "level": 1
+        }
+    },
+    {
+        "name": "達人珠",
+        "rare": 7,
+        "size": 1,
+        "skill": {
+            "name": "看破",
+            "level": 1
+        }
+    },
+    {
+        "name": "跳躍珠",
+        "rare": 6,
+        "size": 2,
+        "skill": {
+            "name": "迴避距離UP",
+            "level": 1
+        }
+    },
+    {
+        "name": "痺瓶珠",
+        "rare": 7,
+        "size": 3,
+        "skill": {
+            "name": "麻痺瓶追加",
+            "level": 1
+        }
+    },
+    {
+        "name": "雷光珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "雷屬性攻擊強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "睡眠珠",
+        "rare": 7,
+        "size": 1,
+        "skill": {
+            "name": "睡眠屬性強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "奪氣珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "奪取耐力",
+            "level": 1
+        }
+    },
+    {
+        "name": "潛伏珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "潛伏",
+            "level": 1
+        }
+    },
+    {
+        "name": "標本珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "昆蟲標本達人",
+            "level": 1
+        }
+    },
+    {
+        "name": "整備珠",
+        "rare": 5,
+        "size": 1,
+        "skill": {
+            "name": "整備",
+            "level": 1
+        }
+    },
+    {
+        "name": "龍封珠",
+        "rare": 7,
+        "size": 3,
+        "skill": {
+            "name": "龍封力強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "爆師珠",
+        "rare": 6,
+        "size": 1,
+        "skill": {
+            "name": "炸彈客",
+            "level": 1
+        }
+    },
+    {
+        "name": "爆破珠",
+        "rare": 7,
+        "size": 1,
+        "skill": {
+            "name": "爆破屬性強化",
+            "level": 1
+        }
+    },
+    {
+        "name": "爆瓶珠",
+        "rare": 7,
+        "size": 3,
+        "skill": {
+            "name": "爆破瓶追加",
+            "level": 1
+        }
+    },
+    {
+        "name": "鐵壁珠",
+        "rare": 7,
+        "size": 1,
+        "skill": {
+            "name": "防禦性能",
+            "level": 1
+        }
+    }
+]

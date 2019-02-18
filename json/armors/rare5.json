@@ -1,0 +1,4686 @@
+[
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "合金α",
+            "defense": 74,
+            "resistance": {
+                "fire": -2,
+                "water": 0,
+                "thunder": -2,
+                "ice": -2,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "合金頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "風壓耐性",
+                        "level": 1
+                    },
+                    {
+                        "name": "防禦",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "合金鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "水耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "合金腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "防禦",
+                        "level": 1
+                    },
+                    {
+                        "name": "砥石使用高速化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "合金腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "毒耐性",
+                        "level": 1
+                    },
+                    {
+                        "name": "水耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "合金護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "砥石使用高速化",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "合金β",
+            "defense": 74,
+            "resistance": {
+                "fire": -2,
+                "water": 0,
+                "thunder": -2,
+                "ice": -2,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "合金頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "風壓耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "合金鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "水耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "合金腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "防禦",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "合金腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "毒耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "合金護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "砥石使用高速化",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "浮空龍α",
+            "defense": 82,
+            "resistance": {
+                "fire": -3,
+                "water": 2,
+                "thunder": 0,
+                "ice": 1,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "浮空龍頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "耐力急速回復",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "浮空龍鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "騎乘名人",
+                        "level": 1
+                    },
+                    {
+                        "name": "砲術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "浮空龍腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "砲術",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "浮空龍腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "精靈加護",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "浮空龍護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "耐力急速回復",
+                        "level": 1
+                    },
+                    {
+                        "name": "風壓耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "浮空龍β",
+            "defense": 82,
+            "resistance": {
+                "fire": -3,
+                "water": 2,
+                "thunder": 0,
+                "ice": 1,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "浮空龍頭盔β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "耐力急速回復",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "浮空龍鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "騎乘名人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "浮空龍腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "砲術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "浮空龍腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "精靈加護",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "浮空龍護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "風壓耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "male",
+            "series": "獨角仙α",
+            "defense": 80,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 2,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "獨角仙護頭α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "迴避性能",
+                        "level": 2
+                    },
+                    {
+                        "name": "植生學",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "獨角仙上身α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "收刀術",
+                        "level": 2
+                    },
+                    {
+                        "name": "植生學",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "獨角仙護袖α",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "飛身躍入",
+                        "level": 1
+                    },
+                    {
+                        "name": "植生學",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "獨角仙護腰具α",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "蜂蜜獵人",
+                        "level": 1
+                    },
+                    {
+                        "name": "收刀術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "獨角仙腳α",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "探索者的幸運",
+                        "level": 1
+                    },
+                    {
+                        "name": "迴避性能",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "male",
+            "series": "獨角仙β",
+            "defense": 80,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 2,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "獨角仙護頭β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "迴避性能",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "獨角仙上身β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "收刀術",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "獨角仙護袖β",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "植生學",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "獨角仙護腰具β",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "蜂蜜獵人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "獨角仙腳β",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "探索者的幸運",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "飛雷龍α",
+            "defense": 82,
+            "resistance": {
+                "fire": 0,
+                "water": -3,
+                "thunder": 3,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "飛雷龍頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "體術",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "飛雷龍鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "跳躍鐵人",
+                        "level": 1
+                    },
+                    {
+                        "name": "迴避距離UP",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "飛雷龍腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "迴避距離UP",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "飛雷龍腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "雷屬性攻擊強化",
+                        "level": 2
+                    },
+                    {
+                        "name": "雷耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "飛雷龍護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "雷耐性",
+                        "level": 1
+                    },
+                    {
+                        "name": "體術",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "飛雷龍β",
+            "defense": 82,
+            "resistance": {
+                "fire": 0,
+                "water": -3,
+                "thunder": 3,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "飛雷龍頭盔β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "體術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "飛雷龍鎧甲β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "跳躍鐵人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "飛雷龍腕甲β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "迴避距離UP",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "飛雷龍腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "雷屬性攻擊強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "飛雷龍護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "雷耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "咬魚α",
+            "defense": 78,
+            "resistance": {
+                "fire": 0,
+                "water": 5,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "leg",
+                "name": "咬魚靴α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "適應水場",
+                        "level": 2
+                    },
+                    {
+                        "name": "水屬性攻擊強化",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "咬魚β",
+            "defense": 78,
+            "resistance": {
+                "fire": 0,
+                "water": 5,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "leg",
+                "name": "咬魚靴β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "適應水場",
+                        "level": 1
+                    },
+                    {
+                        "name": "水屬性攻擊強化",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "兇顎龍α",
+            "defense": 78,
+            "resistance": {
+                "fire": 0,
+                "water": -3,
+                "thunder": 2,
+                "ice": 0,
+                "dragon": 1
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "兇顎龍頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "吹笛名人",
+                        "level": 1
+                    },
+                    {
+                        "name": "麻痺耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "兇顎龍鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "麻痺耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "兇顎龍腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "指示隨從",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "兇顎龍腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "適應瘴氣環境",
+                        "level": 1
+                    },
+                    {
+                        "name": "麻痺屬性強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "兇顎龍護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "麻痺屬性強化",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "兇顎龍β",
+            "defense": 78,
+            "resistance": {
+                "fire": 0,
+                "water": -3,
+                "thunder": 2,
+                "ice": 0,
+                "dragon": 1
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "兇顎龍頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "吹笛名人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "兇顎龍鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "麻痺耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "兇顎龍腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "指示隨從",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "兇顎龍腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "適應瘴氣環境",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "兇顎龍護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "麻痺屬性強化",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "搔鳥α",
+            "defense": 78,
+            "resistance": {
+                "fire": 0,
+                "water": -3,
+                "thunder": 0,
+                "ice": 1,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "搔鳥頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "火耐性",
+                        "level": 1
+                    },
+                    {
+                        "name": "弱點特效",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "搔鳥鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "耐力急速回復",
+                        "level": 1
+                    },
+                    {
+                        "name": "看破",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "搔鳥腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "搬運達人",
+                        "level": 1
+                    },
+                    {
+                        "name": "看破",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "搔鳥腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "道具使用強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "搔鳥護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "看破",
+                        "level": 1
+                    },
+                    {
+                        "name": "道具使用強化",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "搔鳥β",
+            "defense": 78,
+            "resistance": {
+                "fire": 0,
+                "water": -3,
+                "thunder": 0,
+                "ice": 1,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "搔鳥頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "火耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "搔鳥鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "耐力急速回復",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "搔鳥腕甲β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "搬運達人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "搔鳥腰甲β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "道具使用強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "搔鳥護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "看破",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "冠突龍α",
+            "defense": 78,
+            "resistance": {
+                "fire": 4,
+                "water": 0,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "arm",
+                "name": "冠突龍護手α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "滑走強化",
+                        "level": 1
+                    },
+                    {
+                        "name": "集中",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "冠突龍β",
+            "defense": 78,
+            "resistance": {
+                "fire": 4,
+                "water": 0,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "arm",
+                "name": "冠突龍護手β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "滑走強化",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "凶豺龍α",
+            "defense": 78,
+            "resistance": {
+                "fire": -2,
+                "water": 2,
+                "thunder": -1,
+                "ice": -1,
+                "dragon": 1
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "凶豺龍頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "快吃",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "凶豺龍鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "威嚇",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "凶豺龍腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "指示隨從",
+                        "level": 1
+                    },
+                    {
+                        "name": "威嚇",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "凶豺龍腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "不屈",
+                        "level": 1
+                    },
+                    {
+                        "name": "快吃",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "凶豺龍護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "蹲下移動速度UP",
+                        "level": 1
+                    },
+                    {
+                        "name": "滿足感",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "凶豺龍β",
+            "defense": 78,
+            "resistance": {
+                "fire": -2,
+                "water": 2,
+                "thunder": -1,
+                "ice": -1,
+                "dragon": 1
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "凶豺龍頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "快吃",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "凶豺龍鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "威嚇",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "凶豺龍腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "指示隨從",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "凶豺龍腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "不屈",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "凶豺龍護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "蹲下移動速度UP",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "蠻顎龍α",
+            "defense": 82,
+            "resistance": {
+                "fire": 3,
+                "water": -3,
+                "thunder": -1,
+                "ice": -1,
+                "dragon": 0
+            },
+            "set": {
+                "name": "蠻顎龍的鬥志"
+            }
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "蠻顎龍頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "火屬性攻擊強化",
+                        "level": 2
+                    },
+                    {
+                        "name": "火耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "蠻顎龍鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "跑者",
+                        "level": 1
+                    },
+                    {
+                        "name": "特殊射擊強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "蠻顎龍腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "特殊射擊強化",
+                        "level": 1
+                    },
+                    {
+                        "name": "火屬性攻擊強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "蠻顎龍腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "火耐性",
+                        "level": 1
+                    },
+                    {
+                        "name": "砲術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "蠻顎龍護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "砲術",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "蠻顎龍β",
+            "defense": 82,
+            "resistance": {
+                "fire": 3,
+                "water": -3,
+                "thunder": -1,
+                "ice": -1,
+                "dragon": 0
+            },
+            "set": {
+                "name": "蠻顎龍的鬥志"
+            }
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "蠻顎龍頭盔β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "火屬性攻擊強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "蠻顎龍鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "跑者",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "蠻顎龍腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "特殊射擊強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "蠻顎龍腰甲β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "火耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "蠻顎龍護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "砲術",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "貓蜥龍α",
+            "defense": 78,
+            "resistance": {
+                "fire": 2,
+                "water": 2,
+                "thunder": 0,
+                "ice": -3,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "貓蜥龍護目鏡α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "察覺",
+                        "level": 1
+                    },
+                    {
+                        "name": "地質學",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "貓蜥龍β",
+            "defense": 78,
+            "resistance": {
+                "fire": 2,
+                "water": 2,
+                "thunder": 0,
+                "ice": -3,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "貓蜥龍護目鏡β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "察覺",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "泥魚龍α",
+            "defense": 82,
+            "resistance": {
+                "fire": -1,
+                "water": 2,
+                "thunder": -3,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "泥魚龍頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "適應水場",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "泥魚龍鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "泥耐性",
+                        "level": 1
+                    },
+                    {
+                        "name": "水屬性攻擊強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "泥魚龍腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "水屬性攻擊強化",
+                        "level": 1
+                    },
+                    {
+                        "name": "適應水場",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "泥魚龍腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "冰耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "泥魚龍護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "集中",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "泥魚龍β",
+            "defense": 82,
+            "resistance": {
+                "fire": -1,
+                "water": 2,
+                "thunder": -3,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "泥魚龍頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "適應水場",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "泥魚龍鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "泥耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "泥魚龍腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "水屬性攻擊強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "泥魚龍腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "冰耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "泥魚龍護腿β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "集中",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "巨甲蟲α",
+            "defense": 76,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "巨甲蟲頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "異臭名人",
+                        "level": 1
+                    },
+                    {
+                        "name": "龍屬性攻擊強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "巨甲蟲鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "適應瘴氣環境",
+                        "level": 1
+                    },
+                    {
+                        "name": "飢餓耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "巨甲蟲腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "滿足感",
+                        "level": 1
+                    },
+                    {
+                        "name": "飢餓耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "巨甲蟲腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "剝取鐵人",
+                        "level": 1
+                    },
+                    {
+                        "name": "飢餓耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "巨甲蟲護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "匠",
+                        "level": 1
+                    },
+                    {
+                        "name": "龍屬性攻擊強化",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "巨甲蟲β",
+            "defense": 76,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "巨甲蟲頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "異臭名人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "巨甲蟲鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "適應瘴氣環境",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "巨甲蟲腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "滿足感",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "巨甲蟲腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "剝取鐵人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "巨甲蟲護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "匠",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "鎖甲α",
+            "defense": 70,
+            "resistance": {
+                "fire": 0,
+                "water": 2,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "鎖甲頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "採集達人",
+                        "level": 1
+                    },
+                    {
+                        "name": "防禦性能",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "鎖甲鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "水耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "鎖甲腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "回復速度",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "鎖甲腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "收刀術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "鎖甲護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "體力回復量UP",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "鎖甲β",
+            "defense": 70,
+            "resistance": {
+                "fire": 0,
+                "water": 2,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "鎖甲頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "採集達人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "鎖甲鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": null
+            },
+            {
+                "type": "arm",
+                "name": "鎖甲腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": null
+            },
+            {
+                "type": "waist",
+                "name": "鎖甲腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": null
+            },
+            {
+                "type": "leg",
+                "name": "鎖甲護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": null
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "眩鳥α",
+            "defense": 78,
+            "resistance": {
+                "fire": 0,
+                "water": 0,
+                "thunder": -3,
+                "ice": -2,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "眩鳥頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "閃光強化",
+                        "level": 1
+                    },
+                    {
+                        "name": "昏厥耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "眩鳥鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "體術",
+                        "level": 1
+                    },
+                    {
+                        "name": "水屬性攻擊強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "眩鳥腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "昏厥耐性",
+                        "level": 2
+                    },
+                    {
+                        "name": "廣域化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "眩鳥腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "廣域化",
+                        "level": 2
+                    },
+                    {
+                        "name": "水屬性攻擊強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "眩鳥護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "睡眠耐性",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "眩鳥β",
+            "defense": 78,
+            "resistance": {
+                "fire": 0,
+                "water": 0,
+                "thunder": -3,
+                "ice": -2,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "眩鳥頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "閃光強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "眩鳥鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "體術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "眩鳥腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "昏厥耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "眩鳥腰甲β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "廣域化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "眩鳥護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "睡眠耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "female",
+            "series": "燕尾蝶α",
+            "defense": 80,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 2,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "燕尾蝶護頭α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "迴避性能",
+                        "level": 2
+                    },
+                    {
+                        "name": "植生學",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "燕尾蝶上身α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "收刀術",
+                        "level": 2
+                    },
+                    {
+                        "name": "植生學",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "燕尾蝶護袖α",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "飛身躍入",
+                        "level": 1
+                    },
+                    {
+                        "name": "植生學",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "燕尾蝶護腰具α",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "蜂蜜獵人",
+                        "level": 1
+                    },
+                    {
+                        "name": "收刀術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "燕尾蝶腳α",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "探索者的幸運",
+                        "level": 1
+                    },
+                    {
+                        "name": "迴避性能",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "female",
+            "series": "燕尾蝶β",
+            "defense": 80,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 2,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "燕尾蝶護頭β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "迴避性能",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "燕尾蝶上身β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "收刀術",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "燕尾蝶護袖β",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "植生學",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "燕尾蝶護腰具β",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "蜂蜜獵人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "燕尾蝶腳β",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "探索者的幸運",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "獵人α",
+            "defense": 74,
+            "resistance": {
+                "fire": 2,
+                "water": 2,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "獵人頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "導蟲反應距離UP",
+                        "level": 1
+                    },
+                    {
+                        "name": "研究者",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "獵人鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "投射器裝填數UP",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "獵人腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "潛伏",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "獵人腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "採集達人",
+                        "level": 1
+                    },
+                    {
+                        "name": "潛伏",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "獵人護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "追蹤達人",
+                        "level": 1
+                    },
+                    {
+                        "name": "投射器裝填數UP",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "獵人β",
+            "defense": 74,
+            "resistance": {
+                "fire": 2,
+                "water": 2,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "獵人頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "導蟲反應距離UP",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "獵人鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "投射器裝填數UP",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "獵人腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "潛伏",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "獵人腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "採集達人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "獵人護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "追蹤達人",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "毒妖鳥α",
+            "defense": 80,
+            "resistance": {
+                "fire": 0,
+                "water": 3,
+                "thunder": -3,
+                "ice": 0,
+                "dragon": 1
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "毒妖鳥頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "綿花孢子草的知識",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "毒妖鳥鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "道具使用強化",
+                        "level": 1
+                    },
+                    {
+                        "name": "植生學",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "毒妖鳥腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "毒耐性",
+                        "level": 2
+                    },
+                    {
+                        "name": "毒屬性強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "毒妖鳥腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "毒屬性強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "毒妖鳥護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "植生學",
+                        "level": 2
+                    },
+                    {
+                        "name": "綿花孢子草的知識",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "毒妖鳥β",
+            "defense": 80,
+            "resistance": {
+                "fire": 0,
+                "water": 3,
+                "thunder": -3,
+                "ice": 0,
+                "dragon": 1
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "毒妖鳥頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "綿花孢子草的知識",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "毒妖鳥鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "道具使用強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "毒妖鳥腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "毒耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "毒妖鳥腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "毒屬性強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "毒妖鳥護腿β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "植生學",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "骨製α",
+            "defense": 74,
+            "resistance": {
+                "fire": 2,
+                "water": 0,
+                "thunder": 2,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "骨製頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "體力增強",
+                        "level": 1
+                    },
+                    {
+                        "name": "昆蟲標本達人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "骨製鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "攻擊",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "骨製腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "KO術",
+                        "level": 1
+                    },
+                    {
+                        "name": "攻擊",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "骨製腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "吹笛名人",
+                        "level": 1
+                    },
+                    {
+                        "name": "釣魚名人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "骨製護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "昆蟲標本達人",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "骨製β",
+            "defense": 74,
+            "resistance": {
+                "fire": 2,
+                "water": 0,
+                "thunder": 2,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "骨製頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "體力增強",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "骨製鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "攻擊",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "骨製腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "KO術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "骨製腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "吹笛名人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "骨製護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "昆蟲標本達人",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "土砂龍α",
+            "defense": 80,
+            "resistance": {
+                "fire": -3,
+                "water": -1,
+                "thunder": 3,
+                "ice": -1,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "土砂龍頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "防禦性能",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "土砂龍鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "奪取耐力",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "土砂龍腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "跑者",
+                        "level": 1
+                    },
+                    {
+                        "name": "奪取耐力",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "土砂龍腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "泥耐性",
+                        "level": 1
+                    },
+                    {
+                        "name": "防禦性能",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "土砂龍護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "昏厥耐性",
+                        "level": 2
+                    },
+                    {
+                        "name": "跑者",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "土砂龍β",
+            "defense": 80,
+            "resistance": {
+                "fire": -3,
+                "water": -1,
+                "thunder": 3,
+                "ice": -1,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "土砂龍頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "防禦性能",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "土砂龍鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "奪取耐力",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "土砂龍腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "跑者",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "土砂龍腰甲β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "泥耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "土砂龍護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "昏厥耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "菌豬頭套",
+            "defense": 78,
+            "resistance": {
+                "fire": 2,
+                "water": 2,
+                "thunder": 2,
+                "ice": 2,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "菌豬頭套頭",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "最愛菇類",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "巨蜂α",
+            "defense": 76,
+            "resistance": {
+                "fire": -2,
+                "water": 1,
+                "thunder": 1,
+                "ice": 1,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "巨蜂頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "收刀術",
+                        "level": 1
+                    },
+                    {
+                        "name": "麻痺屬性強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "巨蜂鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "風壓耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "巨蜂腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "麻痺屬性強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "巨蜂腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "麻痺耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "巨蜂護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "蜂蜜獵人",
+                        "level": 1
+                    },
+                    {
+                        "name": "麻痺耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "巨蜂β",
+            "defense": 76,
+            "resistance": {
+                "fire": -2,
+                "water": 1,
+                "thunder": 1,
+                "ice": 1,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "巨蜂頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "收刀術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "巨蜂鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "風壓耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "巨蜂腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "麻痺屬性強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "巨蜂腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "麻痺耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "巨蜂護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "蜂蜜獵人",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "雌火龍α",
+            "defense": 84,
+            "resistance": {
+                "fire": 2,
+                "water": 0,
+                "thunder": -2,
+                "ice": 0,
+                "dragon": -3
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "雌火龍頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "體力增強",
+                        "level": 2
+                    },
+                    {
+                        "name": "毒屬性強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "雌火龍鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "植生學",
+                        "level": 2
+                    },
+                    {
+                        "name": "體力回復量UP",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "雌火龍腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "毒屬性強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "雌火龍腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "毒耐性",
+                        "level": 2
+                    },
+                    {
+                        "name": "體力增強",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "雌火龍護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "體力回復量UP",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "雌火龍β",
+            "defense": 84,
+            "resistance": {
+                "fire": 2,
+                "water": 0,
+                "thunder": -2,
+                "ice": 0,
+                "dragon": -3
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "雌火龍頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "體力增強",
+                        "level": 1
+                    },
+                    {
+                        "name": "毒屬性強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "雌火龍鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "植生學",
+                        "level": 1
+                    },
+                    {
+                        "name": "體力回復量UP",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "雌火龍腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "毒屬性強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "雌火龍腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "毒耐性",
+                        "level": 1
+                    },
+                    {
+                        "name": "體力增強",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "雌火龍護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "體力回復量UP",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "皮製α",
+            "defense": 70,
+            "resistance": {
+                "fire": 2,
+                "water": 0,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "皮製頭飾α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "飢餓耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "皮製服飾α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "火耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "皮製手套α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "回復速度",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "皮製皮帶α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "耐力急速回復",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "皮製長褲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "攀岩者",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "皮製β",
+            "defense": 70,
+            "resistance": {
+                "fire": 2,
+                "water": 0,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "皮製頭飾β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "飢餓耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "皮製服飾β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": null
+            },
+            {
+                "type": "arm",
+                "name": "皮製手套β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": null
+            },
+            {
+                "type": "waist",
+                "name": "皮製皮帶β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": null
+            },
+            {
+                "type": "leg",
+                "name": "皮製長褲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": null
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "岩賊龍α",
+            "defense": 86,
+            "resistance": {
+                "fire": 2,
+                "water": 0,
+                "thunder": -3,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "岩賊龍頭盔α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "爆破異常狀態的耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "岩賊龍鎧甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "爆破屬性強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "岩賊龍腕甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "炸彈客",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "岩賊龍腰甲α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "砲術",
+                        "level": 2
+                    },
+                    {
+                        "name": "爆破異常狀態的耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "岩賊龍護腿α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "砲彈裝填數UP",
+                        "level": 1
+                    },
+                    {
+                        "name": "爆破屬性強化",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "岩賊龍β",
+            "defense": 86,
+            "resistance": {
+                "fire": 2,
+                "water": 0,
+                "thunder": -3,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "岩賊龍頭盔β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "爆破異常狀態的耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "岩賊龍鎧甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "爆破屬性強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "岩賊龍腕甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "炸彈客",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "岩賊龍腰甲β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "砲術",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "岩賊龍護腿β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "砲彈裝填數UP",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "酸翼龍斗篷α",
+            "defense": 86,
+            "resistance": {
+                "fire": 1,
+                "water": 1,
+                "thunder": 0,
+                "ice": 1,
+                "dragon": -2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "chest",
+                "name": "酸翼龍斗篷α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "熱傷害無效",
+                        "level": 1
+                    },
+                    {
+                        "name": "防御力DOWN耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "酸翼龍斗篷β",
+            "defense": 86,
+            "resistance": {
+                "fire": 1,
+                "water": 1,
+                "thunder": 0,
+                "ice": 1,
+                "dragon": -2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "chest",
+                "name": "酸翼龍斗篷β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "熱傷害無效",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "突擊龍α",
+            "defense": 86,
+            "resistance": {
+                "fire": 3,
+                "water": 0,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "突擊龍角α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "減輕膽怯",
+                        "level": 1
+                    },
+                    {
+                        "name": "爆破異常狀態的耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "突擊龍β",
+            "defense": 86,
+            "resistance": {
+                "fire": 3,
+                "water": 0,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "突擊龍角β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "減輕膽怯",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "封印的眼帶α",
+            "defense": 84,
+            "resistance": {
+                "fire": 3,
+                "water": 2,
+                "thunder": 0,
+                "ice": 2,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "封印的眼帶α",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "火耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "墨鏡α",
+            "defense": 84,
+            "resistance": {
+                "fire": 4,
+                "water": 0,
+                "thunder": 4,
+                "ice": 2,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "墨鏡α",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "昏厥耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "扒手龍頭套α",
+            "defense": 46,
+            "resistance": {
+                "fire": 2,
+                "water": 0,
+                "thunder": 2,
+                "ice": 3,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "扒手龍頭套α",
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "搬運達人",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "孑孓α",
+            "defense": 84,
+            "resistance": {
+                "fire": 0,
+                "water": 4,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 4
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "孑孓頭α",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "廣域化",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "巴魯特α",
+            "defense": 78,
+            "resistance": {
+                "fire": 1,
+                "water": 1,
+                "thunder": 4,
+                "ice": 1,
+                "dragon": 1
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "巴魯特頭飾α",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "蜂蜜獵人",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "巴魯特服飾α",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "收刀術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "巴魯特腕甲α",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "麻痺耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "巴魯特腰甲α",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "導蟲反應距離UP",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "巴魯特護腿α",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "回復速度",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "general",
+            "series": "潛水夫α",
+            "defense": 84,
+            "resistance": {
+                "fire": 1,
+                "water": 4,
+                "thunder": 1,
+                "ice": 1,
+                "dragon": 1
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "潛水夫修羅α",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "跑者",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "潛水夫服裝α",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "看破",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "潛水夫腕甲α",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "收刀術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "潛水夫皮帶α",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "適應水場",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "潛水夫靴α",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "飢餓耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "female",
+            "series": "獨角仙后α",
+            "defense": 80,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 2,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "獨角仙后護頭α",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "昏厥耐性",
+                        "level": 2
+                    },
+                    {
+                        "name": "防禦",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "獨角仙后上身α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "體力增強",
+                        "level": 2
+                    },
+                    {
+                        "name": "昏厥耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "獨角仙后護袖α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "看破",
+                        "level": 2
+                    },
+                    {
+                        "name": "體力增強",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "獨角仙后護腰具α",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "防禦",
+                        "level": 2
+                    },
+                    {
+                        "name": "跑者",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "獨角仙后腳α",
+                "slots": null,
+                "skills": [
+                    {
+                        "name": "跑者",
+                        "level": 2
+                    },
+                    {
+                        "name": "看破",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 5,
+            "gender": "female",
+            "series": "獨角仙后β",
+            "defense": 80,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 2,
+                "ice": 0,
+                "dragon": 2
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "type": "helm",
+                "name": "獨角仙后護頭β",
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "昏厥耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "chest",
+                "name": "獨角仙后上身β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "體力增強",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "type": "arm",
+                "name": "獨角仙后護袖β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "看破",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "waist",
+                "name": "獨角仙后護腰具β",
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "防禦",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "type": "leg",
+                "name": "獨角仙后腳β",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "name": "跑者",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    }
+]
