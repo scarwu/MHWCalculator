@@ -12,7 +12,7 @@
 import Constant from 'constant';
 
 // Load Dataset
-import Sets from 'datasets/sets.json';
+import Sets from 'json/datasets/sets.json';
 
 // [
 //     0: id,

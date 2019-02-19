@@ -12,7 +12,7 @@
 import Constant from 'constant';
 
 // Load Dataset
-import Jewels from 'datasets/jewels.json';
+import Jewels from 'json/datasets/jewels.json';
 
 // [
 //     0: id,

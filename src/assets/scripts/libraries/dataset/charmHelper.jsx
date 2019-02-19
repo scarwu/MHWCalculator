@@ -12,7 +12,7 @@
 import Constant from 'constant';
 
 // Load Dataset
-import Charms from 'datasets/charms.json';
+import Charms from 'json/datasets/charms.json';
 
 // [
 //     0: id,

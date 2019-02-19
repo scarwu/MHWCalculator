@@ -16,8 +16,8 @@ import Event from 'core/event';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
+import _ from 'libraries/lang';
 import DataSet from 'libraries/dataset';
-import Lang from 'libraries/lang';
 import FittingAlgorithm from 'libraries/fittingAlgorithm';
 
 // Load Components
@@ -99,18 +99,18 @@ export default class CandidateBundles extends Component {
             return (
                 <div key={index} className="row mhwc-bundle">
                     <div className="col-12 mhwc-name">
-                        <span className="mhwc-bundle_name">{Lang.bundle}: {index + 1}</span>
+                        <span className="mhwc-bundle_name">{_('bundle')}: {index + 1}</span>
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="check" altName={Lang.equip}
+                                iconName="check" altName={_('equip')}
                                 onClick={() => {this.handleBundlePickUp(index)}} />
                         </div>
                     </div>
 
                     <div className="col-12 mhwc-item mhwc-equips">
                         <div className="col-12 mhwc-name">
-                            <span>{Lang.equip}</span>
+                            <span>{_('equip')}</span>
                         </div>
                         <div className="col-12 mhwc-value">
                             <div className="row">
@@ -118,7 +118,7 @@ export default class CandidateBundles extends Component {
                                 return (null !== data.equips[euqipType]) ? [(
                                     <div key={'weapon_1'} className="col-2">
                                         <div className="mhwc-name">
-                                            <span>{Lang[euqipType]}</span>
+                                            <span>{_(euqipType)}</span>
                                         </div>
                                     </div>
                                 ), (
@@ -136,7 +136,7 @@ export default class CandidateBundles extends Component {
                     <div className="col-12 mhwc-item mhwc-defense">
                         <div className="row">
                             <div className="col-4 mhwc-name">
-                                <span>{Lang.defense}</span>
+                                <span>{_('defense')}</span>
                             </div>
                             <div className="col-8 mhwc-value">
                                 <span>{data.defense}</span>
@@ -147,7 +147,7 @@ export default class CandidateBundles extends Component {
                     {(0 < data.meta.remainingSlotCount.all) ? (
                         <div className="col-12 mhwc-item mhwc-slots">
                             <div className="col-12 mhwc-name">
-                                <span>{Lang.remainingSlot}</span>
+                                <span>{_('remainingSlot')}</span>
                             </div>
                             <div className="col-12 mhwc-value">
                                 <div className="row">
@@ -174,7 +174,7 @@ export default class CandidateBundles extends Component {
                     {(0 !== Object.keys(data.jewels).length) ? (
                         <div className="col-12 mhwc-item mhwc-jewels">
                             <div className="col-12 mhwc-name">
-                                <span>{Lang.jewel}</span>
+                                <span>{_('jewel')}</span>
                             </div>
                             <div className="col-12 mhwc-value">
                                 <div className="row">
@@ -200,7 +200,7 @@ export default class CandidateBundles extends Component {
                     {(0 !== Object.keys(data.skills).length) ? (
                         <div className="col-12 mhwc-item mhwc-skills">
                             <div className="col-12 mhwc-name">
-                                <span>{Lang.skill}</span>
+                                <span>{_('skill')}</span>
                             </div>
                             <div className="col-12 mhwc-value">
                                 <div className="row">

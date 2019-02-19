@@ -18,9 +18,9 @@ import Event from 'core/event';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
+import _ from 'libraries/lang';
 import Base64 from 'libraries/base64';
 import DataSet from 'libraries/dataset';
-import Lang from 'libraries/lang';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -567,18 +567,18 @@ export default class Main extends Component {
                 <div key={setInfo.id} className="row mhwc-item">
                     <div className="col-12 mhwc-name">
                         <span>
-                            {setInfo.name} x {setRequire}
+                            {_(setInfo.name)} x {setRequire}
                         </span>
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="minus" altName={Lang.down}
+                                iconName="minus" altName={_('down')}
                                 onClick={() => {this.handleSetStepDown(index)}} />
                             <FunctionalIcon
-                                iconName="plus" altName={Lang.up}
+                                iconName="plus" altName={_('up')}
                                 onClick={() => {this.handleSetStepUp(index)}} />
                             <FunctionalIcon
-                                iconName="times" altName={Lang.clean}
+                                iconName="times" altName={_('clean')}
                                 onClick={() => {this.handleSetRemove(index)}} />
                         </div>
                     </div>
@@ -590,7 +590,7 @@ export default class Main extends Component {
 
                             return (
                                 <div key={set.id}>
-                                    <span>({set.require}) {set.name}</span>
+                                    <span>({set.require}) {_(set.name)}</span>
                                 </div>
                             );
                         })}
@@ -610,28 +610,28 @@ export default class Main extends Component {
                 <div key={skillInfo.id} className="row mhwc-item">
                     <div className="col-12 mhwc-name">
                         <span>
-                            {skillInfo.name}
+                            {_(skillInfo.name)}
                             &nbsp;
                             Lv.{data.level} / {skillInfo.list.length}
                         </span>
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="minus" altName={Lang.down}
+                                iconName="minus" altName={_('down')}
                                 onClick={() => {this.handleSkillLevelDown(index)}} />
                             <FunctionalIcon
-                                iconName="plus" altName={Lang.up}
+                                iconName="plus" altName={_('up')}
                                 onClick={() => {this.handleSkillLevelUp(index)}} />
                             <FunctionalIcon
-                                iconName="times" altName={Lang.clean}
+                                iconName="times" altName={_('clean')}
                                 onClick={() => {this.handleSkillRemove(index)}} />
                         </div>
                     </div>
                     <div className="col-12 mhwc-value">
                         <span>
                             {(0 !== data.level)
-                                ? skillInfo.list[data.level - 1].description
-                                : Lang.skillLevelZero}
+                                ? _(skillInfo.list[data.level - 1].description)
+                                : _('skillLevelZero')}
                         </span>
                     </div>
                 </div>
@@ -644,35 +644,35 @@ export default class Main extends Component {
             <div id="main" className="container-fluid">
                 <div className="row mhwc-header">
                     <a href="./">
-                        <h1>{Lang.title}</h1>
+                        <h1>{_('title')}</h1>
                     </a>
                 </div>
 
                 <div className="row mhwc-container">
                     <div className="col mhwc-conditions">
                         <div className="mhwc-section_name">
-                            <span>{Lang.requireCondition}</span>
+                            <span>{_('requireCondition')}</span>
                         </div>
 
                         <div className="row mhwc-panel">
                             <div className="col-3">
                                 <a onClick={this.handleRequireConditionRefresh}>
-                                    <i className="fa fa-refresh"></i> {Lang.reset}
+                                    <i className="fa fa-refresh"></i> {_('reset')}
                                 </a>
                             </div>
                             <div className="col-3">
                                 <a onClick={this.handleSkillSelectorOpen}>
-                                    <i className="fa fa-plus"></i> {Lang.skill}
+                                    <i className="fa fa-plus"></i> {_('skill')}
                                 </a>
                             </div>
                             <div className="col-3">
                                 <a onClick={this.handleSetSelectorOpen}>
-                                    <i className="fa fa-plus"></i> {Lang.set}
+                                    <i className="fa fa-plus"></i> {_('set')}
                                 </a>
                             </div>
                             <div className="col-3">
                                 <a onClick={this.handleCandidateBundlesSearch}>
-                                    <i className="fa fa-search"></i> {Lang.search}
+                                    <i className="fa fa-search"></i> {_('search')}
                                 </a>
                             </div>
                         </div>
@@ -685,7 +685,7 @@ export default class Main extends Component {
 
                     <div className="col mhwc-bundles">
                         <div className="mhwc-section_name">
-                            <span>{Lang.candidateBundle}</span>
+                            <span>{_('candidateBundle')}</span>
                         </div>
 
                         <CandidateBundles
@@ -694,18 +694,18 @@ export default class Main extends Component {
 
                     <div className="col mhwc-equips">
                         <div className="mhwc-section_name">
-                            <span>{Lang.equipBundle}</span>
+                            <span>{_('equipBundle')}</span>
                         </div>
 
                         <div className="row mhwc-panel">
                             <div className="col-6">
                                 <a onClick={this.handleEquipsDisplayerRefresh}>
-                                    <i className="fa fa-refresh"></i> {Lang.reset}
+                                    <i className="fa fa-refresh"></i> {_('reset')}
                                 </a>
                             </div>
                             <div className="col-6">
                                 <a onClick={this.handleEquipBundleSelectorOpen}>
-                                    <i className="fa fa-th-list"></i> {Lang.list}
+                                    <i className="fa fa-th-list"></i> {_('list')}
                                 </a>
                             </div>
                         </div>
@@ -719,7 +719,7 @@ export default class Main extends Component {
 
                     <div className="col mhwc-status">
                         <div className="mhwc-section_name">
-                            <span>{Lang.status}</span>
+                            <span>{_('status')}</span>
                         </div>
 
                         <CharacterStatus equips={this.state.equips} />

@@ -16,8 +16,8 @@ import Event from 'core/event';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
+import _ from 'libraries/lang';
 import DataSet from 'libraries/dataset';
-import Lang from 'libraries/lang';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -133,16 +133,16 @@ export default class EquipsDisplayer extends Component {
                 <div key="weapon" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}>
-                            <span>{Lang.weapon}: {weaponInfo.id}</span>
+                            <span>{_('weapon')}: {weaponInfo.id}</span>
                         </a>
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName={equipsLock.weapon ? 'lock' : 'unlock-alt'}
-                                altName={equipsLock.weapon ? Lang.unlock : Lang.lock}
+                                altName={equipsLock.weapon ? _('unlock') : _('lock')}
                                 onClick={() => {this.handleEquipLockToggle('weapon')}} />
                             <FunctionalIcon
-                                iconName="times" altName={Lang.clean}
+                                iconName="times" altName={_('clean')}
                                 onClick={() => {this.handleEquipEmpty(emptyWeaponSelectorData)}} />
                         </div>
                     </div>
@@ -165,7 +165,7 @@ export default class EquipsDisplayer extends Component {
                                 return (
                                     <div key={data.id + '_' + index} className="row mhwc-enhance">
                                         <div className="col-4 mhwc-name">
-                                            <span>{Lang.enhance}: {index + 1}</span>
+                                            <span>{_('enhance')}: {index + 1}</span>
                                         </div>
                                         <div className="col-8 mhwc-value">
                                             <a onClick={() => {this.handleEquipSwitch(enhanceSelectorData)}}>
@@ -179,7 +179,7 @@ export default class EquipsDisplayer extends Component {
                                             <div className="mhwc-icons_bundle">
                                                 {null !== data.id ? (
                                                     <FunctionalIcon
-                                                        iconName="times" altName={Lang.clean}
+                                                        iconName="times" altName={_('clean')}
                                                         onClick={() => {this.handleEquipEmpty(emptyEnhanceSelectorData)}} />
                                                 ) : false}
                                             </div>
@@ -210,7 +210,7 @@ export default class EquipsDisplayer extends Component {
                                 return (
                                     <div key={data.id + '_' + index} className="row mhwc-jewel">
                                         <div className="col-4 mhwc-name">
-                                            <span>{Lang.slot}: {index + 1} [{data.size}]</span>
+                                            <span>{_('slot')}: {index + 1} [{data.size}]</span>
                                         </div>
                                         <div className="col-8 mhwc-value">
                                             <a onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}>
@@ -224,7 +224,7 @@ export default class EquipsDisplayer extends Component {
                                             <div className="mhwc-icons_bundle">
                                                 {null !== data.jewel.id ? (
                                                     <FunctionalIcon
-                                                        iconName="times" altName={Lang.clean}
+                                                        iconName="times" altName={_('clean')}
                                                         onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}} />
                                                 ) : false}
                                             </div>
@@ -237,14 +237,14 @@ export default class EquipsDisplayer extends Component {
 
                     <div className="col-12 mhwc-item mhwc-properties">
                         <div className="col-12 mhwc-name">
-                            <span>{Lang.property}</span>
+                            <span>{_('property')}</span>
                         </div>
                         <div className="col-12 mhwc-value">
                             <div className="row">
                                 {(null !== weaponInfo.sharpness) ? [(
                                     <div key={'sharpness_1'} className="col-4">
                                         <div className="mhwc-name">
-                                            <span>{Lang.sharpness}</span>
+                                            <span>{_('sharpness')}</span>
                                         </div>
                                     </div>
                                 ), (
@@ -258,7 +258,7 @@ export default class EquipsDisplayer extends Component {
 
                                 <div className="col-4">
                                     <div className="mhwc-name">
-                                        <span>{Lang.attack}</span>
+                                        <span>{_('attack')}</span>
                                     </div>
                                 </div>
                                 <div className="col-2">
@@ -269,7 +269,7 @@ export default class EquipsDisplayer extends Component {
 
                                 <div className="col-4">
                                     <div className="mhwc-name">
-                                        <span>{Lang.criticalRate}</span>
+                                        <span>{_('criticalRate')}</span>
                                     </div>
                                 </div>
                                 <div className="col-2">
@@ -281,7 +281,7 @@ export default class EquipsDisplayer extends Component {
                                 {(null !== weaponInfo.element.attack) ? [(
                                     <div key={'attackElement_1'} className="col-4">
                                         <div className="mhwc-name">
-                                            <span>{Lang.element}: {Lang[weaponInfo.element.attack.type]}</span>
+                                            <span>{_('element')}: {_(weaponInfo.element.attack.type)}</span>
                                         </div>
                                     </div>
                                 ), (
@@ -299,7 +299,7 @@ export default class EquipsDisplayer extends Component {
                                 {(null !== weaponInfo.element.status) ? [(
                                     <div key={'statusElement_1'} className="col-4">
                                         <div className="mhwc-name">
-                                            <span>{Lang.element}: {Lang[weaponInfo.element.status.type]}</span>
+                                            <span>{_('element')}: {_(weaponInfo.element.status.type)}</span>
                                         </div>
                                     </div>
                                 ), (
@@ -317,20 +317,20 @@ export default class EquipsDisplayer extends Component {
                                 {(null !== weaponInfo.elderseal) ? [(
                                     <div key={'elderseal_1'} className="col-4">
                                         <div className="mhwc-name">
-                                            <span>{Lang.elderseal}</span>
+                                            <span>{_('elderseal')}</span>
                                         </div>
                                     </div>
                                 ), (
                                     <div key={'elderseal_2'} className="col-2">
                                         <div className="mhwc-value">
-                                            <span>{Lang[weaponInfo.elderseal.affinity]}</span>
+                                            <span>{_(weaponInfo.elderseal.affinity)}</span>
                                         </div>
                                     </div>
                                 )] : false}
 
                                 <div className="col-4">
                                     <div className="mhwc-name">
-                                        <span>{Lang.defense}</span>
+                                        <span>{_('defense')}</span>
                                     </div>
                                 </div>
                                 <div className="col-2">
@@ -345,7 +345,7 @@ export default class EquipsDisplayer extends Component {
                     {0 !== weaponInfo.skills.length ? (
                         <div className="col-12 mhwc-item mhwc-skills">
                             <div className="col-12 mhwc-name">
-                                <span>{Lang.skill}</span>
+                                <span>{_('skill')}</span>
                             </div>
                             <div className="col-12 mhwc-value">
                                 <div className="row">
@@ -371,7 +371,7 @@ export default class EquipsDisplayer extends Component {
                 <div key="weapon" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}>
-                            <span>{Lang.weapon}: ---</span>
+                            <span>{_('weapon')}: ---</span>
                         </a>
                     </div>
                 </div>
@@ -401,16 +401,16 @@ export default class EquipsDisplayer extends Component {
                     <div key={'equip_' + equipType} className="row mhwc-equip">
                         <div className="col-12 mhwc-name">
                             <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
-                                <span>{Lang[equipType]}: {equipInfo.id}</span>
+                                <span>{_(equipType)}: {equipInfo.id}</span>
                             </a>
 
                             <div className="mhwc-icons_bundle">
                                 <FunctionalIcon
                                     iconName={equipsLock[equipType] ? 'lock' : 'unlock-alt'}
-                                    altName={equipsLock[equipType] ? Lang.unlock : Lang.unlock}
+                                    altName={equipsLock[equipType] ? _('unlock') : _('unlock')}
                                     onClick={() => {this.handleEquipLockToggle(equipType)}} />
                                 <FunctionalIcon
-                                    iconName="times" altName={Lang.clean}
+                                    iconName="times" altName={_('clean')}
                                     onClick={() => {this.handleEquipEmpty(emptyEquipSelectorData)}} />
                             </div>
                         </div>
@@ -435,7 +435,7 @@ export default class EquipsDisplayer extends Component {
                                     return (
                                         <div key={data.id + '_' + index} className="row mhwc-jewel">
                                             <div className="col-4 mhwc-name">
-                                                <span>{Lang.slot}: {index + 1} [{data.size}]</span>
+                                                <span>{_('slot')}: {index + 1} [{data.size}]</span>
                                             </div>
                                             <div className="col-8 mhwc-value">
                                                 <a onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}>
@@ -449,7 +449,7 @@ export default class EquipsDisplayer extends Component {
                                                 <div className="mhwc-icons_bundle">
                                                     {null !== data.jewel.id ? (
                                                         <FunctionalIcon
-                                                            iconName="times" altName={Lang.clean}
+                                                            iconName="times" altName={_('clean')}
                                                             onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}} />
                                                     ) : false}
                                                 </div>
@@ -462,13 +462,13 @@ export default class EquipsDisplayer extends Component {
 
                         <div className="col-12 mhwc-item mhwc-properties">
                             <div className="col-12 mhwc-name">
-                                <span>{Lang.property}</span>
+                                <span>{_('property')}</span>
                             </div>
                             <div className="col-12 mhwc-value">
                                 <div className="row">
                                     <div className="col-4">
                                         <div className="mhwc-name">
-                                            <span>{Lang.defense}</span>
+                                            <span>{_('defense')}</span>
                                         </div>
                                     </div>
                                     <div className="col-2">
@@ -481,7 +481,7 @@ export default class EquipsDisplayer extends Component {
                                         return [(
                                             <div key={elementType + '_1'} className="col-4">
                                                 <div className="mhwc-name">
-                                                    <span>{Lang.resistance}: {Lang[elementType]}</span>
+                                                    <span>{_('resistance')}: {_(elementType)}</span>
                                                 </div>
                                             </div>
                                         ),(
@@ -500,7 +500,7 @@ export default class EquipsDisplayer extends Component {
                             <div className="col-12 mhwc-item mhwc-set">
                                 <div className="row">
                                     <div className="col-4 mhwc-name">
-                                        <span>{Lang.set}</span>
+                                        <span>{_('set')}</span>
                                     </div>
                                     <div className="col-8 mhwc-value">
                                         <span>{equipInfo.set.id}</span>
@@ -512,7 +512,7 @@ export default class EquipsDisplayer extends Component {
                         {0 !== equipInfo.skills.length ? (
                             <div className="col-12 mhwc-item mhwc-skills">
                                 <div className="col-12 mhwc-name">
-                                    <span>{Lang.skill}</span>
+                                    <span>{_('skill')}</span>
                                 </div>
                                 <div className="col-12 mhwc-value">
                                     <div className="row">
@@ -538,7 +538,7 @@ export default class EquipsDisplayer extends Component {
                     <div key={'equip_' + equipType} className="row mhwc-equip">
                         <div className="col-12 mhwc-name">
                             <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
-                                <span>{Lang[equipType]}: ---</span>
+                                <span>{_(equipType)}: ---</span>
                             </a>
                         </div>
                     </div>
@@ -568,23 +568,23 @@ export default class EquipsDisplayer extends Component {
                 <div key="charm" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a onClick={() => {this.handleEquipSwitch(charmSelectorData)}}>
-                            <span>{Lang.charm}: {charmInfo.id}</span>
+                            <span>{_('charm')}: {charmInfo.id}</span>
                         </a>
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName={equipsLock.charm ? 'lock' : 'unlock-alt'}
-                                altName={equipsLock.charm ? Lang.unlock : Lang.lock}
+                                altName={equipsLock.charm ? _('unlock') : _('lock')}
                                 onClick={() => {this.handleEquipLockToggle('charm')}} />
                             <FunctionalIcon
-                                iconName="times" altName={Lang.clean}
+                                iconName="times" altName={_('clean')}
                                 onClick={() => {this.handleEquipEmpty(emptyCharmSelectorData)}} />
                         </div>
                     </div>
 
                     <div className="col-12 mhwc-item mhwc-skills">
                         <div className="col-12 mhwc-name">
-                            <span>{Lang.skill}</span>
+                            <span>{_('skill')}</span>
                         </div>
                         <div className="col-12 mhwc-value">
                             <div className="row">
@@ -609,7 +609,7 @@ export default class EquipsDisplayer extends Component {
                 <div key="charm" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a onClick={() => {this.handleEquipSwitch(charmSelectorData)}}>
-                            <span>{Lang.charm}: ---</span>
+                            <span>{_('charm')}: ---</span>
                         </a>
                     </div>
                 </div>

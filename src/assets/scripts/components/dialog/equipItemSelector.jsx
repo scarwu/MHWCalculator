@@ -17,8 +17,8 @@ import Status from 'core/status';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
+import _ from 'libraries/lang';
 import DataSet from 'libraries/dataset';
-import Lang from 'libraries/lang';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -269,8 +269,8 @@ export default class EquipItemSelector extends Component {
 
         return (
             <tr key={data.id}>
-                <td><span>{data.name}</span></td>
-                <td><span>{data.series}</span></td>
+                <td><span>{_(data.name)}</span></td>
+                <td><span>{_(data.series)}</span></td>
                 <td><span>{data.rare}</span></td>
                 <td><span>{data.attack}</span></td>
                 <td className="mhwc-sharpness">
@@ -281,7 +281,7 @@ export default class EquipItemSelector extends Component {
                 <td>
                     {null !== data.element.attack ? (
                         <div>
-                            <span>{Lang[data.element.attack.type]}</span>
+                            <span>{_(data.element.attack.type)}</span>
                             &nbsp;
                             {data.element.attack.isHidden ? (
                                 <span key="value_1">({data.element.attack.minValue}-{data.element.attack.maxValue})</span>
@@ -293,7 +293,7 @@ export default class EquipItemSelector extends Component {
 
                     {null !== data.element.status ? (
                         <div>
-                            <span>{Lang[data.element.status.type]}</span>
+                            <span>{_(data.element.status.type)}</span>
                             &nbsp;
                             {data.element.status.isHidden ? (
                                 <span key="value_1">({data.element.status.minValue}-{data.element.status.maxValue})</span>
@@ -305,7 +305,7 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     {null !== data.elderseal ? (
-                        <span>{Lang[data.elderseal.affinity]}</span>
+                        <span>{_(data.elderseal.affinity)}</span>
                     ) : false}
                 </td>
                 <td><span>{data.defense}</span></td>
@@ -329,12 +329,12 @@ export default class EquipItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
-                            altName={isIgnore ? Lang.include : Lang.exclude}
+                            altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle('weapon', data.id)}} />
 
                         {(this.props.data.equipName !== data.id) ? (
                             <FunctionalIcon
-                                iconName="check" altName={Lang.select}
+                                iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
@@ -350,17 +350,17 @@ export default class EquipItemSelector extends Component {
             <table className="mhwc-weapon_table">
                 <thead>
                     <tr>
-                        <td>{Lang.name}</td>
-                        <td>{Lang.series}</td>
-                        <td>{Lang.rare}</td>
-                        <td>{Lang.attack}</td>
-                        <td>{Lang.sharpness}</td>
-                        <td>{Lang.criticalRate}</td>
-                        <td>{Lang.element}</td>
-                        <td>{Lang.elderseal}</td>
-                        <td>{Lang.defense}</td>
-                        <td>{Lang.slot}</td>
-                        <td>{Lang.skill}</td>
+                        <td>{_('name')}</td>
+                        <td>{_('series')}</td>
+                        <td>{_('rare')}</td>
+                        <td>{_('attack')}</td>
+                        <td>{_('sharpness')}</td>
+                        <td>{_('criticalRate')}</td>
+                        <td>{_('element')}</td>
+                        <td>{_('elderseal')}</td>
+                        <td>{_('defense')}</td>
+                        <td>{_('slot')}</td>
+                        <td>{_('skill')}</td>
                         <td></td>
                     </tr>
                 </thead>
@@ -374,14 +374,14 @@ export default class EquipItemSelector extends Component {
                         // Create Text
                         let text = data.id;
 
-                        text += Lang[data.type];
+                        text += _(data.type);
 
                         if (null !== data.element.attack) {
-                            text += Lang[data.element.attack.type];
+                            text += _(data.element.attack.type);
                         }
 
                         if (null !== data.element.status) {
-                            text += Lang[data.element.status.type];
+                            text += _(data.element.status.type);
                         }
 
                         // Search Nameword
@@ -405,16 +405,16 @@ export default class EquipItemSelector extends Component {
     renderArmorRow = (data, index, isIgnore) => {
         return (
             <tr key={data.id}>
-                <td><span>{data.name}</span></td>
-                <td><span>{data.series}</span></td>
+                <td><span>{_(data.name)}</span></td>
+                <td><span>{_(data.series)}</span></td>
                 <td><span>{data.rare}</span></td>
                 <td><span>{data.defense}</span></td>
                 <td>
-                    <div><span>{Lang.fire} {data.resistance.fire}</span></div>
-                    <div><span>{Lang.water} {data.resistance.water}</span></div>
-                    <div><span>{Lang.thunder} {data.resistance.thunder}</span></div>
-                    <div><span>{Lang.ice} {data.resistance.ice}</span></div>
-                    <div><span>{Lang.dragon} {data.resistance.dragon}</span></div>
+                    <div><span>{_('fire')} {data.resistance.fire}</span></div>
+                    <div><span>{_('water')} {data.resistance.water}</span></div>
+                    <div><span>{_('thunder')} {data.resistance.thunder}</span></div>
+                    <div><span>{_('ice')} {data.resistance.ice}</span></div>
+                    <div><span>{_('dragon')} {data.resistance.dragon}</span></div>
                 </td>
                 <td>
                     {data.slots.map((data, index) => {
@@ -441,12 +441,12 @@ export default class EquipItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
-                            altName={isIgnore ? Lang.include : Lang.exclude}
+                            altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle(data.type, data.id)}} />
 
                         {(this.props.data.equipName !== data.id) ? (
                             <FunctionalIcon
-                                iconName="check" altName={Lang.select}
+                                iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
@@ -462,14 +462,14 @@ export default class EquipItemSelector extends Component {
             <table className="mhwc-armor_table">
                 <thead>
                     <tr>
-                        <td>{Lang.name}</td>
-                        <td>{Lang.series}</td>
-                        <td>{Lang.rare}</td>
-                        <td>{Lang.defense}</td>
-                        <td>{Lang.resistance}</td>
-                        <td>{Lang.slot}</td>
-                        <td>{Lang.set}</td>
-                        <td>{Lang.skill}</td>
+                        <td>{_('name')}</td>
+                        <td>{_('series')}</td>
+                        <td>{_('rare')}</td>
+                        <td>{_('defense')}</td>
+                        <td>{_('resistance')}</td>
+                        <td>{_('slot')}</td>
+                        <td>{_('set')}</td>
+                        <td>{_('skill')}</td>
                         <td></td>
                     </tr>
                 </thead>
@@ -508,7 +508,7 @@ export default class EquipItemSelector extends Component {
     renderCharmRow = (data, index, isIgnore) => {
         return (
             <tr key={data.id}>
-                <td><span>{data.name}</span></td>
+                <td><span>{_(data.name)}</span></td>
                 <td><span>{data.rare}</span></td>
                 <td>
                     {data.skills.map((data, index) => {
@@ -523,12 +523,12 @@ export default class EquipItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
-                            altName={isIgnore ? Lang.include : Lang.exclude}
+                            altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle('charm', data.id)}} />
 
                         {(this.props.data.equipName !== data.id) ? (
                             <FunctionalIcon
-                                iconName="check" altName={Lang.select}
+                                iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
@@ -544,9 +544,9 @@ export default class EquipItemSelector extends Component {
             <table className="mhwc-charm_table">
                 <thead>
                     <tr>
-                        <td>{Lang.name}</td>
-                        <td>{Lang.rare}</td>
-                        <td>{Lang.skill}</td>
+                        <td>{_('name')}</td>
+                        <td>{_('rare')}</td>
+                        <td>{_('skill')}</td>
                         <td></td>
                     </tr>
                 </thead>
@@ -581,7 +581,7 @@ export default class EquipItemSelector extends Component {
     renderJewelRow = (data, index) => {
         return (
             <tr key={data.id}>
-                <td><span>{data.name}</span></td>
+                <td><span>{_(data.name)}</span></td>
                 <td><span>{data.rare}</span></td>
                 <td><span>{data.size}</span></td>
                 <td>
@@ -591,7 +591,7 @@ export default class EquipItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         {(this.props.data.jewelName !== data.id) ? (
                             <FunctionalIcon
-                                iconName="check" altName={Lang.select}
+                                iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
@@ -607,10 +607,10 @@ export default class EquipItemSelector extends Component {
             <table className="mhwc-jewel_table">
                 <thead>
                     <tr>
-                        <td>{Lang.name}</td>
-                        <td>{Lang.rare}</td>
-                        <td>{Lang.size}</td>
-                        <td>{Lang.skill}</td>
+                        <td>{_('name')}</td>
+                        <td>{_('rare')}</td>
+                        <td>{_('size')}</td>
+                        <td>{_('skill')}</td>
                         <td></td>
                     </tr>
                 </thead>
@@ -653,7 +653,7 @@ export default class EquipItemSelector extends Component {
                     {data.list.map((data, index) => {
                         return (
                             <div key={index}>
-                                <span>{data.description}</span>
+                                <span>{_(data.description)}</span>
                             </div>
                         );
                     })}
@@ -662,7 +662,7 @@ export default class EquipItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         {(this.props.data.enhanceName !== data.id) ? (
                             <FunctionalIcon
-                                iconName="check" altName={Lang.select}
+                                iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
@@ -678,9 +678,9 @@ export default class EquipItemSelector extends Component {
             <table className="mhwc-enhance_table">
                 <thead>
                     <tr>
-                        <td>{Lang.name}</td>
-                        <td>{Lang.level}</td>
-                        <td>{Lang.description}</td>
+                        <td>{_('name')}</td>
+                        <td>{_('level')}</td>
+                        <td>{_('description')}</td>
                         <td></td>
                     </tr>
                 </thead>
@@ -740,7 +740,7 @@ export default class EquipItemSelector extends Component {
                             <select defaultValue={this.state.type} ref="type" onChange={this.handleTypeChange}>
                                 {weaponTypeList.map((type) => {
                                     return (
-                                        <option key={type} value={type}>{Lang[type]}</option>
+                                        <option key={type} value={type}>{_(type)}</option>
                                     );
                                 })}
                             </select>
@@ -748,7 +748,7 @@ export default class EquipItemSelector extends Component {
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="times" altName={Lang.close}
+                                iconName="times" altName={_('close')}
                                 onClick={this.handleWindowClose} />
                         </div>
                     </div>

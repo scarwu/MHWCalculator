@@ -12,12 +12,14 @@
 import Constant from 'constant';
 
 // Load Langs
-import zhTW from 'langs/zhTW';
-import enUS from 'langs/enUS';
+import zhTWUI from 'json/langs/zhTW/ui.json';
+import zhTWDataset from 'json/langs/zhTW/datasets.json';
+import enUSUI from 'json/langs/enUS/ui.json';
+import enUSDataset from 'json/langs/enUS/datasets.json';
 
 let langs = {
-    zhTW: zhTW,
-    enUS: enUS
+    zhTW: Object.assign({}, zhTWUI, zhTWDataset),
+    enUS: Object.assign({}, enUSUI, enUSDataset)
 };
 
 let defaultLang = Constant.defaultLang;
@@ -25,4 +27,7 @@ let browserLnag = navigator.language.replace('-', '');
 let currentLang = ('undefined' !== typeof langs[browserLnag])
     ? browserLnag : defaultLang;
 
-export default langs[currentLang];
+export default (key) => {
+    return ('undefined' !== typeof langs[currentLang][key])
+        ? langs[currentLang][key] : langs[defaultLang][key];
+};

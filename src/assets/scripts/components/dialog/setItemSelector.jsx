@@ -16,8 +16,8 @@ import Event from 'core/event';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
+import _ from 'libraries/lang';
 import DataSet from 'libraries/dataset';
-import Lang from 'libraries/lang';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -114,12 +114,12 @@ export default class SetItemSelector extends Component {
     renderRow = (data, isSelect) => {
         return (
             <tr key={data.id}>
-                <td><span>{data.name}</span></td>
+                <td><span>{_(data.name)}</span></td>
                 <td>
                     {data.skills.map((skill, index) => {
                         return (
                             <div key={index}>
-                                <span>({skill.require}) {skill.id}</span>
+                                <span>({skill.require}) {_(skill.name)}</span>
                             </div>
                         );
                     })}
@@ -130,7 +130,7 @@ export default class SetItemSelector extends Component {
 
                         return (
                             <div key={index}>
-                                <span>{skillInfo.list[0].description}</span>
+                                <span>{_(skillInfo.list[0].description)}</span>
                             </div>
                         );
                     })}
@@ -139,11 +139,11 @@ export default class SetItemSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         {isSelect ? (
                             <FunctionalIcon
-                                iconName="minus" altName={Lang.remove}
+                                iconName="minus" altName={_('remove')}
                                 onClick={() => {this.handleItemThrowDown(data.id)}} />
                         ) : (
                             <FunctionalIcon
-                                iconName="plus" altName={Lang.add}
+                                iconName="plus" altName={_('add')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
                         )}
                     </div>
@@ -159,9 +159,9 @@ export default class SetItemSelector extends Component {
             <table className="mhwc-set_table">
                 <thead>
                     <tr>
-                        <td>{Lang.name}</td>
-                        <td>{Lang.skill}</td>
-                        <td>{Lang.description}</td>
+                        <td>{_('name')}</td>
+                        <td>{_('skill')}</td>
+                        <td>{_('description')}</td>
                         <td></td>
                     </tr>
                 </thead>
@@ -222,7 +222,7 @@ export default class SetItemSelector extends Component {
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="times" altName={Lang.close}
+                                iconName="times" altName={_('close')}
                                 onClick={this.handleWindowClose} />
                         </div>
                     </div>

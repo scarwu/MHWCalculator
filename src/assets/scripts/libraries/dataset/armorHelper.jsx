@@ -8,14 +8,11 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Custom Libraries
-import Lang from 'libraries/lang';
-
 // Load Constant
 import Constant from 'constant';
 
 // Load Dataset
-import Armors from 'datasets/armors.json';
+import Armors from 'json/datasets/armors.json';
 
 let dataset = Armors.map((pack) => {
     return pack[1].map((item) => {

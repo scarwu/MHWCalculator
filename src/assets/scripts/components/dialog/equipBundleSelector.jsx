@@ -17,7 +17,7 @@ import Status from 'core/status';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
-import Lang from 'libraries/lang';
+import _ from 'libraries/lang';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -153,23 +153,23 @@ export default class EquipBundleSelector extends Component {
         return (
             <tr key={data.id}>
                 <td><input type="text" ref={'bundleId_' + index} defaultValue={data.id} /></td>
-                <td><span>{data.equips.weapon.name}</span></td>
-                <td><span>{data.equips.helm.name}</span></td>
-                <td><span>{data.equips.chest.name}</span></td>
-                <td><span>{data.equips.arm.name}</span></td>
-                <td><span>{data.equips.waist.name}</span></td>
-                <td><span>{data.equips.leg.name}</span></td>
-                <td><span>{data.equips.charm.name}</span></td>
+                <td><span>{_(data.equips.weapon.name)}</span></td>
+                <td><span>{_(data.equips.helm.name)}</span></td>
+                <td><span>{_(data.equips.chest.name)}</span></td>
+                <td><span>{_(data.equips.arm.name)}</span></td>
+                <td><span>{_(data.equips.waist.name)}</span></td>
+                <td><span>{_(data.equips.leg.name)}</span></td>
+                <td><span>{_(data.equips.charm.name)}</span></td>
                 <td>
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
-                            iconName="check" altName={Lang.select}
+                            iconName="check" altName={_('select')}
                             onClick={() => {this.handleBundlePickUp(index)}} />
                         <FunctionalIcon
-                            iconName="times" altName={Lang.remove}
+                            iconName="times" altName={_('remove')}
                             onClick={() => {this.handleBundleRemove(index)}} />
                         <FunctionalIcon
-                            iconName="floppy-o" altName={Lang.save}
+                            iconName="floppy-o" altName={_('save')}
                             onClick={() => {this.handleBundleSave(index)}} />
                     </div>
                 </td>
@@ -185,14 +185,14 @@ export default class EquipBundleSelector extends Component {
             <table className="mhwc-equip_bundle_table">
                 <thead>
                     <tr>
-                        <td>{Lang.name}</td>
-                        <td>{Lang.weapon}</td>
-                        <td>{Lang.helm}</td>
-                        <td>{Lang.chest}</td>
-                        <td>{Lang.arm}</td>
-                        <td>{Lang.waist}</td>
-                        <td>{Lang.leg}</td>
-                        <td>{Lang.charm}</td>
+                        <td>{_('name')}</td>
+                        <td>{_('weapon')}</td>
+                        <td>{_('helm')}</td>
+                        <td>{_('chest')}</td>
+                        <td>{_('arm')}</td>
+                        <td>{_('waist')}</td>
+                        <td>{_('leg')}</td>
+                        <td>{_('charm')}</td>
                         <td></td>
                     </tr>
                 </thead>
@@ -200,17 +200,17 @@ export default class EquipBundleSelector extends Component {
                     {null !== equips ? (
                         <tr>
                             <td><input type="text" ref="bundleId" /></td>
-                            <td><span>{equips.weapon.name}</span></td>
-                            <td><span>{equips.helm.name}</span></td>
-                            <td><span>{equips.chest.name}</span></td>
-                            <td><span>{equips.arm.name}</span></td>
-                            <td><span>{equips.waist.name}</span></td>
-                            <td><span>{equips.leg.name}</span></td>
-                            <td><span>{equips.charm.name}</span></td>
+                            <td><span>{_(equips.weapon.name)}</span></td>
+                            <td><span>{_(equips.helm.name)}</span></td>
+                            <td><span>{_(equips.chest.name)}</span></td>
+                            <td><span>{_(equips.arm.name)}</span></td>
+                            <td><span>{_(equips.waist.name)}</span></td>
+                            <td><span>{_(equips.leg.name)}</span></td>
+                            <td><span>{_(equips.charm.name)}</span></td>
                             <td>
                                 <div className="mhwc-icons_bundle">
                                     <FunctionalIcon
-                                        iconName="floppy-o" altName={Lang.save}
+                                        iconName="floppy-o" altName={_('save')}
                                         onClick={() => {this.handleBundleSave(null)}} />
                                 </div>
                             </td>
@@ -230,7 +230,7 @@ export default class EquipBundleSelector extends Component {
                     <div className="mhwc-panel">
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="times" altName={Lang.close}
+                                iconName="times" altName={_('close')}
                                 onClick={this.handleWindowClose} />
                         </div>
                     </div>

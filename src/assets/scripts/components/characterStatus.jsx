@@ -16,13 +16,13 @@ import Event from 'core/event';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
+import _ from 'libraries/lang';
 import DataSet from 'libraries/dataset';
-import Lang from 'libraries/lang';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
 
-// Load Constant & Lang
+// Load Constant
 import Constant from 'constant';
 
 export default class CharacterStatus extends Component {
@@ -595,13 +595,13 @@ export default class CharacterStatus extends Component {
             <div className="mhwc-list">
                 <div key="normal" className="row mhwc-item mhwc-normal">
                     <div className="col-12 mhwc-name">
-                        <span>{Lang.general}</span>
+                        <span>{_('general')}</span>
                     </div>
                     <div className="col-12 mhwc-value">
                         <div className="row">
                             <div className="col-4">
                                 <div className="mhwc-name">
-                                    <span>{Lang.health}</span>
+                                    <span>{_('health')}</span>
                                 </div>
                             </div>
                             <div className="col-2">
@@ -612,7 +612,7 @@ export default class CharacterStatus extends Component {
 
                             <div className="col-4">
                                 <div className="mhwc-name">
-                                    <span>{Lang.stamina}</span>
+                                    <span>{_('stamina')}</span>
                                 </div>
                             </div>
                             <div className="col-2">
@@ -626,14 +626,14 @@ export default class CharacterStatus extends Component {
 
                 <div key="attack" className="row mhwc-item mhwc-attack">
                     <div className="col-12 mhwc-name">
-                        <span>{Lang.attackProperty}</span>
+                        <span>{_('attackProperty')}</span>
                     </div>
                     <div className="col-12 mhwc-value">
                         <div className="row">
                             {null !== status.sharpness ? [(
                                 <div key={'sharpness_1'} className="col-4">
                                     <div className="mhwc-name">
-                                        <span>{Lang.sharpness}</span>
+                                        <span>{_('sharpness')}</span>
                                     </div>
                                 </div>
                             ), (
@@ -647,7 +647,7 @@ export default class CharacterStatus extends Component {
 
                             <div className="col-4">
                                 <div className="mhwc-name">
-                                    <span>{Lang.attack}</span>
+                                    <span>{_('attack')}</span>
                                 </div>
                             </div>
                             <div className="col-2">
@@ -658,7 +658,7 @@ export default class CharacterStatus extends Component {
 
                             <div className="col-4">
                                 <div className="mhwc-name">
-                                    <span>{Lang.criticalRate}</span>
+                                    <span>{_('criticalRate')}</span>
                                 </div>
                             </div>
                             <div className="col-2">
@@ -669,7 +669,7 @@ export default class CharacterStatus extends Component {
 
                             <div className="col-4">
                                 <div className="mhwc-name">
-                                    <span>{Lang.criticalMultiple}</span>
+                                    <span>{_('criticalMultiple')}</span>
                                 </div>
                             </div>
                             <div className="col-2">
@@ -685,7 +685,7 @@ export default class CharacterStatus extends Component {
                             {null !== status.element.attack ? [(
                                 <div key={'attackElement_1'} className="col-4">
                                     <div className="mhwc-name">
-                                        <span>{Lang.element}: {Lang[status.element.attack.type]}</span>
+                                        <span>{_('element')}: {_(status.element.attack.type)}</span>
                                     </div>
                                 </div>
                             ), (
@@ -703,7 +703,7 @@ export default class CharacterStatus extends Component {
                             {null !== status.element.status ? [(
                                 <div key={'statusEelement_1'} className="col-4">
                                     <div className="mhwc-name">
-                                        <span>{Lang.element}: {Lang[status.element.status.type]}</span>
+                                        <span>{_('element')}: {_(status.element.status.type)}</span>
                                     </div>
                                 </div>
                             ), (
@@ -721,13 +721,13 @@ export default class CharacterStatus extends Component {
                             {null !== status.elderseal ? [(
                                 <div key={'elderseal_1'} className="col-4">
                                     <div className="mhwc-name">
-                                        <span>{Lang.elderseal}</span>
+                                        <span>{_('elderseal')}</span>
                                     </div>
                                 </div>
                             ), (
                                 <div key={'elderseal_2'} className="col-2">
                                     <div className="mhwc-value">
-                                        <span>{Lang[status.elderseal.affinity]}</span>
+                                        <span>{_(status.elderseal.affinity)}</span>
                                     </div>
                                 </div>
                             )] : false}
@@ -737,13 +737,13 @@ export default class CharacterStatus extends Component {
 
                 <div key="defense" className="row mhwc-item mhwc-defense">
                     <div className="col-12 mhwc-name">
-                        <span>{Lang.defenseProperty}</span>
+                        <span>{_('defenseProperty')}</span>
                     </div>
                     <div className="col-12 mhwc-value">
                         <div className="row">
                             <div className="col-4">
                                 <div className="mhwc-name">
-                                    <span>{Lang.defense}</span>
+                                    <span>{_('defense')}</span>
                                 </div>
                             </div>
                             <div className="col-2">
@@ -756,7 +756,7 @@ export default class CharacterStatus extends Component {
                                 return [(
                                     <div key={elementType + '_1'} className="col-4">
                                         <div className="mhwc-name">
-                                            <span>{Lang.resistance}: {Lang[elementType]}</span>
+                                            <span>{_('resistance')}: {_(elementType)}</span>
                                         </div>
                                     </div>
                                 ),(
@@ -774,7 +774,7 @@ export default class CharacterStatus extends Component {
                 {(0 !== status.sets.length) ? (
                     <div key="sets" className="row mhwc-item mhwc-sets">
                         <div className="col-12 mhwc-name">
-                            <span>{Lang.set}</span>
+                            <span>{_('set')}</span>
                         </div>
                         <div className="col-12 mhwc-value">
                             {status.sets.map((data) => {
@@ -796,7 +796,7 @@ export default class CharacterStatus extends Component {
                 {(0 !== status.skills.length) ? (
                     <div key="skills" className="row mhwc-item mhwc-skills">
                         <div className="col-12 mhwc-name">
-                            <span>{Lang.skill}</span>
+                            <span>{_('skill')}</span>
                         </div>
                         <div className="col-12 mhwc-value">
                             {status.skills.sort((a, b) => {
@@ -811,7 +811,7 @@ export default class CharacterStatus extends Component {
                                                 {undefined !== passiveSkills[data.id] ? (
                                                     <FunctionalIcon
                                                         iconName={passiveSkills[data.id].isActive ? 'eye' : 'eye-slash'}
-                                                        altName={passiveSkills[data.id].isActive ? Lang.deactive : Lang.active}
+                                                        altName={passiveSkills[data.id].isActive ? _('deactive') : _('active')}
                                                         onClick={() => {this.handlePassiveSkillToggle(data.id)}} />
                                                 ) : false}
                                             </div>
@@ -828,12 +828,12 @@ export default class CharacterStatus extends Component {
 
                 <div key="extraInfo" className="row mhwc-item mhwc-extra_info">
                     <div className="col-12 mhwc-name">
-                        <span>{Lang.extraInfo}</span>
+                        <span>{_('extraInfo')}</span>
                     </div>
                     <div className="col-12 mhwc-value">
                         <div className="row">
                             <div className="col-8 mhwc-name">
-                                <span>{Lang.rawAttack}</span>
+                                <span>{_('rawAttack')}</span>
                             </div>
                             <div className="col-4 mhwc-value">
                                 <span>{extraInfo.rawAttack}</span>
@@ -841,7 +841,7 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="row">
                             <div className="col-8 mhwc-name">
-                                <span>{Lang.rawCriticalAttack}</span>
+                                <span>{_('rawCriticalAttack')}</span>
                             </div>
                             <div className="col-4 mhwc-value">
                                 <span>{extraInfo.rawCriticalAttack}</span>
@@ -849,7 +849,7 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="row">
                             <div className="col-8 mhwc-name">
-                                <span>{Lang.rawEV}</span>
+                                <span>{_('rawEV')}</span>
                             </div>
                             <div className="col-4 mhwc-value">
                                 <span>{extraInfo.rawExpectedValue}</span>
@@ -857,7 +857,7 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="row">
                             <div className="col-8 mhwc-name">
-                                <span>{Lang.elementAttack}</span>
+                                <span>{_('elementAttack')}</span>
                             </div>
                             <div className="col-4 mhwc-value">
                                 <span>{extraInfo.elementAttack}</span>
@@ -865,7 +865,7 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="row">
                             <div className="col-8 mhwc-name">
-                                <span>{Lang.elementEV}</span>
+                                <span>{_('elementEV')}</span>
                             </div>
                             <div className="col-4 mhwc-value">
                                 <span>{extraInfo.elementExpectedValue}</span>
@@ -873,7 +873,7 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="row">
                             <div className="col-8 mhwc-name">
-                                <span>{Lang.totalEV}</span>
+                                <span>{_('totalEV')}</span>
                             </div>
                             <div className="col-4 mhwc-value">
                                 <span>{extraInfo.expectedValue}</span>

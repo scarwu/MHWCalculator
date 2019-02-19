@@ -12,7 +12,7 @@
 import Constant from 'constant';
 
 // Load Dataset
-import Enhances from 'datasets/enhances.json';
+import Enhances from 'json/datasets/enhances.json';
 
 // [
 //     0: id,

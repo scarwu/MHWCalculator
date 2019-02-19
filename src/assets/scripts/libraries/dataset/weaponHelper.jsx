@@ -8,14 +8,11 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Custom Libraries
-import Lang from 'libraries/lang';
-
 // Load Constant
 import Constant from 'constant';
 
 // Load Dataset
-import Weapons from 'datasets/weapons.json';
+import Weapons from 'json/datasets/weapons.json';
 
 let dataset = Weapons.map((weapon) => {
     return {

@@ -17,7 +17,7 @@ import Helper from 'core/helper';
 // Load Custom Libraries
 import DataSet from 'libraries/dataset';
 
-// Load Constant & Lang
+// Load Constant
 import Constant from 'constant';
 
 class FittingAlgorithm {

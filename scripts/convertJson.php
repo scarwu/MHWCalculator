@@ -11,7 +11,7 @@ function loadJson ($name) {
 }
 
 function saveDatasetJson ($name, $data) {
-    $path = ROOT . "/../src/assets/scripts/datasets/{$name}.json";
+    $path = ROOT . "/../src/assets/scripts/json/datasets/{$name}.json";
     $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
     @mkdir(dirname($path), 0755, true);
@@ -20,7 +20,7 @@ function saveDatasetJson ($name, $data) {
 }
 
 function saveLangJson ($name, $data) {
-    $path = ROOT . "/../src/assets/scripts/langs/{$name}.json";
+    $path = ROOT . "/../src/assets/scripts/json/langs/{$name}.json";
     $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
     @mkdir(dirname($path), 0755, true);

@@ -12,7 +12,7 @@
 import Constant from 'constant';
 
 // Load Dataset
-import Skills from 'datasets/skills.json';
+import Skills from 'json/datasets/skills.json';
 
 // [
 //     0: id,
