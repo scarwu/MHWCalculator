@@ -124,7 +124,7 @@ export default class CandidateBundles extends Component {
                                 ), (
                                     <div key={'weapon_2'} className="col-4">
                                         <div className="mhwc-value">
-                                            <span>{data.equips[euqipType]}</span>
+                                            <span>{_(DataSet.armorHelper.getInfo(data.equips[euqipType]).name)}</span>
                                         </div>
                                     </div>
                                 )] : false;
@@ -180,14 +180,15 @@ export default class CandidateBundles extends Component {
                                 <div className="row">
                                     {Object.keys(data.jewels).sort((a, b) => {
                                         return data.jewels[b] - data.jewels[a];
-                                    }).map((jewelName) => {
-                                        let jewelCount = data.jewels[jewelName];
-                                        let jewelInfo = DataSet.jewelHelper.getInfo(jewelName);
+                                    }).map((jewelId) => {
+                                        let jewelCount = data.jewels[jewelId];
+                                        let jewelName = DataSet.jewelHelper.getInfo(jewelId).name;
+                                        let jewelSize = DataSet.jewelHelper.getInfo(jewelId).size;
 
                                         return (
-                                            <div key={jewelName} className="col-4">
+                                            <div key={jewelId} className="col-4">
                                                 <div className="mhwc-value">
-                                                    <span>{`[${jewelInfo.size}] ${jewelName} x ${jewelCount}`}</span>
+                                                    <span>{`[${jewelSize}] ${_(jewelName)} x ${jewelCount}`}</span>
                                                 </div>
                                             </div>
                                         );
@@ -206,13 +207,14 @@ export default class CandidateBundles extends Component {
                                 <div className="row">
                                     {Object.keys(data.skills).sort((a, b) => {
                                         return data.skills[b] - data.skills[a];
-                                    }).map((skillName) => {
-                                        let skillCount = data.skills[skillName];;
+                                    }).map((skillId) => {
+                                        let skillCount = data.skills[skillId];
+                                        let skillName = DataSet.skillHelper.getInfo(skillId).name;;
 
                                         return (
-                                            <div key={skillName} className="col-6">
+                                            <div key={skillId} className="col-6">
                                                 <div className="mhwc-value">
-                                                    <span>{`${skillName} Lv.${skillCount}`}</span>
+                                                    <span>{`${_(skillName)} Lv.${skillCount}`}</span>
                                                 </div>
                                             </div>
                                         );

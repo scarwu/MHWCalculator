@@ -18,6 +18,7 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
+import DataSet from 'libraries/dataset';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -150,16 +151,31 @@ export default class EquipBundleSelector extends Component {
      * Render Functions
      */
     renderRow = (data, index) => {
+        let weaponName = (null !== data.equips.weapon.id)
+            ? _(DataSet.weaponHelper.getInfo(data.equips.weapon.id).name) : null;
+        let helmName = (null !== data.equips.helm.id)
+            ? _(DataSet.armorHelper.getInfo(data.equips.helm.id).name) : null;
+        let chestName = (null !== data.equips.chest.id)
+            ? _(DataSet.armorHelper.getInfo(data.equips.chest.id).name) : null;
+        let armName = (null !== data.equips.arm.id)
+            ? _(DataSet.armorHelper.getInfo(data.equips.arm.id).name) : null;
+        let waistName = (null !== data.equips.waist.id)
+            ? _(DataSet.armorHelper.getInfo(data.equips.waist.id).name) : null;
+        let legName = (null !== data.equips.leg.id)
+            ? _(DataSet.armorHelper.getInfo(data.equips.leg.id).name) : null;
+        let charmName = (null !== data.equips.charm.id)
+            ? _(DataSet.charmHelper.getInfo(data.equips.charm.id).name) : null;
+
         return (
             <tr key={data.id}>
                 <td><input type="text" ref={'bundleId_' + index} defaultValue={data.id} /></td>
-                <td><span>{_(data.equips.weapon.name)}</span></td>
-                <td><span>{_(data.equips.helm.name)}</span></td>
-                <td><span>{_(data.equips.chest.name)}</span></td>
-                <td><span>{_(data.equips.arm.name)}</span></td>
-                <td><span>{_(data.equips.waist.name)}</span></td>
-                <td><span>{_(data.equips.leg.name)}</span></td>
-                <td><span>{_(data.equips.charm.name)}</span></td>
+                <td><span>{weaponName}</span></td>
+                <td><span>{helmName}</span></td>
+                <td><span>{chestName}</span></td>
+                <td><span>{armName}</span></td>
+                <td><span>{waistName}</span></td>
+                <td><span>{legName}</span></td>
+                <td><span>{charmName}</span></td>
                 <td>
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
@@ -181,6 +197,21 @@ export default class EquipBundleSelector extends Component {
         let equips = this.state.equips;
         let equipBundleList = this.state.equipBundleList;
 
+        let weaponName = (null !== equips && null !== equips.weapon.id)
+            ? _(DataSet.weaponHelper.getInfo(equips.weapon.id).name) : null;
+        let helmName = (null !== equips && null !== equips.helm.id)
+            ? _(DataSet.armorHelper.getInfo(equips.helm.id).name) : null;
+        let chestName = (null !== equips && null !== equips.chest.id)
+            ? _(DataSet.armorHelper.getInfo(equips.chest.id).name) : null;
+        let armName = (null !== equips && null !== equips.arm.id)
+            ? _(DataSet.armorHelper.getInfo(equips.arm.id).name) : null;
+        let waistName = (null !== equips && null !== equips.waist.id)
+            ? _(DataSet.armorHelper.getInfo(equips.waist.id).name) : null;
+        let legName = (null !== equips && null !== equips.leg.id)
+            ? _(DataSet.armorHelper.getInfo(equips.leg.id).name) : null;
+        let charmName = (null !== equips && null !== equips.charm.id)
+            ? _(DataSet.charmHelper.getInfo(equips.charm.id).name) : null;
+
         return (
             <table className="mhwc-equip_bundle_table">
                 <thead>
@@ -200,13 +231,13 @@ export default class EquipBundleSelector extends Component {
                     {null !== equips ? (
                         <tr>
                             <td><input type="text" ref="bundleId" /></td>
-                            <td><span>{_(equips.weapon.name)}</span></td>
-                            <td><span>{_(equips.helm.name)}</span></td>
-                            <td><span>{_(equips.chest.name)}</span></td>
-                            <td><span>{_(equips.arm.name)}</span></td>
-                            <td><span>{_(equips.waist.name)}</span></td>
-                            <td><span>{_(equips.leg.name)}</span></td>
-                            <td><span>{_(equips.charm.name)}</span></td>
+                            <td><span>{weaponName}</span></td>
+                            <td><span>{helmName}</span></td>
+                            <td><span>{chestName}</span></td>
+                            <td><span>{armName}</span></td>
+                            <td><span>{waistName}</span></td>
+                            <td><span>{legName}</span></td>
+                            <td><span>{charmName}</span></td>
                             <td>
                                 <div className="mhwc-icons_bundle">
                                     <FunctionalIcon
