@@ -37,6 +37,9 @@ import CharacterStatus from 'components/characterStatus';
 // Load Constant
 import Constant from 'constant';
 
+// Load Json
+import TestData from 'json/testData.json';
+
 export default class Main extends Component {
 
     // Default Props
@@ -111,7 +114,7 @@ export default class Main extends Component {
         let sets = this.state.sets;
 
         sets.push({
-            name: data.setId,
+            id: data.setId,
             step: 1
         });
 
@@ -206,7 +209,7 @@ export default class Main extends Component {
         let skills = this.state.skills;
 
         skills.push({
-            name: data.skillId,
+            id: data.skillId,
             level: 1
         });
 
@@ -329,11 +332,11 @@ export default class Main extends Component {
             let jewelInfoB = DataSet.jewelHelper.getInfo(b);
 
             return jewelInfoA.size - jewelInfoB.size;
-        }).forEach((jewelName) => {
-            let jewelInfo = DataSet.jewelHelper.getInfo(jewelName);
+        }).forEach((jewelId) => {
+            let jewelInfo = DataSet.jewelHelper.getInfo(jewelId);
             let currentSize = jewelInfo.size;
 
-            let jewelCount = bundle.jewels[jewelName];
+            let jewelCount = bundle.jewels[jewelId];
             let data = null
 
             let jewelIndex = 0;
@@ -347,7 +350,7 @@ export default class Main extends Component {
 
                 data = slotMap[currentSize].shift();
 
-                equips[data.type].slotIds[data.index] = jewelName;
+                equips[data.type].slotIds[data.index] = jewelId;
 
                 jewelIndex++;
             }
@@ -404,10 +407,10 @@ export default class Main extends Component {
                 equips[data.equipType].slotIds = {};
             }
 
-            equips[data.equipType].slotIds[data.slotIndex] = data.slotName;
+            equips[data.equipType].slotIds[data.slotIndex] = data.slotId;
         } else if ('weapon' === data.equipType) {
             equips.weapon = {
-                name: data.equipName,
+                id: data.equipId,
                 enhanceIds: {},
                 slotIds: {}
             };
@@ -418,12 +421,12 @@ export default class Main extends Component {
             || 'leg' === data.equipType) {
 
             equips[data.equipType] = {
-                name: data.equipName,
+                id: data.equipId,
                 slotIds: {}
             };
         } else if ('charm' === data.equipType) {
             equips.charm = {
-                name: data.equipName
+                id: data.equipId
             };
         }
 
@@ -522,7 +525,7 @@ export default class Main extends Component {
     componentWillMount () {
 
         // Get Sets & Skills Data from Status
-        let require = Helper.deepCopy(Constant.testRequireSetting[0]);
+        let require = Helper.deepCopy(TestData.requireList[0]);
         let sets = Status.get('sets');
         let skills = Status.get('skills');
 
@@ -542,7 +545,7 @@ export default class Main extends Component {
             ? JSON.parse(Base64.decode(hash))
             : (undefined !== equips)
                 ? equips
-                : Helper.deepCopy(Constant.testEquipsSetting[0]);
+                : Helper.deepCopy(TestData.equipsList[0]);
 
         this.setState({
             sets: sets,
@@ -583,14 +586,16 @@ export default class Main extends Component {
                         </div>
                     </div>
                     <div className="col-12 mhwc-value">
-                        {setInfo.skills.map((set) => {
-                            if (setRequire < set.require) {
+                        {setInfo.skills.map((skill) => {
+                            if (setRequire < skill.require) {
                                 return false;
                             }
 
+                            let skillName = DataSet.skillHelper.getInfo(skill.id).name;
+
                             return (
-                                <div key={set.id}>
-                                    <span>({set.require}) {_(set.name)}</span>
+                                <div key={skill.id}>
+                                    <span>({skill.require}) {_(skillName)}</span>
                                 </div>
                             );
                         })}

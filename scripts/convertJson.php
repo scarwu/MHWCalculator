@@ -10,17 +10,8 @@ function loadJson ($name) {
     return json_decode(file_get_contents($path), true);
 }
 
-function saveDatasetJson ($name, $data) {
-    $path = ROOT . "/../src/assets/scripts/json/datasets/{$name}.json";
-    $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-
-    @mkdir(dirname($path), 0755, true);
-
-    return file_put_contents($path, $json);
-}
-
-function saveLangJson ($name, $data) {
-    $path = ROOT . "/../src/assets/scripts/json/langs/{$name}.json";
+function saveJson ($name, $data) {
+    $path = ROOT . "/../src/assets/scripts/json/{$name}.json";
     $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
     @mkdir(dirname($path), 0755, true);
@@ -84,6 +75,7 @@ $jewels = loadJson('jewels');
 $enhances = loadJson('enhances');
 $skills = loadJson('skills');
 $sets = loadJson('sets');
+$testData = loadJson('testData');
 
 /**
  * Check Enhance, Skill, Set & Create Lang, Dataset
@@ -93,6 +85,10 @@ $datasetMap = [];
 $enhanceChecklist = [];
 $skillChecklist = [];
 $setChecklist = [];
+$weaponChecklist = [];
+$armorChecklist = [];
+$charmChecklist = [];
+$jewelChecklist = [];
 
 // Handle Enhances Data
 $datasetMap['enhances'] = [];
@@ -128,7 +124,7 @@ foreach ($enhances as $enhance) {
     }
 
     // Create ID Hash
-    // $enhance['id'] = md5($enhance['id']);
+    $enhance['id'] = md5($enhance['id']);
 
     // Create Dataset
     // {
@@ -219,7 +215,7 @@ foreach ($skills as $skill) {
     }
 
     // Create ID Hash
-    // $skill['id'] = md5($skill['id']);
+    $skill['id'] = md5($skill['id']);
 
     // Create Dataset
     // {
@@ -308,10 +304,10 @@ foreach ($sets as $set) {
     $set['name'] = $hash;
 
     // Create ID Hash
-    // $set['id'] = md5($set['id']);
+    $set['id'] = md5($set['id']);
 
     foreach (array_keys($set['skills']) as $index) {
-        // $set['skills'][$index]['id'] = md5($set['skills'][$index]['id']);
+        $set['skills'][$index]['id'] = md5($set['skills'][$index]['id']);
     }
 
     // Create Dataset
@@ -344,6 +340,7 @@ $datasetMap['weapons'] = [];
 
 foreach ($weaponsBundle as $name => $weapons) {
     foreach ($weapons as $weapon) {
+        $weaponChecklist[$weapon['id']] = true;
 
         // Checklist
         if (is_array($weapon['skills'])) {
@@ -380,11 +377,11 @@ foreach ($weaponsBundle as $name => $weapons) {
         $weapon['series'] = $hash;
 
         // Create ID Hash
-        // $weapon['id'] = md5($weapon['id']);
+        $weapon['id'] = md5($weapon['id']);
 
         if (is_array($weapon['skills']) && 0 !== count($weapon['skills'])) {
             foreach (array_keys($weapon['skills']) as $index) {
-                // $weapon['skills'][$index]['id'] = md5($weapon['skills'][$index]['id']);
+                $weapon['skills'][$index]['id'] = md5($weapon['skills'][$index]['id']);
             }
         }
 
@@ -490,13 +487,15 @@ foreach ($armorsBundle as $name => $armors) {
     foreach ($armors as $armor) {
 
         // Checklist
-        if (is_string($armor['common']['set']['id'])) {
+        if (is_array($armor['common']['set'])) {
             if (!isset($setChecklist[$armor['common']['set']['id']])) {
                 echo "Error: Set={$armor['common']['set']['id']}\n";
             }
         }
 
         foreach ($armor['list'] as $item) {
+            $armorChecklist[$item['id']] = true;
+
             if (is_array($item['skills'])) {
                 foreach ($item['skills'] as $skill) {
                     if (!isset($skillChecklist[$skill['id']])) {
@@ -504,6 +503,11 @@ foreach ($armorsBundle as $name => $armors) {
                     }
                 }
             }
+        }
+
+        // Create ID Hash
+        if (is_array($armor['common']['set'])) {
+            $armor['common']['set']['id'] = md5($armor['common']['set']['id']);
         }
 
         // Create Translation Mapping
@@ -534,13 +538,13 @@ foreach ($armorsBundle as $name => $armors) {
             $armor['list'][$listIndex]['name'] = $hash;
 
             // Create ID Hash
-            // $armor['list'][$listIndex]['id'] = md5($armor['list'][$listIndex]['name']);
+            $armor['list'][$listIndex]['id'] = md5($armor['list'][$listIndex]['name']);
 
             if (is_array($armor['list'][$listIndex]['skills'])
                 && 0 !== count($armor['list'][$listIndex]['skills'])) {
 
                 foreach (array_keys($armor['list'][$listIndex]['skills']) as $skillIndex) {
-                    // $armor['list'][$listIndex]['skills'][$skillIndex]['id'] = md5($armor['list'][$listIndex]['skills'][$skillIndex]['id']);
+                    $armor['list'][$listIndex]['skills'][$skillIndex]['id'] = md5($armor['list'][$listIndex]['skills'][$skillIndex]['id']);
                 }
             }
         }
@@ -623,6 +627,7 @@ foreach ($armorsBundle as $name => $armors) {
 $datasetMap['charms'] = [];
 
 foreach ($charms as $charm) {
+    $charmChecklist[$charm['id']] = true;
 
     // Checklist
     if (is_array($charm['skills'])) {
@@ -647,10 +652,10 @@ foreach ($charms as $charm) {
     $charm['name'] = $hash;
 
     // Create ID Hash
-    // $charm['id'] = md5($charm['id']);
+    $charm['id'] = md5($charm['id']);
 
     foreach (array_keys($charm['skills']) as $index) {
-        // $charm['skills'][$index]['id'] = md5($charm['skills'][$index]['id']);
+        $charm['skills'][$index]['id'] = md5($charm['skills'][$index]['id']);
     }
 
     // Create Dataset
@@ -688,6 +693,7 @@ foreach ($charms as $charm) {
 $datasetMap['jewels'] = [];
 
 foreach ($jewels as $jewel) {
+    $jewelChecklist[$jewel['id']] = true;
 
     // Checklist
     if (is_string($jewel['skill']['id'])) {
@@ -710,8 +716,8 @@ foreach ($jewels as $jewel) {
     $jewel['name'] = $hash;
 
     // Create ID Hash
-    // $jewel['id'] = md5($jewel['id']);
-    // $jewel['skill']['id'] = md5($jewel['skill']['id']);
+    $jewel['id'] = md5($jewel['id']);
+    $jewel['skill']['id'] = md5($jewel['skill']['id']);
 
     // Create Dataset
     // {
@@ -738,12 +744,153 @@ foreach ($jewels as $jewel) {
     ];
 }
 
-// Save Datasets Json
-foreach ($datasetMap as $name => $data) {
-    saveDatasetJson($name, $data);
+// Test Data
+foreach ($testData['equipsList'] as $index => $equips) {
+
+    // Weapon
+    if (!isset($weaponChecklist[$equips['weapon']['id']])) {
+        echo "Error: Weapon={$equips['weapon']['id']}\n";
+    }
+
+    $equips['weapon']['id'] = md5($equips['weapon']['id']);
+
+    foreach ($equips['weapon']['enhanceIds'] as $enhanceIndex => $id) {
+        if (!isset($enhanceChecklist[$id])) {
+            echo "Error: Enhance={$id}\n";
+        }
+
+        $equips['weapon']['enhanceIds'][$enhanceIndex] = md5($id);
+    }
+
+    foreach ($equips['weapon']['slotIds'] as $slotIndex => $id) {
+        if (!isset($jewelChecklist[$id])) {
+            echo "Error: Slot={$id}\n";
+        }
+
+        $equips['weapon']['slotIds'][$slotIndex] = md5($id);
+    }
+
+    // Helm
+    if (!isset($armorChecklist[$equips['helm']['id']])) {
+        echo "Error: Helm={$equips['helm']['id']}\n";
+    }
+
+    $equips['helm']['id'] = md5($equips['helm']['id']);
+
+    foreach ($equips['helm']['slotIds'] as $slotIndex => $id) {
+        if (!isset($jewelChecklist[$id])) {
+            echo "Error: Slot={$id}\n";
+        }
+
+        $equips['helm']['slotIds'][$slotIndex] = md5($id);
+    }
+
+    // Helm
+    if (!isset($armorChecklist[$equips['chest']['id']])) {
+        echo "Error: Helm={$equips['chest']['id']}\n";
+    }
+
+    $equips['chest']['id'] = md5($equips['chest']['id']);
+
+    foreach ($equips['chest']['slotIds'] as $slotIndex => $id) {
+        if (!isset($jewelChecklist[$id])) {
+            echo "Error: Slot={$id}\n";
+        }
+
+        $equips['chest']['slotIds'][$slotIndex] = md5($id);
+    }
+
+    // Helm
+    if (!isset($armorChecklist[$equips['arm']['id']])) {
+        if (!isset($jewelChecklist[$id])) {
+            echo "Error: Slot={$id}\n";
+        }
+
+        echo "Error: Helm={$equips['arm']['id']}\n";
+    }
+
+    $equips['arm']['id'] = md5($equips['arm']['id']);
+
+    foreach ($equips['arm']['slotIds'] as $slotIndex => $id) {
+        if (!isset($jewelChecklist[$id])) {
+            echo "Error: Slot={$id}\n";
+        }
+
+        $equips['arm']['slotIds'][$slotIndex] = md5($id);
+    }
+
+    // Helm
+    if (!isset($armorChecklist[$equips['waist']['id']])) {
+        echo "Error: Helm={$equips['waist']['id']}\n";
+    }
+
+    $equips['waist']['id'] = md5($equips['waist']['id']);
+
+    foreach ($equips['waist']['slotIds'] as $slotIndex => $id) {
+        if (!isset($jewelChecklist[$id])) {
+            echo "Error: Slot={$id}\n";
+        }
+
+        $equips['waist']['slotIds'][$slotIndex] = md5($id);
+    }
+
+    // Helm
+    if (!isset($armorChecklist[$equips['leg']['id']])) {
+        echo "Error: Helm={$equips['leg']['id']}\n";
+    }
+
+    $equips['leg']['id'] = md5($equips['leg']['id']);
+
+    foreach ($equips['leg']['slotIds'] as $slotIndex => $id) {
+        if (!isset($jewelChecklist[$id])) {
+            echo "Error: Slot={$id}\n";
+        }
+
+        $equips['leg']['slotIds'][$slotIndex] = md5($id);
+    }
+
+    // Charm
+    if (!isset($charmChecklist[$equips['charm']['id']])) {
+        echo "Error: Charm={$equips['charm']['id']}\n";
+    }
+
+    $equips['charm']['id'] = md5($equips['charm']['id']);
+
+    $testData['equipsList'][$index] = $equips;
 }
 
-// Save Langs Json
-foreach ($langMap as $lang => $data) {
-    saveLangJson("{$lang}/datasets", $data);
+foreach ($testData['requireList'] as $index => $require) {
+
+    foreach ($require['sets'] as $setIndex => $set) {
+        if (!isset($setChecklist[$set['id']])) {
+            echo "Error: Set={$set['id']}\n";
+        }
+
+        $set['id'] = md5($set['id']);
+
+        $require['sets'][$setIndex] = $set;
+    }
+
+    foreach ($require['skills'] as $skillIndex => $skill) {
+        if (!isset($skillChecklist[$skill['id']])) {
+            echo "Error: Set={$skill['id']}\n";
+        }
+
+        $skill['id'] = md5($skill['id']);
+
+        $require['skills'][$skillIndex] = $skill;
+    }
+
+    $testData['requireList'][$index] = $require;
 }
+
+// Save Json
+foreach ($datasetMap as $name => $data) {
+    saveJson("datasets/{$name}", $data);
+}
+
+foreach ($langMap as $lang => $data) {
+    saveJson("langs/{$lang}/datasets", $data);
+}
+
+saveJson("testData", $testData);

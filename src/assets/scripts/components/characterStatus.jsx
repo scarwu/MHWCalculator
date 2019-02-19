@@ -49,10 +49,10 @@ export default class CharacterStatus extends Component {
     /**
      * Handle Functions
      */
-    handlePassiveSkillToggle = (skillName) => {
+    handlePassiveSkillToggle = (skillId) => {
         let passiveSkills = this.state.passiveSkills;
 
-        passiveSkills[skillName].isActive = !passiveSkills[skillName].isActive;
+        passiveSkills[skillId].isActive = !passiveSkills[skillId].isActive;
 
         this.setState({
             passiveSkills: passiveSkills,
@@ -134,13 +134,13 @@ export default class CharacterStatus extends Component {
             });
 
             if (null !== info[equipType].set) {
-                let setName = info[equipType].set.id;
+                let setId = info[equipType].set.id;
 
-                if (undefined === setMapping[setName]) {
-                    setMapping[setName] = 0;
+                if (undefined === setMapping[setId]) {
+                    setMapping[setId] = 0;
                 }
 
-                setMapping[setName]++;
+                setMapping[setId]++;
             }
         });
 
@@ -161,9 +161,9 @@ export default class CharacterStatus extends Component {
             });
         });
 
-        Object.keys(setMapping).forEach((setName) => {
-            let setCount = setMapping[setName];
-            let setInfo = DataSet.setHelper.getInfo(setName);
+        Object.keys(setMapping).forEach((setId) => {
+            let setCount = setMapping[setId];
+            let setInfo = DataSet.setHelper.getInfo(setId);
 
             setInfo.skills.forEach((skill) => {
                 if (skill.require > setCount) {
@@ -173,9 +173,10 @@ export default class CharacterStatus extends Component {
                 let skillInfo = DataSet.skillHelper.getInfo(skill.id);
 
                 status.sets.push({
-                    name: `${setName} (${skill.require})`,
+                    id: setId,
+                    require: skill.require,
                     skill: {
-                        name: skillInfo.id,
+                        id: skillInfo.id,
                         level: 1
                     }
                 });
@@ -195,9 +196,9 @@ export default class CharacterStatus extends Component {
         let attackMultipleList = [];
         let defenseMultipleList = [];
 
-        for (let skillName in allSkills) {
-            let skill = DataSet.skillHelper.getInfo(skillName);
-            let level = allSkills[skillName];
+        for (let skillId in allSkills) {
+            let skill = DataSet.skillHelper.getInfo(skillId);
+            let level = allSkills[skillId];
 
             // Fix Skill Level Overflow
             if (level > skill.list.length) {
@@ -205,7 +206,7 @@ export default class CharacterStatus extends Component {
             }
 
             status.skills.push({
-                name: skill.id,
+                id: skill.id,
                 level: level,
                 description: skill.list[level - 1].description
             });
@@ -777,14 +778,17 @@ export default class CharacterStatus extends Component {
                             <span>{_('set')}</span>
                         </div>
                         <div className="col-12 mhwc-value">
-                            {status.sets.map((data) => {
+                            {status.sets.map((data, index) => {
+                                let setName = DataSet.setHelper.getInfo(data.id).name;
+                                let skillName = DataSet.skillHelper.getInfo(data.skill.id).name;
+
                                 return (
-                                    <div key={data.id} className="row mhwc-set">
+                                    <div key={`${index}_${data.id}`} className="row mhwc-set">
                                         <div className="col-12 mhwc-name">
-                                            <span>{data.id}</span>
+                                            <span>{_(setName)} ({data.require})</span>
                                         </div>
                                         <div className="col-12 mhwc-value">
-                                            <span>{data.skill.id} Lv.{data.skill.level}</span>
+                                            <span>{_(skillName)} Lv.{data.skill.level}</span>
                                         </div>
                                     </div>
                                 );
@@ -802,10 +806,12 @@ export default class CharacterStatus extends Component {
                             {status.skills.sort((a, b) => {
                                 return b.level - a.level;
                             }).map((data) => {
+                                let skillName = DataSet.skillHelper.getInfo(data.id).name;
+
                                 return (
                                     <div key={data.id} className="row mhwc-skill">
                                         <div className="col-12 mhwc-name">
-                                            <span>{data.id} Lv.{data.level}</span>
+                                            <span>{_(skillName)} Lv.{data.level}</span>
 
                                             <div className="mhwc-icons_bundle">
                                                 {undefined !== passiveSkills[data.id] ? (
@@ -817,7 +823,7 @@ export default class CharacterStatus extends Component {
                                             </div>
                                         </div>
                                         <div className="col-12 mhwc-value">
-                                            <span>{data.description}</span>
+                                            <span>{_(data.description)}</span>
                                         </div>
                                     </div>
                                 );

@@ -1,6 +1,6 @@
 {
     "title":              "Monster Hunter: World - Calculator",
-    "skillLevelZero":     "此技能將不會出現在備選中",
+    "skillLevelZero":     "This skill will not include in candidate bundles",
     "name":               "Name",
     "description":        "Description",
     "extraInfo":          "Extra Info",

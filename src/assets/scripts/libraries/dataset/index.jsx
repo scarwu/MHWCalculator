@@ -8,6 +8,9 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+// Load Constant
+import Constant from 'constant';
+
 // Load Helpers
 import SetHelper from 'libraries/dataset/setHelper';
 import EnhanceHelper from 'libraries/dataset/enhanceHelper';
@@ -18,7 +21,7 @@ import JewelHelper from 'libraries/dataset/jewelHelper';
 import SkillHelper from 'libraries/dataset/skillHelper';
 
 let getAppliedWeaponInfo = (extend) => {
-    let info = WeaponHelper.getInfo(extend.name);
+    let info = WeaponHelper.getInfo(extend.id);
 
     if (null !== info.element.attack) {
         info.element.attack.value = info.element.attack.minValue;
@@ -44,33 +47,33 @@ let getAppliedWeaponInfo = (extend) => {
     }
 
     enhanceTimes.forEach((data, index) => {
-        let enhanceName = null;
+        let enhanceId = null;
 
-        if (null !== extend.enhanceNames
-            && 'string' === typeof extend.enhanceNames[index]) {
+        if (null !== extend.enhanceIds
+            && 'string' === typeof extend.enhanceIds[index]) {
 
-            enhanceName = extend.enhanceNames[index];
+            enhanceId = extend.enhanceIds[index];
         }
 
         // Update Info
         info.enhances.push({
-            name: enhanceName
+            id: enhanceId
         });
 
-        if (null === enhanceName) {
+        if (null === enhanceId) {
             return false;
         }
 
-        if (undefined === enhanceLevelMapping[enhanceName]) {
-            enhanceLevelMapping[enhanceName] = 0;
+        if (undefined === enhanceLevelMapping[enhanceId]) {
+            enhanceLevelMapping[enhanceId] = 0;
         }
 
-        enhanceLevelMapping[enhanceName] += 1;
+        enhanceLevelMapping[enhanceId] += 1;
     });
 
-    Object.keys(enhanceLevelMapping).forEach((enhanceName) => {
-        let enhanceLevel = enhanceLevelMapping[enhanceName];
-        let enhanceInfo = EnhanceHelper.getInfo(enhanceName);
+    Object.keys(enhanceLevelMapping).forEach((enhanceId) => {
+        let enhanceLevel = enhanceLevelMapping[enhanceId];
+        let enhanceInfo = EnhanceHelper.getInfo(enhanceId);
 
         if (null === enhanceInfo.list[enhanceLevel - 1].reaction) {
             return false;
@@ -107,53 +110,53 @@ let getAppliedWeaponInfo = (extend) => {
     let skillLevelMapping = {};
 
     info.skills && info.skills.forEach((data, index) => {
-        let skillName = data.name;
+        let skillId = data.id;
 
-        if (undefined === skillLevelMapping[skillName]) {
-            skillLevelMapping[skillName] = 0;
+        if (undefined === skillLevelMapping[skillId]) {
+            skillLevelMapping[skillId] = 0;
         }
 
-        skillLevelMapping[skillName] += data.level;
+        skillLevelMapping[skillId] += data.level;
     });
 
     info.slots && info.slots.forEach((data, index) => {
         let jewelInfo = null;
-        let jewelName = null;
+        let jewelId = null;
         let jewelSize = null;
-        let skillName = null;
+        let skillId = null;
 
-        if (null !== extend.slotNames
-            && 'string' === typeof extend.slotNames[index]) {
+        if (null !== extend.slotIds
+            && 'string' === typeof extend.slotIds[index]) {
 
-            jewelInfo = JewelHelper.getInfo(extend.slotNames[index]);
-            jewelName = extend.slotNames[index];
+            jewelInfo = JewelHelper.getInfo(extend.slotIds[index]);
+            jewelId = extend.slotIds[index];
             jewelSize = jewelInfo.size;
-            skillName = jewelInfo.skill.name;
+            skillId = jewelInfo.skill.id;
         }
 
         // Update Info
         info.slots[index].jewel = {
-            name: jewelName,
+            id: jewelId,
             size: jewelSize
         };
 
-        if (null === skillName) {
+        if (null === skillId) {
             return false;
         }
 
-        if (undefined === skillLevelMapping[skillName]) {
-            skillLevelMapping[skillName] = 0;
+        if (undefined === skillLevelMapping[skillId]) {
+            skillLevelMapping[skillId] = 0;
         }
 
-        skillLevelMapping[skillName] += jewelInfo.skill.level;
+        skillLevelMapping[skillId] += jewelInfo.skill.level;
     });
 
     // Reset Skill
     info.skills = [];
 
-    Object.keys(skillLevelMapping).forEach((skillName) => {
-        let skillLevel = skillLevelMapping[skillName];
-        let skillInfo = SkillHelper.getInfo(skillName);
+    Object.keys(skillLevelMapping).forEach((skillId) => {
+        let skillLevel = skillLevelMapping[skillId];
+        let skillInfo = SkillHelper.getInfo(skillId);
 
         // Fix Skill Level Overflow
         if (skillLevel > skillInfo.list.length) {
@@ -161,7 +164,7 @@ let getAppliedWeaponInfo = (extend) => {
         }
 
         info.skills.push({
-            name: skillName,
+            id: skillId,
             level: skillLevel,
             description: skillInfo.list[skillLevel - 1].description
         });
@@ -175,62 +178,62 @@ let getAppliedWeaponInfo = (extend) => {
 };
 
 let getAppliedArmorInfo = (extend) => {
-    let info = ArmorHelper.getInfo(extend.name);
+    let info = ArmorHelper.getInfo(extend.id);
 
     // Handler Skill & Slot
     let skillLevelMapping = {};
 
     info.skills && info.skills.forEach((data, index) => {
-        let skillName = data.name;
+        let skillId = data.id;
 
-        if (undefined === skillLevelMapping[skillName]) {
-            skillLevelMapping[skillName] = 0;
+        if (undefined === skillLevelMapping[skillId]) {
+            skillLevelMapping[skillId] = 0;
         }
 
-        skillLevelMapping[skillName] += data.level;
+        skillLevelMapping[skillId] += data.level;
     });
 
     info.slots && info.slots.forEach((data, index) => {
         let jewelInfo = null;
-        let jewelName = null;
+        let jewelId = null;
         let jewelSize = null;
-        let skillName = null;
+        let skillId = null;
 
-        if (null !== extend.slotNames
-            && 'string' === typeof extend.slotNames[index]) {
+        if (null !== extend.slotIds
+            && 'string' === typeof extend.slotIds[index]) {
 
-            jewelInfo = JewelHelper.getInfo(extend.slotNames[index]);
-            jewelName = extend.slotNames[index];
+            jewelInfo = JewelHelper.getInfo(extend.slotIds[index]);
+            jewelId = extend.slotIds[index];
             jewelSize = jewelInfo.size;
-            skillName = jewelInfo.skill.name;
+            skillId = jewelInfo.skill.id;
         }
 
         // Update Info
         info.slots[index].jewel = {
-            name: jewelName,
+            id: jewelId,
             size: jewelSize
         };
 
-        if (null === skillName) {
+        if (null === skillId) {
             return false;
         }
 
-        if (undefined === skillLevelMapping[skillName]) {
-            skillLevelMapping[skillName] = 0;
+        if (undefined === skillLevelMapping[skillId]) {
+            skillLevelMapping[skillId] = 0;
         }
 
-        skillLevelMapping[skillName] += jewelInfo.skill.level;
+        skillLevelMapping[skillId] += jewelInfo.skill.level;
     });
 
     // Reset Skill
     info.skills = [];
 
-    Object.keys(skillLevelMapping).forEach((skillName) => {
-        let skillLevel = skillLevelMapping[skillName];
-        let skillInfo = SkillHelper.getInfo(skillName);
+    Object.keys(skillLevelMapping).forEach((skillId) => {
+        let skillLevel = skillLevelMapping[skillId];
+        let skillInfo = SkillHelper.getInfo(skillId);
 
         info.skills.push({
-            name: skillName,
+            id: skillId,
             level: skillLevel,
             description: skillInfo.list[skillLevel - 1].description
         });
@@ -244,27 +247,27 @@ let getAppliedArmorInfo = (extend) => {
 };
 
 let getAppliedCharmInfo = (extend) => {
-    let info = CharmHelper.getInfo(extend.name);
+    let info = CharmHelper.getInfo(extend.id);
 
     // Handler Skill & Slot
     let skillLevelMapping = {};
 
     info.skills || info.skills.forEach((data, index) => {
-        let skillName = data.name;
+        let skillId = data.id;
 
-        if (undefined === skillLevelMapping[skillName]) {
-            skillLevelMapping[skillName] = 0;
+        if (undefined === skillLevelMapping[skillId]) {
+            skillLevelMapping[skillId] = 0;
         }
 
-        skillLevelMapping[skillName] += data.level;
+        skillLevelMapping[skillId] += data.level;
     });
 
     // Reset Skill
     info.skills = [];
 
-    Object.keys(skillLevelMapping).forEach((skillName) => {
-        let skillLevel = skillLevelMapping[skillName];
-        let skillInfo = SkillHelper.getInfo(skillName);
+    Object.keys(skillLevelMapping).forEach((skillId) => {
+        let skillLevel = skillLevelMapping[skillId];
+        let skillInfo = SkillHelper.getInfo(skillId);
 
         // Fix Skill Level Overflow
         if (skillLevel > skillInfo.list.length) {
@@ -272,7 +275,7 @@ let getAppliedCharmInfo = (extend) => {
         }
 
         info.skills.push({
-            name: skillName,
+            id: skillId,
             level: skillLevel,
             description: skillInfo.list[skillLevel - 1].description
         });

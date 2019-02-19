@@ -49,15 +49,15 @@ export default class SetItemSelector extends Component {
         this.props.onClose();
     };
 
-    handleItemPickUp = (itemName) => {
+    handleItemPickUp = (itemId) => {
         this.props.onPickUp({
-            setName: itemName
+            setId: itemId
         });
     };
 
-    handleItemThrowDown = (itemName) => {
+    handleItemThrowDown = (itemId) => {
         this.props.onThrowDown({
-            setName: itemName
+            setId: itemId
         });
     };
 
@@ -79,9 +79,9 @@ export default class SetItemSelector extends Component {
             return set.id;
         });
 
-        DataSet.setHelper.getNames().sort().forEach((setName) => {
+        DataSet.setHelper.getNames().sort().forEach((setId) => {
 
-            let set = DataSet.setHelper.getInfo(setName);
+            let set = DataSet.setHelper.getInfo(setId);
 
             // Skip Selected Sets
             if (-1 !== data.indexOf(set.id)) {

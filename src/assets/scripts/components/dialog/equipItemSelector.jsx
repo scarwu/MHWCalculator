@@ -28,13 +28,20 @@ import Constant from 'constant';
 
 // Weapon Type List
 let weaponTypeList = [
-    'greatSword', 'longSword',
-    'swordAndShield', 'dualBlades',
-    'hammer', 'huntingHorn',
-    'lance', 'gunlance',
-    'switchAxe', 'chargeBlade',
-    'insectGlaive', 'bow',
-    'lightBowgun', 'heavyBowgun'
+    'greatSword',
+    'longSword',
+    'swordAndShield',
+    'dualBlades',
+    'hammer',
+    'huntingHorn',
+    'lance',
+    'gunlance',
+    'switchAxe',
+    'chargeBlade',
+    'insectGlaive',
+    'bow',
+    'lightBowgun',
+    'heavyBowgun'
 ];
 
 export default class EquipItemSelector extends Component {
@@ -63,25 +70,25 @@ export default class EquipItemSelector extends Component {
         this.props.onClose();
     };
 
-    handleItemPickUp = (itemName) => {
+    handleItemPickUp = (itemId) => {
         let data = this.props.data;
 
         if (undefined !== data.enhanceIndex) {
-            data.enhanceName = itemName;
+            data.enhanceId = itemId;
         } else if (undefined !== data.slotIndex) {
-            data.slotName = itemName;
+            data.slotId = itemId;
         } else {
-            data.equipName = itemName;
+            data.equipId = itemId;
         }
 
         this.props.onPickUp(data);
         this.props.onClose();
     };
 
-    handleItemToggle = (itemType, itemName) => {
+    handleItemToggle = (itemType, itemId) => {
         this.props.onToggle({
             type: itemType,
-            name: itemName
+            id: itemId
         });
     };
 
@@ -132,8 +139,8 @@ export default class EquipItemSelector extends Component {
             mode = 'weapon';
             type = weaponTypeList[0];
 
-            if (null !== data.equipName) {
-                type = DataSet.weaponHelper.getInfo(data.equipName).type;
+            if (null !== data.equipId) {
+                type = DataSet.weaponHelper.getInfo(data.equipId).type;
             }
 
             weaponTypeList.forEach((weaponType) => {
@@ -320,7 +327,7 @@ export default class EquipItemSelector extends Component {
                     {data.skills.map((data, index) => {
                         return (
                             <div key={index}>
-                                <span>{data.id} Lv.{data.level}</span>
+                                <span>{_(DataSet.skillHelper.getInfo(data.id).name)} Lv.{data.level}</span>
                             </div>
                         );
                     })}
@@ -332,7 +339,7 @@ export default class EquipItemSelector extends Component {
                             altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle('weapon', data.id)}} />
 
-                        {(this.props.data.equipName !== data.id) ? (
+                        {(this.props.data.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -425,14 +432,14 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     {null !== data.set ? (
-                        <span>{data.set.id}</span>
+                        <span>{_(DataSet.setHelper.getInfo(data.set.id).name)}</span>
                     ) : false}
                 </td>
                 <td>
                     {data.skills.map((data, index) => {
                         return (
                             <div key={index}>
-                                <span>{data.id} Lv.{data.level}</span>
+                                <span>{_(DataSet.skillHelper.getInfo(data.id).name)} Lv.{data.level}</span>
                             </div>
                         );
                     })}
@@ -444,7 +451,7 @@ export default class EquipItemSelector extends Component {
                             altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle(data.type, data.id)}} />
 
-                        {(this.props.data.equipName !== data.id) ? (
+                        {(this.props.data.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -526,7 +533,7 @@ export default class EquipItemSelector extends Component {
                             altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle('charm', data.id)}} />
 
-                        {(this.props.data.equipName !== data.id) ? (
+                        {(this.props.data.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -579,17 +586,19 @@ export default class EquipItemSelector extends Component {
     };
 
     renderJewelRow = (data, index) => {
+        let skillName = DataSet.skillHelper.getInfo(data.skill.id).name;
+
         return (
             <tr key={data.id}>
                 <td><span>{_(data.name)}</span></td>
                 <td><span>{data.rare}</span></td>
                 <td><span>{data.size}</span></td>
                 <td>
-                    <span>{data.skill.id} Lv.{data.skill.level}</span>
+                    <span>{_(skillName)} Lv.{data.skill.level}</span>
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        {(this.props.data.jewelName !== data.id) ? (
+                        {(this.props.data.jewelId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -638,8 +647,8 @@ export default class EquipItemSelector extends Component {
 
     renderEnhanceRow = (data, index) => {
         return (
-            <tr key={index}>
-                <td>{data.id}</td>
+            <tr key={data.id}>
+                <td>{_(data.name)}</td>
                 <td>
                     {data.list.map((data, index) => {
                         return (
@@ -660,7 +669,7 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        {(this.props.data.enhanceName !== data.id) ? (
+                        {(this.props.data.enhanceId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />

@@ -49,15 +49,15 @@ export default class SkillItemSelector extends Component {
         this.props.onClose();
     };
 
-    handleItemPickUp = (itemName) => {
+    handleItemPickUp = (itemId) => {
         this.props.onPickUp({
-            skillName: itemName
+            skillId: itemId
         });
     };
 
-    handleItemThrowDown = (itemName) => {
+    handleItemThrowDown = (itemId) => {
         this.props.onThrowDown({
-            skillName: itemName
+            skillId: itemId
         });
     };
 
@@ -79,9 +79,9 @@ export default class SkillItemSelector extends Component {
             return skill.id;
         });
 
-        DataSet.skillHelper.getNames().sort().forEach((skillName) => {
+        DataSet.skillHelper.getNames().sort().forEach((skillId) => {
 
-            let skill = DataSet.skillHelper.getInfo(skillName);
+            let skill = DataSet.skillHelper.getInfo(skillId);
 
             if (false === skill.from.jewel && false === skill.from.armor) {
                 return;

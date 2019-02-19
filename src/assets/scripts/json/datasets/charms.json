@@ -1,1174 +1,1174 @@
 [
     [
-        "KO護石 III",
+        "1e6199bb6bbb5ecead50bef49ce17480",
         "3a8c369b36eba4e863b3e6dba6c2e323",
         null,
         [
             [
-                "KO術",
+                "d8cf909866d66a8c1118b416c270b095",
                 3
             ]
         ]
     ],
     [
-        "體術護石 III",
+        "603c0542e10d50f8669a32718b34fe56",
         "b52581f811da33fccad6243f5647e52f",
         7,
         [
             [
-                "體術",
+                "95e2281a539f8261ab2d26f2bd9bb326",
                 3
             ]
         ]
     ],
     [
-        "體力護石 III",
+        "68d3d86004f1fad9f67d36ddd92b245e",
         "9bead67e663c65c1b667b9717d72d66d",
         null,
         [
             [
-                "體力增強",
+                "9f20fcf8b7ea6208c0bb35c600f94bae",
                 3
             ]
         ]
     ],
     [
-        "小胃口護石",
+        "1b761baba01d7b01fa42e5ad1cbe54c3",
         "619b792a2dad9b736bb6f8a44444730a",
         3,
         [
             [
-                "滿足感",
+                "1e40a4543bff07cf8c24e864f25163d4",
                 1
             ]
         ]
     ],
     [
-        "火焰護石 III",
+        "650e624b21b69386e427dfa996c82c0b",
         "52b9b812dfce8b5035a463435ebc55b2",
         null,
         [
             [
-                "火屬性攻擊強化",
+                "982fc2bc67f4c8c79bc276c39ca7a62a",
                 3
             ]
         ]
     ],
     [
-        "心靜自然涼護石",
+        "672d41f945362e3e93048adb88c5e214",
         "7cb6319b693ad1d65857882fec7fa475",
         7,
         [
             [
-                "熱傷害無效",
+                "064325d0d21fe1b058e2571dac4973ed",
                 1
             ],
             [
-                "適應瘴氣環境",
+                "c8fdb8a0633585efb54779122242897e",
                 1
             ]
         ]
     ],
     [
-        "不屈護石",
+        "9f30fa106074c0c0248ae4c23b0cdf4b",
         "fe22004cb049ed369d6142b6c919b12d",
         3,
         [
             [
-                "不屈",
+                "59dce0f2c78316560a1b853b48821968",
                 1
             ]
         ]
     ],
     [
-        "友愛護石 III",
+        "663b76ee18dbdd28eced34959237acef",
         "a1c66451f0e233c888bbcc875e8b3474",
         null,
         [
             [
-                "廣域化",
+                "4d6f307a1565a21be0d65d70af0f4f08",
                 3
             ]
         ]
     ],
     [
-        "加護護石 III",
+        "c54fecc296d98e80e3d0025c6708847a",
         "b2a952c477c9656bcb745d08cda226a1",
         null,
         [
             [
-                "精靈加護",
+                "7e8bd6936099d9ccf7a4e67afa7ea404",
                 3
             ]
         ]
     ],
     [
-        "全開護石 II",
+        "efa13309399f33a7c3f20d0ff7e417d1",
         "a22c691042e9f08360937e2265acab50",
         null,
         [
             [
-                "力量解放",
+                "cec23fd7955fe5045284d8d9e1727225",
                 2
             ]
         ]
     ],
     [
-        "早氣護石 II",
+        "8dcb41450f417b06548d6b28390b7b9d",
         "64198721f7aa1d9d88d0b3b90c2da292",
         null,
         [
             [
-                "耐力急速回復",
+                "74105c43e648232c93faa45b7a60673d",
                 2
             ]
         ]
     ],
     [
-        "早復護石 III",
+        "260f7c1f4ff8e58ac86090d5d48265d0",
         "9ac9392308a5e21c355ee30363f78d05",
         null,
         [
             [
-                "回復速度",
+                "6dd4901ea0ddc8106e02e60928dabdfe",
                 3
             ]
         ]
     ],
     [
-        "匠之護石 III",
+        "c2aa1ce82240c16e9eacfe12a0d737b0",
         "46a0bf558e256495202189985bb691f1",
         8,
         [
             [
-                "匠",
+                "8f735971a47afe1ed7fa4174f081767d",
                 3
             ]
         ]
     ],
     [
-        "地學護石 III",
+        "cc51acef085a173cfd885ea20ae3ce0a",
         "4a7e7e42a9f7e2c464f31b872c2c6b5f",
         null,
         [
             [
-                "地質學",
+                "b2dae3bb9e5075fa40142cfaa0e66b90",
                 3
             ]
         ]
     ],
     [
-        "冰結護石 III",
+        "8b292fd7592ec913d5f6d053df6bff3a",
         "7e698a356bd4a0f5a6e9a144af0e9f08",
         null,
         [
             [
-                "冰屬性攻擊強化",
+                "fbd95afc88e00a2fbd5e5016b63fcb64",
                 3
             ]
         ]
     ],
     [
-        "耳塞護石 III",
+        "203395e6f07b0ff4a04dba216134606b",
         "f2c252b99dba1af7516152ef19c7ff71",
         8,
         [
             [
-                "耳塞",
+                "f7aec67d4370bdcd03b1e83946839168",
                 3
             ]
         ]
     ],
     [
-        "攻擊護石 III",
+        "58daab91aff7684beab615555413671b",
         "0b7f8bcb131bab3b2d83e8ef0ce64235",
         7,
         [
             [
-                "攻擊",
+                "86e6eba10ee89f7960fa445ee8c8d9a9",
                 3
             ]
         ]
     ],
     [
-        "快吃護石 III",
+        "35db87005f22cea8ccc5459ff03635d9",
         "5baf064050ad4062f408eb00927a2ddf",
         null,
         [
             [
-                "快吃",
+                "8628adbcef82af87c2b570fc97f90c4f",
                 3
             ]
         ]
     ],
     [
-        "投石護石 III",
+        "7d842c9cbf99aa6844b986a26cd17955",
         "5d3d4465b047b300562ecfb5dcb5a986",
         null,
         [
             [
-                "投射器裝填數UP",
+                "29f6ae249db1202b578ca0e101fb1fc5",
                 3
             ]
         ]
     ],
     [
-        "吹笛護石",
+        "d62a025942f4c6875be0c9033ecd1ec8",
         "33c0b84bb75aa32c16179fcefa7d4f65",
         3,
         [
             [
-                "吹笛名人",
+                "3e2d83271698cd4c96ca1dd302a2b5ee",
                 1
             ]
         ]
     ],
     [
-        "防禦護石 III",
+        "8ce7f98700bcbda1ce0b8c5d48d7a7ca",
         "562fdee41a5b39ec8b0c020af4d01c60",
         6,
         [
             [
-                "防禦",
+                "5cfb7b654ae02f9ef86602c6dcb55579",
                 3
             ]
         ]
     ],
     [
-        "防風護石 III",
+        "dc27b1e27dbfc779b235acfffbc5e599",
         "cb33858a6742dc8b6e1daa3e21778325",
         null,
         [
             [
-                "風壓耐性",
+                "55ec2e1c237c073e6d0040cfc9303de2",
                 3
             ]
         ]
     ],
     [
-        "昆蟲學護石 III",
+        "54809b65286b7ebc79ae0e9e1b6a0d2d",
         "cd224c75daec8edfc7287d3d3b684dee",
         null,
         [
             [
-                "昆蟲標本達人",
+                "b5986cce6f2f9ab4def1b06ad003f468",
                 3
             ]
         ]
     ],
     [
-        "昂揚護石 II",
+        "0ceff46a437ca8b5492686c6a427a60d",
         "e5a1fcbf02dd42a0ba9598d6cade5847",
         null,
         [
             [
-                "強化持續",
+                "e4f083dcd2afdd5cedd2a44d94855c58",
                 2
             ]
         ]
     ],
     [
-        "底力護石 II",
+        "4bdfac9737e3d921dc3711a206cddba4",
         "e8378c238b971180864d2667cc2766b1",
         null,
         [
             [
-                "火場怪力",
+                "6d815775ee95a3216adab19b5272394c",
                 2
             ]
         ]
     ],
     [
-        "治癒護石 III",
+        "d1d75420f0d941e6b820593f8f2b0402",
         "04b2b694be73873276afb93cb36a9729",
         null,
         [
             [
-                "體力回復量UP",
+                "3777b745c46ae818702f4845b1d6c7c5",
                 3
             ]
         ]
     ],
     [
-        "泥浴護石",
+        "1de1e733821f651bc14a66e7c2e52546",
         "acfc1a885315a63229fa39fd2a864046",
         5,
         [
             [
-                "泥耐性",
+                "5d48873fedd64765946ecc18772897ee",
                 1
             ],
             [
-                "飛身躍入",
+                "766677ce257a368e2fa353d3cdd2d19e",
                 1
             ]
         ]
     ],
     [
-        "沼渡護石 III",
+        "6b42edf02fc104fe4a7d263491218851",
         "ae7200e95e47662653a7d7a40ebad8ff",
         null,
         [
             [
-                "適應水場",
+                "f704534a4f32bd3033f933a729cfd958",
                 3
             ]
         ]
     ],
     [
-        "拔刀護石 II",
+        "42878595c909c010e1905d6890406131",
         "3d3d5afbfff34857f3325244b0ad875e",
         null,
         [
             [
-                "拔刀術【技】",
+                "353e19cd18057d460487112dcd06b1bf",
                 2
             ]
         ]
     ],
     [
-        "威嚇護石 III",
+        "abd54d1dbcd36dd2604f24d7fa90c711",
         "6d82aa19422919b914b0cb0118c5c8c6",
         null,
         [
             [
-                "威嚇",
+                "c2e8de9fae8fa00c48ad111caaf1769e",
                 3
             ]
         ]
     ],
     [
-        "研磨護石 III",
+        "904b9c30cdd224af1fdc096b9ba091d6",
         "05d9842e3c4f0c523bfd0f11c2619b1c",
         null,
         [
             [
-                "砥石使用高速化",
+                "4602590f3d4fe0a4677ff647f077960d",
                 3
             ]
         ]
     ],
     [
-        "指揮護石 III",
+        "13e5aae40dc84b3fa57bb60a93510ca0",
         "233a52fda0b787536490b77c7f22548e",
         null,
         [
             [
-                "指示隨從",
+                "878efcd90c578d12d9716647a50db900",
                 3
             ]
         ]
     ],
     [
-        "持續護石 III",
+        "59e1db54f35ae48fca1734b64993e796",
         "16655ac9f6eca951317752d09afdf8b4",
         null,
         [
             [
-                "道具使用強化",
+                "f8b9b5cd0952badb3ff1db1688aaa754",
                 3
             ]
         ]
     ],
     [
-        "狩獵生活護石",
+        "9a69284d27419f57e81a6807d47e1827",
         "133dd19f35c981a6248f2f691da1676b",
         5,
         [
             [
-                "烤肉名人",
+                "e59647b4c6f770ebd42a1249c913cdba",
                 1
             ],
             [
-                "釣魚名人",
+                "d6417d7b898dcf806a79013fb5a80eda",
                 1
             ]
         ]
     ],
     [
-        "重擊護石 II",
+        "020314399e32d106d6419b28d056b241",
         "5114c25c468bec221312d42e5c23d298",
         null,
         [
             [
-                "破壞王",
+                "ffc7624d9eb2008adfaa0aac5356d7fc",
                 2
             ]
         ]
     ],
     [
-        "耐瘴護石 III",
+        "a8bd97dc894a92c5ebd0a50b79bd9f50",
         "e11ad8e70cfabdc66d8d4a097a597b4b",
         null,
         [
             [
-                "瘴氣耐性",
+                "a5e46414ac49be101232d2e59d8c6b4e",
                 3
             ]
         ]
     ],
     [
-        "耐火護石 III",
+        "931d0a9ba831499fce9d8947e82958eb",
         "9d0f37f85b084b0f0c167839e8dbbe39",
         null,
         [
             [
-                "火耐性",
+                "7465f43c9eecec5a072f2e9dbf674bc4",
                 3
             ]
         ]
     ],
     [
-        "耐衝護石 II",
+        "392217c36b3acd8fd9177140b02b8ead",
         "e842765eb2ae72ce00f3c7bd436ddbb4",
         null,
         [
             [
-                "減輕膽怯",
+                "47158d91acafb81706b12dbb22a67f5a",
                 2
             ]
         ]
     ],
     [
-        "耐震護石 II",
+        "93cc20d6281a2c21bb31114b057b8510",
         "3f1ba62f3a7873a9dfe46b390ad3ff56",
         null,
         [
             [
-                "耐震",
+                "93e37e6692cea7e4f06cf128e87930ac",
                 2
             ]
         ]
     ],
     [
-        "耐水護石 III",
+        "824bece0c452490a7fcfffe407b20cb6",
         "75c0065dc2c529797b00454a67191a08",
         null,
         [
             [
-                "水耐性",
+                "22c9e69ad2c876352437dd2ad9f03f92",
                 3
             ]
         ]
     ],
     [
-        "耐絕護石 III",
+        "d14860ce2ff7d68c49b83218cb691e5d",
         "b2d1841d76737a8a149d6f940e6d9e7c",
         null,
         [
             [
-                "昏厥耐性",
+                "fee7bcbaa7daa7a505c1b96215f03ca8",
                 3
             ]
         ]
     ],
     [
-        "耐屬護石 III",
+        "8231977bd8a1ccbb8720ec86fd5aa91c",
         "b488faa8de8ebdf9416f2bb3001939e3",
         null,
         [
             [
-                "屬性異常狀態耐性",
+                "4097f0a2fa05fc102c70795c1473cd07",
                 3
             ]
         ]
     ],
     [
-        "耐毒護石 III",
+        "db37faf5b862ffbe41b9a67124a3165e",
         "5cb034e5e1157a53842734fc835f5869",
         null,
         [
             [
-                "毒耐性",
+                "6fb6b7c882accbd8cc9ca144c1b1cd58",
                 3
             ]
         ]
     ],
     [
-        "耐爆護石 III",
+        "51f5d5dc81e9246f3616c3aafe1d867e",
         "3b20edcc432f5bdbd2b3e4f63c0a4b5b",
         null,
         [
             [
-                "爆破異常狀態的耐性",
+                "60f79943f8dfa1c93c36fef3305ecaf0",
                 3
             ]
         ]
     ],
     [
-        "耐冰護石 III",
+        "6df16954843ad6cdd1bbfc50f19f8810",
         "09d75cb884d9759113b4356344c952cb",
         null,
         [
             [
-                "冰耐性",
+                "5fd48ab9f0e9b98cd005d92a5ddacdf2",
                 3
             ]
         ]
     ],
     [
-        "耐防護石 III",
+        "4d29cc9ac0591ac53555004aeef14a4e",
         "475eb690de5254b5221b2eb4af2cf215",
         null,
         [
             [
-                "防御力DOWN耐性",
+                "ec7f4708137653bd3ca8a26581a34d45",
                 3
             ]
         ]
     ],
     [
-        "耐眠護石 III",
+        "b9942091bba27010bbf80b8295980c22",
         "619a4ee1b8fc650bc4cc8c98f58dcbd7",
         null,
         [
             [
-                "睡眠耐性",
+                "3bf779a83de552ed886c8e8c3fd510ce",
                 3
             ]
         ]
     ],
     [
-        "耐雷護石 III",
+        "811b2ae5776341568d9c8bf33a7b9d0b",
         "0d94d24a0c1270b54057a18a09f88876",
         null,
         [
             [
-                "雷耐性",
+                "d726cd4755fcb03e8e2e064a530f2eb3",
                 3
             ]
         ]
     ],
     [
-        "耐龍護石 III",
+        "54da01977dcf875bc6dcfadfbddbff45",
         "7bdacac8139c5b6c1b6fb042f6b0dc76",
         null,
         [
             [
-                "龍耐性",
+                "af55a4af516e7eff3937a18ab3424e2f",
                 3
             ]
         ]
     ],
     [
-        "耐裂護石 III",
+        "a01bd4e90230dcc330d6c43ee74469ab",
         "a87c2ca8e435e81e2d37fa8159514fe2",
         null,
         [
             [
-                "裂傷耐性",
+                "4b01a3413b96203bc4e602e3bfdd70b0",
                 3
             ]
         ]
     ],
     [
-        "耐痺護石 III",
+        "77d10b24c9f68bb44dfb3991f55736b0",
         "daabc7f4a4a2cce96d7787f8633fcb28",
         null,
         [
             [
-                "麻痺耐性",
+                "e888d79df665f8fdc7bf3a117efd54a2",
                 3
             ]
         ]
     ],
     [
-        "挑戰護石 II",
+        "35bf9e362642f9cd16c7690b2247a805",
         "0d21f2445ac5f8a75ccde4d18b996620",
         null,
         [
             [
-                "挑戰者",
+                "ebdfa9a2cb7b4127b8596f4ac6bbdfa1",
                 2
             ]
         ]
     ],
     [
-        "毒擊護石 III",
+        "d1c30789c3e8e5386d8b7e91dcb0e63b",
         "0d01e32e85ae4313ba1fc2a30eb5554e",
         null,
         [
             [
-                "毒屬性強化",
+                "3765125f383f5fce99ec51c33c0fd1b3",
                 3
             ]
         ]
     ],
     [
-        "毒瓶護石",
+        "88edc4a3afa930ce4339b9624674c9e1",
         "f04961d93e9595a24e7d845e06f15724",
         8,
         [
             [
-                "毒瓶追加",
+                "38acf2d9f95c99561709fe1aa5143bf3",
                 1
             ]
         ]
     ],
     [
-        "風水護石",
+        "33a2b3b11e67f5325da13740eef7bfe3",
         "97462f0ae189bf02116f302b928d54fb",
         8,
         [
             [
-                "探索者的幸運",
+                "c7cc79ea1c680edd7fc8f9f1357325ab",
                 1
             ],
             [
-                "察覺",
+                "c5974e409b68728c6c7be76a4fa7e1b5",
                 1
             ]
         ]
     ],
     [
-        "流水護石 III",
+        "4caa042ae658c02e4e1295e57aa35890",
         "62873f9b8c91bda847c118d5c6ba76b2",
         null,
         [
             [
-                "水屬性攻擊強化",
+                "d68b90725116b8c560ed1236324e6481",
                 3
             ]
         ]
     ],
     [
-        "順風護石",
+        "5f6b2893fd37b401188a85f074dff3ae",
         "4ce850860e1724a9dc41296f882948fd",
         3,
         [
             [
-                "攻擊",
+                "86e6eba10ee89f7960fa445ee8c8d9a9",
                 1
             ],
             [
-                "精靈加護",
+                "7e8bd6936099d9ccf7a4e67afa7ea404",
                 1
             ]
         ]
     ],
     [
-        "迴避護石 III",
+        "a2f8acd35cffbd7ef15c27b970a0c474",
         "8a43c45f9cd93f1d3f35a2ca7f049706",
         null,
         [
             [
-                "迴避性能",
+                "438e65dc6ebfad45b72d0cdf8a293b7f",
                 3
             ]
         ]
     ],
     [
-        "疾風護石",
+        "2681a58c37ac5b38f7b5da1409a6ad92",
         "ad13eb96298fea735f0d618d9d982454",
         8,
         [
             [
-                "滑走強化",
+                "66049f3af6415f54ab7ee3c76643c14f",
                 1
             ],
             [
-                "飛燕",
+                "bdeb41d79a0fa2074bd2af26ef263f5c",
                 1
             ]
         ]
     ],
     [
-        "追踨護石",
+        "f2d66fd867bb4865adf8851ab3ee4eeb",
         "4ee9f9c293190cbb5af61bc13f9a93a0",
         3,
         [
             [
-                "追蹤達人",
+                "96aaf0fc2eba3e86e7ca76f5852f2532",
                 1
             ]
         ]
     ],
     [
-        "特射護石 II",
+        "2861c528dadc2900e511c0094897dbbb",
         "960c75686ad4fcde1880730b8d09f121",
         null,
         [
             [
-                "特殊射擊強化",
+                "19a679a347928510a475e2d0da0a4b95",
                 2
             ]
         ]
     ],
     [
-        "納刀護石 III",
+        "8ea3096b4346736c6390da78f7e34a94",
         "79a4ecc827a9a4eaee2977df641eb351",
         null,
         [
             [
-                "收刀術",
+                "ceb5f51b93698dc162a72e59c4f13ed3",
                 3
             ]
         ]
     ],
     [
-        "破龍護石 III",
+        "1700bbf981258e90f5d2fe3fa59c06d1",
         "c9b88201c179e9ac874cc9b8bd0d28aa",
         null,
         [
             [
-                "龍屬性攻擊強化",
+                "44d510c31def67045426e67d037b5155",
                 3
             ]
         ]
     ],
     [
-        "砲擊手護石 II",
+        "b0b53206fdc824b88e17aa08a7ef90a9",
         "f221dbfae0a0336f4df4b9bc576cc755",
         null,
         [
             [
-                "砲擊手",
+                "a1245385cc7e51731933d6d36625d125",
                 2
             ]
         ]
     ],
     [
-        "砲術護石 III",
+        "16ec2197869ad2eea9aff13127f4a6da",
         "a97a79abebe095f1b39fe98ef920265b",
         null,
         [
             [
-                "砲術",
+                "9101fca17899e860a78478ac9e1c8205",
                 3
             ]
         ]
     ],
     [
-        "貫通彈護石",
+        "53ee6c9844b63629677ba07c71d7d89e",
         "af79c87b34d741aad29e4a13f827dd8a",
         8,
         [
             [
-                "貫通彈・龍之箭強化",
+                "66df2f8beafc5bd1ce050b69c9eb8a6a",
                 1
             ]
         ]
     ],
     [
-        "強走護石 II",
+        "a6979427e08ae0bb2223f9759ff48af4",
         "f815f65d0e251b42660fab85ff6c64e5",
         null,
         [
             [
-                "跑者",
+                "475c37042a6799254eebdeca1a97d3c2",
                 2
             ]
         ]
     ],
     [
-        "堅守護石",
+        "35515cd02bd15267e5eeeaaa4bc85091",
         "0e895f964796e772cfe5c1f27aa72cd0",
         8,
         [
             [
-                "防禦強化",
+                "b458b9967cfcba35cbd4a92238340c6d",
                 1
             ],
             [
-                "死裡逃生",
+                "157900d6dd7285f67f263aca1cbb00a4",
                 1
             ]
         ]
     ],
     [
-        "採集鐵人護石",
+        "daf7404a13b83a326a41b4e7121492d5",
         "af0d3c8ab2542dd025ca82dad1e4bf0a",
         5,
         [
             [
-                "採集達人",
+                "c54575c91fde1ad80d815a934e899db7",
                 1
             ],
             [
-                "剝取鐵人",
+                "16fb9ee610e33445291e2e68a32c3e53",
                 1
             ]
         ]
     ],
     [
-        "陷阱彈護石",
+        "64337ac13e54ffc0c7a9dcdba796fb65",
         "665189348fd02671da389105c3d4ba86",
         5,
         [
             [
-                "異臭名人",
+                "356bbe9ba24557b6f25ac9a7bf63764a",
                 1
             ],
             [
-                "閃光強化",
+                "3c9dd4762ad9bbe9e6022fd3485dce37",
                 1
             ]
         ]
     ],
     [
-        "通常彈護石",
+        "dfe817e0480694dc6d45d96db1327b0a",
         "6ab8b9a882c423ed439d68905bc1a441",
         7,
         [
             [
-                "通常彈・通常箭強化",
+                "b442a02e4cef936eff96b735d90d69c2",
                 1
             ]
         ]
     ],
     [
-        "麻痺瓶護石",
+        "4d1d7d764e9c4002cc9701aa1ed86f8f",
         "13ffa56b55870f9588f37166ecf49f3f",
         8,
         [
             [
-                "麻痺瓶追加",
+                "3b743ba29f164543bb5d66f4fba4f388",
                 1
             ]
         ]
     ],
     [
-        "渾身護石 II",
+        "5b2e9b6663dbae21feacd853b234a55e",
         "4df61fdec3c69b0a334656b2ef69f031",
         null,
         [
             [
-                "精神抖擻",
+                "b612f76efd2775da2c433f349918e5ac",
                 2
             ]
         ]
     ],
     [
-        "散彈護石",
+        "2b77b51e28c55fe929d4dfd82fddf698",
         "bc744c7557f842b86b83d17b5c85ed26",
         8,
         [
             [
-                "散彈・剛射強化",
+                "f5814d49d19164bd7162c74bd26e068f",
                 1
             ]
         ]
     ],
     [
-        "集中護石 II",
+        "dbf628800b98f4eb020a35fe457980a3",
         "171aa054f8bbdb1a0eef31a71f90832d",
         null,
         [
             [
-                "集中",
+                "2eba0736fdb04b254dea7bea89dc4102",
                 2
             ]
         ]
     ],
     [
-        "植學護石 III",
+        "7952178dc0ab0982d61b6a18b0aa4fae",
         "89c4b57a0acc8876d79dac54ea1289bf",
         null,
         [
             [
-                "植生學",
+                "c5e840137aac91e4c3979b73bb062ab6",
                 3
             ]
         ]
     ],
     [
-        "超心護石",
+        "64c44c6fec283099253b0e5c03333b2c",
         "19b4b4de2a7b1b876c5ab9cae41fdc74",
         8,
         [
             [
-                "超會心",
+                "cdf3d0519761625adffb9c6182986e3e",
                 1
             ]
         ]
     ],
     [
-        "痛擊護石 II",
+        "56c6e324e2cd304002b75bfd50488a8a",
         "22d062fae6d2e5f98d3255192f2eb929",
         null,
         [
             [
-                "弱點特效",
+                "93b5f1ef7e9afea36cfea14828f7f560",
                 2
             ]
         ]
     ],
     [
-        "無傷護石 II",
+        "28b947425cea4f7829d26bd9d4dd71b0",
         "5fc6f427fdc4ef27055f5c549865c40e",
         null,
         [
             [
-                "無傷",
+                "8590fc46daf9b61d20f5f3eac36237eb",
                 2
             ]
         ]
     ],
     [
-        "煙復護石 III",
+        "172ed90d74d7ebc6c946260e64f60ab6",
         "7995fc305486ca39149c66fcc38dd85c",
         null,
         [
             [
-                "綿花孢子草的知識",
+                "68eb9407a258eef2d0471c93bced7d54",
                 3
             ]
         ]
     ],
     [
-        "滅龍護石",
+        "30b573081d81f6ff94c77f3207d27f37",
         "6f8c5f62c693def5ce57a404e79770cc",
         8,
         [
             [
-                "龍封力強化",
+                "2bc3c87c8c981ab77180c97dbad208f3",
                 1
             ],
             [
-                "龍屬性攻擊強化",
+                "44d510c31def67045426e67d037b5155",
                 1
             ]
         ]
     ],
     [
-        "嗜菇護石 II",
+        "2f2ede249910c465f2e8f42f9240226d",
         "b7951c77229bfc709d30fb3446b23c6e",
         null,
         [
             [
-                "最愛菇類",
+                "96d19ac88843a0e0564ab287ff563fa6",
                 2
             ]
         ]
     ],
     [
-        "裝備護石 III",
+        "b46a484ed32ed8ee82f09e20be7fdbca",
         "ae2ddf03703a2fd713ab49e90c5383ed",
         null,
         [
             [
-                "整備",
+                "62a57ad8c494a4523c1b2e8ae6372c6d",
                 3
             ]
         ]
     ],
     [
-        "裝填護石",
+        "7d6490ed6c8e524a43ba49f86c8d3a9f",
         "c29b757a0a74c86402a7d87476cd19e2",
         3,
         [
             [
-                "砲彈裝填數UP",
+                "4976c8281fb2663a593ed9df46d96090",
                 1
             ]
         ]
     ],
     [
-        "達人護石 III",
+        "14e0f15fa30795492cdaf85240f18702",
         "15e7bd53d42774b260719a2ea3b2c260",
         null,
         [
             [
-                "看破",
+                "551b1f51f6227aae0734c6865620bd88",
                 3
             ]
         ]
     ],
     [
-        "跳躍護石 II",
+        "6a9d1938f04d8136c9f580c069b3d4f2",
         "3ed34b421e902058dadb5bfec131a5cf",
         null,
         [
             [
-                "迴避距離UP",
+                "3b69080c8e68605c6e39163cfc13051a",
                 2
             ]
         ]
     ],
     [
-        "痺擊護石 III",
+        "3deb744477db1c834681df259f436ab2",
         "64381956fc936c3df90eda09c6c4daad",
         null,
         [
             [
-                "麻痺屬性強化",
+                "64a11b55755cdf9585cd260f2e053b88",
                 3
             ]
         ]
     ],
     [
-        "雷光護石 III",
+        "c63c79c9d8dbe11ed41ddb88b12e8937",
         "3a9e3dec457312dfc66f2894894bebce",
         null,
         [
             [
-                "雷屬性攻擊強化",
+                "4b68c9e96619d4ce778821f29b9173fe",
                 3
             ]
         ]
     ],
     [
-        "睡擊護石 III",
+        "521ca706155ef28969eb530e1a0f7382",
         "7b27af880960177d1cce306b56cb0145",
         null,
         [
             [
-                "睡眠屬性強化",
+                "3df3f64c986cef62206bc7fa5cb823c1",
                 3
             ]
         ]
     ],
     [
-        "睡眠瓶護石",
+        "86d1ff146e5d33567f236e37e61ad89a",
         "5c84a4b623d38897a3d955b9be2bb4cf",
         8,
         [
             [
-                "睡眠瓶追加",
+                "7b85e31d1088b9656a3d265fa42c857c",
                 1
             ]
         ]
     ],
     [
-        "奪氣護石 III",
+        "8f176b3ef9c87c57e1049a1418266c28",
         "302fbca22301fc21bbf0c5960b97177c",
         null,
         [
             [
-                "奪取耐力",
+                "230cafda7b76bf746cff1436106e9d7d",
                 3
             ]
         ]
     ],
     [
-        "暴怒護石 II",
+        "bb6f89e46b41f0a37a1aeaeb876610de",
         "061e689c11aea92cea12d5ac57e6c636",
         null,
         [
             [
-                "怨恨",
+                "679ebb308c1ee8cf41f3326e9c45fb08",
                 2
             ]
         ]
     ],
     [
-        "潛伏護石 III",
+        "38df7f8ff303afa46f01f1bf31159e80",
         "b5123b4ba68adf3faa6be0c258d1c920",
         null,
         [
             [
-                "潛伏",
+                "55ab1b603fd250877687fa5fea37b579",
                 3
             ]
         ]
     ],
     [
-        "調查達人護石",
+        "6e99c5af9c500117b0305b35542df59c",
         "f954b33cd11d7e167f3deba8a0ee9ff6",
         7,
         [
             [
-                "導蟲反應距離UP",
+                "e6b19a7cde8ef04eda5d9eb6875d8719",
                 1
             ],
             [
-                "研究者",
+                "1efa483af4e451dd07a3b184f93abb02",
                 1
             ]
         ]
     ],
     [
-        "騎手護石",
+        "6b07529e11076249f4e4dd35b9a63e07",
         "b7aaaa4bf83913e498494460bca2a816",
         7,
         [
             [
-                "騎乘名人",
+                "4b1eda04b65defa97993425843aea834",
                 1
             ],
             [
-                "跳躍鐵人",
+                "071453cb19faf2523a4eaeabbcaa43b2",
                 1
             ]
         ]
     ],
     [
-        "斷食護石 III",
+        "e3d3c5d9f13fbc929b8e2307f15df533",
         "1ec78f26308a0afbdc2f12571740431e",
         null,
         [
             [
-                "飢餓耐性",
+                "19244ead7c6105436403e7a0fc743d17",
                 3
             ]
         ]
     ],
     [
-        "爆師護石 III",
+        "892312667a113e961666157b6410b33e",
         "ad827efa5a768e1b22e9252d577f4441",
         null,
         [
             [
-                "炸彈客",
+                "6d5cf02fc3f49140e7853b6d021ff7c7",
                 3
             ]
         ]
     ],
     [
-        "爆破護石 III",
+        "7c8728e04ab491ae678425370174bf31",
         "eddcec635aa1318f135e18144fc34cb5",
         null,
         [
             [
-                "爆破屬性強化",
+                "a68c3daeccbe80807d2b62ac5dbdfb99",
                 3
             ]
         ]
     ],
     [
-        "爆破瓶護石",
+        "3ce9952e7f6120390f9b63efe1d5688f",
         "fcfd35887cb20e1ad3508cc24a4bf45a",
         8,
         [
             [
-                "爆破瓶追加",
+                "a4082eea050807ee6caa082f30e0f1bb",
                 1
             ]
         ]
     ],
     [
-        "覺醒護石 II",
+        "e000d4024d3d050eeb35fa09adfc9732",
         "5dab4aea9b4dbd8d9e1d7026ddb6e123",
         null,
         [
             [
-                "屬性解放／裝填擴充",
+                "78008fc7b5fd9918079c6fe82e7c6bb4",
                 2
             ]
         ]
     ],
     [
-        "籌備護石",
+        "be552dab4a12aea23576625130553852",
         "859e6a40313fb7da904ae7657f2848e9",
         5,
         [
             [
-                "搬運達人",
+                "258da47e81724a99a6a14f7e186132b2",
                 1
             ],
             [
-                "蜂蜜獵人",
+                "8d10a164c8704c811f2eeed14bceb334",
                 1
             ]
         ]
     ],
     [
-        "鐵壁護石 III",
+        "c4a1e21581e50e40ecb787a8f842d5f9",
         "4119e8186de732375253a718d76ca9c9",
         null,
         [
             [
-                "防禦性能",
+                "fbed4c4c50890f4bd0a52126502f2bbb",
                 3
             ]
         ]

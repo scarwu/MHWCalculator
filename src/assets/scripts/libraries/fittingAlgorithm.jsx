@@ -81,7 +81,7 @@ class FittingAlgorithm {
             let jewel = (0 !== jewelInfo.length) ? jewelInfo[0] : null;
 
             this.correspondJewels[skill.id] = (null !== jewel) ? {
-                name: jewel.id,
+                id: jewel.id,
                 size: jewel.size,
             } : null;
 
@@ -184,8 +184,8 @@ class FittingAlgorithm {
                 }
 
                 // Create Candidate Equips
-                Object.keys(this.conditionSets).forEach((setName) => {
-                    let equips = DataSet.armorHelper.typeIs(equipType).setIs(setName).getItems();
+                Object.keys(this.conditionSets).forEach((setId) => {
+                    let equips = DataSet.armorHelper.typeIs(equipType).setIs(setId).getItems();
 
                     // Get Candidate Equips
                     candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
@@ -230,7 +230,7 @@ class FittingAlgorithm {
                             return;
                         }
 
-                        // Check Candidate Equip Name
+                        // Check Candidate Equip Id
                         if (null === candidateEquip.id) {
                             nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
@@ -241,13 +241,13 @@ class FittingAlgorithm {
                         bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
                         // Sets
-                        let setRequire = this.conditionSets[candidateEquip.setName];
+                        let setRequire = this.conditionSets[candidateEquip.setId];
 
-                        if (undefined === bundle.sets[candidateEquip.setName]) {
-                            bundle.sets[candidateEquip.setName] = 0;
+                        if (undefined === bundle.sets[candidateEquip.setId]) {
+                            bundle.sets[candidateEquip.setId] = 0;
                         }
 
-                        if (setRequire < bundle.sets[candidateEquip.setName]) {
+                        if (setRequire < bundle.sets[candidateEquip.setId]) {
                             bundle = Helper.deepCopy(prevBundleList[hash]);
                             nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
@@ -261,15 +261,15 @@ class FittingAlgorithm {
                 prevBundleList = nextBundleList;
             });
 
-            Object.keys(this.conditionSets).forEach((setName) => {
+            Object.keys(this.conditionSets).forEach((setId) => {
                 nextBundleList = {};
 
-                let setRequire = this.conditionSets[setName];
+                let setRequire = this.conditionSets[setId];
 
                 Object.keys(prevBundleList).forEach((hash) => {
                     let bundle = Helper.deepCopy(prevBundleList[hash]);
 
-                    if (setRequire !== bundle.sets[setName]) {
+                    if (setRequire !== bundle.sets[setId]) {
                         return;
                     }
 
@@ -297,15 +297,15 @@ class FittingAlgorithm {
 
             bundle.meta.completedSkills = {};
 
-            Object.keys(bundle.skills).forEach((skillName) => {
-                if (undefined === this.conditionSkills[skillName]) {
+            Object.keys(bundle.skills).forEach((skillId) => {
+                if (undefined === this.conditionSkills[skillId]) {
                     return;
                 }
 
-                let skillLevel = this.conditionSkills[skillName];
+                let skillLevel = this.conditionSkills[skillId];
 
-                if (skillLevel === bundle.skills[skillName]) {
-                    bundle.meta.completedSkills[skillName] = true;
+                if (skillLevel === bundle.skills[skillId]) {
+                    bundle.meta.completedSkills[skillId] = true;
                 }
             });
 
@@ -325,7 +325,7 @@ class FittingAlgorithm {
             }
 
             // Create Candidate Equips
-            Object.keys(this.conditionSkills).forEach((skillName) => {
+            Object.keys(this.conditionSkills).forEach((skillId) => {
                 let equips = null;
 
                 // Get Equips With Skill
@@ -335,9 +335,9 @@ class FittingAlgorithm {
                     || 'waist' === equipType
                     || 'leg' === equipType) {
 
-                    equips = DataSet.armorHelper.typeIs(equipType).hasSkill(skillName).getItems();
+                    equips = DataSet.armorHelper.typeIs(equipType).hasSkill(skillId).getItems();
                 } else if ('charm' === equipType) {
-                    equips = DataSet.charmHelper.hasSkill(skillName).getItems();
+                    equips = DataSet.charmHelper.hasSkill(skillId).getItems();
                 }
 
                 // Get Candidate Equips
@@ -412,7 +412,7 @@ class FittingAlgorithm {
                         return;
                     }
 
-                    // Check Candidate Equip Name
+                    // Check Candidate Equip Id
                     if (null === candidateEquip.id) {
                         nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
@@ -430,18 +430,18 @@ class FittingAlgorithm {
                     // Count & Check Skills from Candidate Equip
                     let isSkip = false;
 
-                    Object.keys(candidateEquip.skills).forEach((skillName) => {
+                    Object.keys(candidateEquip.skills).forEach((skillId) => {
                         if (true === isSkip) {
                             return;
                         }
 
-                        if (undefined == this.conditionSkills[skillName]) {
+                        if (undefined == this.conditionSkills[skillId]) {
                             return;
                         }
 
-                        let skillLevel = this.conditionSkills[skillName];
+                        let skillLevel = this.conditionSkills[skillId];
 
-                        if (skillLevel < bundle.skills[skillName]) {
+                        if (skillLevel < bundle.skills[skillId]) {
                             bundle = Helper.deepCopy(prevBundleList[hash]);
                             nextBundleList[this.generateBundleHash(bundle)] = bundle;
 
@@ -450,8 +450,8 @@ class FittingAlgorithm {
                             return;
                         }
 
-                        if (skillLevel === bundle.skills[skillName]) {
-                            bundle.meta.completedSkills[skillName] = true;
+                        if (skillLevel === bundle.skills[skillId]) {
+                            bundle.meta.completedSkills[skillId] = true;
                         }
                     });
 
@@ -540,12 +540,12 @@ class FittingAlgorithm {
             equips[equipType] = bundle.equips[equipType];
         });
 
-        Object.keys(bundle.jewels).sort().forEach((jewelName) => {
-            if (0 === bundle.jewels[jewelName]) {
+        Object.keys(bundle.jewels).sort().forEach((jewelId) => {
+            if (0 === bundle.jewels[jewelId]) {
                 return;
             }
 
-            jewels[jewelName] = bundle.jewels[jewelName];
+            jewels[jewelId] = bundle.jewels[jewelId];
         });
 
         return MD5(JSON.stringify([equips, jewels]));
@@ -577,7 +577,7 @@ class FittingAlgorithm {
                 return;
             }
 
-            // Set Used Candidate Equip Name
+            // Set Used Candidate Equip Id
             this.usedEquips[candidateEquip.id] = true;
 
             // Set Candidate Equip
@@ -593,13 +593,13 @@ class FittingAlgorithm {
     convertEquipToCandidateEquip = (equip) => {
         let candidateEquip = Helper.deepCopy(Constant.defaultCandidateEquip);
 
-        // Set Name, Type & Defense
+        // Set Id, Type & Defense
         candidateEquip.id = equip.id;
         candidateEquip.type = equip.type;
         candidateEquip.defense = (undefined !== equip.defense) ? equip.defense : 0;
 
         if (undefined !== equip.set && null !== equip.set) {
-            candidateEquip.setName = equip.set.id;
+            candidateEquip.setId = equip.set.id;
         }
 
         if (undefined === equip.skills) {
@@ -642,13 +642,13 @@ class FittingAlgorithm {
 
         let isSkip = false;
 
-        Object.keys(candidateEquip.skills).forEach((skillName) => {
+        Object.keys(candidateEquip.skills).forEach((skillId) => {
             if (true === isSkip) {
                 return;
             }
 
-            if (undefined !== this.skipSkills[skillName]
-                && true === this.skipSkills[skillName]) {
+            if (undefined !== this.skipSkills[skillId]
+                && true === this.skipSkills[skillId]) {
 
                 isSkip = true;
             }
@@ -719,22 +719,22 @@ class FittingAlgorithm {
         bundle.equips[candidateEquip.type] = candidateEquip.id;
         bundle.defense += candidateEquip.defense;
 
-        if (null !== candidateEquip.setName) {
-            if (undefined === bundle.sets[candidateEquip.setName]) {
-                bundle.sets[candidateEquip.setName] = 0;
+        if (null !== candidateEquip.setId) {
+            if (undefined === bundle.sets[candidateEquip.setId]) {
+                bundle.sets[candidateEquip.setId] = 0;
             }
 
-            bundle.sets[candidateEquip.setName] += 1;
+            bundle.sets[candidateEquip.setId] += 1;
         }
 
-        Object.keys(candidateEquip.skills).forEach((skillName) => {
-            let skillLevel = candidateEquip.skills[skillName];
+        Object.keys(candidateEquip.skills).forEach((skillId) => {
+            let skillLevel = candidateEquip.skills[skillId];
 
-            if (undefined === bundle.skills[skillName]) {
-                bundle.skills[skillName] = 0;
+            if (undefined === bundle.skills[skillId]) {
+                bundle.skills[skillId] = 0;
             }
 
-            bundle.skills[skillName] += skillLevel;
+            bundle.skills[skillId] += skillLevel;
         });
 
         for (let size = 1; size <= 3; size++) {
@@ -758,22 +758,22 @@ class FittingAlgorithm {
     completeBundleBySkills = (bundle) => {
         let isSkip = false;
 
-        Object.keys(this.conditionSkills).forEach((skillName) => {
+        Object.keys(this.conditionSkills).forEach((skillId) => {
             if (true === isSkip) {
                 return;
             }
 
-            let skillLevel = this.conditionSkills[skillName];
+            let skillLevel = this.conditionSkills[skillId];
 
-            if (undefined === bundle.skills[skillName]) {
-                bundle.skills[skillName] = 0
+            if (undefined === bundle.skills[skillId]) {
+                bundle.skills[skillId] = 0
             }
 
             // Add Jewel to Bundle
             bundle = this.addJewelToBundleBySpecificSkill(bundle, {
-                name: skillName,
+                id: skillId,
                 level: skillLevel
-            }, this.correspondJewels[skillName]);
+            }, this.correspondJewels[skillId]);
 
             if (false === bundle) {
                 isSkip = true;
@@ -781,8 +781,8 @@ class FittingAlgorithm {
                 return;
             }
 
-            if (skillLevel === bundle.skills[skillName]) {
-                bundle.meta.completedSkills[skillName] = true;
+            if (skillLevel === bundle.skills[skillId]) {
+                bundle.meta.completedSkills[skillId] = true;
             }
         });
 

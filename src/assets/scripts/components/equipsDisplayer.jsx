@@ -105,12 +105,12 @@ export default class EquipsDisplayer extends Component {
         // Weapon
         let weaponSelectorData = {
             equipType: 'weapon',
-            equipName: equips.weapon.id
+            equipId: equips.weapon.id
         };
 
         let emptyWeaponSelectorData = {
             equipType: 'weapon',
-            equipName: null
+            equipId: null
         };
 
         if (null === DataSet.weaponHelper.getInfo(equips.weapon.id)) {
@@ -133,7 +133,7 @@ export default class EquipsDisplayer extends Component {
                 <div key="weapon" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}>
-                            <span>{_('weapon')}: {weaponInfo.id}</span>
+                            <span>{_('weapon')}: {_(weaponInfo.name)}</span>
                         </a>
 
                         <div className="mhwc-icons_bundle">
@@ -153,13 +153,13 @@ export default class EquipsDisplayer extends Component {
                                 let enhanceSelectorData = {
                                     equipType: 'weapon',
                                     enhanceIndex: index,
-                                    enhanceName: data.id
+                                    enhanceId: data.id
                                 };
 
                                 let emptyEnhanceSelectorData = {
                                     equipType: 'weapon',
                                     enhanceIndex: index,
-                                    enhanceName: null
+                                    enhanceId: null
                                 };
 
                                 return (
@@ -170,7 +170,7 @@ export default class EquipsDisplayer extends Component {
                                         <div className="col-8 mhwc-value">
                                             <a onClick={() => {this.handleEquipSwitch(enhanceSelectorData)}}>
                                                 {null !== data.id ? (
-                                                    <span>{data.id}</span>
+                                                    <span>{_(DataSet.enhanceHelper.getInfo(data.id).name)}</span>
                                                 ) : (
                                                     <span>---</span>
                                                 )}
@@ -197,14 +197,14 @@ export default class EquipsDisplayer extends Component {
                                     equipType: 'weapon',
                                     slotSize: data.size,
                                     slotIndex: index,
-                                    slotName: data.jewel.id
+                                    slotId: data.jewel.id
                                 };
 
                                 let emptyJewelSelectorData = {
                                     equipType: 'weapon',
                                     slotSize: data.size,
                                     slotIndex: index,
-                                    slotName: null
+                                    slotId: null
                                 };
 
                                 return (
@@ -215,7 +215,7 @@ export default class EquipsDisplayer extends Component {
                                         <div className="col-8 mhwc-value">
                                             <a onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}>
                                                 {null !== data.jewel.id ? (
-                                                    <span>[{data.jewel.size}] {data.jewel.id}</span>
+                                                    <span>[{data.jewel.size}] {_(DataSet.jewelHelper.getInfo(data.jewel.id).name)}</span>
                                                 ) : (
                                                     <span>---</span>
                                                 )}
@@ -352,10 +352,12 @@ export default class EquipsDisplayer extends Component {
                                     {weaponInfo.skills.sort((a, b) => {
                                         return b.level - a.level;
                                     }).map((data) => {
+                                        let skillName = DataSet.skillHelper.getInfo(data.id).name;
+
                                         return (
                                             <div key={data.id} className="col-6">
                                                 <div className="mhwc-value">
-                                                    <span>{data.id} Lv.{data.level}</span>
+                                                    <span>{_(skillName)} Lv.{data.level}</span>
                                                 </div>
                                             </div>
                                         );
@@ -382,12 +384,12 @@ export default class EquipsDisplayer extends Component {
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             let equipSelectorData = {
                 equipType: equipType,
-                equipName: equips[equipType].id
+                equipId: equips[equipType].id
             };
 
             let emptyEquipSelectorData = {
                 equipType: equipType,
-                equipName: null
+                equipId: null
             };
 
             if (null === DataSet.armorHelper.getInfo(equips[equipType].id)) {
@@ -395,13 +397,13 @@ export default class EquipsDisplayer extends Component {
             }
 
             if (null !== equips[equipType].id) {
-                let equipInfo = DataSet.getAppliedArrmorInfo(equips[equipType]);
+                let equipInfo = DataSet.getAppliedArmorInfo(equips[equipType]);
 
                 ContentBlocks.push((
                     <div key={'equip_' + equipType} className="row mhwc-equip">
                         <div className="col-12 mhwc-name">
                             <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
-                                <span>{_(equipType)}: {equipInfo.id}</span>
+                                <span>{_(equipType)}: {_(equipInfo.name)}</span>
                             </a>
 
                             <div className="mhwc-icons_bundle">
@@ -422,14 +424,14 @@ export default class EquipsDisplayer extends Component {
                                         equipType: equipType,
                                         slotSize: data.size,
                                         slotIndex: index,
-                                        slotName: data.jewel.id
+                                        slotId: data.jewel.id
                                     };
 
                                     let emptyJewelSelectorData = {
                                         equipType: equipType,
                                         slotSize: data.size,
                                         slotIndex: index,
-                                        slotName: null
+                                        slotId: null
                                     };
 
                                     return (
@@ -440,7 +442,7 @@ export default class EquipsDisplayer extends Component {
                                             <div className="col-8 mhwc-value">
                                                 <a onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}>
                                                     {null !== data.jewel.id ? (
-                                                        <span>[{data.jewel.size}] {data.jewel.id}</span>
+                                                        <span>[{data.jewel.size}] {_(DataSet.jewelHelper.getInfo(data.jewel.id).name)}</span>
                                                     ) : (
                                                         <span>---</span>
                                                     )}
@@ -503,7 +505,7 @@ export default class EquipsDisplayer extends Component {
                                         <span>{_('set')}</span>
                                     </div>
                                     <div className="col-8 mhwc-value">
-                                        <span>{equipInfo.set.id}</span>
+                                        <span>{_(DataSet.setHelper.getInfo(equipInfo.set.id).name)}</span>
                                     </div>
                                 </div>
                             </div>
@@ -519,10 +521,12 @@ export default class EquipsDisplayer extends Component {
                                         {equipInfo.skills.sort((a, b) => {
                                             return b.level - a.level;
                                         }).map((data) => {
+                                            let skillName = DataSet.skillHelper.getInfo(data.id).name;
+
                                             return (
                                                 <div key={data.id} className="col-6">
                                                     <div className="mhwc-value">
-                                                        <span>{data.id} Lv.{data.level}</span>
+                                                        <span>{_(skillName)} Lv.{data.level}</span>
                                                     </div>
                                                 </div>
                                             );
@@ -549,12 +553,12 @@ export default class EquipsDisplayer extends Component {
         // Charm
         let charmSelectorData = {
             equipType: 'charm',
-            equipName: equips.charm.id
+            equipId: equips.charm.id
         };
 
         let emptyCharmSelectorData = {
             equipType: 'charm',
-            equipName: null
+            equipId: null
         };
 
         if (null === DataSet.charmHelper.getInfo(equips.charm.id)) {
@@ -562,13 +566,13 @@ export default class EquipsDisplayer extends Component {
         }
 
         if (null !== equips.charm.id) {
-            let charmInfo = DataSet.getAppliedChramInfo(equips.charm);
+            let charmInfo = DataSet.getAppliedCharmInfo(equips.charm);
 
             ContentBlocks.push((
                 <div key="charm" className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
                         <a onClick={() => {this.handleEquipSwitch(charmSelectorData)}}>
-                            <span>{_('charm')}: {charmInfo.id}</span>
+                            <span>{_('charm')}: {_(charmInfo.name)}</span>
                         </a>
 
                         <div className="mhwc-icons_bundle">
@@ -591,10 +595,12 @@ export default class EquipsDisplayer extends Component {
                                 {charmInfo.skills.sort((a, b) => {
                                     return b.level - a.level;
                                 }).map((data) => {
+                                    let skillName = DataSet.skillHelper.getInfo(data.id).name;
+
                                     return (
                                         <div key={data.id} className="col-6">
                                             <div className="mhwc-value">
-                                                <span>{data.id} Lv.{data.level}</span>
+                                                <span>{_(skillName)} Lv.{data.level}</span>
                                             </div>
                                         </div>
                                     );

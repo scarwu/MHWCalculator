@@ -8,9 +8,6 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Constant
-import Constant from 'constant';
-
 // Load Dataset
 import Sets from 'json/datasets/sets.json';
 
