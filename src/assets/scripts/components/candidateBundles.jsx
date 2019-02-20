@@ -17,7 +17,9 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
+import WeaponDataset from 'libraries/dataset/weapon';
 import ArmorDataset from 'libraries/dataset/armor';
+import CharmDataset from 'libraries/dataset/charm';
 import JewelDataset from 'libraries/dataset/jewel';
 import SkillDataset from 'libraries/dataset/skill';
 import FittingAlgorithm from 'libraries/fittingAlgorithm';
@@ -116,20 +118,40 @@ export default class CandidateBundles extends Component {
                         </div>
                         <div className="col-12 mhwc-value">
                             <div className="row">
-                            {Object.keys(data.equips).map((euqipType) => {
-                                return (null !== data.equips[euqipType]) ? [(
-                                    <div key={'weapon_1'} className="col-2">
+                            {Object.keys(data.equips).map((equipType, index) => {
+                                if (null === data.equips[equipType]) {
+                                    return false;
+                                }
+
+                                let equipInfo = null;
+
+                                if ('weapon' === equipType) {
+                                    equipInfo = WeaponDataset.getInfo(data.equips[equipType]);
+
+                                } else if ('helm' === equipType
+                                    || 'chest' === equipType
+                                    || 'arm' === equipType
+                                    || 'waist' === equipType
+                                    || 'leg' === equipType) {
+
+                                    equipInfo = ArmorDataset.getInfo(data.equips[equipType]);
+                                } else if ('charm' === equipType) {
+                                    equipInfo = CharmDataset.getInfo(data.equips[equipType]);
+                                }
+
+                                return [(
+                                    <div key={`${equipType}_1`} className="col-2">
                                         <div className="mhwc-name">
-                                            <span>{_(euqipType)}</span>
+                                            <span>{_(equipType)}</span>
                                         </div>
                                     </div>
                                 ), (
-                                    <div key={'weapon_2'} className="col-4">
+                                    <div key={`${equipType}_2`} className="col-4">
                                         <div className="mhwc-value">
-                                            <span>{_(ArmorDataset.getInfo(data.equips[euqipType]).name)}</span>
+                                            <span>{_(equipInfo.name)}</span>
                                         </div>
                                     </div>
-                                )] : false;
+                                )];
                             })}
                             </div>
                         </div>
