@@ -10,6 +10,10 @@
 
 export default {
     defaultLang: 'zhTW',
+    langs: {
+        zhTW: '正體中文',
+        enUS: 'English'
+    },
     elements: [
         'fire',
         'water',

@@ -90,6 +90,8 @@
     "search":             "Search",
     "inputKeyword":       "Input Keyword",
     "inputName":          "Input Name",
+    "exportBundle":       "Export Bundle",
+    "showChangelog":      "Show Changelog",
     "list":               "List",
     "requireCondition":   "Required Conditions",
     "candidateBundle":    "Candidate Bundles",

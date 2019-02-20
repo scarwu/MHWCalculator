@@ -90,6 +90,8 @@
     "search":             "搜尋",
     "inputKeyword":       "輸入關鍵字",
     "inputName":          "輸入配裝名稱",
+    "exportBundle":       "匯出裝備",
+    "showChangelog":      "更新資訊",
     "list":               "列表",
     "requireCondition":   "需求條件",
     "candidateBundle":    "備選組合",

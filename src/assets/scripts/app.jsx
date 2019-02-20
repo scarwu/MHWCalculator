@@ -69,6 +69,20 @@ export default class Main extends Component {
     /**
      * Handle Functions
      */
+    handleImportBundle = () => {
+
+    };
+
+    handleExportBundle = () => {
+
+    };
+
+    handleChangeLang = () => {
+        Status.set('lang', this.refs.lang.value);
+
+        window.location.reload();
+    };
+
     handleSetStepDown = (index) => {
         let sets = this.state.sets;
 
@@ -677,6 +691,22 @@ export default class Main extends Component {
                     <a href="./">
                         <h1>{_('title')}</h1>
                     </a>
+
+                    <div className="mhwc-icons_bundle">
+                        <FunctionalIcon
+                            iconName="external-link-square" altName={_('exportBundle')}
+                            onClick={this.handleExportBundle} />
+                        <FunctionalIcon
+                            iconName="info-circle" altName={_('showChangelog')}
+                            onClick={this.handleChangeLogOpen} />
+                        <select defaultValue={Status.get('lang')} ref="lang" onChange={this.handleChangeLang}>
+                        {Object.keys(Constant.langs).map((lang) => {
+                            return (
+                                <option key={lang} value={lang}>{Constant.langs[lang]}</option>
+                            );
+                        })}
+                        </select>
+                    </div>
                 </div>
 
                 <div className="row mhwc-container">
