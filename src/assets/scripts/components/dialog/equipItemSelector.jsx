@@ -18,7 +18,13 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
-import DataSet from 'libraries/dataset';
+import WeaponDataset from 'libraries/dataset/weapon';
+import ArmorDataset from 'libraries/dataset/armor';
+import CharmDataset from 'libraries/dataset/charm';
+import JewelDataset from 'libraries/dataset/jewel';
+import EnhanceDataset from 'libraries/dataset/enhance';
+import SetDataset from 'libraries/dataset/set';
+import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -124,14 +130,14 @@ export default class EquipItemSelector extends Component {
 
         if (undefined !== data.enhanceIndex) {
             mode = 'enhance';
-            includeList = DataSet.enhanceHelper.getItems();
+            includeList = EnhanceDataset.getItems();
         } else if (undefined !== data.slotIndex) {
             mode = 'jewel';
 
             for (let size = data.slotSize; size >= 1; size--) {
                 for (let rare = 8; rare >= 5; rare--) {
                     includeList = includeList.concat(
-                        DataSet.jewelHelper.rareIs(rare).sizeIsEqualThen(size).getItems()
+                        JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems()
                     );
                 }
             }
@@ -140,12 +146,12 @@ export default class EquipItemSelector extends Component {
             type = weaponTypeList[0];
 
             if (null !== data.equipId) {
-                type = DataSet.weaponHelper.getInfo(data.equipId).type;
+                type = WeaponDataset.getInfo(data.equipId).type;
             }
 
             weaponTypeList.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
-                    DataSet.weaponHelper.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
+                    WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
                         if (undefined !== ignoreEquips['weapon']
                             && true === ignoreEquips['weapon'][equip.id]) {
 
@@ -156,7 +162,7 @@ export default class EquipItemSelector extends Component {
                     });
                 }
 
-                DataSet.weaponHelper.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
+                WeaponDataset.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
                     if (undefined !== ignoreEquips['weapon']
                         && true === ignoreEquips['weapon'][equip.id]) {
 
@@ -176,7 +182,7 @@ export default class EquipItemSelector extends Component {
             type = data.equipType;
 
             for (let rare = 8; rare >= 5; rare--) {
-                DataSet.armorHelper.typeIs(data.equipType).rareIs(rare).getItems().forEach((equip) => {
+                ArmorDataset.typeIs(data.equipType).rareIs(rare).getItems().forEach((equip) => {
                     if (undefined !== ignoreEquips[equip.type]
                         && true === ignoreEquips[equip.type][equip.id]) {
 
@@ -187,7 +193,7 @@ export default class EquipItemSelector extends Component {
                 });
             }
 
-            DataSet.armorHelper.typeIs(data.equipType).rareIs(0).getItems().forEach((equip) => {
+            ArmorDataset.typeIs(data.equipType).rareIs(0).getItems().forEach((equip) => {
                 if (undefined !== ignoreEquips[equip.type]
                     && true === ignoreEquips[equip.type][equip.id]) {
 
@@ -199,7 +205,7 @@ export default class EquipItemSelector extends Component {
         } else if ('charm' === data.equipType) {
             mode = 'charm';
 
-            DataSet.charmHelper.getItems().forEach((equip) => {
+            CharmDataset.getItems().forEach((equip) => {
                 if (undefined !== ignoreEquips['charm']
                     && true === ignoreEquips['charm'][equip.id]) {
 
@@ -327,7 +333,7 @@ export default class EquipItemSelector extends Component {
                     {data.skills.map((data, index) => {
                         return (
                             <div key={index}>
-                                <span>{_(DataSet.skillHelper.getInfo(data.id).name)} Lv.{data.level}</span>
+                                <span>{_(SkillDataset.getInfo(data.id).name)} Lv.{data.level}</span>
                             </div>
                         );
                     })}
@@ -432,14 +438,14 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     {null !== data.set ? (
-                        <span>{_(DataSet.setHelper.getInfo(data.set.id).name)}</span>
+                        <span>{_(SetDataset.getInfo(data.set.id).name)}</span>
                     ) : false}
                 </td>
                 <td>
                     {data.skills.map((data, index) => {
                         return (
                             <div key={index}>
-                                <span>{_(DataSet.skillHelper.getInfo(data.id).name)} Lv.{data.level}</span>
+                                <span>{_(SkillDataset.getInfo(data.id).name)} Lv.{data.level}</span>
                             </div>
                         );
                     })}
@@ -586,7 +592,7 @@ export default class EquipItemSelector extends Component {
     };
 
     renderJewelRow = (data, index) => {
-        let skillName = DataSet.skillHelper.getInfo(data.skill.id).name;
+        let skillName = SkillDataset.getInfo(data.skill.id).name;
 
         return (
             <tr key={data.id}>

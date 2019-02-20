@@ -13,9 +13,9 @@ import Constant from 'constant';
 
 // Load Langs
 import zhTWUI from 'json/langs/zhTW/ui.json';
-import zhTWDataset from 'json/langs/zhTW/datasets.json';
+import zhTWDataset from 'json/langs/zhTW/dataset.json';
 import enUSUI from 'json/langs/enUS/ui.json';
-import enUSDataset from 'json/langs/enUS/datasets.json';
+import enUSDataset from 'json/langs/enUS/dataset.json';
 
 let langs = {
     zhTW: Object.assign({}, zhTWUI, zhTWDataset),

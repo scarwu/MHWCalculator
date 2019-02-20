@@ -17,7 +17,9 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
-import DataSet from 'libraries/dataset';
+import ArmorDataset from 'libraries/dataset/armor';
+import JewelDataset from 'libraries/dataset/jewel';
+import SkillDataset from 'libraries/dataset/skill';
 import FittingAlgorithm from 'libraries/fittingAlgorithm';
 
 // Load Components
@@ -124,7 +126,7 @@ export default class CandidateBundles extends Component {
                                 ), (
                                     <div key={'weapon_2'} className="col-4">
                                         <div className="mhwc-value">
-                                            <span>{_(DataSet.armorHelper.getInfo(data.equips[euqipType]).name)}</span>
+                                            <span>{_(ArmorDataset.getInfo(data.equips[euqipType]).name)}</span>
                                         </div>
                                     </div>
                                 )] : false;
@@ -182,8 +184,8 @@ export default class CandidateBundles extends Component {
                                         return data.jewels[b] - data.jewels[a];
                                     }).map((jewelId) => {
                                         let jewelCount = data.jewels[jewelId];
-                                        let jewelName = DataSet.jewelHelper.getInfo(jewelId).name;
-                                        let jewelSize = DataSet.jewelHelper.getInfo(jewelId).size;
+                                        let jewelName = JewelDataset.getInfo(jewelId).name;
+                                        let jewelSize = JewelDataset.getInfo(jewelId).size;
 
                                         return (
                                             <div key={jewelId} className="col-4">
@@ -209,7 +211,7 @@ export default class CandidateBundles extends Component {
                                         return data.skills[b] - data.skills[a];
                                     }).map((skillId) => {
                                         let skillCount = data.skills[skillId];
-                                        let skillName = DataSet.skillHelper.getInfo(skillId).name;;
+                                        let skillName = SkillDataset.getInfo(skillId).name;;
 
                                         return (
                                             <div key={skillId} className="col-6">

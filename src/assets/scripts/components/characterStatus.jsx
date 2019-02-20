@@ -17,7 +17,9 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
-import DataSet from 'libraries/dataset';
+import SetDataset from 'libraries/dataset/set';
+import SkillDataset from 'libraries/dataset/skill';
+import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -95,15 +97,15 @@ export default class CharacterStatus extends Component {
         let info = {};
 
         info.weapon = (null !== equips.weapon.id)
-            ? DataSet.getAppliedWeaponInfo(equips.weapon) : null;
+            ? CommonDataset.getAppliedWeaponInfo(equips.weapon) : null;
 
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             info[equipType] = (null !== equips[equipType].id)
-                ? DataSet.getAppliedArmorInfo(equips[equipType]) : null;
+                ? CommonDataset.getAppliedArmorInfo(equips[equipType]) : null;
         });
 
         info.charm = (null !== equips.charm.id)
-            ? DataSet.getAppliedCharmInfo(equips.charm) : null;
+            ? CommonDataset.getAppliedCharmInfo(equips.charm) : null;
 
         if (null !== info.weapon) {
             status.critical.rate = info.weapon.criticalRate;
@@ -163,14 +165,14 @@ export default class CharacterStatus extends Component {
 
         Object.keys(setMapping).forEach((setId) => {
             let setCount = setMapping[setId];
-            let setInfo = DataSet.setHelper.getInfo(setId);
+            let setInfo = SetDataset.getInfo(setId);
 
             setInfo.skills.forEach((skill) => {
                 if (skill.require > setCount) {
                     return;
                 }
 
-                let skillInfo = DataSet.skillHelper.getInfo(skill.id);
+                let skillInfo = SkillDataset.getInfo(skill.id);
 
                 status.sets.push({
                     id: setId,
@@ -197,7 +199,7 @@ export default class CharacterStatus extends Component {
         let defenseMultipleList = [];
 
         for (let skillId in allSkills) {
-            let skill = DataSet.skillHelper.getInfo(skillId);
+            let skill = SkillDataset.getInfo(skillId);
             let level = allSkills[skillId];
 
             // Fix Skill Level Overflow
@@ -449,7 +451,7 @@ export default class CharacterStatus extends Component {
         let expectedValue = 0;
 
         if (null !== equips.weapon.id) {
-            let weaponInfo = DataSet.getAppliedWeaponInfo(equips.weapon);
+            let weaponInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
             let weaponMultiple = Constant.weaponMultiple[weaponInfo.type];
             let sharpnessMultiple = this.getSharpnessMultiple(status.sharpness);
 
@@ -779,8 +781,8 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="col-12 mhwc-value">
                             {status.sets.map((data, index) => {
-                                let setName = DataSet.setHelper.getInfo(data.id).name;
-                                let skillName = DataSet.skillHelper.getInfo(data.skill.id).name;
+                                let setName = SetDataset.getInfo(data.id).name;
+                                let skillName = SkillDataset.getInfo(data.skill.id).name;
 
                                 return (
                                     <div key={`${index}_${data.id}`} className="row mhwc-set">
@@ -806,7 +808,7 @@ export default class CharacterStatus extends Component {
                             {status.skills.sort((a, b) => {
                                 return b.level - a.level;
                             }).map((data) => {
-                                let skillName = DataSet.skillHelper.getInfo(data.id).name;
+                                let skillName = SkillDataset.getInfo(data.id).name;
 
                                 return (
                                     <div key={data.id} className="row mhwc-skill">

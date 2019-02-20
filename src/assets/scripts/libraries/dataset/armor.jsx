@@ -1,12 +1,15 @@
 'use strict';
 /**
- * Dataset Armor Helper
+ * Dataset Armor
  *
  * @package     MHW Calculator
  * @author      Scar Wu
  * @copyright   Copyright (c) Scar Wu (http://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
+
+// Load Core Libraries
+import Helper from 'core/helper';
 
 // Load Dataset
 import Armors from 'json/datasets/armors.json';
@@ -49,7 +52,7 @@ let dataset = Armors.map((pack) => {
     return armorsA.concat(armorsB);
 });
 
-class ArmorHelper {
+class ArmorDataset {
 
     constructor (list) {
         this.mapping = {};
@@ -151,8 +154,8 @@ class ArmorHelper {
     };
 
     getInfo = (name) => {
-        return undefined !== this.mapping[name]
-            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
+        return (undefined !== this.mapping[name])
+            ? Helper.deepCopy(this.mapping[name]) : null;
     };
 
     // Conditional Functions
@@ -181,4 +184,4 @@ class ArmorHelper {
     };
 }
 
-export default new ArmorHelper(dataset);
+export default new ArmorDataset(dataset);

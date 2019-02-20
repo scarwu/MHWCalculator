@@ -15,7 +15,11 @@ import MD5 from 'md5';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
-import DataSet from 'libraries/dataset';
+import ArmorDataset from 'libraries/dataset/armor';
+import SetDataset from 'libraries/dataset/set';
+import JewelDataset from 'libraries/dataset/jewel';
+import CharmDataset from 'libraries/dataset/charm';
+import CommonDataset from 'libraries/dataset/common';
 
 // Load Constant
 import Constant from 'constant';
@@ -55,12 +59,12 @@ class FittingAlgorithm {
 
         // Create Info by Sets
         sets.sort((a, b) => {
-            let setInfoA = DataSet.setHelper.getInfo(a.id);
-            let setInfoB = DataSet.setHelper.getInfo(b.id);
+            let setInfoA = SetDataset.getInfo(a.id);
+            let setInfoB = SetDataset.getInfo(b.id);
 
             return setInfoB.skills.pop().require - setInfoA.skills.pop().require;
         }).forEach((set) => {
-            let setInfo = DataSet.setHelper.getInfo(set.id);
+            let setInfo = SetDataset.getInfo(set.id);
 
             this.conditionSets[set.id] = setInfo.skills[set.step - 1].require;
         });
@@ -77,7 +81,7 @@ class FittingAlgorithm {
 
             this.conditionSkills[skill.id] = skill.level;
 
-            let jewelInfo = DataSet.jewelHelper.hasSkill(skill.id).getItems();
+            let jewelInfo = JewelDataset.hasSkill(skill.id).getItems();
             let jewel = (0 !== jewelInfo.length) ? jewelInfo[0] : null;
 
             this.correspondJewels[skill.id] = (null !== jewel) ? {
@@ -110,7 +114,7 @@ class FittingAlgorithm {
 
             // Get Equipment Info
             if ('weapon' === equipType) {
-                equipInfo = DataSet.getAppliedWeaponInfo(equips.weapon);
+                equipInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
                 equipInfo.type = equipType;
             } else if ('helm' === equipType
                 || 'chest' === equipType
@@ -118,9 +122,9 @@ class FittingAlgorithm {
                 || 'waist' === equipType
                 || 'leg' === equipType) {
 
-                equipInfo = DataSet.getAppliedArmorInfo(equips[equipType]);
+                equipInfo = CommonDataset.getAppliedArmorInfo(equips[equipType]);
             } else if ('charm' === equipType) {
-                equipInfo = DataSet.getAppliedCharmInfo(equips.charm);
+                equipInfo = CommonDataset.getAppliedCharmInfo(equips.charm);
                 equipInfo.type = equipType;
             }
 
@@ -185,7 +189,7 @@ class FittingAlgorithm {
 
                 // Create Candidate Equips
                 Object.keys(this.conditionSets).forEach((setId) => {
-                    let equips = DataSet.armorHelper.typeIs(equipType).setIs(setId).getItems();
+                    let equips = ArmorDataset.typeIs(equipType).setIs(setId).getItems();
 
                     // Get Candidate Equips
                     candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
@@ -335,9 +339,9 @@ class FittingAlgorithm {
                     || 'waist' === equipType
                     || 'leg' === equipType) {
 
-                    equips = DataSet.armorHelper.typeIs(equipType).hasSkill(skillId).getItems();
+                    equips = ArmorDataset.typeIs(equipType).hasSkill(skillId).getItems();
                 } else if ('charm' === equipType) {
-                    equips = DataSet.charmHelper.hasSkill(skillId).getItems();
+                    equips = CharmDataset.hasSkill(skillId).getItems();
                 }
 
                 // Get Candidate Equips
@@ -346,7 +350,7 @@ class FittingAlgorithm {
                 if ('charm' !== equipType) {
 
                     // Get Equips With Slot
-                    equips = DataSet.armorHelper.typeIs(equipType).rareIs(0).getItems();
+                    equips = ArmorDataset.typeIs(equipType).rareIs(0).getItems();
 
                     // Get Candidate Equips
                     candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);

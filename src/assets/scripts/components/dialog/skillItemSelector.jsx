@@ -17,7 +17,7 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
-import DataSet from 'libraries/dataset';
+import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -79,9 +79,9 @@ export default class SkillItemSelector extends Component {
             return skill.id;
         });
 
-        DataSet.skillHelper.getNames().sort().forEach((skillId) => {
+        SkillDataset.getNames().sort().forEach((skillId) => {
 
-            let skill = DataSet.skillHelper.getInfo(skillId);
+            let skill = SkillDataset.getInfo(skillId);
 
             if (false === skill.from.jewel && false === skill.from.armor) {
                 return;

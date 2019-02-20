@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Dataset Enhance Helper
+ * Dataset Charm
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -8,36 +8,39 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+// Load Core Libraries
+import Helper from 'core/helper';
+
 // Load Dataset
-import Enhances from 'json/datasets/enhances.json';
+import Charms from 'json/datasets/charms.json';
 
 // [
 //     0: id,
 //     1: name,
-//     2: list [
+//     2: rare,
+//     3: skills [
 //         [
-//             0: level,
-//             1: description,
-//             2: reaction { ... }
+//             0: id,
+//             1: level
 //         ],
 //         [ ... ]
 //     ]
 // ]
-let dataset = Enhances.map((enhance) => {
+let dataset = Charms.map((charm) => {
     return {
-        id: enhance[0],
-        name: enhance[1],
-        list: enhance[2].map((item) => {
+        id: charm[0],
+        name: charm[1],
+        rare: charm[2],
+        skills: charm[3].map((skill) => {
             return {
-                level: item[0],
-                description: item[1],
-                reaction: item[2]
-            }
+                id: skill[0],
+                level: skill[1]
+            };
         })
     };
 });
 
-class EnhanceHelper {
+class CharmDataset {
 
     constructor (list) {
         this.mapping = {};
@@ -60,8 +63,18 @@ class EnhanceHelper {
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
+            let isSkip = true;
+
             if (null !== this.filterSkillName) {
-                if (this.filterSkillName !== data.skill.id) {
+                for (let index in data.skills) {
+                    if (this.filterSkillName !== data.skills[index].id) {
+                        continue;
+                    }
+
+                    isSkip = false;
+                }
+
+                if (isSkip) {
                     return false;
                 }
             }
@@ -75,10 +88,11 @@ class EnhanceHelper {
     };
 
     getInfo = (name) => {
-        return undefined !== this.mapping[name]
-            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
+        return (undefined !== this.mapping[name])
+            ? Helper.deepCopy(this.mapping[name]) : null;
     };
 
+    // Conditional Functions
     hasSkill = (name) => {
         this.filterSkillName = name;
 
@@ -86,4 +100,4 @@ class EnhanceHelper {
     };
 }
 
-export default new EnhanceHelper(dataset);
+export default new CharmDataset(dataset);

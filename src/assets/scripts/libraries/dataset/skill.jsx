@@ -1,12 +1,15 @@
 'use strict';
 /**
- * Dataset Skill Helper
+ * Dataset Skill
  *
  * @package     MHW Calculator
  * @author      Scar Wu
  * @copyright   Copyright (c) Scar Wu (http://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
+
+// Load Core Libraries
+import Helper from 'core/helper';
 
 // Load Dataset
 import Skills from 'json/datasets/skills.json';
@@ -49,7 +52,7 @@ let dataset = Skills.map((skill) => {
     };
 });
 
-class SkillHelper {
+class SkillDataset {
 
     constructor (list) {
         this.mapping = {};
@@ -68,9 +71,9 @@ class SkillHelper {
     };
 
     getInfo = (name) => {
-        return undefined !== this.mapping[name]
-            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
+        return (undefined !== this.mapping[name])
+            ? Helper.deepCopy(this.mapping[name]) : null;
     };
 }
 
-export default new SkillHelper(dataset);
+export default new SkillDataset(dataset);

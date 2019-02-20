@@ -8,7 +8,7 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-let prefix = 'mhwcStatus';
+let prefix = 'mhwc:v2';
 let storage = window.localStorage;
 
 function get(key) {

@@ -890,7 +890,7 @@ foreach ($datasetMap as $name => $data) {
 }
 
 foreach ($langMap as $lang => $data) {
-    saveJson("langs/{$lang}/datasets", $data);
+    saveJson("langs/{$lang}/dataset", $data);
 }
 
 saveJson("testData", $testData);

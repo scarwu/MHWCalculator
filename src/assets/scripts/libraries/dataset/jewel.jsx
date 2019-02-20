@@ -1,12 +1,15 @@
 'use strict';
 /**
- * Dataset Jewel Helper
+ * Dataset Jewel
  *
  * @package     MHW Calculator
  * @author      Scar Wu
  * @copyright   Copyright (c) Scar Wu (http://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
+
+// Load Core Libraries
+import Helper from 'core/helper';
 
 // Load Dataset
 import Jewels from 'json/datasets/jewels.json';
@@ -34,7 +37,7 @@ let dataset = Jewels.map((jewel) => {
     };
 });
 
-class JewelHelper {
+class JewelDataset {
 
     constructor (list) {
         this.mapping = {};
@@ -98,8 +101,8 @@ class JewelHelper {
     };
 
     getInfo = (name) => {
-        return undefined !== this.mapping[name]
-            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
+        return (undefined !== this.mapping[name])
+            ? Helper.deepCopy(this.mapping[name]) : null;
     };
 
     // Conditional Functions
@@ -130,4 +133,4 @@ class JewelHelper {
     };
 }
 
-export default new JewelHelper(dataset);
+export default new JewelDataset(dataset);

@@ -20,7 +20,10 @@ import Helper from 'core/helper';
 // Load Custom Libraries
 import _ from 'libraries/lang';
 import Base64 from 'libraries/base64';
-import DataSet from 'libraries/dataset';
+import SetDataset from 'libraries/dataset/set';
+import SkillDataset from 'libraries/dataset/skill';
+import JewelDataset from 'libraries/dataset/jewel';
+import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -82,7 +85,7 @@ export default class Main extends Component {
 
     handleSetStepUp = (index) => {
         let sets = this.state.sets;
-        let setInfo = DataSet.setHelper.getInfo(sets[index].id);
+        let setInfo = SetDataset.getInfo(sets[index].id);
 
         if (setInfo.skills.length === sets[index].step) {
             return false;
@@ -177,7 +180,7 @@ export default class Main extends Component {
 
     handleSkillLevelUp = (index) => {
         let skills = this.state.skills;
-        let skillInfo = DataSet.skillHelper.getInfo(skills[index].id);
+        let skillInfo = SkillDataset.getInfo(skills[index].id);
 
         if (skillInfo.list.length === skills[index].level) {
             return false;
@@ -304,7 +307,7 @@ export default class Main extends Component {
             let equipInfo = null;
 
             if ('weapon' === equipType) {
-                equipInfo = DataSet.getAppliedWeaponInfo(equips.weapon);
+                equipInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
                 equipInfo.slots.forEach((data, index) => {
                     slotMap[data.size].push({
                         type: equipType,
@@ -317,7 +320,7 @@ export default class Main extends Component {
                 || 'waist' === equipType
                 || 'leg' === equipType) {
 
-                equipInfo = DataSet.getAppliedArmorInfo(equips[equipType]);
+                equipInfo = CommonDataset.getAppliedArmorInfo(equips[equipType]);
                 equipInfo.slots.forEach((data, index) => {
                     slotMap[data.size].push({
                         type: equipType,
@@ -328,12 +331,12 @@ export default class Main extends Component {
         });
 
         Object.keys(bundle.jewels).sort((a, b) => {
-            let jewelInfoA = DataSet.jewelHelper.getInfo(a);
-            let jewelInfoB = DataSet.jewelHelper.getInfo(b);
+            let jewelInfoA = JewelDataset.getInfo(a);
+            let jewelInfoB = JewelDataset.getInfo(b);
 
             return jewelInfoA.size - jewelInfoB.size;
         }).forEach((jewelId) => {
-            let jewelInfo = DataSet.jewelHelper.getInfo(jewelId);
+            let jewelInfo = JewelDataset.getInfo(jewelId);
             let currentSize = jewelInfo.size;
 
             let jewelCount = bundle.jewels[jewelId];
@@ -563,7 +566,7 @@ export default class Main extends Component {
         let sets = this.state.sets;
 
         return sets.map((data, index) => {
-            let setInfo = DataSet.setHelper.getInfo(data.id);
+            let setInfo = SetDataset.getInfo(data.id);
             let setRequire = setInfo.skills[data.step - 1].require;
 
             return (
@@ -591,7 +594,7 @@ export default class Main extends Component {
                                 return false;
                             }
 
-                            let skillName = DataSet.skillHelper.getInfo(skill.id).name;
+                            let skillName = SkillDataset.getInfo(skill.id).name;
 
                             return (
                                 <div key={skill.id}>
@@ -609,7 +612,7 @@ export default class Main extends Component {
         let skills = this.state.skills;
 
         return skills.map((data, index) => {
-            let skillInfo = DataSet.skillHelper.getInfo(data.id);
+            let skillInfo = SkillDataset.getInfo(data.id);
 
             return (
                 <div key={skillInfo.id} className="row mhwc-item">

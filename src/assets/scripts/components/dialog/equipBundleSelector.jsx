@@ -18,7 +18,9 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
-import DataSet from 'libraries/dataset';
+import WeaponDataset from 'libraries/dataset/weapon';
+import ArmorDataset from 'libraries/dataset/armor';
+import CharmDataset from 'libraries/dataset/charm';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -152,19 +154,19 @@ export default class EquipBundleSelector extends Component {
      */
     renderRow = (data, index) => {
         let weaponName = (null !== data.equips.weapon.id)
-            ? _(DataSet.weaponHelper.getInfo(data.equips.weapon.id).name) : null;
+            ? _(WeaponDataset.getInfo(data.equips.weapon.id).name) : null;
         let helmName = (null !== data.equips.helm.id)
-            ? _(DataSet.armorHelper.getInfo(data.equips.helm.id).name) : null;
+            ? _(ArmorDataset.getInfo(data.equips.helm.id).name) : null;
         let chestName = (null !== data.equips.chest.id)
-            ? _(DataSet.armorHelper.getInfo(data.equips.chest.id).name) : null;
+            ? _(ArmorDataset.getInfo(data.equips.chest.id).name) : null;
         let armName = (null !== data.equips.arm.id)
-            ? _(DataSet.armorHelper.getInfo(data.equips.arm.id).name) : null;
+            ? _(ArmorDataset.getInfo(data.equips.arm.id).name) : null;
         let waistName = (null !== data.equips.waist.id)
-            ? _(DataSet.armorHelper.getInfo(data.equips.waist.id).name) : null;
+            ? _(ArmorDataset.getInfo(data.equips.waist.id).name) : null;
         let legName = (null !== data.equips.leg.id)
-            ? _(DataSet.armorHelper.getInfo(data.equips.leg.id).name) : null;
+            ? _(ArmorDataset.getInfo(data.equips.leg.id).name) : null;
         let charmName = (null !== data.equips.charm.id)
-            ? _(DataSet.charmHelper.getInfo(data.equips.charm.id).name) : null;
+            ? _(CharmDataset.getInfo(data.equips.charm.id).name) : null;
 
         return (
             <tr key={data.id}>
@@ -197,20 +199,44 @@ export default class EquipBundleSelector extends Component {
         let equips = this.state.equips;
         let equipBundleList = this.state.equipBundleList;
 
-        let weaponName = (null !== equips && null !== equips.weapon.id)
-            ? _(DataSet.weaponHelper.getInfo(equips.weapon.id).name) : null;
-        let helmName = (null !== equips && null !== equips.helm.id)
-            ? _(DataSet.armorHelper.getInfo(equips.helm.id).name) : null;
-        let chestName = (null !== equips && null !== equips.chest.id)
-            ? _(DataSet.armorHelper.getInfo(equips.chest.id).name) : null;
-        let armName = (null !== equips && null !== equips.arm.id)
-            ? _(DataSet.armorHelper.getInfo(equips.arm.id).name) : null;
-        let waistName = (null !== equips && null !== equips.waist.id)
-            ? _(DataSet.armorHelper.getInfo(equips.waist.id).name) : null;
-        let legName = (null !== equips && null !== equips.leg.id)
-            ? _(DataSet.armorHelper.getInfo(equips.leg.id).name) : null;
-        let charmName = (null !== equips && null !== equips.charm.id)
-            ? _(DataSet.charmHelper.getInfo(equips.charm.id).name) : null;
+        let DefaultRow = false;
+
+        if (null !== equips) {
+            let weaponName = (null !== equips.weapon.id)
+                ? _(WeaponDataset.getInfo(equips.weapon.id).name) : null;
+            let helmName = (null !== equips.helm.id)
+                ? _(ArmorDataset.getInfo(equips.helm.id).name) : null;
+            let chestName = (null !== equips.chest.id)
+                ? _(ArmorDataset.getInfo(equips.chest.id).name) : null;
+            let armName = (null !== equips.arm.id)
+                ? _(ArmorDataset.getInfo(equips.arm.id).name) : null;
+            let waistName = (null !== equips.waist.id)
+                ? _(ArmorDataset.getInfo(equips.waist.id).name) : null;
+            let legName = (null !== equips.leg.id)
+                ? _(ArmorDataset.getInfo(equips.leg.id).name) : null;
+            let charmName = (null !== equips.charm.id)
+                ? _(CharmDataset.getInfo(equips.charm.id).name) : null;
+
+            DefaultRow = (
+                <tr>
+                    <td><input type="text" ref="bundleId" /></td>
+                    <td><span>{weaponName}</span></td>
+                    <td><span>{helmName}</span></td>
+                    <td><span>{chestName}</span></td>
+                    <td><span>{armName}</span></td>
+                    <td><span>{waistName}</span></td>
+                    <td><span>{legName}</span></td>
+                    <td><span>{charmName}</span></td>
+                    <td>
+                        <div className="mhwc-icons_bundle">
+                            <FunctionalIcon
+                                iconName="floppy-o" altName={_('save')}
+                                onClick={() => {this.handleBundleSave(null)}} />
+                        </div>
+                    </td>
+                </tr>
+            );
+        }
 
         return (
             <table className="mhwc-equip_bundle_table">
@@ -228,26 +254,7 @@ export default class EquipBundleSelector extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {null !== equips ? (
-                        <tr>
-                            <td><input type="text" ref="bundleId" /></td>
-                            <td><span>{weaponName}</span></td>
-                            <td><span>{helmName}</span></td>
-                            <td><span>{chestName}</span></td>
-                            <td><span>{armName}</span></td>
-                            <td><span>{waistName}</span></td>
-                            <td><span>{legName}</span></td>
-                            <td><span>{charmName}</span></td>
-                            <td>
-                                <div className="mhwc-icons_bundle">
-                                    <FunctionalIcon
-                                        iconName="floppy-o" altName={_('save')}
-                                        onClick={() => {this.handleBundleSave(null)}} />
-                                </div>
-                            </td>
-                        </tr>
-                    ) : false}
-
+                    {DefaultRow}
                     {equipBundleList.map(this.renderRow)}
                 </tbody>
             </table>

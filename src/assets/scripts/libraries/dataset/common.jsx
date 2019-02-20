@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Dataset
+ * Common
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -8,20 +8,22 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+// Load Core Libraries
+import Helper from 'core/helper';
+
 // Load Constant
 import Constant from 'constant';
 
-// Load Helpers
-import SetHelper from 'libraries/dataset/setHelper';
-import EnhanceHelper from 'libraries/dataset/enhanceHelper';
-import WeaponHelper from 'libraries/dataset/weaponHelper';
-import ArmorHelper from 'libraries/dataset/armorHelper';
-import CharmHelper from 'libraries/dataset/charmHelper';
-import JewelHelper from 'libraries/dataset/jewelHelper';
-import SkillHelper from 'libraries/dataset/skillHelper';
+// Load Datasets
+import WeaponDataset from 'libraries/dataset/weapon';
+import ArmorDataset from 'libraries/dataset/armor';
+import CharmDataset from 'libraries/dataset/charm';
+import JewelDataset from 'libraries/dataset/jewel';
+import EnhanceDataset from 'libraries/dataset/enhance';
+import SkillDataset from 'libraries/dataset/skill';
 
 let getAppliedWeaponInfo = (extend) => {
-    let info = WeaponHelper.getInfo(extend.id);
+    let info = WeaponDataset.getInfo(extend.id);
 
     if (null !== info.element.attack) {
         info.element.attack.value = info.element.attack.minValue;
@@ -73,7 +75,7 @@ let getAppliedWeaponInfo = (extend) => {
 
     Object.keys(enhanceLevelMapping).forEach((enhanceId) => {
         let enhanceLevel = enhanceLevelMapping[enhanceId];
-        let enhanceInfo = EnhanceHelper.getInfo(enhanceId);
+        let enhanceInfo = EnhanceDataset.getInfo(enhanceId);
 
         if (null === enhanceInfo.list[enhanceLevel - 1].reaction) {
             return false;
@@ -128,7 +130,7 @@ let getAppliedWeaponInfo = (extend) => {
         if (null !== extend.slotIds
             && 'string' === typeof extend.slotIds[index]) {
 
-            jewelInfo = JewelHelper.getInfo(extend.slotIds[index]);
+            jewelInfo = JewelDataset.getInfo(extend.slotIds[index]);
             jewelId = extend.slotIds[index];
             jewelSize = jewelInfo.size;
             skillId = jewelInfo.skill.id;
@@ -156,7 +158,7 @@ let getAppliedWeaponInfo = (extend) => {
 
     Object.keys(skillLevelMapping).forEach((skillId) => {
         let skillLevel = skillLevelMapping[skillId];
-        let skillInfo = SkillHelper.getInfo(skillId);
+        let skillInfo = SkillDataset.getInfo(skillId);
 
         // Fix Skill Level Overflow
         if (skillLevel > skillInfo.list.length) {
@@ -174,11 +176,11 @@ let getAppliedWeaponInfo = (extend) => {
         return b.level - a.level;
     });
 
-    return info;
+    return Helper.deepCopy(info);
 };
 
 let getAppliedArmorInfo = (extend) => {
-    let info = ArmorHelper.getInfo(extend.id);
+    let info = ArmorDataset.getInfo(extend.id);
 
     // Handler Skill & Slot
     let skillLevelMapping = {};
@@ -202,7 +204,7 @@ let getAppliedArmorInfo = (extend) => {
         if (null !== extend.slotIds
             && 'string' === typeof extend.slotIds[index]) {
 
-            jewelInfo = JewelHelper.getInfo(extend.slotIds[index]);
+            jewelInfo = JewelDataset.getInfo(extend.slotIds[index]);
             jewelId = extend.slotIds[index];
             jewelSize = jewelInfo.size;
             skillId = jewelInfo.skill.id;
@@ -230,7 +232,7 @@ let getAppliedArmorInfo = (extend) => {
 
     Object.keys(skillLevelMapping).forEach((skillId) => {
         let skillLevel = skillLevelMapping[skillId];
-        let skillInfo = SkillHelper.getInfo(skillId);
+        let skillInfo = SkillDataset.getInfo(skillId);
 
         info.skills.push({
             id: skillId,
@@ -243,11 +245,11 @@ let getAppliedArmorInfo = (extend) => {
         return b.level - a.level;
     });
 
-    return info;
+    return Helper.deepCopy(info);
 };
 
 let getAppliedCharmInfo = (extend) => {
-    let info = CharmHelper.getInfo(extend.id);
+    let info = CharmDataset.getInfo(extend.id);
 
     // Handler Skill & Slot
     let skillLevelMapping = {};
@@ -267,7 +269,7 @@ let getAppliedCharmInfo = (extend) => {
 
     Object.keys(skillLevelMapping).forEach((skillId) => {
         let skillLevel = skillLevelMapping[skillId];
-        let skillInfo = SkillHelper.getInfo(skillId);
+        let skillInfo = SkillDataset.getInfo(skillId);
 
         // Fix Skill Level Overflow
         if (skillLevel > skillInfo.list.length) {
@@ -285,17 +287,10 @@ let getAppliedCharmInfo = (extend) => {
         return b.level - a.level;
     });
 
-    return info;
+    return Helper.deepCopy(info);
 };
 
 export default {
-    setHelper: SetHelper,
-    enhanceHelper: EnhanceHelper,
-    weaponHelper: WeaponHelper,
-    armorHelper: ArmorHelper,
-    charmHelper: CharmHelper,
-    jewelHelper: JewelHelper,
-    skillHelper: SkillHelper,
     getAppliedWeaponInfo: getAppliedWeaponInfo,
     getAppliedArmorInfo: getAppliedArmorInfo,
     getAppliedCharmInfo: getAppliedCharmInfo

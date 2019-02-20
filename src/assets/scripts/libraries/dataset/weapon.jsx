@@ -1,12 +1,15 @@
 'use strict';
 /**
- * Dataset Weapon Helper
+ * Dataset Weapon
  *
  * @package     MHW Calculator
  * @author      Scar Wu
  * @copyright   Copyright (c) Scar Wu (http://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
+
+// Load Core Libraries
+import Helper from 'core/helper';
 
 // Load Dataset
 import Weapons from 'json/datasets/weapons.json';
@@ -63,7 +66,7 @@ let dataset = Weapons.map((weapon) => {
     };
 });
 
-class WeaponHelper {
+class WeaponDataset {
 
     constructor (list) {
         this.mapping = {};
@@ -146,7 +149,7 @@ class WeaponHelper {
 
     getInfo = (name) => {
         return (undefined !== this.mapping[name])
-            ? JSON.parse(JSON.stringify(this.mapping[name])) : null;
+            ? Helper.deepCopy(this.mapping[name]) : null;
     };
 
     // Conditional Functions
@@ -199,4 +202,4 @@ class WeaponHelper {
     };
 }
 
-export default new WeaponHelper(dataset);
+export default new WeaponDataset(dataset);

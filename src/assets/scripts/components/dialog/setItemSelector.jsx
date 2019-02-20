@@ -17,7 +17,8 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
-import DataSet from 'libraries/dataset';
+import SetDataset from 'libraries/dataset/set';
+import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -79,9 +80,9 @@ export default class SetItemSelector extends Component {
             return set.id;
         });
 
-        DataSet.setHelper.getNames().sort().forEach((setId) => {
+        SetDataset.getNames().sort().forEach((setId) => {
 
-            let set = DataSet.setHelper.getInfo(setId);
+            let set = SetDataset.getInfo(setId);
 
             // Skip Selected Sets
             if (-1 !== data.indexOf(set.id)) {
@@ -126,7 +127,7 @@ export default class SetItemSelector extends Component {
                 </td>
                 <td>
                     {data.skills.map((skill, index) => {
-                        let skillInfo = DataSet.skillHelper.getInfo(skill.id);
+                        let skillInfo = SkillDataset.getInfo(skill.id);
 
                         return (
                             <div key={index}>
@@ -172,7 +173,7 @@ export default class SetItemSelector extends Component {
                         let text = data.id;
 
                         data.skills.forEach((data) => {
-                            let skillInfo = DataSet.skillHelper.getInfo(data.id);
+                            let skillInfo = SkillDataset.getInfo(data.id);
 
                             text += data.id + skillInfo.list[0].description;
                         })
@@ -193,7 +194,7 @@ export default class SetItemSelector extends Component {
                         let text = data.id;
 
                         data.skills.forEach((data) => {
-                            let skillInfo = DataSet.skillHelper.getInfo(data.id);
+                            let skillInfo = SkillDataset.getInfo(data.id);
 
                             text += data.id + skillInfo.list[0].description;
                         })
