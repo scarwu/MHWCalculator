@@ -384,7 +384,7 @@ export default class EquipItemSelector extends Component {
                         }
 
                         // Create Text
-                        let text = data.id;
+                        let text = _(data.name);
 
                         text += _(data.type);
 
@@ -395,6 +395,12 @@ export default class EquipItemSelector extends Component {
                         if (null !== data.element.status) {
                             text += _(data.element.status.type);
                         }
+
+                        data.skills.forEach((data) => {
+                            let skillInfo = SkillDataset.getInfo(data.id);
+
+                            text += _(skillInfo.name);
+                        });
 
                         // Search Nameword
                         if (null !== segment
@@ -489,15 +495,19 @@ export default class EquipItemSelector extends Component {
                     {this.state.includeList.map((data, index) => {
 
                         // Create Text
-                        let text = data.id;
+                        let text = _(data.name);
 
                         if (null !== data.set) {
-                            text += data.set.id;
+                            let setInfo = SetDataset.getInfo(data.set.id);
+
+                            text += _(setInfo.name);
                         }
 
                         data.skills.forEach((data) => {
-                            text += data.id;
-                        })
+                            let skillInfo = SkillDataset.getInfo(data.id);
+
+                            text += _(skillInfo.name);
+                        });
 
                         // Search Nameword
                         if (null !== segment
@@ -524,9 +534,11 @@ export default class EquipItemSelector extends Component {
                 <td><span>{data.rare}</span></td>
                 <td>
                     {data.skills.map((data, index) => {
+                        let skillInfo = SkillDataset.getInfo(data.id);
+
                         return (
                             <div key={index}>
-                                <span>{data.id} Lv.{data.level}</span>
+                                <span>{_(skillInfo.name)} Lv.{data.level}</span>
                             </div>
                         );
                     })}
@@ -566,11 +578,13 @@ export default class EquipItemSelector extends Component {
                     {this.state.includeList.map((data, index) => {
 
                         // Create Text
-                        let text = data.id;
+                        let text = _(data.name);
 
                         data.skills.forEach((data) => {
-                            text += data.id;
-                        })
+                            let skillInfo = SkillDataset.getInfo(data.id);
+
+                            text += _(skillInfo.anem);
+                        });
 
                         // Search Nameword
                         if (null !== segment
@@ -632,9 +646,11 @@ export default class EquipItemSelector extends Component {
                     {this.state.includeList.map((data, index) => {
 
                         // Create Text
-                        let text = data.id;
+                        let text = _(data.name);
 
-                        text += data.skill.id;
+                        let skillInfo = SkillDataset.getInfo(data.skill.id);
+
+                        text += _(skillInfo.name);
 
                         // Search Nameword
                         if (null !== segment
@@ -702,11 +718,11 @@ export default class EquipItemSelector extends Component {
                     {this.state.includeList.map((data, index) => {
 
                         // Create Text
-                        let text = data.id;
+                        let text = _(data.name);
 
                         data.list.forEach((data) => {
-                            text += data.description;
-                        })
+                            text += _(data.description);
+                        });
 
                         // Search Nameword
                         if (null !== segment
@@ -748,6 +764,7 @@ export default class EquipItemSelector extends Component {
                 <div className="mhwc-dialog">
                     <div className="mhwc-panel">
                         <input className="mhwc-text_segment" type="text"
+                            placeholder={_('inputKeyword')}
                             ref="segment" onChange={this.handleSegmentInput} />
 
                         {'weapon' === this.state.mode ? (

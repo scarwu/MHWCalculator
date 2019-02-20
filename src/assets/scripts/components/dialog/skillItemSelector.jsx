@@ -170,10 +170,10 @@ export default class SkillItemSelector extends Component {
                     {this.state.selectedList.map((data, index) => {
 
                         // Create Text
-                        let text = data.id;
+                        let text = _(data.name);
 
                         data.list.forEach((data) => {
-                            text += data.id + data.description;
+                            text += _(data.name) + _(data.description);
                         })
 
                         // Search Nameword
@@ -189,10 +189,10 @@ export default class SkillItemSelector extends Component {
                     {this.state.unselectedList.map((data, index) => {
 
                         // Create Text
-                        let text = data.id;
+                        let text = _(data.name);
 
                         data.list.forEach((data) => {
-                            text += data.id + data.description;
+                            text += _(data.name) + _(data.description);
                         })
 
                         // Search Nameword
@@ -215,6 +215,7 @@ export default class SkillItemSelector extends Component {
                 <div className="mhwc-dialog">
                     <div className="mhwc-panel">
                         <input className="mhwc-text_segment" type="text"
+                            placeholder={_('inputKeyword')}
                             ref="segment" onChange={this.handleSegmentInput} />
 
                         <div className="mhwc-icons_bundle">

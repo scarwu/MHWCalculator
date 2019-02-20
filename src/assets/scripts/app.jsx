@@ -567,8 +567,7 @@ export default class Main extends Component {
 
         // Is Show ChangeLog
         let isShowChangeLog = ('production' === Config.env)
-            ? (Config.buildTime !== parseInt(Status.get('buildTime')))
-            : false;
+            ? (Config.buildTime !== parseInt(Status.get('buildTime'))) : false;
 
         Status.set('buildTime', Config.buildTime);
 

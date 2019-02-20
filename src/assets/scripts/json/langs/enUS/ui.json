@@ -88,6 +88,7 @@
     "set":                "Set",
     "reset":              "Reset",
     "search":             "Search",
+    "inputKeyword":       "Input Keyword",
     "list":               "List",
     "requireCondition":   "Required Conditions",
     "candidateBundle":    "Candidate Bundles",
