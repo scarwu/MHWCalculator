@@ -32,12 +32,14 @@ import EquipBundleSelector from 'components/dialog/equipBundleSelector';
 import SetItemSelector from 'components/dialog/setItemSelector';
 import SkillItemSelector from 'components/dialog/skillItemSelector';
 import EquipItemSelector from 'components/dialog/equipItemSelector';
+import ChangeLog from 'components/dialog/changeLog';
 
 import CandidateBundles from 'components/candidateBundles';
 import EquipsDisplayer from 'components/equipsDisplayer';
 import CharacterStatus from 'components/characterStatus';
 
-// Load Constant
+// Load Config & Constant
+import Config from 'config';
 import Constant from 'constant';
 
 // Load Json
@@ -60,7 +62,8 @@ export default class Main extends Component {
         isShowEquipBundleSelector: false,
         isShowSetSelector: false,
         isShowSkillSelector: false,
-        isShowEquipSelector: false
+        isShowEquipSelector: false,
+        isShowChangeLog: false
     };
 
     /**
@@ -515,6 +518,18 @@ export default class Main extends Component {
         });
     };
 
+    handleChangeLogOpen = () => {
+        this.setState({
+            isShowChangeLog: true
+        });
+    };
+
+    handleChangeLogClose = () => {
+        this.setState({
+            isShowChangeLog: false
+        });
+    };
+
     refershUrlHash = () => {
         let equips = Helper.deepCopy(this.state.equips);
         let hash = Base64.encode(JSON.stringify(equips));
@@ -550,10 +565,19 @@ export default class Main extends Component {
                 ? equips
                 : Helper.deepCopy(TestData.equipsList[0]);
 
+        // Is Show ChangeLog
+        let isShowChangeLog = ('production' === Config.env)
+            ? (Config.buildTime !== parseInt(Status.get('buildTime')))
+            : false;
+
+        Status.set('buildTime', Config.buildTime);
+
+        // Set State
         this.setState({
             sets: sets,
             skills: skills,
-            equips: equips
+            equips: equips,
+            isShowChangeLog: isShowChangeLog
         }, () => {
             this.refershUrlHash();
         });
@@ -779,6 +803,11 @@ export default class Main extends Component {
                         onPickUp={this.handleEquipSelectorPickUp}
                         onToggle={this.handleEquipSelectorToggle}
                         onClose={this.handleEquipSelectorClose} />
+                ) : false}
+
+                {this.state.isShowChangeLog ? (
+                    <ChangeLog
+                        onClose={this.handleChangeLogClose} />
                 ) : false}
             </div>
         );

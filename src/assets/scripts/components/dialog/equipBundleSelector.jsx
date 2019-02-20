@@ -12,7 +12,6 @@
 import React, { Component } from 'react';
 
 // Load Core Libraries
-import Event from 'core/event';
 import Status from 'core/status';
 import Helper from 'core/helper';
 

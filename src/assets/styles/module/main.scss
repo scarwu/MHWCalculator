@@ -216,6 +216,11 @@ $panel-height: 40px;
         @include font-size(1.6);
     }
 
+    .mhwc-slim-dialog {
+        left: 30%;
+        right: 30%;
+    }
+
     .mhwc-panel {
         position: relative;
         margin-top: 5px;

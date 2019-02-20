@@ -8,6 +8,9 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+// Load Core Libraries
+import Status from 'core/status';
+
 // Load Constant
 import Constant from 'constant';
 
@@ -24,8 +27,15 @@ let langs = {
 
 let defaultLang = Constant.defaultLang;
 let browserLnag = navigator.language.replace('-', '');
-let currentLang = ('undefined' !== typeof langs[browserLnag])
-    ? browserLnag : defaultLang;
+let currentLang = Status.get('lang');
+
+// Decide Current Lang
+currentLang = ('undefined' !== typeof langs[currentLang])
+    ? currentLang : ('undefined' !== typeof langs[browserLnag])
+        ? browserLnag : defaultLang;
+
+// Set Status
+Status.set('lang', currentLang);
 
 export default (key) => {
     return ('undefined' !== typeof langs[currentLang][key])
