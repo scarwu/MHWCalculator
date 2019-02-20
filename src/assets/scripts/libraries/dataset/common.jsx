@@ -254,7 +254,7 @@ let getAppliedCharmInfo = (extend) => {
     // Handler Skill & Slot
     let skillLevelMapping = {};
 
-    info.skills || info.skills.forEach((data, index) => {
+    info.skills && info.skills.forEach((data, index) => {
         let skillId = data.id;
 
         if (undefined === skillLevelMapping[skillId]) {
