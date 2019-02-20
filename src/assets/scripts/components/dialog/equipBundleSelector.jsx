@@ -169,7 +169,7 @@ export default class EquipBundleSelector extends Component {
 
         return (
             <tr key={data.id}>
-                <td><input type="text" ref={'bundleId_' + index} defaultValue={data.id} /></td>
+                <td><input type="text" placeholder={_('inputName')} ref={'bundleId_' + index} defaultValue={data.id} /></td>
                 <td><span>{weaponName}</span></td>
                 <td><span>{helmName}</span></td>
                 <td><span>{chestName}</span></td>
@@ -218,7 +218,7 @@ export default class EquipBundleSelector extends Component {
 
             DefaultRow = (
                 <tr>
-                    <td><input type="text" ref="bundleId" /></td>
+                    <td><input type="text" placeholder={_('inputName')} ref="bundleId" /></td>
                     <td><span>{weaponName}</span></td>
                     <td><span>{helmName}</span></td>
                     <td><span>{chestName}</span></td>
