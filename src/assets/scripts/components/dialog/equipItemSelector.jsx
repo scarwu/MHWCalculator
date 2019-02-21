@@ -124,13 +124,13 @@ export default class EquipItemSelector extends Component {
             }
         } else if ('weapon' === data.equipType) {
             mode = 'weapon';
-            type = Constant.weapons[0];
+            type = Constant.weaponTypes[0];
 
             if (null !== data.equipId) {
                 type = WeaponDataset.getInfo(data.equipId).type;
             }
 
-            Constant.weapons.forEach((weaponType) => {
+            Constant.weaponTypes.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
                     WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
                         if (undefined !== ignoreEquips['weapon']
@@ -751,7 +751,7 @@ export default class EquipItemSelector extends Component {
 
                         {'weapon' === this.state.mode ? (
                             <select defaultValue={this.state.type} ref="type" onChange={this.handleTypeChange}>
-                                {Constant.weapons.map((type) => {
+                                {Constant.weaponTypes.map((type) => {
                                     return (
                                         <option key={type} value={type}>{_(type)}</option>
                                     );

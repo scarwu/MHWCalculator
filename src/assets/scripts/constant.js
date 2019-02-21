@@ -14,14 +14,14 @@ export default {
         zhTW: '正體中文',
         enUS: 'English'
     },
-    elements: [
+    resistances: [
         'fire',
         'water',
         'thunder',
         'ice',
         'dragon'
     ],
-    weapons: [
+    weaponTypes: [
         'greatSword',
         'longSword',
         'swordAndShield',
@@ -36,6 +36,13 @@ export default {
         'bow',
         'lightBowgun',
         'heavyBowgun'
+    ],
+    armorTypes: [
+        'helm',
+        'chest',
+        'arm',
+        'waist',
+        'leg'
     ],
     sharpnessMultiple: {
         raw: {

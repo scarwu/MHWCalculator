@@ -282,7 +282,9 @@ export default class CandidateBundles extends Component {
                     <div className="row mhwc-search_info">
                         <div className="col-12">
                             <span>
-                                搜尋花費 {this.state.searchTime} 秒，並列出 <input type="text" defaultValue={this.state.bundleLimit} ref="bundleLimit" onChange={this.handleLimitChange} /> / {this.state.bundleList.length} 筆結果。
+                                {_('searchResult1').replace('%s', this.state.searchTime)}
+                                <input type="text" defaultValue={this.state.bundleLimit} ref="bundleLimit" onChange={this.handleLimitChange} />
+                                {_('searchResult2').replace('%s', this.state.bundleList.length)}
                             </span>
                         </div>
                     </div>

@@ -131,7 +131,7 @@ export default class CharacterStatus extends Component {
                 return;
             }
 
-            Constant.elements.forEach((elementType) => {
+            Constant.resistances.forEach((elementType) => {
                 status.resistance[elementType] += info[equipType].resistance[elementType];
             });
 
@@ -755,7 +755,7 @@ export default class CharacterStatus extends Component {
                                 </div>
                             </div>
 
-                            {Constant.elements.map((elementType) => {
+                            {Constant.resistances.map((elementType) => {
                                 return [(
                                     <div key={elementType + '_1'} className="col-4">
                                         <div className="mhwc-name">
@@ -889,10 +889,10 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="row">
                             <div className="col-8 mhwc-name">
-                                <span>每</span>
+                                <span>{_('every')}</span>
                                 <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.rawAttack}
                                     ref="tuningRawAttack" onChange={this.handleTuningChange} />
-                                <span>點基礎攻擊力期望值</span>
+                                <span>{_('rawAttackEV')}</span>
                             </div>
                             <div className="col-4 mhwc-value">
                                 <span>{extraInfo.perNRawAttackExpectedValue}</span>
@@ -900,10 +900,10 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="row">
                             <div className="col-8 mhwc-name">
-                                <span>每</span>
+                                <span>{_('every')}</span>
                                 <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.rawCriticalRate}
                                     ref="tuningRawCriticalRate" onChange={this.handleTuningChange} />
-                                <span>點會心率期望值</span>
+                                <span>{_('criticalRateEV')}</span>
                             </div>
                             <div className="col-4 mhwc-value">
                                 <span>{extraInfo.perNRawCriticalRateExpectedValue}</span>
@@ -911,10 +911,10 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="row">
                             <div className="col-8 mhwc-name">
-                                <span>每</span>
+                                <span>{_('every')}</span>
                                 <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.rawCriticalMultiple}
                                     ref="tuningRawCriticalMultiple" onChange={this.handleTuningChange} />
-                                <span>點會心倍數期望值</span>
+                                <span>{_('criticalMultipleEV')}</span>
                             </div>
                             <div className="col-4 mhwc-value">
                                 <span>{extraInfo.perNRawCriticalMultipleExpectedValue}</span>
@@ -922,10 +922,10 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="row">
                             <div className="col-8 mhwc-name">
-                                <span>每</span>
+                                <span>{_('every')}</span>
                                 <input className="mhwc-tuning" type="text" defaultValue={this.state.tuning.elementAttack}
                                     ref="tuningElementAttack" onChange={this.handleTuningChange} />
-                                <span>點屬性攻擊力期望值</span>
+                                <span>{_('elementAttackEV')}</span>
                             </div>
                             <div className="col-4 mhwc-value">
                                 <span>{extraInfo.perNElementAttackExpectedValue}</span>
