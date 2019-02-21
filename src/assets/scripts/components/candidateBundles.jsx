@@ -13,6 +13,7 @@ import React, { Component } from 'react';
 
 // Load Core Libraries
 import Event from 'core/event';
+import Status from 'core/status';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
@@ -67,6 +68,17 @@ export default class CandidateBundles extends Component {
     /**
      * Lifecycle Functions
      */
+    componentWillMount () {
+        let candidateBundles = Status.get('candidateBundles');
+
+        if (undefined !== candidateBundles) {
+            this.setState({
+                bundleList: candidateBundles.bundleList,
+                searchTime: candidateBundles.searchTime
+            });
+        }
+    }
+
     componentDidMount () {
         Event.on('SearchCandidateEquips', 'CandidateBundles', (data) => {
             this.setState({
@@ -82,6 +94,11 @@ export default class CandidateBundles extends Component {
 
                 Helper.log('Bundle List:', bundleList);
                 Helper.log('Search Time:', searchTime);
+
+                Status.set('candidateBundles', {
+                    bundleList: bundleList,
+                    searchTime: searchTime
+                });
 
                 this.setState({
                     bundleList: bundleList,

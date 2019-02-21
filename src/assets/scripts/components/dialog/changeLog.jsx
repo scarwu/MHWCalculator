@@ -48,7 +48,7 @@ export default class ChangeLog extends Component {
 
                     <hr />
 
-                    <h2>2019/02/xx</h2>
+                    <h2>2019/02/21</h2>
                     <ul>
                         <li>多國語系界面</li>
                         <li>修正功能及文字錯誤</li>
@@ -109,7 +109,7 @@ export default class ChangeLog extends Component {
 
                     <hr />
 
-                    <h2>2019/02/xx</h2>
+                    <h2>2019/02/21</h2>
                     <ul>
                         <li>Announce english version</li>
                     </ul>

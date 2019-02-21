@@ -54,6 +54,7 @@ export default class Main extends Component {
 
     // Initial State
     state = {
+        lang: Status.get('lang'),
         sets: [],
         skills: [],
         equips: Helper.deepCopy(Constant.defaultEquips),
@@ -92,7 +93,9 @@ export default class Main extends Component {
     handleLangChange = () => {
         Status.set('lang', this.refs.lang.value);
 
-        window.location.reload();
+        this.setState({
+            lang: Status.get('lang')
+        });
     };
 
     handleSetStepDown = (index) => {
@@ -677,7 +680,7 @@ export default class Main extends Component {
 
     render () {
         return (
-            <div id="main" className="container-fluid">
+            <div key={this.state.lang} id="main" className="container-fluid">
                 <div className="row mhwc-header">
                     <a href="./">
                         <h1>{_('title')}</h1>
@@ -685,10 +688,10 @@ export default class Main extends Component {
 
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
-                            iconName="external-link-square" altName={_('exportBundle')}
+                            iconName="link" altName={_('exportBundle')}
                             onClick={this.handleBundleExport} />
                         <FunctionalIcon
-                            iconName="info-circle" altName={_('showChangelog')}
+                            iconName="info" altName={_('showChangelog')}
                             onClick={this.handleChangeLogOpen} />
                         <div className="mhwc-lang">
                             <div>
