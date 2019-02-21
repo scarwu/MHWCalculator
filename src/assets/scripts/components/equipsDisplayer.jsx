@@ -486,17 +486,17 @@ export default class EquipsDisplayer extends Component {
                                         </div>
                                     </div>
 
-                                    {Constant.elements.map((elementType) => {
+                                    {Constant.resistances.map((resistanceType) => {
                                         return [(
-                                            <div key={elementType + '_1'} className="col-4">
+                                            <div key={resistanceType + '_1'} className="col-4">
                                                 <div className="mhwc-name">
-                                                    <span>{_('resistance')}: {_(elementType)}</span>
+                                                    <span>{_('resistance')}: {_(resistanceType)}</span>
                                                 </div>
                                             </div>
                                         ),(
-                                            <div key={elementType + '_2'} className="col-2">
+                                            <div key={resistanceType + '_2'} className="col-2">
                                                 <div className="mhwc-value">
-                                                    <span>{equipInfo.resistance[elementType]}</span>
+                                                    <span>{equipInfo.resistance[resistanceType]}</span>
                                                 </div>
                                             </div>
                                         )];

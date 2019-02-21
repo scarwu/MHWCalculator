@@ -538,7 +538,7 @@ foreach ($armorsBundle as $name => $armors) {
             $armor['list'][$listIndex]['name'] = $hash;
 
             // Create ID Hash
-            $armor['list'][$listIndex]['id'] = md5($armor['list'][$listIndex]['name']);
+            $armor['list'][$listIndex]['id'] = md5($armor['list'][$listIndex]['id']);
 
             if (is_array($armor['list'][$listIndex]['skills'])
                 && 0 !== count($armor['list'][$listIndex]['skills'])) {
@@ -785,9 +785,9 @@ foreach ($testData['equipsList'] as $index => $equips) {
         $equips['helm']['slotIds'][$slotIndex] = md5($id);
     }
 
-    // Helm
+    // Chest
     if (!isset($armorChecklist[$equips['chest']['id']])) {
-        echo "Error: Helm={$equips['chest']['id']}\n";
+        echo "Error: Chest={$equips['chest']['id']}\n";
     }
 
     $equips['chest']['id'] = md5($equips['chest']['id']);
@@ -800,13 +800,13 @@ foreach ($testData['equipsList'] as $index => $equips) {
         $equips['chest']['slotIds'][$slotIndex] = md5($id);
     }
 
-    // Helm
+    // Arm
     if (!isset($armorChecklist[$equips['arm']['id']])) {
         if (!isset($jewelChecklist[$id])) {
             echo "Error: Slot={$id}\n";
         }
 
-        echo "Error: Helm={$equips['arm']['id']}\n";
+        echo "Error: Arm={$equips['arm']['id']}\n";
     }
 
     $equips['arm']['id'] = md5($equips['arm']['id']);
@@ -819,9 +819,9 @@ foreach ($testData['equipsList'] as $index => $equips) {
         $equips['arm']['slotIds'][$slotIndex] = md5($id);
     }
 
-    // Helm
+    // Waist
     if (!isset($armorChecklist[$equips['waist']['id']])) {
-        echo "Error: Helm={$equips['waist']['id']}\n";
+        echo "Error: Waist={$equips['waist']['id']}\n";
     }
 
     $equips['waist']['id'] = md5($equips['waist']['id']);
@@ -834,9 +834,9 @@ foreach ($testData['equipsList'] as $index => $equips) {
         $equips['waist']['slotIds'][$slotIndex] = md5($id);
     }
 
-    // Helm
+    // Leg
     if (!isset($armorChecklist[$equips['leg']['id']])) {
-        echo "Error: Helm={$equips['leg']['id']}\n";
+        echo "Error: Leg={$equips['leg']['id']}\n";
     }
 
     $equips['leg']['id'] = md5($equips['leg']['id']);
