@@ -85,9 +85,10 @@ export default class Main extends Component {
         let hash = Base64.encode(JSON.stringify(equips));
 
         let protocol = window.location.protocol;
-        let host = window.location.host;
+        let hostname = window.location.hostname;
+        let pathname = window.location.pathname;
 
-        window.open(`${protocol}//${host}/#/${hash}`, '_blank');
+        window.open(`${protocol}//${hostname}${pathname}#/${hash}`, '_blank');
     };
 
     handleLangChange = () => {
