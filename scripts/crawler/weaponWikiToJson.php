@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 $root = __DIR__;
 
 // Composer Auto Loader
-include "{$root}/vendor/autoload.php";
+include "{$root}/../vendor/autoload.php";
 
 function getHTML($url)
 {
@@ -316,9 +316,9 @@ foreach ($urlMapping as $weaponType => $url) {
     }
 }
 
-if (!file_exists("{$root}/../temp")) {
-    mkdir("{$root}/../temp");
+if (!file_exists("{$root}/../../temp")) {
+    mkdir("{$root}/../../temp");
 }
 
 $json = json_encode($allEquips, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-file_put_contents("{$root}/../temp/weapon.json", $json);
+file_put_contents("{$root}/../../temp/weapon.json", $json);

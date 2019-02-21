@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 $root = __DIR__;
 
 // Composer Auto Loader
-include "{$root}/vendor/autoload.php";
+include "{$root}/../vendor/autoload.php";
 
 function getHTML($url)
 {
@@ -343,9 +343,9 @@ foreach ($urlList as $url) {
     }
 }
 
-if (!file_exists("{$root}/../temp")) {
-    mkdir("{$root}/../temp");
+if (!file_exists("{$root}/../../temp")) {
+    mkdir("{$root}/../../temp");
 }
 
 $json = json_encode($allEquiqs, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-file_put_contents("{$root}/../temp/armor.json", $json);
+file_put_contents("{$root}/../../temp/armor.json", $json);
