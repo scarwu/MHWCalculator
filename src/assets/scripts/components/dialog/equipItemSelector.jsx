@@ -31,24 +31,6 @@ import FunctionalIcon from 'components/common/functionalIcon';
 // Load Constant
 import Constant from 'constant';
 
-// Weapon Type List
-let weaponTypeList = [
-    'greatSword',
-    'longSword',
-    'swordAndShield',
-    'dualBlades',
-    'hammer',
-    'huntingHorn',
-    'lance',
-    'gunlance',
-    'switchAxe',
-    'chargeBlade',
-    'insectGlaive',
-    'bow',
-    'lightBowgun',
-    'heavyBowgun'
-];
-
 export default class EquipItemSelector extends Component {
 
     // Default Props
@@ -142,13 +124,13 @@ export default class EquipItemSelector extends Component {
             }
         } else if ('weapon' === data.equipType) {
             mode = 'weapon';
-            type = weaponTypeList[0];
+            type = Constant.weapons[0];
 
             if (null !== data.equipId) {
                 type = WeaponDataset.getInfo(data.equipId).type;
             }
 
-            weaponTypeList.forEach((weaponType) => {
+            Constant.weapons.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
                     WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
                         if (undefined !== ignoreEquips['weapon']
@@ -769,7 +751,7 @@ export default class EquipItemSelector extends Component {
 
                         {'weapon' === this.state.mode ? (
                             <select defaultValue={this.state.type} ref="type" onChange={this.handleTypeChange}>
-                                {weaponTypeList.map((type) => {
+                                {Constant.weapons.map((type) => {
                                     return (
                                         <option key={type} value={type}>{_(type)}</option>
                                     );

@@ -21,6 +21,22 @@ export default {
         'ice',
         'dragon'
     ],
+    weapons: [
+        'greatSword',
+        'longSword',
+        'swordAndShield',
+        'dualBlades',
+        'hammer',
+        'huntingHorn',
+        'lance',
+        'gunlance',
+        'switchAxe',
+        'chargeBlade',
+        'insectGlaive',
+        'bow',
+        'lightBowgun',
+        'heavyBowgun'
+    ],
     sharpnessMultiple: {
         raw: {
             red: 0.50,

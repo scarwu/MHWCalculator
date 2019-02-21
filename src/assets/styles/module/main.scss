@@ -38,6 +38,48 @@ $panel-height: 40px;
 
         @include font-size(2.4);
     }
+
+    .mhwc-icons_bundle {
+        height: $header-height;
+        line-height: $header-height;
+
+        a {
+            background-color: #999;
+        }
+
+        .mhwc-lang {
+            display: inline-block;
+            margin-left: 2px;
+
+            div {
+                display: block;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                color: white;
+                background-color: #999;
+
+                @include border-radius(3px);
+
+                i {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                select {
+                    margin: 0 0;
+                    padding: 0;
+                    border: none;
+                    height: 20px;
+                    line-height: 20px;
+
+                    @include font-size(0.8);
+                    @include border-radius(3px);
+                }
+            }
+        }
+    }
 }
 
 .mhwc-footer {
@@ -164,6 +206,7 @@ $panel-height: 40px;
     }
 
     div {
+        @include nowrap();
         position: absolute;
         display: none;
         top: 0;
@@ -178,7 +221,6 @@ $panel-height: 40px;
         color: #333;
         background-color: white;
         pointer-events: none;
-
         @include border-radius(3px);
     }
 

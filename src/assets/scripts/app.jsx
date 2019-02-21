@@ -69,15 +69,27 @@ export default class Main extends Component {
     /**
      * Handle Functions
      */
-    handleImportBundle = () => {
+    handleBundleImport = () => {
+        let hash = this.props.match.params.hash;
 
+        if (undefined !== hash) {
+            this.setState({
+                equips: JSON.parse(Base64.decode(hash))
+            });
+        }
     };
 
-    handleExportBundle = () => {
+    handleBundleExport = () => {
+        let equips = Helper.deepCopy(this.state.equips);
+        let hash = Base64.encode(JSON.stringify(equips));
 
+        let protocol = window.location.protocol;
+        let host = window.location.host;
+
+        window.open(`${protocol}//${host}/#/${hash}`, '_blank');
     };
 
-    handleChangeLang = () => {
+    handleLangChange = () => {
         Status.set('lang', this.refs.lang.value);
 
         window.location.reload();
@@ -381,8 +393,6 @@ export default class Main extends Component {
 
         this.setState({
             equips: equips
-        }, () => {
-            this.refershUrlHash();
         });
     };
 
@@ -455,8 +465,6 @@ export default class Main extends Component {
 
         this.setState({
             equips: equips
-        }, () => {
-            this.refershUrlHash();
         });
     };
 
@@ -507,8 +515,6 @@ export default class Main extends Component {
         this.setState({
             equips: equips,
             equipsLock: equipsLock
-        }, () => {
-            this.refershUrlHash();
         });
     };
 
@@ -527,8 +533,6 @@ export default class Main extends Component {
     handleEquipBundlePickUp = (equips) => {
         this.setState({
             equips: equips
-        }, () => {
-            this.refershUrlHash();
         });
     };
 
@@ -544,40 +548,27 @@ export default class Main extends Component {
         });
     };
 
-    refershUrlHash = () => {
-        let equips = Helper.deepCopy(this.state.equips);
-        let hash = Base64.encode(JSON.stringify(equips));
-
-        window.location.hash = `#/${hash}`;
-    };
-
     /**
      * Lifecycle Functions
      */
     componentWillMount () {
 
-        // Get Sets & Skills Data from Status
-        let require = Helper.deepCopy(TestData.requireList[0]);
+        // Get Sets, Skills & Equips Data from Status
         let sets = Status.get('sets');
         let skills = Status.get('skills');
+        let equips = Status.get('equips');
 
         if (undefined === sets) {
-            sets = require.sets;
+            sets = Helper.deepCopy(TestData.requireList[0]).sets;
         }
 
         if (undefined === skills) {
-            skills = require.skills;
+            skills = Helper.deepCopy(TestData.requireList[0]).skills;
         }
 
-        // Get Equips Data from URL Base64
-        let hash = this.props.match.params.hash;
-        let equips = Status.get('equips');
-
-        equips = (undefined !== hash)
-            ? JSON.parse(Base64.decode(hash))
-            : (undefined !== equips)
-                ? equips
-                : Helper.deepCopy(TestData.equipsList[0]);
+        if (undefined === equips) {
+            equips = Helper.deepCopy(TestData.equipsList[0]);
+        }
 
         // Is Show ChangeLog
         let isShowChangeLog = ('production' === Config.env)
@@ -592,7 +583,7 @@ export default class Main extends Component {
             equips: equips,
             isShowChangeLog: isShowChangeLog
         }, () => {
-            this.refershUrlHash();
+            this.handleBundleImport();
         });
     }
 
@@ -695,17 +686,22 @@ export default class Main extends Component {
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName="external-link-square" altName={_('exportBundle')}
-                            onClick={this.handleExportBundle} />
+                            onClick={this.handleBundleExport} />
                         <FunctionalIcon
                             iconName="info-circle" altName={_('showChangelog')}
                             onClick={this.handleChangeLogOpen} />
-                        <select defaultValue={Status.get('lang')} ref="lang" onChange={this.handleChangeLang}>
-                        {Object.keys(Constant.langs).map((lang) => {
-                            return (
-                                <option key={lang} value={lang}>{Constant.langs[lang]}</option>
-                            );
-                        })}
-                        </select>
+                        <div className="mhwc-lang">
+                            <div>
+                                <i className="fa fa-globe"></i>
+                                <select defaultValue={Status.get('lang')} ref="lang" onChange={this.handleLangChange}>
+                                    {Object.keys(Constant.langs).map((lang) => {
+                                        return (
+                                            <option key={lang} value={lang}>{Constant.langs[lang]}</option>
+                                        );
+                                    })}
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
