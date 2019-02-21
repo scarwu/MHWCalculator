@@ -56,17 +56,12 @@ function parseHTML($str)
     return $dom;
 }
 
-if (!file_exists("{$root}/../../temp")) {
-    mkdir("{$root}/../../temp");
-}
-
 $host = 'https://monsterhunterworld.wiki.fextralife.com';
-
-// Set & Skill
 $result = [
     'sets' => [],
     'skills' => []
 ];
+
 $dom = parseHTML(getHTML("{$host}/Skills"));
 
 foreach ($dom->find('#wiki-content-block .col-sm-3 > h5 a.wiki_link') as $item) {
@@ -76,16 +71,16 @@ foreach ($dom->find('#wiki-content-block .col-sm-3 > h5 a.wiki_link') as $item) 
 
     echo "Set: {$name}\n";
 
-    $content = parseHTML(getHTML($link));
+    // $content = parseHTML(getHTML($link));
 
-    foreach ($content->find('#wiki-content-block ul', 0)->find('li') as $skill) {
-        $list[] = $skill->plaintext;
-    }
+    // foreach ($content->find('#wiki-content-block ul', 0)->find('li') as $skill) {
+    //     $list[] = $skill->plaintext;
+    // }
 
     $result['sets'][] = [
         'name' => $name,
         'link' => $link,
-        'list' => $list
+        // 'list' => $list
     ];
 }
 
@@ -111,29 +106,18 @@ foreach ($dom->find('#wiki-content-block .col-sm-3 > p') as $item) {
         $list[] = $skill->plaintext;
     }
 
-    $result['list'][] = [
+    $result['skill'][] = [
         'name' => $name,
         'link' => $link,
         'list' => $list
     ];
 }
 
+if (!file_exists("{$root}/../../temp")) {
+    mkdir("{$root}/../../temp");
+}
+
 file_put_contents(
     "{$root}/../../temp/en-sets_skills.json",
     json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
 );
-
-exit();
-
-// Jewel
-$dom = parseHTML(getHTML("{$host}/Jewels"));
-
-// Charm
-$dom = parseHTML(getHTML("{$host}/Charms"));
-
-// Armor
-$dom = parseHTML(getHTML("{$host}/Armors"));
-
-// Weapon
-$dom = parseHTML(getHTML("{$host}/Weapons"));
-
