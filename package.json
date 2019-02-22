@@ -33,6 +33,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "@sentry/browser": "^4.6.3",
     "bootstrap": "^4.2.1",
     "font-awesome": "^4.7.0",
     "md5": "^2.2.1",

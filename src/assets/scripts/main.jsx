@@ -12,9 +12,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
+import * as Sentry from '@sentry/browser'
 
 // Load App
 import App from 'app';
+
+// Load Config & Constant
+import Config from 'config';
+
+// Set Sentry Endpoint
+if ('production' === Config.env) {
+    Sentry.init({
+        dsn: 'https://000580e8cc8a4f3bbf668d4acfc90da2@sentry.io/1400031'
+    });
+}
 
 // Router
 ReactDOM.render((
