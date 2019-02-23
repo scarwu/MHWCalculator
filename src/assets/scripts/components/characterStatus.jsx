@@ -34,19 +34,23 @@ export default class CharacterStatus extends Component {
         equips: Helper.deepCopy(Constant.defaultEquips)
     };
 
-    // Initial State
-    state = {
-        equips: Helper.deepCopy(Constant.defaultEquips),
-        status: Helper.deepCopy(Constant.defaultStatus),
-        extraInfo: Helper.deepCopy(Constant.defaultExtraInfo),
-        passiveSkills: {},
-        tuning: {
-            rawAttack: 5,
-            rawCriticalRate: 10,
-            rawCriticalMultiple: 0.1,
-            elementAttack: 100
-        }
-    };
+    constructor (props) {
+        super(props);
+
+        // Initial State
+        this.state = {
+            equips: props.equips || Helper.deepCopy(Constant.defaultEquips),
+            status: Helper.deepCopy(Constant.defaultStatus),
+            extraInfo: Helper.deepCopy(Constant.defaultExtraInfo),
+            passiveSkills: {},
+            tuning: {
+                rawAttack: 5,
+                rawCriticalRate: 10,
+                rawCriticalMultiple: 0.1,
+                elementAttack: 100
+            }
+        };
+    }
 
     /**
      * Handle Functions
@@ -554,13 +558,8 @@ export default class CharacterStatus extends Component {
     /**
      * Lifecycle Functions
      */
-    componentWillMount () {
-        this.setState({
-            equips: this.props.equips,
-            passiveSkills: {}
-        }, () => {
-            this.generateStatus();
-        });
+    componentDidMount () {
+        this.generateStatus();
     }
 
     componentWillReceiveProps (nextProps) {

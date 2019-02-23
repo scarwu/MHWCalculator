@@ -40,11 +40,15 @@ export default class EquipsDisplayer extends Component {
         onPickUp: (data) => {}
     };
 
-    // Initial State
-    state = {
-        equips: Helper.deepCopy(Constant.defaultEquips),
-        equipsLock: Helper.deepCopy(Constant.defaultEquipsLock)
-    };
+    constructor (props) {
+        super(props);
+
+        // Initial State
+        this.state = {
+            equips: props.equips || Helper.deepCopy(Constant.defaultEquips),
+            equipsLock: props.equipsLock || Helper.deepCopy(Constant.defaultEquipsLock)
+        };
+    }
 
     /**
      * Handle Functions
@@ -64,13 +68,6 @@ export default class EquipsDisplayer extends Component {
     /**
      * Lifecycle Functions
      */
-    componentWillMount () {
-        this.setState({
-            equips: this.props.equips,
-            equipsLock: this.props.equipsLock
-        });
-    }
-
     componentWillReceiveProps (nextProps) {
         this.setState({
             equips: nextProps.equips,

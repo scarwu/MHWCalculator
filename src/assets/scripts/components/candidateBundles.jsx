@@ -39,13 +39,21 @@ export default class CandidateBundles extends Component {
         onPickUp: (data) => {}
     };
 
-    // Initial State
-    state = {
-        bundleList: [],
-        bundleLimit: 25,
-        searchTime: null,
-        isSearching: false
-    };
+    constructor (props) {
+        super(props);
+
+        let candidateBundles = Status.get('candidateBundles');
+
+        // Initial State
+        this.state = {
+            bundleList: [],
+            bundleLimit: 25,
+            searchTime: (undefined !== candidateBundles)
+                ? candidateBundles.bundleList : null,
+            isSearching: (undefined !== candidateBundles)
+                ? candidateBundles.searchTime : false
+        };
+    }
 
     /**
      * Handle Functions
@@ -68,17 +76,6 @@ export default class CandidateBundles extends Component {
     /**
      * Lifecycle Functions
      */
-    componentWillMount () {
-        let candidateBundles = Status.get('candidateBundles');
-
-        if (undefined !== candidateBundles) {
-            this.setState({
-                bundleList: candidateBundles.bundleList,
-                searchTime: candidateBundles.searchTime
-            });
-        }
-    }
-
     componentDidMount () {
         Event.on('SearchCandidateEquips', 'CandidateBundles', (data) => {
             this.setState({

@@ -41,15 +41,19 @@ export default class EquipItemSelector extends Component {
         onClose: () => {}
     };
 
-    // Initial State
-    state = {
-        mode: null,
-        includeList: [],
-        ignoreList: [],
-        type: null,
-        rare: 8,
-        segment: null
-    };
+    constructor (props) {
+        super(props);
+
+        // Initial State
+        this.state = Object.assign({
+            mode: null,
+            includeList: [],
+            ignoreList: [],
+            type: null,
+            rare: 8,
+            segment: null
+        }, this.initState(props.data));
+    }
 
     /**
      * Handle Functions
@@ -205,23 +209,19 @@ export default class EquipItemSelector extends Component {
             });
         }
 
-        this.setState({
+        return {
             mode: mode,
             includeList: includeList,
             ignoreList: ignoreList,
             type: type
-        });
+        };
     };
 
     /**
      * Lifecycle Functions
      */
-    componentWillMount () {
-        this.initState(this.props.data);
-    }
-
     componentWillReceiveProps (nextProps) {
-        this.initState(nextProps.data);
+        this.setState(this.initState(nextProps.data));
     }
 
     /**

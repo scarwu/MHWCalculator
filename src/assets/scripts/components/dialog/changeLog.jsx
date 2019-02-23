@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Component } from 'react';
+import React from 'react';
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -20,27 +20,19 @@ import _ from 'libraries/lang';
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
 
-// Load Constant
-import Constant from 'constant';
-
-export default class ChangeLog extends Component {
-
-    // Default Props
-    static defaultProps = {
-        onClose: () => {}
-    };
+export default function (props) {
 
     /**
      * Handle Functions
      */
-    handleWindowClose = () => {
-        this.props.onClose();
+    let handleWindowClose = () => {
+        props.onClose();
     };
 
     /**
      * Render Functions
      */
-    renderChangelog = () => {
+    let renderChangelog = () => {
         let LogMap = {
             zhTW: (
                 <div>
@@ -133,24 +125,22 @@ export default class ChangeLog extends Component {
         return LogMap[Status.get('lang')];
     };
 
-    render () {
-        return (
-            <div className="mhwc-selector">
-                <div className="mhwc-dialog mhwc-slim-dialog">
-                    <div className="mhwc-panel">
-                        <strong>{_('changelog')}</strong>
+    return (
+        <div className="mhwc-selector">
+            <div className="mhwc-dialog mhwc-slim-dialog">
+                <div className="mhwc-panel">
+                    <strong>{_('changelog')}</strong>
 
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
-                                iconName="times" altName={_('close')}
-                                onClick={this.handleWindowClose} />
-                        </div>
-                    </div>
-                    <div className="mhwc-list">
-                        {this.renderChangelog()}
+                    <div className="mhwc-icons_bundle">
+                        <FunctionalIcon
+                            iconName="times" altName={_('close')}
+                            onClick={handleWindowClose} />
                     </div>
                 </div>
+                <div className="mhwc-list">
+                    {renderChangelog()}
+                </div>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};

@@ -52,20 +52,47 @@ export default class Main extends Component {
         hash: null
     };
 
-    // Initial State
-    state = {
-        lang: Status.get('lang'),
-        sets: [],
-        skills: [],
-        equips: Helper.deepCopy(Constant.defaultEquips),
-        equipsLock: Helper.deepCopy(Constant.defaultEquipsLock),
-        equipSelector: {},
-        isShowEquipBundleSelector: false,
-        isShowSetSelector: false,
-        isShowSkillSelector: false,
-        isShowEquipSelector: false,
-        isShowChangeLog: false
-    };
+    constructor (props) {
+        super(props);
+
+        // Get Sets, Skills & Equips Data from Status
+        let sets = Status.get('sets');
+        let skills = Status.get('skills');
+        let equips = Status.get('equips');
+
+        if (undefined === sets) {
+            sets = Helper.deepCopy(TestData.requireList[0]).sets;
+        }
+
+        if (undefined === skills) {
+            skills = Helper.deepCopy(TestData.requireList[0]).skills;
+        }
+
+        if (undefined === equips) {
+            equips = Helper.deepCopy(TestData.equipsList[0]);
+        }
+
+        // Is Show ChangeLog
+        let isShowChangeLog = ('production' === Config.env)
+            ? (Config.buildTime !== parseInt(Status.get('buildTime'))) : false;
+
+        Status.set('buildTime', Config.buildTime);
+
+        // Initial State
+        this.state = {
+            lang: Status.get('lang'),
+            sets: sets,
+            skills: skills,
+            equips: equips,
+            equipsLock: Helper.deepCopy(Constant.defaultEquipsLock),
+            equipSelector: {},
+            isShowEquipBundleSelector: false,
+            isShowSetSelector: false,
+            isShowSkillSelector: false,
+            isShowEquipSelector: false,
+            isShowChangeLog: isShowChangeLog
+        };
+    }
 
     /**
      * Handle Functions
@@ -571,40 +598,8 @@ export default class Main extends Component {
     /**
      * Lifecycle Functions
      */
-    componentWillMount () {
-
-        // Get Sets, Skills & Equips Data from Status
-        let sets = Status.get('sets');
-        let skills = Status.get('skills');
-        let equips = Status.get('equips');
-
-        if (undefined === sets) {
-            sets = Helper.deepCopy(TestData.requireList[0]).sets;
-        }
-
-        if (undefined === skills) {
-            skills = Helper.deepCopy(TestData.requireList[0]).skills;
-        }
-
-        if (undefined === equips) {
-            equips = Helper.deepCopy(TestData.equipsList[0]);
-        }
-
-        // Is Show ChangeLog
-        let isShowChangeLog = ('production' === Config.env)
-            ? (Config.buildTime !== parseInt(Status.get('buildTime'))) : false;
-
-        Status.set('buildTime', Config.buildTime);
-
-        // Set State
-        this.setState({
-            sets: sets,
-            skills: skills,
-            equips: equips,
-            isShowChangeLog: isShowChangeLog
-        }, () => {
-            this.handleBundleImport();
-        });
+    componentDidMount () {
+        this.handleBundleImport();
     }
 
     /**

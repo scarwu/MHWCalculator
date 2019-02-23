@@ -9,31 +9,19 @@
  */
 
 // Load Libraries
-import React, { PureComponent } from 'react';
+import React from 'react';
 
-export default class FunctionalIcon extends PureComponent {
+// Load Libraries
+export default function (props) {
+    return (
+        <div className="mhwc-functional_icon">
+            <a onClick={props.onClick}>
+                <i className={`fa fa-${props.iconName}`}></i>
+            </a>
 
-    // Default Props
-    static defaultProps = {
-        iconName: null,
-        altName: null,
-        onClick: () => {}
-    };
-
-    /**
-     * Render Functions
-     */
-    render () {
-        return (
-            <div className="mhwc-functional_icon">
-                <a onClick={this.props.onClick}>
-                    <i className={`fa fa-${this.props.iconName}`}></i>
-                </a>
-
-                <div>
-                    <span>{this.props.altName}</span>
-                </div>
+            <div>
+                <span>{props.altName}</span>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
