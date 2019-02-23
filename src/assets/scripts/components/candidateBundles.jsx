@@ -144,7 +144,6 @@ export default class CandidateBundles extends Component {
 
                                 if ('weapon' === equipType) {
                                     equipInfo = WeaponDataset.getInfo(data.equips[equipType]);
-
                                 } else if ('helm' === equipType
                                     || 'chest' === equipType
                                     || 'arm' === equipType

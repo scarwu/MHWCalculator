@@ -278,7 +278,7 @@ export default class CharacterStatus extends Component {
                     break;
                 case 'resistance':
                     if ('all' === data.type) {
-                        elements.forEach((elementType) => {
+                        Constant.resistances.forEach((elementType) => {
                             status.resistance[elementType] += data.value;
                         });
                     } else {
