@@ -155,7 +155,7 @@ export default class CandidateBundles extends Component {
                                     equipInfo = CharmDataset.getInfo(data.equips[equipType]);
                                 }
 
-                                return [(
+                                return (null !== equipInfo) ? [(
                                     <div key={`${equipType}_1`} className="col-2">
                                         <div className="mhwc-name">
                                             <span>{_(equipType)}</span>
@@ -167,7 +167,7 @@ export default class CandidateBundles extends Component {
                                             <span>{_(equipInfo.name)}</span>
                                         </div>
                                     </div>
-                                )];
+                                )] : false;
                             })}
                             </div>
                         </div>
