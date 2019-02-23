@@ -23,7 +23,17 @@ import EnhanceDataset from 'libraries/dataset/enhance';
 import SkillDataset from 'libraries/dataset/skill';
 
 let getAppliedWeaponInfo = (extend) => {
+    if ('object' !== typeof extend
+        || 'string' !== typeof extend.id) {
+
+        return null;
+    }
+
     let info = WeaponDataset.getInfo(extend.id);
+
+    if (null === info) {
+        return null;
+    }
 
     if (null !== info.element.attack) {
         info.element.attack.value = info.element.attack.minValue;
@@ -180,7 +190,17 @@ let getAppliedWeaponInfo = (extend) => {
 };
 
 let getAppliedArmorInfo = (extend) => {
+    if ('object' !== typeof extend
+        || 'string' !== typeof extend.id) {
+
+        return null;
+    }
+
     let info = ArmorDataset.getInfo(extend.id);
+
+    if (null === info) {
+        return null;
+    }
 
     // Handler Skill & Slot
     let skillLevelMapping = {};
@@ -249,7 +269,17 @@ let getAppliedArmorInfo = (extend) => {
 };
 
 let getAppliedCharmInfo = (extend) => {
+    if ('object' !== typeof extend
+        || 'string' !== typeof extend.id) {
+
+        return null;
+    }
+
     let info = CharmDataset.getInfo(extend.id);
+
+    if (null === info) {
+        return null;
+    }
 
     // Handler Skill & Slot
     let skillLevelMapping = {};
