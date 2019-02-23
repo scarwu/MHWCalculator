@@ -103,5 +103,6 @@
     "requireCondition":     "需求條件",
     "candidateBundle":      "備選組合",
     "equipBundle":          "已選裝備",
-    "status":               "狀態"
+    "status":               "狀態",
+    "changelog":            "更新紀錄"
 }

@@ -44,49 +44,50 @@ export default class ChangeLog extends Component {
         let LogMap = {
             zhTW: (
                 <div>
-                    <h1>更新紀錄</h1>
+                    <span>2019/02/24</span>
+                    <ul>
+                        <li>修正大部分造成白畫面的錯誤</li>
+                    </ul>
 
-                    <hr />
-
-                    <h2>2019/02/21</h2>
+                    <span>2019/02/21</span>
                     <ul>
                         <li>多國語系界面</li>
                         <li>修正功能及文字錯誤</li>
                     </ul>
 
-                    <h2>2019/02/12</h2>
+                    <span>2019/02/12</span>
                     <ul>
                         <li>新增絢輝龍鎧羅γ套裝</li>
                         <li>新增冥燈幽火γ套裝</li>
                         <li>新增鑄島熔岩γ套裝</li>
                     </ul>
 
-                    <h2>2018/09/04</h2>
+                    <span>2018/09/04</span>
                     <ul>
                         <li>新增帝王γ套裝</li>
                         <li>新增鋼龍γ套裝</li>
                     </ul>
 
-                    <h2>2018/08/25</h2>
+                    <span>2018/08/25</span>
                     <ul>
                         <li>新增潛水夫及獨角仙后裝備</li>
                         <li>新增貝希摩斯裝備及武器</li>
                     </ul>
 
-                    <h2>2018/06/26</h2>
+                    <span>2018/06/26</span>
                     <ul>
                         <li>新增麒麟γ套裝</li>
                         <li>新增烏德爾γ套裝</li>
                         <li>補完炎妃龍武器斬位</li>
                     </ul>
 
-                    <h2>2018/06/02</h2>
+                    <span>2018/06/02</span>
                     <ul>
                         <li>新增炎妃龍裝備</li>
                         <li>可以在裝備選擇界面排除裝備，排除的裝備將不會加入演算法計算</li>
                     </ul>
 
-                    <h2>2018/05/09</h2>
+                    <span>2018/05/09</span>
                     <ul>
                         <li>新增絢輝龍 R7/R8 武器</li>
                         <li>更新武器選擇界面</li>
@@ -94,7 +95,7 @@ export default class ChangeLog extends Component {
                         <li>優化搜尋演算法</li>
                     </ul>
 
-                    <h2>2018/05/04</h2>
+                    <span>2018/05/04</span>
                     <ul>
                         <li>修正杜賓α插槽遺漏問題</li>
                         <li>新增蒼星之將套裝及武器</li>
@@ -105,11 +106,12 @@ export default class ChangeLog extends Component {
             ),
             enUS: (
                 <div>
-                    <h1>Change Log</h1>
+                    <span>2019/02/24</span>
+                    <ul>
+                        <li>Fix some bugs</li>
+                    </ul>
 
-                    <hr />
-
-                    <h2>2019/02/21</h2>
+                    <span>2019/02/21</span>
                     <ul>
                         <li>Announce english version</li>
                     </ul>
@@ -125,6 +127,8 @@ export default class ChangeLog extends Component {
             <div className="mhwc-selector">
                 <div className="mhwc-dialog mhwc-slim-dialog">
                     <div className="mhwc-panel">
+                        <strong>{_('changelog')}</strong>
+
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName="times" altName={_('close')}

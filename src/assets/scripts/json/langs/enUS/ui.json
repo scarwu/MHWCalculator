@@ -103,5 +103,6 @@
     "requireCondition":     "Required Conditions",
     "candidateBundle":      "Candidate Bundles",
     "equipBundle":          "Equipped Bundle",
-    "status":               "Status"
+    "status":               "Status",
+    "changelog":            "Change Log"
 }
