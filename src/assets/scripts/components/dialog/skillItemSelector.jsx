@@ -178,7 +178,7 @@ export default class SkillItemSelector extends Component {
 
                         // Search Nameword
                         if (null !== segment
-                            && !text.toLowerCase().match(segment.toLowerCase())) {
+                            && -1 === text.toLowerCase().search(segment.toLowerCase())) {
 
                             return false;
                         }
@@ -197,7 +197,7 @@ export default class SkillItemSelector extends Component {
 
                         // Search Nameword
                         if (null !== segment
-                            && !text.toLowerCase().match(segment.toLowerCase())) {
+                            && -1 === text.toLowerCase().search(segment.toLowerCase())) {
 
                             return false;
                         }
