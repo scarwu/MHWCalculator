@@ -82,7 +82,7 @@ class Misc
 /**
  * Load Json Files
  */
-$weaponsBundle = [];
+$weapons = [];
 
 foreach ([
     'greatSword', 'longSword', 'swordAndShield', 'dualBlades',
@@ -91,14 +91,14 @@ foreach ([
     'lightBowgun', 'heavyBowgun', 'bow'
 ] as $type) {
     for ($level = 6; $level <= 8; $level++) {
-        $weaponsBundle["$type/rare{$level}"] = Misc::loadJson("weapons/$type/rare{$level}");
+        $weapons = array_merge($weapons, Misc::loadJson("weapons/$type/rare{$level}"));
     }
 }
 
-$armorsBundle = [];
+$armors = [];
 
 for ($level = 5; $level <= 8; $level++) {
-    $armorsBundle["rare{$level}"] = Misc::loadJson("armors/rare{$level}");
+    $armors = array_merge($armors, Misc::loadJson("armors/rare{$level}"));
 }
 
 $charms = Misc::loadJson('charms');
@@ -121,16 +121,11 @@ $armorChecklist = [];
 $charmChecklist = [];
 $jewelChecklist = [];
 
-// Handle Enhances Data
-$datasetMap['enhances'] = [];
+function appendLangMap ($uniqueStr, $pack)
+{
+    $code = Misc::createCode($uniqueStr);
 
-foreach ($enhances as $enhance) {
-    $enhanceChecklist[$enhance['id']] = true;
-
-    // Create Translation Mapping
-    $code = Misc::createCode("enhance:{$enhance['id']}:name");
-
-    foreach ($enhance['name'] as $lang => $translation) {
+    foreach ($pack as $lang => $translation) {
         if (!isset($langMap[$lang])) {
             $langMap[$lang] = [];
         }
@@ -138,20 +133,23 @@ foreach ($enhances as $enhance) {
         $langMap[$lang][$code] = $translation;
     }
 
-    $enhance['name'] = $code;
+    return $code;
+}
 
-    foreach (array_keys($enhance['list']) as $index) {
-        $code = Misc::createCode("enhance:{$enhance['id']}:list:{$index}:description");
+// Handle Enhances Data
+$datasetMap['enhances'] = [];
 
-        foreach ($enhance['list'][$index]['description'] as $lang => $translation) {
-            if (!isset($langMap[$lang])) {
-                $langMap[$lang] = [];
-            }
+foreach ($enhances as $enhance) {
+    $enhanceChecklist[$enhance['id']] = true;
 
-            $langMap[$lang][$code] = $translation;
-        }
+    // Create Translation Mapping
+    $enhance['name'] = appendLangMap("enhance:{$enhance['id']}:name", $enhance['name']);
 
-        $enhance['list'][$index]['description'] = $code;
+    foreach ($enhance['list'] as $index => $item) {
+        $item['description'] = appendLangMap("enhance:{$enhance['id']}:list:{$index}:description", $item['description']);
+
+        // Rewrite
+        $enhance['list'][$index] = $item;
     }
 
     // Create ID Hash
@@ -219,30 +217,13 @@ foreach ($skills as $skill) {
     $skillChecklist[$skill['id']] = true;
 
     // Create Translation Mapping
-    $code = Misc::createCode("skill:{$skill['id']}:name");
+    $skill['name'] = appendLangMap("skill:{$skill['id']}:name", $skill['name']);
 
-    foreach ($skill['name'] as $lang => $translation) {
-        if (!isset($langMap[$lang])) {
-            $langMap[$lang] = [];
-        }
+    foreach ($skill['list'] as $index => $item) {
+        $item['description'] = appendLangMap("skill:{$skill['id']}:list:{$index}:description", $item['description']);
 
-        $langMap[$lang][$code] = $translation;
-    }
-
-    $skill['name'] = $code;
-
-    foreach (array_keys($skill['list']) as $index) {
-        $code = Misc::createCode("skill:{$skill['id']}:list:{$index}:description");
-
-        foreach ($skill['list'][$index]['description'] as $lang => $translation) {
-            if (!isset($langMap[$lang])) {
-                $langMap[$lang] = [];
-            }
-
-            $langMap[$lang][$code] = $translation;
-        }
-
-        $skill['list'][$index]['description'] = $code;
+        // Rewrite
+        $skill['list'][$index] = $item;
     }
 
     // Create ID Hash
@@ -322,24 +303,15 @@ foreach ($sets as $set) {
     $setChecklist[$set['id']] = true;
 
     // Create Translation Mapping
-    $code = Misc::createCode("set:{$set['id']}:name");
-
-    foreach ($set['name'] as $lang => $translation) {
-        if (!isset($langMap[$lang])) {
-            $langMap[$lang] = [];
-        }
-
-        $langMap[$lang][$code] = $translation;
-    }
-
-    $set['name'] = $code;
+    $set['name'] = appendLangMap("set:{$set['id']}:name", $set['name']);
 
     // Create ID Hash
     $set['id'] = md5($set['id']);
+    $set['skills'] = array_map(function ($skill) {
+        $skill['id'] = md5($skill['id']);
 
-    foreach (array_keys($set['skills']) as $index) {
-        $set['skills'][$index]['id'] = md5($set['skills'][$index]['id']);
-    }
+        return $skill;
+    }, $set['skills']);
 
     // Create Dataset
     // {
@@ -369,289 +341,250 @@ foreach ($sets as $set) {
 // Handle Weapon Data
 $datasetMap['weapons'] = [];
 
-foreach ($weaponsBundle as $name => $weapons) {
-    foreach ($weapons as $weapon) {
-        $weaponChecklist[$weapon['id']] = true;
+foreach ($weapons as $weapon) {
+    $weaponChecklist[$weapon['id']] = true;
 
-        // Checklist
-        if (is_array($weapon['skills'])) {
-            foreach ($weapon['skills'] as $skill) {
-                if (!isset($skillChecklist[$skill['id']])) {
-                    echo "Error: Weapon={$weapon['id']}, Skill={$skill['id']}\n";
-                }
+    // Checklist
+    if (is_array($weapon['skills'])) {
+        foreach ($weapon['skills'] as $skill) {
+            if (!isset($skillChecklist[$skill['id']])) {
+                echo "Error: Weapon={$weapon['id']}, Skill={$skill['id']}\n";
             }
         }
-
-        // Create Translation Mapping
-        $code = Misc::createCode("weapon:{$weapon['id']}:name");
-
-        foreach ($weapon['name'] as $lang => $translation) {
-            if (!isset($langMap[$lang])) {
-                $langMap[$lang] = [];
-            }
-
-            $langMap[$lang][$code] = $translation;
-        }
-
-        $weapon['name'] = $code;
-
-        $code = Misc::createCode("weapon:{$weapon['id']}:series");
-
-        foreach ($weapon['series'] as $lang => $translation) {
-            if (!isset($langMap[$lang])) {
-                $langMap[$lang] = [];
-            }
-
-            $langMap[$lang][$code] = $translation;
-        }
-
-        $weapon['series'] = $code;
-
-        // Create ID Hash
-        $weapon['id'] = md5($weapon['id']);
-
-        if (is_array($weapon['skills']) && 0 !== count($weapon['skills'])) {
-            foreach (array_keys($weapon['skills']) as $index) {
-                $weapon['skills'][$index]['id'] = md5($weapon['skills'][$index]['id']);
-            }
-        }
-
-        // Create Dataset
-        // {
-        //     "id": "冰炎劍維爾瑪閃焰",
-        //     "rare": 8,
-        //     "type": "dualBlades",
-        //     "series": {
-        //         "zhTW": "黑鋼"
-        //     },
-        //     "name": {
-        //         "zhTW": "冰炎劍維爾瑪閃焰"
-        //     },
-        //     "attack": 252,
-        //     "criticalRate": 10,
-        //     "defense": 0,
-        //     "sharpness": {
-        //         "value": 350,
-        //         "steps": {
-        //             "red": 60,
-        //             "orange": 50,
-        //             "yellow": 60,
-        //             "green": 120,
-        //             "blue": 70,
-        //             "white": 40
-        //         }
-        //     },
-        //     "element": {
-        //         "attack": {
-        //             "type": "ice",
-        //             "minValue": 240,
-        //             "maxValue": 310,
-        //             "isHidden": false
-        //         },
-        //         "status": {
-        //             "type": "blast",
-        //             "minValue": 240,
-        //             "maxValue": 300,
-        //             "isHidden": false
-        //         }
-        //     },
-        //     "elderseal": null,
-        //     "slots": [
-        //         {
-        //             "size": 2
-        //         }
-        //     ],
-        //     "skills": null
-        // }
-        $datasetMap['weapons'][] = [
-            $weapon['id'],
-            $weapon['rare'],
-            $weapon['type'],
-            $weapon['series'],
-            $weapon['name'],
-            $weapon['attack'],
-            $weapon['criticalRate'],
-            $weapon['defense'],
-            (null !== $weapon['sharpness']) ? [
-                $weapon['sharpness']['value'],
-                [
-                    $weapon['sharpness']['steps']['red'],
-                    $weapon['sharpness']['steps']['orange'],
-                    $weapon['sharpness']['steps']['yellow'],
-                    $weapon['sharpness']['steps']['green'],
-                    $weapon['sharpness']['steps']['blue'],
-                    $weapon['sharpness']['steps']['white']
-                ]
-            ] : null,
-            [
-                (null !== $weapon['element']['attack']) ? [
-                    $weapon['element']['attack']['type'],
-                    $weapon['element']['attack']['minValue'],
-                    $weapon['element']['attack']['maxValue'],
-                    $weapon['element']['attack']['isHidden']
-                ] : null,
-                (null !== $weapon['element']['status']) ? [
-                    $weapon['element']['status']['type'],
-                    $weapon['element']['status']['minValue'],
-                    $weapon['element']['status']['maxValue'],
-                    $weapon['element']['status']['isHidden']
-                ] : null
-            ],
-            (null !== $weapon['elderseal']) ? $weapon['elderseal']['affinity'] : null,
-            (null !== $weapon['slots']) ? array_map(function ($slot) {
-                return $slot['size'];
-            }, $weapon['slots']) : null,
-            (null !== $weapon['skills']) ? array_map(function ($skill) {
-                return [
-                    $skill['id'],
-                    $skill['level']
-                ];
-            }, $weapon['skills']) : null
-        ];
     }
+
+    // Create Translation Mapping
+    $weapon['name'] = appendLangMap("weapon:{$weapon['id']}:name", $weapon['name']);
+    $weapon['series'] = appendLangMap("weapon:{$weapon['id']}:series", $weapon['series']);
+
+    // Create ID Hash
+    $weapon['id'] = md5($weapon['id']);
+
+    if (is_array($weapon['skills']) && 0 !== count($weapon['skills'])) {
+        $weapon['skills'] = array_map(function ($skill) {
+            $skill['id'] = md5($skill['id']);
+
+            return $skill;
+        }, $weapon['skills']);
+    }
+
+    // Create Dataset
+    // {
+    //     "id": "冰炎劍維爾瑪閃焰",
+    //     "rare": 8,
+    //     "type": "dualBlades",
+    //     "series": {
+    //         "zhTW": "黑鋼"
+    //     },
+    //     "name": {
+    //         "zhTW": "冰炎劍維爾瑪閃焰"
+    //     },
+    //     "attack": 252,
+    //     "criticalRate": 10,
+    //     "defense": 0,
+    //     "sharpness": {
+    //         "value": 350,
+    //         "steps": {
+    //             "red": 60,
+    //             "orange": 50,
+    //             "yellow": 60,
+    //             "green": 120,
+    //             "blue": 70,
+    //             "white": 40
+    //         }
+    //     },
+    //     "element": {
+    //         "attack": {
+    //             "type": "ice",
+    //             "minValue": 240,
+    //             "maxValue": 310,
+    //             "isHidden": false
+    //         },
+    //         "status": {
+    //             "type": "blast",
+    //             "minValue": 240,
+    //             "maxValue": 300,
+    //             "isHidden": false
+    //         }
+    //     },
+    //     "elderseal": null,
+    //     "slots": [
+    //         {
+    //             "size": 2
+    //         }
+    //     ],
+    //     "skills": null
+    // }
+    $datasetMap['weapons'][] = [
+        $weapon['id'],
+        $weapon['rare'],
+        $weapon['type'],
+        $weapon['series'],
+        $weapon['name'],
+        $weapon['attack'],
+        $weapon['criticalRate'],
+        $weapon['defense'],
+        (null !== $weapon['sharpness']) ? [
+            $weapon['sharpness']['value'],
+            [
+                $weapon['sharpness']['steps']['red'],
+                $weapon['sharpness']['steps']['orange'],
+                $weapon['sharpness']['steps']['yellow'],
+                $weapon['sharpness']['steps']['green'],
+                $weapon['sharpness']['steps']['blue'],
+                $weapon['sharpness']['steps']['white']
+            ]
+        ] : null,
+        [
+            (null !== $weapon['element']['attack']) ? [
+                $weapon['element']['attack']['type'],
+                $weapon['element']['attack']['minValue'],
+                $weapon['element']['attack']['maxValue'],
+                $weapon['element']['attack']['isHidden']
+            ] : null,
+            (null !== $weapon['element']['status']) ? [
+                $weapon['element']['status']['type'],
+                $weapon['element']['status']['minValue'],
+                $weapon['element']['status']['maxValue'],
+                $weapon['element']['status']['isHidden']
+            ] : null
+        ],
+        (null !== $weapon['elderseal']) ? $weapon['elderseal']['affinity'] : null,
+        (null !== $weapon['slots']) ? array_map(function ($slot) {
+            return $slot['size'];
+        }, $weapon['slots']) : null,
+        (null !== $weapon['skills']) ? array_map(function ($skill) {
+            return [
+                $skill['id'],
+                $skill['level']
+            ];
+        }, $weapon['skills']) : null
+    ];
 }
 
 // Handler Armor Data
 $datasetMap['armors'] = [];
 
-foreach ($armorsBundle as $name => $armors) {
-    foreach ($armors as $armor) {
+foreach ($armors as $armor) {
 
-        // Checklist
-        if (is_array($armor['common']['set'])) {
-            if (!isset($setChecklist[$armor['common']['set']['id']])) {
-                echo "Error: Set={$armor['common']['set']['id']}\n";
-            }
+    // Checklist
+    if (is_array($armor['common']['set'])) {
+        if (!isset($setChecklist[$armor['common']['set']['id']])) {
+            echo "Error: Set={$armor['common']['set']['id']}\n";
         }
+    }
 
-        foreach ($armor['list'] as $item) {
-            $armorChecklist[$item['id']] = true;
+    foreach ($armor['list'] as $item) {
+        $armorChecklist[$item['id']] = true;
 
-            if (is_array($item['skills'])) {
-                foreach ($item['skills'] as $skill) {
-                    if (!isset($skillChecklist[$skill['id']])) {
-                        echo "Error: Armor={$item['id']}, Skill={$skill['id']}\n";
-                    }
+        if (is_array($item['skills'])) {
+            foreach ($item['skills'] as $skill) {
+                if (!isset($skillChecklist[$skill['id']])) {
+                    echo "Error: Armor={$item['id']}, Skill={$skill['id']}\n";
                 }
             }
         }
+    }
 
-        // Create ID Hash
-        if (is_array($armor['common']['set'])) {
-            $armor['common']['set']['id'] = md5($armor['common']['set']['id']);
-        }
+    // Create ID Hash
+    if (is_array($armor['common']['set'])) {
+        $armor['common']['set']['id'] = md5($armor['common']['set']['id']);
+    }
+
+    // Create Translation Mapping
+    $armor['common']['series'] = appendLangMap("armor:common:series", $armor['common']['series']);
+
+    foreach ($armor['list'] as $index => $item) {
 
         // Create Translation Mapping
-        $code = Misc::createCode("armor:common:series");
+        $item['name'] = appendLangMap("armor:list:{$item['id']}:name", $item['name']);
 
-        foreach ($armor['common']['series'] as $lang => $translation) {
-            if (!isset($langMap[$lang])) {
-                $langMap[$lang] = [];
-            }
+        // Create ID Hash
+        $item['id'] = md5($item['id']);
 
-            $langMap[$lang][$code] = $translation;
+        if (is_array($item['skills']) && 0 !== count($item['skills'])) {
+            $item['skills'] = array_map(function ($skill) {
+                $skill['id'] = md5($skill['id']);
+
+                return $skill;
+            }, $item['skills']);
         }
 
-        $armor['common']['series'] = $code;
-
-        foreach (array_keys($armor['list']) as $listIndex) {
-            // Create Translation Mapping
-            $code = Misc::createCode("armor:list:{$armor['list'][$listIndex]['id']}:name");
-
-            foreach ($armor['list'][$listIndex]['name'] as $lang => $translation) {
-                if (!isset($langMap[$lang])) {
-                    $langMap[$lang] = [];
-                }
-
-                $langMap[$lang][$code] = $translation;
-            }
-
-            $armor['list'][$listIndex]['name'] = $code;
-
-            // Create ID Hash
-            $armor['list'][$listIndex]['id'] = md5($armor['list'][$listIndex]['id']);
-
-            if (is_array($armor['list'][$listIndex]['skills'])
-                && 0 !== count($armor['list'][$listIndex]['skills'])) {
-
-                foreach (array_keys($armor['list'][$listIndex]['skills']) as $skillIndex) {
-                    $armor['list'][$listIndex]['skills'][$skillIndex]['id'] = md5($armor['list'][$listIndex]['skills'][$skillIndex]['id']);
-                }
-            }
-        }
-
-        // Create Dataset
-        // {
-        //     "common": {
-        //         "rare": 8,
-        //         "gender": "general",
-        //         "series": {
-        //             "zhTW": "龍王的獨眼α"
-        //         },
-        //         "defense": 90,
-        //         "resistance": {
-        //             "fire": 0,
-        //             "water": 0,
-        //             "thunder": 0,
-        //             "ice": 0,
-        //             "dragon": 0
-        //         },
-        //         "set": null
-        //     },
-        //     "list": [
-        //         {
-        //             "id": "龍王的獨眼α",
-        //             "type": "helm",
-        //             "name": {
-        //                 "zhTW": "龍王的獨眼α"
-        //             },
-        //             "slots": [
-        //                 {
-        //                     "size": 3
-        //                 }
-        //             ],
-        //             "skills": [
-        //                 {
-        //                     "id": "弱點特效",
-        //                     "level": 2
-        //                 }
-        //             ]
-        //         }
-        //     ]
-        // }
-        $datasetMap['armors'][] = [
-            [
-                $armor['common']['rare'],
-                $armor['common']['gender'],
-                $armor['common']['series'],
-                $armor['common']['defense'],
-                [
-                    $armor['common']['resistance']['fire'],
-                    $armor['common']['resistance']['water'],
-                    $armor['common']['resistance']['thunder'],
-                    $armor['common']['resistance']['ice'],
-                    $armor['common']['resistance']['dragon']
-                ],
-                (null !== $armor['common']['set']) ? $armor['common']['set']['id'] : null,
-            ],
-            array_map(function ($item) {
-                return [
-                    $item['id'],
-                    $item['type'],
-                    $item['name'],
-                    (null !== $item['slots']) ? array_map(function ($slot) {
-                        return $slot['size'];
-                    }, $item['slots']) : null,
-                    (null !== $item['skills']) ? array_map(function ($skill) {
-                        return [
-                            $skill['id'],
-                            $skill['level']
-                        ];
-                    }, $item['skills']) : null
-                ];
-            }, $armor['list'])
-        ];
+        // Rewrite
+        $armor['list'][$index] = $item;
     }
+
+    // Create Dataset
+    // {
+    //     "common": {
+    //         "rare": 8,
+    //         "gender": "general",
+    //         "series": {
+    //             "zhTW": "龍王的獨眼α"
+    //         },
+    //         "defense": 90,
+    //         "resistance": {
+    //             "fire": 0,
+    //             "water": 0,
+    //             "thunder": 0,
+    //             "ice": 0,
+    //             "dragon": 0
+    //         },
+    //         "set": null
+    //     },
+    //     "list": [
+    //         {
+    //             "id": "龍王的獨眼α",
+    //             "type": "helm",
+    //             "name": {
+    //                 "zhTW": "龍王的獨眼α"
+    //             },
+    //             "slots": [
+    //                 {
+    //                     "size": 3
+    //                 }
+    //             ],
+    //             "skills": [
+    //                 {
+    //                     "id": "弱點特效",
+    //                     "level": 2
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // }
+    $datasetMap['armors'][] = [
+        [
+            $armor['common']['rare'],
+            $armor['common']['gender'],
+            $armor['common']['series'],
+            $armor['common']['defense'],
+            [
+                $armor['common']['resistance']['fire'],
+                $armor['common']['resistance']['water'],
+                $armor['common']['resistance']['thunder'],
+                $armor['common']['resistance']['ice'],
+                $armor['common']['resistance']['dragon']
+            ],
+            (null !== $armor['common']['set']) ? $armor['common']['set']['id'] : null,
+        ],
+        array_map(function ($item) {
+            return [
+                $item['id'],
+                $item['type'],
+                $item['name'],
+                (null !== $item['slots']) ? array_map(function ($slot) {
+                    return $slot['size'];
+                }, $item['slots']) : null,
+                (null !== $item['skills']) ? array_map(function ($skill) {
+                    return [
+                        $skill['id'],
+                        $skill['level']
+                    ];
+                }, $item['skills']) : null
+            ];
+        }, $armor['list'])
+    ];
 }
 
 // Handle Charm Data
@@ -670,24 +603,15 @@ foreach ($charms as $charm) {
     }
 
     // Create Translation Mapping
-    $code = Misc::createCode("charm:{$charm['id']}:name");
-
-    foreach ($charm['name'] as $lang => $translation) {
-        if (!isset($langMap[$lang])) {
-            $langMap[$lang] = [];
-        }
-
-        $langMap[$lang][$code] = $translation;
-    }
-
-    $charm['name'] = $code;
+    $charm['name'] = appendLangMap("charm:{$charm['id']}:name", $charm['name']);
 
     // Create ID Hash
     $charm['id'] = md5($charm['id']);
+    $charm['skills'] = array_map(function ($skill) {
+        $skill['id'] = md5($skill['id']);
 
-    foreach (array_keys($charm['skills']) as $index) {
-        $charm['skills'][$index]['id'] = md5($charm['skills'][$index]['id']);
-    }
+        return $skill;
+    }, $charm['skills']);
 
     // Create Dataset
     // {
@@ -734,17 +658,7 @@ foreach ($jewels as $jewel) {
     }
 
     // Create Translation Mapping
-    $code = Misc::createCode("jewel:{$jewel['id']}:name");
-
-    foreach ($jewel['name'] as $lang => $translation) {
-        if (!isset($langMap[$lang])) {
-            $langMap[$lang] = [];
-        }
-
-        $langMap[$lang][$code] = $translation;
-    }
-
-    $jewel['name'] = $code;
+    $jewel['name'] = appendLangMap("jewel:{$jewel['id']}:name", $jewel['name']);
 
     // Create ID Hash
     $jewel['id'] = md5($jewel['id']);
@@ -775,7 +689,7 @@ foreach ($jewels as $jewel) {
     ];
 }
 
-// Test Data
+// Test Data: Equips
 foreach ($testData['equipsList'] as $index => $equips) {
 
     // Weapon
@@ -890,8 +804,10 @@ foreach ($testData['equipsList'] as $index => $equips) {
     $testData['equipsList'][$index] = $equips;
 }
 
+// Test Data: Require Condition
 foreach ($testData['requireList'] as $index => $require) {
 
+    // Set
     foreach ($require['sets'] as $setIndex => $set) {
         if (!isset($setChecklist[$set['id']])) {
             echo "Error: Set={$set['id']}\n";
@@ -902,6 +818,7 @@ foreach ($testData['requireList'] as $index => $require) {
         $require['sets'][$setIndex] = $set;
     }
 
+    // Skill
     foreach ($require['skills'] as $skillIndex => $skill) {
         if (!isset($skillChecklist[$skill['id']])) {
             echo "Error: Set={$skill['id']}\n";
