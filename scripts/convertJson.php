@@ -6,6 +6,17 @@ define('ROOT', __DIR__);
 
 class Misc
 {
+    public static $langMap = [];
+    public static $datasetMap = [
+        'weapons' => [],
+        'armors' => [],
+        'charms' => [],
+        'jewels' => [],
+        'enhances' => [],
+        'skills' => [],
+        'sets' => []
+    ];
+
     private static $codeLength = 2;
     private static $codeMap = [];
     private static $hashMap = [];
@@ -17,6 +28,7 @@ class Misc
         'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
         '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
     ];
+
 
     public static function loadJson ($name)
     {
@@ -35,7 +47,7 @@ class Misc
         return file_put_contents($path, $json);
     }
 
-    public static function createCode($text = null)
+    private static function createCode ($text)
     {
         if (!is_string($text)) {
             return false;
@@ -77,6 +89,346 @@ class Misc
 
         return $code;
     }
+
+    public static function appendLangMap ($uniqueStr, $pack)
+    {
+        $code = self::createCode($uniqueStr);
+
+        foreach ($pack as $lang => $translation) {
+            if (!isset(self::$langMap[$lang])) {
+                self::$langMap[$lang] = [];
+            }
+
+            self::$langMap[$lang][$code] = $translation;
+        }
+
+        return $code;
+    }
+
+    public static function appendDatasetMap ($name, $data)
+    {
+        switch ($name) {
+        case 'weapon':
+            // {
+            //     "id": "冰炎劍維爾瑪閃焰",
+            //     "rare": 8,
+            //     "type": "dualBlades",
+            //     "series": {
+            //         "zhTW": "黑鋼"
+            //     },
+            //     "name": {
+            //         "zhTW": "冰炎劍維爾瑪閃焰"
+            //     },
+            //     "attack": 252,
+            //     "criticalRate": 10,
+            //     "defense": 0,
+            //     "sharpness": {
+            //         "value": 350,
+            //         "steps": {
+            //             "red": 60,
+            //             "orange": 50,
+            //             "yellow": 60,
+            //             "green": 120,
+            //             "blue": 70,
+            //             "white": 40
+            //         }
+            //     },
+            //     "element": {
+            //         "attack": {
+            //             "type": "ice",
+            //             "minValue": 240,
+            //             "maxValue": 310,
+            //             "isHidden": false
+            //         },
+            //         "status": {
+            //             "type": "blast",
+            //             "minValue": 240,
+            //             "maxValue": 300,
+            //             "isHidden": false
+            //         }
+            //     },
+            //     "elderseal": null,
+            //     "slots": [
+            //         {
+            //             "size": 2
+            //         }
+            //     ],
+            //     "skills": null
+            // }
+            Misc::$datasetMap['weapons'][] = [
+                $data['id'],
+                $data['rare'],
+                $data['type'],
+                $data['series'],
+                $data['name'],
+                $data['attack'],
+                $data['criticalRate'],
+                $data['defense'],
+                (null !== $data['sharpness']) ? [
+                    $data['sharpness']['value'],
+                    [
+                        $data['sharpness']['steps']['red'],
+                        $data['sharpness']['steps']['orange'],
+                        $data['sharpness']['steps']['yellow'],
+                        $data['sharpness']['steps']['green'],
+                        $data['sharpness']['steps']['blue'],
+                        $data['sharpness']['steps']['white']
+                    ]
+                ] : null,
+                [
+                    (null !== $data['element']['attack']) ? [
+                        $data['element']['attack']['type'],
+                        $data['element']['attack']['minValue'],
+                        $data['element']['attack']['maxValue'],
+                        $data['element']['attack']['isHidden']
+                    ] : null,
+                    (null !== $data['element']['status']) ? [
+                        $data['element']['status']['type'],
+                        $data['element']['status']['minValue'],
+                        $data['element']['status']['maxValue'],
+                        $data['element']['status']['isHidden']
+                    ] : null
+                ],
+                (null !== $data['elderseal']) ? $data['elderseal']['affinity'] : null,
+                (null !== $data['slots']) ? array_map(function ($slot) {
+                    return $slot['size'];
+                }, $data['slots']) : null,
+                (null !== $data['skills']) ? array_map(function ($skill) {
+                    return [
+                        $skill['id'],
+                        $skill['level']
+                    ];
+                }, $data['skills']) : null
+            ];
+            break;
+        case 'armor':
+            // {
+            //     "common": {
+            //         "rare": 8,
+            //         "gender": "general",
+            //         "series": {
+            //             "zhTW": "龍王的獨眼α"
+            //         },
+            //         "defense": 90,
+            //         "resistance": {
+            //             "fire": 0,
+            //             "water": 0,
+            //             "thunder": 0,
+            //             "ice": 0,
+            //             "dragon": 0
+            //         },
+            //         "set": null
+            //     },
+            //     "list": [
+            //         {
+            //             "id": "龍王的獨眼α",
+            //             "type": "helm",
+            //             "name": {
+            //                 "zhTW": "龍王的獨眼α"
+            //             },
+            //             "slots": [
+            //                 {
+            //                     "size": 3
+            //                 }
+            //             ],
+            //             "skills": [
+            //                 {
+            //                     "id": "弱點特效",
+            //                     "level": 2
+            //                 }
+            //             ]
+            //         }
+            //     ]
+            // }
+            Misc::$datasetMap['armors'][] = [
+                [
+                    $data['common']['rare'],
+                    $data['common']['gender'],
+                    $data['common']['series'],
+                    $data['common']['defense'],
+                    [
+                        $data['common']['resistance']['fire'],
+                        $data['common']['resistance']['water'],
+                        $data['common']['resistance']['thunder'],
+                        $data['common']['resistance']['ice'],
+                        $data['common']['resistance']['dragon']
+                    ],
+                    (null !== $data['common']['set']) ? $data['common']['set']['id'] : null,
+                ],
+                array_map(function ($item) {
+                    return [
+                        $item['id'],
+                        $item['type'],
+                        $item['name'],
+                        (null !== $item['slots']) ? array_map(function ($slot) {
+                            return $slot['size'];
+                        }, $item['slots']) : null,
+                        (null !== $item['skills']) ? array_map(function ($skill) {
+                            return [
+                                $skill['id'],
+                                $skill['level']
+                            ];
+                        }, $item['skills']) : null
+                    ];
+                }, $data['list'])
+            ];
+            break;
+        case 'charm':
+            // {
+            //     "id": "心靜自然涼護石",
+            //     "name": {
+            //         "zhTW": "心靜自然涼護石"
+            //     },
+            //     "rare": 7,
+            //     "skills": [
+            //         {
+            //             "id": "熱傷害無效",
+            //             "level": 1
+            //         },
+            //         {
+            //             "id": "適應瘴氣環境",
+            //             "level": 1
+            //         }
+            //     ]
+            // }
+            Misc::$datasetMap['charms'][] = [
+                $data['id'],
+                $data['name'],
+                $data['rare'],
+                array_map(function ($item) {
+                    return [
+                        $item['id'],
+                        $item['level']
+                    ];
+                }, $data['skills'])
+            ];
+            break;
+        case 'jewel':
+            // {
+            //     "id": "増彈珠",
+            //     "name": {
+            //         "zhTW": "増彈珠"
+            //     },
+            //     "rare": 7,
+            //     "size": 2,
+            //     "skill": {
+            //         "id": "砲彈裝填數UP",
+            //         "level": 1
+            //     }
+            // }
+            Misc::$datasetMap['jewels'][] = [
+                $data['id'],
+                $data['name'],
+                $data['rare'],
+                $data['size'],
+                [
+                    $data['skill']['id'],
+                    $data['skill']['level']
+                ]
+            ];
+            break;
+        case 'enhance':
+            // {
+            //     "id": "強化攻擊力",
+            //     "name":{
+            //         "zhTW":  "強化攻擊力"
+            //     },
+            //     "list": [
+            //         {
+            //             "level": 1,
+            //             "description": {
+            //                 "zhTW": "基礎攻擊力+5"
+            //             },
+            //             "reaction": {
+            //                 "attack": {
+            //                     "value": 5
+            //                 }
+            //             }
+            //         }
+            //     ]
+            // }
+            Misc::$datasetMap['enhances'][] = [
+                $data['id'],
+                $data['name'],
+                array_map(function ($item) {
+                    return [
+                        $item['level'],
+                        $item['description'],
+                        $item['reaction']
+                    ];
+                }, $data['list'])
+            ];
+            break;
+        case 'skill':
+            // {
+            //     "id": "體力增強",
+            //     "name": {
+            //         "zhTW": "體力增強"
+            //     },
+            //     "type": "active",
+            //     "from" : {
+            //         "set": false,
+            //         "jewel": true,
+            //         "armor": true
+            //     },
+            //     "list": [
+            //         {
+            //             "level": 1,
+            //             "description": {
+            //                 "zhTW": "體力+15"
+            //             },
+            //             "reaction": {
+            //                 "health": {
+            //                     "value": 15
+            //                 }
+            //             }
+            //         }
+            //     ]
+            // }
+            Misc::$datasetMap['skills'][] = [
+                $data['id'],
+                $data['name'],
+                $data['type'],
+                [
+                    $data['from']['set'],
+                    $data['from']['jewel'],
+                    $data['from']['armor']
+                ],
+                array_map(function ($item) {
+                    return [
+                        $item['level'],
+                        $item['description'],
+                        $item['reaction']
+                    ];
+                }, $data['list'])
+            ];
+            break;
+        case 'set':
+            // {
+            //     "id": "蠻顎龍之力",
+            //     "name": {
+            //         "zhTW": "蠻顎龍之力"
+            //     },
+            //     "skills": [
+            //         {
+            //             "id": "振奮",
+            //             "require": 3
+            //         }
+            //     ]
+            // }
+            Misc::$datasetMap['sets'][] = [
+                $data['id'],
+                $data['name'],
+                array_map(function ($item) {
+                    return [
+                        $item['id'],
+                        $item['require']
+                    ];
+                }, $data['skills'])
+            ];
+            break;
+        }
+    }
 }
 
 /**
@@ -111,8 +463,6 @@ $testData = Misc::loadJson('testData');
 /**
  * Check Enhance, Skill, Set & Create Lang, Dataset
  */
-$langMap = [];
-$datasetMap = [];
 $enhanceChecklist = [];
 $skillChecklist = [];
 $setChecklist = [];
@@ -121,32 +471,15 @@ $armorChecklist = [];
 $charmChecklist = [];
 $jewelChecklist = [];
 
-function appendLangMap ($uniqueStr, $pack)
-{
-    $code = Misc::createCode($uniqueStr);
-
-    foreach ($pack as $lang => $translation) {
-        if (!isset($langMap[$lang])) {
-            $langMap[$lang] = [];
-        }
-
-        $langMap[$lang][$code] = $translation;
-    }
-
-    return $code;
-}
-
 // Handle Enhances Data
-$datasetMap['enhances'] = [];
-
 foreach ($enhances as $enhance) {
     $enhanceChecklist[$enhance['id']] = true;
 
     // Create Translation Mapping
-    $enhance['name'] = appendLangMap("enhance:{$enhance['id']}:name", $enhance['name']);
+    $enhance['name'] = Misc::appendLangMap("enhance:{$enhance['id']}:name", $enhance['name']);
 
     foreach ($enhance['list'] as $index => $item) {
-        $item['description'] = appendLangMap("enhance:{$enhance['id']}:list:{$index}:description", $item['description']);
+        $item['description'] = Misc::appendLangMap("enhance:{$enhance['id']}:list:{$index}:description", $item['description']);
 
         // Rewrite
         $enhance['list'][$index] = $item;
@@ -156,71 +489,18 @@ foreach ($enhances as $enhance) {
     $enhance['id'] = md5($enhance['id']);
 
     // Create Dataset
-    // {
-    //     "id": "強化攻擊力",
-    //     "name":{
-    //         "zhTW":  "強化攻擊力"
-    //     },
-    //     "list": [
-    //         {
-    //             "level": 1,
-    //             "description": {
-    //                 "zhTW": "基礎攻擊力+5"
-    //             },
-    //             "reaction": {
-    //                 "attack": {
-    //                     "value": 5
-    //                 }
-    //             }
-    //         },
-    //         {
-    //             "level": 2,
-    //             "description": {
-    //                 "zhTW": "基礎攻擊力+10"
-    //             },
-    //             "reaction": {
-    //                 "attack": {
-    //                     "value": 10
-    //                 }
-    //             }
-    //         },
-    //         {
-    //             "level": 3,
-    //             "description": {
-    //                 "zhTW": "基礎攻擊力+15"
-    //             },
-    //             "reaction": {
-    //                 "attack": {
-    //                     "value": 15
-    //                 }
-    //             }
-    //         }
-    //     ]
-    // }
-    $datasetMap['enhances'][] = [
-        $enhance['id'],
-        $enhance['name'],
-        array_map(function ($item) {
-            return [
-                $item['level'],
-                $item['description'],
-                $item['reaction']
-            ];
-        }, $enhance['list'])
-    ];
+    Misc::appendDatasetMap('enhance', $enhance);
 }
 
 // Handle Skill Data
-$datasetMap['skills'] = [];
-
 foreach ($skills as $skill) {
     $skillChecklist[$skill['id']] = true;
 
     // Create Translation Mapping
-    $skill['name'] = appendLangMap("skill:{$skill['id']}:name", $skill['name']);
+    $skill['name'] = Misc::appendLangMap("skill:{$skill['id']}:name", $skill['name']);
 
     foreach ($skill['list'] as $index => $item) {
-        $item['description'] = appendLangMap("skill:{$skill['id']}:list:{$index}:description", $item['description']);
+        $item['description'] = Misc::appendLangMap("skill:{$skill['id']}:list:{$index}:description", $item['description']);
 
         // Rewrite
         $skill['list'][$index] = $item;
@@ -230,80 +510,15 @@ foreach ($skills as $skill) {
     $skill['id'] = md5($skill['id']);
 
     // Create Dataset
-    // {
-    //     "id": "體力增強",
-    //     "name": {
-    //         "zhTW": "體力增強"
-    //     },
-    //     "type": "active",
-    //     "from" : {
-    //         "set": false,
-    //         "jewel": true,
-    //         "armor": true
-    //     },
-    //     "list": [
-    //         {
-    //             "level": 1,
-    //             "description": {
-    //                 "zhTW": "體力+15"
-    //             },
-    //             "reaction": {
-    //                 "health": {
-    //                     "value": 15
-    //                 }
-    //             }
-    //         },
-    //         {
-    //             "level": 2,
-    //             "description": {
-    //                 "zhTW": "體力+30"
-    //             },
-    //             "reaction": {
-    //                 "health": {
-    //                     "value": 30
-    //                 }
-    //             }
-    //         },
-    //         {
-    //             "level": 3,
-    //             "description": {
-    //                 "zhTW": "體力+50"
-    //             },
-    //             "reaction": {
-    //                 "health": {
-    //                     "value": 50
-    //                 }
-    //             }
-    //         }
-    //     ]
-    // }
-    $datasetMap['skills'][] = [
-        $skill['id'],
-        $skill['name'],
-        $skill['type'],
-        [
-            $skill['from']['set'],
-            $skill['from']['jewel'],
-            $skill['from']['armor']
-        ],
-        array_map(function ($item) {
-            return [
-                $item['level'],
-                $item['description'],
-                $item['reaction']
-            ];
-        }, $skill['list'])
-    ];
+    Misc::appendDatasetMap('skill', $skill);
 }
 
 // Handle Set Data
-$datasetMap['sets'] = [];
-
 foreach ($sets as $set) {
     $setChecklist[$set['id']] = true;
 
     // Create Translation Mapping
-    $set['name'] = appendLangMap("set:{$set['id']}:name", $set['name']);
+    $set['name'] = Misc::appendLangMap("set:{$set['id']}:name", $set['name']);
 
     // Create ID Hash
     $set['id'] = md5($set['id']);
@@ -314,33 +529,10 @@ foreach ($sets as $set) {
     }, $set['skills']);
 
     // Create Dataset
-    // {
-    //     "id": "蠻顎龍之力",
-    //     "name": {
-    //         "zhTW": "蠻顎龍之力"
-    //     },
-    //     "skills": [
-    //         {
-    //             "id": "振奮",
-    //             "require": 3
-    //         }
-    //     ]
-    // }
-    $datasetMap['sets'][] = [
-        $set['id'],
-        $set['name'],
-        array_map(function ($item) {
-            return [
-                $item['id'],
-                $item['require']
-            ];
-        }, $set['skills'])
-    ];
+    Misc::appendDatasetMap('set', $set);
 }
 
 // Handle Weapon Data
-$datasetMap['weapons'] = [];
-
 foreach ($weapons as $weapon) {
     $weaponChecklist[$weapon['id']] = true;
 
@@ -354,8 +546,8 @@ foreach ($weapons as $weapon) {
     }
 
     // Create Translation Mapping
-    $weapon['name'] = appendLangMap("weapon:{$weapon['id']}:name", $weapon['name']);
-    $weapon['series'] = appendLangMap("weapon:{$weapon['id']}:series", $weapon['series']);
+    $weapon['name'] = Misc::appendLangMap("weapon:{$weapon['id']}:name", $weapon['name']);
+    $weapon['series'] = Misc::appendLangMap("weapon:{$weapon['id']}:series", $weapon['series']);
 
     // Create ID Hash
     $weapon['id'] = md5($weapon['id']);
@@ -369,102 +561,10 @@ foreach ($weapons as $weapon) {
     }
 
     // Create Dataset
-    // {
-    //     "id": "冰炎劍維爾瑪閃焰",
-    //     "rare": 8,
-    //     "type": "dualBlades",
-    //     "series": {
-    //         "zhTW": "黑鋼"
-    //     },
-    //     "name": {
-    //         "zhTW": "冰炎劍維爾瑪閃焰"
-    //     },
-    //     "attack": 252,
-    //     "criticalRate": 10,
-    //     "defense": 0,
-    //     "sharpness": {
-    //         "value": 350,
-    //         "steps": {
-    //             "red": 60,
-    //             "orange": 50,
-    //             "yellow": 60,
-    //             "green": 120,
-    //             "blue": 70,
-    //             "white": 40
-    //         }
-    //     },
-    //     "element": {
-    //         "attack": {
-    //             "type": "ice",
-    //             "minValue": 240,
-    //             "maxValue": 310,
-    //             "isHidden": false
-    //         },
-    //         "status": {
-    //             "type": "blast",
-    //             "minValue": 240,
-    //             "maxValue": 300,
-    //             "isHidden": false
-    //         }
-    //     },
-    //     "elderseal": null,
-    //     "slots": [
-    //         {
-    //             "size": 2
-    //         }
-    //     ],
-    //     "skills": null
-    // }
-    $datasetMap['weapons'][] = [
-        $weapon['id'],
-        $weapon['rare'],
-        $weapon['type'],
-        $weapon['series'],
-        $weapon['name'],
-        $weapon['attack'],
-        $weapon['criticalRate'],
-        $weapon['defense'],
-        (null !== $weapon['sharpness']) ? [
-            $weapon['sharpness']['value'],
-            [
-                $weapon['sharpness']['steps']['red'],
-                $weapon['sharpness']['steps']['orange'],
-                $weapon['sharpness']['steps']['yellow'],
-                $weapon['sharpness']['steps']['green'],
-                $weapon['sharpness']['steps']['blue'],
-                $weapon['sharpness']['steps']['white']
-            ]
-        ] : null,
-        [
-            (null !== $weapon['element']['attack']) ? [
-                $weapon['element']['attack']['type'],
-                $weapon['element']['attack']['minValue'],
-                $weapon['element']['attack']['maxValue'],
-                $weapon['element']['attack']['isHidden']
-            ] : null,
-            (null !== $weapon['element']['status']) ? [
-                $weapon['element']['status']['type'],
-                $weapon['element']['status']['minValue'],
-                $weapon['element']['status']['maxValue'],
-                $weapon['element']['status']['isHidden']
-            ] : null
-        ],
-        (null !== $weapon['elderseal']) ? $weapon['elderseal']['affinity'] : null,
-        (null !== $weapon['slots']) ? array_map(function ($slot) {
-            return $slot['size'];
-        }, $weapon['slots']) : null,
-        (null !== $weapon['skills']) ? array_map(function ($skill) {
-            return [
-                $skill['id'],
-                $skill['level']
-            ];
-        }, $weapon['skills']) : null
-    ];
+    Misc::appendDatasetMap('weapon', $weapon);
 }
 
 // Handler Armor Data
-$datasetMap['armors'] = [];
-
 foreach ($armors as $armor) {
 
     // Checklist
@@ -492,12 +592,12 @@ foreach ($armors as $armor) {
     }
 
     // Create Translation Mapping
-    $armor['common']['series'] = appendLangMap("armor:common:series", $armor['common']['series']);
+    $armor['common']['series'] = Misc::appendLangMap("armor:common:series", $armor['common']['series']);
 
     foreach ($armor['list'] as $index => $item) {
 
         // Create Translation Mapping
-        $item['name'] = appendLangMap("armor:list:{$item['id']}:name", $item['name']);
+        $item['name'] = Misc::appendLangMap("armor:list:{$item['id']}:name", $item['name']);
 
         // Create ID Hash
         $item['id'] = md5($item['id']);
@@ -515,81 +615,10 @@ foreach ($armors as $armor) {
     }
 
     // Create Dataset
-    // {
-    //     "common": {
-    //         "rare": 8,
-    //         "gender": "general",
-    //         "series": {
-    //             "zhTW": "龍王的獨眼α"
-    //         },
-    //         "defense": 90,
-    //         "resistance": {
-    //             "fire": 0,
-    //             "water": 0,
-    //             "thunder": 0,
-    //             "ice": 0,
-    //             "dragon": 0
-    //         },
-    //         "set": null
-    //     },
-    //     "list": [
-    //         {
-    //             "id": "龍王的獨眼α",
-    //             "type": "helm",
-    //             "name": {
-    //                 "zhTW": "龍王的獨眼α"
-    //             },
-    //             "slots": [
-    //                 {
-    //                     "size": 3
-    //                 }
-    //             ],
-    //             "skills": [
-    //                 {
-    //                     "id": "弱點特效",
-    //                     "level": 2
-    //                 }
-    //             ]
-    //         }
-    //     ]
-    // }
-    $datasetMap['armors'][] = [
-        [
-            $armor['common']['rare'],
-            $armor['common']['gender'],
-            $armor['common']['series'],
-            $armor['common']['defense'],
-            [
-                $armor['common']['resistance']['fire'],
-                $armor['common']['resistance']['water'],
-                $armor['common']['resistance']['thunder'],
-                $armor['common']['resistance']['ice'],
-                $armor['common']['resistance']['dragon']
-            ],
-            (null !== $armor['common']['set']) ? $armor['common']['set']['id'] : null,
-        ],
-        array_map(function ($item) {
-            return [
-                $item['id'],
-                $item['type'],
-                $item['name'],
-                (null !== $item['slots']) ? array_map(function ($slot) {
-                    return $slot['size'];
-                }, $item['slots']) : null,
-                (null !== $item['skills']) ? array_map(function ($skill) {
-                    return [
-                        $skill['id'],
-                        $skill['level']
-                    ];
-                }, $item['skills']) : null
-            ];
-        }, $armor['list'])
-    ];
+    Misc::appendDatasetMap('armor', $armor);
 }
 
 // Handle Charm Data
-$datasetMap['charms'] = [];
-
 foreach ($charms as $charm) {
     $charmChecklist[$charm['id']] = true;
 
@@ -603,7 +632,7 @@ foreach ($charms as $charm) {
     }
 
     // Create Translation Mapping
-    $charm['name'] = appendLangMap("charm:{$charm['id']}:name", $charm['name']);
+    $charm['name'] = Misc::appendLangMap("charm:{$charm['id']}:name", $charm['name']);
 
     // Create ID Hash
     $charm['id'] = md5($charm['id']);
@@ -614,39 +643,10 @@ foreach ($charms as $charm) {
     }, $charm['skills']);
 
     // Create Dataset
-    // {
-    //     "id": "心靜自然涼護石",
-    //     "name": {
-    //         "zhTW": "心靜自然涼護石"
-    //     },
-    //     "rare": 7,
-    //     "skills": [
-    //         {
-    //             "id": "熱傷害無效",
-    //             "level": 1
-    //         },
-    //         {
-    //             "id": "適應瘴氣環境",
-    //             "level": 1
-    //         }
-    //     ]
-    // }
-    $datasetMap['charms'][] = [
-        $charm['id'],
-        $charm['name'],
-        $charm['rare'],
-        array_map(function ($item) {
-            return [
-                $item['id'],
-                $item['level']
-            ];
-        }, $charm['skills'])
-    ];
+    Misc::appendDatasetMap('charm', $charm);
 }
 
 // handler Jewel Data
-$datasetMap['jewels'] = [];
-
 foreach ($jewels as $jewel) {
     $jewelChecklist[$jewel['id']] = true;
 
@@ -658,35 +658,14 @@ foreach ($jewels as $jewel) {
     }
 
     // Create Translation Mapping
-    $jewel['name'] = appendLangMap("jewel:{$jewel['id']}:name", $jewel['name']);
+    $jewel['name'] = Misc::appendLangMap("jewel:{$jewel['id']}:name", $jewel['name']);
 
     // Create ID Hash
     $jewel['id'] = md5($jewel['id']);
     $jewel['skill']['id'] = md5($jewel['skill']['id']);
 
     // Create Dataset
-    // {
-    //     "id": "増彈珠",
-    //     "name": {
-    //         "zhTW": "増彈珠"
-    //     },
-    //     "rare": 7,
-    //     "size": 2,
-    //     "skill": {
-    //         "id": "砲彈裝填數UP",
-    //         "level": 1
-    //     }
-    // }
-    $datasetMap['jewels'][] = [
-        $jewel['id'],
-        $jewel['name'],
-        $jewel['rare'],
-        $jewel['size'],
-        [
-            $jewel['skill']['id'],
-            $jewel['skill']['level']
-        ]
-    ];
+    Misc::appendDatasetMap('jewel', $jewel);
 }
 
 // Test Data: Equips
@@ -833,11 +812,11 @@ foreach ($testData['requireList'] as $index => $require) {
 }
 
 // Save Json
-foreach ($datasetMap as $name => $data) {
+foreach (Misc::$datasetMap as $name => $data) {
     Misc::saveJson("datasets/{$name}", $data);
 }
 
-foreach ($langMap as $lang => $data) {
+foreach (Misc::$langMap as $lang => $data) {
     Misc::saveJson("langs/{$lang}/dataset", $data);
 }
 
