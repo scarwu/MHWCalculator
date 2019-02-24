@@ -22,8 +22,12 @@ import Config from 'config';
 
 // Set Sentry Endpoint
 if ('production' === Config.env) {
+    Sentry.configureScope((scope) => {
+        scope.setLevel('error');
+    });
     Sentry.init({
-        dsn: 'https://000580e8cc8a4f3bbf668d4acfc90da2@sentry.io/1400031'
+        dsn: 'https://000580e8cc8a4f3bbf668d4acfc90da2@sentry.io/1400031',
+        release: Config.buildTime
     });
 }
 

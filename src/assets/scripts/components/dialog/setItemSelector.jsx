@@ -64,7 +64,8 @@ export default class SetItemSelector extends Component {
     handleSegmentInput = () => {
         let segment = this.refs.segment.value;
 
-        segment = (0 !== segment.length) ? segment.trim() : null;
+        segment = (0 !== segment.length)
+            ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
 
         this.setState({
             segment: segment
