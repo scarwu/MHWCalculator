@@ -27,6 +27,32 @@ import FunctionalIcon from 'components/common/functionalIcon';
 // Load Constant
 import Constant from 'constant';
 
+let initState = (equips) => {
+    let equipBundleList = Status.get('equipBundleList');
+
+    if (null === equips.weapon.id
+        && null === equips.helm.id
+        && null === equips.chest.id
+        && null === equips.arm.id
+        && null === equips.waist.id
+        && null === equips.leg.id
+        && null === equips.charm.id) {
+
+        equips = null;
+    }
+
+    if (null === equipBundleList
+        || undefined === equipBundleList) {
+
+        equipBundleList = [];
+    }
+
+    return {
+        equips: equips,
+        equipBundleList: equipBundleList
+    };
+};
+
 export default class EquipBundleSelector extends Component {
 
     // Default Props
@@ -43,7 +69,7 @@ export default class EquipBundleSelector extends Component {
         this.state = Object.assign({
             equips: null,
             equipBundleList: []
-        }, this.initState(props.data));
+        }, initState(props.data));
     }
 
     /**
@@ -115,37 +141,11 @@ export default class EquipBundleSelector extends Component {
         this.props.onClose();
     };
 
-    initState = (equips) => {
-        let equipBundleList = Status.get('equipBundleList');
-
-        if (null === equips.weapon.id
-            && null === equips.helm.id
-            && null === equips.chest.id
-            && null === equips.arm.id
-            && null === equips.waist.id
-            && null === equips.leg.id
-            && null === equips.charm.id) {
-
-            equips = null;
-        }
-
-        if (null === equipBundleList
-            || undefined === equipBundleList) {
-
-            equipBundleList = [];
-        }
-
-        return {
-            equips: equips,
-            equipBundleList: equipBundleList
-        };
-    };
-
     /**
      * Lifecycle Functions
      */
-    componentWillReceiveProps (nextProps) {
-        this.setState(this.initState(nextProps.data));
+    static getDerivedStateFromProps(nextProps, prevState) {
+        return initState(nextProps.data);
     }
 
     /**

@@ -46,12 +46,12 @@ export default class CandidateBundles extends Component {
 
         // Initial State
         this.state = {
-            bundleList: [],
+            bundleList: (undefined !== candidateBundles)
+                ? candidateBundles.bundleList : false,
             bundleLimit: 25,
             searchTime: (undefined !== candidateBundles)
-                ? candidateBundles.bundleList : null,
-            isSearching: (undefined !== candidateBundles)
-                ? candidateBundles.searchTime : false
+                ? candidateBundles.searchTime : null,
+            isSearching: false
         };
     }
 

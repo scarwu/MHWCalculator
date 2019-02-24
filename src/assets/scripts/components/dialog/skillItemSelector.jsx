@@ -24,6 +24,39 @@ import FunctionalIcon from 'components/common/functionalIcon';
 // Load Constant
 import Constant from 'constant';
 
+let initState = (data) => {
+    let selectedList = [];
+    let unselectedList = [];
+
+    data = data.map((skill) => {
+        return skill.id;
+    });
+
+    SkillDataset.getNames().sort().forEach((skillId) => {
+        let skillInfo = SkillDataset.getInfo(skillId);
+
+        if (null === skillInfo) {
+            return;
+        }
+
+        if (false === skillInfo.from.jewel && false === skillInfo.from.armor) {
+            return;
+        }
+
+        // Skip Selected Skills
+        if (-1 !== data.indexOf(skillInfo.id)) {
+            selectedList.push(skillInfo);
+        } else {
+            unselectedList.push(skillInfo);
+        }
+    });
+
+    return {
+        selectedList: selectedList,
+        unselectedList: unselectedList
+    };
+};
+
 export default class SkillItemSelector extends Component {
 
     // Default Props
@@ -42,7 +75,7 @@ export default class SkillItemSelector extends Component {
             data: {},
             list: [],
             segment: null
-        }, this.initList(props.data));
+        }, initState(props.data));
     }
 
     /**
@@ -75,44 +108,11 @@ export default class SkillItemSelector extends Component {
         });
     };
 
-    initList = (data) => {
-        let selectedList = [];
-        let unselectedList = [];
-
-        data = data.map((skill) => {
-            return skill.id;
-        });
-
-        SkillDataset.getNames().sort().forEach((skillId) => {
-            let skillInfo = SkillDataset.getInfo(skillId);
-
-            if (null === skillInfo) {
-                return;
-            }
-
-            if (false === skillInfo.from.jewel && false === skillInfo.from.armor) {
-                return;
-            }
-
-            // Skip Selected Skills
-            if (-1 !== data.indexOf(skillInfo.id)) {
-                selectedList.push(skillInfo);
-            } else {
-                unselectedList.push(skillInfo);
-            }
-        });
-
-        return {
-            selectedList: selectedList,
-            unselectedList: unselectedList
-        };
-    };
-
     /**
      * Lifecycle Functions
      */
-    componentWillReceiveProps (nextProps) {
-        this.setState(this.initList(nextProps.data));
+    static getDerivedStateFromProps(nextProps, prevState) {
+        return initState(nextProps.data);
     }
 
     /**
