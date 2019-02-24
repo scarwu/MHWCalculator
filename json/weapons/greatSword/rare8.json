@@ -4,10 +4,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "滅盡龍"
+            "zhTW": "滅盡龍",
+            "enUS": null,
+            "jaJP": null
         },
         "name": {
-            "zhTW": "滅鬼凶器"
+            "zhTW": "滅鬼凶器",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 1008,
         "criticalRate": 0,
@@ -47,10 +51,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "火龍"
+            "zhTW": "火龍",
+            "enUS": null,
+            "jaJP": null
         },
         "name": {
-            "zhTW": "火龍煌劍"
+            "zhTW": "火龍煌劍",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 912,
         "criticalRate": 15,
@@ -88,10 +96,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "屍套龍"
+            "zhTW": "屍套龍",
+            "enUS": null,
+            "jaJP": null
         },
         "name": {
-            "zhTW": "魔物的憤怒"
+            "zhTW": "魔物的憤怒",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 960,
         "criticalRate": 0,
@@ -131,10 +143,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "幻獸"
+            "zhTW": "幻獸",
+            "enUS": null,
+            "jaJP": null
         },
         "name": {
-            "zhTW": "召雷劍【麒麟王】"
+            "zhTW": "召雷劍【麒麟王】",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 768,
         "criticalRate": 0,
@@ -168,10 +184,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "黑鋼"
+            "zhTW": "黑鋼",
+            "enUS": null,
+            "jaJP": null
         },
         "name": {
-            "zhTW": "鋼龍凍大劍"
+            "zhTW": "鋼龍凍大劍",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 864,
         "criticalRate": 10,
@@ -209,10 +229,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "冥燈龍"
+            "zhTW": "冥燈龍",
+            "enUS": null,
+            "jaJP": null
         },
         "name": {
-            "zhTW": "冥燈龍大劍"
+            "zhTW": "冥燈龍大劍",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 816,
         "criticalRate": 15,
@@ -255,10 +279,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "工房武器"
+            "zhTW": "工房武器",
+            "enUS": null,
+            "jaJP": null
         },
         "name": {
-            "zhTW": "龍顎劍【大牙】"
+            "zhTW": "龍顎劍【大牙】",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 960,
         "criticalRate": 0,
@@ -296,10 +324,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "enUS": null,
+            "jaJP": "マム鑑定"
         },
         "name": {
-            "zhTW": "鎧羅炎．冰"
+            "zhTW": "鎧羅炎．冰",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 912,
         "criticalRate": 10,
@@ -337,10 +369,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "enUS": null,
+            "jaJP": "マム鑑定"
         },
         "name": {
-            "zhTW": "鎧羅炎．睡眠"
+            "zhTW": "鎧羅炎．睡眠",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 912,
         "criticalRate": 0,
@@ -378,10 +414,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "enUS": null,
+            "jaJP": "マム鑑定"
         },
         "name": {
-            "zhTW": "鎧羅炎．水"
+            "zhTW": "鎧羅炎．水",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 912,
         "criticalRate": 0,
@@ -419,10 +459,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "炎妃龍"
+            "zhTW": "炎妃龍",
+            "enUS": null,
+            "jaJP": null
         },
         "name": {
-            "zhTW": "皇后盔．炎妃"
+            "zhTW": "皇后盔．炎妃",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 864,
         "criticalRate": 20,
@@ -468,10 +512,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "炎妃龍．滅盡"
+            "zhTW": "炎妃龍．滅盡",
+            "enUS": null,
+            "jaJP": null
         },
         "name": {
-            "zhTW": "皇后盔．滅盡"
+            "zhTW": "皇后盔．滅盡",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 912,
         "criticalRate": 0,
@@ -517,10 +565,14 @@
         "rare": 8,
         "type": "greatSword",
         "series": {
-            "zhTW": "炎妃龍．冥燈"
+            "zhTW": "炎妃龍．冥燈",
+            "enUS": null,
+            "jaJP": null
         },
         "name": {
-            "zhTW": "皇后盔．冥燈"
+            "zhTW": "皇后盔．冥燈",
+            "enUS": null,
+            "jaJP": null
         },
         "attack": 864,
         "criticalRate": 10,
@@ -557,6 +609,391 @@
         "skills": [
             {
                 "id": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "鎧羅炎・雷",
+        "rare": 8,
+        "type": "greatSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "enUS": null,
+            "jaJP": "マム鑑定"
+        },
+        "name": {
+            "zhTW": "鎧羅炎・雷",
+            "enUS": null,
+            "jaJP": "ガイラブレイズ・雷"
+        },
+        "attack": 1008,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 80,
+                "orange": 100,
+                "yellow": 40,
+                "green": 40,
+                "blue": 140,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 600,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金大劍・王",
+        "rare": 8,
+        "type": "greatSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "enUS": null,
+            "jaJP": "マム鑑定"
+        },
+        "name": {
+            "zhTW": "帝王金大劍・王",
+            "enUS": null,
+            "jaJP": "皇金の大剣・王"
+        },
+        "attack": 936,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 50,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 80,
+                "white": 40
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金大劍・水",
+        "rare": 8,
+        "type": "greatSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "enUS": null,
+            "jaJP": "マム鑑定"
+        },
+        "name": {
+            "zhTW": "帝王金大劍・水",
+            "enUS": null,
+            "jaJP": "皇金の大剣・水"
+        },
+        "attack": 912,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 140,
+                "orange": 100,
+                "yellow": 30,
+                "green": 30,
+                "blue": 70,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 480,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金大劍・雷",
+        "rare": 8,
+        "type": "greatSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "enUS": null,
+            "jaJP": "マム鑑定"
+        },
+        "name": {
+            "zhTW": "帝王金大劍・雷",
+            "enUS": null,
+            "jaJP": "皇金の大剣・雷"
+        },
+        "attack": 1008,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 70,
+                "orange": 100,
+                "yellow": 40,
+                "green": 40,
+                "blue": 150,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 480,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金大劍・冰",
+        "rare": 8,
+        "type": "greatSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "enUS": null,
+            "jaJP": "マム鑑定"
+        },
+        "name": {
+            "zhTW": "帝王金大劍・冰",
+            "enUS": null,
+            "jaJP": "皇金の大剣・氷"
+        },
+        "attack": 912,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 50,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 80,
+                "white": 40
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金大劍・屍套",
+        "rare": 8,
+        "type": "greatSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "enUS": null,
+            "jaJP": "マム鑑定"
+        },
+        "name": {
+            "zhTW": "帝王金大劍・屍套",
+            "enUS": null,
+            "jaJP": "皇金の大剣・屍套"
+        },
+        "attack": 984,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 190,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 60,
+                "white": 40
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金大劍・熔山",
+        "rare": 8,
+        "type": "greatSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "enUS": null,
+            "jaJP": "マム鑑定"
+        },
+        "name": {
+            "zhTW": "帝王金大劍・熔山",
+            "enUS": null,
+            "jaJP": "皇金の大剣・熔山"
+        },
+        "attack": 984,
+        "criticalRate": 10,
+        "defense": 15,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 110,
+                "orange": 50,
+                "yellow": 50,
+                "green": 80,
+                "blue": 110,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 480,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金大劍・痺賊",
+        "rare": 8,
+        "type": "greatSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "enUS": null,
+            "jaJP": "マム鑑定"
+        },
+        "name": {
+            "zhTW": "帝王金大劍・痺賊",
+            "enUS": null,
+            "jaJP": "皇金の大剣・痺賊"
+        },
+        "attack": 840,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 70,
+                "orange": 60,
+                "yellow": 60,
+                "green": 100,
+                "blue": 80,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 480,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
                 "level": 1
             }
         ]

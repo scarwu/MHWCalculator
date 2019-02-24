@@ -77,7 +77,7 @@ class Misc
                 break;
             }
 
-            echo "conflict: {$code}\n";
+            echo '*';
         }
 
         // Reset Random Seed
@@ -94,6 +94,10 @@ class Misc
         $code = self::createCode($uniqueStr);
 
         foreach ($pack as $lang => $translation) {
+            if (null === $translation) {
+                continue;
+            }
+
             if (!isset(self::$langMap[$lang])) {
                 self::$langMap[$lang] = [];
             }
