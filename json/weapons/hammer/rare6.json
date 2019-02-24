@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "hammer",
         "series": {
-            "zhTW": "礦石素材"
+            "zhTW": "礦石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "大鬼鐵 II"
+            "zhTW": "大鬼鐵 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 936,
         "criticalRate": 0,
@@ -48,10 +52,14 @@
         "rare": 6,
         "type": "hammer",
         "series": {
-            "zhTW": "水屬性"
+            "zhTW": "水屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "激流強鎚 III"
+            "zhTW": "激流強鎚 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 936,
         "criticalRate": 0,
@@ -89,10 +97,14 @@
         "rare": 6,
         "type": "hammer",
         "series": {
-            "zhTW": "大凶顎龍"
+            "zhTW": "大凶顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "馬拉多戰鎚 III"
+            "zhTW": "馬拉多戰鎚 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 832,
         "criticalRate": 20,
@@ -126,10 +138,14 @@
         "rare": 6,
         "type": "hammer",
         "series": {
-            "zhTW": "雷屬性"
+            "zhTW": "雷屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "雷光強鎚 III"
+            "zhTW": "雷光強鎚 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 988,
         "criticalRate": 0,
@@ -167,10 +183,14 @@
         "rare": 6,
         "type": "hammer",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "大地之岩 II"
+            "zhTW": "大地之岩 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 988,
         "criticalRate": 0,
@@ -208,10 +228,14 @@
         "rare": 6,
         "type": "hammer",
         "series": {
-            "zhTW": "骨鎚龍"
+            "zhTW": "骨鎚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "骨鎚龍擊鎚 III"
+            "zhTW": "骨鎚龍擊鎚 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 988,
         "criticalRate": 0,
@@ -245,10 +269,14 @@
         "rare": 6,
         "type": "hammer",
         "series": {
-            "zhTW": "搔鳥"
+            "zhTW": "搔鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "衝擊釘鎚 III"
+            "zhTW": "衝擊釘鎚 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 884,
         "criticalRate": 25,
@@ -282,10 +310,14 @@
         "rare": 6,
         "type": "hammer",
         "series": {
-            "zhTW": "土砂龍"
+            "zhTW": "土砂龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "土砂龍粉碎者 III (大槌)"
+            "zhTW": "土砂龍粉碎者 III (大槌)",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1040,
         "criticalRate": -10,
@@ -326,10 +358,14 @@
         "rare": 6,
         "type": "hammer",
         "series": {
-            "zhTW": "蠻顎龍"
+            "zhTW": "蠻顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "蠻顎龍戰鎚 III"
+            "zhTW": "蠻顎龍戰鎚 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1092,
         "criticalRate": -20,
@@ -363,10 +399,14 @@
         "rare": 6,
         "type": "hammer",
         "series": {
-            "zhTW": "龍骨"
+            "zhTW": "龍骨",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍骨大鎚 III"
+            "zhTW": "龍骨大鎚 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 832,
         "criticalRate": 0,

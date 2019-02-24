@@ -2,7 +2,9 @@
     {
         "id": "KO護石 III",
         "name": {
-            "zhTW": "KO護石 III"
+            "zhTW": "KO護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -15,7 +17,9 @@
     {
         "id": "體術護石 III",
         "name": {
-            "zhTW": "體術護石 III"
+            "zhTW": "體術護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "skills": [
@@ -28,7 +32,9 @@
     {
         "id": "體力護石 III",
         "name": {
-            "zhTW": "體力護石 III"
+            "zhTW": "體力護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -41,7 +47,9 @@
     {
         "id": "小胃口護石",
         "name": {
-            "zhTW": "小胃口護石"
+            "zhTW": "小胃口護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 3,
         "skills": [
@@ -54,7 +62,9 @@
     {
         "id": "火焰護石 III",
         "name": {
-            "zhTW": "火焰護石 III"
+            "zhTW": "火焰護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -67,7 +77,9 @@
     {
         "id": "心靜自然涼護石",
         "name": {
-            "zhTW": "心靜自然涼護石"
+            "zhTW": "心靜自然涼護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "skills": [
@@ -84,7 +96,9 @@
     {
         "id": "不屈護石",
         "name": {
-            "zhTW": "不屈護石"
+            "zhTW": "不屈護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 3,
         "skills": [
@@ -97,7 +111,9 @@
     {
         "id": "友愛護石 III",
         "name": {
-            "zhTW": "友愛護石 III"
+            "zhTW": "友愛護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -110,7 +126,9 @@
     {
         "id": "加護護石 III",
         "name": {
-            "zhTW": "加護護石 III"
+            "zhTW": "加護護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -123,7 +141,9 @@
     {
         "id": "全開護石 II",
         "name": {
-            "zhTW": "全開護石 II"
+            "zhTW": "全開護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -136,7 +156,9 @@
     {
         "id": "早氣護石 II",
         "name": {
-            "zhTW": "早氣護石 II"
+            "zhTW": "早氣護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -149,7 +171,9 @@
     {
         "id": "早復護石 III",
         "name": {
-            "zhTW": "早復護石 III"
+            "zhTW": "早復護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -162,7 +186,9 @@
     {
         "id": "匠之護石 III",
         "name": {
-            "zhTW": "匠之護石 III"
+            "zhTW": "匠之護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -175,7 +201,9 @@
     {
         "id": "地學護石 III",
         "name": {
-            "zhTW": "地學護石 III"
+            "zhTW": "地學護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -188,7 +216,9 @@
     {
         "id": "冰結護石 III",
         "name": {
-            "zhTW": "冰結護石 III"
+            "zhTW": "冰結護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -201,7 +231,9 @@
     {
         "id": "耳塞護石 III",
         "name": {
-            "zhTW": "耳塞護石 III"
+            "zhTW": "耳塞護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -214,7 +246,9 @@
     {
         "id": "攻擊護石 III",
         "name": {
-            "zhTW": "攻擊護石 III"
+            "zhTW": "攻擊護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "skills": [
@@ -227,7 +261,9 @@
     {
         "id": "快吃護石 III",
         "name": {
-            "zhTW": "快吃護石 III"
+            "zhTW": "快吃護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -240,7 +276,9 @@
     {
         "id": "投石護石 III",
         "name": {
-            "zhTW": "投石護石 III"
+            "zhTW": "投石護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -253,7 +291,9 @@
     {
         "id": "吹笛護石",
         "name": {
-            "zhTW": "吹笛護石"
+            "zhTW": "吹笛護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 3,
         "skills": [
@@ -266,7 +306,9 @@
     {
         "id": "防禦護石 III",
         "name": {
-            "zhTW": "防禦護石 III"
+            "zhTW": "防禦護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "skills": [
@@ -279,7 +321,9 @@
     {
         "id": "防風護石 III",
         "name": {
-            "zhTW": "防風護石 III"
+            "zhTW": "防風護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -292,7 +336,9 @@
     {
         "id": "昆蟲學護石 III",
         "name": {
-            "zhTW": "昆蟲學護石 III"
+            "zhTW": "昆蟲學護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -305,7 +351,9 @@
     {
         "id": "昂揚護石 II",
         "name": {
-            "zhTW": "昂揚護石 II"
+            "zhTW": "昂揚護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -318,7 +366,9 @@
     {
         "id": "底力護石 II",
         "name": {
-            "zhTW": "底力護石 II"
+            "zhTW": "底力護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -331,7 +381,9 @@
     {
         "id": "治癒護石 III",
         "name": {
-            "zhTW": "治癒護石 III"
+            "zhTW": "治癒護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -344,7 +396,9 @@
     {
         "id": "泥浴護石",
         "name": {
-            "zhTW": "泥浴護石"
+            "zhTW": "泥浴護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "skills": [
@@ -361,7 +415,9 @@
     {
         "id": "沼渡護石 III",
         "name": {
-            "zhTW": "沼渡護石 III"
+            "zhTW": "沼渡護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -374,7 +430,9 @@
     {
         "id": "拔刀護石 II",
         "name": {
-            "zhTW": "拔刀護石 II"
+            "zhTW": "拔刀護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -387,7 +445,9 @@
     {
         "id": "威嚇護石 III",
         "name": {
-            "zhTW": "威嚇護石 III"
+            "zhTW": "威嚇護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -400,7 +460,9 @@
     {
         "id": "研磨護石 III",
         "name": {
-            "zhTW": "研磨護石 III"
+            "zhTW": "研磨護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -413,7 +475,9 @@
     {
         "id": "指揮護石 III",
         "name": {
-            "zhTW": "指揮護石 III"
+            "zhTW": "指揮護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -426,7 +490,9 @@
     {
         "id": "持續護石 III",
         "name": {
-            "zhTW": "持續護石 III"
+            "zhTW": "持續護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -439,7 +505,9 @@
     {
         "id": "狩獵生活護石",
         "name": {
-            "zhTW": "狩獵生活護石"
+            "zhTW": "狩獵生活護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "skills": [
@@ -456,7 +524,9 @@
     {
         "id": "重擊護石 II",
         "name": {
-            "zhTW": "重擊護石 II"
+            "zhTW": "重擊護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -469,7 +539,9 @@
     {
         "id": "耐瘴護石 III",
         "name": {
-            "zhTW": "耐瘴護石 III"
+            "zhTW": "耐瘴護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -482,7 +554,9 @@
     {
         "id": "耐火護石 III",
         "name": {
-            "zhTW": "耐火護石 III"
+            "zhTW": "耐火護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -495,7 +569,9 @@
     {
         "id": "耐衝護石 II",
         "name": {
-            "zhTW": "耐衝護石 II"
+            "zhTW": "耐衝護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -508,7 +584,9 @@
     {
         "id": "耐震護石 II",
         "name": {
-            "zhTW": "耐震護石 II"
+            "zhTW": "耐震護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -521,7 +599,9 @@
     {
         "id": "耐水護石 III",
         "name": {
-            "zhTW": "耐水護石 III"
+            "zhTW": "耐水護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -534,7 +614,9 @@
     {
         "id": "耐絕護石 III",
         "name": {
-            "zhTW": "耐絕護石 III"
+            "zhTW": "耐絕護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -547,7 +629,9 @@
     {
         "id": "耐屬護石 III",
         "name": {
-            "zhTW": "耐屬護石 III"
+            "zhTW": "耐屬護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -560,7 +644,9 @@
     {
         "id": "耐毒護石 III",
         "name": {
-            "zhTW": "耐毒護石 III"
+            "zhTW": "耐毒護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -573,7 +659,9 @@
     {
         "id": "耐爆護石 III",
         "name": {
-            "zhTW": "耐爆護石 III"
+            "zhTW": "耐爆護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -586,7 +674,9 @@
     {
         "id": "耐冰護石 III",
         "name": {
-            "zhTW": "耐冰護石 III"
+            "zhTW": "耐冰護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -599,7 +689,9 @@
     {
         "id": "耐防護石 III",
         "name": {
-            "zhTW": "耐防護石 III"
+            "zhTW": "耐防護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -612,7 +704,9 @@
     {
         "id": "耐眠護石 III",
         "name": {
-            "zhTW": "耐眠護石 III"
+            "zhTW": "耐眠護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -625,7 +719,9 @@
     {
         "id": "耐雷護石 III",
         "name": {
-            "zhTW": "耐雷護石 III"
+            "zhTW": "耐雷護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -638,7 +734,9 @@
     {
         "id": "耐龍護石 III",
         "name": {
-            "zhTW": "耐龍護石 III"
+            "zhTW": "耐龍護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -651,7 +749,9 @@
     {
         "id": "耐裂護石 III",
         "name": {
-            "zhTW": "耐裂護石 III"
+            "zhTW": "耐裂護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -664,7 +764,9 @@
     {
         "id": "耐痺護石 III",
         "name": {
-            "zhTW": "耐痺護石 III"
+            "zhTW": "耐痺護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -677,7 +779,9 @@
     {
         "id": "挑戰護石 II",
         "name": {
-            "zhTW": "挑戰護石 II"
+            "zhTW": "挑戰護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -690,7 +794,9 @@
     {
         "id": "毒擊護石 III",
         "name": {
-            "zhTW": "毒擊護石 III"
+            "zhTW": "毒擊護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -703,7 +809,9 @@
     {
         "id": "毒瓶護石",
         "name": {
-            "zhTW": "毒瓶護石"
+            "zhTW": "毒瓶護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -716,7 +824,9 @@
     {
         "id": "風水護石",
         "name": {
-            "zhTW": "風水護石"
+            "zhTW": "風水護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -733,7 +843,9 @@
     {
         "id": "流水護石 III",
         "name": {
-            "zhTW": "流水護石 III"
+            "zhTW": "流水護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -746,7 +858,9 @@
     {
         "id": "順風護石",
         "name": {
-            "zhTW": "順風護石"
+            "zhTW": "順風護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 3,
         "skills": [
@@ -763,7 +877,9 @@
     {
         "id": "迴避護石 III",
         "name": {
-            "zhTW": "迴避護石 III"
+            "zhTW": "迴避護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -776,7 +892,9 @@
     {
         "id": "疾風護石",
         "name": {
-            "zhTW": "疾風護石"
+            "zhTW": "疾風護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -793,7 +911,9 @@
     {
         "id": "追踨護石",
         "name": {
-            "zhTW": "追踨護石"
+            "zhTW": "追踨護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 3,
         "skills": [
@@ -806,7 +926,9 @@
     {
         "id": "特射護石 II",
         "name": {
-            "zhTW": "特射護石 II"
+            "zhTW": "特射護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -819,7 +941,9 @@
     {
         "id": "納刀護石 III",
         "name": {
-            "zhTW": "納刀護石 III"
+            "zhTW": "納刀護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -832,7 +956,9 @@
     {
         "id": "破龍護石 III",
         "name": {
-            "zhTW": "破龍護石 III"
+            "zhTW": "破龍護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -845,7 +971,9 @@
     {
         "id": "砲擊手護石 II",
         "name": {
-            "zhTW": "砲擊手護石 II"
+            "zhTW": "砲擊手護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -858,7 +986,9 @@
     {
         "id": "砲術護石 III",
         "name": {
-            "zhTW": "砲術護石 III"
+            "zhTW": "砲術護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -871,7 +1001,9 @@
     {
         "id": "貫通彈護石",
         "name": {
-            "zhTW": "貫通彈護石"
+            "zhTW": "貫通彈護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -884,7 +1016,9 @@
     {
         "id": "強走護石 II",
         "name": {
-            "zhTW": "強走護石 II"
+            "zhTW": "強走護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -897,7 +1031,9 @@
     {
         "id": "堅守護石",
         "name": {
-            "zhTW": "堅守護石"
+            "zhTW": "堅守護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -914,7 +1050,9 @@
     {
         "id": "採集鐵人護石",
         "name": {
-            "zhTW": "採集鐵人護石"
+            "zhTW": "採集鐵人護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "skills": [
@@ -931,7 +1069,9 @@
     {
         "id": "陷阱彈護石",
         "name": {
-            "zhTW": "陷阱彈護石"
+            "zhTW": "陷阱彈護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "skills": [
@@ -948,7 +1088,9 @@
     {
         "id": "通常彈護石",
         "name": {
-            "zhTW": "通常彈護石"
+            "zhTW": "通常彈護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "skills": [
@@ -961,7 +1103,9 @@
     {
         "id": "麻痺瓶護石",
         "name": {
-            "zhTW": "麻痺瓶護石"
+            "zhTW": "麻痺瓶護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -974,7 +1118,9 @@
     {
         "id": "渾身護石 II",
         "name": {
-            "zhTW": "渾身護石 II"
+            "zhTW": "渾身護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -987,7 +1133,9 @@
     {
         "id": "散彈護石",
         "name": {
-            "zhTW": "散彈護石"
+            "zhTW": "散彈護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -1000,7 +1148,9 @@
     {
         "id": "集中護石 II",
         "name": {
-            "zhTW": "集中護石 II"
+            "zhTW": "集中護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1013,7 +1163,9 @@
     {
         "id": "植學護石 III",
         "name": {
-            "zhTW": "植學護石 III"
+            "zhTW": "植學護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1026,7 +1178,9 @@
     {
         "id": "超心護石",
         "name": {
-            "zhTW": "超心護石"
+            "zhTW": "超心護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -1039,7 +1193,9 @@
     {
         "id": "痛擊護石 II",
         "name": {
-            "zhTW": "痛擊護石 II"
+            "zhTW": "痛擊護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1052,7 +1208,9 @@
     {
         "id": "無傷護石 II",
         "name": {
-            "zhTW": "無傷護石 II"
+            "zhTW": "無傷護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1065,7 +1223,9 @@
     {
         "id": "煙復護石 III",
         "name": {
-            "zhTW": "煙復護石 III"
+            "zhTW": "煙復護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1078,7 +1238,9 @@
     {
         "id": "滅龍護石",
         "name": {
-            "zhTW": "滅龍護石"
+            "zhTW": "滅龍護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -1095,7 +1257,9 @@
     {
         "id": "嗜菇護石 II",
         "name": {
-            "zhTW": "嗜菇護石 II"
+            "zhTW": "嗜菇護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1108,7 +1272,9 @@
     {
         "id": "裝備護石 III",
         "name": {
-            "zhTW": "裝備護石 III"
+            "zhTW": "裝備護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1121,7 +1287,9 @@
     {
         "id": "裝填護石",
         "name": {
-            "zhTW": "裝填護石"
+            "zhTW": "裝填護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 3,
         "skills": [
@@ -1134,7 +1302,9 @@
     {
         "id": "達人護石 III",
         "name": {
-            "zhTW": "達人護石 III"
+            "zhTW": "達人護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1147,7 +1317,9 @@
     {
         "id": "跳躍護石 II",
         "name": {
-            "zhTW": "跳躍護石 II"
+            "zhTW": "跳躍護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1160,7 +1332,9 @@
     {
         "id": "痺擊護石 III",
         "name": {
-            "zhTW": "痺擊護石 III"
+            "zhTW": "痺擊護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1173,7 +1347,9 @@
     {
         "id": "雷光護石 III",
         "name": {
-            "zhTW": "雷光護石 III"
+            "zhTW": "雷光護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1186,7 +1362,9 @@
     {
         "id": "睡擊護石 III",
         "name": {
-            "zhTW": "睡擊護石 III"
+            "zhTW": "睡擊護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1199,7 +1377,9 @@
     {
         "id": "睡眠瓶護石",
         "name": {
-            "zhTW": "睡眠瓶護石"
+            "zhTW": "睡眠瓶護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -1212,7 +1392,9 @@
     {
         "id": "奪氣護石 III",
         "name": {
-            "zhTW": "奪氣護石 III"
+            "zhTW": "奪氣護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1225,7 +1407,9 @@
     {
         "id": "暴怒護石 II",
         "name": {
-            "zhTW": "暴怒護石 II"
+            "zhTW": "暴怒護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1238,7 +1422,9 @@
     {
         "id": "潛伏護石 III",
         "name": {
-            "zhTW": "潛伏護石 III"
+            "zhTW": "潛伏護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1251,7 +1437,9 @@
     {
         "id": "調查達人護石",
         "name": {
-            "zhTW": "調查達人護石"
+            "zhTW": "調查達人護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "skills": [
@@ -1268,7 +1456,9 @@
     {
         "id": "騎手護石",
         "name": {
-            "zhTW": "騎手護石"
+            "zhTW": "騎手護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "skills": [
@@ -1285,7 +1475,9 @@
     {
         "id": "斷食護石 III",
         "name": {
-            "zhTW": "斷食護石 III"
+            "zhTW": "斷食護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1298,7 +1490,9 @@
     {
         "id": "爆師護石 III",
         "name": {
-            "zhTW": "爆師護石 III"
+            "zhTW": "爆師護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1311,7 +1505,9 @@
     {
         "id": "爆破護石 III",
         "name": {
-            "zhTW": "爆破護石 III"
+            "zhTW": "爆破護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1324,7 +1520,9 @@
     {
         "id": "爆破瓶護石",
         "name": {
-            "zhTW": "爆破瓶護石"
+            "zhTW": "爆破瓶護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "skills": [
@@ -1337,7 +1535,9 @@
     {
         "id": "覺醒護石 II",
         "name": {
-            "zhTW": "覺醒護石 II"
+            "zhTW": "覺醒護石 II",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [
@@ -1350,7 +1550,9 @@
     {
         "id": "籌備護石",
         "name": {
-            "zhTW": "籌備護石"
+            "zhTW": "籌備護石",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "skills": [
@@ -1367,7 +1569,9 @@
     {
         "id": "鐵壁護石 III",
         "name": {
-            "zhTW": "鐵壁護石 III"
+            "zhTW": "鐵壁護石 III",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": null,
         "skills": [

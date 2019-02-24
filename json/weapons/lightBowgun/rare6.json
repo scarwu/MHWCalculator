@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "礦石素材"
+            "zhTW": "礦石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鉻鋼迅擊弩 II"
+            "zhTW": "鉻鋼迅擊弩 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 234,
         "criticalRate": 0,
@@ -33,10 +37,14 @@
         "rare": 6,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "浮空龍"
+            "zhTW": "浮空龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "浮空龍颶風砲 III"
+            "zhTW": "浮空龍颶風砲 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 221,
         "criticalRate": 15,
@@ -59,10 +67,14 @@
         "rare": 6,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "大凶豺龍"
+            "zhTW": "大凶豺龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "凶豺龍火砲 III"
+            "zhTW": "凶豺龍火砲 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 247,
         "criticalRate": 0,
@@ -88,10 +100,14 @@
         "rare": 6,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "雷屬性"
+            "zhTW": "雷屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "雷光迅擊弩 III"
+            "zhTW": "雷光迅擊弩 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 234,
         "criticalRate": 0,
@@ -114,10 +130,14 @@
         "rare": 6,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "冰屬性"
+            "zhTW": "冰屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "寒霜迅擊弩 II"
+            "zhTW": "寒霜迅擊弩 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 247,
         "criticalRate": 0,
@@ -136,10 +156,14 @@
         "rare": 6,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "狙擊射手 II"
+            "zhTW": "狙擊射手 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 247,
         "criticalRate": 0,
@@ -162,10 +186,14 @@
         "rare": 6,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "蠻顎龍"
+            "zhTW": "蠻顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "蠻顎龍破壞砲 III"
+            "zhTW": "蠻顎龍破壞砲 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 273,
         "criticalRate": -30,
@@ -184,10 +212,14 @@
         "rare": 6,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "泥魚龍"
+            "zhTW": "泥魚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "泥岩龍輕弩 III"
+            "zhTW": "泥岩龍輕弩 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 247,
         "criticalRate": 0,
@@ -213,10 +245,14 @@
         "rare": 6,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "土砂龍"
+            "zhTW": "土砂龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "土砂龍射手 III"
+            "zhTW": "土砂龍射手 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 260,
         "criticalRate": -20,
@@ -239,10 +275,14 @@
         "rare": 6,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "龍骨"
+            "zhTW": "龍骨",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍骨弩 III"
+            "zhTW": "龍骨弩 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 208,
         "criticalRate": 0,

@@ -4,10 +4,14 @@
         "rare": 8,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "滅盡龍"
+            "zhTW": "滅盡龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "毀滅之尖兵"
+            "zhTW": "毀滅之尖兵",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 294,
         "criticalRate": 0,
@@ -47,10 +51,14 @@
         "rare": 8,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "風漂龍"
+            "zhTW": "風漂龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冰凌三星劍"
+            "zhTW": "冰凌三星劍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 224,
         "criticalRate": 0,
@@ -88,10 +96,14 @@
         "rare": 8,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "黑鋼"
+            "zhTW": "黑鋼",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "炎王紋章"
+            "zhTW": "炎王紋章",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -125,10 +137,14 @@
         "rare": 8,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "冥燈龍"
+            "zhTW": "冥燈龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冥燈龍劍"
+            "zhTW": "冥燈龍劍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 238,
         "criticalRate": 15,
@@ -171,10 +187,14 @@
         "rare": 8,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．龍"
+            "zhTW": "鎧羅切刀．龍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 224,
         "criticalRate": 0,
@@ -214,10 +234,14 @@
         "rare": 8,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．爆破"
+            "zhTW": "鎧羅切刀．爆破",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 238,
         "criticalRate": 0,
@@ -255,10 +279,14 @@
         "rare": 8,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．水"
+            "zhTW": "鎧羅切刀．水",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 10,
@@ -296,10 +324,14 @@
         "rare": 8,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "炎妃龍"
+            "zhTW": "炎妃龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后小刀．炎妃"
+            "zhTW": "皇后小刀．炎妃",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 20,
@@ -342,10 +374,14 @@
         "rare": 8,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "炎妃龍．滅盡"
+            "zhTW": "炎妃龍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后小刀．滅盡"
+            "zhTW": "皇后小刀．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 280,
         "criticalRate": 0,
@@ -388,10 +424,14 @@
         "rare": 8,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "炎妃龍．冥燈"
+            "zhTW": "炎妃龍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后小刀．冥燈"
+            "zhTW": "皇后小刀．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 10,
@@ -437,10 +477,14 @@
         "rare": 8,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "狩魔獵人"
+            "zhTW": "狩魔獵人",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "狩魔獵人的銀劍＋"
+            "zhTW": "狩魔獵人的銀劍＋",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,

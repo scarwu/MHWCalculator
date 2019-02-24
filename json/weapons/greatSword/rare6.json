@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "greatSword",
         "series": {
-            "zhTW": "礦石素材"
+            "zhTW": "礦石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鉻鋼剃刀 II"
+            "zhTW": "鉻鋼剃刀 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 864,
         "criticalRate": 0,
@@ -48,10 +52,14 @@
         "rare": 6,
         "type": "greatSword",
         "series": {
-            "zhTW": "雷屬性"
+            "zhTW": "雷屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "雷光懲罰者 III"
+            "zhTW": "雷光懲罰者 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 912,
         "criticalRate": 0,
@@ -89,10 +97,14 @@
         "rare": 6,
         "type": "greatSword",
         "series": {
-            "zhTW": "冰屬性"
+            "zhTW": "冰屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "霜炎 II"
+            "zhTW": "霜炎 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 768,
         "criticalRate": 0,
@@ -130,10 +142,14 @@
         "rare": 6,
         "type": "greatSword",
         "series": {
-            "zhTW": "大凶豺龍"
+            "zhTW": "大凶豺龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "凶豺龍鉤爪 III"
+            "zhTW": "凶豺龍鉤爪 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 912,
         "criticalRate": 0,
@@ -174,10 +190,14 @@
         "rare": 6,
         "type": "greatSword",
         "series": {
-            "zhTW": "大凶顎龍"
+            "zhTW": "大凶顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "馬拉多之鐵 III"
+            "zhTW": "馬拉多之鐵 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 768,
         "criticalRate": 20,
@@ -211,10 +231,14 @@
         "rare": 6,
         "type": "greatSword",
         "series": {
-            "zhTW": "毒妖鳥"
+            "zhTW": "毒妖鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "曼陀羅之炎 III"
+            "zhTW": "曼陀羅之炎 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 816,
         "criticalRate": 0,
@@ -255,10 +279,14 @@
         "rare": 6,
         "type": "greatSword",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "大龍顎 II"
+            "zhTW": "大龍顎 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 912,
         "criticalRate": 0,
@@ -296,10 +324,14 @@
         "rare": 6,
         "type": "greatSword",
         "series": {
-            "zhTW": "水屬性"
+            "zhTW": "水屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "激流巨像 III"
+            "zhTW": "激流巨像 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 912,
         "criticalRate": 0,
@@ -337,10 +369,14 @@
         "rare": 6,
         "type": "greatSword",
         "series": {
-            "zhTW": "土砂龍"
+            "zhTW": "土砂龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "土砂龍粉碎者 III (大劍)"
+            "zhTW": "土砂龍粉碎者 III (大劍)",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 960,
         "criticalRate": -20,
@@ -381,10 +417,14 @@
         "rare": 6,
         "type": "greatSword",
         "series": {
-            "zhTW": "骨鎚龍"
+            "zhTW": "骨鎚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "塊劍拉多巴爾喀 III"
+            "zhTW": "塊劍拉多巴爾喀 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 912,
         "criticalRate": 0,
@@ -418,10 +458,14 @@
         "rare": 6,
         "type": "greatSword",
         "series": {
-            "zhTW": "龍骨"
+            "zhTW": "龍骨",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍骨大劍 III"
+            "zhTW": "龍骨大劍 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 768,
         "criticalRate": 0,

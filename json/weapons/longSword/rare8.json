@@ -4,10 +4,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "滅盡龍"
+            "zhTW": "滅盡龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "滅盡一刀"
+            "zhTW": "滅盡一刀",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 693,
         "criticalRate": 0,
@@ -47,10 +51,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "火龍"
+            "zhTW": "火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "飛龍刀【藍染】"
+            "zhTW": "飛龍刀【藍染】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 627,
         "criticalRate": 15,
@@ -88,10 +96,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "爆鱗龍"
+            "zhTW": "爆鱗龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "爆鱗刀赤紅利刃"
+            "zhTW": "爆鱗刀赤紅利刃",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 660,
         "criticalRate": -10,
@@ -132,10 +144,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "風漂龍"
+            "zhTW": "風漂龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "幻光刀"
+            "zhTW": "幻光刀",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 528,
         "criticalRate": 0,
@@ -169,10 +185,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "黑鋼"
+            "zhTW": "黑鋼",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "帝王刀【陽炎】"
+            "zhTW": "帝王刀【陽炎】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 627,
         "criticalRate": 0,
@@ -206,10 +226,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "冥燈龍"
+            "zhTW": "冥燈龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冥燈龍太刀"
+            "zhTW": "冥燈龍太刀",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 594,
         "criticalRate": 15,
@@ -252,10 +276,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "工房武器"
+            "zhTW": "工房武器",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "天上天下無雙刀"
+            "zhTW": "天上天下無雙刀",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 693,
         "criticalRate": 0,
@@ -295,10 +323,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．麻痺"
+            "zhTW": "鎧羅劍．麻痺",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 561,
         "criticalRate": 0,
@@ -336,10 +368,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．毒"
+            "zhTW": "鎧羅劍．毒",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 627,
         "criticalRate": 10,
@@ -377,10 +413,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．水"
+            "zhTW": "鎧羅劍．水",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 627,
         "criticalRate": 0,
@@ -418,10 +458,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "炎妃龍"
+            "zhTW": "炎妃龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后劍．炎妃"
+            "zhTW": "皇后劍．炎妃",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 594,
         "criticalRate": 20,
@@ -467,10 +511,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "炎妃龍．滅盡"
+            "zhTW": "炎妃龍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后劍．滅盡"
+            "zhTW": "皇后劍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 627,
         "criticalRate": 0,
@@ -516,10 +564,14 @@
         "rare": 8,
         "type": "longSword",
         "series": {
-            "zhTW": "炎妃龍．冥燈"
+            "zhTW": "炎妃龍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后劍．冥燈"
+            "zhTW": "皇后劍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 594,
         "criticalRate": 10,

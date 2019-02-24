@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "bow",
         "series": {
-            "zhTW": "礦石素材"
+            "zhTW": "礦石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "合金弓 II"
+            "zhTW": "合金弓 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 204,
         "criticalRate": 0,
@@ -38,10 +42,14 @@
         "rare": 6,
         "type": "bow",
         "series": {
-            "zhTW": "搔鳥"
+            "zhTW": "搔鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "星空迅擊弓 III"
+            "zhTW": "星空迅擊弓 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 204,
         "criticalRate": 20,
@@ -65,10 +73,14 @@
         "rare": 6,
         "type": "bow",
         "series": {
-            "zhTW": "雌火龍"
+            "zhTW": "雌火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "公主弓矢 III"
+            "zhTW": "公主弓矢 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 216,
         "criticalRate": 10,
@@ -101,10 +113,14 @@
         "rare": 6,
         "type": "bow",
         "series": {
-            "zhTW": "水屬性"
+            "zhTW": "水屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "激流射手 III"
+            "zhTW": "激流射手 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 204,
         "criticalRate": 0,
@@ -132,10 +148,14 @@
         "rare": 6,
         "type": "bow",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "勇氣獵弓 II"
+            "zhTW": "勇氣獵弓 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 216,
         "criticalRate": 0,
@@ -163,10 +183,14 @@
         "rare": 6,
         "type": "bow",
         "series": {
-            "zhTW": "毒妖鳥"
+            "zhTW": "毒妖鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "曼陀羅弓 III"
+            "zhTW": "曼陀羅弓 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 204,
         "criticalRate": 0,
@@ -197,10 +221,14 @@
         "rare": 6,
         "type": "bow",
         "series": {
-            "zhTW": "蠻顎龍"
+            "zhTW": "蠻顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "蠻顎龍射手 III"
+            "zhTW": "蠻顎龍射手 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 240,
         "criticalRate": -20,
@@ -224,10 +252,14 @@
         "rare": 6,
         "type": "bow",
         "series": {
-            "zhTW": "龍骨"
+            "zhTW": "龍骨",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍骨弓 III"
+            "zhTW": "龍骨弓 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 180,
         "criticalRate": 0,
@@ -260,10 +292,14 @@
         "rare": 6,
         "type": "bow",
         "series": {
-            "zhTW": "亞蘿伊"
+            "zhTW": "亞蘿伊",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "亞蘿伊的戰弓"
+            "zhTW": "亞蘿伊的戰弓",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 192,
         "criticalRate": 30,

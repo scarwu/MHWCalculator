@@ -4,10 +4,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "滅盡龍"
+            "zhTW": "滅盡龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "帶來毀滅的一把武器"
+            "zhTW": "帶來毀滅的一把武器",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 756,
         "criticalRate": 0,
@@ -47,10 +51,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "慘爪龍"
+            "zhTW": "慘爪龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "憎【忿恨】"
+            "zhTW": "憎【忿恨】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 576,
         "criticalRate": 25,
@@ -84,10 +92,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "熔山龍"
+            "zhTW": "熔山龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "捲土重來熔山龍盾斧"
+            "zhTW": "捲土重來熔山龍盾斧",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 756,
         "criticalRate": -10,
@@ -121,10 +133,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "黑鋼"
+            "zhTW": "黑鋼",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鋼龍幻夢"
+            "zhTW": "鋼龍幻夢",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 648,
         "criticalRate": 15,
@@ -165,10 +181,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "冥燈龍"
+            "zhTW": "冥燈龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冥燈龍盾斧"
+            "zhTW": "冥燈龍盾斧",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 648,
         "criticalRate": 15,
@@ -211,10 +231,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "但丁"
+            "zhTW": "但丁",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "但丁的魔劍"
+            "zhTW": "但丁的魔劍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 720,
         "criticalRate": 0,
@@ -255,10 +279,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．冰"
+            "zhTW": "鎧羅兵裝．冰",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 648,
         "criticalRate": 0,
@@ -296,10 +324,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．睡眠"
+            "zhTW": "鎧羅兵裝．睡眠",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 0,
@@ -337,10 +369,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．雷"
+            "zhTW": "鎧羅兵裝．雷",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 0,
@@ -378,10 +414,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "炎妃龍"
+            "zhTW": "炎妃龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后武器．炎妃"
+            "zhTW": "皇后武器．炎妃",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 648,
         "criticalRate": 20,
@@ -427,10 +467,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "炎妃龍．滅盡"
+            "zhTW": "炎妃龍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后武器．滅盡"
+            "zhTW": "皇后武器．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 0,
@@ -476,10 +520,14 @@
         "rare": 8,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "炎妃龍．冥燈"
+            "zhTW": "炎妃龍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后武器．冥燈"
+            "zhTW": "皇后武器．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 648,
         "criticalRate": 10,

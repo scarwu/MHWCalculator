@@ -4,10 +4,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "滅盡龍"
+            "zhTW": "滅盡龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "殘滅之爪。"
+            "zhTW": "殘滅之爪。",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 294,
         "criticalRate": 0,
@@ -47,10 +51,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "爆鱗龍"
+            "zhTW": "爆鱗龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "爆鱗雙斧赤紅巨星"
+            "zhTW": "爆鱗雙斧赤紅巨星",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 280,
         "criticalRate": -10,
@@ -88,10 +96,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "慘爪龍"
+            "zhTW": "慘爪龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "罪【真】"
+            "zhTW": "罪【真】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 224,
         "criticalRate": 20,
@@ -125,10 +137,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "幻獸"
+            "zhTW": "幻獸",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "迅雷"
+            "zhTW": "迅雷",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 224,
         "criticalRate": 0,
@@ -162,10 +178,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "黑鋼"
+            "zhTW": "黑鋼",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冰炎劍維爾瑪閃焰"
+            "zhTW": "冰炎劍維爾瑪閃焰",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 10,
@@ -208,10 +228,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "冥燈龍"
+            "zhTW": "冥燈龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冥燈龍雙劍"
+            "zhTW": "冥燈龍雙劍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 238,
         "criticalRate": 15,
@@ -254,10 +278,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅小刀．冰"
+            "zhTW": "鎧羅小刀．冰",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -295,10 +323,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅小刀．毒"
+            "zhTW": "鎧羅小刀．毒",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -336,10 +368,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅小刀．水"
+            "zhTW": "鎧羅小刀．水",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -377,10 +413,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "炎妃龍"
+            "zhTW": "炎妃龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后銳劍．炎妃"
+            "zhTW": "皇后銳劍．炎妃",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 20,
@@ -426,10 +466,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "炎妃龍．滅盡"
+            "zhTW": "炎妃龍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后銳劍．滅盡"
+            "zhTW": "皇后銳劍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -475,10 +519,14 @@
         "rare": 8,
         "type": "dualBlades",
         "series": {
-            "zhTW": "炎妃龍．冥燈"
+            "zhTW": "炎妃龍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后銳劍．冥燈"
+            "zhTW": "皇后銳劍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 10,

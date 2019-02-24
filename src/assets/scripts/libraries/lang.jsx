@@ -17,11 +17,14 @@ import Constant from 'constant';
 // Load Langs
 import zhTWUI from 'json/langs/zhTW/ui.json';
 import zhTWDataset from 'json/langs/zhTW/dataset.json';
+import jaJPUI from 'json/langs/jaJP/ui.json';
+import jaJPDataset from 'json/langs/jaJP/dataset.json';
 import enUSUI from 'json/langs/enUS/ui.json';
 import enUSDataset from 'json/langs/enUS/dataset.json';
 
 let langs = {
     zhTW: Object.assign({}, zhTWUI, zhTWDataset),
+    jaJP: Object.assign({}, jaJPUI, jaJPDataset),
     enUS: Object.assign({}, enUSUI, enUSDataset)
 };
 

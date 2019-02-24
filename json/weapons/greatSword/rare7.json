@@ -4,10 +4,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "熔岩龍"
+            "zhTW": "熔岩龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "熔岩之炎 II"
+            "zhTW": "熔岩之炎 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 864,
         "criticalRate": 0,
@@ -48,10 +52,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "蠻顎龍"
+            "zhTW": "蠻顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "蠻顎大劍"
+            "zhTW": "蠻顎大劍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1008,
         "criticalRate": -30,
@@ -85,10 +93,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "熔山龍"
+            "zhTW": "熔山龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "熔山龍大劍 II"
+            "zhTW": "熔山龍大劍 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1056,
         "criticalRate": -20,
@@ -126,10 +138,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "恐暴龍"
+            "zhTW": "恐暴龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "痛苦之劍"
+            "zhTW": "痛苦之劍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1104,
         "criticalRate": -30,
@@ -165,10 +181,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "龍熱機關"
+            "zhTW": "龍熱機關",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍熱機關式【鋼翼】改"
+            "zhTW": "龍熱機關式【鋼翼】改",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1008,
         "criticalRate": -15,
@@ -209,10 +229,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅炎．痺賊"
+            "zhTW": "鎧羅炎．痺賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 768,
         "criticalRate": 30,
@@ -236,10 +260,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅炎．毒妖"
+            "zhTW": "鎧羅炎．毒妖",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 864,
         "criticalRate": 0,
@@ -263,10 +291,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅炎．熔岩"
+            "zhTW": "鎧羅炎．熔岩",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 912,
         "criticalRate": 0,
@@ -290,10 +322,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅炎．王"
+            "zhTW": "鎧羅炎．王",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 912,
         "criticalRate": 10,
@@ -317,10 +353,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅炎．骨鎚"
+            "zhTW": "鎧羅炎．骨鎚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 912,
         "criticalRate": 10,
@@ -344,10 +384,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅炎．屍套"
+            "zhTW": "鎧羅炎．屍套",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 960,
         "criticalRate": 10,
@@ -371,10 +415,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅炎．賊"
+            "zhTW": "鎧羅炎．賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 960,
         "criticalRate": 0,
@@ -402,10 +450,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅炎．熔山"
+            "zhTW": "鎧羅炎．熔山",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1008,
         "criticalRate": -20,
@@ -429,10 +481,14 @@
         "rare": 7,
         "type": "greatSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅炎．土砂"
+            "zhTW": "鎧羅炎．土砂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1008,
         "criticalRate": -20,

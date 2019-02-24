@@ -4,10 +4,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "滅盡龍"
+            "zhTW": "滅盡龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "破滅引金"
+            "zhTW": "破滅引金",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 260,
         "criticalRate": 0,
@@ -30,10 +34,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "屍套龍"
+            "zhTW": "屍套龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "骷髏的吶喊"
+            "zhTW": "骷髏的吶喊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 260,
         "criticalRate": 0,
@@ -56,10 +64,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "慘爪龍"
+            "zhTW": "慘爪龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "業【羯磨】"
+            "zhTW": "業【羯磨】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 234,
         "criticalRate": 30,
@@ -82,10 +94,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "工房武器"
+            "zhTW": "工房武器",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "大鬼島"
+            "zhTW": "大鬼島",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 221,
         "criticalRate": 0,
@@ -108,10 +124,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "幻獸"
+            "zhTW": "幻獸",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "麒麟筒【三角】"
+            "zhTW": "麒麟筒【三角】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 208,
         "criticalRate": 0,
@@ -130,10 +150,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "黑鋼"
+            "zhTW": "黑鋼",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鋼龍冰蜂弩"
+            "zhTW": "鋼龍冰蜂弩",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 234,
         "criticalRate": 10,
@@ -156,10 +180,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "冥燈龍"
+            "zhTW": "冥燈龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冥燈龍輕弩槍"
+            "zhTW": "冥燈龍輕弩槍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 234,
         "criticalRate": 0,
@@ -185,10 +213,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "工房武器"
+            "zhTW": "工房武器",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "巨型十字槍"
+            "zhTW": "巨型十字槍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 260,
         "criticalRate": 0,
@@ -211,10 +243,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅迅擊弩．迫擊"
+            "zhTW": "鎧羅迅擊弩．迫擊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 247,
         "criticalRate": 10,
@@ -237,10 +273,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅迅擊弩．狙擊"
+            "zhTW": "鎧羅迅擊弩．狙擊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 260,
         "criticalRate": 0,
@@ -263,10 +303,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅迅擊弩．射擊"
+            "zhTW": "鎧羅迅擊弩．射擊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 273,
         "criticalRate": -10,
@@ -289,10 +333,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "炎妃龍"
+            "zhTW": "炎妃龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后甲殼．炎妃"
+            "zhTW": "皇后甲殼．炎妃",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 247,
         "criticalRate": 20,
@@ -320,10 +368,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "炎妃龍．滅盡"
+            "zhTW": "炎妃龍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后甲殼．滅盡"
+            "zhTW": "皇后甲殼．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 260,
         "criticalRate": 0,
@@ -351,10 +403,14 @@
         "rare": 8,
         "type": "lightBowgun",
         "series": {
-            "zhTW": "炎妃龍．冥燈"
+            "zhTW": "炎妃龍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后甲殼．冥燈"
+            "zhTW": "皇后甲殼．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 247,
         "criticalRate": 10,

@@ -4,10 +4,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "工房武器"
+            "zhTW": "工房武器",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "慟泣冰河"
+            "zhTW": "慟泣冰河",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 936,
         "criticalRate": 0,
@@ -45,10 +49,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "毒妖鳥"
+            "zhTW": "毒妖鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "花之女神"
+            "zhTW": "花之女神",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 936,
         "criticalRate": 0,
@@ -89,10 +97,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "爆鎚龍"
+            "zhTW": "爆鎚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "爆鎚粉碎者 II"
+            "zhTW": "爆鎚粉碎者 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1092,
         "criticalRate": 0,
@@ -130,10 +142,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "角龍"
+            "zhTW": "角龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "爆鎚戰鎚 II"
+            "zhTW": "爆鎚戰鎚 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1196,
         "criticalRate": -25,
@@ -171,10 +187,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "恐暴龍"
+            "zhTW": "恐暴龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "混沌之鎚"
+            "zhTW": "混沌之鎚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1196,
         "criticalRate": -30,
@@ -210,10 +230,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．痺賊"
+            "zhTW": "鎧羅大錘．痺賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 832,
         "criticalRate": 30,
@@ -237,10 +261,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．搔"
+            "zhTW": "鎧羅大錘．搔",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 884,
         "criticalRate": 35,
@@ -264,10 +292,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．毒妖"
+            "zhTW": "鎧羅大錘．毒妖",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 988,
         "criticalRate": 0,
@@ -291,10 +323,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．骨鎚"
+            "zhTW": "鎧羅大錘．骨鎚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 988,
         "criticalRate": 10,
@@ -318,10 +354,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．屍套"
+            "zhTW": "鎧羅大錘．屍套",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1040,
         "criticalRate": 0,
@@ -345,10 +385,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．蠻顎"
+            "zhTW": "鎧羅大錘．蠻顎",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1040,
         "criticalRate": -20,
@@ -372,10 +416,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．爆鎚"
+            "zhTW": "鎧羅大錘．爆鎚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1092,
         "criticalRate": 0,
@@ -399,10 +447,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．土砂"
+            "zhTW": "鎧羅大錘．土砂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1092,
         "criticalRate": -10,
@@ -430,10 +482,14 @@
         "rare": 7,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．角"
+            "zhTW": "鎧羅大錘．角",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1144,
         "criticalRate": -25,

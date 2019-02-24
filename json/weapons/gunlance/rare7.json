@@ -4,10 +4,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "飛雷龍"
+            "zhTW": "飛雷龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "飛雷銃槍【蜻蜓切】"
+            "zhTW": "飛雷銃槍【蜻蜓切】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 414,
         "criticalRate": 20,
@@ -45,10 +49,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "雌火龍"
+            "zhTW": "雌火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇家銃槍"
+            "zhTW": "皇家銃槍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 437,
         "criticalRate": 15,
@@ -86,10 +94,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "風漂龍"
+            "zhTW": "風漂龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "風漂龍加農砲 II"
+            "zhTW": "風漂龍加農砲 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 368,
         "criticalRate": 0,
@@ -123,10 +135,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "爆鱗龍"
+            "zhTW": "爆鱗龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "爆鱗龍銃槍 II"
+            "zhTW": "爆鱗龍銃槍 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 460,
         "criticalRate": -10,
@@ -164,10 +180,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "屍套龍"
+            "zhTW": "屍套龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "屍套龍火槍 II"
+            "zhTW": "屍套龍火槍 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 460,
         "criticalRate": 0,
@@ -207,10 +227,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "恐暴龍"
+            "zhTW": "恐暴龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "暴銃槍格拉古利德"
+            "zhTW": "暴銃槍格拉古利德",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 529,
         "criticalRate": -30,
@@ -246,10 +270,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅銃槍．風漂"
+            "zhTW": "鎧羅銃槍．風漂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 368,
         "criticalRate": 10,
@@ -273,10 +301,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅銃槍．痺賊"
+            "zhTW": "鎧羅銃槍．痺賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 368,
         "criticalRate": 10,
@@ -300,10 +332,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅銃槍．飛雷"
+            "zhTW": "鎧羅銃槍．飛雷",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": 20,
@@ -327,10 +363,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅銃槍．土砂"
+            "zhTW": "鎧羅銃槍．土砂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": -10,
@@ -354,10 +394,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅銃槍．王"
+            "zhTW": "鎧羅銃槍．王",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 414,
         "criticalRate": 20,
@@ -391,10 +435,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅銃槍．爆鱗"
+            "zhTW": "鎧羅銃槍．爆鱗",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 414,
         "criticalRate": 0,
@@ -418,10 +466,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅銃槍．泥魚"
+            "zhTW": "鎧羅銃槍．泥魚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 437,
         "criticalRate": 0,
@@ -445,10 +497,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅銃槍．賊"
+            "zhTW": "鎧羅銃槍．賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 437,
         "criticalRate": 0,
@@ -472,10 +528,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅銃槍．屍套"
+            "zhTW": "鎧羅銃槍．屍套",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 460,
         "criticalRate": 10,
@@ -501,10 +561,14 @@
         "rare": 7,
         "type": "gunlance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅銃槍．蠻顎"
+            "zhTW": "鎧羅銃槍．蠻顎",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 460,
         "criticalRate": -20,

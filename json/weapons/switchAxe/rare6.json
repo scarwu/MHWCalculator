@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "switchAxe",
         "series": {
-            "zhTW": "礦石素材"
+            "zhTW": "礦石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "合金製完成劍斧 II"
+            "zhTW": "合金製完成劍斧 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 630,
         "criticalRate": 0,
@@ -48,10 +52,14 @@
         "rare": 6,
         "type": "switchAxe",
         "series": {
-            "zhTW": "雷屬性"
+            "zhTW": "雷屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "雷光迅斧 III"
+            "zhTW": "雷光迅斧 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 630,
         "criticalRate": 0,
@@ -89,10 +97,14 @@
         "rare": 6,
         "type": "switchAxe",
         "series": {
-            "zhTW": "大凶豺龍"
+            "zhTW": "大凶豺龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "凶豺龍掠奪者 III"
+            "zhTW": "凶豺龍掠奪者 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 665,
         "criticalRate": 0,
@@ -133,10 +145,14 @@
         "rare": 6,
         "type": "switchAxe",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "重擊斬斧 II"
+            "zhTW": "重擊斬斧 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 665,
         "criticalRate": 10,
@@ -171,10 +187,14 @@
         "rare": 6,
         "type": "switchAxe",
         "series": {
-            "zhTW": "土砂龍"
+            "zhTW": "土砂龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "土砂龍劍斧 III"
+            "zhTW": "土砂龍劍斧 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 735,
         "criticalRate": -20,
@@ -215,10 +235,14 @@
         "rare": 6,
         "type": "switchAxe",
         "series": {
-            "zhTW": "龍骨"
+            "zhTW": "龍骨",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍骨劍斧 III"
+            "zhTW": "龍骨劍斧 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 560,
         "criticalRate": 0,

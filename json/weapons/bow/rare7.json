@@ -4,10 +4,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "火龍"
+            "zhTW": "火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "火龍強弓 III"
+            "zhTW": "火龍強弓 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 216,
         "criticalRate": 20,
@@ -35,10 +39,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "屍套龍"
+            "zhTW": "屍套龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "屍套龍弓 II"
+            "zhTW": "屍套龍弓 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 228,
         "criticalRate": 0,
@@ -68,10 +76,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "飛雷龍"
+            "zhTW": "飛雷龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "飛雷弓【羽羽矢】"
+            "zhTW": "飛雷弓【羽羽矢】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 204,
         "criticalRate": 15,
@@ -99,10 +111,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "恐暴龍"
+            "zhTW": "恐暴龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "惡棍之弓"
+            "zhTW": "惡棍之弓",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 276,
         "criticalRate": -25,
@@ -128,10 +144,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅弓．風漂"
+            "zhTW": "鎧羅弓．風漂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 180,
         "criticalRate": 0,
@@ -155,10 +175,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅弓．飛雷"
+            "zhTW": "鎧羅弓．飛雷",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 204,
         "criticalRate": 20,
@@ -182,10 +206,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅弓．搔"
+            "zhTW": "鎧羅弓．搔",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 204,
         "criticalRate": 30,
@@ -209,10 +237,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅弓．王"
+            "zhTW": "鎧羅弓．王",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 216,
         "criticalRate": 30,
@@ -236,10 +268,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅弓．女王"
+            "zhTW": "鎧羅弓．女王",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 216,
         "criticalRate": 10,
@@ -265,10 +301,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅弓．毒妖"
+            "zhTW": "鎧羅弓．毒妖",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 216,
         "criticalRate": 0,
@@ -292,10 +332,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅弓．屍套"
+            "zhTW": "鎧羅弓．屍套",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 228,
         "criticalRate": 0,
@@ -321,10 +365,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅弓．蠻顎"
+            "zhTW": "鎧羅弓．蠻顎",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 0,
@@ -348,10 +396,14 @@
         "rare": 7,
         "type": "bow",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅弓．角"
+            "zhTW": "鎧羅弓．角",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 264,
         "criticalRate": -20,

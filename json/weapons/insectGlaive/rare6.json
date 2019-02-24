@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "礦石素材"
+            "zhTW": "礦石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鉻鋼長刀 II"
+            "zhTW": "鉻鋼長刀 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 558,
         "criticalRate": 0,
@@ -48,10 +52,14 @@
         "rare": 6,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "搔鳥"
+            "zhTW": "搔鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "星空長刀 III"
+            "zhTW": "星空長刀 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 527,
         "criticalRate": 20,
@@ -85,10 +93,14 @@
         "rare": 6,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "眩鳥"
+            "zhTW": "眩鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "利刃長刀 III"
+            "zhTW": "利刃長刀 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 558,
         "criticalRate": 0,
@@ -126,10 +138,14 @@
         "rare": 6,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "冰屬性"
+            "zhTW": "冰屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "凍寒疾風刀 II"
+            "zhTW": "凍寒疾風刀 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 527,
         "criticalRate": 0,
@@ -170,10 +186,14 @@
         "rare": 6,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "毒妖鳥"
+            "zhTW": "毒妖鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "曼陀羅長刀 III"
+            "zhTW": "曼陀羅長刀 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 527,
         "criticalRate": 0,
@@ -214,10 +234,14 @@
         "rare": 6,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "飛空棍 II"
+            "zhTW": "飛空棍 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 589,
         "criticalRate": 0,
@@ -255,10 +279,14 @@
         "rare": 6,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "水屬性"
+            "zhTW": "水屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "激流長刀 III"
+            "zhTW": "激流長刀 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 589,
         "criticalRate": 0,
@@ -296,10 +324,14 @@
         "rare": 6,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "飛雷龍"
+            "zhTW": "飛雷龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "飛雷龍之柱 III"
+            "zhTW": "飛雷龍之柱 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 558,
         "criticalRate": 10,
@@ -337,10 +369,14 @@
         "rare": 6,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "龍骨"
+            "zhTW": "龍骨",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍骨棍 III"
+            "zhTW": "龍骨棍 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 496,
         "criticalRate": 0,

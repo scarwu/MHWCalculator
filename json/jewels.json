@@ -2,7 +2,9 @@
     {
         "id": "KO珠",
         "name": {
-            "zhTW": "KO珠"
+            "zhTW": "KO珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 2,
@@ -14,7 +16,9 @@
     {
         "id": "増彈珠",
         "name": {
-            "zhTW": "増彈珠"
+            "zhTW": "増彈珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 2,
@@ -26,7 +30,9 @@
     {
         "id": "體術珠",
         "name": {
-            "zhTW": "體術珠"
+            "zhTW": "體術珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 2,
@@ -38,7 +44,9 @@
     {
         "id": "體力珠",
         "name": {
-            "zhTW": "體力珠"
+            "zhTW": "體力珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -50,7 +58,9 @@
     {
         "id": "火炎珠",
         "name": {
-            "zhTW": "火炎珠"
+            "zhTW": "火炎珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -62,7 +72,9 @@
     {
         "id": "心眼珠",
         "name": {
-            "zhTW": "心眼珠"
+            "zhTW": "心眼珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 2,
@@ -74,7 +86,9 @@
     {
         "id": "友愛珠",
         "name": {
-            "zhTW": "友愛珠"
+            "zhTW": "友愛珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -86,7 +100,9 @@
     {
         "id": "加護珠",
         "name": {
-            "zhTW": "加護珠"
+            "zhTW": "加護珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -98,7 +114,9 @@
     {
         "id": "全開珠",
         "name": {
-            "zhTW": "全開珠"
+            "zhTW": "全開珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 2,
@@ -110,7 +128,9 @@
     {
         "id": "早氣珠",
         "name": {
-            "zhTW": "早氣珠"
+            "zhTW": "早氣珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 2,
@@ -122,7 +142,9 @@
     {
         "id": "早復珠",
         "name": {
-            "zhTW": "早復珠"
+            "zhTW": "早復珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -134,7 +156,9 @@
     {
         "id": "匠珠",
         "name": {
-            "zhTW": "匠珠"
+            "zhTW": "匠珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 3,
@@ -146,7 +170,9 @@
     {
         "id": "地學珠",
         "name": {
-            "zhTW": "地學珠"
+            "zhTW": "地學珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -158,7 +184,9 @@
     {
         "id": "冰結珠",
         "name": {
-            "zhTW": "冰結珠"
+            "zhTW": "冰結珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -170,7 +198,9 @@
     {
         "id": "攻擊珠",
         "name": {
-            "zhTW": "攻擊珠"
+            "zhTW": "攻擊珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 1,
@@ -182,7 +212,9 @@
     {
         "id": "快吃珠",
         "name": {
-            "zhTW": "快吃珠"
+            "zhTW": "快吃珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -194,7 +226,9 @@
     {
         "id": "投石珠",
         "name": {
-            "zhTW": "投石珠"
+            "zhTW": "投石珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -206,7 +240,9 @@
     {
         "id": "防音珠",
         "name": {
-            "zhTW": "防音珠"
+            "zhTW": "防音珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 3,
@@ -218,7 +254,9 @@
     {
         "id": "防禦珠",
         "name": {
-            "zhTW": "防禦珠"
+            "zhTW": "防禦珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -230,7 +268,9 @@
     {
         "id": "防風珠",
         "name": {
-            "zhTW": "防風珠"
+            "zhTW": "防風珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 2,
@@ -242,7 +282,9 @@
     {
         "id": "昂揚珠",
         "name": {
-            "zhTW": "昂揚珠"
+            "zhTW": "昂揚珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 2,
@@ -254,7 +296,9 @@
     {
         "id": "指示珠",
         "name": {
-            "zhTW": "指示珠"
+            "zhTW": "指示珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -266,7 +310,9 @@
     {
         "id": "底力珠",
         "name": {
-            "zhTW": "底力珠"
+            "zhTW": "底力珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 2,
@@ -278,7 +324,9 @@
     {
         "id": "治癒珠",
         "name": {
-            "zhTW": "治癒珠"
+            "zhTW": "治癒珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -290,7 +338,9 @@
     {
         "id": "沼渡珠",
         "name": {
-            "zhTW": "沼渡珠"
+            "zhTW": "沼渡珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -302,7 +352,9 @@
     {
         "id": "拔刀珠",
         "name": {
-            "zhTW": "拔刀珠"
+            "zhTW": "拔刀珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 2,
@@ -314,7 +366,9 @@
     {
         "id": "威嚇珠",
         "name": {
-            "zhTW": "威嚇珠"
+            "zhTW": "威嚇珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -326,7 +380,9 @@
     {
         "id": "研磨珠",
         "name": {
-            "zhTW": "研磨珠"
+            "zhTW": "研磨珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -338,7 +394,9 @@
     {
         "id": "持續珠",
         "name": {
-            "zhTW": "持續珠"
+            "zhTW": "持續珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -350,7 +408,9 @@
     {
         "id": "重擊珠",
         "name": {
-            "zhTW": "重擊珠"
+            "zhTW": "重擊珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 2,
@@ -362,7 +422,9 @@
     {
         "id": "耐火珠",
         "name": {
-            "zhTW": "耐火珠"
+            "zhTW": "耐火珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -374,7 +436,9 @@
     {
         "id": "耐瘴珠",
         "name": {
-            "zhTW": "耐瘴珠"
+            "zhTW": "耐瘴珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -386,7 +450,9 @@
     {
         "id": "耐衝珠",
         "name": {
-            "zhTW": "耐衝珠"
+            "zhTW": "耐衝珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 3,
@@ -398,7 +464,9 @@
     {
         "id": "耐震珠",
         "name": {
-            "zhTW": "耐震珠"
+            "zhTW": "耐震珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 2,
@@ -410,7 +478,9 @@
     {
         "id": "耐水珠",
         "name": {
-            "zhTW": "耐水珠"
+            "zhTW": "耐水珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -422,7 +492,9 @@
     {
         "id": "耐絕珠",
         "name": {
-            "zhTW": "耐絕珠"
+            "zhTW": "耐絕珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -434,7 +506,9 @@
     {
         "id": "耐屬珠",
         "name": {
-            "zhTW": "耐屬珠"
+            "zhTW": "耐屬珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -446,7 +520,9 @@
     {
         "id": "耐毒珠",
         "name": {
-            "zhTW": "耐毒珠"
+            "zhTW": "耐毒珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -458,7 +534,9 @@
     {
         "id": "耐爆珠",
         "name": {
-            "zhTW": "耐爆珠"
+            "zhTW": "耐爆珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -470,7 +548,9 @@
     {
         "id": "耐冰珠",
         "name": {
-            "zhTW": "耐冰珠"
+            "zhTW": "耐冰珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -482,7 +562,9 @@
     {
         "id": "耐防珠",
         "name": {
-            "zhTW": "耐防珠"
+            "zhTW": "耐防珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -494,7 +576,9 @@
     {
         "id": "耐麻珠",
         "name": {
-            "zhTW": "耐麻珠"
+            "zhTW": "耐麻珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -506,7 +590,9 @@
     {
         "id": "耐眠珠",
         "name": {
-            "zhTW": "耐眠珠"
+            "zhTW": "耐眠珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -518,7 +604,9 @@
     {
         "id": "耐雷珠",
         "name": {
-            "zhTW": "耐雷珠"
+            "zhTW": "耐雷珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -530,7 +618,9 @@
     {
         "id": "耐龍珠",
         "name": {
-            "zhTW": "耐龍珠"
+            "zhTW": "耐龍珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -542,7 +632,9 @@
     {
         "id": "耐裂珠",
         "name": {
-            "zhTW": "耐裂珠"
+            "zhTW": "耐裂珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -554,7 +646,9 @@
     {
         "id": "挑戰珠",
         "name": {
-            "zhTW": "挑戰珠"
+            "zhTW": "挑戰珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 2,
@@ -566,7 +660,9 @@
     {
         "id": "毒珠",
         "name": {
-            "zhTW": "毒珠"
+            "zhTW": "毒珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -578,7 +674,9 @@
     {
         "id": "毒瓶珠",
         "name": {
-            "zhTW": "毒瓶珠"
+            "zhTW": "毒瓶珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 3,
@@ -590,7 +688,9 @@
     {
         "id": "飛燕珠",
         "name": {
-            "zhTW": "飛燕珠"
+            "zhTW": "飛燕珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 2,
@@ -602,7 +702,9 @@
     {
         "id": "流水珠",
         "name": {
-            "zhTW": "流水珠"
+            "zhTW": "流水珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -614,7 +716,9 @@
     {
         "id": "迴避珠",
         "name": {
-            "zhTW": "迴避珠"
+            "zhTW": "迴避珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 2,
@@ -626,7 +730,9 @@
     {
         "id": "逆上珠",
         "name": {
-            "zhTW": "逆上珠"
+            "zhTW": "逆上珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 2,
@@ -638,7 +744,9 @@
     {
         "id": "逆境珠",
         "name": {
-            "zhTW": "逆境珠"
+            "zhTW": "逆境珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -650,7 +758,9 @@
     {
         "id": "剛刃珠",
         "name": {
-            "zhTW": "剛刃珠"
+            "zhTW": "剛刃珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 2,
@@ -662,7 +772,9 @@
     {
         "id": "茸好珠",
         "name": {
-            "zhTW": "茸好珠"
+            "zhTW": "茸好珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 1,
@@ -674,7 +786,9 @@
     {
         "id": "特射珠",
         "name": {
-            "zhTW": "特射珠"
+            "zhTW": "特射珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 1,
@@ -686,7 +800,9 @@
     {
         "id": "破龍珠",
         "name": {
-            "zhTW": "破龍珠"
+            "zhTW": "破龍珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -698,7 +814,9 @@
     {
         "id": "砲手珠",
         "name": {
-            "zhTW": "砲手珠"
+            "zhTW": "砲手珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -710,7 +828,9 @@
     {
         "id": "砲術珠",
         "name": {
-            "zhTW": "砲術珠"
+            "zhTW": "砲術珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 1,
@@ -722,7 +842,9 @@
     {
         "id": "眠瓶珠",
         "name": {
-            "zhTW": "眠瓶珠"
+            "zhTW": "眠瓶珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 3,
@@ -734,7 +856,9 @@
     {
         "id": "貫通珠",
         "name": {
-            "zhTW": "貫通珠"
+            "zhTW": "貫通珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 3,
@@ -746,7 +870,9 @@
     {
         "id": "強弓珠",
         "name": {
-            "zhTW": "強弓珠"
+            "zhTW": "強弓珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 2,
@@ -758,7 +884,9 @@
     {
         "id": "強走珠",
         "name": {
-            "zhTW": "強走珠"
+            "zhTW": "強走珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 2,
@@ -770,7 +898,9 @@
     {
         "id": "強彈珠",
         "name": {
-            "zhTW": "強彈珠"
+            "zhTW": "強彈珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 3,
@@ -782,7 +912,9 @@
     {
         "id": "強壁珠",
         "name": {
-            "zhTW": "強壁珠"
+            "zhTW": "強壁珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 2,
@@ -794,7 +926,9 @@
     {
         "id": "速納珠",
         "name": {
-            "zhTW": "速納珠"
+            "zhTW": "速納珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -806,7 +940,9 @@
     {
         "id": "麻痺珠",
         "name": {
-            "zhTW": "麻痺珠"
+            "zhTW": "麻痺珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 1,
@@ -818,7 +954,9 @@
     {
         "id": "絕路珠",
         "name": {
-            "zhTW": "絕路珠"
+            "zhTW": "絕路珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -830,7 +968,9 @@
     {
         "id": "渾身珠",
         "name": {
-            "zhTW": "渾身珠"
+            "zhTW": "渾身珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 2,
@@ -842,7 +982,9 @@
     {
         "id": "散彈珠",
         "name": {
-            "zhTW": "散彈珠"
+            "zhTW": "散彈珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 3,
@@ -854,7 +996,9 @@
     {
         "id": "植學珠",
         "name": {
-            "zhTW": "植學珠"
+            "zhTW": "植學珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -866,7 +1010,9 @@
     {
         "id": "短縮珠",
         "name": {
-            "zhTW": "短縮珠"
+            "zhTW": "短縮珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 2,
@@ -878,7 +1024,9 @@
     {
         "id": "超心珠",
         "name": {
-            "zhTW": "超心珠"
+            "zhTW": "超心珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 2,
@@ -890,7 +1038,9 @@
     {
         "id": "痛擊珠",
         "name": {
-            "zhTW": "痛擊珠"
+            "zhTW": "痛擊珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 2,
@@ -902,7 +1052,9 @@
     {
         "id": "無擊珠",
         "name": {
-            "zhTW": "無擊珠"
+            "zhTW": "無擊珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 2,
@@ -914,7 +1066,9 @@
     {
         "id": "無傷珠",
         "name": {
-            "zhTW": "無傷珠"
+            "zhTW": "無傷珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 2,
@@ -926,7 +1080,9 @@
     {
         "id": "無食珠",
         "name": {
-            "zhTW": "無食珠"
+            "zhTW": "無食珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -938,7 +1094,9 @@
     {
         "id": "煙復珠",
         "name": {
-            "zhTW": "煙復珠"
+            "zhTW": "煙復珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -950,7 +1108,9 @@
     {
         "id": "解放珠",
         "name": {
-            "zhTW": "解放珠"
+            "zhTW": "解放珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 8,
         "size": 3,
@@ -962,7 +1122,9 @@
     {
         "id": "滑走珠",
         "name": {
-            "zhTW": "滑走珠"
+            "zhTW": "滑走珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 2,
@@ -974,7 +1136,9 @@
     {
         "id": "嗅覺珠",
         "name": {
-            "zhTW": "嗅覺珠"
+            "zhTW": "嗅覺珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -986,7 +1150,9 @@
     {
         "id": "鼓笛珠",
         "name": {
-            "zhTW": "鼓笛珠"
+            "zhTW": "鼓笛珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -998,7 +1164,9 @@
     {
         "id": "節食珠",
         "name": {
-            "zhTW": "節食珠"
+            "zhTW": "節食珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -1010,7 +1178,9 @@
     {
         "id": "達人珠",
         "name": {
-            "zhTW": "達人珠"
+            "zhTW": "達人珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 1,
@@ -1022,7 +1192,9 @@
     {
         "id": "跳躍珠",
         "name": {
-            "zhTW": "跳躍珠"
+            "zhTW": "跳躍珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 2,
@@ -1034,7 +1206,9 @@
     {
         "id": "痺瓶珠",
         "name": {
-            "zhTW": "痺瓶珠"
+            "zhTW": "痺瓶珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 3,
@@ -1046,7 +1220,9 @@
     {
         "id": "雷光珠",
         "name": {
-            "zhTW": "雷光珠"
+            "zhTW": "雷光珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -1058,7 +1234,9 @@
     {
         "id": "睡眠珠",
         "name": {
-            "zhTW": "睡眠珠"
+            "zhTW": "睡眠珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 1,
@@ -1070,7 +1248,9 @@
     {
         "id": "奪氣珠",
         "name": {
-            "zhTW": "奪氣珠"
+            "zhTW": "奪氣珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -1082,7 +1262,9 @@
     {
         "id": "潛伏珠",
         "name": {
-            "zhTW": "潛伏珠"
+            "zhTW": "潛伏珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -1094,7 +1276,9 @@
     {
         "id": "標本珠",
         "name": {
-            "zhTW": "標本珠"
+            "zhTW": "標本珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -1106,7 +1290,9 @@
     {
         "id": "整備珠",
         "name": {
-            "zhTW": "整備珠"
+            "zhTW": "整備珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 5,
         "size": 1,
@@ -1118,7 +1304,9 @@
     {
         "id": "龍封珠",
         "name": {
-            "zhTW": "龍封珠"
+            "zhTW": "龍封珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 3,
@@ -1130,7 +1318,9 @@
     {
         "id": "爆師珠",
         "name": {
-            "zhTW": "爆師珠"
+            "zhTW": "爆師珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 6,
         "size": 1,
@@ -1142,7 +1332,9 @@
     {
         "id": "爆破珠",
         "name": {
-            "zhTW": "爆破珠"
+            "zhTW": "爆破珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 1,
@@ -1154,7 +1346,9 @@
     {
         "id": "爆瓶珠",
         "name": {
-            "zhTW": "爆瓶珠"
+            "zhTW": "爆瓶珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 3,
@@ -1166,7 +1360,9 @@
     {
         "id": "鐵壁珠",
         "name": {
-            "zhTW": "鐵壁珠"
+            "zhTW": "鐵壁珠",
+            "jaJP": null,
+            "enUS": null
         },
         "rare": 7,
         "size": 1,

@@ -2,7 +2,9 @@
     {
         "id": "蠻顎龍之力",
         "name": {
-            "zhTW": "蠻顎龍之力"
+            "zhTW": "蠻顎龍之力",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -14,7 +16,9 @@
     {
         "id": "慘爪龍之力",
         "name": {
-            "zhTW": "慘爪龍之力"
+            "zhTW": "慘爪龍之力",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -26,7 +30,9 @@
     {
         "id": "風漂龍的恩惠",
         "name": {
-            "zhTW": "風漂龍的恩惠"
+            "zhTW": "風漂龍的恩惠",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -38,7 +44,9 @@
     {
         "id": "幻獸的恩惠",
         "name": {
-            "zhTW": "幻獸的恩惠"
+            "zhTW": "幻獸的恩惠",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -50,7 +58,9 @@
     {
         "id": "角龍之力",
         "name": {
-            "zhTW": "角龍之力"
+            "zhTW": "角龍之力",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -62,7 +72,9 @@
     {
         "id": "火龍之力",
         "name": {
-            "zhTW": "火龍之力"
+            "zhTW": "火龍之力",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -74,7 +86,9 @@
     {
         "id": "蠻顎龍的鬥志",
         "name": {
-            "zhTW": "蠻顎龍的鬥志"
+            "zhTW": "蠻顎龍的鬥志",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -90,7 +104,9 @@
     {
         "id": "熔山龍的奧秘",
         "name": {
-            "zhTW": "熔山龍的奧秘"
+            "zhTW": "熔山龍的奧秘",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -102,7 +118,9 @@
     {
         "id": "櫻火龍的奧秘",
         "name": {
-            "zhTW": "櫻火龍的奧秘"
+            "zhTW": "櫻火龍的奧秘",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -114,7 +132,9 @@
     {
         "id": "風漂龍的恩竉",
         "name": {
-            "zhTW": "風漂龍的恩竉"
+            "zhTW": "風漂龍的恩竉",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -130,7 +150,9 @@
     {
         "id": "角龍之奧秘",
         "name": {
-            "zhTW": "角龍之奧秘"
+            "zhTW": "角龍之奧秘",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -146,7 +168,9 @@
     {
         "id": "慘爪龍的奧秘",
         "name": {
-            "zhTW": "慘爪龍的奧秘"
+            "zhTW": "慘爪龍的奧秘",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -162,7 +186,9 @@
     {
         "id": "火龍奧秘",
         "name": {
-            "zhTW": "火龍奧秘"
+            "zhTW": "火龍奧秘",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -178,7 +204,9 @@
     {
         "id": "爆鎚龍的守護",
         "name": {
-            "zhTW": "爆鎚龍的守護"
+            "zhTW": "爆鎚龍的守護",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -190,7 +218,9 @@
     {
         "id": "爆鱗龍的守護",
         "name": {
-            "zhTW": "爆鱗龍的守護"
+            "zhTW": "爆鱗龍的守護",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -202,7 +232,9 @@
     {
         "id": "屍套龍的命脈",
         "name": {
-            "zhTW": "屍套龍的命脈"
+            "zhTW": "屍套龍的命脈",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -214,7 +246,9 @@
     {
         "id": "滅盡龍的飢餓",
         "name": {
-            "zhTW": "滅盡龍的飢餓"
+            "zhTW": "滅盡龍的飢餓",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -226,7 +260,9 @@
     {
         "id": "炎王龍的武技",
         "name": {
-            "zhTW": "炎王龍的武技"
+            "zhTW": "炎王龍的武技",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -238,7 +274,9 @@
     {
         "id": "鋼龍的飛翅",
         "name": {
-            "zhTW": "鋼龍的飛翅"
+            "zhTW": "鋼龍的飛翅",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -250,7 +288,9 @@
     {
         "id": "冥燈龍的神秘",
         "name": {
-            "zhTW": "冥燈龍的神秘"
+            "zhTW": "冥燈龍的神秘",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -262,7 +302,9 @@
     {
         "id": "麒麟的恩寵",
         "name": {
-            "zhTW": "麒麟的恩寵"
+            "zhTW": "麒麟的恩寵",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -274,7 +316,9 @@
     {
         "id": "公會的引導",
         "name": {
-            "zhTW": "公會的引導"
+            "zhTW": "公會的引導",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -286,7 +330,9 @@
     {
         "id": "調查團的引導",
         "name": {
-            "zhTW": "調查團的引導"
+            "zhTW": "調查團的引導",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -298,7 +344,9 @@
     {
         "id": "炎妃龍的恩寵",
         "name": {
-            "zhTW": "炎妃龍的恩寵"
+            "zhTW": "炎妃龍的恩寵",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -314,7 +362,9 @@
     {
         "id": "龍騎士之證",
         "name": {
-            "zhTW": "龍騎士之證"
+            "zhTW": "龍騎士之證",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {
@@ -330,7 +380,9 @@
     {
         "id": "星辰的祝福",
         "name": {
-            "zhTW": "星辰的祝福"
+            "zhTW": "星辰的祝福",
+            "jaJP": null,
+            "enUS": null
         },
         "skills": [
             {

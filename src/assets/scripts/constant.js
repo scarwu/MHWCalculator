@@ -12,6 +12,7 @@ export default {
     defaultLang: 'zhTW',
     langs: {
         zhTW: '正體中文',
+        jaJP: '日本語',
         enUS: 'English'
     },
     resistances: [

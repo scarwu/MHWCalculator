@@ -4,10 +4,14 @@
         "rare": 8,
         "type": "switchAxe",
         "series": {
-            "zhTW": "滅盡龍"
+            "zhTW": "滅盡龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "斷滅的一閃"
+            "zhTW": "斷滅的一閃",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 700,
         "criticalRate": 0,
@@ -47,10 +51,14 @@
         "rare": 8,
         "type": "switchAxe",
         "series": {
-            "zhTW": "角龍"
+            "zhTW": "角龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "惡靈"
+            "zhTW": "惡靈",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 805,
         "criticalRate": -30,
@@ -88,10 +96,14 @@
         "rare": 8,
         "type": "switchAxe",
         "series": {
-            "zhTW": "幻獸"
+            "zhTW": "幻獸",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "斷雷斧麒麟"
+            "zhTW": "斷雷斧麒麟",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 560,
         "criticalRate": 0,
@@ -125,10 +137,14 @@
         "rare": 8,
         "type": "switchAxe",
         "series": {
-            "zhTW": "黑鋼"
+            "zhTW": "黑鋼",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "炎王城寨"
+            "zhTW": "炎王城寨",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 665,
         "criticalRate": 0,
@@ -162,10 +178,14 @@
         "rare": 8,
         "type": "switchAxe",
         "series": {
-            "zhTW": "冥燈龍"
+            "zhTW": "冥燈龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冥燈龍劍斧"
+            "zhTW": "冥燈龍劍斧",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 595,
         "criticalRate": 15,
@@ -208,10 +228,14 @@
         "rare": 8,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．雷"
+            "zhTW": "鎧羅劍斧．雷",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 560,
         "criticalRate": 10,
@@ -249,10 +273,14 @@
         "rare": 8,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．睡眠"
+            "zhTW": "鎧羅劍斧．睡眠",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 665,
         "criticalRate": 0,
@@ -290,10 +318,14 @@
         "rare": 8,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．麻痺"
+            "zhTW": "鎧羅劍斧．麻痺",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 735,
         "criticalRate": 0,
@@ -331,10 +363,14 @@
         "rare": 8,
         "type": "switchAxe",
         "series": {
-            "zhTW": "炎妃龍"
+            "zhTW": "炎妃龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后斧．炎妃"
+            "zhTW": "皇后斧．炎妃",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 630,
         "criticalRate": 20,
@@ -380,10 +416,14 @@
         "rare": 8,
         "type": "switchAxe",
         "series": {
-            "zhTW": "炎妃龍．滅盡"
+            "zhTW": "炎妃龍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后斧．滅盡"
+            "zhTW": "皇后斧．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 665,
         "criticalRate": 0,
@@ -429,10 +469,14 @@
         "rare": 8,
         "type": "switchAxe",
         "series": {
-            "zhTW": "炎妃龍．冥燈"
+            "zhTW": "炎妃龍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后斧．冥燈"
+            "zhTW": "皇后斧．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 630,
         "criticalRate": 10,

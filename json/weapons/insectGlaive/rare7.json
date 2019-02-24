@@ -4,10 +4,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "火龍"
+            "zhTW": "火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "火龍棍【炎舞】"
+            "zhTW": "火龍棍【炎舞】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 589,
         "criticalRate": 20,
@@ -45,10 +49,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "岩賊龍"
+            "zhTW": "岩賊龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "岩賊龍長鞭 II"
+            "zhTW": "岩賊龍長鞭 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 527,
         "criticalRate": 0,
@@ -89,10 +97,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "屍套龍"
+            "zhTW": "屍套龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "屍套龍操蟲棍 II"
+            "zhTW": "屍套龍操蟲棍 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 620,
         "criticalRate": 0,
@@ -132,10 +144,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "蠻顎龍"
+            "zhTW": "蠻顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "蠻顎棍翼龍桿刀"
+            "zhTW": "蠻顎棍翼龍桿刀",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 651,
         "criticalRate": -20,
@@ -169,10 +185,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "角龍"
+            "zhTW": "角龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "暴君長刀 II"
+            "zhTW": "暴君長刀 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 713,
         "criticalRate": -30,
@@ -210,10 +230,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "恐暴龍"
+            "zhTW": "恐暴龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "污穢暴風雨"
+            "zhTW": "污穢暴風雨",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 682,
         "criticalRate": -25,
@@ -249,10 +273,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅長刀．屍套"
+            "zhTW": "鎧羅長刀．屍套",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 527,
         "criticalRate": 0,
@@ -278,10 +306,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅長刀．搔"
+            "zhTW": "鎧羅長刀．搔",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 527,
         "criticalRate": 30,
@@ -305,10 +337,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅長刀．慘爪"
+            "zhTW": "鎧羅長刀．慘爪",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 558,
         "criticalRate": 20,
@@ -332,10 +368,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅長刀．岩賊"
+            "zhTW": "鎧羅長刀．岩賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 558,
         "criticalRate": 0,
@@ -363,10 +403,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅長刀．飛雷"
+            "zhTW": "鎧羅長刀．飛雷",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 558,
         "criticalRate": 20,
@@ -390,10 +434,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅長刀．毒妖"
+            "zhTW": "鎧羅長刀．毒妖",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 558,
         "criticalRate": 0,
@@ -421,10 +469,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅長刀．眩"
+            "zhTW": "鎧羅長刀．眩",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 589,
         "criticalRate": 0,
@@ -448,10 +500,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅長刀．王"
+            "zhTW": "鎧羅長刀．王",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 589,
         "criticalRate": 20,
@@ -475,10 +531,14 @@
         "rare": 7,
         "type": "insectGlaive",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅長刀．角"
+            "zhTW": "鎧羅長刀．角",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 713,
         "criticalRate": -30,

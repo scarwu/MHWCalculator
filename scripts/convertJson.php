@@ -477,6 +477,7 @@ $jewelChecklist = [];
 // Load Lang
 $_ = [
     'zhTW' => Misc::loadJson('../src/assets/scripts/json/langs/zhTW/ui'),
+    'jaJP' => Misc::loadJson('../src/assets/scripts/json/langs/jaJP/ui'),
     'enUS' => Misc::loadJson('../src/assets/scripts/json/langs/enUS/ui')
 ];
 
@@ -671,7 +672,7 @@ foreach ($weapons as $weapon) {
 
     // Create Translation Mapping
     $weapon['name'] = Misc::appendLangMap("weapon:{$weapon['id']}:name", $weapon['name']);
-    $weapon['series'] = Misc::appendLangMap("weapon:{$weapon['id']}:series", $weapon['series']);
+    $weapon['series'] = Misc::appendLangMap("weapon:{$weapon['series']['zhTW']}:series", $weapon['series']);
 
     // Create ID Hash
     $weapon['id'] = md5($weapon['id']);
@@ -716,7 +717,7 @@ foreach ($armors as $index => $armor) {
     }
 
     // Create Translation Mapping
-    $armor['common']['series'] = Misc::appendLangMap("armor:{$index}:common:series", $armor['common']['series']);
+    $armor['common']['series'] = Misc::appendLangMap("armor:common:{$armor['common']['series']['zhTW']}:series", $armor['common']['series']);
 
     foreach ($armor['list'] as $index => $item) {
 

@@ -4,10 +4,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "爆鎚龍"
+            "zhTW": "爆鎚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "爆鎚太刀 II"
+            "zhTW": "爆鎚太刀 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 660,
         "criticalRate": -10,
@@ -48,10 +52,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "雌火龍"
+            "zhTW": "雌火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "飛龍刀【葵】"
+            "zhTW": "飛龍刀【葵】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 627,
         "criticalRate": 10,
@@ -89,10 +97,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "屍套龍"
+            "zhTW": "屍套龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "屍套龍太刀 II"
+            "zhTW": "屍套龍太刀 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 660,
         "criticalRate": 0,
@@ -132,10 +144,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "熔山龍"
+            "zhTW": "熔山龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "熔山龍太刀 II"
+            "zhTW": "熔山龍太刀 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 726,
         "criticalRate": -20,
@@ -173,10 +189,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "恐暴龍"
+            "zhTW": "恐暴龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "悲慘痛苦太刀"
+            "zhTW": "悲慘痛苦太刀",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 759,
         "criticalRate": -25,
@@ -212,10 +232,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "蒼星"
+            "zhTW": "蒼星",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "蒼星的太刀【舞龍】"
+            "zhTW": "蒼星的太刀【舞龍】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 495,
         "criticalRate": 30,
@@ -253,10 +277,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．黑甲"
+            "zhTW": "鎧羅劍．黑甲",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 528,
         "criticalRate": 0,
@@ -280,10 +308,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．泥魚"
+            "zhTW": "鎧羅劍．泥魚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 660,
         "criticalRate": 0,
@@ -307,10 +339,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．風漂"
+            "zhTW": "鎧羅劍．風漂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 528,
         "criticalRate": 0,
@@ -334,10 +370,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．搔"
+            "zhTW": "鎧羅劍．搔",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 561,
         "criticalRate": 20,
@@ -361,10 +401,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．飛雷"
+            "zhTW": "鎧羅劍．飛雷",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 594,
         "criticalRate": 30,
@@ -388,10 +432,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．眩"
+            "zhTW": "鎧羅劍．眩",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 627,
         "criticalRate": 0,
@@ -415,10 +463,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．屍套"
+            "zhTW": "鎧羅劍．屍套",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 660,
         "criticalRate": 10,
@@ -444,10 +496,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．爆鎚"
+            "zhTW": "鎧羅劍．爆鎚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 660,
         "criticalRate": 0,
@@ -475,10 +531,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．蠻顎"
+            "zhTW": "鎧羅劍．蠻顎",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 693,
         "criticalRate": -10,
@@ -502,10 +562,14 @@
         "rare": 7,
         "type": "longSword",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍．熔山"
+            "zhTW": "鎧羅劍．熔山",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 726,
         "criticalRate": -20,

@@ -4,10 +4,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "火龍"
+            "zhTW": "火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "焰斧鶴王"
+            "zhTW": "焰斧鶴王",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 20,
@@ -45,10 +49,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "雌火龍"
+            "zhTW": "雌火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "火鎧盾斧"
+            "zhTW": "火鎧盾斧",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 0,
@@ -89,10 +97,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "角龍"
+            "zhTW": "角龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "暴君銅盾 II"
+            "zhTW": "暴君銅盾 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 828,
         "criticalRate": -30,
@@ -126,10 +138,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "岩賊龍"
+            "zhTW": "岩賊龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "岩賊龍盾 II"
+            "zhTW": "岩賊龍盾 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 612,
         "criticalRate": 0,
@@ -170,10 +186,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "屍套龍"
+            "zhTW": "屍套龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "屍套龍盾斧 II"
+            "zhTW": "屍套龍盾斧 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 0,
@@ -213,10 +233,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "恐暴龍"
+            "zhTW": "恐暴龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "德斯特涅塔"
+            "zhTW": "德斯特涅塔",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 792,
         "criticalRate": -25,
@@ -252,10 +276,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．痺賊"
+            "zhTW": "鎧羅兵裝．痺賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 576,
         "criticalRate": 30,
@@ -279,10 +307,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．慘爪"
+            "zhTW": "鎧羅兵裝．慘爪",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 25,
@@ -306,10 +338,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．岩賊"
+            "zhTW": "鎧羅兵裝．岩賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 0,
@@ -333,10 +369,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．屍套"
+            "zhTW": "鎧羅兵裝．屍套",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 10,
@@ -362,10 +402,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．賊"
+            "zhTW": "鎧羅兵裝．賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 0,
@@ -389,10 +433,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．王"
+            "zhTW": "鎧羅兵裝．王",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 20,
@@ -416,10 +464,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．泥魚"
+            "zhTW": "鎧羅兵裝．泥魚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 10,
@@ -443,10 +495,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．飛雷"
+            "zhTW": "鎧羅兵裝．飛雷",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 684,
         "criticalRate": 15,
@@ -470,10 +526,14 @@
         "rare": 7,
         "type": "chargeBlade",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅兵裝．角"
+            "zhTW": "鎧羅兵裝．角",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 828,
         "criticalRate": -30,

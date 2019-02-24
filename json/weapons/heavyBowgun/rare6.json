@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "heavyBowgun",
         "series": {
-            "zhTW": "礦石素材"
+            "zhTW": "礦石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鉻鋼突擊弩 II"
+            "zhTW": "鉻鋼突擊弩 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 255,
         "criticalRate": 0,
@@ -33,10 +37,14 @@
         "rare": 6,
         "type": "heavyBowgun",
         "series": {
-            "zhTW": "水屬性"
+            "zhTW": "水屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "激流加農砲 III"
+            "zhTW": "激流加農砲 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 255,
         "criticalRate": 0,
@@ -59,10 +67,14 @@
         "rare": 6,
         "type": "heavyBowgun",
         "series": {
-            "zhTW": "眩鳥"
+            "zhTW": "眩鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "長尾重裝弩 III"
+            "zhTW": "長尾重裝弩 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 255,
         "criticalRate": 0,
@@ -85,10 +97,14 @@
         "rare": 6,
         "type": "heavyBowgun",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "動能發射器 II"
+            "zhTW": "動能發射器 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 270,
         "criticalRate": 0,
@@ -111,10 +127,14 @@
         "rare": 6,
         "type": "heavyBowgun",
         "series": {
-            "zhTW": "毒妖鳥"
+            "zhTW": "毒妖鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "曼陀羅爆破砲 III"
+            "zhTW": "曼陀羅爆破砲 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 255,
         "criticalRate": 0,
@@ -140,10 +160,14 @@
         "rare": 6,
         "type": "heavyBowgun",
         "series": {
-            "zhTW": "骨鎚龍"
+            "zhTW": "骨鎚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "骨鎚龍加農砲 III"
+            "zhTW": "骨鎚龍加農砲 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 270,
         "criticalRate": 0,
@@ -162,10 +186,14 @@
         "rare": 6,
         "type": "heavyBowgun",
         "series": {
-            "zhTW": "飛雷龍"
+            "zhTW": "飛雷龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "飛雷龍之針 III"
+            "zhTW": "飛雷龍之針 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 255,
         "criticalRate": 15,
@@ -188,10 +216,14 @@
         "rare": 6,
         "type": "heavyBowgun",
         "series": {
-            "zhTW": "龍骨"
+            "zhTW": "龍骨",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍骨砲 III"
+            "zhTW": "龍骨砲 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 255,
         "criticalRate": 0,

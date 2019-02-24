@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "礦石素材"
+            "zhTW": "礦石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鉻鋼切刀 II"
+            "zhTW": "鉻鋼切刀 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 0,
@@ -48,10 +52,14 @@
         "rare": 6,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "水屬性"
+            "zhTW": "水屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "洶湧奔流 III"
+            "zhTW": "洶湧奔流 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 0,
@@ -89,10 +97,14 @@
         "rare": 6,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "浮空龍"
+            "zhTW": "浮空龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "浮空龍戰斧 III"
+            "zhTW": "浮空龍戰斧 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 238,
         "criticalRate": 0,
@@ -133,10 +145,14 @@
         "rare": 6,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "毒妖鳥"
+            "zhTW": "毒妖鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "盛開曼陀羅 III"
+            "zhTW": "盛開曼陀羅 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 238,
         "criticalRate": 0,
@@ -177,10 +193,14 @@
         "rare": 6,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "大凶顎龍"
+            "zhTW": "大凶顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "瑪拉多戰斧 III"
+            "zhTW": "瑪拉多戰斧 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 224,
         "criticalRate": 20,
@@ -214,10 +234,14 @@
         "rare": 6,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "大地巴龍刀 II"
+            "zhTW": "大地巴龍刀 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -255,10 +279,14 @@
         "rare": 6,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "骨鎚龍"
+            "zhTW": "骨鎚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "骨鎚龍棍棒 III"
+            "zhTW": "骨鎚龍棍棒 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -292,10 +320,14 @@
         "rare": 6,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "大凶豺龍"
+            "zhTW": "大凶豺龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "凶豺龍棍棒 III"
+            "zhTW": "凶豺龍棍棒 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -336,10 +368,14 @@
         "rare": 6,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "雷屬性"
+            "zhTW": "雷屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "雷光戰狂 III"
+            "zhTW": "雷光戰狂 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -377,10 +413,14 @@
         "rare": 6,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "土砂龍"
+            "zhTW": "土砂龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "土砂龍棍棒 III"
+            "zhTW": "土砂龍棍棒 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 294,
         "criticalRate": -10,
@@ -421,10 +461,14 @@
         "rare": 6,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "龍骨"
+            "zhTW": "龍骨",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍骨劍 III"
+            "zhTW": "龍骨劍 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 196,
         "criticalRate": 0,

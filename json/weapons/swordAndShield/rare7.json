@@ -4,10 +4,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "火龍"
+            "zhTW": "火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "日冕短劍"
+            "zhTW": "日冕短劍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 20,
@@ -45,10 +49,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "工房武器"
+            "zhTW": "工房武器",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "至尊劍"
+            "zhTW": "至尊劍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 280,
         "criticalRate": 0,
@@ -86,10 +94,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "雌火龍"
+            "zhTW": "雌火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇家薔薇"
+            "zhTW": "皇家薔薇",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 10,
@@ -127,10 +139,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "蠻顎龍"
+            "zhTW": "蠻顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "蠻顎龍追尋者"
+            "zhTW": "蠻顎龍追尋者",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 294,
         "criticalRate": -20,
@@ -164,10 +180,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "幻獸"
+            "zhTW": "幻獸",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "雷光刀 II"
+            "zhTW": "雷光刀 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 224,
         "criticalRate": 0,
@@ -201,10 +221,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "恐暴龍"
+            "zhTW": "恐暴龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "致命寬劍"
+            "zhTW": "致命寬劍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 308,
         "criticalRate": -20,
@@ -240,10 +264,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．幻"
+            "zhTW": "鎧羅切刀．幻",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 224,
         "criticalRate": 0,
@@ -267,10 +295,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．痺賊"
+            "zhTW": "鎧羅切刀．痺賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 224,
         "criticalRate": 30,
@@ -294,10 +326,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．風漂"
+            "zhTW": "鎧羅切刀．風漂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 224,
         "criticalRate": 0,
@@ -321,10 +357,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．浮空"
+            "zhTW": "鎧羅切刀．浮空",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 0,
@@ -348,10 +388,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．毒妖"
+            "zhTW": "鎧羅切刀．毒妖",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 0,
@@ -379,10 +423,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．賊"
+            "zhTW": "鎧羅切刀．賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -406,10 +454,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．王"
+            "zhTW": "鎧羅切刀．王",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 30,
@@ -433,10 +485,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．骨鎚"
+            "zhTW": "鎧羅切刀．骨鎚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 10,
@@ -460,10 +516,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．蠻顎"
+            "zhTW": "鎧羅切刀．蠻顎",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 294,
         "criticalRate": -20,
@@ -487,10 +547,14 @@
         "rare": 7,
         "type": "swordAndShield",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅切刀．土砂"
+            "zhTW": "鎧羅切刀．土砂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 308,
         "criticalRate": -10,

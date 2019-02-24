@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "礦石素材"
+            "zhTW": "礦石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "威猛風笛 II"
+            "zhTW": "威猛風笛 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 756,
         "criticalRate": 0,
@@ -48,10 +52,14 @@
         "rare": 6,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "雷屬性"
+            "zhTW": "雷屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "雷鼓 III"
+            "zhTW": "雷鼓 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 756,
         "criticalRate": 0,
@@ -89,10 +97,14 @@
         "rare": 6,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "搔鳥"
+            "zhTW": "搔鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "星空皮鼓 III"
+            "zhTW": "星空皮鼓 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 714,
         "criticalRate": 25,
@@ -126,10 +138,14 @@
         "rare": 6,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "水屬性"
+            "zhTW": "水屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "激流銅鑼 III"
+            "zhTW": "激流銅鑼 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 756,
         "criticalRate": 0,
@@ -167,10 +183,14 @@
         "rare": 6,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "堅骨號角 II"
+            "zhTW": "堅骨號角 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 798,
         "criticalRate": 0,
@@ -208,10 +228,14 @@
         "rare": 6,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "蠻顎龍"
+            "zhTW": "蠻顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "蠻顎龍長號 III"
+            "zhTW": "蠻顎龍長號 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 882,
         "criticalRate": -20,
@@ -245,10 +269,14 @@
         "rare": 6,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "毒妖鳥"
+            "zhTW": "毒妖鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "曼陀羅號角 III"
+            "zhTW": "曼陀羅號角 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 714,
         "criticalRate": 0,
@@ -289,10 +317,14 @@
         "rare": 6,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "浮空龍"
+            "zhTW": "浮空龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "浮空龍長號 III"
+            "zhTW": "浮空龍長號 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 714,
         "criticalRate": 10,
@@ -333,10 +365,14 @@
         "rare": 6,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "骨鎚龍"
+            "zhTW": "骨鎚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "骨鎚龍號角 III"
+            "zhTW": "骨鎚龍號角 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 798,
         "criticalRate": 0,
@@ -370,10 +406,14 @@
         "rare": 6,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "龍骨"
+            "zhTW": "龍骨",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍骨古笛 III"
+            "zhTW": "龍骨古笛 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 672,
         "criticalRate": 0,

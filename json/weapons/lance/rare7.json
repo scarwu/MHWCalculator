@@ -4,10 +4,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "風漂龍"
+            "zhTW": "風漂龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "風漂龍斧槍 II"
+            "zhTW": "風漂龍斧槍 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 368,
         "criticalRate": 0,
@@ -41,10 +45,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "岩賊龍"
+            "zhTW": "岩賊龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "岩賊龍刺針 II"
+            "zhTW": "岩賊龍刺針 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": 0,
@@ -85,10 +93,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "慘爪龍"
+            "zhTW": "慘爪龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "慘爪刺針 II"
+            "zhTW": "慘爪刺針 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": 30,
@@ -122,10 +134,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "恐暴龍"
+            "zhTW": "恐暴龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "亞特羅西斯塔"
+            "zhTW": "亞特羅西斯塔",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 529,
         "criticalRate": -25,
@@ -161,10 +177,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．王"
+            "zhTW": "鎧羅之尖．王",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 368,
         "criticalRate": 0,
@@ -188,10 +208,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．黑甲"
+            "zhTW": "鎧羅之尖．黑甲",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 368,
         "criticalRate": 10,
@@ -215,10 +239,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．風漂"
+            "zhTW": "鎧羅之尖．風漂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 368,
         "criticalRate": 0,
@@ -242,10 +270,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．岩賊"
+            "zhTW": "鎧羅之尖．岩賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": 10,
@@ -269,10 +301,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．屍套"
+            "zhTW": "鎧羅之尖．屍套",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": 0,
@@ -298,10 +334,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．毒妖"
+            "zhTW": "鎧羅之尖．毒妖",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": 0,
@@ -329,10 +369,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．搔"
+            "zhTW": "鎧羅之尖．搔",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": 10,
@@ -356,10 +400,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．慘爪"
+            "zhTW": "鎧羅之尖．慘爪",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 437,
         "criticalRate": 30,
@@ -393,10 +441,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．土砂"
+            "zhTW": "鎧羅之尖．土砂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 437,
         "criticalRate": -20,
@@ -420,10 +472,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "工房武器"
+            "zhTW": "工房武器",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "團旗長槍【流星】"
+            "zhTW": "團旗長槍【流星】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 437,
         "criticalRate": 0,
@@ -457,10 +513,14 @@
         "rare": 7,
         "type": "lance",
         "series": {
-            "zhTW": "工房武器"
+            "zhTW": "工房武器",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "團旗長槍【一帆風順】"
+            "zhTW": "團旗長槍【一帆風順】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": 0,

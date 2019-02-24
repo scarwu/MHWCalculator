@@ -4,7 +4,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "鑄島熔岩α"
+                "zhTW": "鑄島熔岩α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 76,
             "resistance": {
@@ -23,7 +25,9 @@
                 "id": "鑄島熔岩頭飾α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "鑄島熔岩頭飾α"
+                    "zhTW": "鑄島熔岩頭飾α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -41,7 +45,9 @@
                 "id": "鑄島熔岩皮α",
                 "type": "chest",
                 "name": {
-                    "zhTW": "鑄島熔岩皮α"
+                    "zhTW": "鑄島熔岩皮α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -59,7 +65,9 @@
                 "id": "熔山龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": "熔山龍腕甲α"
+                    "zhTW": "熔山龍腕甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -77,7 +85,9 @@
                 "id": "鑄島熔岩腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": "鑄島熔岩腰甲α"
+                    "zhTW": "鑄島熔岩腰甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -95,7 +105,9 @@
                 "id": "鑄島熔岩護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": "鑄島熔岩護腿α"
+                    "zhTW": "鑄島熔岩護腿α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -116,7 +128,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "鑄島熔岩β"
+                "zhTW": "鑄島熔岩β",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 76,
             "resistance": {
@@ -135,7 +149,9 @@
                 "id": "鑄島熔岩頭飾β",
                 "type": "helm",
                 "name": {
-                    "zhTW": "鑄島熔岩頭飾β"
+                    "zhTW": "鑄島熔岩頭飾β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -153,7 +169,9 @@
                 "id": "鑄島熔岩皮β",
                 "type": "chest",
                 "name": {
-                    "zhTW": "鑄島熔岩皮β"
+                    "zhTW": "鑄島熔岩皮β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -171,7 +189,9 @@
                 "id": "熔山龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": "熔山龍腕甲β"
+                    "zhTW": "熔山龍腕甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -189,7 +209,9 @@
                 "id": "鑄島熔岩腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": "鑄島熔岩腰甲β"
+                    "zhTW": "鑄島熔岩腰甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -207,7 +229,9 @@
                 "id": "鑄島熔岩護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": "鑄島熔岩護腿β"
+                    "zhTW": "鑄島熔岩護腿β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -228,7 +252,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "骨鎚龍α"
+                "zhTW": "骨鎚龍α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 78,
             "resistance": {
@@ -245,7 +271,9 @@
                 "id": "骨鎚龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "骨鎚龍頭盔α"
+                    "zhTW": "骨鎚龍頭盔α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -259,7 +287,9 @@
                 "id": "骨鎚龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": "骨鎚龍鎧甲α"
+                    "zhTW": "骨鎚龍鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -277,7 +307,9 @@
                 "id": "骨鎚龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": "骨鎚龍腕甲α"
+                    "zhTW": "骨鎚龍腕甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -295,7 +327,9 @@
                 "id": "骨鎚龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": "骨鎚龍腰甲α"
+                    "zhTW": "骨鎚龍腰甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -309,7 +343,9 @@
                 "id": "骨鎚龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": "骨鎚龍護腿α"
+                    "zhTW": "骨鎚龍護腿α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -326,7 +362,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "骨鎚龍β"
+                "zhTW": "骨鎚龍β",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 78,
             "resistance": {
@@ -343,7 +381,9 @@
                 "id": "骨鎚龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": "骨鎚龍頭盔β"
+                    "zhTW": "骨鎚龍頭盔β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -361,7 +401,9 @@
                 "id": "骨鎚龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": "骨鎚龍鎧甲β"
+                    "zhTW": "骨鎚龍鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -379,7 +421,9 @@
                 "id": "骨鎚龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": "骨鎚龍腕甲β"
+                    "zhTW": "骨鎚龍腕甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -401,7 +445,9 @@
                 "id": "骨鎚龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": "骨鎚龍腰甲β"
+                    "zhTW": "骨鎚龍腰甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -419,7 +465,9 @@
                 "id": "骨鎚龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": "骨鎚龍護腿β"
+                    "zhTW": "骨鎚龍護腿β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -440,7 +488,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "火龍心α"
+                "zhTW": "火龍心α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 84,
             "resistance": {
@@ -459,7 +509,9 @@
                 "id": "火龍心頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "火龍心頭盔α"
+                    "zhTW": "火龍心頭盔α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -477,7 +529,9 @@
                 "id": "火龍心鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": "火龍心鎧甲α"
+                    "zhTW": "火龍心鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -491,7 +545,9 @@
                 "id": "火龍心腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": "火龍心腕甲α"
+                    "zhTW": "火龍心腕甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -505,7 +561,9 @@
                 "id": "火龍心腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": "火龍心腰甲α"
+                    "zhTW": "火龍心腰甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -523,7 +581,9 @@
                 "id": "火龍心護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": "火龍心護腿α"
+                    "zhTW": "火龍心護腿α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -544,7 +604,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "火龍心β"
+                "zhTW": "火龍心β",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 84,
             "resistance": {
@@ -563,7 +625,9 @@
                 "id": "火龍心頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": "火龍心頭盔β"
+                    "zhTW": "火龍心頭盔β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -581,7 +645,9 @@
                 "id": "火龍心鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": "火龍心鎧甲β"
+                    "zhTW": "火龍心鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -602,7 +668,9 @@
                 "id": "火龍心腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": "火龍心腕甲β"
+                    "zhTW": "火龍心腕甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -620,7 +688,9 @@
                 "id": "火龍心腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": "火龍心腰甲β"
+                    "zhTW": "火龍心腰甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -638,7 +708,9 @@
                 "id": "火龍心護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": "火龍心護腿β"
+                    "zhTW": "火龍心護腿β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -659,7 +731,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "熔岩龍α"
+                "zhTW": "熔岩龍α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 88,
             "resistance": {
@@ -676,7 +750,9 @@
                 "id": "熔岩龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "熔岩龍頭盔α"
+                    "zhTW": "熔岩龍頭盔α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -694,7 +770,9 @@
                 "id": "熔岩龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": "熔岩龍鎧甲α"
+                    "zhTW": "熔岩龍鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -712,7 +790,9 @@
                 "id": "熔岩龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": "熔岩龍腕甲α"
+                    "zhTW": "熔岩龍腕甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -734,7 +814,9 @@
                 "id": "熔岩龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": "熔岩龍腰甲α"
+                    "zhTW": "熔岩龍腰甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -752,7 +834,9 @@
                 "id": "熔岩龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": "熔岩龍護腿α"
+                    "zhTW": "熔岩龍護腿α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -777,7 +861,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "熔岩龍β"
+                "zhTW": "熔岩龍β",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 88,
             "resistance": {
@@ -794,7 +880,9 @@
                 "id": "熔岩龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": "熔岩龍頭盔β"
+                    "zhTW": "熔岩龍頭盔β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -819,7 +907,9 @@
                 "id": "熔岩龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": "熔岩龍鎧甲β"
+                    "zhTW": "熔岩龍鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -840,7 +930,9 @@
                 "id": "熔岩龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": "熔岩龍腕甲β"
+                    "zhTW": "熔岩龍腕甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -858,7 +950,9 @@
                 "id": "熔岩龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": "熔岩龍腰甲β"
+                    "zhTW": "熔岩龍腰甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -876,7 +970,9 @@
                 "id": "熔岩龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": "熔岩龍護腿β"
+                    "zhTW": "熔岩龍護腿β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -897,7 +993,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "鑄鐵α"
+                "zhTW": "鑄鐵α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 82,
             "resistance": {
@@ -914,7 +1012,9 @@
                 "id": "鑄鐵頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "鑄鐵頭盔α"
+                    "zhTW": "鑄鐵頭盔α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -928,7 +1028,9 @@
                 "id": "鑄鐵鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": "鑄鐵鎧甲α"
+                    "zhTW": "鑄鐵鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -942,7 +1044,9 @@
                 "id": "鑄鐵腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": "鑄鐵腕甲α"
+                    "zhTW": "鑄鐵腕甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -960,7 +1064,9 @@
                 "id": "鑄鐵腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": "鑄鐵腰甲α"
+                    "zhTW": "鑄鐵腰甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -974,7 +1080,9 @@
                 "id": "鑄鐵護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": "鑄鐵護腿α"
+                    "zhTW": "鑄鐵護腿α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -995,7 +1103,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "鑄鐵β"
+                "zhTW": "鑄鐵β",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 82,
             "resistance": {
@@ -1012,7 +1122,9 @@
                 "id": "鑄鐵頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": "鑄鐵頭盔β"
+                    "zhTW": "鑄鐵頭盔β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1030,7 +1142,9 @@
                 "id": "鑄鐵鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": "鑄鐵鎧甲β"
+                    "zhTW": "鑄鐵鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1048,7 +1162,9 @@
                 "id": "鑄鐵腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": "鑄鐵腕甲β"
+                    "zhTW": "鑄鐵腕甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1066,7 +1182,9 @@
                 "id": "鑄鐵腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": "鑄鐵腰甲β"
+                    "zhTW": "鑄鐵腰甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1084,7 +1202,9 @@
                 "id": "鑄鐵護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": "鑄鐵護腿β"
+                    "zhTW": "鑄鐵護腿β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1105,7 +1225,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "艾路頭套α"
+                "zhTW": "艾路頭套α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 88,
             "resistance": {
@@ -1122,7 +1244,9 @@
                 "id": "艾路頭套α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "艾路頭套α"
+                    "zhTW": "艾路頭套α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1139,7 +1263,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "知性眼鏡α"
+                "zhTW": "知性眼鏡α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 88,
             "resistance": {
@@ -1156,7 +1282,9 @@
                 "id": "知性眼鏡α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "知性眼鏡α"
+                    "zhTW": "知性眼鏡α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1177,7 +1305,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "風漂龍α"
+                "zhTW": "風漂龍α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 86,
             "resistance": {
@@ -1196,7 +1326,9 @@
                 "id": "風漂龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "風漂龍頭盔α"
+                    "zhTW": "風漂龍頭盔α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1214,7 +1346,9 @@
                 "id": "風漂龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": "風漂龍鎧甲α"
+                    "zhTW": "風漂龍鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1232,7 +1366,9 @@
                 "id": "風漂龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": "風漂龍腕甲α"
+                    "zhTW": "風漂龍腕甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1250,7 +1386,9 @@
                 "id": "風漂龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": "風漂龍腰甲α"
+                    "zhTW": "風漂龍腰甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1268,7 +1406,9 @@
                 "id": "風漂龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": "風漂龍護腿α"
+                    "zhTW": "風漂龍護腿α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1289,7 +1429,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "風漂龍β"
+                "zhTW": "風漂龍β",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 86,
             "resistance": {
@@ -1308,7 +1450,9 @@
                 "id": "風漂龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": "風漂龍頭盔β"
+                    "zhTW": "風漂龍頭盔β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1326,7 +1470,9 @@
                 "id": "風漂龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": "風漂龍鎧甲β"
+                    "zhTW": "風漂龍鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1344,7 +1490,9 @@
                 "id": "風漂龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": "風漂龍腕甲β"
+                    "zhTW": "風漂龍腕甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1362,7 +1510,9 @@
                 "id": "風漂龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": "風漂龍腰甲β"
+                    "zhTW": "風漂龍腰甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1380,7 +1530,9 @@
                 "id": "風漂龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": "風漂龍護腿β"
+                    "zhTW": "風漂龍護腿β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1401,7 +1553,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "角龍α"
+                "zhTW": "角龍α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 86,
             "resistance": {
@@ -1420,7 +1574,9 @@
                 "id": "角龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "角龍頭盔α"
+                    "zhTW": "角龍頭盔α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1438,7 +1594,9 @@
                 "id": "角龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": "角龍鎧甲α"
+                    "zhTW": "角龍鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1456,7 +1614,9 @@
                 "id": "角龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": "角龍腕甲α"
+                    "zhTW": "角龍腕甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1474,7 +1634,9 @@
                 "id": "角龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": "角龍腰甲α"
+                    "zhTW": "角龍腰甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1492,7 +1654,9 @@
                 "id": "角龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": "角龍護腿α"
+                    "zhTW": "角龍護腿α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1513,7 +1677,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "角龍β"
+                "zhTW": "角龍β",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 86,
             "resistance": {
@@ -1532,7 +1698,9 @@
                 "id": "角龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": "角龍頭盔β"
+                    "zhTW": "角龍頭盔β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1550,7 +1718,9 @@
                 "id": "角龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": "角龍鎧甲β"
+                    "zhTW": "角龍鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1568,7 +1738,9 @@
                 "id": "角龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": "角龍腕甲β"
+                    "zhTW": "角龍腕甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1586,7 +1758,9 @@
                 "id": "角龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": "角龍腰甲β"
+                    "zhTW": "角龍腰甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1604,7 +1778,9 @@
                 "id": "角龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": "角龍護腿β"
+                    "zhTW": "角龍護腿β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1628,7 +1804,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "礦石α"
+                "zhTW": "礦石α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 82,
             "resistance": {
@@ -1645,7 +1823,9 @@
                 "id": "礦石頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "礦石頭盔α"
+                    "zhTW": "礦石頭盔α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1663,7 +1843,9 @@
                 "id": "礦石鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": "礦石鎧甲α"
+                    "zhTW": "礦石鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1681,7 +1863,9 @@
                 "id": "礦石腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": "礦石腕甲α"
+                    "zhTW": "礦石腕甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1699,7 +1883,9 @@
                 "id": "礦石腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": "礦石腰甲α"
+                    "zhTW": "礦石腰甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1717,7 +1903,9 @@
                 "id": "礦石護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": "礦石護腿α"
+                    "zhTW": "礦石護腿α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1738,7 +1926,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "礦石β"
+                "zhTW": "礦石β",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 82,
             "resistance": {
@@ -1755,7 +1945,9 @@
                 "id": "礦石頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": "礦石頭盔β"
+                    "zhTW": "礦石頭盔β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1773,7 +1965,9 @@
                 "id": "礦石鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": "礦石鎧甲β"
+                    "zhTW": "礦石鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1795,7 +1989,9 @@
                 "id": "礦石腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": "礦石腕甲β"
+                    "zhTW": "礦石腕甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1813,7 +2009,9 @@
                 "id": "礦石腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": "礦石腰甲β"
+                    "zhTW": "礦石腰甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1831,7 +2029,9 @@
                 "id": "礦石護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": "礦石護腿β"
+                    "zhTW": "礦石護腿β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -1852,7 +2052,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "慘爪龍α"
+                "zhTW": "慘爪龍α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 86,
             "resistance": {
@@ -1871,7 +2073,9 @@
                 "id": "慘爪龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "慘爪龍頭盔α"
+                    "zhTW": "慘爪龍頭盔α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1889,7 +2093,9 @@
                 "id": "慘爪龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": "慘爪龍鎧甲α"
+                    "zhTW": "慘爪龍鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1907,7 +2113,9 @@
                 "id": "慘爪龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": "慘爪龍腕甲α"
+                    "zhTW": "慘爪龍腕甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1925,7 +2133,9 @@
                 "id": "慘爪龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": "慘爪龍腰甲α"
+                    "zhTW": "慘爪龍腰甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1943,7 +2153,9 @@
                 "id": "慘爪龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": "慘爪龍護腿α"
+                    "zhTW": "慘爪龍護腿α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -1964,7 +2176,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "慘爪龍β"
+                "zhTW": "慘爪龍β",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 86,
             "resistance": {
@@ -1983,7 +2197,9 @@
                 "id": "慘爪龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": "慘爪龍頭盔β"
+                    "zhTW": "慘爪龍頭盔β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2001,7 +2217,9 @@
                 "id": "慘爪龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": "慘爪龍鎧甲β"
+                    "zhTW": "慘爪龍鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2019,7 +2237,9 @@
                 "id": "慘爪龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": "慘爪龍腕甲β"
+                    "zhTW": "慘爪龍腕甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2037,7 +2257,9 @@
                 "id": "慘爪龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": "慘爪龍腰甲β"
+                    "zhTW": "慘爪龍腰甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2055,7 +2277,9 @@
                 "id": "慘爪龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": "慘爪龍護腿β"
+                    "zhTW": "慘爪龍護腿β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2076,7 +2300,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "火龍α"
+                "zhTW": "火龍α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 86,
             "resistance": {
@@ -2095,7 +2321,9 @@
                 "id": "火龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "火龍頭盔α"
+                    "zhTW": "火龍頭盔α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -2113,7 +2341,9 @@
                 "id": "火龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": "火龍鎧甲α"
+                    "zhTW": "火龍鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -2131,7 +2361,9 @@
                 "id": "火龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": "火龍腕甲α"
+                    "zhTW": "火龍腕甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -2149,7 +2381,9 @@
                 "id": "火龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": "火龍腰甲α"
+                    "zhTW": "火龍腰甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -2167,7 +2401,9 @@
                 "id": "火龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": "火龍護腿α"
+                    "zhTW": "火龍護腿α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -2188,7 +2424,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "火龍β"
+                "zhTW": "火龍β",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 86,
             "resistance": {
@@ -2207,7 +2445,9 @@
                 "id": "火龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": "火龍頭盔β"
+                    "zhTW": "火龍頭盔β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2225,7 +2465,9 @@
                 "id": "火龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": "火龍鎧甲β"
+                    "zhTW": "火龍鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2243,7 +2485,9 @@
                 "id": "火龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": "火龍腕甲β"
+                    "zhTW": "火龍腕甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2261,7 +2505,9 @@
                 "id": "火龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": "火龍腰甲β"
+                    "zhTW": "火龍腰甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2279,7 +2525,9 @@
                 "id": "火龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": "火龍護腿β"
+                    "zhTW": "火龍護腿β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2300,7 +2548,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "旅團α"
+                "zhTW": "旅團α",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 84,
             "resistance": {
@@ -2317,7 +2567,9 @@
                 "id": "旅團頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": "旅團頭盔α"
+                    "zhTW": "旅團頭盔α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -2335,7 +2587,9 @@
                 "id": "旅團鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": "旅團鎧甲α"
+                    "zhTW": "旅團鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2353,7 +2607,9 @@
                 "id": "旅團腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": "旅團腕甲α"
+                    "zhTW": "旅團腕甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -2371,7 +2627,9 @@
                 "id": "旅團腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": "旅團腰甲α"
+                    "zhTW": "旅團腰甲α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": null,
                 "skills": [
@@ -2389,7 +2647,9 @@
                 "id": "旅團護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": "旅團護腿α"
+                    "zhTW": "旅團護腿α",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2414,7 +2674,9 @@
             "rare": 6,
             "gender": "general",
             "series": {
-                "zhTW": "旅團β"
+                "zhTW": "旅團β",
+                "jaJP": null,
+                "enUS": null
             },
             "defense": 84,
             "resistance": {
@@ -2431,7 +2693,9 @@
                 "id": "旅團頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": "旅團頭盔β"
+                    "zhTW": "旅團頭盔β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2449,7 +2713,9 @@
                 "id": "旅團鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": "旅團鎧甲β"
+                    "zhTW": "旅團鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2470,7 +2736,9 @@
                 "id": "旅團腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": "旅團腕甲β"
+                    "zhTW": "旅團腕甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2488,7 +2756,9 @@
                 "id": "旅團腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": "旅團腰甲β"
+                    "zhTW": "旅團腰甲β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {
@@ -2506,7 +2776,9 @@
                 "id": "旅團護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": "旅團護腿β"
+                    "zhTW": "旅團護腿β",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "slots": [
                     {

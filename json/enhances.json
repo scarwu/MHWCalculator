@@ -2,13 +2,17 @@
     {
         "id": "強化攻擊力",
         "name":{
-            "zhTW":  "強化攻擊力"
+            "zhTW": "強化攻擊力",
+            "jaJP": null,
+            "enUS": null
         },
         "list": [
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "基礎攻擊力+5"
+                    "zhTW": "基礎攻擊力+5",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "attack": {
@@ -19,7 +23,9 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "基礎攻擊力+10"
+                    "zhTW": "基礎攻擊力+10",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "attack": {
@@ -30,7 +36,9 @@
             {
                 "level": 3,
                 "description": {
-                    "zhTW": "基礎攻擊力+15"
+                    "zhTW": "基礎攻擊力+15",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "attack": {
@@ -43,13 +51,17 @@
     {
         "id": "強化會心率",
         "name":{
-            "zhTW":  "強化會心率"
+            "zhTW": "強化會心率",
+            "jaJP": null,
+            "enUS": null
         },
         "list": [
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "會心率+10%"
+                    "zhTW": "會心率+10%",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "criticalRate": {
@@ -60,7 +72,9 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "會心率+15%"
+                    "zhTW": "會心率+15%",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "criticalRate": {
@@ -71,7 +85,9 @@
             {
                 "level": 3,
                 "description": {
-                    "zhTW": "會心率+20%"
+                    "zhTW": "會心率+20%",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "criticalRate": {
@@ -84,13 +100,17 @@
     {
         "id": "強化防禦力",
         "name":{
-            "zhTW":  "強化防禦力"
+            "zhTW": "強化防禦力",
+            "jaJP": null,
+            "enUS": null
         },
         "list": [
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "防禦力+10"
+                    "zhTW": "防禦力+10",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "defense": {
@@ -101,7 +121,9 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "防禦力+20"
+                    "zhTW": "防禦力+20",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "defense": {
@@ -112,7 +134,9 @@
             {
                 "level": 3,
                 "description": {
-                    "zhTW": "防禦力+30"
+                    "zhTW": "防禦力+30",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "defense": {
@@ -125,13 +149,17 @@
     {
         "id": "強化鑲嵌槽",
         "name":{
-            "zhTW":  "強化鑲嵌槽"
+            "zhTW": "強化鑲嵌槽",
+            "jaJP": null,
+            "enUS": null
         },
         "list": [
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "1級鑲嵌槽+1"
+                    "zhTW": "1級鑲嵌槽+1",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "addSlot": {
@@ -142,7 +170,9 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "2級鑲嵌槽+1"
+                    "zhTW": "2級鑲嵌槽+1",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "addSlot": {
@@ -153,7 +183,9 @@
             {
                 "level": 3,
                 "description": {
-                    "zhTW": "3級鑲嵌槽+1"
+                    "zhTW": "3級鑲嵌槽+1",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": {
                     "addSlot": {
@@ -172,21 +204,27 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "造成傷害時回復少量體力"
+                    "zhTW": "造成傷害時回復少量體力",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": null
             },
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "造成傷害時回復少量體力"
+                    "zhTW": "造成傷害時回復少量體力",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": null
             },
             {
                 "level": 3,
                 "description": {
-                    "zhTW": "造成傷害時回復少量體力"
+                    "zhTW": "造成傷害時回復少量體力",
+                    "jaJP": null,
+                    "enUS": null
                 },
                 "reaction": null
             }

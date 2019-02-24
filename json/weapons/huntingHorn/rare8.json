@@ -4,10 +4,14 @@
         "rare": 8,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "滅盡龍"
+            "zhTW": "滅盡龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "寂滅的章節"
+            "zhTW": "寂滅的章節",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 882,
         "criticalRate": 0,
@@ -47,10 +51,14 @@
         "rare": 8,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "爆鱗龍"
+            "zhTW": "爆鱗龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "爆鱗鼓赤紅星光"
+            "zhTW": "爆鱗鼓赤紅星光",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 840,
         "criticalRate": -10,
@@ -91,10 +99,14 @@
         "rare": 8,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "黑鋼"
+            "zhTW": "黑鋼",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "炎王豎琴"
+            "zhTW": "炎王豎琴",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 798,
         "criticalRate": 0,
@@ -128,10 +140,14 @@
         "rare": 8,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "冥燈龍"
+            "zhTW": "冥燈龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冥燈龍狩獵笛"
+            "zhTW": "冥燈龍狩獵笛",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 714,
         "criticalRate": 15,
@@ -174,10 +190,14 @@
         "rare": 8,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅風笛．水"
+            "zhTW": "鎧羅風笛．水",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 714,
         "criticalRate": 10,
@@ -215,10 +235,14 @@
         "rare": 8,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅風笛．龍"
+            "zhTW": "鎧羅風笛．龍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 756,
         "criticalRate": 0,
@@ -258,10 +282,14 @@
         "rare": 8,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅風笛．麻痺"
+            "zhTW": "鎧羅風笛．麻痺",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 840,
         "criticalRate": 0,
@@ -299,10 +327,14 @@
         "rare": 8,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "炎妃龍"
+            "zhTW": "炎妃龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后鼓．炎妃"
+            "zhTW": "皇后鼓．炎妃",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 798,
         "criticalRate": 20,
@@ -345,10 +377,14 @@
         "rare": 8,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "炎妃龍．滅盡"
+            "zhTW": "炎妃龍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后鼓．滅盡"
+            "zhTW": "皇后鼓．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 840,
         "criticalRate": 0,
@@ -391,10 +427,14 @@
         "rare": 8,
         "type": "huntingHorn",
         "series": {
-            "zhTW": "炎妃龍．冥燈"
+            "zhTW": "炎妃龍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后鼓．冥燈"
+            "zhTW": "皇后鼓．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 798,
         "criticalRate": 10,

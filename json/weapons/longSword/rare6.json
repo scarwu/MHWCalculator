@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "longSword",
         "series": {
-            "zhTW": "礦石素材"
+            "zhTW": "礦石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鐵刀【神樂】 II"
+            "zhTW": "鐵刀【神樂】 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 594,
         "criticalRate": 0,
@@ -48,10 +52,14 @@
         "rare": 6,
         "type": "longSword",
         "series": {
-            "zhTW": "眩鳥"
+            "zhTW": "眩鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "眩惑刀【閃】 III"
+            "zhTW": "眩惑刀【閃】 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 594,
         "criticalRate": 0,
@@ -89,10 +97,14 @@
         "rare": 6,
         "type": "longSword",
         "series": {
-            "zhTW": "搔鳥"
+            "zhTW": "搔鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "星空迅刀 III"
+            "zhTW": "星空迅刀 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 561,
         "criticalRate": 20,
@@ -126,10 +138,14 @@
         "rare": 6,
         "type": "longSword",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "骨鐮 II"
+            "zhTW": "骨鐮 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 627,
         "criticalRate": 0,
@@ -167,10 +183,14 @@
         "rare": 6,
         "type": "longSword",
         "series": {
-            "zhTW": "蠻顎龍"
+            "zhTW": "蠻顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "蠻顎龍偃月刀 III"
+            "zhTW": "蠻顎龍偃月刀 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 693,
         "criticalRate": -20,
@@ -204,10 +224,14 @@
         "rare": 6,
         "type": "longSword",
         "series": {
-            "zhTW": "泥魚龍"
+            "zhTW": "泥魚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "深土太刀 III"
+            "zhTW": "深土太刀 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 627,
         "criticalRate": 0,
@@ -245,10 +269,14 @@
         "rare": 6,
         "type": "longSword",
         "series": {
-            "zhTW": "飛雷龍"
+            "zhTW": "飛雷龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "飛雷龍之牙 III"
+            "zhTW": "飛雷龍之牙 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 594,
         "criticalRate": 15,
@@ -286,10 +314,14 @@
         "rare": 6,
         "type": "longSword",
         "series": {
-            "zhTW": "巨甲蟲"
+            "zhTW": "巨甲蟲",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "黑色偃月刀 III"
+            "zhTW": "黑色偃月刀 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 528,
         "criticalRate": 0,
@@ -327,10 +359,14 @@
         "rare": 6,
         "type": "longSword",
         "series": {
-            "zhTW": "龍骨"
+            "zhTW": "龍骨",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍骨刀 III"
+            "zhTW": "龍骨刀 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 528,
         "criticalRate": 0,

@@ -4,10 +4,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "滅盡龍"
+            "zhTW": "滅盡龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "潰滅一擊"
+            "zhTW": "潰滅一擊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1092,
         "criticalRate": 0,
@@ -47,10 +51,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "屍套龍"
+            "zhTW": "屍套龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "惡靈禍根"
+            "zhTW": "惡靈禍根",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1040,
         "criticalRate": 0,
@@ -90,10 +98,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "熔山龍"
+            "zhTW": "熔山龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "活火爆發熔山龍爆鎚"
+            "zhTW": "活火爆發熔山龍爆鎚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1144,
         "criticalRate": -20,
@@ -131,10 +143,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "黑鋼"
+            "zhTW": "黑鋼",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "巨大鋼龍錘"
+            "zhTW": "巨大鋼龍錘",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 1040,
         "criticalRate": 10,
@@ -172,10 +188,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "冥燈龍"
+            "zhTW": "冥燈龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冥燈龍大鎚"
+            "zhTW": "冥燈龍大鎚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 884,
         "criticalRate": 15,
@@ -218,10 +238,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "工房武器"
+            "zhTW": "工房武器",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "電擊鎚"
+            "zhTW": "電擊鎚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 936,
         "criticalRate": 0,
@@ -259,10 +283,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．冰"
+            "zhTW": "鎧羅大錘．冰",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 988,
         "criticalRate": 0,
@@ -300,10 +328,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．雷"
+            "zhTW": "鎧羅大錘．雷",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 988,
         "criticalRate": 0,
@@ -341,10 +373,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅大錘．水"
+            "zhTW": "鎧羅大錘．水",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 988,
         "criticalRate": 0,
@@ -382,10 +418,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "炎妃龍"
+            "zhTW": "炎妃龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后鏈錘．炎妃"
+            "zhTW": "皇后鏈錘．炎妃",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 936,
         "criticalRate": 20,
@@ -431,10 +471,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "炎妃龍．滅盡"
+            "zhTW": "炎妃龍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后鏈錘．滅盡"
+            "zhTW": "皇后鏈錘．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 988,
         "criticalRate": 0,
@@ -480,10 +524,14 @@
         "rare": 8,
         "type": "hammer",
         "series": {
-            "zhTW": "炎妃龍．冥燈"
+            "zhTW": "炎妃龍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后鏈錘．冥燈"
+            "zhTW": "皇后鏈錘．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 936,
         "criticalRate": 10,

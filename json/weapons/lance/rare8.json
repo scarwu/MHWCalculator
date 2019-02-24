@@ -4,10 +4,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "滅盡龍"
+            "zhTW": "滅盡龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "亡滅之腕"
+            "zhTW": "亡滅之腕",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 483,
         "criticalRate": 0,
@@ -47,10 +51,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "火龍"
+            "zhTW": "火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "蒼色日珥"
+            "zhTW": "蒼色日珥",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 437,
         "criticalRate": 20,
@@ -88,10 +96,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "屍套龍"
+            "zhTW": "屍套龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "死神的哀愁"
+            "zhTW": "死神的哀愁",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 460,
         "criticalRate": 0,
@@ -131,10 +143,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "爆鱗龍"
+            "zhTW": "爆鱗龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "爆鱗槍赤紅巨星"
+            "zhTW": "爆鱗槍赤紅巨星",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 460,
         "criticalRate": -10,
@@ -168,10 +184,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "幻獸"
+            "zhTW": "幻獸",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "雷槍【建御雷】"
+            "zhTW": "雷槍【建御雷】",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 368,
         "criticalRate": 10,
@@ -205,10 +225,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "黑鋼"
+            "zhTW": "黑鋼",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "祈願鋼龍槍"
+            "zhTW": "祈願鋼龍槍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 414,
         "criticalRate": 10,
@@ -246,10 +270,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "冥燈龍"
+            "zhTW": "冥燈龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冥燈龍長槍"
+            "zhTW": "冥燈龍長槍",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": 15,
@@ -292,10 +320,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "工房武器"
+            "zhTW": "工房武器",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "遠古巴別塔"
+            "zhTW": "遠古巴別塔",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 460,
         "criticalRate": 0,
@@ -333,10 +365,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．雷"
+            "zhTW": "鎧羅之尖．雷",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 368,
         "criticalRate": 20,
@@ -374,10 +410,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．睡眠"
+            "zhTW": "鎧羅之尖．睡眠",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 414,
         "criticalRate": 10,
@@ -415,10 +455,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅之尖．水"
+            "zhTW": "鎧羅之尖．水",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 437,
         "criticalRate": 0,
@@ -456,10 +500,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "炎妃龍"
+            "zhTW": "炎妃龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后長槍．炎妃"
+            "zhTW": "皇后長槍．炎妃",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 414,
         "criticalRate": 20,
@@ -505,10 +553,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "炎妃龍．滅盡"
+            "zhTW": "炎妃龍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后長槍．滅盡"
+            "zhTW": "皇后長槍．滅盡",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 437,
         "criticalRate": 0,
@@ -554,10 +606,14 @@
         "rare": 8,
         "type": "lance",
         "series": {
-            "zhTW": "炎妃龍．冥燈"
+            "zhTW": "炎妃龍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "皇后長槍．冥燈"
+            "zhTW": "皇后長槍．冥燈",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 414,
         "criticalRate": 10,

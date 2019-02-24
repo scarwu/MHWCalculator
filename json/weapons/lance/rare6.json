@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "lance",
         "series": {
-            "zhTW": "礦石素材"
+            "zhTW": "礦石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鉻鋼長槍 II"
+            "zhTW": "鉻鋼長槍 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 414,
         "criticalRate": 0,
@@ -48,10 +52,14 @@
         "rare": 6,
         "type": "lance",
         "series": {
-            "zhTW": "搔鳥"
+            "zhTW": "搔鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "搔鳥尖槍 III"
+            "zhTW": "搔鳥尖槍 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": 25,
@@ -85,10 +93,14 @@
         "rare": 6,
         "type": "lance",
         "series": {
-            "zhTW": "雷屬性"
+            "zhTW": "雷屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "雷光長槍 III"
+            "zhTW": "雷光長槍 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 414,
         "criticalRate": 0,
@@ -126,10 +138,14 @@
         "rare": 6,
         "type": "lance",
         "series": {
-            "zhTW": "毒妖鳥"
+            "zhTW": "毒妖鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "曼陀羅長槍 III"
+            "zhTW": "曼陀羅長槍 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 391,
         "criticalRate": 0,
@@ -170,10 +186,14 @@
         "rare": 6,
         "type": "lance",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "堅骨槍 II"
+            "zhTW": "堅骨槍 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 437,
         "criticalRate": 0,
@@ -211,10 +231,14 @@
         "rare": 6,
         "type": "lance",
         "series": {
-            "zhTW": "巨甲蟲"
+            "zhTW": "巨甲蟲",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "黑色刺針 III"
+            "zhTW": "黑色刺針 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 368,
         "criticalRate": 0,
@@ -252,10 +276,14 @@
         "rare": 6,
         "type": "lance",
         "series": {
-            "zhTW": "土砂龍"
+            "zhTW": "土砂龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "土砂龍刺針 III"
+            "zhTW": "土砂龍刺針 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 460,
         "criticalRate": -20,
@@ -296,10 +324,14 @@
         "rare": 6,
         "type": "lance",
         "series": {
-            "zhTW": "水屬性"
+            "zhTW": "水屬性",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "激流尖刺 III"
+            "zhTW": "激流尖刺 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 437,
         "criticalRate": 0,
@@ -337,10 +369,14 @@
         "rare": 6,
         "type": "lance",
         "series": {
-            "zhTW": "龍骨"
+            "zhTW": "龍骨",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "龍骨槍 III"
+            "zhTW": "龍骨槍 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 368,
         "criticalRate": 0,

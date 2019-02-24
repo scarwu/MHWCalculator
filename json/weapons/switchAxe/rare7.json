@@ -4,10 +4,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "風漂龍"
+            "zhTW": "風漂龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "亡靈之柱"
+            "zhTW": "亡靈之柱",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 560,
         "criticalRate": 0,
@@ -41,10 +45,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "爆鎚龍"
+            "zhTW": "爆鎚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "動力迅斧 II"
+            "zhTW": "動力迅斧 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 735,
         "criticalRate": 0,
@@ -82,10 +90,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "爆鱗龍"
+            "zhTW": "爆鱗龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "爆鱗龍劍斧 II"
+            "zhTW": "爆鱗龍劍斧 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 700,
         "criticalRate": -15,
@@ -123,10 +135,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "火龍"
+            "zhTW": "火龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "火龍斧飛龍牙 II"
+            "zhTW": "火龍斧飛龍牙 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 665,
         "criticalRate": 15,
@@ -164,10 +180,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "屍套龍"
+            "zhTW": "屍套龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "屍套龍劍斧 II"
+            "zhTW": "屍套龍劍斧 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 700,
         "criticalRate": 0,
@@ -207,10 +227,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "泥魚龍"
+            "zhTW": "泥魚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "泥岩龍劍斧 III"
+            "zhTW": "泥岩龍劍斧 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 665,
         "criticalRate": 0,
@@ -248,10 +272,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "浮空龍"
+            "zhTW": "浮空龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "浮空龍斬斧 III"
+            "zhTW": "浮空龍斬斧 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 595,
         "criticalRate": 20,
@@ -289,10 +317,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "蠻顎龍"
+            "zhTW": "蠻顎龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "蠻顎劍斧"
+            "zhTW": "蠻顎劍斧",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 735,
         "criticalRate": -20,
@@ -326,10 +358,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "恐暴龍"
+            "zhTW": "恐暴龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "恐怖暴君"
+            "zhTW": "恐怖暴君",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 770,
         "criticalRate": -25,
@@ -365,10 +401,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．風漂"
+            "zhTW": "鎧羅劍斧．風漂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 560,
         "criticalRate": 10,
@@ -392,10 +432,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．屍套"
+            "zhTW": "鎧羅劍斧．屍套",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 595,
         "criticalRate": 0,
@@ -421,10 +465,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．浮空"
+            "zhTW": "鎧羅劍斧．浮空",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 595,
         "criticalRate": 25,
@@ -448,10 +496,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．爆鱗"
+            "zhTW": "鎧羅劍斧．爆鱗",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 630,
         "criticalRate": 0,
@@ -475,10 +527,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．賊"
+            "zhTW": "鎧羅劍斧．賊",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 665,
         "criticalRate": 0,
@@ -502,10 +558,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．王"
+            "zhTW": "鎧羅劍斧．王",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 665,
         "criticalRate": 15,
@@ -529,10 +589,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．泥魚"
+            "zhTW": "鎧羅劍斧．泥魚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 665,
         "criticalRate": 0,
@@ -556,10 +620,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．爆鎚"
+            "zhTW": "鎧羅劍斧．爆鎚",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 735,
         "criticalRate": 10,
@@ -583,10 +651,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．土砂"
+            "zhTW": "鎧羅劍斧．土砂",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 735,
         "criticalRate": -20,
@@ -610,10 +682,14 @@
         "rare": 7,
         "type": "switchAxe",
         "series": {
-            "zhTW": "絢輝龍"
+            "zhTW": "絢輝龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅劍斧．角"
+            "zhTW": "鎧羅劍斧．角",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 805,
         "criticalRate": -30,

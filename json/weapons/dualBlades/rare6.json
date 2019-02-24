@@ -4,10 +4,14 @@
         "rare": 6,
         "type": "dualBlades",
         "series": {
-            "zhTW": "鑛石素材"
+            "zhTW": "鑛石素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "鉻鋼雙刀 II"
+            "zhTW": "鉻鋼雙刀 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 0,
@@ -48,10 +52,14 @@
         "rare": 6,
         "type": "dualBlades",
         "series": {
-            "zhTW": "眩鳥"
+            "zhTW": "眩鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "決鬥者對劍 III"
+            "zhTW": "決鬥者對劍 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 0,
@@ -89,10 +97,14 @@
         "rare": 6,
         "type": "dualBlades",
         "series": {
-            "zhTW": "冰屬系"
+            "zhTW": "冰屬系",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "冰結鏈劍 II"
+            "zhTW": "冰結鏈劍 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 0,
@@ -130,10 +142,14 @@
         "rare": 6,
         "type": "dualBlades",
         "series": {
-            "zhTW": "搔鳥"
+            "zhTW": "搔鳥",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "奧秘雙劍 III"
+            "zhTW": "奧秘雙劍 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 238,
         "criticalRate": 20,
@@ -167,10 +183,14 @@
         "rare": 6,
         "type": "dualBlades",
         "series": {
-            "zhTW": "駭骨素材"
+            "zhTW": "駭骨素材",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "強斧 II"
+            "zhTW": "強斧 II",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -208,10 +228,14 @@
         "rare": 6,
         "type": "dualBlades",
         "series": {
-            "zhTW": "泥魚龍"
+            "zhTW": "泥魚龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "泥岩龍斬斧 III"
+            "zhTW": "泥岩龍斬斧 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 266,
         "criticalRate": 0,
@@ -249,10 +273,14 @@
         "rare": 6,
         "type": "dualBlades",
         "series": {
-            "zhTW": "巨甲蟲"
+            "zhTW": "巨甲蟲",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "黑色收割者 III"
+            "zhTW": "黑色收割者 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 224,
         "criticalRate": 0,
@@ -290,10 +318,14 @@
         "rare": 6,
         "type": "dualBlades",
         "series": {
-            "zhTW": "飛雷龍"
+            "zhTW": "飛雷龍",
+            "jaJP": null,
+            "enUS": null
         },
         "name": {
-            "zhTW": "飛雷龍之爪 III"
+            "zhTW": "飛雷龍之爪 III",
+            "jaJP": null,
+            "enUS": null
         },
         "attack": 252,
         "criticalRate": 10,
