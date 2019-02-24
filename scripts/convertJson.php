@@ -4,78 +4,109 @@
 error_reporting(E_ALL);
 define('ROOT', __DIR__);
 
-function loadJson ($name) {
-    $path = ROOT . "/../json/{$name}.json";
+class Misc
+{
+    private static $codeLength = 2;
+    private static $codeMap = [];
+    private static $hashMap = [];
+    private static $seed = 0;
+    private static $charPool = [
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+        'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+        '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+    ];
 
-    return json_decode(file_get_contents($path), true);
-}
+    public static function loadJson ($name)
+    {
+        $path = ROOT . "/../json/{$name}.json";
 
-function saveJson ($name, $data) {
-    $path = ROOT . "/../src/assets/scripts/json/{$name}.json";
-    $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        return json_decode(file_get_contents($path), true);
+    }
 
-    @mkdir(dirname($path), 0755, true);
+    public static function saveJson ($name, $data)
+    {
+        $path = ROOT . "/../src/assets/scripts/json/{$name}.json";
+        $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
-    return file_put_contents($path, $json);
+        @mkdir(dirname($path), 0755, true);
+
+        return file_put_contents($path, $json);
+    }
+
+    public static function createCode($text = null)
+    {
+        if (!is_string($text)) {
+            return false;
+        }
+
+        $hash = md5($text);
+
+        if (isset(self::$hashMap[$hash])) {
+            return self::$hashMap[$hash];
+        }
+
+        $poolSize = count(self::$charPool);
+
+        // Set Random Seed
+        srand(self::$seed);
+
+        while (true) {
+            $code = '';
+
+            for ($i = 0; $i < self::$codeLength; $i++) {
+                $code .= self::$charPool[rand() % $poolSize];
+            }
+
+            if (!isset(self::$codeMap[$code])) {
+                self::$hashMap[$hash] = $code;
+                self::$codeMap[$code] = true;
+
+                break;
+            }
+
+            echo "conflict: {$code}\n";
+        }
+
+        // Reset Random Seed
+        srand();
+
+        // Increase Seed
+        self::$seed++;
+
+        return $code;
+    }
 }
 
 /**
  * Load Json Files
  */
 $weaponsBundle = [];
-$weaponsBundle['greatSword/rare6'] = loadJson('weapons/greatSword/rare6');
-$weaponsBundle['greatSword/rare7'] = loadJson('weapons/greatSword/rare7');
-$weaponsBundle['greatSword/rare8'] = loadJson('weapons/greatSword/rare8');
-$weaponsBundle['longSword/rare6'] = loadJson('weapons/longSword/rare6');
-$weaponsBundle['longSword/rare7'] = loadJson('weapons/longSword/rare7');
-$weaponsBundle['longSword/rare8'] = loadJson('weapons/longSword/rare8');
-$weaponsBundle['swordAndShield/rare6'] = loadJson('weapons/swordAndShield/rare6');
-$weaponsBundle['swordAndShield/rare7'] = loadJson('weapons/swordAndShield/rare7');
-$weaponsBundle['swordAndShield/rare8'] = loadJson('weapons/swordAndShield/rare8');
-$weaponsBundle['dualBlades/rare6'] = loadJson('weapons/dualBlades/rare6');
-$weaponsBundle['dualBlades/rare7'] = loadJson('weapons/dualBlades/rare7');
-$weaponsBundle['dualBlades/rare8'] = loadJson('weapons/dualBlades/rare8');
-$weaponsBundle['hammer/rare6'] = loadJson('weapons/hammer/rare6');
-$weaponsBundle['hammer/rare7'] = loadJson('weapons/hammer/rare7');
-$weaponsBundle['hammer/rare8'] = loadJson('weapons/hammer/rare8');
-$weaponsBundle['huntingHorn/rare6'] = loadJson('weapons/huntingHorn/rare6');
-$weaponsBundle['huntingHorn/rare7'] = loadJson('weapons/huntingHorn/rare7');
-$weaponsBundle['huntingHorn/rare8'] = loadJson('weapons/huntingHorn/rare8');
-$weaponsBundle['lance/rare6'] = loadJson('weapons/lance/rare6');
-$weaponsBundle['lance/rare7'] = loadJson('weapons/lance/rare7');
-$weaponsBundle['lance/rare8'] = loadJson('weapons/lance/rare8');
-$weaponsBundle['gunlance/rare6'] = loadJson('weapons/gunlance/rare6');
-$weaponsBundle['gunlance/rare7'] = loadJson('weapons/gunlance/rare7');
-$weaponsBundle['gunlance/rare8'] = loadJson('weapons/gunlance/rare8');
-$weaponsBundle['switchAxe/rare6'] = loadJson('weapons/switchAxe/rare6');
-$weaponsBundle['switchAxe/rare7'] = loadJson('weapons/switchAxe/rare7');
-$weaponsBundle['switchAxe/rare8'] = loadJson('weapons/switchAxe/rare8');
-$weaponsBundle['chargeBlade/rare6'] = loadJson('weapons/chargeBlade/rare6');
-$weaponsBundle['chargeBlade/rare7'] = loadJson('weapons/chargeBlade/rare7');
-$weaponsBundle['chargeBlade/rare8'] = loadJson('weapons/chargeBlade/rare8');
-$weaponsBundle['insectGlaive/rare6'] = loadJson('weapons/insectGlaive/rare6');
-$weaponsBundle['insectGlaive/rare7'] = loadJson('weapons/insectGlaive/rare7');
-$weaponsBundle['insectGlaive/rare8'] = loadJson('weapons/insectGlaive/rare8');
-$weaponsBundle['lightBowgun/rare6'] = loadJson('weapons/lightBowgun/rare6');
-$weaponsBundle['lightBowgun/rare7'] = loadJson('weapons/lightBowgun/rare7');
-$weaponsBundle['lightBowgun/rare8'] = loadJson('weapons/lightBowgun/rare8');
-$weaponsBundle['heavyBowgun/rare6'] = loadJson('weapons/heavyBowgun/rare6');
-$weaponsBundle['heavyBowgun/rare7'] = loadJson('weapons/heavyBowgun/rare7');
-$weaponsBundle['heavyBowgun/rare8'] = loadJson('weapons/heavyBowgun/rare8');
-$weaponsBundle['bow/rare6'] = loadJson('weapons/bow/rare6');
-$weaponsBundle['bow/rare7'] = loadJson('weapons/bow/rare7');
-$weaponsBundle['bow/rare8'] = loadJson('weapons/bow/rare8');
+
+foreach ([
+    'greatSword', 'longSword', 'swordAndShield', 'dualBlades',
+    'hammer', 'huntingHorn', 'lance', 'gunlance',
+    'switchAxe', 'chargeBlade', 'insectGlaive',
+    'lightBowgun', 'heavyBowgun', 'bow'
+] as $type) {
+    for ($level = 6; $level <= 8; $level++) {
+        $weaponsBundle["$type/rare{$level}"] = Misc::loadJson("weapons/$type/rare{$level}");
+    }
+}
+
 $armorsBundle = [];
-$armorsBundle['rare5'] = loadJson('armors/rare5');
-$armorsBundle['rare6'] = loadJson('armors/rare6');
-$armorsBundle['rare7'] = loadJson('armors/rare7');
-$armorsBundle['rare8'] = loadJson('armors/rare8');
-$charms = loadJson('charms');
-$jewels = loadJson('jewels');
-$enhances = loadJson('enhances');
-$skills = loadJson('skills');
-$sets = loadJson('sets');
-$testData = loadJson('testData');
+
+for ($level = 5; $level <= 8; $level++) {
+    $armorsBundle["rare{$level}"] = Misc::loadJson("armors/rare{$level}");
+}
+
+$charms = Misc::loadJson('charms');
+$jewels = Misc::loadJson('jewels');
+$enhances = Misc::loadJson('enhances');
+$skills = Misc::loadJson('skills');
+$sets = Misc::loadJson('sets');
+$testData = Misc::loadJson('testData');
 
 /**
  * Check Enhance, Skill, Set & Create Lang, Dataset
@@ -97,30 +128,30 @@ foreach ($enhances as $enhance) {
     $enhanceChecklist[$enhance['id']] = true;
 
     // Create Translation Mapping
-    $hash = md5("enhance:{$enhance['id']}:name");
+    $code = Misc::createCode("enhance:{$enhance['id']}:name");
 
     foreach ($enhance['name'] as $lang => $translation) {
         if (!isset($langMap[$lang])) {
             $langMap[$lang] = [];
         }
 
-        $langMap[$lang][$hash] = $translation;
+        $langMap[$lang][$code] = $translation;
     }
 
-    $enhance['name'] = $hash;
+    $enhance['name'] = $code;
 
     foreach (array_keys($enhance['list']) as $index) {
-        $hash = md5("enhance:{$enhance['id']}:list:{$index}:description");
+        $code = Misc::createCode("enhance:{$enhance['id']}:list:{$index}:description");
 
         foreach ($enhance['list'][$index]['description'] as $lang => $translation) {
             if (!isset($langMap[$lang])) {
                 $langMap[$lang] = [];
             }
 
-            $langMap[$lang][$hash] = $translation;
+            $langMap[$lang][$code] = $translation;
         }
 
-        $enhance['list'][$index]['description'] = $hash;
+        $enhance['list'][$index]['description'] = $code;
     }
 
     // Create ID Hash
@@ -188,30 +219,30 @@ foreach ($skills as $skill) {
     $skillChecklist[$skill['id']] = true;
 
     // Create Translation Mapping
-    $hash = md5("skill:{$skill['id']}:name");
+    $code = Misc::createCode("skill:{$skill['id']}:name");
 
     foreach ($skill['name'] as $lang => $translation) {
         if (!isset($langMap[$lang])) {
             $langMap[$lang] = [];
         }
 
-        $langMap[$lang][$hash] = $translation;
+        $langMap[$lang][$code] = $translation;
     }
 
-    $skill['name'] = $hash;
+    $skill['name'] = $code;
 
     foreach (array_keys($skill['list']) as $index) {
-        $hash = md5("skill:{$skill['id']}:list:{$index}:description");
+        $code = Misc::createCode("skill:{$skill['id']}:list:{$index}:description");
 
         foreach ($skill['list'][$index]['description'] as $lang => $translation) {
             if (!isset($langMap[$lang])) {
                 $langMap[$lang] = [];
             }
 
-            $langMap[$lang][$hash] = $translation;
+            $langMap[$lang][$code] = $translation;
         }
 
-        $skill['list'][$index]['description'] = $hash;
+        $skill['list'][$index]['description'] = $code;
     }
 
     // Create ID Hash
@@ -291,17 +322,17 @@ foreach ($sets as $set) {
     $setChecklist[$set['id']] = true;
 
     // Create Translation Mapping
-    $hash = md5("set:{$set['id']}:name");
+    $code = Misc::createCode("set:{$set['id']}:name");
 
     foreach ($set['name'] as $lang => $translation) {
         if (!isset($langMap[$lang])) {
             $langMap[$lang] = [];
         }
 
-        $langMap[$lang][$hash] = $translation;
+        $langMap[$lang][$code] = $translation;
     }
 
-    $set['name'] = $hash;
+    $set['name'] = $code;
 
     // Create ID Hash
     $set['id'] = md5($set['id']);
@@ -352,29 +383,29 @@ foreach ($weaponsBundle as $name => $weapons) {
         }
 
         // Create Translation Mapping
-        $hash = md5("weapon:{$weapon['id']}:name");
+        $code = Misc::createCode("weapon:{$weapon['id']}:name");
 
         foreach ($weapon['name'] as $lang => $translation) {
             if (!isset($langMap[$lang])) {
                 $langMap[$lang] = [];
             }
 
-            $langMap[$lang][$hash] = $translation;
+            $langMap[$lang][$code] = $translation;
         }
 
-        $weapon['name'] = $hash;
+        $weapon['name'] = $code;
 
-        $hash = md5("weapon:{$weapon['id']}:series");
+        $code = Misc::createCode("weapon:{$weapon['id']}:series");
 
         foreach ($weapon['series'] as $lang => $translation) {
             if (!isset($langMap[$lang])) {
                 $langMap[$lang] = [];
             }
 
-            $langMap[$lang][$hash] = $translation;
+            $langMap[$lang][$code] = $translation;
         }
 
-        $weapon['series'] = $hash;
+        $weapon['series'] = $code;
 
         // Create ID Hash
         $weapon['id'] = md5($weapon['id']);
@@ -511,31 +542,31 @@ foreach ($armorsBundle as $name => $armors) {
         }
 
         // Create Translation Mapping
-        $hash = md5("armor:common:series");
+        $code = Misc::createCode("armor:common:series");
 
         foreach ($armor['common']['series'] as $lang => $translation) {
             if (!isset($langMap[$lang])) {
                 $langMap[$lang] = [];
             }
 
-            $langMap[$lang][$hash] = $translation;
+            $langMap[$lang][$code] = $translation;
         }
 
-        $armor['common']['series'] = $hash;
+        $armor['common']['series'] = $code;
 
         foreach (array_keys($armor['list']) as $listIndex) {
             // Create Translation Mapping
-            $hash = md5("armor:list:{$armor['list'][$listIndex]['id']}:name");
+            $code = Misc::createCode("armor:list:{$armor['list'][$listIndex]['id']}:name");
 
             foreach ($armor['list'][$listIndex]['name'] as $lang => $translation) {
                 if (!isset($langMap[$lang])) {
                     $langMap[$lang] = [];
                 }
 
-                $langMap[$lang][$hash] = $translation;
+                $langMap[$lang][$code] = $translation;
             }
 
-            $armor['list'][$listIndex]['name'] = $hash;
+            $armor['list'][$listIndex]['name'] = $code;
 
             // Create ID Hash
             $armor['list'][$listIndex]['id'] = md5($armor['list'][$listIndex]['id']);
@@ -639,17 +670,17 @@ foreach ($charms as $charm) {
     }
 
     // Create Translation Mapping
-    $hash = md5("charm:{$charm['id']}:name");
+    $code = Misc::createCode("charm:{$charm['id']}:name");
 
     foreach ($charm['name'] as $lang => $translation) {
         if (!isset($langMap[$lang])) {
             $langMap[$lang] = [];
         }
 
-        $langMap[$lang][$hash] = $translation;
+        $langMap[$lang][$code] = $translation;
     }
 
-    $charm['name'] = $hash;
+    $charm['name'] = $code;
 
     // Create ID Hash
     $charm['id'] = md5($charm['id']);
@@ -703,17 +734,17 @@ foreach ($jewels as $jewel) {
     }
 
     // Create Translation Mapping
-    $hash = md5("jewel:{$jewel['id']}:name");
+    $code = Misc::createCode("jewel:{$jewel['id']}:name");
 
     foreach ($jewel['name'] as $lang => $translation) {
         if (!isset($langMap[$lang])) {
             $langMap[$lang] = [];
         }
 
-        $langMap[$lang][$hash] = $translation;
+        $langMap[$lang][$code] = $translation;
     }
 
-    $jewel['name'] = $hash;
+    $jewel['name'] = $code;
 
     // Create ID Hash
     $jewel['id'] = md5($jewel['id']);
@@ -886,11 +917,11 @@ foreach ($testData['requireList'] as $index => $require) {
 
 // Save Json
 foreach ($datasetMap as $name => $data) {
-    saveJson("datasets/{$name}", $data);
+    Misc::saveJson("datasets/{$name}", $data);
 }
 
 foreach ($langMap as $lang => $data) {
-    saveJson("langs/{$lang}/dataset", $data);
+    Misc::saveJson("langs/{$lang}/dataset", $data);
 }
 
-saveJson("testData", $testData);
+Misc::saveJson("testData", $testData);

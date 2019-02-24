@@ -117,9 +117,6 @@ export default class CandidateBundles extends Component {
         let bundleLimit = this.state.bundleLimit;
 
         return bundleList.slice(0, bundleLimit).map((data, index) => {
-            console.log(data.jewels);
-            console.log(data.skills);
-
             return (
                 <div key={index} className="row mhwc-bundle">
                     <div className="col-12 mhwc-name">

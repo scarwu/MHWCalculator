@@ -33,9 +33,9 @@ export default {
         'switchAxe',
         'chargeBlade',
         'insectGlaive',
-        'bow',
         'lightBowgun',
-        'heavyBowgun'
+        'heavyBowgun',
+        'bow'
     ],
     armorTypes: [
         'helm',
