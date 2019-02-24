@@ -520,8 +520,8 @@ class FittingAlgorithm {
         Helper.log('Result - Bundle Count (Final):', Object.keys(lastBundleList).length);
 
         lastBundleList = Object.values(lastBundleList).sort((bundleA, bundleB) => {
-            let valueA = (8 - a.meta.equipCount) * 1000 + bundleA.defense;
-            let valueB = (8 - b.meta.equipCount) * 1000 + bundleB.defense;
+            let valueA = (8 - bundleA.meta.equipCount) * 1000 + bundleA.defense;
+            let valueB = (8 - bundleB.meta.equipCount) * 1000 + bundleB.defense;
 
             return valueB - valueA;
         }).slice(0, lastBundleLimit);

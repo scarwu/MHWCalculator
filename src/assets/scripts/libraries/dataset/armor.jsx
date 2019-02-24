@@ -59,37 +59,6 @@ class ArmorDataset {
 
         list.forEach((data) => {
             this.mapping[data.id] = data;
-
-            // if (null === data.slots || 0 === data.slots.length) {
-            //     return true;
-            // }
-
-            // let slots = data.slots.sort((a, b) => {
-            //     return b.size - a.size;
-            // });
-
-            // let slotEquipData = {
-            //     name: slots.map((slot) => {
-            //         return '[' + slot.size + ']';
-            //     }).join('') + ' 插槽' + Lang[data.type],
-            //     series: "插槽",
-            //     type: data.type,
-            //     rare: 0,
-            //     gender: "general",
-            //     defense: 0,
-            //     resistance: {
-            //         fire: 0,
-            //         water: 0,
-            //         thunder: 0,
-            //         ice: 0,
-            //         dragon: 0
-            //     },
-            //     slots: slots,
-            //     skills: [],
-            //     set: null
-            // };
-
-            // this.mapping[slotEquipData.id] = slotEquipData;
         });
 
         // Filter Conditional

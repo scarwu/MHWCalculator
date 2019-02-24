@@ -29,7 +29,6 @@ class Misc
         '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
     ];
 
-
     public static function loadJson ($name)
     {
         $path = ROOT . "/../json/{$name}.json";
@@ -471,6 +470,127 @@ $armorChecklist = [];
 $charmChecklist = [];
 $jewelChecklist = [];
 
+// Load Lang
+$_ = [
+    'zhTW' => Misc::loadJson('../src/assets/scripts/json/langs/zhTW/ui'),
+    'enUS' => Misc::loadJson('../src/assets/scripts/json/langs/enUS/ui')
+];
+
+// Extend Weapons
+$slotWeapons = [];
+
+foreach ($weapons as $weapon) {
+    if (!is_array($weapon['slots']) || 0 === count($weapon['slots'])) {
+        continue;
+    }
+
+    usort($weapon['slots'], function ($slotA, $slotB) {
+        return $slotA['size'] <> $slotB['size'];
+    });
+
+    $id = "{$weapon['type']} " . implode('-', array_map(function ($slot) {
+        return $slot['size'];
+    }, $weapon['slots']));
+
+    $name = [];
+    $series = [];
+
+    foreach (array_keys($_) as $lang) {
+        $name[$lang] = "{$_[$lang]['slot']}-{$_[$lang][$weapon['type']]} " . implode('', array_map(function ($slot) {
+            return "[{$slot['size']}]";
+        }, $weapon['slots']));
+
+        $series[$lang] = $_[$lang]['slot'];
+    }
+
+    $slotWeapons[$id] = [
+        'id' => $id,
+        'name' => $name,
+        'rare' => 0,
+        'type' => $weapon['type'],
+        'series' => $series,
+        'attack' => 0,
+        'criticalRate' => 0,
+        'defense' => 0,
+        'sharpness' => null,
+        'element' => [
+            'attack' => null,
+            'status' => null
+        ],
+        'elderseal' => null,
+        'slots' => $weapon['slots'],
+        'skills' => null
+    ];
+}
+
+ksort($slotWeapons);
+
+$weapons = array_merge($weapons, array_values($slotWeapons));
+
+// Extend Armors
+$slotArmorCommon = [];
+$slotArmorList = [];
+
+$series = [];
+
+foreach (array_keys($_) as $lang) {
+    $series[$lang] = $_[$lang]['slot'];
+}
+
+$slotArmorCommon = [
+    'rare' => 0,
+    'gender' => 'general',
+    'series' => $series,
+    'defense' => 0,
+    'resistance' => [
+        'fire' => 0,
+        'water' => 0,
+        'thunder' => 0,
+        'ice' => 0,
+        'dragon' => 0
+    ],
+    'set' => null
+];
+
+foreach ($armors as $armor) {
+    foreach ($armor['list'] as $item) {
+        if (!is_array($item['slots']) || 0 === count($item['slots'])) {
+            continue;
+        }
+
+        usort($item['slots'], function ($slotA, $slotB) {
+            return $slotA['size'] <> $slotB['size'];
+        });
+
+        $id = "{$item['type']} " . implode('-', array_map(function ($slot) {
+            return $slot['size'];
+        }, $item['slots']));
+
+        $name = [];
+
+        foreach (array_keys($_) as $lang) {
+            $name[$lang] = "{$_[$lang]['slot']}-{$_[$lang][$item['type']]} " . implode('', array_map(function ($slot) {
+                return "[{$slot['size']}]";
+            }, $item['slots']));
+        }
+
+        $slotArmorList[$id] = [
+            'id' => $id,
+            'name' => $name,
+            'type' => $item['type'],
+            'slots' => $item['slots'],
+            'skills' => null
+        ];
+    }
+}
+
+ksort($slotArmorList);
+
+$armors[] = [
+    'common' => $slotArmorCommon,
+    'list' => array_values($slotArmorList)
+];
+
 // Handle Enhances Data
 foreach ($enhances as $enhance) {
     $enhanceChecklist[$enhance['id']] = true;
@@ -565,7 +685,7 @@ foreach ($weapons as $weapon) {
 }
 
 // Handler Armor Data
-foreach ($armors as $armor) {
+foreach ($armors as $index => $armor) {
 
     // Checklist
     if (is_array($armor['common']['set'])) {
@@ -592,12 +712,12 @@ foreach ($armors as $armor) {
     }
 
     // Create Translation Mapping
-    $armor['common']['series'] = Misc::appendLangMap("armor:common:series", $armor['common']['series']);
+    $armor['common']['series'] = Misc::appendLangMap("armor:{$index}:common:series", $armor['common']['series']);
 
     foreach ($armor['list'] as $index => $item) {
 
         // Create Translation Mapping
-        $item['name'] = Misc::appendLangMap("armor:list:{$item['id']}:name", $item['name']);
+        $item['name'] = Misc::appendLangMap("armor:{$index}:list:{$item['id']}:name", $item['name']);
 
         // Create ID Hash
         $item['id'] = md5($item['id']);

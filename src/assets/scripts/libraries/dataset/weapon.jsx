@@ -73,37 +73,6 @@ class WeaponDataset {
 
         list.forEach((data) => {
             this.mapping[data.id] = data;
-
-            // if (null === data.slots || 0 === data.slots.length) {
-            //     return true;
-            // }
-
-            // let slots = data.slots.sort((a, b) => {
-            //     return b.size - a.size;
-            // });
-
-            // let slotEquipData = {
-            //     id: ,
-            //     name: slots.map((slot) => {
-            //         return '[' + slot.size + ']';
-            //     }).join('') + ' 插槽' + Lang[data.type],
-            //     rare: 0,
-            //     type: data.type,
-            //     series: "插槽",
-            //     attack: 0,
-            //     criticalRate: 0,
-            //     defense: 0,
-            //     sharpness: null,
-            //     element: {
-            //         attack: null,
-            //         status: null
-            //     },
-            //     elderseal: null,
-            //     slots: slots,
-            //     skills: []
-            // };
-
-            // this.mapping[slotEquipData.id] = slotEquipData;
         });
 
         // Filter Conditional
