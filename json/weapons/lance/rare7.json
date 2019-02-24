@@ -416,28 +416,6 @@
         "skills": null
     },
     {
-        "id": "鎧羅之尖．？",
-        "rare": 7,
-        "type": "lance",
-        "series": {
-            "zhTW": "絢輝龍"
-        },
-        "name": {
-            "zhTW": "鎧羅之尖．？"
-        },
-        "attack": 0,
-        "criticalRate": 0,
-        "defense": 0,
-        "sharpness": null,
-        "element": {
-            "attack": null,
-            "status": null
-        },
-        "elderseal": null,
-        "slots": null,
-        "skills": null
-    },
-    {
         "id": "團旗長槍【指引之星】",
         "rare": 7,
         "type": "lance",

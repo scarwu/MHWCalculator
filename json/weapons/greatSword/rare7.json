@@ -454,27 +454,5 @@
             }
         ],
         "skills": null
-    },
-    {
-        "id": "鎧羅炎．？",
-        "rare": 7,
-        "type": "greatSword",
-        "series": {
-            "zhTW": "絢輝龍"
-        },
-        "name": {
-            "zhTW": "鎧羅炎．？"
-        },
-        "attack": 0,
-        "criticalRate": 0,
-        "defense": 0,
-        "sharpness": null,
-        "element": {
-            "attack": null,
-            "status": null
-        },
-        "elderseal": null,
-        "slots": null,
-        "skills": null
     }
 ]

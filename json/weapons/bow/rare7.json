@@ -369,27 +369,5 @@
         "elderseal": null,
         "slots": null,
         "skills": null
-    },
-    {
-        "id": "鎧羅弓．？",
-        "rare": 7,
-        "type": "bow",
-        "series": {
-            "zhTW": "絢輝龍"
-        },
-        "name": {
-            "zhTW": "鎧羅弓．？"
-        },
-        "attack": 0,
-        "criticalRate": 0,
-        "defense": 0,
-        "sharpness": null,
-        "element": {
-            "attack": null,
-            "status": null
-        },
-        "elderseal": null,
-        "slots": null,
-        "skills": null
     }
 ]
