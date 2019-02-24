@@ -44,6 +44,13 @@ export default class ChangeLog extends Component {
         let LogMap = {
             zhTW: (
                 <div>
+                    <span>2019/02/xx</span>
+                    <ul>
+                        <li>新增狩魔獵人武器</li>
+                        <li>新增團旗長槍武器</li>
+                        <li>新增盛裝α套裝</li>
+                    </ul>
+
                     <span>2019/02/24</span>
                     <ul>
                         <li>修正大部分造成白畫面的錯誤</li>

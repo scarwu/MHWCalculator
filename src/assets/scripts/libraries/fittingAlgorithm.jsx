@@ -864,7 +864,4 @@ class FittingAlgorithm {
     };
 }
 
-// Export Default
-let fa = new FittingAlgorithm();
-
-export default fa;
+export default new FittingAlgorithm();

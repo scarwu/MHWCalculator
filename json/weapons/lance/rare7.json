@@ -436,5 +436,79 @@
         "elderseal": null,
         "slots": null,
         "skills": null
+    },
+    {
+        "id": "團旗長槍【指引之星】",
+        "rare": 7,
+        "type": "lance",
+        "series": {
+            "zhTW": "工房武器"
+        },
+        "name": {
+            "zhTW": "團旗長槍【流星】"
+        },
+        "attack": 437,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 90,
+                "orange": 50,
+                "yellow": 50,
+                "green": 80,
+                "blue": 130,
+                "white": 0
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 180,
+                "maxValue": 250,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
+    },
+    {
+        "id": "團旗長槍【一帆風順】",
+        "rare": 7,
+        "type": "lance",
+        "series": {
+            "zhTW": "工房武器"
+        },
+        "name": {
+            "zhTW": "團旗長槍【一帆風順】"
+        },
+        "attack": 391,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 350,
+            "steps": {
+                "red": 220,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 90
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 180,
+                "maxValue": 250,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": null
     }
 ]

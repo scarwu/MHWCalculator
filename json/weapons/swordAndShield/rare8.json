@@ -431,5 +431,48 @@
                 "level": 1
             }
         ]
+    },
+    {
+        "id": "狩魔獵人的銀劍+",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": {
+            "zhTW": "狩魔獵人"
+        },
+        "name": {
+            "zhTW": "狩魔獵人的銀劍＋"
+        },
+        "attack": 266,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 400,
+            "steps": {
+                "red": 240,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 70
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 330,
+                "maxValue": 430,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "high"
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": null
     }
 ]

@@ -2102,5 +2102,147 @@
                 ]
             }
         ]
+    },
+    {
+        "common": {
+            "rare": 7,
+            "gender": "general",
+            "series": {
+                "zhTW": "盛裝α"
+            },
+            "defense": 90,
+            "resistance": {
+                "fire": 1,
+                "water": 1,
+                "thunder": 1,
+                "ice": 1,
+                "dragon": 4
+            },
+            "set": {
+                "id": "星辰的祝福"
+            }
+        },
+        "list": [
+            {
+                "id": "盛裝頭飾α",
+                "type": "helm",
+                "name": {
+                    "zhTW": "盛裝頭飾α"
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "超會心",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "盛裝戰衣α",
+                "type": "chest",
+                "name": {
+                    "zhTW": "盛裝戰衣α"
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "拔刀術【技】",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "盛裝手套α",
+                "type": "arm",
+                "name": {
+                    "zhTW": "盛裝手套α"
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "精神抖擻",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "盛裝大衣α",
+                "type": "waist",
+                "name": {
+                    "zhTW": "盛裝大衣α"
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "投射器裝填數UP",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "盛裝靴α",
+                "type": "leg",
+                "name": {
+                    "zhTW": "盛裝靴α"
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "精靈加護",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
     }
 ]
