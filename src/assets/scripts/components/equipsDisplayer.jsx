@@ -356,8 +356,8 @@ export default class EquipsDisplayer extends Component {
                             </div>
                             <div className="col-12 mhwc-value">
                                 <div className="row">
-                                    {weaponInfo.skills.sort((a, b) => {
-                                        return b.level - a.level;
+                                    {weaponInfo.skills.sort((skillA, skillB) => {
+                                        return skillB.level - skillA.level;
                                     }).map((data) => {
                                         let skillName = SkillDataset.getInfo(data.id).name;
 
@@ -525,8 +525,8 @@ export default class EquipsDisplayer extends Component {
                                 </div>
                                 <div className="col-12 mhwc-value">
                                     <div className="row">
-                                        {equipInfo.skills.sort((a, b) => {
-                                            return b.level - a.level;
+                                        {equipInfo.skills.sort((skillA, skillB) => {
+                                            return skillB.level - skillA.level;
                                         }).map((data) => {
                                             let skillName = SkillDataset.getInfo(data.id).name;
 
@@ -599,8 +599,8 @@ export default class EquipsDisplayer extends Component {
                         </div>
                         <div className="col-12 mhwc-value">
                             <div className="row">
-                                {charmInfo.skills.sort((a, b) => {
-                                    return b.level - a.level;
+                                {charmInfo.skills.sort((skillA, skillB) => {
+                                    return skillB.level - skillA.level;
                                 }).map((data) => {
                                     let skillName = SkillDataset.getInfo(data.id).name;
 

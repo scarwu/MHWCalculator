@@ -805,8 +805,8 @@ export default class CharacterStatus extends Component {
                             <span>{_('skill')}</span>
                         </div>
                         <div className="col-12 mhwc-value">
-                            {status.skills.sort((a, b) => {
-                                return b.level - a.level;
+                            {status.skills.sort((skillA, skillB) => {
+                                return skillB.level - skillA.level;
                             }).map((data) => {
                                 let skillName = SkillDataset.getInfo(data.id).name;
 

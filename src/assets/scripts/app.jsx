@@ -327,7 +327,7 @@ export default class Main extends Component {
             1: [],
             2: [],
             3: []
-        }
+        };
 
         Object.keys(bundle.equips).forEach((equipType) => {
             if (null === bundle.equips[equipType]) {
@@ -363,9 +363,9 @@ export default class Main extends Component {
             }
         });
 
-        Object.keys(bundle.jewels).sort((a, b) => {
-            let jewelInfoA = JewelDataset.getInfo(a);
-            let jewelInfoB = JewelDataset.getInfo(b);
+        Object.keys(bundle.jewels).sort((jewelIdA, jewelIdB) => {
+            let jewelInfoA = JewelDataset.getInfo(jewelIdA);
+            let jewelInfoB = JewelDataset.getInfo(jewelIdB);
 
             return jewelInfoA.size - jewelInfoB.size;
         }).forEach((jewelId) => {

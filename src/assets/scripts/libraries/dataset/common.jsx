@@ -182,8 +182,8 @@ let getAppliedWeaponInfo = (extend) => {
         });
     });
 
-    info.skills = info.skills.sort((a, b) => {
-        return b.level - a.level;
+    info.skills = info.skills.sort((skillA, skillB) => {
+        return skillB.level - skillA.level;
     });
 
     return Helper.deepCopy(info);
@@ -261,8 +261,8 @@ let getAppliedArmorInfo = (extend) => {
         });
     });
 
-    info.skills = info.skills.sort((a, b) => {
-        return b.level - a.level;
+    info.skills = info.skills.sort((skillA, skillB) => {
+        return skillB.level - skillA.level;
     });
 
     return Helper.deepCopy(info);
@@ -313,8 +313,8 @@ let getAppliedCharmInfo = (extend) => {
         });
     });
 
-    info.skills = info.skills.sort((a, b) => {
-        return b.level - a.level;
+    info.skills = info.skills.sort((skillA, skillB) => {
+        return skillB.level - skillA.level;
     });
 
     return Helper.deepCopy(info);

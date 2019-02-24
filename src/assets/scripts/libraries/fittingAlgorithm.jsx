@@ -58,9 +58,9 @@ class FittingAlgorithm {
         let bundle = Helper.deepCopy(Constant.defaultBundle);
 
         // Create Info by Sets
-        sets.sort((a, b) => {
-            let setInfoA = SetDataset.getInfo(a.id);
-            let setInfoB = SetDataset.getInfo(b.id);
+        sets.sort((setA, setB) => {
+            let setInfoA = SetDataset.getInfo(setA.id);
+            let setInfoB = SetDataset.getInfo(setB.id);
 
             return setInfoB.skills.pop().require - setInfoA.skills.pop().require;
         }).forEach((set) => {
@@ -70,8 +70,8 @@ class FittingAlgorithm {
         });
 
         // Create Info by Skills
-        skills.sort((a, b) => {
-            return b.level - a.level;
+        skills.sort((skillA, skillB) => {
+            return skillB.level - skillA.level;
         }).forEach((skill) => {
             if (0 === skill.level) {
                 this.skipSkills[skill.id] = true;
@@ -519,9 +519,9 @@ class FittingAlgorithm {
 
         Helper.log('Result - Bundle Count (Final):', Object.keys(lastBundleList).length);
 
-        lastBundleList = Object.values(lastBundleList).sort((a, b) => {
-            let valueA = (8 - a.meta.equipCount) * 1000 + a.defense;
-            let valueB = (8 - b.meta.equipCount) * 1000 + b.defense;
+        lastBundleList = Object.values(lastBundleList).sort((bundleA, bundleB) => {
+            let valueA = (8 - a.meta.equipCount) * 1000 + bundleA.defense;
+            let valueB = (8 - b.meta.equipCount) * 1000 + bundleB.defense;
 
             return valueB - valueA;
         }).slice(0, lastBundleLimit);

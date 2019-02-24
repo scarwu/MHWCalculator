@@ -117,6 +117,9 @@ export default class CandidateBundles extends Component {
         let bundleLimit = this.state.bundleLimit;
 
         return bundleList.slice(0, bundleLimit).map((data, index) => {
+            console.log(data.jewels);
+            console.log(data.skills);
+
             return (
                 <div key={index} className="row mhwc-bundle">
                     <div className="col-12 mhwc-name">
@@ -218,8 +221,8 @@ export default class CandidateBundles extends Component {
                             </div>
                             <div className="col-12 mhwc-value">
                                 <div className="row">
-                                    {Object.keys(data.jewels).sort((a, b) => {
-                                        return data.jewels[b] - data.jewels[a];
+                                    {Object.keys(data.jewels).sort((jewelIdA, jewelIdB) => {
+                                        return data.jewels[jewelIdB] - data.jewels[jewelIdA];
                                     }).map((jewelId) => {
                                         let jewelCount = data.jewels[jewelId];
                                         let jewelName = JewelDataset.getInfo(jewelId).name;
@@ -245,8 +248,8 @@ export default class CandidateBundles extends Component {
                             </div>
                             <div className="col-12 mhwc-value">
                                 <div className="row">
-                                    {Object.keys(data.skills).sort((a, b) => {
-                                        return data.skills[b] - data.skills[a];
+                                    {Object.keys(data.skills).sort((skillIdA, skillIdB) => {
+                                        return data.skills[skillIdB] - data.skills[skillIdA];
                                     }).map((skillId) => {
                                         let skillCount = data.skills[skillId];
                                         let skillName = SkillDataset.getInfo(skillId).name;;
