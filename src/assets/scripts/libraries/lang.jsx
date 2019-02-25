@@ -43,6 +43,6 @@ Status.set('lang', currentLang);
 export default (key) => {
     currentLang = Status.get('lang');
 
-    return ('undefined' !== typeof langs[currentLang][key])
+    return ('undefined' !== typeof langs[currentLang][key]) && (null !== langs[currentLang][key])
         ? langs[currentLang][key] : langs[defaultLang][key];
 };

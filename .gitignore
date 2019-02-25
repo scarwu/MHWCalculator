@@ -1,7 +1,7 @@
 .DS_Store
 src/boot
 src/assets/scripts/json/langs/*/dataset.json
-src/assets/scripts/json/dataset
+src/assets/scripts/json/datasets
 node_modules
 .sass-cache
 scripts/vendor

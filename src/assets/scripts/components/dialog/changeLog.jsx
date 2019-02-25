@@ -111,17 +111,14 @@ export default class ChangeLog extends Component {
                     </ul>
                 </div>
             ),
+            jaJP: (
+                <div>
+                    <span></span>
+                </div>
+            ),
             enUS: (
                 <div>
-                    <span>2019/02/24</span>
-                    <ul>
-                        <li>Fix some bugs</li>
-                    </ul>
-
-                    <span>2019/02/21</span>
-                    <ul>
-                        <li>Announce english version</li>
-                    </ul>
+                    <span></span>
                 </div>
             )
         };
