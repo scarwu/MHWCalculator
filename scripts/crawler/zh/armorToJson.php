@@ -30,13 +30,13 @@ $allEquiqs = [];
 foreach ($urlList as $url) {
     echo "{$url}\n";
 
-    $mainDom = parseHTML(getHTML($url));
+    $mainDom = getDOM($url);
 
     foreach ($mainDom->find('a.tip') as $item) {
         echo "{$item->plaintext}: {$host}{$item->href}\n";
 
         $url = "{$host}{$item->href}";
-        $subDom = parseHTML(getHTML($url));
+        $subDom = getDOM($url);
         $tableCount = count($subDom->find('.simple-table'));
 
         $equips = [];
@@ -293,9 +293,4 @@ foreach ($urlList as $url) {
     }
 }
 
-if (!file_exists("{$root}/../../../temp")) {
-    mkdir("{$root}/../../../temp");
-}
-
-$json = json_encode($allEquiqs, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-file_put_contents("{$root}/../../../temp/zhArmor.json", $json);
+saveJson('zh/armor', $allEquiqs);

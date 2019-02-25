@@ -56,7 +56,7 @@ $allEquips = [];
 foreach ($urlMapping as $weaponType => $url) {
     echo "{$typeMapping[$weaponType]}: {$url}\n";
 
-    $dom = parseHTML(getHTML($url));
+    $dom = getDOM($url);
 
     foreach ($dom->find('.content-filter-weapon-target') as $index => $row) {
         if (in_array($weaponType, [
@@ -266,9 +266,4 @@ foreach ($urlMapping as $weaponType => $url) {
     }
 }
 
-if (!file_exists("{$root}/../../../temp")) {
-    mkdir("{$root}/../../../temp");
-}
-
-$json = json_encode($allEquips, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-file_put_contents("{$root}/../../../temp/zhWeapon.json", $json);
+saveJson('zh/weapons', $allEquips);

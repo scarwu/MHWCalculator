@@ -12,7 +12,7 @@ $result = [
     'skills' => []
 ];
 
-$dom = parseHTML(getHTML("{$host}/Skills"));
+$dom = getDOM("{$host}/Skills");
 
 foreach ($dom->find('#wiki-content-block .col-sm-3 > h5 a.wiki_link') as $item) {
     $name = trim($item->plaintext);
@@ -20,7 +20,7 @@ foreach ($dom->find('#wiki-content-block .col-sm-3 > h5 a.wiki_link') as $item) 
 
     echo "Set: {$name}\n";
 
-    $content = parseHTML(getHTML("{$host}{$item->attr['href']}"));
+    $content = getDOM("{$host}{$item->attr['href']}");
 
     foreach ($content->find('#wiki-content-block ul', 0)->find('li') as $skill) {
         $list[] = trim(html_entity_decode($skill->plaintext));
@@ -46,7 +46,7 @@ foreach ($dom->find('#wiki-content-block .col-sm-3 > p') as $item) {
 
     echo "Skill: {$name}\n";
 
-    $content = parseHTML(getHTML("{$host}/" . $item->find('a.wiki_link', 0)->attr['href']));
+    $content = getDOM("{$host}/" . $item->find('a.wiki_link', 0)->attr['href']);
 
     foreach ($content->find('#wiki-content-block ul', 0)->find('li') as $skill) {
         $list[] = trim(html_entity_decode($skill->plaintext));
@@ -58,11 +58,4 @@ foreach ($dom->find('#wiki-content-block .col-sm-3 > p') as $item) {
     ];
 }
 
-if (!file_exists("{$root}/../../../temp")) {
-    mkdir("{$root}/../../../temp");
-}
-
-file_put_contents(
-    "{$root}/../../../temp/en-sets_skills.json",
-    json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
-);
+saveJson('en/sets_skills', $result);

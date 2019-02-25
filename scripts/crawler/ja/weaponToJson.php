@@ -65,63 +65,71 @@ foreach ($list[0] as $type => $url) {
             $series = filter($item->find('td', 0)->plaintext);
         }
 
+        $rare = (int) substr($item->find('td', $offset + 0)->find('.wp_img', 0)->attr['src'], -5, 1);
         $name = filter($item->find('td', $offset + 0)->plaintext);
         $attack = (int) filter($item->find('td', $offset + 1)->plaintext);
+        $criticalRate = 0;
+        $defense = 0;
+        $element = [
+            'attack' => null,
+            'status' => null
+        ];
+        $elderseal = null;
+        $skills = null;
 
         $attrs = explode("\r\n", filter($item->find('td', $offset + 2)->plaintext));
-        $attrs = array_map(function ($attr) {
+        $attrs = array_filter($attrs, function ($attr) {
+            return '' !== $attr;
+        });
+
+        foreach ($attrs as $attr) {
             if (preg_match('/^\((火|水|雷|氷|龍)(\d+)\)$/', $attr, $matches)) {
-                return [
-                    'type' => 'attackElement',
-                    'isHidden' => true,
+                $element['attack'] = [
                     'name' => $matches[1],
-                    'value' => (int) $matches[2]
+                    'minValue' => (int) $matches[2],
+                    'maxValue' => null,
+                    'isHidden' => true
                 ];
             } elseif (preg_match('/^(火|水|雷|氷|龍)(\d+)$/', $attr, $matches)) {
-                return [
-                    'type' => 'attackElement',
-                    'isHidden' => false,
+                $element['attack'] = [
                     'name' => $matches[1],
-                    'value' => (int) $matches[2]
+                    'minValue' => (int) $matches[2],
+                    'maxValue' => null,
+                    'isHidden' => false
                 ];
             } elseif (preg_match('/^\((毒|麻痺|睡眠|爆破)(\d+)\)$/', $attr, $matches)) {
-                return [
-                    'type' => 'statusElement',
-                    'isHidden' => true,
+                $element['status'] = [
                     'name' => $matches[1],
-                    'value' => (int) $matches[2]
+                    'minValue' => (int) $matches[2],
+                    'maxValue' => null,
+                    'isHidden' => true
                 ];
             } elseif (preg_match('/^(毒|麻痺|睡眠|爆破)(\d+)$/', $attr, $matches)) {
-                return [
-                    'type' => 'statusElement',
-                    'isHidden' => false,
+                $element['status'] = [
                     'name' => $matches[1],
-                    'value' => (int) $matches[2]
+                    'minValue' => (int) $matches[2],
+                    'maxValue' => null,
+                    'isHidden' => false
                 ];
             } elseif (preg_match('/^龍封力\[(小|中|大)\]$/', $attr, $matches)) {
-                return [
-                    'type' => 'elderseal',
-                    'value' => $matches[1]
+                $elderseal = [
+                    'affinity' => $matches[1]
                 ];
             } elseif (preg_match('/^防御([-|+]\d+)$/', $attr, $matches)) {
-                return [
-                    'type' => 'defense',
-                    'value' => (int) $matches[1]
-                ];
+                $defense = (int) $matches[1];
             } elseif (preg_match('/^会心((?:-)?\d+)\%$/', $attr, $matches)) {
-                return [
-                    'type' => 'criticalRate',
-                    'value' => (int) $matches[1]
-                ];
+                $criticalRate = (int) $matches[1];
             } else {
-                return [
-                    'type' => 'skill',
-                    'name' => $attr
+                if (null === $skills) {
+                    $skills = [];
+                }
+
+                $skills[] = [
+                    'name' => $attr,
+                    'level' => 1
                 ];
             }
-        }, array_filter($attrs, function ($attr) {
-            return '' !== $attr;
-        }));
+        }
 
         $sharpness = [
             'red' => strlen($item->find('td', $offset + 3)->find('.kr0', 1)->plaintext) * 10,
@@ -144,22 +152,30 @@ foreach ($list[0] as $type => $url) {
         $slots = filter($item->find('td', $offset + 4)->plaintext);
         $slots = ('---' !== $slots)
             ? array_map(function ($size) {
-                return (int) $size;
+                return [
+                    'size' => (int) $size
+                ];
             }, explode(':', trim(str_replace([
                 '①', '②', '③'
             ], [
                 '1:', '2:', '3:'
             ], $slots), ':')))
-            : [];
+            : null;
 
         $result[] = [
-            'series' => $series,
+            'id' => null,
             'type' => $type,
+            'rare' => $rare,
+            'series' => $series,
             'name' => $name,
             'attack' => $attack,
-            'attrs' => $attrs,
+            'criticalRate' => $criticalRate,
+            'defense' => $defense,
             'sharpness' => $sharpness,
-            'slots' => $slots
+            'element' => $element,
+            'elderseal' => $elderseal,
+            'slots' => $slots,
+            'skills' => $skills
         ];
     }
 }

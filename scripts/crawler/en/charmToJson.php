@@ -9,7 +9,7 @@ include "{$root}/../common.php";
 $host = 'https://monsterhunterworld.wiki.fextralife.com';
 $result = [];
 
-$dom = parseHTML(getHTML("{$host}/Charms"));
+$dom = getDOM("{$host}/Charms");
 
 foreach ($dom->find('.wiki_table tr') as $index => $item) {
     if (0 === $index) {
@@ -27,11 +27,4 @@ foreach ($dom->find('.wiki_table tr') as $index => $item) {
     ];
 }
 
-if (!file_exists("{$root}/../../../temp")) {
-    mkdir("{$root}/../../../temp");
-}
-
-file_put_contents(
-    "{$root}/../../../temp/en-charms.json",
-    json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
-);
+saveJson('en/charms', $result);
