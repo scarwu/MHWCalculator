@@ -1,14 +1,16 @@
-#!/usr/bin/env php
 <?php
 
 error_reporting(E_ALL);
 
-$root = __DIR__;
-
 // Composer Auto Loader
-include "{$root}/../vendor/autoload.php";
+include __DIR__ . '/../vendor/autoload.php';
 
-function getHTML($url)
+function getDOM ($url)
+{
+    return parseHTML(getHTML($url));
+}
+
+function getHTML ($url)
 {
     $client = curl_init();
 
@@ -24,7 +26,7 @@ function getHTML($url)
     return $html;
 }
 
-function parseHTML($str)
+function parseHTML ($str)
 {
     $dom = new \Sunra\PhpSimple\HtmlDomParser();
 
@@ -56,32 +58,12 @@ function parseHTML($str)
     return $dom;
 }
 
-$host = 'https://monsterhunterworld.wiki.fextralife.com';
-$result = [];
+function saveJson ($name, $data)
+{
+    $path = __DIR__ . "/../../temp/{$name}.json";
+    $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
-$dom = parseHTML(getHTML("{$host}/Charms"));
+    @mkdir(dirname($path), 0755, true);
 
-foreach ($dom->find('.wiki_table tr') as $index => $item) {
-    if (0 === $index) {
-        continue;
-    }
-
-    $name = trim($item->find('td', 1)->plaintext);
-    $desciption = trim(html_entity_decode($item->find('td', 2)->plaintext));
-
-    echo "Charm: {$name}\n";
-
-    $result[] = [
-        'name' => $name,
-        'desciption' => $desciption
-    ];
+    return file_put_contents($path, $json);
 }
-
-if (!file_exists("{$root}/../../temp")) {
-    mkdir("{$root}/../../temp");
-}
-
-file_put_contents(
-    "{$root}/../../temp/en-charms.json",
-    json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
-);
