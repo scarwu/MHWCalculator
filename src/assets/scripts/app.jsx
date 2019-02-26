@@ -341,12 +341,6 @@ export default class Main extends Component {
 
             if ('weapon' === equipType) {
                 equipInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
-                equipInfo.slots.forEach((data, index) => {
-                    slotMap[data.size].push({
-                        type: equipType,
-                        index: index
-                    });
-                });
             } else if ('helm' === equipType
                 || 'chest' === equipType
                 || 'arm' === equipType
@@ -354,13 +348,18 @@ export default class Main extends Component {
                 || 'leg' === equipType) {
 
                 equipInfo = CommonDataset.getAppliedArmorInfo(equips[equipType]);
-                equipInfo.slots.forEach((data, index) => {
-                    slotMap[data.size].push({
-                        type: equipType,
-                        index: index
-                    });
-                });
             }
+
+            if (null === equipInfo) {
+                return;
+            }
+
+            equipInfo.slots.forEach((data, index) => {
+                slotMap[data.size].push({
+                    type: equipType,
+                    index: index
+                });
+            });
         });
 
         Object.keys(bundle.jewels).sort((jewelIdA, jewelIdB) => {

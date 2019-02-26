@@ -94,18 +94,16 @@ export default class CharacterStatus extends Component {
         let passiveSkills = this.state.passiveSkills;
         let status = Helper.deepCopy(Constant.defaultStatus);
 
+        // Init Info
         let info = {};
 
-        info.weapon = (null !== equips.weapon.id)
-            ? CommonDataset.getAppliedWeaponInfo(equips.weapon) : null;
+        info.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon);
 
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-            info[equipType] = (null !== equips[equipType].id)
-                ? CommonDataset.getAppliedArmorInfo(equips[equipType]) : null;
+            info[equipType] = CommonDataset.getAppliedArmorInfo(equips[equipType]);
         });
 
-        info.charm = (null !== equips.charm.id)
-            ? CommonDataset.getAppliedCharmInfo(equips.charm) : null;
+        info.charm = CommonDataset.getAppliedCharmInfo(equips.charm);
 
         if (null !== info.weapon) {
             status.critical.rate = info.weapon.criticalRate;
@@ -450,8 +448,9 @@ export default class CharacterStatus extends Component {
         let elementExpectedValue = 0;
         let expectedValue = 0;
 
-        if (null !== equips.weapon.id) {
-            let weaponInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
+        let weaponInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
+
+        if (null !== weaponInfo) {
             let weaponMultiple = Constant.weaponMultiple[weaponInfo.type];
             let sharpnessMultiple = this.getSharpnessMultiple(status.sharpness);
 

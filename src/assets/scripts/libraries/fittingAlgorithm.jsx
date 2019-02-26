@@ -109,13 +109,11 @@ class FittingAlgorithm {
                 return;
             }
 
+            // Get Equip Info
             let equipInfo = null;
-            let candidateEquip = null;
 
-            // Get Equipment Info
             if ('weapon' === equipType) {
                 equipInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
-                equipInfo.type = equipType;
             } else if ('helm' === equipType
                 || 'chest' === equipType
                 || 'arm' === equipType
@@ -125,11 +123,18 @@ class FittingAlgorithm {
                 equipInfo = CommonDataset.getAppliedArmorInfo(equips[equipType]);
             } else if ('charm' === equipType) {
                 equipInfo = CommonDataset.getAppliedCharmInfo(equips.charm);
-                equipInfo.type = equipType;
             }
 
+            // Check Equip Info
+            if (null === equipInfo) {
+                return;
+            }
+
+            // Rewrite Equip Info Type
+            equipInfo.type = equipType;
+
             // Convert Equip to Candidate Equip
-            candidateEquip = this.convertEquipToCandidateEquip(equipInfo);
+            let candidateEquip = this.convertEquipToCandidateEquip(equipInfo);
 
             // Add Candidate Equip to Bundle
             bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
