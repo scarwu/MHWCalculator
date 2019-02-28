@@ -86,7 +86,6 @@ export default {
     },
     defaultCandidateEquip: {
         id: null,
-        name: null,
         type: null,
         defense: 0,
         skills: {},

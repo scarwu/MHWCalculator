@@ -1097,7 +1097,7 @@
             "series": {
                 "zhTW": "冥燈幽火α",
                 "jaJP": null,
-                "enUS": null
+                "enUS": "Xeno'jiiva Alpha Armor Set"
             },
             "defense": 92,
             "resistance": {
@@ -1118,7 +1118,7 @@
                 "name": {
                     "zhTW": "異種大型頭飾α",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Headgear Alpha"
                 },
                 "slots": [
                     {
@@ -1142,7 +1142,7 @@
                 "name": {
                     "zhTW": "異種大型皮α",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Hide Alpha"
                 },
                 "slots": [
                     {
@@ -1166,7 +1166,7 @@
                 "name": {
                     "zhTW": "異種大型鋼爪α",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Claws Alpha"
                 },
                 "slots": [
                     {
@@ -1190,7 +1190,7 @@
                 "name": {
                     "zhTW": "異種大型脊椎α",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Spine Alpha"
                 },
                 "slots": [
                     {
@@ -1214,7 +1214,7 @@
                 "name": {
                     "zhTW": "異種大型靴α",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Spurs Alpha"
                 },
                 "slots": [
                     {
@@ -1241,7 +1241,7 @@
             "series": {
                 "zhTW": "冥燈幽火β",
                 "jaJP": null,
-                "enUS": null
+                "enUS": "Xeno'jiiva Beta Armor Set"
             },
             "defense": 92,
             "resistance": {
@@ -1262,7 +1262,7 @@
                 "name": {
                     "zhTW": "異種大型頭飾β",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Headgear Beta"
                 },
                 "slots": [
                     {
@@ -1282,7 +1282,7 @@
                 "name": {
                     "zhTW": "異種大型皮β",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Hide Beta"
                 },
                 "slots": [
                     {
@@ -1305,7 +1305,7 @@
                 "name": {
                     "zhTW": "異種大型鋼爪β",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Claws Beta"
                 },
                 "slots": [
                     {
@@ -1325,7 +1325,7 @@
                 "name": {
                     "zhTW": "異種大型脊椎β",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Spine Beta"
                 },
                 "slots": [
                     {
@@ -1348,7 +1348,7 @@
                 "name": {
                     "zhTW": "異種大型靴β",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Spurs Beta"
                 },
                 "slots": [
                     {
@@ -3937,7 +3937,7 @@
             "series": {
                 "zhTW": "冥燈幽火γ",
                 "jaJP": null,
-                "enUS": null
+                "enUS": "Xeno'jiiva Gamma Armor Set"
             },
             "defense": 90,
             "resistance": {
@@ -3958,7 +3958,7 @@
                 "name": {
                     "zhTW": "異種大型頭飾γ",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Headgear Gamma"
                 },
                 "slots": [
                     {
@@ -3988,7 +3988,7 @@
                 "name": {
                     "zhTW": "異種大型皮γ",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Hide Gamma"
                 },
                 "slots": [
                     {
@@ -4011,7 +4011,7 @@
                 "name": {
                     "zhTW": "異種大型爪γ",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Claws Gamma"
                 },
                 "slots": [
                     {
@@ -4041,7 +4041,7 @@
                 "name": {
                     "zhTW": "異種大型脊椎γ",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Spine Gamma"
                 },
                 "slots": [
                     {
@@ -4064,7 +4064,7 @@
                 "name": {
                     "zhTW": "異種大型護腿γ",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Xeno'jiiva Spurs Gamma"
                 },
                 "slots": [
                     {
