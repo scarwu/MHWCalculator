@@ -152,31 +152,24 @@ export default class EquipBundleSelector extends Component {
      * Render Functions
      */
     renderRow = (data, index) => {
-        let weaponName = (null !== data.equips.weapon.id)
-            ? _(WeaponDataset.getInfo(data.equips.weapon.id).name) : null;
-        let helmName = (null !== data.equips.helm.id)
-            ? _(ArmorDataset.getInfo(data.equips.helm.id).name) : null;
-        let chestName = (null !== data.equips.chest.id)
-            ? _(ArmorDataset.getInfo(data.equips.chest.id).name) : null;
-        let armName = (null !== data.equips.arm.id)
-            ? _(ArmorDataset.getInfo(data.equips.arm.id).name) : null;
-        let waistName = (null !== data.equips.waist.id)
-            ? _(ArmorDataset.getInfo(data.equips.waist.id).name) : null;
-        let legName = (null !== data.equips.leg.id)
-            ? _(ArmorDataset.getInfo(data.equips.leg.id).name) : null;
-        let charmName = (null !== data.equips.charm.id)
-            ? _(CharmDataset.getInfo(data.equips.charm.id).name) : null;
+        let weaponInfo = WeaponDataset.getInfo(data.equips.weapon.id);
+        let helmInfo = ArmorDataset.getInfo(data.equips.helm.id);
+        let chestInfo = ArmorDataset.getInfo(data.equips.chest.id);
+        let armInfo = ArmorDataset.getInfo(data.equips.arm.id);
+        let waistInfo = ArmorDataset.getInfo(data.equips.waist.id);
+        let legInfo = ArmorDataset.getInfo(data.equips.leg.id);
+        let charmInfo = CharmDataset.getInfo(data.equips.charm.id);
 
         return (
             <tr key={data.id}>
                 <td><input type="text" placeholder={_('inputName')} ref={'bundleId_' + index} defaultValue={data.id} /></td>
-                <td><span>{weaponName}</span></td>
-                <td><span>{helmName}</span></td>
-                <td><span>{chestName}</span></td>
-                <td><span>{armName}</span></td>
-                <td><span>{waistName}</span></td>
-                <td><span>{legName}</span></td>
-                <td><span>{charmName}</span></td>
+                <td><span>{(weaponInfo !== null) ? _(weaponInfo.name) : false}</span></td>
+                <td><span>{(helmInfo !== null) ? _(helmInfo.name) : false}</span></td>
+                <td><span>{(chestInfo !== null) ? _(chestInfo.name) : false}</span></td>
+                <td><span>{(armInfo !== null) ? _(armInfo.name) : false}</span></td>
+                <td><span>{(waistInfo !== null) ? _(waistInfo.name) : false}</span></td>
+                <td><span>{(legInfo !== null) ? _(legInfo.name) : false}</span></td>
+                <td><span>{(charmInfo !== null) ? _(charmInfo.name) : false}</span></td>
                 <td>
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
@@ -201,31 +194,24 @@ export default class EquipBundleSelector extends Component {
         let DefaultRow = false;
 
         if (null !== equips) {
-            let weaponName = (null !== equips.weapon.id)
-                ? _(WeaponDataset.getInfo(equips.weapon.id).name) : null;
-            let helmName = (null !== equips.helm.id)
-                ? _(ArmorDataset.getInfo(equips.helm.id).name) : null;
-            let chestName = (null !== equips.chest.id)
-                ? _(ArmorDataset.getInfo(equips.chest.id).name) : null;
-            let armName = (null !== equips.arm.id)
-                ? _(ArmorDataset.getInfo(equips.arm.id).name) : null;
-            let waistName = (null !== equips.waist.id)
-                ? _(ArmorDataset.getInfo(equips.waist.id).name) : null;
-            let legName = (null !== equips.leg.id)
-                ? _(ArmorDataset.getInfo(equips.leg.id).name) : null;
-            let charmName = (null !== equips.charm.id)
-                ? _(CharmDataset.getInfo(equips.charm.id).name) : null;
+            let weaponInfo = WeaponDataset.getInfo(equips.weapon.id);
+            let helmInfo = ArmorDataset.getInfo(equips.helm.id);
+            let chestInfo = ArmorDataset.getInfo(equips.chest.id);
+            let armInfo = ArmorDataset.getInfo(equips.arm.id);
+            let waistInfo = ArmorDataset.getInfo(equips.waist.id);
+            let legInfo = ArmorDataset.getInfo(equips.leg.id);
+            let charmInfo = CharmDataset.getInfo(equips.charm.id);
 
             DefaultRow = (
                 <tr>
                     <td><input type="text" placeholder={_('inputName')} ref="bundleId" /></td>
-                    <td><span>{weaponName}</span></td>
-                    <td><span>{helmName}</span></td>
-                    <td><span>{chestName}</span></td>
-                    <td><span>{armName}</span></td>
-                    <td><span>{waistName}</span></td>
-                    <td><span>{legName}</span></td>
-                    <td><span>{charmName}</span></td>
+                    <td><span>{(null !== weaponInfo) ? _(weaponInfo.name) : false}</span></td>
+                    <td><span>{(null !== helmInfo) ? _(helmInfo.name) : false}</span></td>
+                    <td><span>{(null !== chestInfo) ? _(chestInfo.name) : false}</span></td>
+                    <td><span>{(null !== armInfo) ? _(armInfo.name) : false}</span></td>
+                    <td><span>{(null !== waistInfo) ? _(waistInfo.name) : false}</span></td>
+                    <td><span>{(null !== legInfo) ? _(legInfo.name) : false}</span></td>
+                    <td><span>{(null !== charmInfo) ? _(charmInfo.name) : false}</span></td>
                     <td>
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon

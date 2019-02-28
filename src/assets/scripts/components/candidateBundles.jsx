@@ -222,16 +222,15 @@ export default class CandidateBundles extends Component {
                                         return data.jewels[jewelIdB] - data.jewels[jewelIdA];
                                     }).map((jewelId) => {
                                         let jewelCount = data.jewels[jewelId];
-                                        let jewelName = JewelDataset.getInfo(jewelId).name;
-                                        let jewelSize = JewelDataset.getInfo(jewelId).size;
+                                        let jewelInfo = JewelDataset.getInfo(jewelId);
 
-                                        return (
+                                        return (null !== jewelInfo) ? (
                                             <div key={jewelId} className="col-4">
                                                 <div className="mhwc-value">
-                                                    <span>{`[${jewelSize}] ${_(jewelName)} x ${jewelCount}`}</span>
+                                                    <span>{`[${jewelInfo.size}] ${_(jewelInfo.name)} x ${jewelCount}`}</span>
                                                 </div>
                                             </div>
-                                        );
+                                        ) : false;
                                     })}
                                 </div>
                             </div>
@@ -249,15 +248,15 @@ export default class CandidateBundles extends Component {
                                         return data.skills[skillIdB] - data.skills[skillIdA];
                                     }).map((skillId) => {
                                         let skillCount = data.skills[skillId];
-                                        let skillName = SkillDataset.getInfo(skillId).name;;
+                                        let skillInfo = SkillDataset.getInfo(skillId);;
 
-                                        return (
+                                        return (null !== skillInfo) ? (
                                             <div key={skillId} className="col-6">
                                                 <div className="mhwc-value">
-                                                    <span>{`${_(skillName)} Lv.${skillCount}`}</span>
+                                                    <span>{`${_(skillInfo.name)} Lv.${skillCount}`}</span>
                                                 </div>
                                             </div>
-                                        );
+                                        ) : false;
                                     })}
                                 </div>
                             </div>

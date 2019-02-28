@@ -482,119 +482,119 @@ $_ = [
 ];
 
 // Extend Weapons
-$slotWeapons = [];
+// $slotWeapons = [];
 
-foreach ($weapons as $weapon) {
-    if (!is_array($weapon['slots']) || 0 === count($weapon['slots'])) {
-        continue;
-    }
+// foreach ($weapons as $weapon) {
+//     if (!is_array($weapon['slots']) || 0 === count($weapon['slots'])) {
+//         continue;
+//     }
 
-    usort($weapon['slots'], function ($slotA, $slotB) {
-        return $slotA['size'] <> $slotB['size'];
-    });
+//     usort($weapon['slots'], function ($slotA, $slotB) {
+//         return $slotA['size'] <> $slotB['size'];
+//     });
 
-    $id = "{$weapon['type']} " . implode('-', array_map(function ($slot) {
-        return $slot['size'];
-    }, $weapon['slots']));
+//     $id = "{$weapon['type']} " . implode('-', array_map(function ($slot) {
+//         return $slot['size'];
+//     }, $weapon['slots']));
 
-    $name = [];
-    $series = [];
+//     $name = [];
+//     $series = [];
 
-    foreach (array_keys($_) as $lang) {
-        $name[$lang] = "{$_[$lang]['slot']}-{$_[$lang][$weapon['type']]} " . implode('', array_map(function ($slot) {
-            return "[{$slot['size']}]";
-        }, $weapon['slots']));
+//     foreach (array_keys($_) as $lang) {
+//         $name[$lang] = "{$_[$lang]['slot']}-{$_[$lang][$weapon['type']]} " . implode('', array_map(function ($slot) {
+//             return "[{$slot['size']}]";
+//         }, $weapon['slots']));
 
-        $series[$lang] = $_[$lang]['slot'];
-    }
+//         $series[$lang] = $_[$lang]['slot'];
+//     }
 
-    $slotWeapons[$id] = [
-        'id' => $id,
-        'name' => $name,
-        'rare' => 0,
-        'type' => $weapon['type'],
-        'series' => $series,
-        'attack' => 0,
-        'criticalRate' => 0,
-        'defense' => 0,
-        'sharpness' => null,
-        'element' => [
-            'attack' => null,
-            'status' => null
-        ],
-        'elderseal' => null,
-        'slots' => $weapon['slots'],
-        'skills' => null
-    ];
-}
+//     $slotWeapons[$id] = [
+//         'id' => $id,
+//         'name' => $name,
+//         'rare' => 0,
+//         'type' => $weapon['type'],
+//         'series' => $series,
+//         'attack' => 0,
+//         'criticalRate' => 0,
+//         'defense' => 0,
+//         'sharpness' => null,
+//         'element' => [
+//             'attack' => null,
+//             'status' => null
+//         ],
+//         'elderseal' => null,
+//         'slots' => $weapon['slots'],
+//         'skills' => null
+//     ];
+// }
 
-ksort($slotWeapons);
+// ksort($slotWeapons);
 
-$weapons = array_merge($weapons, array_values($slotWeapons));
+// $weapons = array_merge($weapons, array_values($slotWeapons));
 
 // Extend Armors
-$slotArmorCommon = [];
-$slotArmorList = [];
+// $slotArmorCommon = [];
+// $slotArmorList = [];
 
-$series = [];
+// $series = [];
 
-foreach (array_keys($_) as $lang) {
-    $series[$lang] = $_[$lang]['slot'];
-}
+// foreach (array_keys($_) as $lang) {
+//     $series[$lang] = $_[$lang]['slot'];
+// }
 
-$slotArmorCommon = [
-    'rare' => 0,
-    'gender' => 'general',
-    'series' => $series,
-    'defense' => 0,
-    'resistance' => [
-        'fire' => 0,
-        'water' => 0,
-        'thunder' => 0,
-        'ice' => 0,
-        'dragon' => 0
-    ],
-    'set' => null
-];
+// $slotArmorCommon = [
+//     'rare' => 0,
+//     'gender' => 'general',
+//     'series' => $series,
+//     'defense' => 0,
+//     'resistance' => [
+//         'fire' => 0,
+//         'water' => 0,
+//         'thunder' => 0,
+//         'ice' => 0,
+//         'dragon' => 0
+//     ],
+//     'set' => null
+// ];
 
-foreach ($armors as $armor) {
-    foreach ($armor['list'] as $item) {
-        if (!is_array($item['slots']) || 0 === count($item['slots'])) {
-            continue;
-        }
+// foreach ($armors as $armor) {
+//     foreach ($armor['list'] as $item) {
+//         if (!is_array($item['slots']) || 0 === count($item['slots'])) {
+//             continue;
+//         }
 
-        usort($item['slots'], function ($slotA, $slotB) {
-            return $slotA['size'] <> $slotB['size'];
-        });
+//         usort($item['slots'], function ($slotA, $slotB) {
+//             return $slotA['size'] <> $slotB['size'];
+//         });
 
-        $id = "{$item['type']} " . implode('-', array_map(function ($slot) {
-            return $slot['size'];
-        }, $item['slots']));
+//         $id = "{$item['type']} " . implode('-', array_map(function ($slot) {
+//             return $slot['size'];
+//         }, $item['slots']));
 
-        $name = [];
+//         $name = [];
 
-        foreach (array_keys($_) as $lang) {
-            $name[$lang] = "{$_[$lang]['slot']}-{$_[$lang][$item['type']]} " . implode('', array_map(function ($slot) {
-                return "[{$slot['size']}]";
-            }, $item['slots']));
-        }
+//         foreach (array_keys($_) as $lang) {
+//             $name[$lang] = "{$_[$lang]['slot']}-{$_[$lang][$item['type']]} " . implode('', array_map(function ($slot) {
+//                 return "[{$slot['size']}]";
+//             }, $item['slots']));
+//         }
 
-        $slotArmorList[$id] = [
-            'id' => $id,
-            'name' => $name,
-            'type' => $item['type'],
-            'slots' => $item['slots'],
-            'skills' => null
-        ];
-    }
-}
+//         $slotArmorList[$id] = [
+//             'id' => $id,
+//             'name' => $name,
+//             'type' => $item['type'],
+//             'slots' => $item['slots'],
+//             'skills' => null
+//         ];
+//     }
+// }
 
-ksort($slotArmorList);
+// ksort($slotArmorList);
 
-$armors[] = [
-    'common' => $slotArmorCommon,
-    'list' => array_values($slotArmorList)
-];
+// $armors[] = [
+//     'common' => $slotArmorCommon,
+//     'list' => array_values($slotArmorList)
+// ];
 
 // Handle Enhances Data
 foreach ($enhances as $enhance) {

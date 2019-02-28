@@ -62,9 +62,17 @@ class FittingAlgorithm {
             let setInfoA = SetDataset.getInfo(setA.id);
             let setInfoB = SetDataset.getInfo(setB.id);
 
+            if (null === setInfoA || null === setInfoB) {
+                return 0;
+            }
+
             return setInfoB.skills.pop().require - setInfoA.skills.pop().require;
         }).forEach((set) => {
             let setInfo = SetDataset.getInfo(set.id);
+
+            if (null === setInfo) {
+                return;
+            }
 
             this.conditionSets[set.id] = setInfo.skills[set.step - 1].require;
         });

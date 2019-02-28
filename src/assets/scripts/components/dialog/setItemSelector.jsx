@@ -81,8 +81,11 @@ export default class SetItemSelector extends Component {
         });
 
         SetDataset.getNames().sort().forEach((setId) => {
-
             let set = SetDataset.getInfo(setId);
+
+            if (null === set) {
+                return;
+            }
 
             // Skip Selected Sets
             if (-1 !== data.indexOf(set.id)) {
@@ -129,11 +132,11 @@ export default class SetItemSelector extends Component {
                     {data.skills.map((skill, index) => {
                         let skillInfo = SkillDataset.getInfo(skill.id);
 
-                        return (
+                        return (null !== skillInfo) ? (
                             <div key={index}>
                                 <span>{_(skillInfo.list[0].description)}</span>
                             </div>
-                        );
+                        ) : false;
                     })}
                 </td>
                 <td>
@@ -175,6 +178,10 @@ export default class SetItemSelector extends Component {
                         data.skills.forEach((data) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
 
+                            if (null === skillInfo) {
+                                return;
+                            }
+
                             text += _(skillInfo.name) + skillInfo.list.map((item) => {
                                 return _(item.description);
                             }).join('');
@@ -197,6 +204,10 @@ export default class SetItemSelector extends Component {
 
                         data.skills.forEach((data) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
+
+                            if (null === skillInfo) {
+                                return;
+                            }
 
                             text += _(skillInfo.name) + skillInfo.list.map((item) => {
                                 return _(item.description);

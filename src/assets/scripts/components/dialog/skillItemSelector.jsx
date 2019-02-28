@@ -80,18 +80,21 @@ export default class SkillItemSelector extends Component {
         });
 
         SkillDataset.getNames().sort().forEach((skillId) => {
+            let skillInfo = SkillDataset.getInfo(skillId);
 
-            let skill = SkillDataset.getInfo(skillId);
+            if (null === skillInfo) {
+                return;
+            }
 
-            if (false === skill.from.jewel && false === skill.from.armor) {
+            if (false === skillInfo.from.jewel && false === skillInfo.from.armor) {
                 return;
             }
 
             // Skip Selected Skills
-            if (-1 !== data.indexOf(skill.id)) {
-                selectedList.push(skill);
+            if (-1 !== data.indexOf(skillInfo.id)) {
+                selectedList.push(skillInfo);
             } else {
-                unselectedList.push(skill);
+                unselectedList.push(skillInfo);
             }
         });
 

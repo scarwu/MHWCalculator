@@ -124,12 +124,10 @@ export default class EquipItemSelector extends Component {
                 }
             }
         } else if ('weapon' === data.equipType) {
-            mode = 'weapon';
-            type = Constant.weaponTypes[0];
+            let weaponInfo = WeaponDataset.getInfo(data.equipId);
 
-            if (null !== data.equipId) {
-                type = WeaponDataset.getInfo(data.equipId).type;
-            }
+            mode = 'weapon';
+            type = (null !== weaponInfo) ? weaponInfo.type : Constant.weaponTypes[0];
 
             Constant.weaponTypes.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
@@ -313,11 +311,13 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     {data.skills.map((data, index) => {
-                        return (
+                        let skillInfo = SkillDataset.getInfo(data.id);
+
+                        return (null !== skillInfo) ? (
                             <div key={index}>
-                                <span>{_(SkillDataset.getInfo(data.id).name)} Lv.{data.level}</span>
+                                <span>{_(skillInfo.name)} Lv.{data.level}</span>
                             </div>
-                        );
+                        ) : false;
                     })}
                 </td>
                 <td>
@@ -368,7 +368,7 @@ export default class EquipItemSelector extends Component {
 
                         // Create Text
                         let text = _(data.name);
-
+                        text += _(data.series);
                         text += _(data.type);
 
                         if (null !== data.element.attack) {
@@ -382,7 +382,9 @@ export default class EquipItemSelector extends Component {
                         data.skills.forEach((data) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
 
-                            text += _(skillInfo.name);
+                            if (null !== skillInfo) {
+                                text += _(skillInfo.name);
+                            }
                         });
 
                         // Search Nameword
@@ -404,6 +406,12 @@ export default class EquipItemSelector extends Component {
     };
 
     renderArmorRow = (data, index, isIgnore) => {
+        let skillInfo = null;
+
+        if (null !== data.set) {
+            skillInfo = SetDataset.getInfo(data.set.id);
+        }
+
         return (
             <tr key={data.id}>
                 <td><span>{_(data.name)}</span></td>
@@ -425,17 +433,19 @@ export default class EquipItemSelector extends Component {
                     })}
                 </td>
                 <td>
-                    {null !== data.set ? (
-                        <span>{_(SetDataset.getInfo(data.set.id).name)}</span>
+                    {null !== skillInfo ? (
+                        <span>{_(skillInfo.name)}</span>
                     ) : false}
                 </td>
                 <td>
                     {data.skills.map((data, index) => {
-                        return (
+                        let skillInfo = SkillDataset.getInfo(data.id);
+
+                        return (null !== skillInfo) ? (
                             <div key={index}>
-                                <span>{_(SkillDataset.getInfo(data.id).name)} Lv.{data.level}</span>
+                                <span>{_(skillInfo.name)} Lv.{data.level}</span>
                             </div>
-                        );
+                        ) : false;
                     })}
                 </td>
                 <td>
@@ -479,17 +489,22 @@ export default class EquipItemSelector extends Component {
 
                         // Create Text
                         let text = _(data.name);
+                        text += _(data.series);
 
                         if (null !== data.set) {
                             let setInfo = SetDataset.getInfo(data.set.id);
 
-                            text += _(setInfo.name);
+                            if (null !== setInfo) {
+                                text += _(setInfo.name);
+                            }
                         }
 
                         data.skills.forEach((data) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
 
-                            text += _(skillInfo.name);
+                            if (null !== skillInfo) {
+                                text += _(skillInfo.name);
+                            }
                         });
 
                         // Search Nameword
@@ -519,11 +534,11 @@ export default class EquipItemSelector extends Component {
                     {data.skills.map((data, index) => {
                         let skillInfo = SkillDataset.getInfo(data.id);
 
-                        return (
+                        return (null !== skillInfo) ? (
                             <div key={index}>
                                 <span>{_(skillInfo.name)} Lv.{data.level}</span>
                             </div>
-                        );
+                        ) : false;
                     })}
                 </td>
                 <td>
@@ -566,7 +581,9 @@ export default class EquipItemSelector extends Component {
                         data.skills.forEach((data) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
 
-                            text += _(skillInfo.anem);
+                            if (null !== skillInfo) {
+                                text += _(skillInfo.anem);
+                            }
                         });
 
                         // Search Nameword
@@ -588,7 +605,7 @@ export default class EquipItemSelector extends Component {
     };
 
     renderJewelRow = (data, index) => {
-        let skillName = SkillDataset.getInfo(data.skill.id).name;
+        let skillInfo = SkillDataset.getInfo(data.skill.id);
 
         return (
             <tr key={data.id}>
@@ -596,7 +613,9 @@ export default class EquipItemSelector extends Component {
                 <td><span>{data.rare}</span></td>
                 <td><span>{data.size}</span></td>
                 <td>
-                    <span>{_(skillName)} Lv.{data.skill.level}</span>
+                    {(null !== skillInfo) ? (
+                        <span>{_(skillInfo.name)} Lv.{data.skill.level}</span>
+                    ) : false}
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
@@ -633,7 +652,9 @@ export default class EquipItemSelector extends Component {
 
                         let skillInfo = SkillDataset.getInfo(data.skill.id);
 
-                        text += _(skillInfo.name);
+                        if (null !== skillInfo) {
+                            text += _(skillInfo.name);
+                        }
 
                         // Search Nameword
                         if (null !== segment

@@ -165,6 +165,10 @@ export default class CharacterStatus extends Component {
             let setCount = setMapping[setId];
             let setInfo = SetDataset.getInfo(setId);
 
+            if (null === setInfo) {
+                return;
+            }
+
             setInfo.skills.forEach((skill) => {
                 if (skill.require > setCount) {
                     return;
@@ -197,38 +201,45 @@ export default class CharacterStatus extends Component {
         let defenseMultipleList = [];
 
         for (let skillId in allSkills) {
-            let skill = SkillDataset.getInfo(skillId);
-            let level = allSkills[skillId];
+            let skillInfo = SkillDataset.getInfo(skillId);
+
+            if (null === skillInfo) {
+                continue;
+            }
+
+            let skillLevel = allSkills[skillId];
 
             // Fix Skill Level Overflow
-            if (level > skill.list.length) {
-                level = skill.list.length;
+            if (skillLevel > skillInfo.list.length) {
+                skillLevel = skillInfo.list.length;
             }
 
             status.skills.push({
-                id: skill.id,
-                level: level,
-                description: skill.list[level - 1].description
+                id: skillId,
+                level: skillLevel,
+                description: skillInfo.list[skillLevel - 1].description
             });
 
-            if ('passive' === skill.type) {
-                if (undefined === passiveSkills[skill.id]) {
-                    passiveSkills[skill.id] = {
+            if ('passive' === skillInfo.type) {
+                if (undefined === passiveSkills[skillId]) {
+                    passiveSkills[skillId] = {
                         isActive: false
                     };
                 }
 
-                if (false === passiveSkills[skill.id].isActive) {
+                if (false === passiveSkills[skillId].isActive) {
                     continue;
                 }
             }
 
-            if (undefined === skill.list[level - 1].reaction) {
+            if (undefined === skillInfo.list[skillLevel - 1].reaction
+                || null === skillInfo.list[skillLevel - 1].reaction) {
+
                 continue;
             }
 
-            for (let reactionType in skill.list[level - 1].reaction) {
-                let data = skill.list[level - 1].reaction[reactionType];
+            for (let reactionType in skillInfo.list[skillLevel - 1].reaction) {
+                let data = skillInfo.list[skillLevel - 1].reaction[reactionType];
 
                 switch (reactionType) {
                 case 'health':
@@ -780,19 +791,19 @@ export default class CharacterStatus extends Component {
                         </div>
                         <div className="col-12 mhwc-value">
                             {status.sets.map((data, index) => {
-                                let setName = SetDataset.getInfo(data.id).name;
-                                let skillName = SkillDataset.getInfo(data.skill.id).name;
+                                let setInfo = SetDataset.getInfo(data.id);
+                                let skillInfo = SkillDataset.getInfo(data.skill.id);
 
-                                return (
+                                return (null !== setInfo && null !== skillInfo) ? (
                                     <div key={`${index}_${data.id}`} className="row mhwc-set">
                                         <div className="col-12 mhwc-name">
-                                            <span>{_(setName)} ({data.require})</span>
+                                            <span>{_(setInfo.name)} ({data.require})</span>
                                         </div>
                                         <div className="col-12 mhwc-value">
-                                            <span>{_(skillName)} Lv.{data.skill.level}</span>
+                                            <span>{_(skillInfo.name)} Lv.{data.skill.level}</span>
                                         </div>
                                     </div>
-                                );
+                                ) : false;
                             })}
                         </div>
                     </div>
@@ -807,12 +818,12 @@ export default class CharacterStatus extends Component {
                             {status.skills.sort((skillA, skillB) => {
                                 return skillB.level - skillA.level;
                             }).map((data) => {
-                                let skillName = SkillDataset.getInfo(data.id).name;
+                                let skillInfo = SkillDataset.getInfo(data.id);
 
-                                return (
+                                return (null !== skillInfo) ? (
                                     <div key={data.id} className="row mhwc-skill">
                                         <div className="col-12 mhwc-name">
-                                            <span>{_(skillName)} Lv.{data.level}</span>
+                                            <span>{_(skillInfo.name)} Lv.{data.level}</span>
 
                                             <div className="mhwc-icons_bundle">
                                                 {undefined !== passiveSkills[data.id] ? (
@@ -827,7 +838,7 @@ export default class CharacterStatus extends Component {
                                             <span>{_(data.description)}</span>
                                         </div>
                                     </div>
-                                );
+                                ) : false;
                             })}
                         </div>
                     </div>

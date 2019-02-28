@@ -120,6 +120,10 @@ export default class Main extends Component {
         let sets = this.state.sets;
         let setInfo = SetDataset.getInfo(sets[index].id);
 
+        if (null === setInfo) {
+            return false;
+        }
+
         if (setInfo.skills.length === sets[index].step) {
             return false;
         }
@@ -214,6 +218,10 @@ export default class Main extends Component {
     handleSkillLevelUp = (index) => {
         let skills = this.state.skills;
         let skillInfo = SkillDataset.getInfo(skills[index].id);
+
+        if (null === skillInfo) {
+            return false;
+        }
 
         if (skillInfo.list.length === skills[index].level) {
             return false;
@@ -366,9 +374,18 @@ export default class Main extends Component {
             let jewelInfoA = JewelDataset.getInfo(jewelIdA);
             let jewelInfoB = JewelDataset.getInfo(jewelIdB);
 
+            if (null === jewelInfoA || null === jewelInfoB) {
+                return 0;
+            }
+
             return jewelInfoA.size - jewelInfoB.size;
         }).forEach((jewelId) => {
             let jewelInfo = JewelDataset.getInfo(jewelId);
+
+            if (null === jewelInfo) {
+                return;
+            }
+
             let currentSize = jewelInfo.size;
 
             let jewelCount = bundle.jewels[jewelId];
@@ -598,6 +615,11 @@ export default class Main extends Component {
 
         return sets.map((data, index) => {
             let setInfo = SetDataset.getInfo(data.id);
+
+            if (null === setInfo) {
+                return false;
+            }
+
             let setRequire = setInfo.skills[data.step - 1].require;
 
             return (
@@ -625,13 +647,13 @@ export default class Main extends Component {
                                 return false;
                             }
 
-                            let skillName = SkillDataset.getInfo(skill.id).name;
+                            let skillInfo = SkillDataset.getInfo(skill.id);
 
-                            return (
+                            return (null !== skillInfo) ? (
                                 <div key={skill.id}>
-                                    <span>({skill.require}) {_(skillName)}</span>
+                                    <span>({skill.require}) {_(skillInfo.name)}</span>
                                 </div>
-                            );
+                            ) : false;
                         })}
                     </div>
                 </div>
@@ -645,7 +667,7 @@ export default class Main extends Component {
         return skills.map((data, index) => {
             let skillInfo = SkillDataset.getInfo(data.id);
 
-            return (
+            return (null !== skillInfo) ? (
                 <div key={skillInfo.id} className="row mhwc-item">
                     <div className="col-12 mhwc-name">
                         <span>
@@ -674,7 +696,7 @@ export default class Main extends Component {
                         </span>
                     </div>
                 </div>
-            );
+            ) : false;
         });
     };
 
