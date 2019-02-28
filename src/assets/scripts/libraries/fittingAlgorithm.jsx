@@ -723,7 +723,7 @@ class FittingAlgorithm {
      * Add Candidate Equip To Bundle
      */
     addCandidateEquipToBundle = (bundle, candidateEquip) => {
-        if (null === candidateEquip.id) {
+        if (null === candidateEquip.id || undefined === candidateEquip.id) {
             return bundle;
         }
 

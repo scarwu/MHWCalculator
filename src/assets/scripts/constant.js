@@ -85,6 +85,7 @@ export default {
         bow: 1.2
     },
     defaultCandidateEquip: {
+        id: null,
         name: null,
         type: null,
         defense: 0,
