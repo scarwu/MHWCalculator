@@ -20,6 +20,15 @@ import App from 'app';
 // Load Config & Constant
 import Config from 'config';
 
+// Ployfill
+const polyfillObjectValues = (object) => {
+    return Object.keys(object).map((key) => {
+        return object[key];
+    });
+};
+
+Object.values = Object.values || polyfillObjectValues;
+
 // Set Sentry Endpoint
 if ('production' === Config.env) {
     Sentry.configureScope((scope) => {
