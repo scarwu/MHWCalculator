@@ -44,6 +44,11 @@ export default class ChangeLog extends Component {
         let LogMap = {
             zhTW: (
                 <div>
+                    <span>2019/03/24</span>
+                    <ul>
+                        <li>修正部份數值錯誤</li>
+                    </ul>
+
                     <span>2019/03/01</span>
                     <ul>
                         <li>新增狩魔獵人武器</li>
