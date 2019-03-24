@@ -46,6 +46,7 @@ export default class ChangeLog extends Component {
                 <div>
                     <span>2019/03/24</span>
                     <ul>
+                        <li>調整裝備選擇器界面</li>
                         <li>修正部份數值錯誤</li>
                     </ul>
 

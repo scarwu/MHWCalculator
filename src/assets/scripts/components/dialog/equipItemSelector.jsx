@@ -47,6 +47,7 @@ export default class EquipItemSelector extends Component {
         includeList: [],
         ignoreList: [],
         type: null,
+        rare: 8,
         segment: null
     };
 
@@ -95,6 +96,14 @@ export default class EquipItemSelector extends Component {
 
         this.setState({
             type: type
+        });
+    };
+
+    handleRareChange = () => {
+        let rare = this.refs.rare.value;
+
+        this.setState({
+            rare: parseInt(rare, 10)
         });
     };
 
@@ -366,6 +375,10 @@ export default class EquipItemSelector extends Component {
                             return;
                         }
 
+                        if (data.rare !== this.state.rare) {
+                            return;
+                        }
+
                         // Create Text
                         let text = _(data.name);
                         text += _(data.series);
@@ -486,6 +499,10 @@ export default class EquipItemSelector extends Component {
                 </thead>
                 <tbody>
                     {this.state.includeList.map((data, index) => {
+
+                        if (data.rare !== this.state.rare) {
+                            return;
+                        }
 
                         // Create Text
                         let text = _(data.name);
@@ -771,11 +788,21 @@ export default class EquipItemSelector extends Component {
                             placeholder={_('inputKeyword')}
                             ref="segment" onChange={this.handleSegmentInput} />
 
-                        {'weapon' === this.state.mode ? (
+                        {('weapon' === this.state.mode) ? (
                             <select defaultValue={this.state.type} ref="type" onChange={this.handleTypeChange}>
                                 {Constant.weaponTypes.map((type) => {
                                     return (
                                         <option key={type} value={type}>{_(type)}</option>
+                                    );
+                                })}
+                            </select>
+                        ) : false}
+
+                        {('weapon' === this.state.mode || 'armor' === this.state.mode) ? (
+                            <select defaultValue={this.state.rare} ref="rare" onChange={this.handleRareChange}>
+                                {[8, 7, 6, 5].map((rare) => {
+                                    return (
+                                        <option key={rare} value={rare}>{_('rare') + `: ${rare}`}</option>
                                     );
                                 })}
                             </select>
