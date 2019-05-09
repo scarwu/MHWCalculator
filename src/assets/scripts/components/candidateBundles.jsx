@@ -35,7 +35,6 @@ export default class CandidateBundles extends Component {
 
     // Default Props
     static defaultProps = {
-        data: {},
         onPickUp: (data) => {}
     };
 

@@ -293,8 +293,6 @@ export default class Main extends Component {
     };
 
     handleCandidateBundlesSearch = () => {
-        let sets = this.state.sets;
-        let skills = this.state.skills;
         let equips = this.state.equips;
         let equipsLock = this.state.equipsLock;
 
@@ -309,18 +307,11 @@ export default class Main extends Component {
             currentEquips[equipType] = equips[equipType];
         });
 
-        // Get Ignore Equips
-        let ignoreEquips = Status.get('ignoreEquips');
-
-        if (undefined === ignoreEquips) {
-            ignoreEquips = {};
-        }
-
         Event.trigger('SearchCandidateEquips', Helper.deepCopy({
             equips: currentEquips,
-            ignoreEquips: ignoreEquips,
-            sets: sets,
-            skills: skills
+            ignoreEquips: Status.get('ignoreEquips') || {},
+            sets: this.state.sets,
+            skills: this.state.skills
         }));
     };
 
@@ -566,7 +557,7 @@ export default class Main extends Component {
     /**
      * Lifecycle Functions
      */
-    static getDerivedStateFromProps(nextProps, prevState) {
+    static getDerivedStateFromProps (nextProps, prevState) {
         let hash = nextProps.match.params.hash;
 
         return (undefined !== hash) ? {

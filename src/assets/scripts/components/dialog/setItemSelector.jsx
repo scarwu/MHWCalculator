@@ -25,35 +25,6 @@ import FunctionalIcon from 'components/common/functionalIcon';
 // Load Constant
 import Constant from 'constant';
 
-let initState = (data) => {
-    let selectedList = [];
-    let unselectedList = [];
-
-    data = data.map((set) => {
-        return set.id;
-    });
-
-    SetDataset.getNames().sort().forEach((setId) => {
-        let set = SetDataset.getInfo(setId);
-
-        if (null === set) {
-            return;
-        }
-
-        // Skip Selected Sets
-        if (-1 !== data.indexOf(set.id)) {
-            selectedList.push(set);
-        } else {
-            unselectedList.push(set);
-        }
-    });
-
-    return {
-        selectedList: selectedList,
-        unselectedList: unselectedList
-    };
-};
-
 export default class SetItemSelector extends Component {
 
     // Default Props
@@ -110,8 +81,33 @@ export default class SetItemSelector extends Component {
     /**
      * Lifecycle Functions
      */
-    static getDerivedStateFromProps(nextProps, prevState) {
-        return initState(nextProps.data);
+    static getDerivedStateFromProps (nextProps, prevState) {
+        let selectedList = [];
+        let unselectedList = [];
+
+        let idList = nextProps.data.map((set) => {
+            return set.id;
+        });
+
+        SetDataset.getNames().sort().forEach((setId) => {
+            let set = SetDataset.getInfo(setId);
+
+            if (null === set) {
+                return;
+            }
+
+            // Skip Selected Sets
+            if (-1 !== idList.indexOf(set.id)) {
+                selectedList.push(set);
+            } else {
+                unselectedList.push(set);
+            }
+        });
+
+        return {
+            selectedList: selectedList,
+            unselectedList: unselectedList
+        };
     }
 
     /**

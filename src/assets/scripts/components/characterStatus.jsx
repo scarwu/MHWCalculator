@@ -27,6 +27,453 @@ import FunctionalIcon from 'components/common/functionalIcon';
 // Load Constant
 import Constant from 'constant';
 
+/**
+ * Generate Functions
+ */
+let generateStatus = (equips, passiveSkills) => {
+    let status = Helper.deepCopy(Constant.defaultStatus);
+
+    // Init Info
+    let info = {};
+
+    info.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon);
+
+    ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
+        info[equipType] = CommonDataset.getAppliedArmorInfo(equips[equipType]);
+    });
+
+    info.charm = CommonDataset.getAppliedCharmInfo(equips.charm);
+
+    if (null !== info.weapon) {
+        status.critical.rate = info.weapon.criticalRate;
+        status.sharpness = info.weapon.sharpness;
+        status.element = info.weapon.element;
+        status.elderseal = info.weapon.elderseal;
+    }
+
+    // Defense
+    ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
+        if (null === info[equipType]) {
+            return;
+        }
+
+        status.defense += info[equipType].defense;
+    });
+
+    // Resistance & Set
+    let setMapping = {};
+
+    ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
+        if (null === info[equipType]) {
+            return;
+        }
+
+        Constant.resistances.forEach((elementType) => {
+            status.resistance[elementType] += info[equipType].resistance[elementType];
+        });
+
+        if (null !== info[equipType].set) {
+            let setId = info[equipType].set.id;
+
+            if (undefined === setMapping[setId]) {
+                setMapping[setId] = 0;
+            }
+
+            setMapping[setId]++;
+        }
+    });
+
+    // Skills
+    let allSkills = {};
+
+    ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
+        if (null === info[equipType]) {
+            return;
+        }
+
+        info[equipType].skills.forEach((skill) => {
+            if (undefined === allSkills[skill.id]) {
+                allSkills[skill.id] = 0;
+            }
+
+            allSkills[skill.id] += skill.level;
+        });
+    });
+
+    Object.keys(setMapping).forEach((setId) => {
+        let setCount = setMapping[setId];
+        let setInfo = SetDataset.getInfo(setId);
+
+        if (null === setInfo) {
+            return;
+        }
+
+        setInfo.skills.forEach((skill) => {
+            if (skill.require > setCount) {
+                return;
+            }
+
+            let skillInfo = SkillDataset.getInfo(skill.id);
+
+            status.sets.push({
+                id: setId,
+                require: skill.require,
+                skill: {
+                    id: skillInfo.id,
+                    level: 1
+                }
+            });
+
+            if (undefined === allSkills[skill.id]) {
+                allSkills[skill.id] = 0;
+            }
+
+            allSkills[skill.id] += 1;
+        });
+    });
+
+    let noneElementAttackMutiple = null;
+    let enableElement = null;
+    let elementAttack = null;
+    let elementStatus = null;
+    let attackMultipleList = [];
+    let defenseMultipleList = [];
+
+    for (let skillId in allSkills) {
+        let skillInfo = SkillDataset.getInfo(skillId);
+
+        if (null === skillInfo) {
+            continue;
+        }
+
+        let skillLevel = allSkills[skillId];
+
+        // Fix Skill Level Overflow
+        if (skillLevel > skillInfo.list.length) {
+            skillLevel = skillInfo.list.length;
+        }
+
+        status.skills.push({
+            id: skillId,
+            level: skillLevel,
+            description: skillInfo.list[skillLevel - 1].description
+        });
+
+        if ('passive' === skillInfo.type) {
+            if (undefined === passiveSkills[skillId]) {
+                passiveSkills[skillId] = {
+                    isActive: false
+                };
+            }
+
+            if (false === passiveSkills[skillId].isActive) {
+                continue;
+            }
+        }
+
+        if (undefined === skillInfo.list[skillLevel - 1].reaction
+            || null === skillInfo.list[skillLevel - 1].reaction) {
+
+            continue;
+        }
+
+        for (let reactionType in skillInfo.list[skillLevel - 1].reaction) {
+            let data = skillInfo.list[skillLevel - 1].reaction[reactionType];
+
+            switch (reactionType) {
+            case 'health':
+            case 'stamina':
+            case 'attack':
+            case 'defense':
+                status[reactionType] += data.value;
+
+                break;
+            case 'criticalRate':
+                status.critical.rate += data.value;
+
+                break;
+            case 'criticalMultiple':
+                status.critical.multiple.positive = data.value;
+
+                break;
+            case 'sharpness':
+                if (null == status.sharpness) {
+                    break;
+                }
+
+                status.sharpness.value += data.value;
+
+                break;
+            case 'elementAttack':
+                if (null === status.element.attack
+                    || status.element.attack.type !== data.type) {
+
+                    break;
+                }
+
+                elementAttack = data;
+
+                break;
+            case 'elementStatus':
+                if (null === status.element.status
+                    || status.element.status.type !== data.type) {
+
+                    break;
+                }
+
+                elementStatus = data;
+
+                break;
+            case 'resistance':
+                if ('all' === data.type) {
+                    Constant.resistances.forEach((elementType) => {
+                        status.resistance[elementType] += data.value;
+                    });
+                } else {
+                    status.resistance[data.type] += data.value;
+                }
+
+                break;
+            case 'noneElementAttackMutiple':
+                noneElementAttackMutiple = data;
+
+                break;
+            case 'enableElement':
+                enableElement = data;
+
+                break;
+            case 'attackMultiple':
+                attackMultipleList.push(data.value);
+
+                break;
+            case 'defenseMultiple':
+                if (null !== status.element
+                    && false === status.element.isHidden) {
+
+                    break;
+                }
+
+                defenseMultipleList.push(data.value);
+
+                break;
+            }
+        }
+    }
+
+    // Last Status Completion
+    if (null !== info.weapon) {
+        let weaponAttack = info.weapon.attack;
+        let weaponType = info.weapon.type;
+
+        status.attack *= Constant.weaponMultiple[weaponType]; // 武器倍率
+
+        if (null == enableElement && null !== noneElementAttackMutiple) {
+            status.attack += weaponAttack * noneElementAttackMutiple.value;
+        } else {
+            status.attack += weaponAttack;
+        }
+    } else {
+        status.attack = 0;
+    }
+
+    // Attack Element
+    if (null !== status.element.attack) {
+        if (null !== enableElement) {
+            status.element.attack.value *= enableElement.multiple;
+            status.element.attack.isHidden = false;
+        }
+
+        if (null !== elementAttack) {
+            status.element.attack.value += elementAttack.value;
+            status.element.attack.value *= elementAttack.multiple;
+
+            if (status.element.attack.value > status.element.attack.maxValue) {
+                status.element.attack.value = status.element.attack.maxValue;
+            }
+        }
+
+        status.element.attack.value = parseInt(Math.round(status.element.attack.value));
+    }
+
+    // Status Element
+    if (null !== status.element.status) {
+        if (null !== enableElement) {
+            status.element.status.value *= enableElement.multiple;
+            status.element.status.isHidden = false;
+        }
+
+        if (null !== elementStatus) {
+            status.element.status.value += elementStatus.value;
+            status.element.status.value *= elementStatus.multiple;
+
+            if (status.element.status.value > status.element.status.maxValue) {
+                status.element.status.value = status.element.status.maxValue;
+            }
+        }
+
+        status.element.status.value = parseInt(Math.round(status.element.status.value));
+    }
+
+    attackMultipleList.forEach((multiple) => {
+        status.attack *= multiple;
+    });
+
+    defenseMultipleList.forEach((multiple) => {
+        status.defense *= multiple;
+    });
+
+    status.attack = parseInt(Math.round(status.attack));
+    status.defense = parseInt(Math.round(status.defense));
+
+    return status;
+};
+
+let generateExtraInfo = (equips, status, tuning) => {
+    let extraInfo = Helper.deepCopy(Constant.defaultExtraInfo);
+    let result = getBasicExtraInfo(equips, Helper.deepCopy(status), {});
+
+    extraInfo.rawAttack = result.rawAttack;
+    extraInfo.rawCriticalAttack = result.rawCriticalAttack;
+    extraInfo.rawExpectedValue = result.rawExpectedValue;
+    extraInfo.elementAttack = result.elementAttack;
+    extraInfo.elementExpectedValue = result.elementExpectedValue;
+    extraInfo.expectedValue = result.expectedValue;
+
+    // Raw Attack Tuning
+    result = getBasicExtraInfo(equips, Helper.deepCopy(status), {
+        rawAttack: tuning.rawAttack
+    });
+
+    extraInfo.perNRawAttackExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
+    extraInfo.perNRawAttackExpectedValue = Math.round(extraInfo.perNRawAttackExpectedValue * 100) / 100;
+
+    // Critical Rate Tuning
+    result = getBasicExtraInfo(equips, Helper.deepCopy(status), {
+        rawCriticalRate: tuning.rawCriticalRate
+    });
+
+    extraInfo.perNRawCriticalRateExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
+    extraInfo.perNRawCriticalRateExpectedValue = Math.round(extraInfo.perNRawCriticalRateExpectedValue * 100) / 100;
+
+    // Critical Multiple Tuning
+    result = getBasicExtraInfo(equips, Helper.deepCopy(status), {
+        rawCriticalMultiple: tuning.rawCriticalMultiple
+    });
+
+    extraInfo.perNRawCriticalMultipleExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
+    extraInfo.perNRawCriticalMultipleExpectedValue = Math.round(extraInfo.perNRawCriticalMultipleExpectedValue * 100) / 100;
+
+    // Element Attack Tuning
+    result = getBasicExtraInfo(equips, Helper.deepCopy(status), {
+        elementAttack: tuning.elementAttack
+    });
+
+    extraInfo.perNElementAttackExpectedValue = result.elementExpectedValue - extraInfo.elementExpectedValue;
+    extraInfo.perNElementAttackExpectedValue = Math.round(extraInfo.perNElementAttackExpectedValue * 100) / 100;
+
+    return extraInfo;
+};
+
+let getBasicExtraInfo = (equips, status, tuning) => {
+    let rawAttack = 0;
+    let rawCriticalAttack = 0;
+    let rawExpectedValue = 0;
+    let elementAttack = 0;
+    let elementExpectedValue = 0;
+    let expectedValue = 0;
+
+    let weaponInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
+
+    if (null !== weaponInfo) {
+        let weaponMultiple = Constant.weaponMultiple[weaponInfo.type];
+        let sharpnessMultiple = getSharpnessMultiple(status.sharpness);
+
+        rawAttack = (status.attack / weaponMultiple);
+
+        if (undefined !== tuning.rawAttack) {
+            rawAttack += tuning.rawAttack;
+        }
+
+        if (undefined !== tuning.rawCriticalRate) {
+            status.critical.rate += tuning.rawCriticalRate;
+        }
+
+        if (undefined !== tuning.rawCriticalMultiple) {
+            status.critical.multiple.positive += tuning.rawCriticalMultiple;
+        }
+
+        let criticalRate = (100 >= status.critical.rate)
+            ? Math.abs(status.critical.rate) : 100;
+        let criticalMultiple = (0 <= status.critical.rate)
+            ? status.critical.multiple.positive
+            : status.critical.multiple.nagetive;
+
+        if (null !== status.element.attack
+            && !status.element.attack.isHidden) {
+
+            elementAttack = status.element.attack.value;
+
+            if (undefined !== tuning.elementAttack) {
+                elementAttack += tuning.elementAttack;
+            }
+
+            elementAttack = elementAttack / 10;
+        }
+
+        rawAttack *= sharpnessMultiple.raw;
+        rawCriticalAttack = rawAttack * criticalMultiple;
+        rawExpectedValue = (rawAttack * (100 - criticalRate) / 100)
+            + (rawCriticalAttack * criticalRate / 100);
+
+        elementAttack *= sharpnessMultiple.element;
+        elementExpectedValue = elementAttack;
+
+        expectedValue = rawExpectedValue + elementExpectedValue;
+
+        rawAttack = Math.round(rawAttack * 100) / 100;
+        rawCriticalAttack = Math.round(rawCriticalAttack * 100) / 100;
+        rawExpectedValue = Math.round(rawExpectedValue * 100) / 100;
+        elementAttack = Math.round(elementAttack * 100) / 100;
+        elementExpectedValue = Math.round(elementExpectedValue * 100) / 100;
+        expectedValue = Math.round(expectedValue * 100) / 100;
+    }
+
+    return {
+        rawAttack: rawAttack,
+        rawCriticalAttack: rawCriticalAttack,
+        rawExpectedValue: rawExpectedValue,
+        elementAttack: elementAttack,
+        elementExpectedValue: elementExpectedValue,
+        expectedValue: expectedValue
+    }
+};
+
+let getSharpnessMultiple = (data) => {
+    if (null === data) {
+        return {
+            raw: 1,
+            element: 1
+        };
+    }
+
+    let currentStep = null;
+    let currentValue = 0;
+
+    for (let stepName in data.steps) {
+        currentStep = stepName;
+        currentValue += data.steps[stepName];
+
+        if (currentValue >= data.value) {
+            break;
+        }
+    }
+
+    return {
+        raw: Constant.sharpnessMultiple.raw[currentStep],
+        element: Constant.sharpnessMultiple.element[currentStep]
+    };
+};
+
 export default class CharacterStatus extends Component {
 
     // Default Props
@@ -56,14 +503,14 @@ export default class CharacterStatus extends Component {
      * Handle Functions
      */
     handlePassiveSkillToggle = (skillId) => {
+        let equips = this.state.equips;
         let passiveSkills = this.state.passiveSkills;
 
         passiveSkills[skillId].isActive = !passiveSkills[skillId].isActive;
 
         this.setState({
             passiveSkills: passiveSkills,
-        }, () => {
-            this.generateStatus();
+            status: generateStatus(equips, passiveSkills)
         });
     };
 
@@ -78,497 +525,34 @@ export default class CharacterStatus extends Component {
         tuningRawCriticalMultiple = !isNaN(tuningRawCriticalMultiple) ? tuningRawCriticalMultiple : 0;
         tuningElementAttack = !isNaN(tuningElementAttack) ? tuningElementAttack : 0;
 
-        this.setState({
-            tuning: {
-                rawAttack: tuningRawAttack,
-                rawCriticalRate: tuningRawCriticalRate,
-                rawCriticalMultiple: tuningRawCriticalMultiple,
-                elementAttack: tuningElementAttack
-            }
-        }, () => {
-            this.generateExtraInfo();
-        });
-    };
-
-    /**
-     * Generate Functions
-     */
-    generateStatus = () => {
         let equips = this.state.equips;
-        let passiveSkills = this.state.passiveSkills;
-        let status = Helper.deepCopy(Constant.defaultStatus);
-
-        // Init Info
-        let info = {};
-
-        info.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon);
-
-        ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-            info[equipType] = CommonDataset.getAppliedArmorInfo(equips[equipType]);
-        });
-
-        info.charm = CommonDataset.getAppliedCharmInfo(equips.charm);
-
-        if (null !== info.weapon) {
-            status.critical.rate = info.weapon.criticalRate;
-            status.sharpness = info.weapon.sharpness;
-            status.element = info.weapon.element;
-            status.elderseal = info.weapon.elderseal;
-        }
-
-        // Defense
-        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-            if (null === info[equipType]) {
-                return;
-            }
-
-            status.defense += info[equipType].defense;
-        });
-
-        // Resistance & Set
-        let setMapping = {};
-
-        ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-            if (null === info[equipType]) {
-                return;
-            }
-
-            Constant.resistances.forEach((elementType) => {
-                status.resistance[elementType] += info[equipType].resistance[elementType];
-            });
-
-            if (null !== info[equipType].set) {
-                let setId = info[equipType].set.id;
-
-                if (undefined === setMapping[setId]) {
-                    setMapping[setId] = 0;
-                }
-
-                setMapping[setId]++;
-            }
-        });
-
-        // Skills
-        let allSkills = {};
-
-        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
-            if (null === info[equipType]) {
-                return;
-            }
-
-            info[equipType].skills.forEach((skill) => {
-                if (undefined === allSkills[skill.id]) {
-                    allSkills[skill.id] = 0;
-                }
-
-                allSkills[skill.id] += skill.level;
-            });
-        });
-
-        Object.keys(setMapping).forEach((setId) => {
-            let setCount = setMapping[setId];
-            let setInfo = SetDataset.getInfo(setId);
-
-            if (null === setInfo) {
-                return;
-            }
-
-            setInfo.skills.forEach((skill) => {
-                if (skill.require > setCount) {
-                    return;
-                }
-
-                let skillInfo = SkillDataset.getInfo(skill.id);
-
-                status.sets.push({
-                    id: setId,
-                    require: skill.require,
-                    skill: {
-                        id: skillInfo.id,
-                        level: 1
-                    }
-                });
-
-                if (undefined === allSkills[skill.id]) {
-                    allSkills[skill.id] = 0;
-                }
-
-                allSkills[skill.id] += 1;
-            });
-        });
-
-        let noneElementAttackMutiple = null;
-        let enableElement = null;
-        let elementAttack = null;
-        let elementStatus = null;
-        let attackMultipleList = [];
-        let defenseMultipleList = [];
-
-        for (let skillId in allSkills) {
-            let skillInfo = SkillDataset.getInfo(skillId);
-
-            if (null === skillInfo) {
-                continue;
-            }
-
-            let skillLevel = allSkills[skillId];
-
-            // Fix Skill Level Overflow
-            if (skillLevel > skillInfo.list.length) {
-                skillLevel = skillInfo.list.length;
-            }
-
-            status.skills.push({
-                id: skillId,
-                level: skillLevel,
-                description: skillInfo.list[skillLevel - 1].description
-            });
-
-            if ('passive' === skillInfo.type) {
-                if (undefined === passiveSkills[skillId]) {
-                    passiveSkills[skillId] = {
-                        isActive: false
-                    };
-                }
-
-                if (false === passiveSkills[skillId].isActive) {
-                    continue;
-                }
-            }
-
-            if (undefined === skillInfo.list[skillLevel - 1].reaction
-                || null === skillInfo.list[skillLevel - 1].reaction) {
-
-                continue;
-            }
-
-            for (let reactionType in skillInfo.list[skillLevel - 1].reaction) {
-                let data = skillInfo.list[skillLevel - 1].reaction[reactionType];
-
-                switch (reactionType) {
-                case 'health':
-                case 'stamina':
-                case 'attack':
-                case 'defense':
-                    status[reactionType] += data.value;
-
-                    break;
-                case 'criticalRate':
-                    status.critical.rate += data.value;
-
-                    break;
-                case 'criticalMultiple':
-                    status.critical.multiple.positive = data.value;
-
-                    break;
-                case 'sharpness':
-                    if (null == status.sharpness) {
-                        break;
-                    }
-
-                    status.sharpness.value += data.value;
-
-                    break;
-                case 'elementAttack':
-                    if (null === status.element.attack
-                        || status.element.attack.type !== data.type) {
-
-                        break;
-                    }
-
-                    elementAttack = data;
-
-                    break;
-                case 'elementStatus':
-                    if (null === status.element.status
-                        || status.element.status.type !== data.type) {
-
-                        break;
-                    }
-
-                    elementStatus = data;
-
-                    break;
-                case 'resistance':
-                    if ('all' === data.type) {
-                        Constant.resistances.forEach((elementType) => {
-                            status.resistance[elementType] += data.value;
-                        });
-                    } else {
-                        status.resistance[data.type] += data.value;
-                    }
-
-                    break;
-                case 'noneElementAttackMutiple':
-                    noneElementAttackMutiple = data;
-
-                    break;
-                case 'enableElement':
-                    enableElement = data;
-
-                    break;
-                case 'attackMultiple':
-                    attackMultipleList.push(data.value);
-
-                    break;
-                case 'defenseMultiple':
-                    if (null !== status.element
-                        && false === status.element.isHidden) {
-
-                        break;
-                    }
-
-                    defenseMultipleList.push(data.value);
-
-                    break;
-                }
-            }
-        }
-
-        // Last Status Completion
-        if (null !== info.weapon) {
-            let weaponAttack = info.weapon.attack;
-            let weaponType = info.weapon.type;
-
-            status.attack *= Constant.weaponMultiple[weaponType]; // 武器倍率
-
-            if (null == enableElement && null !== noneElementAttackMutiple) {
-                status.attack += weaponAttack * noneElementAttackMutiple.value;
-            } else {
-                status.attack += weaponAttack;
-            }
-        } else {
-            status.attack = 0;
-        }
-
-        // Attack Element
-        if (null !== status.element.attack) {
-            if (null !== enableElement) {
-                status.element.attack.value *= enableElement.multiple;
-                status.element.attack.isHidden = false;
-            }
-
-            if (null !== elementAttack) {
-                status.element.attack.value += elementAttack.value;
-                status.element.attack.value *= elementAttack.multiple;
-
-                if (status.element.attack.value > status.element.attack.maxValue) {
-                    status.element.attack.value = status.element.attack.maxValue;
-                }
-            }
-
-            status.element.attack.value = parseInt(Math.round(status.element.attack.value));
-        }
-
-        // Status Element
-        if (null !== status.element.status) {
-            if (null !== enableElement) {
-                status.element.status.value *= enableElement.multiple;
-                status.element.status.isHidden = false;
-            }
-
-            if (null !== elementStatus) {
-                status.element.status.value += elementStatus.value;
-                status.element.status.value *= elementStatus.multiple;
-
-                if (status.element.status.value > status.element.status.maxValue) {
-                    status.element.status.value = status.element.status.maxValue;
-                }
-            }
-
-            status.element.status.value = parseInt(Math.round(status.element.status.value));
-        }
-
-        attackMultipleList.forEach((multiple) => {
-            status.attack *= multiple;
-        });
-
-        defenseMultipleList.forEach((multiple) => {
-            status.defense *= multiple;
-        });
-
-        status.attack = parseInt(Math.round(status.attack));
-        status.defense = parseInt(Math.round(status.defense));
-
-        this.setState({
-            status: status,
-            passiveSkills: passiveSkills
-        }, () => {
-            this.generateExtraInfo();
-        });
-    };
-
-    generateExtraInfo = () => {
-        let equips = this.state.equips;
-        let status = Helper.deepCopy(this.state.status);
-        let extraInfo = Helper.deepCopy(Constant.defaultExtraInfo);
-
-        let result = this.getBasicExtraInfo(equips, status, {});
-
-        extraInfo.rawAttack = result.rawAttack;
-        extraInfo.rawCriticalAttack = result.rawCriticalAttack;
-        extraInfo.rawExpectedValue = result.rawExpectedValue;
-        extraInfo.elementAttack = result.elementAttack;
-        extraInfo.elementExpectedValue = result.elementExpectedValue;
-        extraInfo.expectedValue = result.expectedValue;
-
-        let tuning = this.state.tuning;
-
-        // Raw Attack Tuning
-        status = Helper.deepCopy(this.state.status);
-        result = this.getBasicExtraInfo(equips, status, {
-            rawAttack: tuning.rawAttack
-        });
-
-        extraInfo.perNRawAttackExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
-        extraInfo.perNRawAttackExpectedValue = Math.round(extraInfo.perNRawAttackExpectedValue * 100) / 100;
-
-        // Critical Rate Tuning
-        status = Helper.deepCopy(this.state.status);
-        result = this.getBasicExtraInfo(equips, status, {
-            rawCriticalRate: tuning.rawCriticalRate
-        });
-
-        extraInfo.perNRawCriticalRateExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
-        extraInfo.perNRawCriticalRateExpectedValue = Math.round(extraInfo.perNRawCriticalRateExpectedValue * 100) / 100;
-
-        // Critical Multiple Tuning
-        status = Helper.deepCopy(this.state.status);
-        result = this.getBasicExtraInfo(equips, status, {
-            rawCriticalMultiple: tuning.rawCriticalMultiple
-        });
-
-        extraInfo.perNRawCriticalMultipleExpectedValue = result.rawExpectedValue - extraInfo.rawExpectedValue;
-        extraInfo.perNRawCriticalMultipleExpectedValue = Math.round(extraInfo.perNRawCriticalMultipleExpectedValue * 100) / 100;
-
-        // Element Attack Tuning
-        status = Helper.deepCopy(this.state.status);
-        result = this.getBasicExtraInfo(equips, status, {
-            elementAttack: tuning.elementAttack
-        });
-
-        extraInfo.perNElementAttackExpectedValue = result.elementExpectedValue - extraInfo.elementExpectedValue;
-        extraInfo.perNElementAttackExpectedValue = Math.round(extraInfo.perNElementAttackExpectedValue * 100) / 100;
-
-        this.setState({
-            extraInfo: extraInfo
-        });
-    };
-
-    getBasicExtraInfo = (equips, status, tuning) => {
-        let rawAttack = 0;
-        let rawCriticalAttack = 0;
-        let rawExpectedValue = 0;
-        let elementAttack = 0;
-        let elementExpectedValue = 0;
-        let expectedValue = 0;
-
-        let weaponInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
-
-        if (null !== weaponInfo) {
-            let weaponMultiple = Constant.weaponMultiple[weaponInfo.type];
-            let sharpnessMultiple = this.getSharpnessMultiple(status.sharpness);
-
-            rawAttack = (status.attack / weaponMultiple);
-
-            if (undefined !== tuning.rawAttack) {
-                rawAttack += tuning.rawAttack;
-            }
-
-            if (undefined !== tuning.rawCriticalRate) {
-                status.critical.rate += tuning.rawCriticalRate;
-            }
-
-            if (undefined !== tuning.rawCriticalMultiple) {
-                status.critical.multiple.positive += tuning.rawCriticalMultiple;
-            }
-
-            let criticalRate = (100 >= status.critical.rate)
-                ? Math.abs(status.critical.rate) : 100;
-            let criticalMultiple = (0 <= status.critical.rate)
-                ? status.critical.multiple.positive
-                : status.critical.multiple.nagetive;
-
-            if (null !== status.element.attack
-                && !status.element.attack.isHidden) {
-
-                elementAttack = status.element.attack.value;
-
-                if (undefined !== tuning.elementAttack) {
-                    elementAttack += tuning.elementAttack;
-                }
-
-                elementAttack = elementAttack / 10;
-            }
-
-            rawAttack *= sharpnessMultiple.raw;
-            rawCriticalAttack = rawAttack * criticalMultiple;
-            rawExpectedValue = (rawAttack * (100 - criticalRate) / 100)
-                + (rawCriticalAttack * criticalRate / 100);
-
-            elementAttack *= sharpnessMultiple.element;
-            elementExpectedValue = elementAttack;
-
-            expectedValue = rawExpectedValue + elementExpectedValue;
-
-            rawAttack = Math.round(rawAttack * 100) / 100;
-            rawCriticalAttack = Math.round(rawCriticalAttack * 100) / 100;
-            rawExpectedValue = Math.round(rawExpectedValue * 100) / 100;
-            elementAttack = Math.round(elementAttack * 100) / 100;
-            elementExpectedValue = Math.round(elementExpectedValue * 100) / 100;
-            expectedValue = Math.round(expectedValue * 100) / 100;
-        }
-
-        return {
-            rawAttack: rawAttack,
-            rawCriticalAttack: rawCriticalAttack,
-            rawExpectedValue: rawExpectedValue,
-            elementAttack: elementAttack,
-            elementExpectedValue: elementExpectedValue,
-            expectedValue: expectedValue
-        }
-    };
-
-    getSharpnessMultiple = (data) => {
-        if (null === data) {
-            return {
-                raw: 1,
-                element: 1
-            };
-        }
-
-        let currentStep = null;
-        let currentValue = 0;
-
-        for (let stepName in data.steps) {
-            currentStep = stepName;
-            currentValue += data.steps[stepName];
-
-            if (currentValue >= data.value) {
-                break;
-            }
-        }
-
-        return {
-            raw: Constant.sharpnessMultiple.raw[currentStep],
-            element: Constant.sharpnessMultiple.element[currentStep]
+        let status = this.state.status;
+        let tuning = {
+            rawAttack: tuningRawAttack,
+            rawCriticalRate: tuningRawCriticalRate,
+            rawCriticalMultiple: tuningRawCriticalMultiple,
+            elementAttack: tuningElementAttack
         };
+
+        this.setState({
+            tuning: tuning,
+            extraInfo: generateExtraInfo(equips, status, tuning)
+        });
     };
 
     /**
      * Lifecycle Functions
      */
-    componentDidMount () {
-        this.generateStatus();
-    }
+    static getDerivedStateFromProps (nextProps, prevState) {
+        let status = generateStatus(nextProps.equips, {});
+        let extraInfo = generateExtraInfo(nextProps.equips, status, prevState.tuning);
 
-    componentWillReceiveProps (nextProps) {
-        this.setState({
+        return {
             equips: nextProps.equips,
-            passiveSkills: {}
-        }, () => {
-            this.generateStatus();
-        });
+            status: status,
+            passiveSkills: {},
+            extraInfo: extraInfo
+        };
     }
 
     /**
@@ -595,12 +579,21 @@ export default class CharacterStatus extends Component {
     };
 
     render () {
+        let equips = this.state.equips;
         let status = this.state.status;
         let extraInfo = this.state.extraInfo;
         let passiveSkills = this.state.passiveSkills;
 
         if (null === status) {
             return false;
+        }
+
+        // Weapon
+        let weaponInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
+        let originalSharpness = null;
+
+        if (null !== weaponInfo && null !== weaponInfo.sharpness) {
+            originalSharpness = Helper.deepCopy(weaponInfo.sharpness);
         }
 
         return (
@@ -651,7 +644,7 @@ export default class CharacterStatus extends Component {
                             ), (
                                 <div key={'sharpness_2'} className="col-8">
                                     <div className="mhwc-value mhwc-sharpness">
-                                        {this.renderSharpnessBar(status.sharpness)}
+                                        {this.renderSharpnessBar(originalSharpness)}
                                         {this.renderSharpnessBar(status.sharpness)}
                                     </div>
                                 </div>

@@ -31,112 +31,6 @@ import FunctionalIcon from 'components/common/functionalIcon';
 // Load Constant
 import Constant from 'constant';
 
-let initState = (data) => {
-    let mode = null;
-    let includeList = [];
-    let ignoreList = [];
-    let type = null;
-
-    let ignoreEquips = Status.get('ignoreEquips');
-
-    if (undefined === ignoreEquips) {
-        ignoreEquips = {};
-    }
-
-    if (undefined !== data.enhanceIndex) {
-        mode = 'enhance';
-        includeList = EnhanceDataset.getItems();
-    } else if (undefined !== data.slotIndex) {
-        mode = 'jewel';
-
-        for (let size = data.slotSize; size >= 1; size--) {
-            for (let rare = 8; rare >= 5; rare--) {
-                includeList = includeList.concat(
-                    JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems()
-                );
-            }
-        }
-    } else if ('weapon' === data.equipType) {
-        let weaponInfo = WeaponDataset.getInfo(data.equipId);
-
-        mode = 'weapon';
-        type = (null !== weaponInfo) ? weaponInfo.type : Constant.weaponTypes[0];
-
-        Constant.weaponTypes.forEach((weaponType) => {
-            for (let rare = 8; rare >= 5; rare--) {
-                WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
-                    if (undefined !== ignoreEquips['weapon']
-                        && true === ignoreEquips['weapon'][equip.id]) {
-
-                        ignoreList.push(equip);
-                    } else {
-                        includeList.push(equip);
-                    }
-                });
-            }
-
-            WeaponDataset.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
-                if (undefined !== ignoreEquips['weapon']
-                    && true === ignoreEquips['weapon'][equip.id]) {
-
-                    ignoreList.push(equip);
-                } else {
-                    includeList.push(equip);
-                }
-            });
-        });
-    } else if ('helm' === data.equipType
-        || 'chest' === data.equipType
-        || 'arm' === data.equipType
-        || 'waist' === data.equipType
-        || 'leg' === data.equipType) {
-
-        mode = 'armor';
-        type = data.equipType;
-
-        for (let rare = 8; rare >= 5; rare--) {
-            ArmorDataset.typeIs(data.equipType).rareIs(rare).getItems().forEach((equip) => {
-                if (undefined !== ignoreEquips[equip.type]
-                    && true === ignoreEquips[equip.type][equip.id]) {
-
-                    ignoreList.push(equip);
-                } else {
-                    includeList.push(equip);
-                }
-            });
-        }
-
-        ArmorDataset.typeIs(data.equipType).rareIs(0).getItems().forEach((equip) => {
-            if (undefined !== ignoreEquips[equip.type]
-                && true === ignoreEquips[equip.type][equip.id]) {
-
-                ignoreList.push(equip);
-            } else {
-                includeList.push(equip);
-            }
-        });
-    } else if ('charm' === data.equipType) {
-        mode = 'charm';
-
-        CharmDataset.getItems().forEach((equip) => {
-            if (undefined !== ignoreEquips['charm']
-                && true === ignoreEquips['charm'][equip.id]) {
-
-                ignoreList.push(equip);
-            } else {
-                includeList.push(equip);
-            }
-        });
-    }
-
-    return {
-        mode: mode,
-        includeList: includeList,
-        ignoreList: ignoreList,
-        type: type
-    };
-};
-
 export default class EquipItemSelector extends Component {
 
     // Default Props
@@ -220,8 +114,106 @@ export default class EquipItemSelector extends Component {
     /**
      * Lifecycle Functions
      */
-    static getDerivedStateFromProps(nextProps, prevState) {
-        return initState(nextProps.data);
+    static getDerivedStateFromProps (nextProps, prevState) {
+        let mode = null;
+        let includeList = [];
+        let ignoreList = [];
+        let type = null;
+
+        let ignoreEquips = Status.get('ignoreEquips') || {};
+
+        if (undefined !== nextProps.data.enhanceIndex) {
+            mode = 'enhance';
+            includeList = EnhanceDataset.getItems();
+        } else if (undefined !== nextProps.data.slotIndex) {
+            mode = 'jewel';
+
+            for (let size = nextProps.data.slotSize; size >= 1; size--) {
+                for (let rare = 8; rare >= 5; rare--) {
+                    includeList = includeList.concat(
+                        JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems()
+                    );
+                }
+            }
+        } else if ('weapon' === nextProps.data.equipType) {
+            let weaponInfo = WeaponDataset.getInfo(nextProps.data.equipId);
+
+            mode = 'weapon';
+            type = (null !== weaponInfo) ? weaponInfo.type : Constant.weaponTypes[0];
+
+            Constant.weaponTypes.forEach((weaponType) => {
+                for (let rare = 8; rare >= 5; rare--) {
+                    WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
+                        if (undefined !== ignoreEquips['weapon']
+                            && true === ignoreEquips['weapon'][equip.id]) {
+
+                            ignoreList.push(equip);
+                        } else {
+                            includeList.push(equip);
+                        }
+                    });
+                }
+
+                WeaponDataset.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
+                    if (undefined !== ignoreEquips['weapon']
+                        && true === ignoreEquips['weapon'][equip.id]) {
+
+                        ignoreList.push(equip);
+                    } else {
+                        includeList.push(equip);
+                    }
+                });
+            });
+        } else if ('helm' === nextProps.data.equipType
+            || 'chest' === nextProps.data.equipType
+            || 'arm' === nextProps.data.equipType
+            || 'waist' === nextProps.data.equipType
+            || 'leg' === nextProps.data.equipType) {
+
+            mode = 'armor';
+            type = nextProps.data.equipType;
+
+            for (let rare = 8; rare >= 5; rare--) {
+                ArmorDataset.typeIs(nextProps.data.equipType).rareIs(rare).getItems().forEach((equip) => {
+                    if (undefined !== ignoreEquips[equip.type]
+                        && true === ignoreEquips[equip.type][equip.id]) {
+
+                        ignoreList.push(equip);
+                    } else {
+                        includeList.push(equip);
+                    }
+                });
+            }
+
+            ArmorDataset.typeIs(nextProps.data.equipType).rareIs(0).getItems().forEach((equip) => {
+                if (undefined !== ignoreEquips[equip.type]
+                    && true === ignoreEquips[equip.type][equip.id]) {
+
+                    ignoreList.push(equip);
+                } else {
+                    includeList.push(equip);
+                }
+            });
+        } else if ('charm' === nextProps.data.equipType) {
+            mode = 'charm';
+
+            CharmDataset.getItems().forEach((equip) => {
+                if (undefined !== ignoreEquips['charm']
+                    && true === ignoreEquips['charm'][equip.id]) {
+
+                    ignoreList.push(equip);
+                } else {
+                    includeList.push(equip);
+                }
+            });
+        }
+
+        return {
+            mode: mode,
+            includeList: includeList,
+            ignoreList: ignoreList,
+            type: type
+        };
     }
 
     /**
