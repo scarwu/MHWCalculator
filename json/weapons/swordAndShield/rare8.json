@@ -473,17 +473,17 @@
         ]
     },
     {
-        "id": "狩魔獵人的銀劍+",
+        "id": "狩魔獵人的銀劍＋",
         "rare": 8,
         "type": "swordAndShield",
         "series": {
             "zhTW": "狩魔獵人",
-            "jaJP": null,
+            "jaJP": "ウィッチャー",
             "enUS": null
         },
         "name": {
             "zhTW": "狩魔獵人的銀劍＋",
-            "jaJP": null,
+            "jaJP": "ウィッチャーの銀の剣＋",
             "enUS": null
         },
         "attack": 266,
