@@ -39,7 +39,7 @@ export default class CharacterStatus extends Component {
 
         // Initial State
         this.state = {
-            equips: props.equips || Helper.deepCopy(Constant.defaultEquips),
+            equips: Helper.deepCopy(Constant.defaultEquips),
             status: Helper.deepCopy(Constant.defaultStatus),
             extraInfo: Helper.deepCopy(Constant.defaultExtraInfo),
             passiveSkills: {},

@@ -137,7 +137,6 @@ let initState = (data) => {
     };
 };
 
-
 export default class EquipItemSelector extends Component {
 
     // Default Props
@@ -152,14 +151,14 @@ export default class EquipItemSelector extends Component {
         super(props);
 
         // Initial State
-        this.state = Object.assign({
+        this.state = {
             mode: null,
             includeList: [],
             ignoreList: [],
             type: null,
             rare: 8,
             segment: null
-        }, initState(props.data));
+        };
     }
 
     /**

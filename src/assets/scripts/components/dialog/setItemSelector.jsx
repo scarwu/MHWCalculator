@@ -68,11 +68,13 @@ export default class SetItemSelector extends Component {
         super(props);
 
         // Initial State
-        this.state = Object.assign({
+        this.state = {
             data: {},
             list: [],
-            segment: null
-        }, initState(props.data));
+            segment: null,
+            selectedList: [],
+            unselectedList: []
+        };
     }
 
     /**

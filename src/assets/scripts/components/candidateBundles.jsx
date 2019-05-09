@@ -106,6 +106,10 @@ export default class CandidateBundles extends Component {
         });
     }
 
+    componentWillUnmount () {
+        Event.off('SearchCandidateEquips', 'CandidateBundles');
+    }
+
     /**
      * Render Functions
      */

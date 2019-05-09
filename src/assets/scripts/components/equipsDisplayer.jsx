@@ -45,8 +45,8 @@ export default class EquipsDisplayer extends Component {
 
         // Initial State
         this.state = {
-            equips: props.equips || Helper.deepCopy(Constant.defaultEquips),
-            equipsLock: props.equipsLock || Helper.deepCopy(Constant.defaultEquipsLock)
+            equips: Helper.deepCopy(Constant.defaultEquips),
+            equipsLock: Helper.deepCopy(Constant.defaultEquipsLock)
         };
     }
 

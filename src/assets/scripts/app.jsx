@@ -55,58 +55,26 @@ export default class Main extends Component {
     constructor (props) {
         super(props);
 
-        // Get Sets, Skills & Equips Data from Status
-        let sets = Status.get('sets');
-        let skills = Status.get('skills');
-        let equips = Status.get('equips');
-
-        if (undefined === sets) {
-            sets = Helper.deepCopy(TestData.requireList[0]).sets;
-        }
-
-        if (undefined === skills) {
-            skills = Helper.deepCopy(TestData.requireList[0]).skills;
-        }
-
-        if (undefined === equips) {
-            equips = Helper.deepCopy(TestData.equipsList[0]);
-        }
-
-        // Is Show ChangeLog
-        let isShowChangeLog = ('production' === Config.env)
-            ? (Config.buildTime !== parseInt(Status.get('buildTime'))) : false;
-
-        Status.set('buildTime', Config.buildTime);
-
         // Initial State
         this.state = {
             lang: Status.get('lang'),
-            sets: sets,
-            skills: skills,
-            equips: equips,
+            sets: Status.get('sets') || Helper.deepCopy(TestData.requireList[0]).sets,
+            skills: Status.get('skills') || Helper.deepCopy(TestData.requireList[0]).skills,
+            equips: Status.get('equips') || Helper.deepCopy(TestData.equipsList[0]),
             equipsLock: Helper.deepCopy(Constant.defaultEquipsLock),
             equipSelector: {},
             isShowEquipBundleSelector: false,
             isShowSetSelector: false,
             isShowSkillSelector: false,
             isShowEquipSelector: false,
-            isShowChangeLog: isShowChangeLog
+            isShowChangeLog: ('production' === Config.env)
+                ? (Config.buildTime !== parseInt(Status.get('buildTime'))) : false
         };
     }
 
     /**
      * Handle Functions
      */
-    handleBundleImport = () => {
-        let hash = this.props.match.params.hash;
-
-        if (undefined !== hash) {
-            this.setState({
-                equips: JSON.parse(Base64.decode(hash))
-            });
-        }
-    };
-
     handleBundleExport = () => {
         let equips = Helper.deepCopy(this.state.equips);
         let hash = Base64.encode(JSON.stringify(equips));
@@ -495,8 +463,8 @@ export default class Main extends Component {
             || 'chest' === data.equipType
             || 'arm' === data.equipType
             || 'waist' === data.equipType
-            || 'leg' === data.equipType) {
-
+            || 'leg' === data.equipType
+        ) {
             equips[data.equipType] = {
                 id: data.equipId,
                 slotIds: {}
@@ -598,8 +566,12 @@ export default class Main extends Component {
     /**
      * Lifecycle Functions
      */
-    componentDidMount () {
-        this.handleBundleImport();
+    static getDerivedStateFromProps(nextProps, prevState) {
+        let hash = nextProps.match.params.hash;
+
+        return (undefined !== hash) ? {
+            equips: JSON.parse(Base64.decode(hash))
+        } : null;
     }
 
     /**

@@ -66,10 +66,10 @@ export default class EquipBundleSelector extends Component {
         super(props);
 
         // Initial State
-        this.state = Object.assign({
+        this.state = {
             equips: null,
             equipBundleList: []
-        }, initState(props.data));
+        };
     }
 
     /**

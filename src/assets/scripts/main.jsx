@@ -14,6 +14,9 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import * as Sentry from '@sentry/browser'
 
+// Load Core Libraries
+import Status from 'core/status';
+
 // Load App
 import App from 'app';
 
@@ -40,12 +43,12 @@ if ('production' === Config.env) {
     });
 }
 
+// Set Build Time
+Status.set('buildTime', Config.buildTime);
+
 // Router
 ReactDOM.render((
     <Router>
-        <div>
-            <Route exact path="/" component={App} />
-            <Route exact path="/:hash" component={App} />
-        </div>
+        <Route exact path="/:hash?" component={App} />
     </Router>
 ), document.getElementById('mhwc-router'));
