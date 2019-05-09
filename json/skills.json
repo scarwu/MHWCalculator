@@ -102,7 +102,7 @@
         "name": {
             "zhTW": "KO術",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Slugger"
         },
         "type": "active",
         "from" : {
@@ -116,7 +116,7 @@
                 "description": {
                     "zhTW": "昏厥威力1.1倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": " Stun Power +10%"
                 },
                 "reaction": null
             },
@@ -125,7 +125,7 @@
                 "description": {
                     "zhTW": "昏厥威力1.2倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": " Stun Power +20%"
                 },
                 "reaction": null
             },
@@ -134,7 +134,7 @@
                 "description": {
                     "zhTW": "昏厥威力1.3倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": " Stun Power +30%"
                 },
                 "reaction": null
             }
@@ -378,7 +378,7 @@
         "name": {
             "zhTW": "火屬性攻擊強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Fire Attack"
         },
         "type": "active",
         "from" : {
@@ -392,7 +392,7 @@
                 "description": {
                     "zhTW": "火屬性攻擊值+30",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+30 Fire Attack"
                 },
                 "reaction": {
                     "elementAttack": {
@@ -407,7 +407,7 @@
                 "description": {
                     "zhTW": "火屬性攻擊值+60",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+60 Fire Attack"
                 },
                 "reaction": {
                     "elementAttack": {
@@ -422,7 +422,7 @@
                 "description": {
                     "zhTW": "火屬性攻擊值+100",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+100 Fire Attack"
                 },
                 "reaction": {
                     "elementAttack": {
@@ -437,7 +437,7 @@
                 "description": {
                     "zhTW": "火屬性攻擊值變為1.05倍，火屬性攻擊值+100",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+5% Fire Attack and +100 Fire Attack"
                 },
                 "reaction": {
                     "elementAttack": {
@@ -452,7 +452,7 @@
                 "description": {
                     "zhTW": "火屬性攻擊值變為1.1倍，火屬性攻擊值+100",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+10% Fire Attack and +100 Fire Attack"
                 },
                 "reaction": {
                     "elementAttack": {
@@ -1050,7 +1050,7 @@
         "name": {
             "zhTW": "耳塞",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Earplugs"
         },
         "type": "active",
         "from" : {
@@ -1064,7 +1064,7 @@
                 "description": {
                     "zhTW": "小幅減輕咆哮【小】的影響",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Reduces the effects of weak monster roars"
                 },
                 "reaction": null
             },
@@ -1073,7 +1073,7 @@
                 "description": {
                     "zhTW": "減輕咆哮【小】的影響",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Reduces the effects of weak monster roars"
                 },
                 "reaction": null
             },
@@ -1082,7 +1082,7 @@
                 "description": {
                     "zhTW": "使咆哮【小】無效",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Nullifies weak monster roars"
                 },
                 "reaction": null
             },
@@ -1091,7 +1091,7 @@
                 "description": {
                     "zhTW": "使咆哮【小】無效，減輕咆哮【大】的影響",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Nullifies weak monster roars and reduces the effects of strong monster roars"
                 },
                 "reaction": null
             },
@@ -1100,7 +1100,7 @@
                 "description": {
                     "zhTW": "使咆哮【小】【大】無效",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Nullifies weak and strong monster roars"
                 },
                 "reaction": null
             }
@@ -1111,7 +1111,7 @@
         "name": {
             "zhTW": "死裡逃生",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Resuscitate"
         },
         "type": "active",
         "from" : {
@@ -1125,7 +1125,7 @@
                 "description": {
                     "zhTW": "技能發動時，大幅延長迴避的無敵時間，並減少耐力消耗量",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "While active, greatly improves evasion invulnerability time and reduces stamina depletion"
                 },
                 "reaction": null
             }
@@ -1217,7 +1217,7 @@
         "name": {
             "zhTW": "攻擊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Attack Boost"
         },
         "type": "active",
         "from" : {
@@ -1231,7 +1231,7 @@
                 "description": {
                     "zhTW": "基礎攻擊力+3",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+3 Attack Power"
                 },
                 "reaction": {
                     "attack": {
@@ -1244,7 +1244,7 @@
                 "description": {
                     "zhTW": "基礎攻擊力+6",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+6 Attack Power"
                 },
                 "reaction": {
                     "attack": {
@@ -1257,7 +1257,7 @@
                 "description": {
                     "zhTW": "基礎攻擊力+9",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+9 Attack Power"
                 },
                 "reaction": {
                     "attack": {
@@ -1270,7 +1270,7 @@
                 "description": {
                     "zhTW": "基礎攻擊力+12、會心率+5%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+12 Attack Power and +5% Affinity"
                 },
                 "reaction": {
                     "attack": {
@@ -1286,7 +1286,7 @@
                 "description": {
                     "zhTW": "基礎攻擊力+15、會心率+5%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+15 Attack Power and +5% Affinity"
                 },
                 "reaction": {
                     "attack": {
@@ -1302,7 +1302,7 @@
                 "description": {
                     "zhTW": "基礎攻擊力+18、會心率+5%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+18 Attack Power and +5% Affinity"
                 },
                 "reaction": {
                     "attack": {
@@ -1318,7 +1318,7 @@
                 "description": {
                     "zhTW": "基礎攻擊力+21、會心率+5%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+21 Attack Power and +5% Affinity"
                 },
                 "reaction": {
                     "attack": {
@@ -1361,7 +1361,7 @@
         "name": {
             "zhTW": "防禦強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Guard Up"
         },
         "type": "active",
         "from" : {
@@ -1375,7 +1375,7 @@
                 "description": {
                     "zhTW": "可以防禦一般無法防禦的攻擊",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Allows you to guard against ordinarily unblockable attacks"
                 },
                 "reaction": null
             }
@@ -1472,7 +1472,7 @@
         "name": {
             "zhTW": "防禦",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Defense Boost"
         },
         "type": "active",
         "from" : {
@@ -1486,7 +1486,7 @@
                 "description": {
                     "zhTW": "防禦力+5",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+5 Defense"
                 },
                 "reaction": {
                     "defense": {
@@ -1499,7 +1499,7 @@
                 "description": {
                     "zhTW": "防禦力+10",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+10 Defense"
                 },
                 "reaction": {
                     "defense": {
@@ -1512,7 +1512,7 @@
                 "description": {
                     "zhTW": "防禦力+15",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+15 Defense"
                 },
                 "reaction": {
                     "defense": {
@@ -1525,7 +1525,7 @@
                 "description": {
                     "zhTW": "防禦力+20，全屬性耐性值+3",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+20 Defense and +3 to All Elemental Resistances"
                 },
                 "reaction": {
                     "defense": {
@@ -1542,7 +1542,7 @@
                 "description": {
                     "zhTW": "防禦力+25，全屬性耐性值+3",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+25 Defense and +3 to All Elemental Resistances"
                 },
                 "reaction": {
                     "defense": {
@@ -1559,7 +1559,7 @@
                 "description": {
                     "zhTW": "防禦力+30，全屬性耐性值+3",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+30 Defense and +3 to All Elemental Resistances"
                 },
                 "reaction": {
                     "defense": {
@@ -1576,7 +1576,7 @@
                 "description": {
                     "zhTW": "防禦力+35，全屬性耐性值+3",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+35 Defense and +3 to All Elemental Resistances"
                 },
                 "reaction": {
                     "defense": {
@@ -1774,7 +1774,7 @@
         "name": {
             "zhTW": "拔刀術【技】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Critical Draw"
         },
         "type": "passive",
         "from" : {
@@ -1788,7 +1788,7 @@
                 "description": {
                     "zhTW": "武器拔刀攻擊的會心率+30%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Draw attack affinity +30%"
                 },
                 "reaction": {
                     "criticalRate": {
@@ -1801,7 +1801,7 @@
                 "description": {
                     "zhTW": "武器拔刀攻擊的會心率+60%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Draw attack affinity +60%"
                 },
                 "reaction": {
                     "criticalRate": {
@@ -1814,7 +1814,7 @@
                 "description": {
                     "zhTW": "武器拔刀攻擊的會心率+100%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Draw attack affinity +100%"
                 },
                 "reaction": {
                     "criticalRate": {
@@ -2133,7 +2133,7 @@
         "name": {
             "zhTW": "炸彈客",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bombardier"
         },
         "type": "active",
         "from" : {
@@ -2147,7 +2147,7 @@
                 "description": {
                     "zhTW": "威力1.1倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Explosive power +10%"
                 },
                 "reaction": null
             },
@@ -2156,7 +2156,7 @@
                 "description": {
                     "zhTW": "威力1.2倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Explosive power +20%"
                 },
                 "reaction": null
             },
@@ -2165,7 +2165,7 @@
                 "description": {
                     "zhTW": "威力1.3倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Explosive power +30%"
                 },
                 "reaction": null
             }
@@ -2610,7 +2610,7 @@
         "name": {
             "zhTW": "挑戰者",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Agitator"
         },
         "type": "passive",
         "from" : {
@@ -2624,7 +2624,7 @@
                 "description": {
                     "zhTW": "技能發動時，基礎攻擊力+4，會心率+3%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "While active, grants Attack +4 and increases Affinity by 3%"
                 },
                 "reaction": {
                     "attack": {
@@ -2640,7 +2640,7 @@
                 "description": {
                     "zhTW": "技能發動時，基礎攻擊力+8，會心率+6%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "While active, grants Attack +8 and increases Affinity by 6%"
                 },
                 "reaction": {
                     "attack": {
@@ -2656,7 +2656,7 @@
                 "description": {
                     "zhTW": "技能發動時，基礎攻擊力+12，會心率+9%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "While active, grants Attack +12 and increases Affinity by 9%"
                 },
                 "reaction": {
                     "attack": {
@@ -2672,7 +2672,7 @@
                 "description": {
                     "zhTW": "技能發動時，基礎攻擊力+16，會心率+12%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "While active, grants Attack +16 and increases Affinity by 12%"
                 },
                 "reaction": {
                     "attack": {
@@ -2688,7 +2688,7 @@
                 "description": {
                     "zhTW": "技能發動時，基礎攻擊力+20，會心率+15%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "While active, grants Attack +20 and increases Affinity by 15%"
                 },
                 "reaction": {
                     "attack": {
@@ -2812,7 +2812,7 @@
         "name": {
             "zhTW": "砲術",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Artillery"
         },
         "type": "active",
         "from" : {
@@ -2826,7 +2826,7 @@
                 "description": {
                     "zhTW": "對象的攻擊力1.1倍，減少龍擊砲的冷卻時間15%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Increases power of each attack by 10% and reduces Wyvern's Fire cooldown by 15%"
                 },
                 "reaction": null
             },
@@ -2835,7 +2835,7 @@
                 "description": {
                     "zhTW": "對象的攻擊力1.2倍，減少龍擊砲的冷卻時間30%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Increases power of each attack by 10% and reduces Wyvern's Fire cooldown by 30%"
                 },
                 "reaction": null
             },
@@ -2844,7 +2844,7 @@
                 "description": {
                     "zhTW": "對象的攻擊力1.3倍，減少龍擊砲的冷卻時間50%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Increases power of each attack by 10% and reduces Wyvern's Fire cooldown by 50%"
                 },
                 "reaction": null
             }
@@ -2916,7 +2916,7 @@
         "name": {
             "zhTW": "破壞王",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Partbreaker"
         },
         "type": "active",
         "from" : {
@@ -2930,7 +2930,7 @@
                 "description": {
                     "zhTW": "對部位的累積傷害1.1倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Part damage +10%"
                 },
                 "reaction": null
             },
@@ -2939,7 +2939,7 @@
                 "description": {
                     "zhTW": "對部位的累積傷害1.2倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Part damage +20%"
                 },
                 "reaction": null
             },
@@ -2948,7 +2948,7 @@
                 "description": {
                     "zhTW": "對部位的累積傷害1.3倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Part damage +30%"
                 },
                 "reaction": null
             }
@@ -3204,7 +3204,7 @@
         "name": {
             "zhTW": "砲彈裝填數UP",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Capacity Boost"
         },
         "type": "active",
         "from" : {
@@ -3218,7 +3218,7 @@
                 "description": {
                     "zhTW": "裝填數+1",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Loading Capacity +1"
                 },
                 "reaction": null
             }
@@ -3851,7 +3851,7 @@
         "name": {
             "zhTW": "植生學",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Botanist"
         },
         "type": "active",
         "from" : {
@@ -3865,7 +3865,7 @@
                 "description": {
                     "zhTW": "草系消耗道具的取得數+1",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "One extra consumable herb item per gather"
                 },
                 "reaction": null
             },
@@ -3874,7 +3874,7 @@
                 "description": {
                     "zhTW": "追加實、種系消耗道具的取得數+1",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "One extra consumable herb, fruit, nut, or seed item per gather"
                 },
                 "reaction": null
             },
@@ -3883,7 +3883,7 @@
                 "description": {
                     "zhTW": "追加蟲系消耗道具的取得數+1",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "One extra consumable herb, fruit, nut, seed, or insect item per gather"
                 },
                 "reaction": null
             },
@@ -3892,7 +3892,7 @@
                 "description": {
                     "zhTW": "追加菇系消耗道具的取得數+1",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "One extra consumable herb, fruit, nut, seed, insect, or mushroom item per gather"
                 },
                 "reaction": null
             }
@@ -3971,7 +3971,7 @@
         "name": {
             "zhTW": "裂傷耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bleeding Resistance"
         },
         "type": "active",
         "from" : {
@@ -3985,7 +3985,7 @@
                 "description": {
                     "zhTW": "將減輕裂傷狀態造成的傷害",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Reduces damage while Bleeding"
                 },
                 "reaction": null
             },
@@ -3994,7 +3994,7 @@
                 "description": {
                     "zhTW": "大幅減輕裂傷狀態造成的傷害",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Greatly reduces damage while Bleeding"
                 },
                 "reaction": null
             },
@@ -4003,7 +4003,7 @@
                 "description": {
                     "zhTW": "不會變為裂傷狀態",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Prevents Bleeding"
                 },
                 "reaction": null
             }
@@ -4098,7 +4098,7 @@
         "name": {
             "zhTW": "散彈・剛射強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Spread/Power Shots"
         },
         "type": "active",
         "from" : {
@@ -4112,7 +4112,7 @@
                 "description": {
                     "zhTW": "散彈、剛射的威力UP",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Increases the Attack Power of spread ammo and power shot arrows"
                 },
                 "reaction": null
             }
@@ -4166,7 +4166,7 @@
         "name": {
             "zhTW": "超會心",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Critical Boost"
         },
         "type": "active",
         "from" : {
@@ -4180,7 +4180,7 @@
                 "description": {
                     "zhTW": "會心攻擊時的傷害倍率增強為1.3倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Increases damage dealt by critical hits to 130% (125% base + 5%)"
                 },
                 "reaction": {
                     "criticalMultiple": {
@@ -4193,7 +4193,7 @@
                 "description": {
                     "zhTW": "會心攻擊時的傷害倍率增強為1.35倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Increases damage dealt by critical hits to 135% (125% base + 10%)"
                 },
                 "reaction": {
                     "criticalMultiple": {
@@ -4206,7 +4206,7 @@
                 "description": {
                     "zhTW": "會心攻擊時的傷害倍率增強為1.4倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Increases damage dealt by critical hits to 140% (125% base + 15%)"
                 },
                 "reaction": {
                     "criticalMultiple": {
@@ -4777,7 +4777,7 @@
         "name": {
             "zhTW": "奪取耐力",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Stamina Thief"
         },
         "type": "active",
         "from" : {
@@ -4791,7 +4791,7 @@
                 "description": {
                     "zhTW": "減氣威力1.1倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Exhaust power +10%"
                 },
                 "reaction": null
             },
@@ -4800,7 +4800,7 @@
                 "description": {
                     "zhTW": "減氣威力1.2倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Exhaust power +20%"
                 },
                 "reaction": null
             },
@@ -4809,7 +4809,7 @@
                 "description": {
                     "zhTW": "減氣威力1.3倍",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Exhaust power +30%"
                 },
                 "reaction": null
             }
@@ -5047,7 +5047,7 @@
         "name": {
             "zhTW": "適應瘴氣環境",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Effluvial Expert"
         },
         "type": "active",
         "from" : {
@@ -5061,7 +5061,7 @@
                 "description": {
                     "zhTW": "使瘴氣霧霾無效，減輕酸造成的傷害",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Nullifies damage from Effluvia and reduces damage from acids"
                 },
                 "reaction": null
             }
@@ -5115,7 +5115,7 @@
         "name": {
             "zhTW": "熱傷害無效",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Heat Guard"
         },
         "type": "active",
         "from" : {
@@ -5129,7 +5129,7 @@
                 "description": {
                     "zhTW": "使熱造成的傷害無效",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Nullifies Heat damage"
                 },
                 "reaction": null
             }
@@ -5208,7 +5208,7 @@
         "name": {
             "zhTW": "龍耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragon Resistance"
         },
         "type": "active",
         "from" : {
@@ -5222,7 +5222,7 @@
                 "description": {
                     "zhTW": "龍耐性+6",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+6 Dragon Resistance"
                 },
                 "reaction": {
                     "resistance": {
@@ -5236,7 +5236,7 @@
                 "description": {
                     "zhTW": "龍耐性+12",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+12 Dragon Resistance"
                 },
                 "reaction": {
                     "resistance": {
@@ -5250,7 +5250,7 @@
                 "description": {
                     "zhTW": "龍耐性+20、防禦力+10",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "+20 Dragon Resistance and +10 Defense"
                 },
                 "reaction": {
                     "defense": {
@@ -5546,7 +5546,7 @@
         "name": {
             "zhTW": "爆破屬性強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Blast Attack"
         },
         "type": "active",
         "from" : {
@@ -5560,7 +5560,7 @@
                 "description": {
                     "zhTW": "爆破累積值變為1.05倍，爆破累積值+10",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "last buildup +5% Bonus: +10"
                 },
                 "reaction": null
             },
@@ -5569,7 +5569,7 @@
                 "description": {
                     "zhTW": "爆破累積值變為1.1倍，爆破累積值+10",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "last buildup +10% Bonus: +10"
                 },
                 "reaction": null
             },
@@ -5578,7 +5578,7 @@
                 "description": {
                     "zhTW": "爆破累積值變為1.2倍，爆破累積值+10",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "last buildup +20% Bonus: +10"
                 },
                 "reaction": null
             }
@@ -5614,7 +5614,7 @@
         "name": {
             "zhTW": "爆破異常狀態的耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Blast Resistance"
         },
         "type": "active",
         "from" : {
@@ -5628,7 +5628,7 @@
                 "description": {
                     "zhTW": "延長爆破前的間隔時間，減輕爆破時受到的傷害",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Delays Blastblight and reduces Blast Damage"
                 },
                 "reaction": null
             },
@@ -5637,7 +5637,7 @@
                 "description": {
                     "zhTW": "更加延長爆破前的間隔時間，大幅減輕爆破時遭受的傷害",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Greatly delays Blastblight and greatly reduces Blast Damage"
                 },
                 "reaction": null
             },
@@ -5646,7 +5646,7 @@
                 "description": {
                     "zhTW": "不會變為爆破異常狀態",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Prevents Blastblight"
                 },
                 "reaction": null
             }
@@ -5657,7 +5657,7 @@
         "name": {
             "zhTW": "爆破瓶追加",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Blast Functionality"
         },
         "type": "active",
         "from" : {
@@ -5671,7 +5671,7 @@
                 "description": {
                     "zhTW": "弓可以裝著爆破瓶",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Lets you use Blast coating"
                 },
                 "reaction": null
             }
@@ -5682,7 +5682,7 @@
         "name": {
             "zhTW": "屬性解放／裝填擴充",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Free Elem/Ammo Up"
         },
         "type": "active",
         "from" : {
@@ -5696,7 +5696,7 @@
                 "description": {
                     "zhTW": "激發出1\/3的隱藏屬性／增加部分彈藥裝填數",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Draws out 33% of hidden element and expands clip size for some ammo"
                 },
                 "reaction": {
                     "enableElement": {
@@ -5709,7 +5709,7 @@
                 "description": {
                     "zhTW": "激發出2\/3的隱藏屬性／增加多數彈藥裝填數",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Draws out 66% of hidden element and expands clip size for some ammo"
                 },
                 "reaction": {
                     "enableElement": {
@@ -5722,7 +5722,7 @@
                 "description": {
                     "zhTW": "激發出100%的隱藏屬性／幾乎增加所有彈藥裝填數",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Draws out 100% of hidden element and expands clip size for almost all ammo (except wyvern)"
                 },
                 "reaction": {
                     "enableElement": {
@@ -5737,7 +5737,7 @@
         "name": {
             "zhTW": "屬性異常狀態耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Blight Resistance"
         },
         "type": "active",
         "from" : {
@@ -5751,7 +5751,7 @@
                 "description": {
                     "zhTW": "全屬性異常狀態的效果時間減少30%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Reduces the duration of all elemental blights by 30%"
                 },
                 "reaction": null
             },
@@ -5760,7 +5760,7 @@
                 "description": {
                     "zhTW": "全屬性異常狀態的效果時間減少60%",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Reduces the duration of all elemental blights by 60%"
                 },
                 "reaction": null
             },
@@ -5769,7 +5769,7 @@
                 "description": {
                     "zhTW": "使全屬性異常狀態無效",
                     "jaJP": null,
-                    "enUS": null
+                    "enUS": "Nullifies all elemental blights"
                 },
                 "reaction": null
             }

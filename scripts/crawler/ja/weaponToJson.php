@@ -162,7 +162,13 @@ foreach ($list[0] as $type => $url) {
             ], $slots), ':')))
             : null;
 
-        $result[] = [
+        $path = "ja/weapons/{$type}/rare{$rare}";
+
+        if (!isset($result[$path])) {
+            $result[$path] = [];
+        }
+
+        $result[$path][] = [
             'id' => null,
             'type' => $type,
             'rare' => $rare,
@@ -180,4 +186,6 @@ foreach ($list[0] as $type => $url) {
     }
 }
 
-saveJson('ja/weapons', $result);
+foreach ($result as $path => $list) {
+    saveJson($path, $list);
+}
