@@ -42,7 +42,7 @@ export default class EquipBundleSelector extends Component {
         // Initial State
         this.state = {
             equips: null,
-            equipBundleList: []
+            equipBundleList: Status.get('equipBundleSelector:equipBundleList') || []
         };
     }
 
@@ -70,7 +70,7 @@ export default class EquipBundleSelector extends Component {
             equipBundle.id = bundleId;
 
             // Set Data to Status
-            Status.set('equipBundleList', equipBundleList);
+            Status.set('equipBundleSelector:equipBundleList', equipBundleList);
 
             this.setState({
                 equipBundleList: equipBundleList
@@ -82,7 +82,7 @@ export default class EquipBundleSelector extends Component {
             });
 
             // Set Data to Status
-            Status.set('equipBundleList', equipBundleList);
+            Status.set('equipBundleSelector:equipBundleList', equipBundleList);
 
             this.setState({
                 equips: null,
@@ -101,7 +101,7 @@ export default class EquipBundleSelector extends Component {
         });
 
         // Set Data to Status
-        Status.set('equipBundleList', equipBundleList);
+        Status.set('equipBundleSelector:equipBundleList', equipBundleList);
 
         this.setState({
             equipBundleList: equipBundleList
@@ -120,7 +120,6 @@ export default class EquipBundleSelector extends Component {
      */
     static getDerivedStateFromProps (nextProps, prevState) {
         let equips = nextProps.data;
-        let equipBundleList = Status.get('equipBundleList') || [];
 
         if (null === equips.weapon.id
             && null === equips.helm.id
@@ -134,8 +133,7 @@ export default class EquipBundleSelector extends Component {
         }
 
         return {
-            equips: equips,
-            equipBundleList: equipBundleList
+            equips: equips
         };
     }
 

@@ -57,12 +57,12 @@ export default class Main extends Component {
 
         // Initial State
         this.state = {
-            lang: Status.get('lang'),
-            sets: Status.get('sets') || Helper.deepCopy(TestData.requireList[0]).sets,
-            skills: Status.get('skills') || Helper.deepCopy(TestData.requireList[0]).skills,
-            equips: Status.get('equips') || Helper.deepCopy(TestData.equipsList[0]),
-            equipsLock: Status.get('equipsLock') || Helper.deepCopy(Constant.defaultEquipsLock),
-            ignoreEquips: Status.get('ignoreEquips') || {},
+            lang: Status.get('sys:lang'),
+            sets: Status.get('app:sets') || Helper.deepCopy(TestData.requireList[0]).sets,
+            skills: Status.get('app:skills') || Helper.deepCopy(TestData.requireList[0]).skills,
+            equips: Status.get('app:equips') || Helper.deepCopy(TestData.equipsList[0]),
+            equipsLock: Status.get('app:equipsLock') || Helper.deepCopy(Constant.defaultEquipsLock),
+            ignoreEquips: Status.get('app:ignoreEquips') || {},
 
             // Bypass Data
             equipSelector: {},
@@ -73,7 +73,7 @@ export default class Main extends Component {
             isShowSkillItemSelector: false,
             isShowEquipItemSelector: false,
             isShowChangeLog: ('production' === Config.env)
-                ? (Config.buildTime !== parseInt(Status.get('buildTime'))) : false
+                ? (Config.buildTime !== parseInt(Status.get('sys:buildTime'))) : false
         };
     }
 
@@ -95,7 +95,7 @@ export default class Main extends Component {
         let lang = this.refs.lang.value;
 
         // Se Data to Status
-        Status.set('lang', lang);
+        Status.set('sys:lang', lang);
 
         this.setState({
             lang: lang
@@ -112,7 +112,7 @@ export default class Main extends Component {
         sets[index].step -= 1;
 
         // Set Data to Status
-        Status.set('sets', sets);
+        Status.set('app:sets', sets);
 
         this.setState({
             sets: sets
@@ -134,7 +134,7 @@ export default class Main extends Component {
         sets[index].step += 1;
 
         // Set Data to Status
-        Status.set('sets', sets);
+        Status.set('app:sets', sets);
 
         this.setState({
             sets: sets
@@ -162,7 +162,7 @@ export default class Main extends Component {
         });
 
         // Set Data to Status
-        Status.set('sets', sets);
+        Status.set('app:sets', sets);
 
         this.setState({
             sets: sets
@@ -177,7 +177,7 @@ export default class Main extends Component {
         });
 
         // Set Data to Status
-        Status.set('sets', sets);
+        Status.set('app:sets', sets);
 
         this.setState({
             sets: sets
@@ -194,7 +194,7 @@ export default class Main extends Component {
         });
 
         // Set Data to Status
-        Status.set('sets', sets);
+        Status.set('app:sets', sets);
 
         this.setState({
             sets: sets
@@ -211,7 +211,7 @@ export default class Main extends Component {
         skills[index].level -= 1;
 
         // Set Data to Status
-        Status.set('skills', skills);
+        Status.set('app:skills', skills);
 
         this.setState({
             skills: skills
@@ -233,7 +233,7 @@ export default class Main extends Component {
         skills[index].level += 1;
 
         // Set Data to Status
-        Status.set('skills', skills);
+        Status.set('app:skills', skills);
 
         this.setState({
             skills: skills
@@ -261,7 +261,7 @@ export default class Main extends Component {
         });
 
         // Set Data to Status
-        Status.set('skills', skills);
+        Status.set('app:skills', skills);
 
         this.setState({
             skills: skills
@@ -276,7 +276,7 @@ export default class Main extends Component {
         });
 
         // Set Data to Status
-        Status.set('skills', skills);
+        Status.set('app:skills', skills);
 
         this.setState({
             skills: skills
@@ -293,7 +293,7 @@ export default class Main extends Component {
         });
 
         // Set Data to Status
-        Status.set('skills', skills);
+        Status.set('app:skills', skills);
 
         this.setState({
             skills: skills
@@ -403,7 +403,7 @@ export default class Main extends Component {
         });
 
         // Set Data to Status
-        Status.set('equips', equips);
+        Status.set('app:equips', equips);
 
         this.setState({
             equips: equips
@@ -416,7 +416,7 @@ export default class Main extends Component {
         equipsLock[equipType] = !equipsLock[equipType];
 
         // Set Data to Status
-        Status.set('equipsLock', equipsLock);
+        Status.set('app:equipsLock', equipsLock);
 
         this.setState({
             equipsLock: equipsLock
@@ -478,7 +478,7 @@ export default class Main extends Component {
         }
 
         // Set Data to Status
-        Status.set('equips', equips);
+        Status.set('app:equips', equips);
 
         this.setState({
             equips: equips
@@ -499,7 +499,7 @@ export default class Main extends Component {
         }
 
         // Set Data to Status
-        Status.set('ignoreEquips', ignoreEquips);
+        Status.set('app:ignoreEquips', ignoreEquips);
 
         this.setState({
             ignoreEquips: ignoreEquips
@@ -511,8 +511,8 @@ export default class Main extends Component {
         let skills = [];
 
         // Set Data to Status
-        Status.set('sets', sets);
-        Status.set('skills', skills);
+        Status.set('app:sets', sets);
+        Status.set('app:skills', skills);
 
         this.setState({
             sets: sets,
@@ -525,8 +525,8 @@ export default class Main extends Component {
         let equipsLock = Helper.deepCopy(Constant.defaultEquipsLock);
 
         // Set Data to Status
-        Status.set('equips', equips);
-        Status.set('equipsLock', equipsLock);
+        Status.set('app:equips', equips);
+        Status.set('app:equipsLock', equipsLock);
 
         this.setState({
             equips: equips,

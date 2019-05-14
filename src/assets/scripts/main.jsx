@@ -44,7 +44,7 @@ if ('production' === Config.env) {
 }
 
 // Set Build Time
-Status.set('buildTime', Config.buildTime);
+Status.set('sys:buildTime', Config.buildTime);
 
 // Router
 ReactDOM.render((

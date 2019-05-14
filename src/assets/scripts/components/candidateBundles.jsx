@@ -41,15 +41,11 @@ export default class CandidateBundles extends Component {
     constructor (props) {
         super(props);
 
-        let candidateBundles = Status.get('candidateBundles');
-
         // Initial State
         this.state = {
-            bundleList: (undefined !== candidateBundles)
-                ? candidateBundles.bundleList : false,
+            bundleList: Status.get('candidateBundles:bundleList') || [],
             bundleLimit: 25,
-            searchTime: (undefined !== candidateBundles)
-                ? candidateBundles.searchTime : null,
+            searchTime: Status.get('candidateBundles:searchTime') || null,
             isSearching: false
         };
     }
@@ -92,10 +88,8 @@ export default class CandidateBundles extends Component {
                 Helper.log('Search Time:', searchTime);
 
                 // Set Data to Status
-                Status.set('candidateBundles', {
-                    bundleList: bundleList,
-                    searchTime: searchTime
-                });
+                Status.set('candidateBundles:bundleList', bundleList);
+                Status.set('candidateBundles:searchTime', searchTime);
 
                 this.setState({
                     bundleList: bundleList,

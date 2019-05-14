@@ -30,7 +30,7 @@ let langs = {
 
 let defaultLang = Constant.defaultLang;
 let browserLnag = navigator.language.replace('-', '');
-let currentLang = Status.get('lang');
+let currentLang = Status.get('sys:lang');
 
 // Decide Current Lang
 currentLang = ('undefined' !== typeof Constant.langs[currentLang])
@@ -38,10 +38,10 @@ currentLang = ('undefined' !== typeof Constant.langs[currentLang])
         ? browserLnag : defaultLang;
 
 // Set Status
-Status.set('lang', currentLang);
+Status.set('sys:lang', currentLang);
 
 export default (key) => {
-    currentLang = Status.get('lang');
+    currentLang = Status.get('sys:lang');
 
     return ('undefined' !== typeof langs[currentLang][key]) && (null !== langs[currentLang][key])
         ? langs[currentLang][key] : langs[defaultLang][key];
