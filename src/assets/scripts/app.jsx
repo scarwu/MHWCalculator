@@ -61,12 +61,17 @@ export default class Main extends Component {
             sets: Status.get('sets') || Helper.deepCopy(TestData.requireList[0]).sets,
             skills: Status.get('skills') || Helper.deepCopy(TestData.requireList[0]).skills,
             equips: Status.get('equips') || Helper.deepCopy(TestData.equipsList[0]),
-            equipsLock: Helper.deepCopy(Constant.defaultEquipsLock),
+            equipsLock: Status.get('equipsLock') || Helper.deepCopy(Constant.defaultEquipsLock),
+            ignoreEquips: Status.get('ignoreEquips') || {},
+
+            // Bypass Data
             equipSelector: {},
+
+            // Flags
             isShowEquipBundleSelector: false,
-            isShowSetSelector: false,
-            isShowSkillSelector: false,
-            isShowEquipSelector: false,
+            isShowSetItemSelector: false,
+            isShowSkillItemSelector: false,
+            isShowEquipItemSelector: false,
             isShowChangeLog: ('production' === Config.env)
                 ? (Config.buildTime !== parseInt(Status.get('buildTime'))) : false
         };
@@ -87,10 +92,13 @@ export default class Main extends Component {
     };
 
     handleLangChange = () => {
-        Status.set('lang', this.refs.lang.value);
+        let lang = this.refs.lang.value;
+
+        // Se Data to Status
+        Status.set('lang', lang);
 
         this.setState({
-            lang: Status.get('lang')
+            lang: lang
         });
     };
 
@@ -103,7 +111,7 @@ export default class Main extends Component {
 
         sets[index].step -= 1;
 
-        // Set Sets Data to Status
+        // Set Data to Status
         Status.set('sets', sets);
 
         this.setState({
@@ -125,7 +133,7 @@ export default class Main extends Component {
 
         sets[index].step += 1;
 
-        // Set Sets Data to Status
+        // Set Data to Status
         Status.set('sets', sets);
 
         this.setState({
@@ -133,19 +141,19 @@ export default class Main extends Component {
         });
     };
 
-    handleSetSelectorOpen = (data) => {
+    handleSetItemSelectorOpen = (data) => {
         this.setState({
-            isShowSetSelector: true
+            isShowSetItemSelector: true
         });
     };
 
-    handleSetSelectorClose = () => {
+    handleSetItemSelectorClose = () => {
         this.setState({
-            isShowSetSelector: false
+            isShowSetItemSelector: false
         });
     };
 
-    handleSetSelectorPickUp = (data) => {
+    handleSetItemSelectorPickUp = (data) => {
         let sets = this.state.sets;
 
         sets.push({
@@ -153,7 +161,7 @@ export default class Main extends Component {
             step: 1
         });
 
-        // Set Sets Data to Status
+        // Set Data to Status
         Status.set('sets', sets);
 
         this.setState({
@@ -161,14 +169,14 @@ export default class Main extends Component {
         });
     };
 
-    handleSetSelectorThrowDown = (data) => {
+    handleSetItemSelectorThrowDown = (data) => {
         let sets = this.state.sets;
 
         sets = sets.filter((set) => {
             return set.id !== data.setId;
         });
 
-        // Set Sets Data to Status
+        // Set Data to Status
         Status.set('sets', sets);
 
         this.setState({
@@ -185,7 +193,7 @@ export default class Main extends Component {
             return (null !== set);
         });
 
-        // Set Sets Data to Status
+        // Set Data to Status
         Status.set('sets', sets);
 
         this.setState({
@@ -202,7 +210,7 @@ export default class Main extends Component {
 
         skills[index].level -= 1;
 
-        // Set Sets Data to Status
+        // Set Data to Status
         Status.set('skills', skills);
 
         this.setState({
@@ -224,7 +232,7 @@ export default class Main extends Component {
 
         skills[index].level += 1;
 
-        // Set Sets Data to Status
+        // Set Data to Status
         Status.set('skills', skills);
 
         this.setState({
@@ -232,19 +240,19 @@ export default class Main extends Component {
         });
     };
 
-    handleSkillSelectorOpen = (data) => {
+    handleSkillItemSelectorOpen = (data) => {
         this.setState({
-            isShowSkillSelector: true
+            isShowSkillItemSelector: true
         });
     };
 
-    handleSkillSelectorClose = () => {
+    handleSkillItemSelectorClose = () => {
         this.setState({
-            isShowSkillSelector: false
+            isShowSkillItemSelector: false
         });
     };
 
-    handleSkillSelectorPickUp = (data) => {
+    handleSkillItemSelectorPickUp = (data) => {
         let skills = this.state.skills;
 
         skills.push({
@@ -252,7 +260,7 @@ export default class Main extends Component {
             level: 1
         });
 
-        // Set Sets Data to Status
+        // Set Data to Status
         Status.set('skills', skills);
 
         this.setState({
@@ -260,14 +268,14 @@ export default class Main extends Component {
         });
     };
 
-    handleSkillSelectorThrowDown = (data) => {
+    handleSkillItemSelectorThrowDown = (data) => {
         let skills = this.state.skills;
 
         skills = skills.filter((skill) => {
             return skill.id !== data.skillId;
         });
 
-        // Set Sets Data to Status
+        // Set Data to Status
         Status.set('skills', skills);
 
         this.setState({
@@ -284,7 +292,7 @@ export default class Main extends Component {
             return (null !== skill);
         });
 
-        // Set Sets Data to Status
+        // Set Data to Status
         Status.set('skills', skills);
 
         this.setState({
@@ -309,7 +317,7 @@ export default class Main extends Component {
 
         Event.trigger('SearchCandidateEquips', Helper.deepCopy({
             equips: currentEquips,
-            ignoreEquips: Status.get('ignoreEquips') || {},
+            ignoreEquips: this.state.ignoreEquips,
             sets: this.state.sets,
             skills: this.state.skills
         }));
@@ -394,7 +402,7 @@ export default class Main extends Component {
             }
         });
 
-        // Set Equips Data to Status
+        // Set Data to Status
         Status.set('equips', equips);
 
         this.setState({
@@ -407,25 +415,28 @@ export default class Main extends Component {
 
         equipsLock[equipType] = !equipsLock[equipType];
 
+        // Set Data to Status
+        Status.set('equipsLock', equipsLock);
+
         this.setState({
             equipsLock: equipsLock
         });
     };
 
-    handleEquipSelectorOpen = (data) => {
+    handleEquipItemSelectorOpen = (data) => {
         this.setState({
-            isShowEquipSelector: true,
+            isShowEquipItemSelector: true,
             equipSelector: data
         });
     };
 
-    handleEquipSelectorClose = () => {
+    handleEquipItemSelectorClose = () => {
         this.setState({
-            isShowEquipSelector: false
+            isShowEquipItemSelector: false
         });
     };
 
-    handleEquipSelectorPickUp = (data) => {
+    handleEquipItemSelectorPickUp = (data) => {
         let equips = this.state.equips;
 
         if (undefined !== data.enhanceIndex) {
@@ -466,7 +477,7 @@ export default class Main extends Component {
             };
         }
 
-        // Set Equips Data to Status
+        // Set Data to Status
         Status.set('equips', equips);
 
         this.setState({
@@ -474,12 +485,8 @@ export default class Main extends Component {
         });
     };
 
-    handleEquipSelectorToggle = (data) => {
-        let ignoreEquips = Status.get('ignoreEquips');
-
-        if (undefined === ignoreEquips) {
-            ignoreEquips = {};
-        }
+    handleEquipItemSelectorToggle = (data) => {
+        let ignoreEquips = this.state.ignoreEquips;
 
         if (undefined === ignoreEquips[data.type]) {
             ignoreEquips[data.type] = {};
@@ -491,17 +498,19 @@ export default class Main extends Component {
             delete ignoreEquips[data.type][data.id];
         }
 
-        // Set Ignore Equips Data to Status
+        // Set Data to Status
         Status.set('ignoreEquips', ignoreEquips);
 
-        this.forceUpdate();
+        this.setState({
+            ignoreEquips: ignoreEquips
+        });
     };
 
     handleRequireConditionRefresh = () => {
         let sets = [];
         let skills = [];
 
-        // Set Sets & Skills Data to Status
+        // Set Data to Status
         Status.set('sets', sets);
         Status.set('skills', skills);
 
@@ -515,8 +524,9 @@ export default class Main extends Component {
         let equips = Helper.deepCopy(Constant.defaultEquips);
         let equipsLock = Helper.deepCopy(Constant.defaultEquipsLock);
 
-        // Set Equips Data to Status
+        // Set Data to Status
         Status.set('equips', equips);
+        Status.set('equipsLock', equipsLock);
 
         this.setState({
             equips: equips,
@@ -536,7 +546,7 @@ export default class Main extends Component {
         });
     };
 
-    handleEquipBundlePickUp = (equips) => {
+    handleEquipBundleSelectorPickUp = (equips) => {
         this.setState({
             equips: equips
         });
@@ -676,7 +686,7 @@ export default class Main extends Component {
                         <div className="mhwc-lang">
                             <div>
                                 <i className="fa fa-globe"></i>
-                                <select defaultValue={Status.get('lang')} ref="lang" onChange={this.handleLangChange}>
+                                <select defaultValue={this.state.lang} ref="lang" onChange={this.handleLangChange}>
                                     {Object.keys(Constant.langs).map((lang) => {
                                         return (
                                             <option key={lang} value={lang}>{Constant.langs[lang]}</option>
@@ -701,12 +711,12 @@ export default class Main extends Component {
                                 </a>
                             </div>
                             <div className="col-3">
-                                <a onClick={this.handleSkillSelectorOpen}>
+                                <a onClick={this.handleSkillItemSelectorOpen}>
                                     <i className="fa fa-plus"></i> {_('skill')}
                                 </a>
                             </div>
                             <div className="col-3">
-                                <a onClick={this.handleSetSelectorOpen}>
+                                <a onClick={this.handleSetItemSelectorOpen}>
                                     <i className="fa fa-plus"></i> {_('set')}
                                 </a>
                             </div>
@@ -753,8 +763,8 @@ export default class Main extends Component {
                         <EquipsDisplayer equips={this.state.equips}
                             equipsLock={this.state.equipsLock}
                             onToggleEquipsLock={this.handleEquipsLockToggle}
-                            onOpenSelector={this.handleEquipSelectorOpen}
-                            onPickUp={this.handleEquipSelectorPickUp} />
+                            onOpenSelector={this.handleEquipItemSelectorOpen}
+                            onPickUp={this.handleEquipItemSelectorPickUp} />
                     </div>
 
                     <div className="col mhwc-status">
@@ -785,32 +795,33 @@ export default class Main extends Component {
                 {this.state.isShowEquipBundleSelector ? (
                     <EquipBundleSelector
                         data={this.state.equips}
-                        onPickUp={this.handleEquipBundlePickUp}
+                        onPickUp={this.handleEquipBundleSelectorPickUp}
                         onClose={this.handleEquipBundleSelectorClose} />
                 ) : false}
 
-                {this.state.isShowSetSelector ? (
+                {this.state.isShowSetItemSelector ? (
                     <SetItemSelector
                         data={this.state.sets}
-                        onPickUp={this.handleSetSelectorPickUp}
-                        onThrowDown={this.handleSetSelectorThrowDown}
-                        onClose={this.handleSetSelectorClose} />
+                        onPickUp={this.handleSetItemSelectorPickUp}
+                        onThrowDown={this.handleSetItemSelectorThrowDown}
+                        onClose={this.handleSetItemSelectorClose} />
                 ) : false}
 
-                {this.state.isShowSkillSelector ? (
+                {this.state.isShowSkillItemSelector ? (
                     <SkillItemSelector
                         data={this.state.skills}
-                        onPickUp={this.handleSkillSelectorPickUp}
-                        onThrowDown={this.handleSkillSelectorThrowDown}
-                        onClose={this.handleSkillSelectorClose} />
+                        onPickUp={this.handleSkillItemSelectorPickUp}
+                        onThrowDown={this.handleSkillItemSelectorThrowDown}
+                        onClose={this.handleSkillItemSelectorClose} />
                 ) : false}
 
-                {this.state.isShowEquipSelector ? (
+                {this.state.isShowEquipItemSelector ? (
                     <EquipItemSelector
                         data={this.state.equipSelector}
-                        onPickUp={this.handleEquipSelectorPickUp}
-                        onToggle={this.handleEquipSelectorToggle}
-                        onClose={this.handleEquipSelectorClose} />
+                        ignoreEquips={this.state.ignoreEquips}
+                        onPickUp={this.handleEquipItemSelectorPickUp}
+                        onToggle={this.handleEquipItemSelectorToggle}
+                        onClose={this.handleEquipItemSelectorClose} />
                 ) : false}
 
                 {this.state.isShowChangeLog ? (

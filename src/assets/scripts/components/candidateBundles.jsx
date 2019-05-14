@@ -91,6 +91,7 @@ export default class CandidateBundles extends Component {
                 Helper.log('Bundle List:', bundleList);
                 Helper.log('Search Time:', searchTime);
 
+                // Set Data to Status
                 Status.set('candidateBundles', {
                     bundleList: bundleList,
                     searchTime: searchTime

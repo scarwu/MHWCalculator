@@ -120,8 +120,6 @@ export default class EquipItemSelector extends Component {
         let ignoreList = [];
         let type = null;
 
-        let ignoreEquips = Status.get('ignoreEquips') || {};
-
         if (undefined !== nextProps.data.enhanceIndex) {
             mode = 'enhance';
             includeList = EnhanceDataset.getItems();
@@ -144,8 +142,8 @@ export default class EquipItemSelector extends Component {
             Constant.weaponTypes.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
                     WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
-                        if (undefined !== ignoreEquips['weapon']
-                            && true === ignoreEquips['weapon'][equip.id]) {
+                        if (undefined !== nextProps.ignoreEquips['weapon']
+                            && true === nextProps.ignoreEquips['weapon'][equip.id]) {
 
                             ignoreList.push(equip);
                         } else {
@@ -155,8 +153,8 @@ export default class EquipItemSelector extends Component {
                 }
 
                 WeaponDataset.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
-                    if (undefined !== ignoreEquips['weapon']
-                        && true === ignoreEquips['weapon'][equip.id]) {
+                    if (undefined !== nextProps.ignoreEquips['weapon']
+                        && true === nextProps.ignoreEquips['weapon'][equip.id]) {
 
                         ignoreList.push(equip);
                     } else {
@@ -175,8 +173,8 @@ export default class EquipItemSelector extends Component {
 
             for (let rare = 8; rare >= 5; rare--) {
                 ArmorDataset.typeIs(nextProps.data.equipType).rareIs(rare).getItems().forEach((equip) => {
-                    if (undefined !== ignoreEquips[equip.type]
-                        && true === ignoreEquips[equip.type][equip.id]) {
+                    if (undefined !== nextProps.ignoreEquips[equip.type]
+                        && true === nextProps.ignoreEquips[equip.type][equip.id]) {
 
                         ignoreList.push(equip);
                     } else {
@@ -186,8 +184,8 @@ export default class EquipItemSelector extends Component {
             }
 
             ArmorDataset.typeIs(nextProps.data.equipType).rareIs(0).getItems().forEach((equip) => {
-                if (undefined !== ignoreEquips[equip.type]
-                    && true === ignoreEquips[equip.type][equip.id]) {
+                if (undefined !== nextProps.ignoreEquips[equip.type]
+                    && true === nextProps.ignoreEquips[equip.type][equip.id]) {
 
                     ignoreList.push(equip);
                 } else {
@@ -198,8 +196,8 @@ export default class EquipItemSelector extends Component {
             mode = 'charm';
 
             CharmDataset.getItems().forEach((equip) => {
-                if (undefined !== ignoreEquips['charm']
-                    && true === ignoreEquips['charm'][equip.id]) {
+                if (undefined !== nextProps.ignoreEquips['charm']
+                    && true === nextProps.ignoreEquips['charm'][equip.id]) {
 
                     ignoreList.push(equip);
                 } else {

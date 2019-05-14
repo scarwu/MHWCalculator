@@ -69,7 +69,7 @@ export default class EquipBundleSelector extends Component {
 
             equipBundle.id = bundleId;
 
-            // Set Equip Bundle List Data to Status
+            // Set Data to Status
             Status.set('equipBundleList', equipBundleList);
 
             this.setState({
@@ -81,7 +81,7 @@ export default class EquipBundleSelector extends Component {
                 equips: this.state.equips
             });
 
-            // Set Equip Bundle List Data to Status
+            // Set Data to Status
             Status.set('equipBundleList', equipBundleList);
 
             this.setState({
@@ -100,7 +100,7 @@ export default class EquipBundleSelector extends Component {
             return (null !== euqipBundle);
         });
 
-        // Set Equip Bundle List Data to Status
+        // Set Data to Status
         Status.set('equipBundleList', equipBundleList);
 
         this.setState({
