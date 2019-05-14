@@ -122,7 +122,7 @@ export default function (props) {
             )
         };
 
-        return LogMap[Status.get('lang')];
+        return LogMap[Status.get('sys:lang')];
     };
 
     return (

@@ -75,6 +75,9 @@ export default class Main extends Component {
             isShowChangeLog: ('production' === Config.env)
                 ? (Config.buildTime !== parseInt(Status.get('sys:buildTime'))) : false
         };
+
+        // Set Build Time
+        Status.set('sys:buildTime', Config.buildTime);
     }
 
     /**

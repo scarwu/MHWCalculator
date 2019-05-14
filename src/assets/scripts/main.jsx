@@ -14,9 +14,6 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import * as Sentry from '@sentry/browser'
 
-// Load Core Libraries
-import Status from 'core/status';
-
 // Load App
 import App from 'app';
 
@@ -42,9 +39,6 @@ if ('production' === Config.env) {
         release: Config.buildTime
     });
 }
-
-// Set Build Time
-Status.set('sys:buildTime', Config.buildTime);
 
 // Router
 ReactDOM.render((
