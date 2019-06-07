@@ -68,6 +68,7 @@ export default class Main extends Component {
             equipSelector: {},
 
             // Flags
+            isImportEquips: false,
             isShowEquipBundleSelector: false,
             isShowSetItemSelector: false,
             isShowSkillItemSelector: false,
@@ -573,8 +574,9 @@ export default class Main extends Component {
     static getDerivedStateFromProps (nextProps, prevState) {
         let hash = nextProps.match.params.hash;
 
-        return (undefined !== hash) ? {
-            equips: JSON.parse(Base64.decode(hash))
+        return (undefined !== hash && false === prevState.isImportEquips) ? {
+            equips: JSON.parse(Base64.decode(hash)),
+            isImportEquips: true
         } : null;
     }
 
