@@ -19,7 +19,6 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
-import Base64 from 'libraries/base64';
 import SetDataset from 'libraries/dataset/set';
 import SkillDataset from 'libraries/dataset/skill';
 import JewelDataset from 'libraries/dataset/jewel';
@@ -86,7 +85,7 @@ export default class Main extends Component {
      */
     handleBundleExport = () => {
         let equips = Helper.deepCopy(this.state.equips);
-        let hash = Base64.encode(JSON.stringify(equips));
+        let hash = Helper.base64Encode(JSON.stringify(equips));
 
         let protocol = window.location.protocol;
         let hostname = window.location.hostname;
@@ -575,7 +574,7 @@ export default class Main extends Component {
         let hash = nextProps.match.params.hash;
 
         return (undefined !== hash && false === prevState.isImportEquips) ? {
-            equips: JSON.parse(Base64.decode(hash)),
+            equips: JSON.parse(Helper.base64Decode(hash)),
             isImportEquips: true
         } : null;
     }

@@ -21,7 +21,25 @@ function deepCopy(data) {
     return JSON.parse(JSON.stringify(data));
 }
 
+function base64Encode(text) {
+    text = window.btoa(text);
+
+    return text
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_');
+}
+
+function base64Decode(text) {
+    text = text
+        .replace(/\-/g, '+')
+        .replace(/\_/g, '/');
+
+    return window.atob(text);
+}
+
 export default {
     log: log,
     deepCopy: deepCopy,
+    base64Encode: base64Encode,
+    base64Decode: base64Decode
 };
