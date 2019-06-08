@@ -18,18 +18,14 @@
     <link rel="stylesheet" href="./assets/styles/main.min.css?timestamp">
 
     <script>
-        function asyncLoad(src) {
-            var s = document.createElement('script');
-            s.src = src; s.async = true;
-            var e = document.getElementsByTagName('script')[0];
-            e.parentNode.insertBefore(s, e);
-        }
-        var _gaq = [['_setAccount', 'UA-30675094-1'], ['_trackPageview']];
-        asyncLoad('//www.google-analytics.com/analytics.js');
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-30675094-1', 'auto');
+        ga('send', 'pageview');
     </script>
-    <script src="./assets/scripts/main.min.js?timestamp" async></script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
 </head>
 <body>
     <div id="mhwc-router"></div>
+    <script src="./assets/scripts/main.min.js?timestamp" async></script>
 </body>
 </html>
