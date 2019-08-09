@@ -10,9 +10,6 @@
 
 let eventList = {};
 
-/**
- * On
- */
 function on(name, key, callback) {
     if (undefined === eventList[name]) {
         eventList[name] = {};
@@ -21,9 +18,6 @@ function on(name, key, callback) {
     eventList[name][key] = callback;
 }
 
-/**
- * Off
- */
 function off(name, key) {
     if (undefined === eventList[name]) {
         return false;
@@ -32,9 +26,6 @@ function off(name, key) {
     delete eventList[name][key];
 }
 
-/**
- * Trigger
- */
 function trigger(name, arg) {
     if (undefined === eventList[name]) {
         return false;
