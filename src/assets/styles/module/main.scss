@@ -40,6 +40,8 @@ $panel-height: 40px;
     }
 
     .mhwc-icons_bundle {
+        position: absolute;
+        right: 10px;
         height: $header-height;
         line-height: $header-height;
 
