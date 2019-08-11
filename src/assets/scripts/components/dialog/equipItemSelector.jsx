@@ -206,12 +206,17 @@ export default class EquipItemSelector extends Component {
             });
         }
 
-        return {
+        let state = {
             mode: mode,
             includeList: includeList,
-            ignoreList: ignoreList,
-            type: type
+            ignoreList: ignoreList
         };
+
+        if (null === prevState.type) {
+            state.type = type;
+        }
+
+        return state;
     }
 
     /**
