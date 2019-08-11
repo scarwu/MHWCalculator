@@ -36,6 +36,12 @@ export default function (props) {
         let LogMap = {
             zhTW: (
                 <div>
+                    <span>2019/08/12</span>
+                    <ul>
+                        <li>修正武器類別選取問題</li>
+                        <li>修正部份數值錯誤</li>
+                    </ul>
+
                     <span>2019/03/24</span>
                     <ul>
                         <li>調整裝備選擇器界面</li>
