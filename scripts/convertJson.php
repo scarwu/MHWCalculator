@@ -793,6 +793,8 @@ foreach ($jewels as $jewel) {
     Misc::appendDatasetMap('jewel', $jewel);
 }
 
+echo "\n";
+
 // Test Data: Equips
 foreach ($testData['equipsList'] as $index => $equips) {
 
@@ -937,11 +939,23 @@ foreach ($testData['requireList'] as $index => $require) {
 }
 
 // Save Json
+echo "\n";
+echo "Dataset\n";
+echo "---\n";
+
 foreach (Misc::$datasetMap as $name => $data) {
+    echo "{$name} => " . count($data) . "\n";
+
     Misc::saveJson("datasets/{$name}", $data);
 }
 
+echo "\n";
+echo "Lang\n";
+echo "---\n";
+
 foreach (Misc::$langMap as $lang => $data) {
+    echo "{$lang} => " . count($data) . "\n";
+
     Misc::saveJson("langs/{$lang}/dataset", $data);
 }
 
