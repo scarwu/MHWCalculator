@@ -4,7 +4,7 @@
 $root = __DIR__;
 
 // Composer Auto Loader
-include "{$root}/../common.php";
+include "{$root}/../../common.php";
 
 $host = 'https://www.mhchinese.wiki';
 
@@ -266,4 +266,4 @@ foreach ($urlMapping as $weaponType => $url) {
     }
 }
 
-saveJson('zh/weapons', $allEquips);
+saveJson('zh/mhchinese/weapons', $allEquips);

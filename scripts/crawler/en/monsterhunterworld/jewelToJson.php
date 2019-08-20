@@ -4,7 +4,7 @@
 $root = __DIR__;
 
 // Composer Auto Loader
-include "{$root}/../common.php";
+include "{$root}/../../common.php";
 
 $host = 'https://monsterhunterworld.wiki.fextralife.com';
 $result = [];
@@ -28,4 +28,4 @@ foreach ($dom->find('.wiki_table', 0)->find('tr') as $index => $item) {
     ];
 }
 
-saveJson('en/jewels', $result);
+saveJson('en/monsterhunterworld/jewels', $result);

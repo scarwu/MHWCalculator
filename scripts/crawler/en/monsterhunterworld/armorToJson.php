@@ -4,7 +4,7 @@
 $root = __DIR__;
 
 // Composer Auto Loader
-include "{$root}/../common.php";
+include "{$root}/../../common.php";
 
 $host = 'https://monsterhunterworld.wiki.fextralife.com';
 $result = [
@@ -12,27 +12,27 @@ $result = [
     'skills' => []
 ];
 
-$dom = parseHTML(getHTML("{$host}/Weapons"));
+$dom = parseHTML(getHTML("{$host}/Armor"));
 
-foreach ($dom->find('#wiki-content-block .col-sm-3 > h5 a.wiki_link') as $item) {
-    $name = $item->plaintext;
-    $link = "{$host}{$item->attr['href']}";
-    $list = [];
+// foreach ($dom->find('#wiki-content-block .col-sm-3 > h5 a.wiki_link') as $item) {
+//     $name = $item->plaintext;
+//     $link = "{$host}{$item->attr['href']}";
+//     $list = [];
 
-    echo "Set: {$name}\n";
+//     echo "Set: {$name}\n";
 
-    // $content = parseHTML(getHTML($link));
+//     // $content = parseHTML(getHTML($link));
 
-    // foreach ($content->find('#wiki-content-block ul', 0)->find('li') as $skill) {
-    //     $list[] = $skill->plaintext;
-    // }
+//     // foreach ($content->find('#wiki-content-block ul', 0)->find('li') as $skill) {
+//     //     $list[] = $skill->plaintext;
+//     // }
 
-    $result['sets'][] = [
-        'name' => $name,
-        'link' => $link,
-        // 'list' => $list
-    ];
-}
+//     $result['sets'][] = [
+//         'name' => $name,
+//         'link' => $link,
+//         // 'list' => $list
+//     ];
+// }
 
 foreach ($dom->find('#wiki-content-block .col-sm-3 > p') as $item) {
     if (!isset($item->attr['style']) || 'text-align: center;' !== $item->attr['style']) {
@@ -63,11 +63,4 @@ foreach ($dom->find('#wiki-content-block .col-sm-3 > p') as $item) {
     ];
 }
 
-if (!file_exists("{$root}/../../temp")) {
-    mkdir("{$root}/../../temp");
-}
-
-file_put_contents(
-    "{$root}/../../temp/en-sets_skills.json",
-    json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
-);
+saveJson('en/monsterhunterworld/armors', $result);

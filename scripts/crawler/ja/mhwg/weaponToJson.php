@@ -4,7 +4,7 @@
 $root = __DIR__;
 
 // Composer Auto Loader
-include "{$root}/../common.php";
+include "{$root}/../../common.php";
 
 $host = 'http://mhwg.org';
 $list = [
@@ -162,7 +162,7 @@ foreach ($list[0] as $type => $url) {
             ], $slots), ':')))
             : null;
 
-        $path = "ja/weapons/{$type}/rare{$rare}";
+        $path = "ja/mhwg/weapons/{$type}/rare{$rare}";
 
         if (!isset($result[$path])) {
             $result[$path] = [];

@@ -4,7 +4,7 @@
 $root = __DIR__;
 
 // Composer Auto Loader
-include "{$root}/../common.php";
+include "{$root}/../../common.php";
 
 $host = 'https://www.mhchinese.wiki';
 
@@ -293,4 +293,4 @@ foreach ($urlList as $url) {
     }
 }
 
-saveJson('zh/armor', $allEquiqs);
+saveJson('zh/mhchinese/armor', $allEquiqs);

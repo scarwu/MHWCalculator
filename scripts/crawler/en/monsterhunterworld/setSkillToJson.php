@@ -4,7 +4,7 @@
 $root = __DIR__;
 
 // Composer Auto Loader
-include "{$root}/../common.php";
+include "{$root}/../../common.php";
 
 $host = 'https://monsterhunterworld.wiki.fextralife.com';
 $result = [
@@ -12,25 +12,23 @@ $result = [
     'skills' => []
 ];
 
-$dom = parseHTML(getHTML("{$host}/Skills"));
+$dom = getDOM("{$host}/Skills");
 
 foreach ($dom->find('#wiki-content-block .col-sm-3 > h5 a.wiki_link') as $item) {
-    $name = $item->plaintext;
-    $link = "{$host}{$item->attr['href']}";
+    $name = trim($item->plaintext);
     $list = [];
 
     echo "Set: {$name}\n";
 
-    // $content = parseHTML(getHTML($link));
+    $content = getDOM("{$host}{$item->attr['href']}");
 
-    // foreach ($content->find('#wiki-content-block ul', 0)->find('li') as $skill) {
-    //     $list[] = $skill->plaintext;
-    // }
+    foreach ($content->find('#wiki-content-block ul', 0)->find('li') as $skill) {
+        $list[] = trim(html_entity_decode($skill->plaintext));
+    }
 
     $result['sets'][] = [
         'name' => $name,
-        'link' => $link,
-        // 'list' => $list
+        'list' => $list
     ];
 }
 
@@ -43,31 +41,21 @@ foreach ($dom->find('#wiki-content-block .col-sm-3 > p') as $item) {
         continue;
     }
 
-    $name = $item->find('a.wiki_link', 0)->plaintext;
-    $link = $item->find('a.wiki_link', 0)->attr['href'];
-    $link = "{$host}/{$link}";
+    $name = trim($item->find('a.wiki_link', 0)->plaintext);
     $list = [];
 
     echo "Skill: {$name}\n";
 
-    $content = parseHTML(getHTML($link));
+    $content = getDOM("{$host}/" . $item->find('a.wiki_link', 0)->attr['href']);
 
     foreach ($content->find('#wiki-content-block ul', 0)->find('li') as $skill) {
-        $list[] = $skill->plaintext;
+        $list[] = trim(html_entity_decode($skill->plaintext));
     }
 
     $result['skill'][] = [
         'name' => $name,
-        'link' => $link,
         'list' => $list
     ];
 }
 
-if (!file_exists("{$root}/../../temp")) {
-    mkdir("{$root}/../../temp");
-}
-
-file_put_contents(
-    "{$root}/../../temp/en-sets_skills.json",
-    json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
-);
+saveJson('en/monsterhunterworld/sets_skills', $result);
