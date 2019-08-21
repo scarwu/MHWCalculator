@@ -482,5 +482,270 @@
                 "level": 1
             }
         ]
+    },
+    {
+        "id": "鎧羅弓．火",
+        "rare": 8,
+        "type": "bow",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "鎧羅弓．火",
+            "jaJP": null,
+            "enUS": "Taroth Arrow \"Fire\""
+        },
+        "attack": 240,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金弓．飛雷",
+        "rare": 8,
+        "type": "bow",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弓．飛雷",
+            "jaJP": null,
+            "enUS": "Kjárr Bow \"Spark\""
+        },
+        "attack": 216,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金弓．風漂",
+        "rare": 8,
+        "type": "bow",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弓．風漂",
+            "jaJP": null,
+            "enUS": "Kjárr Bow \"Stream\""
+        },
+        "attack": 204,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金弓．王",
+        "rare": 8,
+        "type": "bow",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弓．王",
+            "jaJP": null,
+            "enUS": "Kjárr Bow \"King\""
+        },
+        "attack": 234,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金弓．屍套",
+        "rare": 8,
+        "type": "bow",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弓．屍套",
+            "jaJP": null,
+            "enUS": "Kjárr Bow \"Decay\""
+        },
+        "attack": 240,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金弓．水",
+        "rare": 8,
+        "type": "bow",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弓．水",
+            "jaJP": null,
+            "enUS": "Kjárr Bow \"Water\""
+        },
+        "attack": 240,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金弓．爆破",
+        "rare": 8,
+        "type": "bow",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弓．爆破",
+            "jaJP": null,
+            "enUS": "Kjárr Bow \"Blast\""
+        },
+        "attack": 252,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": null,
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
     }
 ]

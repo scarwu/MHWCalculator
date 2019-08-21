@@ -244,7 +244,7 @@
         "type": "lightBowgun",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -274,7 +274,7 @@
         "type": "lightBowgun",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -304,7 +304,7 @@
         "type": "lightBowgun",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -432,6 +432,205 @@
         "skills": [
             {
                 "id": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "鎧羅迅擊弩．援擊",
+        "rare": 8,
+        "type": "lightBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "鎧羅迅擊弩．援擊",
+            "jaJP": null,
+            "enUS": "Taroth Blitz \"Support\""
+        },
+        "attack": 247,
+        "criticalRate": 0,
+        "defense": 30,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金弩．爆鱗",
+        "rare": 8,
+        "type": "lightBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弩．爆鱗",
+            "jaJP": null,
+            "enUS": "Kjárr Blitz \"Bomber\""
+        },
+        "attack": 260,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金弩．慘爪",
+        "rare": 8,
+        "type": "lightBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弩．慘爪",
+            "jaJP": null,
+            "enUS": "Kjárr Blitz \"Claw\""
+        },
+        "attack": 247,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金弩．屍套",
+        "rare": 8,
+        "type": "lightBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弩．屍套",
+            "jaJP": null,
+            "enUS": "Kjárr Blitz \"Decay\""
+        },
+        "attack": 273,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金弩．王",
+        "rare": 8,
+        "type": "lightBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弩．王",
+            "jaJP": null,
+            "enUS": "Kjárr Blitz \"King\""
+        },
+        "attack": 260,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金弩．雷",
+        "rare": 8,
+        "type": "lightBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弩．雷",
+            "jaJP": null,
+            "enUS": "Kjárr Blitz \"Thunder\""
+        },
+        "attack": 260,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金弩．冰",
+        "rare": 8,
+        "type": "lightBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金弩．冰",
+            "jaJP": null,
+            "enUS": "Kjárr Blitz \"Ice\""
+        },
+        "attack": 260,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
                 "level": 1
             }
         ]

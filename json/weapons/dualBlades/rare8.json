@@ -566,5 +566,445 @@
                 "level": 1
             }
         ]
+    },
+    {
+        "id": "鎧羅小刀．火",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "鎧羅小刀．火",
+            "jaJP": null,
+            "enUS": "Taroth Daggers \"Fire\""
+        },
+        "attack": 252,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 220,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 180,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金雙劍．飛雷",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金雙劍．飛雷",
+            "jaJP": null,
+            "enUS": "Kjárr Daggers \"Spark\""
+        },
+        "attack": 252,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 220,
+                "orange": 20,
+                "yellow": 20,
+                "green": 50,
+                "blue": 20,
+                "white": 60
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 180,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金雙劍．蠻顎",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金雙劍．蠻顎",
+            "jaJP": null,
+            "enUS": "Kjárr Daggers \"Rage\""
+        },
+        "attack": 280,
+        "criticalRate": 5,
+        "defense": 0,
+        "sharpness": {
+            "value": 470,
+            "steps": {
+                "red": 80,
+                "orange": 50,
+                "yellow": 50,
+                "green": 80,
+                "blue": 130,
+                "white": 130
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金雙劍．熔山",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金雙劍．熔山",
+            "jaJP": null,
+            "enUS": "Kjárr Daggers \"Magma\""
+        },
+        "attack": 266,
+        "criticalRate": 5,
+        "defense": 15,
+        "sharpness": {
+            "value": 430,
+            "steps": {
+                "red": 90,
+                "orange": 120,
+                "yellow": 40,
+                "green": 50,
+                "blue": 90,
+                "white": 90
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 180,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金雙劍．黑甲",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金雙劍．黑甲",
+            "jaJP": null,
+            "enUS": "Kjárr Daggers \"Lurk\""
+        },
+        "attack": 224,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 90,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金雙劍．水",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金雙劍．水",
+            "jaJP": null,
+            "enUS": "Kjárr Daggers \"Water\""
+        },
+        "attack": 252,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 170,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 80,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金雙劍．冰",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金雙劍．冰",
+            "jaJP": null,
+            "enUS": "Kjárr Daggers \"Ice\""
+        },
+        "attack": 252,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 40,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 90,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金雙劍．龍",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金雙劍．龍",
+            "jaJP": null,
+            "enUS": "Kjárr Daggers \"Dragon\""
+        },
+        "attack": 252,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 40,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 90,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "吉薇艾兒",
+        "rare": 8,
+        "type": "dualBlades",
+        "series": {
+            "zhTW": "狩魔獵人",
+            "jaJP": "ウィッチャー",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "吉薇艾兒",
+            "jaJP": null,
+            "enUS": "Zireael"
+        },
+        "attack": 294,
+        "criticalRate": 0,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 230,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 70
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "high"
+        },
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
     }
 ]

@@ -229,7 +229,7 @@
         "type": "switchAxe",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -274,7 +274,7 @@
         "type": "switchAxe",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -319,7 +319,7 @@
         "type": "switchAxe",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -513,6 +513,387 @@
         "skills": [
             {
                 "id": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "鎧羅劍斧．水",
+        "rare": 8,
+        "type": "switchAxe",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "鎧羅劍斧．水",
+            "jaJP": null,
+            "enUS": "Taroth Axe \"Water\""
+        },
+        "attack": 700,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 70,
+                "orange": 60,
+                "yellow": 60,
+                "green": 100,
+                "blue": 80,
+                "white": 20
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 480,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金劍斧．風漂",
+        "rare": 8,
+        "type": "switchAxe",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍斧．風漂",
+            "jaJP": null,
+            "enUS": "Kjárr Axe \"Stream\""
+        },
+        "attack": 595,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 70
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍斧．屍套",
+        "rare": 8,
+        "type": "switchAxe",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍斧．屍套",
+            "jaJP": null,
+            "enUS": "Kjárr Axe \"Decay\""
+        },
+        "attack": 595,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 220,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍斧．王",
+        "rare": 8,
+        "type": "switchAxe",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍斧．王",
+            "jaJP": null,
+            "enUS": "Kjárr Axe \"King\""
+        },
+        "attack": 665,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 80,
+                "orange": 60,
+                "yellow": 60,
+                "green": 100,
+                "blue": 70,
+                "white": 20
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍斧．爆鱗",
+        "rare": 8,
+        "type": "switchAxe",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍斧．爆鱗",
+            "jaJP": null,
+            "enUS": "Kjárr Axe \"Bomber\""
+        },
+        "attack": 665,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 460,
+            "steps": {
+                "red": 90,
+                "orange": 100,
+                "yellow": 40,
+                "green": 40,
+                "blue": 120,
+                "white": 120
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍斧．雷",
+        "rare": 8,
+        "type": "switchAxe",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍斧．雷",
+            "jaJP": null,
+            "enUS": "Kjárr Axe \"Thunder\""
+        },
+        "attack": 595,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍斧．水",
+        "rare": 8,
+        "type": "switchAxe",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍斧．水",
+            "jaJP": null,
+            "enUS": "Kjárr Axe \"Water\""
+        },
+        "attack": 665,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 50,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 80,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍斧．麻痺",
+        "rare": 8,
+        "type": "switchAxe",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍斧．麻痺",
+            "jaJP": null,
+            "enUS": "Kjárr Axe \"Paralysis\""
+        },
+        "attack": 700,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 470,
+            "steps": {
+                "red": 80,
+                "orange": 100,
+                "yellow": 40,
+                "green": 40,
+                "blue": 130,
+                "white": 130
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
                 "level": 1
             }
         ]

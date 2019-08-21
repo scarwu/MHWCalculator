@@ -324,7 +324,7 @@
         "type": "longSword",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -369,7 +369,7 @@
         "type": "longSword",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -414,7 +414,7 @@
         "type": "longSword",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -608,6 +608,391 @@
         "skills": [
             {
                 "id": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "鎧羅劍．火",
+        "rare": 8,
+        "type": "longSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "鎧羅劍．火",
+            "jaJP": null,
+            "enUS": "Taroth Sword \"Fire\""
+        },
+        "attack": 660,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 220,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金太刀．飛雷",
+        "rare": 8,
+        "type": "longSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金太刀．飛雷",
+            "jaJP": null,
+            "enUS": "Kjárr Sword \"Spark\""
+        },
+        "attack": 627,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 130,
+                "orange": 100,
+                "yellow": 30,
+                "green": 30,
+                "blue": 80,
+                "white": 20
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金太刀．風漂",
+        "rare": 8,
+        "type": "longSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金太刀．風漂",
+            "jaJP": null,
+            "enUS": "Kjárr Sword \"Stream\""
+        },
+        "attack": 561,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 210,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 90
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金太刀．屍套",
+        "rare": 8,
+        "type": "longSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金太刀．屍套",
+            "jaJP": null,
+            "enUS": "Kjárr Sword \"Decay\""
+        },
+        "attack": 676,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 190,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 60,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金太刀．熔山",
+        "rare": 8,
+        "type": "longSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金太刀．熔山",
+            "jaJP": null,
+            "enUS": "Kjárr Sword \"Magma\""
+        },
+        "attack": 693,
+        "criticalRate": 10,
+        "defense": 15,
+        "sharpness": {
+            "value": 450,
+            "steps": {
+                "red": 100,
+                "orange": 50,
+                "yellow": 50,
+                "green": 80,
+                "blue": 110,
+                "white": 110
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金太刀．水",
+        "rare": 8,
+        "type": "longSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金太刀．水",
+            "jaJP": null,
+            "enUS": "Kjárr Sword \"Water\""
+        },
+        "attack": 610,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 190,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 60,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金太刀．火",
+        "rare": 8,
+        "type": "longSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金太刀．火",
+            "jaJP": null,
+            "enUS": "Kjárr Sword \"Fire\""
+        },
+        "attack": 627,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 220,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金太刀．麻痺",
+        "rare": 8,
+        "type": "longSword",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金太刀．麻痺",
+            "jaJP": null,
+            "enUS": "Kjárr Sword \"Paralysis\""
+        },
+        "attack": 528,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 70
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
                 "level": 1
             }
         ]

@@ -375,5 +375,212 @@
                 "level": 1
             }
         ]
+    },
+    {
+        "id": "鎧羅突擊弩．狙擊",
+        "rare": 8,
+        "type": "heavyBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "鎧羅突擊弩．狙擊",
+            "jaJP": null,
+            "enUS": "Taroth Assault \"Pierce\""
+        },
+        "attack": 247,
+        "criticalRate": 10,
+        "defense": 20,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金砲筒．蠻顎",
+        "rare": 8,
+        "type": "heavyBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金砲筒．蠻顎",
+            "jaJP": null,
+            "enUS": "Kjárr Assault \"Rage\""
+        },
+        "attack": 260,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金砲筒．角",
+        "rare": 8,
+        "type": "heavyBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金砲筒．角",
+            "jaJP": null,
+            "enUS": "Kjárr Assault \"Horn\""
+        },
+        "attack": 286,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金砲筒．飛雷",
+        "rare": 8,
+        "type": "heavyBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金砲筒．飛雷",
+            "jaJP": null,
+            "enUS": "Kjárr Assault \"Spark\""
+        },
+        "attack": 247,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金砲筒．榕山",
+        "rare": 8,
+        "type": "heavyBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金砲筒．榕山",
+            "jaJP": null,
+            "enUS": "Kjárr Assault \"Magma\""
+        },
+        "attack": 273,
+        "criticalRate": 10,
+        "defense": 10,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金砲筒．水",
+        "rare": 8,
+        "type": "heavyBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金砲筒．水",
+            "jaJP": null,
+            "enUS": "Kjárr Assault \"Water\""
+        },
+        "attack": 247,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金砲筒．冰",
+        "rare": 8,
+        "type": "heavyBowgun",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金砲筒．冰",
+            "jaJP": null,
+            "enUS": "Kjárr Assault \"Ice\""
+        },
+        "attack": 260,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": null,
+        "element": null,
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
     }
 ]

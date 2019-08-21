@@ -561,5 +561,374 @@
             }
         ],
         "skills": null
+    },
+    {
+        "id": "鎧羅長刀．睡眠",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "鎧羅長刀．睡眠",
+            "jaJP": null,
+            "enUS": "Taroth Glaive \"Sleep\""
+        },
+        "attack": 558,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 220,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金長刀．飛雷",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金長刀．飛雷",
+            "jaJP": null,
+            "enUS": "Kjárr Glaive \"Spark\""
+        },
+        "attack": 589,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 170,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 80,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金長刀．屍套",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金長刀．屍套",
+            "jaJP": null,
+            "enUS": "Kjárr Glaive \"Decay\""
+        },
+        "attack": 527,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 230,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 70
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金長刀．王",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金長刀．王",
+            "jaJP": null,
+            "enUS": "Kjárr Glaive \"King\""
+        },
+        "attack": 589,
+        "criticalRate": 20,
+        "defense": 20,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 70,
+                "orange": 60,
+                "yellow": 60,
+                "green": 100,
+                "blue": 80,
+                "white": 20
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金長刀．岩賊",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金長刀．岩賊",
+            "jaJP": null,
+            "enUS": "Kjárr Glaive \"Crusher\""
+        },
+        "attack": 558,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 240,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 60
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金長刀．水",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金長刀．水",
+            "jaJP": null,
+            "enUS": "Kjárr Glaive \"Water\""
+        },
+        "attack": 620,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 50,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 80,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金長刀．冰",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金長刀．冰",
+            "jaJP": null,
+            "enUS": "Kjárr Glaive \"Ice\""
+        },
+        "attack": 558,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 90,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 90
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金長刀．麻痺",
+        "rare": 8,
+        "type": "insectGlaive",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金長刀．麻痺",
+            "jaJP": null,
+            "enUS": "Kjárr Glaive \"Paralysis\""
+        },
+        "attack": 620,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 240,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 60
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
     }
 ]

@@ -571,5 +571,386 @@
                 "level": 1
             }
         ]
+    },
+    {
+        "id": "鎧羅大錘．睡眠",
+        "rare": 8,
+        "type": "hammer",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "鎧羅大錘．睡眠",
+            "jaJP": null,
+            "enUS": "Taroth Hammer \"Sleep\""
+        },
+        "attack": 1040,
+        "criticalRate": 0,
+        "defense": 30,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 220,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金鎚．痺賊",
+        "rare": 8,
+        "type": "hammer",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金鎚．痺賊",
+            "jaJP": null,
+            "enUS": "Kjárr Hammer \"Numb\""
+        },
+        "attack": 936,
+        "criticalRate": 20,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 80,
+                "orange": 60,
+                "yellow": 60,
+                "green": 100,
+                "blue": 70,
+                "white": 20
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金鎚．屍套",
+        "rare": 8,
+        "type": "hammer",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金鎚．屍套",
+            "jaJP": null,
+            "enUS": "Kjárr Hammer \"Decay\""
+        },
+        "attack": 1040,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 40,
+                "orange": 120,
+                "yellow": 80,
+                "green": 60,
+                "blue": 50,
+                "white": 40
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金鎚．爆鎚",
+        "rare": 8,
+        "type": "hammer",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金鎚．爆鎚",
+            "jaJP": null,
+            "enUS": "Kjárr Hammer \"Gyre\""
+        },
+        "attack": 1040,
+        "criticalRate": 10,
+        "defense": 15,
+        "sharpness": {
+            "value": 470,
+            "steps": {
+                "red": 80,
+                "orange": 100,
+                "yellow": 40,
+                "green": 40,
+                "blue": 130,
+                "white": 130
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金鎚．水",
+        "rare": 8,
+        "type": "hammer",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金鎚．水",
+            "jaJP": null,
+            "enUS": "Kjárr Hammer \"Water\""
+        },
+        "attack": 1040,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 60,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 70,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金鎚．冰",
+        "rare": 8,
+        "type": "hammer",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金鎚．冰",
+            "jaJP": null,
+            "enUS": "Kjárr Hammer \"Ice\""
+        },
+        "attack": 988,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 170,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 80,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 480,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金鎚．雷",
+        "rare": 8,
+        "type": "hammer",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金鎚．雷",
+            "jaJP": null,
+            "enUS": "Kjárr Hammer \"Thunder\""
+        },
+        "attack": 988,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 130,
+                "orange": 100,
+                "yellow": 30,
+                "green": 30,
+                "blue": 80,
+                "white": 20
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金鎚．爆破",
+        "rare": 8,
+        "type": "hammer",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金鎚．爆破",
+            "jaJP": null,
+            "enUS": "Kjárr Hammer \"Blast\""
+        },
+        "attack": 1118,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 440,
+            "steps": {
+                "red": 110,
+                "orange": 50,
+                "yellow": 50,
+                "green": 80,
+                "blue": 100,
+                "white": 100
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
     }
 ]

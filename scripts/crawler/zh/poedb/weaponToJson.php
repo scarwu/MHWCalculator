@@ -139,7 +139,7 @@ foreach ($urlMapping as $weaponType => $url) {
 
                 break;
             case '會心率':
-                $text = $value->plaintext;
+                $text = trim($value->plaintext);
 
                 if (preg_match('/^(\+|-)(\d+)%$/', $text, $matches)) {
                     if ('+' === $matches[1]) {
@@ -231,7 +231,9 @@ foreach ($urlMapping as $weaponType => $url) {
 
                 break;
             case '龍封力':
-                if (preg_match('/^龍封力\[(.)\]$/', $text, $matches)) {
+                $text = trim($value->plaintext);
+
+                if (preg_match('/^龍封力\[(.+)\]$/', $text, $matches)) {
                     $equip['elderseal'] = [
                         'affinity' => [
                             '大' => 'high',

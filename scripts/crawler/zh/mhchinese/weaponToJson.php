@@ -12,7 +12,7 @@ $urlMapping = [
     "greatSword" => "{$host}/weapons/final/great_swords",
     "longSword" => "{$host}/weapons/final/long_sword",
     "swordAndShield" => "{$host}/weapons/final/sword_shield",
-    "dualSlades" => "{$host}/weapons/final/dual_blades",
+    "dualBlades" => "{$host}/weapons/final/dual_blades",
     "hammer" => "{$host}/weapons/final/hammer",
     "huntingHorn" => "{$host}/weapons/final/hunting_horn",
     "lance" => "{$host}/weapons/final/lances",
@@ -29,7 +29,7 @@ $typeMapping = [
     "greatSword" => '大劍',
     "longSword" => '太刀',
     "swordAndShield" => '片手劍',
-    "dualSlades" => '雙劍',
+    "dualBlades" => '雙劍',
     "hammer" => '大鎚',
     "huntingHorn" => '狩獵笛',
     "lance" => '長槍',
@@ -63,7 +63,7 @@ foreach ($urlMapping as $weaponType => $url) {
             'greatSword',
             'longSword',
             'swordAndShield',
-            'dualSlades',
+            'dualBlades',
             'hammer',
             'lance'
         ])) {

@@ -366,7 +366,7 @@
         "type": "lance",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -411,7 +411,7 @@
         "type": "lance",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -456,7 +456,7 @@
         "type": "lance",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -650,6 +650,387 @@
         "skills": [
             {
                 "id": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "鎧羅之尖．毒",
+        "rare": 8,
+        "type": "lance",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "鎧羅之尖．毒",
+            "jaJP": null,
+            "enUS": "Taroth Crest \"Poison\""
+        },
+        "attack": 460,
+        "criticalRate": -10,
+        "defense": 20,
+        "sharpness": {
+            "value": 450,
+            "steps": {
+                "red": 100,
+                "orange": 50,
+                "yellow": 50,
+                "green": 80,
+                "blue": 110,
+                "white": 110
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "poison",
+                "minValue": 630,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金槍．麻痺",
+        "rare": 8,
+        "type": "lance",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金槍．麻痺",
+            "jaJP": null,
+            "enUS": "Kjárr Crest \"Paralysis\""
+        },
+        "attack": 414,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 80,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 50,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金槍．風漂",
+        "rare": 8,
+        "type": "lance",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金槍．風漂",
+            "jaJP": null,
+            "enUS": "Kjárr Crest \"Stream\""
+        },
+        "attack": 391,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 210,
+                "orange": 20,
+                "yellow": 20,
+                "green": 50,
+                "blue": 20,
+                "white": 70
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金槍．屍套",
+        "rare": 8,
+        "type": "lance",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金槍．屍套",
+            "jaJP": null,
+            "enUS": "Kjárr Crest \"Decay\""
+        },
+        "attack": 391,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 230,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 70
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金槍．王",
+        "rare": 8,
+        "type": "lance",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金槍．王",
+            "jaJP": null,
+            "enUS": "Kjárr Crest \"King\""
+        },
+        "attack": 391,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 210,
+                "orange": 20,
+                "yellow": 20,
+                "green": 50,
+                "blue": 20,
+                "white": 70
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金槍．岩賊",
+        "rare": 8,
+        "type": "lance",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金槍．岩賊",
+            "jaJP": null,
+            "enUS": "Kjárr Crest \"Crusher\""
+        },
+        "attack": 414,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 80,
+                "orange": 60,
+                "yellow": 60,
+                "green": 100,
+                "blue": 70,
+                "white": 20
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 270,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金槍．水",
+        "rare": 8,
+        "type": "lance",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金槍．水",
+            "jaJP": null,
+            "enUS": "Kjárr Crest \"Water\""
+        },
+        "attack": 437,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 50,
+                "orange": 50,
+                "yellow": 60,
+                "green": 120,
+                "blue": 80,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金槍．雷",
+        "rare": 8,
+        "type": "lance",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金槍．雷",
+            "jaJP": null,
+            "enUS": "Kjárr Crest \"Thunder\""
+        },
+        "attack": 414,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 460,
+            "steps": {
+                "red": 110,
+                "orange": 20,
+                "yellow": 20,
+                "green": 120,
+                "blue": 120,
+                "white": 120
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
                 "level": 1
             }
         ]

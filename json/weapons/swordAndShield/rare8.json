@@ -188,7 +188,7 @@
         "type": "swordAndShield",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -235,7 +235,7 @@
         "type": "swordAndShield",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -280,7 +280,7 @@
         "type": "swordAndShield",
         "series": {
             "zhTW": "絢輝龍",
-            "jaJP": null,
+            "jaJP": "マム鑑定",
             "enUS": null
         },
         "name": {
@@ -468,6 +468,403 @@
         "skills": [
             {
                 "id": "利刃／彈藥節約",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "鎧羅切刀．火",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "鎧羅切刀．火",
+            "jaJP": null,
+            "enUS": "Taroth Slicer \"Fire\""
+        },
+        "attack": 252,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 210,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 90
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": true
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金劍．痺賊",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍．痺賊",
+            "jaJP": null,
+            "enUS": "Kjárr Slicer \"Numb\""
+        },
+        "attack": 252,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 40,
+                "orange": 120,
+                "yellow": 80,
+                "green": 60,
+                "blue": 50,
+                "white": 40
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 210,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍．風漂",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍．風漂",
+            "jaJP": null,
+            "enUS": "Kjárr Slicer \"Stream\""
+        },
+        "attack": 238,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍．王",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍．王",
+            "jaJP": null,
+            "enUS": "Kjárr Slicer \"King\""
+        },
+        "attack": 266,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 80,
+                "orange": 60,
+                "yellow": 60,
+                "green": 100,
+                "blue": 70,
+                "white": 20
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 240,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍．幻",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍．幻",
+            "jaJP": null,
+            "enUS": "Kjárr Slicer \"Myth\""
+        },
+        "attack": 238,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 130,
+                "orange": 100,
+                "yellow": 30,
+                "green": 30,
+                "blue": 80,
+                "white": 20
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍．水",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍．水",
+            "jaJP": null,
+            "enUS": "Kjárr Slicer \"Water\""
+        },
+        "attack": 252,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 160,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 90,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍．龍",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍．龍",
+            "jaJP": null,
+            "enUS": "Kjárr Slicer \"Dragon\""
+        },
+        "attack": 238,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 160,
+                "orange": 70,
+                "yellow": 20,
+                "green": 20,
+                "blue": 90,
+                "white": 30
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 360,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "low"
+        },
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金劍．爆破",
+        "rare": 8,
+        "type": "swordAndShield",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金劍．爆破",
+            "jaJP": null,
+            "enUS": "Kjárr Slicer \"Blast\""
+        },
+        "attack": 224,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 330,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
                 "level": 1
             }
         ]

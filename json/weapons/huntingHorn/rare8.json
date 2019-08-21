@@ -474,5 +474,390 @@
                 "level": 1
             }
         ]
+    },
+    {
+        "id": "鎧羅風笛．睡眠",
+        "rare": 8,
+        "type": "huntingHorn",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "鎧羅風笛．睡眠",
+            "jaJP": null,
+            "enUS": "Taroth Pipe \"Sleep\""
+        },
+        "attack": 798,
+        "criticalRate": 0,
+        "defense": 20,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 230,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 70
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "sleep",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": true
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 3
+            }
+        ],
+        "skills": null
+    },
+    {
+        "id": "帝王金龍笛．麻痺",
+        "rare": 8,
+        "type": "huntingHorn",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金龍笛．麻痺",
+            "jaJP": null,
+            "enUS": "Kjárr Pipe \"Paralysis\""
+        },
+        "attack": 798,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 510,
+            "steps": {
+                "red": 40,
+                "orange": 50,
+                "yellow": 50,
+                "green": 80,
+                "blue": 170,
+                "white": 170
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "paralysis",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金龍笛．蠻顎",
+        "rare": 8,
+        "type": "huntingHorn",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金龍笛．蠻顎",
+            "jaJP": null,
+            "enUS": "Kjárr Pipe \"Rage\""
+        },
+        "attack": 798,
+        "criticalRate": 5,
+        "defense": 0,
+        "sharpness": {
+            "value": 460,
+            "steps": {
+                "red": 90,
+                "orange": 100,
+                "yellow": 40,
+                "green": 40,
+                "blue": 120,
+                "white": 120
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "fire",
+                "minValue": 390,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金龍笛．幻",
+        "rare": 8,
+        "type": "huntingHorn",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金龍笛．幻",
+            "jaJP": null,
+            "enUS": "Kjárr Pipe \"Myth\""
+        },
+        "attack": 672,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 220,
+                "orange": 20,
+                "yellow": 20,
+                "green": 50,
+                "blue": 20,
+                "white": 60
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "thunder",
+                "minValue": 510,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金龍笛．岩賊",
+        "rare": 8,
+        "type": "huntingHorn",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金龍笛．岩賊",
+            "jaJP": null,
+            "enUS": "Kjárr Pipe \"Crusher\""
+        },
+        "attack": 798,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 110,
+                "orange": 110,
+                "yellow": 40,
+                "green": 40,
+                "blue": 80,
+                "white": 10
+            }
+        },
+        "element": {
+            "attack": null,
+            "status": {
+                "type": "blast",
+                "minValue": 300,
+                "maxValue": null,
+                "isHidden": false
+            }
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【特殊】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金龍笛．風漂",
+        "rare": 8,
+        "type": "huntingHorn",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金龍笛．風漂",
+            "jaJP": null,
+            "enUS": "Kjárr Pipe \"Stream\""
+        },
+        "attack": 672,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 110,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 70
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "ice",
+                "minValue": 510,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金龍笛．水",
+        "rare": 8,
+        "type": "huntingHorn",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金龍笛．水",
+            "jaJP": null,
+            "enUS": "Kjárr Pipe \"Water\""
+        },
+        "attack": 714,
+        "criticalRate": 15,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 100,
+                "orange": 30,
+                "yellow": 60,
+                "green": 80,
+                "blue": 40,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "water",
+                "minValue": 450,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": null,
+        "slots": [
+            {
+                "size": 1
+            }
+        ],
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "帝王金龍笛．龍",
+        "rare": 8,
+        "type": "huntingHorn",
+        "series": {
+            "zhTW": "絢輝龍",
+            "jaJP": "マム鑑定",
+            "enUS": null
+        },
+        "name": {
+            "zhTW": "帝王金龍笛．龍",
+            "jaJP": null,
+            "enUS": "Kjárr Pipe \"Dragon\""
+        },
+        "attack": 756,
+        "criticalRate": 10,
+        "defense": 0,
+        "sharpness": {
+            "value": 340,
+            "steps": {
+                "red": 220,
+                "orange": 20,
+                "yellow": 20,
+                "green": 20,
+                "blue": 30,
+                "white": 80
+            }
+        },
+        "element": {
+            "attack": {
+                "type": "dragon",
+                "minValue": 420,
+                "maxValue": null,
+                "isHidden": false
+            },
+            "status": null
+        },
+        "elderseal": {
+            "affinity": "medium"
+        },
+        "slots": null,
+        "skills": [
+            {
+                "id": "會心攻擊【屬性】",
+                "level": 1
+            }
+        ]
     }
 ]
