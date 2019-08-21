@@ -40,3 +40,4 @@ gulp release # and commit to github
 * http://mhw.wiki-db.com
 * https://game.capcom.com/manual/MHW/ps4
 * https://monsterhunterworld.wiki.fextralife.com
+* https://mhw.poedb.tw
