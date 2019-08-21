@@ -56,214 +56,417 @@ $allEquips = [];
 foreach ($urlMapping as $weaponType => $url) {
     echo "{$typeMapping[$weaponType]}: {$url}\n";
 
-    $dom = getDOM($url);
+    $mainDom = getDOM($url);
 
-    foreach ($dom->find('.content-filter-weapon-target') as $index => $row) {
-        if (in_array($weaponType, [
-            'greatSword',
-            'longSword',
-            'swordAndShield',
-            'dualSlades',
-            'hammer',
-            'lance'
-        ])) {
-            $series = trim($row->find('td', 0)->plaintext);
-            $name = trim($row->find('td', 1)->plaintext);
-            $attack = trim($row->find('td', 2)->plaintext);
-            $criticalRate = trim($row->find('td', 3)->plaintext);
-            $sharpnessBlock = $row->find('td', 4);
-            $property = trim($row->find('td', 5)->plaintext);
-            $slots = trim($row->find('td', 6)->plaintext);
+    foreach ($mainDom->find('table tr') as $index => $row) {
+        if (0 === $index) {
+            continue;
         }
 
-        if (in_array($weaponType, [
-            'huntingHorn'
-        ])) {
-            $series = trim($row->find('td', 0)->plaintext);
-            $name = trim($row->find('td', 1)->plaintext);
-            $attack = trim($row->find('td', 2)->plaintext);
-            $criticalRate = trim($row->find('td', 3)->plaintext);
-            // pass
-            $sharpnessBlock = $row->find('td', 5);
-            $property = trim($row->find('td', 6)->plaintext);
-            $slots = trim($row->find('td', 7)->plaintext);
-        }
+        $item = $row->find('a', 0);
+        $name = $item->plaintext;
+        $subUrl = "{$host}{$item->href}";
 
-        if (in_array($weaponType, [
-            'chargeBlade'
-        ])) {
-            $series = trim($row->find('td', 0)->plaintext);
-            $name = trim($row->find('td', 1)->plaintext);
-            $attack = trim($row->find('td', 2)->plaintext);
-            $criticalRate = trim($row->find('td', 3)->plaintext);
-            $sharpnessBlock = $row->find('td', 4);
-            // pass
-            $property = trim($row->find('td', 6)->plaintext);
-            $slots = trim($row->find('td', 7)->plaintext);
-        }
+        echo "{$name}: {$host}{$item->href}\n";
 
-        if (in_array($weaponType, [
-            'switchAxe',
-            'gunlance',
-            'insectGlaive'
-        ])) {
-            $series = trim($row->find('td', 0)->plaintext);
-            $name = trim($row->find('td', 1)->plaintext);
-            $attack = trim($row->find('td', 2)->plaintext);
-            $criticalRate = trim($row->find('td', 3)->plaintext);
-            $sharpnessBlock = $row->find('td', 4);
-            $property = trim($row->find('td', 5)->plaintext);
-            // pass
-            $slots = trim($row->find('td', 7)->plaintext);
-        }
-
-        if (in_array($weaponType, [
-            'lightBowgun'
-        ])) {
-            $series = trim($row->find('td', 0)->plaintext);
-            $name = trim($row->find('td', 1)->plaintext);
-            $attack = trim($row->find('td', 2)->plaintext);
-            $criticalRate = trim($row->find('td', 3)->plaintext);
-            $sharpnessBlock = null;
-            $element = null;
-            // pass
-            // pass
-            $slots = trim($row->find('td', 6)->plaintext);
-        }
-
-        if (in_array($weaponType, [
-            'heavyBowgun'
-        ])) {
-            $series = trim($row->find('td', 0)->plaintext);
-            $name = trim($row->find('td', 1)->plaintext);
-            $attack = trim($row->find('td', 2)->plaintext);
-            $criticalRate = trim($row->find('td', 3)->plaintext);
-            $sharpnessBlock = null;
-            $element = null;
-            // pass
-            // pass
-            // pass
-            $slots = trim($row->find('td', 7)->plaintext);
-        }
-
-        if (in_array($weaponType, [
-            'bow'
-        ])) {
-            $series = trim($row->find('td', 0)->plaintext);
-            $name = trim($row->find('td', 1)->plaintext);
-            $attack = trim($row->find('td', 2)->plaintext);
-            $criticalRate = trim($row->find('td', 3)->plaintext);
-            $sharpnessBlock = null;
-            // pass
-            $property = trim($row->find('td', 5)->plaintext);
-            $slots = trim($row->find('td', 6)->plaintext);
-        }
-
-        $name = str_replace(' ', '', $name);
-        $name = str_replace('III', 'Ⅲ', $name);
-        $name = str_replace('II', 'Ⅱ', $name);
-        $name = str_replace('I', 'Ⅰ', $name);
-        $name = str_replace('Ⅲ', ' III', $name);
-        $name = str_replace('Ⅱ', ' II', $name);
-        $name = str_replace('Ⅰ', ' I', $name);
+        $subDom = getDOM($subUrl);
+        $list = $subDom->find('table', 0);
 
         $equip = [
-            'name' => $name,
+            'id' => $name,
+            'rare' => null,
             'type' => $typeMapping[$weaponType],
-            'series' => $series,
-            'attack' => (int) $attack,
-            'criticalRate' => (int) trim($criticalRate, '%'),
+            'series' => [
+                'zhTW' => null,
+                'jaJP' => null,
+                'enUS' => null
+            ],
+            'name' => [
+                'zhTW' => $name,
+                'jaJP' => null,
+                'enUS' => null
+            ],
+            'attack' => 0,
+            'criticalRate' => 0,
             'defense' => 0,
             'sharpness' => null,
             'element' => null,
             'elderseal' => null,
-            'slots' => []
+            'slots' => null,
+            'skills' => null
         ];
 
-        if (null !== $sharpnessBlock) {
-            $equip['sharpness'] = [
-                'value' => 0,
-                'steps' => [
-                    'red' => 0,
-                    'orange' => 0,
-                    'yellow' => 0,
-                    'green' => 0,
-                    'blue' => 0,
-                    'white' => 0
-                ]
-            ];
+        foreach ($list->find('tr') as $row) {
+            [$key, $value] = explode('<td>', $row->find('th', 0)->innertext);
 
-            foreach ($sharpnessBlock->find('.sharpness', 0)->find('div') as $index => $div) {
-                if (!preg_match('/^width: (\d+)px;$/', $div->style, $matches)) {
-                    continue;
+            $key = parseHTML($key);
+            $value = parseHTML($value);
+
+            switch ($key->plaintext) {
+            case 'rarity':
+                $equip['rare'] = (int) $value->plaintext;
+
+                break;
+            case 'tree_en':
+                $equip['series']['zhTW'] = $value->plaintext;
+
+                break;
+            case 'name_en':
+                $equip['name']['enUS'] = $value->plaintext;
+
+                break;
+            case '攻擊力':
+                $equip['attack'] = (int) $value->plaintext;
+
+                break;
+            case '防禦力':
+                $equip['defense'] = (int) $value->plaintext;
+
+                break;
+            case '會心率':
+                $text = $value->plaintext;
+
+                if (preg_match('/^(\+|-)(\d+)%$/', $text, $matches)) {
+                    if ('+' === $matches[1]) {
+                        $equip['criticalRate'] = (int) $matches[2];
+                    } else {
+                        $equip['criticalRate'] = -((int) $matches[2]);
+                    }
                 }
 
-                $equip['sharpness']['value'] += ((int) $matches[1]) * 2;
-            }
+                break;
+            case '銳利度':
+                $steps = $value->find('.kbox-in', 4);
+                $red = (null !== $steps->find('span', 0))
+                    ? (int) $steps->find('span', 0)->attr['title'] : 0;
+                $orange = (null !== $steps->find('span', 1))
+                    ? (int) $steps->find('span', 1)->attr['title'] : 0;
+                $yellow = (null !== $steps->find('span', 2))
+                    ? (int) $steps->find('span', 2)->attr['title'] : 0;
+                $green = (null !== $steps->find('span', 3))
+                    ? (int) $steps->find('span', 3)->attr['title'] : 0;
+                $blue = (null !== $steps->find('span', 4))
+                    ? (int) $steps->find('span', 4)->attr['title'] : 0;
+                $white = (null !== $steps->find('span', 5))
+                    ? (int) $steps->find('span', 5)->attr['title'] : 0;
 
-            foreach ($sharpnessBlock->find('.sharpness', 1)->find('div') as $index => $div) {
-                if (!preg_match('/^width: (\d+)px;$/', $div->style, $matches)) {
-                    continue;
-                }
+                $equip['sharpness'] = [
+                    'value' => ($red + $orange + $yellow + $green + $blue + $white) - 50,
+                    'steps' => [
+                        'red' => $red,
+                        'orange' => $orange,
+                        'yellow' => $yellow,
+                        'green' => $green,
+                        'blue' => $blue,
+                        'white' => $white
+                    ]
+                ];
 
-                if (!isset($sharpnessList[$index])) {
-                    continue;
-                }
+                break;
+            case '屬性值':
+                $text = trim($value->plaintext);
+                $type = $value->find('img', 0)->attr['title'];
 
-                $equip['sharpness']['steps'][$sharpnessList[$index]] = ((int) $matches[1]) * 2;
-            }
-        }
-
-        foreach (explode(' ', $property) as $text) {
-            if (preg_match('/^\((.+?)(\d+)\)$/', trim($text), $matches)) {
                 $equip['element'] = [
-                    'type' => $matches[1],
-                    'value' => (int) $matches[2],
-                    'isHidden' => true
+                    'attack' => null,
+                    'status' => null
                 ];
-            }
 
-            if (preg_match('/^(.+?)(\d+)$/', trim($text), $matches)) {
-                $equip['element'] = [
-                    'type' => $matches[1],
-                    'value' => (int) $matches[2],
-                    'isHidden' => false
+                if (preg_match('/^\((\d+)\)$/', $text, $matches)) {
+                    $equip['element'][in_array($type, [
+                        'fire', 'ice', 'water', 'thunder', 'dragon'
+                    ]) ? 'attack' : 'status'] = [
+                        'type' => $type,
+                        'minValue' => (int) $matches[1],
+                        'maxValue' => null,
+                        'isHidden' => true
+                    ];
+                }
+
+                if (preg_match('/^(\d+)$/', $text, $matches)) {
+                    $equip['element'][in_array($type, [
+                        'fire', 'ice', 'water', 'thunder', 'dragon'
+                    ]) ? 'attack' : 'status'] = [
+                        'type' => $type,
+                        'minValue' => (int) $matches[1],
+                        'maxValue' => null,
+                        'isHidden' => false
+                    ];
+                }
+
+                break;
+            case '鑲嵌槽':
+                $equip['slots'] = [];
+
+                foreach ($value->find('img') as $slot) {
+                    if (strpos($slot->attr['style'], '066') !== false) {
+                        $equip['slots'][] = [
+                            'size' => 1
+                        ];
+                    } elseif (strpos($slot->attr['style'], '067') !== false) {
+                        $equip['slots'][] = [
+                            'size' => 2
+                        ];
+                    } elseif (strpos($slot->attr['style'], '068') !== false) {
+                        $equip['slots'][] = [
+                            'size' => 3
+                        ];
+                    }
+                }
+
+                break;
+            case '龍封力':
+                if (preg_match('/^龍封力\[(.)\]$/', $text, $matches)) {
+                    $equip['elderseal'] = [
+                        'affinity' => [
+                            '大' => 'high',
+                            '中' => 'medium',
+                            '小' => 'low'
+                        ][$matches[1]]
+                    ];
+                }
+
+                break;
+            case 'skill_id':
+                $equip['skills'] = [
+                    [
+                        'id' => $value->plaintext,
+                        'level' => 1
+                    ]
                 ];
-            }
 
-            if (preg_match('/^.+?\[(.+)\]$/', trim($text), $matches)) {
-                $equip['elderseal'] = [
-                    'affinity' => $matches[1]
-                ];
-            }
-        }
+                break;
 
-        foreach (explode(' ', $slots) as $slot) {
-            if ('-' === $slot) {
-                continue;
-            }
+            // Skipped
+            case 'id':
+            case 'color':
+            case 'wep_ids':
+            case 'weapon_type':
+            case 'base_model_id':
+            case '客製強化':
+                break;
+            default:
+                echo "{$key}\n";
+                echo "{$value}\n";
 
-            if ('①' === $slot) {
-                $equip['slots'][] = [
-                    'size' => 1
-                ];
-            }
-
-            if ('②' === $slot) {
-                $equip['slots'][] = [
-                    'size' => 2
-                ];
-            }
-
-            if ('③' === $slot) {
-                $equip['slots'][] = [
-                    'size' => 3
-                ];
+                break;
             }
         }
 
         $allEquips[$name] = $equip;
     }
+
+    break;
+
+
+        //
+
+    // foreach ($dom->find('.content-filter-weapon-target') as $index => $row) {
+    //     if (in_array($weaponType, [
+    //         'greatSword',
+    //         'longSword',
+    //         'swordAndShield',
+    //         'dualSlades',
+    //         'hammer',
+    //         'lance'
+    //     ])) {
+    //         $series = trim($row->find('td', 0)->plaintext);
+    //         $name = trim($row->find('td', 1)->plaintext);
+    //         $attack = trim($row->find('td', 2)->plaintext);
+    //         $criticalRate = trim($row->find('td', 3)->plaintext);
+    //         $sharpnessBlock = $row->find('td', 4);
+    //         $property = trim($row->find('td', 5)->plaintext);
+    //         $slots = trim($row->find('td', 6)->plaintext);
+    //     }
+
+    //     if (in_array($weaponType, [
+    //         'huntingHorn'
+    //     ])) {
+    //         $series = trim($row->find('td', 0)->plaintext);
+    //         $name = trim($row->find('td', 1)->plaintext);
+    //         $attack = trim($row->find('td', 2)->plaintext);
+    //         $criticalRate = trim($row->find('td', 3)->plaintext);
+    //         // pass
+    //         $sharpnessBlock = $row->find('td', 5);
+    //         $property = trim($row->find('td', 6)->plaintext);
+    //         $slots = trim($row->find('td', 7)->plaintext);
+    //     }
+
+    //     if (in_array($weaponType, [
+    //         'chargeBlade'
+    //     ])) {
+    //         $series = trim($row->find('td', 0)->plaintext);
+    //         $name = trim($row->find('td', 1)->plaintext);
+    //         $attack = trim($row->find('td', 2)->plaintext);
+    //         $criticalRate = trim($row->find('td', 3)->plaintext);
+    //         $sharpnessBlock = $row->find('td', 4);
+    //         // pass
+    //         $property = trim($row->find('td', 6)->plaintext);
+    //         $slots = trim($row->find('td', 7)->plaintext);
+    //     }
+
+    //     if (in_array($weaponType, [
+    //         'switchAxe',
+    //         'gunlance',
+    //         'insectGlaive'
+    //     ])) {
+    //         $series = trim($row->find('td', 0)->plaintext);
+    //         $name = trim($row->find('td', 1)->plaintext);
+    //         $attack = trim($row->find('td', 2)->plaintext);
+    //         $criticalRate = trim($row->find('td', 3)->plaintext);
+    //         $sharpnessBlock = $row->find('td', 4);
+    //         $property = trim($row->find('td', 5)->plaintext);
+    //         // pass
+    //         $slots = trim($row->find('td', 7)->plaintext);
+    //     }
+
+    //     if (in_array($weaponType, [
+    //         'lightBowgun'
+    //     ])) {
+    //         $series = trim($row->find('td', 0)->plaintext);
+    //         $name = trim($row->find('td', 1)->plaintext);
+    //         $attack = trim($row->find('td', 2)->plaintext);
+    //         $criticalRate = trim($row->find('td', 3)->plaintext);
+    //         $sharpnessBlock = null;
+    //         $element = null;
+    //         // pass
+    //         // pass
+    //         $slots = trim($row->find('td', 6)->plaintext);
+    //     }
+
+    //     if (in_array($weaponType, [
+    //         'heavyBowgun'
+    //     ])) {
+    //         $series = trim($row->find('td', 0)->plaintext);
+    //         $name = trim($row->find('td', 1)->plaintext);
+    //         $attack = trim($row->find('td', 2)->plaintext);
+    //         $criticalRate = trim($row->find('td', 3)->plaintext);
+    //         $sharpnessBlock = null;
+    //         $element = null;
+    //         // pass
+    //         // pass
+    //         // pass
+    //         $slots = trim($row->find('td', 7)->plaintext);
+    //     }
+
+    //     if (in_array($weaponType, [
+    //         'bow'
+    //     ])) {
+    //         $series = trim($row->find('td', 0)->plaintext);
+    //         $name = trim($row->find('td', 1)->plaintext);
+    //         $attack = trim($row->find('td', 2)->plaintext);
+    //         $criticalRate = trim($row->find('td', 3)->plaintext);
+    //         $sharpnessBlock = null;
+    //         // pass
+    //         $property = trim($row->find('td', 5)->plaintext);
+    //         $slots = trim($row->find('td', 6)->plaintext);
+    //     }
+
+    //     $name = str_replace(' ', '', $name);
+    //     $name = str_replace('III', 'Ⅲ', $name);
+    //     $name = str_replace('II', 'Ⅱ', $name);
+    //     $name = str_replace('I', 'Ⅰ', $name);
+    //     $name = str_replace('Ⅲ', ' III', $name);
+    //     $name = str_replace('Ⅱ', ' II', $name);
+    //     $name = str_replace('Ⅰ', ' I', $name);
+
+    //     $equip = [
+    //         'name' => $name,
+    //         'type' => $typeMapping[$weaponType],
+    //         'series' => $series,
+    //         'attack' => (int) $attack,
+    //         'criticalRate' => (int) trim($criticalRate, '%'),
+    //         'defense' => 0,
+    //         'sharpness' => null,
+    //         'element' => null,
+    //         'elderseal' => null,
+    //         'slots' => []
+    //     ];
+
+    //     if (null !== $sharpnessBlock) {
+    //         $equip['sharpness'] = [
+    //             'value' => 0,
+    //             'steps' => [
+    //                 'red' => 0,
+    //                 'orange' => 0,
+    //                 'yellow' => 0,
+    //                 'green' => 0,
+    //                 'blue' => 0,
+    //                 'white' => 0
+    //             ]
+    //         ];
+
+    //         foreach ($sharpnessBlock->find('.sharpness', 0)->find('div') as $index => $div) {
+    //             if (!preg_match('/^width: (\d+)px;$/', $div->style, $matches)) {
+    //                 continue;
+    //             }
+
+    //             $equip['sharpness']['value'] += ((int) $matches[1]) * 2;
+    //         }
+
+    //         foreach ($sharpnessBlock->find('.sharpness', 1)->find('div') as $index => $div) {
+    //             if (!preg_match('/^width: (\d+)px;$/', $div->style, $matches)) {
+    //                 continue;
+    //             }
+
+    //             if (!isset($sharpnessList[$index])) {
+    //                 continue;
+    //             }
+
+    //             $equip['sharpness']['steps'][$sharpnessList[$index]] = ((int) $matches[1]) * 2;
+    //         }
+    //     }
+
+    //     foreach (explode(' ', $property) as $text) {
+    //         if (preg_match('/^\((.+?)(\d+)\)$/', trim($text), $matches)) {
+    //             $equip['element'] = [
+    //                 'type' => $matches[1],
+    //                 'value' => (int) $matches[2],
+    //                 'isHidden' => true
+    //             ];
+    //         }
+
+    //         if (preg_match('/^(.+?)(\d+)$/', trim($text), $matches)) {
+    //             $equip['element'] = [
+    //                 'type' => $matches[1],
+    //                 'value' => (int) $matches[2],
+    //                 'isHidden' => false
+    //             ];
+    //         }
+
+    //         if (preg_match('/^.+?\[(.+)\]$/', trim($text), $matches)) {
+    //             $equip['elderseal'] = [
+    //                 'affinity' => $matches[1]
+    //             ];
+    //         }
+    //     }
+
+    //     foreach (explode(' ', $slots) as $slot) {
+    //         if ('-' === $slot) {
+    //             continue;
+    //         }
+
+    //         if ('①' === $slot) {
+    //             $equip['slots'][] = [
+    //                 'size' => 1
+    //             ];
+    //         }
+
+    //         if ('②' === $slot) {
+    //             $equip['slots'][] = [
+    //                 'size' => 2
+    //             ];
+    //         }
+
+    //         if ('③' === $slot) {
+    //             $equip['slots'][] = [
+    //                 'size' => 3
+    //             ];
+    //         }
+    //     }
+
+    //     $allEquips[$name] = $equip;
+    // }
 }
 
 saveJson('zh/poedb/weapons', $allEquips);
