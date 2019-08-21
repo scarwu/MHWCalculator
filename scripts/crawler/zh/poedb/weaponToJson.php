@@ -78,6 +78,7 @@ foreach ($urlMapping as $weaponType => $url) {
         $name = str_replace('Ⅲ', ' III', $name);
         $name = str_replace('Ⅱ', ' II', $name);
         $name = str_replace('Ⅰ', ' I', $name);
+        $name = str_replace('‧', '．', $name);
 
         $subUrl = "{$host}{$item->href}";
 
@@ -89,7 +90,7 @@ foreach ($urlMapping as $weaponType => $url) {
         $equip = [
             'id' => $name,
             'rare' => null,
-            'type' => $typeMapping[$weaponType],
+            'type' => $weaponType,
             'series' => [
                 'zhTW' => null,
                 'jaJP' => null,
