@@ -36,6 +36,12 @@ export default function (props) {
         let LogMap = {
             zhTW: (
                 <div>
+                    <span>2019/08/22</span>
+                    <ul>
+                        <li>新增絢輝龍武器</li>
+                        <li>新增狩魔獵人武器</li>
+                    </ul>
+
                     <span>2019/08/12</span>
                     <ul>
                         <li>修正武器類別選取問題</li>
