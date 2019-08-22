@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "合金弓 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Alloy Bow II"
         },
         "attack": 204,
         "criticalRate": 0,
@@ -49,7 +49,7 @@
         "name": {
             "zhTW": "星空迅擊弓 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Archer's Dance III"
         },
         "attack": 204,
         "criticalRate": 20,
@@ -80,7 +80,7 @@
         "name": {
             "zhTW": "公主弓矢 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Princess Arrow III"
         },
         "attack": 216,
         "criticalRate": 10,
@@ -120,7 +120,7 @@
         "name": {
             "zhTW": "激流射手 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Water Shot III"
         },
         "attack": 204,
         "criticalRate": 0,
@@ -155,7 +155,7 @@
         "name": {
             "zhTW": "勇氣獵弓 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Hunter's Proudbow II"
         },
         "attack": 216,
         "criticalRate": 0,
@@ -190,7 +190,7 @@
         "name": {
             "zhTW": "曼陀羅弓 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Datura String III"
         },
         "attack": 204,
         "criticalRate": 0,
@@ -228,7 +228,7 @@
         "name": {
             "zhTW": "蠻顎龍射手 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Anja Arch III"
         },
         "attack": 240,
         "criticalRate": -20,
@@ -259,7 +259,7 @@
         "name": {
             "zhTW": "龍骨弓 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Bow III"
         },
         "attack": 180,
         "criticalRate": 0,

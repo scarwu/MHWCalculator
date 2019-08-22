@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "火龍棍【炎舞】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Firedance Rathmaul"
         },
         "attack": 589,
         "criticalRate": 20,
@@ -56,7 +56,7 @@
         "name": {
             "zhTW": "岩賊龍長鞭 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gama Cane II"
         },
         "attack": 527,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "屍套龍操蟲棍 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Hazak Entoma II"
         },
         "attack": 620,
         "criticalRate": 0,
@@ -151,7 +151,7 @@
         "name": {
             "zhTW": "蠻顎棍翼龍桿刀",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gnashing Flammenkaefer"
         },
         "attack": 651,
         "criticalRate": -20,
@@ -192,7 +192,7 @@
         "name": {
             "zhTW": "暴君長刀 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Tyrannis Glaive II"
         },
         "attack": 713,
         "criticalRate": -30,
@@ -237,7 +237,7 @@
         "name": {
             "zhTW": "污穢暴風雨",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Grunge Storm"
         },
         "attack": 682,
         "criticalRate": -25,
@@ -280,7 +280,7 @@
         "name": {
             "zhTW": "鎧羅長刀．屍套",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"Decay\""
         },
         "attack": 527,
         "criticalRate": 0,
@@ -313,7 +313,7 @@
         "name": {
             "zhTW": "鎧羅長刀．搔",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"Thief\""
         },
         "attack": 527,
         "criticalRate": 30,
@@ -344,7 +344,7 @@
         "name": {
             "zhTW": "鎧羅長刀．慘爪",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"Claw\""
         },
         "attack": 558,
         "criticalRate": 20,
@@ -375,7 +375,7 @@
         "name": {
             "zhTW": "鎧羅長刀．岩賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"Crusher\""
         },
         "attack": 558,
         "criticalRate": 0,
@@ -410,7 +410,7 @@
         "name": {
             "zhTW": "鎧羅長刀．飛雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"Spark\""
         },
         "attack": 558,
         "criticalRate": 20,
@@ -441,7 +441,7 @@
         "name": {
             "zhTW": "鎧羅長刀．毒妖",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"Spew\""
         },
         "attack": 558,
         "criticalRate": 0,
@@ -476,7 +476,7 @@
         "name": {
             "zhTW": "鎧羅長刀．眩",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"Flash\""
         },
         "attack": 589,
         "criticalRate": 0,
@@ -507,7 +507,7 @@
         "name": {
             "zhTW": "鎧羅長刀．王",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"King\""
         },
         "attack": 589,
         "criticalRate": 20,
@@ -538,7 +538,7 @@
         "name": {
             "zhTW": "鎧羅長刀．角",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"Horn\""
         },
         "attack": 713,
         "criticalRate": -30,

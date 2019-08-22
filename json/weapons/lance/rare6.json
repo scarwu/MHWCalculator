@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "鉻鋼長槍 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Chrome Lance II"
         },
         "attack": 414,
         "criticalRate": 0,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "搔鳥尖槍 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Kulu Hasta III"
         },
         "attack": 391,
         "criticalRate": 25,
@@ -100,7 +100,7 @@
         "name": {
             "zhTW": "雷光長槍 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lightning Spire III"
         },
         "attack": 414,
         "criticalRate": 0,
@@ -145,7 +145,7 @@
         "name": {
             "zhTW": "曼陀羅長槍 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Datura Pike III"
         },
         "attack": 391,
         "criticalRate": 0,
@@ -193,7 +193,7 @@
         "name": {
             "zhTW": "堅骨槍 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Heavy Bone Lance II"
         },
         "attack": 437,
         "criticalRate": 0,
@@ -238,7 +238,7 @@
         "name": {
             "zhTW": "黑色刺針 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dark Stinger III"
         },
         "attack": 368,
         "criticalRate": 0,
@@ -283,7 +283,7 @@
         "name": {
             "zhTW": "土砂龍刺針 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Barroth Stinger III"
         },
         "attack": 460,
         "criticalRate": -20,
@@ -331,7 +331,7 @@
         "name": {
             "zhTW": "激流尖刺 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Water Spike III"
         },
         "attack": 437,
         "criticalRate": 0,
@@ -376,7 +376,7 @@
         "name": {
             "zhTW": "龍骨槍 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Lance III"
         },
         "attack": 368,
         "criticalRate": 0,

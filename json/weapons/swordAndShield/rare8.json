@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "毀滅之尖兵",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Eradication Vanguard"
         },
         "attack": 294,
         "criticalRate": 0,
@@ -58,7 +58,7 @@
         "name": {
             "zhTW": "冰凌三星劍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Legia Rimespire"
         },
         "attack": 224,
         "criticalRate": 0,
@@ -103,7 +103,7 @@
         "name": {
             "zhTW": "炎王紋章",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Teostra's Emblem"
         },
         "attack": 266,
         "criticalRate": 0,
@@ -144,7 +144,7 @@
         "name": {
             "zhTW": "冥燈龍劍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Mabura"
         },
         "attack": 238,
         "criticalRate": 15,
@@ -194,7 +194,7 @@
         "name": {
             "zhTW": "鎧羅切刀．龍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Slicer \"Dragon\""
         },
         "attack": 224,
         "criticalRate": 0,
@@ -241,7 +241,7 @@
         "name": {
             "zhTW": "鎧羅切刀．爆破",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Slicer \"Blast\""
         },
         "attack": 238,
         "criticalRate": 0,
@@ -286,7 +286,7 @@
         "name": {
             "zhTW": "鎧羅切刀．水",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Slicer \"Water\""
         },
         "attack": 266,
         "criticalRate": 10,
@@ -320,7 +320,7 @@
         "skills": null
     },
     {
-        "id": "皇后小刀．炎妃",
+        "id": "皇后銳劍．炎妃",
         "rare": 8,
         "type": "swordAndShield",
         "series": {
@@ -329,9 +329,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "皇后小刀．炎妃",
+            "zhTW": "皇后銳劍．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Edge \"Blaze\""
         },
         "attack": 266,
         "criticalRate": 20,
@@ -370,7 +370,7 @@
         ]
     },
     {
-        "id": "皇后小刀．滅盡",
+        "id": "皇后銳劍．滅盡",
         "rare": 8,
         "type": "swordAndShield",
         "series": {
@@ -379,9 +379,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "皇后小刀．滅盡",
+            "zhTW": "皇后銳劍．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Edge \"Ruin\""
         },
         "attack": 280,
         "criticalRate": 0,
@@ -420,7 +420,7 @@
         ]
     },
     {
-        "id": "皇后小刀．冥燈",
+        "id": "皇后銳劍．冥燈",
         "rare": 8,
         "type": "swordAndShield",
         "series": {
@@ -429,9 +429,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "皇后小刀．冥燈",
+            "zhTW": "皇后銳劍．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Edge \"Styx\""
         },
         "attack": 266,
         "criticalRate": 10,
@@ -881,7 +881,7 @@
         "name": {
             "zhTW": "狩魔獵人的銀劍＋",
             "jaJP": "ウィッチャーの銀の剣＋",
-            "enUS": null
+            "enUS": "Witcher's Silver Sword+"
         },
         "attack": 266,
         "criticalRate": 0,

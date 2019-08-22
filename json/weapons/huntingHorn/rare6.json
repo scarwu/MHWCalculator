@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "威猛風笛 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Fortissimo II"
         },
         "attack": 756,
         "criticalRate": 0,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "雷鼓 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lightning Drum III"
         },
         "attack": 756,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "星空皮鼓 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dancing Davul III"
         },
         "attack": 714,
         "criticalRate": 25,
@@ -145,7 +145,7 @@
         "name": {
             "zhTW": "激流銅鑼 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Water Tamtam III"
         },
         "attack": 756,
         "criticalRate": 0,
@@ -190,7 +190,7 @@
         "name": {
             "zhTW": "堅骨號角 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Heavy Bone Horn II"
         },
         "attack": 798,
         "criticalRate": 0,
@@ -235,7 +235,7 @@
         "name": {
             "zhTW": "蠻顎龍長號 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Anja Barone III"
         },
         "attack": 882,
         "criticalRate": -20,
@@ -276,7 +276,7 @@
         "name": {
             "zhTW": "曼陀羅號角 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Datura Horn III"
         },
         "attack": 714,
         "criticalRate": 0,
@@ -324,7 +324,7 @@
         "name": {
             "zhTW": "浮空龍長號 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lumu Barone III"
         },
         "attack": 714,
         "criticalRate": 10,
@@ -372,7 +372,7 @@
         "name": {
             "zhTW": "骨鎚龍號角 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Baan Horn III"
         },
         "attack": 798,
         "criticalRate": 0,
@@ -413,7 +413,7 @@
         "name": {
             "zhTW": "龍骨古笛 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Auldhorn III"
         },
         "attack": 672,
         "criticalRate": 0,

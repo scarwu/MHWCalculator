@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "亡滅之腕",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Perdition's Hand"
         },
         "attack": 483,
         "criticalRate": 0,
@@ -58,7 +58,7 @@
         "name": {
             "zhTW": "蒼色日珥",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Blue Prominence"
         },
         "attack": 437,
         "criticalRate": 20,
@@ -103,7 +103,7 @@
         "name": {
             "zhTW": "死神的哀愁",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Love's Sorrow"
         },
         "attack": 460,
         "criticalRate": 0,
@@ -150,7 +150,7 @@
         "name": {
             "zhTW": "爆鱗槍赤紅巨星",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bazel Myniad Rookslayer"
         },
         "attack": 460,
         "criticalRate": -10,
@@ -191,7 +191,7 @@
         "name": {
             "zhTW": "雷槍【建御雷】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Thunderpiercer"
         },
         "attack": 368,
         "criticalRate": 10,
@@ -232,7 +232,7 @@
         "name": {
             "zhTW": "祈願鋼龍槍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Daora's Fang"
         },
         "attack": 414,
         "criticalRate": 10,
@@ -277,7 +277,7 @@
         "name": {
             "zhTW": "冥燈龍長槍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Zauta"
         },
         "attack": 391,
         "criticalRate": 15,
@@ -327,7 +327,7 @@
         "name": {
             "zhTW": "遠古巴別塔",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Elder Babel Spear"
         },
         "attack": 460,
         "criticalRate": 0,
@@ -372,7 +372,7 @@
         "name": {
             "zhTW": "鎧羅之尖．雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"Thunder\""
         },
         "attack": 368,
         "criticalRate": 20,
@@ -417,7 +417,7 @@
         "name": {
             "zhTW": "鎧羅之尖．睡眠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"Sleep\""
         },
         "attack": 414,
         "criticalRate": 10,
@@ -462,7 +462,7 @@
         "name": {
             "zhTW": "鎧羅之尖．水",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"Water\""
         },
         "attack": 437,
         "criticalRate": 0,
@@ -507,7 +507,7 @@
         "name": {
             "zhTW": "皇后長槍．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Lance \"Blaze\""
         },
         "attack": 414,
         "criticalRate": 20,
@@ -560,7 +560,7 @@
         "name": {
             "zhTW": "皇后長槍．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Lance \"Ruin\""
         },
         "attack": 437,
         "criticalRate": 0,
@@ -613,7 +613,7 @@
         "name": {
             "zhTW": "皇后長槍．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Lance \"Styx\""
         },
         "attack": 414,
         "criticalRate": 10,

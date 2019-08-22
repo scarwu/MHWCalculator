@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "殘滅之爪。",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Decimation Claws"
         },
         "attack": 294,
         "criticalRate": 0,
@@ -58,7 +58,7 @@
         "name": {
             "zhTW": "爆鱗雙斧赤紅巨星",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bazelhawk Rookslayer"
         },
         "attack": 280,
         "criticalRate": -10,
@@ -103,7 +103,7 @@
         "name": {
             "zhTW": "罪【真】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sin"
         },
         "attack": 224,
         "criticalRate": 20,
@@ -144,7 +144,7 @@
         "name": {
             "zhTW": "迅雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Monarch"
         },
         "attack": 224,
         "criticalRate": 0,
@@ -185,7 +185,7 @@
         "name": {
             "zhTW": "冰炎劍維爾瑪閃焰",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Fire and Ice"
         },
         "attack": 252,
         "criticalRate": 10,
@@ -235,7 +235,7 @@
         "name": {
             "zhTW": "冥燈龍雙劍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Raqs"
         },
         "attack": 238,
         "criticalRate": 15,
@@ -285,7 +285,7 @@
         "name": {
             "zhTW": "鎧羅小刀．冰",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Ice\""
         },
         "attack": 266,
         "criticalRate": 0,
@@ -330,7 +330,7 @@
         "name": {
             "zhTW": "鎧羅小刀．毒",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Poison\""
         },
         "attack": 266,
         "criticalRate": 0,
@@ -375,7 +375,7 @@
         "name": {
             "zhTW": "鎧羅小刀．水",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Water\""
         },
         "attack": 266,
         "criticalRate": 0,
@@ -409,7 +409,7 @@
         "skills": null
     },
     {
-        "id": "皇后銳劍．炎妃",
+        "id": "皇后小刀．炎妃",
         "rare": 8,
         "type": "dualBlades",
         "series": {
@@ -418,9 +418,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "皇后銳劍．炎妃",
+            "zhTW": "皇后小刀．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Daggers \"Blaze\""
         },
         "attack": 252,
         "criticalRate": 20,
@@ -462,7 +462,7 @@
         ]
     },
     {
-        "id": "皇后銳劍．滅盡",
+        "id": "皇后小刀．滅盡",
         "rare": 8,
         "type": "dualBlades",
         "series": {
@@ -471,9 +471,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "皇后銳劍．滅盡",
+            "zhTW": "皇后小刀．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Daggers \"Ruin\""
         },
         "attack": 266,
         "criticalRate": 0,
@@ -515,7 +515,7 @@
         ]
     },
     {
-        "id": "皇后銳劍．冥燈",
+        "id": "皇后小刀．冥燈",
         "rare": 8,
         "type": "dualBlades",
         "series": {
@@ -524,9 +524,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "皇后銳劍．冥燈",
+            "zhTW": "皇后小刀．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Daggers \"Styx\""
         },
         "attack": 252,
         "criticalRate": 10,

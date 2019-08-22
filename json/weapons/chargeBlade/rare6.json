@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "鉻鐵守護者 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Chrome Guardian II"
         },
         "attack": 648,
         "criticalRate": 0,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "深坑泥岩 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jyura Depth III"
         },
         "attack": 684,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "寒霜巨人 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gigafrost II"
         },
         "attack": 612,
         "criticalRate": 0,
@@ -152,7 +152,7 @@
         "name": {
             "zhTW": "強骨兵裝 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Mighty Strongarm II"
         },
         "attack": 684,
         "criticalRate": 0,
@@ -197,7 +197,7 @@
         "name": {
             "zhTW": "凶豺龍盾斧 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jagras Escudo III"
         },
         "attack": 684,
         "criticalRate": 0,
@@ -245,7 +245,7 @@
         "name": {
             "zhTW": "凶顎龍盾斧 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Girros Nadja III"
         },
         "attack": 576,
         "criticalRate": 20,
@@ -286,7 +286,7 @@
         "name": {
             "zhTW": "飛雷龍之腕 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Kadachi Kaina III"
         },
         "attack": 648,
         "criticalRate": 15,
@@ -331,7 +331,7 @@
         "name": {
             "zhTW": "龍骨盾斧 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Cutter III"
         },
         "attack": 576,
         "criticalRate": 0,

@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "破滅引金",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Cataclysm's Trigger"
         },
         "attack": 260,
         "criticalRate": 0,
@@ -41,7 +41,7 @@
         "name": {
             "zhTW": "骷髏的吶喊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gulgoleth's Wail"
         },
         "attack": 260,
         "criticalRate": 0,
@@ -71,7 +71,7 @@
         "name": {
             "zhTW": "業【羯磨】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Karma"
         },
         "attack": 234,
         "criticalRate": 30,
@@ -101,7 +101,7 @@
         "name": {
             "zhTW": "大鬼島",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dai-Onigashima"
         },
         "attack": 221,
         "criticalRate": 0,
@@ -131,7 +131,7 @@
         "name": {
             "zhTW": "麒麟筒【三角】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Mythical Three-Horn"
         },
         "attack": 208,
         "criticalRate": 0,
@@ -157,7 +157,7 @@
         "name": {
             "zhTW": "鋼龍冰蜂弩",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Daora's Hornet"
         },
         "attack": 234,
         "criticalRate": 10,
@@ -187,7 +187,7 @@
         "name": {
             "zhTW": "冥燈龍輕弩槍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Neqiina"
         },
         "attack": 234,
         "criticalRate": 0,
@@ -220,7 +220,7 @@
         "name": {
             "zhTW": "巨型十字槍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Great Bowgun"
         },
         "attack": 260,
         "criticalRate": 0,
@@ -250,7 +250,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．迫擊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Spread\""
         },
         "attack": 247,
         "criticalRate": 10,
@@ -280,7 +280,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．狙擊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Pierce\""
         },
         "attack": 260,
         "criticalRate": 0,
@@ -310,7 +310,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．射擊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Shot\""
         },
         "attack": 273,
         "criticalRate": -10,
@@ -340,7 +340,7 @@
         "name": {
             "zhTW": "皇后甲殼．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Shell \"Blaze\""
         },
         "attack": 247,
         "criticalRate": 20,
@@ -375,7 +375,7 @@
         "name": {
             "zhTW": "皇后甲殼．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Shell \"Ruin\""
         },
         "attack": 260,
         "criticalRate": 0,
@@ -410,7 +410,7 @@
         "name": {
             "zhTW": "皇后甲殼．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Shell \"Styx\""
         },
         "attack": 247,
         "criticalRate": 10,

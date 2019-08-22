@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "亡靈之柱",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Legia Frostreaver"
         },
         "attack": 560,
         "criticalRate": 0,
@@ -52,7 +52,7 @@
         "name": {
             "zhTW": "動力迅斧 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Motor Chopper II"
         },
         "attack": 735,
         "criticalRate": 0,
@@ -97,7 +97,7 @@
         "name": {
             "zhTW": "爆鱗龍劍斧 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bazel Raider II"
         },
         "attack": 700,
         "criticalRate": -15,
@@ -142,7 +142,7 @@
         "name": {
             "zhTW": "火龍斧飛龍牙 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Rathbringer Axe II"
         },
         "attack": 665,
         "criticalRate": 15,
@@ -187,7 +187,7 @@
         "name": {
             "zhTW": "屍套龍劍斧 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Hazak Demios II"
         },
         "attack": 700,
         "criticalRate": 0,
@@ -234,7 +234,7 @@
         "name": {
             "zhTW": "泥岩龍劍斧 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jyura Drought III"
         },
         "attack": 665,
         "criticalRate": 0,
@@ -279,7 +279,7 @@
         "name": {
             "zhTW": "浮空龍斬斧 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lumu Smasher III"
         },
         "attack": 595,
         "criticalRate": 20,
@@ -324,7 +324,7 @@
         "name": {
             "zhTW": "蠻顎劍斧",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gnashing Flammenbeil"
         },
         "attack": 735,
         "criticalRate": -20,
@@ -365,7 +365,7 @@
         "name": {
             "zhTW": "恐怖暴君",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Terror Tyrannos"
         },
         "attack": 770,
         "criticalRate": -25,
@@ -408,7 +408,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．風漂",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Stream\""
         },
         "attack": 560,
         "criticalRate": 10,
@@ -439,7 +439,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．屍套",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Decay\""
         },
         "attack": 595,
         "criticalRate": 0,
@@ -472,7 +472,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．浮空",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Drifter\""
         },
         "attack": 595,
         "criticalRate": 25,
@@ -503,7 +503,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．爆鱗",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Bomber\""
         },
         "attack": 630,
         "criticalRate": 0,
@@ -534,7 +534,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Glutton\""
         },
         "attack": 665,
         "criticalRate": 0,
@@ -565,7 +565,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．王",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"King\""
         },
         "attack": 665,
         "criticalRate": 15,
@@ -596,7 +596,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．泥魚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Mire\""
         },
         "attack": 665,
         "criticalRate": 0,
@@ -627,7 +627,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．爆鎚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Gyre\""
         },
         "attack": 735,
         "criticalRate": 10,
@@ -658,7 +658,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．土砂",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Mud\""
         },
         "attack": 735,
         "criticalRate": -20,
@@ -689,7 +689,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．角",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Horn\""
         },
         "attack": 805,
         "criticalRate": -30,

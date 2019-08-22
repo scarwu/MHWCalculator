@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "鉻鋼雙刀 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Chrome Slicers II"
         },
         "attack": 252,
         "criticalRate": 0,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "決鬥者對劍 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dual Destroyers III"
         },
         "attack": 252,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "冰結鏈劍 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Freeze Chain II"
         },
         "attack": 252,
         "criticalRate": 0,
@@ -149,7 +149,7 @@
         "name": {
             "zhTW": "奧秘雙劍 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Arcanaria III"
         },
         "attack": 238,
         "criticalRate": 20,
@@ -190,7 +190,7 @@
         "name": {
             "zhTW": "強斧 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Strong Hatchets II"
         },
         "attack": 266,
         "criticalRate": 0,
@@ -235,7 +235,7 @@
         "name": {
             "zhTW": "泥岩龍斬斧 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jyura Hatchets III"
         },
         "attack": 266,
         "criticalRate": 0,
@@ -280,7 +280,7 @@
         "name": {
             "zhTW": "黑色收割者 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dark Ripper III"
         },
         "attack": 224,
         "criticalRate": 0,
@@ -325,7 +325,7 @@
         "name": {
             "zhTW": "飛雷龍之爪 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Kadachi Claws III"
         },
         "attack": 252,
         "criticalRate": 10,

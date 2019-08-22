@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "寂滅的章節",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Desolation's Overture"
         },
         "attack": 882,
         "criticalRate": 0,
@@ -58,7 +58,7 @@
         "name": {
             "zhTW": "爆鱗鼓赤紅星光",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bazelreid Rookslayer"
         },
         "attack": 840,
         "criticalRate": -10,
@@ -106,7 +106,7 @@
         "name": {
             "zhTW": "炎王豎琴",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Teostra's Orphée"
         },
         "attack": 798,
         "criticalRate": 0,
@@ -147,7 +147,7 @@
         "name": {
             "zhTW": "冥燈龍狩獵笛",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Manasheena"
         },
         "attack": 714,
         "criticalRate": 15,
@@ -197,7 +197,7 @@
         "name": {
             "zhTW": "鎧羅風笛．水",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Pipe \"Water\""
         },
         "attack": 714,
         "criticalRate": 10,
@@ -242,7 +242,7 @@
         "name": {
             "zhTW": "鎧羅風笛．龍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Pipe \"Dragon\""
         },
         "attack": 756,
         "criticalRate": 0,
@@ -289,7 +289,7 @@
         "name": {
             "zhTW": "鎧羅風笛．麻痺",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Pipe \"Paralysis\""
         },
         "attack": 840,
         "criticalRate": 0,
@@ -334,7 +334,7 @@
         "name": {
             "zhTW": "皇后鼓．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Roar \"Blaze\""
         },
         "attack": 798,
         "criticalRate": 20,
@@ -384,7 +384,7 @@
         "name": {
             "zhTW": "皇后鼓．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Roar \"Ruin\""
         },
         "attack": 840,
         "criticalRate": 0,
@@ -434,7 +434,7 @@
         "name": {
             "zhTW": "皇后鼓．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Roar \"Styx\""
         },
         "attack": 798,
         "criticalRate": 10,

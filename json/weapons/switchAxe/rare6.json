@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "合金製完成劍斧 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Perfected Alloy Axe II"
         },
         "attack": 630,
         "criticalRate": 0,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "雷光迅斧 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lightning Chopper III"
         },
         "attack": 630,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "凶豺龍掠奪者 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jagras Raider III"
         },
         "attack": 665,
         "criticalRate": 0,
@@ -152,7 +152,7 @@
         "name": {
             "zhTW": "重擊斬斧 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Power Smasher II"
         },
         "attack": 665,
         "criticalRate": 10,
@@ -194,7 +194,7 @@
         "name": {
             "zhTW": "土砂龍劍斧 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Barroth Grinder III"
         },
         "attack": 735,
         "criticalRate": -20,
@@ -242,7 +242,7 @@
         "name": {
             "zhTW": "龍骨劍斧 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Slicer III"
         },
         "attack": 560,
         "criticalRate": 0,

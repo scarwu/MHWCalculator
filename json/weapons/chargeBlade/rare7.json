@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "焰斧鶴王",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Halberion Blade"
         },
         "attack": 684,
         "criticalRate": 20,
@@ -56,7 +56,7 @@
         "name": {
             "zhTW": "火鎧盾斧",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dear Hecatelia"
         },
         "attack": 684,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "暴君銅盾 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Diablos Tyrannis II"
         },
         "attack": 828,
         "criticalRate": -30,
@@ -145,7 +145,7 @@
         "name": {
             "zhTW": "岩賊龍盾 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gama Silt II"
         },
         "attack": 612,
         "criticalRate": 0,
@@ -193,7 +193,7 @@
         "name": {
             "zhTW": "屍套龍盾斧 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Hazak Aspida II"
         },
         "attack": 684,
         "criticalRate": 0,
@@ -240,7 +240,7 @@
         "name": {
             "zhTW": "德斯特涅塔",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Oppressor's Charge Blade"
         },
         "attack": 792,
         "criticalRate": -25,
@@ -283,7 +283,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．痺賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"Numb\""
         },
         "attack": 576,
         "criticalRate": 30,
@@ -314,7 +314,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．慘爪",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"Claw\""
         },
         "attack": 684,
         "criticalRate": 25,
@@ -345,7 +345,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．岩賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"Crusher\""
         },
         "attack": 684,
         "criticalRate": 0,
@@ -376,7 +376,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．屍套",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"Decay\""
         },
         "attack": 684,
         "criticalRate": 10,
@@ -409,7 +409,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"Glutton\""
         },
         "attack": 684,
         "criticalRate": 0,
@@ -440,7 +440,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．王",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"King\""
         },
         "attack": 684,
         "criticalRate": 20,
@@ -471,7 +471,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．泥魚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"Mire\""
         },
         "attack": 684,
         "criticalRate": 10,
@@ -502,7 +502,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．飛雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"Spark\""
         },
         "attack": 684,
         "criticalRate": 15,
@@ -533,7 +533,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．角",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"Horn\""
         },
         "attack": 828,
         "criticalRate": -30,

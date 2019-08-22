@@ -40,6 +40,7 @@ export default function (props) {
                     <ul>
                         <li>新增絢輝龍武器</li>
                         <li>新增狩魔獵人武器</li>
+                        <li>修正武器名稱</li>
                     </ul>
 
                     <span>2019/08/12</span>

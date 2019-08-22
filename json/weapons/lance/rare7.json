@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "風漂龍斧槍 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Legiana Halberd II"
         },
         "attack": 368,
         "criticalRate": 0,
@@ -52,7 +52,7 @@
         "name": {
             "zhTW": "岩賊龍刺針 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gama Pilebunker II"
         },
         "attack": 391,
         "criticalRate": 0,
@@ -100,7 +100,7 @@
         "name": {
             "zhTW": "慘爪刺針 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Garon Dhara II"
         },
         "attack": 391,
         "criticalRate": 30,
@@ -141,7 +141,7 @@
         "name": {
             "zhTW": "亞特羅西斯塔",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Fiendish Tower"
         },
         "attack": 529,
         "criticalRate": -25,
@@ -184,7 +184,7 @@
         "name": {
             "zhTW": "鎧羅之尖．王",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"King\""
         },
         "attack": 368,
         "criticalRate": 0,
@@ -215,7 +215,7 @@
         "name": {
             "zhTW": "鎧羅之尖．黑甲",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"Lurk\""
         },
         "attack": 368,
         "criticalRate": 10,
@@ -246,7 +246,7 @@
         "name": {
             "zhTW": "鎧羅之尖．風漂",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"Stream\""
         },
         "attack": 368,
         "criticalRate": 0,
@@ -277,7 +277,7 @@
         "name": {
             "zhTW": "鎧羅之尖．岩賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"Crusher\""
         },
         "attack": 391,
         "criticalRate": 10,
@@ -308,7 +308,7 @@
         "name": {
             "zhTW": "鎧羅之尖．屍套",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"Decay\""
         },
         "attack": 391,
         "criticalRate": 0,
@@ -341,7 +341,7 @@
         "name": {
             "zhTW": "鎧羅之尖．毒妖",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"Spew\""
         },
         "attack": 391,
         "criticalRate": 0,
@@ -376,7 +376,7 @@
         "name": {
             "zhTW": "鎧羅之尖．搔",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"Thief\""
         },
         "attack": 391,
         "criticalRate": 10,
@@ -407,7 +407,7 @@
         "name": {
             "zhTW": "鎧羅之尖．慘爪",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"Claw\""
         },
         "attack": 437,
         "criticalRate": 30,
@@ -448,7 +448,7 @@
         "name": {
             "zhTW": "鎧羅之尖．土砂",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Crest \"Mud\""
         },
         "attack": 437,
         "criticalRate": -20,
@@ -479,7 +479,7 @@
         "name": {
             "zhTW": "團旗長槍【流星】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sapphire Star Lance"
         },
         "attack": 437,
         "criticalRate": 0,
@@ -520,7 +520,7 @@
         "name": {
             "zhTW": "團旗長槍【一帆風順】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "White Wind Lance"
         },
         "attack": 391,
         "criticalRate": 0,

@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "斷滅的一閃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dying Light"
         },
         "attack": 700,
         "criticalRate": 0,
@@ -58,7 +58,7 @@
         "name": {
             "zhTW": "惡靈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Axe of Demons"
         },
         "attack": 805,
         "criticalRate": -30,
@@ -103,7 +103,7 @@
         "name": {
             "zhTW": "斷雷斧麒麟",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Kirin Thunderpeal"
         },
         "attack": 560,
         "criticalRate": 0,
@@ -144,7 +144,7 @@
         "name": {
             "zhTW": "炎王城寨",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Teostra's Castle"
         },
         "attack": 665,
         "criticalRate": 0,
@@ -185,7 +185,7 @@
         "name": {
             "zhTW": "冥燈龍劍斧",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Martshu"
         },
         "attack": 595,
         "criticalRate": 15,
@@ -235,7 +235,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Thunder\""
         },
         "attack": 560,
         "criticalRate": 10,
@@ -280,7 +280,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．睡眠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Sleep\""
         },
         "attack": 665,
         "criticalRate": 0,
@@ -325,7 +325,7 @@
         "name": {
             "zhTW": "鎧羅劍斧．麻痺",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Axe \"Paralysis\""
         },
         "attack": 735,
         "criticalRate": 0,
@@ -370,7 +370,7 @@
         "name": {
             "zhTW": "皇后斧．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Axe \"Blaze\""
         },
         "attack": 630,
         "criticalRate": 20,
@@ -423,7 +423,7 @@
         "name": {
             "zhTW": "皇后斧．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Axe \"Ruin\""
         },
         "attack": 665,
         "criticalRate": 0,
@@ -476,7 +476,7 @@
         "name": {
             "zhTW": "皇后斧．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Axe \"Styx\""
         },
         "attack": 630,
         "criticalRate": 10,

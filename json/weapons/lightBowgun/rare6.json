@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "鉻鋼迅擊弩 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Cross Blitz II"
         },
         "attack": 234,
         "criticalRate": 0,
@@ -44,7 +44,7 @@
         "name": {
             "zhTW": "浮空龍颶風砲 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lumu Typhon III"
         },
         "attack": 221,
         "criticalRate": 15,
@@ -74,7 +74,7 @@
         "name": {
             "zhTW": "凶豺龍火砲 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jagras Fire III"
         },
         "attack": 247,
         "criticalRate": 0,
@@ -107,7 +107,7 @@
         "name": {
             "zhTW": "雷光迅擊弩 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lightning Blitz III"
         },
         "attack": 234,
         "criticalRate": 0,
@@ -137,7 +137,7 @@
         "name": {
             "zhTW": "寒霜迅擊弩 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Frost Blitz II"
         },
         "attack": 247,
         "criticalRate": 0,
@@ -163,7 +163,7 @@
         "name": {
             "zhTW": "狙擊射手 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sniper Shot II"
         },
         "attack": 247,
         "criticalRate": 0,
@@ -193,7 +193,7 @@
         "name": {
             "zhTW": "蠻顎龍破壞砲 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Anja Buster III"
         },
         "attack": 273,
         "criticalRate": -30,
@@ -219,7 +219,7 @@
         "name": {
             "zhTW": "泥岩龍輕弩 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jyura Bullet III"
         },
         "attack": 247,
         "criticalRate": 0,
@@ -252,7 +252,7 @@
         "name": {
             "zhTW": "土砂龍射手 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Barroth Shot III"
         },
         "attack": 260,
         "criticalRate": -20,
@@ -282,7 +282,7 @@
         "name": {
             "zhTW": "龍骨弩 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Bowgun III"
         },
         "attack": 208,
         "criticalRate": 0,

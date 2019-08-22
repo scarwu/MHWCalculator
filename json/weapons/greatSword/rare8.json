@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "滅鬼凶器",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Purgation's Atrocity"
         },
         "attack": 1008,
         "criticalRate": 0,
@@ -58,7 +58,7 @@
         "name": {
             "zhTW": "火龍煌劍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Rathalos Glinsword"
         },
         "attack": 912,
         "criticalRate": 15,
@@ -103,7 +103,7 @@
         "name": {
             "zhTW": "魔物的憤怒",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Leviathan's Fury"
         },
         "attack": 960,
         "criticalRate": 0,
@@ -150,7 +150,7 @@
         "name": {
             "zhTW": "召雷劍【麒麟王】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "King Thundersword"
         },
         "attack": 768,
         "criticalRate": 0,
@@ -191,7 +191,7 @@
         "name": {
             "zhTW": "鋼龍凍大劍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Daora's Decimator"
         },
         "attack": 864,
         "criticalRate": 10,
@@ -236,7 +236,7 @@
         "name": {
             "zhTW": "冥燈龍大劍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Maliq"
         },
         "attack": 816,
         "criticalRate": 15,
@@ -286,7 +286,7 @@
         "name": {
             "zhTW": "龍顎劍【大牙】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Great Wyvern Jawblade"
         },
         "attack": 960,
         "criticalRate": 0,
@@ -331,7 +331,7 @@
         "name": {
             "zhTW": "鎧羅炎．冰",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blaze \"Ice\""
         },
         "attack": 912,
         "criticalRate": 10,
@@ -376,7 +376,7 @@
         "name": {
             "zhTW": "鎧羅炎．睡眠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blaze \"Sleep\""
         },
         "attack": 912,
         "criticalRate": 0,
@@ -421,7 +421,7 @@
         "name": {
             "zhTW": "鎧羅炎．水",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blaze \"Water\""
         },
         "attack": 912,
         "criticalRate": 0,
@@ -466,7 +466,7 @@
         "name": {
             "zhTW": "皇后盔．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Galea \"Blaze\""
         },
         "attack": 864,
         "criticalRate": 20,
@@ -519,7 +519,7 @@
         "name": {
             "zhTW": "皇后盔．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Galea \"Ruin\""
         },
         "attack": 912,
         "criticalRate": 0,
@@ -572,7 +572,7 @@
         "name": {
             "zhTW": "皇后盔．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Galea \"Styx\""
         },
         "attack": 864,
         "criticalRate": 10,
@@ -614,7 +614,7 @@
         ]
     },
     {
-        "id": "鎧羅炎・雷",
+        "id": "鎧羅炎．雷",
         "rare": 8,
         "type": "greatSword",
         "series": {
@@ -623,9 +623,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "鎧羅炎・雷",
+            "zhTW": "鎧羅炎．雷",
             "jaJP": "ガイラブレイズ・雷",
-            "enUS": null
+            "enUS": "Taroth Blaze \"Thunder\""
         },
         "attack": 1008,
         "criticalRate": 0,
@@ -659,7 +659,7 @@
         "skills": null
     },
     {
-        "id": "帝王金大劍・王",
+        "id": "帝王金大劍．王",
         "rare": 8,
         "type": "greatSword",
         "series": {
@@ -668,9 +668,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "帝王金大劍・王",
+            "zhTW": "帝王金大劍．王",
             "jaJP": "皇金の大剣・王",
-            "enUS": null
+            "enUS": "Kjárr Fellsword \"King\""
         },
         "attack": 936,
         "criticalRate": 20,
@@ -709,7 +709,7 @@
         ]
     },
     {
-        "id": "帝王金大劍・水",
+        "id": "帝王金大劍．水",
         "rare": 8,
         "type": "greatSword",
         "series": {
@@ -718,9 +718,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "帝王金大劍・水",
+            "zhTW": "帝王金大劍．水",
             "jaJP": "皇金の大剣・水",
-            "enUS": null
+            "enUS": "Kjárr Fellsword \"Water\""
         },
         "attack": 912,
         "criticalRate": 20,
@@ -755,7 +755,7 @@
         ]
     },
     {
-        "id": "帝王金大劍・雷",
+        "id": "帝王金大劍．雷",
         "rare": 8,
         "type": "greatSword",
         "series": {
@@ -764,9 +764,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "帝王金大劍・雷",
+            "zhTW": "帝王金大劍．雷",
             "jaJP": "皇金の大剣・雷",
-            "enUS": null
+            "enUS": "Kjárr Fellsword \"Thunder\""
         },
         "attack": 1008,
         "criticalRate": 10,
@@ -801,7 +801,7 @@
         ]
     },
     {
-        "id": "帝王金大劍・冰",
+        "id": "帝王金大劍．冰",
         "rare": 8,
         "type": "greatSword",
         "series": {
@@ -810,9 +810,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "帝王金大劍・冰",
+            "zhTW": "帝王金大劍．冰",
             "jaJP": "皇金の大剣・氷",
-            "enUS": null
+            "enUS": "Kjárr Fellsword \"Ice\""
         },
         "attack": 912,
         "criticalRate": 20,
@@ -847,7 +847,7 @@
         ]
     },
     {
-        "id": "帝王金大劍・屍套",
+        "id": "帝王金大劍．屍套",
         "rare": 8,
         "type": "greatSword",
         "series": {
@@ -856,9 +856,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "帝王金大劍・屍套",
+            "zhTW": "帝王金大劍．屍套",
             "jaJP": "皇金の大剣・屍套",
-            "enUS": null
+            "enUS": "Kjárr Fellsword \"Decay\""
         },
         "attack": 984,
         "criticalRate": 20,
@@ -899,7 +899,7 @@
         ]
     },
     {
-        "id": "帝王金大劍・熔山",
+        "id": "帝王金大劍．熔山",
         "rare": 8,
         "type": "greatSword",
         "series": {
@@ -908,9 +908,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "帝王金大劍・熔山",
+            "zhTW": "帝王金大劍．熔山",
             "jaJP": "皇金の大剣・熔山",
-            "enUS": null
+            "enUS": "Kjárr Fellsword \"Magma\""
         },
         "attack": 984,
         "criticalRate": 10,
@@ -949,7 +949,7 @@
         ]
     },
     {
-        "id": "帝王金大劍・痺賊",
+        "id": "帝王金大劍．痺賊",
         "rare": 8,
         "type": "greatSword",
         "series": {
@@ -958,9 +958,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "帝王金大劍・痺賊",
+            "zhTW": "帝王金大劍．痺賊",
             "jaJP": "皇金の大剣・痺賊",
-            "enUS": null
+            "enUS": "Kjárr Fellsword \"Numb\""
         },
         "attack": 840,
         "criticalRate": 20,

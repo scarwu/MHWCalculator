@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "慟泣冰河",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Cocytus"
         },
         "attack": 936,
         "criticalRate": 0,
@@ -56,7 +56,7 @@
         "name": {
             "zhTW": "花之女神",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Buona Flora"
         },
         "attack": 936,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "爆鎚粉碎者 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Brazenbreak II"
         },
         "attack": 1092,
         "criticalRate": 0,
@@ -149,7 +149,7 @@
         "name": {
             "zhTW": "爆鎚戰鎚 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Diablos Shatterer II"
         },
         "attack": 1196,
         "criticalRate": -25,
@@ -194,7 +194,7 @@
         "name": {
             "zhTW": "混沌之鎚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Devil's Crush"
         },
         "attack": 1196,
         "criticalRate": -30,
@@ -237,7 +237,7 @@
         "name": {
             "zhTW": "鎧羅大錘．痺賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Numb\""
         },
         "attack": 832,
         "criticalRate": 30,
@@ -268,7 +268,7 @@
         "name": {
             "zhTW": "鎧羅大錘．搔",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Thief\""
         },
         "attack": 884,
         "criticalRate": 35,
@@ -299,7 +299,7 @@
         "name": {
             "zhTW": "鎧羅大錘．毒妖",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Spew\""
         },
         "attack": 988,
         "criticalRate": 0,
@@ -330,7 +330,7 @@
         "name": {
             "zhTW": "鎧羅大錘．骨鎚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Tar\""
         },
         "attack": 988,
         "criticalRate": 10,
@@ -361,7 +361,7 @@
         "name": {
             "zhTW": "鎧羅大錘．屍套",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Decay\""
         },
         "attack": 1040,
         "criticalRate": 0,
@@ -392,7 +392,7 @@
         "name": {
             "zhTW": "鎧羅大錘．蠻顎",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Rage\""
         },
         "attack": 1040,
         "criticalRate": -20,
@@ -423,7 +423,7 @@
         "name": {
             "zhTW": "鎧羅大錘．爆鎚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Gyre\""
         },
         "attack": 1092,
         "criticalRate": 0,
@@ -454,7 +454,7 @@
         "name": {
             "zhTW": "鎧羅大錘．土砂",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Mud\""
         },
         "attack": 1092,
         "criticalRate": -10,
@@ -489,7 +489,7 @@
         "name": {
             "zhTW": "鎧羅大錘．角",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Horn\""
         },
         "attack": 1144,
         "criticalRate": -25,

@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "鉻鋼剃刀 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Chrome Razor II"
         },
         "attack": 864,
         "criticalRate": 0,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "雷光懲罰者 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lightning Punisher III"
         },
         "attack": 912,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "霜炎 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Frost Blaze II"
         },
         "attack": 768,
         "criticalRate": 0,
@@ -149,7 +149,7 @@
         "name": {
             "zhTW": "凶豺龍鉤爪 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jagras Hacker III"
         },
         "attack": 912,
         "criticalRate": 0,
@@ -197,7 +197,7 @@
         "name": {
             "zhTW": "馬拉多之鐵 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Malady's Kiss III"
         },
         "attack": 768,
         "criticalRate": 20,
@@ -238,7 +238,7 @@
         "name": {
             "zhTW": "曼陀羅之炎 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Datura Blaze III"
         },
         "attack": 816,
         "criticalRate": 0,
@@ -286,7 +286,7 @@
         "name": {
             "zhTW": "大龍顎 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Giant Jawblade II"
         },
         "attack": 912,
         "criticalRate": 0,
@@ -331,7 +331,7 @@
         "name": {
             "zhTW": "激流巨像 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Water Golem III"
         },
         "attack": 912,
         "criticalRate": 0,
@@ -374,9 +374,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "土砂龍粉碎者 III (大劍)",
+            "zhTW": "土砂龍粉碎者 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Barroth Shredder III"
         },
         "attack": 960,
         "criticalRate": -20,
@@ -424,7 +424,7 @@
         "name": {
             "zhTW": "塊劍拉多巴爾喀 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Radobaan Slab III"
         },
         "attack": 912,
         "criticalRate": 0,
@@ -465,7 +465,7 @@
         "name": {
             "zhTW": "龍骨大劍 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Cleaver III"
         },
         "attack": 768,
         "criticalRate": 0,

@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "鉻鋼切刀 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Chrome Slicer II"
         },
         "attack": 252,
         "criticalRate": 0,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "洶湧奔流 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Rogue Wave III"
         },
         "attack": 252,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "浮空龍戰斧 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lumu Tabar III"
         },
         "attack": 238,
         "criticalRate": 0,
@@ -152,7 +152,7 @@
         "name": {
             "zhTW": "盛開曼陀羅 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Datura Blossom III"
         },
         "attack": 238,
         "criticalRate": 0,
@@ -200,7 +200,7 @@
         "name": {
             "zhTW": "瑪拉多戰斧 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Malady's Tabar III"
         },
         "attack": 224,
         "criticalRate": 20,
@@ -241,7 +241,7 @@
         "name": {
             "zhTW": "大地巴龍刀 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Grand Barong II"
         },
         "attack": 266,
         "criticalRate": 0,
@@ -286,7 +286,7 @@
         "name": {
             "zhTW": "骨鎚龍棍棒 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Baan Claw III"
         },
         "attack": 266,
         "criticalRate": 0,
@@ -327,7 +327,7 @@
         "name": {
             "zhTW": "凶豺龍棍棒 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jagras Garotte III"
         },
         "attack": 266,
         "criticalRate": 0,
@@ -375,7 +375,7 @@
         "name": {
             "zhTW": "雷光戰狂 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lightning Nemesis III"
         },
         "attack": 266,
         "criticalRate": 0,
@@ -420,7 +420,7 @@
         "name": {
             "zhTW": "土砂龍棍棒 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Barroth Club III"
         },
         "attack": 294,
         "criticalRate": -10,
@@ -468,7 +468,7 @@
         "name": {
             "zhTW": "龍骨劍 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Sword III"
         },
         "attack": 196,
         "criticalRate": 0,

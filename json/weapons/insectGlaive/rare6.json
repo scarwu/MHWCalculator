@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "鉻鋼長刀 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Chrome Blade II"
         },
         "attack": 558,
         "criticalRate": 0,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "星空長刀 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Ya-Ku Wrath III"
         },
         "attack": 527,
         "criticalRate": 20,
@@ -100,7 +100,7 @@
         "name": {
             "zhTW": "利刃長刀 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Destroyer Bo III"
         },
         "attack": 558,
         "criticalRate": 0,
@@ -145,7 +145,7 @@
         "name": {
             "zhTW": "凍寒疾風刀 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Freeze Gale II"
         },
         "attack": 527,
         "criticalRate": 0,
@@ -193,7 +193,7 @@
         "name": {
             "zhTW": "曼陀羅長刀 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Datura Blade III"
         },
         "attack": 527,
         "criticalRate": 0,
@@ -241,7 +241,7 @@
         "name": {
             "zhTW": "飛空棍 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Aerial Rod II"
         },
         "attack": 589,
         "criticalRate": 0,
@@ -286,7 +286,7 @@
         "name": {
             "zhTW": "激流長刀 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Water Glaive III"
         },
         "attack": 589,
         "criticalRate": 0,
@@ -331,7 +331,7 @@
         "name": {
             "zhTW": "飛雷龍之柱 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Kadachi Pillar III"
         },
         "attack": 558,
         "criticalRate": 10,
@@ -376,7 +376,7 @@
         "name": {
             "zhTW": "龍骨棍 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Glaive III"
         },
         "attack": 496,
         "criticalRate": 0,

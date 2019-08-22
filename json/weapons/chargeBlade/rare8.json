@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "帶來毀滅的一把武器",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Devastation's Thorns"
         },
         "attack": 756,
         "criticalRate": 0,
@@ -58,7 +58,7 @@
         "name": {
             "zhTW": "憎【忿恨】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Odium"
         },
         "attack": 576,
         "criticalRate": 25,
@@ -99,7 +99,7 @@
         "name": {
             "zhTW": "捲土重來熔山龍盾斧",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Avenging Magda Manus"
         },
         "attack": 756,
         "criticalRate": -10,
@@ -140,7 +140,7 @@
         "name": {
             "zhTW": "鋼龍幻夢",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Daora's Thwartoise"
         },
         "attack": 648,
         "criticalRate": 15,
@@ -188,7 +188,7 @@
         "name": {
             "zhTW": "冥燈龍盾斧",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Ra'atz"
         },
         "attack": 648,
         "criticalRate": 15,
@@ -238,7 +238,7 @@
         "name": {
             "zhTW": "但丁的魔劍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dante's Devil Sword"
         },
         "attack": 720,
         "criticalRate": 0,
@@ -286,7 +286,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．冰",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"Ice\""
         },
         "attack": 648,
         "criticalRate": 0,
@@ -331,7 +331,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．睡眠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"Sleep\""
         },
         "attack": 684,
         "criticalRate": 0,
@@ -376,7 +376,7 @@
         "name": {
             "zhTW": "鎧羅兵裝．雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Strongarm \"Thunder\""
         },
         "attack": 684,
         "criticalRate": 0,
@@ -421,7 +421,7 @@
         "name": {
             "zhTW": "皇后武器．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Alma \"Blaze\""
         },
         "attack": 648,
         "criticalRate": 20,
@@ -474,7 +474,7 @@
         "name": {
             "zhTW": "皇后武器．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Alma \"Ruin\""
         },
         "attack": 684,
         "criticalRate": 0,
@@ -527,7 +527,7 @@
         "name": {
             "zhTW": "皇后武器．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Alma \"Styx\""
         },
         "attack": 648,
         "criticalRate": 10,

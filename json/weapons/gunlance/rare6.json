@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "鉻鋼銃槍 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Chrome Gunlance II"
         },
         "attack": 414,
         "criticalRate": 0,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "泥岩龍銃槍 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jyura Buster III"
         },
         "attack": 437,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "大骨銃槍【龍尾】 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Great Bone Gunlance II"
         },
         "attack": 437,
         "criticalRate": 0,
@@ -149,7 +149,7 @@
         "name": {
             "zhTW": "牙龍銃槍【大喰】 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Glutton Gunlance III"
         },
         "attack": 437,
         "criticalRate": 0,
@@ -197,7 +197,7 @@
         "name": {
             "zhTW": "牙龍銃槍【黑頭巾】 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Deathfang Gunlance III"
         },
         "attack": 368,
         "criticalRate": 10,
@@ -238,7 +238,7 @@
         "name": {
             "zhTW": "土砂龍破壞砲 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Barroth Blaster III"
         },
         "attack": 460,
         "criticalRate": -10,
@@ -279,7 +279,7 @@
         "name": {
             "zhTW": "蠻顎龍加農砲 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Anja Cannon III"
         },
         "attack": 483,
         "criticalRate": -20,
@@ -320,7 +320,7 @@
         "name": {
             "zhTW": "龍骨銃槍 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Gunlance III"
         },
         "attack": 368,
         "criticalRate": 0,

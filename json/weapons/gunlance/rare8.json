@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "燒滅種火",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Eradication Flame"
         },
         "attack": 483,
         "criticalRate": 0,
@@ -58,7 +58,7 @@
         "name": {
             "zhTW": "藍色戰車",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Blue Chariot"
         },
         "attack": 437,
         "criticalRate": 20,
@@ -103,7 +103,7 @@
         "name": {
             "zhTW": "驚天動地熔山龍銃槍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Earthshaker Magda Lahat"
         },
         "attack": 460,
         "criticalRate": -10,
@@ -144,7 +144,7 @@
         "name": {
             "zhTW": "鋼龍爪銃槍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Daora's Brigia"
         },
         "attack": 414,
         "criticalRate": 10,
@@ -189,7 +189,7 @@
         "name": {
             "zhTW": "冥燈龍銃槍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Hemta"
         },
         "attack": 391,
         "criticalRate": 10,
@@ -239,7 +239,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．水",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Water\""
         },
         "attack": 437,
         "criticalRate": 0,
@@ -284,7 +284,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．睡眠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Sleep\""
         },
         "attack": 437,
         "criticalRate": 0,
@@ -329,7 +329,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．毒",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Poison\""
         },
         "attack": 460,
         "criticalRate": 15,
@@ -374,7 +374,7 @@
         "name": {
             "zhTW": "皇后杖．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Howl \"Blaze\""
         },
         "attack": 437,
         "criticalRate": 20,
@@ -424,7 +424,7 @@
         "name": {
             "zhTW": "皇后杖．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Howl \"Ruin\""
         },
         "attack": 460,
         "criticalRate": 0,
@@ -474,7 +474,7 @@
         "name": {
             "zhTW": "皇后杖．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Howl \"Styx\""
         },
         "attack": 437,
         "criticalRate": 10,

@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "牙龍重弩【暴食】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gluttonous Fangcannon"
         },
         "attack": 270,
         "criticalRate": 0,
@@ -41,7 +41,7 @@
         "name": {
             "zhTW": "蠻顎重弩黑火砲",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gnashing Flammenkanone"
         },
         "attack": 300,
         "criticalRate": -20,
@@ -71,7 +71,7 @@
         "name": {
             "zhTW": "岩賊龍砲 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gama Cannon II"
         },
         "attack": 255,
         "criticalRate": 0,
@@ -101,7 +101,7 @@
         "name": {
             "zhTW": "熔山龍重弩槍 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Magda Gemitus II"
         },
         "attack": 315,
         "criticalRate": -20,
@@ -131,7 +131,7 @@
         "name": {
             "zhTW": "黑暗左右",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dark Devourer"
         },
         "attack": 345,
         "criticalRate": -25,
@@ -157,7 +157,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．眩",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Flash\""
         },
         "attack": 255,
         "criticalRate": 10,
@@ -183,7 +183,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．飛雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Spark\""
         },
         "attack": 255,
         "criticalRate": 25,
@@ -209,7 +209,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Glutton\""
         },
         "attack": 270,
         "criticalRate": 10,
@@ -235,7 +235,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．毒妖",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Spew\""
         },
         "attack": 270,
         "criticalRate": 0,
@@ -261,7 +261,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．骨鎚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Tar\""
         },
         "attack": 270,
         "criticalRate": 0,
@@ -287,7 +287,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．岩賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Crusher\""
         },
         "attack": 285,
         "criticalRate": 0,
@@ -313,7 +313,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．蠻顎",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Rage\""
         },
         "attack": 300,
         "criticalRate": -10,
@@ -339,7 +339,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．熔山",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Magma\""
         },
         "attack": 315,
         "criticalRate": -10,
@@ -365,7 +365,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．角",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Horn\""
         },
         "attack": 330,
         "criticalRate": -10,

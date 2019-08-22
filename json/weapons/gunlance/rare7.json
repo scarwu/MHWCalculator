@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "飛雷銃槍【蜻蜓切】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Mythic Kadachi Striker"
         },
         "attack": 414,
         "criticalRate": 20,
@@ -56,7 +56,7 @@
         "name": {
             "zhTW": "皇家銃槍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Royal Burst"
         },
         "attack": 437,
         "criticalRate": 15,
@@ -101,7 +101,7 @@
         "name": {
             "zhTW": "風漂龍加農砲 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Legiana Cannon II"
         },
         "attack": 368,
         "criticalRate": 0,
@@ -142,7 +142,7 @@
         "name": {
             "zhTW": "爆鱗龍銃槍 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bazel Buster II"
         },
         "attack": 460,
         "criticalRate": -10,
@@ -187,7 +187,7 @@
         "name": {
             "zhTW": "屍套龍火槍 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Hazak Spysa II"
         },
         "attack": 460,
         "criticalRate": 0,
@@ -234,7 +234,7 @@
         "name": {
             "zhTW": "暴銃槍格拉古利德",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Insatiable Gunlance"
         },
         "attack": 529,
         "criticalRate": -30,
@@ -277,7 +277,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．風漂",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Stream\""
         },
         "attack": 368,
         "criticalRate": 10,
@@ -308,7 +308,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．痺賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Numb\""
         },
         "attack": 368,
         "criticalRate": 10,
@@ -339,7 +339,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．飛雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Spark\""
         },
         "attack": 391,
         "criticalRate": 20,
@@ -370,7 +370,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．土砂",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Mud\""
         },
         "attack": 391,
         "criticalRate": -10,
@@ -401,7 +401,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．王",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"King\""
         },
         "attack": 414,
         "criticalRate": 20,
@@ -442,7 +442,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．爆鱗",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Bomber\""
         },
         "attack": 414,
         "criticalRate": 0,
@@ -473,7 +473,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．泥魚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Mire\""
         },
         "attack": 437,
         "criticalRate": 0,
@@ -504,7 +504,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Glutton\""
         },
         "attack": 437,
         "criticalRate": 0,
@@ -535,7 +535,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．屍套",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Decay\""
         },
         "attack": 460,
         "criticalRate": 10,
@@ -568,7 +568,7 @@
         "name": {
             "zhTW": "鎧羅銃槍．蠻顎",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Buster \"Rage\""
         },
         "attack": 460,
         "criticalRate": -20,

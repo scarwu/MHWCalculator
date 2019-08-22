@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "擊滅砲火",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Destruction's Fusillade"
         },
         "attack": 285,
         "criticalRate": 0,
@@ -41,7 +41,7 @@
         "name": {
             "zhTW": "冰凌薔薇",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Legia Shattercryst"
         },
         "attack": 255,
         "criticalRate": 0,
@@ -71,7 +71,7 @@
         "name": {
             "zhTW": "重角轟砲",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Griffon Blazooka"
         },
         "attack": 330,
         "criticalRate": -20,
@@ -101,7 +101,7 @@
         "name": {
             "zhTW": "迅雷閃擊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Quickquiver"
         },
         "attack": 255,
         "criticalRate": 0,
@@ -131,7 +131,7 @@
         "name": {
             "zhTW": "炎王灼紅巨砲",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Teostra's Flames"
         },
         "attack": 270,
         "criticalRate": 0,
@@ -157,7 +157,7 @@
         "name": {
             "zhTW": "冥燈龍重弩槍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Jiiqa"
         },
         "attack": 255,
         "criticalRate": 0,
@@ -190,7 +190,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．援擊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Support\""
         },
         "attack": 270,
         "criticalRate": 20,
@@ -220,7 +220,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．爆擊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Blast\""
         },
         "attack": 285,
         "criticalRate": 10,
@@ -250,7 +250,7 @@
         "name": {
             "zhTW": "鎧羅突擊弩．冷擊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Assault \"Icewater\""
         },
         "attack": 285,
         "criticalRate": 0,
@@ -280,7 +280,7 @@
         "name": {
             "zhTW": "皇后加農砲．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Cannon \"Blaze\""
         },
         "attack": 285,
         "criticalRate": 20,
@@ -315,7 +315,7 @@
         "name": {
             "zhTW": "皇后加農砲．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Cannon \"Ruin\""
         },
         "attack": 300,
         "criticalRate": 0,
@@ -350,7 +350,7 @@
         "name": {
             "zhTW": "皇后加農砲．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Cannon \"Styx\""
         },
         "attack": 285,
         "criticalRate": 10,

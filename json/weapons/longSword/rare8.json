@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "滅盡一刀",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Extermination's Edge"
         },
         "attack": 693,
         "criticalRate": 0,
@@ -58,7 +58,7 @@
         "name": {
             "zhTW": "飛龍刀【藍染】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Wyvern Blade \"Indigo\""
         },
         "attack": 627,
         "criticalRate": 15,
@@ -103,7 +103,7 @@
         "name": {
             "zhTW": "爆鱗刀赤紅利刃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bazel Varga Rookslayer"
         },
         "attack": 660,
         "criticalRate": -10,
@@ -151,7 +151,7 @@
         "name": {
             "zhTW": "幻光刀",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Legia Stealer"
         },
         "attack": 528,
         "criticalRate": 0,
@@ -192,7 +192,7 @@
         "name": {
             "zhTW": "帝王刀【陽炎】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Imperial Shimmer"
         },
         "attack": 627,
         "criticalRate": 0,
@@ -233,7 +233,7 @@
         "name": {
             "zhTW": "冥燈龍太刀",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Cypher"
         },
         "attack": 594,
         "criticalRate": 15,
@@ -283,7 +283,7 @@
         "name": {
             "zhTW": "天上天下無雙刀",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Divine Slasher"
         },
         "attack": 693,
         "criticalRate": 0,
@@ -330,7 +330,7 @@
         "name": {
             "zhTW": "鎧羅劍．麻痺",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Paralysis\""
         },
         "attack": 561,
         "criticalRate": 0,
@@ -375,7 +375,7 @@
         "name": {
             "zhTW": "鎧羅劍．毒",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Poison\""
         },
         "attack": 627,
         "criticalRate": 10,
@@ -420,7 +420,7 @@
         "name": {
             "zhTW": "鎧羅劍．水",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Water\""
         },
         "attack": 627,
         "criticalRate": 0,
@@ -465,7 +465,7 @@
         "name": {
             "zhTW": "皇后劍．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Sword \"Blaze\""
         },
         "attack": 594,
         "criticalRate": 20,
@@ -518,7 +518,7 @@
         "name": {
             "zhTW": "皇后劍．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Sword \"Ruin\""
         },
         "attack": 627,
         "criticalRate": 0,
@@ -571,7 +571,7 @@
         "name": {
             "zhTW": "皇后劍．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Sword \"Styx\""
         },
         "attack": 594,
         "criticalRate": 10,

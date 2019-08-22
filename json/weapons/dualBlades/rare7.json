@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "神聖佩劍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Holy Sabers"
         },
         "attack": 252,
         "criticalRate": 0,
@@ -56,7 +56,7 @@
         "name": {
             "zhTW": "蠻顎龍颶風 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Anja Cyclone III"
         },
         "attack": 294,
         "criticalRate": -20,
@@ -97,7 +97,7 @@
         "name": {
             "zhTW": "爆鎚棍棒 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Diablos Clubs II"
         },
         "attack": 322,
         "criticalRate": -10,
@@ -142,7 +142,7 @@
         "name": {
             "zhTW": "溶岩颶風 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lava Cyclone II"
         },
         "attack": 252,
         "criticalRate": 0,
@@ -190,7 +190,7 @@
         "name": {
             "zhTW": "封龍劍【超絕一門】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Enduring Schism"
         },
         "attack": 196,
         "criticalRate": 0,
@@ -240,7 +240,7 @@
         "name": {
             "zhTW": "熔山龍鉤爪 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Magda Ungulae II"
         },
         "attack": 308,
         "criticalRate": -20,
@@ -285,7 +285,7 @@
         "name": {
             "zhTW": "憤怒捕食者",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Wrathful Predation"
         },
         "attack": 308,
         "criticalRate": -20,
@@ -328,7 +328,7 @@
         "name": {
             "zhTW": "鎧羅小刀．黑甲",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Lurk\""
         },
         "attack": 238,
         "criticalRate": 0,
@@ -359,7 +359,7 @@
         "name": {
             "zhTW": "鎧羅小刀．搔",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Thief\""
         },
         "attack": 238,
         "criticalRate": 20,
@@ -390,7 +390,7 @@
         "name": {
             "zhTW": "鎧羅小刀．慘爪",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Claw\""
         },
         "attack": 252,
         "criticalRate": 20,
@@ -421,7 +421,7 @@
         "name": {
             "zhTW": "鎧羅小刀．熔岩",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Erupter\""
         },
         "attack": 266,
         "criticalRate": 0,
@@ -456,7 +456,7 @@
         "name": {
             "zhTW": "鎧羅小刀．眩",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Flash\""
         },
         "attack": 266,
         "criticalRate": 0,
@@ -487,7 +487,7 @@
         "name": {
             "zhTW": "鎧羅小刀．泥魚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Mire\""
         },
         "attack": 266,
         "criticalRate": 10,
@@ -518,7 +518,7 @@
         "name": {
             "zhTW": "鎧羅小刀．熔山",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Magma\""
         },
         "attack": 280,
         "criticalRate": -20,
@@ -549,7 +549,7 @@
         "name": {
             "zhTW": "鎧羅小刀．蠻顎",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Rage\""
         },
         "attack": 294,
         "criticalRate": -20,
@@ -580,7 +580,7 @@
         "name": {
             "zhTW": "鎧羅小刀．角",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Horn\""
         },
         "attack": 322,
         "criticalRate": -10,
@@ -611,7 +611,7 @@
         "name": {
             "zhTW": "鎧羅小刀．飛雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Daggers \"Spark\""
         },
         "attack": 252,
         "criticalRate": 10,

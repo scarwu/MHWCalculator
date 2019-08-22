@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "必滅一矢",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Doom's Shaft"
         },
         "attack": 240,
         "criticalRate": 0,
@@ -48,7 +48,7 @@
         "name": {
             "zhTW": "重弓巨靈勇士",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gigacles"
         },
         "attack": 228,
         "criticalRate": 0,
@@ -79,7 +79,7 @@
         "name": {
             "zhTW": "冰凌銀蕨",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Legia Snowfletcher"
         },
         "attack": 180,
         "criticalRate": 0,
@@ -110,7 +110,7 @@
         "name": {
             "zhTW": "角王弓疾風",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Cera Coilbender"
         },
         "attack": 264,
         "criticalRate": -30,
@@ -148,7 +148,7 @@
         "name": {
             "zhTW": "鋼龍強弓",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Daora's Sagittarii"
         },
         "attack": 204,
         "criticalRate": 15,
@@ -186,7 +186,7 @@
         "name": {
             "zhTW": "冥燈龍大弓",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Metora"
         },
         "attack": 204,
         "criticalRate": 15,
@@ -226,7 +226,7 @@
         "name": {
             "zhTW": "巨型獵弓",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Great Hunter's Bow"
         },
         "attack": 228,
         "criticalRate": 0,
@@ -261,7 +261,7 @@
         "name": {
             "zhTW": "鎧羅弓．雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Arrow \"Thunder\""
         },
         "attack": 228,
         "criticalRate": 10,
@@ -296,7 +296,7 @@
         "name": {
             "zhTW": "鎧羅弓．水",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Arrow \"Water\""
         },
         "attack": 228,
         "criticalRate": 0,
@@ -331,7 +331,7 @@
         "name": {
             "zhTW": "鎧羅弓．爆破",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Arrow \"Blast\""
         },
         "attack": 240,
         "criticalRate": 0,
@@ -366,7 +366,7 @@
         "name": {
             "zhTW": "皇后弓．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Arrow \"Blaze\""
         },
         "attack": 216,
         "criticalRate": 20,
@@ -409,7 +409,7 @@
         "name": {
             "zhTW": "皇后弓．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Arrow \"Ruin\""
         },
         "attack": 228,
         "criticalRate": 0,
@@ -452,7 +452,7 @@
         "name": {
             "zhTW": "皇后弓．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Arrow \"Styx\""
         },
         "attack": 216,
         "criticalRate": 10,

@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "潰滅一擊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Obliteration's Footfall"
         },
         "attack": 1092,
         "criticalRate": 0,
@@ -58,7 +58,7 @@
         "name": {
             "zhTW": "惡靈禍根",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Pandemonium's Root"
         },
         "attack": 1040,
         "criticalRate": 0,
@@ -105,7 +105,7 @@
         "name": {
             "zhTW": "活火爆發熔山龍爆鎚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Ragefire Magda Floga"
         },
         "attack": 1144,
         "criticalRate": -20,
@@ -150,7 +150,7 @@
         "name": {
             "zhTW": "巨大鋼龍錘",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Daora's Colossus"
         },
         "attack": 1040,
         "criticalRate": 10,
@@ -195,7 +195,7 @@
         "name": {
             "zhTW": "冥燈龍大鎚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Maph'agarna"
         },
         "attack": 884,
         "criticalRate": 15,
@@ -245,7 +245,7 @@
         "name": {
             "zhTW": "電擊鎚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Binder Mace"
         },
         "attack": 936,
         "criticalRate": 0,
@@ -290,7 +290,7 @@
         "name": {
             "zhTW": "鎧羅大錘．冰",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Ice\""
         },
         "attack": 988,
         "criticalRate": 0,
@@ -335,7 +335,7 @@
         "name": {
             "zhTW": "鎧羅大錘．雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Thunder\""
         },
         "attack": 988,
         "criticalRate": 0,
@@ -380,7 +380,7 @@
         "name": {
             "zhTW": "鎧羅大錘．水",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Hammer \"Water\""
         },
         "attack": 988,
         "criticalRate": 0,
@@ -425,7 +425,7 @@
         "name": {
             "zhTW": "皇后鏈錘．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Mace \"Blaze\""
         },
         "attack": 936,
         "criticalRate": 20,
@@ -478,7 +478,7 @@
         "name": {
             "zhTW": "皇后鏈錘．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Mace \"Ruin\""
         },
         "attack": 988,
         "criticalRate": 0,
@@ -531,7 +531,7 @@
         "name": {
             "zhTW": "皇后鏈錘．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Mace \"Styx\""
         },
         "attack": 936,
         "criticalRate": 10,

@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "鐵刀【神樂】 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Iron Gospel II"
         },
         "attack": 594,
         "criticalRate": 0,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "眩惑刀【閃】 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dazzling Flash III"
         },
         "attack": 594,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "星空迅刀 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Last Dance III"
         },
         "attack": 561,
         "criticalRate": 20,
@@ -145,7 +145,7 @@
         "name": {
             "zhTW": "骨鐮 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bone Reaper II"
         },
         "attack": 627,
         "criticalRate": 0,
@@ -190,7 +190,7 @@
         "name": {
             "zhTW": "蠻顎龍偃月刀 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Anja Scimitar III"
         },
         "attack": 693,
         "criticalRate": -20,
@@ -231,7 +231,7 @@
         "name": {
             "zhTW": "深土太刀 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dipterus III"
         },
         "attack": 627,
         "criticalRate": 0,
@@ -276,7 +276,7 @@
         "name": {
             "zhTW": "飛雷龍之牙 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Kadachi Fang III"
         },
         "attack": 594,
         "criticalRate": 15,
@@ -321,7 +321,7 @@
         "name": {
             "zhTW": "黑色偃月刀 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dark Scimitar III"
         },
         "attack": 528,
         "criticalRate": 0,
@@ -366,7 +366,7 @@
         "name": {
             "zhTW": "龍骨刀 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Stabber III"
         },
         "attack": 528,
         "criticalRate": 0,

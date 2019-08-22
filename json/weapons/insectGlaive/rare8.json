@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "撲滅導燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Catastrophe's Light"
         },
         "attack": 651,
         "criticalRate": 0,
@@ -58,7 +58,7 @@
         "name": {
             "zhTW": "惡【VICE】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Vice"
         },
         "attack": 496,
         "criticalRate": 20,
@@ -103,7 +103,7 @@
         "name": {
             "zhTW": "碧綠神鳴",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Verdant Levin"
         },
         "attack": 496,
         "criticalRate": 0,
@@ -144,7 +144,7 @@
         "name": {
             "zhTW": "冰體鋼龍棍",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Daora's Tethidine"
         },
         "attack": 558,
         "criticalRate": 10,
@@ -189,7 +189,7 @@
         "name": {
             "zhTW": "冥燈龍長刀",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno Shmaena"
         },
         "attack": 558,
         "criticalRate": 15,
@@ -239,7 +239,7 @@
         "name": {
             "zhTW": "鎧羅長刀．冰",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"Ice\""
         },
         "attack": 527,
         "criticalRate": 0,
@@ -284,7 +284,7 @@
         "name": {
             "zhTW": "鎧羅長刀．麻痺",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"Paralysis\""
         },
         "attack": 620,
         "criticalRate": 0,
@@ -329,7 +329,7 @@
         "name": {
             "zhTW": "鎧羅長刀．水",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Glaive \"Water\""
         },
         "attack": 620,
         "criticalRate": 0,
@@ -374,7 +374,7 @@
         "name": {
             "zhTW": "皇后長鞭．炎妃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Cane \"Blaze\""
         },
         "attack": 589,
         "criticalRate": 20,
@@ -424,7 +424,7 @@
         "name": {
             "zhTW": "皇后長鞭．滅盡",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Cane \"Ruin\""
         },
         "attack": 620,
         "criticalRate": 0,
@@ -474,7 +474,7 @@
         "name": {
             "zhTW": "皇后長鞭．冥燈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Empress Cane \"Styx\""
         },
         "attack": 589,
         "criticalRate": 10,
@@ -527,7 +527,7 @@
         "name": {
             "zhTW": "穿心槍蓋博爾格．真",
             "jaJP": null,
-            "enUS": null
+            "enUS": "True Gae Bolg"
         },
         "attack": 589,
         "criticalRate": 20,

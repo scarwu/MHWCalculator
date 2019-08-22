@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "大鬼鐵 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Iron Archdemon II"
         },
         "attack": 936,
         "criticalRate": 0,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "激流強鎚 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Water Basher III"
         },
         "attack": 936,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "馬拉多戰鎚 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Malady's Fist III"
         },
         "attack": 832,
         "criticalRate": 20,
@@ -145,7 +145,7 @@
         "name": {
             "zhTW": "雷光強鎚 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lightning Bash III"
         },
         "attack": 988,
         "criticalRate": 0,
@@ -190,7 +190,7 @@
         "name": {
             "zhTW": "大地之岩 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Grandrock II"
         },
         "attack": 988,
         "criticalRate": 0,
@@ -235,7 +235,7 @@
         "name": {
             "zhTW": "骨鎚龍擊鎚 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Baan Strike III"
         },
         "attack": 988,
         "criticalRate": 0,
@@ -276,7 +276,7 @@
         "name": {
             "zhTW": "衝擊釘鎚 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Crushing Beak III"
         },
         "attack": 884,
         "criticalRate": 25,
@@ -315,9 +315,9 @@
             "enUS": null
         },
         "name": {
-            "zhTW": "土砂龍粉碎者 III (大槌)",
+            "zhTW": "土砂龍粉碎者 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Barroth Breaker III"
         },
         "attack": 1040,
         "criticalRate": -10,
@@ -365,7 +365,7 @@
         "name": {
             "zhTW": "蠻顎龍戰鎚 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Anja Striker III"
         },
         "attack": 1092,
         "criticalRate": -20,
@@ -406,7 +406,7 @@
         "name": {
             "zhTW": "龍骨大鎚 III",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonbone Basher III"
         },
         "attack": 832,
         "criticalRate": 0,

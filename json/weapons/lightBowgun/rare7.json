@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "爆鱗龍颶風砲 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bazel Typhoon II"
         },
         "attack": 260,
         "criticalRate": -10,
@@ -41,7 +41,7 @@
         "name": {
             "zhTW": "火龍破壞砲 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Rathbuster II"
         },
         "attack": 247,
         "criticalRate": 20,
@@ -71,7 +71,7 @@
         "name": {
             "zhTW": "熔岩輕弩 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lava Bullet II"
         },
         "attack": 234,
         "criticalRate": 0,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "瘋狂的悲嘆",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Devil's Madness"
         },
         "attack": 299,
         "criticalRate": -25,
@@ -130,7 +130,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．浮空",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Drifter\""
         },
         "attack": 221,
         "criticalRate": 20,
@@ -156,7 +156,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．慘爪",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Claw\""
         },
         "attack": 234,
         "criticalRate": 30,
@@ -182,7 +182,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．熔岩",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Erupter\""
         },
         "attack": 247,
         "criticalRate": 0,
@@ -208,7 +208,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．王",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"King\""
         },
         "attack": 247,
         "criticalRate": 25,
@@ -234,7 +234,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．泥魚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Mire\""
         },
         "attack": 247,
         "criticalRate": 10,
@@ -260,7 +260,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．爆鱗",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Bomber\""
         },
         "attack": 260,
         "criticalRate": -20,
@@ -286,7 +286,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．屍套",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Decay\""
         },
         "attack": 260,
         "criticalRate": 0,
@@ -312,7 +312,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．賊",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Glutton\""
         },
         "attack": 260,
         "criticalRate": 0,
@@ -338,7 +338,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．土砂",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Mud\""
         },
         "attack": 260,
         "criticalRate": -10,
@@ -364,7 +364,7 @@
         "name": {
             "zhTW": "鎧羅迅擊弩．蠻顎",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Blitz \"Rage\""
         },
         "attack": 273,
         "criticalRate": -10,

@@ -67,3 +67,11 @@ function saveJson ($name, $data)
 
     return file_put_contents($path, $json);
 }
+
+function loadJson ($name)
+{
+    $path = __DIR__ . "/../../temp/{$name}.json";
+    $json = file_get_contents($path);
+
+    return json_decode($json, true);
+}

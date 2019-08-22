@@ -11,7 +11,7 @@
         "name": {
             "zhTW": "爆鎚太刀 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Brazenridge II"
         },
         "attack": 660,
         "criticalRate": -10,
@@ -59,7 +59,7 @@
         "name": {
             "zhTW": "飛龍刀【葵】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Wyvern Blade \"Holly\""
         },
         "attack": 627,
         "criticalRate": 10,
@@ -104,7 +104,7 @@
         "name": {
             "zhTW": "屍套龍太刀 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Hazak Grosser II"
         },
         "attack": 660,
         "criticalRate": 0,
@@ -151,7 +151,7 @@
         "name": {
             "zhTW": "熔山龍太刀 II",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Magda Facultas II"
         },
         "attack": 726,
         "criticalRate": -20,
@@ -196,7 +196,7 @@
         "name": {
             "zhTW": "悲慘痛苦太刀",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Reaver \"Calamity\""
         },
         "attack": 759,
         "criticalRate": -25,
@@ -239,7 +239,7 @@
         "name": {
             "zhTW": "蒼星的太刀【舞龍】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Azure Star \"Dragon Dance\""
         },
         "attack": 495,
         "criticalRate": 30,
@@ -284,7 +284,7 @@
         "name": {
             "zhTW": "鎧羅劍．黑甲",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Lurk\""
         },
         "attack": 528,
         "criticalRate": 0,
@@ -315,7 +315,7 @@
         "name": {
             "zhTW": "鎧羅劍．泥魚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Mire\""
         },
         "attack": 660,
         "criticalRate": 0,
@@ -346,7 +346,7 @@
         "name": {
             "zhTW": "鎧羅劍．風漂",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Stream\""
         },
         "attack": 528,
         "criticalRate": 0,
@@ -377,7 +377,7 @@
         "name": {
             "zhTW": "鎧羅劍．搔",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Thief\""
         },
         "attack": 561,
         "criticalRate": 20,
@@ -408,7 +408,7 @@
         "name": {
             "zhTW": "鎧羅劍．飛雷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Spark\""
         },
         "attack": 594,
         "criticalRate": 30,
@@ -439,7 +439,7 @@
         "name": {
             "zhTW": "鎧羅劍．眩",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Flash\""
         },
         "attack": 627,
         "criticalRate": 0,
@@ -470,7 +470,7 @@
         "name": {
             "zhTW": "鎧羅劍．屍套",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Decay\""
         },
         "attack": 660,
         "criticalRate": 10,
@@ -503,7 +503,7 @@
         "name": {
             "zhTW": "鎧羅劍．爆鎚",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Gyre\""
         },
         "attack": 660,
         "criticalRate": 0,
@@ -538,7 +538,7 @@
         "name": {
             "zhTW": "鎧羅劍．蠻顎",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Rage\""
         },
         "attack": 693,
         "criticalRate": -10,
@@ -569,7 +569,7 @@
         "name": {
             "zhTW": "鎧羅劍．熔山",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Taroth Sword \"Magma\""
         },
         "attack": 726,
         "criticalRate": -20,
