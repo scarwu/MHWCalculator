@@ -35,6 +35,7 @@ foreach ($mainList->find('tr') as $index => $row) {
     $subList = $subDom->find('table', 0);
 
     $jewel = [
+        'id' => $name,
         'name' => [
             'zhTW' => $name,
             'jaJP' => null,
@@ -61,6 +62,8 @@ foreach ($mainList->find('tr') as $index => $row) {
             break;
         case 'name_en':
             $jewel['name']['enUS'] = $value->plaintext;
+            $jewel['name']['enUS'] = explode('Jewel', $jewel['name']['enUS'])[0];
+            $jewel['name']['enUS'] .= 'Jewel';
 
             break;
         case 'skills':

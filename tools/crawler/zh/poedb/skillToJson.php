@@ -34,6 +34,7 @@ foreach ($mainList->find('tr') as $index => $row) {
     $subList = $subDom->find('table', 0);
 
     $skill = [
+        'id' => $name,
         'name' => [
             'zhTW' => $name,
             'jaJP' => null,

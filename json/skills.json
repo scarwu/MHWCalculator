@@ -4,10 +4,10 @@
         "name": {
             "zhTW": "體力增強",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Health Boost"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -59,10 +59,10 @@
         "name": {
             "zhTW": "體力回復量UP",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Recovery Up"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -105,7 +105,7 @@
             "enUS": "Slugger"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -145,10 +145,10 @@
         "name": {
             "zhTW": "體術",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Constitution"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -206,10 +206,10 @@
         "name": {
             "zhTW": "力量解放",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Latent Power"
         },
         "type": "passive",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -287,10 +287,10 @@
         "name": {
             "zhTW": "水屬性攻擊強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Water Attack"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -381,7 +381,7 @@
             "enUS": "Fire Attack"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -469,10 +469,10 @@
         "name": {
             "zhTW": "心眼／彈導強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Mind's Eye\/Ballistics"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": true,
             "armor": false
@@ -494,10 +494,10 @@
         "name": {
             "zhTW": "火耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Fire Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -555,10 +555,10 @@
         "name": {
             "zhTW": "水耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Water Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -616,10 +616,10 @@
         "name": {
             "zhTW": "不屈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Fortify"
         },
         "type": "passive",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -648,10 +648,10 @@
         "name": {
             "zhTW": "火場怪力",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Heroics"
         },
         "type": "passive",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -744,10 +744,10 @@
         "name": {
             "zhTW": "加速再生",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Hasten Recovery"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -769,10 +769,10 @@
         "name": {
             "zhTW": "冰耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Ice Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -830,10 +830,10 @@
         "name": {
             "zhTW": "地質學",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Geologist"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -873,10 +873,10 @@
         "name": {
             "zhTW": "回復速度",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Recovery Speed"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -916,10 +916,10 @@
         "name": {
             "zhTW": "冰屬性攻擊強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Ice Attack"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1007,10 +1007,10 @@
         "name": {
             "zhTW": "收刀術",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Quick Sheath"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1053,7 +1053,7 @@
             "enUS": "Earplugs"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1114,7 +1114,7 @@
             "enUS": "Resuscitate"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1136,10 +1136,10 @@
         "name": {
             "zhTW": "匠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Handicraft"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1220,7 +1220,7 @@
             "enUS": "Attack Boost"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1336,10 +1336,10 @@
         "name": {
             "zhTW": "吹笛名人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Horn Maestro"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1364,7 +1364,7 @@
             "enUS": "Guard Up"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": true,
             "armor": false
@@ -1386,10 +1386,10 @@
         "name": {
             "zhTW": "投射器裝填數UP",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Slinger Capacity"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1429,10 +1429,10 @@
         "name": {
             "zhTW": "防御力DOWN耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Iron Skin"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1475,7 +1475,7 @@
             "enUS": "Defense Boost"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1595,10 +1595,10 @@
         "name": {
             "zhTW": "利刃／彈藥節約",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Razor Sharp\/Spare Shot"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -1620,10 +1620,10 @@
         "name": {
             "zhTW": "快吃",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Speed Eating"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1663,10 +1663,10 @@
         "name": {
             "zhTW": "防禦性能",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Guard"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1727,7 +1727,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -1749,10 +1749,10 @@
         "name": {
             "zhTW": "泥耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Muck Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -1777,7 +1777,7 @@
             "enUS": "Critical Draw"
         },
         "type": "passive",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1832,7 +1832,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -1854,10 +1854,10 @@
         "name": {
             "zhTW": "昏厥耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Stun Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1897,10 +1897,10 @@
         "name": {
             "zhTW": "昆蟲標本達人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Entomologist"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -1940,10 +1940,10 @@
         "name": {
             "zhTW": "看破",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Critical Eye"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2047,10 +2047,10 @@
         "name": {
             "zhTW": "指示隨從",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Palico Rally"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2108,10 +2108,10 @@
         "name": {
             "zhTW": "飛身躍入",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Leap of Faith"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -2136,7 +2136,7 @@
             "enUS": "Bombardier"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2176,10 +2176,10 @@
         "name": {
             "zhTW": "毒屬性強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Poison Attack"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2219,10 +2219,10 @@
         "name": {
             "zhTW": "耐力急速回復",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Stamina Surge"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2265,7 +2265,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -2287,10 +2287,10 @@
         "name": {
             "zhTW": "風壓耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Windproof"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2351,7 +2351,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -2377,10 +2377,10 @@
         "name": {
             "zhTW": "耐震",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Tremor Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2420,10 +2420,10 @@
         "name": {
             "zhTW": "飛燕",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Airborne"
         },
         "type": "passive",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2452,7 +2452,7 @@
             "enUS": null
         },
         "type": "passive",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2474,10 +2474,10 @@
         "name": {
             "zhTW": "毒耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Poison Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2517,10 +2517,10 @@
         "name": {
             "zhTW": "威嚇",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Intimidator"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2560,10 +2560,10 @@
         "name": {
             "zhTW": "研究者",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Scholar"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -2588,7 +2588,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -2613,7 +2613,7 @@
             "enUS": "Agitator"
         },
         "type": "passive",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2706,10 +2706,10 @@
         "name": {
             "zhTW": "怨恨",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Resentment"
         },
         "type": "passive",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2787,10 +2787,10 @@
         "name": {
             "zhTW": "毒瓶追加",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Poison Functionality"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": false
@@ -2815,7 +2815,7 @@
             "enUS": "Artillery"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2855,10 +2855,10 @@
         "name": {
             "zhTW": "迴避性能",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Evade Window"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2919,7 +2919,7 @@
             "enUS": "Partbreaker"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -2962,7 +2962,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -2984,10 +2984,10 @@
         "name": {
             "zhTW": "迴避距離UP",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Evade Extender"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3030,7 +3030,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -3052,10 +3052,10 @@
         "name": {
             "zhTW": "追蹤達人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Scenthound"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3077,10 +3077,10 @@
         "name": {
             "zhTW": "剝取鐵人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Carving Pro"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -3102,10 +3102,10 @@
         "name": {
             "zhTW": "砲擊手",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Heavy Artillery"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3136,10 +3136,10 @@
         "name": {
             "zhTW": "剛刃研磨",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Protective Polish"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": true,
             "armor": false
@@ -3161,10 +3161,10 @@
         "name": {
             "zhTW": "砥石使用高速化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Speed Sharpening"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3207,7 +3207,7 @@
             "enUS": "Capacity Boost"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3229,10 +3229,10 @@
         "name": {
             "zhTW": "烤肉名人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "BBQ Master"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": false
@@ -3254,10 +3254,10 @@
         "name": {
             "zhTW": "飢餓耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Hunger Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3297,10 +3297,10 @@
         "name": {
             "zhTW": "特殊射擊強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Special Ammo Boost"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3331,10 +3331,10 @@
         "name": {
             "zhTW": "弱點特效",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Weakness Exploit"
         },
         "type": "passive",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3386,10 +3386,10 @@
         "name": {
             "zhTW": "閃光強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Blindsider"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -3414,7 +3414,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -3436,10 +3436,10 @@
         "name": {
             "zhTW": "採集達人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Master Gatherer"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -3461,10 +3461,10 @@
         "name": {
             "zhTW": "異臭名人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dungmaster"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -3486,10 +3486,10 @@
         "name": {
             "zhTW": "貫通彈・龍之箭強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Piercing Shots"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3511,10 +3511,10 @@
         "name": {
             "zhTW": "強化持續",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Power Prolonger"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3554,10 +3554,10 @@
         "name": {
             "zhTW": "釣魚名人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Master Fisher"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -3579,10 +3579,10 @@
         "name": {
             "zhTW": "通常彈・通常箭強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Normal Shots"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3604,10 +3604,10 @@
         "name": {
             "zhTW": "麻痺耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Paralysis Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3647,10 +3647,10 @@
         "name": {
             "zhTW": "麻痺屬性強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Paralysis Attack"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3690,10 +3690,10 @@
         "name": {
             "zhTW": "探索者的幸運",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Forager's Luck"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -3718,7 +3718,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -3740,10 +3740,10 @@
         "name": {
             "zhTW": "麻痺瓶追加",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Para Functionality"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": false
@@ -3765,10 +3765,10 @@
         "name": {
             "zhTW": "跑者",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Marathon Runner"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3808,10 +3808,10 @@
         "name": {
             "zhTW": "集中",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Focus"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3854,7 +3854,7 @@
             "enUS": "Botanist"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3906,7 +3906,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -3928,10 +3928,10 @@
         "name": {
             "zhTW": "最愛菇類",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Mushroomancer"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -3974,7 +3974,7 @@
             "enUS": "Bleeding Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4014,10 +4014,10 @@
         "name": {
             "zhTW": "無屬性強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Non-elemental Boost"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": true,
             "armor": false
@@ -4043,10 +4043,10 @@
         "name": {
             "zhTW": "無傷",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Peak Performance"
         },
         "type": "passive",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4098,10 +4098,10 @@
         "name": {
             "zhTW": "散彈・剛射強化",
             "jaJP": null,
-            "enUS": "Spread/Power Shots"
+            "enUS": "Spread\/Power Shots"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4123,10 +4123,10 @@
         "name": {
             "zhTW": "減輕膽怯",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Flinch Free"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4169,7 +4169,7 @@
             "enUS": "Critical Boost"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4224,7 +4224,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -4246,10 +4246,10 @@
         "name": {
             "zhTW": "雷屬性攻擊強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Thunder Attack"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4337,10 +4337,10 @@
         "name": {
             "zhTW": "道具使用強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Item Prolonger"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4380,10 +4380,10 @@
         "name": {
             "zhTW": "搬運達人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Pro Transporter"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -4405,10 +4405,10 @@
         "name": {
             "zhTW": "滑走強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Affinity Sliding"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4430,10 +4430,10 @@
         "name": {
             "zhTW": "跳躍鐵人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jump Master"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -4458,7 +4458,7 @@
             "enUS": null
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -4480,10 +4480,10 @@
         "name": {
             "zhTW": "會心攻擊【屬性】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Critical Element"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -4505,10 +4505,10 @@
         "name": {
             "zhTW": "蜂蜜獵人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Honey Hunter"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -4530,10 +4530,10 @@
         "name": {
             "zhTW": "解放弓的蓄力階段",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bow Charge Plus"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": true,
             "armor": false
@@ -4555,10 +4555,10 @@
         "name": {
             "zhTW": "會心攻擊【特殊】",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Critical Status"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -4580,10 +4580,10 @@
         "name": {
             "zhTW": "雷耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Thunder Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4641,10 +4641,10 @@
         "name": {
             "zhTW": "睡眠屬性強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sleep Attack"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4684,10 +4684,10 @@
         "name": {
             "zhTW": "睡眠耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sleep Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4727,10 +4727,10 @@
         "name": {
             "zhTW": "察覺",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Detector"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -4752,10 +4752,10 @@
         "name": {
             "zhTW": "滿足感",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Free Meal"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4780,7 +4780,7 @@
             "enUS": "Stamina Thief"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4820,10 +4820,10 @@
         "name": {
             "zhTW": "精靈加護",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Divine Blessing"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4863,10 +4863,10 @@
         "name": {
             "zhTW": "綿花孢子草的知識",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sporepuff Expert"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4906,10 +4906,10 @@
         "name": {
             "zhTW": "精神抖擻",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Maximum Might"
         },
         "type": "passive",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -4961,10 +4961,10 @@
         "name": {
             "zhTW": "睡眠瓶追加",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sleep Functionality"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": false
@@ -4986,10 +4986,10 @@
         "name": {
             "zhTW": "廣域化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Wide-Range"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -5050,7 +5050,7 @@
             "enUS": "Effluvial Expert"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -5072,10 +5072,10 @@
         "name": {
             "zhTW": "潛伏",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Stealth"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -5118,7 +5118,7 @@
             "enUS": "Heat Guard"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -5140,10 +5140,10 @@
         "name": {
             "zhTW": "適應水場",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Aquatic Expert"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -5183,10 +5183,10 @@
         "name": {
             "zhTW": "毅力",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Guts"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": true,
             "jewel": false,
             "armor": false
@@ -5211,7 +5211,7 @@
             "enUS": "Dragon Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -5269,10 +5269,10 @@
         "name": {
             "zhTW": "龍屬性攻擊強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragon Attack"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -5360,10 +5360,10 @@
         "name": {
             "zhTW": "導蟲反應距離UP",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Scoutfly Range Up"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -5385,10 +5385,10 @@
         "name": {
             "zhTW": "整備",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Tool Specialist"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -5428,10 +5428,10 @@
         "name": {
             "zhTW": "瘴氣耐性",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Effluvia Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -5471,10 +5471,10 @@
         "name": {
             "zhTW": "龍封力強化",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Elderseal Boost"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -5496,10 +5496,10 @@
         "name": {
             "zhTW": "騎乘名人",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Master Mounter"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -5521,10 +5521,10 @@
         "name": {
             "zhTW": "攀岩者",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Cliffhanger"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -5549,7 +5549,7 @@
             "enUS": "Blast Attack"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -5589,10 +5589,10 @@
         "name": {
             "zhTW": "蹲下移動速度UP",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Speed Crawler"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": false,
             "armor": true
@@ -5617,7 +5617,7 @@
             "enUS": "Blast Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -5660,7 +5660,7 @@
             "enUS": "Blast Functionality"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": false
@@ -5682,10 +5682,10 @@
         "name": {
             "zhTW": "屬性解放／裝填擴充",
             "jaJP": null,
-            "enUS": "Free Elem/Ammo Up"
+            "enUS": "Free Elem\/Ammo Up"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true
@@ -5740,7 +5740,7 @@
             "enUS": "Blight Resistance"
         },
         "type": "active",
-        "from" : {
+        "from": {
             "set": false,
             "jewel": true,
             "armor": true

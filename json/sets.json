@@ -4,7 +4,7 @@
         "name": {
             "zhTW": "蠻顎龍之力",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Anjanath Power"
         },
         "skills": [
             {
@@ -18,7 +18,7 @@
         "name": {
             "zhTW": "慘爪龍之力",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Odogaron Power"
         },
         "skills": [
             {
@@ -32,7 +32,7 @@
         "name": {
             "zhTW": "風漂龍的恩惠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Legiana Blessing"
         },
         "skills": [
             {
@@ -46,7 +46,7 @@
         "name": {
             "zhTW": "幻獸的恩惠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Kirin Blessing"
         },
         "skills": [
             {
@@ -60,7 +60,7 @@
         "name": {
             "zhTW": "角龍之力",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Diablos Power"
         },
         "skills": [
             {
@@ -74,7 +74,7 @@
         "name": {
             "zhTW": "火龍之力",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Rathalos Power"
         },
         "skills": [
             {
@@ -88,7 +88,7 @@
         "name": {
             "zhTW": "蠻顎龍的鬥志",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Anjanath Will"
         },
         "skills": [
             {
@@ -106,7 +106,7 @@
         "name": {
             "zhTW": "熔山龍的奧秘",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Zorah Magdaros Mastery"
         },
         "skills": [
             {
@@ -120,7 +120,7 @@
         "name": {
             "zhTW": "櫻火龍的奧秘",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Pink Rathian Mastery"
         },
         "skills": [
             {
@@ -134,7 +134,7 @@
         "name": {
             "zhTW": "風漂龍的恩竉",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Legiana Favor"
         },
         "skills": [
             {
@@ -152,7 +152,7 @@
         "name": {
             "zhTW": "角龍之奧秘",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Diablos Mastery"
         },
         "skills": [
             {
@@ -170,7 +170,7 @@
         "name": {
             "zhTW": "慘爪龍的奧秘",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Odogaron Mastery"
         },
         "skills": [
             {
@@ -188,7 +188,7 @@
         "name": {
             "zhTW": "火龍奧秘",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Rathalos Mastery"
         },
         "skills": [
             {
@@ -206,7 +206,7 @@
         "name": {
             "zhTW": "爆鎚龍的守護",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Uragaan Protection"
         },
         "skills": [
             {
@@ -220,7 +220,7 @@
         "name": {
             "zhTW": "爆鱗龍的守護",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bazelgeuse Protection"
         },
         "skills": [
             {
@@ -234,7 +234,7 @@
         "name": {
             "zhTW": "屍套龍的命脈",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Vaal Hazak Vitality"
         },
         "skills": [
             {
@@ -248,7 +248,7 @@
         "name": {
             "zhTW": "滅盡龍的飢餓",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Nergigante Hunger"
         },
         "skills": [
             {
@@ -262,7 +262,7 @@
         "name": {
             "zhTW": "炎王龍的武技",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Teostra Technique"
         },
         "skills": [
             {
@@ -276,7 +276,7 @@
         "name": {
             "zhTW": "鋼龍的飛翅",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Kushala Daora Flight"
         },
         "skills": [
             {
@@ -290,7 +290,7 @@
         "name": {
             "zhTW": "冥燈龍的神秘",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Xeno'jiiva Divinity"
         },
         "skills": [
             {
@@ -304,7 +304,7 @@
         "name": {
             "zhTW": "麒麟的恩寵",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Kirin Favor"
         },
         "skills": [
             {
@@ -318,7 +318,7 @@
         "name": {
             "zhTW": "公會的引導",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Guild Guidance"
         },
         "skills": [
             {
@@ -332,7 +332,7 @@
         "name": {
             "zhTW": "調查團的引導",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Commission Guidance"
         },
         "skills": [
             {
@@ -346,7 +346,7 @@
         "name": {
             "zhTW": "炎妃龍的恩寵",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Lunastra Favor"
         },
         "skills": [
             {
@@ -364,7 +364,7 @@
         "name": {
             "zhTW": "龍騎士之證",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Soul of the Dragoon"
         },
         "skills": [
             {
@@ -382,7 +382,7 @@
         "name": {
             "zhTW": "星辰的祝福",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Astera Blessing"
         },
         "skills": [
             {

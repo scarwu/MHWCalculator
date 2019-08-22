@@ -4,7 +4,7 @@
         "name": {
             "zhTW": "KO珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "KO Jewel"
         },
         "rare": 6,
         "size": 2,
@@ -18,7 +18,7 @@
         "name": {
             "zhTW": "増彈珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Magazine Jewel"
         },
         "rare": 7,
         "size": 2,
@@ -32,7 +32,7 @@
         "name": {
             "zhTW": "體術珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Physique Jewel 2"
         },
         "rare": 6,
         "size": 2,
@@ -46,7 +46,7 @@
         "name": {
             "zhTW": "體力珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Vitality Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -60,7 +60,7 @@
         "name": {
             "zhTW": "火炎珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Blaze Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -74,7 +74,7 @@
         "name": {
             "zhTW": "心眼珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Mind's Eye Jewel 2"
         },
         "rare": 8,
         "size": 2,
@@ -88,7 +88,7 @@
         "name": {
             "zhTW": "友愛珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Friendship Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -102,7 +102,7 @@
         "name": {
             "zhTW": "加護珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Protection Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -116,7 +116,7 @@
         "name": {
             "zhTW": "全開珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Throttle Jewel 2"
         },
         "rare": 7,
         "size": 2,
@@ -130,7 +130,7 @@
         "name": {
             "zhTW": "早氣珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Refresh Jewel 2"
         },
         "rare": 7,
         "size": 2,
@@ -144,7 +144,7 @@
         "name": {
             "zhTW": "早復珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Recovery Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -158,7 +158,7 @@
         "name": {
             "zhTW": "匠珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Handicraft Jewel 3"
         },
         "rare": 8,
         "size": 3,
@@ -172,7 +172,7 @@
         "name": {
             "zhTW": "地學珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Geology Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -186,7 +186,7 @@
         "name": {
             "zhTW": "冰結珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Frost Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -200,7 +200,7 @@
         "name": {
             "zhTW": "攻擊珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Attack Jewel 1"
         },
         "rare": 7,
         "size": 1,
@@ -214,7 +214,7 @@
         "name": {
             "zhTW": "快吃珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Gobbler Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -228,7 +228,7 @@
         "name": {
             "zhTW": "投石珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Stonethrower Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -242,7 +242,7 @@
         "name": {
             "zhTW": "防音珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Earplug Jewel 3"
         },
         "rare": 6,
         "size": 3,
@@ -256,7 +256,7 @@
         "name": {
             "zhTW": "防禦珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Defense Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -270,7 +270,7 @@
         "name": {
             "zhTW": "防風珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Wind Resist Jewel 2"
         },
         "rare": 6,
         "size": 2,
@@ -284,7 +284,7 @@
         "name": {
             "zhTW": "昂揚珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Enhancer Jewel 2"
         },
         "rare": 7,
         "size": 2,
@@ -298,7 +298,7 @@
         "name": {
             "zhTW": "指示珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Meowster Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -312,7 +312,7 @@
         "name": {
             "zhTW": "底力珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Potential Jewel 2"
         },
         "rare": 7,
         "size": 2,
@@ -326,7 +326,7 @@
         "name": {
             "zhTW": "治癒珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Medicine Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -340,7 +340,7 @@
         "name": {
             "zhTW": "沼渡珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Mirewalker Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -354,7 +354,7 @@
         "name": {
             "zhTW": "拔刀珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Draw Jewel 2"
         },
         "rare": 8,
         "size": 2,
@@ -368,7 +368,7 @@
         "name": {
             "zhTW": "威嚇珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Intimidator Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -382,7 +382,7 @@
         "name": {
             "zhTW": "研磨珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Grinder Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -396,7 +396,7 @@
         "name": {
             "zhTW": "持續珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Enduring Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -410,7 +410,7 @@
         "name": {
             "zhTW": "重擊珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Destroyer Jewel 2"
         },
         "rare": 6,
         "size": 2,
@@ -424,7 +424,7 @@
         "name": {
             "zhTW": "耐火珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Fire Res Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -438,7 +438,7 @@
         "name": {
             "zhTW": "耐瘴珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Miasma Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -452,7 +452,7 @@
         "name": {
             "zhTW": "耐衝珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Brace Jewel 3"
         },
         "rare": 6,
         "size": 3,
@@ -466,7 +466,7 @@
         "name": {
             "zhTW": "耐震珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Footing Jewel 2"
         },
         "rare": 6,
         "size": 2,
@@ -480,7 +480,7 @@
         "name": {
             "zhTW": "耐水珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Water Res Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -494,7 +494,7 @@
         "name": {
             "zhTW": "耐絕珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Steadfast Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -508,7 +508,7 @@
         "name": {
             "zhTW": "耐屬珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Resistor Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -522,7 +522,7 @@
         "name": {
             "zhTW": "耐毒珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Antidote Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -536,7 +536,7 @@
         "name": {
             "zhTW": "耐爆珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Antiblast Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -550,7 +550,7 @@
         "name": {
             "zhTW": "耐冰珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Ice Res Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -564,7 +564,7 @@
         "name": {
             "zhTW": "耐防珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Def Lock Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -578,7 +578,7 @@
         "name": {
             "zhTW": "耐麻珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Antipara Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -592,7 +592,7 @@
         "name": {
             "zhTW": "耐眠珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Pep Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -606,7 +606,7 @@
         "name": {
             "zhTW": "耐雷珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Thunder Res Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -620,7 +620,7 @@
         "name": {
             "zhTW": "耐龍珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragon Res Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -634,7 +634,7 @@
         "name": {
             "zhTW": "耐裂珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Suture Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -648,7 +648,7 @@
         "name": {
             "zhTW": "挑戰珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Challenger Jewel 2"
         },
         "rare": 7,
         "size": 2,
@@ -662,7 +662,7 @@
         "name": {
             "zhTW": "毒珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Venom Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -676,7 +676,7 @@
         "name": {
             "zhTW": "毒瓶珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Poisoncoat Jewel 3"
         },
         "rare": 6,
         "size": 3,
@@ -690,7 +690,7 @@
         "name": {
             "zhTW": "飛燕珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Flight Jewel 2"
         },
         "rare": 5,
         "size": 2,
@@ -704,7 +704,7 @@
         "name": {
             "zhTW": "流水珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Stream Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -718,7 +718,7 @@
         "name": {
             "zhTW": "迴避珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Evasion Jewel 2"
         },
         "rare": 6,
         "size": 2,
@@ -732,7 +732,7 @@
         "name": {
             "zhTW": "逆上珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Furor Jewel 2"
         },
         "rare": 7,
         "size": 2,
@@ -746,7 +746,7 @@
         "name": {
             "zhTW": "逆境珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Fortitude Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -760,7 +760,7 @@
         "name": {
             "zhTW": "剛刃珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sharp Jewel 2"
         },
         "rare": 7,
         "size": 2,
@@ -774,7 +774,7 @@
         "name": {
             "zhTW": "茸好珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Fungiform Jewel 1"
         },
         "rare": 8,
         "size": 1,
@@ -788,7 +788,7 @@
         "name": {
             "zhTW": "特射珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Trueshot Jewel 1"
         },
         "rare": 7,
         "size": 1,
@@ -802,7 +802,7 @@
         "name": {
             "zhTW": "破龍珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragon Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -816,7 +816,7 @@
         "name": {
             "zhTW": "砲手珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Heavy Artillery Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -830,7 +830,7 @@
         "name": {
             "zhTW": "砲術珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Artillery Jewel 1"
         },
         "rare": 8,
         "size": 1,
@@ -844,7 +844,7 @@
         "name": {
             "zhTW": "眠瓶珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sleepcoat Jewel 3"
         },
         "rare": 7,
         "size": 3,
@@ -858,7 +858,7 @@
         "name": {
             "zhTW": "貫通珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Pierce Jewel 3"
         },
         "rare": 8,
         "size": 3,
@@ -872,7 +872,7 @@
         "name": {
             "zhTW": "強弓珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Mighty Bow Jewel 2"
         },
         "rare": 8,
         "size": 2,
@@ -886,7 +886,7 @@
         "name": {
             "zhTW": "強走珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sprinter Jewel 2"
         },
         "rare": 8,
         "size": 2,
@@ -900,7 +900,7 @@
         "name": {
             "zhTW": "強彈珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Forceshot Jewel 3"
         },
         "rare": 7,
         "size": 3,
@@ -914,7 +914,7 @@
         "name": {
             "zhTW": "強壁珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Shield Jewel 2"
         },
         "rare": 7,
         "size": 2,
@@ -928,7 +928,7 @@
         "name": {
             "zhTW": "速納珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sheath Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -942,7 +942,7 @@
         "name": {
             "zhTW": "麻痺珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Paralyzer Jewel 1"
         },
         "rare": 7,
         "size": 1,
@@ -956,7 +956,7 @@
         "name": {
             "zhTW": "絕路珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Crisis Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -970,7 +970,7 @@
         "name": {
             "zhTW": "渾身珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Mighty Jewel 2"
         },
         "rare": 7,
         "size": 2,
@@ -984,7 +984,7 @@
         "name": {
             "zhTW": "散彈珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Spread Jewel 3"
         },
         "rare": 8,
         "size": 3,
@@ -998,7 +998,7 @@
         "name": {
             "zhTW": "植學珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Botany Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -1012,7 +1012,7 @@
         "name": {
             "zhTW": "短縮珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Charger Jewel"
         },
         "rare": 8,
         "size": 2,
@@ -1026,7 +1026,7 @@
         "name": {
             "zhTW": "超心珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Critical Jewel 2"
         },
         "rare": 8,
         "size": 2,
@@ -1040,7 +1040,7 @@
         "name": {
             "zhTW": "痛擊珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Tenderizer Jewel 2"
         },
         "rare": 6,
         "size": 2,
@@ -1054,7 +1054,7 @@
         "name": {
             "zhTW": "無擊珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Elementless Jewel 2"
         },
         "rare": 6,
         "size": 2,
@@ -1068,7 +1068,7 @@
         "name": {
             "zhTW": "無傷珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Flawless Jewel 2"
         },
         "rare": 7,
         "size": 2,
@@ -1082,7 +1082,7 @@
         "name": {
             "zhTW": "無食珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Hungerless Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -1096,7 +1096,7 @@
         "name": {
             "zhTW": "煙復珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Smoke Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -1110,7 +1110,7 @@
         "name": {
             "zhTW": "解放珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Release Jewel 3"
         },
         "rare": 8,
         "size": 3,
@@ -1124,7 +1124,7 @@
         "name": {
             "zhTW": "滑走珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Slider Jewel 2"
         },
         "rare": 6,
         "size": 2,
@@ -1138,7 +1138,7 @@
         "name": {
             "zhTW": "嗅覺珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Scent Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -1152,7 +1152,7 @@
         "name": {
             "zhTW": "鼓笛珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sonorous Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -1166,7 +1166,7 @@
         "name": {
             "zhTW": "節食珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Satiated Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -1180,7 +1180,7 @@
         "name": {
             "zhTW": "達人珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Expert Jewel 1"
         },
         "rare": 7,
         "size": 1,
@@ -1194,7 +1194,7 @@
         "name": {
             "zhTW": "跳躍珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Jumping Jewel 2"
         },
         "rare": 6,
         "size": 2,
@@ -1208,7 +1208,7 @@
         "name": {
             "zhTW": "痺瓶珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Paracoat Jewel 3"
         },
         "rare": 7,
         "size": 3,
@@ -1222,7 +1222,7 @@
         "name": {
             "zhTW": "雷光珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bolt Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -1236,7 +1236,7 @@
         "name": {
             "zhTW": "睡眠珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Sleep Jewel 1"
         },
         "rare": 7,
         "size": 1,
@@ -1250,7 +1250,7 @@
         "name": {
             "zhTW": "奪氣珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Drain Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -1264,7 +1264,7 @@
         "name": {
             "zhTW": "潛伏珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Tip Toe Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -1278,7 +1278,7 @@
         "name": {
             "zhTW": "標本珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Specimen Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -1292,7 +1292,7 @@
         "name": {
             "zhTW": "整備珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Maintenance Jewel 1"
         },
         "rare": 5,
         "size": 1,
@@ -1306,7 +1306,7 @@
         "name": {
             "zhTW": "龍封珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Dragonseal Jewel 3"
         },
         "rare": 7,
         "size": 3,
@@ -1320,7 +1320,7 @@
         "name": {
             "zhTW": "爆師珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Bomber Jewel 1"
         },
         "rare": 6,
         "size": 1,
@@ -1334,7 +1334,7 @@
         "name": {
             "zhTW": "爆破珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Blast Jewel 1"
         },
         "rare": 7,
         "size": 1,
@@ -1348,7 +1348,7 @@
         "name": {
             "zhTW": "爆瓶珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Blastcoat Jewel 3"
         },
         "rare": 7,
         "size": 3,
@@ -1362,7 +1362,7 @@
         "name": {
             "zhTW": "鐵壁珠",
             "jaJP": null,
-            "enUS": null
+            "enUS": "Ironwall Jewel 1"
         },
         "rare": 7,
         "size": 1,

@@ -42,6 +42,7 @@ foreach ($mainList->find('tr') as $index => $row) {
     $subList = $subDom->find('table', 0);
 
     $charm = [
+        'id' => $name,
         'name' => [
             'zhTW' => $name,
             'jaJP' => null,
