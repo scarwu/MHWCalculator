@@ -60,7 +60,7 @@ function parseHTML ($str)
 
 function saveJson ($name, $data)
 {
-    $path = __DIR__ . "/../../temp/{$name}.json";
+    $path = __DIR__ . "/../temp/{$name}.json";
     $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
     @mkdir(dirname($path), 0755, true);
@@ -70,7 +70,7 @@ function saveJson ($name, $data)
 
 function loadJson ($name)
 {
-    $path = __DIR__ . "/../../temp/{$name}.json";
+    $path = __DIR__ . "/../temp/{$name}.json";
     $json = file_get_contents($path);
 
     return json_decode($json, true);

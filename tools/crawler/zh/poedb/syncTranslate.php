@@ -23,7 +23,7 @@ foreach ([
     "bow"
 ] as $type) {
     foreach ([ 6, 7, 8 ] as $rare) {
-        $rawEquips = loadJson("../json/weapons/{$type}/rare{$rare}");
+        $rawEquips = loadJson("../../json/weapons/{$type}/rare{$rare}");
         $tmpEquips = loadJson("zh/poedb/weapons/{$type}/rare{$rare}");
 
         $mapping = [];
@@ -53,7 +53,7 @@ foreach ([
             unset($mapping[$equip['id']]);
         }
 
-        saveJson("../json/weapons/{$type}/rare{$rare}", $rawEquips);
+        saveJson("../../json/weapons/{$type}/rare{$rare}", $rawEquips);
 
         // Show Untrack List
         if (0 < count(array_keys($mapping))) {
