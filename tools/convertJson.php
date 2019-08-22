@@ -944,7 +944,17 @@ echo "Dataset\n";
 echo "---\n";
 
 foreach (Misc::$datasetMap as $name => $data) {
-    echo "{$name} => " . count($data) . "\n";
+    if ('armors' === $name) {
+        $count = 0;
+
+        foreach ($data as $bundle) {
+            $count += count($bundle[1]);
+        }
+
+        echo "{$name} => {$count}\n";
+    } else {
+        echo "{$name} => " . count($data) . "\n";
+    }
 
     Misc::saveJson("datasets/{$name}", $data);
 }
