@@ -51,6 +51,14 @@ export default class SetItemSelector extends Component {
     /**
      * Handle Functions
      */
+    handleFastWindowClose = (event) => {
+        if (this.refs.modal !== event.target) {
+            return;
+        }
+
+        this.handleWindowClose();
+    };
+
     handleWindowClose = () => {
         this.props.onClose();
     };
@@ -228,8 +236,8 @@ export default class SetItemSelector extends Component {
 
     render () {
         return (
-            <div className="mhwc-selector">
-                <div className="mhwc-dialog">
+            <div className="mhwc-selector" ref="modal" onClick={this.handleFastWindowClose}>
+                <div className="mhwc-modal">
                     <div className="mhwc-panel">
                         <input className="mhwc-text_segment" type="text"
                             placeholder={_('inputKeyword')}

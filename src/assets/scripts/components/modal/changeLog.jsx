@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React from 'react';
+import React, { useRef } from 'react';
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -21,10 +21,19 @@ import _ from 'libraries/lang';
 import FunctionalIcon from 'components/common/functionalIcon';
 
 export default function (props) {
+    const modalRef = useRef();
 
     /**
      * Handle Functions
      */
+    let handleFastWindowClose = (event) => {
+        if (modalRef.current !== event.target) {
+            return;
+        }
+
+        handleWindowClose();
+    };
+
     let handleWindowClose = () => {
         props.onClose();
     };
@@ -139,8 +148,8 @@ export default function (props) {
     };
 
     return (
-        <div className="mhwc-selector">
-            <div className="mhwc-dialog mhwc-slim-dialog">
+        <div className="mhwc-selector" ref={modalRef} onClick={handleFastWindowClose}>
+            <div className="mhwc-modal mhwc-slim-modal">
                 <div className="mhwc-panel">
                     <strong>{_('changelog')}</strong>
 

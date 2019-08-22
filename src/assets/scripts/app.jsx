@@ -27,11 +27,12 @@ import CommonDataset from 'libraries/dataset/common';
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
 
-import EquipBundleSelector from 'components/dialog/equipBundleSelector';
-import SetItemSelector from 'components/dialog/setItemSelector';
-import SkillItemSelector from 'components/dialog/skillItemSelector';
-import EquipItemSelector from 'components/dialog/equipItemSelector';
-import ChangeLog from 'components/dialog/changeLog';
+import InventorySetting from 'components/modal/inventorySetting';
+import EquipBundleSelector from 'components/modal/equipBundleSelector';
+import SetItemSelector from 'components/modal/setItemSelector';
+import SkillItemSelector from 'components/modal/skillItemSelector';
+import EquipItemSelector from 'components/modal/equipItemSelector';
+import ChangeLog from 'components/modal/changeLog';
 
 import CandidateBundles from 'components/candidateBundles';
 import EquipsDisplayer from 'components/equipsDisplayer';
@@ -68,6 +69,7 @@ export default class Main extends Component {
 
             // Flags
             isImportEquips: false,
+            isShowInventorySetting: false,
             isShowEquipBundleSelector: false,
             isShowSetItemSelector: false,
             isShowSkillItemSelector: false,
@@ -549,6 +551,18 @@ export default class Main extends Component {
         });
     };
 
+    handleInventorySettingOpen = () => {
+        this.setState({
+            isShowInventorySetting: true
+        });
+    };
+
+    handleInventorySettingClose = () => {
+        this.setState({
+            isShowInventorySetting: false
+        });
+    };
+
     handleEquipBundleSelectorPickUp = (equips) => {
         this.setState({
             equips: equips
@@ -752,14 +766,19 @@ export default class Main extends Component {
                         </div>
 
                         <div className="row mhwc-panel">
-                            <div className="col-6">
+                            <div className="col-4">
                                 <a onClick={this.handleEquipsDisplayerRefresh}>
                                     <i className="fa fa-refresh"></i> {_('reset')}
                                 </a>
                             </div>
-                            <div className="col-6">
+                            <div className="col-4">
                                 <a onClick={this.handleEquipBundleSelectorOpen}>
-                                    <i className="fa fa-th-list"></i> {_('list')}
+                                    <i className="fa fa-th-list"></i> {_('bundleList')}
+                                </a>
+                            </div>
+                            <div className="col-4">
+                                <a onClick={this.handleInventorySettingOpen}>
+                                    <i className="fa fa-th-large"></i> {_('inventorySetting')}
                                 </a>
                             </div>
                         </div>
@@ -795,6 +814,12 @@ export default class Main extends Component {
                         </a>
                     </div>
                 </div>
+
+                {this.state.isShowInventorySetting ? (
+                    <InventorySetting
+                        data={this.state.equips}
+                        onClose={this.handleInventorySettingClose} />
+                ) : false}
 
                 {this.state.isShowEquipBundleSelector ? (
                     <EquipBundleSelector

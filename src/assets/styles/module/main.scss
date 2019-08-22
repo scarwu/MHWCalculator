@@ -246,7 +246,7 @@ $panel-height: 40px;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.5);
 
-    .mhwc-dialog {
+    .mhwc-modal {
         position: absolute;
         top: 20px + $header-height;
         left: 20px;
@@ -260,7 +260,7 @@ $panel-height: 40px;
         @include font-size(1.6);
     }
 
-    .mhwc-slim-dialog {
+    .mhwc-slim-modal {
         left: 30%;
         right: 30%;
     }
