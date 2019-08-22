@@ -55,7 +55,7 @@ foreach ($urlMapping as $weaponType => $url) {
     echo "{$typeMapping[$weaponType]}: {$url}\n";
 
     $mainDom = getDOM($url);
-    $mainList = getDOM($url)->find('table', 0);
+    $mainList = $mainDom->find('table', 0);
 
     $equips = [];
 
@@ -64,11 +64,11 @@ foreach ($urlMapping as $weaponType => $url) {
             continue;
         }
 
-        if (null === $row->find('a', 0)) {
+        $item = $row->find('a', 0);
+
+        if (null === $item) {
             continue;
         }
-
-        $item = $row->find('a', 0);
 
         $name = trim($item->plaintext);
         $name = str_replace(' ', '', $name);
