@@ -84,6 +84,7 @@
     "equip":                "Equip",
     "remove":               "Remove",
     "add":                  "Add",
+    "change":               "Change",
     "close":                "Close",
     "select":               "Select",
     "save":                 "Save",

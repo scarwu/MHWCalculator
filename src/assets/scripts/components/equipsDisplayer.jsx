@@ -128,22 +128,22 @@ export default class EquipsDisplayer extends Component {
         ContentBlocks.push((null !== weaponInfo) ? (
             <div key="weapon" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
-                    <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}>
-                        <span>{_('weapon')}: {_(weaponInfo.name)}</span>
-                    </a>
-
+                    <span>{_('weapon')}: {_(weaponInfo.name)}</span>
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName={equipsLock.weapon ? 'lock' : 'unlock-alt'}
                             altName={equipsLock.weapon ? _('unlock') : _('lock')}
                             onClick={() => {this.handleEquipLockToggle('weapon')}} />
                         <FunctionalIcon
+                            iconName="exchange" altName={_('change')}
+                            onClick={() => {this.handleEquipSwitch(weaponSelectorData)}} />
+                        <FunctionalIcon
                             iconName="times" altName={_('clean')}
                             onClick={() => {this.handleEquipEmpty(emptyWeaponSelectorData)}} />
                     </div>
                 </div>
 
-                {0 !== weaponInfo.enhances.length ? (
+                {(0 !== weaponInfo.enhances.length) ? (
                     <div className="col-12 mhwc-item mhwc-enhances">
                         {weaponInfo.enhances.map((data, index) => {
                             let enhanceInfo = EnhanceDataset.getInfo(data.id);
@@ -165,23 +165,28 @@ export default class EquipsDisplayer extends Component {
                                     <div className="col-4 mhwc-name">
                                         <span>{_('enhance')}: {index + 1}</span>
                                     </div>
-                                    <div className="col-8 mhwc-value">
-                                        <a onClick={() => {this.handleEquipSwitch(enhanceSelectorData)}}>
-                                            {null !== enhanceInfo ? (
-                                                <span>{_(enhanceInfo.name)}</span>
-                                            ) : (
-                                                <span>---</span>
-                                            )}
-                                        </a>
-
-                                        <div className="mhwc-icons_bundle">
-                                            {null !== data.id ? (
+                                    {(null !== enhanceInfo) ? (
+                                        <div className="col-8 mhwc-value">
+                                            <span>{_(enhanceInfo.name)}</span>
+                                            <div className="mhwc-icons_bundle">
+                                                <FunctionalIcon
+                                                    iconName="exchange" altName={_('change')}
+                                                    onClick={() => {this.handleEquipSwitch(enhanceSelectorData)}} />
                                                 <FunctionalIcon
                                                     iconName="times" altName={_('clean')}
                                                     onClick={() => {this.handleEquipEmpty(emptyEnhanceSelectorData)}} />
-                                            ) : false}
+                                            </div>
                                         </div>
-                                    </div>
+                                    ) : (
+                                        <div className="col-8 mhwc-value">
+                                            <span>---</span>
+                                            <div className="mhwc-icons_bundle">
+                                                <FunctionalIcon
+                                                    iconName="plus" altName={_('add')}
+                                                    onClick={() => {this.handleEquipSwitch(enhanceSelectorData)}} />
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             );
                         })}
@@ -212,23 +217,28 @@ export default class EquipsDisplayer extends Component {
                                     <div className="col-4 mhwc-name">
                                         <span>{_('slot')}: {index + 1} [{data.size}]</span>
                                     </div>
-                                    <div className="col-8 mhwc-value">
-                                        <a onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}>
-                                            {null !== jewelInfo ? (
-                                                <span>[{data.jewel.size}] {_(jewelInfo.name)}</span>
-                                            ) : (
-                                                <span>---</span>
-                                            )}
-                                        </a>
-
-                                        <div className="mhwc-icons_bundle">
-                                            {null !== data.jewel.id ? (
+                                    {(null !== jewelInfo) ? (
+                                        <div className="col-8 mhwc-value">
+                                            <span>[{data.jewel.size}] {_(jewelInfo.name)}</span>
+                                            <div className="mhwc-icons_bundle">
+                                                <FunctionalIcon
+                                                    iconName="exchange" altName={_('change')}
+                                                    onClick={() => {this.handleEquipSwitch(jewelSelectorData)}} />
                                                 <FunctionalIcon
                                                     iconName="times" altName={_('clean')}
                                                     onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}} />
-                                            ) : false}
+                                            </div>
                                         </div>
-                                    </div>
+                                    ) : (
+                                        <div className="col-8 mhwc-value">
+                                            <span>---</span>
+                                            <div className="mhwc-icons_bundle">
+                                                <FunctionalIcon
+                                                    iconName="plus" altName={_('add')}
+                                                    onClick={() => {this.handleEquipSwitch(jewelSelectorData)}} />
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             );
                         })}
@@ -342,7 +352,7 @@ export default class EquipsDisplayer extends Component {
                     </div>
                 </div>
 
-                {0 !== weaponInfo.skills.length ? (
+                {(0 !== weaponInfo.skills.length) ? (
                     <div className="col-12 mhwc-item mhwc-skills">
                         <div className="col-12 mhwc-name">
                             <span>{_('skill')}</span>
@@ -370,9 +380,12 @@ export default class EquipsDisplayer extends Component {
         ) : (
             <div key="weapon" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
-                    <a onClick={() => {this.handleEquipSwitch(weaponSelectorData)}}>
-                        <span>{_('weapon')}: ---</span>
-                    </a>
+                    <span>{_('weapon')}: ---</span>
+                    <div className="mhwc-icons_bundle">
+                        <FunctionalIcon
+                            iconName="plus" altName={_('add')}
+                            onClick={() => {this.handleEquipSwitch(weaponSelectorData)}} />
+                    </div>
                 </div>
             </div>
         ));
@@ -400,22 +413,22 @@ export default class EquipsDisplayer extends Component {
             ContentBlocks.push((null !== equipInfo) ? (
                 <div key={'equip_' + equipType} className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
-                        <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
-                            <span>{_(equipType)}: {_(equipInfo.name)}</span>
-                        </a>
-
+                        <span>{_(equipType)}: {_(equipInfo.name)}</span>
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName={equipsLock[equipType] ? 'lock' : 'unlock-alt'}
                                 altName={equipsLock[equipType] ? _('unlock') : _('unlock')}
                                 onClick={() => {this.handleEquipLockToggle(equipType)}} />
                             <FunctionalIcon
+                                iconName="exchange" altName={_('change')}
+                                onClick={() => {this.handleEquipSwitch(equipSelectorData)}} />
+                            <FunctionalIcon
                                 iconName="times" altName={_('clean')}
                                 onClick={() => {this.handleEquipEmpty(emptyEquipSelectorData)}} />
                         </div>
                     </div>
 
-                    {0 !== equipInfo.slots.length ? (
+                    {(0 !== equipInfo.slots.length) ? (
                         <div className="col-12 mhwc-item mhwc-slots">
                             {equipInfo.slots.map((data, index) => {
                                 let jewelInfo = JewelDataset.getInfo(data.jewel.id);
@@ -439,23 +452,28 @@ export default class EquipsDisplayer extends Component {
                                         <div className="col-4 mhwc-name">
                                             <span>{_('slot')}: {index + 1} [{data.size}]</span>
                                         </div>
-                                        <div className="col-8 mhwc-value">
-                                            <a onClick={() => {this.handleEquipSwitch(jewelSelectorData)}}>
-                                                {null !== jewelInfo ? (
-                                                    <span>[{data.jewel.size}] {_(jewelInfo.name)}</span>
-                                                ) : (
-                                                    <span>---</span>
-                                                )}
-                                            </a>
-
-                                            <div className="mhwc-icons_bundle">
-                                                {null !== data.jewel.id ? (
+                                        {(null !== jewelInfo) ? (
+                                            <div className="col-8 mhwc-value">
+                                                <span>[{data.jewel.size}] {_(jewelInfo.name)}</span>
+                                                <div className="mhwc-icons_bundle">
+                                                    <FunctionalIcon
+                                                        iconName="exchange" altName={_('change')}
+                                                        onClick={() => {this.handleEquipSwitch(jewelSelectorData)}} />
                                                     <FunctionalIcon
                                                         iconName="times" altName={_('clean')}
                                                         onClick={() => {this.handleEquipEmpty(emptyJewelSelectorData)}} />
-                                                ) : false}
+                                                </div>
                                             </div>
-                                        </div>
+                                        ) : (
+                                            <div className="col-8 mhwc-value">
+                                                <span>---</span>
+                                                <div className="mhwc-icons_bundle">
+                                                    <FunctionalIcon
+                                                        iconName="plus" altName={_('add')}
+                                                        onClick={() => {this.handleEquipSwitch(jewelSelectorData)}} />
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                 );
                             })}
@@ -498,7 +516,7 @@ export default class EquipsDisplayer extends Component {
                         </div>
                     </div>
 
-                    {null !== setInfo ? (
+                    {(null !== setInfo) ? (
                         <div className="col-12 mhwc-item mhwc-set">
                             <div className="row">
                                 <div className="col-4 mhwc-name">
@@ -511,7 +529,7 @@ export default class EquipsDisplayer extends Component {
                         </div>
                     ) : false}
 
-                    {0 !== equipInfo.skills.length ? (
+                    {(0 !== equipInfo.skills.length) ? (
                         <div className="col-12 mhwc-item mhwc-skills">
                             <div className="col-12 mhwc-name">
                                 <span>{_('skill')}</span>
@@ -539,9 +557,12 @@ export default class EquipsDisplayer extends Component {
             ) : (
                 <div key={'equip_' + equipType} className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
-                        <a className="mhwc-equip_name" onClick={() => {this.handleEquipSwitch(equipSelectorData)}}>
-                            <span>{_(equipType)}: ---</span>
-                        </a>
+                        <span>{_(equipType)}: ---</span>
+                        <div className="mhwc-icons_bundle">
+                            <FunctionalIcon
+                                iconName="plus" altName={_('add')}
+                                onClick={() => {this.handleEquipSwitch(equipSelectorData)}} />
+                        </div>
                     </div>
                 </div>
             ));
@@ -563,15 +584,15 @@ export default class EquipsDisplayer extends Component {
         ContentBlocks.push((null !== charmInfo) ? (
             <div key="charm" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
-                    <a onClick={() => {this.handleEquipSwitch(charmSelectorData)}}>
-                        <span>{_('charm')}: {_(charmInfo.name)}</span>
-                    </a>
-
+                    <span>{_('charm')}: {_(charmInfo.name)}</span>
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName={equipsLock.charm ? 'lock' : 'unlock-alt'}
                             altName={equipsLock.charm ? _('unlock') : _('lock')}
                             onClick={() => {this.handleEquipLockToggle('charm')}} />
+                        <FunctionalIcon
+                            iconName="exchange" altName={_('change')}
+                            onClick={() => {this.handleEquipSwitch(charmSelectorData)}} />
                         <FunctionalIcon
                             iconName="times" altName={_('clean')}
                             onClick={() => {this.handleEquipEmpty(emptyCharmSelectorData)}} />
@@ -604,9 +625,12 @@ export default class EquipsDisplayer extends Component {
         ) : (
             <div key="charm" className="row mhwc-equip">
                 <div className="col-12 mhwc-name">
-                    <a onClick={() => {this.handleEquipSwitch(charmSelectorData)}}>
-                        <span>{_('charm')}: ---</span>
-                    </a>
+                    <span>{_('charm')}: ---</span>
+                    <div className="mhwc-icons_bundle">
+                        <FunctionalIcon
+                            iconName="plus" altName={_('add')}
+                            onClick={() => {this.handleEquipSwitch(charmSelectorData)}} />
+                    </div>
                 </div>
             </div>
         ));
