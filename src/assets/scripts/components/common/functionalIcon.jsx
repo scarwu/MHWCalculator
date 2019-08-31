@@ -11,7 +11,6 @@
 // Load Libraries
 import React from 'react';
 
-// Load Libraries
 export default function (props) {
     return (
         <div className="mhwc-functional_icon">

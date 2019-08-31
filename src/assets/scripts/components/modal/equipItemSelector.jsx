@@ -27,6 +27,7 @@ import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
+import SharpnessBar from 'components/common/sharpnessBar';
 
 // Load Constant
 import Constant from 'constant';
@@ -230,26 +231,6 @@ export default class EquipItemSelector extends Component {
     /**
      * Render Functions
      */
-    renderSharpnessBar = (data) => {
-        return (
-            <div className="mhwc-bar">
-                <div className="mhwc-steps">
-                    {['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
-                        return (
-                            <div key={'sharpness_' + step} className="mhwc-step" style={{
-                                width: (data.steps[step] / 4) + '%'
-                            }}></div>
-                        );
-                    })}
-                </div>
-
-                <div className="mhwc-mask" style={{
-                    width: ((400 - data.value) / 4) + '%'
-                }}></div>
-            </div>
-        );
-    };
-
     renderWeaponRow = (data, index, isIgnore) => {
         let originalSharpness = null;
         let enhancedSharpness = null;
@@ -279,8 +260,8 @@ export default class EquipItemSelector extends Component {
                 <td><span>{data.rare}</span></td>
                 <td><span>{data.attack}</span></td>
                 <td className="mhwc-sharpness">
-                    {null !== data.sharpness ? this.renderSharpnessBar(originalSharpness) :  false}
-                    {null !== data.sharpness ? this.renderSharpnessBar(enhancedSharpness) :  false}
+                    {null !== data.sharpness ? <SharpnessBar data={originalSharpness} /> :  false}
+                    {null !== data.sharpness ? <SharpnessBar data={enhancedSharpness} /> :  false}
                 </td>
                 <td><span>{data.criticalRate}%</span></td>
                 <td>

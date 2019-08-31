@@ -25,6 +25,7 @@ import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
+import SharpnessBar from 'components/common/sharpnessBar';
 
 // Load Constant
 import Constant from 'constant';
@@ -78,26 +79,6 @@ export default class EquipsDisplayer extends Component {
     /**
      * Render Functions
      */
-    renderSharpnessBar = (data) => {
-        return (
-            <div className="mhwc-bar">
-                <div className="mhwc-steps">
-                    {['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
-                        return (
-                            <div key={'sharpness_' + step} className="mhwc-step" style={{
-                                width: (data.steps[step] / 4) + '%'
-                            }}></div>
-                        );
-                    })}
-                </div>
-
-                <div className="mhwc-mask" style={{
-                    width: ((400 - data.value) / 4) + '%'
-                }}></div>
-            </div>
-        );
-    };
-
     renderEnhanceBlock = (enhanceIndex, enhanceInfo) => {
         let selectorData = {
             equipType: 'weapon',
@@ -290,8 +271,8 @@ export default class EquipsDisplayer extends Component {
                             ), (
                                 <div key={'sharpness_2'} className="col-8">
                                     <div className="mhwc-value mhwc-sharpness">
-                                        {this.renderSharpnessBar(originalSharpness)}
-                                        {this.renderSharpnessBar(enhancedSharpness)}
+                                        <SharpnessBar data={originalSharpness} />
+                                        <SharpnessBar data={enhancedSharpness} />
                                     </div>
                                 </div>
                             )] : false}
