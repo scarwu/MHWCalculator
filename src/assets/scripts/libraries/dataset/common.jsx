@@ -24,22 +24,26 @@ import SkillDataset from 'libraries/dataset/skill';
 
 let getAppliedWeaponInfo = (extend) => {
     if ('object' !== typeof extend
-        || 'string' !== typeof extend.id) {
-
+        || 'string' !== typeof extend.id
+    ) {
         return null;
     }
 
     let info = WeaponDataset.getInfo(extend.id);
 
-    if (null === info) {
+    if (Helper.isEmpty(info)) {
         return null;
     }
 
-    if (null !== info.element.attack) {
+    if (Helper.isNotEmpty(info.element)
+        && Helper.isNotEmpty(info.element.attack)
+    ) {
         info.element.attack.value = info.element.attack.minValue;
     }
 
-    if (null !== info.element.status) {
+    if (Helper.isNotEmpty(info.element)
+        && Helper.isNotEmpty(info.element.status)
+    ) {
         info.element.status.value = info.element.status.minValue;
     }
 
@@ -61,9 +65,9 @@ let getAppliedWeaponInfo = (extend) => {
     enhanceTimes.forEach((data, index) => {
         let enhanceId = null;
 
-        if (null !== extend.enhanceIds
-            && 'string' === typeof extend.enhanceIds[index]) {
-
+        if (Helper.isNotEmpty(extend.enhanceIds)
+            && Helper.isNotEmpty(extend.enhanceIds[index])
+        ) {
             enhanceId = extend.enhanceIds[index];
         }
 
@@ -72,11 +76,11 @@ let getAppliedWeaponInfo = (extend) => {
             id: enhanceId
         });
 
-        if (null === enhanceId) {
+        if (Helper.isEmpty(enhanceId)) {
             return false;
         }
 
-        if (undefined === enhanceLevelMapping[enhanceId]) {
+        if (Helper.isEmpty(enhanceLevelMapping[enhanceId])) {
             enhanceLevelMapping[enhanceId] = 0;
         }
 
@@ -87,7 +91,7 @@ let getAppliedWeaponInfo = (extend) => {
         let enhanceLevel = enhanceLevelMapping[enhanceId];
         let enhanceInfo = EnhanceDataset.getInfo(enhanceId);
 
-        if (null === enhanceInfo.list[enhanceLevel - 1].reaction) {
+        if (Helper.isEmpty(enhanceInfo.list[enhanceLevel - 1].reaction)) {
             return false;
         }
 
@@ -124,7 +128,7 @@ let getAppliedWeaponInfo = (extend) => {
     info.skills && info.skills.forEach((data, index) => {
         let skillId = data.id;
 
-        if (undefined === skillLevelMapping[skillId]) {
+        if (Helper.isEmpty(skillLevelMapping[skillId])) {
             skillLevelMapping[skillId] = 0;
         }
 
@@ -137,9 +141,9 @@ let getAppliedWeaponInfo = (extend) => {
         let jewelSize = null;
         let skillId = null;
 
-        if (null !== extend.slotIds
-            && 'string' === typeof extend.slotIds[index]) {
-
+        if (Helper.isNotEmpty(extend.slotIds)
+            && Helper.isNotEmpty(extend.slotIds[index])
+        ) {
             jewelInfo = JewelDataset.getInfo(extend.slotIds[index]);
             jewelId = extend.slotIds[index];
             jewelSize = jewelInfo.size;
@@ -152,11 +156,11 @@ let getAppliedWeaponInfo = (extend) => {
             size: jewelSize
         };
 
-        if (null === skillId) {
+        if (Helper.isEmpty(skillId)) {
             return false;
         }
 
-        if (undefined === skillLevelMapping[skillId]) {
+        if (Helper.isEmpty(skillLevelMapping[skillId])) {
             skillLevelMapping[skillId] = 0;
         }
 
@@ -191,14 +195,14 @@ let getAppliedWeaponInfo = (extend) => {
 
 let getAppliedArmorInfo = (extend) => {
     if ('object' !== typeof extend
-        || 'string' !== typeof extend.id) {
-
+        || 'string' !== typeof extend.id
+    ) {
         return null;
     }
 
     let info = ArmorDataset.getInfo(extend.id);
 
-    if (null === info) {
+    if (Helper.isEmpty(info)) {
         return null;
     }
 
@@ -208,7 +212,7 @@ let getAppliedArmorInfo = (extend) => {
     info.skills && info.skills.forEach((data, index) => {
         let skillId = data.id;
 
-        if (undefined === skillLevelMapping[skillId]) {
+        if (Helper.isEmpty(skillLevelMapping[skillId])) {
             skillLevelMapping[skillId] = 0;
         }
 
@@ -221,9 +225,9 @@ let getAppliedArmorInfo = (extend) => {
         let jewelSize = null;
         let skillId = null;
 
-        if (null !== extend.slotIds
-            && 'string' === typeof extend.slotIds[index]) {
-
+        if (Helper.isNotEmpty(extend.slotIds)
+            && Helper.isNotEmpty(extend.slotIds[index])
+        ) {
             jewelInfo = JewelDataset.getInfo(extend.slotIds[index]);
             jewelId = extend.slotIds[index];
             jewelSize = jewelInfo.size;
@@ -236,11 +240,11 @@ let getAppliedArmorInfo = (extend) => {
             size: jewelSize
         };
 
-        if (null === skillId) {
+        if (Helper.isEmpty(skillId)) {
             return false;
         }
 
-        if (undefined === skillLevelMapping[skillId]) {
+        if (Helper.isEmpty(skillLevelMapping[skillId])) {
             skillLevelMapping[skillId] = 0;
         }
 
@@ -270,14 +274,14 @@ let getAppliedArmorInfo = (extend) => {
 
 let getAppliedCharmInfo = (extend) => {
     if ('object' !== typeof extend
-        || 'string' !== typeof extend.id) {
-
+        || 'string' !== typeof extend.id
+    ) {
         return null;
     }
 
     let info = CharmDataset.getInfo(extend.id);
 
-    if (null === info) {
+    if (Helper.isEmpty(info)) {
         return null;
     }
 
@@ -287,7 +291,7 @@ let getAppliedCharmInfo = (extend) => {
     info.skills && info.skills.forEach((data, index) => {
         let skillId = data.id;
 
-        if (undefined === skillLevelMapping[skillId]) {
+        if (Helper.isEmpty(skillLevelMapping[skillId])) {
             skillLevelMapping[skillId] = 0;
         }
 

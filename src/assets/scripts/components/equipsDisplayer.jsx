@@ -83,7 +83,7 @@ export default class EquipsDisplayer extends Component {
         let selectorData = {
             equipType: equipType,
             enhanceIndex: enhanceIndex,
-            enhanceId: (false === Helper.isEmpty(enhanceInfo)) ? enhanceInfo.id : null
+            enhanceId: (Helper.isNotEmpty(enhanceInfo)) ? enhanceInfo.id : null
         };
 
         let emptySelectorData = {
@@ -92,7 +92,7 @@ export default class EquipsDisplayer extends Component {
             enhanceId: null
         };
 
-        if (true === Helper.isEmpty(enhanceInfo)) {
+        if (Helper.isEmpty(enhanceInfo)) {
             return (
                 <div key={'enhance_' + enhanceIndex} className="row mhwc-enhance">
                     <div className="col-4 mhwc-name">
@@ -134,7 +134,7 @@ export default class EquipsDisplayer extends Component {
             equipType: equipType,
             slotIndex: slotIndex,
             slotSize: slotSize,
-            slotId: (false === Helper.isEmpty(jewelInfo)) ? jewelInfo.id : null
+            slotId: (Helper.isNotEmpty(jewelInfo)) ? jewelInfo.id : null
         };
 
         let emptySelectorData = {
@@ -144,7 +144,7 @@ export default class EquipsDisplayer extends Component {
             slotId: null
         };
 
-        if (true === Helper.isEmpty(jewelInfo)) {
+        if (Helper.isEmpty(jewelInfo)) {
             return (
                 <div key={'jewel_' + equipType + '_' + slotIndex} className="row mhwc-jewel">
                     <div className="col-4 mhwc-name">
@@ -185,7 +185,7 @@ export default class EquipsDisplayer extends Component {
         let originalSharpness = null;
         let enhancedSharpness = null;
 
-        if (false === Helper.isEmpty(equipInfo.sharpness)) {
+        if (Helper.isNotEmpty(equipInfo.sharpness)) {
             originalSharpness = Helper.deepCopy(equipInfo.sharpness);
             enhancedSharpness = Helper.deepCopy(equipInfo.sharpness);
             enhancedSharpness.value += 50;
@@ -198,7 +198,7 @@ export default class EquipsDisplayer extends Component {
                 </div>
                 <div className="col-12 mhwc-value">
                     <div className="row">
-                        {(false === Helper.isEmpty(equipInfo.sharpness)) ? [(
+                        {(Helper.isNotEmpty(equipInfo.sharpness)) ? [(
                             <div key={'sharpness_1'} className="col-4">
                                 <div className="mhwc-name">
                                     <span>{_('sharpness')}</span>
@@ -235,8 +235,8 @@ export default class EquipsDisplayer extends Component {
                             </div>
                         </div>
 
-                        {(false === Helper.isEmpty(equipInfo.element)
-                            && false === Helper.isEmpty(equipInfo.element.attack))
+                        {(Helper.isNotEmpty(equipInfo.element)
+                            && Helper.isNotEmpty(equipInfo.element.attack))
                         ? [(
                             <div key={'attackElement_1'} className="col-4">
                                 <div className="mhwc-name">
@@ -255,8 +255,8 @@ export default class EquipsDisplayer extends Component {
                             </div>
                         )] : false}
 
-                        {(false === Helper.isEmpty(equipInfo.element)
-                            && false === Helper.isEmpty(equipInfo.element.status))
+                        {(Helper.isNotEmpty(equipInfo.element)
+                            && Helper.isNotEmpty(equipInfo.element.status))
                         ? [(
                             <div key={'statusElement_1'} className="col-4">
                                 <div className="mhwc-name">
@@ -275,7 +275,7 @@ export default class EquipsDisplayer extends Component {
                             </div>
                         )] : false}
 
-                        {(false === Helper.isEmpty(equipInfo.elderseal)) ? [(
+                        {(Helper.isNotEmpty(equipInfo.elderseal)) ? [(
                             <div key={'elderseal_1'} className="col-4">
                                 <div className="mhwc-name">
                                     <span>{_('elderseal')}</span>
@@ -348,7 +348,7 @@ export default class EquipsDisplayer extends Component {
     renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
         let selectorData = {
             equipType: equipType,
-            equipId: (false === Helper.isEmpty(equipInfo)) ? equipInfo.id : null
+            equipId: (Helper.isNotEmpty(equipInfo)) ? equipInfo.id : null
         };
 
         let emptySelectorData = {
@@ -356,7 +356,7 @@ export default class EquipsDisplayer extends Component {
             equipId: null
         };
 
-        if (true === Helper.isEmpty(equipInfo)) {
+        if (Helper.isEmpty(equipInfo)) {
             return (
                 <div key={'equip_' + equipType} className="row mhwc-equip">
                     <div className="col-12 mhwc-name">
@@ -371,7 +371,7 @@ export default class EquipsDisplayer extends Component {
             );
         }
 
-        let setInfo = (false === Helper.isEmpty(equipInfo.set))
+        let setInfo = (Helper.isNotEmpty(equipInfo.set))
             ? SetDataset.getInfo(equipInfo.set.id) : null;
 
         return (
@@ -392,7 +392,7 @@ export default class EquipsDisplayer extends Component {
                     </div>
                 </div>
 
-                {(false === Helper.isEmpty(equipInfo.enhances)
+                {(Helper.isNotEmpty(equipInfo.enhances)
                     && 0 !== equipInfo.enhances.length)
                 ? (
                     <div className="col-12 mhwc-item mhwc-enhances">
@@ -405,7 +405,7 @@ export default class EquipsDisplayer extends Component {
                     </div>
                 ) : false}
 
-                {(false === Helper.isEmpty(equipInfo.slots)
+                {(Helper.isNotEmpty(equipInfo.slots)
                     && 0 !== equipInfo.slots.length)
                 ? (
                     <div className="col-12 mhwc-item mhwc-slots">
@@ -424,7 +424,7 @@ export default class EquipsDisplayer extends Component {
                 {('weapon' !== equipType && 'charm' !== equipType)
                     ? this.renderArmorProperties(equipInfo) : false}
 
-                {(false === Helper.isEmpty(setInfo)) ? (
+                {(Helper.isNotEmpty(setInfo)) ? (
                     <div className="col-12 mhwc-item mhwc-set">
                         <div className="row">
                             <div className="col-4 mhwc-name">
@@ -437,7 +437,7 @@ export default class EquipsDisplayer extends Component {
                     </div>
                 ) : false}
 
-                {(false === Helper.isEmpty(equipInfo.skills)
+                {(Helper.isNotEmpty(equipInfo.skills)
                     && 0 !== equipInfo.skills.length)
                 ? (
                     <div className="col-12 mhwc-item mhwc-skills">
@@ -451,7 +451,7 @@ export default class EquipsDisplayer extends Component {
                                 }).map((data) => {
                                     let skillInfo = SkillDataset.getInfo(data.id);
 
-                                    return (false === Helper.isEmpty(skillInfo)) ? (
+                                    return (Helper.isNotEmpty(skillInfo)) ? (
                                         <div key={data.id} className="col-6">
                                             <div className="mhwc-value">
                                                 <span>{_(skillInfo.name)} Lv.{data.level}</span>

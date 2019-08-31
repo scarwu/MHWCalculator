@@ -63,19 +63,19 @@ class JewelDataset {
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
-            if (null !== this.filterRare) {
+            if (Helper.isNotEmpty(this.filterRare)) {
                 if (this.filterRare !== data.rare) {
                     return false;
                 }
             }
 
-            if (null !== this.filterSkillName) {
+            if (Helper.isNotEmpty(this.filterSkillName)) {
                 if (this.filterSkillName !== data.skill.id) {
                     return false;
                 }
             }
 
-            if (null !== this.filterSize) {
+            if (Helper.isNotEmpty(this.filterSize)) {
                 switch (this.filterSizeCondition) {
                 case 'equal':
                     if (this.filterSize !== data.size) {
@@ -101,7 +101,7 @@ class JewelDataset {
     };
 
     getInfo = (name) => {
-        return (undefined !== this.mapping[name])
+        return (Helper.isNotEmpty(this.mapping[name]))
             ? Helper.deepCopy(this.mapping[name]) : null;
     };
 

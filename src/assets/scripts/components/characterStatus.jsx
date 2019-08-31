@@ -50,19 +50,19 @@ let generatePassiveSkills = (equipInfos) => {
     let passiveSkills = {};
 
     ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
-        if (true === Helper.isEmpty(equipInfos[equipType])) {
+        if (Helper.isEmpty(equipInfos[equipType])) {
             return;
         }
 
         equipInfos[equipType].skills.forEach((skill) => {
             let skillInfo = SkillDataset.getInfo(skill.id);
 
-            if (true === Helper.isEmpty(skillInfo)) {
+            if (Helper.isEmpty(skillInfo)) {
                 return;
             }
 
             if ('passive' === skillInfo.type) {
-                if (true === Helper.isEmpty(passiveSkills[skillInfo.id])) {
+                if (Helper.isEmpty(passiveSkills[skillInfo.id])) {
                     passiveSkills[skillInfo.id] = {
                         isActive: false
                     };
@@ -77,7 +77,7 @@ let generatePassiveSkills = (equipInfos) => {
 let generateStatus = (equipInfos, passiveSkills) => {
     let status = Helper.deepCopy(Constant.defaultStatus);
 
-    if (false === Helper.isEmpty(equipInfos.weapon)) {
+    if (Helper.isNotEmpty(equipInfos.weapon)) {
         status.critical.rate = equipInfos.weapon.criticalRate;
         status.sharpness = equipInfos.weapon.sharpness;
         status.element = equipInfos.weapon.element;
@@ -86,7 +86,7 @@ let generateStatus = (equipInfos, passiveSkills) => {
 
     // Defense
     ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-        if (true === Helper.isEmpty(equipInfos[equipType])) {
+        if (Helper.isEmpty(equipInfos[equipType])) {
             return;
         }
 
@@ -97,7 +97,7 @@ let generateStatus = (equipInfos, passiveSkills) => {
     let setMapping = {};
 
     ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-        if (true === Helper.isEmpty(equipInfos[equipType])) {
+        if (Helper.isEmpty(equipInfos[equipType])) {
             return;
         }
 
@@ -105,10 +105,10 @@ let generateStatus = (equipInfos, passiveSkills) => {
             status.resistance[elementType] += equipInfos[equipType].resistance[elementType];
         });
 
-        if (false === Helper.isEmpty(equipInfos[equipType].set)) {
+        if (Helper.isNotEmpty(equipInfos[equipType].set)) {
             let setId = equipInfos[equipType].set.id;
 
-            if (true === Helper.isEmpty(setMapping[setId])) {
+            if (Helper.isEmpty(setMapping[setId])) {
                 setMapping[setId] = 0;
             }
 
@@ -120,12 +120,12 @@ let generateStatus = (equipInfos, passiveSkills) => {
     let allSkills = {};
 
     ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
-        if (true === Helper.isEmpty(equipInfos[equipType])) {
+        if (Helper.isEmpty(equipInfos[equipType])) {
             return;
         }
 
         equipInfos[equipType].skills.forEach((skill) => {
-            if (true === Helper.isEmpty(allSkills[skill.id])) {
+            if (Helper.isEmpty(allSkills[skill.id])) {
                 allSkills[skill.id] = 0;
             }
 
@@ -137,7 +137,7 @@ let generateStatus = (equipInfos, passiveSkills) => {
         let setCount = setMapping[setId];
         let setInfo = SetDataset.getInfo(setId);
 
-        if (true === Helper.isEmpty(setInfo)) {
+        if (Helper.isEmpty(setInfo)) {
             return;
         }
 
@@ -157,7 +157,7 @@ let generateStatus = (equipInfos, passiveSkills) => {
                 }
             });
 
-            if (true === Helper.isEmpty(allSkills[skill.id])) {
+            if (Helper.isEmpty(allSkills[skill.id])) {
                 allSkills[skill.id] = 0;
             }
 
@@ -175,7 +175,7 @@ let generateStatus = (equipInfos, passiveSkills) => {
     for (let skillId in allSkills) {
         let skillInfo = SkillDataset.getInfo(skillId);
 
-        if (true === Helper.isEmpty(skillInfo)) {
+        if (Helper.isEmpty(skillInfo)) {
             continue;
         }
 
@@ -193,7 +193,7 @@ let generateStatus = (equipInfos, passiveSkills) => {
         });
 
         if ('passive' === skillInfo.type) {
-            if (true === Helper.isEmpty(passiveSkills[skillId])) {
+            if (Helper.isEmpty(passiveSkills[skillId])) {
                 passiveSkills[skillId] = {
                     isActive: false
                 };
@@ -204,7 +204,7 @@ let generateStatus = (equipInfos, passiveSkills) => {
             }
         }
 
-        if (true === Helper.isEmpty(skillInfo.list[skillLevel - 1].reaction)) {
+        if (Helper.isEmpty(skillInfo.list[skillLevel - 1].reaction)) {
             continue;
         }
 
@@ -228,7 +228,7 @@ let generateStatus = (equipInfos, passiveSkills) => {
 
                 break;
             case 'sharpness':
-                if (true === Helper.isEmpty(status.sharpness)) {
+                if (Helper.isEmpty(status.sharpness)) {
                     break;
                 }
 
@@ -236,8 +236,8 @@ let generateStatus = (equipInfos, passiveSkills) => {
 
                 break;
             case 'elementAttack':
-                if (true === Helper.isEmpty(status.element)
-                    || true === Helper.isEmpty(status.element.attack)
+                if (Helper.isEmpty(status.element)
+                    || Helper.isEmpty(status.element.attack)
                     || status.element.attack.type !== data.type
                 ) {
                     break;
@@ -247,8 +247,8 @@ let generateStatus = (equipInfos, passiveSkills) => {
 
                 break;
             case 'elementStatus':
-                if (true === Helper.isEmpty(status.element)
-                    || true  === Helper.isEmpty(status.element.status)
+                if (Helper.isEmpty(status.element)
+                    || Helper.isEmpty(status.element.status)
                     || status.element.status.type !== data.type
                 ) {
                     break;
@@ -280,7 +280,7 @@ let generateStatus = (equipInfos, passiveSkills) => {
 
                 break;
             case 'defenseMultiple':
-                if (false === Helper.isEmpty(status.element)
+                if (Helper.isNotEmpty(status.element)
                     && false === status.element.isHidden
                 ) {
                     break;
@@ -294,14 +294,14 @@ let generateStatus = (equipInfos, passiveSkills) => {
     }
 
     // Last Status Completion
-    if (false === Helper.isEmpty(equipInfos.weapon)) {
+    if (Helper.isNotEmpty(equipInfos.weapon)) {
         let weaponAttack = equipInfos.weapon.attack;
         let weaponType = equipInfos.weapon.type;
 
         status.attack *= Constant.weaponMultiple[weaponType]; // 武器倍率
 
-        if (true === Helper.isEmpty(enableElement)
-            && false === Helper.isEmpty(noneElementAttackMutiple)
+        if (Helper.isEmpty(enableElement)
+            && Helper.isNotEmpty(noneElementAttackMutiple)
         ) {
             status.attack += weaponAttack * noneElementAttackMutiple.value;
         } else {
@@ -312,15 +312,15 @@ let generateStatus = (equipInfos, passiveSkills) => {
     }
 
     // Attack Element
-    if (false === Helper.isEmpty(status.element)
-        && false === Helper.isEmpty(status.element.attack)
+    if (Helper.isNotEmpty(status.element)
+        && Helper.isNotEmpty(status.element.attack)
     ) {
-        if (false === Helper.isEmpty(enableElement)) {
+        if (Helper.isNotEmpty(enableElement)) {
             status.element.attack.value *= enableElement.multiple;
             status.element.attack.isHidden = false;
         }
 
-        if (false === Helper.isEmpty(elementAttack)) {
+        if (Helper.isNotEmpty(elementAttack)) {
             status.element.attack.value += elementAttack.value;
             status.element.attack.value *= elementAttack.multiple;
 
@@ -333,15 +333,15 @@ let generateStatus = (equipInfos, passiveSkills) => {
     }
 
     // Status Element
-    if (false === Helper.isEmpty(status.element)
-        && false === Helper.isEmpty(status.element.status)
+    if (Helper.isNotEmpty(status.element)
+        && Helper.isNotEmpty(status.element.status)
     ) {
-        if (false === Helper.isEmpty(enableElement)) {
+        if (Helper.isNotEmpty(enableElement)) {
             status.element.status.value *= enableElement.multiple;
             status.element.status.isHidden = false;
         }
 
-        if (false === Helper.isEmpty(elementStatus)) {
+        if (Helper.isNotEmpty(elementStatus)) {
             status.element.status.value += elementStatus.value;
             status.element.status.value *= elementStatus.multiple;
 
@@ -421,21 +421,21 @@ let getBasicExtraInfo = (equipInfos, status, tuning) => {
     let elementExpectedValue = 0;
     let expectedValue = 0;
 
-    if (false === Helper.isEmpty(equipInfos.weapon)) {
+    if (Helper.isNotEmpty(equipInfos.weapon)) {
         let weaponMultiple = Constant.weaponMultiple[equipInfos.weapon.type];
         let sharpnessMultiple = getSharpnessMultiple(status.sharpness);
 
         rawAttack = (status.attack / weaponMultiple);
 
-        if (false === Helper.isEmpty(tuning.rawAttack)) {
+        if (Helper.isNotEmpty(tuning.rawAttack)) {
             rawAttack += tuning.rawAttack;
         }
 
-        if (false === Helper.isEmpty(tuning.rawCriticalRate)) {
+        if (Helper.isNotEmpty(tuning.rawCriticalRate)) {
             status.critical.rate += tuning.rawCriticalRate;
         }
 
-        if (false === Helper.isEmpty(tuning.rawCriticalMultiple)) {
+        if (Helper.isNotEmpty(tuning.rawCriticalMultiple)) {
             status.critical.multiple.positive += tuning.rawCriticalMultiple;
         }
 
@@ -445,13 +445,13 @@ let getBasicExtraInfo = (equipInfos, status, tuning) => {
             ? status.critical.multiple.positive
             : status.critical.multiple.nagetive;
 
-        if (false === Helper.isEmpty(status.element)
-            && false === Helper.isEmpty(status.element.attack)
+        if (Helper.isNotEmpty(status.element)
+            && Helper.isNotEmpty(status.element.attack)
             && !status.element.attack.isHidden
         ) {
             elementAttack = status.element.attack.value;
 
-            if (false === Helper.isEmpty(tuning.elementAttack)) {
+            if (Helper.isNotEmpty(tuning.elementAttack)) {
                 elementAttack += tuning.elementAttack;
             }
 
@@ -487,7 +487,7 @@ let getBasicExtraInfo = (equipInfos, status, tuning) => {
 };
 
 let getSharpnessMultiple = (data) => {
-    if (true === Helper.isEmpty(data)) {
+    if (Helper.isEmpty(data)) {
         return {
             raw: 1,
             element: 1
@@ -617,8 +617,8 @@ export default class CharacterStatus extends Component {
 
         let originalSharpness = null;
 
-        if (false === Helper.isEmpty(equipInfos.weapon)
-            && false === Helper.isEmpty(equipInfos.weapon.sharpness)
+        if (Helper.isNotEmpty(equipInfos.weapon)
+            && Helper.isNotEmpty(equipInfos.weapon.sharpness)
         ) {
             originalSharpness = Helper.deepCopy(equipInfos.weapon.sharpness);
         }
@@ -662,7 +662,7 @@ export default class CharacterStatus extends Component {
                     </div>
                     <div className="col-12 mhwc-value">
                         <div className="row">
-                            {(false === Helper.isEmpty(status.sharpness)) ? [(
+                            {(Helper.isNotEmpty(status.sharpness)) ? [(
                                 <div key={'sharpness_1'} className="col-4">
                                     <div className="mhwc-name">
                                         <span>{_('sharpness')}</span>
@@ -714,8 +714,8 @@ export default class CharacterStatus extends Component {
                                 </div>
                             </div>
 
-                            {(false === Helper.isEmpty(status.element)
-                                && false === Helper.isEmpty(status.element.attack)
+                            {(Helper.isNotEmpty(status.element)
+                                && Helper.isNotEmpty(status.element.attack)
                             ) ? [(
                                 <div key={'attackElement_1'} className="col-4">
                                     <div className="mhwc-name">
@@ -734,8 +734,8 @@ export default class CharacterStatus extends Component {
                                 </div>
                             )] : false}
 
-                            {(false === Helper.isEmpty(status.element)
-                                && false === Helper.isEmpty(status.element.status)
+                            {(Helper.isNotEmpty(status.element)
+                                && Helper.isNotEmpty(status.element.status)
                             ) ? [(
                                 <div key={'statusEelement_1'} className="col-4">
                                     <div className="mhwc-name">
@@ -754,7 +754,7 @@ export default class CharacterStatus extends Component {
                                 </div>
                             )] : false}
 
-                            {(false === Helper.isEmpty(status.elderseal)) ? [(
+                            {(Helper.isNotEmpty(status.elderseal)) ? [(
                                 <div key={'elderseal_1'} className="col-4">
                                     <div className="mhwc-name">
                                         <span>{_('elderseal')}</span>
@@ -817,8 +817,8 @@ export default class CharacterStatus extends Component {
                                 let setInfo = SetDataset.getInfo(data.id);
                                 let skillInfo = SkillDataset.getInfo(data.skill.id);
 
-                                return (false === Helper.isEmpty(setInfo)
-                                    && false === Helper.isEmpty(skillInfo))
+                                return (Helper.isNotEmpty(setInfo)
+                                    && Helper.isNotEmpty(skillInfo))
                                 ? (
                                     <div key={`${index}_${data.id}`} className="row mhwc-set">
                                         <div className="col-12 mhwc-name">
@@ -845,13 +845,13 @@ export default class CharacterStatus extends Component {
                             }).map((data) => {
                                 let skillInfo = SkillDataset.getInfo(data.id);
 
-                                return (false === Helper.isEmpty(skillInfo)) ? (
+                                return (Helper.isNotEmpty(skillInfo)) ? (
                                     <div key={data.id} className="row mhwc-skill">
                                         <div className="col-12 mhwc-name">
                                             <span>{_(skillInfo.name)} Lv.{data.level}</span>
 
                                             <div className="mhwc-icons_bundle">
-                                                {false === Helper.isEmpty(passiveSkills[data.id]) ? (
+                                                {Helper.isNotEmpty(passiveSkills[data.id]) ? (
                                                     <FunctionalIcon
                                                         iconName={passiveSkills[data.id].isActive ? 'eye' : 'eye-slash'}
                                                         altName={passiveSkills[data.id].isActive ? _('deactive') : _('active')}

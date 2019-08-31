@@ -128,7 +128,7 @@ export default class Main extends Component {
         let sets = this.state.sets;
         let setInfo = SetDataset.getInfo(sets[index].id);
 
-        if (null === setInfo) {
+        if (Helper.isEmpty(setInfo)) {
             return false;
         }
 
@@ -195,7 +195,7 @@ export default class Main extends Component {
         delete sets[index];
 
         sets = sets.filter((set) => {
-            return (null !== set);
+            return (Helper.isNotEmpty(set));
         });
 
         // Set Data to Status
@@ -227,7 +227,7 @@ export default class Main extends Component {
         let skills = this.state.skills;
         let skillInfo = SkillDataset.getInfo(skills[index].id);
 
-        if (null === skillInfo) {
+        if (Helper.isEmpty(skillInfo)) {
             return false;
         }
 
@@ -294,7 +294,7 @@ export default class Main extends Component {
         delete skills[index];
 
         skills = skills.filter((skill) => {
-            return (null !== skill);
+            return (Helper.isNotEmpty(skill));
         });
 
         // Set Data to Status
@@ -337,7 +337,7 @@ export default class Main extends Component {
         };
 
         Object.keys(bundle.equips).forEach((equipType) => {
-            if (null === bundle.equips[equipType]) {
+            if (Helper.isEmpty(bundle.equips[equipType])) {
                 return;
             }
 
@@ -352,12 +352,12 @@ export default class Main extends Component {
                 || 'chest' === equipType
                 || 'arm' === equipType
                 || 'waist' === equipType
-                || 'leg' === equipType) {
-
+                || 'leg' === equipType
+            ) {
                 equipInfo = CommonDataset.getAppliedArmorInfo(equips[equipType]);
             }
 
-            if (null === equipInfo) {
+            if (Helper.isEmpty(equipInfo)) {
                 return;
             }
 
@@ -373,7 +373,7 @@ export default class Main extends Component {
             let jewelInfoA = JewelDataset.getInfo(jewelIdA);
             let jewelInfoB = JewelDataset.getInfo(jewelIdB);
 
-            if (null === jewelInfoA || null === jewelInfoB) {
+            if (Helper.isEmpty(jewelInfoA) || Helper.isEmpty(jewelInfoB)) {
                 return 0;
             }
 
@@ -381,7 +381,7 @@ export default class Main extends Component {
         }).forEach((jewelId) => {
             let jewelInfo = JewelDataset.getInfo(jewelId);
 
-            if (null === jewelInfo) {
+            if (Helper.isEmpty(jewelInfo)) {
                 return;
             }
 
@@ -444,18 +444,14 @@ export default class Main extends Component {
     handleEquipItemSelectorPickUp = (data) => {
         let equips = this.state.equips;
 
-        if (undefined !== data.enhanceIndex) {
-            if ('object' !== typeof equips.weapon.enhanceIds
-                || null === equips.weapon.enhanceIds) {
-
+        if (Helper.isNotEmpty(data.enhanceIndex)) {
+            if (Helper.isEmpty(equips.weapon.enhanceIds)) {
                 equips.weapon.enhanceIds = {};
             }
 
             equips.weapon.enhanceIds[data.enhanceIndex] = data.enhanceId;
-        } else if (undefined !== data.slotIndex) {
-            if ('object' !== typeof equips[data.equipType].slotIds
-                || null === equips.weapon.slotIds) {
-
+        } else if (Helper.isNotEmpty(data.slotIndex)) {
+            if (Helper.isEmpty(equips.weapon.slotIds)) {
                 equips[data.equipType].slotIds = {};
             }
 
@@ -493,11 +489,11 @@ export default class Main extends Component {
     handleEquipItemSelectorToggle = (data) => {
         let ignoreEquips = this.state.ignoreEquips;
 
-        if (undefined === ignoreEquips[data.type]) {
+        if (Helper.isEmpty(ignoreEquips[data.type])) {
             ignoreEquips[data.type] = {};
         }
 
-        if (undefined === ignoreEquips[data.type][data.id]) {
+        if (Helper.isEmpty(ignoreEquips[data.type][data.id])) {
             ignoreEquips[data.type][data.id] = true;
         } else {
             delete ignoreEquips[data.type][data.id];
@@ -587,7 +583,7 @@ export default class Main extends Component {
     static getDerivedStateFromProps (nextProps, prevState) {
         let hash = nextProps.match.params.hash;
 
-        return (undefined !== hash && false === prevState.isImportEquips) ? {
+        return (Helper.isNotEmpty(hash) && false === prevState.isImportEquips) ? {
             equips: JSON.parse(Helper.base64Decode(hash)),
             isImportEquips: true
         } : null;
@@ -602,7 +598,7 @@ export default class Main extends Component {
         return sets.map((data, index) => {
             let setInfo = SetDataset.getInfo(data.id);
 
-            if (null === setInfo) {
+            if (Helper.isEmpty(setInfo)) {
                 return false;
             }
 
@@ -635,7 +631,7 @@ export default class Main extends Component {
 
                             let skillInfo = SkillDataset.getInfo(skill.id);
 
-                            return (null !== skillInfo) ? (
+                            return (Helper.isNotEmpty(skillInfo)) ? (
                                 <div key={skill.id}>
                                     <span>({skill.require}) {_(skillInfo.name)}</span>
                                 </div>
@@ -653,7 +649,7 @@ export default class Main extends Component {
         return skills.map((data, index) => {
             let skillInfo = SkillDataset.getInfo(data.id);
 
-            return (null !== skillInfo) ? (
+            return (Helper.isNotEmpty(skillInfo)) ? (
                 <div key={skillInfo.id} className="row mhwc-item">
                     <div className="col-12 mhwc-name">
                         <span>

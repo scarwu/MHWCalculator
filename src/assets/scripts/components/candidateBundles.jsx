@@ -130,7 +130,7 @@ export default class CandidateBundles extends Component {
                         <div className="col-12 mhwc-value">
                             <div className="row">
                             {Object.keys(data.equips).map((equipType, index) => {
-                                if (null === data.equips[equipType]) {
+                                if (Helper.isEmpty(data.equips[equipType])) {
                                     return false;
                                 }
 
@@ -149,7 +149,7 @@ export default class CandidateBundles extends Component {
                                     equipInfo = CharmDataset.getInfo(data.equips[equipType]);
                                 }
 
-                                return (null !== equipInfo) ? [(
+                                return (Helper.isNotEmpty(equipInfo) )? [(
                                     <div key={`${equipType}_1`} className="col-2">
                                         <div className="mhwc-name">
                                             <span>{_(equipType)}</span>
@@ -218,7 +218,7 @@ export default class CandidateBundles extends Component {
                                         let jewelCount = data.jewels[jewelId];
                                         let jewelInfo = JewelDataset.getInfo(jewelId);
 
-                                        return (null !== jewelInfo) ? (
+                                        return (Helper.isNotEmpty(jewelInfo)) ? (
                                             <div key={jewelId} className="col-4">
                                                 <div className="mhwc-value">
                                                     <span>{`[${jewelInfo.size}] ${_(jewelInfo.name)} x ${jewelCount}`}</span>
@@ -244,7 +244,7 @@ export default class CandidateBundles extends Component {
                                         let skillCount = data.skills[skillId];
                                         let skillInfo = SkillDataset.getInfo(skillId);;
 
-                                        return (null !== skillInfo) ? (
+                                        return (Helper.isNotEmpty(skillInfo)) ? (
                                             <div key={skillId} className="col-6">
                                                 <div className="mhwc-value">
                                                     <span>{`${_(skillInfo.name)} Lv.${skillCount}`}</span>
@@ -270,7 +270,7 @@ export default class CandidateBundles extends Component {
                     </div>
                 ) : false}
 
-                {(null !== this.state.searchTime) ? (
+                {(Helper.isNotEmpty(this.state.searchTime)) ? (
                     <div className="row mhwc-search_info">
                         <div className="col-12">
                             <span>

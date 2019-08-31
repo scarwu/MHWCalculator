@@ -61,7 +61,7 @@ class SetDataset {
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
-            if (null !== this.filterSkillName) {
+            if (Helper.isNotEmpty(this.filterSkillName)) {
                 if (this.filterSkillName !== data.skill.id) {
                     return false;
                 }
@@ -76,7 +76,7 @@ class SetDataset {
     };
 
     getInfo = (name) => {
-        return (undefined !== this.mapping[name])
+        return (Helper.isNotEmpty(this.mapping[name]))
             ? Helper.deepCopy(this.mapping[name]) : null;
     };
 

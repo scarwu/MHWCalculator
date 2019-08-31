@@ -10,6 +10,7 @@
 
 // Load Core Libraries
 import Status from 'core/status';
+import Helper from 'core/helper';
 
 // Load Constant
 import Constant from 'constant';
@@ -33,8 +34,8 @@ let browserLnag = navigator.language.replace('-', '');
 let currentLang = Status.get('sys:lang');
 
 // Decide Current Lang
-currentLang = ('undefined' !== typeof Constant.langs[currentLang])
-    ? currentLang : ('undefined' !== typeof Constant.langs[browserLnag])
+currentLang = (Helper.isNotEmpty(Constant.langs[currentLang]))
+    ? currentLang : (Helper.isNotEmpty(Constant.langs[browserLnag]))
         ? browserLnag : defaultLang;
 
 // Set Status
@@ -43,6 +44,6 @@ Status.set('sys:lang', currentLang);
 export default (key) => {
     currentLang = Status.get('sys:lang');
 
-    return ('undefined' !== typeof langs[currentLang][key]) && (null !== langs[currentLang][key])
+    return (Helper.isNotEmpty(langs[currentLang][key]))
         ? langs[currentLang][key] : langs[defaultLang][key];
 };

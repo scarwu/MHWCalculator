@@ -28,18 +28,18 @@ let dataset = Armors.map((pack) => {
                 ice: pack[0][4][3],
                 dragon: pack[0][4][4]
             },
-            set: (null !== pack[0][5]) ? {
+            set: (Helper.isNotEmpty(pack[0][5])) ? {
                 id: pack[0][5]
             } : null,
             id: item[0],
             type: item[1],
             name: item[2],
-            slots: (null !== item[3]) ? item[3].map((size) => {
+            slots: (Helper.isNotEmpty(item[3])) ? item[3].map((size) => {
                 return {
                     size: size
                 }
             }) : [],
-            skills: (null !== item[4]) ? item[4].map((skill) => {
+            skills: (Helper.isNotEmpty(item[4])) ? item[4].map((skill) => {
                 return {
                     id: skill[0],
                     level: skill[1]
@@ -78,29 +78,29 @@ class ArmorDataset {
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
-            if (null !== this.filterType) {
+            if (Helper.isNotEmpty(this.filterType)) {
                 if (this.filterType !== data.type) {
                     return false;
                 }
             }
 
-            if (null !== this.filterRare) {
+            if (Helper.isNotEmpty(this.filterRare)) {
                 if (this.filterRare !== data.rare) {
                     return false;
                 }
             }
 
-            if (null !== this.filterSet) {
-                if (null === data.set
-                    || this.filterSet !== data.set.id) {
-
+            if (Helper.isNotEmpty(this.filterSet)) {
+                if (Helper.isEmpty(data.set)
+                    || this.filterSet !== data.set.id
+                ) {
                     return false;
                 }
             }
 
             let isSkip = true;
 
-            if (null !== this.filterSkillName) {
+            if (Helper.isNotEmpty(this.filterSkillName)) {
                 for (let index in data.skills) {
                     if (this.filterSkillName !== data.skills[index].id) {
                         continue;
@@ -123,7 +123,7 @@ class ArmorDataset {
     };
 
     getInfo = (name) => {
-        return (undefined !== this.mapping[name])
+        return (Helper.isNotEmpty(this.mapping[name]))
             ? Helper.deepCopy(this.mapping[name]) : null;
     };
 

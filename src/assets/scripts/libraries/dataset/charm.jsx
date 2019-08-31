@@ -65,7 +65,7 @@ class CharmDataset {
         let result = Object.values(this.mapping).filter((data) => {
             let isSkip = true;
 
-            if (null !== this.filterSkillName) {
+            if (Helper.isNotEmpty(this.filterSkillName)) {
                 for (let index in data.skills) {
                     if (this.filterSkillName !== data.skills[index].id) {
                         continue;
@@ -88,7 +88,7 @@ class CharmDataset {
     };
 
     getInfo = (name) => {
-        return (undefined !== this.mapping[name])
+        return (Helper.isNotEmpty(this.mapping[name]))
             ? Helper.deepCopy(this.mapping[name]) : null;
     };
 

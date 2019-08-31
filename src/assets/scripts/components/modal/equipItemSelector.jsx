@@ -74,9 +74,9 @@ export default class EquipItemSelector extends Component {
     handleItemPickUp = (itemId) => {
         let data = this.props.data;
 
-        if (undefined !== data.enhanceIndex) {
+        if (Helper.isNotEmpty(data.enhanceIndex)) {
             data.enhanceId = itemId;
-        } else if (undefined !== data.slotIndex) {
+        } else if (Helper.isNotEmpty(data.slotIndex)) {
             data.slotId = itemId;
         } else {
             data.equipId = itemId;
@@ -129,10 +129,10 @@ export default class EquipItemSelector extends Component {
         let ignoreList = [];
         let type = null;
 
-        if (undefined !== nextProps.data.enhanceIndex) {
+        if (Helper.isNotEmpty(nextProps.data.enhanceIndex)) {
             mode = 'enhance';
             includeList = EnhanceDataset.getItems();
-        } else if (undefined !== nextProps.data.slotIndex) {
+        } else if (Helper.isNotEmpty(nextProps.data.slotIndex)) {
             mode = 'jewel';
 
             for (let size = nextProps.data.slotSize; size >= 1; size--) {
@@ -146,14 +146,14 @@ export default class EquipItemSelector extends Component {
             let weaponInfo = WeaponDataset.getInfo(nextProps.data.equipId);
 
             mode = 'weapon';
-            type = (null !== weaponInfo) ? weaponInfo.type : Constant.weaponTypes[0];
+            type = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.type : Constant.weaponTypes[0];
 
             Constant.weaponTypes.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
                     WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
-                        if (undefined !== nextProps.ignoreEquips['weapon']
-                            && true === nextProps.ignoreEquips['weapon'][equip.id]) {
-
+                        if (Helper.isNotEmpty(nextProps.ignoreEquips['weapon'])
+                            && true === nextProps.ignoreEquips['weapon'][equip.id]
+                        ) {
                             ignoreList.push(equip);
                         } else {
                             includeList.push(equip);
@@ -162,9 +162,9 @@ export default class EquipItemSelector extends Component {
                 }
 
                 WeaponDataset.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
-                    if (undefined !== nextProps.ignoreEquips['weapon']
-                        && true === nextProps.ignoreEquips['weapon'][equip.id]) {
-
+                    if (Helper.isNotEmpty(nextProps.ignoreEquips['weapon'])
+                        && true === nextProps.ignoreEquips['weapon'][equip.id]
+                    ) {
                         ignoreList.push(equip);
                     } else {
                         includeList.push(equip);
@@ -182,9 +182,9 @@ export default class EquipItemSelector extends Component {
 
             for (let rare = 8; rare >= 5; rare--) {
                 ArmorDataset.typeIs(nextProps.data.equipType).rareIs(rare).getItems().forEach((equip) => {
-                    if (undefined !== nextProps.ignoreEquips[equip.type]
-                        && true === nextProps.ignoreEquips[equip.type][equip.id]) {
-
+                    if (Helper.isNotEmpty(nextProps.ignoreEquips[equip.type])
+                        && true === nextProps.ignoreEquips[equip.type][equip.id]
+                    ) {
                         ignoreList.push(equip);
                     } else {
                         includeList.push(equip);
@@ -193,9 +193,9 @@ export default class EquipItemSelector extends Component {
             }
 
             ArmorDataset.typeIs(nextProps.data.equipType).rareIs(0).getItems().forEach((equip) => {
-                if (undefined !== nextProps.ignoreEquips[equip.type]
-                    && true === nextProps.ignoreEquips[equip.type][equip.id]) {
-
+                if (Helper.isNotEmpty(nextProps.ignoreEquips[equip.type])
+                    && true === nextProps.ignoreEquips[equip.type][equip.id]
+                ) {
                     ignoreList.push(equip);
                 } else {
                     includeList.push(equip);
@@ -205,9 +205,9 @@ export default class EquipItemSelector extends Component {
             mode = 'charm';
 
             CharmDataset.getItems().forEach((equip) => {
-                if (undefined !== nextProps.ignoreEquips['charm']
-                    && true === nextProps.ignoreEquips['charm'][equip.id]) {
-
+                if (Helper.isNotEmpty(nextProps.ignoreEquips['charm'])
+                    && true === nextProps.ignoreEquips['charm'][equip.id]
+                ) {
                     ignoreList.push(equip);
                 } else {
                     includeList.push(equip);
@@ -221,7 +221,7 @@ export default class EquipItemSelector extends Component {
             ignoreList: ignoreList
         };
 
-        if (null === prevState.type) {
+        if (Helper.isEmpty(prevState.type)) {
             state.type = type;
         }
 
@@ -235,21 +235,21 @@ export default class EquipItemSelector extends Component {
         let originalSharpness = null;
         let enhancedSharpness = null;
 
-        if (null !== data.sharpness) {
+        if (Helper.isNotEmpty(data.sharpness)) {
             originalSharpness = Helper.deepCopy(data.sharpness);
             enhancedSharpness = Helper.deepCopy(data.sharpness);
             enhancedSharpness.value += 50;
         }
 
-        if (null !== data.element.attack
-            && null === data.element.attack.maxValue) {
-
+        if (Helper.isNotEmpty(data.element.attack)
+            && Helper.isEmpty(data.element.attack.maxValue)
+        ) {
             data.element.attack.maxValue = '?';
         }
 
-        if (null !== data.element.status
-            && null === data.element.status.maxValue) {
-
+        if (Helper.isNotEmpty(data.element.status)
+            && Helper.isEmpty(data.element.status.maxValue)
+        ) {
             data.element.status.maxValue = '?';
         }
 
@@ -260,12 +260,12 @@ export default class EquipItemSelector extends Component {
                 <td><span>{data.rare}</span></td>
                 <td><span>{data.attack}</span></td>
                 <td className="mhwc-sharpness">
-                    {null !== data.sharpness ? <SharpnessBar data={originalSharpness} /> :  false}
-                    {null !== data.sharpness ? <SharpnessBar data={enhancedSharpness} /> :  false}
+                    {Helper.isNotEmpty(data.sharpness) ? <SharpnessBar data={originalSharpness} /> :  false}
+                    {Helper.isNotEmpty(data.sharpness) ? <SharpnessBar data={enhancedSharpness} /> :  false}
                 </td>
                 <td><span>{data.criticalRate}%</span></td>
                 <td>
-                    {null !== data.element.attack ? (
+                    {Helper.isNotEmpty(data.element.attack) ? (
                         <div>
                             <span>{_(data.element.attack.type)}</span>
                             &nbsp;
@@ -277,7 +277,7 @@ export default class EquipItemSelector extends Component {
                         </div>
                     ) : false}
 
-                    {null !== data.element.status ? (
+                    {Helper.isNotEmpty(data.element.status) ? (
                         <div>
                             <span>{_(data.element.status.type)}</span>
                             &nbsp;
@@ -290,7 +290,7 @@ export default class EquipItemSelector extends Component {
                     ) : false}
                 </td>
                 <td>
-                    {null !== data.elderseal ? (
+                    {Helper.isNotEmpty(data.elderseal) ? (
                         <span>{_(data.elderseal.affinity)}</span>
                     ) : false}
                 </td>
@@ -306,7 +306,7 @@ export default class EquipItemSelector extends Component {
                     {data.skills.map((data, index) => {
                         let skillInfo = SkillDataset.getInfo(data.id);
 
-                        return (null !== skillInfo) ? (
+                        return (Helper.isNotEmpty(skillInfo)) ? (
                             <div key={index}>
                                 <span>{_(skillInfo.name)} Lv.{data.level}</span>
                             </div>
@@ -368,26 +368,30 @@ export default class EquipItemSelector extends Component {
                         text += _(data.series);
                         text += _(data.type);
 
-                        if (null !== data.element.attack) {
+                        if (Helper.isNotEmpty(data.element)
+                            && Helper.isNotEmpty(data.element.attack)
+                        ) {
                             text += _(data.element.attack.type);
                         }
 
-                        if (null !== data.element.status) {
+                        if (Helper.isNotEmpty(data.element)
+                            && Helper.isNotEmpty(data.element.status)
+                        ) {
                             text += _(data.element.status.type);
                         }
 
                         data.skills.forEach((data) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
 
-                            if (null !== skillInfo) {
+                            if (Helper.isNotEmpty(skillInfo)) {
                                 text += _(skillInfo.name);
                             }
                         });
 
                         // Search Nameword
-                        if (null !== segment
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())) {
-
+                        if (Helper.isNotEmpty(segment)
+                            && -1 === text.toLowerCase().search(segment.toLowerCase())
+                        ) {
                             return false;
                         }
 
@@ -405,7 +409,7 @@ export default class EquipItemSelector extends Component {
     renderArmorRow = (data, index, isIgnore) => {
         let skillInfo = null;
 
-        if (null !== data.set) {
+        if (Helper.isNotEmpty(data.set)) {
             skillInfo = SetDataset.getInfo(data.set.id);
         }
 
@@ -430,7 +434,7 @@ export default class EquipItemSelector extends Component {
                     })}
                 </td>
                 <td>
-                    {null !== skillInfo ? (
+                    {(Helper.isNotEmpty(skillInfo)) ? (
                         <span>{_(skillInfo.name)}</span>
                     ) : false}
                 </td>
@@ -438,7 +442,7 @@ export default class EquipItemSelector extends Component {
                     {data.skills.map((data, index) => {
                         let skillInfo = SkillDataset.getInfo(data.id);
 
-                        return (null !== skillInfo) ? (
+                        return (Helper.isNotEmpty(skillInfo)) ? (
                             <div key={index}>
                                 <span>{_(skillInfo.name)} Lv.{data.level}</span>
                             </div>
@@ -492,10 +496,10 @@ export default class EquipItemSelector extends Component {
                         let text = _(data.name);
                         text += _(data.series);
 
-                        if (null !== data.set) {
+                        if (Helper.isNotEmpty(data.set)) {
                             let setInfo = SetDataset.getInfo(data.set.id);
 
-                            if (null !== setInfo) {
+                            if (Helper.isNotEmpty(setInfo)) {
                                 text += _(setInfo.name);
                             }
                         }
@@ -503,15 +507,15 @@ export default class EquipItemSelector extends Component {
                         data.skills.forEach((data) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
 
-                            if (null !== skillInfo) {
+                            if (Helper.isNotEmpty(skillInfo)) {
                                 text += _(skillInfo.name);
                             }
                         });
 
                         // Search Nameword
-                        if (null !== segment
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())) {
-
+                        if (Helper.isNotEmpty(segment)
+                            && -1 === text.toLowerCase().search(segment.toLowerCase())
+                        ) {
                             return false;
                         }
 
@@ -535,7 +539,7 @@ export default class EquipItemSelector extends Component {
                     {data.skills.map((data, index) => {
                         let skillInfo = SkillDataset.getInfo(data.id);
 
-                        return (null !== skillInfo) ? (
+                        return (Helper.isNotEmpty(skillInfo)) ? (
                             <div key={index}>
                                 <span>{_(skillInfo.name)} Lv.{data.level}</span>
                             </div>
@@ -582,15 +586,15 @@ export default class EquipItemSelector extends Component {
                         data.skills.forEach((data) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
 
-                            if (null !== skillInfo) {
+                            if (Helper.isNotEmpty(skillInfo)) {
                                 text += _(skillInfo.anem);
                             }
                         });
 
                         // Search Nameword
-                        if (null !== segment
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())) {
-
+                        if (Helper.isNotEmpty(segment)
+                            && -1 === text.toLowerCase().search(segment.toLowerCase())
+                        ) {
                             return false;
                         }
 
@@ -614,7 +618,7 @@ export default class EquipItemSelector extends Component {
                 <td><span>{data.rare}</span></td>
                 <td><span>{data.size}</span></td>
                 <td>
-                    {(null !== skillInfo) ? (
+                    {(Helper.isNotEmpty(skillInfo)) ? (
                         <span>{_(skillInfo.name)} Lv.{data.skill.level}</span>
                     ) : false}
                 </td>
@@ -653,14 +657,14 @@ export default class EquipItemSelector extends Component {
 
                         let skillInfo = SkillDataset.getInfo(data.skill.id);
 
-                        if (null !== skillInfo) {
+                        if (Helper.isNotEmpty(skillInfo)) {
                             text += _(skillInfo.name);
                         }
 
                         // Search Nameword
-                        if (null !== segment
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())) {
-
+                        if (Helper.isNotEmpty(segment)
+                            && -1 === text.toLowerCase().search(segment.toLowerCase())
+                        ) {
                             return false;
                         }
 
@@ -730,9 +734,9 @@ export default class EquipItemSelector extends Component {
                         });
 
                         // Search Nameword
-                        if (null !== segment
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())) {
-
+                        if (Helper.isNotEmpty(segment)
+                            && -1 === text.toLowerCase().search(segment.toLowerCase())
+                        ) {
                             return false;
                         }
 

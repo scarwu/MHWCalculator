@@ -24,7 +24,7 @@ let dataset = Weapons.map((weapon) => {
         attack: weapon[5],
         criticalRate: weapon[6],
         defense: weapon[7],
-        sharpness: (null !== weapon[8]) ? {
+        sharpness: (Helper.isNotEmpty(weapon[8])) ? {
             value: weapon[8][0],
             steps: {
                 red: weapon[8][1][0],
@@ -36,28 +36,28 @@ let dataset = Weapons.map((weapon) => {
             }
         } : null,
         element: {
-            attack: (null !== weapon[9][0]) ? {
+            attack: (Helper.isNotEmpty(weapon[9][0])) ? {
                 type: weapon[9][0][0],
                 minValue: weapon[9][0][1],
                 maxValue: weapon[9][0][2],
                 isHidden: weapon[9][0][3]
             } : null,
-            status: (null !== weapon[9][1]) ? {
+            status: (Helper.isNotEmpty(weapon[9][1])) ? {
                 type: weapon[9][1][0],
                 minValue: weapon[9][1][1],
                 maxValue: weapon[9][1][2],
                 isHidden: weapon[9][1][3]
             } : null
         },
-        elderseal: (null !== weapon[10]) ? {
+        elderseal: (Helper.isNotEmpty(weapon[10])) ? {
             affinity: weapon[10]
         } : null,
-        slots: (null !== weapon[11]) ? weapon[11].map((size) => {
+        slots: (Helper.isNotEmpty(weapon[11])) ? weapon[11].map((size) => {
             return {
                 size: size
             }
         }) : [],
-        skills: (null !== weapon[12]) ? weapon[12].map((skill) => {
+        skills: (Helper.isNotEmpty(weapon[12])) ? weapon[12].map((skill) => {
             return {
                 id: skill[0],
                 level: skill[1]
@@ -96,13 +96,13 @@ class WeaponDataset {
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
-            if (null !== this.filterType) {
+            if (Helper.isNotEmpty(this.filterType)) {
                 if (this.filterType !== data.type) {
                     return false;
                 }
             }
 
-            if (null !== this.filterRare) {
+            if (Helper.isNotEmpty(this.filterRare)) {
                 if (this.filterRare !== data.rare) {
                     return false;
                 }
@@ -117,7 +117,7 @@ class WeaponDataset {
     };
 
     getInfo = (name) => {
-        return (undefined !== this.mapping[name])
+        return (Helper.isNotEmpty(this.mapping[name]))
             ? Helper.deepCopy(this.mapping[name]) : null;
     };
 

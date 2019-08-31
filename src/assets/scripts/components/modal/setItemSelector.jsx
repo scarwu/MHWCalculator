@@ -100,7 +100,7 @@ export default class SetItemSelector extends Component {
         SetDataset.getNames().sort().forEach((setId) => {
             let set = SetDataset.getInfo(setId);
 
-            if (null === set) {
+            if (Helper.isEmpty(set)) {
                 return;
             }
 
@@ -138,7 +138,7 @@ export default class SetItemSelector extends Component {
                     {data.skills.map((skill, index) => {
                         let skillInfo = SkillDataset.getInfo(skill.id);
 
-                        return (null !== skillInfo) ? (
+                        return (Helper.isNotEmpty(skillInfo)) ? (
                             <div key={index}>
                                 <span>{_(skillInfo.list[0].description)}</span>
                             </div>
@@ -184,7 +184,7 @@ export default class SetItemSelector extends Component {
                         data.skills.forEach((data) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
 
-                            if (null === skillInfo) {
+                            if (Helper.isEmpty(skillInfo)) {
                                 return;
                             }
 
@@ -194,9 +194,9 @@ export default class SetItemSelector extends Component {
                         });
 
                         // Search Nameword
-                        if (null !== segment
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())) {
-
+                        if (Helper.isNotEmpty(segment)
+                            && -1 === text.toLowerCase().search(segment.toLowerCase())
+                        ) {
                             return false;
                         }
 
@@ -211,7 +211,7 @@ export default class SetItemSelector extends Component {
                         data.skills.forEach((data) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
 
-                            if (null === skillInfo) {
+                            if (Helper.isEmpty(skillInfo)) {
                                 return;
                             }
 
@@ -221,9 +221,9 @@ export default class SetItemSelector extends Component {
                         });
 
                         // Search Nameword
-                        if (null !== segment
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())) {
-
+                        if (Helper.isNotEmpty(segment)
+                            && -1 === text.toLowerCase().search(segment.toLowerCase())
+                        ) {
                             return false;
                         }
 

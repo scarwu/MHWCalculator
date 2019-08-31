@@ -18,15 +18,11 @@ function log(...params) {
 }
 
 function isEmpty(variable) {
-    if (undefined === variable) {
-        return true;
-    }
+    return (undefined === variable || null === variable);
+}
 
-    if (null === variable) {
-        return true;
-    }
-
-    return false;
+function isNotEmpty(variable) {
+    return (undefined !== variable && null !== variable);
 }
 
 function deepCopy(data) {
@@ -52,6 +48,7 @@ function base64Decode(text) {
 export default {
     log: log,
     isEmpty: isEmpty,
+    isNotEmpty: isNotEmpty,
     deepCopy: deepCopy,
     base64Encode: base64Encode,
     base64Decode: base64Decode

@@ -62,7 +62,7 @@ export default class EquipBundleSelector extends Component {
     };
 
     handleBundleSave = (index) => {
-        let bundleId = (null !== index)
+        let bundleId = (Helper.isNotEmpty(index))
             ? this.refs['bundleId_' + index].value
             : this.refs.bundleId.value;
 
@@ -72,7 +72,7 @@ export default class EquipBundleSelector extends Component {
 
         let equipBundleList = this.state.equipBundleList;
 
-        if (null !== index) {
+        if (Helper.isNotEmpty(index)) {
             let equipBundle = equipBundleList[index];
 
             equipBundle.id = bundleId;
@@ -105,7 +105,7 @@ export default class EquipBundleSelector extends Component {
         delete equipBundleList[index];
 
         equipBundleList = equipBundleList.filter((euqipBundle) => {
-            return (null !== euqipBundle);
+            return (Helper.isNotEmpty(euqipBundle));
         });
 
         // Set Data to Status
@@ -129,14 +129,14 @@ export default class EquipBundleSelector extends Component {
     static getDerivedStateFromProps (nextProps, prevState) {
         let equips = nextProps.data;
 
-        if (null === equips.weapon.id
-            && null === equips.helm.id
-            && null === equips.chest.id
-            && null === equips.arm.id
-            && null === equips.waist.id
-            && null === equips.leg.id
-            && null === equips.charm.id) {
-
+        if (Helper.isEmpty(equips.weapon.id)
+            && Helper.isEmpty(equips.helm.id)
+            && Helper.isEmpty(equips.chest.id)
+            && Helper.isEmpty(equips.arm.id)
+            && Helper.isEmpty(equips.waist.id)
+            && Helper.isEmpty(equips.leg.id)
+            && Helper.isEmpty(equips.charm.id)
+        ) {
             equips = null;
         }
 
@@ -160,13 +160,13 @@ export default class EquipBundleSelector extends Component {
         return (
             <tr key={data.id}>
                 <td><input type="text" placeholder={_('inputName')} ref={'bundleId_' + index} defaultValue={data.id} /></td>
-                <td><span>{(weaponInfo !== null) ? _(weaponInfo.name) : false}</span></td>
-                <td><span>{(helmInfo !== null) ? _(helmInfo.name) : false}</span></td>
-                <td><span>{(chestInfo !== null) ? _(chestInfo.name) : false}</span></td>
-                <td><span>{(armInfo !== null) ? _(armInfo.name) : false}</span></td>
-                <td><span>{(waistInfo !== null) ? _(waistInfo.name) : false}</span></td>
-                <td><span>{(legInfo !== null) ? _(legInfo.name) : false}</span></td>
-                <td><span>{(charmInfo !== null) ? _(charmInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(weaponInfo)) ? _(weaponInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(helmInfo)) ? _(helmInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(chestInfo)) ? _(chestInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(armInfo)) ? _(armInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(waistInfo)) ? _(waistInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(legInfo)) ? _(legInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(charmInfo)) ? _(charmInfo.name) : false}</span></td>
                 <td>
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
@@ -190,7 +190,7 @@ export default class EquipBundleSelector extends Component {
 
         let DefaultRow = false;
 
-        if (null !== equips) {
+        if (Helper.isNotEmpty(equips)) {
             let weaponInfo = WeaponDataset.getInfo(equips.weapon.id);
             let helmInfo = ArmorDataset.getInfo(equips.helm.id);
             let chestInfo = ArmorDataset.getInfo(equips.chest.id);
@@ -202,13 +202,13 @@ export default class EquipBundleSelector extends Component {
             DefaultRow = (
                 <tr>
                     <td><input type="text" placeholder={_('inputName')} ref="bundleId" /></td>
-                    <td><span>{(null !== weaponInfo) ? _(weaponInfo.name) : false}</span></td>
-                    <td><span>{(null !== helmInfo) ? _(helmInfo.name) : false}</span></td>
-                    <td><span>{(null !== chestInfo) ? _(chestInfo.name) : false}</span></td>
-                    <td><span>{(null !== armInfo) ? _(armInfo.name) : false}</span></td>
-                    <td><span>{(null !== waistInfo) ? _(waistInfo.name) : false}</span></td>
-                    <td><span>{(null !== legInfo) ? _(legInfo.name) : false}</span></td>
-                    <td><span>{(null !== charmInfo) ? _(charmInfo.name) : false}</span></td>
+                    <td><span>{(Helper.isNotEmpty(weaponInfo)) ? _(weaponInfo.name) : false}</span></td>
+                    <td><span>{(Helper.isNotEmpty(helmInfo)) ? _(helmInfo.name) : false}</span></td>
+                    <td><span>{(Helper.isNotEmpty(chestInfo)) ? _(chestInfo.name) : false}</span></td>
+                    <td><span>{(Helper.isNotEmpty(armInfo)) ? _(armInfo.name) : false}</span></td>
+                    <td><span>{(Helper.isNotEmpty(waistInfo)) ? _(waistInfo.name) : false}</span></td>
+                    <td><span>{(Helper.isNotEmpty(legInfo)) ? _(legInfo.name) : false}</span></td>
+                    <td><span>{(Helper.isNotEmpty(charmInfo)) ? _(charmInfo.name) : false}</span></td>
                     <td>
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon

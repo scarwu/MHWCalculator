@@ -99,7 +99,7 @@ export default class SkillItemSelector extends Component {
         SkillDataset.getNames().sort().forEach((skillId) => {
             let skillInfo = SkillDataset.getInfo(skillId);
 
-            if (null === skillInfo) {
+            if (Helper.isEmpty(skillInfo)) {
                 return;
             }
 
@@ -187,9 +187,9 @@ export default class SkillItemSelector extends Component {
                         })
 
                         // Search Nameword
-                        if (null !== segment
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())) {
-
+                        if (Helper.isNotEmpty(segment)
+                            && -1 === text.toLowerCase().search(segment.toLowerCase())
+                        ) {
                             return false;
                         }
 
@@ -206,9 +206,9 @@ export default class SkillItemSelector extends Component {
                         })
 
                         // Search Nameword
-                        if (null !== segment
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())) {
-
+                        if (Helper.isNotEmpty(segment)
+                            && -1 === text.toLowerCase().search(segment.toLowerCase())
+                        ) {
                             return false;
                         }
 
