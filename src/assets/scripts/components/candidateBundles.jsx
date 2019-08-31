@@ -142,8 +142,8 @@ export default class CandidateBundles extends Component {
                                     || 'chest' === equipType
                                     || 'arm' === equipType
                                     || 'waist' === equipType
-                                    || 'leg' === equipType) {
-
+                                    || 'leg' === equipType
+                                ) {
                                     equipInfo = ArmorDataset.getInfo(data.equips[equipType]);
                                 } else if ('charm' === equipType) {
                                     equipInfo = CharmDataset.getInfo(data.equips[equipType]);
@@ -263,7 +263,7 @@ export default class CandidateBundles extends Component {
 
     render () {
         return [(
-            <div key={'bar'} className="row mhwc-panel">
+            <div key="bar" className="row mhwc-panel">
                 {true === this.state.isSearching ? (
                     <div className="mhwc-mask">
                         <i className="fa fa-spin fa-cog"></i>

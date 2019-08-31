@@ -175,8 +175,8 @@ export default class EquipItemSelector extends Component {
             || 'chest' === nextProps.data.equipType
             || 'arm' === nextProps.data.equipType
             || 'waist' === nextProps.data.equipType
-            || 'leg' === nextProps.data.equipType) {
-
+            || 'leg' === nextProps.data.equipType
+        ) {
             mode = 'armor';
             type = nextProps.data.equipType;
 

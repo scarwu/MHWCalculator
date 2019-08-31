@@ -10,6 +10,7 @@
 
 // Load Libraries
 import React, { Component } from 'react';
+import MD5 from 'md5';
 
 // Load Core Libraries
 import Event from 'core/event';
@@ -31,52 +32,83 @@ import Constant from 'constant';
 /**
  * Generate Functions
  */
-let generateStatus = (equips, passiveSkills) => {
-    let status = Helper.deepCopy(Constant.defaultStatus);
+let generateEquipInfos = (equips) => {
+    let equipInfos = {};
 
-    // Init Info
-    let info = {};
-
-    info.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon);
+    equipInfos.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon);
 
     ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-        info[equipType] = CommonDataset.getAppliedArmorInfo(equips[equipType]);
+        equipInfos[equipType] = CommonDataset.getAppliedArmorInfo(equips[equipType]);
     });
 
-    info.charm = CommonDataset.getAppliedCharmInfo(equips.charm);
+    equipInfos.charm = CommonDataset.getAppliedCharmInfo(equips.charm);
 
-    if (null !== info.weapon) {
-        status.critical.rate = info.weapon.criticalRate;
-        status.sharpness = info.weapon.sharpness;
-        status.element = info.weapon.element;
-        status.elderseal = info.weapon.elderseal;
+    return equipInfos;
+};
+
+let generatePassiveSkills = (equipInfos) => {
+    let passiveSkills = {};
+
+    ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
+        if (true === Helper.isEmpty(equipInfos[equipType])) {
+            return;
+        }
+
+        equipInfos[equipType].skills.forEach((skill) => {
+            let skillInfo = SkillDataset.getInfo(skill.id);
+
+            if (true === Helper.isEmpty(skillInfo)) {
+                return;
+            }
+
+            if ('passive' === skillInfo.type) {
+                if (true === Helper.isEmpty(passiveSkills[skillInfo.id])) {
+                    passiveSkills[skillInfo.id] = {
+                        isActive: false
+                    };
+                }
+            }
+        });
+    });
+
+    return passiveSkills;
+};
+
+let generateStatus = (equipInfos, passiveSkills) => {
+    let status = Helper.deepCopy(Constant.defaultStatus);
+
+    if (false === Helper.isEmpty(equipInfos.weapon)) {
+        status.critical.rate = equipInfos.weapon.criticalRate;
+        status.sharpness = equipInfos.weapon.sharpness;
+        status.element = equipInfos.weapon.element;
+        status.elderseal = equipInfos.weapon.elderseal;
     }
 
     // Defense
     ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-        if (null === info[equipType]) {
+        if (true === Helper.isEmpty(equipInfos[equipType])) {
             return;
         }
 
-        status.defense += info[equipType].defense;
+        status.defense += equipInfos[equipType].defense;
     });
 
     // Resistance & Set
     let setMapping = {};
 
     ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-        if (null === info[equipType]) {
+        if (true === Helper.isEmpty(equipInfos[equipType])) {
             return;
         }
 
         Constant.resistances.forEach((elementType) => {
-            status.resistance[elementType] += info[equipType].resistance[elementType];
+            status.resistance[elementType] += equipInfos[equipType].resistance[elementType];
         });
 
-        if (null !== info[equipType].set) {
-            let setId = info[equipType].set.id;
+        if (false === Helper.isEmpty(equipInfos[equipType].set)) {
+            let setId = equipInfos[equipType].set.id;
 
-            if (undefined === setMapping[setId]) {
+            if (true === Helper.isEmpty(setMapping[setId])) {
                 setMapping[setId] = 0;
             }
 
@@ -88,12 +120,12 @@ let generateStatus = (equips, passiveSkills) => {
     let allSkills = {};
 
     ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
-        if (null === info[equipType]) {
+        if (true === Helper.isEmpty(equipInfos[equipType])) {
             return;
         }
 
-        info[equipType].skills.forEach((skill) => {
-            if (undefined === allSkills[skill.id]) {
+        equipInfos[equipType].skills.forEach((skill) => {
+            if (true === Helper.isEmpty(allSkills[skill.id])) {
                 allSkills[skill.id] = 0;
             }
 
@@ -105,7 +137,7 @@ let generateStatus = (equips, passiveSkills) => {
         let setCount = setMapping[setId];
         let setInfo = SetDataset.getInfo(setId);
 
-        if (null === setInfo) {
+        if (true === Helper.isEmpty(setInfo)) {
             return;
         }
 
@@ -125,7 +157,7 @@ let generateStatus = (equips, passiveSkills) => {
                 }
             });
 
-            if (undefined === allSkills[skill.id]) {
+            if (true === Helper.isEmpty(allSkills[skill.id])) {
                 allSkills[skill.id] = 0;
             }
 
@@ -143,7 +175,7 @@ let generateStatus = (equips, passiveSkills) => {
     for (let skillId in allSkills) {
         let skillInfo = SkillDataset.getInfo(skillId);
 
-        if (null === skillInfo) {
+        if (true === Helper.isEmpty(skillInfo)) {
             continue;
         }
 
@@ -161,7 +193,7 @@ let generateStatus = (equips, passiveSkills) => {
         });
 
         if ('passive' === skillInfo.type) {
-            if (undefined === passiveSkills[skillId]) {
+            if (true === Helper.isEmpty(passiveSkills[skillId])) {
                 passiveSkills[skillId] = {
                     isActive: false
                 };
@@ -172,9 +204,7 @@ let generateStatus = (equips, passiveSkills) => {
             }
         }
 
-        if (undefined === skillInfo.list[skillLevel - 1].reaction
-            || null === skillInfo.list[skillLevel - 1].reaction) {
-
+        if (true === Helper.isEmpty(skillInfo.list[skillLevel - 1].reaction)) {
             continue;
         }
 
@@ -198,7 +228,7 @@ let generateStatus = (equips, passiveSkills) => {
 
                 break;
             case 'sharpness':
-                if (null == status.sharpness) {
+                if (true === Helper.isEmpty(status.sharpness)) {
                     break;
                 }
 
@@ -206,9 +236,10 @@ let generateStatus = (equips, passiveSkills) => {
 
                 break;
             case 'elementAttack':
-                if (null === status.element.attack
-                    || status.element.attack.type !== data.type) {
-
+                if (true === Helper.isEmpty(status.element)
+                    || true === Helper.isEmpty(status.element.attack)
+                    || status.element.attack.type !== data.type
+                ) {
                     break;
                 }
 
@@ -216,9 +247,10 @@ let generateStatus = (equips, passiveSkills) => {
 
                 break;
             case 'elementStatus':
-                if (null === status.element.status
-                    || status.element.status.type !== data.type) {
-
+                if (true === Helper.isEmpty(status.element)
+                    || true  === Helper.isEmpty(status.element.status)
+                    || status.element.status.type !== data.type
+                ) {
                     break;
                 }
 
@@ -248,9 +280,9 @@ let generateStatus = (equips, passiveSkills) => {
 
                 break;
             case 'defenseMultiple':
-                if (null !== status.element
-                    && false === status.element.isHidden) {
-
+                if (false === Helper.isEmpty(status.element)
+                    && false === status.element.isHidden
+                ) {
                     break;
                 }
 
@@ -262,13 +294,15 @@ let generateStatus = (equips, passiveSkills) => {
     }
 
     // Last Status Completion
-    if (null !== info.weapon) {
-        let weaponAttack = info.weapon.attack;
-        let weaponType = info.weapon.type;
+    if (false === Helper.isEmpty(equipInfos.weapon)) {
+        let weaponAttack = equipInfos.weapon.attack;
+        let weaponType = equipInfos.weapon.type;
 
         status.attack *= Constant.weaponMultiple[weaponType]; // 武器倍率
 
-        if (null == enableElement && null !== noneElementAttackMutiple) {
+        if (true === Helper.isEmpty(enableElement)
+            && false === Helper.isEmpty(noneElementAttackMutiple)
+        ) {
             status.attack += weaponAttack * noneElementAttackMutiple.value;
         } else {
             status.attack += weaponAttack;
@@ -278,13 +312,15 @@ let generateStatus = (equips, passiveSkills) => {
     }
 
     // Attack Element
-    if (null !== status.element.attack) {
-        if (null !== enableElement) {
+    if (false === Helper.isEmpty(status.element)
+        && false === Helper.isEmpty(status.element.attack)
+    ) {
+        if (false === Helper.isEmpty(enableElement)) {
             status.element.attack.value *= enableElement.multiple;
             status.element.attack.isHidden = false;
         }
 
-        if (null !== elementAttack) {
+        if (false === Helper.isEmpty(elementAttack)) {
             status.element.attack.value += elementAttack.value;
             status.element.attack.value *= elementAttack.multiple;
 
@@ -297,13 +333,15 @@ let generateStatus = (equips, passiveSkills) => {
     }
 
     // Status Element
-    if (null !== status.element.status) {
-        if (null !== enableElement) {
+    if (false === Helper.isEmpty(status.element)
+        && false === Helper.isEmpty(status.element.status)
+    ) {
+        if (false === Helper.isEmpty(enableElement)) {
             status.element.status.value *= enableElement.multiple;
             status.element.status.isHidden = false;
         }
 
-        if (null !== elementStatus) {
+        if (false === Helper.isEmpty(elementStatus)) {
             status.element.status.value += elementStatus.value;
             status.element.status.value *= elementStatus.multiple;
 
@@ -329,9 +367,9 @@ let generateStatus = (equips, passiveSkills) => {
     return status;
 };
 
-let generateExtraInfo = (equips, status, tuning) => {
+let generateExtraInfo = (equipInfos, status, tuning) => {
     let extraInfo = Helper.deepCopy(Constant.defaultExtraInfo);
-    let result = getBasicExtraInfo(equips, Helper.deepCopy(status), {});
+    let result = getBasicExtraInfo(equipInfos, Helper.deepCopy(status), {});
 
     extraInfo.rawAttack = result.rawAttack;
     extraInfo.rawCriticalAttack = result.rawCriticalAttack;
@@ -341,7 +379,7 @@ let generateExtraInfo = (equips, status, tuning) => {
     extraInfo.expectedValue = result.expectedValue;
 
     // Raw Attack Tuning
-    result = getBasicExtraInfo(equips, Helper.deepCopy(status), {
+    result = getBasicExtraInfo(equipInfos, Helper.deepCopy(status), {
         rawAttack: tuning.rawAttack
     });
 
@@ -349,7 +387,7 @@ let generateExtraInfo = (equips, status, tuning) => {
     extraInfo.perNRawAttackExpectedValue = Math.round(extraInfo.perNRawAttackExpectedValue * 100) / 100;
 
     // Critical Rate Tuning
-    result = getBasicExtraInfo(equips, Helper.deepCopy(status), {
+    result = getBasicExtraInfo(equipInfos, Helper.deepCopy(status), {
         rawCriticalRate: tuning.rawCriticalRate
     });
 
@@ -357,7 +395,7 @@ let generateExtraInfo = (equips, status, tuning) => {
     extraInfo.perNRawCriticalRateExpectedValue = Math.round(extraInfo.perNRawCriticalRateExpectedValue * 100) / 100;
 
     // Critical Multiple Tuning
-    result = getBasicExtraInfo(equips, Helper.deepCopy(status), {
+    result = getBasicExtraInfo(equipInfos, Helper.deepCopy(status), {
         rawCriticalMultiple: tuning.rawCriticalMultiple
     });
 
@@ -365,7 +403,7 @@ let generateExtraInfo = (equips, status, tuning) => {
     extraInfo.perNRawCriticalMultipleExpectedValue = Math.round(extraInfo.perNRawCriticalMultipleExpectedValue * 100) / 100;
 
     // Element Attack Tuning
-    result = getBasicExtraInfo(equips, Helper.deepCopy(status), {
+    result = getBasicExtraInfo(equipInfos, Helper.deepCopy(status), {
         elementAttack: tuning.elementAttack
     });
 
@@ -375,7 +413,7 @@ let generateExtraInfo = (equips, status, tuning) => {
     return extraInfo;
 };
 
-let getBasicExtraInfo = (equips, status, tuning) => {
+let getBasicExtraInfo = (equipInfos, status, tuning) => {
     let rawAttack = 0;
     let rawCriticalAttack = 0;
     let rawExpectedValue = 0;
@@ -383,23 +421,21 @@ let getBasicExtraInfo = (equips, status, tuning) => {
     let elementExpectedValue = 0;
     let expectedValue = 0;
 
-    let weaponInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
-
-    if (null !== weaponInfo) {
-        let weaponMultiple = Constant.weaponMultiple[weaponInfo.type];
+    if (false === Helper.isEmpty(equipInfos.weapon)) {
+        let weaponMultiple = Constant.weaponMultiple[equipInfos.weapon.type];
         let sharpnessMultiple = getSharpnessMultiple(status.sharpness);
 
         rawAttack = (status.attack / weaponMultiple);
 
-        if (undefined !== tuning.rawAttack) {
+        if (false === Helper.isEmpty(tuning.rawAttack)) {
             rawAttack += tuning.rawAttack;
         }
 
-        if (undefined !== tuning.rawCriticalRate) {
+        if (false === Helper.isEmpty(tuning.rawCriticalRate)) {
             status.critical.rate += tuning.rawCriticalRate;
         }
 
-        if (undefined !== tuning.rawCriticalMultiple) {
+        if (false === Helper.isEmpty(tuning.rawCriticalMultiple)) {
             status.critical.multiple.positive += tuning.rawCriticalMultiple;
         }
 
@@ -409,12 +445,13 @@ let getBasicExtraInfo = (equips, status, tuning) => {
             ? status.critical.multiple.positive
             : status.critical.multiple.nagetive;
 
-        if (null !== status.element.attack
-            && !status.element.attack.isHidden) {
-
+        if (false === Helper.isEmpty(status.element)
+            && false === Helper.isEmpty(status.element.attack)
+            && !status.element.attack.isHidden
+        ) {
             elementAttack = status.element.attack.value;
 
-            if (undefined !== tuning.elementAttack) {
+            if (false === Helper.isEmpty(tuning.elementAttack)) {
                 elementAttack += tuning.elementAttack;
             }
 
@@ -450,7 +487,7 @@ let getBasicExtraInfo = (equips, status, tuning) => {
 };
 
 let getSharpnessMultiple = (data) => {
-    if (null === data) {
+    if (true === Helper.isEmpty(data)) {
         return {
             raw: 1,
             element: 1
@@ -487,7 +524,7 @@ export default class CharacterStatus extends Component {
 
         // Initial State
         this.state = {
-            equips: Helper.deepCopy(Constant.defaultEquips),
+            propsHash: null,
             status: Helper.deepCopy(Constant.defaultStatus),
             extraInfo: Helper.deepCopy(Constant.defaultExtraInfo),
             passiveSkills: {},
@@ -504,14 +541,18 @@ export default class CharacterStatus extends Component {
      * Handle Functions
      */
     handlePassiveSkillToggle = (skillId) => {
-        let equips = this.state.equips;
+        let equipInfos = this.state.equipInfos;
         let passiveSkills = this.state.passiveSkills;
+        let tuning = this.state.tuning;
 
         passiveSkills[skillId].isActive = !passiveSkills[skillId].isActive;
 
+        let status = generateStatus(equipInfos, passiveSkills);
+
         this.setState({
             passiveSkills: passiveSkills,
-            status: generateStatus(equips, passiveSkills)
+            status: status,
+            extraInfo: generateExtraInfo(equipInfos, status, tuning)
         });
     };
 
@@ -526,7 +567,7 @@ export default class CharacterStatus extends Component {
         tuningRawCriticalMultiple = !isNaN(tuningRawCriticalMultiple) ? tuningRawCriticalMultiple : 0;
         tuningElementAttack = !isNaN(tuningElementAttack) ? tuningElementAttack : 0;
 
-        let equips = this.state.equips;
+        let equipInfos = this.state.equipInfos;
         let status = this.state.status;
         let tuning = {
             rawAttack: tuningRawAttack,
@@ -537,7 +578,7 @@ export default class CharacterStatus extends Component {
 
         this.setState({
             tuning: tuning,
-            extraInfo: generateExtraInfo(equips, status, tuning)
+            extraInfo: generateExtraInfo(equipInfos, status, tuning)
         });
     };
 
@@ -545,13 +586,22 @@ export default class CharacterStatus extends Component {
      * Lifecycle Functions
      */
     static getDerivedStateFromProps (nextProps, prevState) {
-        let status = generateStatus(nextProps.equips, {});
-        let extraInfo = generateExtraInfo(nextProps.equips, status, prevState.tuning);
+        let propsHash = MD5(JSON.stringify(nextProps));
+
+        if (propsHash === prevState.propsHash) {
+            return null;
+        }
+
+        let equipInfos = generateEquipInfos(nextProps.equips);
+        let passiveSkills = generatePassiveSkills(equipInfos);
+        let status = generateStatus(equipInfos, passiveSkills);
+        let extraInfo = generateExtraInfo(equipInfos, status, prevState.tuning);
 
         return {
-            equips: nextProps.equips,
+            propsHash: propsHash,
+            equipInfos: equipInfos,
+            passiveSkills: passiveSkills,
             status: status,
-            passiveSkills: {},
             extraInfo: extraInfo
         };
     }
@@ -560,21 +610,17 @@ export default class CharacterStatus extends Component {
      * Render Functions
      */
     render () {
-        let equips = this.state.equips;
+        let equipInfos = this.state.equipInfos;
+        let passiveSkills = this.state.passiveSkills;
         let status = this.state.status;
         let extraInfo = this.state.extraInfo;
-        let passiveSkills = this.state.passiveSkills;
 
-        if (null === status) {
-            return false;
-        }
-
-        // Weapon
-        let weaponInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
         let originalSharpness = null;
 
-        if (null !== weaponInfo && null !== weaponInfo.sharpness) {
-            originalSharpness = Helper.deepCopy(weaponInfo.sharpness);
+        if (false === Helper.isEmpty(equipInfos.weapon)
+            && false === Helper.isEmpty(equipInfos.weapon.sharpness)
+        ) {
+            originalSharpness = Helper.deepCopy(equipInfos.weapon.sharpness);
         }
 
         return (
@@ -616,7 +662,7 @@ export default class CharacterStatus extends Component {
                     </div>
                     <div className="col-12 mhwc-value">
                         <div className="row">
-                            {null !== status.sharpness ? [(
+                            {(false === Helper.isEmpty(status.sharpness)) ? [(
                                 <div key={'sharpness_1'} className="col-4">
                                     <div className="mhwc-name">
                                         <span>{_('sharpness')}</span>
@@ -668,7 +714,9 @@ export default class CharacterStatus extends Component {
                                 </div>
                             </div>
 
-                            {null !== status.element.attack ? [(
+                            {(false === Helper.isEmpty(status.element)
+                                && false === Helper.isEmpty(status.element.attack)
+                            ) ? [(
                                 <div key={'attackElement_1'} className="col-4">
                                     <div className="mhwc-name">
                                         <span>{_('element')}: {_(status.element.attack.type)}</span>
@@ -686,7 +734,9 @@ export default class CharacterStatus extends Component {
                                 </div>
                             )] : false}
 
-                            {null !== status.element.status ? [(
+                            {(false === Helper.isEmpty(status.element)
+                                && false === Helper.isEmpty(status.element.status)
+                            ) ? [(
                                 <div key={'statusEelement_1'} className="col-4">
                                     <div className="mhwc-name">
                                         <span>{_('element')}: {_(status.element.status.type)}</span>
@@ -704,7 +754,7 @@ export default class CharacterStatus extends Component {
                                 </div>
                             )] : false}
 
-                            {null !== status.elderseal ? [(
+                            {(false === Helper.isEmpty(status.elderseal)) ? [(
                                 <div key={'elderseal_1'} className="col-4">
                                     <div className="mhwc-name">
                                         <span>{_('elderseal')}</span>
@@ -767,7 +817,9 @@ export default class CharacterStatus extends Component {
                                 let setInfo = SetDataset.getInfo(data.id);
                                 let skillInfo = SkillDataset.getInfo(data.skill.id);
 
-                                return (null !== setInfo && null !== skillInfo) ? (
+                                return (false === Helper.isEmpty(setInfo)
+                                    && false === Helper.isEmpty(skillInfo))
+                                ? (
                                     <div key={`${index}_${data.id}`} className="row mhwc-set">
                                         <div className="col-12 mhwc-name">
                                             <span>{_(setInfo.name)} ({data.require})</span>
@@ -793,13 +845,13 @@ export default class CharacterStatus extends Component {
                             }).map((data) => {
                                 let skillInfo = SkillDataset.getInfo(data.id);
 
-                                return (null !== skillInfo) ? (
+                                return (false === Helper.isEmpty(skillInfo)) ? (
                                     <div key={data.id} className="row mhwc-skill">
                                         <div className="col-12 mhwc-name">
                                             <span>{_(skillInfo.name)} Lv.{data.level}</span>
 
                                             <div className="mhwc-icons_bundle">
-                                                {undefined !== passiveSkills[data.id] ? (
+                                                {false === Helper.isEmpty(passiveSkills[data.id]) ? (
                                                     <FunctionalIcon
                                                         iconName={passiveSkills[data.id].isActive ? 'eye' : 'eye-slash'}
                                                         altName={passiveSkills[data.id].isActive ? _('deactive') : _('active')}
