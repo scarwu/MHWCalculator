@@ -688,7 +688,7 @@ export default class Main extends Component {
 
     render () {
         return (
-            <div key={this.state.lang} id="main" className="container-fluid">
+            <div key={this.state.lang} id="app" className="container-fluid">
                 <div className="row mhwc-header">
                     <a href="./">
                         <h1>{_('title')}</h1>

@@ -586,12 +586,6 @@ $panel-height: 40px;
             @include font-size(6);
         }
 
-        .mhwc-bundle_name {
-            &:hover {
-                color: #666;
-            }
-        }
-
         .mhwc-bundle {
             margin: 5px 5px 10px 5px;
             padding: 5px 5px 15px 5px;
@@ -719,12 +713,6 @@ $panel-height: 40px;
                 &:hover {
                     background-color: #eee;
                 }
-            }
-        }
-
-        .mhwc-equip_name {
-            &:hover {
-                color: #666;
             }
         }
 
