@@ -17,6 +17,18 @@ function log(...params) {
     }
 }
 
+function isEmpty(variable) {
+    if (undefined === variable) {
+        return true;
+    }
+
+    if (null === variable) {
+        return true;
+    }
+
+    return false;
+}
+
 function deepCopy(data) {
     return JSON.parse(JSON.stringify(data));
 }
@@ -39,6 +51,7 @@ function base64Decode(text) {
 
 export default {
     log: log,
+    isEmpty: isEmpty,
     deepCopy: deepCopy,
     base64Encode: base64Encode,
     base64Decode: base64Decode
