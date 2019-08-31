@@ -8,15 +8,15 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-let gulp = require('gulp');
-let del = require('del');
-let $ = require('gulp-load-plugins')();
-let log = require('fancy-log');
-let colors = require('ansi-colors');
-let webpack = require('webpack');
-let webpackStream = require('webpack-stream');
-let webpackConfig = require('./webpack.config.js');
-let postfix = (new Date()).getTime().toString();
+const gulp = require('gulp');
+const del = require('del');
+const $ = require('gulp-load-plugins')();
+const log = require('fancy-log');
+const colors = require('ansi-colors');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
+const postfix = (new Date()).getTime().toString();
 
 let ENVIRONMENT = 'development';
 let WEBPACK_NEED_WATCH = false;

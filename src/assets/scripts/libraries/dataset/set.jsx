@@ -12,7 +12,7 @@
 import Helper from 'core/helper';
 
 // Load Dataset
-import Sets from 'json/datasets/sets.json';
+import Sets from 'files/json/datasets/sets.json';
 
 // [
 //     0: id,

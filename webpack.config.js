@@ -8,7 +8,9 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-var path = require('path');
+const path = require('path');
+const marked = require("marked");
+const renderer = new marked.Renderer();
 
 module.exports = {
     mode: 'development',
@@ -69,6 +71,21 @@ module.exports = {
                             presets: [
                                 '@babel/preset-react'
                             ]
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.md$/,
+                use: [
+                    {
+                        loader: 'html-loader'
+                    },
+                    {
+                        loader: 'markdown-loader',
+                        options: {
+                            pedantic: true,
+                            renderer
                         }
                     }
                 ]

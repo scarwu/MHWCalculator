@@ -12,7 +12,7 @@
 import Helper from 'core/helper';
 
 // Load Dataset
-import Armors from 'json/datasets/armors.json';
+import Armors from 'files/json/datasets/armors.json';
 
 let dataset = Armors.map((pack) => {
     return pack[1].map((item) => {

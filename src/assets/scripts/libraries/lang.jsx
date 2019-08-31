@@ -15,12 +15,12 @@ import Status from 'core/status';
 import Constant from 'constant';
 
 // Load Langs
-import zhTWUI from 'json/langs/zhTW/ui.json';
-import zhTWDataset from 'json/langs/zhTW/dataset.json';
-import jaJPUI from 'json/langs/jaJP/ui.json';
-import jaJPDataset from 'json/langs/jaJP/dataset.json';
-import enUSUI from 'json/langs/enUS/ui.json';
-import enUSDataset from 'json/langs/enUS/dataset.json';
+import zhTWUI from 'files/json/langs/zhTW/ui.json';
+import zhTWDataset from 'files/json/langs/zhTW/dataset.json';
+import jaJPUI from 'files/json/langs/jaJP/ui.json';
+import jaJPDataset from 'files/json/langs/jaJP/dataset.json';
+import enUSUI from 'files/json/langs/enUS/ui.json';
+import enUSDataset from 'files/json/langs/enUS/dataset.json';
 
 let langs = {
     zhTW: Object.assign({}, zhTWUI, zhTWDataset),

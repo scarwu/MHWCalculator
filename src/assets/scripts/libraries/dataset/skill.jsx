@@ -12,7 +12,7 @@
 import Helper from 'core/helper';
 
 // Load Dataset
-import Skills from 'json/datasets/skills.json';
+import Skills from 'files/json/datasets/skills.json';
 
 // [
 //     0: id,

@@ -12,7 +12,7 @@
 import Helper from 'core/helper';
 
 // Load Dataset
-import Charms from 'json/datasets/charms.json';
+import Charms from 'files/json/datasets/charms.json';
 
 // [
 //     0: id,

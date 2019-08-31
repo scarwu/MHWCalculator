@@ -12,7 +12,7 @@
 import Helper from 'core/helper';
 
 // Load Dataset
-import Jewels from 'json/datasets/jewels.json';
+import Jewels from 'files/json/datasets/jewels.json';
 
 // [
 //     0: id,

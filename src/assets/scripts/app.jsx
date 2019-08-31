@@ -43,7 +43,7 @@ import Config from 'config';
 import Constant from 'constant';
 
 // Load Json
-import TestData from 'json/testData.json';
+import TestData from 'files/json/testData.json';
 
 export default class Main extends Component {
 

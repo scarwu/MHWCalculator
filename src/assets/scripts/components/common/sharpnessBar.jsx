@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Functional Icon
+ * Sharpness Bar
  *
  * @package     MHW Calculator
  * @author      Scar Wu

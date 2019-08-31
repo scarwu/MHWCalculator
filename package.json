@@ -30,6 +30,9 @@
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
+    "html-loader": "^0.5.5",
+    "markdown-loader": "^5.1.0",
+    "marked": "^0.7.0",
     "webpack": "^4.33.0",
     "webpack-stream": "^5.2.1"
   },
@@ -37,7 +40,6 @@
     "@sentry/browser": "^5.4.0",
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
-    "marked": "^0.7.0",
     "md5": "^2.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",

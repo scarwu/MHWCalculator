@@ -12,7 +12,7 @@
 import Helper from 'core/helper';
 
 // Load Dataset
-import Enhances from 'json/datasets/enhances.json';
+import Enhances from 'files/json/datasets/enhances.json';
 
 // [
 //     0: id,
