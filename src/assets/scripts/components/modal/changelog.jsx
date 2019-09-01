@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -20,6 +20,9 @@ import _ from 'libraries/lang';
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
 
+// Load State Control
+import ModalStates from 'states/modal';
+
 // Load Markdown
 import zhTW from 'files/md/langs/zhTW/changelog.md';
 import jaJP from 'files/md/langs/jaJP/changelog.md';
@@ -27,6 +30,17 @@ import enUS from 'files/md/langs/enUS/changelog.md';
 
 export default function (props) {
     const modalRef = useRef();
+    const [isShow, modalToggle] = useState(ModalStates.getters.isShowChangelog());
+
+    useEffect(() => {
+        const unsubscribe = ModalStates.store.subscribe(() => {
+            modalToggle(ModalStates.getters.isShowChangelog());
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    });
 
     /**
      * Handle Functions
@@ -40,7 +54,7 @@ export default function (props) {
     };
 
     let handleWindowClose = () => {
-        props.onClose();
+        ModalStates.setters.hideChangelog();
     };
 
     /**
@@ -56,7 +70,7 @@ export default function (props) {
         return LogMap[Status.get('sys:lang')];
     };
 
-    return (
+    return isShow ? (
         <div className="mhwc-selector" ref={modalRef} onClick={handleFastWindowClose}>
             <div className="mhwc-modal mhwc-slim-modal">
                 <div className="mhwc-panel">
@@ -71,5 +85,5 @@ export default function (props) {
                 <div className="mhwc-list" dangerouslySetInnerHTML={{__html: renderChangelog()}}></div>
             </div>
         </div>
-    );
+    ) : false;
 };

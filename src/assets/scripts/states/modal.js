@@ -50,7 +50,7 @@ const Store = createStore((state, action) => {
         };
     }
 
-    Helper.log(action);
+    Helper.log('Modal States', action);
 
     switch (action.type) {
     case 'CHANGE_INVENTOR_YSETTING':

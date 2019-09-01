@@ -14,11 +14,14 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import * as Sentry from '@sentry/browser'
 
+// Load Config & Constant
+import Config from 'config';
+
 // Load App
 import App from 'app';
 
-// Load Config & Constant
-import Config from 'config';
+// Load Components
+import Changelog from 'components/modal/changelog';
 
 // Polyfill
 const polyfillObjectValues = (object) => {
@@ -42,7 +45,8 @@ if ('production' === Config.env) {
 
 // Router
 ReactDOM.render((
-    <Router>
+    <Router key="router">
         <Route exact path="/:hash?" component={App} />
+        <Changelog />
     </Router>
-), document.getElementById('mhwc-router'));
+), document.querySelector('#mhwc'));

@@ -32,7 +32,6 @@ import EquipBundleSelector from 'components/modal/equipBundleSelector';
 import SetItemSelector from 'components/modal/setItemSelector';
 import SkillItemSelector from 'components/modal/skillItemSelector';
 import EquipItemSelector from 'components/modal/equipItemSelector';
-import Changelog from 'components/modal/changelog';
 
 import CandidateBundles from 'components/candidateBundles';
 import EquipsDisplayer from 'components/equipsDisplayer';
@@ -67,17 +66,13 @@ export default class Main extends Component {
             equipsLock: Status.get('app:equipsLock') || Helper.deepCopy(Constant.defaultEquipsLock),
             ignoreEquips: Status.get('app:ignoreEquips') || {},
 
-            // Bypass Data
-            equipSelector: {},
-
             // Flags
             isImportEquips: false,
             isShowInventorySetting: false,
             isShowEquipBundleSelector: false,
             isShowSetItemSelector: false,
             isShowSkillItemSelector: false,
-            isShowEquipItemSelector: ModalStates.getters.isShowEquipItemSelector(),
-            isShowChangelog: ModalStates.getters.isShowChangelog()
+            isShowEquipItemSelector: ModalStates.getters.isShowEquipItemSelector()
         };
 
         // Set Build Time
@@ -588,8 +583,7 @@ export default class Main extends Component {
     componentDidMount () {
         this.unsubscribe = ModalStates.store.subscribe(() => {
             this.setState({
-                isShowEquipItemSelector: ModalStates.getters.isShowEquipItemSelector(),
-                isShowChangelog: ModalStates.getters.isShowChangelog()
+                isShowEquipItemSelector: ModalStates.getters.isShowEquipItemSelector()
             });
         });
     }
@@ -691,7 +685,7 @@ export default class Main extends Component {
 
     render () {
         return (
-            <div key={this.state.lang} id="app" className="container-fluid">
+            <div key={this.state.lang} id="mhwc-app" className="container-fluid">
                 <div className="row mhwc-header">
                     <a className="mhwc-title" href="./">
                         <h1>{_('title')}</h1>
@@ -849,11 +843,6 @@ export default class Main extends Component {
                         onPickUp={this.handleEquipItemSelectorPickUp}
                         onToggle={this.handleEquipItemSelectorToggle}
                         onClose={ModalStates.setters.hideEquipItemSelector} />
-                ) : false}
-
-                {this.state.isShowChangelog ? (
-                    <Changelog
-                        onClose={ModalStates.setters.hideChangelog} />
                 ) : false}
             </div>
         );

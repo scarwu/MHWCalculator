@@ -25,6 +25,8 @@ $grid-gutter-width: 0;
 /**
  * Module & Option Style
  */
-#app {
+#mhwc {
+    position: relative;
+
     @import "module/app";
 }
