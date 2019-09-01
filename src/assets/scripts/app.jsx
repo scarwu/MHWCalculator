@@ -347,6 +347,10 @@ export default class Main extends Component {
             let equipInfo = null;
 
             if ('weapon' === equipType) {
+                if (Helper.isNotEmpty(bundle.meta.weaponEnhanceIds)) {
+                    equips.weapon.enhanceIds = bundle.meta.weaponEnhanceIds; // Restore Enhance
+                }
+
                 equipInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
             } else if ('helm' === equipType
                 || 'chest' === equipType

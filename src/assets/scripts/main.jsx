@@ -20,7 +20,7 @@ import App from 'app';
 // Load Config & Constant
 import Config from 'config';
 
-// Ployfill
+// Polyfill
 const polyfillObjectValues = (object) => {
     return Object.keys(object).map((key) => {
         return object[key];

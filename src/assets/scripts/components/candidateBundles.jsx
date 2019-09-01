@@ -81,8 +81,15 @@ export default class CandidateBundles extends Component {
                 let startTime = new Date().getTime();
                 let bundleList = FittingAlgorithm.search(data.equips, data.ignoreEquips, data.sets, data.skills);
                 let stopTime = new Date().getTime();
-
                 let searchTime = (stopTime - startTime) / 1000;
+                let weaponEnhanceIds = Helper.isNotEmpty(data.equips.weapon)
+                    ? data.equips.weapon.enhanceIds : null;
+
+                bundleList.map((bundle) => {
+                    bundle.meta.weaponEnhanceIds = weaponEnhanceIds;
+
+                    return bundle;
+                });
 
                 Helper.log('Bundle List:', bundleList);
                 Helper.log('Search Time:', searchTime);
