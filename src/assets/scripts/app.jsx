@@ -32,7 +32,7 @@ import EquipBundleSelector from 'components/modal/equipBundleSelector';
 import SetItemSelector from 'components/modal/setItemSelector';
 import SkillItemSelector from 'components/modal/skillItemSelector';
 import EquipItemSelector from 'components/modal/equipItemSelector';
-import ChangeLog from 'components/modal/changeLog';
+import Changelog from 'components/modal/changelog';
 
 import CandidateBundles from 'components/candidateBundles';
 import EquipsDisplayer from 'components/equipsDisplayer';
@@ -41,6 +41,9 @@ import CharacterStatus from 'components/characterStatus';
 // Load Config & Constant
 import Config from 'config';
 import Constant from 'constant';
+
+// Load State Control
+import ModalStates from 'states/modal';
 
 // Load Json
 import TestData from 'files/json/testData.json';
@@ -73,9 +76,8 @@ export default class Main extends Component {
             isShowEquipBundleSelector: false,
             isShowSetItemSelector: false,
             isShowSkillItemSelector: false,
-            isShowEquipItemSelector: false,
-            isShowChangeLog: ('production' === Config.env)
-                ? (Config.buildTime !== parseInt(Status.get('sys:buildTime'))) : false
+            isShowEquipItemSelector: ModalStates.getters.isShowEquipItemSelector(),
+            isShowChangelog: ModalStates.getters.isShowChangelog()
         };
 
         // Set Build Time
@@ -447,19 +449,6 @@ export default class Main extends Component {
         });
     };
 
-    handleEquipItemSelectorOpen = (data) => {
-        this.setState({
-            isShowEquipItemSelector: true,
-            equipSelector: data
-        });
-    };
-
-    handleEquipItemSelectorClose = () => {
-        this.setState({
-            isShowEquipItemSelector: false
-        });
-    };
-
     handleEquipItemSelectorPickUp = (data) => {
         let equips = this.state.equips;
 
@@ -584,18 +573,6 @@ export default class Main extends Component {
         });
     };
 
-    handleChangeLogOpen = () => {
-        this.setState({
-            isShowChangeLog: true
-        });
-    };
-
-    handleChangeLogClose = () => {
-        this.setState({
-            isShowChangeLog: false
-        });
-    };
-
     /**
      * Lifecycle Functions
      */
@@ -606,6 +583,19 @@ export default class Main extends Component {
             equips: JSON.parse(Helper.base64Decode(hash)),
             isImportEquips: true
         } : null;
+    }
+
+    componentDidMount () {
+        this.unsubscribe = ModalStates.store.subscribe(() => {
+            this.setState({
+                isShowEquipItemSelector: ModalStates.getters.isShowEquipItemSelector(),
+                isShowChangelog: ModalStates.getters.isShowChangelog()
+            });
+        });
+    }
+
+    componentWillUnmount(){
+        this.unsubscribe();
     }
 
     /**
@@ -713,7 +703,7 @@ export default class Main extends Component {
                             onClick={this.handleBundleExport} />
                         <FunctionalIcon
                             iconName="info" altName={_('showChangelog')}
-                            onClick={this.handleChangeLogOpen} />
+                            onClick={ModalStates.setters.showChangelog} />
                         <div className="mhwc-lang">
                             <div>
                                 <i className="fa fa-globe"></i>
@@ -794,7 +784,7 @@ export default class Main extends Component {
                         <EquipsDisplayer equips={this.state.equips}
                             equipsLock={this.state.equipsLock}
                             onToggleEquipsLock={this.handleEquipsLockToggle}
-                            onOpenSelector={this.handleEquipItemSelectorOpen}
+                            onOpenSelector={ModalStates.setters.showEquipItemSelector}
                             onPickUp={this.handleEquipItemSelectorPickUp} />
                     </div>
 
@@ -854,16 +844,16 @@ export default class Main extends Component {
 
                 {this.state.isShowEquipItemSelector ? (
                     <EquipItemSelector
-                        data={this.state.equipSelector}
+                        data={ModalStates.getters.getEquipItemSelectorData()}
                         ignoreEquips={this.state.ignoreEquips}
                         onPickUp={this.handleEquipItemSelectorPickUp}
                         onToggle={this.handleEquipItemSelectorToggle}
-                        onClose={this.handleEquipItemSelectorClose} />
+                        onClose={ModalStates.setters.hideEquipItemSelector} />
                 ) : false}
 
-                {this.state.isShowChangeLog ? (
-                    <ChangeLog
-                        onClose={this.handleChangeLogClose} />
+                {this.state.isShowChangelog ? (
+                    <Changelog
+                        onClose={ModalStates.setters.hideChangelog} />
                 ) : false}
             </div>
         );

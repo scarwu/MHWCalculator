@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Change Log
+ * Changelog
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -21,9 +21,9 @@ import _ from 'libraries/lang';
 import FunctionalIcon from 'components/common/functionalIcon';
 
 // Load Markdown
-import zhTW from 'files/md/langs/zhTW/changeLog.md';
-import jaJP from 'files/md/langs/jaJP/changeLog.md';
-import enUS from 'files/md/langs/enUS/changeLog.md';
+import zhTW from 'files/md/langs/zhTW/changelog.md';
+import jaJP from 'files/md/langs/jaJP/changelog.md';
+import enUS from 'files/md/langs/enUS/changelog.md';
 
 export default function (props) {
     const modalRef = useRef();
