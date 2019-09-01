@@ -305,6 +305,21 @@ export default class Main extends Component {
         });
     };
 
+    handleCandidateBundlesRefresh = () => {
+        let bundleList = [];
+
+        // Set Data to Status
+        Status.set('candidateBundles:bundleList', bundleList);
+
+        this.setState({
+            bundleList: bundleList
+        });
+    };
+
+    handleCandidateBundlesSetting = () => {
+
+    };
+
     handleCandidateBundlesSearch = () => {
         let equips = this.state.equips;
         let equipsLock = this.state.equipsLock;
@@ -617,10 +632,10 @@ export default class Main extends Component {
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="minus" altName={_('down')}
+                                iconName="minus-circle" altName={_('down')}
                                 onClick={() => {this.handleSetStepDown(index)}} />
                             <FunctionalIcon
-                                iconName="plus" altName={_('up')}
+                                iconName="plus-circle" altName={_('up')}
                                 onClick={() => {this.handleSetStepUp(index)}} />
                             <FunctionalIcon
                                 iconName="times" altName={_('clean')}
@@ -657,17 +672,15 @@ export default class Main extends Component {
                 <div key={skillInfo.id} className="row mhwc-item">
                     <div className="col-12 mhwc-name">
                         <span>
-                            {_(skillInfo.name)}
-                            &nbsp;
-                            Lv.{data.level} / {skillInfo.list.length}
+                            {_(skillInfo.name)} Lv.{data.level} / {skillInfo.list.length}
                         </span>
 
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
-                                iconName="minus" altName={_('down')}
+                                iconName="minus-circle" altName={_('down')}
                                 onClick={() => {this.handleSkillLevelDown(index)}} />
                             <FunctionalIcon
-                                iconName="plus" altName={_('up')}
+                                iconName="plus-circle" altName={_('up')}
                                 onClick={() => {this.handleSkillLevelUp(index)}} />
                             <FunctionalIcon
                                 iconName="times" altName={_('clean')}
@@ -690,7 +703,7 @@ export default class Main extends Component {
         return (
             <div key={this.state.lang} id="app" className="container-fluid">
                 <div className="row mhwc-header">
-                    <a href="./">
+                    <a className="mhwc-title" href="./">
                         <h1>{_('title')}</h1>
                     </a>
 
@@ -719,29 +732,18 @@ export default class Main extends Component {
                 <div className="row mhwc-container">
                     <div className="col mhwc-conditions">
                         <div className="mhwc-section_name">
-                            <span>{_('requireCondition')}</span>
-                        </div>
+                            <span className="mhwc-title">{_('requireCondition')}</span>
 
-                        <div className="row mhwc-panel">
-                            <div className="col-3">
-                                <a onClick={this.handleRequireConditionRefresh}>
-                                    <i className="fa fa-refresh"></i> {_('reset')}
-                                </a>
-                            </div>
-                            <div className="col-3">
-                                <a onClick={this.handleSkillItemSelectorOpen}>
-                                    <i className="fa fa-plus"></i> {_('skill')}
-                                </a>
-                            </div>
-                            <div className="col-3">
-                                <a onClick={this.handleSetItemSelectorOpen}>
-                                    <i className="fa fa-plus"></i> {_('set')}
-                                </a>
-                            </div>
-                            <div className="col-3">
-                                <a onClick={this.handleCandidateBundlesSearch}>
-                                    <i className="fa fa-search"></i> {_('search')}
-                                </a>
+                            <div className="mhwc-icons_bundle">
+                                <FunctionalIcon
+                                    iconName="refresh" altName={_('reset')}
+                                    onClick={this.handleRequireConditionRefresh} />
+                                <FunctionalIcon
+                                    iconName="plus" altName={_('skill')}
+                                    onClick={this.handleSkillItemSelectorOpen} />
+                                <FunctionalIcon
+                                    iconName="plus" altName={_('set')}
+                                    onClick={this.handleSetItemSelectorOpen} />
                             </div>
                         </div>
 
@@ -753,7 +755,19 @@ export default class Main extends Component {
 
                     <div className="col mhwc-bundles">
                         <div className="mhwc-section_name">
-                            <span>{_('candidateBundle')}</span>
+                            <span className="mhwc-title">{_('candidateBundle')}</span>
+
+                            <div className="mhwc-icons_bundle">
+                                <FunctionalIcon
+                                    iconName="refresh" altName={_('reset')}
+                                    onClick={this.handleCandidateBundlesRefresh} />
+                                <FunctionalIcon
+                                    iconName="cog" altName={_('setting')}
+                                    onClick={this.handleCandidateBundlesSetting} />
+                                <FunctionalIcon
+                                    iconName="search" altName={_('search')}
+                                    onClick={this.handleCandidateBundlesSearch} />
+                            </div>
                         </div>
 
                         <CandidateBundles
@@ -762,24 +776,18 @@ export default class Main extends Component {
 
                     <div className="col mhwc-equips">
                         <div className="mhwc-section_name">
-                            <span>{_('equipBundle')}</span>
-                        </div>
+                            <span className="mhwc-title">{_('equipBundle')}</span>
 
-                        <div className="row mhwc-panel">
-                            <div className="col-4">
-                                <a onClick={this.handleEquipsDisplayerRefresh}>
-                                    <i className="fa fa-refresh"></i> {_('reset')}
-                                </a>
-                            </div>
-                            <div className="col-4">
-                                <a onClick={this.handleEquipBundleSelectorOpen}>
-                                    <i className="fa fa-th-list"></i> {_('bundleList')}
-                                </a>
-                            </div>
-                            <div className="col-4">
-                                <a onClick={this.handleInventorySettingOpen}>
-                                    <i className="fa fa-th-large"></i> {_('inventorySetting')}
-                                </a>
+                            <div className="mhwc-icons_bundle">
+                                <FunctionalIcon
+                                    iconName="refresh" altName={_('reset')}
+                                    onClick={this.handleEquipsDisplayerRefresh} />
+                                <FunctionalIcon
+                                    iconName="th-list" altName={_('bundleList')}
+                                    onClick={this.handleEquipBundleSelectorOpen} />
+                                <FunctionalIcon
+                                    iconName="th-large" altName={_('inventorySetting')}
+                                    onClick={this.handleInventorySettingOpen} />
                             </div>
                         </div>
 
@@ -792,7 +800,7 @@ export default class Main extends Component {
 
                     <div className="col mhwc-status">
                         <div className="mhwc-section_name">
-                            <span>{_('status')}</span>
+                            <span className="mhwc-title">{_('status')}</span>
                         </div>
 
                         <CharacterStatus equips={this.state.equips} />

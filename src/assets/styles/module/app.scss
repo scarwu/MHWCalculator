@@ -7,121 +7,53 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-$header-height: 60px;
-$footer-height: 50px;
-$section_name-height: 40px;
-$panel-height: 40px;
+// Common Components
+.mhwc-functional_icon {
+    position: relative;
+    display: inline-block;
+    margin-left: 2px;
 
-& {
-    height: 100vh;
-}
-
-.mhwc-header {
-    padding: 0 10px;
-    height: $header-height;
-    background-color: #333;
-
-    > a {
-        margin: 0 auto;
-        color: #ccc;
-
-        &:hover {
-            color: white;
-        }
-    }
-
-    h1 {
-        margin: 0;
-        padding: 0;
-        line-height: $header-height;
-        font-weight: bold;
-
-        @include font-size(2.4);
-    }
-
-    .mhwc-icons_bundle {
-        position: absolute;
-        right: 10px;
-        height: $header-height;
-        line-height: $header-height;
-
-        a {
-            background-color: #999;
-        }
-
-        .mhwc-lang {
-            display: inline-block;
-            margin-left: 2px;
-
-            div {
-                display: block;
-                height: 20px;
-                line-height: 20px;
-                text-align: center;
-                color: white;
-                background-color: #999;
-
-                @include border-radius(3px);
-
-                i {
-                    display: inline-block;
-                    width: 20px;
-                    height: 20px;
-                }
-
-                select {
-                    margin: 0 0;
-                    padding: 0;
-                    border: none;
-                    height: 20px;
-                    line-height: 20px;
-
-                    @include font-size(0.8);
-                    @include border-radius(3px);
-                }
-            }
-        }
-    }
-}
-
-.mhwc-footer {
-    padding: 0 10px;
-    height: $footer-height;
-    background-color: #333;
-    color: #ccc;
-
-    > div:nth-child(1) {
-        margin: 0 auto;
-        padding-top: 5px;
+    a {
+        display: block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
         text-align: center;
-
-        @include font-size(1.4);
-    }
-
-    > div:nth-child(2) {
-        margin: 0 auto;
-        padding-bottom: 5px;
-        text-align: center;
+        color: white;
+        background-color: #ccc;
 
         @include font-size(1.2);
+        @include border-radius(3px);
+    }
 
+    div {
+        @include nowrap();
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 22px;
+        z-index: 3000;
+        padding: 0 5px;
+        border: 1px solid #999;
+        height: 20px;
+        line-height: 18px;
+        text-align: center;
+        color: #333;
+        background-color: white;
+        pointer-events: none;
+
+        @include font-size(1.2);
+        @include border-radius(3px);
+    }
+
+    &:hover {
         a {
-            color: #ccc;
-
-            &:hover {
-                color: white;
-            }
+            background-color: #666;
         }
-    }
-}
 
-.mhwc-sharpness {
-    .mhwc-sharpness_bar {
-        height: 11px;
-    }
-
-    .mhwc-sharpness_bar:nth-child(2) {
-        margin-top: -1px;
+        div {
+            display: block;
+        }
     }
 }
 
@@ -194,53 +126,523 @@ $panel-height: 40px;
     // }
 }
 
-.mhwc-icons_bundle {
-    float: right;
+// Variables
+$header-height: 60px;
+$footer-height: 50px;
+$section_name-height: 40px;
+$panel-height: 40px;
+
+& {
+    height: 100vh;
 }
 
-.mhwc-functional_icon {
+.mhwc-header {
     position: relative;
-    display: inline-block;
-    margin-left: 2px;
+    padding: 0 10px;
+    height: $header-height;
+    background-color: #333;
 
-    a {
-        display: block;
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-        text-align: center;
-        color: white;
-        background-color: #ccc;
+    .mhwc-title {
+        margin: 0 auto;
+        color: #ccc;
 
-        @include border-radius(3px);
-    }
-
-    div {
-        @include nowrap();
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 22px;
-        z-index: 3000;
-        padding: 0 5px;
-        border: 1px solid #999;
-        height: 20px;
-        // width: 40px;
-        line-height: 18px;
-        text-align: center;
-        color: #333;
-        background-color: white;
-        pointer-events: none;
-        @include border-radius(3px);
-    }
-
-    &:hover {
-        a {
-            background-color: #666;
+        &:hover {
+            color: white;
         }
 
-        div {
-            display: block;
+        h1 {
+            margin: 0;
+            padding: 0;
+            line-height: $header-height;
+            font-weight: bold;
+
+            @include font-size(2.4);
+        }
+    }
+
+    .mhwc-icons_bundle {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        height: $header-height;
+        line-height: $header-height;
+
+        a {
+            background-color: #999;
+        }
+
+        .mhwc-lang {
+            display: inline-block;
+            margin-left: 2px;
+
+            div {
+                display: block;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                color: white;
+                background-color: #999;
+
+                @include border-radius(3px);
+
+                i {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    @include font-size(1.2);
+                }
+
+                select {
+                    margin: 0 0;
+                    padding: 0;
+                    border: none;
+                    height: 20px;
+                    line-height: 20px;
+
+                    @include font-size(1);
+                    @include border-radius(3px);
+                }
+            }
+        }
+    }
+}
+
+.mhwc-container {
+    height: calc(100vh - (#{$header-height} + #{$footer-height}));
+
+    @include font-size(1.4);
+
+    > .mhwc-conditions,
+    > .mhwc-bundles,
+    > .mhwc-equips,
+    > .mhwc-status {
+        position: relative;
+        height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
+
+        .mhwc-section_name {
+            position: relative;
+            height: $section_name-height;
+            line-height: $section_name-height;
+            text-align: center;
+            background-color: #666;
+            color: white;
+
+            .mhwc-title {
+                @include font-size(1.8);
+            }
+        }
+    }
+
+    > .mhwc-bundles {
+        .mhwc-list {
+            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height} + #{$panel-height}));
+        }
+    }
+
+    > .mhwc-conditions,
+    > .mhwc-equips,
+    > .mhwc-status {
+        .mhwc-list {
+            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
+        }
+    }
+
+    > .mhwc-conditions,
+    > .mhwc-bundles,
+    > .mhwc-equips {
+        .mhwc-section_name {
+            .mhwc-icons_bundle {
+                position: absolute;
+                top: 0;
+                right: 10px;
+                height: $section_name-height;
+                line-height: $section_name-height;
+
+                a {
+                    background-color: #999;
+                }
+            }
+        }
+    }
+
+    > .mhwc-conditions {
+        .mhwc-item {
+            margin: 5px 5px 10px 5px;
+            padding: 5px 5px 15px 5px;
+            border: 1px solid #999;
+            background-color: #eee;
+
+            @include border-radius(5px);
+
+            .mhwc-name {
+                line-height: 33px;
+            }
+
+            .mhwc-value {
+                padding: 5px;
+                border: 1px solid #999;
+                background-color: white;
+
+                @include border-radius(5px);
+            }
+
+            > .mhwc-value {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    > .mhwc-bundles {
+        .mhwc-panel {
+            height: $panel-height;
+
+            .mhwc-search_info {
+                width: 100%;
+                margin: 5px 5px;
+                padding: 0 5px;
+                border: 1px solid #999;
+                background-color: #eee;
+                line-height: 28px;
+
+                @include border-radius(5px);
+
+                input {
+                    margin: 0 5px;
+                    padding: 0 5px;
+                    height: 21px;
+                    width: 50px;
+                    line-height: 21px;
+                    border: 1px solid #333;
+
+                    @include border-radius(5px);
+                }
+            }
+        }
+
+        .mhwc-mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            line-height: 100vh;
+            text-align: center;
+
+            @include font-size(6);
+        }
+
+        .mhwc-bundle {
+            margin: 5px 5px 10px 5px;
+            padding: 5px 5px 15px 5px;
+            border: 1px solid #999;
+            background-color: #ccc;
+
+            @include border-radius(5px);
+
+            .mhwc-name {
+                line-height: 33px;
+            }
+
+            .mhwc-value {
+                padding: 5px;
+                border: 1px solid #999;
+                background-color: white;
+
+                @include border-radius(5px);
+            }
+        }
+
+        .mhwc-item {
+            margin-top: 5px;
+            padding: 5px;
+            border: 1px solid #999;
+            background-color: #eee;
+
+            @include border-radius(5px);
+
+            .mhwc-name {
+                line-height: 33px;
+
+                @include nowrap();
+            }
+
+            .mhwc-value {
+                padding: 5px;
+                border: 1px solid #999;
+                background-color: white;
+
+                @include border-radius(5px);
+            }
+
+            .row {
+                margin-top: 5px;
+
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .mhwc-defense {
+
+        }
+
+        .mhwc-equips {
+            > .mhwc-value {
+                margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-name {
+                        margin: 2.5px;
+                    }
+
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+
+                        span {
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mhwc-jewels,
+        .mhwc-slots,
+        .mhwc-skills {
+            > .mhwc-value {
+                margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+
+                        span {
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > .mhwc-equips {
+        .mhwc-equip {
+            margin: 5px 5px 10px 5px;
+            padding: 5px 5px 15px 5px;
+            border: 1px solid #999;
+            background-color: #ccc;
+
+            @include border-radius(5px);
+
+            .mhwc-name {
+                line-height: 33px;
+            }
+
+            .mhwc-value {
+                padding: 5px;
+                border: 1px solid #999;
+                background-color: white;
+
+                @include border-radius(5px);
+            }
+        }
+
+        .mhwc-item {
+            margin-top: 5px;
+            padding: 5px;
+            border: 1px solid #999;
+            background-color: #eee;
+
+            @include border-radius(5px);
+
+            .mhwc-name {
+                line-height: 33px;
+
+                @include nowrap();
+            }
+
+            .mhwc-value {
+                padding: 5px;
+                border: 1px solid #999;
+                background-color: white;
+
+                @include border-radius(5px);
+            }
+
+            .row {
+                margin-top: 5px;
+
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .mhwc-enhances {
+
+        }
+
+        .mhwc-slots {
+
+        }
+
+        .mhwc-properties {
+            > .mhwc-value {
+                margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-name {
+                        margin: 2.5px;
+                    }
+
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+                    }
+                }
+            }
+        }
+
+        .mhwc-skills {
+            > .mhwc-value {
+                margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+                    }
+                }
+            }
+        }
+    }
+
+    > .mhwc-status {
+        .mhwc-item {
+            margin: 5px 5px 10px 5px;
+            padding: 5px 5px 15px 5px;
+            border: 1px solid #999;
+            background-color: #eee;
+
+            @include border-radius(5px);
+
+            .mhwc-name {
+                line-height: 33px;
+
+                @include nowrap();
+            }
+
+            .mhwc-value {
+                padding: 5px;
+                border: 1px solid #999;
+                background-color: white;
+
+                @include border-radius(5px);
+            }
+
+            > .mhwc-value {
+                margin-top: 5px;
+            }
+
+            .row {
+                margin-top: 5px;
+
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .mhwc-normal,
+        .mhwc-attack,
+        .mhwc-defense {
+            > .mhwc-value {
+                margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-name {
+                        margin: 2.5px;
+                    }
+
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+
+                        span {
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mhwc-skills {
+            .mhwc-value {
+                margin-top: 5px;
+            }
+        }
+
+        .mhwc-normal,
+        .mhwc-attack,
+        .mhwc-defense,
+        .mhwc-extra_info {
+            .mhwc-tuning {
+                margin: 5px;
+                padding: 0 5px;
+                height: 21px;
+                width: 50px;
+                line-height: 21px;
+                border: 1px solid #333;
+
+                @include border-radius(5px);
+            }
+        }
+    }
+}
+
+.mhwc-footer {
+    padding: 0 10px;
+    height: $footer-height;
+    background-color: #333;
+    color: #ccc;
+
+    > div:nth-child(1) {
+        margin: 0 auto;
+        padding-top: 5px;
+        text-align: center;
+
+        @include font-size(1.4);
+    }
+
+    > div:nth-child(2) {
+        margin: 0 auto;
+        padding-bottom: 5px;
+        text-align: center;
+
+        @include font-size(1.2);
+
+        a {
+            color: #ccc;
+
+            &:hover {
+                color: white;
+            }
         }
     }
 }
@@ -428,439 +830,16 @@ $panel-height: 40px;
     }
 }
 
-.mhwc-container {
-    height: calc(100vh - (#{$header-height} + #{$footer-height}));
+.mhwc-icons_bundle {
+    float: right;
+}
 
-    @include font-size(1.4);
-
-    .mhwc-section_name {
-        height: $section_name-height;
-        line-height: 40px;
-        text-align: center;
-        background-color: #666;
-        color: white;
-
-        @include font-size(1.8);
+.mhwc-sharpness {
+    .mhwc-sharpness_bar {
+        height: 11px;
     }
 
-    > .mhwc-conditions,
-    > .mhwc-bundles,
-    > .mhwc-equips,
-    > .mhwc-status {
-        position: relative;
-        height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
-    }
-
-
-    > .mhwc-conditions,
-    > .mhwc-bundles,
-    > .mhwc-equips {
-        .mhwc-list {
-            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height} + #{$panel-height}));
-        }
-    }
-
-    > .mhwc-status {
-        .mhwc-list {
-            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
-        }
-    }
-
-    > .mhwc-conditions {
-        .mhwc-panel {
-            padding: 5px 2.5px;
-            height: $panel-height;
-
-            div {
-                padding: 0 2.5px;
-            }
-
-            a {
-                display: inline-block;
-                width: 100%;
-                height: 30px;
-                line-height: 30px;
-                border: 1px solid #999;
-                text-align: center;
-
-                @include border-radius(5px);
-
-                &:hover {
-                    background-color: #eee;
-                }
-            }
-        }
-
-        .mhwc-item {
-            margin: 5px 5px 10px 5px;
-            padding: 5px 5px 15px 5px;
-            border: 1px solid #999;
-            background-color: #eee;
-
-            @include border-radius(5px);
-
-            .mhwc-name {
-                line-height: 33px;
-            }
-
-            .mhwc-value {
-                padding: 5px;
-                border: 1px solid #999;
-                background-color: white;
-
-                @include border-radius(5px);
-            }
-
-            > .mhwc-value {
-                margin-top: 5px;
-            }
-        }
-    }
-
-    > .mhwc-bundles {
-        .mhwc-panel {
-            height: $panel-height;
-
-            .mhwc-search_info {
-                width: 100%;
-                margin: 5px 5px;
-                padding: 0 5px;
-                border: 1px solid #999;
-                background-color: #eee;
-                line-height: 28px;
-
-                @include border-radius(5px);
-
-                input {
-                    margin: 0 5px;
-                    padding: 0 5px;
-                    height: 21px;
-                    width: 50px;
-                    line-height: 21px;
-                    border: 1px solid #333;
-
-                    @include border-radius(5px);
-                }
-            }
-        }
-
-        .mhwc-mask {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 100;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            line-height: 100vh;
-            text-align: center;
-
-            @include font-size(6);
-        }
-
-        .mhwc-bundle {
-            margin: 5px 5px 10px 5px;
-            padding: 5px 5px 15px 5px;
-            border: 1px solid #999;
-            background-color: #ccc;
-
-            @include border-radius(5px);
-
-            .mhwc-name {
-                line-height: 33px;
-            }
-
-            .mhwc-value {
-                padding: 5px;
-                border: 1px solid #999;
-                background-color: white;
-
-                @include border-radius(5px);
-            }
-        }
-
-        .mhwc-item {
-            margin-top: 5px;
-            padding: 5px;
-            border: 1px solid #999;
-            background-color: #eee;
-
-            @include border-radius(5px);
-
-            .mhwc-name {
-                line-height: 33px;
-
-                @include nowrap();
-            }
-
-            .mhwc-value {
-                padding: 5px;
-                border: 1px solid #999;
-                background-color: white;
-
-                @include border-radius(5px);
-            }
-
-            .row {
-                margin-top: 5px;
-
-                &:nth-child(1) {
-                    margin-top: 0;
-                }
-            }
-        }
-
-        .mhwc-defense {
-
-        }
-
-        .mhwc-equips {
-            > .mhwc-value {
-                margin-top: 5px;
-                padding: 2.5px;
-
-                .row {
-                    .mhwc-name {
-                        margin: 2.5px;
-                    }
-
-                    .mhwc-value {
-                        margin: 2.5px;
-
-                        @include nowrap();
-
-                        span {
-                            background-color: white;
-                        }
-                    }
-                }
-            }
-        }
-
-        .mhwc-jewels,
-        .mhwc-slots,
-        .mhwc-skills {
-            > .mhwc-value {
-                margin-top: 5px;
-                padding: 2.5px;
-
-                .row {
-                    .mhwc-value {
-                        margin: 2.5px;
-
-                        @include nowrap();
-
-                        span {
-                            background-color: white;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    > .mhwc-equips {
-        .mhwc-panel {
-            padding: 5px 2.5px;
-            height: $panel-height;
-
-            div {
-                padding: 0 2.5px;
-            }
-
-            a {
-                display: inline-block;
-                width: 100%;
-                height: 30px;
-                line-height: 30px;
-                border: 1px solid #999;
-                text-align: center;
-
-                @include border-radius(5px);
-
-                &:hover {
-                    background-color: #eee;
-                }
-            }
-        }
-
-        .mhwc-equip {
-            margin: 5px 5px 10px 5px;
-            padding: 5px 5px 15px 5px;
-            border: 1px solid #999;
-            background-color: #ccc;
-
-            @include border-radius(5px);
-
-            .mhwc-name {
-                line-height: 33px;
-            }
-
-            .mhwc-value {
-                padding: 5px;
-                border: 1px solid #999;
-                background-color: white;
-
-                @include border-radius(5px);
-            }
-        }
-
-        .mhwc-item {
-            margin-top: 5px;
-            padding: 5px;
-            border: 1px solid #999;
-            background-color: #eee;
-
-            @include border-radius(5px);
-
-            .mhwc-name {
-                line-height: 33px;
-
-                @include nowrap();
-            }
-
-            .mhwc-value {
-                padding: 5px;
-                border: 1px solid #999;
-                background-color: white;
-
-                @include border-radius(5px);
-            }
-
-            .row {
-                margin-top: 5px;
-
-                &:nth-child(1) {
-                    margin-top: 0;
-                }
-            }
-        }
-
-        .mhwc-enhances {
-
-        }
-
-        .mhwc-slots {
-
-        }
-
-        .mhwc-properties {
-            > .mhwc-value {
-                margin-top: 5px;
-                padding: 2.5px;
-
-                .row {
-                    .mhwc-name {
-                        margin: 2.5px;
-                    }
-
-                    .mhwc-value {
-                        margin: 2.5px;
-
-                        @include nowrap();
-                    }
-                }
-            }
-        }
-
-        .mhwc-skills {
-            > .mhwc-value {
-                margin-top: 5px;
-                padding: 2.5px;
-
-                .row {
-                    .mhwc-value {
-                        margin: 2.5px;
-
-                        @include nowrap();
-                    }
-                }
-            }
-        }
-    }
-
-    > .mhwc-status {
-        .mhwc-item {
-            margin: 5px 5px 10px 5px;
-            padding: 5px 5px 15px 5px;
-            border: 1px solid #999;
-            background-color: #eee;
-
-            @include border-radius(5px);
-
-            .mhwc-name {
-                line-height: 33px;
-
-                @include nowrap();
-            }
-
-            .mhwc-value {
-                padding: 5px;
-                border: 1px solid #999;
-                background-color: white;
-
-                @include border-radius(5px);
-            }
-
-            > .mhwc-value {
-                margin-top: 5px;
-            }
-
-            .row {
-                margin-top: 5px;
-
-                &:nth-child(1) {
-                    margin-top: 0;
-                }
-            }
-        }
-
-        .mhwc-normal,
-        .mhwc-attack,
-        .mhwc-defense {
-            > .mhwc-value {
-                margin-top: 5px;
-                padding: 2.5px;
-
-                .row {
-                    .mhwc-name {
-                        margin: 2.5px;
-                    }
-
-                    .mhwc-value {
-                        margin: 2.5px;
-
-                        @include nowrap();
-
-                        span {
-                            background-color: white;
-                        }
-                    }
-                }
-            }
-        }
-
-        .mhwc-skills {
-            .mhwc-value {
-                margin-top: 5px;
-            }
-        }
-
-        .mhwc-normal,
-        .mhwc-attack,
-        .mhwc-defense,
-        .mhwc-extra_info {
-            .mhwc-tuning {
-                margin: 5px;
-                padding: 0 5px;
-                height: 21px;
-                width: 50px;
-                line-height: 21px;
-                border: 1px solid #333;
-
-                @include border-radius(5px);
-            }
-        }
+    .mhwc-sharpness_bar:nth-child(2) {
+        margin-top: -1px;
     }
 }

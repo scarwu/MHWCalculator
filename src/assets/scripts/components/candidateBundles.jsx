@@ -79,7 +79,13 @@ export default class CandidateBundles extends Component {
 
             setTimeout(() => {
                 let startTime = new Date().getTime();
-                let bundleList = FittingAlgorithm.search(data.equips, data.ignoreEquips, data.sets, data.skills);
+                let bundleList = FittingAlgorithm.search(
+                    data.equips,
+                    data.ignoreEquips,
+                    data.sets,
+                    data.skills,
+                    this.state.bundleLimit
+                );
                 let stopTime = new Date().getTime();
                 let searchTime = (stopTime - startTime) / 1000;
                 let weaponEnhanceIds = Helper.isNotEmpty(data.equips.weapon)
@@ -118,7 +124,7 @@ export default class CandidateBundles extends Component {
         let bundleList = this.state.bundleList;
         let bundleLimit = this.state.bundleLimit;
 
-        return bundleList.slice(0, bundleLimit).map((data, index) => {
+        return bundleList.map((data, index) => {
             return (
                 <div key={index} className="row mhwc-bundle">
                     <div className="col-12 mhwc-name">
@@ -273,7 +279,7 @@ export default class CandidateBundles extends Component {
             <div key="bar" className="row mhwc-panel">
                 {true === this.state.isSearching ? (
                     <div className="mhwc-mask">
-                        <i className="fa fa-spin fa-cog"></i>
+                        <i className="fa fa-spin fa-spinner"></i>
                     </div>
                 ) : false}
 

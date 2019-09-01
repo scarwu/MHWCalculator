@@ -29,7 +29,7 @@ class FittingAlgorithm {
     /**
      * Search
      */
-    search = (equips, ignoreEquips, sets, skills) => {
+    search = (equips, ignoreEquips, sets, skills, limit) => {
 
         if (0 === sets.length
             && 0 === skills.length
@@ -51,7 +51,7 @@ class FittingAlgorithm {
         this.maxEquipsExpectedLevel = {};
 
         let candidateEquips = {};
-        let lastBundleLimit = 200;
+        let lastBundleLimit = limit;
         let prevBundleList = {};
         let nextBundleList = {};
         let lastBundleList = {};

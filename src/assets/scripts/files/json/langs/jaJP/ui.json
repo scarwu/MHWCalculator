@@ -95,6 +95,7 @@
     "jewel":                "装飾品",
     "set":                  null,
     "reset":                null,
+    "setting":              null,
     "search":               null,
     "inputKeyword":         null,
     "inputName":            null,
