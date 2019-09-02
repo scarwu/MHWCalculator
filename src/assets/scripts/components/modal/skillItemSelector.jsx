@@ -21,22 +21,11 @@ import SkillDataset from 'libraries/dataset/skill';
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
 
-// Load Constant
-import Constant from 'constant';
-
 // Load State Control
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
 export default class SkillItemSelector extends Component {
-
-    // Default Props
-    static defaultProps = {
-        data: {},
-        onPickUp: (data) => {},
-        onThrowDown: (data) => {},
-        onClose: () => {}
-    };
 
     constructor (props) {
         super(props);
@@ -44,7 +33,7 @@ export default class SkillItemSelector extends Component {
         // Initial State
         this.state = {
             isShow: ModalStates.getters.isShowSkillItemSelector(),
-            data: {},
+            requiredSkills: CommonStates.getters.getRequiredSkills(),
             list: [],
             segment: null,
             selectedList: [],
@@ -68,13 +57,13 @@ export default class SkillItemSelector extends Component {
     };
 
     handleItemPickUp = (itemId) => {
-        this.props.onPickUp({
+        CommonStates.setters.addRequiredSkill({
             skillId: itemId
         });
     };
 
     handleItemThrowDown = (itemId) => {
-        this.props.onThrowDown({
+        CommonStates.setters.removeRequiredSkill({
             skillId: itemId
         });
     };
@@ -94,12 +83,16 @@ export default class SkillItemSelector extends Component {
      * Lifecycle Functions
      */
     static getDerivedStateFromProps (nextProps, prevState) {
-        let selectedList = [];
-        let unselectedList = [];
+        if (Helper.isEmpty(prevState.requiredSkills)) {
+            return {};
+        }
 
-        let idList = nextProps.data.map((skill) => {
+        let idList = prevState.requiredSkills.map((skill) => {
             return skill.id;
         });
+
+        let selectedList = [];
+        let unselectedList = [];
 
         SkillDataset.getNames().sort().forEach((skillId) => {
             let skillInfo = SkillDataset.getInfo(skillId);
@@ -127,7 +120,13 @@ export default class SkillItemSelector extends Component {
     }
 
     componentDidMount () {
-        this.unsubscribe = ModalStates.store.subscribe(() => {
+        this.unsubscribeCommon = CommonStates.store.subscribe(() => {
+            this.setState({
+                requiredSkills: CommonStates.getters.getRequiredSkills()
+            });
+        });
+
+        this.unsubscribeModal = ModalStates.store.subscribe(() => {
             this.setState({
                 isShow: ModalStates.getters.isShowSkillItemSelector()
             });
@@ -135,7 +134,8 @@ export default class SkillItemSelector extends Component {
     }
 
     componentWillUnmount(){
-        this.unsubscribe();
+        this.unsubscribeCommon();
+        this.unsubscribeModal();
     }
 
     /**

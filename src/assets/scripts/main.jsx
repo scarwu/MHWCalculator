@@ -23,6 +23,8 @@ import App from 'app';
 // Load Components
 import Changelog from 'components/modal/changelog';
 import InventorySetting from 'components/modal/inventorySetting';
+import SetItemSelector from 'components/modal/setItemSelector';
+import SkillItemSelector from 'components/modal/skillItemSelector';
 
 // Polyfill
 const polyfillObjectValues = (object) => {
@@ -51,5 +53,7 @@ ReactDOM.render((
 
         <Changelog />
         <InventorySetting />
+        <SetItemSelector />
+        <SkillItemSelector />
     </Router>
 ), document.querySelector('#mhwc'));

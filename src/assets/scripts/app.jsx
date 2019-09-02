@@ -19,8 +19,6 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
-import SetDataset from 'libraries/dataset/set';
-import SkillDataset from 'libraries/dataset/skill';
 import JewelDataset from 'libraries/dataset/jewel';
 import CommonDataset from 'libraries/dataset/common';
 
@@ -28,10 +26,9 @@ import CommonDataset from 'libraries/dataset/common';
 import FunctionalIcon from 'components/common/functionalIcon';
 
 import EquipBundleSelector from 'components/modal/equipBundleSelector';
-import SetItemSelector from 'components/modal/setItemSelector';
-import SkillItemSelector from 'components/modal/skillItemSelector';
 import EquipItemSelector from 'components/modal/equipItemSelector';
 
+import ConditionOptions from 'components/conditionOptions';
 import CandidateBundles from 'components/candidateBundles';
 import EquipsDisplayer from 'components/equipsDisplayer';
 import CharacterStatus from 'components/characterStatus';
@@ -61,8 +58,6 @@ export default class Main extends Component {
         this.state = {
             isImportEquips: false,
             lang: Status.get('sys:lang'),
-            sets: CommonStates.getters.getRequiredSets(),
-            skills: CommonStates.getters.getRequiredSkills(),
             equips: Status.get('app:equips') || Helper.deepCopy(TestData.equipsList[0]),
             equipsLock: Status.get('app:equipsLock') || Helper.deepCopy(Constant.defaultEquipsLock),
             ignoreEquips: Status.get('app:ignoreEquips') || {}
@@ -290,20 +285,6 @@ export default class Main extends Component {
         });
     };
 
-    handleRequireConditionRefresh = () => {
-        let sets = [];
-        let skills = [];
-
-        // Set Data to Status
-        Status.set('app:sets', sets);
-        Status.set('app:skills', skills);
-
-        this.setState({
-            sets: sets,
-            skills: skills
-        });
-    };
-
     handleEquipsDisplayerRefresh = () => {
         let equips = Helper.deepCopy(Constant.defaultEquips);
         let equipsLock = Helper.deepCopy(Constant.defaultEquipsLock);
@@ -339,8 +320,8 @@ export default class Main extends Component {
     componentDidMount () {
         this.unsubscribe = CommonStates.store.subscribe(() => {
             this.setState({
-                sets: CommonStates.getters.getRequiredSets(),
-                skills: CommonStates.getters.getRequiredSkills()
+                // sets: CommonStates.getters.getRequiredSets(),
+                // skills: CommonStates.getters.getRequiredSkills()
             });
         });
     }
@@ -352,94 +333,6 @@ export default class Main extends Component {
     /**
      * Render Functions
      */
-    renderSelectedSetItems = () => {
-        let sets = this.state.sets;
-
-        return sets.map((data, index) => {
-            let setInfo = SetDataset.getInfo(data.id);
-
-            if (Helper.isEmpty(setInfo)) {
-                return false;
-            }
-
-            let setRequire = setInfo.skills[data.step - 1].require;
-
-            return (
-                <div key={setInfo.id} className="row mhwc-item">
-                    <div className="col-12 mhwc-name">
-                        <span>
-                            {_(setInfo.name)} x {setRequire}
-                        </span>
-
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
-                                iconName="minus-circle" altName={_('down')}
-                                onClick={() => {CommonStates.setters.decreaseRequiredSetStep(index)}} />
-                            <FunctionalIcon
-                                iconName="plus-circle" altName={_('up')}
-                                onClick={() => {CommonStates.setters.increaseRequiredSetStep(index)}} />
-                            <FunctionalIcon
-                                iconName="times" altName={_('clean')}
-                                onClick={() => {CommonStates.setters.removeRequiredSetByIndex(index)}} />
-                        </div>
-                    </div>
-                    <div className="col-12 mhwc-value">
-                        {setInfo.skills.map((skill) => {
-                            if (setRequire < skill.require) {
-                                return false;
-                            }
-
-                            let skillInfo = SkillDataset.getInfo(skill.id);
-
-                            return (Helper.isNotEmpty(skillInfo)) ? (
-                                <div key={skill.id}>
-                                    <span>({skill.require}) {_(skillInfo.name)}</span>
-                                </div>
-                            ) : false;
-                        })}
-                    </div>
-                </div>
-            );
-        });
-    };
-
-    renderSelectedSkillItems = () => {
-        let skills = this.state.skills;
-
-        return skills.map((data, index) => {
-            let skillInfo = SkillDataset.getInfo(data.id);
-
-            return (Helper.isNotEmpty(skillInfo)) ? (
-                <div key={skillInfo.id} className="row mhwc-item">
-                    <div className="col-12 mhwc-name">
-                        <span>
-                            {_(skillInfo.name)} Lv.{data.level} / {skillInfo.list.length}
-                        </span>
-
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
-                                iconName="minus-circle" altName={_('down')}
-                                onClick={() => {CommonStates.setters.decreaseRequiredSkillLevel(index)}} />
-                            <FunctionalIcon
-                                iconName="plus-circle" altName={_('up')}
-                                onClick={() => {CommonStates.setters.increaseRequiredSkillLevel(index)}} />
-                            <FunctionalIcon
-                                iconName="times" altName={_('clean')}
-                                onClick={() => {CommonStates.setters.removeRequiredSkillByIndex(index)}} />
-                        </div>
-                    </div>
-                    <div className="col-12 mhwc-value">
-                        <span>
-                            {(0 !== data.level)
-                                ? _(skillInfo.list[data.level - 1].description)
-                                : _('skillLevelZero')}
-                        </span>
-                    </div>
-                </div>
-            ) : false;
-        });
-    };
-
     render () {
         return (
             <div key={this.state.lang} id="mhwc-app" className="container-fluid">
@@ -471,28 +364,7 @@ export default class Main extends Component {
                 </div>
 
                 <div className="row mhwc-container">
-                    <div className="col mhwc-conditions">
-                        <div className="mhwc-section_name">
-                            <span className="mhwc-title">{_('requireCondition')}</span>
-
-                            <div className="mhwc-icons_bundle">
-                                <FunctionalIcon
-                                    iconName="refresh" altName={_('reset')}
-                                    onClick={this.handleRequireConditionRefresh} />
-                                <FunctionalIcon
-                                    iconName="plus" altName={_('skill')}
-                                    onClick={ModalStates.setters.showSkillItemSelector} />
-                                <FunctionalIcon
-                                    iconName="plus" altName={_('set')}
-                                    onClick={ModalStates.setters.showSetItemSelector} />
-                            </div>
-                        </div>
-
-                        <div className="mhwc-list">
-                            {this.renderSelectedSetItems()}
-                            {this.renderSelectedSkillItems()}
-                        </div>
-                    </div>
+                    <ConditionOptions />
 
                     <div className="col mhwc-bundles">
                         <div className="mhwc-section_name">
@@ -567,16 +439,6 @@ export default class Main extends Component {
                 <EquipBundleSelector
                     data={this.state.equips}
                     onPickUp={this.handleEquipBundleSelectorPickUp} />
-
-                <SetItemSelector
-                    data={this.state.sets}
-                    onPickUp={CommonStates.setters.addRequiredSet}
-                    onThrowDown={CommonStates.setters.removeRequiredSet} />
-
-                <SkillItemSelector
-                    data={this.state.skills}
-                    onPickUp={CommonStates.setters.addRequiredSkill}
-                    onThrowDown={CommonStates.setters.removeRequiredSkill} />
 
                 <EquipItemSelector
                     ignoreEquips={this.state.ignoreEquips}

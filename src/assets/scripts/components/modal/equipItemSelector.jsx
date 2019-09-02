@@ -49,8 +49,8 @@ export default class EquipItemSelector extends Component {
 
         // Initial State
         this.state = {
-            data: ModalStates.getters.getEquipItemSelectorData(),
             isShow: ModalStates.getters.isShowEquipItemSelector(),
+            data: ModalStates.getters.getEquipItemSelectorData(),
             mode: null,
             includeList: [],
             ignoreList: [],
@@ -128,14 +128,14 @@ export default class EquipItemSelector extends Component {
      * Lifecycle Functions
      */
     static getDerivedStateFromProps (nextProps, prevState) {
+        if (Helper.isEmpty(prevState.data)) {
+            return {};
+        }
+
         let mode = null;
         let includeList = [];
         let ignoreList = [];
         let type = null;
-
-        if (null === prevState.data) {
-            return {};
-        }
 
         if (Helper.isNotEmpty(prevState.data.enhanceIndex)) {
             mode = 'enhance';

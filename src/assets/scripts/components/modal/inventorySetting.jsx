@@ -29,11 +29,6 @@ import ModalStates from 'states/modal';
 
 export default class InventorySetting extends Component {
 
-    // Default Props
-    static defaultProps = {
-
-    };
-
     constructor (props) {
         super(props);
 

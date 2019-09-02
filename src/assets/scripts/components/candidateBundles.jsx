@@ -47,7 +47,7 @@ export default class CandidateBundles extends Component {
 
         // Initial State
         this.state = {
-            bundleList: CommonStates.getters.getComputedBundles(),
+            computedBundles: CommonStates.getters.getComputedBundles(),
             bundleLimit: 25,
             searchTime: null,
             isSearching: false
@@ -58,9 +58,9 @@ export default class CandidateBundles extends Component {
      * Handle Functions
      */
     handleBundlePickUp = (index) => {
-        let bundleList = this.state.bundleList;
+        let computedBundles = this.state.computedBundles;
 
-        this.props.onPickUp(bundleList[index]);
+        this.props.onPickUp(computedBundles[index]);
     };
 
     handleLimitChange = () => {
@@ -78,7 +78,7 @@ export default class CandidateBundles extends Component {
     componentDidMount () {
         this.unsubscribe = CommonStates.store.subscribe(() => {
             this.setState({
-                bundleList: CommonStates.getters.getComputedBundles()
+                computedBundles: CommonStates.getters.getComputedBundles()
             });
         });
 
@@ -87,13 +87,16 @@ export default class CandidateBundles extends Component {
                 isSearching: true
             });
 
+            let requiredSets = CommonStates.getters.getRequiredSets();
+            let requiredSkills = CommonStates.getters.getRequiredSkills();
+
             setTimeout(() => {
                 let startTime = new Date().getTime();
-                let bundleList = FittingAlgorithm.search(
+                let computedBundles = FittingAlgorithm.search(
                     data.equips,
                     data.ignoreEquips,
-                    data.sets,
-                    data.skills,
+                    requiredSets,
+                    requiredSkills,
                     this.state.bundleLimit
                 );
                 let stopTime = new Date().getTime();
@@ -101,16 +104,16 @@ export default class CandidateBundles extends Component {
                 let weaponEnhanceIds = Helper.isNotEmpty(data.equips.weapon)
                     ? data.equips.weapon.enhanceIds : null;
 
-                bundleList.map((bundle) => {
+                computedBundles.map((bundle) => {
                     bundle.meta.weaponEnhanceIds = weaponEnhanceIds;
 
                     return bundle;
                 });
 
-                Helper.log('Bundle List:', bundleList);
+                Helper.log('Bundle List:', computedBundles);
                 Helper.log('Search Time:', searchTime);
 
-                CommonStates.setters.saveComputedBundles(bundleList);
+                CommonStates.setters.saveComputedBundles(computedBundles);
 
                 this.setState({
                     isSearching: false
@@ -129,10 +132,10 @@ export default class CandidateBundles extends Component {
      * Render Functions
      */
     renderBundleItems = () => {
-        let bundleList = this.state.bundleList;
+        let computedBundles = this.state.computedBundles;
         let bundleLimit = this.state.bundleLimit;
 
-        return bundleList.map((data, index) => {
+        return computedBundles.map((data, index) => {
             return (
                 <div key={index} className="row mhwc-bundle">
                     <div className="col-12 mhwc-name">

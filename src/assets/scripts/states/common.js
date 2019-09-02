@@ -43,6 +43,8 @@ const Store = createStore((state, action) => {
     Helper.log('Common States', action);
 
     switch (action.type) {
+
+    // Required Sets
     case 'ADD_REQUIRED_SET':
         Status.set('requiredSets', (() => {
             let requiredSets = state.requiredSets;
@@ -125,6 +127,14 @@ const Store = createStore((state, action) => {
         return Object.assign({}, state, {
             requiredSets: Status.get('requiredSets')
         });
+    case 'CLEAN_REQUIRED_SETS':
+        Status.set('requiredSets', []);
+
+        return Object.assign({}, state, {
+            requiredSets: Status.get('requiredSets')
+        });
+
+    // Required Skills
     case 'ADD_REQUIRED_SKILL':
         Status.set('requiredSkills', (() => {
             let requiredSkills = state.requiredSkills;
@@ -207,6 +217,12 @@ const Store = createStore((state, action) => {
         return Object.assign({}, state, {
             requiredSkills: Status.get('requiredSkills')
         });
+    case 'CLEAN_REQUIRED_SKILLS':
+        Status.set('requiredSkills', []);
+
+        return Object.assign({}, state, {
+            requiredSkills: Status.get('requiredSkills')
+        });
 
     // case 'REQUIRED_EQUIP_PARTS':
     //     return Object.assign({}, state, {
@@ -225,6 +241,7 @@ const Store = createStore((state, action) => {
     //         algorithmParams: action.payload.data
     //     });
 
+    // Computed Bundles
     case 'UPDATE_COMPUTED_BUNDLES':
         Status.set('computedBundles', (() => {
             return action.payload.data;
@@ -233,6 +250,8 @@ const Store = createStore((state, action) => {
         return Object.assign({}, state, {
             computedBundles: Status.get('computedBundles')
         });
+
+    // Reserved Bundles
     case 'ADD_RESERVED_BUNDLE':
         Status.set('reservedBundles', (() => {
             let reservedBundles = state.reservedBundles;
@@ -245,12 +264,16 @@ const Store = createStore((state, action) => {
         return Object.assign({}, state, {
             reservedBundles: Status.get('reservedBundles')
         });
+
+    // Default
     default:
         return state
     }
 });
 
 const Setters = {
+
+    // Required Sets
     addRequiredSet: (data) => {
         Store.dispatch({
             type: 'ADD_REQUIRED_SET',
@@ -291,6 +314,13 @@ const Setters = {
             }
         });
     },
+    cleanRequiredSets: () => {
+        Store.dispatch({
+            type: 'CLEAN_REQUIRED_SETS'
+        });
+    },
+
+    // Required Skills
     addRequiredSkill: (data) => {
         Store.dispatch({
             type: 'ADD_REQUIRED_SKILL',
@@ -331,9 +361,15 @@ const Setters = {
             }
         });
     },
+    cleanRequiredSkills: () => {
+        Store.dispatch({
+            type: 'CLEAN_REQUIRED_SKILLS'
+        });
+    },
 
     /////
 
+    // Computed Bundles
     saveComputedBundles: (data) => {
         Store.dispatch({
             type: 'UPDATE_COMPUTED_BUNDLES',
@@ -350,6 +386,8 @@ const Setters = {
             }
         });
     },
+
+    // Reserved Bundles
     addReservedBundle: (data) => {
         Store.dispatch({
             type: 'ADD_RESERVED_BUNDLE',

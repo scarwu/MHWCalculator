@@ -22,22 +22,11 @@ import SkillDataset from 'libraries/dataset/skill';
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
 
-// Load Constant
-import Constant from 'constant';
-
 // Load State Control
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
 export default class SetItemSelector extends Component {
-
-    // Default Props
-    static defaultProps = {
-        data: {},
-        onPickUp: (data) => {},
-        onThrowDown: (data) => {},
-        onClose: () => {}
-    };
 
     constructor (props) {
         super(props);
@@ -45,7 +34,7 @@ export default class SetItemSelector extends Component {
         // Initial State
         this.state = {
             isShow: ModalStates.getters.isShowSetItemSelector(),
-            data: {},
+            requiredSets: CommonStates.getters.getRequiredSets(),
             list: [],
             segment: null,
             selectedList: [],
@@ -69,13 +58,13 @@ export default class SetItemSelector extends Component {
     };
 
     handleItemPickUp = (itemId) => {
-        this.props.onPickUp({
+        CommonStates.setters.addRequiredSet({
             setId: itemId
         });
     };
 
     handleItemThrowDown = (itemId) => {
-        this.props.onThrowDown({
+        CommonStates.setters.removeRequiredSet({
             setId: itemId
         });
     };
@@ -95,12 +84,16 @@ export default class SetItemSelector extends Component {
      * Lifecycle Functions
      */
     static getDerivedStateFromProps (nextProps, prevState) {
-        let selectedList = [];
-        let unselectedList = [];
+        if (Helper.isEmpty(prevState.requiredSets)) {
+            return {};
+        }
 
-        let idList = nextProps.data.map((set) => {
+        let idList = prevState.requiredSets.map((set) => {
             return set.id;
         });
+
+        let selectedList = [];
+        let unselectedList = [];
 
         SetDataset.getNames().sort().forEach((setId) => {
             let set = SetDataset.getInfo(setId);
@@ -124,7 +117,13 @@ export default class SetItemSelector extends Component {
     }
 
     componentDidMount () {
-        this.unsubscribe = ModalStates.store.subscribe(() => {
+        this.unsubscribeCommon = CommonStates.store.subscribe(() => {
+            this.setState({
+                requiredSets: CommonStates.getters.getRequiredSets()
+            });
+        });
+
+        this.unsubscribeModal = ModalStates.store.subscribe(() => {
             this.setState({
                 isShow: ModalStates.getters.isShowSetItemSelector()
             });
@@ -132,7 +131,8 @@ export default class SetItemSelector extends Component {
     }
 
     componentWillUnmount(){
-        this.unsubscribe();
+        this.unsubscribeCommon();
+        this.unsubscribeModal();
     }
 
     /**
