@@ -10,6 +10,7 @@
 
 // Load Libraries
 import React, { Component } from 'react';
+import MD5 from 'md5';
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -61,58 +62,30 @@ export default class EquipBundleSelector extends Component {
     };
 
     handleBundleSave = (index) => {
-        let bundleId = (Helper.isNotEmpty(index))
-            ? this.refs['bundleId_' + index].value
-            : this.refs.bundleId.value;
+        let name = Helper.isNotEmpty(index)
+            ? this.refs['name_' + index].value
+            : this.refs.name.value;
 
-        if (0 === bundleId.length) {
+        if (0 === name.length) {
             return;
         }
 
-        let reservedBundles = this.state.reservedBundles;
-
         if (Helper.isNotEmpty(index)) {
-            let equipBundle = reservedBundles[index];
-
-            equipBundle.id = bundleId;
-
-            // Set Data to Status
-            Status.set('equipBundleSelector:reservedBundles', reservedBundles);
-
-            this.setState({
-                reservedBundles: reservedBundles
+            CommonStates.setters.updateReservedBundleName({
+                index: index,
+                name: name
             });
         } else {
-            reservedBundles.push({
-                id: bundleId,
+            CommonStates.setters.addReservedBundle({
+                id: MD5(JSON.stringify(this.state.equips)),
+                name: name,
                 equips: this.state.equips
-            });
-
-            // Set Data to Status
-            Status.set('equipBundleSelector:reservedBundles', reservedBundles);
-
-            this.setState({
-                equips: null,
-                reservedBundles: reservedBundles
             });
         }
     };
 
     handleBundleRemove = (index) => {
-        let reservedBundles = this.state.reservedBundles;
-
-        delete reservedBundles[index];
-
-        reservedBundles = reservedBundles.filter((euqipBundle) => {
-            return (Helper.isNotEmpty(euqipBundle));
-        });
-
-        // Set Data to Status
-        Status.set('equipBundleSelector:reservedBundles', reservedBundles);
-
-        this.setState({
-            reservedBundles: reservedBundles
-        });
+        CommonStates.setters.removeReservedBundle(index);
     };
 
     handleBundlePickUp = (index) => {
@@ -145,7 +118,7 @@ export default class EquipBundleSelector extends Component {
     }
 
     componentDidMount () {
-        this.unsubscribeCommon = ModalStates.store.subscribe(() => {
+        this.unsubscribeCommon = CommonStates.store.subscribe(() => {
             this.setState({
                 reservedBundles: CommonStates.getters.getReservedBundles(),
                 currentEquips: CommonStates.getters.getCurrentEquips()
@@ -178,7 +151,7 @@ export default class EquipBundleSelector extends Component {
 
         return (
             <tr key={data.id}>
-                <td><input type="text" placeholder={_('inputName')} ref={'bundleId_' + index} defaultValue={data.id} /></td>
+                <td><input type="text" placeholder={_('inputName')} ref={'name_' + index} defaultValue={data.name} /></td>
                 <td><span>{(Helper.isNotEmpty(weaponInfo)) ? _(weaponInfo.name) : false}</span></td>
                 <td><span>{(Helper.isNotEmpty(helmInfo)) ? _(helmInfo.name) : false}</span></td>
                 <td><span>{(Helper.isNotEmpty(chestInfo)) ? _(chestInfo.name) : false}</span></td>
@@ -220,7 +193,7 @@ export default class EquipBundleSelector extends Component {
 
             DefaultRow = (
                 <tr>
-                    <td><input type="text" placeholder={_('inputName')} ref="bundleId" /></td>
+                    <td><input type="text" placeholder={_('inputName')} ref="name" /></td>
                     <td><span>{(Helper.isNotEmpty(weaponInfo)) ? _(weaponInfo.name) : false}</span></td>
                     <td><span>{(Helper.isNotEmpty(helmInfo)) ? _(helmInfo.name) : false}</span></td>
                     <td><span>{(Helper.isNotEmpty(chestInfo)) ? _(chestInfo.name) : false}</span></td>

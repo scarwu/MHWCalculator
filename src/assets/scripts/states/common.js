@@ -36,7 +36,7 @@ const Store = createStore((state, action) => {
             inventory: Status.get('state:inventory') || {},
             algorithmParams: Status.get('state:algorithmParams') || {},
             computedBundles: Status.get('state:computedBundles') || [],
-            reservedBundles: Status.get('state:reservedEquipBundles') || []
+            reservedBundles: Status.get('state:reservedBundles') || []
         };
     }
 
@@ -342,7 +342,43 @@ const Store = createStore((state, action) => {
         Status.set('state:reservedBundles', (() => {
             let reservedBundles = state.reservedBundles;
 
-            reservedBundles.add(action.payload.data);
+            reservedBundles.push(action.payload.data);
+
+            return reservedBundles;
+        })());
+
+        return Object.assign({}, state, {
+            reservedBundles: Status.get('state:reservedBundles')
+        });
+    case 'UPDATE_RESERVED_BUNDLE_NAME':
+        Status.set('state:reservedBundles', (() => {
+            let reservedBundles = state.reservedBundles;
+
+            if (Helper.isEmpty(reservedBundles[action.payload.index])) {
+                return reservedBundles;
+            }
+
+            reservedBundles[action.payload.index].name = action.payload.name;
+
+            return reservedBundles;
+        })());
+
+        return Object.assign({}, state, {
+            reservedBundles: Status.get('state:reservedBundles')
+        });
+    case 'REMOVE_RESERVED_BUNDLE':
+        Status.set('state:reservedBundles', (() => {
+            let reservedBundles = state.reservedBundles;
+
+            if (Helper.isEmpty(reservedBundles[action.payload.index])) {
+                return reservedBundles;
+            }
+
+            delete reservedBundles[action.payload.index];
+
+            reservedBundles = reservedBundles.filter((euqipBundle) => {
+                return (Helper.isNotEmpty(euqipBundle));
+            });
 
             return reservedBundles;
         })());
@@ -526,6 +562,23 @@ const Setters = {
             type: 'ADD_RESERVED_BUNDLE',
             payload: {
                 data: data
+            }
+        });
+    },
+    updateReservedBundleName: (index, name) => {
+        Store.dispatch({
+            type: 'UPDATE_RESERVED_BUNDLE_NAME',
+            payload: {
+                index: index,
+                name: name
+            }
+        });
+    },
+    removeReservedBundle: (index) => {
+        Store.dispatch({
+            type: 'REMOVE_RESERVED_BUNDLE',
+            payload: {
+                index: index
             }
         });
     }
