@@ -13,6 +13,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 // Load Core Libraries
 import Status from 'core/status';
+import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
@@ -24,9 +25,15 @@ import FunctionalIcon from 'components/common/functionalIcon';
 import ModalStates from 'states/modal';
 
 // Load Markdown
-import zhTW from 'files/md/langs/zhTW/changelog.md';
-import jaJP from 'files/md/langs/jaJP/changelog.md';
-import enUS from 'files/md/langs/enUS/changelog.md';
+import zhTWChangelog from 'files/md/langs/zhTW/changelog.md';
+import jaJPChangelog from 'files/md/langs/jaJP/changelog.md';
+import enUSChangelog from 'files/md/langs/enUS/changelog.md';
+
+let ChangelogMap = {
+    zhTW: zhTWChangelog,
+    jaJP: jaJPChangelog,
+    enUS: enUSChangelog
+};
 
 export default function (props) {
     const modalRef = useRef();
@@ -61,13 +68,8 @@ export default function (props) {
      * Render Functions
      */
     let renderChangelog = () => {
-        let LogMap = {
-            zhTW: zhTW,
-            jaJP: jaJP,
-            enUS: enUS
-        };
-
-        return LogMap[Status.get('sys:lang')];
+        return Helper.isNotEmpty(ChangelogMap[Status.get('sys:lang')])
+            ? ChangelogMap[Status.get('sys:lang')] : false;
     };
 
     return isShow ? (

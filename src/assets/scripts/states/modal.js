@@ -53,42 +53,42 @@ const Store = createStore((state, action) => {
     Helper.log('Modal States', action);
 
     switch (action.type) {
-    case 'CHANGE_INVENTORY_SETTING':
+    case 'UPDATE_INVENTORY_SETTING':
         return Object.assign({}, state, {
             inventorySetting: {
                 isShow: action.payload.isShow,
                 data: action.payload.data
             }
         });
-    case 'CHANGE_EQUIP_BUNDLE_SELECTOR':
+    case 'UPDATE_EQUIP_BUNDLE_SELECTOR':
         return Object.assign({}, state, {
             equipBundleSelector: {
                 isShow: action.payload.isShow,
                 data: action.payload.data
             }
         });
-    case 'CHANGE_SET_ITEM_SELECTOR':
+    case 'UPDATE_SET_ITEM_SELECTOR':
         return Object.assign({}, state, {
             setItemSelector: {
                 isShow: action.payload.isShow,
                 data: action.payload.data
             }
         });
-    case 'CHANGE_SKILL_ITEM_SELECTOR':
+    case 'UPDATE_SKILL_ITEM_SELECTOR':
         return Object.assign({}, state, {
             skillItemSelector: {
                 isShow: action.payload.isShow,
                 data: action.payload.data
             }
         });
-    case 'CHANGE_EQUIP_ITEM_SELECTOR':
+    case 'UPDATE_EQUIP_ITEM_SELECTOR':
         return Object.assign({}, state, {
             equipItemSelector: {
                 isShow: action.payload.isShow,
                 data: action.payload.data
             }
         });
-    case 'CHANGE_CHANGELOG':
+    case 'UPDATE_CHANGELOG':
         return Object.assign({}, state, {
             changelog: {
                 isShow: action.payload.isShow,
@@ -103,7 +103,7 @@ const Store = createStore((state, action) => {
 const Setters = {
     showInventorySetting: (data = null) => {
         Store.dispatch({
-            type: 'CHANGE_INVENTORY_SETTING',
+            type: 'UPDATE_INVENTORY_SETTING',
             payload: {
                 isShow: true,
                 data: data
@@ -112,7 +112,7 @@ const Setters = {
     },
     hideInventorySetting: () => {
         Store.dispatch({
-            type: 'CHANGE_INVENTORY_SETTING',
+            type: 'UPDATE_INVENTORY_SETTING',
             payload: {
                 isShow: false,
                 data: null
@@ -121,7 +121,7 @@ const Setters = {
     },
     showEquipBundleSelector: (data = null) => {
         Store.dispatch({
-            type: 'CHANGE_EQUIP_BUNDLE_SELECTOR',
+            type: 'UPDATE_EQUIP_BUNDLE_SELECTOR',
             payload: {
                 isShow: true,
                 data: data
@@ -130,7 +130,7 @@ const Setters = {
     },
     hideEquipBundleSelector: () => {
         Store.dispatch({
-            type: 'CHANGE_EQUIP_BUNDLE_SELECTOR',
+            type: 'UPDATE_EQUIP_BUNDLE_SELECTOR',
             payload: {
                 isShow: false,
                 data: null
@@ -139,7 +139,7 @@ const Setters = {
     },
     showSetItemSelector: (data = null) => {
         Store.dispatch({
-            type: 'CHANGE_SET_ITEM_SELECTOR',
+            type: 'UPDATE_SET_ITEM_SELECTOR',
             payload: {
                 isShow: true,
                 data: data
@@ -148,7 +148,7 @@ const Setters = {
     },
     hideSetItemSelector: () => {
         Store.dispatch({
-            type: 'CHANGE_SET_ITEM_SELECTOR',
+            type: 'UPDATE_SET_ITEM_SELECTOR',
             payload: {
                 isShow: false,
                 data: null
@@ -157,7 +157,7 @@ const Setters = {
     },
     showSkillItemSelector: (data = null) => {
         Store.dispatch({
-            type: 'CHANGE_SKILL_ITEM_SELECTOR',
+            type: 'UPDATE_SKILL_ITEM_SELECTOR',
             payload: {
                 isShow: true,
                 data: data
@@ -166,7 +166,7 @@ const Setters = {
     },
     hideSkillItemSelector: () => {
         Store.dispatch({
-            type: 'CHANGE_SKILL_ITEM_SELECTOR',
+            type: 'UPDATE_SKILL_ITEM_SELECTOR',
             payload: {
                 isShow: false,
                 data: null
@@ -175,7 +175,7 @@ const Setters = {
     },
     showEquipItemSelector: (data = null) => {
         Store.dispatch({
-            type: 'CHANGE_EQUIP_ITEM_SELECTOR',
+            type: 'UPDATE_EQUIP_ITEM_SELECTOR',
             payload: {
                 isShow: true,
                 data: data
@@ -184,7 +184,7 @@ const Setters = {
     },
     hideEquipItemSelector: () => {
         Store.dispatch({
-            type: 'CHANGE_EQUIP_ITEM_SELECTOR',
+            type: 'UPDATE_EQUIP_ITEM_SELECTOR',
             payload: {
                 isShow: false,
                 data: null
@@ -193,7 +193,7 @@ const Setters = {
     },
     showChangelog: (data = null) => {
         Store.dispatch({
-            type: 'CHANGE_CHANGELOG',
+            type: 'UPDATE_CHANGELOG',
             payload: {
                 isShow: true,
                 data: data
@@ -202,7 +202,7 @@ const Setters = {
     },
     hideChangelog: () => {
         Store.dispatch({
-            type: 'CHANGE_CHANGELOG',
+            type: 'UPDATE_CHANGELOG',
             payload: {
                 isShow: false,
                 data: null

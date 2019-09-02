@@ -24,6 +24,7 @@ import FunctionalIcon from 'components/common/functionalIcon';
 import Constant from 'constant';
 
 // Load State Control
+import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
 export default class InventorySetting extends Component {

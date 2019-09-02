@@ -252,13 +252,8 @@ $panel-height: 40px;
         }
     }
 
-    > .mhwc-bundles {
-        .mhwc-list {
-            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height} + #{$panel-height}));
-        }
-    }
-
     > .mhwc-conditions,
+    > .mhwc-bundles,
     > .mhwc-equips,
     > .mhwc-status {
         .mhwc-list {

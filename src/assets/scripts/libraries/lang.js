@@ -34,8 +34,8 @@ let browserLnag = navigator.language.replace('-', '');
 let currentLang = Status.get('sys:lang');
 
 // Decide Current Lang
-currentLang = (Helper.isNotEmpty(Constant.langs[currentLang]))
-    ? currentLang : (Helper.isNotEmpty(Constant.langs[browserLnag]))
+currentLang = Helper.isNotEmpty(Constant.langs[currentLang])
+    ? currentLang : Helper.isNotEmpty(Constant.langs[browserLnag])
         ? browserLnag : defaultLang;
 
 // Set Status

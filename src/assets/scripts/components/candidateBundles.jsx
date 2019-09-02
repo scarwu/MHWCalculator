@@ -31,6 +31,9 @@ import FunctionalIcon from 'components/common/functionalIcon';
 // Load Constant
 import Constant from 'constant';
 
+// Load State Control
+import CommonStates from 'states/common';
+
 export default class CandidateBundles extends Component {
 
     // Default Props
@@ -43,9 +46,9 @@ export default class CandidateBundles extends Component {
 
         // Initial State
         this.state = {
-            bundleList: Status.get('candidateBundles:bundleList') || [],
+            bundleList: CommonStates.getters.getComputedBundles(),
             bundleLimit: 25,
-            searchTime: Status.get('candidateBundles:searchTime') || null,
+            searchTime: null,
             isSearching: false
         };
     }
@@ -72,6 +75,12 @@ export default class CandidateBundles extends Component {
      * Lifecycle Functions
      */
     componentDidMount () {
+        this.unsubscribe = CommonStates.store.subscribe(() => {
+            this.setState({
+                bundleList: CommonStates.getters.getComputedBundles()
+            });
+        });
+
         Event.on('SearchCandidateEquips', 'CandidateBundles', (data) => {
             this.setState({
                 isSearching: true
@@ -100,13 +109,9 @@ export default class CandidateBundles extends Component {
                 Helper.log('Bundle List:', bundleList);
                 Helper.log('Search Time:', searchTime);
 
-                // Set Data to Status
-                Status.set('candidateBundles:bundleList', bundleList);
-                Status.set('candidateBundles:searchTime', searchTime);
+                CommonStates.setters.saveComputedBundles(bundleList);
 
                 this.setState({
-                    bundleList: bundleList,
-                    searchTime: searchTime,
                     isSearching: false
                 });
             }, 100);
@@ -114,6 +119,8 @@ export default class CandidateBundles extends Component {
     }
 
     componentWillUnmount () {
+        this.unsubscribe();
+
         Event.off('SearchCandidateEquips', 'CandidateBundles');
     }
 
@@ -275,30 +282,16 @@ export default class CandidateBundles extends Component {
     };
 
     render () {
-        return [(
-            <div key="bar" className="row mhwc-panel">
+        return (
+            <div key="list" className="mhwc-list">
                 {true === this.state.isSearching ? (
                     <div className="mhwc-mask">
                         <i className="fa fa-spin fa-spinner"></i>
                     </div>
                 ) : false}
 
-                {(Helper.isNotEmpty(this.state.searchTime)) ? (
-                    <div className="row mhwc-search_info">
-                        <div className="col-12">
-                            <span>
-                                {_('searchResult1').replace('%s', this.state.searchTime)}
-                                <input type="text" defaultValue={this.state.bundleLimit} ref="bundleLimit" onChange={this.handleLimitChange} />
-                                {_('searchResult2').replace('%s', this.state.bundleList.length)}
-                            </span>
-                        </div>
-                    </div>
-                ) : false}
-            </div>
-        ), (
-            <div key="list" className="mhwc-list">
                 {this.renderBundleItems()}
             </div>
-        )];
+        );
     }
 }

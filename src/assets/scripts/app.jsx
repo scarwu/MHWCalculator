@@ -41,6 +41,7 @@ import Config from 'config';
 import Constant from 'constant';
 
 // Load State Control
+import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
 // Load Json
@@ -268,21 +269,6 @@ export default class Main extends Component {
         this.setState({
             skills: skills
         });
-    };
-
-    handleCandidateBundlesRefresh = () => {
-        let bundleList = [];
-
-        // Set Data to Status
-        Status.set('candidateBundles:bundleList', bundleList);
-
-        this.setState({
-            bundleList: bundleList
-        });
-    };
-
-    handleCandidateBundlesSetting = () => {
-
     };
 
     handleCandidateBundlesSearch = () => {
@@ -688,10 +674,10 @@ export default class Main extends Component {
                             <div className="mhwc-icons_bundle">
                                 <FunctionalIcon
                                     iconName="refresh" altName={_('reset')}
-                                    onClick={this.handleCandidateBundlesRefresh} />
+                                    onClick={CommonStates.setters.cleanComputedBundles} />
                                 <FunctionalIcon
                                     iconName="cog" altName={_('setting')}
-                                    onClick={this.handleCandidateBundlesSetting} />
+                                    onClick={() => {}} />
                                 <FunctionalIcon
                                     iconName="search" altName={_('search')}
                                     onClick={this.handleCandidateBundlesSearch} />

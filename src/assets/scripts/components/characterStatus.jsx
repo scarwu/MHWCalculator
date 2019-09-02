@@ -29,6 +29,9 @@ import SharpnessBar from 'components/common/sharpnessBar';
 // Load Constant
 import Constant from 'constant';
 
+// Load State Control
+import CommonStates from 'states/common';
+
 /**
  * Generate Functions
  */
