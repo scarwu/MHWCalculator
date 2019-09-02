@@ -61,8 +61,8 @@ export default class Main extends Component {
         this.state = {
             isImportEquips: false,
             lang: Status.get('sys:lang'),
-            sets: Status.get('app:sets') || Helper.deepCopy(TestData.requireList[0]).sets,
-            skills: Status.get('app:skills') || Helper.deepCopy(TestData.requireList[0]).skills,
+            sets: CommonStates.getters.getRequiredSets(),
+            skills: CommonStates.getters.getRequiredSkills(),
             equips: Status.get('app:equips') || Helper.deepCopy(TestData.equipsList[0]),
             equipsLock: Status.get('app:equipsLock') || Helper.deepCopy(Constant.defaultEquipsLock),
             ignoreEquips: Status.get('app:ignoreEquips') || {}
@@ -94,180 +94,6 @@ export default class Main extends Component {
 
         this.setState({
             lang: lang
-        });
-    };
-
-    handleSetStepDown = (index) => {
-        let sets = this.state.sets;
-
-        if (1 === sets[index].step) {
-            return false;
-        }
-
-        sets[index].step -= 1;
-
-        // Set Data to Status
-        Status.set('app:sets', sets);
-
-        this.setState({
-            sets: sets
-        });
-    };
-
-    handleSetStepUp = (index) => {
-        let sets = this.state.sets;
-        let setInfo = SetDataset.getInfo(sets[index].id);
-
-        if (Helper.isEmpty(setInfo)) {
-            return false;
-        }
-
-        if (setInfo.skills.length === sets[index].step) {
-            return false;
-        }
-
-        sets[index].step += 1;
-
-        // Set Data to Status
-        Status.set('app:sets', sets);
-
-        this.setState({
-            sets: sets
-        });
-    };
-
-    handleSetItemSelectorPickUp = (data) => {
-        let sets = this.state.sets;
-
-        sets.push({
-            id: data.setId,
-            step: 1
-        });
-
-        // Set Data to Status
-        Status.set('app:sets', sets);
-
-        this.setState({
-            sets: sets
-        });
-    };
-
-    handleSetItemSelectorThrowDown = (data) => {
-        let sets = this.state.sets;
-
-        sets = sets.filter((set) => {
-            return set.id !== data.setId;
-        });
-
-        // Set Data to Status
-        Status.set('app:sets', sets);
-
-        this.setState({
-            sets: sets
-        });
-    };
-
-    handleSetRemove = (index) => {
-        let sets = this.state.sets;
-
-        delete sets[index];
-
-        sets = sets.filter((set) => {
-            return (Helper.isNotEmpty(set));
-        });
-
-        // Set Data to Status
-        Status.set('app:sets', sets);
-
-        this.setState({
-            sets: sets
-        });
-    };
-
-    handleSkillLevelDown = (index) => {
-        let skills = this.state.skills;
-
-        if (0 === skills[index].level) {
-            return false;
-        }
-
-        skills[index].level -= 1;
-
-        // Set Data to Status
-        Status.set('app:skills', skills);
-
-        this.setState({
-            skills: skills
-        });
-    };
-
-    handleSkillLevelUp = (index) => {
-        let skills = this.state.skills;
-        let skillInfo = SkillDataset.getInfo(skills[index].id);
-
-        if (Helper.isEmpty(skillInfo)) {
-            return false;
-        }
-
-        if (skillInfo.list.length === skills[index].level) {
-            return false;
-        }
-
-        skills[index].level += 1;
-
-        // Set Data to Status
-        Status.set('app:skills', skills);
-
-        this.setState({
-            skills: skills
-        });
-    };
-
-    handleSkillItemSelectorPickUp = (data) => {
-        let skills = this.state.skills;
-
-        skills.push({
-            id: data.skillId,
-            level: 1
-        });
-
-        // Set Data to Status
-        Status.set('app:skills', skills);
-
-        this.setState({
-            skills: skills
-        });
-    };
-
-    handleSkillItemSelectorThrowDown = (data) => {
-        let skills = this.state.skills;
-
-        skills = skills.filter((skill) => {
-            return skill.id !== data.skillId;
-        });
-
-        // Set Data to Status
-        Status.set('app:skills', skills);
-
-        this.setState({
-            skills: skills
-        });
-    };
-
-    handleSkillRemove = (index) => {
-        let skills = this.state.skills;
-
-        delete skills[index];
-
-        skills = skills.filter((skill) => {
-            return (Helper.isNotEmpty(skill));
-        });
-
-        // Set Data to Status
-        Status.set('app:skills', skills);
-
-        this.setState({
-            skills: skills
         });
     };
 
@@ -511,15 +337,16 @@ export default class Main extends Component {
     }
 
     componentDidMount () {
-        // this.unsubscribe = ModalStates.store.subscribe(() => {
-        //     this.setState({
-
-        //     });
-        // });
+        this.unsubscribe = CommonStates.store.subscribe(() => {
+            this.setState({
+                sets: CommonStates.getters.getRequiredSets(),
+                skills: CommonStates.getters.getRequiredSkills()
+            });
+        });
     }
 
     componentWillUnmount(){
-        // this.unsubscribe();
+        this.unsubscribe();
     }
 
     /**
@@ -547,13 +374,13 @@ export default class Main extends Component {
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName="minus-circle" altName={_('down')}
-                                onClick={() => {this.handleSetStepDown(index)}} />
+                                onClick={() => {CommonStates.setters.decreaseRequiredSetStep(index)}} />
                             <FunctionalIcon
                                 iconName="plus-circle" altName={_('up')}
-                                onClick={() => {this.handleSetStepUp(index)}} />
+                                onClick={() => {CommonStates.setters.increaseRequiredSetStep(index)}} />
                             <FunctionalIcon
                                 iconName="times" altName={_('clean')}
-                                onClick={() => {this.handleSetRemove(index)}} />
+                                onClick={() => {CommonStates.setters.removeRequiredSetByIndex(index)}} />
                         </div>
                     </div>
                     <div className="col-12 mhwc-value">
@@ -592,13 +419,13 @@ export default class Main extends Component {
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName="minus-circle" altName={_('down')}
-                                onClick={() => {this.handleSkillLevelDown(index)}} />
+                                onClick={() => {CommonStates.setters.decreaseRequiredSkillLevel(index)}} />
                             <FunctionalIcon
                                 iconName="plus-circle" altName={_('up')}
-                                onClick={() => {this.handleSkillLevelUp(index)}} />
+                                onClick={() => {CommonStates.setters.increaseRequiredSkillLevel(index)}} />
                             <FunctionalIcon
                                 iconName="times" altName={_('clean')}
-                                onClick={() => {this.handleSkillRemove(index)}} />
+                                onClick={() => {CommonStates.setters.removeRequiredSkillByIndex(index)}} />
                         </div>
                     </div>
                     <div className="col-12 mhwc-value">
@@ -743,13 +570,13 @@ export default class Main extends Component {
 
                 <SetItemSelector
                     data={this.state.sets}
-                    onPickUp={this.handleSetItemSelectorPickUp}
-                    onThrowDown={this.handleSetItemSelectorThrowDown} />
+                    onPickUp={CommonStates.setters.addRequiredSet}
+                    onThrowDown={CommonStates.setters.removeRequiredSet} />
 
                 <SkillItemSelector
                     data={this.state.skills}
-                    onPickUp={this.handleSkillItemSelectorPickUp}
-                    onThrowDown={this.handleSkillItemSelectorThrowDown} />
+                    onPickUp={CommonStates.setters.addRequiredSkill}
+                    onThrowDown={CommonStates.setters.removeRequiredSkill} />
 
                 <EquipItemSelector
                     ignoreEquips={this.state.ignoreEquips}

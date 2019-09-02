@@ -23,6 +23,7 @@ import ArmorDataset from 'libraries/dataset/armor';
 import CharmDataset from 'libraries/dataset/charm';
 import JewelDataset from 'libraries/dataset/jewel';
 import SkillDataset from 'libraries/dataset/skill';
+import CommonDataset from 'libraries/dataset/common';
 import FittingAlgorithm from 'libraries/fittingAlgorithm';
 
 // Load Components

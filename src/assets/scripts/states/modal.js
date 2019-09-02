@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Modal States
+ * Modal State
  *
  * @package     MHW Calculator
  * @author      Scar Wu
