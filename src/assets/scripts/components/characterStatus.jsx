@@ -10,10 +10,8 @@
 
 // Load Libraries
 import React, { Component } from 'react';
-import MD5 from 'md5';
 
 // Load Core Libraries
-import Event from 'core/event';
 import Helper from 'core/helper';
 
 // Load Custom Libraries

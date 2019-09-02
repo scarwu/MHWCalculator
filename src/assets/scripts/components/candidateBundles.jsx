@@ -12,7 +12,6 @@
 import React, { Component } from 'react';
 
 // Load Core Libraries
-import Status from 'core/status';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
@@ -33,6 +32,7 @@ import Constant from 'constant';
 
 // Load State Control
 import CommonStates from 'states/common';
+import ModelStates from 'states/modal';
 
 export default class CandidateBundles extends Component {
 

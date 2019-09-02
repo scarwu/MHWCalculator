@@ -10,7 +10,6 @@
 
 // Load Libraries
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -18,8 +17,6 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
-import JewelDataset from 'libraries/dataset/jewel';
-import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
@@ -35,9 +32,6 @@ import Constant from 'constant';
 // Load State Control
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
-
-// Load Json
-import TestData from 'files/json/testData.json';
 
 export default class Main extends Component {
 

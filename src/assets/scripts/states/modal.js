@@ -15,9 +15,8 @@ import { createStore } from 'redux'
 import Status from 'core/status';
 import Helper from 'core/helper';
 
-// Load Config & Constant
+// Load Config
 import Config from 'config';
-import Constant from 'constant';
 
 const Store = createStore((state, action) => {
     if (undefined === state) {

@@ -19,8 +19,7 @@ import Helper from 'core/helper';
 import SetDataset from 'libraries/dataset/set';
 import SkillDataset from 'libraries/dataset/skill';
 
-// Load Config & Constant
-import Config from 'config';
+// Load Constant
 import Constant from 'constant';
 
 // Load Json

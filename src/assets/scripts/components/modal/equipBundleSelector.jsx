@@ -13,7 +13,6 @@ import React, { Component } from 'react';
 import MD5 from 'md5';
 
 // Load Core Libraries
-import Status from 'core/status';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
