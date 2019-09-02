@@ -21,6 +21,10 @@ import Config from 'config';
 const Store = createStore((state, action) => {
     if (undefined === state) {
         state = {
+            algorithmSetting: {
+                isShow: false,
+                data: null
+            },
             inventorySetting: {
                 isShow: false,
                 data: null
@@ -52,6 +56,13 @@ const Store = createStore((state, action) => {
     Helper.log('Modal States', action);
 
     switch (action.type) {
+    case 'UPDATE_ALGORITHM_SETTING':
+        return Object.assign({}, state, {
+            algorithmSetting: {
+                isShow: action.payload.isShow,
+                data: action.payload.data
+            }
+        });
     case 'UPDATE_INVENTORY_SETTING':
         return Object.assign({}, state, {
             inventorySetting: {
@@ -100,6 +111,24 @@ const Store = createStore((state, action) => {
 });
 
 const Setters = {
+    showAlgorithmSetting: (data = null) => {
+        Store.dispatch({
+            type: 'UPDATE_ALGORITHM_SETTING',
+            payload: {
+                isShow: true,
+                data: data
+            }
+        });
+    },
+    hideAlgorithmSetting: (data = null) => {
+        Store.dispatch({
+            type: 'UPDATE_ALGORITHM_SETTING',
+            payload: {
+                isShow: false,
+                data: data
+            }
+        });
+    },
     showInventorySetting: (data = null) => {
         Store.dispatch({
             type: 'UPDATE_INVENTORY_SETTING',
@@ -211,6 +240,12 @@ const Setters = {
 };
 
 const Getters = {
+    isShowAlgorithmSetting: () => {
+        return Store.getState().algorithmSetting.isShow;
+    },
+    getAlgorithmSettingData: () => {
+        return Store.getState().algorithmSetting.data;
+    },
     isShowInventorySetting: () => {
         return Store.getState().inventorySetting.isShow;
     },

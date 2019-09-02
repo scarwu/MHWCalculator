@@ -33,7 +33,7 @@ const Store = createStore((state, action) => {
             requiredEquipPins: Status.get('state:requiredEquipPins') || Helper.deepCopy(Constant.defaultEquipsLock),
             currentEquips: Status.get('state:currentEquips') || Helper.deepCopy(TestData.equipsList[0]),
             inventory: Status.get('state:inventory') || {},
-            algorithmParams: Status.get('state:algorithmParams') || {},
+            algorithmParams: Status.get('state:algorithmParams') || Helper.deepCopy(Constant.default.algorithmParams),
             computedBundles: Status.get('state:computedBundles') || [],
             reservedBundles: Status.get('state:reservedBundles') || []
         };

@@ -84,6 +84,13 @@ export default {
         heavyBowgun: 1.5,
         bow: 1.2
     },
+    default: {
+        algorithmParams: {
+            limit: 25,
+            sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel
+            strategy: 'complete' // complete | speed
+        }
+    },
     defaultCandidateEquip: {
         id: null,
         type: null,

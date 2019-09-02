@@ -32,7 +32,7 @@ import Constant from 'constant';
 
 // Load State Control
 import CommonStates from 'states/common';
-import ModelStates from 'states/modal';
+import ModalStates from 'states/modal';
 
 export default class CandidateBundles extends Component {
 
@@ -80,11 +80,11 @@ export default class CandidateBundles extends Component {
         setTimeout(() => {
             let startTime = new Date().getTime();
             let computedBundles = FittingAlgorithm.search(
-                requiredEquips,
-                inventory,
                 requiredSets,
                 requiredSkills,
-                25
+                requiredEquips,
+                inventory,
+                algorithmParams
             );
             let stopTime = new Date().getTime();
             let searchTime = (stopTime - startTime) / 1000;
@@ -214,11 +214,13 @@ export default class CandidateBundles extends Component {
      * Render Functions
      */
     renderBundleItems = () => {
+        let totalBundle = this.state.computedBundles.length;
+
         return this.state.computedBundles.map((data, index) => {
             return (
                 <div key={index} className="row mhwc-bundle">
                     <div className="col-12 mhwc-name">
-                        <span>{_('bundle')}: {index + 1}</span>
+                        <span>{_('bundle')}: {index + 1} / {totalBundle}</span>
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName="check" altName={_('equip')}
@@ -376,7 +378,7 @@ export default class CandidateBundles extends Component {
                             onClick={CommonStates.setters.cleanComputedBundles} />
                         <FunctionalIcon
                             iconName="cog" altName={_('setting')}
-                            onClick={() => {}} />
+                            onClick={ModalStates.setters.showAlgorithmSetting} />
                         <FunctionalIcon
                             iconName="search" altName={_('search')}
                             onClick={this.handleCandidateBundlesSearch} />

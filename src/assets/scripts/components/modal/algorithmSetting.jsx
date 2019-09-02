@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Changelog
+ * Algorithm Setting
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -22,31 +22,27 @@ import _ from 'libraries/lang';
 import FunctionalIcon from 'components/common/functionalIcon';
 
 // Load State Control
+import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
-
-// Load Markdown
-import zhTWChangelog from 'files/md/langs/zhTW/changelog.md';
-import jaJPChangelog from 'files/md/langs/jaJP/changelog.md';
-import enUSChangelog from 'files/md/langs/enUS/changelog.md';
-
-let ChangelogMap = {
-    zhTW: zhTWChangelog,
-    jaJP: jaJPChangelog,
-    enUS: enUSChangelog
-};
 
 export default function (props) {
     const refModal = useRef();
-    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowChangelog());
-
+    const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonStates.getters.getAlgorithmParams());
+    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowAlgorithmSetting());
+            console.log(stateIsShow)
     // Did Mount & Will Ummount
     useEffect(() => {
-        const unsubscribe = ModalStates.store.subscribe(() => {
-            updateIsShow(ModalStates.getters.isShowChangelog());
+        const unsubscribeCommon = CommonStates.store.subscribe(() => {
+            updateAlgorithmParams(CommonStates.getters.getAlgorithmParams());
+        });
+
+        const unsubscribeModal = ModalStates.store.subscribe(() => {
+            updateIsShow(ModalStates.getters.isShowAlgorithmSetting());
         });
 
         return () => {
-            unsubscribe();
+            unsubscribeCommon();
+            unsubscribeModal();
         };
     }, []);
 
@@ -62,22 +58,17 @@ export default function (props) {
     };
 
     let handleWindowClose = () => {
-        ModalStates.setters.hideChangelog();
+        ModalStates.setters.hideAlgorithmSetting();
     };
 
     /**
      * Render Functions
      */
-    let renderChangelog = () => {
-        return Helper.isNotEmpty(ChangelogMap[Status.get('sys:lang')])
-            ? ChangelogMap[Status.get('sys:lang')] : false;
-    };
-
     return stateIsShow ? (
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
             <div className="mhwc-modal mhwc-slim-modal">
                 <div className="mhwc-panel">
-                    <strong>{_('changelog')}</strong>
+                    <strong>{_('algorithmSetting')}</strong>
 
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
@@ -85,7 +76,9 @@ export default function (props) {
                             onClick={handleWindowClose} />
                     </div>
                 </div>
-                <div className="mhwc-list" dangerouslySetInnerHTML={{__html: renderChangelog()}}></div>
+                <div className="mhwc-list">
+
+                </div>
             </div>
         </div>
     ) : false;
