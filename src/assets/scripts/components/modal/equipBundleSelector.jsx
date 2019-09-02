@@ -33,21 +33,15 @@ import ModalStates from 'states/modal';
 
 export default class EquipBundleSelector extends Component {
 
-    // Default Props
-    static defaultProps = {
-        data: {},
-        onPickUp: (data) => {},
-        onClose: () => {}
-    };
-
     constructor (props) {
         super(props);
 
         // Initial State
         this.state = {
+            reservedBundles: CommonStates.getters.getReservedBundles(),
+            currentEquips: CommonStates.getters.getCurrentEquips(),
             isShow: ModalStates.getters.isShowEquipBundleSelector(),
-            equips: null,
-            equipBundleList: Status.get('equipBundleSelector:equipBundleList') || []
+            equips: null
         };
     }
 
@@ -75,64 +69,64 @@ export default class EquipBundleSelector extends Component {
             return;
         }
 
-        let equipBundleList = this.state.equipBundleList;
+        let reservedBundles = this.state.reservedBundles;
 
         if (Helper.isNotEmpty(index)) {
-            let equipBundle = equipBundleList[index];
+            let equipBundle = reservedBundles[index];
 
             equipBundle.id = bundleId;
 
             // Set Data to Status
-            Status.set('equipBundleSelector:equipBundleList', equipBundleList);
+            Status.set('equipBundleSelector:reservedBundles', reservedBundles);
 
             this.setState({
-                equipBundleList: equipBundleList
+                reservedBundles: reservedBundles
             });
         } else {
-            equipBundleList.push({
+            reservedBundles.push({
                 id: bundleId,
                 equips: this.state.equips
             });
 
             // Set Data to Status
-            Status.set('equipBundleSelector:equipBundleList', equipBundleList);
+            Status.set('equipBundleSelector:reservedBundles', reservedBundles);
 
             this.setState({
                 equips: null,
-                equipBundleList: equipBundleList
+                reservedBundles: reservedBundles
             });
         }
     };
 
     handleBundleRemove = (index) => {
-        let equipBundleList = this.state.equipBundleList;
+        let reservedBundles = this.state.reservedBundles;
 
-        delete equipBundleList[index];
+        delete reservedBundles[index];
 
-        equipBundleList = equipBundleList.filter((euqipBundle) => {
+        reservedBundles = reservedBundles.filter((euqipBundle) => {
             return (Helper.isNotEmpty(euqipBundle));
         });
 
         // Set Data to Status
-        Status.set('equipBundleSelector:equipBundleList', equipBundleList);
+        Status.set('equipBundleSelector:reservedBundles', reservedBundles);
 
         this.setState({
-            equipBundleList: equipBundleList
+            reservedBundles: reservedBundles
         });
     };
 
     handleBundlePickUp = (index) => {
-        let equipBundleList = this.state.equipBundleList;
+        let reservedBundles = this.state.reservedBundles;
 
-        this.props.onPickUp(equipBundleList[index].equips);
-        this.props.onClose();
+        CommonStates.setters.replaceCurrentEquips(reservedBundles[index].equips);
+        ModalStates.setters.hideEquipBundleSelector();
     };
 
     /**
      * Lifecycle Functions
      */
     static getDerivedStateFromProps (nextProps, prevState) {
-        let equips = nextProps.data;
+        let equips = prevState.currentEquips;
 
         if (Helper.isEmpty(equips.weapon.id)
             && Helper.isEmpty(equips.helm.id)
@@ -151,7 +145,14 @@ export default class EquipBundleSelector extends Component {
     }
 
     componentDidMount () {
-        this.unsubscribe = ModalStates.store.subscribe(() => {
+        this.unsubscribeCommon = ModalStates.store.subscribe(() => {
+            this.setState({
+                reservedBundles: CommonStates.getters.getReservedBundles(),
+                currentEquips: CommonStates.getters.getCurrentEquips()
+            });
+        });
+
+        this.unsubscribeModal = ModalStates.store.subscribe(() => {
             this.setState({
                 isShow: ModalStates.getters.isShowEquipBundleSelector()
             });
@@ -159,7 +160,8 @@ export default class EquipBundleSelector extends Component {
     }
 
     componentWillUnmount(){
-        this.unsubscribe();
+        this.unsubscribeCommon();
+        this.unsubscribeModal();
     }
 
     /**
@@ -203,7 +205,7 @@ export default class EquipBundleSelector extends Component {
 
     renderTable = () => {
         let equips = this.state.equips;
-        let equipBundleList = this.state.equipBundleList;
+        let reservedBundles = this.state.reservedBundles;
 
         let DefaultRow = false;
 
@@ -254,7 +256,7 @@ export default class EquipBundleSelector extends Component {
                 </thead>
                 <tbody>
                     {DefaultRow}
-                    {equipBundleList.map(this.renderRow)}
+                    {reservedBundles.map(this.renderRow)}
                 </tbody>
             </table>
         );

@@ -12,7 +12,6 @@
 import React, { Component } from 'react';
 
 // Load Core Libraries
-import Event from 'core/event';
 import Status from 'core/status';
 import Helper from 'core/helper';
 
@@ -48,8 +47,6 @@ export default class CandidateBundles extends Component {
         // Initial State
         this.state = {
             computedBundles: CommonStates.getters.getComputedBundles(),
-            bundleLimit: 25,
-            searchTime: null,
             isSearching: false
         };
     }
@@ -57,19 +54,145 @@ export default class CandidateBundles extends Component {
     /**
      * Handle Functions
      */
-    handleBundlePickUp = (index) => {
-        let computedBundles = this.state.computedBundles;
+    handleCandidateBundlesSearch = () => {
+        let requiredSets = CommonStates.getters.getRequiredSets();
+        let requiredSkills = CommonStates.getters.getRequiredSkills();
+        let requiredEquipPins = CommonStates.getters.getRequiredEquipPins();
+        let currentEquips = CommonStates.getters.getCurrentEquips();
+        let inventory = CommonStates.getters.getInventory();
+        let algorithmParams = CommonStates.getters.getAlgorithmParams();
 
-        this.props.onPickUp(computedBundles[index]);
-    };
+        // Create Required Equips
+        let requiredEquips = {};
 
-    handleLimitChange = () => {
-        let bundleLimit = parseInt(this.refs.bundleLimit.value, 10);
-        bundleLimit = !isNaN(bundleLimit) ? bundleLimit : 0;
+        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
+            if (false === requiredEquipPins[equipType]) {
+                return;
+            }
+
+            requiredEquips[equipType] = currentEquips[equipType];
+        });
 
         this.setState({
-            bundleLimit: bundleLimit
+            isSearching: true
         });
+
+        setTimeout(() => {
+            let startTime = new Date().getTime();
+            let computedBundles = FittingAlgorithm.search(
+                requiredEquips,
+                inventory,
+                requiredSets,
+                requiredSkills,
+                25
+            );
+            let stopTime = new Date().getTime();
+            let searchTime = (stopTime - startTime) / 1000;
+            let weaponEnhanceIds = Helper.isNotEmpty(requiredEquips.weapon)
+                ? requiredEquips.weapon.enhanceIds : null;
+
+            computedBundles.map((bundle) => {
+                bundle.meta.weaponEnhanceIds = weaponEnhanceIds;
+
+                return bundle;
+            });
+
+            Helper.log('Bundle List:', computedBundles);
+            Helper.log('Search Time:', searchTime);
+
+            CommonStates.setters.saveComputedBundles(computedBundles);
+
+            this.setState({
+                isSearching: false
+            });
+        }, 100);
+    };
+
+    handleBundlePickUp = (index) => {
+        let bundle = this.state.computedBundles[index];
+        let equips = CommonStates.getters.getCurrentEquips();
+        let slotMap = {
+            1: [],
+            2: [],
+            3: []
+        };
+
+        Object.keys(bundle.equips).forEach((equipType) => {
+            if (Helper.isEmpty(bundle.equips[equipType])) {
+                return;
+            }
+
+            equips[equipType].id = bundle.equips[equipType];
+            equips[equipType].slotIds = {};
+
+            let equipInfo = null;
+
+            if ('weapon' === equipType) {
+                if (Helper.isNotEmpty(bundle.meta.weaponEnhanceIds)) {
+                    equips.weapon.enhanceIds = bundle.meta.weaponEnhanceIds; // Restore Enhance
+                }
+
+                equipInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
+            } else if ('helm' === equipType
+                || 'chest' === equipType
+                || 'arm' === equipType
+                || 'waist' === equipType
+                || 'leg' === equipType
+            ) {
+                equipInfo = CommonDataset.getAppliedArmorInfo(equips[equipType]);
+            }
+
+            if (Helper.isEmpty(equipInfo)) {
+                return;
+            }
+
+            equipInfo.slots.forEach((data, index) => {
+                slotMap[data.size].push({
+                    type: equipType,
+                    index: index
+                });
+            });
+        });
+
+        Object.keys(bundle.jewels).sort((jewelIdA, jewelIdB) => {
+            let jewelInfoA = JewelDataset.getInfo(jewelIdA);
+            let jewelInfoB = JewelDataset.getInfo(jewelIdB);
+
+            if (Helper.isEmpty(jewelInfoA) || Helper.isEmpty(jewelInfoB)) {
+                return 0;
+            }
+
+            return jewelInfoA.size - jewelInfoB.size;
+        }).forEach((jewelId) => {
+            let jewelInfo = JewelDataset.getInfo(jewelId);
+
+            if (Helper.isEmpty(jewelInfo)) {
+                return;
+            }
+
+            let currentSize = jewelInfo.size;
+
+            let jewelCount = bundle.jewels[jewelId];
+            let data = null
+
+            let jewelIndex = 0;
+
+            while (jewelIndex < jewelCount) {
+                if (0 === slotMap[currentSize].length) {
+                    currentSize++;
+
+                    continue;
+                }
+
+                data = slotMap[currentSize].shift();
+
+                equips[data.type].slotIds[data.index] = jewelId;
+
+                jewelIndex++;
+            }
+        });
+
+        CommonStates.setters.replaceCurrentEquips(equips);
     };
 
     /**
@@ -81,61 +204,17 @@ export default class CandidateBundles extends Component {
                 computedBundles: CommonStates.getters.getComputedBundles()
             });
         });
-
-        Event.on('SearchCandidateEquips', 'CandidateBundles', (data) => {
-            this.setState({
-                isSearching: true
-            });
-
-            let requiredSets = CommonStates.getters.getRequiredSets();
-            let requiredSkills = CommonStates.getters.getRequiredSkills();
-
-            setTimeout(() => {
-                let startTime = new Date().getTime();
-                let computedBundles = FittingAlgorithm.search(
-                    data.equips,
-                    data.ignoreEquips,
-                    requiredSets,
-                    requiredSkills,
-                    this.state.bundleLimit
-                );
-                let stopTime = new Date().getTime();
-                let searchTime = (stopTime - startTime) / 1000;
-                let weaponEnhanceIds = Helper.isNotEmpty(data.equips.weapon)
-                    ? data.equips.weapon.enhanceIds : null;
-
-                computedBundles.map((bundle) => {
-                    bundle.meta.weaponEnhanceIds = weaponEnhanceIds;
-
-                    return bundle;
-                });
-
-                Helper.log('Bundle List:', computedBundles);
-                Helper.log('Search Time:', searchTime);
-
-                CommonStates.setters.saveComputedBundles(computedBundles);
-
-                this.setState({
-                    isSearching: false
-                });
-            }, 100);
-        });
     }
 
     componentWillUnmount () {
         this.unsubscribe();
-
-        Event.off('SearchCandidateEquips', 'CandidateBundles');
     }
 
     /**
      * Render Functions
      */
     renderBundleItems = () => {
-        let computedBundles = this.state.computedBundles;
-        let bundleLimit = this.state.bundleLimit;
-
-        return computedBundles.map((data, index) => {
+        return this.state.computedBundles.map((data, index) => {
             return (
                 <div key={index} className="row mhwc-bundle">
                     <div className="col-12 mhwc-name">
@@ -287,14 +366,32 @@ export default class CandidateBundles extends Component {
 
     render () {
         return (
-            <div key="list" className="mhwc-list">
-                {true === this.state.isSearching ? (
-                    <div className="mhwc-mask">
-                        <i className="fa fa-spin fa-spinner"></i>
-                    </div>
-                ) : false}
+            <div className="col mhwc-bundles">
+                <div className="mhwc-section_name">
+                    <span className="mhwc-title">{_('candidateBundle')}</span>
 
-                {this.renderBundleItems()}
+                    <div className="mhwc-icons_bundle">
+                        <FunctionalIcon
+                            iconName="refresh" altName={_('reset')}
+                            onClick={CommonStates.setters.cleanComputedBundles} />
+                        <FunctionalIcon
+                            iconName="cog" altName={_('setting')}
+                            onClick={() => {}} />
+                        <FunctionalIcon
+                            iconName="search" altName={_('search')}
+                            onClick={this.handleCandidateBundlesSearch} />
+                    </div>
+                </div>
+
+                <div key="list" className="mhwc-list">
+                    {true === this.state.isSearching ? (
+                        <div className="mhwc-mask">
+                            <i className="fa fa-spin fa-spinner"></i>
+                        </div>
+                    ) : false}
+
+                    {this.renderBundleItems()}
+                </div>
             </div>
         );
     }

@@ -32,51 +32,54 @@ import Constant from 'constant';
 
 // Load State Control
 import CommonStates from 'states/common';
+import ModalStates from 'states/modal';
 
 export default class EquipsDisplayer extends Component {
-
-    // Default Props
-    static defaultProps = {
-        equips: Helper.deepCopy(Constant.defaultEquips),
-        equipsLock: Helper.deepCopy(Constant.defaultEquipsLock),
-        onToggleEquipsLock: (equipType) => {},
-        onOpenSelector: (data) => {},
-        onPickUp: (data) => {}
-    };
 
     constructor (props) {
         super(props);
 
         // Initial State
         this.state = {
-            equips: Helper.deepCopy(Constant.defaultEquips),
-            equipsLock: Helper.deepCopy(Constant.defaultEquipsLock)
+            currentEquips: CommonStates.getters.getCurrentEquips(),
+            requiredEquipPins: CommonStates.getters.getRequiredEquipPins()
         };
     }
 
     /**
      * Handle Functions
      */
+    handleEquipsDisplayerRefresh = () => {
+        CommonStates.setters.cleanRequiredEquipPins();
+        CommonStates.setters.cleanCurrentEquips();
+    };
+
     handleEquipLockToggle = (equipType) => {
-        this.props.onToggleEquipsLock(equipType);
+        CommonStates.setters.toggleRequiredEquipPins(equipType);
     };
 
     handleEquipSwitch = (data) => {
-        this.props.onOpenSelector(data);
+        ModalStates.setters.showEquipItemSelector(data);
     };
 
     handleEquipEmpty = (data) => {
-        this.props.onPickUp(data);
+        CommonStates.setters.setCurrentEquip(data);
     };
 
     /**
      * Lifecycle Functions
      */
-    static getDerivedStateFromProps (nextProps, prevState) {
-        return {
-            equips: nextProps.equips,
-            equipsLock: nextProps.equipsLock
-        };
+    componentDidMount () {
+        this.unsubscribe = CommonStates.store.subscribe(() => {
+            this.setState({
+                currentEquips: CommonStates.getters.getCurrentEquips(),
+                requiredEquipPins: CommonStates.getters.getRequiredEquipPins()
+            });
+        });
+    }
+
+    componentWillUnmount(){
+        this.unsubscribe();
     }
 
     /**
@@ -471,33 +474,51 @@ export default class EquipsDisplayer extends Component {
     };
 
     render () {
-        let equips = this.state.equips;
-        let equipsLock = this.state.equipsLock;
+        let currentEquips = this.state.currentEquips;
+        let requiredEquipPins = this.state.requiredEquipPins;
         let ContentBlocks = [];
 
         ContentBlocks.push(this.renderEquipBlock(
             'weapon',
-            CommonDataset.getAppliedWeaponInfo(equips.weapon),
-            equipsLock.weapon
+            CommonDataset.getAppliedWeaponInfo(currentEquips.weapon),
+            requiredEquipPins.weapon
         ));
 
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             ContentBlocks.push(this.renderEquipBlock(
                 equipType,
-                CommonDataset.getAppliedArmorInfo(equips[equipType]),
-                equipsLock[equipType]
+                CommonDataset.getAppliedArmorInfo(currentEquips[equipType]),
+                requiredEquipPins[equipType]
             ));
         });
 
         ContentBlocks.push(this.renderEquipBlock(
             'charm',
-            CommonDataset.getAppliedCharmInfo(equips.charm),
-            equipsLock.charm
+            CommonDataset.getAppliedCharmInfo(currentEquips.charm),
+            requiredEquipPins.charm
         ));
 
         return (
-            <div className="mhwc-list">
-                {ContentBlocks}
+            <div className="col mhwc-equips">
+                <div className="mhwc-section_name">
+                    <span className="mhwc-title">{_('equipBundle')}</span>
+
+                    <div className="mhwc-icons_bundle">
+                        <FunctionalIcon
+                            iconName="refresh" altName={_('reset')}
+                            onClick={this.handleEquipsDisplayerRefresh} />
+                        <FunctionalIcon
+                            iconName="th-list" altName={_('bundleList')}
+                            onClick={ModalStates.setters.showEquipBundleSelector} />
+                        <FunctionalIcon
+                            iconName="th-large" altName={_('inventorySetting')}
+                            onClick={ModalStates.setters.showInventorySetting} />
+                    </div>
+                </div>
+
+                <div className="mhwc-list">
+                    {ContentBlocks}
+                </div>
             </div>
         );
     }

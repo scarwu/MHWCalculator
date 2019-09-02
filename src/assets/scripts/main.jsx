@@ -25,6 +25,8 @@ import Changelog from 'components/modal/changelog';
 import InventorySetting from 'components/modal/inventorySetting';
 import SetItemSelector from 'components/modal/setItemSelector';
 import SkillItemSelector from 'components/modal/skillItemSelector';
+import EquipItemSelector from 'components/modal/equipItemSelector';
+import EquipBundleSelector from 'components/modal/equipBundleSelector';
 
 // Polyfill
 const polyfillObjectValues = (object) => {
@@ -55,5 +57,7 @@ ReactDOM.render((
         <InventorySetting />
         <SetItemSelector />
         <SkillItemSelector />
+        <EquipItemSelector />
+        <EquipBundleSelector />
     </Router>
 ), document.querySelector('#mhwc'));

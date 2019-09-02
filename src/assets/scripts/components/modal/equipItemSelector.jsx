@@ -38,17 +38,12 @@ import ModalStates from 'states/modal';
 
 export default class EquipItemSelector extends Component {
 
-    // Default Props
-    static defaultProps = {
-        onPickUp: (data) => {},
-        onToggle: (data) => {}
-    };
-
     constructor (props) {
         super(props);
 
         // Initial State
         this.state = {
+            inventory: CommonStates.getters.getInventory(),
             isShow: ModalStates.getters.isShowEquipItemSelector(),
             data: ModalStates.getters.getEquipItemSelectorData(),
             mode: null,
@@ -86,12 +81,13 @@ export default class EquipItemSelector extends Component {
             data.equipId = itemId;
         }
 
-        this.props.onPickUp(data);
+        CommonStates.setters.setCurrentEquip(data);
+
         this.handleWindowClose();
     };
 
     handleItemToggle = (itemType, itemId) => {
-        this.props.onToggle({
+        CommonStates.setters.toggleInventoryEquip({
             type: itemType,
             id: itemId
         });
@@ -159,8 +155,8 @@ export default class EquipItemSelector extends Component {
             Constant.weaponTypes.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
                     WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
-                        if (Helper.isNotEmpty(nextProps.ignoreEquips['weapon'])
-                            && true === nextProps.ignoreEquips['weapon'][equip.id]
+                        if (Helper.isNotEmpty(prevState.inventory['weapon'])
+                            && true === prevState.inventory['weapon'][equip.id]
                         ) {
                             ignoreList.push(equip);
                         } else {
@@ -170,8 +166,8 @@ export default class EquipItemSelector extends Component {
                 }
 
                 WeaponDataset.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
-                    if (Helper.isNotEmpty(nextProps.ignoreEquips['weapon'])
-                        && true === nextProps.ignoreEquips['weapon'][equip.id]
+                    if (Helper.isNotEmpty(prevState.inventory['weapon'])
+                        && true === prevState.inventory['weapon'][equip.id]
                     ) {
                         ignoreList.push(equip);
                     } else {
@@ -190,8 +186,8 @@ export default class EquipItemSelector extends Component {
 
             for (let rare = 8; rare >= 5; rare--) {
                 ArmorDataset.typeIs(prevState.data.equipType).rareIs(rare).getItems().forEach((equip) => {
-                    if (Helper.isNotEmpty(nextProps.ignoreEquips[equip.type])
-                        && true === nextProps.ignoreEquips[equip.type][equip.id]
+                    if (Helper.isNotEmpty(prevState.inventory[equip.type])
+                        && true === prevState.inventory[equip.type][equip.id]
                     ) {
                         ignoreList.push(equip);
                     } else {
@@ -201,8 +197,8 @@ export default class EquipItemSelector extends Component {
             }
 
             ArmorDataset.typeIs(prevState.data.equipType).rareIs(0).getItems().forEach((equip) => {
-                if (Helper.isNotEmpty(nextProps.ignoreEquips[equip.type])
-                    && true === nextProps.ignoreEquips[equip.type][equip.id]
+                if (Helper.isNotEmpty(prevState.inventory[equip.type])
+                    && true === prevState.inventory[equip.type][equip.id]
                 ) {
                     ignoreList.push(equip);
                 } else {
@@ -213,8 +209,8 @@ export default class EquipItemSelector extends Component {
             mode = 'charm';
 
             CharmDataset.getItems().forEach((equip) => {
-                if (Helper.isNotEmpty(nextProps.ignoreEquips['charm'])
-                    && true === nextProps.ignoreEquips['charm'][equip.id]
+                if (Helper.isNotEmpty(prevState.inventory['charm'])
+                    && true === prevState.inventory['charm'][equip.id]
                 ) {
                     ignoreList.push(equip);
                 } else {
@@ -237,7 +233,13 @@ export default class EquipItemSelector extends Component {
     }
 
     componentDidMount () {
-        this.unsubscribe = ModalStates.store.subscribe(() => {
+        this.unsubscribeCommon = CommonStates.store.subscribe(() => {
+            this.setState({
+                inventory: CommonStates.getters.getInventory()
+            });
+        });
+
+        this.unsubscribeModel = ModalStates.store.subscribe(() => {
             this.setState({
                 data: ModalStates.getters.getEquipItemSelectorData(),
                 isShow: ModalStates.getters.isShowEquipItemSelector()
@@ -246,7 +248,8 @@ export default class EquipItemSelector extends Component {
     }
 
     componentWillUnmount(){
-        this.unsubscribe();
+        this.unsubscribeCommon();
+        this.unsubscribeModel();
     }
 
     /**

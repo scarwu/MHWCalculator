@@ -8,7 +8,7 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-let prefix = 'mhwc:051519';
+let prefix = 'mhwc:020919';
 let storage = window.localStorage;
 
 function get(key) {
