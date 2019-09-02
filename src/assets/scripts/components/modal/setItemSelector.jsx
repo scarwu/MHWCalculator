@@ -25,6 +25,9 @@ import FunctionalIcon from 'components/common/functionalIcon';
 // Load Constant
 import Constant from 'constant';
 
+// Load State Control
+import ModalStates from 'states/modal';
+
 export default class SetItemSelector extends Component {
 
     // Default Props
@@ -40,6 +43,7 @@ export default class SetItemSelector extends Component {
 
         // Initial State
         this.state = {
+            isShow: ModalStates.getters.isShowSetItemSelector(),
             data: {},
             list: [],
             segment: null,
@@ -60,7 +64,7 @@ export default class SetItemSelector extends Component {
     };
 
     handleWindowClose = () => {
-        this.props.onClose();
+        ModalStates.setters.hideSetItemSelector();
     };
 
     handleItemPickUp = (itemId) => {
@@ -116,6 +120,18 @@ export default class SetItemSelector extends Component {
             selectedList: selectedList,
             unselectedList: unselectedList
         };
+    }
+
+    componentDidMount () {
+        this.unsubscribe = ModalStates.store.subscribe(() => {
+            this.setState({
+                isShow: ModalStates.getters.isShowSetItemSelector()
+            });
+        });
+    }
+
+    componentWillUnmount(){
+        this.unsubscribe();
     }
 
     /**
@@ -235,7 +251,7 @@ export default class SetItemSelector extends Component {
     };
 
     render () {
-        return (
+        return this.state.isShow ? (
             <div className="mhwc-selector" ref="modal" onClick={this.handleFastWindowClose}>
                 <div className="mhwc-modal">
                     <div className="mhwc-panel">
@@ -254,6 +270,6 @@ export default class SetItemSelector extends Component {
                     </div>
                 </div>
             </div>
-        );
+        ) : false;
     }
 }

@@ -27,7 +27,6 @@ import CommonDataset from 'libraries/dataset/common';
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
 
-import InventorySetting from 'components/modal/inventorySetting';
 import EquipBundleSelector from 'components/modal/equipBundleSelector';
 import SetItemSelector from 'components/modal/setItemSelector';
 import SkillItemSelector from 'components/modal/skillItemSelector';
@@ -59,20 +58,13 @@ export default class Main extends Component {
 
         // Initial State
         this.state = {
+            isImportEquips: false,
             lang: Status.get('sys:lang'),
             sets: Status.get('app:sets') || Helper.deepCopy(TestData.requireList[0]).sets,
             skills: Status.get('app:skills') || Helper.deepCopy(TestData.requireList[0]).skills,
             equips: Status.get('app:equips') || Helper.deepCopy(TestData.equipsList[0]),
             equipsLock: Status.get('app:equipsLock') || Helper.deepCopy(Constant.defaultEquipsLock),
-            ignoreEquips: Status.get('app:ignoreEquips') || {},
-
-            // Flags
-            isImportEquips: false,
-            isShowInventorySetting: false,
-            isShowEquipBundleSelector: false,
-            isShowSetItemSelector: false,
-            isShowSkillItemSelector: false,
-            isShowEquipItemSelector: ModalStates.getters.isShowEquipItemSelector()
+            ignoreEquips: Status.get('app:ignoreEquips') || {}
         };
 
         // Set Build Time
@@ -140,18 +132,6 @@ export default class Main extends Component {
 
         this.setState({
             sets: sets
-        });
-    };
-
-    handleSetItemSelectorOpen = (data) => {
-        this.setState({
-            isShowSetItemSelector: true
-        });
-    };
-
-    handleSetItemSelectorClose = () => {
-        this.setState({
-            isShowSetItemSelector: false
         });
     };
 
@@ -239,18 +219,6 @@ export default class Main extends Component {
 
         this.setState({
             skills: skills
-        });
-    };
-
-    handleSkillItemSelectorOpen = (data) => {
-        this.setState({
-            isShowSkillItemSelector: true
-        });
-    };
-
-    handleSkillItemSelectorClose = () => {
-        this.setState({
-            isShowSkillItemSelector: false
         });
     };
 
@@ -538,30 +506,6 @@ export default class Main extends Component {
         });
     };
 
-    handleEquipBundleSelectorOpen = () => {
-        this.setState({
-            isShowEquipBundleSelector: true
-        });
-    };
-
-    handleEquipBundleSelectorClose = () => {
-        this.setState({
-            isShowEquipBundleSelector: false
-        });
-    };
-
-    handleInventorySettingOpen = () => {
-        this.setState({
-            isShowInventorySetting: true
-        });
-    };
-
-    handleInventorySettingClose = () => {
-        this.setState({
-            isShowInventorySetting: false
-        });
-    };
-
     handleEquipBundleSelectorPickUp = (equips) => {
         this.setState({
             equips: equips
@@ -581,15 +525,15 @@ export default class Main extends Component {
     }
 
     componentDidMount () {
-        this.unsubscribe = ModalStates.store.subscribe(() => {
-            this.setState({
-                isShowEquipItemSelector: ModalStates.getters.isShowEquipItemSelector()
-            });
-        });
+        // this.unsubscribe = ModalStates.store.subscribe(() => {
+        //     this.setState({
+
+        //     });
+        // });
     }
 
     componentWillUnmount(){
-        this.unsubscribe();
+        // this.unsubscribe();
     }
 
     /**
@@ -724,10 +668,10 @@ export default class Main extends Component {
                                     onClick={this.handleRequireConditionRefresh} />
                                 <FunctionalIcon
                                     iconName="plus" altName={_('skill')}
-                                    onClick={this.handleSkillItemSelectorOpen} />
+                                    onClick={ModalStates.setters.showSkillItemSelector} />
                                 <FunctionalIcon
                                     iconName="plus" altName={_('set')}
-                                    onClick={this.handleSetItemSelectorOpen} />
+                                    onClick={ModalStates.setters.showSetItemSelector} />
                             </div>
                         </div>
 
@@ -768,10 +712,10 @@ export default class Main extends Component {
                                     onClick={this.handleEquipsDisplayerRefresh} />
                                 <FunctionalIcon
                                     iconName="th-list" altName={_('bundleList')}
-                                    onClick={this.handleEquipBundleSelectorOpen} />
+                                    onClick={ModalStates.setters.showEquipBundleSelector} />
                                 <FunctionalIcon
                                     iconName="th-large" altName={_('inventorySetting')}
-                                    onClick={this.handleInventorySettingOpen} />
+                                    onClick={ModalStates.setters.showInventorySetting} />
                             </div>
                         </div>
 
@@ -807,43 +751,24 @@ export default class Main extends Component {
                     </div>
                 </div>
 
-                {this.state.isShowInventorySetting ? (
-                    <InventorySetting
-                        data={this.state.equips}
-                        onClose={this.handleInventorySettingClose} />
-                ) : false}
+                <EquipBundleSelector
+                    data={this.state.equips}
+                    onPickUp={this.handleEquipBundleSelectorPickUp} />
 
-                {this.state.isShowEquipBundleSelector ? (
-                    <EquipBundleSelector
-                        data={this.state.equips}
-                        onPickUp={this.handleEquipBundleSelectorPickUp}
-                        onClose={this.handleEquipBundleSelectorClose} />
-                ) : false}
+                <SetItemSelector
+                    data={this.state.sets}
+                    onPickUp={this.handleSetItemSelectorPickUp}
+                    onThrowDown={this.handleSetItemSelectorThrowDown} />
 
-                {this.state.isShowSetItemSelector ? (
-                    <SetItemSelector
-                        data={this.state.sets}
-                        onPickUp={this.handleSetItemSelectorPickUp}
-                        onThrowDown={this.handleSetItemSelectorThrowDown}
-                        onClose={this.handleSetItemSelectorClose} />
-                ) : false}
+                <SkillItemSelector
+                    data={this.state.skills}
+                    onPickUp={this.handleSkillItemSelectorPickUp}
+                    onThrowDown={this.handleSkillItemSelectorThrowDown} />
 
-                {this.state.isShowSkillItemSelector ? (
-                    <SkillItemSelector
-                        data={this.state.skills}
-                        onPickUp={this.handleSkillItemSelectorPickUp}
-                        onThrowDown={this.handleSkillItemSelectorThrowDown}
-                        onClose={this.handleSkillItemSelectorClose} />
-                ) : false}
-
-                {this.state.isShowEquipItemSelector ? (
-                    <EquipItemSelector
-                        data={ModalStates.getters.getEquipItemSelectorData()}
-                        ignoreEquips={this.state.ignoreEquips}
-                        onPickUp={this.handleEquipItemSelectorPickUp}
-                        onToggle={this.handleEquipItemSelectorToggle}
-                        onClose={ModalStates.setters.hideEquipItemSelector} />
-                ) : false}
+                <EquipItemSelector
+                    ignoreEquips={this.state.ignoreEquips}
+                    onPickUp={this.handleEquipItemSelectorPickUp}
+                    onToggle={this.handleEquipItemSelectorToggle} />
             </div>
         );
     }

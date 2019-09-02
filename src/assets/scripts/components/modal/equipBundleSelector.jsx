@@ -27,6 +27,9 @@ import FunctionalIcon from 'components/common/functionalIcon';
 // Load Constant
 import Constant from 'constant';
 
+// Load State Control
+import ModalStates from 'states/modal';
+
 export default class EquipBundleSelector extends Component {
 
     // Default Props
@@ -41,6 +44,7 @@ export default class EquipBundleSelector extends Component {
 
         // Initial State
         this.state = {
+            isShow: ModalStates.getters.isShowEquipBundleSelector(),
             equips: null,
             equipBundleList: Status.get('equipBundleSelector:equipBundleList') || []
         };
@@ -58,7 +62,7 @@ export default class EquipBundleSelector extends Component {
     };
 
     handleWindowClose = () => {
-        this.props.onClose();
+        ModalStates.setters.hideEquipBundleSelector();
     };
 
     handleBundleSave = (index) => {
@@ -143,6 +147,18 @@ export default class EquipBundleSelector extends Component {
         return {
             equips: equips
         };
+    }
+
+    componentDidMount () {
+        this.unsubscribe = ModalStates.store.subscribe(() => {
+            this.setState({
+                isShow: ModalStates.getters.isShowEquipBundleSelector()
+            });
+        });
+    }
+
+    componentWillUnmount(){
+        this.unsubscribe();
     }
 
     /**
@@ -244,7 +260,7 @@ export default class EquipBundleSelector extends Component {
     };
 
     render () {
-        return (
+        return this.state.isShow ? (
             <div className="mhwc-selector" ref="modal" onClick={this.handleFastWindowClose}>
                 <div className="mhwc-modal">
                     <div className="mhwc-panel">
@@ -259,6 +275,6 @@ export default class EquipBundleSelector extends Component {
                     </div>
                 </div>
             </div>
-        );
+        ) : false;
     }
 }

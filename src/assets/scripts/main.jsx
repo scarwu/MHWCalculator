@@ -22,6 +22,7 @@ import App from 'app';
 
 // Load Components
 import Changelog from 'components/modal/changelog';
+import InventorySetting from 'components/modal/inventorySetting';
 
 // Polyfill
 const polyfillObjectValues = (object) => {
@@ -47,6 +48,8 @@ if ('production' === Config.env) {
 ReactDOM.render((
     <Router key="router">
         <Route exact path="/:hash?" component={App} />
+
         <Changelog />
+        <InventorySetting />
     </Router>
 ), document.querySelector('#mhwc'));

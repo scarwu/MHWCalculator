@@ -32,14 +32,15 @@ import SharpnessBar from 'components/common/sharpnessBar';
 // Load Constant
 import Constant from 'constant';
 
+// Load State Control
+import ModalStates from 'states/modal';
+
 export default class EquipItemSelector extends Component {
 
     // Default Props
     static defaultProps = {
-        data: {},
         onPickUp: (data) => {},
-        onToggle: (data) => {},
-        onClose: () => {}
+        onToggle: (data) => {}
     };
 
     constructor (props) {
@@ -47,6 +48,8 @@ export default class EquipItemSelector extends Component {
 
         // Initial State
         this.state = {
+            data: ModalStates.getters.getEquipItemSelectorData(),
+            isShow: ModalStates.getters.isShowEquipItemSelector(),
             mode: null,
             includeList: [],
             ignoreList: [],
@@ -68,11 +71,11 @@ export default class EquipItemSelector extends Component {
     };
 
     handleWindowClose = () => {
-        this.props.onClose();
+        ModalStates.setters.hideEquipItemSelector();
     };
 
     handleItemPickUp = (itemId) => {
-        let data = this.props.data;
+        let data = this.state.data;
 
         if (Helper.isNotEmpty(data.enhanceIndex)) {
             data.enhanceId = itemId;
@@ -83,7 +86,7 @@ export default class EquipItemSelector extends Component {
         }
 
         this.props.onPickUp(data);
-        this.props.onClose();
+        this.handleWindowClose();
     };
 
     handleItemToggle = (itemType, itemId) => {
@@ -129,21 +132,25 @@ export default class EquipItemSelector extends Component {
         let ignoreList = [];
         let type = null;
 
-        if (Helper.isNotEmpty(nextProps.data.enhanceIndex)) {
+        if (null === prevState.data) {
+            return {};
+        }
+
+        if (Helper.isNotEmpty(prevState.data.enhanceIndex)) {
             mode = 'enhance';
             includeList = EnhanceDataset.getItems();
-        } else if (Helper.isNotEmpty(nextProps.data.slotIndex)) {
+        } else if (Helper.isNotEmpty(prevState.data.slotIndex)) {
             mode = 'jewel';
 
-            for (let size = nextProps.data.slotSize; size >= 1; size--) {
+            for (let size = prevState.data.slotSize; size >= 1; size--) {
                 for (let rare = 8; rare >= 5; rare--) {
                     includeList = includeList.concat(
                         JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems()
                     );
                 }
             }
-        } else if ('weapon' === nextProps.data.equipType) {
-            let weaponInfo = WeaponDataset.getInfo(nextProps.data.equipId);
+        } else if ('weapon' === prevState.data.equipType) {
+            let weaponInfo = WeaponDataset.getInfo(prevState.data.equipId);
 
             mode = 'weapon';
             type = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.type : Constant.weaponTypes[0];
@@ -171,17 +178,17 @@ export default class EquipItemSelector extends Component {
                     }
                 });
             });
-        } else if ('helm' === nextProps.data.equipType
-            || 'chest' === nextProps.data.equipType
-            || 'arm' === nextProps.data.equipType
-            || 'waist' === nextProps.data.equipType
-            || 'leg' === nextProps.data.equipType
+        } else if ('helm' === prevState.data.equipType
+            || 'chest' === prevState.data.equipType
+            || 'arm' === prevState.data.equipType
+            || 'waist' === prevState.data.equipType
+            || 'leg' === prevState.data.equipType
         ) {
             mode = 'armor';
-            type = nextProps.data.equipType;
+            type = prevState.data.equipType;
 
             for (let rare = 8; rare >= 5; rare--) {
-                ArmorDataset.typeIs(nextProps.data.equipType).rareIs(rare).getItems().forEach((equip) => {
+                ArmorDataset.typeIs(prevState.data.equipType).rareIs(rare).getItems().forEach((equip) => {
                     if (Helper.isNotEmpty(nextProps.ignoreEquips[equip.type])
                         && true === nextProps.ignoreEquips[equip.type][equip.id]
                     ) {
@@ -192,7 +199,7 @@ export default class EquipItemSelector extends Component {
                 });
             }
 
-            ArmorDataset.typeIs(nextProps.data.equipType).rareIs(0).getItems().forEach((equip) => {
+            ArmorDataset.typeIs(prevState.data.equipType).rareIs(0).getItems().forEach((equip) => {
                 if (Helper.isNotEmpty(nextProps.ignoreEquips[equip.type])
                     && true === nextProps.ignoreEquips[equip.type][equip.id]
                 ) {
@@ -201,7 +208,7 @@ export default class EquipItemSelector extends Component {
                     includeList.push(equip);
                 }
             });
-        } else if ('charm' === nextProps.data.equipType) {
+        } else if ('charm' === prevState.data.equipType) {
             mode = 'charm';
 
             CharmDataset.getItems().forEach((equip) => {
@@ -226,6 +233,19 @@ export default class EquipItemSelector extends Component {
         }
 
         return state;
+    }
+
+    componentDidMount () {
+        this.unsubscribe = ModalStates.store.subscribe(() => {
+            this.setState({
+                data: ModalStates.getters.getEquipItemSelectorData(),
+                isShow: ModalStates.getters.isShowEquipItemSelector()
+            });
+        });
+    }
+
+    componentWillUnmount(){
+        this.unsubscribe();
     }
 
     /**
@@ -320,7 +340,7 @@ export default class EquipItemSelector extends Component {
                             altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle('weapon', data.id)}} />
 
-                        {(this.props.data.equipId !== data.id) ? (
+                        {(this.state.data.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -456,7 +476,7 @@ export default class EquipItemSelector extends Component {
                             altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle(data.type, data.id)}} />
 
-                        {(this.props.data.equipId !== data.id) ? (
+                        {(this.state.data.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -553,7 +573,7 @@ export default class EquipItemSelector extends Component {
                             altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle('charm', data.id)}} />
 
-                        {(this.props.data.equipId !== data.id) ? (
+                        {(this.state.data.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -624,7 +644,7 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        {(this.props.data.jewelId !== data.id) ? (
+                        {(this.state.data.jewelId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -699,7 +719,7 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        {(this.props.data.enhanceId !== data.id) ? (
+                        {(this.state.data.enhanceId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -750,6 +770,10 @@ export default class EquipItemSelector extends Component {
     render () {
         let Content = null;
 
+        if (Helper.isEmpty(this.state.data)) {
+            return false;
+        }
+
         switch (this.state.mode) {
         case 'weapon':
             Content = this.renderWeaponTable();
@@ -768,7 +792,7 @@ export default class EquipItemSelector extends Component {
             break;
         }
 
-        return (
+        return this.state.isShow ? (
             <div className="mhwc-selector" ref="modal" onClick={this.handleFastWindowClose}>
                 <div className="mhwc-modal">
                     <div className="mhwc-panel">
@@ -807,6 +831,6 @@ export default class EquipItemSelector extends Component {
                     </div>
                 </div>
             </div>
-        );
+        ) : false;
     }
 }

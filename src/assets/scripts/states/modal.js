@@ -53,7 +53,7 @@ const Store = createStore((state, action) => {
     Helper.log('Modal States', action);
 
     switch (action.type) {
-    case 'CHANGE_INVENTOR_YSETTING':
+    case 'CHANGE_INVENTORY_SETTING':
         return Object.assign({}, state, {
             inventorySetting: {
                 isShow: action.payload.isShow,
@@ -103,7 +103,7 @@ const Store = createStore((state, action) => {
 const Setters = {
     showInventorySetting: (data = null) => {
         Store.dispatch({
-            type: 'CHANGE_INVENTOR_YSETTING',
+            type: 'CHANGE_INVENTORY_SETTING',
             payload: {
                 isShow: true,
                 data: data
@@ -112,7 +112,7 @@ const Setters = {
     },
     hideInventorySetting: () => {
         Store.dispatch({
-            type: 'CHANGE_INVENTOR_YSETTING',
+            type: 'CHANGE_INVENTORY_SETTING',
             payload: {
                 isShow: false,
                 data: null
