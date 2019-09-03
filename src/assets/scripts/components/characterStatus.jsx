@@ -579,28 +579,30 @@ export default class CharacterStatus extends Component {
         });
     };
 
-    /**
-     * Lifecycle Functions
-     */
-    static getDerivedStateFromProps (nextProps, prevState) {
-        let equipInfos = generateEquipInfos(prevState.currentEquips);
+    initState = () => {
+        let equipInfos = generateEquipInfos(this.state.currentEquips);
         let passiveSkills = generatePassiveSkills(equipInfos);
         let status = generateStatus(equipInfos, passiveSkills);
-        let extraInfo = generateExtraInfo(equipInfos, status, prevState.tuning);
+        let extraInfo = generateExtraInfo(equipInfos, status, this.state.tuning);
 
-        return {
+        this.setState({
             equipInfos: equipInfos,
             passiveSkills: passiveSkills,
             status: status,
             extraInfo: extraInfo
-        };
-    }
+        });
+    };
 
+    /**
+     * Lifecycle Functions
+     */
     componentDidMount () {
+        this.initState();
+
         this.unsubscribe = CommonStates.store.subscribe(() => {
             this.setState({
                 currentEquips: CommonStates.getters.getCurrentEquips()
-            });
+            }, this.initState);
         });
     }
 
