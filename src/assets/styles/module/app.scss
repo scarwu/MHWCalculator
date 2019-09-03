@@ -701,7 +701,6 @@ $panel-height: 40px;
     .mhwc-panel {
         position: relative;
         margin-top: 5px;
-        padding: 0 10px;
         height: $panel-height;
         line-height: $panel-height;
 
@@ -732,10 +731,46 @@ $panel-height: 40px;
     .mhwc-list {
         position: absolute;
         top: 10px + $panel-height;
-        left: 5px;
-        right: 5px;
-        bottom: 10px;
-        padding: 0 5px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        .mhwc-item {
+            margin: 5px 5px 10px 5px;
+            padding: 5px 5px 15px 5px;
+            width: calc(33% - 6px);
+            float: left;
+            border: 1px solid #999;
+            background-color: #eee;
+
+            @include border-radius(5px);
+
+            .mhwc-name {
+                line-height: 33px;
+
+                @include nowrap();
+            }
+
+            .mhwc-value {
+                padding: 5px;
+                border: 1px solid #999;
+                background-color: white;
+
+                @include border-radius(5px);
+            }
+
+            > .mhwc-value {
+                margin-top: 5px;
+            }
+
+            .row {
+                margin-top: 5px;
+
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
+            }
+        }
 
         table {
             width: 100%;

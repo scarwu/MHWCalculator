@@ -35,8 +35,7 @@ export default function SetItemSelector(props) {
     const [stateRequiredSets, updateRequiredSets] = useState(CommonStates.getters.getRequiredSets());
     const [stateList, updateList] = useState([]);
     const [stateSegment, updateSegment] = useState(null);
-    const [stateSelectedList, updateSelectedList] = useState([]);
-    const [stateUnselectedList, updateUnselectedList] = useState([]);
+    const [stateSortedList, updateSortedList] = useState([]);
     const refModal = useRef();
     const refSegment = useRef();
 
@@ -49,22 +48,25 @@ export default function SetItemSelector(props) {
         let unselectedList = [];
 
         SetDataset.getNames().sort().forEach((setId) => {
-            let set = SetDataset.getInfo(setId);
+            let setInfo = SetDataset.getInfo(setId);
 
-            if (Helper.isEmpty(set)) {
+            if (Helper.isEmpty(setInfo)) {
                 return;
             }
 
             // Skip Selected Sets
-            if (-1 !== idList.indexOf(set.id)) {
-                selectedList.push(set);
+            if (-1 !== idList.indexOf(setInfo.id)) {
+                setInfo.isSelect = true;
+
+                selectedList.push(setInfo);
             } else {
-                unselectedList.push(set);
+                setInfo.isSelect = false;
+
+                unselectedList.push(setInfo);
             }
         });
 
-        updateSelectedList(selectedList);
-        updateUnselectedList(unselectedList);
+        updateSortedList(selectedList.concat(unselectedList));
     }, [stateRequiredSets]);
 
     // Like Did Mount & Will Unmount Cycle
@@ -122,33 +124,37 @@ export default function SetItemSelector(props) {
     /**
      * Render Functions
      */
-    let renderRow = (data, isSelect) => {
-        return (
-            <tr key={data.id}>
-                <td><span>{_(data.name)}</span></td>
-                <td>
-                    {data.skills.map((skill, index) => {
-                        return (
-                            <div key={index}>
-                                <span>({skill.require}) {_(skill.name)}</span>
-                            </div>
-                        );
-                    })}
-                </td>
-                <td>
-                    {data.skills.map((skill, index) => {
-                        let skillInfo = SkillDataset.getInfo(skill.id);
+    let renderBlock = (data, index) => {
 
-                        return (Helper.isNotEmpty(skillInfo)) ? (
-                            <div key={index}>
-                                <span>{_(skillInfo.list[0].description)}</span>
-                            </div>
-                        ) : false;
-                    })}
-                </td>
-                <td>
+        // Create Text
+        let text = _(data.name);
+
+        data.skills.forEach((data) => {
+            let skillInfo = SkillDataset.getInfo(data.id);
+
+            if (Helper.isEmpty(skillInfo)) {
+                return;
+            }
+
+            text += _(skillInfo.name) + skillInfo.list.map((item) => {
+                return _(item.description);
+            }).join('');
+        });
+
+        // Search Nameword
+        if (Helper.isNotEmpty(stateSegment)
+            && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+        ) {
+            return false;
+        }
+
+        return (
+            <div key={data.id} className="mhwc-item">
+                <div className="col-12 mhwc-name">
+                    <span>{_(data.name)}</span>
+
                     <div className="mhwc-icons_bundle">
-                        {isSelect ? (
+                        {data.isSelect ? (
                             <FunctionalIcon
                                 iconName="minus" altName={_('remove')}
                                 onClick={() => {handleItemThrowDown(data.id)}} />
@@ -158,80 +164,24 @@ export default function SetItemSelector(props) {
                                 onClick={() => {handleItemPickUp(data.id)}} />
                         )}
                     </div>
-                </td>
-            </tr>
-        );
-    };
+                </div>
+                <div className="col-12 mhwc-value">
+                    {data.skills.map((skill, index) => {
+                        let skillInfo = SkillDataset.getInfo(skill.id);
 
-    let renderTable = () => {
-        let segment = stateSegment;
-
-        return (
-            <table className="mhwc-set_table">
-                <thead>
-                    <tr>
-                        <td>{_('name')}</td>
-                        <td>{_('skill')}</td>
-                        <td>{_('description')}</td>
-                        <td></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {stateSelectedList.map((data, index) => {
-
-                        // Create Text
-                        let text = _(data.name);
-
-                        data.skills.forEach((data) => {
-                            let skillInfo = SkillDataset.getInfo(data.id);
-
-                            if (Helper.isEmpty(skillInfo)) {
-                                return;
-                            }
-
-                            text += _(skillInfo.name) + skillInfo.list.map((item) => {
-                                return _(item.description);
-                            }).join('');
-                        });
-
-                        // Search Nameword
-                        if (Helper.isNotEmpty(segment)
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())
-                        ) {
-                            return false;
-                        }
-
-                        return renderRow(data, true);
+                        return (
+                            <div key={index} className="row">
+                                <div className="col-12 mhwc-name">
+                                    <span>({skill.require}) {_(skillInfo.name)}</span>
+                                </div>
+                                <div className="col-12 mhwc-value">
+                                    <span>{_(skillInfo.list[0].description)}</span>
+                                </div>
+                            </div>
+                        );
                     })}
-
-                    {stateUnselectedList.map((data, index) => {
-
-                        // Create Text
-                        let text = _(data.name);
-
-                        data.skills.forEach((data) => {
-                            let skillInfo = SkillDataset.getInfo(data.id);
-
-                            if (Helper.isEmpty(skillInfo)) {
-                                return;
-                            }
-
-                            text += _(skillInfo.name) + skillInfo.list.map((item) => {
-                                return _(item.description);
-                            }).join('');
-                        });
-
-                        // Search Nameword
-                        if (Helper.isNotEmpty(segment)
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())
-                        ) {
-                            return false;
-                        }
-
-                        return renderRow(data, false);
-                    })}
-                </tbody>
-            </table>
+                </div>
+            </div>
         );
     };
 
@@ -250,7 +200,7 @@ export default function SetItemSelector(props) {
                     </div>
                 </div>
                 <div className="mhwc-list">
-                    {renderTable()}
+                    {stateSortedList.map(renderBlock)}
                 </div>
             </div>
         </div>

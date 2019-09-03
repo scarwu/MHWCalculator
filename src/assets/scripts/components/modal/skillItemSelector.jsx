@@ -34,8 +34,7 @@ export default function SkillItemSelector(props) {
     const [stateRequiredSkills, updateRequiredSkills] = useState(CommonStates.getters.getRequiredSkills());
     const [stateList, updateList] = useState([]);
     const [stateSegment, updateSegment] = useState(null);
-    const [stateSelectedList, updateSelectedList] = useState([]);
-    const [stateUnselectedList, updateUnselectedList] = useState([]);
+    const [stateSortedList, updateSortedList] = useState([]);
     const refModal = useRef();
     const refSegment = useRef();
 
@@ -60,14 +59,17 @@ export default function SkillItemSelector(props) {
 
             // Skip Selected Skills
             if (-1 !== idList.indexOf(skillInfo.id)) {
+                skillInfo.isSelect = true;
+
                 selectedList.push(skillInfo);
             } else {
+                skillInfo.isSelect = false;
+
                 unselectedList.push(skillInfo);
             }
         });
 
-        updateSelectedList(selectedList);
-        updateUnselectedList(unselectedList);
+        updateSortedList(selectedList.concat(unselectedList));
     }, [stateRequiredSkills]);
 
     // Like Did Mount & Will Unmount Cycle
@@ -125,31 +127,29 @@ export default function SkillItemSelector(props) {
     /**
      * Render Functions
      */
-    let renderRow = (data, isSelect) => {
+    let renderBlock = (data, index) => {
+
+        // Create Text
+        let text = _(data.name);
+
+        data.list.forEach((data) => {
+            text += _(data.name) + _(data.description);
+        })
+
+        // Search Nameword
+        if (Helper.isNotEmpty(stateSegment)
+            && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+        ) {
+            return false;
+        }
+
         return (
-            <tr key={data.id}>
-                <td><span>{_(data.name)}</span></td>
-                <td>
-                    {data.list.map((skill, index) => {
-                        return (
-                            <div key={index}>
-                                <span>Lv.{skill.level}</span>
-                            </div>
-                        );
-                    })}
-                </td>
-                <td>
-                    {data.list.map((skill, index) => {
-                        return (
-                            <div key={index}>
-                                <span>{_(skill.description)}</span>
-                            </div>
-                        );
-                    })}
-                </td>
-                <td>
+            <div key={data.id} className="mhwc-item">
+                <div className="col-12 mhwc-name">
+                    <span>{_(data.name)}</span>
+
                     <div className="mhwc-icons_bundle">
-                        {isSelect ? (
+                        {data.isSelect ? (
                             <FunctionalIcon
                                 iconName="minus" altName={_('remove')}
                                 onClick={() => {handleItemThrowDown(data.id)}} />
@@ -159,64 +159,22 @@ export default function SkillItemSelector(props) {
                                 onClick={() => {handleItemPickUp(data.id)}} />
                         )}
                     </div>
-                </td>
-            </tr>
-        );
-    };
-
-    let renderTable = () => {
-        let segment = stateSegment;
-
-        return (
-            <table className="mhwc-skill_table">
-                <thead>
-                    <tr>
-                        <td>{_('name')}</td>
-                        <td>{_('level')}</td>
-                        <td>{_('description')}</td>
-                        <td></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {stateSelectedList.map((data, index) => {
-
-                        // Create Text
-                        let text = _(data.name);
-
-                        data.list.forEach((data) => {
-                            text += _(data.name) + _(data.description);
-                        })
-
-                        // Search Nameword
-                        if (Helper.isNotEmpty(segment)
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())
-                        ) {
-                            return false;
-                        }
-
-                        return renderRow(data, true);
+                </div>
+                <div className="col-12 mhwc-value">
+                    {data.list.map((skill, index) => {
+                        return (
+                            <div key={index} className="row">
+                                <div className="col-2 mhwc-name">
+                                    <span>Lv.{skill.level}</span>
+                                </div>
+                                <div className="col-10 mhwc-value">
+                                    <span>{_(skill.description)}</span>
+                                </div>
+                            </div>
+                        );
                     })}
-
-                    {stateUnselectedList.map((data, index) => {
-
-                        // Create Text
-                        let text = _(data.name);
-
-                        data.list.forEach((data) => {
-                            text += _(data.name) + _(data.description);
-                        })
-
-                        // Search Nameword
-                        if (Helper.isNotEmpty(segment)
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())
-                        ) {
-                            return false;
-                        }
-
-                        return renderRow(data, false);
-                    })}
-                </tbody>
-            </table>
+                </div>
+            </div>
         );
     };
 
@@ -235,7 +193,7 @@ export default function SkillItemSelector(props) {
                     </div>
                 </div>
                 <div className="mhwc-list">
-                    {renderTable()}
+                    {stateSortedList.map(renderBlock)}
                 </div>
             </div>
         </div>
