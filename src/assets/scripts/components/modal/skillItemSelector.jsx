@@ -79,15 +79,8 @@ export default class SkillItemSelector extends Component {
         });
     };
 
-    /**
-     * Lifecycle Functions
-     */
-    static getDerivedStateFromProps (nextProps, prevState) {
-        if (Helper.isEmpty(prevState.requiredSkills)) {
-            return {};
-        }
-
-        let idList = prevState.requiredSkills.map((skill) => {
+    initState = () => {
+        let idList = this.state.requiredSkills.map((skill) => {
             return skill.id;
         });
 
@@ -113,23 +106,28 @@ export default class SkillItemSelector extends Component {
             }
         });
 
-        return {
+        this.setState({
             selectedList: selectedList,
             unselectedList: unselectedList
-        };
-    }
+        });
+    };
 
+    /**
+     * Lifecycle Functions
+     */
     componentDidMount () {
+        this.initState();
+
         this.unsubscribeCommon = CommonStates.store.subscribe(() => {
             this.setState({
                 requiredSkills: CommonStates.getters.getRequiredSkills()
-            });
+            }, this.initState);
         });
 
         this.unsubscribeModal = ModalStates.store.subscribe(() => {
             this.setState({
                 isShow: ModalStates.getters.isShowSkillItemSelector()
-            });
+            }, this.initState);
         });
     }
 

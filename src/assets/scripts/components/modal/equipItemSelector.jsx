@@ -70,7 +70,7 @@ export default class EquipItemSelector extends Component {
     };
 
     handleItemPickUp = (itemId) => {
-        let bypassData = this.state.bypassData;
+        let bypassData = Helper.deepCopy(this.state.bypassData);
 
         if (Helper.isNotEmpty(bypassData.enhanceIndex)) {
             bypassData.enhanceId = itemId;
@@ -104,27 +104,20 @@ export default class EquipItemSelector extends Component {
     };
 
     handleTypeChange = () => {
-        let type = this.refs.type.value;
-
         this.setState({
-            type: type
+            type: this.refs.type.value
         });
     };
 
     handleRareChange = () => {
-        let rare = this.refs.rare.value;
-
         this.setState({
-            rare: parseInt(rare, 10)
+            rare: parseInt(this.refs.rare.value, 10)
         });
     };
 
-    /**
-     * Lifecycle Functions
-     */
-    static getDerivedStateFromProps (nextProps, prevState) {
-        if (Helper.isEmpty(prevState.bypassData)) {
-            return {};
+    initState = () => {
+        if (Helper.isEmpty(this.state.bypassData)) {
+            return;
         }
 
         let mode = null;
@@ -132,21 +125,21 @@ export default class EquipItemSelector extends Component {
         let ignoreList = [];
         let type = null;
 
-        if (Helper.isNotEmpty(prevState.bypassData.enhanceIndex)) {
+        if (Helper.isNotEmpty(this.state.bypassData.enhanceIndex)) {
             mode = 'enhance';
             includeList = EnhanceDataset.getItems();
-        } else if (Helper.isNotEmpty(prevState.bypassData.slotIndex)) {
+        } else if (Helper.isNotEmpty(this.state.bypassData.slotIndex)) {
             mode = 'jewel';
 
-            for (let size = prevState.bypassData.slotSize; size >= 1; size--) {
+            for (let size = this.state.bypassData.slotSize; size >= 1; size--) {
                 for (let rare = 8; rare >= 5; rare--) {
                     includeList = includeList.concat(
                         JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems()
                     );
                 }
             }
-        } else if ('weapon' === prevState.bypassData.equipType) {
-            let weaponInfo = WeaponDataset.getInfo(prevState.bypassData.equipId);
+        } else if ('weapon' === this.state.bypassData.equipType) {
+            let weaponInfo = WeaponDataset.getInfo(this.state.bypassData.equipId);
 
             mode = 'weapon';
             type = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.type : Constant.weaponTypes[0];
@@ -154,8 +147,8 @@ export default class EquipItemSelector extends Component {
             Constant.weaponTypes.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
                     WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
-                        if (Helper.isNotEmpty(prevState.inventory['weapon'])
-                            && true === prevState.inventory['weapon'][equip.id]
+                        if (Helper.isNotEmpty(this.state.inventory['weapon'])
+                            && true === this.state.inventory['weapon'][equip.id]
                         ) {
                             ignoreList.push(equip);
                         } else {
@@ -165,8 +158,8 @@ export default class EquipItemSelector extends Component {
                 }
 
                 WeaponDataset.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
-                    if (Helper.isNotEmpty(prevState.inventory['weapon'])
-                        && true === prevState.inventory['weapon'][equip.id]
+                    if (Helper.isNotEmpty(this.state.inventory['weapon'])
+                        && true === this.state.inventory['weapon'][equip.id]
                     ) {
                         ignoreList.push(equip);
                     } else {
@@ -174,19 +167,19 @@ export default class EquipItemSelector extends Component {
                     }
                 });
             });
-        } else if ('helm' === prevState.bypassData.equipType
-            || 'chest' === prevState.bypassData.equipType
-            || 'arm' === prevState.bypassData.equipType
-            || 'waist' === prevState.bypassData.equipType
-            || 'leg' === prevState.bypassData.equipType
+        } else if ('helm' === this.state.bypassData.equipType
+            || 'chest' === this.state.bypassData.equipType
+            || 'arm' === this.state.bypassData.equipType
+            || 'waist' === this.state.bypassData.equipType
+            || 'leg' === this.state.bypassData.equipType
         ) {
             mode = 'armor';
-            type = prevState.bypassData.equipType;
+            type = this.state.bypassData.equipType;
 
             for (let rare = 8; rare >= 5; rare--) {
-                ArmorDataset.typeIs(prevState.bypassData.equipType).rareIs(rare).getItems().forEach((equip) => {
-                    if (Helper.isNotEmpty(prevState.inventory[equip.type])
-                        && true === prevState.inventory[equip.type][equip.id]
+                ArmorDataset.typeIs(this.state.bypassData.equipType).rareIs(rare).getItems().forEach((equip) => {
+                    if (Helper.isNotEmpty(this.state.inventory[equip.type])
+                        && true === this.state.inventory[equip.type][equip.id]
                     ) {
                         ignoreList.push(equip);
                     } else {
@@ -195,21 +188,21 @@ export default class EquipItemSelector extends Component {
                 });
             }
 
-            ArmorDataset.typeIs(prevState.bypassData.equipType).rareIs(0).getItems().forEach((equip) => {
-                if (Helper.isNotEmpty(prevState.inventory[equip.type])
-                    && true === prevState.inventory[equip.type][equip.id]
+            ArmorDataset.typeIs(this.state.bypassData.equipType).rareIs(0).getItems().forEach((equip) => {
+                if (Helper.isNotEmpty(this.state.inventory[equip.type])
+                    && true === this.state.inventory[equip.type][equip.id]
                 ) {
                     ignoreList.push(equip);
                 } else {
                     includeList.push(equip);
                 }
             });
-        } else if ('charm' === prevState.bypassData.equipType) {
+        } else if ('charm' === this.state.bypassData.equipType) {
             mode = 'charm';
 
             CharmDataset.getItems().forEach((equip) => {
-                if (Helper.isNotEmpty(prevState.inventory['charm'])
-                    && true === prevState.inventory['charm'][equip.id]
+                if (Helper.isNotEmpty(this.state.inventory['charm'])
+                    && true === this.state.inventory['charm'][equip.id]
                 ) {
                     ignoreList.push(equip);
                 } else {
@@ -224,25 +217,30 @@ export default class EquipItemSelector extends Component {
             ignoreList: ignoreList
         };
 
-        if (Helper.isEmpty(prevState.type)) {
+        if (Helper.isEmpty(this.state.type)) {
             state.type = type;
         }
 
-        return state;
+        this.setState(state);
     }
 
+    /**
+     * Lifecycle Functions
+     */
     componentDidMount () {
+        this.initState();
+
         this.unsubscribeCommon = CommonStates.store.subscribe(() => {
             this.setState({
                 inventory: CommonStates.getters.getInventory()
-            });
+            }, this.initState);
         });
 
         this.unsubscribeModel = ModalStates.store.subscribe(() => {
             this.setState({
                 bypassData: ModalStates.getters.getEquipItemSelectorBypassData(),
                 isShow: ModalStates.getters.isShowEquipItemSelector()
-            });
+            }, this.initState);
         });
     }
 

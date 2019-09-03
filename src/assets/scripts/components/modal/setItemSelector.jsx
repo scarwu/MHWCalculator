@@ -80,15 +80,8 @@ export default class SetItemSelector extends Component {
         });
     };
 
-    /**
-     * Lifecycle Functions
-     */
-    static getDerivedStateFromProps (nextProps, prevState) {
-        if (Helper.isEmpty(prevState.requiredSets)) {
-            return {};
-        }
-
-        let idList = prevState.requiredSets.map((set) => {
+    initState = () => {
+        let idList = this.state.requiredSets.map((set) => {
             return set.id;
         });
 
@@ -110,13 +103,18 @@ export default class SetItemSelector extends Component {
             }
         });
 
-        return {
+        this.setState({
             selectedList: selectedList,
             unselectedList: unselectedList
-        };
-    }
+        });
+    };
 
+    /**
+     * Lifecycle Functions
+     */
     componentDidMount () {
+        this.initState();
+
         this.unsubscribeCommon = CommonStates.store.subscribe(() => {
             this.setState({
                 requiredSets: CommonStates.getters.getRequiredSets()

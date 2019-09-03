@@ -82,18 +82,14 @@ export default class Main extends Component {
     /**
      * Lifecycle Functions
      */
-    static getDerivedStateFromProps (nextProps, prevState) {
-        let hash = nextProps.match.params.hash;
+    componentDidMount () {
+        let hash = this.props.match.params.hash;
 
-        if (Helper.isEmpty(hash) || true === prevState.isImportEquips) {
+        if (Helper.isEmpty(hash) || true === this.state.isImportEquips) {
             return null;
         }
 
         CommonStates.setters.replaceCurrentEquips(JSON.parse(Helper.base64Decode(hash)));
-
-        return {
-            isImportEquips: true
-        };
     }
 
     /**

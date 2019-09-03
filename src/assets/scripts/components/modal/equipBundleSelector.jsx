@@ -94,11 +94,8 @@ export default class EquipBundleSelector extends Component {
         ModalStates.setters.hideEquipBundleSelector();
     };
 
-    /**
-     * Lifecycle Functions
-     */
-    static getDerivedStateFromProps (nextProps, prevState) {
-        let equips = prevState.currentEquips;
+    initState = () => {
+        let equips = this.state.currentEquips;
 
         if (Helper.isEmpty(equips.weapon.id)
             && Helper.isEmpty(equips.helm.id)
@@ -111,23 +108,28 @@ export default class EquipBundleSelector extends Component {
             equips = null;
         }
 
-        return {
+        this.setState({
             equips: equips
-        };
+        });
     }
 
+    /**
+     * Lifecycle Functions
+     */
     componentDidMount () {
+        this.initState();
+
         this.unsubscribeCommon = CommonStates.store.subscribe(() => {
             this.setState({
                 reservedBundles: CommonStates.getters.getReservedBundles(),
                 currentEquips: CommonStates.getters.getCurrentEquips()
-            });
+            }, this.initState);
         });
 
         this.unsubscribeModal = ModalStates.store.subscribe(() => {
             this.setState({
                 isShow: ModalStates.getters.isShowEquipBundleSelector()
-            });
+            }, this.initState);
         });
     }
 
