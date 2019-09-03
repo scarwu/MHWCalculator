@@ -110,7 +110,7 @@ export default class CandidateBundles extends Component {
 
     handleBundlePickUp = (index) => {
         let bundle = this.state.computedBundles[index];
-        let equips = CommonStates.getters.getCurrentEquips();
+        let equips = Helper.deepCopy(CommonStates.getters.getCurrentEquips());
         let slotMap = {
             1: [],
             2: [],

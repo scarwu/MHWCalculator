@@ -29,9 +29,9 @@ const statusPrefix = 'state:common';
 
 // Middleware
 const diffLogger = store => next => action => {
-    let prevState = Helper.deepCopy(store.getState());
+    let prevState = store.getState();
     let result = next(action);
-    let nextState = Helper.deepCopy(store.getState());
+    let nextState = store.getState();
     let diffState = {};
 
     for (let key in prevState) {
@@ -71,7 +71,7 @@ const Store = createStore((state, action) => {
     case 'ADD_REQUIRED_SET':
         return Object.assign({}, state, {
             requiredSets: (() => {
-                let requiredSets = state.requiredSets;
+                let requiredSets = Helper.deepCopy(state.requiredSets);
 
                 requiredSets.push({
                     id: action.payload.data.setId,
@@ -84,7 +84,7 @@ const Store = createStore((state, action) => {
     case 'REMOVE_REQUIRED_SET':
         return Object.assign({}, state, {
             requiredSets: (() => {
-                let requiredSets = state.requiredSets;
+                let requiredSets = Helper.deepCopy(state.requiredSets);
 
                 requiredSets = requiredSets.filter((set) => {
                     return set.id !== action.payload.data.setId;
@@ -96,7 +96,7 @@ const Store = createStore((state, action) => {
     case 'REMOVE_REQUIRED_SET_BY_INDEX':
         return Object.assign({}, state, {
             requiredSets: (() => {
-                let requiredSets = state.requiredSets;
+                let requiredSets = Helper.deepCopy(state.requiredSets);
 
                 delete requiredSets[action.payload.index];
 
@@ -110,7 +110,7 @@ const Store = createStore((state, action) => {
     case 'INCREASE_REQUIRED_SET_STEP':
         return Object.assign({}, state, {
             requiredSets: (() => {
-                let requiredSets = state.requiredSets;
+                let requiredSets = Helper.deepCopy(state.requiredSets);
                 let setInfo = SetDataset.getInfo(requiredSets[action.payload.index].id);
 
                 if (Helper.isEmpty(setInfo)) {
@@ -129,7 +129,7 @@ const Store = createStore((state, action) => {
     case 'DECREASE_REQUIRED_SET_STEP':
         return Object.assign({}, state, {
             requiredSets: (() => {
-                let requiredSets = state.requiredSets;
+                let requiredSets = Helper.deepCopy(state.requiredSets);
 
                 if (1 === requiredSets[action.payload.index].step) {
                     return requiredSets;
@@ -149,7 +149,7 @@ const Store = createStore((state, action) => {
     case 'ADD_REQUIRED_SKILL':
         return Object.assign({}, state, {
             requiredSkills: (() => {
-                let requiredSkills = state.requiredSkills;
+                let requiredSkills = Helper.deepCopy(state.requiredSkills);
 
                 requiredSkills.push({
                     id: action.payload.data.skillId,
@@ -162,7 +162,7 @@ const Store = createStore((state, action) => {
     case 'REMOVE_REQUIRED_SKILL':
         return Object.assign({}, state, {
             requiredSkills: (() => {
-                let requiredSkills = state.requiredSkills;
+                let requiredSkills = Helper.deepCopy(state.requiredSkills);
 
                 requiredSkills = requiredSkills.filter((skill) => {
                     return skill.id !== action.payload.data.skillId;
@@ -174,7 +174,7 @@ const Store = createStore((state, action) => {
     case 'REMOVE_REQUIRED_SKILL_BY_INDEX':
         return Object.assign({}, state, {
             requiredSkills: (() => {
-                let requiredSkills = state.requiredSkills;
+                let requiredSkills = Helper.deepCopy(state.requiredSkills);
 
                 delete requiredSkills[action.payload.index];
 
@@ -188,7 +188,7 @@ const Store = createStore((state, action) => {
     case 'INCREASE_REQUIRED_SKILL_LEVEL':
         return Object.assign({}, state, {
             requiredSkills: (() => {
-                let requiredSkills = state.requiredSkills;
+                let requiredSkills = Helper.deepCopy(state.requiredSkills);
                 let skillInfo = SkillDataset.getInfo(requiredSkills[action.payload.index].id);
 
                 if (Helper.isEmpty(skillInfo)) {
@@ -207,7 +207,7 @@ const Store = createStore((state, action) => {
     case 'DECREASE_REQUIRED_SKILL_LEVEL':
         return Object.assign({}, state, {
             requiredSkills: (() => {
-                let requiredSkills = state.requiredSkills;
+                let requiredSkills = Helper.deepCopy(state.requiredSkills);
 
                 if (0 === requiredSkills[action.payload.index].level) {
                     return requiredSkills;
@@ -227,7 +227,7 @@ const Store = createStore((state, action) => {
     case 'TOGGLE_REQUIRED_EQUIP_PINS':
         return Object.assign({}, state, {
             requiredEquipPins: (() => {
-                let requiredEquipPins = state.requiredEquipPins;
+                let requiredEquipPins = Helper.deepCopy(state.requiredEquipPins);
 
                 requiredEquipPins[action.payload.equipType] = !requiredEquipPins[action.payload.equipType];
 
@@ -243,7 +243,7 @@ const Store = createStore((state, action) => {
     case 'SET_CURRENT_EQUIP':
         return Object.assign({}, state, {
             currentEquips: (() => {
-                let currentEquips = state.currentEquips;
+                let currentEquips = Helper.deepCopy(state.currentEquips);
 
                 if (Helper.isNotEmpty(action.payload.data.enhanceIndex)) {
                     if (Helper.isEmpty(currentEquips.weapon.enhanceIds)) {
@@ -295,16 +295,16 @@ const Store = createStore((state, action) => {
     case 'TOGGLE_INVENTORY_EQUIP':
         return Object.assign({}, state, {
             inventory: (() => {
-                let inventory = state.inventory;
+                let inventory = Helper.deepCopy(state.inventory);
 
-                if (Helper.isEmpty(inventory[data.type])) {
-                    inventory[data.type] = {};
+                if (Helper.isEmpty(inventory[action.payload.equip.type])) {
+                    inventory[action.payload.equip.type] = {};
                 }
 
-                if (Helper.isEmpty(inventory[data.type][data.id])) {
-                    inventory[data.type][data.id] = true;
+                if (Helper.isEmpty(inventory[action.payload.equip.type][action.payload.equip.id])) {
+                    inventory[action.payload.equip.type][action.payload.equip.id] = true;
                 } else {
-                    delete inventory[data.type][data.id];
+                    delete inventory[action.payload.equip.type][action.payload.equip.id];
                 }
 
                 return inventory;
@@ -326,7 +326,7 @@ const Store = createStore((state, action) => {
     case 'ADD_RESERVED_BUNDLE':
         return Object.assign({}, state, {
             reservedBundles: (() => {
-                let reservedBundles = state.reservedBundles;
+                let reservedBundles = Helper.deepCopy(state.reservedBundles);
 
                 reservedBundles.push(action.payload.data);
 
@@ -336,7 +336,7 @@ const Store = createStore((state, action) => {
     case 'UPDATE_RESERVED_BUNDLE_NAME':
         return Object.assign({}, state, {
             reservedBundles: (() => {
-                let reservedBundles = state.reservedBundles;
+                let reservedBundles = Helper.deepCopy(state.reservedBundles);
 
                 if (Helper.isEmpty(reservedBundles[action.payload.index])) {
                     return reservedBundles;
@@ -350,7 +350,7 @@ const Store = createStore((state, action) => {
     case 'REMOVE_RESERVED_BUNDLE':
         return Object.assign({}, state, {
             reservedBundles: (() => {
-                let reservedBundles = state.reservedBundles;
+                let reservedBundles = Helper.deepCopy(state.reservedBundles);
 
                 if (Helper.isEmpty(reservedBundles[action.payload.index])) {
                     return reservedBundles;
@@ -508,11 +508,11 @@ const Setters = {
     },
 
     // Inventory
-    toggleInventoryEquip: (data) => {
+    toggleInventoryEquip: (equip) => {
         Store.dispatch({
             type: 'TOGGLE_INVENTORY_EQUIP',
             payload: {
-                data: data
+                equip: equip
             }
         });
     },

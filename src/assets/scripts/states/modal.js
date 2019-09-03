@@ -22,9 +22,9 @@ const statusPrefix = 'state:modal';
 
 // Middleware
 const diffLogger = store => next => action => {
-    let prevState = Helper.deepCopy(store.getState());
+    let prevState = store.getState();
     let result = next(action);
-    let nextState = Helper.deepCopy(store.getState());
+    let nextState = store.getState();
     let diffState = {};
 
     for (let key in prevState) {
