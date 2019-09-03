@@ -30,11 +30,11 @@ export default function AlgorithmSetting(props) {
     /**
      * Hooks
      */
-    const refModal = useRef();
     const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonStates.getters.getAlgorithmParams());
     const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowAlgorithmSetting());
+    const refModal = useRef();
 
-    // Did Mount & Will Unmount
+    // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribeCommon = CommonStates.store.subscribe(() => {
             updateAlgorithmParams(CommonStates.getters.getAlgorithmParams());

@@ -40,10 +40,10 @@ export default function Changelog(props) {
     /**
      * Hooks
      */
-    const refModal = useRef();
     const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowChangelog());
+    const refModal = useRef();
 
-    // Did Mount & Will Unmount
+    // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = ModalStates.store.subscribe(() => {
             updateIsShow(ModalStates.getters.isShowChangelog());

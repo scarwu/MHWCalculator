@@ -518,10 +518,6 @@ export default function CharacterStatus(props) {
     /**
      * Hooks
      */
-    const refTuningRawAttack = useRef();
-    const refTuningRawCriticalRate = useRef();
-    const refTuningRawCriticalMultiple = useRef();
-    const refTuningElementAttack = useRef();
     const [stateCurrentEquips, updateCurrentEquips] = useState(CommonStates.getters.getCurrentEquips());
     const [stateEquipInfos, updateEquipInfos] = useState({});
     const [stateStatus, updateStatus] = useState(Helper.deepCopy(Constant.defaultStatus));
@@ -533,16 +529,25 @@ export default function CharacterStatus(props) {
         rawCriticalMultiple: 0.1,
         elementAttack: 100
     });
+    const refTuningRawAttack = useRef();
+    const refTuningRawCriticalRate = useRef();
+    const refTuningRawCriticalMultiple = useRef();
+    const refTuningElementAttack = useRef();
 
-    // Will Mount
     useEffect(() => {
-        initState();
+        const equipInfos = generateEquipInfos(stateCurrentEquips);
+        const passiveSkills = generatePassiveSkills(equipInfos);
+        const status = generateStatus(equipInfos, passiveSkills);
+        const extraInfo = generateExtraInfo(equipInfos, status, stateTuning);
+
+        updateEquipInfos(equipInfos);
+        updatePassiveSkills(passiveSkills);
+        updateStatus(status);
+        updateExtraInfo(extraInfo);
     }, [stateCurrentEquips]);
 
-    // Did Mount & Will Unmount
+    // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        initState();
-
         const unsubscribe = CommonStates.store.subscribe(() => {
             updateCurrentEquips(CommonStates.getters.getCurrentEquips());
         });
@@ -556,13 +561,13 @@ export default function CharacterStatus(props) {
      * Handle Functions
      */
     let handlePassiveSkillToggle = (skillId) => {
-        let equipInfos = stateEquipInfos;
-        let passiveSkills = statePassiveSkills;
-        let tuning = stateTuning;
+        const equipInfos = stateEquipInfos;
+        const passiveSkills = statePassiveSkills;
+        const tuning = stateTuning;
 
         passiveSkills[skillId].isActive = !passiveSkills[skillId].isActive;
 
-        let status = generateStatus(equipInfos, passiveSkills);
+        const status = generateStatus(equipInfos, passiveSkills);
 
         updatePassiveSkills(passiveSkills);
         updateStatus(status);
@@ -580,9 +585,9 @@ export default function CharacterStatus(props) {
         tuningRawCriticalMultiple = !isNaN(tuningRawCriticalMultiple) ? tuningRawCriticalMultiple : 0;
         tuningElementAttack = !isNaN(tuningElementAttack) ? tuningElementAttack : 0;
 
-        let equipInfos = stateEquipInfos;
-        let status = stateStatus;
-        let tuning = {
+        const equipInfos = stateEquipInfos;
+        const status = stateStatus;
+        const tuning = {
             rawAttack: tuningRawAttack,
             rawCriticalRate: tuningRawCriticalRate,
             rawCriticalMultiple: tuningRawCriticalMultiple,
@@ -591,18 +596,6 @@ export default function CharacterStatus(props) {
 
         updateTuning(tuning);
         updateExtraInfo(generateExtraInfo(equipInfos, status, tuning));
-    };
-
-    let initState = () => {
-        let equipInfos = generateEquipInfos(stateCurrentEquips);
-        let passiveSkills = generatePassiveSkills(equipInfos);
-        let status = generateStatus(equipInfos, passiveSkills);
-        let extraInfo = generateExtraInfo(equipInfos, status, stateTuning);
-
-        updateEquipInfos(equipInfos);
-        updatePassiveSkills(passiveSkills);
-        updateStatus(status);
-        updateExtraInfo(extraInfo);
     };
 
     /**

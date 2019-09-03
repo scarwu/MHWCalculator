@@ -31,24 +31,44 @@ export default function SetItemSelector(props) {
     /**
      * Hooks
      */
-    const refModal = useRef();
-    const refSegment = useRef();
     const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowSetItemSelector());
     const [stateRequiredSets, updateRequiredSets] = useState(CommonStates.getters.getRequiredSets());
     const [stateList, updateList] = useState([]);
     const [stateSegment, updateSegment] = useState(null);
     const [stateSelectedList, updateSelectedList] = useState([]);
     const [stateUnselectedList, updateUnselectedList] = useState([]);
+    const refModal = useRef();
+    const refSegment = useRef();
 
-    // Will Mount
     useEffect(() => {
-        initState();
-    }, [stateRequiredSets, updateIsShow]);
+        let idList = stateRequiredSets.map((set) => {
+            return set.id;
+        });
 
-    // Did Mount & Will Unmount
+        let selectedList = [];
+        let unselectedList = [];
+
+        SetDataset.getNames().sort().forEach((setId) => {
+            let set = SetDataset.getInfo(setId);
+
+            if (Helper.isEmpty(set)) {
+                return;
+            }
+
+            // Skip Selected Sets
+            if (-1 !== idList.indexOf(set.id)) {
+                selectedList.push(set);
+            } else {
+                unselectedList.push(set);
+            }
+        });
+
+        updateSelectedList(selectedList);
+        updateUnselectedList(unselectedList);
+    }, [stateRequiredSets]);
+
+    // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        initState();
-
         const unsubscribeCommon = CommonStates.store.subscribe(() => {
             updateRequiredSets(CommonStates.getters.getRequiredSets());
         });
@@ -97,33 +117,6 @@ export default function SetItemSelector(props) {
             ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
 
         updateSegment(segment);
-    };
-
-    let initState = () => {
-        let idList = stateRequiredSets.map((set) => {
-            return set.id;
-        });
-
-        let selectedList = [];
-        let unselectedList = [];
-
-        SetDataset.getNames().sort().forEach((setId) => {
-            let set = SetDataset.getInfo(setId);
-
-            if (Helper.isEmpty(set)) {
-                return;
-            }
-
-            // Skip Selected Sets
-            if (-1 !== idList.indexOf(set.id)) {
-                selectedList.push(set);
-            } else {
-                unselectedList.push(set);
-            }
-        });
-
-        updateSelectedList(selectedList);
-        updateUnselectedList(unselectedList);
     };
 
     /**

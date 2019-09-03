@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, createRef } from 'react';
 import MD5 from 'md5';
 
 // Load Core Libraries
@@ -36,24 +36,15 @@ export default function EquipBundleSelector(props) {
     /**
      * Hooks
      */
-    const refModal = useRef();
-    const refName = useRef();
+    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowEquipBundleSelector());
     const [stateReservedBundles, updateReservedBundles] = useState(CommonStates.getters.getReservedBundles());
     const [stateCurrentEquips, updateCurrentEquips] = useState(CommonStates.getters.getCurrentEquips());
-    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowEquipBundleSelector());
-    const [stateEquips, updateEquips] = useState(null);
+    const refModal = useRef();
+    const refName = useRef();
+    const refNameList = useRef(stateReservedBundles.map(() => createRef()));
 
-    let refNameList = [];
-
-    // Will Mount
+    // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        initState();
-    }, [stateReservedBundles, stateCurrentEquips, stateIsShow]);
-
-    // Did Mount & Will Unmount
-    useEffect(() => {
-        initState();
-
         const unsubscribeCommon = CommonStates.store.subscribe(() => {
             updateReservedBundles(CommonStates.getters.getReservedBundles());
             updateCurrentEquips(CommonStates.getters.getCurrentEquips());
@@ -86,7 +77,7 @@ export default function EquipBundleSelector(props) {
 
     let handleBundleSave = (index) => {
         let name = Helper.isNotEmpty(index)
-            ? refNameList[index].current.value
+            ? refNameList.current[index].current.value
             : refName.current.value;
 
         if (0 === name.length) {
@@ -94,15 +85,12 @@ export default function EquipBundleSelector(props) {
         }
 
         if (Helper.isNotEmpty(index)) {
-            CommonStates.setters.updateReservedBundleName({
-                index: index,
-                name: name
-            });
+            CommonStates.setters.updateReservedBundleName(index, name);
         } else {
             CommonStates.setters.addReservedBundle({
-                id: MD5(JSON.stringify(stateEquips)),
+                id: MD5(JSON.stringify(stateCurrentEquips)),
                 name: name,
-                equips: stateEquips
+                equips: stateCurrentEquips
             });
         }
     };
@@ -118,23 +106,6 @@ export default function EquipBundleSelector(props) {
         ModalStates.setters.hideEquipBundleSelector();
     };
 
-    let initState = () => {
-        let equips = stateCurrentEquips;
-
-        if (Helper.isEmpty(equips.weapon.id)
-            && Helper.isEmpty(equips.helm.id)
-            && Helper.isEmpty(equips.chest.id)
-            && Helper.isEmpty(equips.arm.id)
-            && Helper.isEmpty(equips.waist.id)
-            && Helper.isEmpty(equips.leg.id)
-            && Helper.isEmpty(equips.charm.id)
-        ) {
-            equips = null;
-        }
-
-        updateEquips(equips);
-    }
-
     /**
      * Render Functions
      */
@@ -149,7 +120,7 @@ export default function EquipBundleSelector(props) {
 
         return (
             <tr key={data.id}>
-                <td><input type="text" placeholder={_('inputName')} ref={refNameList[index]} defaultValue={data.name} /></td>
+                <td><input type="text" placeholder={_('inputName')} ref={refNameList.current[index]} defaultValue={data.name} /></td>
                 <td><span>{(Helper.isNotEmpty(weaponInfo)) ? _(weaponInfo.name) : false}</span></td>
                 <td><span>{(Helper.isNotEmpty(helmInfo)) ? _(helmInfo.name) : false}</span></td>
                 <td><span>{(Helper.isNotEmpty(chestInfo)) ? _(chestInfo.name) : false}</span></td>
@@ -174,42 +145,56 @@ export default function EquipBundleSelector(props) {
         );
     };
 
-    let renderTable = () => {
-        let equips = stateEquips;
-        let reservedBundles = stateReservedBundles;
-
-        let DefaultRow = false;
-
-        if (Helper.isNotEmpty(equips)) {
-            let weaponInfo = WeaponDataset.getInfo(equips.weapon.id);
-            let helmInfo = ArmorDataset.getInfo(equips.helm.id);
-            let chestInfo = ArmorDataset.getInfo(equips.chest.id);
-            let armInfo = ArmorDataset.getInfo(equips.arm.id);
-            let waistInfo = ArmorDataset.getInfo(equips.waist.id);
-            let legInfo = ArmorDataset.getInfo(equips.leg.id);
-            let charmInfo = CharmDataset.getInfo(equips.charm.id);
-
-            DefaultRow = (
-                <tr>
-                    <td><input type="text" placeholder={_('inputName')} ref={refName} /></td>
-                    <td><span>{(Helper.isNotEmpty(weaponInfo)) ? _(weaponInfo.name) : false}</span></td>
-                    <td><span>{(Helper.isNotEmpty(helmInfo)) ? _(helmInfo.name) : false}</span></td>
-                    <td><span>{(Helper.isNotEmpty(chestInfo)) ? _(chestInfo.name) : false}</span></td>
-                    <td><span>{(Helper.isNotEmpty(armInfo)) ? _(armInfo.name) : false}</span></td>
-                    <td><span>{(Helper.isNotEmpty(waistInfo)) ? _(waistInfo.name) : false}</span></td>
-                    <td><span>{(Helper.isNotEmpty(legInfo)) ? _(legInfo.name) : false}</span></td>
-                    <td><span>{(Helper.isNotEmpty(charmInfo)) ? _(charmInfo.name) : false}</span></td>
-                    <td>
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
-                                iconName="floppy-o" altName={_('save')}
-                                onClick={() => {handleBundleSave(null)}} />
-                        </div>
-                    </td>
-                </tr>
-            );
+    let renderDefaultRow = () => {
+        if (Helper.isEmpty(stateCurrentEquips.weapon.id)
+            && Helper.isEmpty(stateCurrentEquips.helm.id)
+            && Helper.isEmpty(stateCurrentEquips.chest.id)
+            && Helper.isEmpty(stateCurrentEquips.arm.id)
+            && Helper.isEmpty(stateCurrentEquips.waist.id)
+            && Helper.isEmpty(stateCurrentEquips.leg.id)
+            && Helper.isEmpty(stateCurrentEquips.charm.id)
+        ) {
+            return false;
         }
 
+        let bundleId = MD5(JSON.stringify(stateCurrentEquips));
+
+        for (let index in stateReservedBundles) {
+            if (bundleId === stateReservedBundles[index].id) {
+                return false;
+            }
+        }
+
+        let weaponInfo = WeaponDataset.getInfo(stateCurrentEquips.weapon.id);
+        let helmInfo = ArmorDataset.getInfo(stateCurrentEquips.helm.id);
+        let chestInfo = ArmorDataset.getInfo(stateCurrentEquips.chest.id);
+        let armInfo = ArmorDataset.getInfo(stateCurrentEquips.arm.id);
+        let waistInfo = ArmorDataset.getInfo(stateCurrentEquips.waist.id);
+        let legInfo = ArmorDataset.getInfo(stateCurrentEquips.leg.id);
+        let charmInfo = CharmDataset.getInfo(stateCurrentEquips.charm.id);
+
+        return (
+            <tr>
+                <td><input type="text" placeholder={_('inputName')} ref={refName} /></td>
+                <td><span>{(Helper.isNotEmpty(weaponInfo)) ? _(weaponInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(helmInfo)) ? _(helmInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(chestInfo)) ? _(chestInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(armInfo)) ? _(armInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(waistInfo)) ? _(waistInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(legInfo)) ? _(legInfo.name) : false}</span></td>
+                <td><span>{(Helper.isNotEmpty(charmInfo)) ? _(charmInfo.name) : false}</span></td>
+                <td>
+                    <div className="mhwc-icons_bundle">
+                        <FunctionalIcon
+                            iconName="floppy-o" altName={_('save')}
+                            onClick={() => {handleBundleSave(null)}} />
+                    </div>
+                </td>
+            </tr>
+        );
+    };
+
+    let renderTable = () => {
         return (
             <table className="mhwc-equip_bundle_table">
                 <thead>
@@ -226,8 +211,8 @@ export default function EquipBundleSelector(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {DefaultRow}
-                    {reservedBundles.map(renderRow)}
+                    {renderDefaultRow()}
+                    {stateReservedBundles.map(renderRow)}
                 </tbody>
             </table>
         );

@@ -34,7 +34,7 @@ export default function ConditionOptions(props) {
     const [stateRequiredSets, updateRequiredSets] = useState(CommonStates.getters.getRequiredSets());
     const [stateRequiredSkills, updateRequiredSkills] = useState(CommonStates.getters.getRequiredSkills());
 
-    // Did Mount & Will Unmount
+    // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonStates.store.subscribe(() => {
             updateRequiredSets(CommonStates.getters.getRequiredSets());

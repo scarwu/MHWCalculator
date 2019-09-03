@@ -40,100 +40,21 @@ export default function EquipItemSelector(props) {
     /**
      * Hooks
      */
-    const refModal = useRef();
-    const refSegment = useRef();
-    const refType = useRef();
-    const refRare = useRef();
-    const [stateInventory, updateInventory] = useState(CommonStates.getters.getInventory());
     const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowEquipItemSelector());
     const [stateBypassData, updateBypassData] = useState(ModalStates.getters.getEquipItemSelectorBypassData());
+    const [stateInventory, updateInventory] = useState(CommonStates.getters.getInventory());
     const [stateMode, updateMode] = useState(null);
     const [stateIncludeList, updateIncludeList] = useState([]);
     const [stateIgnoreList, updateIgnoreList] = useState([]);
     const [stateType, updateType] = useState(null);
     const [stateRare, updateRare] = useState(8);
     const [stateSegment, updateSegment] = useState(null);
+    const refModal = useRef();
+    const refSegment = useRef();
+    const refType = useRef();
+    const refRare = useRef();
 
-    // Will Mount
     useEffect(() => {
-        initState();
-    }, [stateBypassData]);
-
-    // Did Mount & Will Unmount
-    useEffect(() => {
-        initState();
-
-        const unsubscribeCommon = CommonStates.store.subscribe(() => {
-            updateInventory(CommonStates.getters.getInventory());
-        });
-
-        const unsubscribeModel = ModalStates.store.subscribe(() => {
-            updateBypassData(ModalStates.getters.getEquipItemSelectorBypassData());
-            updateIsShow(ModalStates.getters.isShowEquipItemSelector());
-        });
-
-        return () => {
-            unsubscribeCommon();
-            unsubscribeModel();
-        };
-    }, []);
-
-    /**
-     * Handle Functions
-     */
-    let handleFastWindowClose = (event) => {
-        if (refModal.current !== event.target) {
-            return;
-        }
-
-        handleWindowClose();
-    };
-
-    let handleWindowClose = () => {
-        ModalStates.setters.hideEquipItemSelector();
-    };
-
-    let handleItemPickUp = (itemId) => {
-        let bypassData = Helper.deepCopy(stateBypassData);
-
-        if (Helper.isNotEmpty(bypassData.enhanceIndex)) {
-            bypassData.enhanceId = itemId;
-        } else if (Helper.isNotEmpty(bypassData.slotIndex)) {
-            bypassData.slotId = itemId;
-        } else {
-            bypassData.equipId = itemId;
-        }
-
-        CommonStates.setters.setCurrentEquip(bypassData);
-
-        handleWindowClose();
-    };
-
-    let handleItemToggle = (itemType, itemId) => {
-        CommonStates.setters.toggleInventoryEquip({
-            type: itemType,
-            id: itemId
-        });
-    };
-
-    let handleSegmentInput = () => {
-        let segment = refSegment.current.value;
-
-        segment = (0 !== segment.length)
-            ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
-
-        updateSegment(segment);
-    };
-
-    let handleTypeChange = () => {
-        updateType(refType.current.value);
-    };
-
-    let handleRareChange = () => {
-        updateRare(parseInt(refRare.current.value, 10));
-    };
-
-    let initState = () => {
         if (Helper.isEmpty(stateBypassData)) {
             return;
         }
@@ -232,11 +153,80 @@ export default function EquipItemSelector(props) {
         updateMode(mode);
         updateIncludeList(includeList);
         updateIgnoreList(ignoreList);
+        updateType(type);
+    }, [stateBypassData, stateInventory]);
 
-        if (Helper.isEmpty(stateType)) {
-            updateType(type);
+    // Like Did Mount & Will Unmount Cycle
+    useEffect(() => {
+        const unsubscribeCommon = CommonStates.store.subscribe(() => {
+            updateInventory(CommonStates.getters.getInventory());
+        });
+
+        const unsubscribeModel = ModalStates.store.subscribe(() => {
+            updateBypassData(ModalStates.getters.getEquipItemSelectorBypassData());
+            updateIsShow(ModalStates.getters.isShowEquipItemSelector());
+        });
+
+        return () => {
+            unsubscribeCommon();
+            unsubscribeModel();
+        };
+    }, []);
+
+    /**
+     * Handle Functions
+     */
+    let handleFastWindowClose = (event) => {
+        if (refModal.current !== event.target) {
+            return;
         }
-    }
+
+        handleWindowClose();
+    };
+
+    let handleWindowClose = () => {
+        ModalStates.setters.hideEquipItemSelector();
+    };
+
+    let handleItemPickUp = (itemId) => {
+        let bypassData = Helper.deepCopy(stateBypassData);
+
+        if (Helper.isNotEmpty(bypassData.enhanceIndex)) {
+            bypassData.enhanceId = itemId;
+        } else if (Helper.isNotEmpty(bypassData.slotIndex)) {
+            bypassData.slotId = itemId;
+        } else {
+            bypassData.equipId = itemId;
+        }
+
+        CommonStates.setters.setCurrentEquip(bypassData);
+
+        handleWindowClose();
+    };
+
+    let handleItemToggle = (itemType, itemId) => {
+        CommonStates.setters.toggleInventoryEquip({
+            type: itemType,
+            id: itemId
+        });
+    };
+
+    let handleSegmentInput = () => {
+        let segment = refSegment.current.value;
+
+        segment = (0 !== segment.length)
+            ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
+
+        updateSegment(segment);
+    };
+
+    let handleTypeChange = () => {
+        updateType(refType.current.value);
+    };
+
+    let handleRareChange = () => {
+        updateRare(parseInt(refRare.current.value, 10));
+    };
 
     /**
      * Render Functions

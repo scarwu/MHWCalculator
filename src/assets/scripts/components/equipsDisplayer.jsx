@@ -42,7 +42,7 @@ export default function EquipsDisplayer(props) {
     const [stateCurrentEquips, updateCurrentEquips] = useState(CommonStates.getters.getCurrentEquips());
     const [stateRequiredEquipPins, updateRequiredEquipPins] = useState(CommonStates.getters.getRequiredEquipPins());
 
-    // Did Mount & Will Unmount
+    // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonStates.store.subscribe(() => {
             updateCurrentEquips(CommonStates.getters.getCurrentEquips());

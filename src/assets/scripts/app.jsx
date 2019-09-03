@@ -38,20 +38,21 @@ export default function App(props) {
     /**
      * Hooks
      */
-    const refLang = useRef();
     const [stateLang, updateLang] = useState(Status.get('sys:lang'));
+    const refLang = useRef();
 
-    // Did Mount & Will Unmount
+    // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
+
+        // Set Build Time
         Status.set('sys:buildTime', Config.buildTime);
 
-        let hash = props.match.params.hash;
-
-        if (Helper.isEmpty(hash)) {
-            return null;
+        // Restore Equips from Url to State
+        if (Helper.isNotEmpty(props.match.params.hash)) {
+            CommonStates.setters.replaceCurrentEquips(
+                JSON.parse(Helper.base64Decode(props.match.params.hash))
+            );
         }
-
-        CommonStates.setters.replaceCurrentEquips(JSON.parse(Helper.base64Decode(hash)));
     }, []);
 
     /**

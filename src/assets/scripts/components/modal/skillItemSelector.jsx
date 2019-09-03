@@ -30,24 +30,48 @@ export default function SkillItemSelector(props) {
     /**
      * Hooks
      */
-    const refModal = useRef();
-    const refSegment = useRef();
     const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowSkillItemSelector());
     const [stateRequiredSkills, updateRequiredSkills] = useState(CommonStates.getters.getRequiredSkills());
     const [stateList, updateList] = useState([]);
     const [stateSegment, updateSegment] = useState(null);
     const [stateSelectedList, updateSelectedList] = useState([]);
     const [stateUnselectedList, updateUnselectedList] = useState([]);
+    const refModal = useRef();
+    const refSegment = useRef();
 
-    // Will Mount
     useEffect(() => {
-        initState();
-    }, [stateRequiredSkills, updateIsShow]);
+        let idList = stateRequiredSkills.map((skill) => {
+            return skill.id;
+        });
 
-    // Did Mount & Will Unmount
+        let selectedList = [];
+        let unselectedList = [];
+
+        SkillDataset.getNames().sort().forEach((skillId) => {
+            let skillInfo = SkillDataset.getInfo(skillId);
+
+            if (Helper.isEmpty(skillInfo)) {
+                return;
+            }
+
+            if (false === skillInfo.from.jewel && false === skillInfo.from.armor) {
+                return;
+            }
+
+            // Skip Selected Skills
+            if (-1 !== idList.indexOf(skillInfo.id)) {
+                selectedList.push(skillInfo);
+            } else {
+                unselectedList.push(skillInfo);
+            }
+        });
+
+        updateSelectedList(selectedList);
+        updateUnselectedList(unselectedList);
+    }, [stateRequiredSkills]);
+
+    // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        initState();
-
         const unsubscribeCommon = CommonStates.store.subscribe(() => {
             updateRequiredSkills(CommonStates.getters.getRequiredSkills());
         });
@@ -96,37 +120,6 @@ export default function SkillItemSelector(props) {
             ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
 
         updateSegment(segment);
-    };
-
-    let initState = () => {
-        let idList = stateRequiredSkills.map((skill) => {
-            return skill.id;
-        });
-
-        let selectedList = [];
-        let unselectedList = [];
-
-        SkillDataset.getNames().sort().forEach((skillId) => {
-            let skillInfo = SkillDataset.getInfo(skillId);
-
-            if (Helper.isEmpty(skillInfo)) {
-                return;
-            }
-
-            if (false === skillInfo.from.jewel && false === skillInfo.from.armor) {
-                return;
-            }
-
-            // Skip Selected Skills
-            if (-1 !== idList.indexOf(skillInfo.id)) {
-                selectedList.push(skillInfo);
-            } else {
-                unselectedList.push(skillInfo);
-            }
-        });
-
-        updateSelectedList(selectedList);
-        updateUnselectedList(unselectedList);
     };
 
     /**

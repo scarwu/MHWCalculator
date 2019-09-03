@@ -43,7 +43,7 @@ export default function CandidateBundles(props) {
     const [stateComputedBundles, updateComputedBundles] = useState(CommonStates.getters.getComputedBundles());
     const [stateIsSearching, updateIsSearching] = useState(false);
 
-    // Did Mount & Will Unmount
+    // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonStates.store.subscribe(() => {
             updateComputedBundles(CommonStates.getters.getComputedBundles());
