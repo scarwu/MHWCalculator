@@ -27,7 +27,8 @@ import FittingAlgorithm from 'libraries/fittingAlgorithm';
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
 
-// Load Constant
+// Load Config & Constant
+import Config from 'config';
 import Constant from 'constant';
 
 // Load State Control
@@ -376,9 +377,9 @@ export default class CandidateBundles extends Component {
                         <FunctionalIcon
                             iconName="refresh" altName={_('reset')}
                             onClick={CommonStates.setters.cleanComputedBundles} />
-                        <FunctionalIcon
+                        {'production' !== Config.env ? <FunctionalIcon
                             iconName="cog" altName={_('setting')}
-                            onClick={ModalStates.setters.showAlgorithmSetting} />
+                            onClick={ModalStates.setters.showAlgorithmSetting} /> : false}
                         <FunctionalIcon
                             iconName="search" altName={_('search')}
                             onClick={this.handleCandidateBundlesSearch} />

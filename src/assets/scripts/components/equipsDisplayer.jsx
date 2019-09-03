@@ -26,7 +26,8 @@ import CommonDataset from 'libraries/dataset/common';
 import FunctionalIcon from 'components/common/functionalIcon';
 import SharpnessBar from 'components/common/sharpnessBar';
 
-// Load Constant
+// Load Config & Constant
+import Config from 'config';
 import Constant from 'constant';
 
 // Load State Control
@@ -509,9 +510,9 @@ export default class EquipsDisplayer extends Component {
                         <FunctionalIcon
                             iconName="th-list" altName={_('bundleList')}
                             onClick={ModalStates.setters.showEquipBundleSelector} />
-                        <FunctionalIcon
+                        {'production' !== Config.env ? <FunctionalIcon
                             iconName="th-large" altName={_('inventorySetting')}
-                            onClick={ModalStates.setters.showInventorySetting} />
+                            onClick={ModalStates.setters.showInventorySetting} /> : false}
                     </div>
                 </div>
 
