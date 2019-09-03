@@ -20,7 +20,8 @@ import Sets from 'files/json/datasets/sets.json';
 //     2: skills [
 //         [
 //             0: name,
-//             1: require
+//             1: level
+//             2: require
 //         ],
 //         [ ... ]
 //     ]
@@ -32,7 +33,8 @@ let dataset = Sets.map((set) => {
         skills: set[2].map((skill) => {
             return {
                 id: skill[0],
-                require: skill[1]
+                level: skill[1],
+                require: skill[2]
             };
         })
     };

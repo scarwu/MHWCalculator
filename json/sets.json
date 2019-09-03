@@ -9,6 +9,7 @@
         "skills": [
             {
                 "id": "振奮",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -23,6 +24,7 @@
         "skills": [
             {
                 "id": "拔刀術【力】",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -37,6 +39,7 @@
         "skills": [
             {
                 "id": "幸運",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -51,6 +54,7 @@
         "skills": [
             {
                 "id": "捕獲名人",
+                "level": 1,
                 "require": 4
             }
         ]
@@ -65,6 +69,7 @@
         "skills": [
             {
                 "id": "鈍器能手",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -79,6 +84,7 @@
         "skills": [
             {
                 "id": "會心攻擊【屬性】",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -93,10 +99,12 @@
         "skills": [
             {
                 "id": "振奮",
+                "level": 1,
                 "require": 2
             },
             {
                 "id": "突破耐力上限",
+                "level": 1,
                 "require": 4
             }
         ]
@@ -111,6 +119,7 @@
         "skills": [
             {
                 "id": "會心攻擊【特殊】",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -125,6 +134,7 @@
         "skills": [
             {
                 "id": "毒傷害強化",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -139,10 +149,12 @@
         "skills": [
             {
                 "id": "幸運",
+                "level": 1,
                 "require": 2
             },
             {
                 "id": "解放弓的蓄力階段",
+                "level": 1,
                 "require": 4
             }
         ]
@@ -157,10 +169,12 @@
         "skills": [
             {
                 "id": "鈍器能手",
+                "level": 1,
                 "require": 2
             },
             {
                 "id": "無屬性強化",
+                "level": 1,
                 "require": 4
             }
         ]
@@ -175,10 +189,12 @@
         "skills": [
             {
                 "id": "拔刀術【力】",
+                "level": 1,
                 "require": 2
             },
             {
                 "id": "剛刃研磨",
+                "level": 1,
                 "require": 4
             }
         ]
@@ -193,10 +209,12 @@
         "skills": [
             {
                 "id": "會心攻擊【屬性】",
+                "level": 1,
                 "require": 2
             },
             {
                 "id": "心眼／彈導強化",
+                "level": 1,
                 "require": 4
             }
         ]
@@ -211,6 +229,7 @@
         "skills": [
             {
                 "id": "防禦強化",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -225,6 +244,7 @@
         "skills": [
             {
                 "id": "毅力",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -239,6 +259,7 @@
         "skills": [
             {
                 "id": "超回復力",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -253,6 +274,7 @@
         "skills": [
             {
                 "id": "加速再生",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -267,6 +289,7 @@
         "skills": [
             {
                 "id": "達人藝",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -281,6 +304,7 @@
         "skills": [
             {
                 "id": "風壓完全無效",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -295,6 +319,7 @@
         "skills": [
             {
                 "id": "利刃／彈藥節約",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -309,6 +334,7 @@
         "skills": [
             {
                 "id": "捕獲名人",
+                "level": 1,
                 "require": 3
             }
         ]
@@ -323,6 +349,7 @@
         "skills": [
             {
                 "id": "強運",
+                "level": 1,
                 "require": 4
             }
         ]
@@ -337,6 +364,7 @@
         "skills": [
             {
                 "id": "剝取名人",
+                "level": 1,
                 "require": 4
             }
         ]
@@ -351,10 +379,12 @@
         "skills": [
             {
                 "id": "突破耐力上限",
+                "level": 1,
                 "require": 2
             },
             {
                 "id": "心眼／彈導強化",
+                "level": 1,
                 "require": 4
             }
         ]
@@ -369,10 +399,12 @@
         "skills": [
             {
                 "id": "飛燕【屬性】",
+                "level": 1,
                 "require": 2
             },
             {
                 "id": "達人藝",
+                "level": 1,
                 "require": 4
             }
         ]
@@ -387,6 +419,7 @@
         "skills": [
             {
                 "id": "強運",
+                "level": 1,
                 "require": 5
             }
         ]

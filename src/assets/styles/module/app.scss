@@ -690,7 +690,7 @@ $panel-height: 40px;
         background-color: white;
 
         @include border-radius(5px);
-        @include font-size(1.6);
+        @include font-size(1.4);
     }
 
     .mhwc-slim-modal {
@@ -768,6 +768,29 @@ $panel-height: 40px;
 
                 &:nth-child(1) {
                     margin-top: 0;
+                }
+            }
+        }
+
+        .mhwc-item-bundle {
+            > .mhwc-value {
+                margin-top: 5px;
+                padding: 2.5px;
+
+                .row {
+                    .mhwc-name {
+                        margin: 2.5px;
+                    }
+
+                    .mhwc-value {
+                        margin: 2.5px;
+
+                        @include nowrap();
+
+                        span {
+                            background-color: white;
+                        }
+                    }
                 }
             }
         }

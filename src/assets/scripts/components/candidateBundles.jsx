@@ -238,7 +238,7 @@ export default function CandidateBundles(props) {
                                     equipInfo = CharmDataset.getInfo(data.equips[equipType]);
                                 }
 
-                                return (Helper.isNotEmpty(equipInfo) )? [(
+                                return Helper.isNotEmpty(equipInfo) ? [(
                                     <div key={`${equipType}_1`} className="col-2">
                                         <div className="mhwc-name">
                                             <span>{_(equipType)}</span>

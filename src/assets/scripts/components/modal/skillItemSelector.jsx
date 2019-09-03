@@ -127,7 +127,7 @@ export default function SkillItemSelector(props) {
     /**
      * Render Functions
      */
-    let renderBlock = (data, index) => {
+    let renderItem = (data, index) => {
 
         // Create Text
         let text = _(data.name);
@@ -144,7 +144,7 @@ export default function SkillItemSelector(props) {
         }
 
         return (
-            <div key={data.id} className="mhwc-item">
+            <div key={data.id} className="mhwc-item mhwc-item-skill">
                 <div className="col-12 mhwc-name">
                     <span>{_(data.name)}</span>
 
@@ -193,7 +193,7 @@ export default function SkillItemSelector(props) {
                     </div>
                 </div>
                 <div className="mhwc-list">
-                    {stateSortedList.map(renderBlock)}
+                    {stateSortedList.map(renderItem)}
                 </div>
             </div>
         </div>

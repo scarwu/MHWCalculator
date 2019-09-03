@@ -415,6 +415,7 @@ class Misc
             //     "skills": [
             //         {
             //             "id": "振奮",
+            //             "level": 1,
             //             "require": 3
             //         }
             //     ]
@@ -425,6 +426,7 @@ class Misc
                 array_map(function ($item) {
                     return [
                         $item['id'],
+                        $item['level'],
                         $item['require']
                     ];
                 }, $data['skills'])

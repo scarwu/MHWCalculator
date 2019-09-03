@@ -124,7 +124,7 @@ export default function SetItemSelector(props) {
     /**
      * Render Functions
      */
-    let renderBlock = (data, index) => {
+    let renderItem = (data, index) => {
 
         // Create Text
         let text = _(data.name);
@@ -149,7 +149,7 @@ export default function SetItemSelector(props) {
         }
 
         return (
-            <div key={data.id} className="mhwc-item">
+            <div key={data.id} className="mhwc-item mhwc-item-set">
                 <div className="col-12 mhwc-name">
                     <span>{_(data.name)}</span>
 
@@ -172,7 +172,7 @@ export default function SetItemSelector(props) {
                         return (
                             <div key={index} className="row">
                                 <div className="col-12 mhwc-name">
-                                    <span>({skill.require}) {_(skillInfo.name)}</span>
+                                    <span>({skill.require}) {_(skillInfo.name)} Lv.{skill.level}</span>
                                 </div>
                                 <div className="col-12 mhwc-value">
                                     <span>{_(skillInfo.list[0].description)}</span>
@@ -200,7 +200,7 @@ export default function SetItemSelector(props) {
                     </div>
                 </div>
                 <div className="mhwc-list">
-                    {stateSortedList.map(renderBlock)}
+                    {stateSortedList.map(renderItem)}
                 </div>
             </div>
         </div>

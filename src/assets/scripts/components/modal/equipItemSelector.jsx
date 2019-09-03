@@ -609,142 +609,104 @@ export default function EquipItemSelector(props) {
         );
     };
 
-    let renderJewelRow = (data, index) => {
-        let skillInfo = SkillDataset.getInfo(data.skill.id);
-
-        return (
-            <tr key={data.id}>
-                <td><span>{_(data.name)}</span></td>
-                <td><span>{data.rare}</span></td>
-                <td><span>{data.size}</span></td>
-                <td>
-                    {(Helper.isNotEmpty(skillInfo)) ? (
-                        <span>{_(skillInfo.name)} Lv.{data.skill.level}</span>
-                    ) : false}
-                </td>
-                <td>
-                    <div className="mhwc-icons_bundle">
-                        {(stateBypassData.jewelId !== data.id) ? (
-                            <FunctionalIcon
-                                iconName="check" altName={_('select')}
-                                onClick={() => {handleItemPickUp(data.id)}} />
-                        ) : false}
-                    </div>
-                </td>
-            </tr>
-        );
-    };
-
-    let renderJewelTable = () => {
+    let renderJewelItem = () => {
         let segment = stateSegment;
 
-        return (
-            <table className="mhwc-jewel_table">
-                <thead>
-                    <tr>
-                        <td>{_('name')}</td>
-                        <td>{_('rare')}</td>
-                        <td>{_('size')}</td>
-                        <td>{_('skill')}</td>
-                        <td></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {stateIncludeList.map((data, index) => {
+        return stateIncludeList.map((data, index) => {
 
-                        // Create Text
-                        let text = _(data.name);
+            // Create Text
+            let text = _(data.name);
 
-                        let skillInfo = SkillDataset.getInfo(data.skill.id);
+            let skillInfo = SkillDataset.getInfo(data.skill.id);
 
-                        if (Helper.isNotEmpty(skillInfo)) {
-                            text += _(skillInfo.name);
-                        }
+            if (Helper.isNotEmpty(skillInfo)) {
+                text += _(skillInfo.name);
+            }
 
-                        // Search Nameword
-                        if (Helper.isNotEmpty(segment)
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())
-                        ) {
-                            return false;
-                        }
+            // Search Nameword
+            if (Helper.isNotEmpty(segment)
+                && -1 === text.toLowerCase().search(segment.toLowerCase())
+            ) {
+                return false;
+            }
 
-                        return renderJewelRow(data, index);
-                    })}
-                </tbody>
-            </table>
-        );
-    };
+            return (
+                <div key={data.id} className="mhwc-item mhwc-item-jewel">
+                    <div className="col-12 mhwc-name">
+                        <span>[{data.size}] {_(data.name)} (R{data.rare})</span>
 
-    let renderEnhanceRow = (data, index) => {
-        return (
-            <tr key={data.id}>
-                <td>{_(data.name)}</td>
-                <td>
-                    {data.list.map((data, index) => {
-                        return (
-                            <div key={index}>
-                                <span>Lv.{data.level}</span>
-                            </div>
-                        );
-                    })}
-                </td>
-                <td>
-                    {data.list.map((data, index) => {
-                        return (
-                            <div key={index}>
-                                <span>{_(data.description)}</span>
-                            </div>
-                        );
-                    })}
-                </td>
-                <td>
-                    <div className="mhwc-icons_bundle">
-                        {(stateBypassData.enhanceId !== data.id) ? (
-                            <FunctionalIcon
-                                iconName="check" altName={_('select')}
-                                onClick={() => {handleItemPickUp(data.id)}} />
-                        ) : false}
+                        <div className="mhwc-icons_bundle">
+                            {(stateBypassData.jewelId !== data.id) ? (
+                                <FunctionalIcon
+                                    iconName="check" altName={_('select')}
+                                    onClick={() => {handleItemPickUp(data.id)}} />
+                            ) : false}
+                        </div>
                     </div>
-                </td>
-            </tr>
-        );
+                    <div className="col-12 mhwc-value">
+                        <div key={index} className="row">
+                            <div className="col-12 mhwc-name">
+                                <span>{_(skillInfo.name)} Lv.{data.skill.level}</span>
+                            </div>
+                            <div className="col-12 mhwc-value">
+                                <span>{_(skillInfo.list[0].description)}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        });
     };
 
-    let renderEnhanceTable = () => {
+    let renderEnhanceItem = () => {
         let segment = stateSegment;
 
-        return (
-            <table className="mhwc-enhance_table">
-                <thead>
-                    <tr>
-                        <td>{_('name')}</td>
-                        <td>{_('level')}</td>
-                        <td>{_('description')}</td>
-                        <td></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {stateIncludeList.map((data, index) => {
+        return stateIncludeList.map((data, index) => {
 
-                        // Create Text
-                        let text = _(data.name);
+            // Create Text
+            let text = _(data.name);
 
-                        data.list.forEach((data) => {
-                            text += _(data.description);
-                        });
+            data.list.forEach((data) => {
+                text += _(data.description);
+            });
 
-                        // Search Nameword
-                        if (Helper.isNotEmpty(segment)
-                            && -1 === text.toLowerCase().search(segment.toLowerCase())
-                        ) {
-                            return false;
-                        }
+            // Search Nameword
+            if (Helper.isNotEmpty(segment)
+                && -1 === text.toLowerCase().search(segment.toLowerCase())
+            ) {
+                return false;
+            }
 
-                        return renderEnhanceRow(data, index);
-                    })}
-                </tbody>
-            </table>
-        );
+            return (
+                <div key={data.id} className="mhwc-item mhwc-item-enhance">
+                    <div className="col-12 mhwc-name">
+                        <span>{_(data.name)}</span>
+
+                        <div className="mhwc-icons_bundle">
+                            {(stateBypassData.enhanceId !== data.id) ? (
+                                <FunctionalIcon
+                                    iconName="check" altName={_('select')}
+                                    onClick={() => {handleItemPickUp(data.id)}} />
+                            ) : false}
+                        </div>
+                    </div>
+                    <div className="col-12 mhwc-value">
+                        {data.list.map((skill, index) => {
+                            return (
+                                <div key={index} className="row">
+                                    <div className="col-2 mhwc-name">
+                                        <span>Lv.{skill.level}</span>
+                                    </div>
+                                    <div className="col-10 mhwc-value">
+                                        <span>{_(skill.description)}</span>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            );
+        });
     };
 
     let renderContent = () => {
@@ -760,9 +722,9 @@ export default function EquipItemSelector(props) {
         case 'charm':
             return renderCharmTable();
         case 'jewel':
-            return renderJewelTable();
+            return renderJewelItem();
         case 'enhance':
-            return renderEnhanceTable();
+            return renderEnhanceItem();
         default:
             return false;
         }
