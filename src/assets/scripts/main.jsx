@@ -49,7 +49,7 @@ if ('production' === Config.env) {
     });
 }
 
-// Router
+// Mounting
 ReactDOM.render((
     <Router key="router">
         <Route exact path="/:hash?" component={App} />

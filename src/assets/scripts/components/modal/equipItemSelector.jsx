@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Component } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -35,42 +35,66 @@ import Constant from 'constant';
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
-export default class EquipItemSelector extends Component {
+export default function EquipItemSelector(props) {
 
-    constructor (props) {
-        super(props);
+    /**
+     * Hooks
+     */
+    const refModal = useRef();
+    const refSegment = useRef();
+    const refType = useRef();
+    const refRare = useRef();
+    const [stateInventory, updateInventory] = useState(CommonStates.getters.getInventory());
+    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowEquipItemSelector());
+    const [stateBypassData, updateBypassData] = useState(ModalStates.getters.getEquipItemSelectorBypassData());
+    const [stateMode, updateMode] = useState(null);
+    const [stateIncludeList, updateIncludeList] = useState([]);
+    const [stateIgnoreList, updateIgnoreList] = useState([]);
+    const [stateType, updateType] = useState(null);
+    const [stateRare, updateRare] = useState(8);
+    const [stateSegment, updateSegment] = useState(null);
 
-        // Initial State
-        this.state = {
-            inventory: CommonStates.getters.getInventory(),
-            isShow: ModalStates.getters.isShowEquipItemSelector(),
-            bypassData: ModalStates.getters.getEquipItemSelectorBypassData(),
-            mode: null,
-            includeList: [],
-            ignoreList: [],
-            type: null,
-            rare: 8,
-            segment: null
+    // Will Mount
+    useEffect(() => {
+        initState();
+    }, [stateBypassData]);
+
+    // Did Mount & Will Unmount
+    useEffect(() => {
+        initState();
+
+        const unsubscribeCommon = CommonStates.store.subscribe(() => {
+            updateInventory(CommonStates.getters.getInventory());
+        });
+
+        const unsubscribeModel = ModalStates.store.subscribe(() => {
+            updateBypassData(ModalStates.getters.getEquipItemSelectorBypassData());
+            updateIsShow(ModalStates.getters.isShowEquipItemSelector());
+        });
+
+        return () => {
+            unsubscribeCommon();
+            unsubscribeModel();
         };
-    }
+    }, []);
 
     /**
      * Handle Functions
      */
-    handleFastWindowClose = (event) => {
-        if (this.refs.modal !== event.target) {
+    let handleFastWindowClose = (event) => {
+        if (refModal.current !== event.target) {
             return;
         }
 
-        this.handleWindowClose();
+        handleWindowClose();
     };
 
-    handleWindowClose = () => {
+    let handleWindowClose = () => {
         ModalStates.setters.hideEquipItemSelector();
     };
 
-    handleItemPickUp = (itemId) => {
-        let bypassData = Helper.deepCopy(this.state.bypassData);
+    let handleItemPickUp = (itemId) => {
+        let bypassData = Helper.deepCopy(stateBypassData);
 
         if (Helper.isNotEmpty(bypassData.enhanceIndex)) {
             bypassData.enhanceId = itemId;
@@ -82,41 +106,35 @@ export default class EquipItemSelector extends Component {
 
         CommonStates.setters.setCurrentEquip(bypassData);
 
-        this.handleWindowClose();
+        handleWindowClose();
     };
 
-    handleItemToggle = (itemType, itemId) => {
+    let handleItemToggle = (itemType, itemId) => {
         CommonStates.setters.toggleInventoryEquip({
             type: itemType,
             id: itemId
         });
     };
 
-    handleSegmentInput = () => {
-        let segment = this.refs.segment.value;
+    let handleSegmentInput = () => {
+        let segment = refSegment.current.value;
 
         segment = (0 !== segment.length)
             ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
 
-        this.setState({
-            segment: segment
-        });
+        updateSegment(segment);
     };
 
-    handleTypeChange = () => {
-        this.setState({
-            type: this.refs.type.value
-        });
+    let handleTypeChange = () => {
+        updateType(refType.current.value);
     };
 
-    handleRareChange = () => {
-        this.setState({
-            rare: parseInt(this.refs.rare.value, 10)
-        });
+    let handleRareChange = () => {
+        updateRare(parseInt(refRare.current.value, 10));
     };
 
-    initState = () => {
-        if (Helper.isEmpty(this.state.bypassData)) {
+    let initState = () => {
+        if (Helper.isEmpty(stateBypassData)) {
             return;
         }
 
@@ -125,21 +143,21 @@ export default class EquipItemSelector extends Component {
         let ignoreList = [];
         let type = null;
 
-        if (Helper.isNotEmpty(this.state.bypassData.enhanceIndex)) {
+        if (Helper.isNotEmpty(stateBypassData.enhanceIndex)) {
             mode = 'enhance';
             includeList = EnhanceDataset.getItems();
-        } else if (Helper.isNotEmpty(this.state.bypassData.slotIndex)) {
+        } else if (Helper.isNotEmpty(stateBypassData.slotIndex)) {
             mode = 'jewel';
 
-            for (let size = this.state.bypassData.slotSize; size >= 1; size--) {
+            for (let size = stateBypassData.slotSize; size >= 1; size--) {
                 for (let rare = 8; rare >= 5; rare--) {
                     includeList = includeList.concat(
                         JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems()
                     );
                 }
             }
-        } else if ('weapon' === this.state.bypassData.equipType) {
-            let weaponInfo = WeaponDataset.getInfo(this.state.bypassData.equipId);
+        } else if ('weapon' === stateBypassData.equipType) {
+            let weaponInfo = WeaponDataset.getInfo(stateBypassData.equipId);
 
             mode = 'weapon';
             type = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.type : Constant.weaponTypes[0];
@@ -147,8 +165,8 @@ export default class EquipItemSelector extends Component {
             Constant.weaponTypes.forEach((weaponType) => {
                 for (let rare = 8; rare >= 5; rare--) {
                     WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
-                        if (Helper.isNotEmpty(this.state.inventory['weapon'])
-                            && true === this.state.inventory['weapon'][equip.id]
+                        if (Helper.isNotEmpty(stateInventory['weapon'])
+                            && true === stateInventory['weapon'][equip.id]
                         ) {
                             ignoreList.push(equip);
                         } else {
@@ -158,8 +176,8 @@ export default class EquipItemSelector extends Component {
                 }
 
                 WeaponDataset.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
-                    if (Helper.isNotEmpty(this.state.inventory['weapon'])
-                        && true === this.state.inventory['weapon'][equip.id]
+                    if (Helper.isNotEmpty(stateInventory['weapon'])
+                        && true === stateInventory['weapon'][equip.id]
                     ) {
                         ignoreList.push(equip);
                     } else {
@@ -167,19 +185,19 @@ export default class EquipItemSelector extends Component {
                     }
                 });
             });
-        } else if ('helm' === this.state.bypassData.equipType
-            || 'chest' === this.state.bypassData.equipType
-            || 'arm' === this.state.bypassData.equipType
-            || 'waist' === this.state.bypassData.equipType
-            || 'leg' === this.state.bypassData.equipType
+        } else if ('helm' === stateBypassData.equipType
+            || 'chest' === stateBypassData.equipType
+            || 'arm' === stateBypassData.equipType
+            || 'waist' === stateBypassData.equipType
+            || 'leg' === stateBypassData.equipType
         ) {
             mode = 'armor';
-            type = this.state.bypassData.equipType;
+            type = stateBypassData.equipType;
 
             for (let rare = 8; rare >= 5; rare--) {
-                ArmorDataset.typeIs(this.state.bypassData.equipType).rareIs(rare).getItems().forEach((equip) => {
-                    if (Helper.isNotEmpty(this.state.inventory[equip.type])
-                        && true === this.state.inventory[equip.type][equip.id]
+                ArmorDataset.typeIs(stateBypassData.equipType).rareIs(rare).getItems().forEach((equip) => {
+                    if (Helper.isNotEmpty(stateInventory[equip.type])
+                        && true === stateInventory[equip.type][equip.id]
                     ) {
                         ignoreList.push(equip);
                     } else {
@@ -188,21 +206,21 @@ export default class EquipItemSelector extends Component {
                 });
             }
 
-            ArmorDataset.typeIs(this.state.bypassData.equipType).rareIs(0).getItems().forEach((equip) => {
-                if (Helper.isNotEmpty(this.state.inventory[equip.type])
-                    && true === this.state.inventory[equip.type][equip.id]
+            ArmorDataset.typeIs(stateBypassData.equipType).rareIs(0).getItems().forEach((equip) => {
+                if (Helper.isNotEmpty(stateInventory[equip.type])
+                    && true === stateInventory[equip.type][equip.id]
                 ) {
                     ignoreList.push(equip);
                 } else {
                     includeList.push(equip);
                 }
             });
-        } else if ('charm' === this.state.bypassData.equipType) {
+        } else if ('charm' === stateBypassData.equipType) {
             mode = 'charm';
 
             CharmDataset.getItems().forEach((equip) => {
-                if (Helper.isNotEmpty(this.state.inventory['charm'])
-                    && true === this.state.inventory['charm'][equip.id]
+                if (Helper.isNotEmpty(stateInventory['charm'])
+                    && true === stateInventory['charm'][equip.id]
                 ) {
                     ignoreList.push(equip);
                 } else {
@@ -211,48 +229,19 @@ export default class EquipItemSelector extends Component {
             });
         }
 
-        let state = {
-            mode: mode,
-            includeList: includeList,
-            ignoreList: ignoreList
-        };
+        updateMode(mode);
+        updateIncludeList(includeList);
+        updateIgnoreList(ignoreList);
 
-        if (Helper.isEmpty(this.state.type)) {
-            state.type = type;
+        if (Helper.isEmpty(stateType)) {
+            updateType(type);
         }
-
-        this.setState(state);
-    }
-
-    /**
-     * Lifecycle Functions
-     */
-    componentDidMount () {
-        this.initState();
-
-        this.unsubscribeCommon = CommonStates.store.subscribe(() => {
-            this.setState({
-                inventory: CommonStates.getters.getInventory()
-            }, this.initState);
-        });
-
-        this.unsubscribeModel = ModalStates.store.subscribe(() => {
-            this.setState({
-                bypassData: ModalStates.getters.getEquipItemSelectorBypassData(),
-                isShow: ModalStates.getters.isShowEquipItemSelector()
-            }, this.initState);
-        });
-    }
-
-    componentWillUnmount(){
-        this.unsubscribeCommon();
-        this.unsubscribeModel();
     }
 
     /**
      * Render Functions
      */
-    renderWeaponRow = (data, index, isIgnore) => {
+    let renderWeaponRow = (data, index, isIgnore) => {
         let originalSharpness = null;
         let enhancedSharpness = null;
 
@@ -339,12 +328,12 @@ export default class EquipItemSelector extends Component {
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
                             altName={isIgnore ? _('include') : _('exclude')}
-                            onClick={() => {this.handleItemToggle('weapon', data.id)}} />
+                            onClick={() => {handleItemToggle('weapon', data.id)}} />
 
-                        {(this.state.bypassData.equipId !== data.id) ? (
+                        {(stateBypassData.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
-                                onClick={() => {this.handleItemPickUp(data.id)}} />
+                                onClick={() => {handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
                 </td>
@@ -352,8 +341,8 @@ export default class EquipItemSelector extends Component {
         );
     };
 
-    renderWeaponTable = () => {
-        let segment = this.state.segment;
+    let renderWeaponTable = () => {
+        let segment = stateSegment;
 
         return (
             <table className="mhwc-weapon_table">
@@ -374,13 +363,13 @@ export default class EquipItemSelector extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.includeList.map((data, index) => {
+                    {stateIncludeList.map((data, index) => {
 
-                        if (data.type !== this.state.type) {
+                        if (data.type !== stateType) {
                             return;
                         }
 
-                        if (data.rare !== this.state.rare) {
+                        if (data.rare !== stateRare) {
                             return;
                         }
 
@@ -416,18 +405,18 @@ export default class EquipItemSelector extends Component {
                             return false;
                         }
 
-                        return this.renderWeaponRow(data, index, false);
+                        return renderWeaponRow(data, index, false);
                     })}
 
-                    {this.state.ignoreList.map((data, index) => {
-                        return this.renderWeaponRow(data, index, true);
+                    {stateIgnoreList.map((data, index) => {
+                        return renderWeaponRow(data, index, true);
                     })}
                 </tbody>
             </table>
         );
     };
 
-    renderArmorRow = (data, index, isIgnore) => {
+    let renderArmorRow = (data, index, isIgnore) => {
         let skillInfo = null;
 
         if (Helper.isNotEmpty(data.set)) {
@@ -475,12 +464,12 @@ export default class EquipItemSelector extends Component {
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
                             altName={isIgnore ? _('include') : _('exclude')}
-                            onClick={() => {this.handleItemToggle(data.type, data.id)}} />
+                            onClick={() => {handleItemToggle(data.type, data.id)}} />
 
-                        {(this.state.bypassData.equipId !== data.id) ? (
+                        {(stateBypassData.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
-                                onClick={() => {this.handleItemPickUp(data.id)}} />
+                                onClick={() => {handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
                 </td>
@@ -488,8 +477,8 @@ export default class EquipItemSelector extends Component {
         );
     };
 
-    renderArmorTable = () => {
-        let segment = this.state.segment;
+    let renderArmorTable = () => {
+        let segment = stateSegment;
 
         return (
             <table className="mhwc-armor_table">
@@ -507,9 +496,9 @@ export default class EquipItemSelector extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.includeList.map((data, index) => {
+                    {stateIncludeList.map((data, index) => {
 
-                        if (data.rare !== this.state.rare) {
+                        if (data.rare !== stateRare) {
                             return;
                         }
 
@@ -540,18 +529,18 @@ export default class EquipItemSelector extends Component {
                             return false;
                         }
 
-                        return this.renderArmorRow(data, index, false);
+                        return renderArmorRow(data, index, false);
                     })}
 
-                    {this.state.ignoreList.map((data, index) => {
-                        return this.renderArmorRow(data, index, true);
+                    {stateIgnoreList.map((data, index) => {
+                        return renderArmorRow(data, index, true);
                     })}
                 </tbody>
             </table>
         );
     };
 
-    renderCharmRow = (data, index, isIgnore) => {
+    let renderCharmRow = (data, index, isIgnore) => {
         return (
             <tr key={data.id}>
                 <td><span>{_(data.name)}</span></td>
@@ -572,12 +561,12 @@ export default class EquipItemSelector extends Component {
                         <FunctionalIcon
                             iconName={isIgnore ? 'star-o' : 'star'}
                             altName={isIgnore ? _('include') : _('exclude')}
-                            onClick={() => {this.handleItemToggle('charm', data.id)}} />
+                            onClick={() => {handleItemToggle('charm', data.id)}} />
 
-                        {(this.state.bypassData.equipId !== data.id) ? (
+                        {(stateBypassData.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
-                                onClick={() => {this.handleItemPickUp(data.id)}} />
+                                onClick={() => {handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
                 </td>
@@ -585,8 +574,8 @@ export default class EquipItemSelector extends Component {
         );
     };
 
-    renderCharmTable = () => {
-        let segment = this.state.segment;
+    let renderCharmTable = () => {
+        let segment = stateSegment;
 
         return (
             <table className="mhwc-charm_table">
@@ -599,7 +588,7 @@ export default class EquipItemSelector extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.includeList.map((data, index) => {
+                    {stateIncludeList.map((data, index) => {
 
                         // Create Text
                         let text = _(data.name);
@@ -619,18 +608,18 @@ export default class EquipItemSelector extends Component {
                             return false;
                         }
 
-                        return this.renderCharmRow(data, index, false);
+                        return renderCharmRow(data, index, false);
                     })}
 
-                    {this.state.ignoreList.map((data, index) => {
-                        return this.renderCharmRow(data, index, true);
+                    {stateIgnoreList.map((data, index) => {
+                        return renderCharmRow(data, index, true);
                     })}
                 </tbody>
             </table>
         );
     };
 
-    renderJewelRow = (data, index) => {
+    let renderJewelRow = (data, index) => {
         let skillInfo = SkillDataset.getInfo(data.skill.id);
 
         return (
@@ -645,10 +634,10 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        {(this.state.bypassData.jewelId !== data.id) ? (
+                        {(stateBypassData.jewelId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
-                                onClick={() => {this.handleItemPickUp(data.id)}} />
+                                onClick={() => {handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
                 </td>
@@ -656,8 +645,8 @@ export default class EquipItemSelector extends Component {
         );
     };
 
-    renderJewelTable = () => {
-        let segment = this.state.segment;
+    let renderJewelTable = () => {
+        let segment = stateSegment;
 
         return (
             <table className="mhwc-jewel_table">
@@ -671,7 +660,7 @@ export default class EquipItemSelector extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.includeList.map((data, index) => {
+                    {stateIncludeList.map((data, index) => {
 
                         // Create Text
                         let text = _(data.name);
@@ -689,14 +678,14 @@ export default class EquipItemSelector extends Component {
                             return false;
                         }
 
-                        return this.renderJewelRow(data, index);
+                        return renderJewelRow(data, index);
                     })}
                 </tbody>
             </table>
         );
     };
 
-    renderEnhanceRow = (data, index) => {
+    let renderEnhanceRow = (data, index) => {
         return (
             <tr key={data.id}>
                 <td>{_(data.name)}</td>
@@ -720,10 +709,10 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        {(this.state.bypassData.enhanceId !== data.id) ? (
+                        {(stateBypassData.enhanceId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
-                                onClick={() => {this.handleItemPickUp(data.id)}} />
+                                onClick={() => {handleItemPickUp(data.id)}} />
                         ) : false}
                     </div>
                 </td>
@@ -731,8 +720,8 @@ export default class EquipItemSelector extends Component {
         );
     };
 
-    renderEnhanceTable = () => {
-        let segment = this.state.segment;
+    let renderEnhanceTable = () => {
+        let segment = stateSegment;
 
         return (
             <table className="mhwc-enhance_table">
@@ -745,7 +734,7 @@ export default class EquipItemSelector extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.includeList.map((data, index) => {
+                    {stateIncludeList.map((data, index) => {
 
                         // Create Text
                         let text = _(data.name);
@@ -761,77 +750,72 @@ export default class EquipItemSelector extends Component {
                             return false;
                         }
 
-                        return this.renderEnhanceRow(data, index);
+                        return renderEnhanceRow(data, index);
                     })}
                 </tbody>
             </table>
         );
     };
 
-    render () {
-        let Content = null;
-
-        if (Helper.isEmpty(this.state.bypassData)) {
+    let renderContent = () => {
+        if (Helper.isEmpty(stateBypassData)) {
             return false;
         }
 
-        switch (this.state.mode) {
+        switch (stateMode) {
         case 'weapon':
-            Content = this.renderWeaponTable();
-            break;
+            return renderWeaponTable();
         case 'armor':
-            Content = this.renderArmorTable();
-            break;
+            return renderArmorTable();
         case 'charm':
-            Content = this.renderCharmTable();
-            break;
+            return renderCharmTable();
         case 'jewel':
-            Content = this.renderJewelTable();
-            break;
+            return renderJewelTable();
         case 'enhance':
-            Content = this.renderEnhanceTable();
-            break;
+            return renderEnhanceTable();
+        default:
+            return false;
         }
+    };
 
-        return this.state.isShow ? (
-            <div className="mhwc-selector" ref="modal" onClick={this.handleFastWindowClose}>
-                <div className="mhwc-modal">
-                    <div className="mhwc-panel">
-                        <input className="mhwc-text_segment" type="text"
-                            placeholder={_('inputKeyword')}
-                            ref="segment" onChange={this.handleSegmentInput} />
+    return stateIsShow ? (
+        <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
+            <div className="mhwc-modal">
+                <div className="mhwc-panel">
+                    <input className="mhwc-text_segment" type="text"
+                        placeholder={_('inputKeyword')}
+                        ref={refSegment} onChange={handleSegmentInput} />
 
-                        {('weapon' === this.state.mode) ? (
-                            <select defaultValue={this.state.type} ref="type" onChange={this.handleTypeChange}>
-                                {Constant.weaponTypes.map((type) => {
-                                    return (
-                                        <option key={type} value={type}>{_(type)}</option>
-                                    );
-                                })}
-                            </select>
-                        ) : false}
+                    {('weapon' === stateMode) ? (
+                        <select defaultValue={stateType} ref={refType} onChange={handleTypeChange}>
+                            {Constant.weaponTypes.map((type) => {
+                                return (
+                                    <option key={type} value={type}>{_(type)}</option>
+                                );
+                            })}
+                        </select>
+                    ) : false}
 
-                        {('weapon' === this.state.mode || 'armor' === this.state.mode) ? (
-                            <select defaultValue={this.state.rare} ref="rare" onChange={this.handleRareChange}>
-                                {[8, 7, 6, 5].map((rare) => {
-                                    return (
-                                        <option key={rare} value={rare}>{_('rare') + `: ${rare}`}</option>
-                                    );
-                                })}
-                            </select>
-                        ) : false}
+                    {('weapon' === stateMode || 'armor' === stateMode) ? (
+                        <select defaultValue={stateRare} ref={refRare} onChange={handleRareChange}>
+                            {[8, 7, 6, 5].map((rare) => {
+                                return (
+                                    <option key={rare} value={rare}>{_('rare') + `: ${rare}`}</option>
+                                );
+                            })}
+                        </select>
+                    ) : false}
 
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
-                                iconName="times" altName={_('close')}
-                                onClick={this.handleWindowClose} />
-                        </div>
-                    </div>
-                    <div className="mhwc-list">
-                        {Content}
+                    <div className="mhwc-icons_bundle">
+                        <FunctionalIcon
+                            iconName="times" altName={_('close')}
+                            onClick={handleWindowClose} />
                     </div>
                 </div>
+                <div className="mhwc-list">
+                    {renderContent()}
+                </div>
             </div>
-        ) : false;
-    }
+        </div>
+    ) : false;
 }

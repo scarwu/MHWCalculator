@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Algorithm Setting
+ *
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -25,7 +25,7 @@ import FunctionalIcon from 'components/common/functionalIcon';
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
-export default function (props) {
+export default function AlgorithmSetting(props) {
 
     /**
      * Hooks

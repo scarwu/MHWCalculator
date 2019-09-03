@@ -513,7 +513,7 @@ let getSharpnessMultiple = (data) => {
     };
 };
 
-export default function (props) {
+export default function CharacterStatus(props) {
 
     /**
      * Hooks

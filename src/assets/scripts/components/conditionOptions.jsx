@@ -26,7 +26,7 @@ import FunctionalIcon from 'components/common/functionalIcon';
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
-export default function (props) {
+export default function ConditionOptions(props) {
 
     /**
      * Hooks

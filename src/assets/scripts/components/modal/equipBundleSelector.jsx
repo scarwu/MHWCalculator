@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Component } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import MD5 from 'md5';
 
 // Load Core Libraries
@@ -31,39 +31,63 @@ import Constant from 'constant';
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
-export default class EquipBundleSelector extends Component {
+export default function EquipBundleSelector(props) {
 
-    constructor (props) {
-        super(props);
+    /**
+     * Hooks
+     */
+    const refModal = useRef();
+    const refName = useRef();
+    const [stateReservedBundles, updateReservedBundles] = useState(CommonStates.getters.getReservedBundles());
+    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonStates.getters.getCurrentEquips());
+    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowEquipBundleSelector());
+    const [stateEquips, updateEquips] = useState(null);
 
-        // Initial State
-        this.state = {
-            reservedBundles: CommonStates.getters.getReservedBundles(),
-            currentEquips: CommonStates.getters.getCurrentEquips(),
-            isShow: ModalStates.getters.isShowEquipBundleSelector(),
-            equips: null
+    let refNameList = [];
+
+    // Will Mount
+    useEffect(() => {
+        initState();
+    }, [stateReservedBundles, stateCurrentEquips, stateIsShow]);
+
+    // Did Mount & Will Unmount
+    useEffect(() => {
+        initState();
+
+        const unsubscribeCommon = CommonStates.store.subscribe(() => {
+            updateReservedBundles(CommonStates.getters.getReservedBundles());
+            updateCurrentEquips(CommonStates.getters.getCurrentEquips());
+        });
+
+        const unsubscribeModal = ModalStates.store.subscribe(() => {
+            updateIsShow(ModalStates.getters.isShowEquipBundleSelector());
+        });
+
+        return () => {
+            unsubscribeCommon();
+            unsubscribeModal();
         };
-    }
+    }, []);
 
     /**
      * Handle Functions
      */
-    handleFastWindowClose = (event) => {
-        if (this.refs.modal !== event.target) {
+    let handleFastWindowClose = (event) => {
+        if (refModal.current !== event.target) {
             return;
         }
 
-        this.handleWindowClose();
+        handleWindowClose();
     };
 
-    handleWindowClose = () => {
+    let handleWindowClose = () => {
         ModalStates.setters.hideEquipBundleSelector();
     };
 
-    handleBundleSave = (index) => {
+    let handleBundleSave = (index) => {
         let name = Helper.isNotEmpty(index)
-            ? this.refs['name_' + index].value
-            : this.refs.name.value;
+            ? refNameList[index].current.value
+            : refName.current.value;
 
         if (0 === name.length) {
             return;
@@ -76,26 +100,26 @@ export default class EquipBundleSelector extends Component {
             });
         } else {
             CommonStates.setters.addReservedBundle({
-                id: MD5(JSON.stringify(this.state.equips)),
+                id: MD5(JSON.stringify(stateEquips)),
                 name: name,
-                equips: this.state.equips
+                equips: stateEquips
             });
         }
     };
 
-    handleBundleRemove = (index) => {
+    let handleBundleRemove = (index) => {
         CommonStates.setters.removeReservedBundle(index);
     };
 
-    handleBundlePickUp = (index) => {
-        let reservedBundles = this.state.reservedBundles;
+    let handleBundlePickUp = (index) => {
+        let reservedBundles = stateReservedBundles;
 
         CommonStates.setters.replaceCurrentEquips(reservedBundles[index].equips);
         ModalStates.setters.hideEquipBundleSelector();
     };
 
-    initState = () => {
-        let equips = this.state.currentEquips;
+    let initState = () => {
+        let equips = stateCurrentEquips;
 
         if (Helper.isEmpty(equips.weapon.id)
             && Helper.isEmpty(equips.helm.id)
@@ -108,40 +132,13 @@ export default class EquipBundleSelector extends Component {
             equips = null;
         }
 
-        this.setState({
-            equips: equips
-        });
-    }
-
-    /**
-     * Lifecycle Functions
-     */
-    componentDidMount () {
-        this.initState();
-
-        this.unsubscribeCommon = CommonStates.store.subscribe(() => {
-            this.setState({
-                reservedBundles: CommonStates.getters.getReservedBundles(),
-                currentEquips: CommonStates.getters.getCurrentEquips()
-            }, this.initState);
-        });
-
-        this.unsubscribeModal = ModalStates.store.subscribe(() => {
-            this.setState({
-                isShow: ModalStates.getters.isShowEquipBundleSelector()
-            }, this.initState);
-        });
-    }
-
-    componentWillUnmount(){
-        this.unsubscribeCommon();
-        this.unsubscribeModal();
+        updateEquips(equips);
     }
 
     /**
      * Render Functions
      */
-    renderRow = (data, index) => {
+    let renderRow = (data, index) => {
         let weaponInfo = WeaponDataset.getInfo(data.equips.weapon.id);
         let helmInfo = ArmorDataset.getInfo(data.equips.helm.id);
         let chestInfo = ArmorDataset.getInfo(data.equips.chest.id);
@@ -152,7 +149,7 @@ export default class EquipBundleSelector extends Component {
 
         return (
             <tr key={data.id}>
-                <td><input type="text" placeholder={_('inputName')} ref={'name_' + index} defaultValue={data.name} /></td>
+                <td><input type="text" placeholder={_('inputName')} ref={refNameList[index]} defaultValue={data.name} /></td>
                 <td><span>{(Helper.isNotEmpty(weaponInfo)) ? _(weaponInfo.name) : false}</span></td>
                 <td><span>{(Helper.isNotEmpty(helmInfo)) ? _(helmInfo.name) : false}</span></td>
                 <td><span>{(Helper.isNotEmpty(chestInfo)) ? _(chestInfo.name) : false}</span></td>
@@ -164,22 +161,22 @@ export default class EquipBundleSelector extends Component {
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName="check" altName={_('select')}
-                            onClick={() => {this.handleBundlePickUp(index)}} />
+                            onClick={() => {handleBundlePickUp(index)}} />
                         <FunctionalIcon
                             iconName="times" altName={_('remove')}
-                            onClick={() => {this.handleBundleRemove(index)}} />
+                            onClick={() => {handleBundleRemove(index)}} />
                         <FunctionalIcon
                             iconName="floppy-o" altName={_('save')}
-                            onClick={() => {this.handleBundleSave(index)}} />
+                            onClick={() => {handleBundleSave(index)}} />
                     </div>
                 </td>
             </tr>
         );
     };
 
-    renderTable = () => {
-        let equips = this.state.equips;
-        let reservedBundles = this.state.reservedBundles;
+    let renderTable = () => {
+        let equips = stateEquips;
+        let reservedBundles = stateReservedBundles;
 
         let DefaultRow = false;
 
@@ -194,7 +191,7 @@ export default class EquipBundleSelector extends Component {
 
             DefaultRow = (
                 <tr>
-                    <td><input type="text" placeholder={_('inputName')} ref="name" /></td>
+                    <td><input type="text" placeholder={_('inputName')} ref={refName} /></td>
                     <td><span>{(Helper.isNotEmpty(weaponInfo)) ? _(weaponInfo.name) : false}</span></td>
                     <td><span>{(Helper.isNotEmpty(helmInfo)) ? _(helmInfo.name) : false}</span></td>
                     <td><span>{(Helper.isNotEmpty(chestInfo)) ? _(chestInfo.name) : false}</span></td>
@@ -206,7 +203,7 @@ export default class EquipBundleSelector extends Component {
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName="floppy-o" altName={_('save')}
-                                onClick={() => {this.handleBundleSave(null)}} />
+                                onClick={() => {handleBundleSave(null)}} />
                         </div>
                     </td>
                 </tr>
@@ -230,28 +227,26 @@ export default class EquipBundleSelector extends Component {
                 </thead>
                 <tbody>
                     {DefaultRow}
-                    {reservedBundles.map(this.renderRow)}
+                    {reservedBundles.map(renderRow)}
                 </tbody>
             </table>
         );
     };
 
-    render () {
-        return this.state.isShow ? (
-            <div className="mhwc-selector" ref="modal" onClick={this.handleFastWindowClose}>
-                <div className="mhwc-modal">
-                    <div className="mhwc-panel">
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
-                                iconName="times" altName={_('close')}
-                                onClick={this.handleWindowClose} />
-                        </div>
-                    </div>
-                    <div className="mhwc-list">
-                        {this.renderTable()}
+    return stateIsShow ? (
+        <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
+            <div className="mhwc-modal">
+                <div className="mhwc-panel">
+                    <div className="mhwc-icons_bundle">
+                        <FunctionalIcon
+                            iconName="times" altName={_('close')}
+                            onClick={handleWindowClose} />
                     </div>
                 </div>
+                <div className="mhwc-list">
+                    {renderTable()}
+                </div>
             </div>
-        ) : false;
-    }
+        </div>
+    ) : false;
 }

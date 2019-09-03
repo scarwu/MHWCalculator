@@ -35,7 +35,7 @@ import Constant from 'constant';
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
-export default function (props) {
+export default function CandidateBundles(props) {
 
     /**
      * Hooks

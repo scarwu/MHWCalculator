@@ -35,7 +35,7 @@ let ChangelogMap = {
     enUS: enUSChangelog
 };
 
-export default function (props) {
+export default function Changelog(props) {
 
     /**
      * Hooks

@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Component } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -33,31 +33,31 @@ import Constant from 'constant';
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
-export default class Main extends Component {
+export default function App(props) {
 
-    // Default Props
-    static defaultProps = {
-        hash: null
-    };
+    /**
+     * Hooks
+     */
+    const refLang = useRef();
+    const [stateLang, updateLang] = useState(Status.get('sys:lang'));
 
-    constructor (props) {
-        super(props);
-
-        // Initial State
-        this.state = {
-            isImportEquips: false,
-            lang: Status.get('sys:lang'),
-            ignoreEquips: Status.get('app:ignoreEquips') || {}
-        };
-
-        // Set Build Time
+    // Did Mount & Will Unmount
+    useEffect(() => {
         Status.set('sys:buildTime', Config.buildTime);
-    }
+
+        let hash = props.match.params.hash;
+
+        if (Helper.isEmpty(hash)) {
+            return null;
+        }
+
+        CommonStates.setters.replaceCurrentEquips(JSON.parse(Helper.base64Decode(hash)));
+    }, []);
 
     /**
      * Handle Functions
      */
-    handleBundleExport = () => {
+    let handleBundleExport = () => {
         let equips = Helper.deepCopy(CommonStates.getters.getCurrentEquips());
         let hash = Helper.base64Encode(JSON.stringify(equips));
 
@@ -68,86 +68,66 @@ export default class Main extends Component {
         window.open(`${protocol}//${hostname}${pathname}#/${hash}`, '_blank');
     };
 
-    handleLangChange = () => {
-        let lang = this.refs.lang.value;
+    let handleLangChange = () => {
+        Status.set('sys:lang', refLang.current.value);
 
-        // Se Data to Status
-        Status.set('sys:lang', lang);
-
-        this.setState({
-            lang: lang
-        });
+        updateLang(refLang.current.value);
     };
-
-    /**
-     * Lifecycle Functions
-     */
-    componentDidMount () {
-        let hash = this.props.match.params.hash;
-
-        if (Helper.isEmpty(hash) || true === this.state.isImportEquips) {
-            return null;
-        }
-
-        CommonStates.setters.replaceCurrentEquips(JSON.parse(Helper.base64Decode(hash)));
-    }
 
     /**
      * Render Functions
      */
-    render () {
-        return (
-            <div key={this.state.lang} id="mhwc-app" className="container-fluid">
-                <div className="row mhwc-header">
-                    <a className="mhwc-title" href="./">
-                        <h1>{_('title')}</h1>
-                    </a>
+    return (
+        <div key={stateLang} id="mhwc-app" className="container-fluid">
+            <div className="row mhwc-header">
+                <a className="mhwc-title" href="./">
+                    <h1>{_('title')}</h1>
+                </a>
 
-                    <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
-                            iconName="link" altName={_('exportBundle')}
-                            onClick={this.handleBundleExport} />
-                        <FunctionalIcon
-                            iconName="info" altName={_('showChangelog')}
-                            onClick={ModalStates.setters.showChangelog} />
-                        <div className="mhwc-lang">
-                            <div>
-                                <i className="fa fa-globe"></i>
-                                <select defaultValue={this.state.lang} ref="lang" onChange={this.handleLangChange}>
-                                    {Object.keys(Constant.langs).map((lang) => {
-                                        return (
-                                            <option key={lang} value={lang}>{Constant.langs[lang]}</option>
-                                        );
-                                    })}
-                                </select>
-                            </div>
+                <div className="mhwc-icons_bundle">
+                    <FunctionalIcon
+                        iconName="link" altName={_('exportBundle')}
+                        onClick={handleBundleExport} />
+                    <FunctionalIcon
+                        iconName="info" altName={_('showChangelog')}
+                        onClick={ModalStates.setters.showChangelog} />
+                    <div className="mhwc-lang">
+                        <div>
+                            <i className="fa fa-globe"></i>
+                            <select defaultValue={stateLang} ref={refLang} onChange={handleLangChange}>
+                                {Object.keys(Constant.langs).map((lang) => {
+                                    return (
+                                        <option key={lang} value={lang}>{Constant.langs[lang]}</option>
+                                    );
+                                })}
+                            </select>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div className="row mhwc-container">
-                    <ConditionOptions />
-                    <CandidateBundles />
-                    <EquipsDisplayer />
-                    <CharacterStatus />
+            <div className="row mhwc-container">
+                <ConditionOptions />
+                <CandidateBundles />
+                <EquipsDisplayer />
+                <CharacterStatus />
+            </div>
+
+            <div className="row mhwc-footer">
+                <div className="col-12">
+                    <span>Copyright (c) Scar Wu</span>
                 </div>
 
-                <div className="row mhwc-footer">
-                    <div className="col-12">
-                        <span>Copyright (c) Scar Wu</span>
-                    </div>
-
-                    <div className="col-12">
-                        <a href="//scar.tw" target="_blank">
-                            <span>Blog</span>
-                        </a>
-                        &nbsp;|&nbsp;
-                        <a href="https://github.com/scarwu/MHWCalculator" target="_blank">
-                            <span>Github</span>
-                        </a>
-                    </div>
+                <div className="col-12">
+                    <a href="//scar.tw" target="_blank">
+                        <span>Blog</span>
+                    </a>
+                    &nbsp;|&nbsp;
+                    <a href="https://github.com/scarwu/MHWCalculator" target="_blank">
+                        <span>Github</span>
+                    </a>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }

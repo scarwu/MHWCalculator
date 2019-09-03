@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Component } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -26,62 +26,81 @@ import FunctionalIcon from 'components/common/functionalIcon';
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
-export default class SetItemSelector extends Component {
+export default function SetItemSelector(props) {
 
-    constructor (props) {
-        super(props);
+    /**
+     * Hooks
+     */
+    const refModal = useRef();
+    const refSegment = useRef();
+    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowSetItemSelector());
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonStates.getters.getRequiredSets());
+    const [stateList, updateList] = useState([]);
+    const [stateSegment, updateSegment] = useState(null);
+    const [stateSelectedList, updateSelectedList] = useState([]);
+    const [stateUnselectedList, updateUnselectedList] = useState([]);
 
-        // Initial State
-        this.state = {
-            isShow: ModalStates.getters.isShowSetItemSelector(),
-            requiredSets: CommonStates.getters.getRequiredSets(),
-            list: [],
-            segment: null,
-            selectedList: [],
-            unselectedList: []
+    // Will Mount
+    useEffect(() => {
+        initState();
+    }, [stateRequiredSets, updateIsShow]);
+
+    // Did Mount & Will Unmount
+    useEffect(() => {
+        initState();
+
+        const unsubscribeCommon = CommonStates.store.subscribe(() => {
+            updateRequiredSets(CommonStates.getters.getRequiredSets());
+        });
+
+        const unsubscribeModal = ModalStates.store.subscribe(() => {
+            updateIsShow(ModalStates.getters.isShowSetItemSelector());
+        });
+
+        return () => {
+            unsubscribeCommon();
+            unsubscribeModal();
         };
-    }
+    }, []);
 
     /**
      * Handle Functions
      */
-    handleFastWindowClose = (event) => {
-        if (this.refs.modal !== event.target) {
+    let handleFastWindowClose = (event) => {
+        if (refModal.current !== event.target) {
             return;
         }
 
-        this.handleWindowClose();
+        handleWindowClose();
     };
 
-    handleWindowClose = () => {
+    let handleWindowClose = () => {
         ModalStates.setters.hideSetItemSelector();
     };
 
-    handleItemPickUp = (itemId) => {
+    let handleItemPickUp = (itemId) => {
         CommonStates.setters.addRequiredSet({
             setId: itemId
         });
     };
 
-    handleItemThrowDown = (itemId) => {
+    let handleItemThrowDown = (itemId) => {
         CommonStates.setters.removeRequiredSet({
             setId: itemId
         });
     };
 
-    handleSegmentInput = () => {
-        let segment = this.refs.segment.value;
+    let handleSegmentInput = () => {
+        let segment = refSegment.current.value;
 
         segment = (0 !== segment.length)
             ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
 
-        this.setState({
-            segment: segment
-        });
+        updateSegment(segment);
     };
 
-    initState = () => {
-        let idList = this.state.requiredSets.map((set) => {
+    let initState = () => {
+        let idList = stateRequiredSets.map((set) => {
             return set.id;
         });
 
@@ -103,40 +122,14 @@ export default class SetItemSelector extends Component {
             }
         });
 
-        this.setState({
-            selectedList: selectedList,
-            unselectedList: unselectedList
-        });
+        updateSelectedList(selectedList);
+        updateUnselectedList(unselectedList);
     };
-
-    /**
-     * Lifecycle Functions
-     */
-    componentDidMount () {
-        this.initState();
-
-        this.unsubscribeCommon = CommonStates.store.subscribe(() => {
-            this.setState({
-                requiredSets: CommonStates.getters.getRequiredSets()
-            }, this.initState);
-        });
-
-        this.unsubscribeModal = ModalStates.store.subscribe(() => {
-            this.setState({
-                isShow: ModalStates.getters.isShowSetItemSelector()
-            }, this.initState);
-        });
-    }
-
-    componentWillUnmount(){
-        this.unsubscribeCommon();
-        this.unsubscribeModal();
-    }
 
     /**
      * Render Functions
      */
-    renderRow = (data, isSelect) => {
+    let renderRow = (data, isSelect) => {
         return (
             <tr key={data.id}>
                 <td><span>{_(data.name)}</span></td>
@@ -165,11 +158,11 @@ export default class SetItemSelector extends Component {
                         {isSelect ? (
                             <FunctionalIcon
                                 iconName="minus" altName={_('remove')}
-                                onClick={() => {this.handleItemThrowDown(data.id)}} />
+                                onClick={() => {handleItemThrowDown(data.id)}} />
                         ) : (
                             <FunctionalIcon
                                 iconName="plus" altName={_('add')}
-                                onClick={() => {this.handleItemPickUp(data.id)}} />
+                                onClick={() => {handleItemPickUp(data.id)}} />
                         )}
                     </div>
                 </td>
@@ -177,8 +170,8 @@ export default class SetItemSelector extends Component {
         );
     };
 
-    renderTable = () => {
-        let segment = this.state.segment;
+    let renderTable = () => {
+        let segment = stateSegment;
 
         return (
             <table className="mhwc-set_table">
@@ -191,7 +184,7 @@ export default class SetItemSelector extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.selectedList.map((data, index) => {
+                    {stateSelectedList.map((data, index) => {
 
                         // Create Text
                         let text = _(data.name);
@@ -215,10 +208,10 @@ export default class SetItemSelector extends Component {
                             return false;
                         }
 
-                        return this.renderRow(data, true);
+                        return renderRow(data, true);
                     })}
 
-                    {this.state.unselectedList.map((data, index) => {
+                    {stateUnselectedList.map((data, index) => {
 
                         // Create Text
                         let text = _(data.name);
@@ -242,33 +235,31 @@ export default class SetItemSelector extends Component {
                             return false;
                         }
 
-                        return this.renderRow(data, false);
+                        return renderRow(data, false);
                     })}
                 </tbody>
             </table>
         );
     };
 
-    render () {
-        return this.state.isShow ? (
-            <div className="mhwc-selector" ref="modal" onClick={this.handleFastWindowClose}>
-                <div className="mhwc-modal">
-                    <div className="mhwc-panel">
-                        <input className="mhwc-text_segment" type="text"
-                            placeholder={_('inputKeyword')}
-                            ref="segment" onChange={this.handleSegmentInput} />
+    return stateIsShow ? (
+        <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
+            <div className="mhwc-modal">
+                <div className="mhwc-panel">
+                    <input className="mhwc-text_segment" type="text"
+                        placeholder={_('inputKeyword')}
+                        ref={refSegment} onChange={handleSegmentInput} />
 
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
-                                iconName="times" altName={_('close')}
-                                onClick={this.handleWindowClose} />
-                        </div>
-                    </div>
-                    <div className="mhwc-list">
-                        {this.renderTable()}
+                    <div className="mhwc-icons_bundle">
+                        <FunctionalIcon
+                            iconName="times" altName={_('close')}
+                            onClick={handleWindowClose} />
                     </div>
                 </div>
+                <div className="mhwc-list">
+                    {renderTable()}
+                </div>
             </div>
-        ) : false;
-    }
+        </div>
+    ) : false;
 }

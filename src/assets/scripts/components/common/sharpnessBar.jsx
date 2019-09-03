@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Sharpness Bar
+ *
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -11,7 +11,7 @@
 // Load Libraries
 import React from 'react';
 
-export default function (props) {
+export default function SharpnessBar(props) {
     return (
         <div className="mhwc-sharpness_bar">
             <div className="mhwc-steps">

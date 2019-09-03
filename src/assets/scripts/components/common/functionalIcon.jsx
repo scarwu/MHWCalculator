@@ -11,7 +11,7 @@
 // Load Libraries
 import React from 'react';
 
-export default function (props) {
+export default function FunctionalIcon(props) {
     return (
         <div className="mhwc-functional_icon">
             <a onClick={props.onClick}>
