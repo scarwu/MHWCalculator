@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -18,123 +18,149 @@ import Helper from 'core/helper';
 // Load Config
 import Config from 'config';
 
+const statusPrefix = 'state:modal';
+
+// Middleware
+const diffLogger = store => next => action => {
+    let prevState = Helper.deepCopy(store.getState());
+    let result = next(action);
+    let nextState = Helper.deepCopy(store.getState());
+    let diffState = {};
+
+    for (let key in prevState) {
+        if (JSON.stringify(prevState[key]) === JSON.stringify(nextState[key])) {
+            continue;
+        }
+
+        diffState[key] = nextState[key];
+
+        Status.set(statusPrefix + ':' + key, nextState[key]);
+    }
+
+    Helper.log('ModalState action', action);
+    Helper.log('ModalState diffState', diffState);
+
+    return result;
+};
+
+// Store
 const Store = createStore((state, action) => {
     if (undefined === state) {
         state = {
-            algorithmSetting: {
-                isShow: false,
-                data: null
+            changelog: ('production' === Config.env) ? {
+                isShow: (Config.buildTime !== parseInt(Status.get('sys:buildTime')))
+            } : Status.get(statusPrefix + ':changelog') || {
+                isShow: false
             },
-            inventorySetting: {
-                isShow: false,
-                data: null
+            algorithmSetting: Status.get(statusPrefix + ':algorithmSetting') || {
+                isShow: false
             },
-            equipBundleSelector: {
-                isShow: false,
-                data: null
+            inventorySetting: Status.get(statusPrefix + ':inventorySetting') || {
+                isShow: false
             },
-            setItemSelector: {
-                isShow: false,
-                data: null
+            equipBundleSelector: Status.get(statusPrefix + ':equipBundleSelector') || {
+                isShow: false
             },
-            skillItemSelector: {
-                isShow: false,
-                data: null
+            setItemSelector: Status.get(statusPrefix + ':setItemSelector') || {
+                isShow: false
             },
-            equipItemSelector: {
-                isShow: false,
-                data: null
+            skillItemSelector: Status.get(statusPrefix + ':skillItemSelector') || {
+                isShow: false
             },
-            changelog: {
-                isShow: ('production' === Config.env)
-                    ? (Config.buildTime !== parseInt(Status.get('sys:buildTime'))) : false,
-                data: null
+            equipItemSelector: Status.get(statusPrefix + ':equipItemSelector') || {
+                isShow: false,
+                bypassData: null
             }
         };
     }
 
-    Helper.log('Modal States', action);
-
     switch (action.type) {
-    case 'UPDATE_ALGORITHM_SETTING':
+    case 'UPDATE_CHANGELOG':
         return Object.assign({}, state, {
-            algorithmSetting: {
-                isShow: action.payload.isShow,
-                data: action.payload.data
+            changelog: {
+                isShow: action.payload.isShow
             }
         });
     case 'UPDATE_INVENTORY_SETTING':
         return Object.assign({}, state, {
             inventorySetting: {
-                isShow: action.payload.isShow,
-                data: action.payload.data
+                isShow: action.payload.isShow
+            }
+        });
+    case 'UPDATE_ALGORITHM_SETTING':
+        return Object.assign({}, state, {
+            algorithmSetting: {
+                isShow: action.payload.isShow
             }
         });
     case 'UPDATE_EQUIP_BUNDLE_SELECTOR':
         return Object.assign({}, state, {
             equipBundleSelector: {
-                isShow: action.payload.isShow,
-                data: action.payload.data
+                isShow: action.payload.isShow
             }
         });
     case 'UPDATE_SET_ITEM_SELECTOR':
         return Object.assign({}, state, {
             setItemSelector: {
-                isShow: action.payload.isShow,
-                data: action.payload.data
+                isShow: action.payload.isShow
             }
         });
     case 'UPDATE_SKILL_ITEM_SELECTOR':
         return Object.assign({}, state, {
             skillItemSelector: {
-                isShow: action.payload.isShow,
-                data: action.payload.data
+                isShow: action.payload.isShow
             }
         });
     case 'UPDATE_EQUIP_ITEM_SELECTOR':
         return Object.assign({}, state, {
             equipItemSelector: {
                 isShow: action.payload.isShow,
-                data: action.payload.data
-            }
-        });
-    case 'UPDATE_CHANGELOG':
-        return Object.assign({}, state, {
-            changelog: {
-                isShow: action.payload.isShow,
-                data: action.payload.data
+                bypassData: action.payload.bypassData
             }
         });
     default:
         return state
     }
-});
+}, applyMiddleware(diffLogger));
 
 const Setters = {
-    showAlgorithmSetting: (data = null) => {
+    showChangelog: () => {
         Store.dispatch({
-            type: 'UPDATE_ALGORITHM_SETTING',
+            type: 'UPDATE_CHANGELOG',
             payload: {
-                isShow: true,
-                data: data
+                isShow: true
             }
         });
     },
-    hideAlgorithmSetting: (data = null) => {
+    hideChangelog: () => {
         Store.dispatch({
-            type: 'UPDATE_ALGORITHM_SETTING',
+            type: 'UPDATE_CHANGELOG',
             payload: {
-                isShow: false,
-                data: data
+                isShow: false
             }
         });
     },
-    showInventorySetting: (data = null) => {
+    showAlgorithmSetting: () => {
+        Store.dispatch({
+            type: 'UPDATE_ALGORITHM_SETTING',
+            payload: {
+                isShow: true
+            }
+        });
+    },
+    hideAlgorithmSetting: () => {
+        Store.dispatch({
+            type: 'UPDATE_ALGORITHM_SETTING',
+            payload: {
+                isShow: false
+            }
+        });
+    },
+    showInventorySetting: () => {
         Store.dispatch({
             type: 'UPDATE_INVENTORY_SETTING',
             payload: {
-                isShow: true,
-                data: data
+                isShow: true
             }
         });
     },
@@ -142,17 +168,15 @@ const Setters = {
         Store.dispatch({
             type: 'UPDATE_INVENTORY_SETTING',
             payload: {
-                isShow: false,
-                data: null
+                isShow: false
             }
         });
     },
-    showEquipBundleSelector: (data = null) => {
+    showEquipBundleSelector: () => {
         Store.dispatch({
             type: 'UPDATE_EQUIP_BUNDLE_SELECTOR',
             payload: {
-                isShow: true,
-                data: data
+                isShow: true
             }
         });
     },
@@ -160,17 +184,15 @@ const Setters = {
         Store.dispatch({
             type: 'UPDATE_EQUIP_BUNDLE_SELECTOR',
             payload: {
-                isShow: false,
-                data: null
+                isShow: false
             }
         });
     },
-    showSetItemSelector: (data = null) => {
+    showSetItemSelector: () => {
         Store.dispatch({
             type: 'UPDATE_SET_ITEM_SELECTOR',
             payload: {
-                isShow: true,
-                data: data
+                isShow: true
             }
         });
     },
@@ -178,17 +200,15 @@ const Setters = {
         Store.dispatch({
             type: 'UPDATE_SET_ITEM_SELECTOR',
             payload: {
-                isShow: false,
-                data: null
+                isShow: false
             }
         });
     },
-    showSkillItemSelector: (data = null) => {
+    showSkillItemSelector: () => {
         Store.dispatch({
             type: 'UPDATE_SKILL_ITEM_SELECTOR',
             payload: {
-                isShow: true,
-                data: data
+                isShow: true
             }
         });
     },
@@ -196,17 +216,16 @@ const Setters = {
         Store.dispatch({
             type: 'UPDATE_SKILL_ITEM_SELECTOR',
             payload: {
-                isShow: false,
-                data: null
+                isShow: false
             }
         });
     },
-    showEquipItemSelector: (data = null) => {
+    showEquipItemSelector: (bypassData = null) => {
         Store.dispatch({
             type: 'UPDATE_EQUIP_ITEM_SELECTOR',
             payload: {
                 isShow: true,
-                data: data
+                bypassData: bypassData
             }
         });
     },
@@ -215,72 +234,36 @@ const Setters = {
             type: 'UPDATE_EQUIP_ITEM_SELECTOR',
             payload: {
                 isShow: false,
-                data: null
-            }
-        });
-    },
-    showChangelog: (data = null) => {
-        Store.dispatch({
-            type: 'UPDATE_CHANGELOG',
-            payload: {
-                isShow: true,
-                data: data
-            }
-        });
-    },
-    hideChangelog: () => {
-        Store.dispatch({
-            type: 'UPDATE_CHANGELOG',
-            payload: {
-                isShow: false,
-                data: null
+                bypassData: null
             }
         });
     }
 };
 
 const Getters = {
+    isShowChangelog: () => {
+        return Store.getState().changelog.isShow;
+    },
     isShowAlgorithmSetting: () => {
         return Store.getState().algorithmSetting.isShow;
-    },
-    getAlgorithmSettingData: () => {
-        return Store.getState().algorithmSetting.data;
     },
     isShowInventorySetting: () => {
         return Store.getState().inventorySetting.isShow;
     },
-    getInventorySettingData: () => {
-        return Store.getState().inventorySetting.data;
-    },
     isShowEquipBundleSelector: () => {
         return Store.getState().equipBundleSelector.isShow;
-    },
-    getEquipBundleSelectorData: () => {
-        return Store.getState().equipBundleSelector.data;
     },
     isShowSetItemSelector: () => {
         return Store.getState().setItemSelector.isShow;
     },
-    getSetItemSelectorData: () => {
-        return Store.getState().setItemSelector.data;
-    },
     isShowSkillItemSelector: () => {
         return Store.getState().skillItemSelector.isShow;
-    },
-    getSkillItemSelectorData: () => {
-        return Store.getState().skillItemSelector.data;
     },
     isShowEquipItemSelector: () => {
         return Store.getState().equipItemSelector.isShow;
     },
-    getEquipItemSelectorData: () => {
-        return Store.getState().equipItemSelector.data;
-    },
-    isShowChangelog: () => {
-        return Store.getState().changelog.isShow;
-    },
-    getChangelogData: () => {
-        return Store.getState().changelog.data;
+    getEquipItemSelectorBypassData: () => {
+        return Store.getState().equipItemSelector.bypassData;
     }
 };
 

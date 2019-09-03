@@ -29,7 +29,7 @@ export default function (props) {
     const refModal = useRef();
     const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonStates.getters.getAlgorithmParams());
     const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowAlgorithmSetting());
-            console.log(stateIsShow)
+
     // Did Mount & Will Ummount
     useEffect(() => {
         const unsubscribeCommon = CommonStates.store.subscribe(() => {

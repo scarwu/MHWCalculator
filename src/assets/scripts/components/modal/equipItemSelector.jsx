@@ -44,7 +44,7 @@ export default class EquipItemSelector extends Component {
         this.state = {
             inventory: CommonStates.getters.getInventory(),
             isShow: ModalStates.getters.isShowEquipItemSelector(),
-            data: ModalStates.getters.getEquipItemSelectorData(),
+            bypassData: ModalStates.getters.getEquipItemSelectorBypassData(),
             mode: null,
             includeList: [],
             ignoreList: [],
@@ -70,17 +70,17 @@ export default class EquipItemSelector extends Component {
     };
 
     handleItemPickUp = (itemId) => {
-        let data = this.state.data;
+        let bypassData = this.state.bypassData;
 
-        if (Helper.isNotEmpty(data.enhanceIndex)) {
-            data.enhanceId = itemId;
-        } else if (Helper.isNotEmpty(data.slotIndex)) {
-            data.slotId = itemId;
+        if (Helper.isNotEmpty(bypassData.enhanceIndex)) {
+            bypassData.enhanceId = itemId;
+        } else if (Helper.isNotEmpty(bypassData.slotIndex)) {
+            bypassData.slotId = itemId;
         } else {
-            data.equipId = itemId;
+            bypassData.equipId = itemId;
         }
 
-        CommonStates.setters.setCurrentEquip(data);
+        CommonStates.setters.setCurrentEquip(bypassData);
 
         this.handleWindowClose();
     };
@@ -123,7 +123,7 @@ export default class EquipItemSelector extends Component {
      * Lifecycle Functions
      */
     static getDerivedStateFromProps (nextProps, prevState) {
-        if (Helper.isEmpty(prevState.data)) {
+        if (Helper.isEmpty(prevState.bypassData)) {
             return {};
         }
 
@@ -132,21 +132,21 @@ export default class EquipItemSelector extends Component {
         let ignoreList = [];
         let type = null;
 
-        if (Helper.isNotEmpty(prevState.data.enhanceIndex)) {
+        if (Helper.isNotEmpty(prevState.bypassData.enhanceIndex)) {
             mode = 'enhance';
             includeList = EnhanceDataset.getItems();
-        } else if (Helper.isNotEmpty(prevState.data.slotIndex)) {
+        } else if (Helper.isNotEmpty(prevState.bypassData.slotIndex)) {
             mode = 'jewel';
 
-            for (let size = prevState.data.slotSize; size >= 1; size--) {
+            for (let size = prevState.bypassData.slotSize; size >= 1; size--) {
                 for (let rare = 8; rare >= 5; rare--) {
                     includeList = includeList.concat(
                         JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems()
                     );
                 }
             }
-        } else if ('weapon' === prevState.data.equipType) {
-            let weaponInfo = WeaponDataset.getInfo(prevState.data.equipId);
+        } else if ('weapon' === prevState.bypassData.equipType) {
+            let weaponInfo = WeaponDataset.getInfo(prevState.bypassData.equipId);
 
             mode = 'weapon';
             type = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.type : Constant.weaponTypes[0];
@@ -174,17 +174,17 @@ export default class EquipItemSelector extends Component {
                     }
                 });
             });
-        } else if ('helm' === prevState.data.equipType
-            || 'chest' === prevState.data.equipType
-            || 'arm' === prevState.data.equipType
-            || 'waist' === prevState.data.equipType
-            || 'leg' === prevState.data.equipType
+        } else if ('helm' === prevState.bypassData.equipType
+            || 'chest' === prevState.bypassData.equipType
+            || 'arm' === prevState.bypassData.equipType
+            || 'waist' === prevState.bypassData.equipType
+            || 'leg' === prevState.bypassData.equipType
         ) {
             mode = 'armor';
-            type = prevState.data.equipType;
+            type = prevState.bypassData.equipType;
 
             for (let rare = 8; rare >= 5; rare--) {
-                ArmorDataset.typeIs(prevState.data.equipType).rareIs(rare).getItems().forEach((equip) => {
+                ArmorDataset.typeIs(prevState.bypassData.equipType).rareIs(rare).getItems().forEach((equip) => {
                     if (Helper.isNotEmpty(prevState.inventory[equip.type])
                         && true === prevState.inventory[equip.type][equip.id]
                     ) {
@@ -195,7 +195,7 @@ export default class EquipItemSelector extends Component {
                 });
             }
 
-            ArmorDataset.typeIs(prevState.data.equipType).rareIs(0).getItems().forEach((equip) => {
+            ArmorDataset.typeIs(prevState.bypassData.equipType).rareIs(0).getItems().forEach((equip) => {
                 if (Helper.isNotEmpty(prevState.inventory[equip.type])
                     && true === prevState.inventory[equip.type][equip.id]
                 ) {
@@ -204,7 +204,7 @@ export default class EquipItemSelector extends Component {
                     includeList.push(equip);
                 }
             });
-        } else if ('charm' === prevState.data.equipType) {
+        } else if ('charm' === prevState.bypassData.equipType) {
             mode = 'charm';
 
             CharmDataset.getItems().forEach((equip) => {
@@ -240,7 +240,7 @@ export default class EquipItemSelector extends Component {
 
         this.unsubscribeModel = ModalStates.store.subscribe(() => {
             this.setState({
-                data: ModalStates.getters.getEquipItemSelectorData(),
+                bypassData: ModalStates.getters.getEquipItemSelectorBypassData(),
                 isShow: ModalStates.getters.isShowEquipItemSelector()
             });
         });
@@ -343,7 +343,7 @@ export default class EquipItemSelector extends Component {
                             altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle('weapon', data.id)}} />
 
-                        {(this.state.data.equipId !== data.id) ? (
+                        {(this.state.bypassData.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -479,7 +479,7 @@ export default class EquipItemSelector extends Component {
                             altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle(data.type, data.id)}} />
 
-                        {(this.state.data.equipId !== data.id) ? (
+                        {(this.state.bypassData.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -576,7 +576,7 @@ export default class EquipItemSelector extends Component {
                             altName={isIgnore ? _('include') : _('exclude')}
                             onClick={() => {this.handleItemToggle('charm', data.id)}} />
 
-                        {(this.state.data.equipId !== data.id) ? (
+                        {(this.state.bypassData.equipId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -647,7 +647,7 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        {(this.state.data.jewelId !== data.id) ? (
+                        {(this.state.bypassData.jewelId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -722,7 +722,7 @@ export default class EquipItemSelector extends Component {
                 </td>
                 <td>
                     <div className="mhwc-icons_bundle">
-                        {(this.state.data.enhanceId !== data.id) ? (
+                        {(this.state.bypassData.enhanceId !== data.id) ? (
                             <FunctionalIcon
                                 iconName="check" altName={_('select')}
                                 onClick={() => {this.handleItemPickUp(data.id)}} />
@@ -773,7 +773,7 @@ export default class EquipItemSelector extends Component {
     render () {
         let Content = null;
 
-        if (Helper.isEmpty(this.state.data)) {
+        if (Helper.isEmpty(this.state.bypassData)) {
             return false;
         }
 
