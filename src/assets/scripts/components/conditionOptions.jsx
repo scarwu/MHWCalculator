@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -26,47 +26,39 @@ import FunctionalIcon from 'components/common/functionalIcon';
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
-export default class EquipsDisplayer extends Component {
+export default function (props) {
 
-    constructor (props) {
-        super(props);
+    /**
+     * Hooks
+     */
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonStates.getters.getRequiredSets());
+    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonStates.getters.getRequiredSkills());
 
-        // Initial State
-        this.state = {
-            requiredSets: CommonStates.getters.getRequiredSets(),
-            requiredSkills: CommonStates.getters.getRequiredSkills(),
+    // Did Mount & Will Unmount
+    useEffect(() => {
+        const unsubscribe = CommonStates.store.subscribe(() => {
+            updateRequiredSets(CommonStates.getters.getRequiredSets());
+            updateRequiredSkills(CommonStates.getters.getRequiredSkills());
+        });
+
+        return () => {
+            unsubscribe();
         };
-    }
+    }, []);
 
     /**
      * Handle Functions
      */
-    handleRequireConditionRefresh = () => {
+    let handleRequireConditionRefresh = () => {
         CommonStates.setters.cleanRequiredSets();
         CommonStates.setters.cleanRequiredSkills();
     };
 
     /**
-     * Lifecycle Functions
-     */
-    componentDidMount () {
-        this.unsubscribe = CommonStates.store.subscribe(() => {
-            this.setState({
-                requiredSets: CommonStates.getters.getRequiredSets(),
-                requiredSkills: CommonStates.getters.getRequiredSkills()
-            });
-        });
-    }
-
-    componentWillUnmount(){
-        this.unsubscribe();
-    }
-
-    /**
      * Render Functions
      */
-    renderSelectedSetItems = () => {
-        return this.state.requiredSets.map((data, index) => {
+    let renderSelectedSetItems = () => {
+        return stateRequiredSets.map((data, index) => {
             let setInfo = SetDataset.getInfo(data.id);
 
             if (Helper.isEmpty(setInfo)) {
@@ -114,8 +106,8 @@ export default class EquipsDisplayer extends Component {
         });
     };
 
-    renderSelectedSkillItems = () => {
-        return this.state.requiredSkills.map((data, index) => {
+    let renderSelectedSkillItems = () => {
+        return stateRequiredSkills.map((data, index) => {
             let skillInfo = SkillDataset.getInfo(data.id);
 
             return (Helper.isNotEmpty(skillInfo)) ? (
@@ -149,30 +141,28 @@ export default class EquipsDisplayer extends Component {
         });
     };
 
-    render () {
-        return (
-            <div className="col mhwc-conditions">
-                <div className="mhwc-section_name">
-                    <span className="mhwc-title">{_('requireCondition')}</span>
+    return (
+        <div className="col mhwc-conditions">
+            <div className="mhwc-section_name">
+                <span className="mhwc-title">{_('requireCondition')}</span>
 
-                    <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
-                            iconName="refresh" altName={_('reset')}
-                            onClick={this.handleRequireConditionRefresh} />
-                        <FunctionalIcon
-                            iconName="plus" altName={_('skill')}
-                            onClick={ModalStates.setters.showSkillItemSelector} />
-                        <FunctionalIcon
-                            iconName="plus" altName={_('set')}
-                            onClick={ModalStates.setters.showSetItemSelector} />
-                    </div>
-                </div>
-
-                <div className="mhwc-list">
-                    {this.renderSelectedSetItems()}
-                    {this.renderSelectedSkillItems()}
+                <div className="mhwc-icons_bundle">
+                    <FunctionalIcon
+                        iconName="refresh" altName={_('reset')}
+                        onClick={handleRequireConditionRefresh} />
+                    <FunctionalIcon
+                        iconName="plus" altName={_('skill')}
+                        onClick={ModalStates.setters.showSkillItemSelector} />
+                    <FunctionalIcon
+                        iconName="plus" altName={_('set')}
+                        onClick={ModalStates.setters.showSetItemSelector} />
                 </div>
             </div>
-        );
-    }
+
+            <div className="mhwc-list">
+                {renderSelectedSetItems()}
+                {renderSelectedSkillItems()}
+            </div>
+        </div>
+    );
 }

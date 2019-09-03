@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -35,27 +35,29 @@ import Constant from 'constant';
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
-export default class CandidateBundles extends Component {
+export default function (props) {
 
-    // Default Props
-    static defaultProps = {
-        onPickUp: (data) => {}
-    };
+    /**
+     * Hooks
+     */
+    const [stateComputedBundles, updateComputedBundles] = useState(CommonStates.getters.getComputedBundles());
+    const [stateIsSearching, updateIsSearching] = useState(false);
 
-    constructor (props) {
-        super(props);
+    // Did Mount & Will Unmount
+    useEffect(() => {
+        const unsubscribe = CommonStates.store.subscribe(() => {
+            updateComputedBundles(CommonStates.getters.getComputedBundles());
+        });
 
-        // Initial State
-        this.state = {
-            computedBundles: CommonStates.getters.getComputedBundles(),
-            isSearching: false
+        return () => {
+            unsubscribe();
         };
-    }
+    }, []);
 
     /**
      * Handle Functions
      */
-    handleCandidateBundlesSearch = () => {
+    let handleCandidateBundlesSearch = () => {
         let requiredSets = CommonStates.getters.getRequiredSets();
         let requiredSkills = CommonStates.getters.getRequiredSkills();
         let requiredEquipPins = CommonStates.getters.getRequiredEquipPins();
@@ -74,9 +76,7 @@ export default class CandidateBundles extends Component {
             requiredEquips[equipType] = currentEquips[equipType];
         });
 
-        this.setState({
-            isSearching: true
-        });
+        updateIsSearching(true);
 
         setTimeout(() => {
             let startTime = new Date().getTime();
@@ -103,14 +103,12 @@ export default class CandidateBundles extends Component {
 
             CommonStates.setters.saveComputedBundles(computedBundles);
 
-            this.setState({
-                isSearching: false
-            });
+            updateIsSearching(false);
         }, 100);
     };
 
-    handleBundlePickUp = (index) => {
-        let bundle = this.state.computedBundles[index];
+    let handleBundlePickUp = (index) => {
+        let bundle = stateComputedBundles[index];
         let equips = Helper.deepCopy(CommonStates.getters.getCurrentEquips());
         let slotMap = {
             1: [],
@@ -197,27 +195,12 @@ export default class CandidateBundles extends Component {
     };
 
     /**
-     * Lifecycle Functions
-     */
-    componentDidMount () {
-        this.unsubscribe = CommonStates.store.subscribe(() => {
-            this.setState({
-                computedBundles: CommonStates.getters.getComputedBundles()
-            });
-        });
-    }
-
-    componentWillUnmount () {
-        this.unsubscribe();
-    }
-
-    /**
      * Render Functions
      */
-    renderBundleItems = () => {
-        let totalBundle = this.state.computedBundles.length;
+    let renderBundleItems = () => {
+        let totalBundle = stateComputedBundles.length;
 
-        return this.state.computedBundles.map((data, index) => {
+        return stateComputedBundles.map((data, index) => {
             return (
                 <div key={index} className="row mhwc-bundle">
                     <div className="col-12 mhwc-name">
@@ -225,7 +208,7 @@ export default class CandidateBundles extends Component {
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName="check" altName={_('equip')}
-                                onClick={() => {this.handleBundlePickUp(index)}} />
+                                onClick={() => {handleBundlePickUp(index)}} />
                         </div>
                     </div>
 
@@ -367,35 +350,33 @@ export default class CandidateBundles extends Component {
         });
     };
 
-    render () {
-        return (
-            <div className="col mhwc-bundles">
-                <div className="mhwc-section_name">
-                    <span className="mhwc-title">{_('candidateBundle')}</span>
+    return (
+        <div className="col mhwc-bundles">
+            <div className="mhwc-section_name">
+                <span className="mhwc-title">{_('candidateBundle')}</span>
 
-                    <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
-                            iconName="refresh" altName={_('reset')}
-                            onClick={CommonStates.setters.cleanComputedBundles} />
-                        {'production' !== Config.env ? <FunctionalIcon
-                            iconName="cog" altName={_('setting')}
-                            onClick={ModalStates.setters.showAlgorithmSetting} /> : false}
-                        <FunctionalIcon
-                            iconName="search" altName={_('search')}
-                            onClick={this.handleCandidateBundlesSearch} />
-                    </div>
-                </div>
-
-                <div key="list" className="mhwc-list">
-                    {true === this.state.isSearching ? (
-                        <div className="mhwc-mask">
-                            <i className="fa fa-spin fa-spinner"></i>
-                        </div>
-                    ) : false}
-
-                    {this.renderBundleItems()}
+                <div className="mhwc-icons_bundle">
+                    <FunctionalIcon
+                        iconName="refresh" altName={_('reset')}
+                        onClick={CommonStates.setters.cleanComputedBundles} />
+                    {'production' !== Config.env ? <FunctionalIcon
+                        iconName="cog" altName={_('setting')}
+                        onClick={ModalStates.setters.showAlgorithmSetting} /> : false}
+                    <FunctionalIcon
+                        iconName="search" altName={_('search')}
+                        onClick={handleCandidateBundlesSearch} />
                 </div>
             </div>
-        );
-    }
+
+            <div key="list" className="mhwc-list">
+                {true === stateIsSearching ? (
+                    <div className="mhwc-mask">
+                        <i className="fa fa-spin fa-spinner"></i>
+                    </div>
+                ) : false}
+
+                {renderBundleItems()}
+            </div>
+        </div>
+    );
 }

@@ -118,13 +118,13 @@ export default class SetItemSelector extends Component {
         this.unsubscribeCommon = CommonStates.store.subscribe(() => {
             this.setState({
                 requiredSets: CommonStates.getters.getRequiredSets()
-            });
+            }, this.initState);
         });
 
         this.unsubscribeModal = ModalStates.store.subscribe(() => {
             this.setState({
                 isShow: ModalStates.getters.isShowSetItemSelector()
-            });
+            }, this.initState);
         });
     }
 

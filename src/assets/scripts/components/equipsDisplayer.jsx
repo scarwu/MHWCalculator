@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -34,58 +34,50 @@ import Constant from 'constant';
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
-export default class EquipsDisplayer extends Component {
+export default function (props) {
 
-    constructor (props) {
-        super(props);
+    /**
+     * Hooks
+     */
+    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonStates.getters.getCurrentEquips());
+    const [stateRequiredEquipPins, updateRequiredEquipPins] = useState(CommonStates.getters.getRequiredEquipPins());
 
-        // Initial State
-        this.state = {
-            currentEquips: CommonStates.getters.getCurrentEquips(),
-            requiredEquipPins: CommonStates.getters.getRequiredEquipPins()
+    // Did Mount & Will Unmount
+    useEffect(() => {
+        const unsubscribe = CommonStates.store.subscribe(() => {
+            updateCurrentEquips(CommonStates.getters.getCurrentEquips());
+            updateRequiredEquipPins(CommonStates.getters.getRequiredEquipPins());
+        });
+
+        return () => {
+            unsubscribe();
         };
-    }
+    }, []);
 
     /**
      * Handle Functions
      */
-    handleEquipsDisplayerRefresh = () => {
+    let handleEquipsDisplayerRefresh = () => {
         CommonStates.setters.cleanRequiredEquipPins();
         CommonStates.setters.cleanCurrentEquips();
     };
 
-    handleEquipLockToggle = (equipType) => {
+    let handleEquipLockToggle = (equipType) => {
         CommonStates.setters.toggleRequiredEquipPins(equipType);
     };
 
-    handleEquipSwitch = (data) => {
+    let handleEquipSwitch = (data) => {
         ModalStates.setters.showEquipItemSelector(data);
     };
 
-    handleEquipEmpty = (data) => {
+    let handleEquipEmpty = (data) => {
         CommonStates.setters.setCurrentEquip(data);
     };
 
     /**
-     * Lifecycle Functions
-     */
-    componentDidMount () {
-        this.unsubscribe = CommonStates.store.subscribe(() => {
-            this.setState({
-                currentEquips: CommonStates.getters.getCurrentEquips(),
-                requiredEquipPins: CommonStates.getters.getRequiredEquipPins()
-            });
-        });
-    }
-
-    componentWillUnmount(){
-        this.unsubscribe();
-    }
-
-    /**
      * Render Functions
      */
-    renderEnhanceOption = (equipType, enhanceIndex, enhanceInfo) => {
+    let renderEnhanceOption = (equipType, enhanceIndex, enhanceInfo) => {
         let selectorData = {
             equipType: equipType,
             enhanceIndex: enhanceIndex,
@@ -108,7 +100,7 @@ export default class EquipsDisplayer extends Component {
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName="plus" altName={_('add')}
-                                onClick={() => {this.handleEquipSwitch(selectorData)}} />
+                                onClick={() => {handleEquipSwitch(selectorData)}} />
                         </div>
                     </div>
                 </div>
@@ -125,17 +117,17 @@ export default class EquipsDisplayer extends Component {
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName="exchange" altName={_('change')}
-                            onClick={() => {this.handleEquipSwitch(selectorData)}} />
+                            onClick={() => {handleEquipSwitch(selectorData)}} />
                         <FunctionalIcon
                             iconName="times" altName={_('clean')}
-                            onClick={() => {this.handleEquipEmpty(emptySelectorData)}} />
+                            onClick={() => {handleEquipEmpty(emptySelectorData)}} />
                     </div>
                 </div>
             </div>
         );
     };
 
-    renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
+    let renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
         let selectorData = {
             equipType: equipType,
             slotIndex: slotIndex,
@@ -160,7 +152,7 @@ export default class EquipsDisplayer extends Component {
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName="plus" altName={_('add')}
-                                onClick={() => {this.handleEquipSwitch(selectorData)}} />
+                                onClick={() => {handleEquipSwitch(selectorData)}} />
                         </div>
                     </div>
                 </div>
@@ -177,17 +169,17 @@ export default class EquipsDisplayer extends Component {
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
                             iconName="exchange" altName={_('change')}
-                            onClick={() => {this.handleEquipSwitch(selectorData)}} />
+                            onClick={() => {handleEquipSwitch(selectorData)}} />
                         <FunctionalIcon
                             iconName="times" altName={_('clean')}
-                            onClick={() => {this.handleEquipEmpty(emptySelectorData)}} />
+                            onClick={() => {handleEquipEmpty(emptySelectorData)}} />
                     </div>
                 </div>
             </div>
         );
     };
 
-    renderWeaponProperties = (equipInfo) => {
+    let renderWeaponProperties = (equipInfo) => {
         let originalSharpness = null;
         let enhancedSharpness = null;
 
@@ -311,7 +303,7 @@ export default class EquipsDisplayer extends Component {
         );
     };
 
-    renderArmorProperties = (equipInfo) => {
+    let renderArmorProperties = (equipInfo) => {
         return (
             <div className="col-12 mhwc-item mhwc-properties">
                 <div className="col-12 mhwc-name">
@@ -351,7 +343,7 @@ export default class EquipsDisplayer extends Component {
         );
     };
 
-    renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
+    let renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
         let selectorData = {
             equipType: equipType,
             equipId: (Helper.isNotEmpty(equipInfo)) ? equipInfo.id : null
@@ -370,7 +362,7 @@ export default class EquipsDisplayer extends Component {
                         <div className="mhwc-icons_bundle">
                             <FunctionalIcon
                                 iconName="plus" altName={_('add')}
-                                onClick={() => {this.handleEquipSwitch(selectorData)}} />
+                                onClick={() => {handleEquipSwitch(selectorData)}} />
                         </div>
                     </div>
                 </div>
@@ -388,13 +380,13 @@ export default class EquipsDisplayer extends Component {
                         <FunctionalIcon
                             iconName={isEquipLock ? 'lock' : 'unlock-alt'}
                             altName={isEquipLock ? _('unlock') : _('lock')}
-                            onClick={() => {this.handleEquipLockToggle(equipType)}} />
+                            onClick={() => {handleEquipLockToggle(equipType)}} />
                         <FunctionalIcon
                             iconName="exchange" altName={_('change')}
-                            onClick={() => {this.handleEquipSwitch(selectorData)}} />
+                            onClick={() => {handleEquipSwitch(selectorData)}} />
                         <FunctionalIcon
                             iconName="times" altName={_('clean')}
-                            onClick={() => {this.handleEquipEmpty(emptySelectorData)}} />
+                            onClick={() => {handleEquipEmpty(emptySelectorData)}} />
                     </div>
                 </div>
 
@@ -403,7 +395,7 @@ export default class EquipsDisplayer extends Component {
                 ? (
                     <div className="col-12 mhwc-item mhwc-enhances">
                         {equipInfo.enhances.map((data, index) => {
-                            return this.renderEnhanceOption(
+                            return renderEnhanceOption(
                                 equipType, index,
                                 EnhanceDataset.getInfo(data.id)
                             );
@@ -416,7 +408,7 @@ export default class EquipsDisplayer extends Component {
                 ? (
                     <div className="col-12 mhwc-item mhwc-slots">
                         {equipInfo.slots.map((data, index) => {
-                            return this.renderJewelOption(
+                            return renderJewelOption(
                                 equipType, index, data.size,
                                 JewelDataset.getInfo(data.jewel.id)
                             );
@@ -425,10 +417,10 @@ export default class EquipsDisplayer extends Component {
                 ) : false}
 
                 {('weapon' === equipType)
-                    ? this.renderWeaponProperties(equipInfo) : false}
+                    ? renderWeaponProperties(equipInfo) : false}
 
                 {('weapon' !== equipType && 'charm' !== equipType)
-                    ? this.renderArmorProperties(equipInfo) : false}
+                    ? renderArmorProperties(equipInfo) : false}
 
                 {(Helper.isNotEmpty(setInfo)) ? (
                     <div className="col-12 mhwc-item mhwc-set">
@@ -473,53 +465,49 @@ export default class EquipsDisplayer extends Component {
         );
     };
 
-    render () {
-        let currentEquips = this.state.currentEquips;
-        let requiredEquipPins = this.state.requiredEquipPins;
-        let ContentBlocks = [];
+    let ContentBlocks = [];
 
-        ContentBlocks.push(this.renderEquipBlock(
-            'weapon',
-            CommonDataset.getAppliedWeaponInfo(currentEquips.weapon),
-            requiredEquipPins.weapon
+    ContentBlocks.push(renderEquipBlock(
+        'weapon',
+        CommonDataset.getAppliedWeaponInfo(stateCurrentEquips.weapon),
+        stateRequiredEquipPins.weapon
+    ));
+
+    ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
+        ContentBlocks.push(renderEquipBlock(
+            equipType,
+            CommonDataset.getAppliedArmorInfo(stateCurrentEquips[equipType]),
+            stateRequiredEquipPins[equipType]
         ));
+    });
 
-        ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-            ContentBlocks.push(this.renderEquipBlock(
-                equipType,
-                CommonDataset.getAppliedArmorInfo(currentEquips[equipType]),
-                requiredEquipPins[equipType]
-            ));
-        });
+    ContentBlocks.push(renderEquipBlock(
+        'charm',
+        CommonDataset.getAppliedCharmInfo(stateCurrentEquips.charm),
+        stateRequiredEquipPins.charm
+    ));
 
-        ContentBlocks.push(this.renderEquipBlock(
-            'charm',
-            CommonDataset.getAppliedCharmInfo(currentEquips.charm),
-            requiredEquipPins.charm
-        ));
+    return (
+        <div className="col mhwc-equips">
+            <div className="mhwc-section_name">
+                <span className="mhwc-title">{_('equipBundle')}</span>
 
-        return (
-            <div className="col mhwc-equips">
-                <div className="mhwc-section_name">
-                    <span className="mhwc-title">{_('equipBundle')}</span>
-
-                    <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
-                            iconName="refresh" altName={_('reset')}
-                            onClick={this.handleEquipsDisplayerRefresh} />
-                        <FunctionalIcon
-                            iconName="th-list" altName={_('bundleList')}
-                            onClick={ModalStates.setters.showEquipBundleSelector} />
-                        {'production' !== Config.env ? <FunctionalIcon
-                            iconName="th-large" altName={_('inventorySetting')}
-                            onClick={ModalStates.setters.showInventorySetting} /> : false}
-                    </div>
-                </div>
-
-                <div className="mhwc-list">
-                    {ContentBlocks}
+                <div className="mhwc-icons_bundle">
+                    <FunctionalIcon
+                        iconName="refresh" altName={_('reset')}
+                        onClick={handleEquipsDisplayerRefresh} />
+                    <FunctionalIcon
+                        iconName="th-list" altName={_('bundleList')}
+                        onClick={ModalStates.setters.showEquipBundleSelector} />
+                    {'production' !== Config.env ? <FunctionalIcon
+                        iconName="th-large" altName={_('inventorySetting')}
+                        onClick={ModalStates.setters.showInventorySetting} /> : false}
                 </div>
             </div>
-        );
-    }
+
+            <div className="mhwc-list">
+                {ContentBlocks}
+            </div>
+        </div>
+    );
 }

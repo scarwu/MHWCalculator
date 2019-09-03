@@ -36,10 +36,14 @@ let ChangelogMap = {
 };
 
 export default function (props) {
+
+    /**
+     * Hooks
+     */
     const refModal = useRef();
     const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowChangelog());
 
-    // Did Mount & Will Ummount
+    // Did Mount & Will Unmount
     useEffect(() => {
         const unsubscribe = ModalStates.store.subscribe(() => {
             updateIsShow(ModalStates.getters.isShowChangelog());

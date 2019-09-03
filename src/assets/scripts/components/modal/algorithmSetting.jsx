@@ -26,11 +26,15 @@ import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
 
 export default function (props) {
+
+    /**
+     * Hooks
+     */
     const refModal = useRef();
     const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonStates.getters.getAlgorithmParams());
     const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowAlgorithmSetting());
 
-    // Did Mount & Will Ummount
+    // Did Mount & Will Unmount
     useEffect(() => {
         const unsubscribeCommon = CommonStates.store.subscribe(() => {
             updateAlgorithmParams(CommonStates.getters.getAlgorithmParams());
