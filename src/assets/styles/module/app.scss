@@ -754,15 +754,15 @@ $panel-height: 40px;
         .mhwc-wrapper {
             column-count: 3;
             column-gap: 0;
-            flex-direction: column;
-            flex-wrap: wrap;
+            padding: 5px 0;
         }
 
         .mhwc-item {
-            margin: 5px;
+            margin: 0 5px 10px 5px;
             padding: 5px 5px 15px 5px;
             width: calc(100% - 10px);
-            float: left;
+            height:100%;
+            overflow: auto;
             border: 1px solid #999;
             background-color: #eee;
 
