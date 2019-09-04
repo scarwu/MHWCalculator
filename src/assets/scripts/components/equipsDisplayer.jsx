@@ -91,12 +91,15 @@ export default function EquipsDisplayer(props) {
         };
 
         if (Helper.isEmpty(enhanceInfo)) {
-            return (
-                <div key={'enhance_' + enhanceIndex} className="row mhwc-enhance">
-                    <div className="col-3 mhwc-name">
+            return [(
+                <div key={'enhanceName_' + enhanceIndex} className="col-3">
+                    <div className="mhwc-name">
                         <span>{_('enhance')}: {enhanceIndex + 1}</span>
                     </div>
-                    <div className="col-9 mhwc-value">
+                </div>
+            ), (
+                <div key={'enhanceValue_' + enhanceIndex} className="col-9">
+                    <div className="mhwc-value">
                         <div className="mhwc-icons_bundle">
                             <FunctionalButton
                                 iconName="plus" altName={_('add')}
@@ -104,15 +107,18 @@ export default function EquipsDisplayer(props) {
                         </div>
                     </div>
                 </div>
-            );
+            )];
         }
 
-        return (
-            <div key={'enhance_' + enhanceIndex} className="row mhwc-enhance">
-                <div className="col-3 mhwc-name">
+        return [(
+            <div key={'enhanceName_' + enhanceIndex} className="col-3">
+                <div className="mhwc-name">
                     <span>{_('enhance')}: {enhanceIndex + 1}</span>
                 </div>
-                <div className="col-9 mhwc-value">
+            </div>
+        ), (
+            <div key={'enhanceValue_' + enhanceIndex} className="col-9">
+                <div className="mhwc-value">
                     <span>{_(enhanceInfo.name)}</span>
                     <div className="mhwc-icons_bundle">
                         <FunctionalButton
@@ -124,7 +130,7 @@ export default function EquipsDisplayer(props) {
                     </div>
                 </div>
             </div>
-        );
+        )];
     };
 
     let renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
@@ -143,12 +149,15 @@ export default function EquipsDisplayer(props) {
         };
 
         if (Helper.isEmpty(jewelInfo)) {
-            return (
-                <div key={'jewel_' + equipType + '_' + slotIndex} className="row mhwc-jewel">
-                    <div className="col-3 mhwc-name">
+            return [(
+                <div key={'jewelName_' + equipType + '_' + slotIndex} className="col-3">
+                    <div className="mhwc-name">
                         <span>{_('slot')}: {slotIndex + 1} [{slotSize}]</span>
                     </div>
-                    <div className="col-9 mhwc-value">
+                </div>
+            ), (
+                <div key={'jewelValue_' + equipType + '_' + slotIndex} className="col-9">
+                    <div className="mhwc-value">
                         <div className="mhwc-icons_bundle">
                             <FunctionalButton
                                 iconName="plus" altName={_('add')}
@@ -156,15 +165,18 @@ export default function EquipsDisplayer(props) {
                         </div>
                     </div>
                 </div>
-            );
+            )];
         }
 
-        return (
-            <div key={'jewel_' + equipType + '_' + slotIndex} className="row mhwc-jewel">
-                <div className="col-3 mhwc-name">
+        return [(
+            <div key={'jewelName_' + equipType + '_' + slotIndex} className="col-3">
+                <div className="mhwc-name">
                     <span>{_('slot')}: {slotIndex + 1} [{slotSize}]</span>
                 </div>
-                <div className="col-9 mhwc-value">
+            </div>
+        ), (
+            <div key={'jewelValue_' + equipType + '_' + slotIndex} className="col-9">
+                <div className="mhwc-value">
                     <span>[{jewelInfo.size}] {_(jewelInfo.name)}</span>
                     <div className="mhwc-icons_bundle">
                         <FunctionalButton
@@ -176,7 +188,7 @@ export default function EquipsDisplayer(props) {
                     </div>
                 </div>
             </div>
-        );
+        )];
     };
 
     let renderWeaponProperties = (equipInfo) => {
@@ -190,12 +202,14 @@ export default function EquipsDisplayer(props) {
         }
 
         return (
-            <div className="col-12 mhwc-item mhwc-properties">
-                <div className="col-12 mhwc-name">
-                    <span>{_('property')}</span>
+            <div className="mhwc-content">
+                <div className="col-12">
+                    <div className="mhwc-name">
+                        <span>{_('property')}</span>
+                    </div>
                 </div>
-                <div className="col-12 mhwc-value">
-                    <div className="row">
+                <div className="col-12">
+                    <div className="mhwc-content">
                         {(Helper.isNotEmpty(equipInfo.sharpness)) ? [(
                             <div key={'sharpness_1'} className="col-3">
                                 <div className="mhwc-name">
@@ -305,12 +319,14 @@ export default function EquipsDisplayer(props) {
 
     let renderArmorProperties = (equipInfo) => {
         return (
-            <div className="col-12 mhwc-item mhwc-properties">
-                <div className="col-12 mhwc-name">
-                    <span>{_('property')}</span>
+            <div className="mhwc-content">
+                <div className="col-12">
+                    <div className="mhwc-name">
+                        <span>{_('property')}</span>
+                    </div>
                 </div>
-                <div className="col-12 mhwc-value">
-                    <div className="row">
+                <div className="col-12">
+                    <div className="mhwc-content">
                         <div className="col-3">
                             <div className="mhwc-name">
                                 <span>{_('defense')}</span>
@@ -356,13 +372,15 @@ export default function EquipsDisplayer(props) {
 
         if (Helper.isEmpty(equipInfo)) {
             return (
-                <div key={'equip_' + equipType} className="row mhwc-equip">
-                    <div className="col-12 mhwc-name">
-                        <span>{_(equipType)}</span>
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalButton
-                                iconName="plus" altName={_('add')}
-                                onClick={() => {handleEquipSwitch(selectorData)}} />
+                <div key={'equip_' + equipType} className="mhwc-item">
+                    <div className="col-12">
+                        <div className="mhwc-name">
+                            <span>{_(equipType)}</span>
+                            <div className="mhwc-icons_bundle">
+                                <FunctionalButton
+                                    iconName="plus" altName={_('add')}
+                                    onClick={() => {handleEquipSwitch(selectorData)}} />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -373,63 +391,80 @@ export default function EquipsDisplayer(props) {
             ? SetDataset.getInfo(equipInfo.set.id) : null;
 
         return (
-            <div key={'equip_' + equipType} className="row mhwc-equip">
-                <div className="col-12 mhwc-name">
-                    <span>{_(equipType)}: {_(equipInfo.name)}</span>
-                    <div className="mhwc-icons_bundle">
-                        <FunctionalButton
-                            iconName={isEquipLock ? 'lock' : 'unlock-alt'}
-                            altName={isEquipLock ? _('unlock') : _('lock')}
-                            onClick={() => {handleEquipLockToggle(equipType)}} />
-                        <FunctionalButton
-                            iconName="exchange" altName={_('change')}
-                            onClick={() => {handleEquipSwitch(selectorData)}} />
-                        <FunctionalButton
-                            iconName="times" altName={_('clean')}
-                            onClick={() => {handleEquipEmpty(emptySelectorData)}} />
+            <div key={'equip_' + equipType} className="mhwc-item">
+                <div className="col-12">
+                    <div className="mhwc-name">
+                        <span>{_(equipType)}: {_(equipInfo.name)}</span>
+
+                        <div className="mhwc-icons_bundle">
+                            <FunctionalButton
+                                iconName={isEquipLock ? 'lock' : 'unlock-alt'}
+                                altName={isEquipLock ? _('unlock') : _('lock')}
+                                onClick={() => {handleEquipLockToggle(equipType)}} />
+                            <FunctionalButton
+                                iconName="exchange" altName={_('change')}
+                                onClick={() => {handleEquipSwitch(selectorData)}} />
+                            <FunctionalButton
+                                iconName="times" altName={_('clean')}
+                                onClick={() => {handleEquipEmpty(emptySelectorData)}} />
+                        </div>
                     </div>
                 </div>
 
                 {(Helper.isNotEmpty(equipInfo.enhances)
                     && 0 !== equipInfo.enhances.length)
                 ? (
-                    <div className="col-12 mhwc-item mhwc-enhances">
-                        {equipInfo.enhances.map((data, index) => {
-                            return renderEnhanceOption(
-                                equipType, index,
-                                EnhanceDataset.getInfo(data.id)
-                            );
-                        })}
+                    <div className="col-12">
+                        <div className="mhwc-content">
+                            {equipInfo.enhances.map((data, index) => {
+                                return renderEnhanceOption(
+                                    equipType, index,
+                                    EnhanceDataset.getInfo(data.id)
+                                );
+                            })}
+                        </div>
                     </div>
                 ) : false}
 
                 {(Helper.isNotEmpty(equipInfo.slots)
                     && 0 !== equipInfo.slots.length)
                 ? (
-                    <div className="col-12 mhwc-item mhwc-slots">
-                        {equipInfo.slots.map((data, index) => {
-                            return renderJewelOption(
-                                equipType, index, data.size,
-                                JewelDataset.getInfo(data.jewel.id)
-                            );
-                        })}
+                    <div className="col-12">
+                        <div className="mhwc-content">
+                            {equipInfo.slots.map((data, index) => {
+                                return renderJewelOption(
+                                    equipType, index, data.size,
+                                    JewelDataset.getInfo(data.jewel.id)
+                                );
+                            })}
+                        </div>
                     </div>
                 ) : false}
 
-                {('weapon' === equipType)
-                    ? renderWeaponProperties(equipInfo) : false}
+                {('weapon' === equipType) ? (
+                    <div className="col-12">
+                        {renderWeaponProperties(equipInfo)}
+                    </div>
+                ) : false}
 
-                {('weapon' !== equipType && 'charm' !== equipType)
-                    ? renderArmorProperties(equipInfo) : false}
+                {('weapon' !== equipType && 'charm' !== equipType) ? (
+                    <div className="col-12">
+                        {renderArmorProperties(equipInfo)}
+                    </div>
+                ) : false}
 
                 {(Helper.isNotEmpty(setInfo)) ? (
-                    <div className="col-12 mhwc-item mhwc-set">
-                        <div className="row">
-                            <div className="col-3 mhwc-name">
-                                <span>{_('set')}</span>
+                    <div className="col-12">
+                        <div className="mhwc-content">
+                            <div className="col-3">
+                                <div className="mhwc-name">
+                                    <span>{_('set')}</span>
+                                </div>
                             </div>
-                            <div className="col-9 mhwc-value">
-                                <span>{_(setInfo.name)}</span>
+                            <div className="col-9">
+                                <div className="mhwc-value">
+                                    <span>{_(setInfo.name)}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -438,25 +473,29 @@ export default function EquipsDisplayer(props) {
                 {(Helper.isNotEmpty(equipInfo.skills)
                     && 0 !== equipInfo.skills.length)
                 ? (
-                    <div className="col-12 mhwc-item mhwc-skills">
-                        <div className="col-12 mhwc-name">
-                            <span>{_('skill')}</span>
-                        </div>
-                        <div className="col-12 mhwc-value">
-                            <div className="row">
-                                {equipInfo.skills.sort((skillA, skillB) => {
-                                    return skillB.level - skillA.level;
-                                }).map((data) => {
-                                    let skillInfo = SkillDataset.getInfo(data.id);
+                    <div className="col-12">
+                        <div className="mhwc-content">
+                            <div className="col-12">
+                                <div className="mhwc-name">
+                                    <span>{_('skill')}</span>
+                                </div>
+                            </div>
+                            <div className="col-12">
+                                <div className="mhwc-content">
+                                    {equipInfo.skills.sort((skillA, skillB) => {
+                                        return skillB.level - skillA.level;
+                                    }).map((data) => {
+                                        let skillInfo = SkillDataset.getInfo(data.id);
 
-                                    return (Helper.isNotEmpty(skillInfo)) ? (
-                                        <div key={data.id} className="col-6">
-                                            <div className="mhwc-value">
-                                                <span>{_(skillInfo.name)} Lv.{data.level}</span>
+                                        return (Helper.isNotEmpty(skillInfo)) ? (
+                                            <div key={data.id} className="col-6">
+                                                <div className="mhwc-value">
+                                                    <span>{_(skillInfo.name)} Lv.{data.level}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    ) : false;
-                                })}
+                                        ) : false;
+                                    })}
+                            </div>
                             </div>
                         </div>
                     </div>

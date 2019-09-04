@@ -202,7 +202,7 @@ export default function CandidateBundles(props) {
 
         return stateComputedBundles.map((data, index) => {
             return (
-                <div key={index} className="row mhwc-bundle">
+                <div key={index} className="row mhwc-item mhwc-bundle">
                     <div className="col-12 mhwc-name">
                         <span>{_('bundle')}: {index + 1} / {totalBundle}</span>
                         <div className="mhwc-icons_bundle">
@@ -212,7 +212,7 @@ export default function CandidateBundles(props) {
                         </div>
                     </div>
 
-                    <div className="col-12 mhwc-item mhwc-equips">
+                    <div className="col-12 mhwc-value mhwc-equips">
                         <div className="col-12 mhwc-name">
                             <span>{_('equip')}</span>
                         </div>
@@ -256,7 +256,7 @@ export default function CandidateBundles(props) {
                         </div>
                     </div>
 
-                    <div className="col-12 mhwc-item mhwc-defense">
+                    <div className="col-12 mhwc-value mhwc-defense">
                         <div className="row">
                             <div className="col-4 mhwc-name">
                                 <span>{_('defense')}</span>
@@ -268,7 +268,7 @@ export default function CandidateBundles(props) {
                     </div>
 
                     {(0 < data.meta.remainingSlotCount.all) ? (
-                        <div className="col-12 mhwc-item mhwc-slots">
+                        <div className="col-12 mhwc-value mhwc-slots">
                             <div className="col-12 mhwc-name">
                                 <span>{_('remainingSlot')}</span>
                             </div>
@@ -295,7 +295,7 @@ export default function CandidateBundles(props) {
                     ) : false}
 
                     {(0 !== Object.keys(data.jewels).length) ? (
-                        <div className="col-12 mhwc-item mhwc-jewels">
+                        <div className="col-12 mhwc-value mhwc-jewels">
                             <div className="col-12 mhwc-name">
                                 <span>{_('jewel')}</span>
                             </div>
@@ -321,7 +321,7 @@ export default function CandidateBundles(props) {
                     ) : false}
 
                     {(0 !== Object.keys(data.skills).length) ? (
-                        <div className="col-12 mhwc-item mhwc-skills">
+                        <div className="col-12 mhwc-value mhwc-skills">
                             <div className="col-12 mhwc-name">
                                 <span>{_('skill')}</span>
                             </div>
@@ -370,7 +370,7 @@ export default function CandidateBundles(props) {
 
             <div key="list" className="mhwc-list">
                 {true === stateIsSearching ? (
-                    <div className="mhwc-mask">
+                    <div className="mhwc-loading">
                         <i className="fa fa-spin fa-spinner"></i>
                     </div>
                 ) : false}

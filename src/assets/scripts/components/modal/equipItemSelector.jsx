@@ -313,7 +313,7 @@ export default function EquipItemSelector(props) {
             }
 
             return (
-                <div key={data.id} className="mhwc-item mhwc-item-armor">
+                <div key={data.id} className="mhwc-item mhwc-item-weapon">
                     <div className="col-12 mhwc-name">
                         <span>{_(data.name)} (R{data.rare})</span>
 
@@ -495,7 +495,7 @@ export default function EquipItemSelector(props) {
                         </div>
                     </div>
                     <div className="col-12 mhwc-value">
-                        <div key={index} className="row">
+                        <div className="row">
                             <div className="col-3 mhwc-name">
                                 <span>{_('series')}</span>
                             </div>
