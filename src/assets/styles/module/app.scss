@@ -13,25 +13,50 @@
 }
 
 // Common Components
+.mhwc-functional_input,
+.mhwc-functional_selector,
 .mhwc-functional_button {
     position: relative;
     display: inline-block;
     margin-left: 2px;
 
-    a {
+    @include font-size(1.2);
+
+    .mhwc-body {
         display: block;
-        width: 20px;
-        height: 20px;
         line-height: 20px;
         text-align: center;
         color: white;
         background-color: #ccc;
 
-        @include font-size(1.2);
         @include border-radius(3px);
+
+        .mhwc-icon {
+            display: inline-block;
+            vertical-align: top;
+            width: 20px;
+            height: 20px;
+        }
+
+        .mhwc-select,
+        .mhwc-input {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 0;
+            padding: 0;
+            border: none;
+            height: 20px;
+            line-height: 20px;
+
+            @include border-radius(3px);
+        }
+
+        .mhwc-input {
+            padding: 0 5px;
+        }
     }
 
-    div {
+    .mhwc-label {
         @include nowrap();
         position: absolute;
         display: none;
@@ -47,70 +72,16 @@
         background-color: white;
         pointer-events: none;
 
-        @include font-size(1.2);
         @include border-radius(3px);
     }
 
     &:hover {
-        a {
+        .mhwc-body {
             background-color: #666;
         }
 
-        div {
+        .mhwc-label {
             display: block;
-        }
-    }
-}
-
-.mhwc-functional_input,
-.mhwc-functional_selector {
-    display: inline-block;
-    margin-left: 2px;
-    line-height: 20px;
-
-    div {
-        display: inline-block;
-        height: 20px;
-        line-height: 20px;
-        text-align: center;
-        color: white;
-        background-color: #999;
-
-        @include border-radius(3px);
-
-        i {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            @include font-size(1.2);
-        }
-
-        select {
-            margin: 0 0;
-            padding: 0;
-            border: none;
-            height: 20px;
-            line-height: 20px;
-
-            @include font-size(1);
-            @include border-radius(3px);
-        }
-
-        input {
-            margin: 0 0;
-            padding: 0 5px;
-            border: none;
-            height: 20px;
-            line-height: 20px;
-
-            @include font-size(1);
-            @include border-radius(3px);
-        }
-    }
-
-    &:hover {
-        div {
-            background-color: #666;
         }
     }
 }
@@ -226,13 +197,14 @@ $panel-height: 40px;
         height: $header-height;
         line-height: $header-height;
 
+        .mhwc-functional_selector,
         .mhwc-functional_button {
-            a {
+            .mhwc-body {
                 background-color: #999;
             }
 
             &:hover {
-                a {
+                .mhwc-body {
                     background-color: #666;
                 }
             }
@@ -726,26 +698,15 @@ $panel-height: 40px;
             top: 0;
             right: 10px;
 
-            .mhwc-functional_button {
-                a {
-                    background-color: #999;
-                }
-
-                &:hover {
-                    a {
-                        background-color: #333;
-                    }
-                }
-            }
-
             .mhwc-functional_input,
-            .mhwc-functional_selector {
-                div {
+            .mhwc-functional_selector,
+            .mhwc-functional_button {
+                .mhwc-body {
                     background-color: #999;
                 }
 
                 &:hover {
-                    div {
+                    .mhwc-body {
                         background-color: #333;
                     }
                 }

@@ -14,11 +14,13 @@ import React from 'react';
 export default function FunctionalButton(props) {
     return (
         <div className="mhwc-functional_button">
-            <a onClick={props.onClick}>
-                <i className={`fa fa-${props.iconName}`}></i>
+            <a className="mhwc-body" onClick={props.onClick}>
+                <div className="mhwc-icon">
+                    <i className={`fa fa-${props.iconName}`}></i>
+                </div>
             </a>
 
-            <div>
+            <div className="mhwc-label">
                 <span>{props.altName}</span>
             </div>
         </div>

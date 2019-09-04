@@ -14,9 +14,11 @@ import React from 'react';
 export default function FunctionalInput(props) {
     return (
         <div className="mhwc-functional_input">
-            <div>
-                <i className={`fa fa-${props.iconName}`}></i>
-                <input type="text"
+            <div className="mhwc-body">
+                <div className="mhwc-icon">
+                    <i className={`fa fa-${props.iconName}`}></i>
+                </div>
+                <input className="mhwc-input" type="text"
                     placeholder={props.placeholder}
                     onChange={props.onChange} />
             </div>

@@ -14,9 +14,11 @@ import React from 'react';
 export default function FunctionalSelector(props) {
     return (
         <div className="mhwc-functional_selector">
-            <div>
-                <i className={`fa fa-${props.iconName}`}></i>
-                <select defaultValue={props.defaultValue} onChange={props.onChange}>
+            <div className="mhwc-body">
+                <div className="mhwc-icon">
+                    <i className={`fa fa-${props.iconName}`}></i>
+                </div>
+                <select className="mhwc-select" defaultValue={props.defaultValue} onChange={props.onChange}>
                     {props.options.map((option) => {
                         return (
                             <option key={option.key} value={option.key}>{option.value}</option>
