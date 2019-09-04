@@ -332,41 +332,41 @@ export default function EquipItemSelector(props) {
                     </div>
                     <div className="col-12 mhwc-value">
                         <div key={index} className="row">
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('series')}</span>
                             </div>
-                            <div className="col-8 mhwc-value">
+                            <div className="col-9 mhwc-value">
                                 <span>{_(data.series)}</span>
                             </div>
 
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('attack')}</span>
                             </div>
-                            <div className="col-2 mhwc-value">
+                            <div className="col-3 mhwc-value">
                                 <span>{data.attack}</span>
                             </div>
 
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('criticalRate')}</span>
                             </div>
-                            <div className="col-2 mhwc-value">
+                            <div className="col-3 mhwc-value">
                                 <span>{data.criticalRate}</span>
                             </div>
 
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('sharpness')}</span>
                             </div>
-                            <div className="col-8 mhwc-value mhwc-sharpness">
+                            <div className="col-9 mhwc-value mhwc-sharpness">
                                 {Helper.isNotEmpty(data.sharpness) ? <SharpnessBar data={originalSharpness} /> :  false}
                                 {Helper.isNotEmpty(data.sharpness) ? <SharpnessBar data={enhancedSharpness} /> :  false}
                             </div>
 
                             {Helper.isNotEmpty(data.element.attack) ? [(
-                                <div className="col-4 mhwc-name">
+                                <div className="col-3 mhwc-name">
                                     <span>{_(data.element.attack.type)}</span>
                                 </div>
                             ), (
-                                <div className="col-2 mhwc-value">
+                                <div className="col-3 mhwc-value">
                                     {data.element.attack.isHidden ? (
                                         <span key="value_1">({data.element.attack.minValue}-{data.element.attack.maxValue})</span>
                                     ) : (
@@ -376,11 +376,11 @@ export default function EquipItemSelector(props) {
                             )] : false}
 
                             {Helper.isNotEmpty(data.element.status) ? [(
-                                <div className="col-4 mhwc-name">
+                                <div className="col-3 mhwc-name">
                                     <span>{_(data.element.status.type)}</span>
                                 </div>
                             ), (
-                                <div className="col-2 mhwc-value">
+                                <div className="col-3 mhwc-value">
                                     {data.element.status.isHidden ? (
                                         <span key="value_1">({data.element.status.minValue}-{data.element.status.maxValue})</span>
                                     ) : (
@@ -389,26 +389,26 @@ export default function EquipItemSelector(props) {
                                 </div>
                             )] : false}
 
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('elderseal')}</span>
                             </div>
-                            <div className="col-2 mhwc-value">
+                            <div className="col-3 mhwc-value">
                                 {Helper.isNotEmpty(data.elderseal) ? (
                                     <span>{_(data.elderseal.affinity)}</span>
                                 ) : false}
                             </div>
 
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('defense')}</span>
                             </div>
-                            <div className="col-2 mhwc-value">
+                            <div className="col-3 mhwc-value">
                                 <span>{data.defense}</span>
                             </div>
 
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('slot')}</span>
                             </div>
-                            <div className="col-2 mhwc-value">
+                            <div className="col-3 mhwc-value">
                                 {data.slots.map((data, index) => {
                                     return (
                                         <span key={index}>[{data.size}]</span>
@@ -496,36 +496,36 @@ export default function EquipItemSelector(props) {
                     </div>
                     <div className="col-12 mhwc-value">
                         <div key={index} className="row">
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('series')}</span>
                             </div>
-                            <div className="col-8 mhwc-value">
+                            <div className="col-9 mhwc-value">
                                 <span>{_(data.series)}</span>
                             </div>
 
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('defense')}</span>
                             </div>
-                            <div className="col-2 mhwc-value">
+                            <div className="col-3 mhwc-value">
                                 <span>{data.defense}</span>
                             </div>
 
                             {Constant.resistances.map((resistanceType) => {
                                 return [(
-                                    <div key={resistanceType + '_1'} className="col-4 mhwc-name">
+                                    <div key={resistanceType + '_1'} className="col-3 mhwc-name">
                                         <span>{_('resistance')}: {_(resistanceType)}</span>
                                     </div>
                                 ),(
-                                    <div key={resistanceType + '_2'} className="col-2 mhwc-value">
+                                    <div key={resistanceType + '_2'} className="col-3 mhwc-value">
                                         <span>{data.resistance[resistanceType]}</span>
                                     </div>
                                 )];
                             })}
 
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('slot')}</span>
                             </div>
-                            <div className="col-2 mhwc-value">
+                            <div className="col-9 mhwc-value">
                                 {data.slots.map((data, index) => {
                                     return (
                                         <span key={index}>[{data.size}]</span>
@@ -533,10 +533,10 @@ export default function EquipItemSelector(props) {
                                 })}
                             </div>
 
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('set')}</span>
                             </div>
-                            <div className="col-2 mhwc-value">
+                            <div className="col-9 mhwc-value">
                                 {(Helper.isNotEmpty(setInfo)) ? (
                                     <span>{_(setInfo.name)}</span>
                                 ) : false}

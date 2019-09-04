@@ -93,10 +93,10 @@ export default function EquipsDisplayer(props) {
         if (Helper.isEmpty(enhanceInfo)) {
             return (
                 <div key={'enhance_' + enhanceIndex} className="row mhwc-enhance">
-                    <div className="col-4 mhwc-name">
+                    <div className="col-3 mhwc-name">
                         <span>{_('enhance')}: {enhanceIndex + 1}</span>
                     </div>
-                    <div className="col-8 mhwc-value">
+                    <div className="col-9 mhwc-value">
                         <div className="mhwc-icons_bundle">
                             <FunctionalButton
                                 iconName="plus" altName={_('add')}
@@ -109,10 +109,10 @@ export default function EquipsDisplayer(props) {
 
         return (
             <div key={'enhance_' + enhanceIndex} className="row mhwc-enhance">
-                <div className="col-4 mhwc-name">
+                <div className="col-3 mhwc-name">
                     <span>{_('enhance')}: {enhanceIndex + 1}</span>
                 </div>
-                <div className="col-8 mhwc-value">
+                <div className="col-9 mhwc-value">
                     <span>{_(enhanceInfo.name)}</span>
                     <div className="mhwc-icons_bundle">
                         <FunctionalButton
@@ -145,10 +145,10 @@ export default function EquipsDisplayer(props) {
         if (Helper.isEmpty(jewelInfo)) {
             return (
                 <div key={'jewel_' + equipType + '_' + slotIndex} className="row mhwc-jewel">
-                    <div className="col-4 mhwc-name">
+                    <div className="col-3 mhwc-name">
                         <span>{_('slot')}: {slotIndex + 1} [{slotSize}]</span>
                     </div>
-                    <div className="col-8 mhwc-value">
+                    <div className="col-9 mhwc-value">
                         <div className="mhwc-icons_bundle">
                             <FunctionalButton
                                 iconName="plus" altName={_('add')}
@@ -161,10 +161,10 @@ export default function EquipsDisplayer(props) {
 
         return (
             <div key={'jewel_' + equipType + '_' + slotIndex} className="row mhwc-jewel">
-                <div className="col-4 mhwc-name">
+                <div className="col-3 mhwc-name">
                     <span>{_('slot')}: {slotIndex + 1} [{slotSize}]</span>
                 </div>
-                <div className="col-8 mhwc-value">
+                <div className="col-9 mhwc-value">
                     <span>[{jewelInfo.size}] {_(jewelInfo.name)}</span>
                     <div className="mhwc-icons_bundle">
                         <FunctionalButton
@@ -197,13 +197,13 @@ export default function EquipsDisplayer(props) {
                 <div className="col-12 mhwc-value">
                     <div className="row">
                         {(Helper.isNotEmpty(equipInfo.sharpness)) ? [(
-                            <div key={'sharpness_1'} className="col-4">
+                            <div key={'sharpness_1'} className="col-3">
                                 <div className="mhwc-name">
                                     <span>{_('sharpness')}</span>
                                 </div>
                             </div>
                         ), (
-                            <div key={'sharpness_2'} className="col-8">
+                            <div key={'sharpness_2'} className="col-9">
                                 <div className="mhwc-value mhwc-sharpness">
                                     <SharpnessBar data={originalSharpness} />
                                     <SharpnessBar data={enhancedSharpness} />
@@ -211,23 +211,23 @@ export default function EquipsDisplayer(props) {
                             </div>
                         )] : false}
 
-                        <div className="col-4">
+                        <div className="col-3">
                             <div className="mhwc-name">
                                 <span>{_('attack')}</span>
                             </div>
                         </div>
-                        <div className="col-2">
+                        <div className="col-3">
                             <div className="mhwc-value">
                                 <span>{equipInfo.attack}</span>
                             </div>
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-3">
                             <div className="mhwc-name">
                                 <span>{_('criticalRate')}</span>
                             </div>
                         </div>
-                        <div className="col-2">
+                        <div className="col-3">
                             <div className="mhwc-value">
                                 <span>{equipInfo.criticalRate}%</span>
                             </div>
@@ -236,13 +236,13 @@ export default function EquipsDisplayer(props) {
                         {(Helper.isNotEmpty(equipInfo.element)
                             && Helper.isNotEmpty(equipInfo.element.attack))
                         ? [(
-                            <div key={'attackElement_1'} className="col-4">
+                            <div key={'attackElement_1'} className="col-3">
                                 <div className="mhwc-name">
                                     <span>{_('element')}: {_(equipInfo.element.attack.type)}</span>
                                 </div>
                             </div>
                         ), (
-                            <div key={'attackElement_2'} className="col-2">
+                            <div key={'attackElement_2'} className="col-3">
                                 <div className="mhwc-value">
                                     {equipInfo.element.attack.isHidden ? (
                                         <span>({equipInfo.element.attack.value})</span>
@@ -256,13 +256,13 @@ export default function EquipsDisplayer(props) {
                         {(Helper.isNotEmpty(equipInfo.element)
                             && Helper.isNotEmpty(equipInfo.element.status))
                         ? [(
-                            <div key={'statusElement_1'} className="col-4">
+                            <div key={'statusElement_1'} className="col-3">
                                 <div className="mhwc-name">
                                     <span>{_('element')}: {_(equipInfo.element.status.type)}</span>
                                 </div>
                             </div>
                         ), (
-                            <div key={'statusElement_2'} className="col-2">
+                            <div key={'statusElement_2'} className="col-3">
                                 <div className="mhwc-value">
                                     {equipInfo.element.status.isHidden ? (
                                         <span>({equipInfo.element.status.value})</span>
@@ -274,25 +274,25 @@ export default function EquipsDisplayer(props) {
                         )] : false}
 
                         {(Helper.isNotEmpty(equipInfo.elderseal)) ? [(
-                            <div key={'elderseal_1'} className="col-4">
+                            <div key={'elderseal_1'} className="col-3">
                                 <div className="mhwc-name">
                                     <span>{_('elderseal')}</span>
                                 </div>
                             </div>
                         ), (
-                            <div key={'elderseal_2'} className="col-2">
+                            <div key={'elderseal_2'} className="col-3">
                                 <div className="mhwc-value">
                                     <span>{_(equipInfo.elderseal.affinity)}</span>
                                 </div>
                             </div>
                         )] : false}
 
-                        <div className="col-4">
+                        <div className="col-3">
                             <div className="mhwc-name">
                                 <span>{_('defense')}</span>
                             </div>
                         </div>
-                        <div className="col-2">
+                        <div className="col-3">
                             <div className="mhwc-value">
                                 <span>{equipInfo.defense}</span>
                             </div>
@@ -311,12 +311,12 @@ export default function EquipsDisplayer(props) {
                 </div>
                 <div className="col-12 mhwc-value">
                     <div className="row">
-                        <div className="col-4">
+                        <div className="col-3">
                             <div className="mhwc-name">
                                 <span>{_('defense')}</span>
                             </div>
                         </div>
-                        <div className="col-2">
+                        <div className="col-3">
                             <div className="mhwc-value">
                                 <span>{equipInfo.defense}</span>
                             </div>
@@ -324,13 +324,13 @@ export default function EquipsDisplayer(props) {
 
                         {Constant.resistances.map((resistanceType) => {
                             return [(
-                                <div key={resistanceType + '_1'} className="col-4">
+                                <div key={resistanceType + '_1'} className="col-3">
                                     <div className="mhwc-name">
                                         <span>{_('resistance')}: {_(resistanceType)}</span>
                                     </div>
                                 </div>
                             ),(
-                                <div key={resistanceType + '_2'} className="col-2">
+                                <div key={resistanceType + '_2'} className="col-3">
                                     <div className="mhwc-value">
                                         <span>{equipInfo.resistance[resistanceType]}</span>
                                     </div>
@@ -425,10 +425,10 @@ export default function EquipsDisplayer(props) {
                 {(Helper.isNotEmpty(setInfo)) ? (
                     <div className="col-12 mhwc-item mhwc-set">
                         <div className="row">
-                            <div className="col-4 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('set')}</span>
                             </div>
-                            <div className="col-8 mhwc-value">
+                            <div className="col-9 mhwc-value">
                                 <span>{_(setInfo.name)}</span>
                             </div>
                         </div>

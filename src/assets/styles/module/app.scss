@@ -12,6 +12,8 @@
     transition-duration: 0.1s;
 }
 
+@include font-size(1.4);
+
 // Common Components
 .mhwc-functional_input,
 .mhwc-functional_selector,
@@ -215,8 +217,6 @@ $panel-height: 40px;
 .mhwc-container {
     height: calc(100vh - (#{$header-height} + #{$footer-height}));
 
-    @include font-size(1.4);
-
     > .mhwc-conditions,
     > .mhwc-bundles,
     > .mhwc-equips,
@@ -233,24 +233,9 @@ $panel-height: 40px;
             color: white;
 
             .mhwc-title {
-                @include font-size(1.8);
+                @include font-size(1.6);
             }
-        }
-    }
 
-    > .mhwc-conditions,
-    > .mhwc-bundles,
-    > .mhwc-equips,
-    > .mhwc-status {
-        .mhwc-list {
-            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
-        }
-    }
-
-    > .mhwc-conditions,
-    > .mhwc-bundles,
-    > .mhwc-equips {
-        .mhwc-section_name {
             .mhwc-icons_bundle {
                 position: absolute;
                 top: 0;
@@ -259,17 +244,21 @@ $panel-height: 40px;
                 line-height: $section_name-height;
 
                 .mhwc-functional_button {
-                    a {
+                    .mhwc-body {
                         background-color: #999;
                     }
 
                     &:hover {
-                        a {
+                        .mhwc-body {
                             background-color: #333;
                         }
                     }
                 }
             }
+        }
+
+        .mhwc-list {
+            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
         }
     }
 
@@ -301,32 +290,6 @@ $panel-height: 40px;
     }
 
     > .mhwc-bundles {
-        .mhwc-panel {
-            height: $panel-height;
-
-            .mhwc-search_info {
-                width: 100%;
-                margin: 5px 5px;
-                padding: 0 5px;
-                border: 1px solid #999;
-                background-color: #eee;
-                line-height: 28px;
-
-                @include border-radius(5px);
-
-                input {
-                    margin: 0 5px;
-                    padding: 0 5px;
-                    height: 21px;
-                    width: 50px;
-                    line-height: 21px;
-                    border: 1px solid #333;
-
-                    @include border-radius(5px);
-                }
-            }
-        }
-
         .mhwc-mask {
             position: fixed;
             top: 0;
@@ -672,8 +635,6 @@ $panel-height: 40px;
         bottom: $footer-height;
         z-index: 200;
         background-color: white;
-
-        @include font-size(1.4);
     }
 
     .mhwc-slim-modal {
@@ -690,7 +651,7 @@ $panel-height: 40px;
         color: white;
 
         .mhwc-title {
-            @include font-size(1.8);
+            @include font-size(1.6);
         }
 
         .mhwc-icons_bundle {
