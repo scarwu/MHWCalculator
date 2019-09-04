@@ -1,8 +1,6 @@
 {
     "title":                "魔物獵人世界 - 配裝計算機",
     "skillLevelZero":       "此技能將不會出現在備選中",
-    "searchResult1":        "搜尋花費 %s 秒，並列出 ",
-    "searchResult2":        " / %s 筆結果。",
     "every":                "每",
     "rawAttackEV":          "點基礎攻擊力期望值",
     "criticalRateEV":       "點會心率期望值",
@@ -101,11 +99,11 @@
     "inputName":            "輸入配裝名稱",
     "exportBundle":         "匯出裝備",
     "showChangelog":        "更新資訊",
-    "bundleList":           "配裝",
-    "inventorySetting":     "庫存",
     "requireCondition":     "需求條件",
     "candidateBundle":      "備選組合",
     "equipBundle":          "已選裝備",
     "status":               "狀態",
+    "inventorySetting":     "裝備列表",
+    "bundleList":           "配裝清單",
     "changelog":            "更新紀錄"
 }

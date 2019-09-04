@@ -25,7 +25,9 @@ import SetDataset from 'libraries/dataset/set';
 import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
-import FunctionalIcon from 'components/common/functionalIcon';
+import FunctionalButton from 'components/common/functionalButton';
+import FunctionalSelector from 'components/common/functionalSelector';
+import FunctionalInput from 'components/common/functionalInput';
 import SharpnessBar from 'components/common/sharpnessBar';
 
 // Load Constant
@@ -49,9 +51,6 @@ export default function EquipItemSelector(props) {
     const [stateRare, updateRare] = useState(8);
     const [stateSegment, updateSegment] = useState(null);
     const refModal = useRef();
-    const refSegment = useRef();
-    const refType = useRef();
-    const refRare = useRef();
 
     useEffect(() => {
         if (Helper.isEmpty(stateBypassData)) {
@@ -229,8 +228,8 @@ export default function EquipItemSelector(props) {
         });
     };
 
-    let handleSegmentInput = () => {
-        let segment = refSegment.current.value;
+    let handleSegmentInput = (event) => {
+        let segment = event.target.value;
 
         segment = (0 !== segment.length)
             ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
@@ -238,12 +237,12 @@ export default function EquipItemSelector(props) {
         updateSegment(segment);
     };
 
-    let handleTypeChange = () => {
-        updateType(refType.current.value);
+    let handleTypeChange = (event) => {
+        updateType(event.target.value);
     };
 
-    let handleRareChange = () => {
-        updateRare(parseInt(refRare.current.value, 10));
+    let handleRareChange = (event) => {
+        updateRare(parseInt(event.target.value, 10));
     };
 
     /**
@@ -319,13 +318,13 @@ export default function EquipItemSelector(props) {
                         <span>{_(data.name)} (R{data.rare})</span>
 
                         <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName={data.isInclude ? 'star' : 'star-o'}
                                 altName={data.isInclude ? _('exclude') : _('include')}
                                 onClick={() => {handleItemToggle('weapon', data.id)}} />
 
                             {(stateBypassData.equipId !== data.id) ? (
-                                <FunctionalIcon
+                                <FunctionalButton
                                     iconName="check" altName={_('select')}
                                     onClick={() => {handleItemPickUp(data.id)}} />
                             ) : false}
@@ -483,13 +482,13 @@ export default function EquipItemSelector(props) {
                         <span>{_(data.name)} (R{data.rare})</span>
 
                         <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName={data.isInclude ? 'star' : 'star-o'}
                                 altName={data.isInclude ? _('exclude') : _('include')}
                                 onClick={() => {handleItemToggle(data.type, data.id)}} />
 
                             {(stateBypassData.equipId !== data.id) ? (
-                                <FunctionalIcon
+                                <FunctionalButton
                                     iconName="check" altName={_('select')}
                                     onClick={() => {handleItemPickUp(data.id)}} />
                             ) : false}
@@ -590,13 +589,13 @@ export default function EquipItemSelector(props) {
                         <span>{_(data.name)} (R{data.rare})</span>
 
                         <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName={data.isInclude ? 'star' : 'star-o'}
                                 altName={data.isInclude ? _('exclude') : _('include')}
                                 onClick={() => {handleItemToggle('charm', data.id)}} />
 
                             {(stateBypassData.equipId !== data.id) ? (
-                                <FunctionalIcon
+                                <FunctionalButton
                                     iconName="check" altName={_('select')}
                                     onClick={() => {handleItemPickUp(data.id)}} />
                             ) : false}
@@ -650,7 +649,7 @@ export default function EquipItemSelector(props) {
 
                         <div className="mhwc-icons_bundle">
                             {(stateBypassData.jewelId !== data.id) ? (
-                                <FunctionalIcon
+                                <FunctionalButton
                                     iconName="check" altName={_('select')}
                                     onClick={() => {handleItemPickUp(data.id)}} />
                             ) : false}
@@ -695,7 +694,7 @@ export default function EquipItemSelector(props) {
 
                         <div className="mhwc-icons_bundle">
                             {(stateBypassData.enhanceId !== data.id) ? (
-                                <FunctionalIcon
+                                <FunctionalButton
                                     iconName="check" altName={_('select')}
                                     onClick={() => {handleItemPickUp(data.id)}} />
                             ) : false}
@@ -745,34 +744,33 @@ export default function EquipItemSelector(props) {
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
             <div className="mhwc-modal">
                 <div className="mhwc-panel">
-                    <input className="mhwc-text_segment" type="text"
-                        placeholder={_('inputKeyword')}
-                        ref={refSegment} onChange={handleSegmentInput} />
-
-                    {('weapon' === stateMode) ? (
-                        <select defaultValue={stateType} ref={refType} onChange={handleTypeChange}>
-                            {Constant.weaponTypes.map((type) => {
-                                return (
-                                    <option key={type} value={type}>{_(type)}</option>
-                                );
-                            })}
-                        </select>
-                    ) : false}
-
-                    {('weapon' === stateMode || 'armor' === stateMode) ? (
-                        <select defaultValue={stateRare} ref={refRare} onChange={handleRareChange}>
-                            {[8, 7, 6, 5].map((rare) => {
-                                return (
-                                    <option key={rare} value={rare}>{_('rare') + `: ${rare}`}</option>
-                                );
-                            })}
-                        </select>
-                    ) : false}
+                    <span className="mhwc-title">{_('inventorySetting')}</span>
 
                     <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
+                        <FunctionalInput
+                            iconName="search" placeholder={_('inputKeyword')}
+                            onChange={handleSegmentInput} />
+
+                        {('weapon' === stateMode) ? (
+                            <FunctionalSelector
+                                iconName="globe" defaultValue={stateType}
+                                options={Constant.weaponTypes.map((type) => {
+                                    return { key: type, value: _(type) }
+                                })} onChange={handleTypeChange} />
+                        ) : false}
+
+                        {('weapon' === stateMode || 'armor' === stateMode) ? (
+                            <FunctionalSelector
+                                iconName="globe" defaultValue={stateRare}
+                                options={[8, 7, 6, 5].map((rare) => {
+                                    return { key: rare, value: _('rare') + `: ${rare}` };
+                                })} onChange={handleRareChange} />
+                        ) : false}
+
+                        <FunctionalButton
                             iconName="times" altName={_('close')}
                             onClick={handleWindowClose} />
+
                     </div>
                 </div>
                 <div className="mhwc-list">

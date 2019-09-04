@@ -17,9 +17,9 @@ export default function FunctionalSelector(props) {
             <div>
                 <i className={`fa fa-${props.iconName}`}></i>
                 <select defaultValue={props.defaultValue} onChange={props.onChange}>
-                    {Object.keys(props.options).map((key) => {
+                    {props.options.map((option) => {
                         return (
-                            <option key={key} value={key}>{props.options[key]}</option>
+                            <option key={option.key} value={option.key}>{option.value}</option>
                         );
                     })}
                 </select>

@@ -19,7 +19,7 @@ import Helper from 'core/helper';
 import _ from 'libraries/lang';
 
 // Load Components
-import FunctionalIcon from 'components/common/functionalIcon';
+import FunctionalButton from 'components/common/functionalButton';
 import FunctionalSelector from 'components/common/functionalSelector';
 import ConditionOptions from 'components/conditionOptions';
 import CandidateBundles from 'components/candidateBundles';
@@ -87,15 +87,17 @@ export default function App(props) {
                 </a>
 
                 <div className="mhwc-icons_bundle">
-                    <FunctionalIcon
+                    <FunctionalButton
                         iconName="link" altName={_('exportBundle')}
                         onClick={handleBundleExport} />
-                    <FunctionalIcon
+                    <FunctionalButton
                         iconName="info" altName={_('showChangelog')}
                         onClick={ModalStates.setters.showChangelog} />
                     <FunctionalSelector
                         iconName="globe" defaultValue={stateLang}
-                        options={Constant.langs} onChange={handleLangChange} />
+                        options={Object.keys(Constant.langs).map((key) => {
+                            return { key: key, value: Constant.langs[key] };
+                        })} onChange={handleLangChange} />
                 </div>
             </div>
 

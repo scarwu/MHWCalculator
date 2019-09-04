@@ -20,7 +20,8 @@ import SetDataset from 'libraries/dataset/set';
 import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
-import FunctionalIcon from 'components/common/functionalIcon';
+import FunctionalButton from 'components/common/functionalButton';
+import FunctionalInput from 'components/common/functionalInput';
 
 // Load State Control
 import CommonStates from 'states/common';
@@ -37,7 +38,6 @@ export default function SetItemSelector(props) {
     const [stateSegment, updateSegment] = useState(null);
     const [stateSortedList, updateSortedList] = useState([]);
     const refModal = useRef();
-    const refSegment = useRef();
 
     useEffect(() => {
         let idList = stateRequiredSets.map((set) => {
@@ -112,8 +112,8 @@ export default function SetItemSelector(props) {
         });
     };
 
-    let handleSegmentInput = () => {
-        let segment = refSegment.current.value;
+    let handleSegmentInput = (event) => {
+        let segment = event.target.value;
 
         segment = (0 !== segment.length)
             ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
@@ -155,11 +155,11 @@ export default function SetItemSelector(props) {
 
                     <div className="mhwc-icons_bundle">
                         {data.isSelect ? (
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="minus" altName={_('remove')}
                                 onClick={() => {handleItemThrowDown(data.id)}} />
                         ) : (
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="plus" altName={_('add')}
                                 onClick={() => {handleItemPickUp(data.id)}} />
                         )}
@@ -189,12 +189,14 @@ export default function SetItemSelector(props) {
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
             <div className="mhwc-modal">
                 <div className="mhwc-panel">
-                    <input className="mhwc-text_segment" type="text"
-                        placeholder={_('inputKeyword')}
-                        ref={refSegment} onChange={handleSegmentInput} />
+                    <span className="mhwc-title">{_('inventorySetting')}</span>
 
                     <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
+                        <FunctionalInput
+                            iconName="search" placeholder={_('inputKeyword')}
+                            onChange={handleSegmentInput} />
+
+                        <FunctionalButton
                             iconName="times" altName={_('close')}
                             onClick={handleWindowClose} />
                     </div>

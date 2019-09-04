@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Functional Icon
+ * Functional Button
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -11,9 +11,9 @@
 // Load Libraries
 import React from 'react';
 
-export default function FunctionalIcon(props) {
+export default function FunctionalButton(props) {
     return (
-        <div className="mhwc-functional_icon">
+        <div className="mhwc-functional_button">
             <a onClick={props.onClick}>
                 <i className={`fa fa-${props.iconName}`}></i>
             </a>

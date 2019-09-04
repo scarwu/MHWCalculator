@@ -19,7 +19,7 @@ import Helper from 'core/helper';
 import _ from 'libraries/lang';
 
 // Load Components
-import FunctionalIcon from 'components/common/functionalIcon';
+import FunctionalButton from 'components/common/functionalButton';
 
 // Load State Control
 import CommonStates from 'states/common';
@@ -75,7 +75,7 @@ export default function AlgorithmSetting(props) {
                     <strong>{_('algorithmSetting')}</strong>
 
                     <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
+                        <FunctionalButton
                             iconName="times" altName={_('close')}
                             onClick={handleWindowClose} />
                     </div>

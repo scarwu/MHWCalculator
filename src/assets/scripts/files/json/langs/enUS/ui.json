@@ -1,8 +1,6 @@
 {
     "title":                "Monster Hunter: World - Calculator",
     "skillLevelZero":       "This skill will not include in candidate bundles",
-    "searchResult1":        "Search time %s s, and display ",
-    "searchResult2":        " / %s results.",
     "every":                "Every",
     "rawAttackEV":          "Points Raw Attack EV",
     "criticalRateEV":       "Points Critical Rate EV",
@@ -101,11 +99,11 @@
     "inputName":            "Input Name",
     "exportBundle":         "Export Bundle",
     "showChangelog":        "Show Changelog",
-    "bundleList":           "Bundle List",
-    "inventorySetting":     "Inventory",
     "requireCondition":     "Required Conditions",
     "candidateBundle":      "Candidate Bundles",
     "equipBundle":          "Equipped Bundle",
     "status":               "Status",
+    "inventorySetting":     "Inventory",
+    "bundleList":           "Bundle List",
     "changelog":            "Change Log"
 }

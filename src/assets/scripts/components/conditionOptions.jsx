@@ -20,7 +20,7 @@ import SetDataset from 'libraries/dataset/set';
 import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
-import FunctionalIcon from 'components/common/functionalIcon';
+import FunctionalButton from 'components/common/functionalButton';
 
 // Load State Control
 import CommonStates from 'states/common';
@@ -75,13 +75,13 @@ export default function ConditionOptions(props) {
                         </span>
 
                         <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="minus-circle" altName={_('down')}
                                 onClick={() => {CommonStates.setters.decreaseRequiredSetStep(index)}} />
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="plus-circle" altName={_('up')}
                                 onClick={() => {CommonStates.setters.increaseRequiredSetStep(index)}} />
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="times" altName={_('clean')}
                                 onClick={() => {CommonStates.setters.removeRequiredSetByIndex(index)}} />
                         </div>
@@ -118,13 +118,13 @@ export default function ConditionOptions(props) {
                         </span>
 
                         <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="minus-circle" altName={_('down')}
                                 onClick={() => {CommonStates.setters.decreaseRequiredSkillLevel(index)}} />
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="plus-circle" altName={_('up')}
                                 onClick={() => {CommonStates.setters.increaseRequiredSkillLevel(index)}} />
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="times" altName={_('clean')}
                                 onClick={() => {CommonStates.setters.removeRequiredSkillByIndex(index)}} />
                         </div>
@@ -147,13 +147,13 @@ export default function ConditionOptions(props) {
                 <span className="mhwc-title">{_('requireCondition')}</span>
 
                 <div className="mhwc-icons_bundle">
-                    <FunctionalIcon
+                    <FunctionalButton
                         iconName="refresh" altName={_('reset')}
                         onClick={handleRequireConditionRefresh} />
-                    <FunctionalIcon
+                    <FunctionalButton
                         iconName="plus" altName={_('skill')}
                         onClick={ModalStates.setters.showSkillItemSelector} />
-                    <FunctionalIcon
+                    <FunctionalButton
                         iconName="plus" altName={_('set')}
                         onClick={ModalStates.setters.showSetItemSelector} />
                 </div>

@@ -1,8 +1,6 @@
 {
     "title":                "モンスターハンター：ワールド - 計算機",
     "skillLevelZero":       null,
-    "searchResult1":        null,
-    "searchResult2":        null,
     "every":                null,
     "rawAttackEV":          null,
     "criticalRateEV":       null,
@@ -101,11 +99,11 @@
     "inputName":            null,
     "exportBundle":         null,
     "showChangelog":        null,
-    "bundleList":           null,
-    "inventorySetting":     null,
     "requireCondition":     null,
     "candidateBundle":      null,
     "equipBundle":          null,
     "status":               null,
+    "inventorySetting":     null,
+    "bundleList":           null,
     "changelog":            "変更履歴"
 }

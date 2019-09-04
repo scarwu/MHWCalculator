@@ -13,7 +13,7 @@
 }
 
 // Common Components
-.mhwc-functional_icon {
+.mhwc-functional_button {
     position: relative;
     display: inline-block;
     margin-left: 2px;
@@ -62,12 +62,14 @@
     }
 }
 
+.mhwc-functional_input,
 .mhwc-functional_selector {
     display: inline-block;
     margin-left: 2px;
+    line-height: 20px;
 
     div {
-        display: block;
+        display: inline-block;
         height: 20px;
         line-height: 20px;
         text-align: center;
@@ -86,6 +88,17 @@
         select {
             margin: 0 0;
             padding: 0;
+            border: none;
+            height: 20px;
+            line-height: 20px;
+
+            @include font-size(1);
+            @include border-radius(3px);
+        }
+
+        input {
+            margin: 0 0;
+            padding: 0 5px;
             border: none;
             height: 20px;
             line-height: 20px;
@@ -213,7 +226,7 @@ $panel-height: 40px;
         height: $header-height;
         line-height: $header-height;
 
-        .mhwc-functional_icon {
+        .mhwc-functional_button {
             a {
                 background-color: #999;
             }
@@ -273,7 +286,7 @@ $panel-height: 40px;
                 height: $section_name-height;
                 line-height: $section_name-height;
 
-                .mhwc-functional_icon {
+                .mhwc-functional_button {
                     a {
                         background-color: #999;
                     }
@@ -709,9 +722,11 @@ $panel-height: 40px;
         }
 
         .mhwc-icons_bundle {
-            margin-right: 10px;
+            position: absolute;
+            top: 0;
+            right: 10px;
 
-            .mhwc-functional_icon {
+            .mhwc-functional_button {
                 a {
                     background-color: #999;
                 }
@@ -723,23 +738,17 @@ $panel-height: 40px;
                 }
             }
 
-            input {
-                margin: 0 5px;
-                padding: 0 5px;
-                width: 250px;
-                height: $panel-height - 10px;
-                border: 1px solid #666;
+            .mhwc-functional_input,
+            .mhwc-functional_selector {
+                div {
+                    background-color: #999;
+                }
 
-                @include border-radius(5px);
-            }
-
-            select {
-                margin: 0 5px;
-                padding: 0 5px;
-                height: $panel-height - 10px;
-                border: 1px solid #666;
-
-                @include border-radius(5px);
+                &:hover {
+                    div {
+                        background-color: #333;
+                    }
+                }
             }
         }
     }
@@ -750,6 +759,10 @@ $panel-height: 40px;
         left: 0;
         right: 0;
         bottom: 0;
+
+        .mhwc-article {
+            padding: 5px;
+        }
 
         .mhwc-wrapper {
             column-count: 4;

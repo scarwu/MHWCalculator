@@ -23,7 +23,7 @@ import SkillDataset from 'libraries/dataset/skill';
 import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
-import FunctionalIcon from 'components/common/functionalIcon';
+import FunctionalButton from 'components/common/functionalButton';
 import SharpnessBar from 'components/common/sharpnessBar';
 
 // Load Config & Constant
@@ -98,7 +98,7 @@ export default function EquipsDisplayer(props) {
                     </div>
                     <div className="col-8 mhwc-value">
                         <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="plus" altName={_('add')}
                                 onClick={() => {handleEquipSwitch(selectorData)}} />
                         </div>
@@ -115,10 +115,10 @@ export default function EquipsDisplayer(props) {
                 <div className="col-8 mhwc-value">
                     <span>{_(enhanceInfo.name)}</span>
                     <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
+                        <FunctionalButton
                             iconName="exchange" altName={_('change')}
                             onClick={() => {handleEquipSwitch(selectorData)}} />
-                        <FunctionalIcon
+                        <FunctionalButton
                             iconName="times" altName={_('clean')}
                             onClick={() => {handleEquipEmpty(emptySelectorData)}} />
                     </div>
@@ -150,7 +150,7 @@ export default function EquipsDisplayer(props) {
                     </div>
                     <div className="col-8 mhwc-value">
                         <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="plus" altName={_('add')}
                                 onClick={() => {handleEquipSwitch(selectorData)}} />
                         </div>
@@ -167,10 +167,10 @@ export default function EquipsDisplayer(props) {
                 <div className="col-8 mhwc-value">
                     <span>[{jewelInfo.size}] {_(jewelInfo.name)}</span>
                     <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
+                        <FunctionalButton
                             iconName="exchange" altName={_('change')}
                             onClick={() => {handleEquipSwitch(selectorData)}} />
-                        <FunctionalIcon
+                        <FunctionalButton
                             iconName="times" altName={_('clean')}
                             onClick={() => {handleEquipEmpty(emptySelectorData)}} />
                     </div>
@@ -360,7 +360,7 @@ export default function EquipsDisplayer(props) {
                     <div className="col-12 mhwc-name">
                         <span>{_(equipType)}</span>
                         <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="plus" altName={_('add')}
                                 onClick={() => {handleEquipSwitch(selectorData)}} />
                         </div>
@@ -377,14 +377,14 @@ export default function EquipsDisplayer(props) {
                 <div className="col-12 mhwc-name">
                     <span>{_(equipType)}: {_(equipInfo.name)}</span>
                     <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
+                        <FunctionalButton
                             iconName={isEquipLock ? 'lock' : 'unlock-alt'}
                             altName={isEquipLock ? _('unlock') : _('lock')}
                             onClick={() => {handleEquipLockToggle(equipType)}} />
-                        <FunctionalIcon
+                        <FunctionalButton
                             iconName="exchange" altName={_('change')}
                             onClick={() => {handleEquipSwitch(selectorData)}} />
-                        <FunctionalIcon
+                        <FunctionalButton
                             iconName="times" altName={_('clean')}
                             onClick={() => {handleEquipEmpty(emptySelectorData)}} />
                     </div>
@@ -493,13 +493,13 @@ export default function EquipsDisplayer(props) {
                 <span className="mhwc-title">{_('equipBundle')}</span>
 
                 <div className="mhwc-icons_bundle">
-                    <FunctionalIcon
+                    <FunctionalButton
                         iconName="refresh" altName={_('reset')}
                         onClick={handleEquipsDisplayerRefresh} />
-                    <FunctionalIcon
+                    <FunctionalButton
                         iconName="th-list" altName={_('bundleList')}
                         onClick={ModalStates.setters.showEquipBundleSelector} />
-                    {'production' !== Config.env ? <FunctionalIcon
+                    {'production' !== Config.env ? <FunctionalButton
                         iconName="th-large" altName={_('inventorySetting')}
                         onClick={ModalStates.setters.showInventorySetting} /> : false}
                 </div>

@@ -25,7 +25,7 @@ import CommonDataset from 'libraries/dataset/common';
 import FittingAlgorithm from 'libraries/fittingAlgorithm';
 
 // Load Components
-import FunctionalIcon from 'components/common/functionalIcon';
+import FunctionalButton from 'components/common/functionalButton';
 
 // Load Config & Constant
 import Config from 'config';
@@ -206,7 +206,7 @@ export default function CandidateBundles(props) {
                     <div className="col-12 mhwc-name">
                         <span>{_('bundle')}: {index + 1} / {totalBundle}</span>
                         <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="check" altName={_('equip')}
                                 onClick={() => {handleBundlePickUp(index)}} />
                         </div>
@@ -356,13 +356,13 @@ export default function CandidateBundles(props) {
                 <span className="mhwc-title">{_('candidateBundle')}</span>
 
                 <div className="mhwc-icons_bundle">
-                    <FunctionalIcon
+                    <FunctionalButton
                         iconName="refresh" altName={_('reset')}
                         onClick={CommonStates.setters.cleanComputedBundles} />
-                    {'production' !== Config.env ? <FunctionalIcon
+                    {'production' !== Config.env ? <FunctionalButton
                         iconName="cog" altName={_('setting')}
                         onClick={ModalStates.setters.showAlgorithmSetting} /> : false}
-                    <FunctionalIcon
+                    <FunctionalButton
                         iconName="search" altName={_('search')}
                         onClick={handleCandidateBundlesSearch} />
                 </div>

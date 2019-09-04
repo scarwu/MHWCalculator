@@ -22,7 +22,7 @@ import ArmorDataset from 'libraries/dataset/armor';
 import CharmDataset from 'libraries/dataset/charm';
 
 // Load Components
-import FunctionalIcon from 'components/common/functionalIcon';
+import FunctionalButton from 'components/common/functionalButton';
 
 // Load Constant
 import Constant from 'constant';
@@ -135,7 +135,7 @@ export default function EquipBundleSelector(props) {
                     <input type="text" placeholder={_('inputName')} ref={refName} />
 
                     <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
+                        <FunctionalButton
                             iconName="floppy-o" altName={_('save')}
                             onClick={() => {handleBundleSave(null)}} />
                     </div>
@@ -191,13 +191,13 @@ export default function EquipBundleSelector(props) {
 
                     <div className="mhwc-icons_bundle">
                         <div className="mhwc-icons_bundle">
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="check" altName={_('select')}
                                 onClick={() => {handleBundlePickUp(index)}} />
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="times" altName={_('remove')}
                                 onClick={() => {handleBundleRemove(index)}} />
-                            <FunctionalIcon
+                            <FunctionalButton
                                 iconName="floppy-o" altName={_('save')}
                                 onClick={() => {handleBundleSave(index)}} />
                         </div>
@@ -249,8 +249,10 @@ export default function EquipBundleSelector(props) {
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
             <div className="mhwc-modal">
                 <div className="mhwc-panel">
+                    <span className="mhwc-title">{_('inventorySetting')}</span>
+
                     <div className="mhwc-icons_bundle">
-                        <FunctionalIcon
+                        <FunctionalButton
                             iconName="times" altName={_('close')}
                             onClick={handleWindowClose} />
                     </div>
