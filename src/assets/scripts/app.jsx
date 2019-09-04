@@ -20,6 +20,7 @@ import _ from 'libraries/lang';
 
 // Load Components
 import FunctionalIcon from 'components/common/functionalIcon';
+import FunctionalSelector from 'components/common/functionalSelector';
 import ConditionOptions from 'components/conditionOptions';
 import CandidateBundles from 'components/candidateBundles';
 import EquipsDisplayer from 'components/equipsDisplayer';
@@ -69,10 +70,10 @@ export default function App(props) {
         window.open(`${protocol}//${hostname}${pathname}#/${hash}`, '_blank');
     };
 
-    let handleLangChange = () => {
-        Status.set('sys:lang', refLang.current.value);
+    let handleLangChange = (event) => {
+        Status.set('sys:lang', event.target.value);
 
-        updateLang(refLang.current.value);
+        updateLang(event.target.value);
     };
 
     /**
@@ -92,18 +93,9 @@ export default function App(props) {
                     <FunctionalIcon
                         iconName="info" altName={_('showChangelog')}
                         onClick={ModalStates.setters.showChangelog} />
-                    <div className="mhwc-lang">
-                        <div>
-                            <i className="fa fa-globe"></i>
-                            <select defaultValue={stateLang} ref={refLang} onChange={handleLangChange}>
-                                {Object.keys(Constant.langs).map((lang) => {
-                                    return (
-                                        <option key={lang} value={lang}>{Constant.langs[lang]}</option>
-                                    );
-                                })}
-                            </select>
-                        </div>
-                    </div>
+                    <FunctionalSelector
+                        iconName="globe" defaultValue={stateLang}
+                        options={Constant.langs} onChange={handleLangChange} />
                 </div>
             </div>
 
