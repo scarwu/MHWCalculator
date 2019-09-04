@@ -120,6 +120,7 @@
 
 .mhwc-list {
     overflow-y: scroll;
+    overflow-x: hidden;
 
     &::-webkit-scrollbar {
         width: 0;
@@ -283,7 +284,6 @@ $panel-height: 40px;
                         }
                     }
                 }
-
             }
         }
     }
@@ -681,15 +681,13 @@ $panel-height: 40px;
 
     .mhwc-modal {
         position: absolute;
-        top: 20px + $header-height;
-        left: 20px;
-        right: 20px;
-        bottom: 20px + $footer-height;
+        top: $header-height;
+        left: 0;
+        right: 0;
+        bottom: $footer-height;
         z-index: 200;
-        border: 1px solid #333;
         background-color: white;
 
-        @include border-radius(5px);
         @include font-size(1.4);
     }
 
@@ -700,45 +698,70 @@ $panel-height: 40px;
 
     .mhwc-panel {
         position: relative;
-        margin-top: 5px;
-        height: $panel-height;
-        line-height: $panel-height;
+        height: $section_name-height;
+        line-height: $section_name-height;
+        text-align: center;
+        background-color: #666;
+        color: white;
 
-        input {
-            margin: 0 5px;
-            padding: 0 5px;
-            width: 250px;
-            height: $panel-height - 10px;
-            border: 1px solid #666;
-
-            @include border-radius(5px);
-        }
-
-        select {
-            margin: 0 5px;
-            padding: 0 5px;
-            height: $panel-height - 10px;
-            border: 1px solid #666;
-
-            @include border-radius(5px);
+        .mhwc-title {
+            @include font-size(1.8);
         }
 
         .mhwc-icons_bundle {
             margin-right: 5px;
+
+            .mhwc-functional_icon {
+                a {
+                    background-color: #999;
+                }
+
+                &:hover {
+                    a {
+                        background-color: #333;
+                    }
+                }
+            }
+
+            input {
+                margin: 0 5px;
+                padding: 0 5px;
+                width: 250px;
+                height: $panel-height - 10px;
+                border: 1px solid #666;
+
+                @include border-radius(5px);
+            }
+
+            select {
+                margin: 0 5px;
+                padding: 0 5px;
+                height: $panel-height - 10px;
+                border: 1px solid #666;
+
+                @include border-radius(5px);
+            }
         }
     }
 
     .mhwc-list {
         position: absolute;
-        top: 10px + $panel-height;
+        top: $panel-height;
         left: 0;
         right: 0;
         bottom: 0;
 
+        .mhwc-wrapper {
+            column-count: 3;
+            column-gap: 0;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
         .mhwc-item {
-            margin: 5px 5px 10px 5px;
+            margin: 5px;
             padding: 5px 5px 15px 5px;
-            width: calc(33% - 6px);
+            width: calc(100% - 10px);
             float: left;
             border: 1px solid #999;
             background-color: #eee;

@@ -81,7 +81,7 @@ export default function Changelog(props) {
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
             <div className="mhwc-modal mhwc-slim-modal">
                 <div className="mhwc-panel">
-                    <strong>{_('changelog')}</strong>
+                    <span className="mhwc-title">{_('changelog')}</span>
 
                     <div className="mhwc-icons_bundle">
                         <FunctionalIcon
@@ -89,7 +89,9 @@ export default function Changelog(props) {
                             onClick={handleWindowClose} />
                     </div>
                 </div>
-                <div className="mhwc-list" dangerouslySetInnerHTML={{__html: renderChangelog()}}></div>
+                <div className="mhwc-list">
+                    <div className="mhwc-article" dangerouslySetInnerHTML={{__html: renderChangelog()}}></div>
+                </div>
             </div>
         </div>
     ) : false;

@@ -62,4 +62,4 @@ ReactDOM.render((
         <EquipItemSelector />
         <EquipBundleSelector />
     </Router>
-), document.querySelector('#mhwc'));
+), document.getElementById('mhwc'));

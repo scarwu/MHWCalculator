@@ -776,7 +776,9 @@ export default function EquipItemSelector(props) {
                     </div>
                 </div>
                 <div className="mhwc-list">
-                    {renderContent()}
+                    <div className="mhwc-wrapper">
+                        {renderContent()}
+                    </div>
                 </div>
             </div>
         </div>

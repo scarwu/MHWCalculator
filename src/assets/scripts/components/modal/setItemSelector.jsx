@@ -200,7 +200,9 @@ export default function SetItemSelector(props) {
                     </div>
                 </div>
                 <div className="mhwc-list">
-                    {stateSortedList.map(renderItem)}
+                    <div className="mhwc-wrapper">
+                        {stateSortedList.map(renderItem)}
+                    </div>
                 </div>
             </div>
         </div>

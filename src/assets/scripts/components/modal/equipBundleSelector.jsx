@@ -256,8 +256,10 @@ export default function EquipBundleSelector(props) {
                     </div>
                 </div>
                 <div className="mhwc-list">
-                    {renderDefaultItem()}
-                    {stateReservedBundles.map(renderItem)}
+                    <div className="mhwc-wrapper">
+                        {renderDefaultItem()}
+                        {stateReservedBundles.map(renderItem)}
+                    </div>
                 </div>
             </div>
         </div>
