@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect, useRef } from 'react';
+import React, { Fragment, useState, useEffect, useRef } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -165,19 +165,19 @@ export default function SetItemSelector(props) {
                         )}
                     </div>
                 </div>
-                <div className="col-12 mhwc-value">
+                <div className="col-12 mhwc-content">
                     {data.skills.map((skill, index) => {
                         let skillInfo = SkillDataset.getInfo(skill.id);
 
                         return (
-                            <div key={index} className="row">
+                            <Fragment key={index}>
                                 <div className="col-12 mhwc-name">
                                     <span>({skill.require}) {_(skillInfo.name)} Lv.{skill.level}</span>
                                 </div>
                                 <div className="col-12 mhwc-value">
                                     <span>{_(skillInfo.list[0].description)}</span>
                                 </div>
-                            </div>
+                            </Fragment>
                         );
                     })}
                 </div>

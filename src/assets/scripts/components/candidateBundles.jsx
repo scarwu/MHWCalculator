@@ -202,7 +202,7 @@ export default function CandidateBundles(props) {
 
         return stateComputedBundles.map((data, index) => {
             return (
-                <div key={index} className="row mhwc-item mhwc-bundle">
+                <div key={index} className="mhwc-item">
                     <div className="col-12 mhwc-name">
                         <span>{_('bundle')}: {index + 1} / {totalBundle}</span>
                         <div className="mhwc-icons_bundle">
@@ -212,12 +212,11 @@ export default function CandidateBundles(props) {
                         </div>
                     </div>
 
-                    <div className="col-12 mhwc-value mhwc-equips">
+                    <div className="col-12 mhwc-content">
                         <div className="col-12 mhwc-name">
                             <span>{_('equip')}</span>
                         </div>
-                        <div className="col-12 mhwc-value">
-                            <div className="row">
+                        <div className="col-12 mhwc-content">
                             {Object.keys(data.equips).map((equipType, index) => {
                                 if (Helper.isEmpty(data.equips[equipType])) {
                                     return false;
@@ -240,109 +239,90 @@ export default function CandidateBundles(props) {
 
                                 return Helper.isNotEmpty(equipInfo) ? (
                                     <Fragment key={equipType}>
-                                        <div className="col-2">
-                                            <div className="mhwc-name">
-                                                <span>{_(equipType)}</span>
-                                            </div>
+                                        <div className="col-2 mhwc-name">
+                                            <span>{_(equipType)}</span>
                                         </div>
-                                        <div className="col-4">
-                                            <div className="mhwc-value">
-                                                <span>{_(equipInfo.name)}</span>
-                                            </div>
+                                        <div className="col-4 mhwc-value">
+                                            <span>{_(equipInfo.name)}</span>
                                         </div>
                                     </Fragment>
                                 ) : false;
                             })}
-                            </div>
                         </div>
                     </div>
 
-                    <div className="col-12 mhwc-value mhwc-defense">
-                        <div className="row">
-                            <div className="col-4 mhwc-name">
-                                <span>{_('defense')}</span>
-                            </div>
-                            <div className="col-8 mhwc-value">
-                                <span>{data.defense}</span>
-                            </div>
+                    <div className="col-12 mhwc-content">
+                        <div className="col-4 mhwc-name">
+                            <span>{_('defense')}</span>
+                        </div>
+                        <div className="col-8 mhwc-value">
+                            <span>{data.defense}</span>
                         </div>
                     </div>
 
                     {(0 < data.meta.remainingSlotCount.all) ? (
-                        <div className="col-12 mhwc-value mhwc-slots">
+                        <div className="col-12 mhwc-content">
                             <div className="col-12 mhwc-name">
                                 <span>{_('remainingSlot')}</span>
                             </div>
-                            <div className="col-12 mhwc-value">
-                                <div className="row">
-                                    {Object.keys(data.meta.remainingSlotCount).map((slotSize) => {
-                                        if ('all' === slotSize) {
-                                            return;
-                                        }
+                            <div className="col-12 mhwc-content">
+                                {Object.keys(data.meta.remainingSlotCount).map((slotSize) => {
+                                    if ('all' === slotSize) {
+                                        return;
+                                    }
 
-                                        let slotCount = data.meta.remainingSlotCount[slotSize];
+                                    let slotCount = data.meta.remainingSlotCount[slotSize];
 
-                                        return (slotCount > 0) ? (
-                                            <div key={slotSize} className="col-4">
-                                                <div className="mhwc-value">
-                                                    <span>{`[${slotSize}] x ${slotCount}`}</span>
-                                                </div>
-                                            </div>
-                                        ) : false;
-                                    })}
-                                </div>
+                                    return (slotCount > 0) ? (
+                                        <div key={slotSize} className="col-4 mhwc-value">
+                                            <span>{`[${slotSize}] x ${slotCount}`}</span>
+                                        </div>
+                                    ) : false;
+                                })}
                             </div>
                         </div>
                     ) : false}
 
                     {(0 !== Object.keys(data.jewels).length) ? (
-                        <div className="col-12 mhwc-value mhwc-jewels">
+                        <div className="col-12 mhwc-content">
                             <div className="col-12 mhwc-name">
                                 <span>{_('jewel')}</span>
                             </div>
-                            <div className="col-12 mhwc-value">
-                                <div className="row">
-                                    {Object.keys(data.jewels).sort((jewelIdA, jewelIdB) => {
-                                        return data.jewels[jewelIdB] - data.jewels[jewelIdA];
-                                    }).map((jewelId) => {
-                                        let jewelCount = data.jewels[jewelId];
-                                        let jewelInfo = JewelDataset.getInfo(jewelId);
+                            <div className="col-12 mhwc-content">
+                                {Object.keys(data.jewels).sort((jewelIdA, jewelIdB) => {
+                                    return data.jewels[jewelIdB] - data.jewels[jewelIdA];
+                                }).map((jewelId) => {
+                                    let jewelCount = data.jewels[jewelId];
+                                    let jewelInfo = JewelDataset.getInfo(jewelId);
 
-                                        return (Helper.isNotEmpty(jewelInfo)) ? (
-                                            <div key={jewelId} className="col-4">
-                                                <div className="mhwc-value">
-                                                    <span>{`[${jewelInfo.size}] ${_(jewelInfo.name)} x ${jewelCount}`}</span>
-                                                </div>
-                                            </div>
-                                        ) : false;
-                                    })}
-                                </div>
+                                    return (Helper.isNotEmpty(jewelInfo)) ? (
+                                        <div key={jewelId} className="col-4 mhwc-value">
+                                            <span>{`[${jewelInfo.size}] ${_(jewelInfo.name)} x ${jewelCount}`}</span>
+                                        </div>
+                                    ) : false;
+                                })}
                             </div>
                         </div>
                     ) : false}
 
                     {(0 !== Object.keys(data.skills).length) ? (
-                        <div className="col-12 mhwc-value mhwc-skills">
+                        <div className="col-12 mhwc-content">
                             <div className="col-12 mhwc-name">
                                 <span>{_('skill')}</span>
                             </div>
-                            <div className="col-12 mhwc-value">
-                                <div className="row">
-                                    {Object.keys(data.skills).sort((skillIdA, skillIdB) => {
-                                        return data.skills[skillIdB] - data.skills[skillIdA];
-                                    }).map((skillId) => {
-                                        let skillCount = data.skills[skillId];
-                                        let skillInfo = SkillDataset.getInfo(skillId);;
+                            <div className="col-12 mhwc-content">
+                                {Object.keys(data.skills).sort((skillIdA, skillIdB) => {
+                                    return data.skills[skillIdB] - data.skills[skillIdA];
+                                }).map((skillId) => {
+                                    let skillCount = data.skills[skillId];
+                                    let skillInfo = SkillDataset.getInfo(skillId);;
 
-                                        return (Helper.isNotEmpty(skillInfo)) ? (
-                                            <div key={skillId} className="col-6">
-                                                <div className="mhwc-value">
-                                                    <span>{`${_(skillInfo.name)} Lv.${skillCount}`}</span>
-                                                </div>
-                                            </div>
-                                        ) : false;
-                                    })}
-                                </div>
+                                    return (Helper.isNotEmpty(skillInfo)) ? (
+                                        <div key={skillId} className="col-6 mhwc-value">
+                                            <span>{`${_(skillInfo.name)} Lv.${skillCount}`}</span>
+                                        </div>
+                                    ) : false;
+                                })}
                             </div>
                         </div>
                     ) : false}
@@ -353,7 +333,7 @@ export default function CandidateBundles(props) {
 
     return (
         <div className="col mhwc-bundles">
-            <div className="mhwc-section_name">
+            <div className="mhwc-panel">
                 <span className="mhwc-title">{_('candidateBundle')}</span>
 
                 <div className="mhwc-icons_bundle">

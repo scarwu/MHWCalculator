@@ -330,109 +330,107 @@ export default function EquipItemSelector(props) {
                             ) : false}
                         </div>
                     </div>
-                    <div className="col-12 mhwc-value">
-                        <div className="row">
-                            <div className="col-3 mhwc-name">
-                                <span>{_('series')}</span>
-                            </div>
-                            <div className="col-9 mhwc-value">
-                                <span>{_(data.series)}</span>
-                            </div>
+                    <div className="col-12 mhwc-content">
+                        <div className="col-3 mhwc-name">
+                            <span>{_('series')}</span>
+                        </div>
+                        <div className="col-9 mhwc-value">
+                            <span>{_(data.series)}</span>
+                        </div>
 
-                            <div className="col-3 mhwc-name">
-                                <span>{_('attack')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{data.attack}</span>
-                            </div>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('attack')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{data.attack}</span>
+                        </div>
 
-                            <div className="col-3 mhwc-name">
-                                <span>{_('criticalRate')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{data.criticalRate}</span>
-                            </div>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('criticalRate')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{data.criticalRate}</span>
+                        </div>
 
-                            <div className="col-3 mhwc-name">
-                                <span>{_('sharpness')}</span>
-                            </div>
-                            <div className="col-9 mhwc-value mhwc-sharpness">
-                                {Helper.isNotEmpty(data.sharpness) ? <SharpnessBar data={originalSharpness} /> :  false}
-                                {Helper.isNotEmpty(data.sharpness) ? <SharpnessBar data={enhancedSharpness} /> :  false}
-                            </div>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('sharpness')}</span>
+                        </div>
+                        <div className="col-9 mhwc-value mhwc-sharpness">
+                            {Helper.isNotEmpty(data.sharpness) ? <SharpnessBar data={originalSharpness} /> :  false}
+                            {Helper.isNotEmpty(data.sharpness) ? <SharpnessBar data={enhancedSharpness} /> :  false}
+                        </div>
 
-                            {Helper.isNotEmpty(data.element.attack) ? (
-                                <Fragment>
-                                    <div className="col-3 mhwc-name">
-                                        <span>{_(data.element.attack.type)}</span>
-                                    </div>
-                                    <div className="col-3 mhwc-value">
-                                        {data.element.attack.isHidden ? (
-                                            <span>({data.element.attack.minValue}-{data.element.attack.maxValue})</span>
-                                        ) : (
-                                            <span>{data.element.attack.minValue}-{data.element.attack.maxValue}</span>
-                                        )}
-                                    </div>
-                                </Fragment>
+                        {Helper.isNotEmpty(data.element.attack) ? (
+                            <Fragment>
+                                <div className="col-3 mhwc-name">
+                                    <span>{_(data.element.attack.type)}</span>
+                                </div>
+                                <div className="col-3 mhwc-value">
+                                    {data.element.attack.isHidden ? (
+                                        <span>({data.element.attack.minValue}-{data.element.attack.maxValue})</span>
+                                    ) : (
+                                        <span>{data.element.attack.minValue}-{data.element.attack.maxValue}</span>
+                                    )}
+                                </div>
+                            </Fragment>
+                        ) : false}
+
+                        {Helper.isNotEmpty(data.element.status) ? (
+                            <Fragment>
+                                <div className="col-3 mhwc-name">
+                                    <span>{_(data.element.status.type)}</span>
+                                </div>
+                                <div className="col-3 mhwc-value">
+                                    {data.element.status.isHidden ? (
+                                        <span>({data.element.status.minValue}-{data.element.status.maxValue})</span>
+                                    ) : (
+                                        <span>{data.element.status.minValue}-{data.element.status.maxValue}</span>
+                                    )}
+                                </div>
+                            </Fragment>
+                        ) : false}
+
+                        <div className="col-3 mhwc-name">
+                            <span>{_('elderseal')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            {Helper.isNotEmpty(data.elderseal) ? (
+                                <span>{_(data.elderseal.affinity)}</span>
                             ) : false}
+                        </div>
 
-                            {Helper.isNotEmpty(data.element.status) ? (
-                                <Fragment>
-                                    <div className="col-3 mhwc-name">
-                                        <span>{_(data.element.status.type)}</span>
-                                    </div>
-                                    <div className="col-3 mhwc-value">
-                                        {data.element.status.isHidden ? (
-                                            <span>({data.element.status.minValue}-{data.element.status.maxValue})</span>
-                                        ) : (
-                                            <span>{data.element.status.minValue}-{data.element.status.maxValue}</span>
-                                        )}
-                                    </div>
-                                </Fragment>
-                            ) : false}
+                        <div className="col-3 mhwc-name">
+                            <span>{_('defense')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{data.defense}</span>
+                        </div>
 
-                            <div className="col-3 mhwc-name">
-                                <span>{_('elderseal')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                {Helper.isNotEmpty(data.elderseal) ? (
-                                    <span>{_(data.elderseal.affinity)}</span>
-                                ) : false}
-                            </div>
-
-                            <div className="col-3 mhwc-name">
-                                <span>{_('defense')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{data.defense}</span>
-                            </div>
-
-                            <div className="col-3 mhwc-name">
-                                <span>{_('slot')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                {data.slots.map((data, index) => {
-                                    return (
-                                        <span key={index}>[{data.size}]</span>
-                                    );
-                                })}
-                            </div>
-
-                            {data.skills.map((data, index) => {
-                                let skillInfo = SkillDataset.getInfo(data.id);
-
-                                return Helper.isNotEmpty(skillInfo) ? (
-                                    <Fragment>
-                                        <div className="col-12 mhwc-name">
-                                            <span>{_(skillInfo.name)} Lv.{data.level}</span>
-                                        </div>
-                                        <div kclassName="col-12 mhwc-value">
-                                            <span>{_(skillInfo.list[data.level - 1].description)}</span>
-                                        </div>
-                                    </Fragment>
-                                ) : false;
+                        <div className="col-3 mhwc-name">
+                            <span>{_('slot')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            {data.slots.map((data, index) => {
+                                return (
+                                    <span key={index}>[{data.size}]</span>
+                                );
                             })}
                         </div>
+
+                        {data.skills.map((data, index) => {
+                            let skillInfo = SkillDataset.getInfo(data.id);
+
+                            return Helper.isNotEmpty(skillInfo) ? (
+                                <Fragment>
+                                    <div className="col-12 mhwc-name">
+                                        <span>{_(skillInfo.name)} Lv.{data.level}</span>
+                                    </div>
+                                    <div className="col-12 mhwc-value">
+                                        <span>{_(skillInfo.list[data.level - 1].description)}</span>
+                                    </div>
+                                </Fragment>
+                            ) : false;
+                        })}
                     </div>
                 </div>
             );
@@ -497,70 +495,68 @@ export default function EquipItemSelector(props) {
                             ) : false}
                         </div>
                     </div>
-                    <div className="col-12 mhwc-value">
-                        <div className="row">
-                            <div className="col-3 mhwc-name">
-                                <span>{_('series')}</span>
-                            </div>
-                            <div className="col-9 mhwc-value">
-                                <span>{_(data.series)}</span>
-                            </div>
+                    <div className="col-12 mhwc-content">
+                        <div className="col-3 mhwc-name">
+                            <span>{_('series')}</span>
+                        </div>
+                        <div className="col-9 mhwc-value">
+                            <span>{_(data.series)}</span>
+                        </div>
 
-                            <div className="col-3 mhwc-name">
-                                <span>{_('defense')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{data.defense}</span>
-                            </div>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('defense')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{data.defense}</span>
+                        </div>
 
-                            {Constant.resistances.map((resistanceType) => {
+                        {Constant.resistances.map((resistanceType) => {
+                            return (
+                                <Fragment>
+                                    <div className="col-3 mhwc-name">
+                                        <span>{_('resistance')}: {_(resistanceType)}</span>
+                                    </div>
+                                    <div className="col-3 mhwc-value">
+                                        <span>{data.resistance[resistanceType]}</span>
+                                    </div>
+                                </Fragment>
+                            );
+                        })}
+
+                        <div className="col-3 mhwc-name">
+                            <span>{_('slot')}</span>
+                        </div>
+                        <div className="col-9 mhwc-value">
+                            {data.slots.map((data, index) => {
                                 return (
-                                    <Fragment>
-                                        <div className="col-3 mhwc-name">
-                                            <span>{_('resistance')}: {_(resistanceType)}</span>
-                                        </div>
-                                        <div className="col-3 mhwc-value">
-                                            <span>{data.resistance[resistanceType]}</span>
-                                        </div>
-                                    </Fragment>
+                                    <span key={index}>[{data.size}]</span>
                                 );
                             })}
-
-                            <div className="col-3 mhwc-name">
-                                <span>{_('slot')}</span>
-                            </div>
-                            <div className="col-9 mhwc-value">
-                                {data.slots.map((data, index) => {
-                                    return (
-                                        <span key={index}>[{data.size}]</span>
-                                    );
-                                })}
-                            </div>
-
-                            <div className="col-3 mhwc-name">
-                                <span>{_('set')}</span>
-                            </div>
-                            <div className="col-9 mhwc-value">
-                                {(Helper.isNotEmpty(setInfo)) ? (
-                                    <span>{_(setInfo.name)}</span>
-                                ) : false}
-                            </div>
-
-                            {data.skills.map((data, index) => {
-                                let skillInfo = SkillDataset.getInfo(data.id);
-
-                                return Helper.isNotEmpty(skillInfo) ? (
-                                    <Fragment>
-                                        <div className="col-12 mhwc-name">
-                                            <span>{_(skillInfo.name)} Lv.{data.level}</span>
-                                        </div>
-                                        <div className="col-12 mhwc-value">
-                                            <span>{_(skillInfo.list[data.level - 1].description)}</span>
-                                        </div>
-                                    </Fragment>
-                                ) : false;
-                            })}
                         </div>
+
+                        <div className="col-3 mhwc-name">
+                            <span>{_('set')}</span>
+                        </div>
+                        <div className="col-9 mhwc-value">
+                            {(Helper.isNotEmpty(setInfo)) ? (
+                                <span>{_(setInfo.name)}</span>
+                            ) : false}
+                        </div>
+
+                        {data.skills.map((data, index) => {
+                            let skillInfo = SkillDataset.getInfo(data.id);
+
+                            return Helper.isNotEmpty(skillInfo) ? (
+                                <Fragment>
+                                    <div className="col-12 mhwc-name">
+                                        <span>{_(skillInfo.name)} Lv.{data.level}</span>
+                                    </div>
+                                    <div className="col-12 mhwc-value">
+                                        <span>{_(skillInfo.list[data.level - 1].description)}</span>
+                                    </div>
+                                </Fragment>
+                            ) : false;
+                        })}
                     </div>
                 </div>
             );
@@ -606,23 +602,21 @@ export default function EquipItemSelector(props) {
                             ) : false}
                         </div>
                     </div>
-                    <div className="col-12 mhwc-value">
-                        <div className="row">
-                            {data.skills.map((data, index) => {
-                                let skillInfo = SkillDataset.getInfo(data.id);
+                    <div className="col-12 mhwc-content">
+                        {data.skills.map((data, index) => {
+                            let skillInfo = SkillDataset.getInfo(data.id);
 
-                                return Helper.isNotEmpty(skillInfo) ? (
-                                    <Fragment>
-                                        <div className="col-12 mhwc-name">
-                                            <span>{_(skillInfo.name)} Lv.{data.level}</span>
-                                        </div>
-                                        <div className="col-12 mhwc-value">
-                                            <span>{_(skillInfo.list[data.level - 1].description)}</span>
-                                        </div>
-                                    </Fragment>
-                                ) : false;
-                            })}
-                        </div>
+                            return Helper.isNotEmpty(skillInfo) ? (
+                                <Fragment>
+                                    <div className="col-12 mhwc-name">
+                                        <span>{_(skillInfo.name)} Lv.{data.level}</span>
+                                    </div>
+                                    <div className="col-12 mhwc-value">
+                                        <span>{_(skillInfo.list[data.level - 1].description)}</span>
+                                    </div>
+                                </Fragment>
+                            ) : false;
+                        })}
                     </div>
                 </div>
             );
@@ -661,14 +655,12 @@ export default function EquipItemSelector(props) {
                             ) : false}
                         </div>
                     </div>
-                    <div className="col-12 mhwc-value">
-                        <div className="row">
-                            <div className="col-12 mhwc-name">
-                                <span>{_(skillInfo.name)} Lv.{data.skill.level}</span>
-                            </div>
-                            <div className="col-12 mhwc-value">
-                                <span>{_(skillInfo.list[0].description)}</span>
-                            </div>
+                    <div className="col-12 mhwc-content">
+                        <div className="col-12 mhwc-name">
+                            <span>{_(skillInfo.name)} Lv.{data.skill.level}</span>
+                        </div>
+                        <div className="col-12 mhwc-value">
+                            <span>{_(skillInfo.list[0].description)}</span>
                         </div>
                     </div>
                 </div>
@@ -706,17 +698,17 @@ export default function EquipItemSelector(props) {
                             ) : false}
                         </div>
                     </div>
-                    <div className="col-12 mhwc-value">
+                    <div className="col-12 mhwc-content">
                         {data.list.map((skill, index) => {
                             return (
-                                <div className="row">
+                                <Fragment>
                                     <div className="col-2 mhwc-name">
                                         <span>Lv.{skill.level}</span>
                                     </div>
                                     <div className="col-10 mhwc-value">
                                         <span>{_(skill.description)}</span>
                                     </div>
-                                </div>
+                                </Fragment>
                             );
                         })}
                     </div>

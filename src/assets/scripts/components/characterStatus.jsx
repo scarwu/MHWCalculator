@@ -616,204 +616,154 @@ export default function CharacterStatus(props) {
 
     return (
         <div className="col mhwc-status">
-            <div className="mhwc-section_name">
+            <div className="mhwc-panel">
                 <span className="mhwc-title">{_('status')}</span>
             </div>
 
             <div className="mhwc-list">
-                <div className="row mhwc-item mhwc-normal">
+                <div className="mhwc-item mhwc-normal">
                     <div className="col-12 mhwc-name">
                         <span>{_('general')}</span>
                     </div>
-                    <div className="col-12 mhwc-value">
-                        <div className="row">
-                            <div className="col-3">
-                                <div className="mhwc-name">
-                                    <span>{_('health')}</span>
-                                </div>
-                            </div>
-                            <div className="col-3">
-                                <div className="mhwc-value">
-                                    <span>{status.health}</span>
-                                </div>
-                            </div>
+                    <div className="col-12 mhwc-content">
+                        <div className="col-3 mhwc-name">
+                            <span>{_('health')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{status.health}</span>
+                        </div>
 
-                            <div className="col-3">
-                                <div className="mhwc-name">
-                                    <span>{_('stamina')}</span>
-                                </div>
-                            </div>
-                            <div className="col-3">
-                                <div className="mhwc-value">
-                                    <span>{status.stamina}</span>
-                                </div>
-                            </div>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('stamina')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{status.stamina}</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="row mhwc-item mhwc-attack">
+                <div className="mhwc-item mhwc-attack">
                     <div className="col-12 mhwc-name">
                         <span>{_('attackProperty')}</span>
                     </div>
-                    <div className="col-12 mhwc-value">
-                        <div className="row">
-                            {Helper.isNotEmpty(status.sharpness) ? (
-                                <Fragment>
-                                    <div className="col-3">
-                                        <div className="mhwc-name">
-                                            <span>{_('sharpness')}</span>
-                                        </div>
-                                    </div>
-                                    <div className="col-9">
-                                        <div className="mhwc-value mhwc-sharpness">
-                                            <SharpnessBar data={originalSharpness} />
-                                            <SharpnessBar data={status.sharpness} />
-                                        </div>
-                                    </div>
-                                </Fragment>
-                            ) : false}
+                    <div className="col-12 mhwc-content">
+                        {Helper.isNotEmpty(status.sharpness) ? (
+                            <Fragment>
+                                <div className="col-3 mhwc-name">
+                                    <span>{_('sharpness')}</span>
+                                </div>
+                                <div className="col-9 mhwc-value mhwc-sharpness">
+                                    <SharpnessBar data={originalSharpness} />
+                                    <SharpnessBar data={status.sharpness} />
+                                </div>
+                            </Fragment>
+                        ) : false}
 
-                            <div className="col-3">
-                                <div className="mhwc-name">
-                                    <span>{_('attack')}</span>
-                                </div>
-                            </div>
-                            <div className="col-3">
-                                <div className="mhwc-value">
-                                    <span>{status.attack}</span>
-                                </div>
-                            </div>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('attack')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{status.attack}</span>
+                        </div>
 
-                            <div className="col-3">
-                                <div className="mhwc-name">
-                                    <span>{_('criticalRate')}</span>
-                                </div>
-                            </div>
-                            <div className="col-3">
-                                <div className="mhwc-value">
-                                    <span>{status.critical.rate}%</span>
-                                </div>
-                            </div>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('criticalRate')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{status.critical.rate}%</span>
+                        </div>
 
-                            <div className="col-3">
-                                <div className="mhwc-name">
-                                    <span>{_('criticalMultiple')}</span>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('criticalMultiple')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            {(0 <= status.critical.rate) ? (
+                                <span>{status.critical.multiple.positive}x</span>
+                            ) : (
+                                <span>{status.critical.multiple.nagetive}x</span>
+                            )}
+                        </div>
+
+                        {(Helper.isNotEmpty(status.element)
+                            && Helper.isNotEmpty(status.element.attack)
+                        ) ? (
+                            <Fragment>
+                                <div className="col-3 mhwc-name">
+                                    <span>{_('element')}: {_(status.element.attack.type)}</span>
                                 </div>
-                            </div>
-                            <div className="col-3">
-                                <div className="mhwc-value">
-                                    {(0 <= status.critical.rate) ? (
-                                        <span>{status.critical.multiple.positive}x</span>
+                                <div className="col-3 mhwc-value">
+                                    {status.element.attack.isHidden ? (
+                                        <span>({status.element.attack.value})</span>
                                     ) : (
-                                        <span>{status.critical.multiple.nagetive}x</span>
+                                        <span>{status.element.attack.value}</span>
                                     )}
                                 </div>
-                            </div>
+                            </Fragment>
+                        ) : false}
 
-                            {(Helper.isNotEmpty(status.element)
-                                && Helper.isNotEmpty(status.element.attack)
-                            ) ? (
-                                <Fragment>
-                                    <div className="col-3">
-                                        <div className="mhwc-name">
-                                            <span>{_('element')}: {_(status.element.attack.type)}</span>
-                                        </div>
-                                    </div>
-                                    <div className="col-3">
-                                        <div className="mhwc-value">
-                                            {status.element.attack.isHidden ? (
-                                                <span>({status.element.attack.value})</span>
-                                            ) : (
-                                                <span>{status.element.attack.value}</span>
-                                            )}
-                                        </div>
-                                    </div>
-                                </Fragment>
-                            ) : false}
+                        {(Helper.isNotEmpty(status.element)
+                            && Helper.isNotEmpty(status.element.status)
+                        ) ? (
+                            <Fragment>
+                                <div className="col-3 mhwc-name">
+                                    <span>{_('element')}: {_(status.element.status.type)}</span>
+                                </div>
+                                <div className="col-3 mhwc-value">
+                                    {status.element.status.isHidden ? (
+                                        <span>({status.element.status.value})</span>
+                                    ) : (
+                                        <span>{status.element.status.value}</span>
+                                    )}
+                                </div>
+                            </Fragment>
+                        ) : false}
 
-                            {(Helper.isNotEmpty(status.element)
-                                && Helper.isNotEmpty(status.element.status)
-                            ) ? (
-                                <Fragment>
-                                    <div className="col-3">
-                                        <div className="mhwc-name">
-                                            <span>{_('element')}: {_(status.element.status.type)}</span>
-                                        </div>
-                                    </div>
-                                    <div className="col-3">
-                                        <div className="mhwc-value">
-                                            {status.element.status.isHidden ? (
-                                                <span>({status.element.status.value})</span>
-                                            ) : (
-                                                <span>{status.element.status.value}</span>
-                                            )}
-                                        </div>
-                                    </div>
-                                </Fragment>
-                            ) : false}
-
-                            {(Helper.isNotEmpty(status.elderseal)) ? (
-                                <Fragment>
-                                    <div className="col-3">
-                                        <div className="mhwc-name">
-                                            <span>{_('elderseal')}</span>
-                                        </div>
-                                    </div>
-                                    <div className="col-3">
-                                        <div className="mhwc-value">
-                                            <span>{_(status.elderseal.affinity)}</span>
-                                        </div>
-                                    </div>
-                                </Fragment>
-                            ) : false}
-                        </div>
+                        {(Helper.isNotEmpty(status.elderseal)) ? (
+                            <Fragment>
+                                <div className="col-3 mhwc-name">
+                                    <span>{_('elderseal')}</span>
+                                </div>
+                                <div className="col-3 mhwc-value">
+                                    <span>{_(status.elderseal.affinity)}</span>
+                                </div>
+                            </Fragment>
+                        ) : false}
                     </div>
                 </div>
 
-                <div className="row mhwc-item mhwc-defense">
+                <div className="mhwc-item mhwc-defense">
                     <div className="col-12 mhwc-name">
                         <span>{_('defenseProperty')}</span>
                     </div>
-                    <div className="col-12 mhwc-value">
-                        <div className="row">
-                            <div className="col-3">
-                                <div className="mhwc-name">
-                                    <span>{_('defense')}</span>
-                                </div>
-                            </div>
-                            <div className="col-3">
-                                <div className="mhwc-value">
-                                    <span>{status.defense}</span>
-                                </div>
-                            </div>
-
-                            {Constant.resistances.map((elementType) => {
-                                return (
-                                    <Fragment key={elementType}>
-                                        <div className="col-3">
-                                            <div className="mhwc-name">
-                                                <span>{_('resistance')}: {_(elementType)}</span>
-                                            </div>
-                                        </div>
-                                        <div className="col-3">
-                                            <div className="mhwc-value">
-                                                <span>{status.resistance[elementType]}</span>
-                                            </div>
-                                        </div>
-                                    </Fragment>
-                                );
-                            })}
+                    <div className="col-12 mhwc-content">
+                        <div className="col-3 mhwc-name">
+                            <span>{_('defense')}</span>
                         </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{status.defense}</span>
+                        </div>
+
+                        {Constant.resistances.map((elementType) => {
+                            return (
+                                <Fragment key={elementType}>
+                                    <div className="col-3 mhwc-name">
+                                        <span>{_('resistance')}: {_(elementType)}</span>
+                                    </div>
+                                    <div className="col-3 mhwc-value">
+                                        <span>{status.resistance[elementType]}</span>
+                                    </div>
+                                </Fragment>
+                            );
+                        })}
                     </div>
                 </div>
 
                 {(0 !== status.sets.length) ? (
-                    <div className="row mhwc-item mhwc-sets">
+                    <div className="mhwc-item mhwc-sets">
                         <div className="col-12 mhwc-name">
                             <span>{_('set')}</span>
                         </div>
-                        <div className="col-12 mhwc-value">
+                        <div className="col-12 mhwc-content">
                             {status.sets.map((data, index) => {
                                 let setInfo = SetDataset.getInfo(data.id);
                                 let skillInfo = SkillDataset.getInfo(data.skill.id);
@@ -821,14 +771,14 @@ export default function CharacterStatus(props) {
                                 return (Helper.isNotEmpty(setInfo)
                                     && Helper.isNotEmpty(skillInfo))
                                 ? (
-                                    <div key={`${index}:${data.id}`} className="row mhwc-set">
+                                    <Fragment key={`${index}:${data.id}`} className="mhwc-set">
                                         <div className="col-12 mhwc-name">
                                             <span>{_(setInfo.name)} ({data.require})</span>
                                         </div>
                                         <div className="col-12 mhwc-value">
                                             <span>{_(skillInfo.name)} Lv.{data.skill.level}</span>
                                         </div>
-                                    </div>
+                                    </Fragment>
                                 ) : false;
                             })}
                         </div>
@@ -836,20 +786,23 @@ export default function CharacterStatus(props) {
                 ) : false}
 
                 {(0 !== status.skills.length) ? (
-                    <div className="row mhwc-item mhwc-skills">
+                    <div className="mhwc-item mhwc-skills">
                         <div className="col-12 mhwc-name">
                             <span>{_('skill')}</span>
                         </div>
-                        <div className="col-12 mhwc-value">
+                        <div className="col-12 mhwc-content">
                             {status.skills.sort((skillA, skillB) => {
                                 return skillB.level - skillA.level;
                             }).map((data) => {
                                 let skillInfo = SkillDataset.getInfo(data.id);
 
                                 return (Helper.isNotEmpty(skillInfo)) ? (
-                                    <div key={data.id} className="row mhwc-skill">
+                                    <Fragment key={data.id}>
                                         <div className="col-12 mhwc-name">
                                             <span>{_(skillInfo.name)} Lv.{data.level}</span>
+                                        </div>
+                                        <div className="col-12 mhwc-value">
+                                            <span>{_(data.description)}</span>
 
                                             <div className="mhwc-icons_bundle">
                                                 {Helper.isNotEmpty(passiveSkills[data.id]) ? (
@@ -860,112 +813,89 @@ export default function CharacterStatus(props) {
                                                 ) : false}
                                             </div>
                                         </div>
-                                        <div className="col-12 mhwc-value">
-                                            <span>{_(data.description)}</span>
-                                        </div>
-                                    </div>
+                                    </Fragment>
                                 ) : false;
                             })}
                         </div>
                     </div>
                 ) : false}
 
-                <div className="row mhwc-item mhwc-extra_info">
+                <div className="mhwc-item mhwc-extra_info">
                     <div className="col-12 mhwc-name">
                         <span>{_('extraInfo')}</span>
                     </div>
-                    <div className="col-12 mhwc-value">
-                        <div className="row">
-                            <div className="col-9 mhwc-name">
-                                <span>{_('rawAttack')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{extraInfo.rawAttack}</span>
-                            </div>
+                    <div className="col-12 mhwc-content">
+                        <div className="col-9 mhwc-name">
+                            <span>{_('rawAttack')}</span>
                         </div>
-                        <div className="row">
-                            <div className="col-9 mhwc-name">
-                                <span>{_('rawCriticalAttack')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{extraInfo.rawCriticalAttack}</span>
-                            </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{extraInfo.rawAttack}</span>
                         </div>
-                        <div className="row">
-                            <div className="col-9 mhwc-name">
-                                <span>{_('rawEV')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{extraInfo.rawExpectedValue}</span>
-                            </div>
+                        <div className="col-9 mhwc-name">
+                            <span>{_('rawCriticalAttack')}</span>
                         </div>
-                        <div className="row">
-                            <div className="col-9 mhwc-name">
-                                <span>{_('elementAttack')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{extraInfo.elementAttack}</span>
-                            </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{extraInfo.rawCriticalAttack}</span>
                         </div>
-                        <div className="row">
-                            <div className="col-9 mhwc-name">
-                                <span>{_('elementEV')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{extraInfo.elementExpectedValue}</span>
-                            </div>
+                        <div className="col-9 mhwc-name">
+                            <span>{_('rawEV')}</span>
                         </div>
-                        <div className="row">
-                            <div className="col-9 mhwc-name">
-                                <span>{_('totalEV')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{extraInfo.expectedValue}</span>
-                            </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{extraInfo.rawExpectedValue}</span>
                         </div>
-                        <div className="row">
-                            <div className="col-9 mhwc-name">
-                                <span>{_('every')}</span>
-                                <input className="mhwc-tuning" type="text" defaultValue={stateTuning.rawAttack}
-                                    ref={refTuningRawAttack} onChange={handleTuningChange} />
-                                <span>{_('rawAttackEV')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{extraInfo.perNRawAttackExpectedValue}</span>
-                            </div>
+                        <div className="col-9 mhwc-name">
+                            <span>{_('elementAttack')}</span>
                         </div>
-                        <div className="row">
-                            <div className="col-9 mhwc-name">
-                                <span>{_('every')}</span>
-                                <input className="mhwc-tuning" type="text" defaultValue={stateTuning.rawCriticalRate}
-                                    ref={refTuningRawCriticalRate} onChange={handleTuningChange} />
-                                <span>{_('criticalRateEV')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{extraInfo.perNRawCriticalRateExpectedValue}</span>
-                            </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{extraInfo.elementAttack}</span>
                         </div>
-                        <div className="row">
-                            <div className="col-9 mhwc-name">
-                                <span>{_('every')}</span>
-                                <input className="mhwc-tuning" type="text" defaultValue={stateTuning.rawCriticalMultiple}
-                                    ref={refTuningRawCriticalMultiple} onChange={handleTuningChange} />
-                                <span>{_('criticalMultipleEV')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{extraInfo.perNRawCriticalMultipleExpectedValue}</span>
-                            </div>
+                        <div className="col-9 mhwc-name">
+                            <span>{_('elementEV')}</span>
                         </div>
-                        <div className="row">
-                            <div className="col-9 mhwc-name">
-                                <span>{_('every')}</span>
-                                <input className="mhwc-tuning" type="text" defaultValue={stateTuning.elementAttack}
-                                    ref={refTuningElementAttack} onChange={handleTuningChange} />
-                                <span>{_('elementAttackEV')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <span>{extraInfo.perNElementAttackExpectedValue}</span>
-                            </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{extraInfo.elementExpectedValue}</span>
+                        </div>
+                        <div className="col-9 mhwc-name">
+                            <span>{_('totalEV')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{extraInfo.expectedValue}</span>
+                        </div>
+                        <div className="col-9 mhwc-name">
+                            <span>{_('every')}</span>
+                            <input className="mhwc-tuning" type="text" defaultValue={stateTuning.rawAttack}
+                                ref={refTuningRawAttack} onChange={handleTuningChange} />
+                            <span>{_('rawAttackEV')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{extraInfo.perNRawAttackExpectedValue}</span>
+                        </div>
+                        <div className="col-9 mhwc-name">
+                            <span>{_('every')}</span>
+                            <input className="mhwc-tuning" type="text" defaultValue={stateTuning.rawCriticalRate}
+                                ref={refTuningRawCriticalRate} onChange={handleTuningChange} />
+                            <span>{_('criticalRateEV')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{extraInfo.perNRawCriticalRateExpectedValue}</span>
+                        </div>
+                        <div className="col-9 mhwc-name">
+                            <span>{_('every')}</span>
+                            <input className="mhwc-tuning" type="text" defaultValue={stateTuning.rawCriticalMultiple}
+                                ref={refTuningRawCriticalMultiple} onChange={handleTuningChange} />
+                            <span>{_('criticalMultipleEV')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{extraInfo.perNRawCriticalMultipleExpectedValue}</span>
+                        </div>
+                        <div className="col-9 mhwc-name">
+                            <span>{_('every')}</span>
+                            <input className="mhwc-tuning" type="text" defaultValue={stateTuning.elementAttack}
+                                ref={refTuningElementAttack} onChange={handleTuningChange} />
+                            <span>{_('elementAttackEV')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{extraInfo.perNElementAttackExpectedValue}</span>
                         </div>
                     </div>
                 </div>

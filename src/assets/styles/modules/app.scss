@@ -61,12 +61,12 @@
     > .mhwc-equips,
     > .mhwc-status {
         position: relative;
-        height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
+        height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$panel-height}));
 
-        .mhwc-section_name {
+        .mhwc-panel {
             position: relative;
-            height: $section_name-height;
-            line-height: $section_name-height;
+            height: $panel-height;
+            line-height: $panel-height;
             text-align: center;
             background-color: #666;
             color: white;
@@ -79,8 +79,8 @@
                 position: absolute;
                 top: 0;
                 right: 10px;
-                height: $section_name-height;
-                line-height: $section_name-height;
+                height: $panel-height;
+                line-height: $panel-height;
 
                 .mhwc-functional_button {
                     .mhwc-body {
@@ -97,7 +97,7 @@
         }
 
         .mhwc-list {
-            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
+            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$panel-height}));
             padding-top: 5px;
         }
     }
@@ -135,7 +135,6 @@
 
         .mhwc-extra_info {
             .mhwc-tuning {
-                margin: 5px;
                 padding: 0 5px;
                 height: 21px;
                 width: 50px;

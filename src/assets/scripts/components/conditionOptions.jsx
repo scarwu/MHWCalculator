@@ -68,12 +68,9 @@ export default function ConditionOptions(props) {
             let setRequire = setInfo.skills[data.step - 1].require;
 
             return (
-                <div key={setInfo.id} className="row mhwc-item">
+                <div key={setInfo.id} className="mhwc-item">
                     <div className="col-12 mhwc-name">
-                        <span>
-                            {_(setInfo.name)} x {setRequire}
-                        </span>
-
+                        <span>{_(setInfo.name)} x {setRequire}</span>
                         <div className="mhwc-icons_bundle">
                             <FunctionalButton
                                 iconName="minus-circle" altName={_('down')}
@@ -111,12 +108,9 @@ export default function ConditionOptions(props) {
             let skillInfo = SkillDataset.getInfo(data.id);
 
             return (Helper.isNotEmpty(skillInfo)) ? (
-                <div key={skillInfo.id} className="row mhwc-item">
+                <div key={skillInfo.id} className="mhwc-item">
                     <div className="col-12 mhwc-name">
-                        <span>
-                            {_(skillInfo.name)} Lv.{data.level} / {skillInfo.list.length}
-                        </span>
-
+                        <span>{_(skillInfo.name)} Lv.{data.level} / {skillInfo.list.length}</span>
                         <div className="mhwc-icons_bundle">
                             <FunctionalButton
                                 iconName="minus-circle" altName={_('down')}
@@ -143,7 +137,7 @@ export default function ConditionOptions(props) {
 
     return (
         <div className="col mhwc-conditions">
-            <div className="mhwc-section_name">
+            <div className="mhwc-panel">
                 <span className="mhwc-title">{_('requireCondition')}</span>
 
                 <div className="mhwc-icons_bundle">

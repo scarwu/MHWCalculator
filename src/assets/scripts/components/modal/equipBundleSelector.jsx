@@ -141,44 +141,38 @@ export default function EquipBundleSelector(props) {
                     </div>
                 </div>
 
-                <div className="col-12 mhwc-value">
-                    <div className="row">
-                        {Object.keys(stateCurrentEquips).map((equipType, index) => {
-                            if (Helper.isEmpty(stateCurrentEquips[equipType])) {
-                                return false;
-                            }
+                <div className="col-12 mhwc-content">
+                    {Object.keys(stateCurrentEquips).map((equipType, index) => {
+                        if (Helper.isEmpty(stateCurrentEquips[equipType])) {
+                            return false;
+                        }
 
-                            let equipInfo = null;
+                        let equipInfo = null;
 
-                            if ('weapon' === equipType) {
-                                equipInfo = WeaponDataset.getInfo(stateCurrentEquips[equipType].id);
-                            } else if ('helm' === equipType
-                                || 'chest' === equipType
-                                || 'arm' === equipType
-                                || 'waist' === equipType
-                                || 'leg' === equipType
-                            ) {
-                                equipInfo = ArmorDataset.getInfo(stateCurrentEquips[equipType].id);
-                            } else if ('charm' === equipType) {
-                                equipInfo = CharmDataset.getInfo(stateCurrentEquips[equipType].id);
-                            }
+                        if ('weapon' === equipType) {
+                            equipInfo = WeaponDataset.getInfo(stateCurrentEquips[equipType].id);
+                        } else if ('helm' === equipType
+                            || 'chest' === equipType
+                            || 'arm' === equipType
+                            || 'waist' === equipType
+                            || 'leg' === equipType
+                        ) {
+                            equipInfo = ArmorDataset.getInfo(stateCurrentEquips[equipType].id);
+                        } else if ('charm' === equipType) {
+                            equipInfo = CharmDataset.getInfo(stateCurrentEquips[equipType].id);
+                        }
 
-                            return Helper.isNotEmpty(equipInfo) ? (
-                                <Fragment>
-                                    <div className="col-2">
-                                        <div className="mhwc-name">
-                                            <span>{_(equipType)}</span>
-                                        </div>
-                                    </div>
-                                    <div className="col-4">
-                                        <div className="mhwc-value">
-                                            <span>{_(equipInfo.name)}</span>
-                                        </div>
-                                    </div>
-                                </Fragment>
-                            ) : false;
-                        })}
-                    </div>
+                        return Helper.isNotEmpty(equipInfo) ? (
+                            <Fragment>
+                                <div className="col-2 mhwc-name">
+                                    <span>{_(equipType)}</span>
+                                </div>
+                                <div className="col-4 mhwc-value">
+                                    <span>{_(equipInfo.name)}</span>
+                                </div>
+                            </Fragment>
+                        ) : false;
+                    })}
                 </div>
             </div>
         );
@@ -204,44 +198,38 @@ export default function EquipBundleSelector(props) {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 mhwc-value">
-                    <div className="row">
-                        {Object.keys(data.equips).map((equipType, index) => {
-                            if (Helper.isEmpty(data.equips[equipType])) {
-                                return false;
-                            }
+                <div className="col-12 mhwc-content">
+                    {Object.keys(data.equips).map((equipType, index) => {
+                        if (Helper.isEmpty(data.equips[equipType])) {
+                            return false;
+                        }
 
-                            let equipInfo = null;
+                        let equipInfo = null;
 
-                            if ('weapon' === equipType) {
-                                equipInfo = WeaponDataset.getInfo(data.equips[equipType].id);
-                            } else if ('helm' === equipType
-                                || 'chest' === equipType
-                                || 'arm' === equipType
-                                || 'waist' === equipType
-                                || 'leg' === equipType
-                            ) {
-                                equipInfo = ArmorDataset.getInfo(data.equips[equipType].id);
-                            } else if ('charm' === equipType) {
-                                equipInfo = CharmDataset.getInfo(data.equips[equipType].id);
-                            }
+                        if ('weapon' === equipType) {
+                            equipInfo = WeaponDataset.getInfo(data.equips[equipType].id);
+                        } else if ('helm' === equipType
+                            || 'chest' === equipType
+                            || 'arm' === equipType
+                            || 'waist' === equipType
+                            || 'leg' === equipType
+                        ) {
+                            equipInfo = ArmorDataset.getInfo(data.equips[equipType].id);
+                        } else if ('charm' === equipType) {
+                            equipInfo = CharmDataset.getInfo(data.equips[equipType].id);
+                        }
 
-                            return Helper.isNotEmpty(equipInfo) ? (
-                                <Fragment>
-                                    <div className="col-2">
-                                        <div className="mhwc-name">
-                                            <span>{_(equipType)}</span>
-                                        </div>
-                                    </div>
-                                    <div className="col-4">
-                                        <div className="mhwc-value">
-                                            <span>{_(equipInfo.name)}</span>
-                                        </div>
-                                    </div>
-                                </Fragment>
-                            ) : false;
-                        })}
-                    </div>
+                        return Helper.isNotEmpty(equipInfo) ? (
+                            <Fragment>
+                                <div className="col-2 mhwc-name">
+                                    <span>{_(equipType)}</span>
+                                </div>
+                                <div className="col-4 mhwc-value">
+                                    <span>{_(equipInfo.name)}</span>
+                                </div>
+                            </Fragment>
+                        ) : false;
+                    })}
                 </div>
             </div>
         );

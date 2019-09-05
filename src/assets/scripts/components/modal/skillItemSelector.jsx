@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect, useRef } from 'react';
+import React, { Fragment, useState, useEffect, useRef } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -160,17 +160,17 @@ export default function SkillItemSelector(props) {
                         )}
                     </div>
                 </div>
-                <div className="col-12 mhwc-value">
+                <div className="col-12 mhwc-content">
                     {data.list.map((skill, index) => {
                         return (
-                            <div key={index} className="row">
+                            <Fragment key={index}>
                                 <div className="col-2 mhwc-name">
                                     <span>Lv.{skill.level}</span>
                                 </div>
                                 <div className="col-10 mhwc-value">
                                     <span>{_(skill.description)}</span>
                                 </div>
-                            </div>
+                            </Fragment>
                         );
                     })}
                 </div>

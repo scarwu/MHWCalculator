@@ -157,22 +157,15 @@
 
 .mhwc-item {
     margin: 0 5px 10px 5px;
-    padding: 2.5px;
+    padding: 5px;
     border: 1px solid #999;
 
     @include border-radius(5px);
 
     .mhwc-name,
     .mhwc-content,
-    .mhwc-value,
-    .col-12, .col-8, .col-4, .col-3, .col-2 {
+    .mhwc-value {
         overflow: hidden;
-    }
-
-    .mhwc-name,
-    .mhwc-content {
-        margin: 2.5px;
-        padding: 2.5px;
     }
 
     .mhwc-content,
@@ -183,20 +176,17 @@
     }
 
     .mhwc-name {
-        margin: 2.5px;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding: 5px;
     }
 
     .mhwc-content {
+        padding: 5px;
         display: flex;
         flex-wrap: wrap;
     }
 
     .mhwc-value {
-        margin: 2.5px;
         padding: 5px;
-
         // @include nowrap();
     }
 
@@ -215,22 +205,14 @@
     }
 
     .mhwc-name {
-        border: 3px solid red;
+        border: 1px solid #FF0000;
     }
 
     .mhwc-content {
-        border: 3px solid yellow;
+        border: 1px solid #00FF00;
     }
 
     .mhwc-value {
-        border: 3px solid blue;
-    }
-
-    .row {
-        border: 3px solid green;
-    }
-
-    .col-12 {
-        border: 3px solid black;
+        border: 1px solid #0000FF;
     }
 }
