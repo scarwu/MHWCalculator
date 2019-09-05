@@ -861,36 +861,36 @@ export default function CharacterStatus(props) {
                         <div className="col-3 mhwc-value">
                             <span>{extraInfo.expectedValue}</span>
                         </div>
-                        <div className="col-9 mhwc-name">
+                        <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-tuning" type="text" defaultValue={stateTuning.rawAttack}
+                            <input className="mhwc-input" type="text" defaultValue={stateTuning.rawAttack}
                                 ref={refTuningRawAttack} onChange={handleTuningChange} />
                             <span>{_('rawAttackEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
                             <span>{extraInfo.perNRawAttackExpectedValue}</span>
                         </div>
-                        <div className="col-9 mhwc-name">
+                        <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-tuning" type="text" defaultValue={stateTuning.rawCriticalRate}
+                            <input className="mhwc-input" type="text" defaultValue={stateTuning.rawCriticalRate}
                                 ref={refTuningRawCriticalRate} onChange={handleTuningChange} />
                             <span>{_('criticalRateEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
                             <span>{extraInfo.perNRawCriticalRateExpectedValue}</span>
                         </div>
-                        <div className="col-9 mhwc-name">
+                        <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-tuning" type="text" defaultValue={stateTuning.rawCriticalMultiple}
+                            <input className="mhwc-input" type="text" defaultValue={stateTuning.rawCriticalMultiple}
                                 ref={refTuningRawCriticalMultiple} onChange={handleTuningChange} />
                             <span>{_('criticalMultipleEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
                             <span>{extraInfo.perNRawCriticalMultipleExpectedValue}</span>
                         </div>
-                        <div className="col-9 mhwc-name">
+                        <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-tuning" type="text" defaultValue={stateTuning.elementAttack}
+                            <input className="mhwc-input" type="text" defaultValue={stateTuning.elementAttack}
                                 ref={refTuningElementAttack} onChange={handleTuningChange} />
                             <span>{_('elementAttackEV')}</span>
                         </div>

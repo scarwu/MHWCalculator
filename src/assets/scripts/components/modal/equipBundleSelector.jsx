@@ -132,7 +132,7 @@ export default function EquipBundleSelector(props) {
         return (
             <div className="mhwc-item mhwc-item-bundle">
                 <div className="col-12 mhwc-name">
-                    <input type="text" placeholder={_('inputName')} ref={refName} />
+                    <input className="mhwc-input" type="text" placeholder={_('inputName')} ref={refName} />
 
                     <div className="mhwc-icons_bundle">
                         <FunctionalButton

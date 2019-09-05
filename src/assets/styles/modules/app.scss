@@ -132,19 +132,6 @@
                 background-color: #fff;
             }
         }
-
-        .mhwc-extra_info {
-            .mhwc-tuning {
-                margin: 0 5px;
-                padding: 0 5px;
-                height: 21px;
-                width: 50px;
-                line-height: 21px;
-                border: 1px solid #333;
-
-                @include border-radius(5px);
-            }
-        }
     }
 
     > .mhwc-bundles,

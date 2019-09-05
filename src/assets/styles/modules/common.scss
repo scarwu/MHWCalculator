@@ -184,7 +184,7 @@
 
     .mhwc-name {
         margin: 5px 2.5px 0 2.5px;
-        padding: 5px;
+        padding: 5px 0;
     }
 
     .mhwc-content {
@@ -217,5 +217,21 @@
 
     .mhwc-description {
         @include wrap();
+    }
+
+    .mhwc-input {
+        padding: 0 5px;
+        height: 21px;
+        line-height: 21px;
+        border: 1px solid #666;
+
+        @include border-radius(5px);
+    }
+
+    .mhwc-input-ev {
+        .mhwc-input {
+            margin: 0 5px;
+            width: 50px;
+        }
     }
 }
