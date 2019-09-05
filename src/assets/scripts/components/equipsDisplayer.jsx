@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -91,46 +91,49 @@ export default function EquipsDisplayer(props) {
         };
 
         if (Helper.isEmpty(enhanceInfo)) {
-            return [(
-                <div key={'enhanceName_' + enhanceIndex} className="col-3">
+            return (
+                <Fragment key={`${equipType}:${enhanceIndex}`}>
+                    <div className="col-3">
+                        <div className="mhwc-name">
+                            <span>{_('enhance')}: {enhanceIndex + 1}</span>
+                        </div>
+                    </div>
+
+                    <div className="col-9">
+                        <div className="mhwc-value">
+                            <div className="mhwc-icons_bundle">
+                                <FunctionalButton
+                                    iconName="plus" altName={_('add')}
+                                    onClick={() => {handleEquipSwitch(selectorData)}} />
+                            </div>
+                        </div>
+                    </div>
+                </Fragment>
+            );
+        }
+
+        return (
+            <Fragment key={`${equipType}:${enhanceIndex}`}>
+                <div className="col-3">
                     <div className="mhwc-name">
                         <span>{_('enhance')}: {enhanceIndex + 1}</span>
                     </div>
                 </div>
-            ), (
-                <div key={'enhanceValue_' + enhanceIndex} className="col-9">
+                <div className="col-9">
                     <div className="mhwc-value">
+                        <span>{_(enhanceInfo.name)}</span>
                         <div className="mhwc-icons_bundle">
                             <FunctionalButton
-                                iconName="plus" altName={_('add')}
+                                iconName="exchange" altName={_('change')}
                                 onClick={() => {handleEquipSwitch(selectorData)}} />
+                            <FunctionalButton
+                                iconName="times" altName={_('clean')}
+                                onClick={() => {handleEquipEmpty(emptySelectorData)}} />
                         </div>
                     </div>
                 </div>
-            )];
-        }
-
-        return [(
-            <div key={'enhanceName_' + enhanceIndex} className="col-3">
-                <div className="mhwc-name">
-                    <span>{_('enhance')}: {enhanceIndex + 1}</span>
-                </div>
-            </div>
-        ), (
-            <div key={'enhanceValue_' + enhanceIndex} className="col-9">
-                <div className="mhwc-value">
-                    <span>{_(enhanceInfo.name)}</span>
-                    <div className="mhwc-icons_bundle">
-                        <FunctionalButton
-                            iconName="exchange" altName={_('change')}
-                            onClick={() => {handleEquipSwitch(selectorData)}} />
-                        <FunctionalButton
-                            iconName="times" altName={_('clean')}
-                            onClick={() => {handleEquipEmpty(emptySelectorData)}} />
-                    </div>
-                </div>
-            </div>
-        )];
+            </Fragment>
+        );
     };
 
     let renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
@@ -149,46 +152,48 @@ export default function EquipsDisplayer(props) {
         };
 
         if (Helper.isEmpty(jewelInfo)) {
-            return [(
-                <div key={'jewelName_' + equipType + '_' + slotIndex} className="col-3">
+            return (
+                <Fragment key={`${equipType}:${slotIndex}`}>
+                    <div className="col-3">
+                        <div className="mhwc-name">
+                            <span>{_('slot')}: {slotIndex + 1} [{slotSize}]</span>
+                        </div>
+                    </div>
+                    <div className="col-9">
+                        <div className="mhwc-value">
+                            <div className="mhwc-icons_bundle">
+                                <FunctionalButton
+                                    iconName="plus" altName={_('add')}
+                                    onClick={() => {handleEquipSwitch(selectorData)}} />
+                            </div>
+                        </div>
+                    </div>
+                </Fragment>
+            );
+        }
+
+        return (
+            <Fragment key={`${equipType}:${slotIndex}`}>
+                <div className="col-3">
                     <div className="mhwc-name">
                         <span>{_('slot')}: {slotIndex + 1} [{slotSize}]</span>
                     </div>
                 </div>
-            ), (
-                <div key={'jewelValue_' + equipType + '_' + slotIndex} className="col-9">
+                <div className="col-9">
                     <div className="mhwc-value">
+                        <span>[{jewelInfo.size}] {_(jewelInfo.name)}</span>
                         <div className="mhwc-icons_bundle">
                             <FunctionalButton
-                                iconName="plus" altName={_('add')}
+                                iconName="exchange" altName={_('change')}
                                 onClick={() => {handleEquipSwitch(selectorData)}} />
+                            <FunctionalButton
+                                iconName="times" altName={_('clean')}
+                                onClick={() => {handleEquipEmpty(emptySelectorData)}} />
                         </div>
                     </div>
                 </div>
-            )];
-        }
-
-        return [(
-            <div key={'jewelName_' + equipType + '_' + slotIndex} className="col-3">
-                <div className="mhwc-name">
-                    <span>{_('slot')}: {slotIndex + 1} [{slotSize}]</span>
-                </div>
-            </div>
-        ), (
-            <div key={'jewelValue_' + equipType + '_' + slotIndex} className="col-9">
-                <div className="mhwc-value">
-                    <span>[{jewelInfo.size}] {_(jewelInfo.name)}</span>
-                    <div className="mhwc-icons_bundle">
-                        <FunctionalButton
-                            iconName="exchange" altName={_('change')}
-                            onClick={() => {handleEquipSwitch(selectorData)}} />
-                        <FunctionalButton
-                            iconName="times" altName={_('clean')}
-                            onClick={() => {handleEquipEmpty(emptySelectorData)}} />
-                    </div>
-                </div>
-            </div>
-        )];
+            </Fragment>
+        );
     };
 
     let renderWeaponProperties = (equipInfo) => {
@@ -210,20 +215,21 @@ export default function EquipsDisplayer(props) {
                 </div>
                 <div className="col-12">
                     <div className="mhwc-content">
-                        {(Helper.isNotEmpty(equipInfo.sharpness)) ? [(
-                            <div key={'sharpness_1'} className="col-3">
-                                <div className="mhwc-name">
-                                    <span>{_('sharpness')}</span>
+                        {Helper.isNotEmpty(equipInfo.sharpness) ? (
+                            <Fragment>
+                                <div className="col-3">
+                                    <div className="mhwc-name">
+                                        <span>{_('sharpness')}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        ), (
-                            <div key={'sharpness_2'} className="col-9">
-                                <div className="mhwc-value mhwc-sharpness">
-                                    <SharpnessBar data={originalSharpness} />
-                                    <SharpnessBar data={enhancedSharpness} />
+                                <div className="col-9">
+                                    <div className="mhwc-value mhwc-sharpness">
+                                        <SharpnessBar data={originalSharpness} />
+                                        <SharpnessBar data={enhancedSharpness} />
+                                    </div>
                                 </div>
-                            </div>
-                        )] : false}
+                            </Fragment>
+                        ) : false}
 
                         <div className="col-3">
                             <div className="mhwc-name">
@@ -249,57 +255,60 @@ export default function EquipsDisplayer(props) {
 
                         {(Helper.isNotEmpty(equipInfo.element)
                             && Helper.isNotEmpty(equipInfo.element.attack))
-                        ? [(
-                            <div key={'attackElement_1'} className="col-3">
-                                <div className="mhwc-name">
-                                    <span>{_('element')}: {_(equipInfo.element.attack.type)}</span>
+                        ? (
+                            <Fragment>
+                                <div className="col-3">
+                                    <div className="mhwc-name">
+                                        <span>{_('element')}: {_(equipInfo.element.attack.type)}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        ), (
-                            <div key={'attackElement_2'} className="col-3">
-                                <div className="mhwc-value">
-                                    {equipInfo.element.attack.isHidden ? (
-                                        <span>({equipInfo.element.attack.value})</span>
-                                    ) : (
-                                        <span>{equipInfo.element.attack.value}</span>
-                                    )}
+                                <div className="col-3">
+                                    <div className="mhwc-value">
+                                        {equipInfo.element.attack.isHidden ? (
+                                            <span>({equipInfo.element.attack.value})</span>
+                                        ) : (
+                                            <span>{equipInfo.element.attack.value}</span>
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
-                        )] : false}
+                            </Fragment>
+                        ) : false}
 
                         {(Helper.isNotEmpty(equipInfo.element)
                             && Helper.isNotEmpty(equipInfo.element.status))
-                        ? [(
-                            <div key={'statusElement_1'} className="col-3">
-                                <div className="mhwc-name">
-                                    <span>{_('element')}: {_(equipInfo.element.status.type)}</span>
+                        ? (
+                            <Fragment>
+                                <div className="col-3">
+                                    <div className="mhwc-name">
+                                        <span>{_('element')}: {_(equipInfo.element.status.type)}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        ), (
-                            <div key={'statusElement_2'} className="col-3">
-                                <div className="mhwc-value">
-                                    {equipInfo.element.status.isHidden ? (
-                                        <span>({equipInfo.element.status.value})</span>
-                                    ) : (
-                                        <span>{equipInfo.element.status.value}</span>
-                                    )}
+                                <div className="col-3">
+                                    <div className="mhwc-value">
+                                        {equipInfo.element.status.isHidden ? (
+                                            <span>({equipInfo.element.status.value})</span>
+                                        ) : (
+                                            <span>{equipInfo.element.status.value}</span>
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
-                        )] : false}
+                            </Fragment>
+                        ) : false}
 
-                        {(Helper.isNotEmpty(equipInfo.elderseal)) ? [(
-                            <div key={'elderseal_1'} className="col-3">
-                                <div className="mhwc-name">
-                                    <span>{_('elderseal')}</span>
+                        {(Helper.isNotEmpty(equipInfo.elderseal)) ? (
+                            <Fragment>
+                                <div className="col-3">
+                                    <div className="mhwc-name">
+                                        <span>{_('elderseal')}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        ), (
-                            <div key={'elderseal_2'} className="col-3">
-                                <div className="mhwc-value">
-                                    <span>{_(equipInfo.elderseal.affinity)}</span>
+                                <div className="col-3">
+                                    <div className="mhwc-value">
+                                        <span>{_(equipInfo.elderseal.affinity)}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        )] : false}
+                            </Fragment>
+                        ) : false}
 
                         <div className="col-3">
                             <div className="mhwc-name">
@@ -339,19 +348,20 @@ export default function EquipsDisplayer(props) {
                         </div>
 
                         {Constant.resistances.map((resistanceType) => {
-                            return [(
-                                <div key={resistanceType + '_1'} className="col-3">
-                                    <div className="mhwc-name">
-                                        <span>{_('resistance')}: {_(resistanceType)}</span>
+                            return (
+                                <Fragment key={resistanceType}>
+                                    <div className="col-3">
+                                        <div className="mhwc-name">
+                                            <span>{_('resistance')}: {_(resistanceType)}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            ),(
-                                <div key={resistanceType + '_2'} className="col-3">
-                                    <div className="mhwc-value">
-                                        <span>{equipInfo.resistance[resistanceType]}</span>
+                                    <div className="col-3">
+                                        <div className="mhwc-value">
+                                            <span>{equipInfo.resistance[resistanceType]}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            )];
+                                </Fragment>
+                            );
                         })}
                     </div>
                 </div>
@@ -372,7 +382,7 @@ export default function EquipsDisplayer(props) {
 
         if (Helper.isEmpty(equipInfo)) {
             return (
-                <div key={'equip_' + equipType} className="mhwc-item">
+                <div key={equipType} className="mhwc-item">
                     <div className="col-12">
                         <div className="mhwc-name">
                             <span>{_(equipType)}</span>
@@ -391,7 +401,7 @@ export default function EquipsDisplayer(props) {
             ? SetDataset.getInfo(equipInfo.set.id) : null;
 
         return (
-            <div key={'equip_' + equipType} className="mhwc-item">
+            <div key={equipType} className="mhwc-item">
                 <div className="col-12">
                     <div className="mhwc-name">
                         <span>{_(equipType)}: {_(equipInfo.name)}</span>

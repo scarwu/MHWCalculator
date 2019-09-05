@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect, useRef, createRef } from 'react';
+import React, { Fragment, useState, useEffect, useRef, createRef } from 'react';
 import MD5 from 'md5';
 
 // Load Core Libraries
@@ -163,19 +163,20 @@ export default function EquipBundleSelector(props) {
                                 equipInfo = CharmDataset.getInfo(stateCurrentEquips[equipType].id);
                             }
 
-                            return Helper.isNotEmpty(equipInfo) ? [(
-                                <div key={`${equipType}_1`} className="col-2">
-                                    <div className="mhwc-name">
-                                        <span>{_(equipType)}</span>
+                            return Helper.isNotEmpty(equipInfo) ? (
+                                <Fragment>
+                                    <div className="col-2">
+                                        <div className="mhwc-name">
+                                            <span>{_(equipType)}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            ), (
-                                <div key={`${equipType}_2`} className="col-4">
-                                    <div className="mhwc-value">
-                                        <span>{_(equipInfo.name)}</span>
+                                    <div className="col-4">
+                                        <div className="mhwc-value">
+                                            <span>{_(equipInfo.name)}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            )] : false;
+                                </Fragment>
+                            ) : false;
                         })}
                     </div>
                 </div>
@@ -225,19 +226,20 @@ export default function EquipBundleSelector(props) {
                                 equipInfo = CharmDataset.getInfo(data.equips[equipType].id);
                             }
 
-                            return Helper.isNotEmpty(equipInfo) ? [(
-                                <div key={`${equipType}_1`} className="col-2">
-                                    <div className="mhwc-name">
-                                        <span>{_(equipType)}</span>
+                            return Helper.isNotEmpty(equipInfo) ? (
+                                <Fragment>
+                                    <div className="col-2">
+                                        <div className="mhwc-name">
+                                            <span>{_(equipType)}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            ), (
-                                <div key={`${equipType}_2`} className="col-4">
-                                    <div className="mhwc-value">
-                                        <span>{_(equipInfo.name)}</span>
+                                    <div className="col-4">
+                                        <div className="mhwc-value">
+                                            <span>{_(equipInfo.name)}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            )] : false;
+                                </Fragment>
+                            ) : false;
                         })}
                     </div>
                 </div>

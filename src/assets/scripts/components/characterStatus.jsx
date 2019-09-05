@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect, useRef } from 'react';
+import React, { Fragment, useState, useEffect, useRef } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -621,7 +621,7 @@ export default function CharacterStatus(props) {
             </div>
 
             <div className="mhwc-list">
-                <div key="normal" className="row mhwc-item mhwc-normal">
+                <div className="row mhwc-item mhwc-normal">
                     <div className="col-12 mhwc-name">
                         <span>{_('general')}</span>
                     </div>
@@ -652,26 +652,27 @@ export default function CharacterStatus(props) {
                     </div>
                 </div>
 
-                <div key="attack" className="row mhwc-item mhwc-attack">
+                <div className="row mhwc-item mhwc-attack">
                     <div className="col-12 mhwc-name">
                         <span>{_('attackProperty')}</span>
                     </div>
                     <div className="col-12 mhwc-value">
                         <div className="row">
-                            {(Helper.isNotEmpty(status.sharpness)) ? [(
-                                <div key={'sharpness_1'} className="col-3">
-                                    <div className="mhwc-name">
-                                        <span>{_('sharpness')}</span>
+                            {Helper.isNotEmpty(status.sharpness) ? (
+                                <Fragment>
+                                    <div className="col-3">
+                                        <div className="mhwc-name">
+                                            <span>{_('sharpness')}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            ), (
-                                <div key={'sharpness_2'} className="col-9">
-                                    <div className="mhwc-value mhwc-sharpness">
-                                        <SharpnessBar data={originalSharpness} />
-                                        <SharpnessBar data={status.sharpness} />
+                                    <div className="col-9">
+                                        <div className="mhwc-value mhwc-sharpness">
+                                            <SharpnessBar data={originalSharpness} />
+                                            <SharpnessBar data={status.sharpness} />
+                                        </div>
                                     </div>
-                                </div>
-                            )] : false}
+                                </Fragment>
+                            ) : false}
 
                             <div className="col-3">
                                 <div className="mhwc-name">
@@ -712,62 +713,65 @@ export default function CharacterStatus(props) {
 
                             {(Helper.isNotEmpty(status.element)
                                 && Helper.isNotEmpty(status.element.attack)
-                            ) ? [(
-                                <div key={'attackElement_1'} className="col-3">
-                                    <div className="mhwc-name">
-                                        <span>{_('element')}: {_(status.element.attack.type)}</span>
+                            ) ? (
+                                <Fragment>
+                                    <div className="col-3">
+                                        <div className="mhwc-name">
+                                            <span>{_('element')}: {_(status.element.attack.type)}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            ), (
-                                <div key={'attackElement_2'} className="col-3">
-                                    <div className="mhwc-value">
-                                        {status.element.attack.isHidden ? (
-                                            <span>({status.element.attack.value})</span>
-                                        ) : (
-                                            <span>{status.element.attack.value}</span>
-                                        )}
+                                    <div className="col-3">
+                                        <div className="mhwc-value">
+                                            {status.element.attack.isHidden ? (
+                                                <span>({status.element.attack.value})</span>
+                                            ) : (
+                                                <span>{status.element.attack.value}</span>
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
-                            )] : false}
+                                </Fragment>
+                            ) : false}
 
                             {(Helper.isNotEmpty(status.element)
                                 && Helper.isNotEmpty(status.element.status)
-                            ) ? [(
-                                <div key={'statusEelement_1'} className="col-3">
-                                    <div className="mhwc-name">
-                                        <span>{_('element')}: {_(status.element.status.type)}</span>
+                            ) ? (
+                                <Fragment>
+                                    <div className="col-3">
+                                        <div className="mhwc-name">
+                                            <span>{_('element')}: {_(status.element.status.type)}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            ), (
-                                <div key={'statusEelement_2'} className="col-3">
-                                    <div className="mhwc-value">
-                                        {status.element.status.isHidden ? (
-                                            <span>({status.element.status.value})</span>
-                                        ) : (
-                                            <span>{status.element.status.value}</span>
-                                        )}
+                                    <div className="col-3">
+                                        <div className="mhwc-value">
+                                            {status.element.status.isHidden ? (
+                                                <span>({status.element.status.value})</span>
+                                            ) : (
+                                                <span>{status.element.status.value}</span>
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
-                            )] : false}
+                                </Fragment>
+                            ) : false}
 
-                            {(Helper.isNotEmpty(status.elderseal)) ? [(
-                                <div key={'elderseal_1'} className="col-3">
-                                    <div className="mhwc-name">
-                                        <span>{_('elderseal')}</span>
+                            {(Helper.isNotEmpty(status.elderseal)) ? (
+                                <Fragment>
+                                    <div className="col-3">
+                                        <div className="mhwc-name">
+                                            <span>{_('elderseal')}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            ), (
-                                <div key={'elderseal_2'} className="col-3">
-                                    <div className="mhwc-value">
-                                        <span>{_(status.elderseal.affinity)}</span>
+                                    <div className="col-3">
+                                        <div className="mhwc-value">
+                                            <span>{_(status.elderseal.affinity)}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            )] : false}
+                                </Fragment>
+                            ) : false}
                         </div>
                     </div>
                 </div>
 
-                <div key="defense" className="row mhwc-item mhwc-defense">
+                <div className="row mhwc-item mhwc-defense">
                     <div className="col-12 mhwc-name">
                         <span>{_('defenseProperty')}</span>
                     </div>
@@ -785,26 +789,27 @@ export default function CharacterStatus(props) {
                             </div>
 
                             {Constant.resistances.map((elementType) => {
-                                return [(
-                                    <div key={elementType + '_1'} className="col-3">
-                                        <div className="mhwc-name">
-                                            <span>{_('resistance')}: {_(elementType)}</span>
+                                return (
+                                    <Fragment key={elementType}>
+                                        <div className="col-3">
+                                            <div className="mhwc-name">
+                                                <span>{_('resistance')}: {_(elementType)}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                ),(
-                                    <div key={elementType + '_2'} className="col-3">
-                                        <div className="mhwc-value">
-                                            <span>{status.resistance[elementType]}</span>
+                                        <div className="col-3">
+                                            <div className="mhwc-value">
+                                                <span>{status.resistance[elementType]}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                )];
+                                    </Fragment>
+                                );
                             })}
                         </div>
                     </div>
                 </div>
 
                 {(0 !== status.sets.length) ? (
-                    <div key="sets" className="row mhwc-item mhwc-sets">
+                    <div className="row mhwc-item mhwc-sets">
                         <div className="col-12 mhwc-name">
                             <span>{_('set')}</span>
                         </div>
@@ -816,7 +821,7 @@ export default function CharacterStatus(props) {
                                 return (Helper.isNotEmpty(setInfo)
                                     && Helper.isNotEmpty(skillInfo))
                                 ? (
-                                    <div key={`${index}_${data.id}`} className="row mhwc-set">
+                                    <div key={`${index}:${data.id}`} className="row mhwc-set">
                                         <div className="col-12 mhwc-name">
                                             <span>{_(setInfo.name)} ({data.require})</span>
                                         </div>
@@ -831,7 +836,7 @@ export default function CharacterStatus(props) {
                 ) : false}
 
                 {(0 !== status.skills.length) ? (
-                    <div key="skills" className="row mhwc-item mhwc-skills">
+                    <div className="row mhwc-item mhwc-skills">
                         <div className="col-12 mhwc-name">
                             <span>{_('skill')}</span>
                         </div>
@@ -865,7 +870,7 @@ export default function CharacterStatus(props) {
                     </div>
                 ) : false}
 
-                <div key="extraInfo" className="row mhwc-item mhwc-extra_info">
+                <div className="row mhwc-item mhwc-extra_info">
                     <div className="col-12 mhwc-name">
                         <span>{_('extraInfo')}</span>
                     </div>

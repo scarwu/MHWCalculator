@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -238,19 +238,20 @@ export default function CandidateBundles(props) {
                                     equipInfo = CharmDataset.getInfo(data.equips[equipType]);
                                 }
 
-                                return Helper.isNotEmpty(equipInfo) ? [(
-                                    <div key={`${equipType}_1`} className="col-2">
-                                        <div className="mhwc-name">
-                                            <span>{_(equipType)}</span>
+                                return Helper.isNotEmpty(equipInfo) ? (
+                                    <Fragment key={equipType}>
+                                        <div className="col-2">
+                                            <div className="mhwc-name">
+                                                <span>{_(equipType)}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                ), (
-                                    <div key={`${equipType}_2`} className="col-4">
-                                        <div className="mhwc-value">
-                                            <span>{_(equipInfo.name)}</span>
+                                        <div className="col-4">
+                                            <div className="mhwc-value">
+                                                <span>{_(equipInfo.name)}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                )] : false;
+                                    </Fragment>
+                                ) : false;
                             })}
                             </div>
                         </div>
