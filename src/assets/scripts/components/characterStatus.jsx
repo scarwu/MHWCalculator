@@ -801,7 +801,7 @@ export default function CharacterStatus(props) {
                                         <div className="col-12 mhwc-name">
                                             <span>{_(skillInfo.name)} Lv.{data.level}</span>
                                         </div>
-                                        <div className="col-12 mhwc-value">
+                                        <div className="col-12 mhwc-value mhwc-description">
                                             <span>{_(data.description)}</span>
 
                                             <div className="mhwc-icons_bundle">

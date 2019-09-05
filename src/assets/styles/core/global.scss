@@ -66,15 +66,18 @@
     background: linear-gradient(to right, $color1, $color2, $color3);
 }
 
+@mixin wrap {
+    display: block;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+}
+
 @mixin nowrap {
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
-    &:hover {
-        overflow: visible;
-    }
 }
 
 /**

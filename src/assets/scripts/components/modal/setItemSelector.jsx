@@ -174,7 +174,7 @@ export default function SetItemSelector(props) {
                                 <div className="col-12 mhwc-name">
                                     <span>({skill.require}) {_(skillInfo.name)} Lv.{skill.level}</span>
                                 </div>
-                                <div className="col-12 mhwc-value">
+                                <div className="col-12 mhwc-value mhwc-description">
                                     <span>{_(skillInfo.list[0].description)}</span>
                                 </div>
                             </Fragment>

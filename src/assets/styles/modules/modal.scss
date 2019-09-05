@@ -23,7 +23,7 @@
         right: 0;
         bottom: $footer-height;
         z-index: 200;
-        background-color: white;
+        background-color: #fff;
     }
 
     .mhwc-slim-modal {
@@ -37,7 +37,7 @@
         line-height: $panel-height;
         text-align: center;
         background-color: #666;
-        color: white;
+        color: #fff;
 
         .mhwc-title {
             @include font-size(1.6);
@@ -88,8 +88,12 @@
 
             background-color: #eee;
 
+            .mhwc-content {
+                background-color: #fff;
+            }
+
             .mhwc-value {
-                background-color: white;
+                background-color: #fff;
             }
         }
     }

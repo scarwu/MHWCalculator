@@ -425,7 +425,7 @@ export default function EquipItemSelector(props) {
                                     <div className="col-12 mhwc-name">
                                         <span>{_(skillInfo.name)} Lv.{data.level}</span>
                                     </div>
-                                    <div className="col-12 mhwc-value">
+                                    <div className="col-12 mhwc-value mhwc-description">
                                         <span>{_(skillInfo.list[data.level - 1].description)}</span>
                                     </div>
                                 </Fragment>
@@ -551,7 +551,7 @@ export default function EquipItemSelector(props) {
                                     <div className="col-12 mhwc-name">
                                         <span>{_(skillInfo.name)} Lv.{data.level}</span>
                                     </div>
-                                    <div className="col-12 mhwc-value">
+                                    <div className="col-12 mhwc-value mhwc-description">
                                         <span>{_(skillInfo.list[data.level - 1].description)}</span>
                                     </div>
                                 </Fragment>
@@ -611,7 +611,7 @@ export default function EquipItemSelector(props) {
                                     <div className="col-12 mhwc-name">
                                         <span>{_(skillInfo.name)} Lv.{data.level}</span>
                                     </div>
-                                    <div className="col-12 mhwc-value">
+                                    <div className="col-12 mhwc-value mhwc-description">
                                         <span>{_(skillInfo.list[data.level - 1].description)}</span>
                                     </div>
                                 </Fragment>
@@ -659,7 +659,7 @@ export default function EquipItemSelector(props) {
                         <div className="col-12 mhwc-name">
                             <span>{_(skillInfo.name)} Lv.{data.skill.level}</span>
                         </div>
-                        <div className="col-12 mhwc-value">
+                        <div className="col-12 mhwc-value mhwc-description">
                             <span>{_(skillInfo.list[0].description)}</span>
                         </div>
                     </div>
@@ -705,7 +705,7 @@ export default function EquipItemSelector(props) {
                                     <div className="col-2 mhwc-name">
                                         <span>Lv.{skill.level}</span>
                                     </div>
-                                    <div className="col-10 mhwc-value">
+                                    <div className="col-10 mhwc-value mhwc-description">
                                         <span>{_(skill.description)}</span>
                                     </div>
                                 </Fragment>

@@ -18,7 +18,7 @@
         color: #ccc;
 
         &:hover {
-            color: white;
+            color: #fff;
         }
 
         h1 {
@@ -69,7 +69,7 @@
             line-height: $panel-height;
             text-align: center;
             background-color: #666;
-            color: white;
+            color: #fff;
 
             .mhwc-title {
                 @include font-size(1.6);
@@ -111,7 +111,7 @@
             bottom: 0;
             z-index: 100;
             background-color: rgba(0, 0, 0, 0.5);
-            color: white;
+            color: #fff;
             line-height: 100vh;
             text-align: center;
 
@@ -125,16 +125,17 @@
             background-color: #eee;
 
             .mhwc-content {
-                background-color: white;
+                background-color: #fff;
             }
 
             .mhwc-value {
-                background-color: white;
+                background-color: #fff;
             }
         }
 
         .mhwc-extra_info {
             .mhwc-tuning {
+                margin: 0 5px;
                 padding: 0 5px;
                 height: 21px;
                 width: 50px;
@@ -155,12 +156,12 @@
                 background-color: #eee;
 
                 .mhwc-content {
-                    background-color: white;
+                    background-color: #fff;
                 }
             }
 
             .mhwc-value {
-                background-color: white;
+                background-color: #fff;
             }
         }
     }
@@ -191,7 +192,7 @@
             color: #ccc;
 
             &:hover {
-                color: white;
+                color: #fff;
             }
         }
     }

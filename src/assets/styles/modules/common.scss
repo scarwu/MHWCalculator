@@ -157,8 +157,15 @@
 
 .mhwc-item {
     margin: 0 5px 10px 5px;
-    padding: 5px;
+    padding: 0 2.5px 5px 2.5px;
     border: 1px solid #999;
+
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            flex-basis: calc(100% / 12 * #{$i} - 5px);
+            max-width: calc(100% / 12 * #{$i} - 5px);
+        }
+    }
 
     @include border-radius(5px);
 
@@ -176,18 +183,22 @@
     }
 
     .mhwc-name {
+        margin: 5px 2.5px 0 2.5px;
         padding: 5px;
     }
 
     .mhwc-content {
-        padding: 5px;
         display: flex;
         flex-wrap: wrap;
+        margin: 5px 2.5px 0 2.5px;
+        padding: 0 2.5px 5px 2.5px;
     }
 
     .mhwc-value {
+        margin: 5px 2.5px 0 2.5px;
         padding: 5px;
-        // @include nowrap();
+
+        @include nowrap();
     }
 
     .mhwc-icons_bundle {
@@ -204,15 +215,7 @@
         }
     }
 
-    .mhwc-name {
-        border: 1px solid #FF0000;
-    }
-
-    .mhwc-content {
-        border: 1px solid #00FF00;
-    }
-
-    .mhwc-value {
-        border: 1px solid #0000FF;
+    .mhwc-description {
+        @include wrap();
     }
 }

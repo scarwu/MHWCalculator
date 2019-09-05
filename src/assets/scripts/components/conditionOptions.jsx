@@ -123,7 +123,7 @@ export default function ConditionOptions(props) {
                                 onClick={() => {CommonStates.setters.removeRequiredSkillByIndex(index)}} />
                         </div>
                     </div>
-                    <div className="col-12 mhwc-value">
+                    <div className="col-12 mhwc-value mhwc-description">
                         <span>
                             {(0 !== data.level)
                                 ? _(skillInfo.list[data.level - 1].description)
