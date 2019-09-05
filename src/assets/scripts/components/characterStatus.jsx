@@ -771,7 +771,7 @@ export default function CharacterStatus(props) {
                                 return (Helper.isNotEmpty(setInfo)
                                     && Helper.isNotEmpty(skillInfo))
                                 ? (
-                                    <Fragment key={`${index}:${data.id}`} className="mhwc-set">
+                                    <Fragment key={`${index}:${data.id}`}>
                                         <div className="col-12 mhwc-name">
                                             <span>{_(setInfo.name)} ({data.require})</span>
                                         </div>
