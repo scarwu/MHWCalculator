@@ -1,0 +1,236 @@
+/**
+ * Main Module
+ *
+ * @package     MHW Calculator
+ * @author      Scar Wu
+ * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @link        https://github.com/scarwu/MHWCalculator
+ */
+
+// Common Components
+.mhwc-functional_input,
+.mhwc-functional_selector,
+.mhwc-functional_button {
+    transition-property: background-color;
+    transition-duration: 0.1s;
+
+    position: relative;
+    display: inline-block;
+    margin-left: 2px;
+
+    @include font-size(1.2);
+
+    .mhwc-body {
+        display: block;
+        line-height: 20px;
+        text-align: center;
+        color: white;
+        background-color: #ccc;
+
+        @include border-radius(3px);
+
+        .mhwc-icon {
+            display: inline-block;
+            vertical-align: top;
+            width: 20px;
+            height: 20px;
+        }
+
+        .mhwc-select,
+        .mhwc-input {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 0;
+            padding: 0;
+            border: none;
+            height: 20px;
+            line-height: 20px;
+
+            @include border-radius(3px);
+        }
+
+        .mhwc-input {
+            padding: 0 5px;
+        }
+    }
+
+    .mhwc-label {
+        @include nowrap();
+
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 22px;
+        z-index: 3000;
+        padding: 0 5px;
+        border: 1px solid #999;
+        height: 20px;
+        line-height: 18px;
+        text-align: center;
+        color: #333;
+        background-color: white;
+        pointer-events: none;
+
+        @include border-radius(3px);
+    }
+
+    &:hover {
+        .mhwc-body {
+            background-color: #666;
+        }
+
+        .mhwc-label {
+            display: block;
+        }
+    }
+}
+
+.mhwc-sharpness_bar {
+    position: relative;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    @include font-size(0);
+
+    .mhwc-steps {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        .mhwc-step {
+            float: left;
+            display: block;
+            height: 100%;
+
+            &:nth-child(1) {
+                background-color: red;
+            }
+
+            &:nth-child(2) {
+                background-color: orange;
+            }
+
+            &:nth-child(3) {
+                background-color: yellow;
+            }
+
+            &:nth-child(4) {
+                background-color: green;
+            }
+
+            &:nth-child(5) {
+                background-color: blue;
+            }
+
+            &:nth-child(6) {
+                background-color: white;
+            }
+        }
+    }
+
+    .mhwc-mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: black;
+    }
+}
+
+.mhwc-list {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    // &::-webkit-scrollbar-thumb {
+    //     background: rgba(0, 0, 0, 0.1);
+    // }
+}
+
+.mhwc-item {
+    margin: 0 5px 10px 5px;
+    padding: 2.5px;
+    border: 1px solid #999;
+
+    @include border-radius(5px);
+
+    .mhwc-name,
+    .mhwc-content,
+    .mhwc-value,
+    .col-12, .col-8, .col-4, .col-3, .col-2 {
+        overflow: hidden;
+    }
+
+    .mhwc-name,
+    .mhwc-content {
+        margin: 2.5px;
+        padding: 2.5px;
+    }
+
+    .mhwc-content,
+    .mhwc-value {
+        border: 1px solid #999;
+
+        @include border-radius(5px);
+    }
+
+    .mhwc-name {
+        margin: 2.5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .mhwc-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .mhwc-value {
+        margin: 2.5px;
+        padding: 5px;
+
+        // @include nowrap();
+    }
+
+    .mhwc-icons_bundle {
+        float: right;
+    }
+
+    .mhwc-sharpness {
+        .mhwc-sharpness_bar {
+            height: 11px;
+        }
+
+        .mhwc-sharpness_bar:nth-child(2) {
+            margin-top: -1px;
+        }
+    }
+
+    .mhwc-name {
+        border: 3px solid red;
+    }
+
+    .mhwc-content {
+        border: 3px solid yellow;
+    }
+
+    .mhwc-value {
+        border: 3px solid blue;
+    }
+
+    .row {
+        border: 3px solid green;
+    }
+
+    .col-12 {
+        border: 3px solid black;
+    }
+}

@@ -1,0 +1,199 @@
+/**
+ * Main Module
+ *
+ * @package     MHW Calculator
+ * @author      Scar Wu
+ * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @link        https://github.com/scarwu/MHWCalculator
+ */
+
+.mhwc-header {
+    position: relative;
+    padding: 0 10px;
+    height: $header-height;
+    background-color: #333;
+
+    .mhwc-title {
+        margin: 0 auto;
+        color: #ccc;
+
+        &:hover {
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            line-height: $header-height;
+            font-weight: bold;
+
+            @include font-size(2.4);
+        }
+    }
+
+    .mhwc-icons_bundle {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        height: $header-height;
+        line-height: $header-height;
+
+        .mhwc-functional_selector,
+        .mhwc-functional_button {
+            .mhwc-body {
+                background-color: #999;
+            }
+
+            &:hover {
+                .mhwc-body {
+                    background-color: #666;
+                }
+            }
+        }
+    }
+}
+
+.mhwc-container {
+    height: calc(100vh - (#{$header-height} + #{$footer-height}));
+
+    > .mhwc-conditions,
+    > .mhwc-bundles,
+    > .mhwc-equips,
+    > .mhwc-status {
+        position: relative;
+        height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
+
+        .mhwc-section_name {
+            position: relative;
+            height: $section_name-height;
+            line-height: $section_name-height;
+            text-align: center;
+            background-color: #666;
+            color: white;
+
+            .mhwc-title {
+                @include font-size(1.6);
+            }
+
+            .mhwc-icons_bundle {
+                position: absolute;
+                top: 0;
+                right: 10px;
+                height: $section_name-height;
+                line-height: $section_name-height;
+
+                .mhwc-functional_button {
+                    .mhwc-body {
+                        background-color: #999;
+                    }
+
+                    &:hover {
+                        .mhwc-body {
+                            background-color: #333;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mhwc-list {
+            height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$section_name-height}));
+            padding-top: 5px;
+        }
+    }
+
+    > .mhwc-bundles {
+        .mhwc-loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            line-height: 100vh;
+            text-align: center;
+
+            @include font-size(6);
+        }
+    }
+
+    > .mhwc-conditions,
+    > .mhwc-status {
+        .mhwc-item {
+            background-color: #eee;
+
+            .mhwc-content {
+                background-color: white;
+            }
+
+            .mhwc-value {
+                background-color: white;
+            }
+        }
+
+        .mhwc-extra_info {
+            .mhwc-tuning {
+                margin: 5px;
+                padding: 0 5px;
+                height: 21px;
+                width: 50px;
+                line-height: 21px;
+                border: 1px solid #333;
+
+                @include border-radius(5px);
+            }
+        }
+    }
+
+    > .mhwc-bundles,
+    > .mhwc-equips {
+        .mhwc-item {
+            background-color: #ccc;
+
+            .mhwc-content {
+                background-color: #eee;
+
+                .mhwc-content {
+                    background-color: white;
+                }
+            }
+
+            .mhwc-value {
+                background-color: white;
+            }
+        }
+    }
+}
+
+.mhwc-footer {
+    padding: 0 10px;
+    height: $footer-height;
+    background-color: #333;
+    color: #ccc;
+
+    > div:nth-child(1) {
+        margin: 0 auto;
+        padding-top: 5px;
+        text-align: center;
+
+        @include font-size(1.4);
+    }
+
+    > div:nth-child(2) {
+        margin: 0 auto;
+        padding-bottom: 5px;
+        text-align: center;
+
+        @include font-size(1.2);
+
+        a {
+            color: #ccc;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}

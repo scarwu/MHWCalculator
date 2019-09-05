@@ -18,15 +18,26 @@ $grid-gutter-width: 0;
 /**
  * Load Specify Styles
  */
-@import "component/common";
-@import "component/desktop";
-@import "component/mobile";
+@import "core/global";
+@import "core/desktop";
+@import "core/mobile";
 
 /**
  * Module & Option Style
  */
 #mhwc {
     position: relative;
+    height: 100vh;
 
-    @import "module/app";
+    @include font-size(1.4);
+
+    // Variables
+    $header-height: 60px;
+    $footer-height: 50px;
+    $section_name-height: 40px;
+    $panel-height: 40px;
+
+    @import "modules/common";
+    @import "modules/app";
+    @import "modules/modal";
 }

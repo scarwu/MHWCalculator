@@ -1,0 +1,96 @@
+/**
+ * Main Module
+ *
+ * @package     MHW Calculator
+ * @author      Scar Wu
+ * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @link        https://github.com/scarwu/MHWCalculator
+ */
+
+.mhwc-selector {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .mhwc-modal {
+        position: absolute;
+        top: $header-height;
+        left: 0;
+        right: 0;
+        bottom: $footer-height;
+        z-index: 200;
+        background-color: white;
+    }
+
+    .mhwc-slim-modal {
+        left: 30%;
+        right: 30%;
+    }
+
+    .mhwc-panel {
+        position: relative;
+        height: $section_name-height;
+        line-height: $section_name-height;
+        text-align: center;
+        background-color: #666;
+        color: white;
+
+        .mhwc-title {
+            @include font-size(1.6);
+        }
+
+        .mhwc-icons_bundle {
+            position: absolute;
+            top: 0;
+            right: 10px;
+
+            .mhwc-functional_input,
+            .mhwc-functional_selector,
+            .mhwc-functional_button {
+                .mhwc-body {
+                    background-color: #999;
+                }
+
+                &:hover {
+                    .mhwc-body {
+                        background-color: #333;
+                    }
+                }
+            }
+        }
+    }
+
+    .mhwc-list {
+        position: absolute;
+        top: $panel-height;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 5px 0 10px 0;
+
+        .mhwc-article {
+            padding: 0 5px ;
+        }
+
+        .mhwc-wrapper {
+            column-count: 4;
+            column-gap: 0;
+        }
+
+        .mhwc-item {
+            width: calc(100% - 10px);
+            height:100%;
+            overflow: auto;
+
+            background-color: #eee;
+
+            .mhwc-value {
+                background-color: white;
+            }
+        }
+    }
+}
