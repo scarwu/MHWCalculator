@@ -235,3 +235,31 @@
         }
     }
 }
+
+.mhwc-item-2-step {
+    background-color: #eee;
+
+    .mhwc-content {
+        background-color: #fff;
+    }
+
+    .mhwc-value {
+        background-color: #fff;
+    }
+}
+
+.mhwc-item-3-step {
+    background-color: #ccc;
+
+    .mhwc-content {
+        background-color: #eee;
+
+        .mhwc-content {
+            background-color: #fff;
+        }
+    }
+
+    .mhwc-value {
+        background-color: #fff;
+    }
+}

@@ -130,7 +130,7 @@ export default function EquipBundleSelector(props) {
         }
 
         return (
-            <div className="mhwc-item mhwc-item-bundle">
+            <div className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
                     <input className="mhwc-input" type="text" placeholder={_('inputName')} ref={refName} />
 
@@ -180,7 +180,7 @@ export default function EquipBundleSelector(props) {
 
     let renderItem = (data, index) => {
         return (
-            <div key={data.id} className="mhwc-item mhwc-item-bundle">
+            <div key={data.id} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
                     <input type="text" placeholder={_('inputName')} ref={refNameList.current[index]} defaultValue={data.name} />
 

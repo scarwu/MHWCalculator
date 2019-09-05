@@ -118,40 +118,6 @@
             @include font-size(6);
         }
     }
-
-    > .mhwc-conditions,
-    > .mhwc-status {
-        .mhwc-item {
-            background-color: #eee;
-
-            .mhwc-content {
-                background-color: #fff;
-            }
-
-            .mhwc-value {
-                background-color: #fff;
-            }
-        }
-    }
-
-    > .mhwc-bundles,
-    > .mhwc-equips {
-        .mhwc-item {
-            background-color: #ccc;
-
-            .mhwc-content {
-                background-color: #eee;
-
-                .mhwc-content {
-                    background-color: #fff;
-                }
-            }
-
-            .mhwc-value {
-                background-color: #fff;
-            }
-        }
-    }
 }
 
 .mhwc-footer {

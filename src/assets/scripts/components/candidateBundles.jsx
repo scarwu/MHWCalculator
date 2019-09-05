@@ -202,7 +202,7 @@ export default function CandidateBundles(props) {
 
         return stateComputedBundles.map((data, index) => {
             return (
-                <div key={index} className="mhwc-item">
+                <div key={index} className="mhwc-item mhwc-item-3-step">
                     <div className="col-12 mhwc-name">
                         <span>{_('bundle')}: {index + 1} / {totalBundle}</span>
                         <div className="mhwc-icons_bundle">

@@ -144,7 +144,7 @@ export default function SkillItemSelector(props) {
         }
 
         return (
-            <div key={data.id} className="mhwc-item mhwc-item-skill">
+            <div key={data.id} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
                     <span>{_(data.name)}</span>
 

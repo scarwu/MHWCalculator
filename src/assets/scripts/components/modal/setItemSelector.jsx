@@ -149,7 +149,7 @@ export default function SetItemSelector(props) {
         }
 
         return (
-            <div key={data.id} className="mhwc-item mhwc-item-set">
+            <div key={data.id} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
                     <span>{_(data.name)}</span>
 

@@ -322,7 +322,7 @@ export default function EquipsDisplayer(props) {
 
         if (Helper.isEmpty(equipInfo)) {
             return (
-                <div key={equipType} className="mhwc-item">
+                <div key={equipType} className="mhwc-item mhwc-item-3-step">
                     <div className="col-12 mhwc-name">
                         <span>{_(equipType)}</span>
                         <div className="mhwc-icons_bundle">
@@ -339,7 +339,7 @@ export default function EquipsDisplayer(props) {
             ? SetDataset.getInfo(equipInfo.set.id) : null;
 
         return (
-            <div key={equipType} className="mhwc-item">
+            <div key={equipType} className="mhwc-item mhwc-item-3-step">
                 <div className="col-12 mhwc-name">
                     <span>{_(equipType)}: {_(equipInfo.name)}</span>
                     <div className="mhwc-icons_bundle">

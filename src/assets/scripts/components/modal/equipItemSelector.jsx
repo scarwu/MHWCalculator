@@ -313,7 +313,7 @@ export default function EquipItemSelector(props) {
             }
 
             return (
-                <div key={data.id} className="mhwc-item mhwc-item-weapon">
+                <div key={data.id} className="mhwc-item mhwc-item-2-step">
                     <div className="col-12 mhwc-name">
                         <span>{_(data.name)} (R{data.rare})</span>
 
@@ -478,7 +478,7 @@ export default function EquipItemSelector(props) {
             let setInfo = SetDataset.getInfo(data.set.id);
 
             return (
-                <div key={data.id} className="mhwc-item mhwc-item-armor">
+                <div key={data.id} className="mhwc-item mhwc-item-2-step">
                     <div className="col-12 mhwc-name">
                         <span>{_(data.name)} (R{data.rare})</span>
 
@@ -585,7 +585,7 @@ export default function EquipItemSelector(props) {
             }
 
             return (
-                <div key={data.id} className="mhwc-item mhwc-item-chram">
+                <div key={data.id} className="mhwc-item mhwc-item-2-step">
                     <div className="col-12 mhwc-name">
                         <span>{_(data.name)} (R{data.rare})</span>
 
@@ -643,7 +643,7 @@ export default function EquipItemSelector(props) {
             }
 
             return (
-                <div key={data.id} className="mhwc-item mhwc-item-jewel">
+                <div key={data.id} className="mhwc-item mhwc-item-2-step">
                     <div className="col-12 mhwc-name">
                         <span>[{data.size}] {_(data.name)} (R{data.rare})</span>
 
@@ -686,7 +686,7 @@ export default function EquipItemSelector(props) {
             }
 
             return (
-                <div key={data.id} className="mhwc-item mhwc-item-enhance">
+                <div key={data.id} className="mhwc-item mhwc-item-2-step">
                     <div className="col-12 mhwc-name">
                         <span>{_(data.name)}</span>
 

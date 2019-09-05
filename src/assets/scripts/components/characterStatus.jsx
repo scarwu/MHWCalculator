@@ -621,7 +621,7 @@ export default function CharacterStatus(props) {
             </div>
 
             <div className="mhwc-list">
-                <div className="mhwc-item mhwc-normal">
+                <div className="mhwc-item mhwc-item-2-step">
                     <div className="col-12 mhwc-name">
                         <span>{_('general')}</span>
                     </div>
@@ -642,7 +642,7 @@ export default function CharacterStatus(props) {
                     </div>
                 </div>
 
-                <div className="mhwc-item mhwc-attack">
+                <div className="mhwc-item mhwc-item-2-step">
                     <div className="col-12 mhwc-name">
                         <span>{_('attackProperty')}</span>
                     </div>
@@ -731,7 +731,7 @@ export default function CharacterStatus(props) {
                     </div>
                 </div>
 
-                <div className="mhwc-item mhwc-defense">
+                <div className="mhwc-item mhwc-item-2-step">
                     <div className="col-12 mhwc-name">
                         <span>{_('defenseProperty')}</span>
                     </div>
@@ -759,7 +759,7 @@ export default function CharacterStatus(props) {
                 </div>
 
                 {(0 !== status.sets.length) ? (
-                    <div className="mhwc-item mhwc-sets">
+                    <div className="mhwc-item mhwc-item-2-step">
                         <div className="col-12 mhwc-name">
                             <span>{_('set')}</span>
                         </div>
@@ -786,7 +786,7 @@ export default function CharacterStatus(props) {
                 ) : false}
 
                 {(0 !== status.skills.length) ? (
-                    <div className="mhwc-item mhwc-skills">
+                    <div className="mhwc-item mhwc-item-2-step">
                         <div className="col-12 mhwc-name">
                             <span>{_('skill')}</span>
                         </div>
@@ -820,7 +820,7 @@ export default function CharacterStatus(props) {
                     </div>
                 ) : false}
 
-                <div className="mhwc-item mhwc-extra_info">
+                <div className="mhwc-item mhwc-item-2-step">
                     <div className="col-12 mhwc-name">
                         <span>{_('extraInfo')}</span>
                     </div>

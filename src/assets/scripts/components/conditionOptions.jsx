@@ -68,7 +68,7 @@ export default function ConditionOptions(props) {
             let setRequire = setInfo.skills[data.step - 1].require;
 
             return (
-                <div key={setInfo.id} className="mhwc-item">
+                <div key={setInfo.id} className="mhwc-item mhwc-item-2-step">
                     <div className="col-12 mhwc-name">
                         <span>{_(setInfo.name)} x {setRequire}</span>
                         <div className="mhwc-icons_bundle">
@@ -108,7 +108,7 @@ export default function ConditionOptions(props) {
             let skillInfo = SkillDataset.getInfo(data.id);
 
             return (Helper.isNotEmpty(skillInfo)) ? (
-                <div key={skillInfo.id} className="mhwc-item">
+                <div key={skillInfo.id} className="mhwc-item mhwc-item-2-step">
                     <div className="col-12 mhwc-name">
                         <span>{_(skillInfo.name)} Lv.{data.level} / {skillInfo.list.length}</span>
                         <div className="mhwc-icons_bundle">
