@@ -6,7 +6,7 @@
             "jaJP": "威嚇珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -22,7 +22,7 @@
             "jaJP": "威嚇珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -32,37 +32,37 @@
         ]
     },
     {
-        "id": "迴避珠II",
+        "id": "回避珠II",
         "name": {
             "zhTW": null,
-            "jaJP": "迴避珠II",
+            "jaJP": "回避珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 2
             }
         ]
     },
     {
-        "id": "解放・迴避珠",
+        "id": "解放・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "解放・迴避珠",
+            "jaJP": "解放・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -74,15 +74,15 @@
             "jaJP": "解放・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -94,11 +94,11 @@
             "jaJP": "解放・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             },
             {
@@ -108,41 +108,41 @@
         ]
     },
     {
-        "id": "解放・體術珠",
+        "id": "解放・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "解放・體術珠",
+            "jaJP": "解放・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "解放・體力珠",
+        "id": "解放・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "解放・體力珠",
+            "jaJP": "解放・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -154,15 +154,15 @@
             "jaJP": "解放・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -174,23 +174,23 @@
             "jaJP": "火炎珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "火屬性攻擊強化",
+                "id": "火属性攻撃強化",
                 "level": 2
             }
         ]
     },
     {
-        "id": "滑走・迴避珠",
+        "id": "滑走・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "滑走・迴避珠",
+            "jaJP": "滑走・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -198,7 +198,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -210,7 +210,7 @@
             "jaJP": "滑走・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -218,19 +218,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "滑走・體術珠",
+        "id": "滑走・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "滑走・體術珠",
+            "jaJP": "滑走・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -238,7 +238,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -250,7 +250,7 @@
             "jaJP": "滑走・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -270,7 +270,7 @@
             "jaJP": "滑走・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -278,19 +278,19 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
     },
     {
-        "id": "滑走・攻擊珠",
+        "id": "滑走・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "滑走・攻擊珠",
+            "jaJP": "滑走・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -298,7 +298,7 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
@@ -310,7 +310,7 @@
             "jaJP": "環境珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -326,7 +326,7 @@
             "jaJP": "環境珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -336,13 +336,13 @@
         ]
     },
     {
-        "id": "逆上・迴避珠",
+        "id": "逆上・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "逆上・迴避珠",
+            "jaJP": "逆上・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -350,7 +350,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -362,7 +362,7 @@
             "jaJP": "逆上・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -370,7 +370,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -382,7 +382,7 @@
             "jaJP": "逆上・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -396,13 +396,13 @@
         ]
     },
     {
-        "id": "逆上・體術珠",
+        "id": "逆上・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "逆上・體術珠",
+            "jaJP": "逆上・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -410,19 +410,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "逆上・體力珠",
+        "id": "逆上・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "逆上・體力珠",
+            "jaJP": "逆上・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -430,7 +430,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -442,7 +442,7 @@
             "jaJP": "逆上・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -450,7 +450,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -462,7 +462,7 @@
             "jaJP": "逆上珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 2,
         "skills": [
             {
@@ -472,13 +472,13 @@
         ]
     },
     {
-        "id": "逆境・迴避珠",
+        "id": "逆境・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "逆境・迴避珠",
+            "jaJP": "逆境・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -486,7 +486,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -498,7 +498,7 @@
             "jaJP": "逆境・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -506,19 +506,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "逆境・攻擊珠",
+        "id": "逆境・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "逆境・攻擊珠",
+            "jaJP": "逆境・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -526,19 +526,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "逆境・體術珠",
+        "id": "逆境・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "逆境・體術珠",
+            "jaJP": "逆境・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -546,7 +546,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -558,7 +558,7 @@
             "jaJP": "逆境・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -578,7 +578,7 @@
             "jaJP": "逆境・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -586,19 +586,19 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
     },
     {
-        "id": "窮地・迴避珠",
+        "id": "窮地・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "窮地・迴避珠",
+            "jaJP": "窮地・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -606,7 +606,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -618,7 +618,7 @@
             "jaJP": "窮地・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -626,19 +626,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "窮地・攻擊珠",
+        "id": "窮地・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "窮地・攻擊珠",
+            "jaJP": "窮地・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -646,19 +646,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "窮地・體術珠",
+        "id": "窮地・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "窮地・體術珠",
+            "jaJP": "窮地・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -666,7 +666,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -678,7 +678,7 @@
             "jaJP": "窮地・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -698,7 +698,7 @@
             "jaJP": "窮地・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -706,19 +706,19 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
     },
     {
-        "id": "強走・迴避珠",
+        "id": "強走・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "強走・迴避珠",
+            "jaJP": "強走・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -726,7 +726,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -738,7 +738,7 @@
             "jaJP": "強走・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -746,19 +746,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "強走・攻擊珠",
+        "id": "強走・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "強走・攻擊珠",
+            "jaJP": "強走・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -766,19 +766,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "強走・體術珠",
+        "id": "強走・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "強走・體術珠",
+            "jaJP": "強走・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -786,7 +786,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -798,7 +798,7 @@
             "jaJP": "強走・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -818,7 +818,7 @@
             "jaJP": "強走・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -826,19 +826,19 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
     },
     {
-        "id": "KO・迴避珠",
+        "id": "KO・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "KO・迴避珠",
+            "jaJP": "KO・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -846,7 +846,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -858,7 +858,7 @@
             "jaJP": "KO・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -866,7 +866,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -878,7 +878,7 @@
             "jaJP": "KO・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -892,13 +892,13 @@
         ]
     },
     {
-        "id": "KO・體術珠",
+        "id": "KO・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "KO・體術珠",
+            "jaJP": "KO・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -906,19 +906,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "KO・體力珠",
+        "id": "KO・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "KO・體力珠",
+            "jaJP": "KO・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -926,7 +926,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -938,7 +938,7 @@
             "jaJP": "KO・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -946,19 +946,19 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
     },
     {
-        "id": "研磨・迴避珠",
+        "id": "研磨・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "研磨・迴避珠",
+            "jaJP": "研磨・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -966,7 +966,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -978,7 +978,7 @@
             "jaJP": "研磨・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -986,19 +986,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "研磨・攻擊珠",
+        "id": "研磨・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "研磨・攻擊珠",
+            "jaJP": "研磨・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1006,19 +1006,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "研磨・體術珠",
+        "id": "研磨・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "研磨・體術珠",
+            "jaJP": "研磨・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1026,7 +1026,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -1038,7 +1038,7 @@
             "jaJP": "研磨・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1058,7 +1058,7 @@
             "jaJP": "研磨・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1066,35 +1066,35 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
     },
     {
-        "id": "攻擊珠II",
+        "id": "攻撃珠II",
         "name": {
             "zhTW": null,
-            "jaJP": "攻擊珠II",
+            "jaJP": "攻撃珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 2
             }
         ]
     },
     {
-        "id": "昂揚・迴避珠",
+        "id": "昂揚・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "昂揚・迴避珠",
+            "jaJP": "昂揚・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1102,7 +1102,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -1114,7 +1114,7 @@
             "jaJP": "昂揚・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1122,7 +1122,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -1134,7 +1134,7 @@
             "jaJP": "昂揚・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1148,13 +1148,13 @@
         ]
     },
     {
-        "id": "昂揚・體術珠",
+        "id": "昂揚・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "昂揚・體術珠",
+            "jaJP": "昂揚・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1162,19 +1162,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "昂揚・體力珠",
+        "id": "昂揚・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "昂揚・體力珠",
+            "jaJP": "昂揚・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1182,7 +1182,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -1194,7 +1194,7 @@
             "jaJP": "昂揚・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1202,7 +1202,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -1214,7 +1214,7 @@
             "jaJP": "鼓笛珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 1,
         "skills": [
             {
@@ -1224,13 +1224,13 @@
         ]
     },
     {
-        "id": "渾身・迴避珠",
+        "id": "渾身・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "渾身・迴避珠",
+            "jaJP": "渾身・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1238,7 +1238,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -1250,7 +1250,7 @@
             "jaJP": "渾身・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1258,7 +1258,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -1270,7 +1270,7 @@
             "jaJP": "渾身・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1284,13 +1284,13 @@
         ]
     },
     {
-        "id": "渾身・體術珠",
+        "id": "渾身・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "渾身・體術珠",
+            "jaJP": "渾身・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1298,19 +1298,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "渾身・體力珠",
+        "id": "渾身・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "渾身・體力珠",
+            "jaJP": "渾身・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1318,7 +1318,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -1330,7 +1330,7 @@
             "jaJP": "渾身・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1338,7 +1338,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -1350,7 +1350,7 @@
             "jaJP": "采配珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1366,7 +1366,7 @@
             "jaJP": "采配珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1382,7 +1382,7 @@
             "jaJP": "持続珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1398,7 +1398,7 @@
             "jaJP": "持続珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1408,13 +1408,13 @@
         ]
     },
     {
-        "id": "重撃・迴避珠",
+        "id": "重撃・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "重撃・迴避珠",
+            "jaJP": "重撃・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1422,7 +1422,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -1434,7 +1434,7 @@
             "jaJP": "重撃・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1442,7 +1442,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -1454,7 +1454,7 @@
             "jaJP": "重撃・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1468,13 +1468,13 @@
         ]
     },
     {
-        "id": "重撃・體術珠",
+        "id": "重撃・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "重撃・體術珠",
+            "jaJP": "重撃・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1482,19 +1482,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "重撃・體力珠",
+        "id": "重撃・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "重撃・體力珠",
+            "jaJP": "重撃・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1502,7 +1502,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -1514,7 +1514,7 @@
             "jaJP": "重撃・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1522,19 +1522,19 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
     },
     {
-        "id": "守勢・迴避珠",
+        "id": "守勢・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "守勢・迴避珠",
+            "jaJP": "守勢・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1542,7 +1542,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -1554,7 +1554,7 @@
             "jaJP": "守勢・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1562,19 +1562,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "守勢・攻擊珠",
+        "id": "守勢・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "守勢・攻擊珠",
+            "jaJP": "守勢・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1582,19 +1582,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "守勢・體術珠",
+        "id": "守勢・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "守勢・體術珠",
+            "jaJP": "守勢・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1602,7 +1602,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -1614,7 +1614,7 @@
             "jaJP": "守勢・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1634,7 +1634,7 @@
             "jaJP": "守勢・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1642,7 +1642,7 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
@@ -1654,7 +1654,7 @@
             "jaJP": "守勢珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 2,
         "skills": [
             {
@@ -1670,7 +1670,7 @@
             "jaJP": "植学珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1686,7 +1686,7 @@
             "jaJP": "植学珠IV",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1702,23 +1702,23 @@
             "jaJP": "睡眠珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "睡眠屬性強化",
+                "id": "睡眠属性強化",
                 "level": 2
             }
         ]
     },
     {
-        "id": "節食・迴避珠",
+        "id": "節食・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "節食・迴避珠",
+            "jaJP": "節食・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1726,7 +1726,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -1738,7 +1738,7 @@
             "jaJP": "節食・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1746,19 +1746,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "節食・攻擊珠",
+        "id": "節食・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "節食・攻擊珠",
+            "jaJP": "節食・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1766,19 +1766,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "節食・體術珠",
+        "id": "節食・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "節食・體術珠",
+            "jaJP": "節食・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1786,7 +1786,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -1798,7 +1798,7 @@
             "jaJP": "節食・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1818,7 +1818,7 @@
             "jaJP": "節食・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1826,19 +1826,19 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
     },
     {
-        "id": "全開・迴避珠",
+        "id": "全開・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "全開・迴避珠",
+            "jaJP": "全開・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1846,7 +1846,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -1858,7 +1858,7 @@
             "jaJP": "全開・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1866,7 +1866,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -1878,7 +1878,7 @@
             "jaJP": "全開・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1892,13 +1892,13 @@
         ]
     },
     {
-        "id": "全開・體術珠",
+        "id": "全開・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "全開・體術珠",
+            "jaJP": "全開・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1906,19 +1906,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "全開・體力珠",
+        "id": "全開・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "全開・體力珠",
+            "jaJP": "全開・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1926,7 +1926,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -1938,7 +1938,7 @@
             "jaJP": "全開・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1946,7 +1946,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -1958,7 +1958,7 @@
             "jaJP": "潜伏珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1974,7 +1974,7 @@
             "jaJP": "潜伏珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1984,13 +1984,13 @@
         ]
     },
     {
-        "id": "早気・迴避珠",
+        "id": "早気・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "早気・迴避珠",
+            "jaJP": "早気・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -1998,7 +1998,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -2010,7 +2010,7 @@
             "jaJP": "早気・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2018,19 +2018,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "早気・攻擊珠",
+        "id": "早気・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "早気・攻擊珠",
+            "jaJP": "早気・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2038,19 +2038,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "早気・體術珠",
+        "id": "早気・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "早気・體術珠",
+            "jaJP": "早気・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2058,7 +2058,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -2070,7 +2070,7 @@
             "jaJP": "早気・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2090,7 +2090,7 @@
             "jaJP": "早気・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2098,19 +2098,19 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
     },
     {
-        "id": "早食・迴避珠",
+        "id": "早食・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "早食・迴避珠",
+            "jaJP": "早食・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2118,7 +2118,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -2130,7 +2130,7 @@
             "jaJP": "早食・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2138,19 +2138,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "早食・攻擊珠",
+        "id": "早食・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "早食・攻擊珠",
+            "jaJP": "早食・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2158,19 +2158,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "早食・體術珠",
+        "id": "早食・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "早食・體術珠",
+            "jaJP": "早食・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2178,7 +2178,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -2190,7 +2190,7 @@
             "jaJP": "早食・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2210,7 +2210,7 @@
             "jaJP": "早食・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2218,7 +2218,7 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
@@ -2230,7 +2230,7 @@
             "jaJP": "早復珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2240,21 +2240,21 @@
         ]
     },
     {
-        "id": "速納・迴避珠",
+        "id": "速納・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "速納・迴避珠",
+            "jaJP": "速納・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "收刀術",
+                "id": "納刀術",
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -2266,55 +2266,55 @@
             "jaJP": "速納・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "收刀術",
+                "id": "納刀術",
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "速納・攻擊珠",
+        "id": "速納・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "速納・攻擊珠",
+            "jaJP": "速納・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "收刀術",
+                "id": "納刀術",
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "速納・體術珠",
+        "id": "速納・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "速納・體術珠",
+            "jaJP": "速納・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "收刀術",
+                "id": "納刀術",
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -2326,11 +2326,11 @@
             "jaJP": "速納・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "收刀術",
+                "id": "納刀術",
                 "level": 1
             },
             {
@@ -2346,27 +2346,27 @@
             "jaJP": "速納・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "收刀術",
+                "id": "納刀術",
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
     },
     {
-        "id": "底力・迴避珠",
+        "id": "底力・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "底力・迴避珠",
+            "jaJP": "底力・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2374,7 +2374,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -2386,7 +2386,7 @@
             "jaJP": "底力・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2394,7 +2394,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -2406,7 +2406,7 @@
             "jaJP": "底力・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2420,13 +2420,13 @@
         ]
     },
     {
-        "id": "底力・體術珠",
+        "id": "底力・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "底力・體術珠",
+            "jaJP": "底力・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2434,19 +2434,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "底力・體力珠",
+        "id": "底力・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "底力・體力珠",
+            "jaJP": "底力・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2454,7 +2454,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -2466,7 +2466,7 @@
             "jaJP": "底力・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2474,7 +2474,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -2486,7 +2486,7 @@
             "jaJP": "底力珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2502,7 +2502,7 @@
             "jaJP": "耐火珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2518,7 +2518,7 @@
             "jaJP": "耐火珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2534,7 +2534,7 @@
             "jaJP": "耐寒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 2,
         "skills": [
             {
@@ -2544,29 +2544,29 @@
         ]
     },
     {
-        "id": "體術珠II",
+        "id": "体術珠II",
         "name": {
             "zhTW": null,
-            "jaJP": "體術珠II",
+            "jaJP": "体術珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 2
             }
         ]
     },
     {
-        "id": "耐衝・迴避珠",
+        "id": "耐衝・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "耐衝・迴避珠",
+            "jaJP": "耐衝・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2574,7 +2574,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -2586,7 +2586,7 @@
             "jaJP": "耐衝・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2594,7 +2594,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -2606,7 +2606,7 @@
             "jaJP": "耐衝・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2620,13 +2620,13 @@
         ]
     },
     {
-        "id": "耐衝・體術珠",
+        "id": "耐衝・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "耐衝・體術珠",
+            "jaJP": "耐衝・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2634,19 +2634,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "耐衝・體力珠",
+        "id": "耐衝・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "耐衝・體力珠",
+            "jaJP": "耐衝・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2654,7 +2654,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -2666,7 +2666,7 @@
             "jaJP": "耐衝・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2674,7 +2674,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -2686,7 +2686,7 @@
             "jaJP": "耐瘴珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2702,7 +2702,7 @@
             "jaJP": "耐暑珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 2,
         "skills": [
             {
@@ -2712,13 +2712,13 @@
         ]
     },
     {
-        "id": "耐震・迴避珠",
+        "id": "耐震・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "耐震・迴避珠",
+            "jaJP": "耐震・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2726,7 +2726,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -2738,7 +2738,7 @@
             "jaJP": "耐震・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2746,7 +2746,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -2758,7 +2758,7 @@
             "jaJP": "耐震・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2772,13 +2772,13 @@
         ]
     },
     {
-        "id": "耐震・體術珠",
+        "id": "耐震・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "耐震・體術珠",
+            "jaJP": "耐震・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2786,19 +2786,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "耐震・體力珠",
+        "id": "耐震・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "耐震・體力珠",
+            "jaJP": "耐震・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2806,7 +2806,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -2818,7 +2818,7 @@
             "jaJP": "耐震・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2826,7 +2826,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -2838,7 +2838,7 @@
             "jaJP": "耐水珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2854,7 +2854,7 @@
             "jaJP": "耐水珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2870,7 +2870,7 @@
             "jaJP": "耐絶珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -2880,21 +2880,21 @@
         ]
     },
     {
-        "id": "耐属・迴避珠",
+        "id": "耐属・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "耐属・迴避珠",
+            "jaJP": "耐属・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性やられ耐性",
+                "id": "属性やられ耐性",
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -2906,55 +2906,55 @@
             "jaJP": "耐属・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性やられ耐性",
+                "id": "属性やられ耐性",
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "耐属・攻擊珠",
+        "id": "耐属・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "耐属・攻擊珠",
+            "jaJP": "耐属・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性やられ耐性",
+                "id": "属性やられ耐性",
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "耐属・體術珠",
+        "id": "耐属・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "耐属・體術珠",
+            "jaJP": "耐属・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性やられ耐性",
+                "id": "属性やられ耐性",
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -2966,11 +2966,11 @@
             "jaJP": "耐属・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性やられ耐性",
+                "id": "属性やられ耐性",
                 "level": 1
             },
             {
@@ -2986,15 +2986,15 @@
             "jaJP": "耐属・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "屬性やられ耐性",
+                "id": "属性やられ耐性",
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
@@ -3006,7 +3006,7 @@
             "jaJP": "耐毒珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3022,7 +3022,7 @@
             "jaJP": "耐爆珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3032,33 +3032,33 @@
         ]
     },
     {
-        "id": "耐冰珠II",
+        "id": "耐氷珠II",
         "name": {
             "zhTW": null,
-            "jaJP": "耐冰珠II",
+            "jaJP": "耐氷珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "冰耐性",
+                "id": "氷耐性",
                 "level": 2
             }
         ]
     },
     {
-        "id": "耐冰珠III",
+        "id": "耐氷珠III",
         "name": {
             "zhTW": null,
-            "jaJP": "耐冰珠III",
+            "jaJP": "耐氷珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "冰耐性",
+                "id": "氷耐性",
                 "level": 3
             }
         ]
@@ -3070,11 +3070,11 @@
             "jaJP": "耐防珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "防禦力DOWN耐性",
+                "id": "防御力DOWN耐性",
                 "level": 2
             }
         ]
@@ -3086,7 +3086,7 @@
             "jaJP": "耐麻珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3102,7 +3102,7 @@
             "jaJP": "耐眠珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3118,7 +3118,7 @@
             "jaJP": "耐雷珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3134,7 +3134,7 @@
             "jaJP": "耐雷珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3150,7 +3150,7 @@
             "jaJP": "耐龍珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3166,7 +3166,7 @@
             "jaJP": "耐龍珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3182,7 +3182,7 @@
             "jaJP": "耐裂珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3192,13 +3192,13 @@
         ]
     },
     {
-        "id": "匠・迴避珠",
+        "id": "匠・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "匠・迴避珠",
+            "jaJP": "匠・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3206,7 +3206,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -3218,7 +3218,7 @@
             "jaJP": "匠・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3226,7 +3226,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -3238,7 +3238,7 @@
             "jaJP": "匠・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3252,13 +3252,13 @@
         ]
     },
     {
-        "id": "匠・體術珠",
+        "id": "匠・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "匠・體術珠",
+            "jaJP": "匠・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3266,19 +3266,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "匠・體力珠",
+        "id": "匠・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "匠・體力珠",
+            "jaJP": "匠・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3286,7 +3286,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -3298,7 +3298,7 @@
             "jaJP": "匠・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3306,7 +3306,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -3318,7 +3318,7 @@
             "jaJP": "匠珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3328,13 +3328,13 @@
         ]
     },
     {
-        "id": "茸好・迴避珠",
+        "id": "茸好・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "茸好・迴避珠",
+            "jaJP": "茸好・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3342,7 +3342,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -3354,7 +3354,7 @@
             "jaJP": "茸好・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3362,19 +3362,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "茸好・攻擊珠",
+        "id": "茸好・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "茸好・攻擊珠",
+            "jaJP": "茸好・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3382,19 +3382,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "茸好・體術珠",
+        "id": "茸好・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "茸好・體術珠",
+            "jaJP": "茸好・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3402,7 +3402,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -3414,7 +3414,7 @@
             "jaJP": "茸好・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3434,7 +3434,7 @@
             "jaJP": "茸好・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3442,19 +3442,19 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
     },
     {
-        "id": "奪気・迴避珠",
+        "id": "奪気・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "奪気・迴避珠",
+            "jaJP": "奪気・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3462,7 +3462,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -3474,7 +3474,7 @@
             "jaJP": "奪気・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3482,19 +3482,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "奪気・攻擊珠",
+        "id": "奪気・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "奪気・攻擊珠",
+            "jaJP": "奪気・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3502,19 +3502,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "奪気・體術珠",
+        "id": "奪気・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "奪気・體術珠",
+            "jaJP": "奪気・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3522,7 +3522,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -3534,7 +3534,7 @@
             "jaJP": "奪気・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3554,7 +3554,7 @@
             "jaJP": "奪気・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3562,7 +3562,7 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
@@ -3574,23 +3574,23 @@
             "jaJP": "達人珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 2
             }
         ]
     },
     {
-        "id": "短縮・迴避珠",
+        "id": "短縮・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "短縮・迴避珠",
+            "jaJP": "短縮・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3598,7 +3598,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -3610,7 +3610,7 @@
             "jaJP": "短縮・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3618,7 +3618,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -3630,7 +3630,7 @@
             "jaJP": "短縮・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3644,13 +3644,13 @@
         ]
     },
     {
-        "id": "短縮・體術珠",
+        "id": "短縮・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "短縮・體術珠",
+            "jaJP": "短縮・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3658,19 +3658,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "短縮・體力珠",
+        "id": "短縮・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "短縮・體力珠",
+            "jaJP": "短縮・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3678,7 +3678,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -3690,7 +3690,7 @@
             "jaJP": "短縮・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3698,7 +3698,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -3710,7 +3710,7 @@
             "jaJP": "地学珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3726,7 +3726,7 @@
             "jaJP": "地学珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3736,13 +3736,13 @@
         ]
     },
     {
-        "id": "超心・迴避珠",
+        "id": "超心・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "超心・迴避珠",
+            "jaJP": "超心・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3750,7 +3750,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -3762,7 +3762,7 @@
             "jaJP": "超心・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3770,7 +3770,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -3782,7 +3782,7 @@
             "jaJP": "超心・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3796,13 +3796,13 @@
         ]
     },
     {
-        "id": "超心・體術珠",
+        "id": "超心・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "超心・體術珠",
+            "jaJP": "超心・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3810,19 +3810,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "超心・體力珠",
+        "id": "超心・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "超心・體力珠",
+            "jaJP": "超心・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3830,7 +3830,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -3842,7 +3842,7 @@
             "jaJP": "超心・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3850,19 +3850,19 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
     },
     {
-        "id": "挑戦・迴避珠",
+        "id": "挑戦・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "挑戦・迴避珠",
+            "jaJP": "挑戦・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3870,7 +3870,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -3882,7 +3882,7 @@
             "jaJP": "挑戦・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3890,7 +3890,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -3902,7 +3902,7 @@
             "jaJP": "挑戦・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3916,13 +3916,13 @@
         ]
     },
     {
-        "id": "挑戦・體術珠",
+        "id": "挑戦・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "挑戦・體術珠",
+            "jaJP": "挑戦・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3930,19 +3930,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "挑戦・體力珠",
+        "id": "挑戦・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "挑戦・體力珠",
+            "jaJP": "挑戦・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3950,7 +3950,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -3962,7 +3962,7 @@
             "jaJP": "挑戦・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3970,7 +3970,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -3982,7 +3982,7 @@
             "jaJP": "挑戦珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -3992,21 +3992,21 @@
         ]
     },
     {
-        "id": "跳躍・迴避珠",
+        "id": "跳躍・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "跳躍・迴避珠",
+            "jaJP": "跳躍・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "迴避距離UP",
+                "id": "回避距離UP",
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -4018,55 +4018,55 @@
             "jaJP": "跳躍・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "迴避距離UP",
+                "id": "回避距離UP",
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "跳躍・攻擊珠",
+        "id": "跳躍・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "跳躍・攻擊珠",
+            "jaJP": "跳躍・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "迴避距離UP",
+                "id": "回避距離UP",
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "跳躍・體術珠",
+        "id": "跳躍・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "跳躍・體術珠",
+            "jaJP": "跳躍・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "迴避距離UP",
+                "id": "回避距離UP",
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -4078,11 +4078,11 @@
             "jaJP": "跳躍・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "迴避距離UP",
+                "id": "回避距離UP",
                 "level": 1
             },
             {
@@ -4098,35 +4098,35 @@
             "jaJP": "跳躍・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "迴避距離UP",
+                "id": "回避距離UP",
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
     },
     {
-        "id": "痛撃・迴避珠",
+        "id": "痛撃・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "痛撃・迴避珠",
+            "jaJP": "痛撃・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "弱點特效",
+                "id": "弱点特効",
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -4138,15 +4138,15 @@
             "jaJP": "痛撃・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "弱點特效",
+                "id": "弱点特効",
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -4158,11 +4158,11 @@
             "jaJP": "痛撃・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "弱點特效",
+                "id": "弱点特効",
                 "level": 1
             },
             {
@@ -4172,41 +4172,41 @@
         ]
     },
     {
-        "id": "痛撃・體術珠",
+        "id": "痛撃・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "痛撃・體術珠",
+            "jaJP": "痛撃・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "弱點特效",
+                "id": "弱点特効",
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "痛撃・體力珠",
+        "id": "痛撃・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "痛撃・體力珠",
+            "jaJP": "痛撃・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "弱點特效",
+                "id": "弱点特効",
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -4218,27 +4218,27 @@
             "jaJP": "痛撃・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "弱點特效",
+                "id": "弱点特効",
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
     },
     {
-        "id": "鉄壁・迴避珠",
+        "id": "鉄壁・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "鉄壁・迴避珠",
+            "jaJP": "鉄壁・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4246,7 +4246,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -4258,7 +4258,7 @@
             "jaJP": "鉄壁・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4266,19 +4266,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "鉄壁・攻擊珠",
+        "id": "鉄壁・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "鉄壁・攻擊珠",
+            "jaJP": "鉄壁・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4286,19 +4286,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "鉄壁・體術珠",
+        "id": "鉄壁・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "鉄壁・體術珠",
+            "jaJP": "鉄壁・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4306,7 +4306,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -4318,7 +4318,7 @@
             "jaJP": "鉄壁・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4338,7 +4338,7 @@
             "jaJP": "鉄壁・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4346,7 +4346,7 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
@@ -4358,7 +4358,7 @@
             "jaJP": "鉄壁珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4368,13 +4368,13 @@
         ]
     },
     {
-        "id": "転福・迴避珠",
+        "id": "転福・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "転福・迴避珠",
+            "jaJP": "転福・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4382,7 +4382,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -4394,7 +4394,7 @@
             "jaJP": "転福・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4402,7 +4402,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -4414,7 +4414,7 @@
             "jaJP": "転福・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4428,13 +4428,13 @@
         ]
     },
     {
-        "id": "転福・體術珠",
+        "id": "転福・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "転福・體術珠",
+            "jaJP": "転福・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4442,19 +4442,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "転福・體力珠",
+        "id": "転福・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "転福・體力珠",
+            "jaJP": "転福・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4462,7 +4462,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -4474,7 +4474,7 @@
             "jaJP": "転福・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4482,7 +4482,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -4494,7 +4494,7 @@
             "jaJP": "転福珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 3,
         "skills": [
             {
@@ -4504,13 +4504,13 @@
         ]
     },
     {
-        "id": "投石・迴避珠",
+        "id": "投石・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "投石・迴避珠",
+            "jaJP": "投石・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4518,7 +4518,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -4530,7 +4530,7 @@
             "jaJP": "投石・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4538,19 +4538,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "投石・攻擊珠",
+        "id": "投石・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "投石・攻擊珠",
+            "jaJP": "投石・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4558,19 +4558,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "投石・體術珠",
+        "id": "投石・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "投石・體術珠",
+            "jaJP": "投石・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4578,7 +4578,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -4590,7 +4590,7 @@
             "jaJP": "投石・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4610,7 +4610,7 @@
             "jaJP": "投石・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4618,7 +4618,7 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
@@ -4630,7 +4630,7 @@
             "jaJP": "特射珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4646,11 +4646,11 @@
             "jaJP": "毒珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "毒屬性強化",
+                "id": "毒属性強化",
                 "level": 2
             }
         ]
@@ -4662,23 +4662,23 @@
             "jaJP": "沼渡珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "適應水場．深雪",
+                "id": "水場・深雪適応",
                 "level": 2
             }
         ]
     },
     {
-        "id": "爆師・迴避珠",
+        "id": "爆師・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "爆師・迴避珠",
+            "jaJP": "爆師・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4686,7 +4686,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -4698,7 +4698,7 @@
             "jaJP": "爆師・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4706,19 +4706,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "爆師・攻擊珠",
+        "id": "爆師・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "爆師・攻擊珠",
+            "jaJP": "爆師・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4726,19 +4726,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "爆師・體術珠",
+        "id": "爆師・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "爆師・體術珠",
+            "jaJP": "爆師・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4746,7 +4746,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -4758,7 +4758,7 @@
             "jaJP": "爆師・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4778,7 +4778,7 @@
             "jaJP": "爆師・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4786,7 +4786,7 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
@@ -4798,23 +4798,23 @@
             "jaJP": "爆破珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "爆破屬性強化",
+                "id": "爆破属性強化",
                 "level": 2
             }
         ]
     },
     {
-        "id": "抜刀・迴避珠",
+        "id": "抜刀・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "抜刀・迴避珠",
+            "jaJP": "抜刀・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4822,7 +4822,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -4834,7 +4834,7 @@
             "jaJP": "抜刀・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4842,7 +4842,7 @@
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -4854,7 +4854,7 @@
             "jaJP": "抜刀・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4868,13 +4868,13 @@
         ]
     },
     {
-        "id": "抜刀・體術珠",
+        "id": "抜刀・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "抜刀・體術珠",
+            "jaJP": "抜刀・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4882,19 +4882,19 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "抜刀・體力珠",
+        "id": "抜刀・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "抜刀・體力珠",
+            "jaJP": "抜刀・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4902,7 +4902,7 @@
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -4914,7 +4914,7 @@
             "jaJP": "抜刀・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4922,7 +4922,7 @@
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -4934,23 +4934,23 @@
             "jaJP": "破龍珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "龍屬性攻擊強化",
+                "id": "龍属性攻撃強化",
                 "level": 2
             }
         ]
     },
     {
-        "id": "飛燕・迴避珠",
+        "id": "飛燕・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "飛燕・迴避珠",
+            "jaJP": "飛燕・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4958,7 +4958,7 @@
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -4970,7 +4970,7 @@
             "jaJP": "飛燕・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4978,19 +4978,19 @@
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "飛燕・攻擊珠",
+        "id": "飛燕・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "飛燕・攻擊珠",
+            "jaJP": "飛燕・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -4998,19 +4998,19 @@
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "飛燕・體術珠",
+        "id": "飛燕・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "飛燕・體術珠",
+            "jaJP": "飛燕・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -5018,7 +5018,7 @@
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -5030,7 +5030,7 @@
             "jaJP": "飛燕・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -5050,7 +5050,7 @@
             "jaJP": "飛燕・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -5058,23 +5058,23 @@
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
     },
     {
-        "id": "冰結珠II",
+        "id": "氷結珠II",
         "name": {
             "zhTW": null,
-            "jaJP": "冰結珠II",
+            "jaJP": "氷結珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "冰屬性攻擊強化",
+                "id": "氷属性攻撃強化",
                 "level": 2
             }
         ]
@@ -5086,7 +5086,7 @@
             "jaJP": "標本珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -5102,7 +5102,7 @@
             "jaJP": "標本珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -5112,21 +5112,21 @@
         ]
     },
     {
-        "id": "防音・迴避珠",
+        "id": "防音・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "防音・迴避珠",
+            "jaJP": "防音・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "耳塞",
+                "id": "耳栓",
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -5138,15 +5138,15 @@
             "jaJP": "防音・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "耳塞",
+                "id": "耳栓",
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -5158,11 +5158,11 @@
             "jaJP": "防音・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "耳塞",
+                "id": "耳栓",
                 "level": 1
             },
             {
@@ -5172,41 +5172,41 @@
         ]
     },
     {
-        "id": "防音・體術珠",
+        "id": "防音・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "防音・體術珠",
+            "jaJP": "防音・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "耳塞",
+                "id": "耳栓",
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "防音・體力珠",
+        "id": "防音・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "防音・體力珠",
+            "jaJP": "防音・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "耳塞",
+                "id": "耳栓",
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -5218,15 +5218,15 @@
             "jaJP": "防音・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "耳塞",
+                "id": "耳栓",
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -5238,43 +5238,43 @@
             "jaJP": "防音珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "耳塞",
+                "id": "耳栓",
                 "level": 2
             }
         ]
     },
     {
-        "id": "防禦珠II",
+        "id": "防御珠II",
         "name": {
             "zhTW": null,
-            "jaJP": "防禦珠II",
+            "jaJP": "防御珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "防禦",
+                "id": "防御",
                 "level": 2
             }
         ]
     },
     {
-        "id": "防禦珠III",
+        "id": "防御珠III",
         "name": {
             "zhTW": null,
-            "jaJP": "防禦珠III",
+            "jaJP": "防御珠III",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "防禦",
+                "id": "防御",
                 "level": 3
             }
         ]
@@ -5286,7 +5286,7 @@
             "jaJP": "砲手珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -5302,7 +5302,7 @@
             "jaJP": "砲術珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -5312,21 +5312,21 @@
         ]
     },
     {
-        "id": "防風・迴避珠",
+        "id": "防風・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "防風・迴避珠",
+            "jaJP": "防風・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "風壓耐性",
+                "id": "風圧耐性",
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -5338,15 +5338,15 @@
             "jaJP": "防風・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "風壓耐性",
+                "id": "風圧耐性",
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -5358,11 +5358,11 @@
             "jaJP": "防風・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "風壓耐性",
+                "id": "風圧耐性",
                 "level": 1
             },
             {
@@ -5372,41 +5372,41 @@
         ]
     },
     {
-        "id": "防風・體術珠",
+        "id": "防風・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "防風・體術珠",
+            "jaJP": "防風・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "風壓耐性",
+                "id": "風圧耐性",
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "防風・體力珠",
+        "id": "防風・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "防風・體力珠",
+            "jaJP": "防風・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "風壓耐性",
+                "id": "風圧耐性",
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -5418,15 +5418,15 @@
             "jaJP": "防風・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "風壓耐性",
+                "id": "風圧耐性",
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -5438,11 +5438,11 @@
             "jaJP": "防風珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "風壓耐性",
+                "id": "風圧耐性",
                 "level": 2
             }
         ]
@@ -5454,31 +5454,31 @@
             "jaJP": "麻痺珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "麻痺屬性強化",
+                "id": "麻痺属性強化",
                 "level": 2
             }
         ]
     },
     {
-        "id": "無傷・迴避珠",
+        "id": "無傷・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "無傷・迴避珠",
+            "jaJP": "無傷・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "無傷",
+                "id": "フルチャージ",
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -5490,15 +5490,15 @@
             "jaJP": "無傷・加護珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "無傷",
+                "id": "フルチャージ",
                 "level": 1
             },
             {
-                "id": "精靈加護",
+                "id": "精霊の加護",
                 "level": 1
             }
         ]
@@ -5510,11 +5510,11 @@
             "jaJP": "無傷・整備珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "無傷",
+                "id": "フルチャージ",
                 "level": 1
             },
             {
@@ -5524,41 +5524,41 @@
         ]
     },
     {
-        "id": "無傷・體術珠",
+        "id": "無傷・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "無傷・體術珠",
+            "jaJP": "無傷・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "無傷",
+                "id": "フルチャージ",
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
     },
     {
-        "id": "無傷・體力珠",
+        "id": "無傷・体力珠",
         "name": {
             "zhTW": null,
-            "jaJP": "無傷・體力珠",
+            "jaJP": "無傷・体力珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "無傷",
+                "id": "フルチャージ",
                 "level": 1
             },
             {
-                "id": "體力增強",
+                "id": "体力増強",
                 "level": 1
             }
         ]
@@ -5570,15 +5570,15 @@
             "jaJP": "無傷・治癒珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "無傷",
+                "id": "フルチャージ",
                 "level": 1
             },
             {
-                "id": "體力回復量UP",
+                "id": "体力回復量UP",
                 "level": 1
             }
         ]
@@ -5590,7 +5590,7 @@
             "jaJP": "無食珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
@@ -5600,21 +5600,21 @@
         ]
     },
     {
-        "id": "友愛・迴避珠",
+        "id": "友愛・回避珠",
         "name": {
             "zhTW": null,
-            "jaJP": "友愛・迴避珠",
+            "jaJP": "友愛・回避珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "廣域化",
+                "id": "広域化",
                 "level": 1
             },
             {
-                "id": "迴避性能",
+                "id": "回避性能",
                 "level": 1
             }
         ]
@@ -5626,55 +5626,55 @@
             "jaJP": "友愛・解放珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "廣域化",
+                "id": "広域化",
                 "level": 1
             },
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "属性解放\/装填拡張",
                 "level": 1
             }
         ]
     },
     {
-        "id": "友愛・攻擊珠",
+        "id": "友愛・攻撃珠",
         "name": {
             "zhTW": null,
-            "jaJP": "友愛・攻擊珠",
+            "jaJP": "友愛・攻撃珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "廣域化",
+                "id": "広域化",
                 "level": 1
             },
             {
-                "id": "攻擊",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "友愛・體術珠",
+        "id": "友愛・体術珠",
         "name": {
             "zhTW": null,
-            "jaJP": "友愛・體術珠",
+            "jaJP": "友愛・体術珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "廣域化",
+                "id": "広域化",
                 "level": 1
             },
             {
-                "id": "體術",
+                "id": "体術",
                 "level": 1
             }
         ]
@@ -5686,11 +5686,11 @@
             "jaJP": "友愛・匠珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "廣域化",
+                "id": "広域化",
                 "level": 1
             },
             {
@@ -5706,15 +5706,15 @@
             "jaJP": "友愛・達人珠",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "廣域化",
+                "id": "広域化",
                 "level": 1
             },
             {
-                "id": "看破",
+                "id": "見切り",
                 "level": 1
             }
         ]
@@ -5726,11 +5726,11 @@
             "jaJP": "友愛珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "廣域化",
+                "id": "広域化",
                 "level": 2
             }
         ]
@@ -5742,11 +5742,11 @@
             "jaJP": "雷光珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "雷屬性攻擊強化",
+                "id": "雷属性攻撃強化",
                 "level": 2
             }
         ]
@@ -5758,11 +5758,11 @@
             "jaJP": "流水珠II",
             "enUS": null
         },
-        "rare": 9,
+        "rare": null,
         "size": 4,
         "skills": [
             {
-                "id": "水屬性攻擊強化",
+                "id": "水属性攻撃強化",
                 "level": 2
             }
         ]

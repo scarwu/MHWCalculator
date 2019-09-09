@@ -5,7 +5,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．骨製α",
+                "jaJP": "EXボーンαシリーズ",
                 "enUS": null
             },
             "defense": 114,
@@ -20,11 +20,11 @@
         },
         "list": [
             {
-                "id": "精英．骨製ヘルムα",
+                "id": "EXボーンヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．骨製ヘルムα",
+                    "jaJP": "EXボーンヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -34,21 +34,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 2
                     },
                     {
-                        "id": "破壞王",
+                        "id": "破壊王",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．骨製メイルα",
+                "id": "EXボーンメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．骨製メイルα",
+                    "jaJP": "EXボーンメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -62,17 +62,17 @@
                         "level": 2
                     },
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．骨製アームα",
+                "id": "EXボーンアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．骨製アームα",
+                    "jaJP": "EXボーンアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -92,11 +92,11 @@
                 ]
             },
             {
-                "id": "精英．骨製コイルα",
+                "id": "EXボーンコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．骨製コイルα",
+                    "jaJP": "EXボーンコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -106,21 +106,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "吹笛名人",
+                        "id": "笛吹き名人",
                         "level": 1
                     },
                     {
-                        "id": "破壞王",
+                        "id": "破壊王",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．骨製グリーヴα",
+                "id": "EXボーングリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．骨製グリーヴα",
+                    "jaJP": "EXボーングリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -134,7 +134,7 @@
                         "level": 1
                     },
                     {
-                        "id": "吹笛名人",
+                        "id": "笛吹き名人",
                         "level": 1
                     }
                 ]
@@ -147,7 +147,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．骨製β",
+                "jaJP": "EXボーンβシリーズ",
                 "enUS": null
             },
             "defense": 114,
@@ -162,11 +162,11 @@
         },
         "list": [
             {
-                "id": "精英．骨製ヘルムβ",
+                "id": "EXボーンヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．骨製ヘルムβ",
+                    "jaJP": "EXボーンヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -176,21 +176,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 1
                     },
                     {
-                        "id": "破壞王",
+                        "id": "破壊王",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．骨製メイルβ",
+                "id": "EXボーンメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．骨製メイルβ",
+                    "jaJP": "EXボーンメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -209,11 +209,11 @@
                 ]
             },
             {
-                "id": "精英．骨製アームβ",
+                "id": "EXボーンアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．骨製アームβ",
+                    "jaJP": "EXボーンアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -232,11 +232,11 @@
                 ]
             },
             {
-                "id": "精英．骨製コイルβ",
+                "id": "EXボーンコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．骨製コイルβ",
+                    "jaJP": "EXボーンコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -249,17 +249,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "吹笛名人",
+                        "id": "笛吹き名人",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．骨製グリーヴβ",
+                "id": "EXボーングリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．骨製グリーヴβ",
+                    "jaJP": "EXボーングリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -282,7 +282,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．合金α",
+                "jaJP": "EXアロイαシリーズ",
                 "enUS": null
             },
             "defense": 114,
@@ -297,11 +297,11 @@
         },
         "list": [
             {
-                "id": "精英．合金ヘルムα",
+                "id": "EXアロイヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．合金ヘルムα",
+                    "jaJP": "EXアロイヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -311,21 +311,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 2
                     },
                     {
-                        "id": "防禦",
+                        "id": "防御",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．合金メイルα",
+                "id": "EXアロイメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．合金メイルα",
+                    "jaJP": "EXアロイメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -339,17 +339,17 @@
                         "level": 2
                     },
                     {
-                        "id": "防禦",
+                        "id": "防御",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．合金アームα",
+                "id": "EXアロイアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．合金アームα",
+                    "jaJP": "EXアロイアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -359,7 +359,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "防禦",
+                        "id": "防御",
                         "level": 2
                     },
                     {
@@ -369,11 +369,11 @@
                 ]
             },
             {
-                "id": "精英．合金コイルα",
+                "id": "EXアロイコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．合金コイルα",
+                    "jaJP": "EXアロイコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -387,17 +387,17 @@
                         "level": 2
                     },
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．合金グリーヴα",
+                "id": "EXアロイグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．合金グリーヴα",
+                    "jaJP": "EXアロイグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -411,7 +411,7 @@
                         "level": 2
                     },
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
@@ -424,7 +424,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．合金β",
+                "jaJP": "EXアロイβシリーズ",
                 "enUS": null
             },
             "defense": 114,
@@ -439,11 +439,11 @@
         },
         "list": [
             {
-                "id": "精英．合金ヘルムβ",
+                "id": "EXアロイヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．合金ヘルムβ",
+                    "jaJP": "EXアロイヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -456,17 +456,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．合金メイルβ",
+                "id": "EXアロイメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．合金メイルβ",
+                    "jaJP": "EXアロイメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -485,11 +485,11 @@
                 ]
             },
             {
-                "id": "精英．合金アームβ",
+                "id": "EXアロイアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．合金アームβ",
+                    "jaJP": "EXアロイアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -502,17 +502,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "防禦",
+                        "id": "防御",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．合金コイルβ",
+                "id": "EXアロイコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．合金コイルβ",
+                    "jaJP": "EXアロイコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -526,17 +526,17 @@
                         "level": 1
                     },
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．合金グリーヴβ",
+                "id": "EXアロイグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．合金グリーヴβ",
+                    "jaJP": "EXアロイグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -550,7 +550,7 @@
                         "level": 1
                     },
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
@@ -563,7 +563,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．巨蜂α",
+                "jaJP": "EXランゴαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -578,11 +578,11 @@
         },
         "list": [
             {
-                "id": "精英．巨蜂ヘルムα",
+                "id": "EXランゴヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨蜂ヘルムα",
+                    "jaJP": "EXランゴヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -592,21 +592,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "收刀術",
+                        "id": "納刀術",
                         "level": 1
                     },
                     {
-                        "id": "麻痺屬性強化",
+                        "id": "麻痺属性強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．巨蜂メイルα",
+                "id": "EXランゴメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨蜂メイルα",
+                    "jaJP": "EXランゴメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -619,17 +619,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．巨蜂アームα",
+                "id": "EXランゴアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨蜂アームα",
+                    "jaJP": "EXランゴアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -639,21 +639,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "麻痺屬性強化",
+                        "id": "麻痺属性強化",
                         "level": 2
                     },
                     {
-                        "id": "收刀術",
+                        "id": "納刀術",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．巨蜂コイルα",
+                "id": "EXランゴコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨蜂コイルα",
+                    "jaJP": "EXランゴコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -667,17 +667,17 @@
                         "level": 2
                     },
                     {
-                        "id": "收刀術",
+                        "id": "納刀術",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．巨蜂グリーヴα",
+                "id": "EXランゴグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨蜂グリーヴα",
+                    "jaJP": "EXランゴグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -687,7 +687,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "拔刀術【技】",
+                        "id": "抜刀術【技】",
                         "level": 1
                     },
                     {
@@ -704,7 +704,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．巨蜂β",
+                "jaJP": "EXランゴβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -719,11 +719,11 @@
         },
         "list": [
             {
-                "id": "精英．巨蜂ヘルムβ",
+                "id": "EXランゴヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨蜂ヘルムβ",
+                    "jaJP": "EXランゴヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -736,17 +736,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "收刀術",
+                        "id": "納刀術",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．巨蜂メイルβ",
+                "id": "EXランゴメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨蜂メイルβ",
+                    "jaJP": "EXランゴメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -759,17 +759,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．巨蜂アームβ",
+                "id": "EXランゴアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨蜂アームβ",
+                    "jaJP": "EXランゴアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -782,17 +782,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "麻痺屬性強化",
+                        "id": "麻痺属性強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．巨蜂コイルβ",
+                "id": "EXランゴコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨蜂コイルβ",
+                    "jaJP": "EXランゴコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -811,11 +811,11 @@
                 ]
             },
             {
-                "id": "精英．巨蜂グリーヴβ",
+                "id": "EXランゴグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨蜂グリーヴβ",
+                    "jaJP": "EXランゴグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -828,7 +828,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "拔刀術【技】",
+                        "id": "抜刀術【技】",
                         "level": 1
                     }
                 ]
@@ -841,7 +841,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．巨甲蟲α",
+                "jaJP": "EXタロスαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -856,11 +856,11 @@
         },
         "list": [
             {
-                "id": "精英．巨甲蟲ヘルムα",
+                "id": "EXタロスヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨甲蟲ヘルムα",
+                    "jaJP": "EXタロスヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -870,21 +870,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "弱點特效",
+                        "id": "弱点特効",
                         "level": 1
                     },
                     {
-                        "id": "龍屬性攻撃強化",
+                        "id": "龍属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．巨甲蟲メイルα",
+                "id": "EXタロスメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨甲蟲メイルα",
+                    "jaJP": "EXタロスメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -897,21 +897,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "適應瘴氣環境",
+                        "id": "瘴気環境適応",
                         "level": 1
                     },
                     {
-                        "id": "飢餓耐性",
+                        "id": "腹減り耐性",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．巨甲蟲アームα",
+                "id": "EXタロスアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨甲蟲アームα",
+                    "jaJP": "EXタロスアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -921,7 +921,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "滿足感",
+                        "id": "満足感",
                         "level": 1
                     },
                     {
@@ -931,11 +931,11 @@
                 ]
             },
             {
-                "id": "精英．巨甲蟲コイルα",
+                "id": "EXタロスコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨甲蟲コイルα",
+                    "jaJP": "EXタロスコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -945,21 +945,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "弱點特效",
+                        "id": "弱点特効",
                         "level": 1
                     },
                     {
-                        "id": "飢餓耐性",
+                        "id": "腹減り耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．巨甲蟲グリーヴα",
+                "id": "EXタロスグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨甲蟲グリーヴα",
+                    "jaJP": "EXタロスグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -976,7 +976,7 @@
                         "level": 1
                     },
                     {
-                        "id": "龍屬性攻撃強化",
+                        "id": "龍属性攻撃強化",
                         "level": 1
                     }
                 ]
@@ -989,7 +989,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．巨甲蟲β",
+                "jaJP": "EXタロスβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1004,11 +1004,11 @@
         },
         "list": [
             {
-                "id": "精英．巨甲蟲ヘルムβ",
+                "id": "EXタロスヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨甲蟲ヘルムβ",
+                    "jaJP": "EXタロスヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1018,21 +1018,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "弱點特效",
+                        "id": "弱点特効",
                         "level": 1
                     },
                     {
-                        "id": "龍屬性攻撃強化",
+                        "id": "龍属性攻撃強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．巨甲蟲メイルβ",
+                "id": "EXタロスメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨甲蟲メイルβ",
+                    "jaJP": "EXタロスメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1048,17 +1048,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "適應瘴氣環境",
+                        "id": "瘴気環境適応",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．巨甲蟲アームβ",
+                "id": "EXタロスアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨甲蟲アームβ",
+                    "jaJP": "EXタロスアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1071,17 +1071,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "滿足感",
+                        "id": "満足感",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．巨甲蟲コイルβ",
+                "id": "EXタロスコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨甲蟲コイルβ",
+                    "jaJP": "EXタロスコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1094,17 +1094,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "弱點特效",
+                        "id": "弱点特効",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．巨甲蟲グリーヴβ",
+                "id": "EXタロスグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．巨甲蟲グリーヴβ",
+                    "jaJP": "EXタロスグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1130,7 +1130,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．冠屠龍α",
+                "jaJP": "EXケストαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1145,11 +1145,11 @@
         },
         "list": [
             {
-                "id": "精英．冠屠龍護手α",
+                "id": "EXケストガードα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冠屠龍護手α",
+                    "jaJP": "EXケストガードα",
                     "enUS": null
                 },
                 "slots": [
@@ -1179,7 +1179,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．冠屠龍β",
+                "jaJP": "EXケストβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1194,11 +1194,11 @@
         },
         "list": [
             {
-                "id": "精英．冠屠龍護手β",
+                "id": "EXケストガードβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冠屠龍護手β",
+                    "jaJP": "EXケストガードβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1228,7 +1228,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．咬魚α",
+                "jaJP": "EXガライーαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1243,11 +1243,11 @@
         },
         "list": [
             {
-                "id": "精英．咬魚靴α",
+                "id": "EXガライーブーツα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．咬魚靴α",
+                    "jaJP": "EXガライーブーツα",
                     "enUS": null
                 },
                 "slots": [
@@ -1260,11 +1260,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "適應水場．深雪",
+                        "id": "水場・深雪適応",
                         "level": 2
                     },
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 2
                     }
                 ]
@@ -1277,7 +1277,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．咬魚β",
+                "jaJP": "EXガライーβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1292,11 +1292,11 @@
         },
         "list": [
             {
-                "id": "精英．咬魚靴β",
+                "id": "EXガライーブーツβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．咬魚靴β",
+                    "jaJP": "EXガライーブーツβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1309,11 +1309,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "適應水場．深雪",
+                        "id": "水場・深雪適応",
                         "level": 1
                     },
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 1
                     }
                 ]
@@ -1326,7 +1326,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．貓蜥龍α",
+                "jaJP": "EXシャムαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1341,11 +1341,11 @@
         },
         "list": [
             {
-                "id": "精英．貓蜥龍護目鏡α",
+                "id": "EXシャムゴーグルα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．貓蜥龍護目鏡α",
+                    "jaJP": "EXシャムゴーグルα",
                     "enUS": null
                 },
                 "slots": [
@@ -1358,11 +1358,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "察覺",
+                        "id": "感知",
                         "level": 1
                     },
                     {
-                        "id": "地質學",
+                        "id": "地質学",
                         "level": 2
                     }
                 ]
@@ -1375,7 +1375,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．貓蜥龍β",
+                "jaJP": "EXシャムβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1390,11 +1390,11 @@
         },
         "list": [
             {
-                "id": "精英．貓蜥龍護目鏡β",
+                "id": "EXシャムゴーグルβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．貓蜥龍護目鏡β",
+                    "jaJP": "EXシャムゴーグルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1407,11 +1407,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "察覺",
+                        "id": "感知",
                         "level": 1
                     },
                     {
-                        "id": "地質學",
+                        "id": "地質学",
                         "level": 1
                     }
                 ]
@@ -1424,7 +1424,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．突擊龍α",
+                "jaJP": "EXガストαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1439,11 +1439,11 @@
         },
         "list": [
             {
-                "id": "精英．突擊龍角α",
+                "id": "EXガストホーンα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．突擊龍角α",
+                    "jaJP": "EXガストホーンα",
                     "enUS": null
                 },
                 "slots": [
@@ -1453,11 +1453,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "減輕膽怯",
+                        "id": "ひるみ軽減",
                         "level": 2
                     },
                     {
-                        "id": "爆破異常狀態的耐性",
+                        "id": "爆破やられ耐性",
                         "level": 1
                     }
                 ]
@@ -1470,7 +1470,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．突擊龍β",
+                "jaJP": "EXガストβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1485,11 +1485,11 @@
         },
         "list": [
             {
-                "id": "精英．突擊龍角β",
+                "id": "EXガストホーンβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．突擊龍角β",
+                    "jaJP": "EXガストホーンβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1502,11 +1502,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "減輕膽怯",
+                        "id": "ひるみ軽減",
                         "level": 1
                     },
                     {
-                        "id": "爆破異常狀態的耐性",
+                        "id": "爆破やられ耐性",
                         "level": 1
                     }
                 ]
@@ -1519,7 +1519,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．酸翼龍α",
+                "jaJP": "EXバルノスαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1534,11 +1534,11 @@
         },
         "list": [
             {
-                "id": "精英．酸翼龍斗篷α",
+                "id": "EXバルノスマントα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．酸翼龍斗篷α",
+                    "jaJP": "EXバルノスマントα",
                     "enUS": null
                 },
                 "slots": [
@@ -1551,11 +1551,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "熱傷害無效",
+                        "id": "熱ダメージ無効",
                         "level": 1
                     },
                     {
-                        "id": "防禦力DOWN耐性",
+                        "id": "防御力DOWN耐性",
                         "level": 2
                     }
                 ]
@@ -1568,7 +1568,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．酸翼龍β",
+                "jaJP": "EXバルノスβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1583,11 +1583,11 @@
         },
         "list": [
             {
-                "id": "精英．酸翼龍斗篷β",
+                "id": "EXバルノスマントβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．酸翼龍斗篷β",
+                    "jaJP": "EXバルノスマントβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1600,11 +1600,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "熱傷害無效",
+                        "id": "熱ダメージ無効",
                         "level": 1
                     },
                     {
-                        "id": "防禦力DOWN耐性",
+                        "id": "防御力DOWN耐性",
                         "level": 1
                     }
                 ]
@@ -1617,7 +1617,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．冰豺龍α",
+                "jaJP": "EXウルグαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1632,11 +1632,11 @@
         },
         "list": [
             {
-                "id": "精英．冰豺龍圍巾α",
+                "id": "EXウルグマフラーα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰豺龍圍巾α",
+                    "jaJP": "EXウルグマフラーα",
                     "enUS": null
                 },
                 "slots": [
@@ -1649,11 +1649,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "冰耐性",
+                        "id": "氷耐性",
                         "level": 2
                     },
                     {
-                        "id": "騎乘名人",
+                        "id": "乗り名人",
                         "level": 1
                     }
                 ]
@@ -1666,7 +1666,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．冰豺龍β",
+                "jaJP": "EXウルグβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1681,11 +1681,11 @@
         },
         "list": [
             {
-                "id": "精英．冰豺龍圍巾β",
+                "id": "EXウルグマフラーβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰豺龍圍巾β",
+                    "jaJP": "EXウルグマフラーβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1698,11 +1698,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "冰耐性",
+                        "id": "氷耐性",
                         "level": 1
                     },
                     {
-                        "id": "騎乘名人",
+                        "id": "乗り名人",
                         "level": 1
                     }
                 ]
@@ -1715,7 +1715,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．冬翼龍α",
+                "jaJP": "EXコルトスαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1730,11 +1730,11 @@
         },
         "list": [
             {
-                "id": "精英．冬翼龍斗篷α",
+                "id": "EXコルトスマントα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冬翼龍斗篷α",
+                    "jaJP": "EXコルトスマントα",
                     "enUS": null
                 },
                 "slots": [
@@ -1747,11 +1747,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "飢餓耐性",
+                        "id": "腹減り耐性",
                         "level": 2
                     },
                     {
-                        "id": "跳躍鐵人",
+                        "id": "ジャンプ鉄人",
                         "level": 1
                     }
                 ]
@@ -1764,7 +1764,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．冬翼龍β",
+                "jaJP": "EXコルトスβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1779,11 +1779,11 @@
         },
         "list": [
             {
-                "id": "精英．冬翼龍斗篷β",
+                "id": "EXコルトスマントβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冬翼龍斗篷β",
+                    "jaJP": "EXコルトスマントβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1793,11 +1793,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "飢餓耐性",
+                        "id": "腹減り耐性",
                         "level": 1
                     },
                     {
-                        "id": "跳躍鐵人",
+                        "id": "ジャンプ鉄人",
                         "level": 1
                     }
                 ]
@@ -1810,7 +1810,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．凶豺龍α",
+                "jaJP": "EXジャグラスαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1825,11 +1825,11 @@
         },
         "list": [
             {
-                "id": "精英．凶豺龍ヘルムα",
+                "id": "EXジャグラスヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶豺龍ヘルムα",
+                    "jaJP": "EXジャグラスヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -1839,7 +1839,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "快吃",
+                        "id": "早食い",
                         "level": 2
                     },
                     {
@@ -1849,11 +1849,11 @@
                 ]
             },
             {
-                "id": "精英．凶豺龍メイルα",
+                "id": "EXジャグラスメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶豺龍メイルα",
+                    "jaJP": "EXジャグラスメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -1863,7 +1863,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 1
                     },
                     {
@@ -1873,11 +1873,11 @@
                 ]
             },
             {
-                "id": "精英．凶豺龍アームα",
+                "id": "EXジャグラスアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶豺龍アームα",
+                    "jaJP": "EXジャグラスアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -1887,21 +1887,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 2
                     },
                     {
-                        "id": "體力回復量UP",
+                        "id": "体力回復量UP",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．凶豺龍コイルα",
+                "id": "EXジャグラスコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶豺龍コイルα",
+                    "jaJP": "EXジャグラスコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -1914,21 +1914,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體力回復量UP",
+                        "id": "体力回復量UP",
                         "level": 1
                     },
                     {
-                        "id": "快吃",
+                        "id": "早食い",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．凶豺龍グリーブα",
+                "id": "EXジャグラスグリーブα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶豺龍グリーブα",
+                    "jaJP": "EXジャグラスグリーブα",
                     "enUS": null
                 },
                 "slots": [
@@ -1941,11 +1941,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "滿足感",
+                        "id": "満足感",
                         "level": 1
                     },
                     {
-                        "id": "體力回復量UP",
+                        "id": "体力回復量UP",
                         "level": 1
                     }
                 ]
@@ -1958,7 +1958,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．凶豺龍β",
+                "jaJP": "EXジャグラスβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1973,11 +1973,11 @@
         },
         "list": [
             {
-                "id": "精英．凶豺龍ヘルムβ",
+                "id": "EXジャグラスヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶豺龍ヘルムβ",
+                    "jaJP": "EXジャグラスヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -1990,7 +1990,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "快吃",
+                        "id": "早食い",
                         "level": 1
                     },
                     {
@@ -2000,11 +2000,11 @@
                 ]
             },
             {
-                "id": "精英．凶豺龍メイルβ",
+                "id": "EXジャグラスメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶豺龍メイルβ",
+                    "jaJP": "EXジャグラスメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2014,7 +2014,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 1
                     },
                     {
@@ -2024,11 +2024,11 @@
                 ]
             },
             {
-                "id": "精英．凶豺龍アームβ",
+                "id": "EXジャグラスアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶豺龍アームβ",
+                    "jaJP": "EXジャグラスアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2038,21 +2038,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 1
                     },
                     {
-                        "id": "體力回復量UP",
+                        "id": "体力回復量UP",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．凶豺龍コイルβ",
+                "id": "EXジャグラスコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶豺龍コイルβ",
+                    "jaJP": "EXジャグラスコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2065,17 +2065,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "體力回復量UP",
+                        "id": "体力回復量UP",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．凶豺龍グリーブβ",
+                "id": "EXジャグラスグリーブβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶豺龍グリーブβ",
+                    "jaJP": "EXジャグラスグリーブβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2088,7 +2088,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "滿足感",
+                        "id": "満足感",
                         "level": 1
                     }
                 ]
@@ -2101,7 +2101,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．昡鳥α",
+                "jaJP": "EXツィツィαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -2116,11 +2116,11 @@
         },
         "list": [
             {
-                "id": "精英．昡鳥ヘルムα",
+                "id": "EXツィツィヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．昡鳥ヘルムα",
+                    "jaJP": "EXツィツィヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -2133,21 +2133,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "屬性解放／裝填擴充",
+                        "id": "属性解放\/装填拡張",
                         "level": 1
                     },
                     {
-                        "id": "昏厥耐性",
+                        "id": "気絶耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．昡鳥メイルα",
+                "id": "EXツィツィメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．昡鳥メイルα",
+                    "jaJP": "EXツィツィメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -2160,21 +2160,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體術",
+                        "id": "体術",
                         "level": 2
                     },
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．昡鳥アームα",
+                "id": "EXツィツィアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．昡鳥アームα",
+                    "jaJP": "EXツィツィアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -2184,21 +2184,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "昏厥耐性",
+                        "id": "気絶耐性",
                         "level": 2
                     },
                     {
-                        "id": "廣域化",
+                        "id": "広域化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．昡鳥コイルα",
+                "id": "EXツィツィコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．昡鳥コイルα",
+                    "jaJP": "EXツィツィコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -2208,21 +2208,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "廣域化",
+                        "id": "広域化",
                         "level": 2
                     },
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．昡鳥グリーヴα",
+                "id": "EXツィツィグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．昡鳥グリーヴα",
+                    "jaJP": "EXツィツィグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -2236,7 +2236,7 @@
                         "level": 2
                     },
                     {
-                        "id": "廣域化",
+                        "id": "広域化",
                         "level": 1
                     }
                 ]
@@ -2249,7 +2249,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．昡鳥β",
+                "jaJP": "EXツィツィβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -2264,11 +2264,11 @@
         },
         "list": [
             {
-                "id": "精英．昡鳥ヘルムβ",
+                "id": "EXツィツィヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．昡鳥ヘルムβ",
+                    "jaJP": "EXツィツィヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2281,17 +2281,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "屬性解放／裝填擴充",
+                        "id": "属性解放\/装填拡張",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．昡鳥メイルβ",
+                "id": "EXツィツィメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．昡鳥メイルβ",
+                    "jaJP": "EXツィツィメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2304,21 +2304,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體術",
+                        "id": "体術",
                         "level": 1
                     },
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．昡鳥アームβ",
+                "id": "EXツィツィアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．昡鳥アームβ",
+                    "jaJP": "EXツィツィアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2328,21 +2328,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "昏厥耐性",
+                        "id": "気絶耐性",
                         "level": 2
                     },
                     {
-                        "id": "廣域化",
+                        "id": "広域化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．昡鳥コイルβ",
+                "id": "EXツィツィコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．昡鳥コイルβ",
+                    "jaJP": "EXツィツィコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2355,17 +2355,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "廣域化",
+                        "id": "広域化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．昡鳥グリーヴβ",
+                "id": "EXツィツィグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．昡鳥グリーヴβ",
+                    "jaJP": "EXツィツィグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2379,7 +2379,7 @@
                         "level": 1
                     },
                     {
-                        "id": "廣域化",
+                        "id": "広域化",
                         "level": 1
                     }
                 ]
@@ -2392,7 +2392,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．凶顎龍α",
+                "jaJP": "EXギルオスαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -2407,11 +2407,11 @@
         },
         "list": [
             {
-                "id": "精英．凶顎龍ヘルムα",
+                "id": "EXギルオスヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶顎龍ヘルムα",
+                    "jaJP": "EXギルオスヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -2421,7 +2421,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "吹笛名人",
+                        "id": "笛吹き名人",
                         "level": 2
                     },
                     {
@@ -2431,11 +2431,11 @@
                 ]
             },
             {
-                "id": "精英．凶顎龍メイルα",
+                "id": "EXギルオスメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶顎龍メイルα",
+                    "jaJP": "EXギルオスメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -2449,17 +2449,17 @@
                         "level": 2
                     },
                     {
-                        "id": "屬性解放／裝填擴充",
+                        "id": "属性解放\/装填拡張",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．凶顎龍アームα",
+                "id": "EXギルオスアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶顎龍アームα",
+                    "jaJP": "EXギルオスアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -2469,21 +2469,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "屬性解放／裝填擴充",
+                        "id": "属性解放\/装填拡張",
                         "level": 1
                     },
                     {
-                        "id": "瘴氣耐性",
+                        "id": "瘴気耐性",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．凶顎龍コイルα",
+                "id": "EXギルオスコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶顎龍コイルα",
+                    "jaJP": "EXギルオスコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -2493,21 +2493,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "適應瘴氣環境",
+                        "id": "瘴気環境適応",
                         "level": 1
                     },
                     {
-                        "id": "麻痺屬性強化",
+                        "id": "麻痺属性強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．凶顎龍グリーヴα",
+                "id": "EXギルオスグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶顎龍グリーヴα",
+                    "jaJP": "EXギルオスグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -2517,11 +2517,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "麻痺屬性強化",
+                        "id": "麻痺属性強化",
                         "level": 2
                     },
                     {
-                        "id": "屬性解放／裝填擴充",
+                        "id": "属性解放\/装填拡張",
                         "level": 1
                     }
                 ]
@@ -2534,7 +2534,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．凶顎龍β",
+                "jaJP": "EXギルオスβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -2549,11 +2549,11 @@
         },
         "list": [
             {
-                "id": "精英．凶顎龍ヘルムβ",
+                "id": "EXギルオスヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶顎龍ヘルムβ",
+                    "jaJP": "EXギルオスヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2563,17 +2563,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "吹笛名人",
+                        "id": "笛吹き名人",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．凶顎龍メイルβ",
+                "id": "EXギルオスメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶顎龍メイルβ",
+                    "jaJP": "EXギルオスメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2592,11 +2592,11 @@
                 ]
             },
             {
-                "id": "精英．凶顎龍アームβ",
+                "id": "EXギルオスアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶顎龍アームβ",
+                    "jaJP": "EXギルオスアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2606,21 +2606,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "屬性解放／裝填擴充",
+                        "id": "属性解放\/装填拡張",
                         "level": 1
                     },
                     {
-                        "id": "瘴氣耐性",
+                        "id": "瘴気耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．凶顎龍コイルβ",
+                "id": "EXギルオスコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶顎龍コイルβ",
+                    "jaJP": "EXギルオスコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2633,17 +2633,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "適應瘴氣環境",
+                        "id": "瘴気環境適応",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．凶顎龍グリーヴβ",
+                "id": "EXギルオスグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．凶顎龍グリーヴβ",
+                    "jaJP": "EXギルオスグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2653,7 +2653,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "麻痺屬性強化",
+                        "id": "麻痺属性強化",
                         "level": 2
                     }
                 ]
@@ -2666,7 +2666,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．岩賊龍α",
+                "jaJP": "EXガマルαシリーズ",
                 "enUS": null
             },
             "defense": 120,
@@ -2681,11 +2681,11 @@
         },
         "list": [
             {
-                "id": "精英．岩賊龍ヘルムα",
+                "id": "EXガマルヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．岩賊龍ヘルムα",
+                    "jaJP": "EXガマルヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -2695,21 +2695,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "爆破異常狀態的耐性",
+                        "id": "爆破やられ耐性",
                         "level": 2
                     },
                     {
-                        "id": "炸彈客",
+                        "id": "ボマー",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．岩賊龍メイルα",
+                "id": "EXガマルメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．岩賊龍メイルα",
+                    "jaJP": "EXガマルメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -2719,7 +2719,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "爆破屬性強化",
+                        "id": "爆破属性強化",
                         "level": 2
                     },
                     {
@@ -2729,11 +2729,11 @@
                 ]
             },
             {
-                "id": "精英．岩賊龍アームα",
+                "id": "EXガマルアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．岩賊龍アームα",
+                    "jaJP": "EXガマルアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -2743,21 +2743,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "炸彈客",
+                        "id": "ボマー",
                         "level": 2
                     },
                     {
-                        "id": "爆破屬性強化",
+                        "id": "爆破属性強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．岩賊龍コイルα",
+                "id": "EXガマルコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．岩賊龍コイルα",
+                    "jaJP": "EXガマルコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -2774,17 +2774,17 @@
                         "level": 2
                     },
                     {
-                        "id": "爆破異常狀態的耐性",
+                        "id": "爆破やられ耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．岩賊龍グリーヴα",
+                "id": "EXガマルグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．岩賊龍グリーヴα",
+                    "jaJP": "EXガマルグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -2797,11 +2797,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "砲彈裝填數UP",
+                        "id": "砲弾装填数UP",
                         "level": 1
                     },
                     {
-                        "id": "爆破屬性強化",
+                        "id": "爆破属性強化",
                         "level": 1
                     }
                 ]
@@ -2814,7 +2814,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．岩賊龍β",
+                "jaJP": "EXガマルβシリーズ",
                 "enUS": null
             },
             "defense": 120,
@@ -2829,11 +2829,11 @@
         },
         "list": [
             {
-                "id": "精英．岩賊龍ヘルムβ",
+                "id": "EXガマルヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．岩賊龍ヘルムβ",
+                    "jaJP": "EXガマルヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2843,17 +2843,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "爆破異常狀態的耐性",
+                        "id": "爆破やられ耐性",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．岩賊龍メイルβ",
+                "id": "EXガマルメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．岩賊龍メイルβ",
+                    "jaJP": "EXガマルメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2863,17 +2863,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "爆破屬性強化",
+                        "id": "爆破属性強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．岩賊龍アームβ",
+                "id": "EXガマルアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．岩賊龍アームβ",
+                    "jaJP": "EXガマルアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2883,21 +2883,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "炸彈客",
+                        "id": "ボマー",
                         "level": 1
                     },
                     {
-                        "id": "爆破屬性強化",
+                        "id": "爆破属性強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．岩賊龍コイルβ",
+                "id": "EXガマルコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．岩賊龍コイルβ",
+                    "jaJP": "EXガマルコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2916,11 +2916,11 @@
                 ]
             },
             {
-                "id": "精英．岩賊龍グリーヴβ",
+                "id": "EXガマルグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．岩賊龍グリーヴβ",
+                    "jaJP": "EXガマルグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -2933,7 +2933,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "砲彈裝填數UP",
+                        "id": "砲弾装填数UP",
                         "level": 1
                     }
                 ]
@@ -2946,7 +2946,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．搔鳥α",
+                "jaJP": "EXクルルαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -2961,11 +2961,11 @@
         },
         "list": [
             {
-                "id": "精英．搔鳥ヘルムα",
+                "id": "EXクルルヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．搔鳥ヘルムα",
+                    "jaJP": "EXクルルヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -2975,21 +2975,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "投射器裝填數UP",
+                        "id": "スリンガー装填数UP",
                         "level": 2
                     },
                     {
-                        "id": "超會心",
+                        "id": "超会心",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．搔鳥メイルα",
+                "id": "EXクルルメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．搔鳥メイルα",
+                    "jaJP": "EXクルルメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -2999,21 +2999,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "耐力急速回復",
+                        "id": "スタミナ急速回復",
                         "level": 1
                     },
                     {
-                        "id": "看破",
+                        "id": "見切り",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．搔鳥アームα",
+                "id": "EXクルルアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．搔鳥アームα",
+                    "jaJP": "EXクルルアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -3026,21 +3026,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "超會心",
+                        "id": "超会心",
                         "level": 1
                     },
                     {
-                        "id": "搬運達人",
+                        "id": "運搬の達人",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．搔鳥コイルα",
+                "id": "EXクルルコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．搔鳥コイルα",
+                    "jaJP": "EXクルルコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -3050,21 +3050,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 2
                     },
                     {
-                        "id": "看破",
+                        "id": "見切り",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．搔鳥グリーブα",
+                "id": "EXクルルグリーブα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．搔鳥グリーブα",
+                    "jaJP": "EXクルルグリーブα",
                     "enUS": null
                 },
                 "slots": [
@@ -3074,11 +3074,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "看破",
+                        "id": "見切り",
                         "level": 2
                     },
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 1
                     }
                 ]
@@ -3091,7 +3091,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．搔鳥β",
+                "jaJP": "EXクルルβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -3106,11 +3106,11 @@
         },
         "list": [
             {
-                "id": "精英．搔鳥ヘルムβ",
+                "id": "EXクルルヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．搔鳥ヘルムβ",
+                    "jaJP": "EXクルルヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3120,17 +3120,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "投射器裝填數UP",
+                        "id": "スリンガー装填数UP",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．搔鳥メイルβ",
+                "id": "EXクルルメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．搔鳥メイルβ",
+                    "jaJP": "EXクルルメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3140,21 +3140,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "耐力急速回復",
+                        "id": "スタミナ急速回復",
                         "level": 1
                     },
                     {
-                        "id": "看破",
+                        "id": "見切り",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．搔鳥アームβ",
+                "id": "EXクルルアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．搔鳥アームβ",
+                    "jaJP": "EXクルルアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3164,17 +3164,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "超會心",
+                        "id": "超会心",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．搔鳥コイルβ",
+                "id": "EXクルルコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．搔鳥コイルβ",
+                    "jaJP": "EXクルルコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3187,17 +3187,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．搔鳥グリーブβ",
+                "id": "EXクルルグリーブβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．搔鳥グリーブβ",
+                    "jaJP": "EXクルルグリーブβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3207,11 +3207,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "看破",
+                        "id": "見切り",
                         "level": 1
                     },
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 1
                     }
                 ]
@@ -3224,7 +3224,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．毒妖鳥α",
+                "jaJP": "EXプケプケαシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -3239,11 +3239,11 @@
         },
         "list": [
             {
-                "id": "精英．毒妖鳥ヘルムα",
+                "id": "EXプケプケヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．毒妖鳥ヘルムα",
+                    "jaJP": "EXプケプケヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -3256,7 +3256,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "環境利用知識",
+                        "id": "環境利用の知識",
                         "level": 2
                     },
                     {
@@ -3266,11 +3266,11 @@
                 ]
             },
             {
-                "id": "精英．毒妖鳥メイルα",
+                "id": "EXプケプケメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．毒妖鳥メイルα",
+                    "jaJP": "EXプケプケメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -3280,21 +3280,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 2
                     },
                     {
-                        "id": "無傷",
+                        "id": "フルチャージ",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．毒妖鳥アームα",
+                "id": "EXプケプケアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．毒妖鳥アームα",
+                    "jaJP": "EXプケプケアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -3304,21 +3304,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "無傷",
+                        "id": "フルチャージ",
                         "level": 2
                     },
                     {
-                        "id": "環境利用知識",
+                        "id": "環境利用の知識",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．毒妖鳥コイルα",
+                "id": "EXプケプケコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．毒妖鳥コイルα",
+                    "jaJP": "EXプケプケコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -3328,21 +3328,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "毒屬性強化",
+                        "id": "毒属性強化",
                         "level": 2
                     },
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．毒妖鳥グリーヴα",
+                "id": "EXプケプケグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．毒妖鳥グリーヴα",
+                    "jaJP": "EXプケプケグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -3356,7 +3356,7 @@
                         "level": 2
                     },
                     {
-                        "id": "毒屬性強化",
+                        "id": "毒属性強化",
                         "level": 2
                     }
                 ]
@@ -3369,7 +3369,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．毒妖鳥β",
+                "jaJP": "EXプケプケβシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -3384,11 +3384,11 @@
         },
         "list": [
             {
-                "id": "精英．毒妖鳥ヘルムβ",
+                "id": "EXプケプケヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．毒妖鳥ヘルムβ",
+                    "jaJP": "EXプケプケヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3404,17 +3404,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "環境利用知識",
+                        "id": "環境利用の知識",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．毒妖鳥メイルβ",
+                "id": "EXプケプケメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．毒妖鳥メイルβ",
+                    "jaJP": "EXプケプケメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3424,21 +3424,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 1
                     },
                     {
-                        "id": "無傷",
+                        "id": "フルチャージ",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．毒妖鳥アームβ",
+                "id": "EXプケプケアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．毒妖鳥アームβ",
+                    "jaJP": "EXプケプケアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3448,21 +3448,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "無傷",
+                        "id": "フルチャージ",
                         "level": 1
                     },
                     {
-                        "id": "環境利用知識",
+                        "id": "環境利用の知識",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．毒妖鳥コイルβ",
+                "id": "EXプケプケコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．毒妖鳥コイルβ",
+                    "jaJP": "EXプケプケコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3475,21 +3475,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "毒屬性強化",
+                        "id": "毒属性強化",
                         "level": 1
                     },
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．毒妖鳥グリーヴβ",
+                "id": "EXプケプケグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．毒妖鳥グリーヴβ",
+                    "jaJP": "EXプケプケグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3515,7 +3515,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．プケラグーナα",
+                "jaJP": "EXプケラグーナαシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -3530,11 +3530,11 @@
         },
         "list": [
             {
-                "id": "精英．プケラグーナヘルムα",
+                "id": "EXプケラグーナヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．プケラグーナヘルムα",
+                    "jaJP": "EXプケラグーナヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -3544,21 +3544,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "拔刀術【技】",
+                        "id": "抜刀術【技】",
                         "level": 2
                     },
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．プケラグーナメイルα",
+                "id": "EXプケラグーナメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．プケラグーナメイルα",
+                    "jaJP": "EXプケラグーナメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -3568,21 +3568,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "強化持續",
+                        "id": "強化持続",
                         "level": 1
                     },
                     {
-                        "id": "拔刀術【技】",
+                        "id": "抜刀術【技】",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．プケラグーナアームα",
+                "id": "EXプケラグーナアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．プケラグーナアームα",
+                    "jaJP": "EXプケラグーナアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -3592,21 +3592,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "破壞王",
+                        "id": "破壊王",
                         "level": 1
                     },
                     {
-                        "id": "強化持續",
+                        "id": "強化持続",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．プケラグーナコイルα",
+                "id": "EXプケラグーナコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．プケラグーナコイルα",
+                    "jaJP": "EXプケラグーナコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -3616,21 +3616,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 2
                     },
                     {
-                        "id": "破壞王",
+                        "id": "破壊王",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．プケラグーナグリーヴα",
+                "id": "EXプケラグーナグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．プケラグーナグリーヴα",
+                    "jaJP": "EXプケラグーナグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -3640,11 +3640,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 2
                     },
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 2
                     }
                 ]
@@ -3657,7 +3657,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．プケラグーナβ",
+                "jaJP": "EXプケラグーナβシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -3672,11 +3672,11 @@
         },
         "list": [
             {
-                "id": "精英．プケラグーナヘルムβ",
+                "id": "EXプケラグーナヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．プケラグーナヘルムβ",
+                    "jaJP": "EXプケラグーナヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3686,21 +3686,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "拔刀術【技】",
+                        "id": "抜刀術【技】",
                         "level": 1
                     },
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．プケラグーナメイルβ",
+                "id": "EXプケラグーナメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．プケラグーナメイルβ",
+                    "jaJP": "EXプケラグーナメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3713,17 +3713,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "強化持續",
+                        "id": "強化持続",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．プケラグーナアームβ",
+                "id": "EXプケラグーナアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．プケラグーナアームβ",
+                    "jaJP": "EXプケラグーナアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3736,17 +3736,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "破壞王",
+                        "id": "破壊王",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．プケラグーナコイルβ",
+                "id": "EXプケラグーナコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．プケラグーナコイルβ",
+                    "jaJP": "EXプケラグーナコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3756,21 +3756,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 1
                     },
                     {
-                        "id": "破壞王",
+                        "id": "破壊王",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．プケラグーナグリーヴβ",
+                "id": "EXプケラグーナグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．プケラグーナグリーヴβ",
+                    "jaJP": "EXプケラグーナグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3783,7 +3783,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "道具使用強化",
+                        "id": "アイテム使用強化",
                         "level": 2
                     }
                 ]
@@ -3796,7 +3796,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．土砂龍α",
+                "jaJP": "EXボロスαシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -3811,11 +3811,11 @@
         },
         "list": [
             {
-                "id": "精英．土砂龍ヘルムα",
+                "id": "EXボロスヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．土砂龍ヘルムα",
+                    "jaJP": "EXボロスヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -3825,21 +3825,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "防禦性能",
+                        "id": "ガード性能",
                         "level": 2
                     },
                     {
-                        "id": "跑者",
+                        "id": "ランナー",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．土砂龍メイルα",
+                "id": "EXボロスメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．土砂龍メイルα",
+                    "jaJP": "EXボロスメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -3852,21 +3852,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "奪取耐力",
+                        "id": "スタミナ奪取",
                         "level": 2
                     },
                     {
-                        "id": "挑戰者",
+                        "id": "挑戦者",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．土砂龍アームα",
+                "id": "EXボロスアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．土砂龍アームα",
+                    "jaJP": "EXボロスアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -3879,21 +3879,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "跑者",
+                        "id": "ランナー",
                         "level": 1
                     },
                     {
-                        "id": "防禦性能",
+                        "id": "ガード性能",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．土砂龍コイルα",
+                "id": "EXボロスコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．土砂龍コイルα",
+                    "jaJP": "EXボロスコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -3903,21 +3903,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "挑戰者",
+                        "id": "挑戦者",
                         "level": 2
                     },
                     {
-                        "id": "防禦性能",
+                        "id": "ガード性能",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．土砂龍グリーヴα",
+                "id": "EXボロスグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．土砂龍グリーヴα",
+                    "jaJP": "EXボロスグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -3930,11 +3930,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "昏厥耐性",
+                        "id": "気絶耐性",
                         "level": 2
                     },
                     {
-                        "id": "跑者",
+                        "id": "ランナー",
                         "level": 1
                     }
                 ]
@@ -3947,7 +3947,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．土砂龍β",
+                "jaJP": "EXボロスβシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -3962,11 +3962,11 @@
         },
         "list": [
             {
-                "id": "精英．土砂龍ヘルムβ",
+                "id": "EXボロスヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．土砂龍ヘルムβ",
+                    "jaJP": "EXボロスヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -3979,17 +3979,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "防禦性能",
+                        "id": "ガード性能",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．土砂龍メイルβ",
+                "id": "EXボロスメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．土砂龍メイルβ",
+                    "jaJP": "EXボロスメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4002,17 +4002,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "奪取耐力",
+                        "id": "スタミナ奪取",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．土砂龍アームβ",
+                "id": "EXボロスアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．土砂龍アームβ",
+                    "jaJP": "EXボロスアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4025,17 +4025,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "跑者",
+                        "id": "ランナー",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．土砂龍コイルβ",
+                "id": "EXボロスコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．土砂龍コイルβ",
+                    "jaJP": "EXボロスコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4045,17 +4045,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "挑戰者",
+                        "id": "挑戦者",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．土砂龍グリーヴβ",
+                "id": "EXボロスグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．土砂龍グリーヴβ",
+                    "jaJP": "EXボロスグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4071,7 +4071,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "昏厥耐性",
+                        "id": "気絶耐性",
                         "level": 2
                     }
                 ]
@@ -4084,7 +4084,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．泥魚α",
+                "jaJP": "EXジュラαシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -4099,11 +4099,11 @@
         },
         "list": [
             {
-                "id": "精英．泥魚ヘルムα",
+                "id": "EXジュラヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．泥魚ヘルムα",
+                    "jaJP": "EXジュラヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -4116,7 +4116,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "力量解放",
+                        "id": "力の解放",
                         "level": 2
                     },
                     {
@@ -4126,11 +4126,11 @@
                 ]
             },
             {
-                "id": "精英．泥魚メイルα",
+                "id": "EXジュラメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．泥魚メイルα",
+                    "jaJP": "EXジュラメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -4140,21 +4140,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "力量解放",
+                        "id": "力の解放",
                         "level": 1
                     },
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．泥魚アームα",
+                "id": "EXジュラアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．泥魚アームα",
+                    "jaJP": "EXジュラアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -4167,21 +4167,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 2
                     },
                     {
-                        "id": "冰耐性",
+                        "id": "氷耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．泥魚コイルα",
+                "id": "EXジュラコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．泥魚コイルα",
+                    "jaJP": "EXジュラコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -4191,21 +4191,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "冰耐性",
+                        "id": "氷耐性",
                         "level": 2
                     },
                     {
-                        "id": "力量解放",
+                        "id": "力の解放",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．泥魚グリーヴα",
+                "id": "EXジュラグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．泥魚グリーヴα",
+                    "jaJP": "EXジュラグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -4219,7 +4219,7 @@
                         "level": 2
                     },
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 1
                     }
                 ]
@@ -4232,7 +4232,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．泥魚β",
+                "jaJP": "EXジュラβシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -4247,11 +4247,11 @@
         },
         "list": [
             {
-                "id": "精英．泥魚ヘルムβ",
+                "id": "EXジュラヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．泥魚ヘルムβ",
+                    "jaJP": "EXジュラヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4264,7 +4264,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "力量解放",
+                        "id": "力の解放",
                         "level": 1
                     },
                     {
@@ -4274,11 +4274,11 @@
                 ]
             },
             {
-                "id": "精英．泥魚メイルβ",
+                "id": "EXジュラメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．泥魚メイルβ",
+                    "jaJP": "EXジュラメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4288,21 +4288,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "力量解放",
+                        "id": "力の解放",
                         "level": 1
                     },
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．泥魚アームβ",
+                "id": "EXジュラアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．泥魚アームβ",
+                    "jaJP": "EXジュラアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4315,17 +4315,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．泥魚コイルβ",
+                "id": "EXジュラコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．泥魚コイルβ",
+                    "jaJP": "EXジュラコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4338,17 +4338,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "冰耐性",
+                        "id": "氷耐性",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．泥魚グリーヴβ",
+                "id": "EXジュラグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．泥魚グリーヴβ",
+                    "jaJP": "EXジュラグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4365,7 +4365,7 @@
                         "level": 1
                     },
                     {
-                        "id": "水屬性攻撃強化",
+                        "id": "水属性攻撃強化",
                         "level": 1
                     }
                 ]
@@ -4378,7 +4378,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．冰魚α",
+                "jaJP": "EXブランαシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -4393,11 +4393,11 @@
         },
         "list": [
             {
-                "id": "精英．冰魚ヘルムα",
+                "id": "EXブランヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰魚ヘルムα",
+                    "jaJP": "EXブランヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -4407,21 +4407,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "適應水場．深雪",
+                        "id": "水場・深雪適応",
                         "level": 2
                     },
                     {
-                        "id": "耳塞",
+                        "id": "耳栓",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．冰魚メイルα",
+                "id": "EXブランメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰魚メイルα",
+                    "jaJP": "EXブランメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -4431,21 +4431,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "耐力急速回復",
+                        "id": "スタミナ急速回復",
                         "level": 1
                     },
                     {
-                        "id": "冰屬性攻撃強化",
+                        "id": "氷属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．冰魚アームα",
+                "id": "EXブランアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰魚アームα",
+                    "jaJP": "EXブランアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -4455,21 +4455,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "冰屬性攻撃強化",
+                        "id": "氷属性攻撃強化",
                         "level": 2
                     },
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．冰魚コイルα",
+                "id": "EXブランコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰魚コイルα",
+                    "jaJP": "EXブランコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -4479,21 +4479,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 2
                     },
                     {
-                        "id": "耳塞",
+                        "id": "耳栓",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．冰魚グリーヴα",
+                "id": "EXブラングリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰魚グリーヴα",
+                    "jaJP": "EXブラングリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -4503,11 +4503,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "耳塞",
+                        "id": "耳栓",
                         "level": 2
                     },
                     {
-                        "id": "冰屬性攻撃強化",
+                        "id": "氷属性攻撃強化",
                         "level": 1
                     }
                 ]
@@ -4520,7 +4520,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．冰魚β",
+                "jaJP": "EXブランβシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -4535,11 +4535,11 @@
         },
         "list": [
             {
-                "id": "精英．冰魚ヘルムβ",
+                "id": "EXブランヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰魚ヘルムβ",
+                    "jaJP": "EXブランヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4552,17 +4552,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "適應水場．深雪",
+                        "id": "水場・深雪適応",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．冰魚メイルβ",
+                "id": "EXブランメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰魚メイルβ",
+                    "jaJP": "EXブランメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4575,17 +4575,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "耐力急速回復",
+                        "id": "スタミナ急速回復",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．冰魚アームβ",
+                "id": "EXブランアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰魚アームβ",
+                    "jaJP": "EXブランアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4595,17 +4595,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "冰屬性攻撃強化",
+                        "id": "氷属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．冰魚コイルβ",
+                "id": "EXブランコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰魚コイルβ",
+                    "jaJP": "EXブランコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4618,21 +4618,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 2
                     },
                     {
-                        "id": "耳塞",
+                        "id": "耳栓",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．冰魚グリーヴβ",
+                "id": "EXブラングリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．冰魚グリーヴβ",
+                    "jaJP": "EXブラングリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4642,7 +4642,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "耳塞",
+                        "id": "耳栓",
                         "level": 2
                     }
                 ]
@@ -4655,7 +4655,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．飛雷α",
+                "jaJP": "EXカガチαシリーズ",
                 "enUS": null
             },
             "defense": 120,
@@ -4670,11 +4670,11 @@
         },
         "list": [
             {
-                "id": "精英．飛雷ヘルムα",
+                "id": "EXカガチヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．飛雷ヘルムα",
+                    "jaJP": "EXカガチヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -4684,21 +4684,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體術",
+                        "id": "体術",
                         "level": 2
                     },
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．飛雷メイルα",
+                "id": "EXカガチメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．飛雷メイルα",
+                    "jaJP": "EXカガチメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -4711,21 +4711,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "跳躍鐵人",
+                        "id": "ジャンプ鉄人",
                         "level": 1
                     },
                     {
-                        "id": "體術",
+                        "id": "体術",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．飛雷アームα",
+                "id": "EXカガチアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．飛雷アームα",
+                    "jaJP": "EXカガチアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -4735,21 +4735,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 2
                     },
                     {
-                        "id": "雷屬性攻撃強化",
+                        "id": "雷属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．飛雷コイルα",
+                "id": "EXカガチコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．飛雷コイルα",
+                    "jaJP": "EXカガチコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -4762,7 +4762,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "雷屬性攻撃強化",
+                        "id": "雷属性攻撃強化",
                         "level": 2
                     },
                     {
@@ -4772,11 +4772,11 @@
                 ]
             },
             {
-                "id": "精英．飛雷グリーヴα",
+                "id": "EXカガチグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．飛雷グリーヴα",
+                    "jaJP": "EXカガチグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -4793,7 +4793,7 @@
                         "level": 2
                     },
                     {
-                        "id": "體術",
+                        "id": "体術",
                         "level": 1
                     }
                 ]
@@ -4806,7 +4806,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．飛雷β",
+                "jaJP": "EXカガチβシリーズ",
                 "enUS": null
             },
             "defense": 120,
@@ -4821,11 +4821,11 @@
         },
         "list": [
             {
-                "id": "精英．飛雷ヘルムβ",
+                "id": "EXカガチヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．飛雷ヘルムβ",
+                    "jaJP": "EXカガチヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4838,21 +4838,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體術",
+                        "id": "体術",
                         "level": 1
                     },
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．飛雷メイルβ",
+                "id": "EXカガチメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．飛雷メイルβ",
+                    "jaJP": "EXカガチメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4865,17 +4865,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "跳躍鐵人",
+                        "id": "ジャンプ鉄人",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．飛雷アームβ",
+                "id": "EXカガチアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．飛雷アームβ",
+                    "jaJP": "EXカガチアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4888,21 +4888,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 1
                     },
                     {
-                        "id": "雷屬性攻撃強化",
+                        "id": "雷属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．飛雷コイルβ",
+                "id": "EXカガチコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．飛雷コイルβ",
+                    "jaJP": "EXカガチコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4915,17 +4915,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "雷屬性攻撃強化",
+                        "id": "雷属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．飛雷グリーヴβ",
+                "id": "EXカガチグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．飛雷グリーヴβ",
+                    "jaJP": "EXカガチグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -4954,7 +4954,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．朱毒α",
+                "jaJP": "EXベニカガチαシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -4969,11 +4969,11 @@
         },
         "list": [
             {
-                "id": "精英．朱毒ヘルムα",
+                "id": "EXベニカガチヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．朱毒ヘルムα",
+                    "jaJP": "EXベニカガチヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -4983,21 +4983,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 2
                     },
                     {
-                        "id": "麻痺屬性強化",
+                        "id": "麻痺属性強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．朱毒メイルα",
+                "id": "EXベニカガチメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．朱毒メイルα",
+                    "jaJP": "EXベニカガチメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -5010,21 +5010,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "收刀術",
+                        "id": "納刀術",
                         "level": 1
                     },
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．朱毒アームα",
+                "id": "EXベニカガチアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．朱毒アームα",
+                    "jaJP": "EXベニカガチアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -5034,21 +5034,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "毒屬性強化",
+                        "id": "毒属性強化",
                         "level": 2
                     },
                     {
-                        "id": "迴避性能",
+                        "id": "回避性能",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．朱毒コイルα",
+                "id": "EXベニカガチコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．朱毒コイルα",
+                    "jaJP": "EXベニカガチコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -5058,21 +5058,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體術",
+                        "id": "体術",
                         "level": 1
                     },
                     {
-                        "id": "收刀術",
+                        "id": "納刀術",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．朱毒グリーヴα",
+                "id": "EXベニカガチグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．朱毒グリーヴα",
+                    "jaJP": "EXベニカガチグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -5082,11 +5082,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避性能",
+                        "id": "回避性能",
                         "level": 1
                     },
                     {
-                        "id": "體術",
+                        "id": "体術",
                         "level": 1
                     }
                 ]
@@ -5099,7 +5099,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．朱毒β",
+                "jaJP": "EXベニカガチβシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -5114,11 +5114,11 @@
         },
         "list": [
             {
-                "id": "精英．朱毒ヘルムβ",
+                "id": "EXベニカガチヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．朱毒ヘルムβ",
+                    "jaJP": "EXベニカガチヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5128,21 +5128,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 1
                     },
                     {
-                        "id": "麻痺屬性強化",
+                        "id": "麻痺属性強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．朱毒メイルβ",
+                "id": "EXベニカガチメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．朱毒メイルβ",
+                    "jaJP": "EXベニカガチメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5155,17 +5155,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "收刀術",
+                        "id": "納刀術",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．朱毒アームβ",
+                "id": "EXベニカガチアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．朱毒アームβ",
+                    "jaJP": "EXベニカガチアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5175,21 +5175,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "毒屬性強化",
+                        "id": "毒属性強化",
                         "level": 1
                     },
                     {
-                        "id": "迴避性能",
+                        "id": "回避性能",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．朱毒コイルβ",
+                "id": "EXベニカガチコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．朱毒コイルβ",
+                    "jaJP": "EXベニカガチコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5202,17 +5202,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "體術",
+                        "id": "体術",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．朱毒グリーヴβ",
+                "id": "EXベニカガチグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．朱毒グリーヴβ",
+                    "jaJP": "EXベニカガチグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5225,11 +5225,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避性能",
+                        "id": "回避性能",
                         "level": 1
                     },
                     {
-                        "id": "體術",
+                        "id": "体術",
                         "level": 1
                     }
                 ]
@@ -5242,7 +5242,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．礦石α",
+                "jaJP": "EXハイメタαシリーズ",
                 "enUS": null
             },
             "defense": 128,
@@ -5257,11 +5257,11 @@
         },
         "list": [
             {
-                "id": "精英．礦石ヘルムα",
+                "id": "EXハイメタヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．礦石ヘルムα",
+                    "jaJP": "EXハイメタヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -5271,21 +5271,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "冰耐性",
+                        "id": "氷耐性",
                         "level": 2
                     },
                     {
-                        "id": "耳塞",
+                        "id": "耳栓",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．礦石メイルα",
+                "id": "EXハイメタメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．礦石メイルα",
+                    "jaJP": "EXハイメタメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -5295,21 +5295,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "耳塞",
+                        "id": "耳栓",
                         "level": 2
                     },
                     {
-                        "id": "冰屬性攻撃強化",
+                        "id": "氷属性攻撃強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．礦石アームα",
+                "id": "EXハイメタアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．礦石アームα",
+                    "jaJP": "EXハイメタアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -5322,21 +5322,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "防禦",
+                        "id": "防御",
                         "level": 2
                     },
                     {
-                        "id": "冰屬性攻撃強化",
+                        "id": "氷属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．礦石コイルα",
+                "id": "EXハイメタコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．礦石コイルα",
+                    "jaJP": "EXハイメタコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -5349,21 +5349,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "砲彈裝填數UP",
+                        "id": "砲弾装填数UP",
                         "level": 1
                     },
                     {
-                        "id": "防禦",
+                        "id": "防御",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．礦石グリーヴα",
+                "id": "EXハイメタグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．礦石グリーヴα",
+                    "jaJP": "EXハイメタグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -5383,7 +5383,7 @@
                         "level": 2
                     },
                     {
-                        "id": "冰耐性",
+                        "id": "氷耐性",
                         "level": 1
                     }
                 ]
@@ -5396,7 +5396,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．礦石β",
+                "jaJP": "EXハイメタβシリーズ",
                 "enUS": null
             },
             "defense": 128,
@@ -5411,11 +5411,11 @@
         },
         "list": [
             {
-                "id": "精英．礦石ヘルムβ",
+                "id": "EXハイメタヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．礦石ヘルムβ",
+                    "jaJP": "EXハイメタヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5428,21 +5428,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "冰耐性",
+                        "id": "氷耐性",
                         "level": 2
                     },
                     {
-                        "id": "耳塞",
+                        "id": "耳栓",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．礦石メイルβ",
+                "id": "EXハイメタメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．礦石メイルβ",
+                    "jaJP": "EXハイメタメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5455,21 +5455,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "耳塞",
+                        "id": "耳栓",
                         "level": 1
                     },
                     {
-                        "id": "冰屬性攻撃強化",
+                        "id": "氷属性攻撃強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．礦石アームβ",
+                "id": "EXハイメタアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．礦石アームβ",
+                    "jaJP": "EXハイメタアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5482,21 +5482,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "防禦",
+                        "id": "防御",
                         "level": 2
                     },
                     {
-                        "id": "冰屬性攻撃強化",
+                        "id": "氷属性攻撃強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．礦石コイルβ",
+                "id": "EXハイメタコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．礦石コイルβ",
+                    "jaJP": "EXハイメタコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5509,21 +5509,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "砲彈裝填數UP",
+                        "id": "砲弾装填数UP",
                         "level": 1
                     },
                     {
-                        "id": "防禦",
+                        "id": "防御",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．礦石グリーヴβ",
+                "id": "EXハイメタグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．礦石グリーヴβ",
+                    "jaJP": "EXハイメタグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5540,7 +5540,7 @@
                         "level": 1
                     },
                     {
-                        "id": "冰耐性",
+                        "id": "氷耐性",
                         "level": 1
                     }
                 ]
@@ -5553,7 +5553,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．猛牛龍α",
+                "jaJP": "EXバフバロαシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -5568,11 +5568,11 @@
         },
         "list": [
             {
-                "id": "精英．猛牛龍ヘルムα",
+                "id": "EXバフバロヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．猛牛龍ヘルムα",
+                    "jaJP": "EXバフバロヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -5582,21 +5582,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "怨恨",
+                        "id": "逆恨み",
                         "level": 2
                     },
                     {
-                        "id": "最愛菇類",
+                        "id": "キノコ大好き",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．猛牛龍メイルα",
+                "id": "EXバフバロメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．猛牛龍メイルα",
+                    "jaJP": "EXバフバロメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -5606,21 +5606,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "快吃",
+                        "id": "早食い",
                         "level": 1
                     },
                     {
-                        "id": "攻擊守勢",
+                        "id": "攻めの守勢",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．猛牛龍アームα",
+                "id": "EXバフバロアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．猛牛龍アームα",
+                    "jaJP": "EXバフバロアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -5630,21 +5630,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "攻擊守勢",
+                        "id": "攻めの守勢",
                         "level": 1
                     },
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．猛牛龍コイルα",
+                "id": "EXバフバロコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．猛牛龍コイルα",
+                    "jaJP": "EXバフバロコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -5654,21 +5654,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "最愛菇類",
+                        "id": "キノコ大好き",
                         "level": 1
                     },
                     {
-                        "id": "攻擊守勢",
+                        "id": "攻めの守勢",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．猛牛龍グリーヴα",
+                "id": "EXバフバログリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．猛牛龍グリーヴα",
+                    "jaJP": "EXバフバログリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -5678,11 +5678,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "最愛菇類",
+                        "id": "キノコ大好き",
                         "level": 1
                     },
                     {
-                        "id": "快吃",
+                        "id": "早食い",
                         "level": 1
                     }
                 ]
@@ -5695,7 +5695,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．猛牛龍β",
+                "jaJP": "EXバフバロβシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -5710,11 +5710,11 @@
         },
         "list": [
             {
-                "id": "精英．猛牛龍ヘルムβ",
+                "id": "EXバフバロヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．猛牛龍ヘルムβ",
+                    "jaJP": "EXバフバロヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5727,17 +5727,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "怨恨",
+                        "id": "逆恨み",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．猛牛龍メイルβ",
+                "id": "EXバフバロメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．猛牛龍メイルβ",
+                    "jaJP": "EXバフバロメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5750,17 +5750,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "快吃",
+                        "id": "早食い",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．猛牛龍アームβ",
+                "id": "EXバフバロアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．猛牛龍アームβ",
+                    "jaJP": "EXバフバロアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5770,21 +5770,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "攻擊守勢",
+                        "id": "攻めの守勢",
                         "level": 1
                     },
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．猛牛龍コイルβ",
+                "id": "EXバフバロコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．猛牛龍コイルβ",
+                    "jaJP": "EXバフバロコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5797,17 +5797,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "最愛菇類",
+                        "id": "キノコ大好き",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．猛牛龍グリーヴβ",
+                "id": "EXバフバログリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．猛牛龍グリーヴβ",
+                    "jaJP": "EXバフバログリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -5820,7 +5820,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "最愛菇類",
+                        "id": "キノコ大好き",
                         "level": 1
                     }
                 ]
@@ -5833,7 +5833,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．ジャナフα",
+                "jaJP": "EXジャナフαシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -5845,16 +5845,16 @@
                 "dragon": 0
             },
             "set": {
-                "id": "蛮顎竜の覇気"
+                "id": "【蛮顎竜の覇気】"
             }
         },
         "list": [
             {
-                "id": "精英．ジャナフヘルムα",
+                "id": "EXジャナフヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ジャナフヘルムα",
+                    "jaJP": "EXジャナフヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -5864,7 +5864,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "火屬性攻撃強化",
+                        "id": "火属性攻撃強化",
                         "level": 2
                     },
                     {
@@ -5874,11 +5874,11 @@
                 ]
             },
             {
-                "id": "精英．ジャナフメイルα",
+                "id": "EXジャナフメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ジャナフメイルα",
+                    "jaJP": "EXジャナフメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -5891,7 +5891,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "跑者",
+                        "id": "ランナー",
                         "level": 2
                     },
                     {
@@ -5901,11 +5901,11 @@
                 ]
             },
             {
-                "id": "精英．ジャナフアームα",
+                "id": "EXジャナフアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ジャナフアームα",
+                    "jaJP": "EXジャナフアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -5919,17 +5919,17 @@
                         "level": 1
                     },
                     {
-                        "id": "火屬性攻撃強化",
+                        "id": "火属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．ジャナフコイルα",
+                "id": "EXジャナフコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ジャナフコイルα",
+                    "jaJP": "EXジャナフコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -5952,11 +5952,11 @@
                 ]
             },
             {
-                "id": "精英．ジャナフグリーヴα",
+                "id": "EXジャナフグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ジャナフグリーヴα",
+                    "jaJP": "EXジャナフグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -5970,7 +5970,7 @@
                         "level": 2
                     },
                     {
-                        "id": "跑者",
+                        "id": "ランナー",
                         "level": 1
                     }
                 ]
@@ -5983,7 +5983,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．ジャナフβ",
+                "jaJP": "EXジャナフβシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -5995,16 +5995,16 @@
                 "dragon": 0
             },
             "set": {
-                "id": "蛮顎竜の覇気"
+                "id": "【蛮顎竜の覇気】"
             }
         },
         "list": [
             {
-                "id": "精英．ジャナフヘルムβ",
+                "id": "EXジャナフヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ジャナフヘルムβ",
+                    "jaJP": "EXジャナフヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6014,17 +6014,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "火屬性攻撃強化",
+                        "id": "火属性攻撃強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．ジャナフメイルβ",
+                "id": "EXジャナフメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ジャナフメイルβ",
+                    "jaJP": "EXジャナフメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6037,7 +6037,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "跑者",
+                        "id": "ランナー",
                         "level": 1
                     },
                     {
@@ -6047,11 +6047,11 @@
                 ]
             },
             {
-                "id": "精英．ジャナフアームβ",
+                "id": "EXジャナフアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ジャナフアームβ",
+                    "jaJP": "EXジャナフアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6065,17 +6065,17 @@
                         "level": 1
                     },
                     {
-                        "id": "火屬性攻撃強化",
+                        "id": "火属性攻撃強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ジャナフコイルβ",
+                "id": "EXジャナフコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ジャナフコイルβ",
+                    "jaJP": "EXジャナフコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6094,11 +6094,11 @@
                 ]
             },
             {
-                "id": "精英．ジャナフグリーヴβ",
+                "id": "EXジャナフグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ジャナフグリーヴβ",
+                    "jaJP": "EXジャナフグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6124,7 +6124,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．レイアα",
+                "jaJP": "EXレイアαシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -6136,16 +6136,16 @@
                 "dragon": -3
             },
             "set": {
-                "id": "雌火竜の真髄"
+                "id": "【雌火竜の真髄】"
             }
         },
         "list": [
             {
-                "id": "精英．レイアヘルムα",
+                "id": "EXレイアヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．レイアヘルムα",
+                    "jaJP": "EXレイアヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -6155,21 +6155,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 2
                     },
                     {
-                        "id": "毒屬性強化",
+                        "id": "毒属性強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．レイアメイルα",
+                "id": "EXレイアメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．レイアメイルα",
+                    "jaJP": "EXレイアメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -6182,21 +6182,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "植生學",
+                        "id": "植生学",
                         "level": 2
                     },
                     {
-                        "id": "體力回復量UP",
+                        "id": "体力回復量UP",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．レイアアームα",
+                "id": "EXレイアアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．レイアアームα",
+                    "jaJP": "EXレイアアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -6206,21 +6206,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "毒屬性強化",
+                        "id": "毒属性強化",
                         "level": 2
                     },
                     {
-                        "id": "植生學",
+                        "id": "植生学",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．レイアコイルα",
+                "id": "EXレイアコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．レイアコイルα",
+                    "jaJP": "EXレイアコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -6237,17 +6237,17 @@
                         "level": 2
                     },
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．レイアグリーヴα",
+                "id": "EXレイアグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．レイアグリーヴα",
+                    "jaJP": "EXレイアグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -6257,7 +6257,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "體力回復量UP",
+                        "id": "体力回復量UP",
                         "level": 2
                     },
                     {
@@ -6274,7 +6274,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．レイアβ",
+                "jaJP": "EXレイアβシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -6286,16 +6286,16 @@
                 "dragon": -3
             },
             "set": {
-                "id": "雌火竜の真髄"
+                "id": "【雌火竜の真髄】"
             }
         },
         "list": [
             {
-                "id": "精英．レイアヘルムβ",
+                "id": "EXレイアヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．レイアヘルムβ",
+                    "jaJP": "EXレイアヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6305,21 +6305,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 1
                     },
                     {
-                        "id": "毒屬性強化",
+                        "id": "毒属性強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．レイアメイルβ",
+                "id": "EXレイアメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．レイアメイルβ",
+                    "jaJP": "EXレイアメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6332,21 +6332,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "植生學",
+                        "id": "植生学",
                         "level": 1
                     },
                     {
-                        "id": "體力回復量UP",
+                        "id": "体力回復量UP",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．レイアアームβ",
+                "id": "EXレイアアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．レイアアームβ",
+                    "jaJP": "EXレイアアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6356,17 +6356,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "毒屬性強化",
+                        "id": "毒属性強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．レイアコイルβ",
+                "id": "EXレイアコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．レイアコイルβ",
+                    "jaJP": "EXレイアコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6383,17 +6383,17 @@
                         "level": 1
                     },
                     {
-                        "id": "體力增強",
+                        "id": "体力増強",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．レイアグリーヴβ",
+                "id": "EXレイアグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．レイアグリーヴβ",
+                    "jaJP": "EXレイアグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6403,7 +6403,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "體力回復量UP",
+                        "id": "体力回復量UP",
                         "level": 2
                     }
                 ]
@@ -6416,7 +6416,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．リオハートα",
+                "jaJP": "EXリオハートαシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -6428,16 +6428,16 @@
                 "dragon": -4
             },
             "set": {
-                "id": "雌火竜の真髄"
+                "id": "【雌火竜の真髄】"
             }
         },
         "list": [
             {
-                "id": "精英．リオハートヘルムα",
+                "id": "EXリオハートヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．リオハートヘルムα",
+                    "jaJP": "EXリオハートヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -6447,21 +6447,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 2
                     },
                     {
-                        "id": "攀岩者",
+                        "id": "クライマー",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．リオハートメイルα",
+                "id": "EXリオハートメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．リオハートメイルα",
+                    "jaJP": "EXリオハートメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -6481,11 +6481,11 @@
                 ]
             },
             {
-                "id": "精英．リオハートアームα",
+                "id": "EXリオハートアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．リオハートアームα",
+                    "jaJP": "EXリオハートアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -6495,7 +6495,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 2
                     },
                     {
@@ -6505,11 +6505,11 @@
                 ]
             },
             {
-                "id": "精英．リオハートコイルα",
+                "id": "EXリオハートコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．リオハートコイルα",
+                    "jaJP": "EXリオハートコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -6529,11 +6529,11 @@
                 ]
             },
             {
-                "id": "精英．リオハートグリーヴα",
+                "id": "EXリオハートグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．リオハートグリーヴα",
+                    "jaJP": "EXリオハートグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -6550,7 +6550,7 @@
                         "level": 1
                     },
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
@@ -6563,7 +6563,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．リオハートβ",
+                "jaJP": "EXリオハートβシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -6575,16 +6575,16 @@
                 "dragon": -4
             },
             "set": {
-                "id": "雌火竜の真髄"
+                "id": "【雌火竜の真髄】"
             }
         },
         "list": [
             {
-                "id": "精英．リオハートヘルムβ",
+                "id": "EXリオハートヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．リオハートヘルムβ",
+                    "jaJP": "EXリオハートヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6597,17 +6597,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "迴避距離UP",
+                        "id": "回避距離UP",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．リオハートメイルβ",
+                "id": "EXリオハートメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．リオハートメイルβ",
+                    "jaJP": "EXリオハートメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6629,11 +6629,11 @@
                 ]
             },
             {
-                "id": "精英．リオハートアームβ",
+                "id": "EXリオハートアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．リオハートアームβ",
+                    "jaJP": "EXリオハートアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6646,17 +6646,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．リオハートコイルβ",
+                "id": "EXリオハートコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．リオハートコイルβ",
+                    "jaJP": "EXリオハートコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6676,11 +6676,11 @@
                 ]
             },
             {
-                "id": "精英．リオハートグリーヴβ",
+                "id": "EXリオハートグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．リオハートグリーヴβ",
+                    "jaJP": "EXリオハートグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6706,7 +6706,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．ウルムーα",
+                "jaJP": "EXウルムーαシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -6721,11 +6721,11 @@
         },
         "list": [
             {
-                "id": "精英．ウルムーヘルムα",
+                "id": "EXウルムーヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムーヘルムα",
+                    "jaJP": "EXウルムーヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -6735,21 +6735,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "耐力急速回復",
+                        "id": "スタミナ急速回復",
                         "level": 2
                     },
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムーメイルα",
+                "id": "EXウルムーメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムーメイルα",
+                    "jaJP": "EXウルムーメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -6762,7 +6762,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "騎乘名人",
+                        "id": "乗り名人",
                         "level": 1
                     },
                     {
@@ -6772,11 +6772,11 @@
                 ]
             },
             {
-                "id": "精英．ウルムーアームα",
+                "id": "EXウルムーアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムーアームα",
+                    "jaJP": "EXウルムーアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -6793,17 +6793,17 @@
                         "level": 2
                     },
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムーコイルα",
+                "id": "EXウルムーコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムーコイルα",
+                    "jaJP": "EXウルムーコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -6816,21 +6816,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "精靈加護",
+                        "id": "精霊の加護",
                         "level": 2
                     },
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムーグリーヴα",
+                "id": "EXウルムーグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムーグリーヴα",
+                    "jaJP": "EXウルムーグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -6840,11 +6840,11 @@
                 ],
                 "skills": [
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 2
                     },
                     {
-                        "id": "耐力急速回復",
+                        "id": "スタミナ急速回復",
                         "level": 1
                     }
                 ]
@@ -6857,7 +6857,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．ウルムーβ",
+                "jaJP": "EXウルムーβシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -6872,11 +6872,11 @@
         },
         "list": [
             {
-                "id": "精英．ウルムーヘルムβ",
+                "id": "EXウルムーヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムーヘルムβ",
+                    "jaJP": "EXウルムーヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6889,17 +6889,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "耐力急速回復",
+                        "id": "スタミナ急速回復",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．ウルムーメイルβ",
+                "id": "EXウルムーメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムーメイルβ",
+                    "jaJP": "EXウルムーメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6912,17 +6912,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "騎乘名人",
+                        "id": "乗り名人",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムーアームβ",
+                "id": "EXウルムーアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムーアームβ",
+                    "jaJP": "EXウルムーアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6939,17 +6939,17 @@
                         "level": 1
                     },
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムーコイルβ",
+                "id": "EXウルムーコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムーコイルβ",
+                    "jaJP": "EXウルムーコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6962,21 +6962,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "精靈加護",
+                        "id": "精霊の加護",
                         "level": 1
                     },
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムーグリーヴβ",
+                "id": "EXウルムーグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムーグリーヴβ",
+                    "jaJP": "EXウルムーグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -6989,7 +6989,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "風壓耐性",
+                        "id": "風圧耐性",
                         "level": 2
                     }
                 ]
@@ -7002,7 +7002,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．ウルムメアα",
+                "jaJP": "EXウルムメアαシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -7017,11 +7017,11 @@
         },
         "list": [
             {
-                "id": "精英．ウルムメアヘルムα",
+                "id": "EXウルムメアヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムメアヘルムα",
+                    "jaJP": "EXウルムメアヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -7034,21 +7034,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "弱點特效",
+                        "id": "弱点特効",
                         "level": 1
                     },
                     {
-                        "id": "廣域化",
+                        "id": "広域化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムメアメイルα",
+                "id": "EXウルムメアメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムメアメイルα",
+                    "jaJP": "EXウルムメアメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -7058,21 +7058,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "廣域化",
+                        "id": "広域化",
                         "level": 2
                     },
                     {
-                        "id": "精神抖擻",
+                        "id": "渾身",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムメアアームα",
+                "id": "EXウルムメアアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムメアアームα",
+                    "jaJP": "EXウルムメアアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -7082,21 +7082,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "精神抖擻",
+                        "id": "渾身",
                         "level": 1
                     },
                     {
-                        "id": "睡眠屬性強化",
+                        "id": "睡眠属性強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムメアコイルα",
+                "id": "EXウルムメアコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムメアコイルα",
+                    "jaJP": "EXウルムメアコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -7106,21 +7106,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "睡眠屬性強化",
+                        "id": "睡眠属性強化",
                         "level": 2
                     },
                     {
-                        "id": "廣域化",
+                        "id": "広域化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムメアグリーヴα",
+                "id": "EXウルムメアグリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムメアグリーヴα",
+                    "jaJP": "EXウルムメアグリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -7134,7 +7134,7 @@
                         "level": 2
                     },
                     {
-                        "id": "廣域化",
+                        "id": "広域化",
                         "level": 1
                     }
                 ]
@@ -7147,7 +7147,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．ウルムメアβ",
+                "jaJP": "EXウルムメアβシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -7162,11 +7162,11 @@
         },
         "list": [
             {
-                "id": "精英．ウルムメアヘルムβ",
+                "id": "EXウルムメアヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムメアヘルムβ",
+                    "jaJP": "EXウルムメアヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -7176,17 +7176,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "弱點特效",
+                        "id": "弱点特効",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムメアメイルβ",
+                "id": "EXウルムメアメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムメアメイルβ",
+                    "jaJP": "EXウルムメアメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -7199,17 +7199,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "廣域化",
+                        "id": "広域化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．ウルムメアアームβ",
+                "id": "EXウルムメアアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムメアアームβ",
+                    "jaJP": "EXウルムメアアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -7219,17 +7219,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "精神抖擻",
+                        "id": "渾身",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．ウルムメアコイルβ",
+                "id": "EXウルムメアコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムメアコイルβ",
+                    "jaJP": "EXウルムメアコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -7239,17 +7239,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "睡眠屬性強化",
+                        "id": "睡眠属性強化",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．ウルムメアグリーヴβ",
+                "id": "EXウルムメアグリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．ウルムメアグリーヴβ",
+                    "jaJP": "EXウルムメアグリーヴβ",
                     "enUS": null
                 },
                 "slots": [
@@ -7275,7 +7275,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．バルキンα",
+                "jaJP": "EXバルキンαシリーズ",
                 "enUS": null
             },
             "defense": 134,
@@ -7290,11 +7290,11 @@
         },
         "list": [
             {
-                "id": "精英．バルキンヘルムα",
+                "id": "EXバルキンヘルムα",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．バルキンヘルムα",
+                    "jaJP": "EXバルキンヘルムα",
                     "enUS": null
                 },
                 "slots": [
@@ -7317,11 +7317,11 @@
                 ]
             },
             {
-                "id": "精英．バルキンメイルα",
+                "id": "EXバルキンメイルα",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．バルキンメイルα",
+                    "jaJP": "EXバルキンメイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -7331,7 +7331,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "睡眠屬性強化",
+                        "id": "睡眠属性強化",
                         "level": 1
                     },
                     {
@@ -7341,11 +7341,11 @@
                 ]
             },
             {
-                "id": "精英．バルキンアームα",
+                "id": "EXバルキンアームα",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．バルキンアームα",
+                    "jaJP": "EXバルキンアームα",
                     "enUS": null
                 },
                 "slots": [
@@ -7355,21 +7355,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "睡眠屬性強化",
+                        "id": "睡眠属性強化",
                         "level": 2
                     },
                     {
-                        "id": "防禦性能",
+                        "id": "ガード性能",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．バルキンコイルα",
+                "id": "EXバルキンコイルα",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．バルキンコイルα",
+                    "jaJP": "EXバルキンコイルα",
                     "enUS": null
                 },
                 "slots": [
@@ -7379,7 +7379,7 @@
                 ],
                 "skills": [
                     {
-                        "id": "防禦性能",
+                        "id": "ガード性能",
                         "level": 2
                     },
                     {
@@ -7389,11 +7389,11 @@
                 ]
             },
             {
-                "id": "精英．バルキングリーヴα",
+                "id": "EXバルキングリーヴα",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．バルキングリーヴα",
+                    "jaJP": "EXバルキングリーヴα",
                     "enUS": null
                 },
                 "slots": [
@@ -7407,7 +7407,7 @@
                         "level": 2
                     },
                     {
-                        "id": "防禦性能",
+                        "id": "ガード性能",
                         "level": 1
                     }
                 ]
@@ -7420,7 +7420,7 @@
             "gender": "general",
             "series": {
                 "zhTW": null,
-                "jaJP": "精英．バルキンβ",
+                "jaJP": "EXバルキンβシリーズ",
                 "enUS": null
             },
             "defense": 134,
@@ -7435,11 +7435,11 @@
         },
         "list": [
             {
-                "id": "精英．バルキンヘルムβ",
+                "id": "EXバルキンヘルムβ",
                 "type": "helm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．バルキンヘルムβ",
+                    "jaJP": "EXバルキンヘルムβ",
                     "enUS": null
                 },
                 "slots": [
@@ -7455,11 +7455,11 @@
                 ]
             },
             {
-                "id": "精英．バルキンメイルβ",
+                "id": "EXバルキンメイルβ",
                 "type": "chest",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．バルキンメイルβ",
+                    "jaJP": "EXバルキンメイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -7469,17 +7469,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "睡眠屬性強化",
+                        "id": "睡眠属性強化",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．バルキンアームβ",
+                "id": "EXバルキンアームβ",
                 "type": "arm",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．バルキンアームβ",
+                    "jaJP": "EXバルキンアームβ",
                     "enUS": null
                 },
                 "slots": [
@@ -7489,21 +7489,21 @@
                 ],
                 "skills": [
                     {
-                        "id": "睡眠屬性強化",
+                        "id": "睡眠属性強化",
                         "level": 1
                     },
                     {
-                        "id": "防禦性能",
+                        "id": "ガード性能",
                         "level": 1
                     }
                 ]
             },
             {
-                "id": "精英．バルキンコイルβ",
+                "id": "EXバルキンコイルβ",
                 "type": "waist",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．バルキンコイルβ",
+                    "jaJP": "EXバルキンコイルβ",
                     "enUS": null
                 },
                 "slots": [
@@ -7513,17 +7513,17 @@
                 ],
                 "skills": [
                     {
-                        "id": "防禦性能",
+                        "id": "ガード性能",
                         "level": 2
                     }
                 ]
             },
             {
-                "id": "精英．バルキングリーヴβ",
+                "id": "EXバルキングリーヴβ",
                 "type": "leg",
                 "name": {
                     "zhTW": null,
-                    "jaJP": "精英．バルキングリーヴβ",
+                    "jaJP": "EXバルキングリーヴβ",
                     "enUS": null
                 },
                 "slots": [

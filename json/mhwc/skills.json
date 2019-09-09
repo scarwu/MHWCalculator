@@ -3,7 +3,7 @@
         "id": "體力增強",
         "name": {
             "zhTW": "體力增強",
-            "jaJP": null,
+            "jaJP": "体力増強",
             "enUS": "Health Boost"
         },
         "type": "active",
@@ -58,7 +58,7 @@
         "id": "體力回復量UP",
         "name": {
             "zhTW": "體力回復量UP",
-            "jaJP": null,
+            "jaJP": "体力回復量UP",
             "enUS": "Recovery Up"
         },
         "type": "active",
@@ -101,7 +101,7 @@
         "id": "KO術",
         "name": {
             "zhTW": "KO術",
-            "jaJP": null,
+            "jaJP": "KO術",
             "enUS": "Slugger"
         },
         "type": "active",
@@ -144,7 +144,7 @@
         "id": "體術",
         "name": {
             "zhTW": "體術",
-            "jaJP": null,
+            "jaJP": "体術",
             "enUS": "Constitution"
         },
         "type": "active",
@@ -205,7 +205,7 @@
         "id": "力量解放",
         "name": {
             "zhTW": "力量解放",
-            "jaJP": null,
+            "jaJP": "力の解放",
             "enUS": "Latent Power"
         },
         "type": "passive",
@@ -286,7 +286,7 @@
         "id": "水屬性攻擊強化",
         "name": {
             "zhTW": "水屬性攻擊強化",
-            "jaJP": null,
+            "jaJP": "水属性攻撃強化",
             "enUS": "Water Attack"
         },
         "type": "active",
@@ -377,7 +377,7 @@
         "id": "火屬性攻擊強化",
         "name": {
             "zhTW": "火屬性攻擊強化",
-            "jaJP": null,
+            "jaJP": "火属性攻撃強化",
             "enUS": "Fire Attack"
         },
         "type": "active",
@@ -468,7 +468,7 @@
         "id": "心眼／彈導強化",
         "name": {
             "zhTW": "心眼／彈導強化",
-            "jaJP": null,
+            "jaJP": "心眼\/弾導強化",
             "enUS": "Mind's Eye\/Ballistics"
         },
         "type": "active",
@@ -493,7 +493,7 @@
         "id": "火耐性",
         "name": {
             "zhTW": "火耐性",
-            "jaJP": null,
+            "jaJP": "火耐性",
             "enUS": "Fire Resistance"
         },
         "type": "active",
@@ -554,7 +554,7 @@
         "id": "水耐性",
         "name": {
             "zhTW": "水耐性",
-            "jaJP": null,
+            "jaJP": "水耐性",
             "enUS": "Water Resistance"
         },
         "type": "active",
@@ -615,7 +615,7 @@
         "id": "不屈",
         "name": {
             "zhTW": "不屈",
-            "jaJP": null,
+            "jaJP": "不屈",
             "enUS": "Fortify"
         },
         "type": "passive",
@@ -647,7 +647,7 @@
         "id": "火場怪力",
         "name": {
             "zhTW": "火場怪力",
-            "jaJP": null,
+            "jaJP": "火事場力",
             "enUS": "Heroics"
         },
         "type": "passive",
@@ -743,7 +743,7 @@
         "id": "加速再生",
         "name": {
             "zhTW": "加速再生",
-            "jaJP": null,
+            "jaJP": "加速再生",
             "enUS": "Hasten Recovery"
         },
         "type": "active",
@@ -768,7 +768,7 @@
         "id": "冰耐性",
         "name": {
             "zhTW": "冰耐性",
-            "jaJP": null,
+            "jaJP": "氷耐性",
             "enUS": "Ice Resistance"
         },
         "type": "active",
@@ -829,7 +829,7 @@
         "id": "地質學",
         "name": {
             "zhTW": "地質學",
-            "jaJP": null,
+            "jaJP": "地質学",
             "enUS": "Geologist"
         },
         "type": "active",
@@ -872,7 +872,7 @@
         "id": "回復速度",
         "name": {
             "zhTW": "回復速度",
-            "jaJP": null,
+            "jaJP": "回復速度",
             "enUS": "Recovery Speed"
         },
         "type": "active",
@@ -915,7 +915,7 @@
         "id": "冰屬性攻擊強化",
         "name": {
             "zhTW": "冰屬性攻擊強化",
-            "jaJP": null,
+            "jaJP": "氷属性攻撃強化",
             "enUS": "Ice Attack"
         },
         "type": "active",
@@ -1006,7 +1006,7 @@
         "id": "收刀術",
         "name": {
             "zhTW": "收刀術",
-            "jaJP": null,
+            "jaJP": "納刀術",
             "enUS": "Quick Sheath"
         },
         "type": "active",
@@ -1049,7 +1049,7 @@
         "id": "耳塞",
         "name": {
             "zhTW": "耳塞",
-            "jaJP": null,
+            "jaJP": "耳栓",
             "enUS": "Earplugs"
         },
         "type": "active",
@@ -1110,7 +1110,7 @@
         "id": "死裡逃生",
         "name": {
             "zhTW": "死裡逃生",
-            "jaJP": null,
+            "jaJP": "死中に活",
             "enUS": "Resuscitate"
         },
         "type": "active",
@@ -1135,7 +1135,7 @@
         "id": "匠",
         "name": {
             "zhTW": "匠",
-            "jaJP": null,
+            "jaJP": "匠",
             "enUS": "Handicraft"
         },
         "type": "active",
@@ -1216,7 +1216,7 @@
         "id": "攻擊",
         "name": {
             "zhTW": "攻擊",
-            "jaJP": null,
+            "jaJP": "攻撃",
             "enUS": "Attack Boost"
         },
         "type": "active",
@@ -1335,7 +1335,7 @@
         "id": "吹笛名人",
         "name": {
             "zhTW": "吹笛名人",
-            "jaJP": null,
+            "jaJP": "笛吹き名人",
             "enUS": "Horn Maestro"
         },
         "type": "active",
@@ -1360,7 +1360,7 @@
         "id": "防禦強化",
         "name": {
             "zhTW": "防禦強化",
-            "jaJP": null,
+            "jaJP": "ガード強化",
             "enUS": "Guard Up"
         },
         "type": "active",
@@ -1385,7 +1385,7 @@
         "id": "投射器裝填數UP",
         "name": {
             "zhTW": "投射器裝填數UP",
-            "jaJP": null,
+            "jaJP": "スリンガー装填数UP",
             "enUS": "Slinger Capacity"
         },
         "type": "active",
@@ -1425,10 +1425,10 @@
         ]
     },
     {
-        "id": "防御力DOWN耐性",
+        "id": "防禦力DOWN耐性",
         "name": {
-            "zhTW": "防御力DOWN耐性",
-            "jaJP": null,
+            "zhTW": "防禦力DOWN耐性",
+            "jaJP": "防御力DOWN耐性",
             "enUS": "Iron Skin"
         },
         "type": "active",
@@ -1471,7 +1471,7 @@
         "id": "防禦",
         "name": {
             "zhTW": "防禦",
-            "jaJP": null,
+            "jaJP": "防御",
             "enUS": "Defense Boost"
         },
         "type": "active",
@@ -1594,7 +1594,7 @@
         "id": "利刃／彈藥節約",
         "name": {
             "zhTW": "利刃／彈藥節約",
-            "jaJP": null,
+            "jaJP": "業物/弾丸節約",
             "enUS": "Razor Sharp\/Spare Shot"
         },
         "type": "active",
@@ -1619,7 +1619,7 @@
         "id": "快吃",
         "name": {
             "zhTW": "快吃",
-            "jaJP": null,
+            "jaJP": "早食い",
             "enUS": "Speed Eating"
         },
         "type": "active",
@@ -1662,7 +1662,7 @@
         "id": "防禦性能",
         "name": {
             "zhTW": "防禦性能",
-            "jaJP": null,
+            "jaJP": "ガード性能",
             "enUS": "Guard"
         },
         "type": "active",
@@ -1723,8 +1723,8 @@
         "id": "拔刀術【力】",
         "name": {
             "zhTW": "拔刀術【力】",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "抜刀術【力】",
+            "enUS": "Punishing Draw"
         },
         "type": "active",
         "from": {
@@ -1748,7 +1748,7 @@
         "id": "泥耐性",
         "name": {
             "zhTW": "泥耐性",
-            "jaJP": null,
+            "jaJP": "泥耐性",
             "enUS": "Muck Resistance"
         },
         "type": "active",
@@ -1773,7 +1773,7 @@
         "id": "拔刀術【技】",
         "name": {
             "zhTW": "拔刀術【技】",
-            "jaJP": null,
+            "jaJP": "抜刀術【技】",
             "enUS": "Critical Draw"
         },
         "type": "passive",
@@ -1828,8 +1828,8 @@
         "id": "幸運",
         "name": {
             "zhTW": "幸運",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "幸運",
+            "enUS": "Good Luck"
         },
         "type": "active",
         "from": {
@@ -1853,7 +1853,7 @@
         "id": "昏厥耐性",
         "name": {
             "zhTW": "昏厥耐性",
-            "jaJP": null,
+            "jaJP": "気絶耐性",
             "enUS": "Stun Resistance"
         },
         "type": "active",
@@ -1896,7 +1896,7 @@
         "id": "昆蟲標本達人",
         "name": {
             "zhTW": "昆蟲標本達人",
-            "jaJP": null,
+            "jaJP": "昆虫標本の達人",
             "enUS": "Entomologist"
         },
         "type": "active",
@@ -1939,7 +1939,7 @@
         "id": "看破",
         "name": {
             "zhTW": "看破",
-            "jaJP": null,
+            "jaJP": "見切り",
             "enUS": "Critical Eye"
         },
         "type": "active",
@@ -2046,7 +2046,7 @@
         "id": "指示隨從",
         "name": {
             "zhTW": "指示隨從",
-            "jaJP": null,
+            "jaJP": "オトモへの采配",
             "enUS": "Palico Rally"
         },
         "type": "active",
@@ -2107,7 +2107,7 @@
         "id": "飛身躍入",
         "name": {
             "zhTW": "飛身躍入",
-            "jaJP": null,
+            "jaJP": "飛び込み",
             "enUS": "Leap of Faith"
         },
         "type": "active",
@@ -2132,7 +2132,7 @@
         "id": "炸彈客",
         "name": {
             "zhTW": "炸彈客",
-            "jaJP": null,
+            "jaJP": "ボマー",
             "enUS": "Bombardier"
         },
         "type": "active",
@@ -2175,7 +2175,7 @@
         "id": "毒屬性強化",
         "name": {
             "zhTW": "毒屬性強化",
-            "jaJP": null,
+            "jaJP": "毒属性強化",
             "enUS": "Poison Attack"
         },
         "type": "active",
@@ -2218,7 +2218,7 @@
         "id": "耐力急速回復",
         "name": {
             "zhTW": "耐力急速回復",
-            "jaJP": null,
+            "jaJP": "スタミナ急速回復",
             "enUS": "Stamina Surge"
         },
         "type": "active",
@@ -2261,8 +2261,8 @@
         "id": "風壓完全無效",
         "name": {
             "zhTW": "風壓完全無效",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "風圧完全無効",
+            "enUS": "Nullify Wind Pressure"
         },
         "type": "active",
         "from": {
@@ -2286,7 +2286,7 @@
         "id": "風壓耐性",
         "name": {
             "zhTW": "風壓耐性",
-            "jaJP": null,
+            "jaJP": "風圧耐性",
             "enUS": "Windproof"
         },
         "type": "active",
@@ -2347,8 +2347,8 @@
         "id": "突破耐力上限",
         "name": {
             "zhTW": "突破耐力上限",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "スタミナ上限突破",
+            "enUS": "Stamina Cap Up"
         },
         "type": "active",
         "from": {
@@ -2376,7 +2376,7 @@
         "id": "耐震",
         "name": {
             "zhTW": "耐震",
-            "jaJP": null,
+            "jaJP": "耐震",
             "enUS": "Tremor Resistance"
         },
         "type": "active",
@@ -2419,7 +2419,7 @@
         "id": "飛燕",
         "name": {
             "zhTW": "飛燕",
-            "jaJP": null,
+            "jaJP": "飛燕",
             "enUS": "Airborne"
         },
         "type": "passive",
@@ -2448,7 +2448,7 @@
         "id": "飛燕【屬性】",
         "name": {
             "zhTW": "飛燕【屬性】",
-            "jaJP": null,
+            "jaJP": "飛燕【屬性】",
             "enUS": null
         },
         "type": "passive",
@@ -2473,7 +2473,7 @@
         "id": "毒耐性",
         "name": {
             "zhTW": "毒耐性",
-            "jaJP": null,
+            "jaJP": "毒耐性",
             "enUS": "Poison Resistance"
         },
         "type": "active",
@@ -2516,7 +2516,7 @@
         "id": "威嚇",
         "name": {
             "zhTW": "威嚇",
-            "jaJP": null,
+            "jaJP": "威嚇",
             "enUS": "Intimidator"
         },
         "type": "active",
@@ -2559,7 +2559,7 @@
         "id": "研究者",
         "name": {
             "zhTW": "研究者",
-            "jaJP": null,
+            "jaJP": "研究者",
             "enUS": "Scholar"
         },
         "type": "active",
@@ -2584,8 +2584,8 @@
         "id": "毒傷害強化",
         "name": {
             "zhTW": "毒傷害強化",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "毒ダメージ強化",
+            "enUS": "Poison Duratoini Up"
         },
         "type": "active",
         "from": {
@@ -2609,7 +2609,7 @@
         "id": "挑戰者",
         "name": {
             "zhTW": "挑戰者",
-            "jaJP": null,
+            "jaJP": "挑戦者",
             "enUS": "Agitator"
         },
         "type": "passive",
@@ -2705,7 +2705,7 @@
         "id": "怨恨",
         "name": {
             "zhTW": "怨恨",
-            "jaJP": null,
+            "jaJP": "逆恨み",
             "enUS": "Resentment"
         },
         "type": "passive",
@@ -2786,7 +2786,7 @@
         "id": "毒瓶追加",
         "name": {
             "zhTW": "毒瓶追加",
-            "jaJP": null,
+            "jaJP": "毒ビン追加",
             "enUS": "Poison Functionality"
         },
         "type": "active",
@@ -2811,7 +2811,7 @@
         "id": "砲術",
         "name": {
             "zhTW": "砲術",
-            "jaJP": null,
+            "jaJP": "砲術",
             "enUS": "Artillery"
         },
         "type": "active",
@@ -2854,7 +2854,7 @@
         "id": "迴避性能",
         "name": {
             "zhTW": "迴避性能",
-            "jaJP": null,
+            "jaJP": "回避性能",
             "enUS": "Evade Window"
         },
         "type": "active",
@@ -2915,7 +2915,7 @@
         "id": "破壞王",
         "name": {
             "zhTW": "破壞王",
-            "jaJP": null,
+            "jaJP": "破壊王",
             "enUS": "Partbreaker"
         },
         "type": "active",
@@ -2958,8 +2958,8 @@
         "id": "剝取名人",
         "name": {
             "zhTW": "剝取名人",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "剥ぎ取り名人",
+            "enUS": "Carving Master"
         },
         "type": "active",
         "from": {
@@ -2983,7 +2983,7 @@
         "id": "迴避距離UP",
         "name": {
             "zhTW": "迴避距離UP",
-            "jaJP": null,
+            "jaJP": "回避距離UP",
             "enUS": "Evade Extender"
         },
         "type": "active",
@@ -3026,8 +3026,8 @@
         "id": "振奮",
         "name": {
             "zhTW": "振奮",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "奮起",
+            "enUS": "Adrenaline"
         },
         "type": "active",
         "from": {
@@ -3051,7 +3051,7 @@
         "id": "追蹤達人",
         "name": {
             "zhTW": "追蹤達人",
-            "jaJP": null,
+            "jaJP": "追跡の達人",
             "enUS": "Scenthound"
         },
         "type": "active",
@@ -3076,7 +3076,7 @@
         "id": "剝取鐵人",
         "name": {
             "zhTW": "剝取鐵人",
-            "jaJP": null,
+            "jaJP": "剥ぎ取り鉄人",
             "enUS": "Carving Pro"
         },
         "type": "active",
@@ -3101,7 +3101,7 @@
         "id": "砲擊手",
         "name": {
             "zhTW": "砲擊手",
-            "jaJP": null,
+            "jaJP": "砲撃手",
             "enUS": "Heavy Artillery"
         },
         "type": "active",
@@ -3135,7 +3135,7 @@
         "id": "剛刃研磨",
         "name": {
             "zhTW": "剛刃研磨",
-            "jaJP": null,
+            "jaJP": "剛刃研磨",
             "enUS": "Protective Polish"
         },
         "type": "active",
@@ -3160,7 +3160,7 @@
         "id": "砥石使用高速化",
         "name": {
             "zhTW": "砥石使用高速化",
-            "jaJP": null,
+            "jaJP": "砥石使用高速化",
             "enUS": "Speed Sharpening"
         },
         "type": "active",
@@ -3203,7 +3203,7 @@
         "id": "砲彈裝填數UP",
         "name": {
             "zhTW": "砲彈裝填數UP",
-            "jaJP": null,
+            "jaJP": "砲弾装填数UP",
             "enUS": "Capacity Boost"
         },
         "type": "active",
@@ -3228,7 +3228,7 @@
         "id": "烤肉名人",
         "name": {
             "zhTW": "烤肉名人",
-            "jaJP": null,
+            "jaJP": "肉焼き名人",
             "enUS": "BBQ Master"
         },
         "type": "active",
@@ -3253,7 +3253,7 @@
         "id": "飢餓耐性",
         "name": {
             "zhTW": "飢餓耐性",
-            "jaJP": null,
+            "jaJP": "腹減り耐性",
             "enUS": "Hunger Resistance"
         },
         "type": "active",
@@ -3296,7 +3296,7 @@
         "id": "特殊射擊強化",
         "name": {
             "zhTW": "特殊射擊強化",
-            "jaJP": null,
+            "jaJP": "特殊射撃強化",
             "enUS": "Special Ammo Boost"
         },
         "type": "active",
@@ -3330,7 +3330,7 @@
         "id": "弱點特效",
         "name": {
             "zhTW": "弱點特效",
-            "jaJP": null,
+            "jaJP": "弱点特効",
             "enUS": "Weakness Exploit"
         },
         "type": "passive",
@@ -3385,7 +3385,7 @@
         "id": "閃光強化",
         "name": {
             "zhTW": "閃光強化",
-            "jaJP": null,
+            "jaJP": "閃光強化",
             "enUS": "Blindsider"
         },
         "type": "active",
@@ -3410,8 +3410,8 @@
         "id": "捕獲名人",
         "name": {
             "zhTW": "捕獲名人",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "捕獲名人",
+            "enUS": "Capture Master"
         },
         "type": "active",
         "from": {
@@ -3435,7 +3435,7 @@
         "id": "採集達人",
         "name": {
             "zhTW": "採集達人",
-            "jaJP": null,
+            "jaJP": "採集の達人",
             "enUS": "Master Gatherer"
         },
         "type": "active",
@@ -3460,7 +3460,7 @@
         "id": "異臭名人",
         "name": {
             "zhTW": "異臭名人",
-            "jaJP": null,
+            "jaJP": "こやし名人",
             "enUS": "Dungmaster"
         },
         "type": "active",
@@ -3485,7 +3485,7 @@
         "id": "貫通彈・龍之箭強化",
         "name": {
             "zhTW": "貫通彈・龍之箭強化",
-            "jaJP": null,
+            "jaJP": "貫通弾・竜の一矢強化",
             "enUS": "Piercing Shots"
         },
         "type": "active",
@@ -3510,7 +3510,7 @@
         "id": "強化持續",
         "name": {
             "zhTW": "強化持續",
-            "jaJP": null,
+            "jaJP": "強化持続",
             "enUS": "Power Prolonger"
         },
         "type": "active",
@@ -3553,7 +3553,7 @@
         "id": "釣魚名人",
         "name": {
             "zhTW": "釣魚名人",
-            "jaJP": null,
+            "jaJP": "釣り名人",
             "enUS": "Master Fisher"
         },
         "type": "active",
@@ -3578,7 +3578,7 @@
         "id": "通常彈・通常箭強化",
         "name": {
             "zhTW": "通常彈・通常箭強化",
-            "jaJP": null,
+            "jaJP": "通常弾・通常矢強化",
             "enUS": "Normal Shots"
         },
         "type": "active",
@@ -3603,7 +3603,7 @@
         "id": "麻痺耐性",
         "name": {
             "zhTW": "麻痺耐性",
-            "jaJP": null,
+            "jaJP": "麻痺耐性",
             "enUS": "Paralysis Resistance"
         },
         "type": "active",
@@ -3646,7 +3646,7 @@
         "id": "麻痺屬性強化",
         "name": {
             "zhTW": "麻痺屬性強化",
-            "jaJP": null,
+            "jaJP": "麻痺属性強化",
             "enUS": "Paralysis Attack"
         },
         "type": "active",
@@ -3689,7 +3689,7 @@
         "id": "探索者的幸運",
         "name": {
             "zhTW": "探索者的幸運",
-            "jaJP": null,
+            "jaJP": "探索者の幸運",
             "enUS": "Forager's Luck"
         },
         "type": "active",
@@ -3714,8 +3714,8 @@
         "id": "強運",
         "name": {
             "zhTW": "強運",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "強運",
+            "enUS": "Great Luck"
         },
         "type": "active",
         "from": {
@@ -3739,7 +3739,7 @@
         "id": "麻痺瓶追加",
         "name": {
             "zhTW": "麻痺瓶追加",
-            "jaJP": null,
+            "jaJP": "麻痺ビン追加",
             "enUS": "Para Functionality"
         },
         "type": "active",
@@ -3764,7 +3764,7 @@
         "id": "跑者",
         "name": {
             "zhTW": "跑者",
-            "jaJP": null,
+            "jaJP": "ランナー",
             "enUS": "Marathon Runner"
         },
         "type": "active",
@@ -3807,7 +3807,7 @@
         "id": "集中",
         "name": {
             "zhTW": "集中",
-            "jaJP": null,
+            "jaJP": "集中",
             "enUS": "Focus"
         },
         "type": "active",
@@ -3850,7 +3850,7 @@
         "id": "植生學",
         "name": {
             "zhTW": "植生學",
-            "jaJP": null,
+            "jaJP": "植生学",
             "enUS": "Botanist"
         },
         "type": "active",
@@ -3902,8 +3902,8 @@
         "id": "鈍器能手",
         "name": {
             "zhTW": "鈍器能手",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "鈍器使い",
+            "enUS": "Bludgeoner"
         },
         "type": "active",
         "from": {
@@ -3927,7 +3927,7 @@
         "id": "最愛菇類",
         "name": {
             "zhTW": "最愛菇類",
-            "jaJP": null,
+            "jaJP": "キノコ大好き",
             "enUS": "Mushroomancer"
         },
         "type": "active",
@@ -3970,7 +3970,7 @@
         "id": "裂傷耐性",
         "name": {
             "zhTW": "裂傷耐性",
-            "jaJP": null,
+            "jaJP": "裂傷耐性",
             "enUS": "Bleeding Resistance"
         },
         "type": "active",
@@ -4013,7 +4013,7 @@
         "id": "無屬性強化",
         "name": {
             "zhTW": "無屬性強化",
-            "jaJP": null,
+            "jaJP": "無属性強化",
             "enUS": "Non-elemental Boost"
         },
         "type": "active",
@@ -4042,7 +4042,7 @@
         "id": "無傷",
         "name": {
             "zhTW": "無傷",
-            "jaJP": null,
+            "jaJP": "フルチャージ",
             "enUS": "Peak Performance"
         },
         "type": "passive",
@@ -4097,7 +4097,7 @@
         "id": "散彈・剛射強化",
         "name": {
             "zhTW": "散彈・剛射強化",
-            "jaJP": null,
+            "jaJP": "散弾・剛射強化",
             "enUS": "Spread\/Power Shots"
         },
         "type": "active",
@@ -4122,7 +4122,7 @@
         "id": "減輕膽怯",
         "name": {
             "zhTW": "減輕膽怯",
-            "jaJP": null,
+            "jaJP": "ひるみ軽減",
             "enUS": "Flinch Free"
         },
         "type": "active",
@@ -4165,7 +4165,7 @@
         "id": "超會心",
         "name": {
             "zhTW": "超會心",
-            "jaJP": null,
+            "jaJP": "超会心",
             "enUS": "Critical Boost"
         },
         "type": "active",
@@ -4220,8 +4220,8 @@
         "id": "超回復力",
         "name": {
             "zhTW": "超回復力",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "超回復力",
+            "enUS": "Super Recover"
         },
         "type": "active",
         "from": {
@@ -4245,7 +4245,7 @@
         "id": "雷屬性攻擊強化",
         "name": {
             "zhTW": "雷屬性攻擊強化",
-            "jaJP": null,
+            "jaJP": "雷属性攻撃強化",
             "enUS": "Thunder Attack"
         },
         "type": "active",
@@ -4336,7 +4336,7 @@
         "id": "道具使用強化",
         "name": {
             "zhTW": "道具使用強化",
-            "jaJP": null,
+            "jaJP": "アイテム使用強化",
             "enUS": "Item Prolonger"
         },
         "type": "active",
@@ -4379,7 +4379,7 @@
         "id": "搬運達人",
         "name": {
             "zhTW": "搬運達人",
-            "jaJP": null,
+            "jaJP": "運搬の達人",
             "enUS": "Pro Transporter"
         },
         "type": "active",
@@ -4404,7 +4404,7 @@
         "id": "滑走強化",
         "name": {
             "zhTW": "滑走強化",
-            "jaJP": null,
+            "jaJP": "滑走強化",
             "enUS": "Affinity Sliding"
         },
         "type": "active",
@@ -4429,7 +4429,7 @@
         "id": "跳躍鐵人",
         "name": {
             "zhTW": "跳躍鐵人",
-            "jaJP": null,
+            "jaJP": "ジャンプ鉄人",
             "enUS": "Jump Master"
         },
         "type": "active",
@@ -4454,8 +4454,8 @@
         "id": "達人藝",
         "name": {
             "zhTW": "達人藝",
-            "jaJP": null,
-            "enUS": null
+            "jaJP": "達人芸",
+            "enUS": "Master's Touch"
         },
         "type": "active",
         "from": {
@@ -4479,7 +4479,7 @@
         "id": "會心攻擊【屬性】",
         "name": {
             "zhTW": "會心攻擊【屬性】",
-            "jaJP": null,
+            "jaJP": "会心撃【属性】",
             "enUS": "Critical Element"
         },
         "type": "active",
@@ -4504,7 +4504,7 @@
         "id": "蜂蜜獵人",
         "name": {
             "zhTW": "蜂蜜獵人",
-            "jaJP": null,
+            "jaJP": "ハニーハンター",
             "enUS": "Honey Hunter"
         },
         "type": "active",
@@ -4529,7 +4529,7 @@
         "id": "解放弓的蓄力階段",
         "name": {
             "zhTW": "解放弓的蓄力階段",
-            "jaJP": null,
+            "jaJP": "弓溜め段階解放",
             "enUS": "Bow Charge Plus"
         },
         "type": "active",
@@ -4554,7 +4554,7 @@
         "id": "會心攻擊【特殊】",
         "name": {
             "zhTW": "會心攻擊【特殊】",
-            "jaJP": null,
+            "jaJP": "会心撃【特殊】",
             "enUS": "Critical Status"
         },
         "type": "active",
@@ -4579,7 +4579,7 @@
         "id": "雷耐性",
         "name": {
             "zhTW": "雷耐性",
-            "jaJP": null,
+            "jaJP": "雷耐性",
             "enUS": "Thunder Resistance"
         },
         "type": "active",
@@ -4640,7 +4640,7 @@
         "id": "睡眠屬性強化",
         "name": {
             "zhTW": "睡眠屬性強化",
-            "jaJP": null,
+            "jaJP": "睡眠属性強化",
             "enUS": "Sleep Attack"
         },
         "type": "active",
@@ -4683,7 +4683,7 @@
         "id": "睡眠耐性",
         "name": {
             "zhTW": "睡眠耐性",
-            "jaJP": null,
+            "jaJP": "睡眠耐性",
             "enUS": "Sleep Resistance"
         },
         "type": "active",
@@ -4726,7 +4726,7 @@
         "id": "察覺",
         "name": {
             "zhTW": "察覺",
-            "jaJP": null,
+            "jaJP": "感知",
             "enUS": "Detector"
         },
         "type": "active",
@@ -4751,7 +4751,7 @@
         "id": "滿足感",
         "name": {
             "zhTW": "滿足感",
-            "jaJP": null,
+            "jaJP": "満足感",
             "enUS": "Free Meal"
         },
         "type": "active",
@@ -4776,7 +4776,7 @@
         "id": "奪取耐力",
         "name": {
             "zhTW": "奪取耐力",
-            "jaJP": null,
+            "jaJP": "スタミナ奪取",
             "enUS": "Stamina Thief"
         },
         "type": "active",
@@ -4819,7 +4819,7 @@
         "id": "精靈加護",
         "name": {
             "zhTW": "精靈加護",
-            "jaJP": null,
+            "jaJP": "精霊の加護",
             "enUS": "Divine Blessing"
         },
         "type": "active",
@@ -4859,10 +4859,10 @@
         ]
     },
     {
-        "id": "綿花孢子草的知識",
+        "id": "環境利用的知識",
         "name": {
-            "zhTW": "綿花孢子草的知識",
-            "jaJP": null,
+            "zhTW": "環境利用的知識",
+            "jaJP": "環境利用の知識",
             "enUS": "Sporepuff Expert"
         },
         "type": "active",
@@ -4905,7 +4905,7 @@
         "id": "精神抖擻",
         "name": {
             "zhTW": "精神抖擻",
-            "jaJP": null,
+            "jaJP": "渾身",
             "enUS": "Maximum Might"
         },
         "type": "passive",
@@ -4960,7 +4960,7 @@
         "id": "睡眠瓶追加",
         "name": {
             "zhTW": "睡眠瓶追加",
-            "jaJP": null,
+            "jaJP": "睡眠ビン追加",
             "enUS": "Sleep Functionality"
         },
         "type": "active",
@@ -4985,7 +4985,7 @@
         "id": "廣域化",
         "name": {
             "zhTW": "廣域化",
-            "jaJP": null,
+            "jaJP": "広域化",
             "enUS": "Wide-Range"
         },
         "type": "active",
@@ -5046,7 +5046,7 @@
         "id": "適應瘴氣環境",
         "name": {
             "zhTW": "適應瘴氣環境",
-            "jaJP": null,
+            "jaJP": "瘴気環境適応",
             "enUS": "Effluvial Expert"
         },
         "type": "active",
@@ -5071,7 +5071,7 @@
         "id": "潛伏",
         "name": {
             "zhTW": "潛伏",
-            "jaJP": null,
+            "jaJP": "潜伏",
             "enUS": "Stealth"
         },
         "type": "active",
@@ -5114,7 +5114,7 @@
         "id": "熱傷害無效",
         "name": {
             "zhTW": "熱傷害無效",
-            "jaJP": null,
+            "jaJP": "熱ダメージ無効",
             "enUS": "Heat Guard"
         },
         "type": "active",
@@ -5139,7 +5139,7 @@
         "id": "適應水場．深雪",
         "name": {
             "zhTW": "適應水場．深雪",
-            "jaJP": null,
+            "jaJP": "水場・深雪適応",
             "enUS": "Aquatic Expert"
         },
         "type": "active",
@@ -5182,7 +5182,7 @@
         "id": "毅力",
         "name": {
             "zhTW": "毅力",
-            "jaJP": null,
+            "jaJP": "根性",
             "enUS": "Guts"
         },
         "type": "active",
@@ -5207,7 +5207,7 @@
         "id": "龍耐性",
         "name": {
             "zhTW": "龍耐性",
-            "jaJP": null,
+            "jaJP": "龍耐性",
             "enUS": "Dragon Resistance"
         },
         "type": "active",
@@ -5268,7 +5268,7 @@
         "id": "龍屬性攻擊強化",
         "name": {
             "zhTW": "龍屬性攻擊強化",
-            "jaJP": null,
+            "jaJP": "龍属性攻撃強化",
             "enUS": "Dragon Attack"
         },
         "type": "active",
@@ -5359,7 +5359,7 @@
         "id": "導蟲反應距離UP",
         "name": {
             "zhTW": "導蟲反應距離UP",
-            "jaJP": null,
+            "jaJP": "導蟲反応距離UP",
             "enUS": "Scoutfly Range Up"
         },
         "type": "active",
@@ -5384,7 +5384,7 @@
         "id": "整備",
         "name": {
             "zhTW": "整備",
-            "jaJP": null,
+            "jaJP": "整備",
             "enUS": "Tool Specialist"
         },
         "type": "active",
@@ -5427,7 +5427,7 @@
         "id": "瘴氣耐性",
         "name": {
             "zhTW": "瘴氣耐性",
-            "jaJP": null,
+            "jaJP": "瘴気耐性",
             "enUS": "Effluvia Resistance"
         },
         "type": "active",
@@ -5470,7 +5470,7 @@
         "id": "龍封力強化",
         "name": {
             "zhTW": "龍封力強化",
-            "jaJP": null,
+            "jaJP": "龍封力強化",
             "enUS": "Elderseal Boost"
         },
         "type": "active",
@@ -5495,7 +5495,7 @@
         "id": "騎乘名人",
         "name": {
             "zhTW": "騎乘名人",
-            "jaJP": null,
+            "jaJP": "乗り名人",
             "enUS": "Master Mounter"
         },
         "type": "active",
@@ -5520,7 +5520,7 @@
         "id": "攀岩者",
         "name": {
             "zhTW": "攀岩者",
-            "jaJP": null,
+            "jaJP": "クライマー",
             "enUS": "Cliffhanger"
         },
         "type": "active",
@@ -5545,7 +5545,7 @@
         "id": "爆破屬性強化",
         "name": {
             "zhTW": "爆破屬性強化",
-            "jaJP": null,
+            "jaJP": "爆破属性強化",
             "enUS": "Blast Attack"
         },
         "type": "active",
@@ -5588,7 +5588,7 @@
         "id": "蹲下移動速度UP",
         "name": {
             "zhTW": "蹲下移動速度UP",
-            "jaJP": null,
+            "jaJP": "しゃがみ移動速度UP",
             "enUS": "Speed Crawler"
         },
         "type": "active",
@@ -5613,7 +5613,7 @@
         "id": "爆破異常狀態的耐性",
         "name": {
             "zhTW": "爆破異常狀態的耐性",
-            "jaJP": null,
+            "jaJP": "爆破やられ耐性",
             "enUS": "Blast Resistance"
         },
         "type": "active",
@@ -5656,7 +5656,7 @@
         "id": "爆破瓶追加",
         "name": {
             "zhTW": "爆破瓶追加",
-            "jaJP": null,
+            "jaJP": "爆破ビン追加",
             "enUS": "Blast Functionality"
         },
         "type": "active",
@@ -5681,7 +5681,7 @@
         "id": "屬性解放／裝填擴充",
         "name": {
             "zhTW": "屬性解放／裝填擴充",
-            "jaJP": null,
+            "jaJP": "属性解放\/装填拡張",
             "enUS": "Free Elem\/Ammo Up"
         },
         "type": "active",
@@ -5736,7 +5736,7 @@
         "id": "屬性異常狀態耐性",
         "name": {
             "zhTW": "屬性異常狀態耐性",
-            "jaJP": null,
+            "jaJP": "属性やられ耐性",
             "enUS": "Blight Resistance"
         },
         "type": "active",
