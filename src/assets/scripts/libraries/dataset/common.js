@@ -137,34 +137,34 @@ let getAppliedWeaponInfo = (extend) => {
 
     info.slots && info.slots.forEach((data, index) => {
         let jewelInfo = null;
-        let jewelId = null;
-        let jewelSize = null;
-        let skillId = null;
 
         if (Helper.isNotEmpty(extend.slotIds)
             && Helper.isNotEmpty(extend.slotIds[index])
         ) {
             jewelInfo = JewelDataset.getInfo(extend.slotIds[index]);
-            jewelId = extend.slotIds[index];
-            jewelSize = jewelInfo.size;
-            skillId = jewelInfo.skill.id;
+        }
+
+        if (Helper.isEmpty(jewelInfo)) {
+            info.slots[index].jewel = {};
+
+            return false;
         }
 
         // Update Info
         info.slots[index].jewel = {
-            id: jewelId,
-            size: jewelSize
+            id: jewelInfo.id,
+            size: jewelInfo.size
         };
 
-        if (Helper.isEmpty(skillId)) {
-            return false;
-        }
+        jewelInfo.skills && jewelInfo.skills.forEach((data, index) => {
+            let skillId = data.id;
 
-        if (Helper.isEmpty(skillLevelMapping[skillId])) {
-            skillLevelMapping[skillId] = 0;
-        }
+            if (Helper.isEmpty(skillLevelMapping[skillId])) {
+                skillLevelMapping[skillId] = 0;
+            }
 
-        skillLevelMapping[skillId] += jewelInfo.skill.level;
+            skillLevelMapping[skillId] += data.level;
+        });
     });
 
     // Reset Skill
@@ -221,34 +221,34 @@ let getAppliedArmorInfo = (extend) => {
 
     info.slots && info.slots.forEach((data, index) => {
         let jewelInfo = null;
-        let jewelId = null;
-        let jewelSize = null;
-        let skillId = null;
 
         if (Helper.isNotEmpty(extend.slotIds)
             && Helper.isNotEmpty(extend.slotIds[index])
         ) {
             jewelInfo = JewelDataset.getInfo(extend.slotIds[index]);
-            jewelId = extend.slotIds[index];
-            jewelSize = jewelInfo.size;
-            skillId = jewelInfo.skill.id;
+        }
+
+        if (Helper.isEmpty(jewelInfo)) {
+            info.slots[index].jewel = {};
+
+            return false;
         }
 
         // Update Info
         info.slots[index].jewel = {
-            id: jewelId,
-            size: jewelSize
+            id: jewelInfo.id,
+            size: jewelInfo.size
         };
 
-        if (Helper.isEmpty(skillId)) {
-            return false;
-        }
+        jewelInfo.skills && jewelInfo.skills.forEach((data, index) => {
+            let skillId = data.id;
 
-        if (Helper.isEmpty(skillLevelMapping[skillId])) {
-            skillLevelMapping[skillId] = 0;
-        }
+            if (Helper.isEmpty(skillLevelMapping[skillId])) {
+                skillLevelMapping[skillId] = 0;
+            }
 
-        skillLevelMapping[skillId] += jewelInfo.skill.level;
+            skillLevelMapping[skillId] += data.level;
+        });
     });
 
     // Reset Skill

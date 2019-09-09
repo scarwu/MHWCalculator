@@ -314,20 +314,24 @@ class Misc
             //     },
             //     "rare": 7,
             //     "size": 2,
-            //     "skill": {
-            //         "id": "砲彈裝填數UP",
-            //         "level": 1
-            //     }
+            //     "skills": [
+            //         {
+            //             "id": "砲彈裝填數UP",
+            //             "level": 1
+            //         }
+            //     ]
             // }
             Misc::$datasetMap['jewels'][] = [
                 $data['id'],
                 $data['name'],
                 $data['rare'],
                 $data['size'],
-                [
-                    $data['skill']['id'],
-                    $data['skill']['level']
-                ]
+                array_map(function ($item) {
+                    return [
+                        $item['id'],
+                        $item['level']
+                    ];
+                }, $data['skills'])
             ];
             break;
         case 'enhance':
@@ -778,9 +782,11 @@ foreach ($jewels as $jewel) {
     $jewelChecklist[$jewel['id']] = true;
 
     // Checklist
-    if (is_string($jewel['skill']['id'])) {
-        if (!isset($skillChecklist[$jewel['skill']['id']])) {
-            echo "Error: Jewel={$jewel['id']}, Skill={$jewel['skill']['id']}\n";
+    if (is_array($jewel['skills'])) {
+        foreach ($jewel['skills'] as $skill) {
+            if (!isset($skillChecklist[$skill['id']])) {
+                echo "Error: Charm={$jewel['id']}, Skill={$skill['id']}\n";
+            }
         }
     }
 
@@ -789,7 +795,11 @@ foreach ($jewels as $jewel) {
 
     // Create ID Hash
     $jewel['id'] = md5($jewel['id']);
-    $jewel['skill']['id'] = md5($jewel['skill']['id']);
+    $jewel['skills'] = array_map(function ($skill) {
+        $skill['id'] = md5($skill['id']);
+
+        return $skill;
+    }, $jewel['skills']);
 
     // Create Dataset
     Misc::appendDatasetMap('jewel', $jewel);

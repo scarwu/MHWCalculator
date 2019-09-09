@@ -54,6 +54,7 @@ class CharmDataset {
     }
 
     resetFilter = () => {
+        this.filterRare = null;
         this.filterSkillName = null;
     };
 
@@ -63,6 +64,12 @@ class CharmDataset {
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
+            if (Helper.isNotEmpty(this.filterRare)) {
+                if (this.filterRare !== data.rare) {
+                    return false;
+                }
+            }
+
             let isSkip = true;
 
             if (Helper.isNotEmpty(this.filterSkillName)) {
@@ -93,6 +100,12 @@ class CharmDataset {
     };
 
     // Conditional Functions
+    rareIs = (number) => {
+        this.filterRare = number;
+
+        return this;
+    };
+
     hasSkill = (name) => {
         this.filterSkillName = name;
 

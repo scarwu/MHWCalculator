@@ -19,9 +19,12 @@ import Jewels from 'files/json/datasets/jewels.json';
 //     1: name,
 //     2: rare,
 //     3: size,
-//     4: skill [
-//         0: id,
-//         1: level
+//     4: skills [
+//         [
+//             0: id,
+//             1: level
+//         ],
+//         [ ... ]
 //     ]
 // ]
 let dataset = Jewels.map((jewel) => {
@@ -30,10 +33,12 @@ let dataset = Jewels.map((jewel) => {
         name: jewel[1],
         rare: jewel[2],
         size: jewel[3],
-        skill: {
-            id: jewel[4][0],
-            level: jewel[4][1]
-        }
+        skills: jewel[4].map((skill) => {
+            return {
+                id: skill[0],
+                level: skill[1]
+            };
+        })
     };
 });
 
@@ -51,8 +56,8 @@ class JewelDataset {
     }
 
     resetFilter = () => {
-        this.filterSkillName = null;
         this.filterRare = null;
+        this.filterSkillName = null;
         this.filterSize = null;
         this.filterSizeCondition = null;
     };
@@ -69,8 +74,18 @@ class JewelDataset {
                 }
             }
 
+            let isSkip = true;
+
             if (Helper.isNotEmpty(this.filterSkillName)) {
-                if (this.filterSkillName !== data.skill.id) {
+                for (let index in data.skills) {
+                    if (this.filterSkillName !== data.skills[index].id) {
+                        continue;
+                    }
+
+                    isSkip = false;
+                }
+
+                if (isSkip) {
                     return false;
                 }
             }

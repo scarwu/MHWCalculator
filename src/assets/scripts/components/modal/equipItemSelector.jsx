@@ -656,12 +656,20 @@ export default function EquipItemSelector(props) {
                         </div>
                     </div>
                     <div className="col-12 mhwc-content">
-                        <div className="col-12 mhwc-name">
-                            <span>{_(skillInfo.name)} Lv.{data.skill.level}</span>
-                        </div>
-                        <div className="col-12 mhwc-value mhwc-description">
-                            <span>{_(skillInfo.list[0].description)}</span>
-                        </div>
+                        {data.skills.map((data, index) => {
+                            let skillInfo = SkillDataset.getInfo(data.id);
+
+                            return Helper.isNotEmpty(skillInfo) ? (
+                                <Fragment>
+                                    <div className="col-12 mhwc-name">
+                                        <span>{_(skillInfo.name)} Lv.{data.level}</span>
+                                    </div>
+                                    <div className="col-12 mhwc-value mhwc-description">
+                                        <span>{_(skillInfo.list[data.level - 1].description)}</span>
+                                    </div>
+                                </Fragment>
+                            ) : false;
+                        })}
                     </div>
                 </div>
             );
