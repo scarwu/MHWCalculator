@@ -30,7 +30,7 @@ foreach ($list as $rare => $mainUrl) {
     $mainDom = getDOM("{$host}{$mainUrl}");
 
     foreach ($mainDom->find('.card-success3') as $item) {
-        $name = $item->find('.card-header a', 0)->plaintext;
+        $name = trim($item->find('.card-header a', 0)->plaintext);
 
         echo "{$name}\n";
 
@@ -64,25 +64,25 @@ foreach ($list as $rare => $mainUrl) {
                 continue;
             }
 
-            if ('合計' === $row->find('td', 0)->plaintext) {
+            if ('合計' === trim($row->find('td', 0)->plaintext)) {
                 continue;
             }
 
             if (1 === $index) {
-                $armor['common']['defense'] = (int) $row->find('td', 1)->plaintext;
-                $armor['common']['resistance']['fire'] = (int) $row->find('td', 2)->plaintext;
-                $armor['common']['resistance']['water'] = (int) $row->find('td', 3)->plaintext;
-                $armor['common']['resistance']['thunder'] = (int) $row->find('td', 4)->plaintext;
-                $armor['common']['resistance']['ice'] = (int) $row->find('td', 5)->plaintext;
-                $armor['common']['resistance']['dragon'] = (int) $row->find('td', 6)->plaintext;
+                $armor['common']['defense'] = (int) trim($row->find('td', 1)->plaintext);
+                $armor['common']['resistance']['fire'] = (int) trim($row->find('td', 2)->plaintext);
+                $armor['common']['resistance']['water'] = (int) trim($row->find('td', 3)->plaintext);
+                $armor['common']['resistance']['thunder'] = (int) trim($row->find('td', 4)->plaintext);
+                $armor['common']['resistance']['ice'] = (int) trim($row->find('td', 5)->plaintext);
+                $armor['common']['resistance']['dragon'] = (int) trim($row->find('td', 6)->plaintext);
             }
 
             $armor['list'][$index] = [
-                'id' => $row->find('td', 0)->plaintext,
+                'id' => trim($row->find('td', 0)->plaintext),
                 'type' => null,
                 'name' => [
                     'zhTW' => null,
-                    'jaJP' => $row->find('td', 0)->plaintext,
+                    'jaJP' => trim($row->find('td', 0)->plaintext),
                     'enUS' => null
                 ],
                 'slots' => null,
@@ -95,7 +95,7 @@ foreach ($list as $rare => $mainUrl) {
                 continue;
             }
 
-            if ('合計' === $row->find('td', 0)->plaintext) {
+            if ('合計' === trim($row->find('td', 0)->plaintext)) {
                 continue;
             }
 
@@ -113,33 +113,38 @@ foreach ($list as $rare => $mainUrl) {
                 continue;
             }
 
-            if ('合計' === $row->find('td', 0)->plaintext) {
+            if ('合計' === trim($row->find('td', 0)->plaintext)) {
                 continue;
             }
 
-            $slots = str_split($row->find('td', 1)->plaintext);
+            $slots = trim($row->find('td', 1)->plaintext);
 
-            if (0 === sizeof($slots)) {
-                $armor['list'][$index]['slots'] = [];
-
-                foreach (str_split($row->find('td', 1)->plaintext) as $size) {
-                    $armor['list'][$index]['slots'][] = [
-                        'size' => [
-                            '④' => 4,
-                            '③' => 3,
-                            '②' => 2,
-                            '①' => 1
-                        ][$size]
+            if (0 < strlen($slots)) {
+                $armor['list'][$index]['slots'] = array_map(function ($size) {
+                    return [
+                        'size' => (int) $size
                     ];
-                }
+                }, explode(':', trim(str_replace([
+                    '①', '②', '③', '④'
+                ], [
+                    '1:', '2:', '3:', '4:'
+                ], $slots), ':')));
             }
 
-            $skills = explode(' ', $row->find('td', 1)->plaintext);
+            $skills = [];
 
-            if (0 === sizeof($skills)) {
+            foreach (explode(' ', trim($row->find('td', 2)->plaintext)) as $value) {
+                if ('' === $value) {
+                    continue;
+                }
+
+                $skills[] = $value;
+            }
+
+            if (0 !== sizeof($skills)) {
                 $armor['list'][$index]['skills'] = [];
 
-                for ($i = 0; $i < size($skills) / 2; $i++) {
+                for ($i = 0; $i < sizeof($skills) / 2; $i++) {
                     $armor['list'][$index]['skills'] = [
                         'id' => $skills[$i * 2],
                         'level' => (int) $skills[$i * 2 + 1]
@@ -153,11 +158,11 @@ foreach ($list as $rare => $mainUrl) {
                 continue;
             }
 
-            if ('無し' === $row->find('td', 0)->plaintext) {
+            if ('無し' === trim($row->find('td', 0)->plaintext)) {
                 continue;
             }
 
-            $armor['common']['set'] = $row->find('td', 0)->plaintext;
+            $armor['common']['set'] = trim($row->find('td', 0)->plaintext);
         }
 
         $path = "ja/mhwg/armor/rare{$rare}";
