@@ -12,12 +12,27 @@ function getDOM ($url)
 
 function getHTML ($url)
 {
+    $refer = [
+        'https://www.google.com.tw/',
+        'https://tw.yahoo.com/',
+        'https://www.facebook.com/'
+    ];
+
+    $agent = [
+        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.125 Safari/537.36',
+        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36',
+        'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0'
+    ];
+
     $client = curl_init();
 
     curl_setopt($client, CURLOPT_URL, $url);
+    curl_setopt($client, CURLOPT_REFERER, $refer[rand() % count($refer)]);
+    curl_setopt($client, CURLOPT_USERAGENT, $agent[rand() % count($agent)]);
     curl_setopt($client, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($client, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($client, CURLOPT_ENCODING , "");
 
     $html = curl_exec($client);
 
