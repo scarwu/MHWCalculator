@@ -145,7 +145,7 @@ foreach ($list as $rare => $mainUrl) {
                 $armor['list'][$index]['skills'] = [];
 
                 for ($i = 0; $i < sizeof($skills) / 2; $i++) {
-                    $armor['list'][$index]['skills'] = [
+                    $armor['list'][$index]['skills'][] = [
                         'id' => $skills[$i * 2],
                         'level' => (int) $skills[$i * 2 + 1]
                     ];
@@ -162,7 +162,9 @@ foreach ($list as $rare => $mainUrl) {
                 continue;
             }
 
-            $armor['common']['set'] = trim($row->find('td', 0)->plaintext);
+            $armor['common']['set'] = [
+                'id' => trim($row->find('td', 0)->plaintext)
+            ];
         }
 
         $path = "ja/mhwg/armor/rare{$rare}";

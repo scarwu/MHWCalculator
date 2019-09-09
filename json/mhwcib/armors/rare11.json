@@ -1,3 +1,3552 @@
 [
-
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXジャナールαシリーズ",
+                "enUS": null
+            },
+            "defense": 146,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 2,
+                "ice": -3,
+                "dragon": 0
+            },
+            "set": {
+                "id": "【蛮顎竜の覇気】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXジャナールヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジャナールヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "弱点特効",
+                        "level": 1
+                    },
+                    {
+                        "id": "死中に活",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXジャナールメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジャナールメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "ひるみ軽減",
+                        "level": 1
+                    },
+                    {
+                        "id": "気絶耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXジャナールアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジャナールアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "アイテム使用強化",
+                        "level": 2
+                    },
+                    {
+                        "id": "雷属性攻撃強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXジャナールコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジャナールコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "弱点特効",
+                        "level": 2
+                    },
+                    {
+                        "id": "アイテム使用強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXジャナールグリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジャナールグリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "雷属性攻撃強化",
+                        "level": 2
+                    },
+                    {
+                        "id": "特殊射撃強化",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXジャナールβシリーズ",
+                "enUS": null
+            },
+            "defense": 146,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 2,
+                "ice": -3,
+                "dragon": 0
+            },
+            "set": {
+                "id": "【蛮顎竜の覇気】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXジャナールヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジャナールヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "弱点特効",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXジャナールメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジャナールメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "ひるみ軽減",
+                        "level": 1
+                    },
+                    {
+                        "id": "気絶耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXジャナールアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジャナールアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "アイテム使用強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXジャナールコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジャナールコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "弱点特効",
+                        "level": 1
+                    },
+                    {
+                        "id": "アイテム使用強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXジャナールグリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジャナールグリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "雷属性攻撃強化",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXリオソウルαシリーズ",
+                "enUS": null
+            },
+            "defense": 148,
+            "resistance": {
+                "fire": 3,
+                "water": 2,
+                "thunder": 2,
+                "ice": -3,
+                "dragon": -4
+            },
+            "set": {
+                "id": "【火竜の真髄】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXリオソウルヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXリオソウルヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "超会心",
+                        "level": 1
+                    },
+                    {
+                        "id": "クライマー",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXリオソウルメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXリオソウルメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "属性解放\/装填拡張",
+                        "level": 1
+                    },
+                    {
+                        "id": "破壊王",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXリオソウルアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXリオソウルアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "破壊王",
+                        "level": 2
+                    },
+                    {
+                        "id": "風圧耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXリオソウルコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXリオソウルコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "風圧耐性",
+                        "level": 2
+                    },
+                    {
+                        "id": "貫通弾・竜の一矢強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXリオソウルグリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXリオソウルグリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "超会心",
+                        "level": 1
+                    },
+                    {
+                        "id": "風圧耐性",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXリオソウルβシリーズ",
+                "enUS": null
+            },
+            "defense": 148,
+            "resistance": {
+                "fire": 3,
+                "water": 2,
+                "thunder": 2,
+                "ice": -3,
+                "dragon": -4
+            },
+            "set": {
+                "id": "【火竜の真髄】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXリオソウルヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXリオソウルヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "超会心",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXリオソウルメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXリオソウルメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "属性解放\/装填拡張",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXリオソウルアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXリオソウルアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "破壊王",
+                        "level": 1
+                    },
+                    {
+                        "id": "風圧耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXリオソウルコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXリオソウルコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "風圧耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXリオソウルグリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXリオソウルグリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "超会心",
+                        "level": 1
+                    },
+                    {
+                        "id": "風圧耐性",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXディアネロαシリーズ",
+                "enUS": null
+            },
+            "defense": 148,
+            "resistance": {
+                "fire": 2,
+                "water": -3,
+                "thunder": 0,
+                "ice": -4,
+                "dragon": 2
+            },
+            "set": {
+                "id": "【角竜の覇気】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXディアネロヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディアネロヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "破壊王",
+                        "level": 2
+                    },
+                    {
+                        "id": "逆恨み",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXディアネロメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディアネロメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "逆恨み",
+                        "level": 2
+                    },
+                    {
+                        "id": "ランナー",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXディアネロアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディアネロアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "KO術",
+                        "level": 2
+                    },
+                    {
+                        "id": "ランナー",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXディアネロコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディアネロコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "KO術",
+                        "level": 2
+                    },
+                    {
+                        "id": "破壊王",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXディアネログリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディアネログリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "逆恨み",
+                        "level": 2
+                    },
+                    {
+                        "id": "KO術",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXディアネロβシリーズ",
+                "enUS": null
+            },
+            "defense": 148,
+            "resistance": {
+                "fire": 2,
+                "water": -3,
+                "thunder": 0,
+                "ice": -4,
+                "dragon": 2
+            },
+            "set": {
+                "id": "【角竜の覇気】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXディアネロヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディアネロヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "破壊王",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXディアネロメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディアネロメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "逆恨み",
+                        "level": 1
+                    },
+                    {
+                        "id": "ランナー",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXディアネロアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディアネロアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "KO術",
+                        "level": 1
+                    },
+                    {
+                        "id": "ランナー",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXディアネロコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディアネロコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "KO術",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXディアネログリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディアネログリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "逆恨み",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXブリーナαシリーズ",
+                "enUS": null
+            },
+            "defense": 146,
+            "resistance": {
+                "fire": -3,
+                "water": 2,
+                "thunder": -1,
+                "ice": 3,
+                "dragon": 0
+            },
+            "set": {
+                "id": "【風漂竜の覇気】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXブリーナヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブリーナヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "腹減り耐性",
+                        "level": 2
+                    },
+                    {
+                        "id": "回避距離UP",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXブリーナメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブリーナメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "集中",
+                        "level": 2
+                    },
+                    {
+                        "id": "ランナー",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXブリーナアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブリーナアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "抜刀術【技】",
+                        "level": 2
+                    },
+                    {
+                        "id": "腹減り耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXブリーナコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブリーナコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "回避距離UP",
+                        "level": 2
+                    },
+                    {
+                        "id": "集中",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXブリーナグリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブリーナグリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "ランナー",
+                        "level": 2
+                    },
+                    {
+                        "id": "散弾・剛射強化",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXブリーナβシリーズ",
+                "enUS": null
+            },
+            "defense": 146,
+            "resistance": {
+                "fire": -3,
+                "water": 2,
+                "thunder": -1,
+                "ice": 3,
+                "dragon": 0
+            },
+            "set": {
+                "id": "【風漂竜の覇気】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXブリーナヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブリーナヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "腹減り耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXブリーナメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブリーナメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "集中",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXブリーナアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブリーナアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "抜刀術【技】",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXブリーナコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブリーナコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "回避距離UP",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXブリーナグリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブリーナグリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "ランナー",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXデスガロンαシリーズ",
+                "enUS": null
+            },
+            "defense": 148,
+            "resistance": {
+                "fire": -2,
+                "water": -3,
+                "thunder": -2,
+                "ice": -2,
+                "dragon": 4
+            },
+            "set": {
+                "id": "【惨爪竜の真髄】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXデスガロンヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXデスガロンヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "力の解放",
+                        "level": 2
+                    },
+                    {
+                        "id": "整備",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXデスガロンメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXデスガロンメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "見切り",
+                        "level": 3
+                    },
+                    {
+                        "id": "龍耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXデスガロンアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXデスガロンアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "強化持続",
+                        "level": 1
+                    },
+                    {
+                        "id": "龍属性攻撃強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXデスガロンコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXデスガロンコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "龍属性攻撃強化",
+                        "level": 2
+                    },
+                    {
+                        "id": "力の解放",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXデスガロングリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXデスガロングリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "整備",
+                        "level": 2
+                    },
+                    {
+                        "id": "強化持続",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXデスガロンβシリーズ",
+                "enUS": null
+            },
+            "defense": 148,
+            "resistance": {
+                "fire": -2,
+                "water": -3,
+                "thunder": -2,
+                "ice": -2,
+                "dragon": 4
+            },
+            "set": {
+                "id": "【惨爪竜の真髄】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXデスガロンヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXデスガロンヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "力の解放",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXデスガロンメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXデスガロンメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "見切り",
+                        "level": 2
+                    },
+                    {
+                        "id": "龍耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXデスガロンアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXデスガロンアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "強化持続",
+                        "level": 1
+                    },
+                    {
+                        "id": "龍属性攻撃強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXデスガロンコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXデスガロンコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "龍属性攻撃強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXデスガロングリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXデスガロングリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "整備",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXディノイエロαシリーズ",
+                "enUS": null
+            },
+            "defense": 150,
+            "resistance": {
+                "fire": -3,
+                "water": 2,
+                "thunder": -1,
+                "ice": 2,
+                "dragon": -1
+            },
+            "set": {
+                "id": "【斬竜の真髄】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXディノイエロヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディノイエロヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "渾身",
+                        "level": 2
+                    },
+                    {
+                        "id": "瘴気耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXディノイエロメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディノイエロメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "匠",
+                        "level": 2
+                    },
+                    {
+                        "id": "スタミナ急速回復",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXディノイエロアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディノイエロアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "気絶耐性",
+                        "level": 2
+                    },
+                    {
+                        "id": "匠",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXディノイエロコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディノイエロコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "匠",
+                        "level": 2
+                    },
+                    {
+                        "id": "防御力DOWN耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXディノイエログリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディノイエログリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "渾身",
+                        "level": 2
+                    },
+                    {
+                        "id": "スタミナ急速回復",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXディノイエロβシリーズ",
+                "enUS": null
+            },
+            "defense": 150,
+            "resistance": {
+                "fire": -3,
+                "water": 2,
+                "thunder": -1,
+                "ice": 2,
+                "dragon": -1
+            },
+            "set": {
+                "id": "【斬竜の真髄】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXディノイエロヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディノイエロヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "渾身",
+                        "level": 1
+                    },
+                    {
+                        "id": "瘴気耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXディノイエロメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディノイエロメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "匠",
+                        "level": 1
+                    },
+                    {
+                        "id": "スタミナ急速回復",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXディノイエロアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディノイエロアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "気絶耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXディノイエロコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディノイエロコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "匠",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXディノイエログリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXディノイエログリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "渾身",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXクロオビαシリーズ",
+                "enUS": null
+            },
+            "defense": 150,
+            "resistance": {
+                "fire": 1,
+                "water": 1,
+                "thunder": 1,
+                "ice": 1,
+                "dragon": 2
+            },
+            "set": {
+                "id": "【教官の導き】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXクロオビヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXクロオビヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "ランナー",
+                        "level": 2
+                    },
+                    {
+                        "id": "キノコ大好き",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXクロオビメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXクロオビメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "キノコ大好き",
+                        "level": 2
+                    },
+                    {
+                        "id": "広域化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXクロオビアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXクロオビアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "広域化",
+                        "level": 2
+                    },
+                    {
+                        "id": "笛吹き名人",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXクロオビコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXクロオビコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "体力回復量UP",
+                        "level": 2
+                    },
+                    {
+                        "id": "ランナー",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXクロオビグリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXクロオビグリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "広域化",
+                        "level": 2
+                    },
+                    {
+                        "id": "体力回復量UP",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXクロオビβシリーズ",
+                "enUS": null
+            },
+            "defense": 150,
+            "resistance": {
+                "fire": 1,
+                "water": 1,
+                "thunder": 1,
+                "ice": 1,
+                "dragon": 2
+            },
+            "set": {
+                "id": "【教官の導き】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXクロオビヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXクロオビヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "ランナー",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXクロオビメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXクロオビメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "キノコ大好き",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXクロオビアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXクロオビアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "広域化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXクロオビコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXクロオビコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "体力回復量UP",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXクロオビグリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXクロオビグリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "広域化",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXドーベルαシリーズ",
+                "enUS": null
+            },
+            "defense": 152,
+            "resistance": {
+                "fire": -2,
+                "water": 0,
+                "thunder": -1,
+                "ice": -1,
+                "dragon": 4
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "id": "EXドーベルヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXドーベルヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "属性解放\/装填拡張",
+                        "level": 2
+                    },
+                    {
+                        "id": "スタミナ急速回復",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXドーベルメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXドーベルメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻撃",
+                        "level": 2
+                    },
+                    {
+                        "id": "瘴気耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXドーベルアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXドーベルアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "スタミナ急速回復",
+                        "level": 2
+                    },
+                    {
+                        "id": "キノコ大好き",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXドーベルコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXドーベルコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻撃",
+                        "level": 2
+                    },
+                    {
+                        "id": "気絶耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXドーベルグリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXドーベルグリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻撃",
+                        "level": 2
+                    },
+                    {
+                        "id": "キノコ大好き",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXドーベルβシリーズ",
+                "enUS": null
+            },
+            "defense": 152,
+            "resistance": {
+                "fire": -2,
+                "water": 0,
+                "thunder": -1,
+                "ice": -1,
+                "dragon": 4
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "id": "EXドーベルヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXドーベルヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "属性解放\/装填拡張",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXドーベルメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXドーベルメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻撃",
+                        "level": 1
+                    },
+                    {
+                        "id": "瘴気耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXドーベルアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXドーベルアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "スタミナ急速回復",
+                        "level": 1
+                    },
+                    {
+                        "id": "キノコ大好き",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXドーベルコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXドーベルコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻撃",
+                        "level": 1
+                    },
+                    {
+                        "id": "気絶耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXドーベルグリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXドーベルグリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻撃",
+                        "level": 1
+                    },
+                    {
+                        "id": "キノコ大好き",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXダマスクαシリーズ",
+                "enUS": null
+            },
+            "defense": 152,
+            "resistance": {
+                "fire": 4,
+                "water": -2,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "id": "EXダマスクヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXダマスクヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "防御",
+                        "level": 3
+                    },
+                    {
+                        "id": "砥石使用高速化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXダマスクメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXダマスクメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "集中",
+                        "level": 2
+                    },
+                    {
+                        "id": "防御",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXダマスクアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXダマスクアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "匠",
+                        "level": 2
+                    },
+                    {
+                        "id": "砥石使用高速化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXダマスクコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXダマスクコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "集中",
+                        "level": 1
+                    },
+                    {
+                        "id": "ガード性能",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXダマスクグリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXダマスクグリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "防御",
+                        "level": 2
+                    },
+                    {
+                        "id": "ガード性能",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXダマスクβシリーズ",
+                "enUS": null
+            },
+            "defense": 152,
+            "resistance": {
+                "fire": 4,
+                "water": -2,
+                "thunder": 0,
+                "ice": 0,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "id": "EXダマスクヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXダマスクヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "防御",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "EXダマスクメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXダマスクメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "集中",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXダマスクアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXダマスクアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "匠",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXダマスクコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXダマスクコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "集中",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXダマスクグリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXダマスクグリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "防御",
+                        "level": 2
+                    },
+                    {
+                        "id": "ガード性能",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXブライドαシリーズ",
+                "enUS": null
+            },
+            "defense": 154,
+            "resistance": {
+                "fire": 3,
+                "water": 1,
+                "thunder": -2,
+                "ice": -4,
+                "dragon": -2
+            },
+            "set": {
+                "id": "【爆鱗竜の覇気】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXブライドヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブライドヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "耳栓",
+                        "level": 2
+                    },
+                    {
+                        "id": "爆破属性強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXブライドメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブライドメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "ガード性能",
+                        "level": 2
+                    },
+                    {
+                        "id": "爆破やられ耐性",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXブライドアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブライドアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "抜刀術【技】",
+                        "level": 2
+                    },
+                    {
+                        "id": "耳栓",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXブライドコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブライドコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "ボマー",
+                        "level": 2
+                    },
+                    {
+                        "id": "抜刀術【技】",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXブライドグリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブライドグリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "耳栓",
+                        "level": 2
+                    },
+                    {
+                        "id": "ジャンプ鉄人",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXブライドβシリーズ",
+                "enUS": null
+            },
+            "defense": 154,
+            "resistance": {
+                "fire": 3,
+                "water": 1,
+                "thunder": -2,
+                "ice": -4,
+                "dragon": -2
+            },
+            "set": {
+                "id": "【爆鱗竜の覇気】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXブライドヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブライドヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "耳栓",
+                        "level": 2
+                    },
+                    {
+                        "id": "爆破属性強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXブライドメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブライドメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "ガード性能",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXブライドアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブライドアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "抜刀術【技】",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXブライドコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブライドコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "ボマー",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXブライドグリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXブライドグリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "耳栓",
+                        "level": 1
+                    },
+                    {
+                        "id": "ジャンプ鉄人",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXグリードαシリーズ",
+                "enUS": null
+            },
+            "defense": 156,
+            "resistance": {
+                "fire": 2,
+                "water": 1,
+                "thunder": -3,
+                "ice": 1,
+                "dragon": -3
+            },
+            "set": {
+                "id": "【恐暴竜の真髄】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXグリードヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXグリードヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "破壊王",
+                        "level": 1
+                    },
+                    {
+                        "id": "匠",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXグリードメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXグリードメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "早食い",
+                        "level": 1
+                    },
+                    {
+                        "id": "匠",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXグリードアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXグリードアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "スタミナ奪取",
+                        "level": 2
+                    },
+                    {
+                        "id": "破壊王",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXグリードコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXグリードコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "スタミナ奪取",
+                        "level": 2
+                    },
+                    {
+                        "id": "匠",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXグリードグリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXグリードグリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "早食い",
+                        "level": 2
+                    },
+                    {
+                        "id": "スタミナ奪取",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXグリードβシリーズ",
+                "enUS": null
+            },
+            "defense": 156,
+            "resistance": {
+                "fire": 2,
+                "water": 1,
+                "thunder": -3,
+                "ice": 1,
+                "dragon": -3
+            },
+            "set": {
+                "id": "【恐暴竜の真髄】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXグリードヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXグリードヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "破壊王",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXグリードメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXグリードメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "早食い",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXグリードアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXグリードアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "スタミナ奪取",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXグリードコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXグリードコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "スタミナ奪取",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXグリードグリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXグリードグリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "早食い",
+                        "level": 1
+                    },
+                    {
+                        "id": "スタミナ奪取",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXジンオウαシリーズ",
+                "enUS": null
+            },
+            "defense": 158,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 4,
+                "ice": -4,
+                "dragon": 1
+            },
+            "set": {
+                "id": "【雷狼竜の真髄】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXジンオウヘルムα",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジンオウヘルムα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "強化持続",
+                        "level": 2
+                    },
+                    {
+                        "id": "超会心",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXジンオウメイルα",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジンオウメイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "力の解放",
+                        "level": 3
+                    },
+                    {
+                        "id": "通常弾・通常矢強化",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXジンオウアームα",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジンオウアームα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "回復速度",
+                        "level": 2
+                    },
+                    {
+                        "id": "力の解放",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXジンオウコイルα",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジンオウコイルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "強化持続",
+                        "level": 1
+                    },
+                    {
+                        "id": "雷属性攻撃強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXジンオウグリーヴα",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジンオウグリーヴα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "雷属性攻撃強化",
+                        "level": 3
+                    },
+                    {
+                        "id": "力の解放",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 11,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "EXジンオウβシリーズ",
+                "enUS": null
+            },
+            "defense": 158,
+            "resistance": {
+                "fire": -1,
+                "water": -1,
+                "thunder": 4,
+                "ice": -4,
+                "dragon": 1
+            },
+            "set": {
+                "id": "【雷狼竜の真髄】"
+            }
+        },
+        "list": [
+            {
+                "id": "EXジンオウヘルムβ",
+                "type": "helm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジンオウヘルムβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "強化持続",
+                        "level": 1
+                    },
+                    {
+                        "id": "超会心",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXジンオウメイルβ",
+                "type": "chest",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジンオウメイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "力の解放",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "EXジンオウアームβ",
+                "type": "arm",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジンオウアームβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "回復速度",
+                        "level": 1
+                    },
+                    {
+                        "id": "力の解放",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXジンオウコイルβ",
+                "type": "waist",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジンオウコイルβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "強化持続",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "EXジンオウグリーヴβ",
+                "type": "leg",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXジンオウグリーヴβ",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "雷属性攻撃強化",
+                        "level": 1
+                    },
+                    {
+                        "id": "力の解放",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    }
 ]
