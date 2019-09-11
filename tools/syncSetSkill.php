@@ -101,6 +101,23 @@ foreach ($charms as $charmIndex => $charm) {
 
 saveJson("../../json/mhwib/charms", $charms);
 
+// Set
+$sets = loadJson("../../json/mhwib/sets");
+
+foreach ($sets as $setIndex => $set) {
+    foreach ($set['skills'] as $skillIndex => $skill) {
+        if (false === isset($skillNameMapping[$skill['id']])) {
+            $untrack['skills'][$skill['id']] = true;
+        } else {
+            $set['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+        }
+    }
+
+    $sets[$setIndex] = $set;
+}
+
+saveJson("../../json/mhwib/sets", $sets);
+
 $untrack['sets'] = array_keys($untrack['sets']);
 $untrack['skills'] = array_keys($untrack['skills']);
 

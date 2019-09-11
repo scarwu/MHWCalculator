@@ -162,5 +162,421 @@
                 "isHidden": false
             }
         ]
+    },
+    {
+        "id": "KO術．極意",
+        "name": {
+            "zhTW": "KO術．極意",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "真．利刃／彈藥節約",
+        "name": {
+            "zhTW": "真．利刃／彈藥節約",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "精神抖擻．極意",
+        "name": {
+            "zhTW": "精神抖擻．極意",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "挑戰者．極意",
+        "name": {
+            "zhTW": "挑戰者．極意",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "滿足感．極意",
+        "name": {
+            "zhTW": "滿足感．極意",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "耐力奪取．極意",
+        "name": {
+            "zhTW": "耐力奪取．極意",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "力量解放．極意",
+        "name": {
+            "zhTW": "力量解放．極意",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "冰氣練成",
+        "name": {
+            "zhTW": "冰氣練成",
+            "jaJP": "冰気錬成",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "属性加速",
+        "name": {
+            "zhTW": "屬性加速",
+            "jaJP": "属性加速",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "真．屬性加速",
+        "name": {
+            "zhTW": "真．屬性加速",
+            "jaJP": "真・属性加速",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "大地縫纏",
+        "name": {
+            "zhTW": null,
+            "jaJP": "大地縫纏",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "真・大地縫纏",
+        "name": {
+            "zhTW": null,
+            "jaJP": "真・大地縫纏",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "砲術．極意",
+        "name": {
+            "zhTW": "砲術．極意",
+            "jaJP": "砲術・極意",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
     }
 ]
