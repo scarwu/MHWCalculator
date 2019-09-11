@@ -41,9 +41,20 @@ currentLang = Helper.isNotEmpty(Constant.langs[currentLang])
 // Set Status
 Status.set('sys:lang', currentLang);
 
+function getExistLang (key) {
+    for (let lang in langs) {
+        if (Helper.isNotEmpty(langs[lang][key])) {
+            return langs[lang][key];
+        }
+    }
+
+    return null;
+}
+
 export default (key) => {
     currentLang = Status.get('sys:lang');
 
     return (Helper.isNotEmpty(langs[currentLang][key]))
-        ? langs[currentLang][key] : langs[defaultLang][key];
+        ? langs[currentLang][key] : (Helper.isNotEmpty(langs[defaultLang][key])
+            ? langs[defaultLang][key] : getExistLang(key));
 };
