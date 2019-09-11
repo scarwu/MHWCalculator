@@ -6,7 +6,12 @@
             "jaJP": "攻めの守勢",
             "enUS": null
         },
-        "type": null,
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": "passive",
         "from": {
             "set": false,
             "jewel": false,
@@ -21,7 +26,11 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "attackMultiple": {
+                        "value": 1.05
+                    }
+                },
                 "isHidden": false
             },
             {
@@ -31,7 +40,11 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "attackMultiple": {
+                        "value": 1.1
+                    }
+                },
                 "isHidden": false
             },
             {
@@ -41,7 +54,11 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "attackMultiple": {
+                        "value": 1.15
+                    }
+                },
                 "isHidden": false
             }
         ]
@@ -51,6 +68,11 @@
         "name": {
             "zhTW": null,
             "jaJP": "災禍転福",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
             "enUS": null
         },
         "type": null,
@@ -80,6 +102,11 @@
             "jaJP": "寒さ耐性",
             "enUS": null
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": null,
         "from": {
             "set": false,
@@ -96,6 +123,42 @@
                     "enUS": null
                 },
                 "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "炸彈客．極意",
+        "name": {
+            "zhTW": "炸彈客．極意",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": "解放炸彈客技能的等級上限。",
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": "active",
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "解放炸彈客技能的等級上限。",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "enableSkillLevel": {
+                        "id": "炸彈客"
+                    }
+                },
                 "isHidden": false
             }
         ]

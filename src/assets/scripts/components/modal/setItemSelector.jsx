@@ -169,7 +169,7 @@ export default function SetItemSelector(props) {
                     {data.skills.map((skill, index) => {
                         let skillInfo = SkillDataset.getInfo(skill.id);
 
-                        return (
+                        return Helper.isNotEmpty(skillInfo) ? (
                             <Fragment key={index}>
                                 <div className="col-12 mhwc-name">
                                     <span>({skill.require}) {_(skillInfo.name)} Lv.{skill.level}</span>
@@ -178,7 +178,7 @@ export default function SetItemSelector(props) {
                                     <span>{_(skillInfo.list[0].description)}</span>
                                 </div>
                             </Fragment>
-                        );
+                        ) : false;
                     })}
                 </div>
             </div>

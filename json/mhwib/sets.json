@@ -45,17 +45,17 @@
         ]
     },
     {
-        "id": "調査団の錬金術",
+        "id": "調查團的鍊金術",
         "name": {
-            "zhTW": null,
+            "zhTW": "調查團的鍊金術",
             "jaJP": "調査団の錬金術",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "炸彈客．極意",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },

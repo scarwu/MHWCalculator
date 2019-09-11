@@ -6,6 +6,11 @@
             "jaJP": "体力増強",
             "enUS": "Health Boost"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -65,6 +70,11 @@
             "jaJP": "体力回復量UP",
             "enUS": "Recovery Up"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -112,6 +122,11 @@
             "jaJP": "KO術",
             "enUS": "Slugger"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -158,6 +173,11 @@
             "zhTW": "體術",
             "jaJP": "体術",
             "enUS": "Constitution"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -225,6 +245,11 @@
             "zhTW": "力量解放",
             "jaJP": "力の解放",
             "enUS": "Latent Power"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "passive",
         "from": {
@@ -312,6 +337,11 @@
             "zhTW": "水屬性攻擊強化",
             "jaJP": "水属性攻撃強化",
             "enUS": "Water Attack"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -410,6 +440,11 @@
             "jaJP": "火属性攻撃強化",
             "enUS": "Fire Attack"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -507,6 +542,11 @@
             "jaJP": "心眼\/弾導強化",
             "enUS": "Mind's Eye\/Ballistics"
         },
+        "description": {
+            "zhTW": "攻擊不會被彈開，縮短彈藥、箭矢達到最大威力時的距離",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -533,6 +573,11 @@
             "zhTW": "火耐性",
             "jaJP": "火耐性",
             "enUS": "Fire Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -599,6 +644,11 @@
             "jaJP": "水耐性",
             "enUS": "Water Resistance"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -664,6 +714,11 @@
             "jaJP": "不屈",
             "enUS": "Fortify"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "passive",
         "from": {
             "set": false,
@@ -697,6 +752,11 @@
             "zhTW": "火場怪力",
             "jaJP": "火事場力",
             "enUS": "Heroics"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "passive",
         "from": {
@@ -800,6 +860,11 @@
             "jaJP": "加速再生",
             "enUS": "Hasten Recovery"
         },
+        "description": {
+            "zhTW": "若持續攻擊命中魔物，便能回復體力。回復量會依武器種類不同而有所變動",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -826,6 +891,11 @@
             "zhTW": "冰耐性",
             "jaJP": "氷耐性",
             "enUS": "Ice Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -892,6 +962,11 @@
             "jaJP": "地質学",
             "enUS": "Geologist"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -939,6 +1014,11 @@
             "jaJP": "回復速度",
             "enUS": "Recovery Speed"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -985,6 +1065,11 @@
             "zhTW": "冰屬性攻擊強化",
             "jaJP": "氷属性攻撃強化",
             "enUS": "Ice Attack"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -1083,6 +1168,11 @@
             "jaJP": "納刀術",
             "enUS": "Quick Sheath"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -1129,6 +1219,11 @@
             "zhTW": "耳塞",
             "jaJP": "耳栓",
             "enUS": "Earplugs"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -1197,6 +1292,11 @@
             "jaJP": "死中に活",
             "enUS": "Resuscitate"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -1223,6 +1323,11 @@
             "zhTW": "匠",
             "jaJP": "匠",
             "enUS": "Handicraft"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -1310,6 +1415,11 @@
             "zhTW": "攻擊",
             "jaJP": "攻撃",
             "enUS": "Attack Boost"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -1438,6 +1548,11 @@
             "jaJP": "笛吹き名人",
             "enUS": "Horn Maestro"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -1465,6 +1580,11 @@
             "jaJP": "ガード強化",
             "enUS": "Guard Up"
         },
+        "description": {
+            "zhTW": "可以防禦一般無法防禦的攻擊",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -1491,6 +1611,11 @@
             "zhTW": "投射器裝填數UP",
             "jaJP": "スリンガー装填数UP",
             "enUS": "Slinger Capacity"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -1539,6 +1664,11 @@
             "jaJP": "防御力DOWN耐性",
             "enUS": "Iron Skin"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -1585,6 +1715,11 @@
             "zhTW": "防禦",
             "jaJP": "防御",
             "enUS": "Defense Boost"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -1717,6 +1852,11 @@
             "jaJP": "業物/弾丸節約",
             "enUS": "Razor Sharp\/Spare Shot"
         },
+        "description": {
+            "zhTW": "銳利度的消耗降低一半 ／ 有少量機會在射擊時不消耗弩槍的彈藥及弓的瓶",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -1743,6 +1883,11 @@
             "zhTW": "快吃",
             "jaJP": "早食い",
             "enUS": "Speed Eating"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -1790,6 +1935,11 @@
             "zhTW": "防禦性能",
             "jaJP": "ガード性能",
             "enUS": "Guard"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -1858,6 +2008,11 @@
             "jaJP": "抜刀術【力】",
             "enUS": "Punishing Draw"
         },
+        "description": {
+            "zhTW": "追加、強化武器拔刀攻擊所引起的昏厥的能力，攻擊力也會小幅提升",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -1885,6 +2040,11 @@
             "jaJP": "泥耐性",
             "enUS": "Muck Resistance"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -1911,6 +2071,11 @@
             "zhTW": "拔刀術【技】",
             "jaJP": "抜刀術【技】",
             "enUS": "Critical Draw"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "passive",
         "from": {
@@ -1971,6 +2136,11 @@
             "jaJP": "幸運",
             "enUS": "Good Luck"
         },
+        "description": {
+            "zhTW": "完成任務獲得的報酬數量容易變多(從任務中途開始使用不會有效果)",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -1997,6 +2167,11 @@
             "zhTW": "昏厥耐性",
             "jaJP": "気絶耐性",
             "enUS": "Stun Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -2045,6 +2220,11 @@
             "jaJP": "昆虫標本の達人",
             "enUS": "Entomologist"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -2091,6 +2271,11 @@
             "zhTW": "看破",
             "jaJP": "見切り",
             "enUS": "Critical Eye"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -2207,6 +2392,11 @@
             "jaJP": "オトモへの采配",
             "enUS": "Palico Rally"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -2274,6 +2464,11 @@
             "jaJP": "飛び込み",
             "enUS": "Leap of Faith"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -2300,6 +2495,11 @@
             "zhTW": "炸彈客",
             "jaJP": "ボマー",
             "enUS": "Bombardier"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -2348,6 +2548,11 @@
             "jaJP": "毒属性強化",
             "enUS": "Poison Attack"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -2394,6 +2599,11 @@
             "zhTW": "耐力急速回復",
             "jaJP": "スタミナ急速回復",
             "enUS": "Stamina Surge"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -2442,6 +2652,11 @@
             "jaJP": "風圧完全無効",
             "enUS": "Nullify Wind Pressure"
         },
+        "description": {
+            "zhTW": "使全部的風壓無效",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -2468,6 +2683,11 @@
             "zhTW": "風壓耐性",
             "jaJP": "風圧耐性",
             "enUS": "Windproof"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -2536,6 +2756,11 @@
             "jaJP": "スタミナ上限突破",
             "enUS": "Stamina Cap Up"
         },
+        "description": {
+            "zhTW": "增加耐力的上限值",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -2566,6 +2791,11 @@
             "zhTW": "耐震",
             "jaJP": "耐震",
             "enUS": "Tremor Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -2614,6 +2844,11 @@
             "jaJP": "飛燕",
             "enUS": "Airborne"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "passive",
         "from": {
             "set": false,
@@ -2645,6 +2880,11 @@
             "jaJP": "飛燕【屬性】",
             "enUS": null
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "passive",
         "from": {
             "set": false,
@@ -2671,6 +2911,11 @@
             "zhTW": "毒耐性",
             "jaJP": "毒耐性",
             "enUS": "Poison Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -2719,6 +2964,11 @@
             "jaJP": "威嚇",
             "enUS": "Intimidator"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -2766,6 +3016,11 @@
             "jaJP": "研究者",
             "enUS": "Scholar"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -2793,6 +3048,11 @@
             "jaJP": "毒ダメージ強化",
             "enUS": "Poison Duratoini Up"
         },
+        "description": {
+            "zhTW": "提高對魔物施毒的效果時間",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -2819,6 +3079,11 @@
             "zhTW": "挑戰者",
             "jaJP": "挑戦者",
             "enUS": "Agitator"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "passive",
         "from": {
@@ -2922,6 +3187,11 @@
             "jaJP": "逆恨み",
             "enUS": "Resentment"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "passive",
         "from": {
             "set": false,
@@ -3009,6 +3279,11 @@
             "jaJP": "毒ビン追加",
             "enUS": "Poison Functionality"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3035,6 +3310,11 @@
             "zhTW": "砲術",
             "jaJP": "砲術",
             "enUS": "Artillery"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -3082,6 +3362,11 @@
             "zhTW": "迴避性能",
             "jaJP": "回避性能",
             "enUS": "Evade Window"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -3150,6 +3435,11 @@
             "jaJP": "破壊王",
             "enUS": "Partbreaker"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3197,6 +3487,11 @@
             "jaJP": "剥ぎ取り名人",
             "enUS": "Carving Master"
         },
+        "description": {
+            "zhTW": "剝取回數增加1回(從任務中途開始使用不會有效果)",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -3223,6 +3518,11 @@
             "zhTW": "迴避距離UP",
             "jaJP": "回避距離UP",
             "enUS": "Evade Extender"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -3271,6 +3571,11 @@
             "jaJP": "奮起",
             "enUS": "Adrenaline"
         },
+        "description": {
+            "zhTW": "體力降低至40%以下時，一定時間內耐力的消耗量會減少",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -3297,6 +3602,11 @@
             "zhTW": "追蹤達人",
             "jaJP": "追跡の達人",
             "enUS": "Scenthound"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -3325,6 +3635,11 @@
             "jaJP": "剥ぎ取り鉄人",
             "enUS": "Carving Pro"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3351,6 +3666,11 @@
             "zhTW": "砲擊手",
             "jaJP": "砲撃手",
             "enUS": "Heavy Artillery"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -3389,6 +3709,11 @@
             "jaJP": "剛刃研磨",
             "enUS": "Protective Polish"
         },
+        "description": {
+            "zhTW": "研磨武器後，一定時間內銳利度不會降低",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -3415,6 +3740,11 @@
             "zhTW": "砥石使用高速化",
             "jaJP": "砥石使用高速化",
             "enUS": "Speed Sharpening"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -3463,6 +3793,11 @@
             "jaJP": "砲弾装填数UP",
             "enUS": "Capacity Boost"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3490,6 +3825,11 @@
             "jaJP": "肉焼き名人",
             "enUS": "BBQ Master"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3516,6 +3856,11 @@
             "zhTW": "飢餓耐性",
             "jaJP": "腹減り耐性",
             "enUS": "Hunger Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -3564,6 +3909,11 @@
             "jaJP": "特殊射撃強化",
             "enUS": "Special Ammo Boost"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3600,6 +3950,11 @@
             "zhTW": "弱點特效",
             "jaJP": "弱点特効",
             "enUS": "Weakness Exploit"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "passive",
         "from": {
@@ -3660,6 +4015,11 @@
             "jaJP": "閃光強化",
             "enUS": "Blindsider"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3686,6 +4046,11 @@
             "zhTW": "捕獲名人",
             "jaJP": "捕獲名人",
             "enUS": "Capture Master"
+        },
+        "description": {
+            "zhTW": "捕獲獲取得的報酬數量變多的機率很高(從任務中途開始使用不會有效果)",
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -3714,6 +4079,11 @@
             "jaJP": "採集の達人",
             "enUS": "Master Gatherer"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3740,6 +4110,11 @@
             "zhTW": "異臭名人",
             "jaJP": "こやし名人",
             "enUS": "Dungmaster"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -3768,6 +4143,11 @@
             "jaJP": "貫通弾・竜の一矢強化",
             "enUS": "Piercing Shots"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3794,6 +4174,11 @@
             "zhTW": "強化持續",
             "jaJP": "強化持続",
             "enUS": "Power Prolonger"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -3842,6 +4227,11 @@
             "jaJP": "釣り名人",
             "enUS": "Master Fisher"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3869,6 +4259,11 @@
             "jaJP": "通常弾・通常矢強化",
             "enUS": "Normal Shots"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3895,6 +4290,11 @@
             "zhTW": "麻痺耐性",
             "jaJP": "麻痺耐性",
             "enUS": "Paralysis Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -3943,6 +4343,11 @@
             "jaJP": "麻痺属性強化",
             "enUS": "Paralysis Attack"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -3990,6 +4395,11 @@
             "jaJP": "探索者の幸運",
             "enUS": "Forager's Luck"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -4016,6 +4426,11 @@
             "zhTW": "強運",
             "jaJP": "強運",
             "enUS": "Great Luck"
+        },
+        "description": {
+            "zhTW": "完成任務獲取得的報酬數量變多的機率很高(從任務中途開始使用不會有效果)",
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -4044,6 +4459,11 @@
             "jaJP": "麻痺ビン追加",
             "enUS": "Para Functionality"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -4070,6 +4490,11 @@
             "zhTW": "跑者",
             "jaJP": "ランナー",
             "enUS": "Marathon Runner"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -4118,6 +4543,11 @@
             "jaJP": "集中",
             "enUS": "Focus"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -4164,6 +4594,11 @@
             "zhTW": "植生學",
             "jaJP": "植生学",
             "enUS": "Botanist"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -4222,6 +4657,11 @@
             "jaJP": "鈍器使い",
             "enUS": "Bludgeoner"
         },
+        "description": {
+            "zhTW": "銳利度愈差攻擊力愈高。遠距離武器的近身攻擊威力與使敵人昏厥的容易度有大幅提升",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -4248,6 +4688,11 @@
             "zhTW": "最愛菇類",
             "jaJP": "キノコ大好き",
             "enUS": "Mushroomancer"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -4296,6 +4741,11 @@
             "jaJP": "裂傷耐性",
             "enUS": "Bleeding Resistance"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -4343,6 +4793,11 @@
             "jaJP": "無属性強化",
             "enUS": "Non-elemental Boost"
         },
+        "description": {
+            "zhTW": "強化裝備中的無屬性武器",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -4373,6 +4828,11 @@
             "zhTW": "無傷",
             "jaJP": "フルチャージ",
             "enUS": "Peak Performance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "passive",
         "from": {
@@ -4433,6 +4893,11 @@
             "jaJP": "散弾・剛射強化",
             "enUS": "Spread\/Power Shots"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -4459,6 +4924,11 @@
             "zhTW": "減輕膽怯",
             "jaJP": "ひるみ軽減",
             "enUS": "Flinch Free"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -4506,6 +4976,11 @@
             "zhTW": "超會心",
             "jaJP": "超会心",
             "enUS": "Critical Boost"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -4566,6 +5041,11 @@
             "jaJP": "超回復力",
             "enUS": "Super Recover"
         },
+        "description": {
+            "zhTW": "體力在達到計量表的最大值前會持續自動回復",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -4592,6 +5072,11 @@
             "zhTW": "雷屬性攻擊強化",
             "jaJP": "雷属性攻撃強化",
             "enUS": "Thunder Attack"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -4690,6 +5175,11 @@
             "jaJP": "アイテム使用強化",
             "enUS": "Item Prolonger"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -4737,6 +5227,11 @@
             "jaJP": "運搬の達人",
             "enUS": "Pro Transporter"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -4763,6 +5258,11 @@
             "zhTW": "滑走強化",
             "jaJP": "滑走強化",
             "enUS": "Affinity Sliding"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -4791,6 +5291,11 @@
             "jaJP": "ジャンプ鉄人",
             "enUS": "Jump Master"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -4817,6 +5322,11 @@
             "zhTW": "達人藝",
             "jaJP": "達人芸",
             "enUS": "Master's Touch"
+        },
+        "description": {
+            "zhTW": "發生會心攻擊時，不會消耗銳利度",
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -4845,6 +5355,11 @@
             "jaJP": "会心撃【属性】",
             "enUS": "Critical Element"
         },
+        "description": {
+            "zhTW": "因攻擊而出現會心時，所造成的屬性傷害(火、水、雷、冰、龍)會提高",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -4871,6 +5386,11 @@
             "zhTW": "蜂蜜獵人",
             "jaJP": "ハニーハンター",
             "enUS": "Honey Hunter"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -4899,6 +5419,11 @@
             "jaJP": "弓溜め段階解放",
             "enUS": "Bow Charge Plus"
         },
+        "description": {
+            "zhTW": "弓的蓄力階段增加1個階段",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -4926,6 +5451,11 @@
             "jaJP": "会心撃【特殊】",
             "enUS": "Critical Status"
         },
+        "description": {
+            "zhTW": "因攻擊而出現會心時，所造成的狀態異常值(麻痺、毒、睡眠、爆破)會提高",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -4952,6 +5482,11 @@
             "zhTW": "雷耐性",
             "jaJP": "雷耐性",
             "enUS": "Thunder Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -5018,6 +5553,11 @@
             "jaJP": "睡眠属性強化",
             "enUS": "Sleep Attack"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5064,6 +5604,11 @@
             "zhTW": "睡眠耐性",
             "jaJP": "睡眠耐性",
             "enUS": "Sleep Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -5112,6 +5657,11 @@
             "jaJP": "感知",
             "enUS": "Detector"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5139,6 +5689,11 @@
             "jaJP": "満足感",
             "enUS": "Free Meal"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5165,6 +5720,11 @@
             "zhTW": "奪取耐力",
             "jaJP": "スタミナ奪取",
             "enUS": "Stamina Thief"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -5213,6 +5773,11 @@
             "jaJP": "精霊の加護",
             "enUS": "Divine Blessing"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5260,6 +5825,11 @@
             "jaJP": "環境利用の知識",
             "enUS": "Sporepuff Expert"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5306,6 +5876,11 @@
             "zhTW": "精神抖擻",
             "jaJP": "渾身",
             "enUS": "Maximum Might"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "passive",
         "from": {
@@ -5366,6 +5941,11 @@
             "jaJP": "睡眠ビン追加",
             "enUS": "Sleep Functionality"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5392,6 +5972,11 @@
             "zhTW": "廣域化",
             "jaJP": "広域化",
             "enUS": "Wide-Range"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -5460,6 +6045,11 @@
             "jaJP": "瘴気環境適応",
             "enUS": "Effluvial Expert"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5486,6 +6076,11 @@
             "zhTW": "潛伏",
             "jaJP": "潜伏",
             "enUS": "Stealth"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -5534,6 +6129,11 @@
             "jaJP": "熱ダメージ無効",
             "enUS": "Heat Guard"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5560,6 +6160,11 @@
             "zhTW": "適應水場．深雪",
             "jaJP": "水場・深雪適応",
             "enUS": "Aquatic Expert"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -5608,6 +6213,11 @@
             "jaJP": "根性",
             "enUS": "Guts"
         },
+        "description": {
+            "zhTW": "當體力在一定程度以上時，即使承受了超過體力的傷害，也能撐住而不耗盡體力一次",
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": true,
@@ -5634,6 +6244,11 @@
             "zhTW": "龍耐性",
             "jaJP": "龍耐性",
             "enUS": "Dragon Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -5699,6 +6314,11 @@
             "zhTW": "龍屬性攻擊強化",
             "jaJP": "龍属性攻撃強化",
             "enUS": "Dragon Attack"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -5797,6 +6417,11 @@
             "jaJP": "導蟲反応距離UP",
             "enUS": "Scoutfly Range Up"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5823,6 +6448,11 @@
             "zhTW": "整備",
             "jaJP": "整備",
             "enUS": "Tool Specialist"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -5871,6 +6501,11 @@
             "jaJP": "瘴気耐性",
             "enUS": "Effluvia Resistance"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5918,6 +6553,11 @@
             "jaJP": "龍封力強化",
             "enUS": "Elderseal Boost"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5944,6 +6584,11 @@
             "zhTW": "騎乘名人",
             "jaJP": "乗り名人",
             "enUS": "Master Mounter"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -5972,6 +6617,11 @@
             "jaJP": "クライマー",
             "enUS": "Cliffhanger"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -5998,6 +6648,11 @@
             "zhTW": "爆破屬性強化",
             "jaJP": "爆破属性強化",
             "enUS": "Blast Attack"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -6046,6 +6701,11 @@
             "jaJP": "しゃがみ移動速度UP",
             "enUS": "Speed Crawler"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -6072,6 +6732,11 @@
             "zhTW": "爆破異常狀態的耐性",
             "jaJP": "爆破やられ耐性",
             "enUS": "Blast Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -6120,6 +6785,11 @@
             "jaJP": "爆破ビン追加",
             "enUS": "Blast Functionality"
         },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
         "type": "active",
         "from": {
             "set": false,
@@ -6146,6 +6816,11 @@
             "zhTW": "屬性解放／裝填擴充",
             "jaJP": "属性解放\/装填拡張",
             "enUS": "Free Elem\/Ammo Up"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {
@@ -6205,6 +6880,11 @@
             "zhTW": "屬性異常狀態耐性",
             "jaJP": "属性やられ耐性",
             "enUS": "Blight Resistance"
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
         },
         "type": "active",
         "from": {

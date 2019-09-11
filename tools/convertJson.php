@@ -372,6 +372,9 @@ class Misc
             //     "name": {
             //         "zhTW": "體力增強"
             //     },
+            //     "description": {
+            //         "zhTW": "體力+15"
+            //     },
             //     "type": "active",
             //     "from" : {
             //         "set": false,
@@ -397,6 +400,7 @@ class Misc
             Misc::$datasetMap['skills'][] = [
                 $data['id'],
                 $data['name'],
+                $data['description'],
                 $data['type'],
                 [
                     $data['from']['set'],
@@ -661,6 +665,7 @@ foreach ($skills as $skill) {
 
     // Create Translation Mapping
     $skill['name'] = Misc::appendLangMap("skill:{$skill['id']}:name", $skill['name']);
+    $skill['description'] = Misc::appendLangMap("skill:{$skill['id']}:description", $skill['description']);
 
     foreach ($skill['list'] as $index => $item) {
         $item['description'] = Misc::appendLangMap("skill:{$skill['id']}:list:{$index}:description", $item['description']);
