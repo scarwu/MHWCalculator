@@ -1549,7 +1549,7 @@
             "enUS": "Horn Maestro"
         },
         "description": {
-            "zhTW": null,
+            "zhTW": "延長狩獵笛旋律效果持續時間",
             "jaJP": null,
             "enUS": null
         },
@@ -1565,6 +1565,16 @@
                 "level": 1,
                 "description": {
                     "zhTW": "延長狩獵笛旋律效果時間，體力回復量的上升率UP",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "更加延長狩獵笛的旋律效果時間",
                     "jaJP": null,
                     "enUS": null
                 },

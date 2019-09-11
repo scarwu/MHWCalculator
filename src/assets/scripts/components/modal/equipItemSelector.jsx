@@ -471,11 +471,8 @@ export default function EquipItemSelector(props) {
                 return false;
             }
 
-            if (Helper.isEmpty(data.set)) {
-                return false;
-            }
-
-            let setInfo = SetDataset.getInfo(data.set.id);
+            let setInfo = Helper.isNotEmpty(data.set)
+                ? SetDataset.getInfo(data.set.id) : false;
 
             return (
                 <div key={data.id} className="mhwc-item mhwc-item-2-step">
@@ -534,18 +531,21 @@ export default function EquipItemSelector(props) {
                             })}
                         </div>
 
-                        <div className="col-3 mhwc-name">
-                            <span>{_('set')}</span>
-                        </div>
-                        <div className="col-9 mhwc-value">
-                            {(Helper.isNotEmpty(setInfo)) ? (
-                                <span>{_(setInfo.name)}</span>
-                            ) : false}
-                        </div>
+                        {Helper.isEmpty(setInfo) ? (
+                            <Fragment>
+                                <div className="col-3 mhwc-name">
+                                    <span>{_('set')}</span>
+                                </div>
+                                <div className="col-9 mhwc-value">
+                                    <span>{_(setInfo.name)}</span>
+                                </div>
+                            </Fragment>
+                        ) : false}
 
                         {data.skills.map((data, index) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
 
+                            console.log(_(skillInfo.name), skillInfo, data.level)
                             return Helper.isNotEmpty(skillInfo) ? (
                                 <Fragment>
                                     <div className="col-12 mhwc-name">

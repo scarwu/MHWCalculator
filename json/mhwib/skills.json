@@ -135,7 +135,7 @@
             "enUS": null
         },
         "description": {
-            "zhTW": "解放炸彈客技能的等級上限。",
+            "zhTW": "解放炸彈客技能的等級上限",
             "jaJP": null,
             "enUS": null
         },
@@ -150,7 +150,7 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "解放炸彈客技能的等級上限。",
+                    "zhTW": "解放炸彈客技能的等級上限",
                     "jaJP": null,
                     "enUS": null
                 },
