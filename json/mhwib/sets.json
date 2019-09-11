@@ -1,31 +1,31 @@
 [
     {
-        "id": "蛮顎竜の覇気",
+        "id": "蠻顎龍的霸氣",
         "name": {
-            "zhTW": null,
+            "zhTW": "蠻顎龍的霸氣",
             "jaJP": "蛮顎竜の覇気",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "突破耐力上限",
                 "level": 1,
-                "require": null
+                "require": 2
             }
         ]
     },
     {
-        "id": "雌火竜の真髄",
+        "id": "雌火龍的真髓",
         "name": {
-            "zhTW": null,
+            "zhTW": "雌火龍的真髓",
             "jaJP": "雌火竜の真髄",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "毒傷害強化",
                 "level": 1,
-                "require": null
+                "require": 2
             }
         ]
     },

@@ -4,8 +4,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．骨製α系列",
+                "zhTW": "精英．骨製α",
+                "jaJP": "EXボーンαシリーズ",
                 "enUS": null
             },
             "defense": 114,
@@ -146,8 +146,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．骨製β系列",
+                "zhTW": "精英．骨製β",
+                "jaJP": "EXボーンβシリーズ",
                 "enUS": null
             },
             "defense": 114,
@@ -281,8 +281,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．合金α系列",
+                "zhTW": "精英．合金α",
+                "jaJP": "EXアロイαシリーズ",
                 "enUS": null
             },
             "defense": 114,
@@ -423,8 +423,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．合金β系列",
+                "zhTW": "精英．合金β",
+                "jaJP": "EXアロイβシリーズ",
                 "enUS": null
             },
             "defense": 114,
@@ -562,8 +562,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．巨蜂α系列",
+                "zhTW": "精英．巨蜂α",
+                "jaJP": "EXランゴαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -703,8 +703,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．巨蜂β系列",
+                "zhTW": "精英．巨蜂β",
+                "jaJP": "EXランゴβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -840,8 +840,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．巨甲蟲α系列",
+                "zhTW": "精英．巨甲蟲α",
+                "jaJP": "EXタロスαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -988,8 +988,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．巨甲蟲β系列",
+                "zhTW": "精英．巨甲蟲β",
+                "jaJP": "EXタロスβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1129,8 +1129,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．冠突龍α系列",
+                "zhTW": "精英．冠突龍α",
+                "jaJP": "EXケストαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1178,8 +1178,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．冠突龍β系列",
+                "zhTW": "精英．冠突龍β",
+                "jaJP": "EXケストβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1227,8 +1227,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．咬魚α系列",
+                "zhTW": "精英．咬魚α",
+                "jaJP": "EXガライーαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1276,8 +1276,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．咬魚β系列",
+                "zhTW": "精英．咬魚β",
+                "jaJP": "EXガライーβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1325,8 +1325,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．貓蜥龍α系列",
+                "zhTW": "精英．貓蜥龍α",
+                "jaJP": "EXシャムαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1374,8 +1374,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．貓蜥龍β系列",
+                "zhTW": "精英．貓蜥龍β",
+                "jaJP": "EXシャムβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1423,8 +1423,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．突擊龍α系列",
+                "zhTW": "精英．突擊龍α",
+                "jaJP": "EXガストαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1469,8 +1469,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．突擊龍β系列",
+                "zhTW": "精英．突擊龍β",
+                "jaJP": "EXガストβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1518,8 +1518,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．酸翼龍α系列",
+                "zhTW": "精英．酸翼龍α",
+                "jaJP": "EXバルノスαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1567,8 +1567,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．酸翼龍β系列",
+                "zhTW": "精英．酸翼龍β",
+                "jaJP": "EXバルノスβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1616,8 +1616,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．冰豺龍α系列",
+                "zhTW": "精英．冰豺龍α",
+                "jaJP": "EXウルグαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1665,8 +1665,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．冰豺龍β系列",
+                "zhTW": "精英．冰豺龍β",
+                "jaJP": "EXウルグβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1714,8 +1714,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．冬翼龍α系列",
+                "zhTW": "精英．冬翼龍α",
+                "jaJP": "EXコルトスαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1763,8 +1763,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．冬翼龍β系列",
+                "zhTW": "精英．冬翼龍β",
+                "jaJP": "EXコルトスβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1809,8 +1809,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．凶豺龍α系列",
+                "zhTW": "精英．凶豺龍α",
+                "jaJP": "EXジャグラスαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -1957,8 +1957,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．凶豺龍β系列",
+                "zhTW": "精英．凶豺龍β",
+                "jaJP": "EXジャグラスβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -2100,8 +2100,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．昡鳥α系列",
+                "zhTW": "精英．昡鳥α",
+                "jaJP": "EXツィツィαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -2248,8 +2248,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．昡鳥β系列",
+                "zhTW": "精英．昡鳥β",
+                "jaJP": "EXツィツィβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -2391,8 +2391,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．凶顎龍α系列",
+                "zhTW": "精英．凶顎龍α",
+                "jaJP": "EXギルオスαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -2533,8 +2533,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．凶顎龍β系列",
+                "zhTW": "精英．凶顎龍β",
+                "jaJP": "EXギルオスβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -2665,8 +2665,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．岩賊龍α系列",
+                "zhTW": "精英．岩賊龍α",
+                "jaJP": "EXガマルαシリーズ",
                 "enUS": null
             },
             "defense": 120,
@@ -2813,8 +2813,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．岩賊龍β系列",
+                "zhTW": "精英．岩賊龍β",
+                "jaJP": "EXガマルβシリーズ",
                 "enUS": null
             },
             "defense": 120,
@@ -2945,8 +2945,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．搔鳥α系列",
+                "zhTW": "精英．搔鳥α",
+                "jaJP": "EXクルルαシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -3090,8 +3090,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．搔鳥β系列",
+                "zhTW": "精英．搔鳥β",
+                "jaJP": "EXクルルβシリーズ",
                 "enUS": null
             },
             "defense": 116,
@@ -3223,8 +3223,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．毒妖鳥α系列",
+                "zhTW": "精英．毒妖鳥α",
+                "jaJP": "EXプケプケαシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -3368,8 +3368,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．毒妖鳥β系列",
+                "zhTW": "精英．毒妖鳥β",
+                "jaJP": "EXプケプケβシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -3514,8 +3514,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．妖水α系列",
+                "zhTW": "精英．妖水α",
+                "jaJP": "EXプケラグーナαシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -3656,8 +3656,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．妖水β系列",
+                "zhTW": "精英．妖水β",
+                "jaJP": "EXプケラグーナβシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -3795,8 +3795,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．土砂龍α系列",
+                "zhTW": "精英．土砂龍α",
+                "jaJP": "EXボロスαシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -3946,8 +3946,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．土砂龍β系列",
+                "zhTW": "精英．土砂龍β",
+                "jaJP": "EXボロスβシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -4083,8 +4083,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．泥魚龍α系列",
+                "zhTW": "精英．泥魚龍α",
+                "jaJP": "EXジュラαシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -4231,8 +4231,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．泥魚龍β系列",
+                "zhTW": "精英．泥魚龍β",
+                "jaJP": "EXジュラβシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -4377,8 +4377,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．冰魚龍α系列",
+                "zhTW": "精英．冰魚龍α",
+                "jaJP": "EXブランαシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -4519,8 +4519,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．冰魚龍β系列",
+                "zhTW": "精英．冰魚龍β",
+                "jaJP": "EXブランβシリーズ",
                 "enUS": null
             },
             "defense": 118,
@@ -4654,8 +4654,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．飛雷龍α系列",
+                "zhTW": "精英．飛雷龍α",
+                "jaJP": "EXカガチαシリーズ",
                 "enUS": null
             },
             "defense": 120,
@@ -4805,8 +4805,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．飛雷龍β系列",
+                "zhTW": "精英．飛雷龍β",
+                "jaJP": "EXカガチβシリーズ",
                 "enUS": null
             },
             "defense": 120,
@@ -4953,8 +4953,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．朱毒α系列",
+                "zhTW": "精英．朱毒α",
+                "jaJP": "EXベニカガチαシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -5098,8 +5098,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．朱毒β系列",
+                "zhTW": "精英．朱毒β",
+                "jaJP": "EXベニカガチβシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -5241,8 +5241,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．礦石α系列",
+                "zhTW": "精英．礦石α",
+                "jaJP": "EXハイメタαシリーズ",
                 "enUS": null
             },
             "defense": 128,
@@ -5395,8 +5395,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．礦石β系列",
+                "zhTW": "精英．礦石β",
+                "jaJP": "EXハイメタβシリーズ",
                 "enUS": null
             },
             "defense": 128,
@@ -5552,8 +5552,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．猛牛龍α系列",
+                "zhTW": "精英．猛牛龍α",
+                "jaJP": "EXバフバロαシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -5694,8 +5694,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．猛牛龍β系列",
+                "zhTW": "精英．猛牛龍β",
+                "jaJP": "EXバフバロβシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -5832,8 +5832,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．蠻顎龍α系列",
+                "zhTW": "精英．蠻顎龍α",
+                "jaJP": "EXジャナフαシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -5845,7 +5845,7 @@
                 "dragon": 0
             },
             "set": {
-                "id": "蛮顎竜の覇気"
+                "id": "蠻顎龍的霸氣"
             }
         },
         "list": [
@@ -5982,8 +5982,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．蠻顎龍β系列",
+                "zhTW": "精英．蠻顎龍β",
+                "jaJP": "EXジャナフβシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -5995,7 +5995,7 @@
                 "dragon": 0
             },
             "set": {
-                "id": "蛮顎竜の覇気"
+                "id": "蠻顎龍的霸氣"
             }
         },
         "list": [
@@ -6123,8 +6123,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．雌火龍α系列",
+                "zhTW": "精英．雌火龍α",
+                "jaJP": "EXレイアαシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -6136,7 +6136,7 @@
                 "dragon": -3
             },
             "set": {
-                "id": "雌火竜の真髄"
+                "id": "雌火龍的真髓"
             }
         },
         "list": [
@@ -6273,8 +6273,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．雌火龍β系列",
+                "zhTW": "精英．雌火龍β",
+                "jaJP": "EXレイアβシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -6286,7 +6286,7 @@
                 "dragon": -3
             },
             "set": {
-                "id": "雌火竜の真髄"
+                "id": "雌火龍的真髓"
             }
         },
         "list": [
@@ -6415,8 +6415,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．火龍心α系列",
+                "zhTW": "精英．火龍心α",
+                "jaJP": "EXリオハートαシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -6428,7 +6428,7 @@
                 "dragon": -4
             },
             "set": {
-                "id": "雌火竜の真髄"
+                "id": "雌火龍的真髓"
             }
         },
         "list": [
@@ -6562,8 +6562,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．火龍心β系列",
+                "zhTW": "精英．火龍心β",
+                "jaJP": "EXリオハートβシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -6575,7 +6575,7 @@
                 "dragon": -4
             },
             "set": {
-                "id": "雌火竜の真髄"
+                "id": "雌火龍的真髓"
             }
         },
         "list": [
@@ -6705,8 +6705,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．浮空龍α系列",
+                "zhTW": "精英．浮空龍α",
+                "jaJP": "EXウルムーαシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -6856,8 +6856,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．浮空龍β系列",
+                "zhTW": "精英．浮空龍β",
+                "jaJP": "EXウルムーβシリーズ",
                 "enUS": null
             },
             "defense": 130,
@@ -7001,8 +7001,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．浮夢α系列",
+                "zhTW": "精英．浮夢α",
+                "jaJP": "EXウルムメアαシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -7146,8 +7146,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．浮夢β系列",
+                "zhTW": "精英．浮夢β",
+                "jaJP": "EXウルムメアβシリーズ",
                 "enUS": null
             },
             "defense": 132,
@@ -7274,8 +7274,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．骨鎚龍α系列",
+                "zhTW": "精英．骨鎚龍α",
+                "jaJP": "EXバルキンαシリーズ",
                 "enUS": null
             },
             "defense": 134,
@@ -7419,8 +7419,8 @@
             "rare": 9,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "精英．骨鎚龍β系列",
+                "zhTW": "精英．骨鎚龍β",
+                "jaJP": "EXバルキンβシリーズ",
                 "enUS": null
             },
             "defense": 134,
@@ -7537,6 +7537,51 @@
                 "skills": [
                     {
                         "id": "裂傷耐性",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "common": {
+            "rare": 9,
+            "gender": "general",
+            "series": {
+                "zhTW": null,
+                "jaJP": "精英．溫泉銀猴α",
+                "enUS": null
+            },
+            "defense": 120,
+            "resistance": {
+                "fire": 0,
+                "water": 0,
+                "thunder": 0,
+                "ice": 5,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "list": [
+            {
+                "id": "精英．溫泉銀猴α",
+                "type": "helm",
+                "name": {
+                    "zhTW": "精英．溫泉銀猴α",
+                    "jaJP": "EXギンセンザルα",
+                    "enUS": null
+                },
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "體力回復量UP",
                         "level": 2
                     }
                 ]
