@@ -1,8 +1,8 @@
 [
     {
-        "id": "攻めの守勢",
+        "id": "攻擊守勢",
         "name": {
-            "zhTW": null,
+            "zhTW": "攻擊守勢",
             "jaJP": "攻めの守勢",
             "enUS": null
         },
@@ -17,11 +17,32 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "技能發動時，攻擊力 1.05 倍",
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "技能發動時，攻擊力 1.1 倍",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            },
+            {
+                "level": 3,
+                "description": {
+                    "zhTW": "技能發動時，攻擊力 1.15 倍",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -47,7 +68,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -73,7 +95,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     }

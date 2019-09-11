@@ -48,7 +48,7 @@ export default function EquipItemSelector(props) {
     const [stateMode, updateMode] = useState(null);
     const [stateSortedList, updateSortedList] = useState([]);
     const [stateType, updateType] = useState(null);
-    const [stateRare, updateRare] = useState(8);
+    const [stateRare, updateRare] = useState(12);
     const [stateSegment, updateSegment] = useState(null);
     const refModal = useRef();
 
@@ -69,7 +69,7 @@ export default function EquipItemSelector(props) {
             mode = 'jewel';
 
             for (let size = stateBypassData.slotSize; size >= 1; size--) {
-                for (let rare = 8; rare >= 5; rare--) {
+                for (let rare = 9; rare >= 5; rare--) {
                     includeList = includeList.concat(
                         JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems()
                     );
@@ -82,7 +82,7 @@ export default function EquipItemSelector(props) {
             type = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.type : Constant.weaponTypes[0];
 
             Constant.weaponTypes.forEach((weaponType) => {
-                for (let rare = 8; rare >= 5; rare--) {
+                for (let rare = 12; rare >= 5; rare--) {
                     WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
                         if (Helper.isNotEmpty(stateInventory['weapon'])
                             && true === stateInventory['weapon'][equip.id]
@@ -121,7 +121,7 @@ export default function EquipItemSelector(props) {
             mode = 'armor';
             type = stateBypassData.equipType;
 
-            for (let rare = 8; rare >= 5; rare--) {
+            for (let rare = 12; rare >= 5; rare--) {
                 ArmorDataset.typeIs(stateBypassData.equipType).rareIs(rare).getItems().forEach((equip) => {
                     if (Helper.isNotEmpty(stateInventory[equip.type])
                         && true === stateInventory[equip.type][equip.id]
@@ -629,11 +629,13 @@ export default function EquipItemSelector(props) {
             // Create Text
             let text = _(data.name);
 
-            let skillInfo = SkillDataset.getInfo(data.skill.id);
+            data.skills.forEach((skill) => {
+                let skillInfo = SkillDataset.getInfo(skill.id);
 
-            if (Helper.isNotEmpty(skillInfo)) {
-                text += _(skillInfo.name);
-            }
+                if (Helper.isNotEmpty(skillInfo)) {
+                    text += _(skillInfo.name);
+                }
+            });
 
             // Search Nameword
             if (Helper.isNotEmpty(stateSegment)
@@ -768,7 +770,7 @@ export default function EquipItemSelector(props) {
                         {('weapon' === stateMode || 'armor' === stateMode) ? (
                             <FunctionalSelector
                                 iconName="globe" defaultValue={stateRare}
-                                options={[8, 7, 6, 5].map((rare) => {
+                                options={[12, 11, 10, 9, 8, 7, 6, 5].map((rare) => {
                                     return { key: rare, value: _('rare') + `: ${rare}` };
                                 })} onChange={handleRareChange} />
                         ) : false}

@@ -101,5 +101,7 @@ foreach ($charms as $charmIndex => $charm) {
 
 saveJson("../../json/mhwib/charms", $charms);
 
-print_r(array_keys($untrack['sets']));
-print_r(array_keys($untrack['skills']));
+$untrack['sets'] = array_keys($untrack['sets']);
+$untrack['skills'] = array_keys($untrack['skills']);
+
+print_r($untrack);

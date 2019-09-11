@@ -25,7 +25,8 @@
                     "health": {
                         "value": 15
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -38,7 +39,8 @@
                     "health": {
                         "value": 30
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -51,7 +53,8 @@
                     "health": {
                         "value": 50
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -77,7 +80,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -86,7 +90,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -95,7 +100,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -121,7 +127,8 @@
                     "jaJP": null,
                     "enUS": " Stun Power +10%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -130,7 +137,8 @@
                     "jaJP": null,
                     "enUS": " Stun Power +20%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -139,7 +147,8 @@
                     "jaJP": null,
                     "enUS": " Stun Power +30%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -165,7 +174,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -174,7 +184,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -183,7 +194,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -192,7 +204,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -201,7 +214,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -231,7 +245,8 @@
                     "criticalRate": {
                         "value": 10
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -244,7 +259,8 @@
                     "criticalRate": {
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -257,7 +273,8 @@
                     "criticalRate": {
                         "value": 30
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -270,7 +287,8 @@
                     "criticalRate": {
                         "value": 40
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -283,7 +301,8 @@
                     "criticalRate": {
                         "value": 50
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -315,7 +334,8 @@
                         "value": 30,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -330,7 +350,8 @@
                         "value": 60,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -345,7 +366,8 @@
                         "value": 100,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -360,7 +382,8 @@
                         "value": 100,
                         "multiple": 1.05
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -375,7 +398,8 @@
                         "value": 100,
                         "multiple": 1.1
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -407,7 +431,8 @@
                         "value": 30,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -422,7 +447,8 @@
                         "value": 60,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -437,7 +463,8 @@
                         "value": 100,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -452,7 +479,8 @@
                         "value": 100,
                         "multiple": 1.05
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -467,7 +495,8 @@
                         "value": 100,
                         "multiple": 1.1
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -493,7 +522,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -524,7 +554,8 @@
                         "type": "fire",
                         "value": 6
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -538,7 +569,8 @@
                         "type": "fire",
                         "value": 12
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -555,7 +587,8 @@
                         "type": "fire",
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -586,7 +619,8 @@
                         "type": "water",
                         "value": 6
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -600,7 +634,8 @@
                         "type": "water",
                         "value": 12
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -617,7 +652,8 @@
                         "type": "water",
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -650,7 +686,8 @@
                     "defenseMultiple": {
                         "value": 1.15
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -683,7 +720,8 @@
                     "defense": {
                         "value": 15
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -699,7 +737,8 @@
                     "defense": {
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -715,7 +754,8 @@
                     "defense": {
                         "value": 25
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -731,7 +771,8 @@
                     "defense": {
                         "value": 30
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -747,7 +788,8 @@
                     "defense": {
                         "value": 40
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -773,7 +815,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -804,7 +847,8 @@
                         "type": "ice",
                         "value": 6
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -818,7 +862,8 @@
                         "type": "ice",
                         "value": 12
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -835,7 +880,8 @@
                         "type": "ice",
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -861,7 +907,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -870,7 +917,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -879,7 +927,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -905,7 +954,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -914,7 +964,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -923,7 +974,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -955,7 +1007,8 @@
                         "value": 30,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -970,7 +1023,8 @@
                         "value": 60,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -985,7 +1039,8 @@
                         "value": 100,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -1000,7 +1055,8 @@
                         "value": 100,
                         "multiple": 1.05
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -1015,7 +1071,8 @@
                         "value": 100,
                         "multiple": 1.1
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -1041,7 +1098,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1050,7 +1108,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1059,7 +1118,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1085,7 +1145,8 @@
                     "jaJP": null,
                     "enUS": "Reduces the effects of weak monster roars"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1094,7 +1155,8 @@
                     "jaJP": null,
                     "enUS": "Reduces the effects of weak monster roars"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1103,7 +1165,8 @@
                     "jaJP": null,
                     "enUS": "Nullifies weak monster roars"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -1112,7 +1175,8 @@
                     "jaJP": null,
                     "enUS": "Nullifies weak monster roars and reduces the effects of strong monster roars"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -1121,7 +1185,8 @@
                     "jaJP": null,
                     "enUS": "Nullifies weak and strong monster roars"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1147,7 +1212,8 @@
                     "jaJP": null,
                     "enUS": "While active, greatly improves evasion invulnerability time and reduces stamina depletion"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1177,7 +1243,8 @@
                     "sharpness": {
                         "value": 10
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1190,7 +1257,8 @@
                     "sharpness": {
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1203,7 +1271,8 @@
                     "sharpness": {
                         "value": 30
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -1216,7 +1285,8 @@
                     "sharpness": {
                         "value": 40
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -1229,7 +1299,8 @@
                     "sharpness": {
                         "value": 50
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -1259,7 +1330,8 @@
                     "attack": {
                         "value": 3
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1272,7 +1344,8 @@
                     "attack": {
                         "value": 6
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1285,7 +1358,8 @@
                     "attack": {
                         "value": 9
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -1301,7 +1375,8 @@
                     "criticalRate": {
                         "value": 5
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -1317,7 +1392,8 @@
                     "criticalRate": {
                         "value": 5
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 6,
@@ -1333,7 +1409,8 @@
                     "criticalRate": {
                         "value": 5
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 7,
@@ -1349,7 +1426,8 @@
                     "criticalRate": {
                         "value": 5
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -1375,7 +1453,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1401,7 +1480,8 @@
                     "jaJP": null,
                     "enUS": "Allows you to guard against ordinarily unblockable attacks"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1427,7 +1507,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1436,7 +1517,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1445,7 +1527,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1471,7 +1554,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1480,7 +1564,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1489,7 +1574,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1519,7 +1605,8 @@
                     "defense": {
                         "value": 5
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1532,7 +1619,8 @@
                     "defense": {
                         "value": 10
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1545,7 +1633,8 @@
                     "defense": {
                         "value": 15
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -1562,7 +1651,8 @@
                         "type": "all",
                         "value": 3
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -1579,7 +1669,8 @@
                         "type": "全部",
                         "value": 3
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 6,
@@ -1596,7 +1687,8 @@
                         "type": "all",
                         "value": 3
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 7,
@@ -1613,7 +1705,8 @@
                         "type": "all",
                         "value": 3
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -1639,7 +1732,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1665,7 +1759,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1674,7 +1769,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1683,7 +1779,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1709,7 +1806,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1718,7 +1816,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1727,7 +1826,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -1736,7 +1836,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -1745,7 +1846,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1771,7 +1873,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1797,7 +1900,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1827,7 +1931,8 @@
                     "criticalRate": {
                         "value": 30
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1840,7 +1945,8 @@
                     "criticalRate": {
                         "value": 60
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1853,7 +1959,8 @@
                     "criticalRate": {
                         "value": 100
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -1879,7 +1986,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1905,7 +2013,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1914,7 +2023,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1923,7 +2033,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1949,7 +2060,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -1958,7 +2070,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -1967,7 +2080,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -1997,7 +2111,8 @@
                     "criticalRate": {
                         "value": 3
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2010,7 +2125,8 @@
                     "criticalRate": {
                         "value": 6
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2023,7 +2139,8 @@
                     "criticalRate": {
                         "value": 10
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -2036,7 +2153,8 @@
                     "criticalRate": {
                         "value": 15
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -2049,7 +2167,8 @@
                     "criticalRate": {
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 6,
@@ -2062,7 +2181,8 @@
                     "criticalRate": {
                         "value": 25
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 7,
@@ -2075,7 +2195,8 @@
                     "criticalRate": {
                         "value": 30
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -2101,7 +2222,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2110,7 +2232,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2119,7 +2242,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -2128,7 +2252,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -2137,7 +2262,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2163,7 +2289,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2189,7 +2316,8 @@
                     "jaJP": null,
                     "enUS": "Explosive power +10%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2198,7 +2326,8 @@
                     "jaJP": null,
                     "enUS": "Explosive power +20%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2207,7 +2336,8 @@
                     "jaJP": null,
                     "enUS": "Explosive power +30%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2233,7 +2363,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2242,7 +2373,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2251,7 +2383,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2277,7 +2410,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2286,7 +2420,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2295,7 +2430,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2321,7 +2457,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2347,7 +2484,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2356,7 +2494,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2365,7 +2504,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -2374,7 +2514,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -2383,7 +2524,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2413,7 +2555,8 @@
                     "stamina": {
                         "value": 50
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -2439,7 +2582,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2448,7 +2592,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2457,7 +2602,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2487,7 +2633,8 @@
                     "attackMultiple": {
                         "value": 1.1
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -2513,7 +2660,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2539,7 +2687,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2548,7 +2697,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2557,7 +2707,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2583,7 +2734,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2592,7 +2744,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2601,7 +2754,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2627,7 +2781,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2653,7 +2808,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2686,7 +2842,8 @@
                     "criticalRate": {
                         "value": 3
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2702,7 +2859,8 @@
                     "criticalRate": {
                         "value": 6
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2718,7 +2876,8 @@
                     "criticalRate": {
                         "value": 9
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -2734,7 +2893,8 @@
                     "criticalRate": {
                         "value": 12
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -2750,7 +2910,8 @@
                     "criticalRate": {
                         "value": 15
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -2780,7 +2941,8 @@
                     "attack": {
                         "value": 5
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2793,7 +2955,8 @@
                     "attack": {
                         "value": 10
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2806,7 +2969,8 @@
                     "attack": {
                         "value": 15
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -2819,7 +2983,8 @@
                     "attack": {
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -2832,7 +2997,8 @@
                     "attack": {
                         "value": 25
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -2858,7 +3024,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2884,7 +3051,8 @@
                     "jaJP": null,
                     "enUS": "Increases power of each attack by 10% and reduces Wyvern's Fire cooldown by 15%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2893,7 +3061,8 @@
                     "jaJP": null,
                     "enUS": "Increases power of each attack by 10% and reduces Wyvern's Fire cooldown by 30%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2902,7 +3071,8 @@
                     "jaJP": null,
                     "enUS": "Increases power of each attack by 10% and reduces Wyvern's Fire cooldown by 50%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2928,7 +3098,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2937,7 +3108,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -2946,7 +3118,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -2955,7 +3128,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -2964,7 +3138,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -2990,7 +3165,8 @@
                     "jaJP": null,
                     "enUS": "Part damage +10%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -2999,7 +3175,8 @@
                     "jaJP": null,
                     "enUS": "Part damage +20%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -3008,7 +3185,8 @@
                     "jaJP": null,
                     "enUS": "Part damage +30%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3034,7 +3212,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3060,7 +3239,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3069,7 +3249,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -3078,7 +3259,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3104,7 +3286,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3130,7 +3313,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3156,7 +3340,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3182,7 +3367,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3191,7 +3377,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3217,7 +3404,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3243,7 +3431,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3252,7 +3441,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -3261,7 +3451,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3287,7 +3478,8 @@
                     "jaJP": null,
                     "enUS": "Loading Capacity +1"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3313,7 +3505,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3339,7 +3532,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3348,7 +3542,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -3357,7 +3552,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3383,7 +3579,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3392,7 +3589,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3422,7 +3620,8 @@
                     "criticalRate": {
                         "value": 15
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3435,7 +3634,8 @@
                     "criticalRate": {
                         "value": 30
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -3448,7 +3648,8 @@
                     "criticalRate": {
                         "value": 50
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -3474,7 +3675,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3500,7 +3702,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3526,7 +3729,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3552,7 +3756,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3578,7 +3783,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3604,7 +3810,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3613,7 +3820,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -3622,7 +3830,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3648,7 +3857,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3674,7 +3884,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3700,7 +3911,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3709,7 +3921,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -3718,7 +3931,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3744,7 +3958,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3753,7 +3968,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -3762,7 +3978,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3788,7 +4005,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3814,7 +4032,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3840,7 +4059,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3866,7 +4086,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3875,7 +4096,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -3884,7 +4106,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3910,7 +4133,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3919,7 +4143,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -3928,7 +4153,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -3954,7 +4180,8 @@
                     "jaJP": null,
                     "enUS": "One extra consumable herb item per gather"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -3963,7 +4190,8 @@
                     "jaJP": null,
                     "enUS": "One extra consumable herb, fruit, nut, or seed item per gather"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -3972,7 +4200,8 @@
                     "jaJP": null,
                     "enUS": "One extra consumable herb, fruit, nut, seed, or insect item per gather"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -3981,7 +4210,8 @@
                     "jaJP": null,
                     "enUS": "One extra consumable herb, fruit, nut, seed, insect, or mushroom item per gather"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4007,7 +4237,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4033,7 +4264,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4042,7 +4274,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4051,7 +4284,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4077,7 +4311,8 @@
                     "jaJP": null,
                     "enUS": "Reduces damage while Bleeding"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4086,7 +4321,8 @@
                     "jaJP": null,
                     "enUS": "Greatly reduces damage while Bleeding"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4095,7 +4331,8 @@
                     "jaJP": null,
                     "enUS": "Prevents Bleeding"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4125,7 +4362,8 @@
                     "noneElementAttackMutiple": {
                         "value": 1.1
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -4155,7 +4393,8 @@
                     "attack": {
                         "value": 5
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4168,7 +4407,8 @@
                     "attack": {
                         "value": 10
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4181,7 +4421,8 @@
                     "attack": {
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -4207,7 +4448,8 @@
                     "jaJP": null,
                     "enUS": "Increases the Attack Power of spread ammo and power shot arrows"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4233,7 +4475,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4242,7 +4485,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4251,7 +4495,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4281,7 +4526,8 @@
                     "criticalMultiple": {
                         "value": 1.3
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4294,7 +4540,8 @@
                     "criticalMultiple": {
                         "value": 1.35
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4307,7 +4554,8 @@
                     "criticalMultiple": {
                         "value": 1.4
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -4333,7 +4581,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4365,7 +4614,8 @@
                         "value": 30,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4380,7 +4630,8 @@
                         "value": 60,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4395,7 +4646,8 @@
                         "value": 100,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -4410,7 +4662,8 @@
                         "value": 100,
                         "multiple": 1.05
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -4425,7 +4678,8 @@
                         "value": 100,
                         "multiple": 1.1
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -4451,7 +4705,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4460,7 +4715,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4469,7 +4725,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4495,7 +4752,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4521,7 +4779,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4547,7 +4806,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4573,7 +4833,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4599,7 +4860,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4625,7 +4887,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4651,7 +4914,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4677,7 +4941,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4708,7 +4973,8 @@
                         "type": "thunder",
                         "value": 6
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4722,7 +4988,8 @@
                         "type": "thunder",
                         "value": 12
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4739,7 +5006,8 @@
                         "type": "thunder",
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -4765,7 +5033,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4774,7 +5043,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4783,7 +5053,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4809,7 +5080,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4818,7 +5090,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4827,7 +5100,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4853,7 +5127,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4879,7 +5154,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4905,7 +5181,8 @@
                     "jaJP": null,
                     "enUS": "Exhaust power +10%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4914,7 +5191,8 @@
                     "jaJP": null,
                     "enUS": "Exhaust power +20%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4923,7 +5201,8 @@
                     "jaJP": null,
                     "enUS": "Exhaust power +30%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4949,7 +5228,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -4958,7 +5238,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -4967,7 +5248,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4993,7 +5275,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5002,7 +5285,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5011,7 +5295,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5041,7 +5326,8 @@
                     "criticalRate": {
                         "value": 10
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5054,7 +5340,8 @@
                     "criticalRate": {
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5067,7 +5354,8 @@
                     "criticalRate": {
                         "value": 30
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -5093,7 +5381,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5119,7 +5408,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5128,7 +5418,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5137,7 +5428,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -5146,7 +5438,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -5155,7 +5448,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5181,7 +5475,8 @@
                     "jaJP": null,
                     "enUS": "Nullifies damage from Effluvia and reduces damage from acids"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5207,7 +5502,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5216,7 +5512,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5225,7 +5522,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5251,7 +5549,8 @@
                     "jaJP": null,
                     "enUS": "Nullifies Heat damage"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5277,7 +5576,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5286,7 +5586,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5295,7 +5596,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5321,7 +5623,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5352,7 +5655,8 @@
                         "type": "dragon",
                         "value": 6
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5366,7 +5670,8 @@
                         "type": "dragon",
                         "value": 12
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5383,7 +5688,8 @@
                         "type": "dragon",
                         "value": 20
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -5415,7 +5721,8 @@
                         "value": 30,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5430,7 +5737,8 @@
                         "value": 60,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5445,7 +5753,8 @@
                         "value": 100,
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 4,
@@ -5460,7 +5769,8 @@
                         "value": 100,
                         "multiple": 1.05
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 5,
@@ -5475,7 +5785,8 @@
                         "value": 100,
                         "multiple": 1.1
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -5501,7 +5812,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5527,7 +5839,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5536,7 +5849,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5545,7 +5859,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5571,7 +5886,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5580,7 +5896,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5589,7 +5906,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5615,7 +5933,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5641,7 +5960,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5667,7 +5987,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5693,7 +6014,8 @@
                     "jaJP": null,
                     "enUS": "last buildup +5% Bonus: +10"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5702,7 +6024,8 @@
                     "jaJP": null,
                     "enUS": "last buildup +10% Bonus: +10"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5711,7 +6034,8 @@
                     "jaJP": null,
                     "enUS": "last buildup +20% Bonus: +10"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5737,7 +6061,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5763,7 +6088,8 @@
                     "jaJP": null,
                     "enUS": "Delays Blastblight and reduces Blast Damage"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5772,7 +6098,8 @@
                     "jaJP": null,
                     "enUS": "Greatly delays Blastblight and greatly reduces Blast Damage"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5781,7 +6108,8 @@
                     "jaJP": null,
                     "enUS": "Prevents Blastblight"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5807,7 +6135,8 @@
                     "jaJP": null,
                     "enUS": "Lets you use Blast coating"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -5837,7 +6166,8 @@
                     "enableElement": {
                         "multiple": 0.3333
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5850,7 +6180,8 @@
                     "enableElement": {
                         "multiple": 0.6666
                     }
-                }
+                },
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5863,7 +6194,8 @@
                     "enableElement": {
                         "multiple": 1
                     }
-                }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -5889,7 +6221,8 @@
                     "jaJP": null,
                     "enUS": "Reduces the duration of all elemental blights by 30%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 2,
@@ -5898,7 +6231,8 @@
                     "jaJP": null,
                     "enUS": "Reduces the duration of all elemental blights by 60%"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             },
             {
                 "level": 3,
@@ -5907,7 +6241,8 @@
                     "jaJP": null,
                     "enUS": "Nullifies all elemental blights"
                 },
-                "reaction": null
+                "reaction": null,
+                "isHidden": false
             }
         ]
     }

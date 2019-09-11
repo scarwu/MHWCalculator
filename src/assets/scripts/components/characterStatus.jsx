@@ -149,6 +149,10 @@ let generateStatus = (equipInfos, passiveSkills) => {
 
             let skillInfo = SkillDataset.getInfo(skill.id);
 
+            if (Helper.isEmpty(skillInfo)) {
+                return;
+            }
+
             status.sets.push({
                 id: setId,
                 require: skill.require,

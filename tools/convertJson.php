@@ -376,7 +376,8 @@ class Misc
             //     "from" : {
             //         "set": false,
             //         "jewel": true,
-            //         "armor": true
+            //         "armor": true,
+            //         "weapon": false
             //     },
             //     "list": [
             //         {
@@ -388,7 +389,8 @@ class Misc
             //                 "health": {
             //                     "value": 15
             //                 }
-            //             }
+            //             },
+            //             "isHidden": false
             //         }
             //     ]
             // }
@@ -399,13 +401,15 @@ class Misc
                 [
                     $data['from']['set'],
                     $data['from']['jewel'],
-                    $data['from']['armor']
+                    $data['from']['armor'],
+                    $data['from']['weapon']
                 ],
                 array_map(function ($item) {
                     return [
                         $item['level'],
                         $item['description'],
-                        $item['reaction']
+                        $item['reaction'],
+                        $item['isHidden']
                     ];
                 }, $data['list'])
             ];
