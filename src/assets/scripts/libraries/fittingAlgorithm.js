@@ -626,9 +626,9 @@ class FittingAlgorithm {
                 let jewel = this.correspondJewels[skill.id];
 
                 if (Helper.isNotEmpty(jewel)) {
-                    candidateEquip.expectedValue += skill.level * jewel.size; // 1, 2, 3
+                    candidateEquip.expectedValue += skill.level * jewel.size; // 1, 2, 3, 4
                 } else {
-                    candidateEquip.expectedValue += skill.level * 4;
+                    candidateEquip.expectedValue += skill.level * 5;
                 }
 
                 candidateEquip.expectedLevel += skill.level;
