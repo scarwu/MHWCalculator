@@ -31,6 +31,11 @@ foreach ($skills as $skill) {
 /**
  * MHWIB
  */
+$untrack = [
+    'sets' => [],
+    'skills' => []
+];
+
 // Armor
 for ($rare = 9; $rare <= 12; $rare++) {
     $bundles = loadJson("../../json/mhwib/armors/rare{$rare}");
@@ -38,7 +43,7 @@ for ($rare = 9; $rare <= 12; $rare++) {
     foreach ($bundles as $bundleIndex => $bundle) {
         if (false !== isset($bundle['common']['set'])) {
             if (false === isset($setNameMapping[$bundle['common']['set']['id']])) {
-                echo "Armor Untrack Set: {$bundle['common']['set']['id']}\n";
+                $untrack['sets'][$bundle['common']['set']['id']] = true;
             } else {
                 $bundle['common']['set']['id'] = $setNameMapping[$bundle['common']['set']['id']];
             }
@@ -47,7 +52,7 @@ for ($rare = 9; $rare <= 12; $rare++) {
         foreach ($bundle['list'] as $armorIndex => $armor) {
             foreach ($armor['skills'] as $skillIndex => $skill) {
                 if (false === isset($skillNameMapping[$skill['id']])) {
-                    echo "Armor Untrack Skill: {$skill['id']}\n";
+                    $untrack['skills'][$skill['id']] = true;
                 } else {
                     $armor['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
                 }
@@ -65,16 +70,36 @@ for ($rare = 9; $rare <= 12; $rare++) {
 // Jewel
 $jewels = loadJson("../../json/mhwib/jewels");
 
-foreach ($jewels as $chramIndex => $chram) {
-    foreach ($chram['skills'] as $skillIndex => $skill) {
+foreach ($jewels as $jewelIndex => $jewel) {
+    foreach ($jewel['skills'] as $skillIndex => $skill) {
         if (false === isset($skillNameMapping[$skill['id']])) {
-            echo "Jewel Untrack Skill: {$skill['id']}\n";
+            $untrack['skills'][$skill['id']] = true;
         } else {
-            $chram['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+            $jewel['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
         }
     }
 
-    $jewels[$chramIndex] = $chram;
+    $jewels[$jewelIndex] = $jewel;
 }
 
 saveJson("../../json/mhwib/jewels", $jewels);
+
+// Charm
+$charms = loadJson("../../json/mhwib/charms");
+
+foreach ($charms as $charmIndex => $charm) {
+    foreach ($charm['skills'] as $skillIndex => $skill) {
+        if (false === isset($skillNameMapping[$skill['id']])) {
+            $untrack['skills'][$skill['id']] = true;
+        } else {
+            $charm['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+        }
+    }
+
+    $charms[$charmIndex] = $charm;
+}
+
+saveJson("../../json/mhwib/charms", $charms);
+
+print_r(array_keys($untrack['sets']));
+print_r(array_keys($untrack['skills']));

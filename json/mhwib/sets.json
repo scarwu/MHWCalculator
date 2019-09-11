@@ -1,1 +1,392 @@
-[]
+[
+    {
+        "id": "蛮顎竜の覇気",
+        "name": {
+            "zhTW": null,
+            "jaJP": "蛮顎竜の覇気",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "雌火竜の真髄",
+        "name": {
+            "zhTW": null,
+            "jaJP": "雌火竜の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "太古の神秘",
+        "name": {
+            "zhTW": null,
+            "jaJP": "太古の神秘",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "調査団の錬金術",
+        "name": {
+            "zhTW": null,
+            "jaJP": "調査団の錬金術",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "氷牙竜の秘技",
+        "name": {
+            "zhTW": null,
+            "jaJP": "氷牙竜の秘技",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "火竜の真髄",
+        "name": {
+            "zhTW": null,
+            "jaJP": "火竜の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "角竜の覇気",
+        "name": {
+            "zhTW": null,
+            "jaJP": "角竜の覇気",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "風漂竜の覇気",
+        "name": {
+            "zhTW": null,
+            "jaJP": "風漂竜の覇気",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "惨爪竜の真髄",
+        "name": {
+            "zhTW": null,
+            "jaJP": "惨爪竜の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "爆鎚竜の覇気",
+        "name": {
+            "zhTW": null,
+            "jaJP": "爆鎚竜の覇気",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "迅竜の真髄",
+        "name": {
+            "zhTW": null,
+            "jaJP": "迅竜の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "斬竜の真髄",
+        "name": {
+            "zhTW": null,
+            "jaJP": "斬竜の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "砕竜の真髄",
+        "name": {
+            "zhTW": null,
+            "jaJP": "砕竜の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "轟竜の真髄",
+        "name": {
+            "zhTW": null,
+            "jaJP": "轟竜の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "教官の導き",
+        "name": {
+            "zhTW": null,
+            "jaJP": "教官の導き",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "爆鱗竜の覇気",
+        "name": {
+            "zhTW": null,
+            "jaJP": "爆鱗竜の覇気",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "恐暴竜の真髄",
+        "name": {
+            "zhTW": null,
+            "jaJP": "恐暴竜の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "雷狼竜の真髄",
+        "name": {
+            "zhTW": null,
+            "jaJP": "雷狼竜の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "冰気練成",
+        "name": {
+            "zhTW": null,
+            "jaJP": "冰気練成",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "屍套龍の霊脈",
+        "name": {
+            "zhTW": null,
+            "jaJP": "屍套龍の霊脈",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "炎王龍の武技",
+        "name": {
+            "zhTW": null,
+            "jaJP": "炎王龍の武技",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "鋼龍の飛翔",
+        "name": {
+            "zhTW": null,
+            "jaJP": "鋼龍の飛翔",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "幻獣の神秘",
+        "name": {
+            "zhTW": null,
+            "jaJP": "幻獣の神秘",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "真・属性加速",
+        "name": {
+            "zhTW": null,
+            "jaJP": "真・属性加速",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "真・大地縫纏",
+        "name": {
+            "zhTW": null,
+            "jaJP": "真・大地縫纏",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    },
+    {
+        "id": "熔山龍の真髄",
+        "name": {
+            "zhTW": null,
+            "jaJP": "熔山龍の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "xxx",
+                "level": 1,
+                "require": null
+            }
+        ]
+    }
+]

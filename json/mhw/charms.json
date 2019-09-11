@@ -696,7 +696,7 @@
         "rare": 7,
         "skills": [
             {
-                "id": "防御力DOWN耐性",
+                "id": "防禦力DOWN耐性",
                 "level": 3
             }
         ]
@@ -1221,16 +1221,16 @@
         ]
     },
     {
-        "id": "煙復護石 III",
+        "id": "環境護石 III",
         "name": {
-            "zhTW": "煙復護石 III",
+            "zhTW": "環境護石 III",
             "jaJP": null,
             "enUS": "Smoke Charm III"
         },
         "rare": 7,
         "skills": [
             {
-                "id": "綿花孢子草的知識",
+                "id": "環境利用的知識",
                 "level": 3
             }
         ]

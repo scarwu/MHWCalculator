@@ -1,1 +1,80 @@
-[]
+[
+    {
+        "id": "攻めの守勢",
+        "name": {
+            "zhTW": null,
+            "jaJP": "攻めの守勢",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null
+            }
+        ]
+    },
+    {
+        "id": "災禍転福",
+        "name": {
+            "zhTW": null,
+            "jaJP": "災禍転福",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null
+            }
+        ]
+    },
+    {
+        "id": "寒さ耐性",
+        "name": {
+            "zhTW": null,
+            "jaJP": "寒さ耐性",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null
+            }
+        ]
+    }
+]
