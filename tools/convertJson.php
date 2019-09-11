@@ -687,6 +687,15 @@ foreach ($skills as $skill) {
 foreach ($sets as $set) {
     $setChecklist[$set['id']] = true;
 
+    // Checklist
+    if (is_array($set['skills'])) {
+        foreach ($set['skills'] as $skill) {
+            if (!isset($skillChecklist[$skill['id']])) {
+                echo "Error: Set={$set['id']}, Skill={$skill['id']}\n";
+            }
+        }
+    }
+
     // Create Translation Mapping
     $set['name'] = Misc::appendLangMap("set:{$set['id']}:name", $set['name']);
 

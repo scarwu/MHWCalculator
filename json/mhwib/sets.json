@@ -30,17 +30,17 @@
         ]
     },
     {
-        "id": "太古の神秘",
+        "id": "太古的神祕",
         "name": {
-            "zhTW": null,
+            "zhTW": "太古的神祕",
             "jaJP": "太古の神秘",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "會心攻擊【特殊】",
                 "level": 1,
-                "require": null
+                "require": 2
             }
         ]
     },
@@ -60,332 +60,302 @@
         ]
     },
     {
-        "id": "氷牙竜の秘技",
+        "id": "冰牙龍的秘技",
         "name": {
-            "zhTW": null,
+            "zhTW": "冰牙龍的秘技",
             "jaJP": "氷牙竜の秘技",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "拔刀術【力】",
                 "level": 1,
-                "require": null
+                "require": 2
             }
         ]
     },
     {
-        "id": "火竜の真髄",
+        "id": "火龍的真髓",
         "name": {
-            "zhTW": null,
+            "zhTW": "火龍的真髓",
             "jaJP": "火竜の真髄",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "心眼／彈導強化",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },
     {
-        "id": "角竜の覇気",
+        "id": "角龍的霸氣",
         "name": {
-            "zhTW": null,
+            "zhTW": "角龍的霸氣",
             "jaJP": "角竜の覇気",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "KO術．極意",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },
     {
-        "id": "風漂竜の覇気",
+        "id": "風漂龍的霸氣",
         "name": {
-            "zhTW": null,
+            "zhTW": "風漂龍的霸氣",
             "jaJP": "風漂竜の覇気",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "解放弓的蓄力階段",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },
     {
-        "id": "惨爪竜の真髄",
+        "id": "惨爪龍的真髓",
         "name": {
-            "zhTW": null,
+            "zhTW": "惨爪龍的真髓",
             "jaJP": "惨爪竜の真髄",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "剛刃研磨",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },
     {
-        "id": "爆鎚竜の覇気",
+        "id": "爆鎚龍的霸氣",
         "name": {
-            "zhTW": null,
+            "zhTW": "爆鎚龍的霸氣",
             "jaJP": "爆鎚竜の覇気",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "防禦強化",
                 "level": 1,
-                "require": null
+                "require": 2
             }
         ]
     },
     {
-        "id": "迅竜の真髄",
+        "id": "迅龍的真髓",
         "name": {
-            "zhTW": null,
+            "zhTW": "迅龍的真髓",
             "jaJP": "迅竜の真髄",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "真．利刃／彈藥節約",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },
     {
-        "id": "斬竜の真髄",
+        "id": "斬龍的真髓",
         "name": {
-            "zhTW": null,
+            "zhTW": "斬龍的真髓",
             "jaJP": "斬竜の真髄",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "精神抖擻．極意",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },
     {
-        "id": "砕竜の真髄",
+        "id": "碎龍的真髓",
         "name": {
-            "zhTW": null,
+            "zhTW": "碎龍的真髓",
             "jaJP": "砕竜の真髄",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "挑戰者．極意",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },
     {
-        "id": "轟竜の真髄",
+        "id": "轟龍的真髓",
         "name": {
-            "zhTW": null,
+            "zhTW": "轟龍的真髓",
             "jaJP": "轟竜の真髄",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "滿足感．極意",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },
     {
-        "id": "教官の導き",
+        "id": "教官的指導",
         "name": {
-            "zhTW": null,
+            "zhTW": "教官的指導",
             "jaJP": "教官の導き",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "捕獲名人",
                 "level": 1,
-                "require": null
+                "require": 2
             }
         ]
     },
     {
-        "id": "爆鱗竜の覇気",
+        "id": "爆鱗龍的霸氣",
         "name": {
-            "zhTW": null,
+            "zhTW": "爆鱗龍的霸氣",
             "jaJP": "爆鱗竜の覇気",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "毅力",
                 "level": 1,
-                "require": null
+                "require": 2
             }
         ]
     },
     {
-        "id": "恐暴竜の真髄",
+        "id": "恐暴龍的真髓",
         "name": {
-            "zhTW": null,
+            "zhTW": "恐暴龍的真髓",
             "jaJP": "恐暴竜の真髄",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "耐力奪取．極意",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },
     {
-        "id": "雷狼竜の真髄",
+        "id": "雷狼龍的真髓",
         "name": {
-            "zhTW": null,
+            "zhTW": "雷狼龍的真髓",
             "jaJP": "雷狼竜の真髄",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "力量解放．極意",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },
     {
-        "id": "冰気練成",
+        "id": "冰呪龍的神祕",
         "name": {
-            "zhTW": null,
+            "zhTW": "冰呪龍的神祕",
             "jaJP": "冰気練成",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "會心攻擊【屬性】",
                 "level": 1,
-                "require": null
-            }
-        ]
-    },
-    {
-        "id": "屍套龍の霊脈",
-        "name": {
-            "zhTW": null,
-            "jaJP": "屍套龍の霊脈",
-            "enUS": null
-        },
-        "skills": [
+                "require": 2
+            },
             {
-                "id": "xxx",
+                "id": "冰氣練成",
                 "level": 1,
-                "require": null
+                "require": 4
             }
         ]
     },
     {
-        "id": "炎王龍の武技",
+        "id": "幻獸的神秘",
         "name": {
-            "zhTW": null,
-            "jaJP": "炎王龍の武技",
-            "enUS": null
-        },
-        "skills": [
-            {
-                "id": "xxx",
-                "level": 1,
-                "require": null
-            }
-        ]
-    },
-    {
-        "id": "鋼龍の飛翔",
-        "name": {
-            "zhTW": null,
-            "jaJP": "鋼龍の飛翔",
-            "enUS": null
-        },
-        "skills": [
-            {
-                "id": "xxx",
-                "level": 1,
-                "require": null
-            }
-        ]
-    },
-    {
-        "id": "幻獣の神秘",
-        "name": {
-            "zhTW": null,
+            "zhTW": "幻獸的神秘",
             "jaJP": "幻獣の神秘",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "強運",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     },
     {
-        "id": "真・属性加速",
+        "id": "溟波龍的神祕",
         "name": {
-            "zhTW": null,
+            "zhTW": "溟波龍的神祕",
             "jaJP": "真・属性加速",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "？",
                 "level": 1,
-                "require": null
+                "require": 2
+            },
+            {
+                "id": "？",
+                "level": 1,
+                "require": 4
             }
         ]
     },
     {
-        "id": "真・大地縫纏",
+        "id": "天地煌啼龍的神祕",
         "name": {
-            "zhTW": null,
+            "zhTW": "天地煌啼龍的神祕",
             "jaJP": "真・大地縫纏",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "？",
                 "level": 1,
-                "require": null
+                "require": 4
+            },
+            {
+                "id": "？",
+                "level": 1,
+                "require": 5
             }
         ]
     },
     {
-        "id": "熔山龍の真髄",
+        "id": "熔山龍的真髓",
         "name": {
-            "zhTW": null,
-            "jaJP": "熔山龍の真髄",
+            "zhTW": "熔山龍的真髓",
+            "jaJP": "熔山竜の真髄",
             "enUS": null
         },
         "skills": [
             {
-                "id": "xxx",
+                "id": "？",
                 "level": 1,
-                "require": null
+                "require": 3
             }
         ]
     }

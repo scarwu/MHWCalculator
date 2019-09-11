@@ -253,7 +253,7 @@
         "id": "屍套龍的命脈",
         "name": {
             "zhTW": "屍套龍的命脈",
-            "jaJP": null,
+            "jaJP": "屍套龍の霊脈",
             "enUS": "Vaal Hazak Vitality"
         },
         "skills": [
@@ -283,7 +283,7 @@
         "id": "炎王龍的武技",
         "name": {
             "zhTW": "炎王龍的武技",
-            "jaJP": null,
+            "jaJP": "炎王龍の武技",
             "enUS": "Teostra Technique"
         },
         "skills": [
@@ -295,10 +295,10 @@
         ]
     },
     {
-        "id": "鋼龍的飛翅",
+        "id": "鋼龍的飛翔",
         "name": {
-            "zhTW": "鋼龍的飛翅",
-            "jaJP": null,
+            "zhTW": "鋼龍的飛翔",
+            "jaJP": "鋼龍の飛翔",
             "enUS": "Kushala Daora Flight"
         },
         "skills": [
