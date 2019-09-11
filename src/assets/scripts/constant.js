@@ -57,7 +57,8 @@ export default {
             yellow: 1.00,
             green: 1.05,
             blue: 1.20,
-            white: 1.32
+            white: 1.32,
+            purple: 1.45
         },
         element: {
             red: 0.25,
@@ -65,7 +66,8 @@ export default {
             yellow: 0.75,
             green: 1.00,
             blue: 1.0625,
-            white: 1.125
+            white: 1.125,
+            purple: 1.2
         }
     },
     weaponMultiple: {

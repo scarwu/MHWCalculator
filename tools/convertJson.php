@@ -133,7 +133,8 @@ class Misc
             //             "yellow": 60,
             //             "green": 120,
             //             "blue": 70,
-            //             "white": 40
+            //             "white": 40,
+            //             "purple": 0
             //         }
             //     },
             //     "element": {
@@ -175,7 +176,8 @@ class Misc
                         $data['sharpness']['steps']['yellow'],
                         $data['sharpness']['steps']['green'],
                         $data['sharpness']['steps']['blue'],
-                        $data['sharpness']['steps']['white']
+                        $data['sharpness']['steps']['white'],
+                        $data['sharpness']['steps']['purple']
                     ]
                 ] : null,
                 [

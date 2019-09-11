@@ -15,7 +15,7 @@ export default function SharpnessBar(props) {
     return (
         <div className="mhwc-sharpness_bar">
             <div className="mhwc-steps">
-                {['red', 'orange', 'yellow', 'green', 'blue', 'white'].map((step) => {
+                {['red', 'orange', 'yellow', 'green', 'blue', 'white', 'purple'].map((step) => {
                     return (
                         <div key={step} className="mhwc-step" style={{
                             width: (props.data.steps[step] / 4) + '%'

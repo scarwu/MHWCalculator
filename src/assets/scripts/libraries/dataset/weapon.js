@@ -32,7 +32,8 @@ let dataset = Weapons.map((weapon) => {
                 yellow: weapon[8][1][2],
                 green: weapon[8][1][3],
                 blue: weapon[8][1][4],
-                white: weapon[8][1][5]
+                white: weapon[8][1][5],
+                purple: weapon[8][1][6]
             }
         } : null,
         element: {

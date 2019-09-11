@@ -24,7 +24,8 @@
                 "yellow": 60,
                 "green": 120,
                 "blue": 60,
-                "white": 40
+                "white": 40,
+                "purple": 0
             }
         },
         "element": {
@@ -69,7 +70,8 @@
                 "yellow": 60,
                 "green": 80,
                 "blue": 40,
-                "white": 60
+                "white": 60,
+                "purple": 0
             }
         },
         "element": {
@@ -110,7 +112,8 @@
                 "yellow": 40,
                 "green": 40,
                 "blue": 90,
-                "white": 0
+                "white": 0,
+                "purple": 0
             }
         },
         "element": {
@@ -158,7 +161,8 @@
                 "yellow": 60,
                 "green": 80,
                 "blue": 40,
-                "white": 80
+                "white": 80,
+                "purple": 0
             }
         },
         "element": {
@@ -206,7 +210,8 @@
                 "yellow": 20,
                 "green": 140,
                 "blue": 110,
-                "white": 0
+                "white": 0,
+                "purple": 0
             }
         },
         "element": {
@@ -247,7 +252,8 @@
                 "yellow": 80,
                 "green": 60,
                 "blue": 40,
-                "white": 50
+                "white": 50,
+                "purple": 0
             }
         },
         "element": {
