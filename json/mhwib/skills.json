@@ -131,7 +131,7 @@
         "id": "炸彈客．極意",
         "name": {
             "zhTW": "炸彈客．極意",
-            "jaJP": null,
+            "jaJP": "ボマー・極意",
             "enUS": null
         },
         "description": {
@@ -167,7 +167,7 @@
         "id": "KO術．極意",
         "name": {
             "zhTW": "KO術．極意",
-            "jaJP": null,
+            "jaJP": "KO術・極意",
             "enUS": null
         },
         "description": {
@@ -175,7 +175,7 @@
             "jaJP": null,
             "enUS": null
         },
-        "type": null,
+        "type": "active",
         "from": {
             "set": false,
             "jewel": false,
@@ -186,11 +186,15 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "解放KO術技能的等級上限",
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "enableSkillLevel": {
+                        "id": "KO術"
+                    }
+                },
                 "isHidden": false
             }
         ]
@@ -199,7 +203,7 @@
         "id": "真．利刃／彈藥節約",
         "name": {
             "zhTW": "真．利刃／彈藥節約",
-            "jaJP": null,
+            "jaJP": "真・業物/弾丸節約",
             "enUS": null
         },
         "description": {
@@ -231,7 +235,7 @@
         "id": "精神抖擻．極意",
         "name": {
             "zhTW": "精神抖擻．極意",
-            "jaJP": null,
+            "jaJP": "渾身・極意",
             "enUS": null
         },
         "description": {
@@ -239,7 +243,7 @@
             "jaJP": null,
             "enUS": null
         },
-        "type": null,
+        "type": "active",
         "from": {
             "set": false,
             "jewel": false,
@@ -250,11 +254,15 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "解放精神抖擻技能的等級上限",
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "enableSkillLevel": {
+                        "id": "精神抖擻"
+                    }
+                },
                 "isHidden": false
             }
         ]
@@ -263,7 +271,7 @@
         "id": "挑戰者．極意",
         "name": {
             "zhTW": "挑戰者．極意",
-            "jaJP": null,
+            "jaJP": "挑戦者・極意",
             "enUS": null
         },
         "description": {
@@ -271,7 +279,7 @@
             "jaJP": null,
             "enUS": null
         },
-        "type": null,
+        "type": "active",
         "from": {
             "set": false,
             "jewel": false,
@@ -282,11 +290,15 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "解放挑戰者技能的等級上限",
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "enableSkillLevel": {
+                        "id": "挑戰者"
+                    }
+                },
                 "isHidden": false
             }
         ]
@@ -295,7 +307,7 @@
         "id": "滿足感．極意",
         "name": {
             "zhTW": "滿足感．極意",
-            "jaJP": null,
+            "jaJP": "満足感・極意",
             "enUS": null
         },
         "description": {
@@ -303,7 +315,7 @@
             "jaJP": null,
             "enUS": null
         },
-        "type": null,
+        "type": "active",
         "from": {
             "set": false,
             "jewel": false,
@@ -314,20 +326,24 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "解放滿足感技能的等級上限",
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "enableSkillLevel": {
+                        "id": "滿足感"
+                    }
+                },
                 "isHidden": false
             }
         ]
     },
     {
-        "id": "耐力奪取．極意",
+        "id": "奪取耐力．極意",
         "name": {
-            "zhTW": "耐力奪取．極意",
-            "jaJP": null,
+            "zhTW": "奪取耐力．極意",
+            "jaJP": "スタミナ奪取・極意",
             "enUS": null
         },
         "description": {
@@ -335,7 +351,7 @@
             "jaJP": null,
             "enUS": null
         },
-        "type": null,
+        "type": "active",
         "from": {
             "set": false,
             "jewel": false,
@@ -346,11 +362,15 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "解放奪取耐力技能的等級上限",
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "enableSkillLevel": {
+                        "id": "奪取耐力"
+                    }
+                },
                 "isHidden": false
             }
         ]
@@ -359,7 +379,7 @@
         "id": "力量解放．極意",
         "name": {
             "zhTW": "力量解放．極意",
-            "jaJP": null,
+            "jaJP": "力の解放・極意",
             "enUS": null
         },
         "description": {
@@ -367,7 +387,7 @@
             "jaJP": null,
             "enUS": null
         },
-        "type": null,
+        "type": "active",
         "from": {
             "set": false,
             "jewel": false,
@@ -378,11 +398,15 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "解放力量解放技能的等級上限",
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "enableSkillLevel": {
+                        "id": "力量解放"
+                    }
+                },
                 "isHidden": false
             }
         ]
@@ -486,7 +510,7 @@
     {
         "id": "大地縫纏",
         "name": {
-            "zhTW": null,
+            "zhTW": "大地縫纏",
             "jaJP": "大地縫纏",
             "enUS": null
         },
@@ -516,9 +540,9 @@
         ]
     },
     {
-        "id": "真・大地縫纏",
+        "id": "真．大地縫纏",
         "name": {
-            "zhTW": null,
+            "zhTW": "真．大地縫纏",
             "jaJP": "真・大地縫纏",
             "enUS": null
         },
@@ -559,7 +583,7 @@
             "jaJP": null,
             "enUS": null
         },
-        "type": null,
+        "type": "active",
         "from": {
             "set": false,
             "jewel": false,
@@ -570,11 +594,15 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "解放砲術技能的等級上限",
                     "jaJP": null,
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "enableSkillLevel": {
+                        "id": "砲術"
+                    }
+                },
                 "isHidden": false
             }
         ]
