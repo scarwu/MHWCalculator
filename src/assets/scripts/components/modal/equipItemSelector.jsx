@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Fragment, useState, useEffect, useRef } from 'react';
+import React, { Fragment, useState, useEffect, useRef, useMemo, useCallback } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -36,6 +36,17 @@ import Constant from 'constant';
 // Load State Control
 import CommonStates from 'states/common';
 import ModalStates from 'states/modal';
+
+/**
+ * Variables
+ */
+const weaponTypeList = Constant.weaponTypes.map((type) => {
+    return { key: type, value: _(type) };
+});
+
+const rareList = [12, 11, 10, 9, 8, 7, 6, 5].map((rare) => {
+    return { key: rare, value: _('rare') + `: ${rare}` };
+});
 
 export default function EquipItemSelector(props) {
 
@@ -250,7 +261,6 @@ export default function EquipItemSelector(props) {
      */
     let renderWeaponItem = () => {
         return stateSortedList.map((data, index) => {
-
             if (data.type !== stateType) {
                 return;
             }
@@ -439,7 +449,6 @@ export default function EquipItemSelector(props) {
 
     let renderArmorItem = () => {
         return stateSortedList.map((data, index) => {
-
             if (data.rare !== stateRare) {
                 return;
             }
@@ -762,17 +771,13 @@ export default function EquipItemSelector(props) {
                         {('weapon' === stateMode) ? (
                             <FunctionalSelector
                                 iconName="globe" defaultValue={stateType}
-                                options={Constant.weaponTypes.map((type) => {
-                                    return { key: type, value: _(type) }
-                                })} onChange={handleTypeChange} />
+                                options={weaponTypeList} onChange={handleTypeChange} />
                         ) : false}
 
                         {('weapon' === stateMode || 'armor' === stateMode) ? (
                             <FunctionalSelector
                                 iconName="globe" defaultValue={stateRare}
-                                options={[12, 11, 10, 9, 8, 7, 6, 5].map((rare) => {
-                                    return { key: rare, value: _('rare') + `: ${rare}` };
-                                })} onChange={handleRareChange} />
+                                options={rareList} onChange={handleRareChange} />
                         ) : false}
 
                         <FunctionalButton

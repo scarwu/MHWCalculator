@@ -9,20 +9,29 @@
  */
 
 // Load Libraries
-import React from 'react';
+import React, { useMemo } from 'react';
+
+// Load Core Libraries
+import Helper from 'core/helper';
 
 export default function FunctionalButton(props) {
-    return (
-        <div className="mhwc-functional_button">
-            <a className="mhwc-body" onClick={props.onClick}>
-                <div className="mhwc-icon">
-                    <i className={`fa fa-${props.iconName}`}></i>
-                </div>
-            </a>
+    const {iconName, altName, onClick} = props;
 
-            <div className="mhwc-label">
-                <span>{props.altName}</span>
+    return useMemo(() => {
+        Helper.log('Component: FunctionalButton');
+
+        return (
+            <div className="mhwc-functional_button">
+                <a className="mhwc-body" onClick={onClick}>
+                    <div className="mhwc-icon">
+                        <i className={`fa fa-${iconName}`}></i>
+                    </div>
+                </a>
+
+                <div className="mhwc-label">
+                    <span>{altName}</span>
+                </div>
             </div>
-        </div>
-    );
+        )
+    }, [iconName, altName]);
 };
