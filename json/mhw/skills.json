@@ -164,6 +164,26 @@
                 },
                 "reaction": null,
                 "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "昏厥威力1.5倍",
+                    "jaJP": null,
+                    "enUS": " Stun Power +50%"
+                },
+                "reaction": null,
+                "isHidden": true
+            },
+            {
+                "level": 5,
+                "description": {
+                    "zhTW": "昏厥威力1.6倍",
+                    "jaJP": null,
+                    "enUS": " Stun Power +60%"
+                },
+                "reaction": null,
+                "isHidden": true
             }
         ]
     },
@@ -328,6 +348,34 @@
                     }
                 },
                 "isHidden": false
+            },
+            {
+                "level": 6,
+                "description": {
+                    "zhTW": "技能發動時，會心率+50%，耐力消耗量減少50%，更容易發動效果",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "criticalRate": {
+                        "value": 50
+                    }
+                },
+                "isHidden": true
+            },
+            {
+                "level": 7,
+                "description": {
+                    "zhTW": "技能發動時，會心率+60%，耐力消耗量減少50%，更容易發動效果",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "criticalRate": {
+                        "value": 60
+                    }
+                },
+                "isHidden": true
             }
         ]
     },
@@ -2608,6 +2656,26 @@
                 },
                 "reaction": null,
                 "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "威力1.4倍",
+                    "jaJP": null,
+                    "enUS": "Explosive power +30%"
+                },
+                "reaction": null,
+                "isHidden": true
+            },
+            {
+                "level": 5,
+                "description": {
+                    "zhTW": "威力1.5倍",
+                    "jaJP": null,
+                    "enUS": "Explosive power +30%"
+                },
+                "reaction": null,
+                "isHidden": true
             }
         ]
     },
@@ -3247,6 +3315,40 @@
                     }
                 },
                 "isHidden": false
+            },
+            {
+                "level": 6,
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+24，會心率+15%",
+                    "jaJP": null,
+                    "enUS": "While active, grants Attack +24 and increases Affinity by 15%"
+                },
+                "reaction": {
+                    "attack": {
+                        "value": 24
+                    },
+                    "criticalRate": {
+                        "value": 15
+                    }
+                },
+                "isHidden": true
+            },
+            {
+                "level": 7,
+                "description": {
+                    "zhTW": "技能發動時，基礎攻擊力+28，會心率+20%",
+                    "jaJP": null,
+                    "enUS": "While active, grants Attack +28 and increases Affinity by 20%"
+                },
+                "reaction": {
+                    "attack": {
+                        "value": 28
+                    },
+                    "criticalRate": {
+                        "value": 20
+                    }
+                },
+                "isHidden": true
             }
         ]
     },
@@ -3409,7 +3511,7 @@
                 "description": {
                     "zhTW": "對象的攻擊力1.2倍，減少龍擊砲的冷卻時間30%",
                     "jaJP": null,
-                    "enUS": "Increases power of each attack by 10% and reduces Wyvern's Fire cooldown by 30%"
+                    "enUS": "Increases power of each attack by 20% and reduces Wyvern's Fire cooldown by 30%"
                 },
                 "reaction": null,
                 "isHidden": false
@@ -3419,10 +3521,30 @@
                 "description": {
                     "zhTW": "對象的攻擊力1.3倍，減少龍擊砲的冷卻時間50%",
                     "jaJP": null,
-                    "enUS": "Increases power of each attack by 10% and reduces Wyvern's Fire cooldown by 50%"
+                    "enUS": "Increases power of each attack by 30% and reduces Wyvern's Fire cooldown by 50%"
                 },
                 "reaction": null,
                 "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "對象的攻擊力1.4倍，減少龍擊砲的冷卻時間60%",
+                    "jaJP": null,
+                    "enUS": "Increases power of each attack by 40% and reduces Wyvern's Fire cooldown by 60%"
+                },
+                "reaction": null,
+                "isHidden": true
+            },
+            {
+                "level": 5,
+                "description": {
+                    "zhTW": "對象的攻擊力1.5倍，減少龍擊砲的冷卻時間70%",
+                    "jaJP": null,
+                    "enUS": "Increases power of each attack by 50% and reduces Wyvern's Fire cooldown by 70%"
+                },
+                "reaction": null,
+                "isHidden": true
             }
         ]
     },
@@ -5797,6 +5919,26 @@
                 },
                 "reaction": null,
                 "isHidden": false
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "效果發動率50%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": true
+            },
+            {
+                "level": 3,
+                "description": {
+                    "zhTW": "效果發動率75%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": true
             }
         ]
     },
@@ -5849,6 +5991,26 @@
                 },
                 "reaction": null,
                 "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "減氣威力1.4倍",
+                    "jaJP": null,
+                    "enUS": "Exhaust power +40%"
+                },
+                "reaction": null,
+                "isHidden": true
+            },
+            {
+                "level": 5,
+                "description": {
+                    "zhTW": "減氣威力1.5倍",
+                    "jaJP": null,
+                    "enUS": "Exhaust power +50%"
+                },
+                "reaction": null,
+                "isHidden": true
             }
         ]
     },
@@ -6017,6 +6179,34 @@
                     }
                 },
                 "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "效果發動時，會心率+40%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "criticalRate": {
+                        "value": 40
+                    }
+                },
+                "isHidden": true
+            },
+            {
+                "level": 5,
+                "description": {
+                    "zhTW": "效果發動時，會心率+50%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "criticalRate": {
+                        "value": 50
+                    }
+                },
+                "isHidden": true
             }
         ]
     },
