@@ -14,14 +14,6 @@ $list = [
     12 => '/data/3219.html'
 ];
 
-function removeBOM($str = '')
-{
-    if (substr($str, 0,3) == pack("CCC",0xef,0xbb,0xbf))
-        $str = substr($str, 3);
-
-    return $str;
-}
-
 $result = [];
 
 $path = "ja/mhwg/jewel";

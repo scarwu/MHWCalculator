@@ -138,16 +138,6 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "昏厥威力1.1倍",
-                    "jaJP": null,
-                    "enUS": " Stun Power +10%"
-                },
-                "reaction": null,
-                "isHidden": false
-            },
-            {
-                "level": 2,
-                "description": {
                     "zhTW": "昏厥威力1.2倍",
                     "jaJP": null,
                     "enUS": " Stun Power +20%"
@@ -156,11 +146,21 @@
                 "isHidden": false
             },
             {
-                "level": 3,
+                "level": 2,
                 "description": {
                     "zhTW": "昏厥威力1.3倍",
                     "jaJP": null,
                     "enUS": " Stun Power +30%"
+                },
+                "reaction": null,
+                "isHidden": false
+            },
+            {
+                "level": 3,
+                "description": {
+                    "zhTW": "昏厥威力1.4倍",
+                    "jaJP": null,
+                    "enUS": " Stun Power +40%"
                 },
                 "reaction": null,
                 "isHidden": false
@@ -430,6 +430,22 @@
                     }
                 },
                 "isHidden": false
+            },
+            {
+                "level": 6,
+                "description": {
+                    "zhTW": "水屬性攻擊值變為1.2倍，水屬性攻擊值+100",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "elementAttack": {
+                        "type": "water",
+                        "value": 100,
+                        "multiple": 1.2
+                    }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -529,6 +545,22 @@
                         "type": "fire",
                         "value": 100,
                         "multiple": 1.1
+                    }
+                },
+                "isHidden": false
+            },
+            {
+                "level": 6,
+                "description": {
+                    "zhTW": "火屬性攻擊值變為1.2倍，火屬性攻擊值+100",
+                    "jaJP": null,
+                    "enUS": "+10% Fire Attack and +100 Fire Attack"
+                },
+                "reaction": {
+                    "elementAttack": {
+                        "type": "fire",
+                        "value": 100,
+                        "multiple": 1.2
                     }
                 },
                 "isHidden": false
@@ -769,7 +801,21 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "技能發動時，攻擊力1.05倍，防禦力+15",
+                    "zhTW": "技能發動時，防禦力+50",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "defense": {
+                        "value": 50
+                    }
+                },
+                "isHidden": false
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "技能發動時，攻擊力1.05倍，防禦力+50",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -778,15 +824,32 @@
                         "value": 1.05
                     },
                     "defense": {
-                        "value": 15
+                        "value": 50
                     }
                 },
                 "isHidden": false
             },
             {
-                "level": 2,
+                "level": 3,
                 "description": {
-                    "zhTW": "技能發動時，攻擊力1.1倍，防禦力+20",
+                    "zhTW": "技能發動時，攻擊力1.05倍，防禦力+100",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "attackMultiple": {
+                        "value": 1.05
+                    },
+                    "defense": {
+                        "value": 100
+                    }
+                },
+                "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "技能發動時，攻擊力1.1倍，防禦力+100",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -795,15 +858,15 @@
                         "value": 1.1
                     },
                     "defense": {
-                        "value": 20
+                        "value": 100
                     }
                 },
                 "isHidden": false
             },
             {
-                "level": 3,
+                "level": 5,
                 "description": {
-                    "zhTW": "技能發動時，攻擊力1.15倍，防禦力+25",
+                    "zhTW": "技能發動時，攻擊力1.15倍，防禦力+100",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -812,41 +875,7 @@
                         "value": 1.15
                     },
                     "defense": {
-                        "value": 25
-                    }
-                },
-                "isHidden": false
-            },
-            {
-                "level": 4,
-                "description": {
-                    "zhTW": "技能發動時，攻擊力1.2倍，防禦力+30",
-                    "jaJP": null,
-                    "enUS": null
-                },
-                "reaction": {
-                    "attackMultiple": {
-                        "value": 1.2
-                    },
-                    "defense": {
-                        "value": 30
-                    }
-                },
-                "isHidden": false
-            },
-            {
-                "level": 5,
-                "description": {
-                    "zhTW": "技能發動時，攻擊力1.3倍，防禦力+40",
-                    "jaJP": null,
-                    "enUS": null
-                },
-                "reaction": {
-                    "attackMultiple": {
-                        "value": 1.3
-                    },
-                    "defense": {
-                        "value": 40
+                        "value": 100
                     }
                 },
                 "isHidden": false
@@ -1155,6 +1184,22 @@
                         "type": "ice",
                         "value": 100,
                         "multiple": 1.1
+                    }
+                },
+                "isHidden": false
+            },
+            {
+                "level": 6,
+                "description": {
+                    "zhTW": "冰屬性攻擊值變為1.2倍，冰屬性攻擊值+100",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "elementAttack": {
+                        "type": "ice",
+                        "value": 100,
+                        "multiple": 1.2
                     }
                 },
                 "isHidden": false
@@ -1675,7 +1720,7 @@
             "enUS": "Iron Skin"
         },
         "description": {
-            "zhTW": null,
+            "zhTW": "對防禦力下降的耐性提升",
             "jaJP": null,
             "enUS": null
         },
@@ -1690,7 +1735,7 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "減少防禦力DOWN狀態的時間30%",
+                    "zhTW": "減少防禦力DOWN狀態的時間50%",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -1700,7 +1745,7 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "減少防禦力DOWN狀態的時間60%",
+                    "zhTW": "減少防禦力DOWN狀態的時間75%",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -1770,13 +1815,16 @@
             {
                 "level": 3,
                 "description": {
-                    "zhTW": "防禦力+15",
+                    "zhTW": "防禦力變為 1.05 倍，防禦力+15",
                     "jaJP": null,
                     "enUS": "+15 Defense"
                 },
                 "reaction": {
                     "defense": {
                         "value": 15
+                    },
+                    "defenseMultiple": {
+                        "value": 1.05
                     }
                 },
                 "isHidden": false
@@ -1784,13 +1832,16 @@
             {
                 "level": 4,
                 "description": {
-                    "zhTW": "防禦力+20，全屬性耐性值+3",
+                    "zhTW": "防禦力變為 1.05 倍，防禦力+20，全屬性耐性值+3",
                     "jaJP": null,
                     "enUS": "+20 Defense and +3 to All Elemental Resistances"
                 },
                 "reaction": {
                     "defense": {
                         "value": 20
+                    },
+                    "defenseMultiple": {
+                        "value": 1.05
                     },
                     "resistance": {
                         "type": "all",
@@ -1802,13 +1853,16 @@
             {
                 "level": 5,
                 "description": {
-                    "zhTW": "防禦力+25，全屬性耐性值+3",
+                    "zhTW": "防禦力變為 1.08 倍，防禦力+25，全屬性耐性值+3",
                     "jaJP": null,
                     "enUS": "+25 Defense and +3 to All Elemental Resistances"
                 },
                 "reaction": {
                     "defense": {
                         "value": 25
+                    },
+                    "defenseMultiple": {
+                        "value": 1.08
                     },
                     "resistance": {
                         "type": "全部",
@@ -1820,17 +1874,20 @@
             {
                 "level": 6,
                 "description": {
-                    "zhTW": "防禦力+30，全屬性耐性值+3",
+                    "zhTW": "防禦力變為 1.08 倍，防禦力+30，全屬性耐性值+5",
                     "jaJP": null,
-                    "enUS": "+30 Defense and +3 to All Elemental Resistances"
+                    "enUS": "+30 Defense and +5 to All Elemental Resistances"
                 },
                 "reaction": {
                     "defense": {
                         "value": 30
                     },
+                    "defenseMultiple": {
+                        "value": 1.08
+                    },
                     "resistance": {
                         "type": "all",
-                        "value": 3
+                        "value": 5
                     }
                 },
                 "isHidden": false
@@ -1838,17 +1895,20 @@
             {
                 "level": 7,
                 "description": {
-                    "zhTW": "防禦力+35，全屬性耐性值+3",
+                    "zhTW": "防禦力變為 1.1 倍，防禦力+35，全屬性耐性值+5",
                     "jaJP": null,
-                    "enUS": "+35 Defense and +3 to All Elemental Resistances"
+                    "enUS": "+35 Defense and +5 to All Elemental Resistances"
                 },
                 "reaction": {
                     "defense": {
                         "value": 35
                     },
+                    "defenseMultiple": {
+                        "value": 1.1
+                    },
                     "resistance": {
                         "type": "all",
-                        "value": 3
+                        "value": 5
                     }
                 },
                 "isHidden": false
@@ -2179,7 +2239,7 @@
             "enUS": "Stun Resistance"
         },
         "description": {
-            "zhTW": null,
+            "zhTW": "減少昏厥狀態的時間效果增強",
             "jaJP": null,
             "enUS": null
         },
@@ -2194,7 +2254,7 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "減少昏厥狀態的時間30%",
+                    "zhTW": "減少昏厥狀態的時間60%",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -2204,7 +2264,7 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "減少昏厥狀態的時間60%",
+                    "zhTW": "減少昏厥狀態的時間90%",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -2298,33 +2358,19 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "會心率+3%",
+                    "zhTW": "會心率+5%",
                     "jaJP": null,
                     "enUS": null
                 },
                 "reaction": {
                     "criticalRate": {
-                        "value": 3
+                        "value": 5
                     }
                 },
                 "isHidden": false
             },
             {
                 "level": 2,
-                "description": {
-                    "zhTW": "會心率+6%",
-                    "jaJP": null,
-                    "enUS": null
-                },
-                "reaction": {
-                    "criticalRate": {
-                        "value": 6
-                    }
-                },
-                "isHidden": false
-            },
-            {
-                "level": 3,
                 "description": {
                     "zhTW": "會心率+10%",
                     "jaJP": null,
@@ -2338,7 +2384,7 @@
                 "isHidden": false
             },
             {
-                "level": 4,
+                "level": 3,
                 "description": {
                     "zhTW": "會心率+15%",
                     "jaJP": null,
@@ -2352,7 +2398,7 @@
                 "isHidden": false
             },
             {
-                "level": 5,
+                "level": 4,
                 "description": {
                     "zhTW": "會心率+20%",
                     "jaJP": null,
@@ -2366,7 +2412,7 @@
                 "isHidden": false
             },
             {
-                "level": 6,
+                "level": 5,
                 "description": {
                     "zhTW": "會心率+25%",
                     "jaJP": null,
@@ -2380,7 +2426,7 @@
                 "isHidden": false
             },
             {
-                "level": 7,
+                "level": 6,
                 "description": {
                     "zhTW": "會心率+30%",
                     "jaJP": null,
@@ -2389,6 +2435,20 @@
                 "reaction": {
                     "criticalRate": {
                         "value": 30
+                    }
+                },
+                "isHidden": false
+            },
+            {
+                "level": 7,
+                "description": {
+                    "zhTW": "會心率+40%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "criticalRate": {
+                        "value": 40
                     }
                 },
                 "isHidden": false
@@ -2870,13 +2930,13 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "跳躍攻擊的威力變為1.1倍",
+                    "zhTW": "跳躍攻擊的威力變為1.3倍",
                     "jaJP": null,
                     "enUS": null
                 },
                 "reaction": {
                     "attackMultiple": {
-                        "value": 1.1
+                        "value": 1.3
                     }
                 },
                 "isHidden": false
@@ -2923,7 +2983,7 @@
             "enUS": "Poison Resistance"
         },
         "description": {
-            "zhTW": null,
+            "zhTW": "減少中毒狀態所收到的傷害",
             "jaJP": null,
             "enUS": null
         },
@@ -2938,7 +2998,7 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "減少中毒狀態的時間30%",
+                    "zhTW": "減少受到中毒傷害的次數",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -2948,7 +3008,7 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "減少中毒狀態的時間60%",
+                    "zhTW": "大幅減少受到中毒傷害的次數",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -3106,16 +3166,16 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "技能發動時，基礎攻擊力+4，會心率+3%",
+                    "zhTW": "技能發動時，基礎攻擊力+4，會心率+5%",
                     "jaJP": null,
-                    "enUS": "While active, grants Attack +4 and increases Affinity by 3%"
+                    "enUS": "While active, grants Attack +4 and increases Affinity by 5%"
                 },
                 "reaction": {
                     "attack": {
                         "value": 4
                     },
                     "criticalRate": {
-                        "value": 3
+                        "value": 5
                     }
                 },
                 "isHidden": false
@@ -3123,16 +3183,16 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "技能發動時，基礎攻擊力+8，會心率+6%",
+                    "zhTW": "技能發動時，基礎攻擊力+8，會心率+5%",
                     "jaJP": null,
-                    "enUS": "While active, grants Attack +8 and increases Affinity by 6%"
+                    "enUS": "While active, grants Attack +8 and increases Affinity by 5%"
                 },
                 "reaction": {
                     "attack": {
                         "value": 8
                     },
                     "criticalRate": {
-                        "value": 6
+                        "value": 5
                     }
                 },
                 "isHidden": false
@@ -3140,16 +3200,16 @@
             {
                 "level": 3,
                 "description": {
-                    "zhTW": "技能發動時，基礎攻擊力+12，會心率+9%",
+                    "zhTW": "技能發動時，基礎攻擊力+12，會心率+7%",
                     "jaJP": null,
-                    "enUS": "While active, grants Attack +12 and increases Affinity by 9%"
+                    "enUS": "While active, grants Attack +12 and increases Affinity by 7%"
                 },
                 "reaction": {
                     "attack": {
                         "value": 12
                     },
                     "criticalRate": {
-                        "value": 9
+                        "value": 7
                     }
                 },
                 "isHidden": false
@@ -3157,16 +3217,16 @@
             {
                 "level": 4,
                 "description": {
-                    "zhTW": "技能發動時，基礎攻擊力+16，會心率+12%",
+                    "zhTW": "技能發動時，基礎攻擊力+16，會心率+7%",
                     "jaJP": null,
-                    "enUS": "While active, grants Attack +16 and increases Affinity by 12%"
+                    "enUS": "While active, grants Attack +16 and increases Affinity by 7%"
                 },
                 "reaction": {
                     "attack": {
                         "value": 16
                     },
                     "criticalRate": {
-                        "value": 12
+                        "value": 7
                     }
                 },
                 "isHidden": false
@@ -3174,16 +3234,16 @@
             {
                 "level": 5,
                 "description": {
-                    "zhTW": "技能發動時，基礎攻擊力+20，會心率+15%",
+                    "zhTW": "技能發動時，基礎攻擊力+20，會心率+10%",
                     "jaJP": null,
-                    "enUS": "While active, grants Attack +20 and increases Affinity by 15%"
+                    "enUS": "While active, grants Attack +20 and increases Affinity by 10%"
                 },
                 "reaction": {
                     "attack": {
                         "value": 20
                     },
                     "criticalRate": {
-                        "value": 15
+                        "value": 10
                     }
                 },
                 "isHidden": false
@@ -3693,7 +3753,7 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "威力1.1倍",
+                    "zhTW": "威力1.5倍",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -3703,7 +3763,7 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "威力1.2倍",
+                    "zhTW": "威力2倍",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -3868,7 +3928,7 @@
             "enUS": "Hunger Resistance"
         },
         "description": {
-            "zhTW": null,
+            "zhTW": "加強對耐力值最大值減少的抑制能力",
             "jaJP": null,
             "enUS": null
         },
@@ -3883,7 +3943,7 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "到減少的時間延長30%",
+                    "zhTW": "到減少的時間延長50%",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -3893,7 +3953,7 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "到減少的時間延長60%",
+                    "zhTW": "到減少的時間延長100%",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -3977,7 +4037,21 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "攻擊有效部份時，會心率+15%",
+                    "zhTW": "攻擊有效部份時，會心率+10%，若有受傷再增加 5%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "criticalRate": {
+                        "value": 10
+                    }
+                },
+                "isHidden": false
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "攻擊有效部份時，會心率+15%，若有受傷再增加 15%",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -3989,29 +4063,15 @@
                 "isHidden": false
             },
             {
-                "level": 2,
+                "level": 3,
                 "description": {
-                    "zhTW": "攻擊有效部份時，會心率+30%",
+                    "zhTW": "攻擊有效部份時，會心率+30%，若有受傷再增加 20%",
                     "jaJP": null,
                     "enUS": null
                 },
                 "reaction": {
                     "criticalRate": {
                         "value": 30
-                    }
-                },
-                "isHidden": false
-            },
-            {
-                "level": 3,
-                "description": {
-                    "zhTW": "攻擊有效部份時，會心率+50%",
-                    "jaJP": null,
-                    "enUS": null
-                },
-                "reaction": {
-                    "criticalRate": {
-                        "value": 50
                     }
                 },
                 "isHidden": false
@@ -4041,7 +4101,7 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "閃光效果的生效率UP",
+                    "zhTW": "閃光效果的發生效率UP",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -4825,7 +4885,7 @@
                 },
                 "reaction": {
                     "noneElementAttackMutiple": {
-                        "value": 1.1
+                        "value": 1.05
                     }
                 },
                 "isHidden": false
@@ -5172,6 +5232,22 @@
                         "type": "thunder",
                         "value": 100,
                         "multiple": 1.1
+                    }
+                },
+                "isHidden": false
+            },
+            {
+                "level": 6,
+                "description": {
+                    "zhTW": "雷屬性攻擊值變為1.2倍，雷屬性攻擊值+100",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "elementAttack": {
+                        "type": "thunder",
+                        "value": 100,
+                        "multiple": 1.2
                     }
                 },
                 "isHidden": false
@@ -5851,7 +5927,7 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "體力回復20",
+                    "zhTW": "體力回復50",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -5861,7 +5937,7 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "體力回復35",
+                    "zhTW": "體力回復80",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -5871,7 +5947,7 @@
             {
                 "level": 3,
                 "description": {
-                    "zhTW": "體力回復60",
+                    "zhTW": "體力回復100",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -6417,6 +6493,22 @@
                     }
                 },
                 "isHidden": false
+            },
+            {
+                "level": 6,
+                "description": {
+                    "zhTW": "龍屬性攻擊值變為1.2倍，龍屬性攻擊值+100",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "elementAttack": {
+                        "type": "dragon",
+                        "value": 100,
+                        "multiple": 1.2
+                    }
+                },
+                "isHidden": false
             }
         ]
     },
@@ -6460,7 +6552,7 @@
             "enUS": "Tool Specialist"
         },
         "description": {
-            "zhTW": null,
+            "zhTW": "特殊裝備可再次使用的間隔時間進一步縮短",
             "jaJP": null,
             "enUS": null
         },
@@ -6475,7 +6567,7 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "再使用時間縮短5%",
+                    "zhTW": "再使用時間縮短10%",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -6485,7 +6577,7 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "再使用時間縮短10%",
+                    "zhTW": "再使用時間縮短20%",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -6495,7 +6587,7 @@
             {
                 "level": 3,
                 "description": {
-                    "zhTW": "再使用時間縮短20%",
+                    "zhTW": "再使用時間縮短30%",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -6643,7 +6735,7 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "耐力消耗減少25%",
+                    "zhTW": "耐力消耗減少50%",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -6892,7 +6984,7 @@
             "enUS": "Blight Resistance"
         },
         "description": {
-            "zhTW": null,
+            "zhTW": "異常狀態效果時間進一步下降",
             "jaJP": null,
             "enUS": null
         },
@@ -6907,9 +6999,9 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": "全屬性異常狀態的效果時間減少30%",
+                    "zhTW": "全屬性異常狀態的效果時間減少50%",
                     "jaJP": null,
-                    "enUS": "Reduces the duration of all elemental blights by 30%"
+                    "enUS": "Reduces the duration of all elemental blights by 50%"
                 },
                 "reaction": null,
                 "isHidden": false
@@ -6917,9 +7009,9 @@
             {
                 "level": 2,
                 "description": {
-                    "zhTW": "全屬性異常狀態的效果時間減少60%",
+                    "zhTW": "全屬性異常狀態的效果時間減少75%",
                     "jaJP": null,
-                    "enUS": "Reduces the duration of all elemental blights by 60%"
+                    "enUS": "Reduces the duration of all elemental blights by 75%"
                 },
                 "reaction": null,
                 "isHidden": false

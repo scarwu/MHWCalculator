@@ -1832,6 +1832,22 @@
         ]
     },
     {
+        "id": "全開珠II",
+        "name": {
+            "zhTW": "全開珠II",
+            "jaJP": "全開珠II",
+            "enUS": null
+        },
+        "rare": null,
+        "size": 4,
+        "skills": [
+            {
+                "id": "力量解放",
+                "level": 2
+            }
+        ]
+    },
+    {
         "id": "全開．迴避珠",
         "name": {
             "zhTW": "全開．迴避珠",
