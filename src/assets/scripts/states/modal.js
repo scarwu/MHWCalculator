@@ -43,37 +43,36 @@ const diffLogger = store => next => action => {
     return result;
 };
 
-// Store
-const Store = createStore((state, action) => {
-    if (undefined === state) {
-        state = {
-            changelog: ('production' === Config.env) ? {
-                isShow: (Config.buildTime !== parseInt(Status.get('sys:buildTime')))
-            } : Status.get(statusPrefix + ':changelog') || {
-                isShow: false
-            },
-            algorithmSetting: Status.get(statusPrefix + ':algorithmSetting') || {
-                isShow: false
-            },
-            inventorySetting: Status.get(statusPrefix + ':inventorySetting') || {
-                isShow: false
-            },
-            equipBundleSelector: Status.get(statusPrefix + ':equipBundleSelector') || {
-                isShow: false
-            },
-            setItemSelector: Status.get(statusPrefix + ':setItemSelector') || {
-                isShow: false
-            },
-            skillItemSelector: Status.get(statusPrefix + ':skillItemSelector') || {
-                isShow: false
-            },
-            equipItemSelector: Status.get(statusPrefix + ':equipItemSelector') || {
-                isShow: false,
-                bypassData: null
-            }
-        };
+// Initial State
+const initialState = {
+    changelog: ('production' === Config.env) ? {
+        isShow: (Config.buildTime !== parseInt(Status.get('sys:buildTime')))
+    } : Status.get(statusPrefix + ':changelog') || {
+        isShow: false
+    },
+    algorithmSetting: Status.get(statusPrefix + ':algorithmSetting') || {
+        isShow: false
+    },
+    inventorySetting: Status.get(statusPrefix + ':inventorySetting') || {
+        isShow: false
+    },
+    equipBundleSelector: Status.get(statusPrefix + ':equipBundleSelector') || {
+        isShow: false
+    },
+    setItemSelector: Status.get(statusPrefix + ':setItemSelector') || {
+        isShow: false
+    },
+    skillItemSelector: Status.get(statusPrefix + ':skillItemSelector') || {
+        isShow: false
+    },
+    equipItemSelector: Status.get(statusPrefix + ':equipItemSelector') || {
+        isShow: false,
+        bypassData: null
     }
+};
 
+// Store
+const Store = createStore((state = initialState, action) => {
     switch (action.type) {
     case 'UPDATE_CHANGELOG':
         return Object.assign({}, state, {
@@ -119,7 +118,7 @@ const Store = createStore((state, action) => {
             }
         });
     default:
-        return state
+        return state;
     }
 }, applyMiddleware(diffLogger));
 
