@@ -4,8 +4,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXアーティアαシリーズ",
+                "zhTW": "精英．機械α",
+                "jaJP": "EXアーティアα",
                 "enUS": null
             },
             "defense": 142,
@@ -22,10 +22,10 @@
         },
         "list": [
             {
-                "id": "EXアーティアヘルムα",
+                "id": "精英．機械頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．機械頭盔α",
                     "jaJP": "EXアーティアヘルムα",
                     "enUS": null
                 },
@@ -46,10 +46,10 @@
                 ]
             },
             {
-                "id": "EXアーティアメイルα",
+                "id": "精英．機械鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．機械鎧甲α",
                     "jaJP": "EXアーティアメイルα",
                     "enUS": null
                 },
@@ -70,10 +70,10 @@
                 ]
             },
             {
-                "id": "EXアーティアアームα",
+                "id": "精英．機械腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．機械腕甲α",
                     "jaJP": "EXアーティアアームα",
                     "enUS": null
                 },
@@ -97,10 +97,10 @@
                 ]
             },
             {
-                "id": "EXアーティアコイルα",
+                "id": "精英．機械腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．機械腰甲α",
                     "jaJP": "EXアーティアコイルα",
                     "enUS": null
                 },
@@ -124,10 +124,10 @@
                 ]
             },
             {
-                "id": "EXアーティアグリーヴα",
+                "id": "精英．機械護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．機械護腿α",
                     "jaJP": "EXアーティアグリーヴα",
                     "enUS": null
                 },
@@ -157,8 +157,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXアーティアβシリーズ",
+                "zhTW": "精英．機械β",
+                "jaJP": "EXアーティアβ",
                 "enUS": null
             },
             "defense": 142,
@@ -175,10 +175,10 @@
         },
         "list": [
             {
-                "id": "EXアーティアヘルムβ",
+                "id": "精英．機械頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．機械頭盔β",
                     "jaJP": "EXアーティアヘルムβ",
                     "enUS": null
                 },
@@ -202,10 +202,10 @@
                 ]
             },
             {
-                "id": "EXアーティアメイルβ",
+                "id": "精英．機械鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．機械鎧甲β",
                     "jaJP": "EXアーティアメイルβ",
                     "enUS": null
                 },
@@ -226,10 +226,10 @@
                 ]
             },
             {
-                "id": "EXアーティアアームβ",
+                "id": "精英．機械腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．機械腕甲β",
                     "jaJP": "EXアーティアアームβ",
                     "enUS": null
                 },
@@ -246,10 +246,10 @@
                 ]
             },
             {
-                "id": "EXアーティアコイルβ",
+                "id": "精英．機械腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．機械腰甲β",
                     "jaJP": "EXアーティアコイルβ",
                     "enUS": null
                 },
@@ -273,10 +273,10 @@
                 ]
             },
             {
-                "id": "EXアーティアグリーヴβ",
+                "id": "精英．機械護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．機械護腿β",
                     "jaJP": "EXアーティアグリーヴβ",
                     "enUS": null
                 },
@@ -299,8 +299,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXアークロックαシリーズ",
+                "zhTW": "精英．蒸氣貴族α",
+                "jaJP": "EXアークロックα",
                 "enUS": null
             },
             "defense": 142,
@@ -317,10 +317,10 @@
         },
         "list": [
             {
-                "id": "EXアークロックヘルムα",
+                "id": "精英．蒸氣貴族頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．蒸氣貴族頭盔α",
                     "jaJP": "EXアークロックヘルムα",
                     "enUS": null
                 },
@@ -344,10 +344,10 @@
                 ]
             },
             {
-                "id": "EXアークロックメイルα",
+                "id": "精英．蒸氣貴族鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．蒸氣貴族鎧甲α",
                     "jaJP": "EXアークロックメイルα",
                     "enUS": null
                 },
@@ -371,10 +371,10 @@
                 ]
             },
             {
-                "id": "EXアークロックアームα",
+                "id": "精英．蒸氣貴族腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．蒸氣貴族腕甲α",
                     "jaJP": "EXアークロックアームα",
                     "enUS": null
                 },
@@ -395,10 +395,10 @@
                 ]
             },
             {
-                "id": "EXアークロックコイルα",
+                "id": "精英．蒸氣貴族腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．蒸氣貴族腰甲α",
                     "jaJP": "EXアークロックコイルα",
                     "enUS": null
                 },
@@ -419,10 +419,10 @@
                 ]
             },
             {
-                "id": "EXアークロックグリーヴα",
+                "id": "精英．蒸氣貴族護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．蒸氣貴族護腿α",
                     "jaJP": "EXアークロックグリーヴα",
                     "enUS": null
                 },
@@ -452,8 +452,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXアークロックβシリーズ",
+                "zhTW": "精英．蒸氣貴族β",
+                "jaJP": "EXアークロックβ",
                 "enUS": null
             },
             "defense": 142,
@@ -470,10 +470,10 @@
         },
         "list": [
             {
-                "id": "EXアークロックヘルムβ",
+                "id": "精英．蒸氣貴族頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．蒸氣貴族頭盔β",
                     "jaJP": "EXアークロックヘルムβ",
                     "enUS": null
                 },
@@ -497,10 +497,10 @@
                 ]
             },
             {
-                "id": "EXアークロックメイルβ",
+                "id": "精英．蒸氣貴族鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．蒸氣貴族鎧甲β",
                     "jaJP": "EXアークロックメイルβ",
                     "enUS": null
                 },
@@ -520,10 +520,10 @@
                 ]
             },
             {
-                "id": "EXアークロックアームβ",
+                "id": "精英．蒸氣貴族腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．蒸氣貴族腕甲β",
                     "jaJP": "EXアークロックアームβ",
                     "enUS": null
                 },
@@ -540,10 +540,10 @@
                 ]
             },
             {
-                "id": "EXアークロックコイルβ",
+                "id": "精英．蒸氣貴族腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．蒸氣貴族腰甲β",
                     "jaJP": "EXアークロックコイルβ",
                     "enUS": null
                 },
@@ -563,10 +563,10 @@
                 ]
             },
             {
-                "id": "EXアークロックグリーヴβ",
+                "id": "精英．蒸氣貴族護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．蒸氣貴族護腿β",
                     "jaJP": "EXアークロックグリーヴβ",
                     "enUS": null
                 },
@@ -593,8 +593,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXインゴットαシリーズ",
+                "zhTW": "精英．鑄鐵α",
+                "jaJP": "EXインゴットα",
                 "enUS": null
             },
             "defense": 136,
@@ -609,10 +609,10 @@
         },
         "list": [
             {
-                "id": "EXインゴットヘルムα",
+                "id": "精英．鑄鐵頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．鑄鐵頭盔α",
                     "jaJP": "EXインゴットヘルムα",
                     "enUS": null
                 },
@@ -633,10 +633,10 @@
                 ]
             },
             {
-                "id": "EXインゴットメイルα",
+                "id": "精英．鑄鐵鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．鑄鐵鎧甲α",
                     "jaJP": "EXインゴットメイルα",
                     "enUS": null
                 },
@@ -657,10 +657,10 @@
                 ]
             },
             {
-                "id": "EXインゴットアームα",
+                "id": "精英．鑄鐵腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．鑄鐵腕甲α",
                     "jaJP": "EXインゴットアームα",
                     "enUS": null
                 },
@@ -684,10 +684,10 @@
                 ]
             },
             {
-                "id": "EXインゴットコイルα",
+                "id": "精英．鑄鐵腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．鑄鐵腰甲α",
                     "jaJP": "EXインゴットコイルα",
                     "enUS": null
                 },
@@ -708,10 +708,10 @@
                 ]
             },
             {
-                "id": "EXインゴットグリーヴα",
+                "id": "精英．鑄鐵護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．鑄鐵護腿α",
                     "jaJP": "EXインゴットグリーヴα",
                     "enUS": null
                 },
@@ -738,8 +738,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXインゴットβシリーズ",
+                "zhTW": "精英．鑄鐵β",
+                "jaJP": "EXインゴットβ",
                 "enUS": null
             },
             "defense": 136,
@@ -754,10 +754,10 @@
         },
         "list": [
             {
-                "id": "EXインゴットヘルムβ",
+                "id": "精英．鑄鐵頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．鑄鐵頭盔β",
                     "jaJP": "EXインゴットヘルムβ",
                     "enUS": null
                 },
@@ -777,10 +777,10 @@
                 ]
             },
             {
-                "id": "EXインゴットメイルβ",
+                "id": "精英．鑄鐵鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．鑄鐵鎧甲β",
                     "jaJP": "EXインゴットメイルβ",
                     "enUS": null
                 },
@@ -801,10 +801,10 @@
                 ]
             },
             {
-                "id": "EXインゴットアームβ",
+                "id": "精英．鑄鐵腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．鑄鐵腕甲β",
                     "jaJP": "EXインゴットアームβ",
                     "enUS": null
                 },
@@ -825,10 +825,10 @@
                 ]
             },
             {
-                "id": "EXインゴットコイルβ",
+                "id": "精英．鑄鐵腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．鑄鐵腰甲β",
                     "jaJP": "EXインゴットコイルβ",
                     "enUS": null
                 },
@@ -852,10 +852,10 @@
                 ]
             },
             {
-                "id": "EXインゴットグリーヴβ",
+                "id": "精英．鑄鐵護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．鑄鐵護腿β",
                     "jaJP": "EXインゴットグリーヴβ",
                     "enUS": null
                 },
@@ -882,8 +882,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXベリオαシリーズ",
+                "zhTW": "精英．冰牙龍α",
+                "jaJP": "EXベリオα",
                 "enUS": null
             },
             "defense": 138,
@@ -900,10 +900,10 @@
         },
         "list": [
             {
-                "id": "EXベリオヘルムα",
+                "id": "精英．冰牙龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．冰牙龍頭盔α",
                     "jaJP": "EXベリオヘルムα",
                     "enUS": null
                 },
@@ -927,10 +927,10 @@
                 ]
             },
             {
-                "id": "EXベリオメイルα",
+                "id": "精英．冰牙龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．冰牙龍鎧甲α",
                     "jaJP": "EXベリオメイルα",
                     "enUS": null
                 },
@@ -951,10 +951,10 @@
                 ]
             },
             {
-                "id": "EXベリオアームα",
+                "id": "精英．冰牙龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．冰牙龍腕甲α",
                     "jaJP": "EXベリオアームα",
                     "enUS": null
                 },
@@ -975,10 +975,10 @@
                 ]
             },
             {
-                "id": "EXベリオコイルα",
+                "id": "精英．冰牙龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．冰牙龍腰甲α",
                     "jaJP": "EXベリオコイルα",
                     "enUS": null
                 },
@@ -999,10 +999,10 @@
                 ]
             },
             {
-                "id": "EXベリオグリーヴα",
+                "id": "精英．冰牙龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．冰牙龍護腿α",
                     "jaJP": "EXベリオグリーヴα",
                     "enUS": null
                 },
@@ -1032,8 +1032,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXベリオβシリーズ",
+                "zhTW": "精英．冰牙龍β",
+                "jaJP": "EXベリオβ",
                 "enUS": null
             },
             "defense": 138,
@@ -1050,10 +1050,10 @@
         },
         "list": [
             {
-                "id": "EXベリオヘルムβ",
+                "id": "精英．冰牙龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．冰牙龍頭盔β",
                     "jaJP": "EXベリオヘルムβ",
                     "enUS": null
                 },
@@ -1077,10 +1077,10 @@
                 ]
             },
             {
-                "id": "EXベリオメイルβ",
+                "id": "精英．冰牙龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．冰牙龍鎧甲β",
                     "jaJP": "EXベリオメイルβ",
                     "enUS": null
                 },
@@ -1100,10 +1100,10 @@
                 ]
             },
             {
-                "id": "EXベリオアームβ",
+                "id": "精英．冰牙龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．冰牙龍腕甲β",
                     "jaJP": "EXベリオアームβ",
                     "enUS": null
                 },
@@ -1124,10 +1124,10 @@
                 ]
             },
             {
-                "id": "EXベリオコイルβ",
+                "id": "精英．冰牙龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．冰牙龍腰甲β",
                     "jaJP": "EXベリオコイルβ",
                     "enUS": null
                 },
@@ -1144,10 +1144,10 @@
                 ]
             },
             {
-                "id": "EXベリオグリーヴβ",
+                "id": "精英．冰牙龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．冰牙龍護腿β",
                     "jaJP": "EXベリオグリーヴβ",
                     "enUS": null
                 },
@@ -1177,8 +1177,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXレウスαシリーズ",
+                "zhTW": "精英．火龍α",
+                "jaJP": "EXレウスα",
                 "enUS": null
             },
             "defense": 140,
@@ -1195,10 +1195,10 @@
         },
         "list": [
             {
-                "id": "EXレウスヘルムα",
+                "id": "精英．火龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．火龍頭盔α",
                     "jaJP": "EXレウスヘルムα",
                     "enUS": null
                 },
@@ -1219,10 +1219,10 @@
                 ]
             },
             {
-                "id": "EXレウスメイルα",
+                "id": "精英．火龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．火龍鎧甲α",
                     "jaJP": "EXレウスメイルα",
                     "enUS": null
                 },
@@ -1246,10 +1246,10 @@
                 ]
             },
             {
-                "id": "EXレウスアームα",
+                "id": "精英．火龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．火龍腕甲α",
                     "jaJP": "EXレウスアームα",
                     "enUS": null
                 },
@@ -1270,10 +1270,10 @@
                 ]
             },
             {
-                "id": "EXレウスコイルα",
+                "id": "精英．火龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．火龍腰甲α",
                     "jaJP": "EXレウスコイルα",
                     "enUS": null
                 },
@@ -1294,10 +1294,10 @@
                 ]
             },
             {
-                "id": "EXレウスグリーヴα",
+                "id": "精英．火龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．火龍護腿α",
                     "jaJP": "EXレウスグリーヴα",
                     "enUS": null
                 },
@@ -1324,8 +1324,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXレウスβシリーズ",
+                "zhTW": "精英．火龍β",
+                "jaJP": "EXレウスβ",
                 "enUS": null
             },
             "defense": 140,
@@ -1342,10 +1342,10 @@
         },
         "list": [
             {
-                "id": "EXレウスヘルムβ",
+                "id": "精英．火龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．火龍頭盔β",
                     "jaJP": "EXレウスヘルムβ",
                     "enUS": null
                 },
@@ -1365,10 +1365,10 @@
                 ]
             },
             {
-                "id": "EXレウスメイルβ",
+                "id": "精英．火龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．火龍鎧甲β",
                     "jaJP": "EXレウスメイルβ",
                     "enUS": null
                 },
@@ -1385,10 +1385,10 @@
                 ]
             },
             {
-                "id": "EXレウスアームβ",
+                "id": "精英．火龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．火龍腕甲β",
                     "jaJP": "EXレウスアームβ",
                     "enUS": null
                 },
@@ -1408,10 +1408,10 @@
                 ]
             },
             {
-                "id": "EXレウスコイルβ",
+                "id": "精英．火龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．火龍腰甲β",
                     "jaJP": "EXレウスコイルβ",
                     "enUS": null
                 },
@@ -1431,10 +1431,10 @@
                 ]
             },
             {
-                "id": "EXレウスグリーヴβ",
+                "id": "精英．火龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．火龍護腿β",
                     "jaJP": "EXレウスグリーヴβ",
                     "enUS": null
                 },
@@ -1461,8 +1461,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXディアブロαシリーズ",
+                "zhTW": "精英．角龍α",
+                "jaJP": "EXディアブロα",
                 "enUS": null
             },
             "defense": 140,
@@ -1479,10 +1479,10 @@
         },
         "list": [
             {
-                "id": "EXディアブロヘルムα",
+                "id": "精英．角龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．角龍頭盔α",
                     "jaJP": "EXディアブロヘルムα",
                     "enUS": null
                 },
@@ -1503,10 +1503,10 @@
                 ]
             },
             {
-                "id": "EXディアブロメイルα",
+                "id": "精英．角龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．角龍鎧甲α",
                     "jaJP": "EXディアブロメイルα",
                     "enUS": null
                 },
@@ -1527,10 +1527,10 @@
                 ]
             },
             {
-                "id": "EXディアブロアームα",
+                "id": "精英．角龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．角龍腕甲α",
                     "jaJP": "EXディアブロアームα",
                     "enUS": null
                 },
@@ -1551,10 +1551,10 @@
                 ]
             },
             {
-                "id": "EXディアブロコイルα",
+                "id": "精英．角龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．角龍腰甲α",
                     "jaJP": "EXディアブロコイルα",
                     "enUS": null
                 },
@@ -1575,10 +1575,10 @@
                 ]
             },
             {
-                "id": "EXディアブログリーヴα",
+                "id": "精英．角龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．角龍護腿α",
                     "jaJP": "EXディアブログリーヴα",
                     "enUS": null
                 },
@@ -1608,8 +1608,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXディアブロβシリーズ",
+                "zhTW": "精英．角龍β",
+                "jaJP": "EXディアブロβ",
                 "enUS": null
             },
             "defense": 140,
@@ -1626,10 +1626,10 @@
         },
         "list": [
             {
-                "id": "EXディアブロヘルムβ",
+                "id": "精英．角龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．角龍頭盔β",
                     "jaJP": "EXディアブロヘルムβ",
                     "enUS": null
                 },
@@ -1646,10 +1646,10 @@
                 ]
             },
             {
-                "id": "EXディアブロメイルβ",
+                "id": "精英．角龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．角龍鎧甲β",
                     "jaJP": "EXディアブロメイルβ",
                     "enUS": null
                 },
@@ -1673,10 +1673,10 @@
                 ]
             },
             {
-                "id": "EXディアブロアームβ",
+                "id": "精英．角龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．角龍腕甲β",
                     "jaJP": "EXディアブロアームβ",
                     "enUS": null
                 },
@@ -1700,10 +1700,10 @@
                 ]
             },
             {
-                "id": "EXディアブロコイルβ",
+                "id": "精英．角龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．角龍腰甲β",
                     "jaJP": "EXディアブロコイルβ",
                     "enUS": null
                 },
@@ -1723,10 +1723,10 @@
                 ]
             },
             {
-                "id": "EXディアブログリーヴβ",
+                "id": "精英．角龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．角龍護腿β",
                     "jaJP": "EXディアブログリーヴβ",
                     "enUS": null
                 },
@@ -1756,8 +1756,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXギエナαシリーズ",
+                "zhTW": "精英．風漂龍α",
+                "jaJP": "EXギエナα",
                 "enUS": null
             },
             "defense": 140,
@@ -1774,10 +1774,10 @@
         },
         "list": [
             {
-                "id": "EXギエナヘルムα",
+                "id": "精英．風漂龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．風漂龍頭盔α",
                     "jaJP": "EXギエナヘルムα",
                     "enUS": null
                 },
@@ -1798,10 +1798,10 @@
                 ]
             },
             {
-                "id": "EXギエナメイルα",
+                "id": "精英．風漂龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．風漂龍鎧甲α",
                     "jaJP": "EXギエナメイルα",
                     "enUS": null
                 },
@@ -1822,10 +1822,10 @@
                 ]
             },
             {
-                "id": "EXギエナアームα",
+                "id": "精英．風漂龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．風漂龍腕甲α",
                     "jaJP": "EXギエナアームα",
                     "enUS": null
                 },
@@ -1846,10 +1846,10 @@
                 ]
             },
             {
-                "id": "EXギエナコイルα",
+                "id": "精英．風漂龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．風漂龍腰甲α",
                     "jaJP": "EXギエナコイルα",
                     "enUS": null
                 },
@@ -1870,10 +1870,10 @@
                 ]
             },
             {
-                "id": "EXギエナグリーヴα",
+                "id": "精英．風漂龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．風漂龍護腿α",
                     "jaJP": "EXギエナグリーヴα",
                     "enUS": null
                 },
@@ -1900,8 +1900,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXギエナβシリーズ",
+                "zhTW": "精英．風漂龍β",
+                "jaJP": "EXギエナβ",
                 "enUS": null
             },
             "defense": 140,
@@ -1918,10 +1918,10 @@
         },
         "list": [
             {
-                "id": "EXギエナヘルムβ",
+                "id": "精英．風漂龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．風漂龍頭盔β",
                     "jaJP": "EXギエナヘルムβ",
                     "enUS": null
                 },
@@ -1941,10 +1941,10 @@
                 ]
             },
             {
-                "id": "EXギエナメイルβ",
+                "id": "精英．風漂龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．風漂龍鎧甲β",
                     "jaJP": "EXギエナメイルβ",
                     "enUS": null
                 },
@@ -1965,10 +1965,10 @@
                 ]
             },
             {
-                "id": "EXギエナアームβ",
+                "id": "精英．風漂龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．風漂龍腕甲β",
                     "jaJP": "EXギエナアームβ",
                     "enUS": null
                 },
@@ -1992,10 +1992,10 @@
                 ]
             },
             {
-                "id": "EXギエナコイルβ",
+                "id": "精英．風漂龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．風漂龍腰甲β",
                     "jaJP": "EXギエナコイルβ",
                     "enUS": null
                 },
@@ -2019,10 +2019,10 @@
                 ]
             },
             {
-                "id": "EXギエナグリーヴβ",
+                "id": "精英．風漂龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．風漂龍護腿β",
                     "jaJP": "EXギエナグリーヴβ",
                     "enUS": null
                 },
@@ -2048,8 +2048,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXガロンαシリーズ",
+                "zhTW": "精英．慘爪龍α",
+                "jaJP": "EXガロンα",
                 "enUS": null
             },
             "defense": 140,
@@ -2066,10 +2066,10 @@
         },
         "list": [
             {
-                "id": "EXガロンヘルムα",
+                "id": "精英．慘爪龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．慘爪龍頭盔α",
                     "jaJP": "EXガロンヘルムα",
                     "enUS": null
                 },
@@ -2090,10 +2090,10 @@
                 ]
             },
             {
-                "id": "EXガロンメイルα",
+                "id": "精英．慘爪龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．慘爪龍鎧甲α",
                     "jaJP": "EXガロンメイルα",
                     "enUS": null
                 },
@@ -2114,10 +2114,10 @@
                 ]
             },
             {
-                "id": "EXガロンアームα",
+                "id": "精英．慘爪龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．慘爪龍腕甲α",
                     "jaJP": "EXガロンアームα",
                     "enUS": null
                 },
@@ -2138,10 +2138,10 @@
                 ]
             },
             {
-                "id": "EXガロンコイルα",
+                "id": "精英．慘爪龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．慘爪龍腰甲α",
                     "jaJP": "EXガロンコイルα",
                     "enUS": null
                 },
@@ -2162,10 +2162,10 @@
                 ]
             },
             {
-                "id": "EXガロングリーヴα",
+                "id": "精英．慘爪龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．慘爪龍護腿α",
                     "jaJP": "EXガロングリーヴα",
                     "enUS": null
                 },
@@ -2192,8 +2192,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXガロンβシリーズ",
+                "zhTW": "精英．慘爪龍β",
+                "jaJP": "EXガロンβ",
                 "enUS": null
             },
             "defense": 140,
@@ -2210,10 +2210,10 @@
         },
         "list": [
             {
-                "id": "EXガロンヘルムβ",
+                "id": "精英．慘爪龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．慘爪龍頭盔β",
                     "jaJP": "EXガロンヘルムβ",
                     "enUS": null
                 },
@@ -2234,10 +2234,10 @@
                 ]
             },
             {
-                "id": "EXガロンメイルβ",
+                "id": "精英．慘爪龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．慘爪龍鎧甲β",
                     "jaJP": "EXガロンメイルβ",
                     "enUS": null
                 },
@@ -2257,10 +2257,10 @@
                 ]
             },
             {
-                "id": "EXガロンアームβ",
+                "id": "精英．慘爪龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．慘爪龍腕甲β",
                     "jaJP": "EXガロンアームβ",
                     "enUS": null
                 },
@@ -2281,10 +2281,10 @@
                 ]
             },
             {
-                "id": "EXガロンコイルβ",
+                "id": "精英．慘爪龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．慘爪龍腰甲β",
                     "jaJP": "EXガロンコイルβ",
                     "enUS": null
                 },
@@ -2304,10 +2304,10 @@
                 ]
             },
             {
-                "id": "EXガロングリーヴβ",
+                "id": "精英．慘爪龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．慘爪龍護腿β",
                     "jaJP": "EXガロングリーヴβ",
                     "enUS": null
                 },
@@ -2334,8 +2334,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXラヴァαシリーズ",
+                "zhTW": "精英．熔岩龍α",
+                "jaJP": "EXラヴァα",
                 "enUS": null
             },
             "defense": 140,
@@ -2350,10 +2350,10 @@
         },
         "list": [
             {
-                "id": "EXラヴァヘルムα",
+                "id": "精英．熔岩龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．熔岩龍頭盔α",
                     "jaJP": "EXラヴァヘルムα",
                     "enUS": null
                 },
@@ -2377,10 +2377,10 @@
                 ]
             },
             {
-                "id": "EXラヴァメイルα",
+                "id": "精英．熔岩龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．熔岩龍鎧甲α",
                     "jaJP": "EXラヴァメイルα",
                     "enUS": null
                 },
@@ -2404,10 +2404,10 @@
                 ]
             },
             {
-                "id": "EXラヴァアームα",
+                "id": "精英．熔岩龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．熔岩龍腕甲α",
                     "jaJP": "EXラヴァアームα",
                     "enUS": null
                 },
@@ -2428,10 +2428,10 @@
                 ]
             },
             {
-                "id": "EXラヴァコイルα",
+                "id": "精英．熔岩龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．熔岩龍腰甲α",
                     "jaJP": "EXラヴァコイルα",
                     "enUS": null
                 },
@@ -2452,10 +2452,10 @@
                 ]
             },
             {
-                "id": "EXラヴァグリーヴα",
+                "id": "精英．熔岩龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．熔岩龍護腿α",
                     "jaJP": "EXラヴァグリーヴα",
                     "enUS": null
                 },
@@ -2482,8 +2482,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXラヴァβシリーズ",
+                "zhTW": "精英．熔岩龍β",
+                "jaJP": "EXラヴァβ",
                 "enUS": null
             },
             "defense": 140,
@@ -2498,10 +2498,10 @@
         },
         "list": [
             {
-                "id": "EXラヴァヘルムβ",
+                "id": "精英．熔岩龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．熔岩龍頭盔β",
                     "jaJP": "EXラヴァヘルムβ",
                     "enUS": null
                 },
@@ -2525,10 +2525,10 @@
                 ]
             },
             {
-                "id": "EXラヴァメイルβ",
+                "id": "精英．熔岩龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．熔岩龍鎧甲β",
                     "jaJP": "EXラヴァメイルβ",
                     "enUS": null
                 },
@@ -2552,10 +2552,10 @@
                 ]
             },
             {
-                "id": "EXラヴァアームβ",
+                "id": "精英．熔岩龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．熔岩龍腕甲β",
                     "jaJP": "EXラヴァアームβ",
                     "enUS": null
                 },
@@ -2576,10 +2576,10 @@
                 ]
             },
             {
-                "id": "EXラヴァコイルβ",
+                "id": "精英．熔岩龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．熔岩龍腰甲β",
                     "jaJP": "EXラヴァコイルβ",
                     "enUS": null
                 },
@@ -2600,10 +2600,10 @@
                 ]
             },
             {
-                "id": "EXラヴァグリーヴβ",
+                "id": "精英．熔岩龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．熔岩龍護腿β",
                     "jaJP": "EXラヴァグリーヴβ",
                     "enUS": null
                 },
@@ -2633,8 +2633,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXガンキンαシリーズ",
+                "zhTW": "精英．爆鎚龍α",
+                "jaJP": "EXガンキンα",
                 "enUS": null
             },
             "defense": 144,
@@ -2651,10 +2651,10 @@
         },
         "list": [
             {
-                "id": "EXガンキンヘルムα",
+                "id": "精英．爆鎚龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．爆鎚龍頭盔α",
                     "jaJP": "EXガンキンヘルムα",
                     "enUS": null
                 },
@@ -2678,10 +2678,10 @@
                 ]
             },
             {
-                "id": "EXガンキンメイルα",
+                "id": "精英．爆鎚龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．爆鎚龍鎧甲α",
                     "jaJP": "EXガンキンメイルα",
                     "enUS": null
                 },
@@ -2702,10 +2702,10 @@
                 ]
             },
             {
-                "id": "EXガンキンアームα",
+                "id": "精英．爆鎚龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．爆鎚龍腕甲α",
                     "jaJP": "EXガンキンアームα",
                     "enUS": null
                 },
@@ -2726,10 +2726,10 @@
                 ]
             },
             {
-                "id": "EXガンキンコイルα",
+                "id": "精英．爆鎚龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．爆鎚龍腰甲α",
                     "jaJP": "EXガンキンコイルα",
                     "enUS": null
                 },
@@ -2753,10 +2753,10 @@
                 ]
             },
             {
-                "id": "EXガンキングリーヴα",
+                "id": "精英．爆鎚龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．爆鎚龍護腿α",
                     "jaJP": "EXガンキングリーヴα",
                     "enUS": null
                 },
@@ -2783,8 +2783,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXガンキンβシリーズ",
+                "zhTW": "精英．爆鎚龍β",
+                "jaJP": "EXガンキンβ",
                 "enUS": null
             },
             "defense": 144,
@@ -2801,10 +2801,10 @@
         },
         "list": [
             {
-                "id": "EXガンキンヘルムβ",
+                "id": "精英．爆鎚龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．爆鎚龍頭盔β",
                     "jaJP": "EXガンキンヘルムβ",
                     "enUS": null
                 },
@@ -2824,10 +2824,10 @@
                 ]
             },
             {
-                "id": "EXガンキンメイルβ",
+                "id": "精英．爆鎚龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．爆鎚龍鎧甲β",
                     "jaJP": "EXガンキンメイルβ",
                     "enUS": null
                 },
@@ -2844,10 +2844,10 @@
                 ]
             },
             {
-                "id": "EXガンキンアームβ",
+                "id": "精英．爆鎚龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．爆鎚龍腕甲β",
                     "jaJP": "EXガンキンアームβ",
                     "enUS": null
                 },
@@ -2868,10 +2868,10 @@
                 ]
             },
             {
-                "id": "EXガンキンコイルβ",
+                "id": "精英．爆鎚龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．爆鎚龍腰甲β",
                     "jaJP": "EXガンキンコイルβ",
                     "enUS": null
                 },
@@ -2891,10 +2891,10 @@
                 ]
             },
             {
-                "id": "EXガンキングリーヴβ",
+                "id": "精英．爆鎚龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．爆鎚龍護腿β",
                     "jaJP": "EXガンキングリーヴβ",
                     "enUS": null
                 },
@@ -2920,8 +2920,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXナルガαシリーズ",
+                "zhTW": "精英．迅龍α",
+                "jaJP": "EXナルガα",
                 "enUS": null
             },
             "defense": 140,
@@ -2938,10 +2938,10 @@
         },
         "list": [
             {
-                "id": "EXナルガヘルムα",
+                "id": "精英．迅龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．迅龍頭盔α",
                     "jaJP": "EXナルガヘルムα",
                     "enUS": null
                 },
@@ -2965,10 +2965,10 @@
                 ]
             },
             {
-                "id": "EXナルガメイルα",
+                "id": "精英．迅龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．迅龍鎧甲α",
                     "jaJP": "EXナルガメイルα",
                     "enUS": null
                 },
@@ -2989,10 +2989,10 @@
                 ]
             },
             {
-                "id": "EXナルガアームα",
+                "id": "精英．迅龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．迅龍腕甲α",
                     "jaJP": "EXナルガアームα",
                     "enUS": null
                 },
@@ -3013,10 +3013,10 @@
                 ]
             },
             {
-                "id": "EXナルガコイルα",
+                "id": "精英．迅龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．迅龍腰甲α",
                     "jaJP": "EXナルガコイルα",
                     "enUS": null
                 },
@@ -3037,10 +3037,10 @@
                 ]
             },
             {
-                "id": "EXナルガグリーヴα",
+                "id": "精英．迅龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．迅龍護腿α",
                     "jaJP": "EXナルガグリーヴα",
                     "enUS": null
                 },
@@ -3070,8 +3070,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXナルガβシリーズ",
+                "zhTW": "精英．迅龍β",
+                "jaJP": "EXナルガβ",
                 "enUS": null
             },
             "defense": 140,
@@ -3088,10 +3088,10 @@
         },
         "list": [
             {
-                "id": "EXナルガヘルムβ",
+                "id": "精英．迅龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．迅龍頭盔β",
                     "jaJP": "EXナルガヘルムβ",
                     "enUS": null
                 },
@@ -3115,10 +3115,10 @@
                 ]
             },
             {
-                "id": "EXナルガメイルβ",
+                "id": "精英．迅龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．迅龍鎧甲β",
                     "jaJP": "EXナルガメイルβ",
                     "enUS": null
                 },
@@ -3135,10 +3135,10 @@
                 ]
             },
             {
-                "id": "EXナルガアームβ",
+                "id": "精英．迅龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．迅龍腕甲β",
                     "jaJP": "EXナルガアームβ",
                     "enUS": null
                 },
@@ -3155,10 +3155,10 @@
                 ]
             },
             {
-                "id": "EXナルガコイルβ",
+                "id": "精英．迅龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．迅龍腰甲β",
                     "jaJP": "EXナルガコイルβ",
                     "enUS": null
                 },
@@ -3179,10 +3179,10 @@
                 ]
             },
             {
-                "id": "EXナルガグリーヴβ",
+                "id": "精英．迅龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．迅龍護腿β",
                     "jaJP": "EXナルガグリーヴβ",
                     "enUS": null
                 },
@@ -3208,8 +3208,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXディノαシリーズ",
+                "zhTW": "精英．斬龍α",
+                "jaJP": "EXディノα",
                 "enUS": null
             },
             "defense": 142,
@@ -3226,10 +3226,10 @@
         },
         "list": [
             {
-                "id": "EXディノヘルムα",
+                "id": "精英．斬龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．斬龍頭盔α",
                     "jaJP": "EXディノヘルムα",
                     "enUS": null
                 },
@@ -3250,10 +3250,10 @@
                 ]
             },
             {
-                "id": "EXディノメイルα",
+                "id": "精英．斬龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．斬龍鎧甲α",
                     "jaJP": "EXディノメイルα",
                     "enUS": null
                 },
@@ -3274,10 +3274,10 @@
                 ]
             },
             {
-                "id": "EXディノアームα",
+                "id": "精英．斬龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．斬龍腕甲α",
                     "jaJP": "EXディノアームα",
                     "enUS": null
                 },
@@ -3298,10 +3298,10 @@
                 ]
             },
             {
-                "id": "EXディノコイルα",
+                "id": "精英．斬龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．斬龍腰甲α",
                     "jaJP": "EXディノコイルα",
                     "enUS": null
                 },
@@ -3325,10 +3325,10 @@
                 ]
             },
             {
-                "id": "EXディノグリーヴα",
+                "id": "精英．斬龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．斬龍護腿α",
                     "jaJP": "EXディノグリーヴα",
                     "enUS": null
                 },
@@ -3355,8 +3355,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXディノβシリーズ",
+                "zhTW": "精英．斬龍β",
+                "jaJP": "EXディノβ",
                 "enUS": null
             },
             "defense": 142,
@@ -3373,10 +3373,10 @@
         },
         "list": [
             {
-                "id": "EXディノヘルムβ",
+                "id": "精英．斬龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．斬龍頭盔β",
                     "jaJP": "EXディノヘルムβ",
                     "enUS": null
                 },
@@ -3397,10 +3397,10 @@
                 ]
             },
             {
-                "id": "EXディノメイルβ",
+                "id": "精英．斬龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．斬龍鎧甲β",
                     "jaJP": "EXディノメイルβ",
                     "enUS": null
                 },
@@ -3421,10 +3421,10 @@
                 ]
             },
             {
-                "id": "EXディノアームβ",
+                "id": "精英．斬龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．斬龍腕甲β",
                     "jaJP": "EXディノアームβ",
                     "enUS": null
                 },
@@ -3445,10 +3445,10 @@
                 ]
             },
             {
-                "id": "EXディノコイルβ",
+                "id": "精英．斬龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．斬龍腰甲β",
                     "jaJP": "EXディノコイルβ",
                     "enUS": null
                 },
@@ -3465,10 +3465,10 @@
                 ]
             },
             {
-                "id": "EXディノグリーヴβ",
+                "id": "精英．斬龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．斬龍護腿β",
                     "jaJP": "EXディノグリーヴβ",
                     "enUS": null
                 },
@@ -3491,8 +3491,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXブラキαシリーズ",
+                "zhTW": "精英．碎龍α",
+                "jaJP": "EXブラキα",
                 "enUS": null
             },
             "defense": 142,
@@ -3509,10 +3509,10 @@
         },
         "list": [
             {
-                "id": "EXブラキヘルムα",
+                "id": "精英．碎龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．碎龍頭盔α",
                     "jaJP": "EXブラキヘルムα",
                     "enUS": null
                 },
@@ -3533,10 +3533,10 @@
                 ]
             },
             {
-                "id": "EXブラキメイルα",
+                "id": "精英．碎龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．碎龍鎧甲α",
                     "jaJP": "EXブラキメイルα",
                     "enUS": null
                 },
@@ -3557,10 +3557,10 @@
                 ]
             },
             {
-                "id": "EXブラキアームα",
+                "id": "精英．碎龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．碎龍腕甲α",
                     "jaJP": "EXブラキアームα",
                     "enUS": null
                 },
@@ -3581,10 +3581,10 @@
                 ]
             },
             {
-                "id": "EXブラキコイルα",
+                "id": "精英．碎龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．碎龍腰甲α",
                     "jaJP": "EXブラキコイルα",
                     "enUS": null
                 },
@@ -3605,10 +3605,10 @@
                 ]
             },
             {
-                "id": "EXブラキグリーヴα",
+                "id": "精英．碎龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．碎龍護腿α",
                     "jaJP": "EXブラキグリーヴα",
                     "enUS": null
                 },
@@ -3635,8 +3635,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXブラキβシリーズ",
+                "zhTW": "精英．碎龍β",
+                "jaJP": "EXブラキβ",
                 "enUS": null
             },
             "defense": 142,
@@ -3653,10 +3653,10 @@
         },
         "list": [
             {
-                "id": "EXブラキヘルムβ",
+                "id": "精英．碎龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．碎龍頭盔β",
                     "jaJP": "EXブラキヘルムβ",
                     "enUS": null
                 },
@@ -3676,10 +3676,10 @@
                 ]
             },
             {
-                "id": "EXブラキメイルβ",
+                "id": "精英．碎龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．碎龍鎧甲β",
                     "jaJP": "EXブラキメイルβ",
                     "enUS": null
                 },
@@ -3700,10 +3700,10 @@
                 ]
             },
             {
-                "id": "EXブラキアームβ",
+                "id": "精英．碎龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．碎龍腕甲β",
                     "jaJP": "EXブラキアームβ",
                     "enUS": null
                 },
@@ -3724,10 +3724,10 @@
                 ]
             },
             {
-                "id": "EXブラキコイルβ",
+                "id": "精英．碎龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．碎龍腰甲β",
                     "jaJP": "EXブラキコイルβ",
                     "enUS": null
                 },
@@ -3747,10 +3747,10 @@
                 ]
             },
             {
-                "id": "EXブラキグリーヴβ",
+                "id": "精英．碎龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．碎龍護腿β",
                     "jaJP": "EXブラキグリーヴβ",
                     "enUS": null
                 },
@@ -3777,8 +3777,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXレックスαシリーズ",
+                "zhTW": "精英．轟龍α",
+                "jaJP": "EXレックスα",
                 "enUS": null
             },
             "defense": 142,
@@ -3795,10 +3795,10 @@
         },
         "list": [
             {
-                "id": "EXレックスヘルムα",
+                "id": "精英．轟龍頭盔α",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．轟龍頭盔α",
                     "jaJP": "EXレックスヘルムα",
                     "enUS": null
                 },
@@ -3819,10 +3819,10 @@
                 ]
             },
             {
-                "id": "EXレックスメイルα",
+                "id": "精英．轟龍鎧甲α",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．轟龍鎧甲α",
                     "jaJP": "EXレックスメイルα",
                     "enUS": null
                 },
@@ -3843,10 +3843,10 @@
                 ]
             },
             {
-                "id": "EXレックスアームα",
+                "id": "精英．轟龍腕甲α",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．轟龍腕甲α",
                     "jaJP": "EXレックスアームα",
                     "enUS": null
                 },
@@ -3867,10 +3867,10 @@
                 ]
             },
             {
-                "id": "EXレックスコイルα",
+                "id": "精英．轟龍腰甲α",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．轟龍腰甲α",
                     "jaJP": "EXレックスコイルα",
                     "enUS": null
                 },
@@ -3894,10 +3894,10 @@
                 ]
             },
             {
-                "id": "EXレックスグリーヴα",
+                "id": "精英．轟龍護腿α",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．轟龍護腿α",
                     "jaJP": "EXレックスグリーヴα",
                     "enUS": null
                 },
@@ -3927,8 +3927,8 @@
             "rare": 10,
             "gender": "general",
             "series": {
-                "zhTW": null,
-                "jaJP": "EXレックスβシリーズ",
+                "zhTW": "精英．轟龍β",
+                "jaJP": "EXレックスβ",
                 "enUS": null
             },
             "defense": 142,
@@ -3945,10 +3945,10 @@
         },
         "list": [
             {
-                "id": "EXレックスヘルムβ",
+                "id": "精英．轟龍頭盔β",
                 "type": "helm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．轟龍頭盔β",
                     "jaJP": "EXレックスヘルムβ",
                     "enUS": null
                 },
@@ -3969,10 +3969,10 @@
                 ]
             },
             {
-                "id": "EXレックスメイルβ",
+                "id": "精英．轟龍鎧甲β",
                 "type": "chest",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．轟龍鎧甲β",
                     "jaJP": "EXレックスメイルβ",
                     "enUS": null
                 },
@@ -3992,10 +3992,10 @@
                 ]
             },
             {
-                "id": "EXレックスアームβ",
+                "id": "精英．轟龍腕甲β",
                 "type": "arm",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．轟龍腕甲β",
                     "jaJP": "EXレックスアームβ",
                     "enUS": null
                 },
@@ -4016,10 +4016,10 @@
                 ]
             },
             {
-                "id": "EXレックスコイルβ",
+                "id": "精英．轟龍腰甲β",
                 "type": "waist",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．轟龍腰甲β",
                     "jaJP": "EXレックスコイルβ",
                     "enUS": null
                 },
@@ -4042,10 +4042,10 @@
                 ]
             },
             {
-                "id": "EXレックスグリーヴβ",
+                "id": "精英．轟龍護腿β",
                 "type": "leg",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．轟龍護腿β",
                     "jaJP": "EXレックスグリーヴβ",
                     "enUS": null
                 },

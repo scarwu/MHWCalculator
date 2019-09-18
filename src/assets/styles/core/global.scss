@@ -126,14 +126,6 @@ html {
     }
 }
 
-html.no-js > body {
-    display: none;
-}
-
-html.js > body {
-    display: block;
-}
-
 a {
     cursor: pointer;
     text-decoration: none !important;
