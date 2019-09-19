@@ -72,7 +72,7 @@
         },
         "description": {
             "zhTW": null,
-            "jaJP": null,
+            "jaJP": "状態異常や属性やられを解除すると一定時間、攻撃性能が強化される",
             "enUS": null
         },
         "type": null,
@@ -87,7 +87,27 @@
                 "level": 1,
                 "description": {
                     "zhTW": null,
-                    "jaJP": null,
+                    "jaJP": "基礎攻撃力+12、属性値+30、状態異常の蓄積値1.05倍",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "基礎攻撃力+15、属性値+60、状態異常の蓄積値1.10倍",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            },
+            {
+                "level": 3,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "基礎攻撃力+18、属性値+90、状態異常の蓄積値1.15倍",
                     "enUS": null
                 },
                 "reaction": null,
@@ -104,7 +124,7 @@
         },
         "description": {
             "zhTW": null,
-            "jaJP": null,
+            "jaJP": "寒さによる影響を無効化する",
             "enUS": null
         },
         "type": null,
@@ -119,7 +139,7 @@
                 "level": 1,
                 "description": {
                     "zhTW": null,
-                    "jaJP": null,
+                    "jaJP": "寒さによる影響を無効化する",
                     "enUS": null
                 },
                 "reaction": null,
@@ -208,7 +228,7 @@
         },
         "description": {
             "zhTW": null,
-            "jaJP": null,
+            "jaJP": "攻撃が弾かれなかった時、一定確率で斬れ味を消耗しない。また、一定確率でボウガンの弾と弓のビンを消費しない。",
             "enUS": null
         },
         "type": null,
@@ -223,7 +243,7 @@
                 "level": 1,
                 "description": {
                     "zhTW": null,
-                    "jaJP": null,
+                    "jaJP": "攻撃が弾かれなかった時、一定確率で斬れ味を消耗しない。また、一定確率でボウガンの弾と弓のビンを消費しない。",
                     "enUS": null
                 },
                 "reaction": null,
@@ -415,12 +435,12 @@
         "id": "冰氣練成",
         "name": {
             "zhTW": "冰氣練成",
-            "jaJP": "冰気錬成",
+            "jaJP": "冰気練成",
             "enUS": null
         },
         "description": {
             "zhTW": null,
-            "jaJP": null,
+            "jaJP": "納刀中、または抜刀中で攻撃しない間は徐々に冰気ゲージが高まり、攻撃力が強化される。近接攻撃を当てる、または弾や矢を発射すると冰気ゲージが減少する。",
             "enUS": null
         },
         "type": null,
@@ -435,7 +455,7 @@
                 "level": 1,
                 "description": {
                     "zhTW": null,
-                    "jaJP": null,
+                    "jaJP": "納刀中、または抜刀中で攻撃しない間は徐々に冰気ゲージが高まり、攻撃力が強化される。近接攻撃を当てる、または弾や矢を発射すると冰気ゲージが減少する。",
                     "enUS": null
                 },
                 "reaction": null,
@@ -452,7 +472,7 @@
         },
         "description": {
             "zhTW": null,
-            "jaJP": null,
+            "jaJP": "継続してモンスターに攻撃を当てると一定時間、属性解放/装填拡張Lv2が発動。さらに、属性攻撃力も少し上昇する。",
             "enUS": null
         },
         "type": null,
@@ -467,7 +487,7 @@
                 "level": 1,
                 "description": {
                     "zhTW": null,
-                    "jaJP": null,
+                    "jaJP": "継続してモンスターに攻撃を当てると一定時間、属性解放/装填拡張Lv2が発動。さらに、属性攻撃力も少し上昇する。",
                     "enUS": null
                 },
                 "reaction": null,
@@ -484,7 +504,7 @@
         },
         "description": {
             "zhTW": null,
-            "jaJP": null,
+            "jaJP": "継続してモンスターに攻撃を当てると一定時間、属性解放/装填拡張Lv3が発動。さらに、属性攻撃力も上昇する。",
             "enUS": null
         },
         "type": null,
@@ -499,7 +519,7 @@
                 "level": 1,
                 "description": {
                     "zhTW": null,
-                    "jaJP": null,
+                    "jaJP": "継続してモンスターに攻撃を当てると一定時間、属性解放/装填拡張Lv3が発動。さらに、属性攻撃力も上昇する。",
                     "enUS": null
                 },
                 "reaction": null,
@@ -516,7 +536,7 @@
         },
         "description": {
             "zhTW": null,
-            "jaJP": null,
+            "jaJP": "装衣を装着している間、耐震Lv3、風圧耐性Lv3、耳栓Lv3、ひるみ無効の効果。",
             "enUS": null
         },
         "type": null,
@@ -531,7 +551,7 @@
                 "level": 1,
                 "description": {
                     "zhTW": null,
-                    "jaJP": null,
+                    "jaJP": "装衣を装着している間、耐震Lv3、風圧耐性Lv3、耳栓Lv3、ひるみ無効の効果。",
                     "enUS": null
                 },
                 "reaction": null,
@@ -548,7 +568,7 @@
         },
         "description": {
             "zhTW": null,
-            "jaJP": null,
+            "jaJP": "装衣を装着している間、耐震Lv3、風圧完全無効、耳栓Lv5、ひるみ無効の効果。",
             "enUS": null
         },
         "type": null,
@@ -563,7 +583,7 @@
                 "level": 1,
                 "description": {
                     "zhTW": null,
-                    "jaJP": null,
+                    "jaJP": "装衣を装着している間、耐震Lv3、風圧完全無効、耳栓Lv5、ひるみ無効の効果。",
                     "enUS": null
                 },
                 "reaction": null,
