@@ -161,7 +161,7 @@ export default function SkillItemSelector(props) {
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
             <div className="mhwc-modal">
                 <div className="mhwc-panel">
-                    <span className="mhwc-title">{_('inventorySetting')}</span>
+                    <span className="mhwc-title">{_('skillList')}</span>
 
                     <div className="mhwc-icons_bundle">
                         <FunctionalInput

@@ -38,17 +38,6 @@ import ModalState from 'states/modal';
 import Constant from 'constant';
 
 /**
- * Variables
- */
-const weaponTypeList = Constant.weaponTypes.map((type) => {
-    return { key: type, value: _(type) };
-});
-
-const rareList = [12, 11, 10, 9, 8, 7, 6, 5].map((rare) => {
-    return { key: rare, value: _('rare') + `: ${rare}` };
-});
-
-/**
  * Handle Functions
  */
 const handleItemPickUp = (bypassData, itemId) => {
@@ -197,7 +186,7 @@ const renderWeaponItem = (weapon, bypassData) => {
                     let skillInfo = SkillDataset.getInfo(skill.id);
 
                     return Helper.isNotEmpty(skillInfo) ? (
-                        <Fragment>
+                        <Fragment key={index}>
                             <div className="col-12 mhwc-name">
                                 <span>{_(skillInfo.name)} Lv.{skill.level}</span>
                             </div>
@@ -215,6 +204,9 @@ const renderWeaponItem = (weapon, bypassData) => {
 const renderArmorItem = (armor, bypassData) => {
     let setInfo = Helper.isNotEmpty(armor.set)
         ? SetDataset.getInfo(armor.set.id) : false;
+
+    // Re-write BypassData
+    bypassData.equipType = armor.type;
 
     return (
         <div key={armor.id} className="mhwc-item mhwc-item-2-step">
@@ -246,7 +238,7 @@ const renderArmorItem = (armor, bypassData) => {
 
                 {Constant.resistances.map((resistanceType) => {
                     return (
-                        <Fragment>
+                        <Fragment key={resistanceType}>
                             <div className="col-3 mhwc-name">
                                 <span>{_('resistance')}: {_(resistanceType)}</span>
                             </div>
@@ -283,7 +275,7 @@ const renderArmorItem = (armor, bypassData) => {
                     let skillInfo = SkillDataset.getInfo(skill.id);
 
                     return Helper.isNotEmpty(skillInfo) ? (
-                        <Fragment>
+                        <Fragment key={index}>
                             <div className="col-12 mhwc-name">
                                 <span>{_(skillInfo.name)} Lv.{skill.level}</span>
                             </div>
@@ -317,7 +309,7 @@ const renderCharmItem = (charm, bypassData) => {
                     let skillInfo = SkillDataset.getInfo(skill.id);
 
                     return Helper.isNotEmpty(skillInfo) ? (
-                        <Fragment>
+                        <Fragment key={index}>
                             <div className="col-12 mhwc-name">
                                 <span>{_(skillInfo.name)} Lv.{skill.level}</span>
                             </div>
@@ -351,7 +343,7 @@ const renderJewelItem = (jewel, bypassData) => {
                     let skillInfo = SkillDataset.getInfo(skill.id);
 
                     return Helper.isNotEmpty(skillInfo) ? (
-                        <Fragment>
+                        <Fragment key={index}>
                             <div className="col-12 mhwc-name">
                                 <span>{_(skillInfo.name)} Lv.{skill.level}</span>
                             </div>
@@ -383,7 +375,7 @@ const renderEnhanceItem = (enhance, bypassData) => {
             <div className="col-12 mhwc-content">
                 {enhance.list.map((item, index) => {
                     return (
-                        <Fragment>
+                        <Fragment key={index}>
                             <div className="col-2 mhwc-name">
                                 <span>Lv.{item.level}</span>
                             </div>
@@ -408,7 +400,9 @@ export default function EquipItemSelector(props) {
     const [stateMode, updateMode] = useState(null);
     const [stateSortedList, updateSortedList] = useState([]);
     const [stateType, updateType] = useState(null);
-    const [stateRare, updateRare] = useState(12);
+    const [stateRare, updateRare] = useState(null);
+    const [stateTypeList, updateTypeList] = useState([]);
+    const [stateRareList, updateRareList] = useState([]);
     const [stateSegment, updateSegment] = useState(null);
     const refModal = useRef();
 
@@ -419,7 +413,10 @@ export default function EquipItemSelector(props) {
 
         let mode = null;
         let sortedList = [];
+        let typeList = {};
+        let rareList = {};
         let type = null;
+        let rare = null;
 
         if (Helper.isNotEmpty(stateBypassData.enhanceIndex)) {
             mode = 'enhance';
@@ -445,41 +442,52 @@ export default function EquipItemSelector(props) {
         } else if ('weapon' === stateBypassData.equipType) {
             let weaponInfo = WeaponDataset.getInfo(stateBypassData.equipId);
 
-            mode = 'weapon';
-            type = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.type : Constant.weaponTypes[0];
-
-            Constant.weaponTypes.forEach((weaponType) => {
-                [12, 11, 10, 9, 8, 7, 6, 5, 0].forEach((rare) => {
-                    sortedList = sortedList.concat(
-                        WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().map((weaponInfo) => {
-                            weaponInfo.isSelect = (stateBypassData.equipId === weaponInfo.id);
-
-                            return weaponInfo;
-                        })
-                    );
-                });
+            typeList = Constant.weaponTypes.map((type) => {
+                return { key: type, value: _(type) };
             });
+            type = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.type : typeList[0].key;
+
+            mode = 'weapon';
+            sortedList =  WeaponDataset.getItems().map((weaponInfo) => {
+                rareList[weaponInfo.rare] = weaponInfo.rare;
+
+                weaponInfo.isSelect = (stateBypassData.equipId === weaponInfo.id);
+
+                return weaponInfo;
+            });
+
+            rareList = Object.values(rareList).reverse().map((rare) => {
+                return { key: rare, value: _('rare') + `: ${rare}` };
+            });
+            rare = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.rare : rareList[0].key;
         } else if ('helm' === stateBypassData.equipType
             || 'chest' === stateBypassData.equipType
             || 'arm' === stateBypassData.equipType
             || 'waist' === stateBypassData.equipType
             || 'leg' === stateBypassData.equipType
         ) {
-            mode = 'armor';
-            type = stateBypassData.equipType;
+            let armoreInfo = ArmorDataset.getInfo(stateBypassData.equipId);
 
-            [12, 11, 10, 9, 8, 7, 6, 5, 0].forEach((rare) => {
-                sortedList = sortedList.concat(
-                    ArmorDataset.typeIs(stateBypassData.equipType).rareIs(rare).getItems().map((armorInfo) => {
-                        armorInfo.isSelect = (stateBypassData.equipId === armorInfo.id);
-
-                        return armorInfo;
-                    })
-                );
+            typeList = Constant.armorTypes.map((type) => {
+                return { key: type, value: _(type) };
             });
+            type = (Helper.isNotEmpty(armoreInfo)) ? armoreInfo.type : typeList[0].key;
+
+            mode = 'armor';
+            sortedList = ArmorDataset.getItems().map((armorInfo) => {
+                rareList[armorInfo.rare] = armorInfo.rare;
+
+                armorInfo.isSelect = (stateBypassData.equipId === armorInfo.id);
+
+                return armorInfo;
+            });
+
+            rareList = Object.values(rareList).reverse().map((rare) => {
+                return { key: rare, value: _('rare') + `: ${rare}` };
+            });
+            rare = (Helper.isNotEmpty(armoreInfo)) ? armoreInfo.rare : rareList[0].key;
         } else if ('charm' === stateBypassData.equipType) {
             mode = 'charm';
-
             sortedList = CharmDataset.getItems().map((charmInfo) => {
                 charmInfo.isSelect = (stateBypassData.equipId === charmInfo.id);
 
@@ -489,7 +497,10 @@ export default function EquipItemSelector(props) {
 
         updateMode(mode);
         updateSortedList(sortedList);
+        updateTypeList(typeList);
+        updateRareList(rareList);
         updateType(type);
+        updateRare(rare);
     }, [stateBypassData]);
 
     // Like Did Mount & Will Unmount Cycle
@@ -537,6 +548,8 @@ export default function EquipItemSelector(props) {
             return false;
         }
 
+        let bypassData = Helper.deepCopy(stateBypassData);
+
         switch (stateMode) {
         case 'weapon':
             return stateSortedList.filter((data) => {
@@ -582,10 +595,14 @@ export default function EquipItemSelector(props) {
 
                 return true;
             }).map((data) => {
-                return renderWeaponItem(data, stateBypassData);
+                return renderWeaponItem(data, bypassData);
             });
         case 'armor':
             return stateSortedList.filter((data) => {
+                if (data.type !== stateType) {
+                    return false;
+                }
+
                 if (data.rare !== stateRare) {
                     return false;
                 }
@@ -619,7 +636,7 @@ export default function EquipItemSelector(props) {
 
                 return true;
             }).map((data) => {
-                return renderArmorItem(data, stateBypassData);
+                return renderArmorItem(data, bypassData);
             });
         case 'charm':
             return stateSortedList.filter((data) => {
@@ -644,7 +661,7 @@ export default function EquipItemSelector(props) {
 
                 return true;
             }).map((data) => {
-                return renderCharmItem(data, stateBypassData);
+                return renderCharmItem(data, bypassData);
             });
         case 'jewel':
             return stateSortedList.filter((data) => {
@@ -669,7 +686,7 @@ export default function EquipItemSelector(props) {
 
                 return true;
             }).map((data) => {
-                return renderJewelItem(data, stateBypassData);
+                return renderJewelItem(data, bypassData);
             });
         case 'enhance':
             return stateSortedList.filter((data) => {
@@ -690,7 +707,7 @@ export default function EquipItemSelector(props) {
 
                 return true;
             }).map((data) => {
-                return renderEnhanceItem(data, stateBypassData);
+                return renderEnhanceItem(data, bypassData);
             });
         default:
             return false;
@@ -698,9 +715,11 @@ export default function EquipItemSelector(props) {
     }, [
         stateBypassData,
         stateMode,
-        stateRare,
-        stateType,
         stateSortedList,
+        stateTypeList,
+        stateRareList,
+        stateType,
+        stateRare,
         stateSegment
     ]);
 
@@ -708,29 +727,28 @@ export default function EquipItemSelector(props) {
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
             <div className="mhwc-modal">
                 <div className="mhwc-panel">
-                    <span className="mhwc-title">{_('inventorySetting')}</span>
+                    <span className="mhwc-title">{_(stateMode + 'List')}</span>
 
                     <div className="mhwc-icons_bundle">
                         <FunctionalInput
                             iconName="search" placeholder={_('inputKeyword')}
                             onChange={handleSegmentInput} />
 
-                        {('weapon' === stateMode) ? (
+                        {('weapon' === stateMode || 'armor' === stateMode) ? (
                             <FunctionalSelector
                                 iconName="globe" defaultValue={stateType}
-                                options={weaponTypeList} onChange={handleTypeChange} />
+                                options={stateTypeList} onChange={handleTypeChange} />
                         ) : false}
 
                         {('weapon' === stateMode || 'armor' === stateMode) ? (
                             <FunctionalSelector
                                 iconName="globe" defaultValue={stateRare}
-                                options={rareList} onChange={handleRareChange} />
+                                options={stateRareList} onChange={handleRareChange} />
                         ) : false}
 
                         <FunctionalButton
                             iconName="times" altName={_('close')}
                             onClick={ModalState.setter.hideEquipItemSelector} />
-
                     </div>
                 </div>
                 <div className="mhwc-list">

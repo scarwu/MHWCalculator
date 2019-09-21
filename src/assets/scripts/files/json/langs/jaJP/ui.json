@@ -103,7 +103,14 @@
     "candidateBundle":      null,
     "equipBundle":          null,
     "status":               null,
-    "inventorySetting":     null,
+    "skillList":            null,
+    "setList":              null,
+    "enhanceList":          null,
+    "jewelList":            null,
+    "charmList":            null,
+    "armorList":            null,
+    "weaponList":           null,
     "bundleList":           null,
+    "algorithmSetting":     null,
     "changelog":            "変更履歴"
 }

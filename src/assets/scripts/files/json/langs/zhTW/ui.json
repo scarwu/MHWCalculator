@@ -103,7 +103,14 @@
     "candidateBundle":      "備選組合",
     "equipBundle":          "已選裝備",
     "status":               "狀態",
-    "inventorySetting":     "選擇列表",
+    "skillList":            "技能列表",
+    "setList":              "套裝列表",
+    "enhanceList":          "強化列表",
+    "jewelList":            "裝飾珠列表",
+    "charmList":            "護石列表",
+    "armorList":            "裝甲列表",
+    "weaponList":           "武器列表",
     "bundleList":           "配裝清單",
+    "algorithmSetting":     "搜尋設定",
     "changelog":            "更新紀錄"
 }

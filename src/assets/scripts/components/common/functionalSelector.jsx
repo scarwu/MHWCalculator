@@ -26,7 +26,7 @@ export default function FunctionalSelector(props) {
                     <div className="mhwc-icon">
                         <i className={`fa fa-${iconName}`}></i>
                     </div>
-                    <select className="mhwc-select" defaultValue={defaultValue} onChange={onChange}>
+                    <select className="mhwc-select" value={defaultValue} onChange={onChange}>
                         {options.map((option) => {
                             return (
                                 <option key={option.key} value={option.key}>{option.value}</option>
