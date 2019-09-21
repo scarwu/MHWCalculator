@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Fragment, useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import React, { Fragment, useState, useEffect, useCallback, useMemo, useRef } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';

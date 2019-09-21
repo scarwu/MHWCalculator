@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Fragment, useState, useEffect, useRef, createRef } from 'react';
+import React, { Fragment, useState, useEffect, useCallback, useRef, createRef } from 'react';
 import MD5 from 'md5';
 
 // Load Core Libraries
@@ -24,12 +24,12 @@ import CharmDataset from 'libraries/dataset/charm';
 // Load Components
 import FunctionalButton from 'components/common/functionalButton';
 
-// Load Constant
-import Constant from 'constant';
-
 // Load State Control
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
+
+// Load Constant
+import Constant from 'constant';
 
 export default function EquipBundleSelector(props) {
 
@@ -63,19 +63,15 @@ export default function EquipBundleSelector(props) {
     /**
      * Handle Functions
      */
-    let handleFastWindowClose = (event) => {
+    const handleFastWindowClose = useCallback((event) => {
         if (refModal.current !== event.target) {
             return;
         }
 
-        handleWindowClose();
-    };
-
-    let handleWindowClose = () => {
         ModalState.setter.hideEquipBundleSelector();
-    };
+    }, []);
 
-    let handleBundleSave = (index) => {
+    const handleBundleSave = useCallback((index) => {
         let name = Helper.isNotEmpty(index)
             ? refNameList.current[index].current.value
             : refName.current.value;
@@ -93,18 +89,12 @@ export default function EquipBundleSelector(props) {
                 equips: stateCurrentEquips
             });
         }
-    };
+    }, []);
 
-    let handleBundleRemove = (index) => {
-        CommonState.setter.removeReservedBundle(index);
-    };
-
-    let handleBundlePickUp = (index) => {
-        let reservedBundles = stateReservedBundles;
-
-        CommonState.setter.replaceCurrentEquips(reservedBundles[index].equips);
+    const handleBundlePickUp = useCallback((index) => {
+        CommonState.setter.replaceCurrentEquips(stateReservedBundles[index].equips);
         ModalState.setter.hideEquipBundleSelector();
-    };
+    }, [stateReservedBundles]);
 
     /**
      * Render Functions
@@ -182,7 +172,7 @@ export default function EquipBundleSelector(props) {
         return (
             <div key={data.id} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
-                    <input type="text" placeholder={_('inputName')} ref={refNameList.current[index]} defaultValue={data.name} />
+                    <input className="mhwc-input" type="text" placeholder={_('inputName')} ref={refNameList.current[index]} defaultValue={data.name} />
 
                     <div className="mhwc-icons_bundle">
                         <div className="mhwc-icons_bundle">
@@ -191,7 +181,7 @@ export default function EquipBundleSelector(props) {
                                 onClick={() => {handleBundlePickUp(index)}} />
                             <FunctionalButton
                                 iconName="times" altName={_('remove')}
-                                onClick={() => {handleBundleRemove(index)}} />
+                                onClick={() => {CommonState.setter.removeReservedBundle(index)}} />
                             <FunctionalButton
                                 iconName="floppy-o" altName={_('save')}
                                 onClick={() => {handleBundleSave(index)}} />
@@ -244,7 +234,7 @@ export default function EquipBundleSelector(props) {
                     <div className="mhwc-icons_bundle">
                         <FunctionalButton
                             iconName="times" altName={_('close')}
-                            onClick={handleWindowClose} />
+                            onClick={ModalState.setter.hideEquipBundleSelector} />
                     </div>
                 </div>
                 <div className="mhwc-list">

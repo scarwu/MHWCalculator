@@ -27,13 +27,13 @@ import FittingAlgorithm from 'libraries/fittingAlgorithm';
 // Load Components
 import FunctionalButton from 'components/common/functionalButton';
 
-// Load Config & Constant
-import Config from 'config';
-import Constant from 'constant';
-
 // Load State Control
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
+
+// Load Config & Constant
+import Config from 'config';
+import Constant from 'constant';
 
 export default function CandidateBundles(props) {
 

@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Fragment, useState, useEffect, useRef } from 'react';
+import React, { Fragment, useState, useEffect, useCallback, useRef } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -24,16 +24,16 @@ import CommonDataset from 'libraries/dataset/common';
 import FunctionalButton from 'components/common/functionalButton';
 import SharpnessBar from 'components/common/sharpnessBar';
 
-// Load Constant
-import Constant from 'constant';
-
 // Load State Control
 import CommonState from 'states/common';
+
+// Load Constant
+import Constant from 'constant';
 
 /**
  * Generate Functions
  */
-let generateEquipInfos = (equips) => {
+const generateEquipInfos = (equips) => {
     let equipInfos = {};
 
     equipInfos.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon);
@@ -47,7 +47,7 @@ let generateEquipInfos = (equips) => {
     return equipInfos;
 };
 
-let generatePassiveSkills = (equipInfos) => {
+const generatePassiveSkills = (equipInfos) => {
     let passiveSkills = {};
 
     ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
@@ -75,7 +75,7 @@ let generatePassiveSkills = (equipInfos) => {
     return passiveSkills;
 };
 
-let generateStatus = (equipInfos, passiveSkills) => {
+const generateStatus = (equipInfos, passiveSkills) => {
     let status = Helper.deepCopy(Constant.defaultStatus);
 
     if (Helper.isNotEmpty(equipInfos.weapon)) {
@@ -372,7 +372,7 @@ let generateStatus = (equipInfos, passiveSkills) => {
     return status;
 };
 
-let generateExtraInfo = (equipInfos, status, tuning) => {
+const generateExtraInfo = (equipInfos, status, tuning) => {
     let extraInfo = Helper.deepCopy(Constant.defaultExtraInfo);
     let result = getBasicExtraInfo(equipInfos, Helper.deepCopy(status), {});
 
@@ -418,7 +418,7 @@ let generateExtraInfo = (equipInfos, status, tuning) => {
     return extraInfo;
 };
 
-let getBasicExtraInfo = (equipInfos, status, tuning) => {
+const getBasicExtraInfo = (equipInfos, status, tuning) => {
     let rawAttack = 0;
     let rawCriticalAttack = 0;
     let rawExpectedValue = 0;
@@ -491,7 +491,7 @@ let getBasicExtraInfo = (equipInfos, status, tuning) => {
     }
 };
 
-let getSharpnessMultiple = (data) => {
+const getSharpnessMultiple = (data) => {
     if (Helper.isEmpty(data)) {
         return {
             raw: 1,
@@ -564,7 +564,7 @@ export default function CharacterStatus(props) {
     /**
      * Handle Functions
      */
-    let handlePassiveSkillToggle = (skillId) => {
+    const handlePassiveSkillToggle = useCallback((skillId) => {
         const equipInfos = stateEquipInfos;
         const passiveSkills = statePassiveSkills;
         const tuning = stateTuning;
@@ -576,9 +576,9 @@ export default function CharacterStatus(props) {
         updatePassiveSkills(passiveSkills);
         updateStatus(status);
         updateExtraInfo(generateExtraInfo(equipInfos, status, tuning));
-    };
+    }, [stateEquipInfos, statePassiveSkills, stateTuning]);
 
-    let handleTuningChange = () => {
+    const handleTuningChange = useCallback(() => {
         let tuningRawAttack = parseInt(refTuningRawAttack.current.value, 10);
         let tuningRawCriticalRate = parseFloat(refTuningRawCriticalRate.current.value, 10);
         let tuningRawCriticalMultiple = parseFloat(refTuningRawCriticalMultiple.current.value);
@@ -600,7 +600,7 @@ export default function CharacterStatus(props) {
 
         updateTuning(tuning);
         updateExtraInfo(generateExtraInfo(equipInfos, status, tuning));
-    };
+    }, [stateEquipInfos, stateStatus]);
 
     /**
      * Render Functions

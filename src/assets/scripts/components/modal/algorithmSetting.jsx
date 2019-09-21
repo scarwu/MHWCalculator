@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -53,17 +53,13 @@ export default function AlgorithmSetting(props) {
     /**
      * Handle Functions
      */
-    let handleFastWindowClose = (event) => {
+    const handleFastWindowClose = useCallback((event) => {
         if (refModal.current !== event.target) {
             return;
         }
 
-        handleWindowClose();
-    };
-
-    let handleWindowClose = () => {
         ModalState.setter.hideAlgorithmSetting();
-    };
+    }, []);
 
     /**
      * Render Functions
@@ -77,7 +73,7 @@ export default function AlgorithmSetting(props) {
                     <div className="mhwc-icons_bundle">
                         <FunctionalButton
                             iconName="times" altName={_('close')}
-                            onClick={handleWindowClose} />
+                            onClick={ModalState.setter.hideAlgorithmSetting} />
                     </div>
                 </div>
                 <div className="mhwc-list">

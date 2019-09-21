@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -29,10 +29,21 @@ import zhTWChangelog from 'files/md/langs/zhTW/changelog.md';
 import jaJPChangelog from 'files/md/langs/jaJP/changelog.md';
 import enUSChangelog from 'files/md/langs/enUS/changelog.md';
 
-let ChangelogMap = {
+/**
+ * Variables
+ */
+const ChangelogMap = {
     zhTW: zhTWChangelog,
     jaJP: jaJPChangelog,
     enUS: enUSChangelog
+};
+
+/**
+ * Handle Functions
+ */
+const getChangelog = () => {
+    return Helper.isNotEmpty(ChangelogMap[Status.get('sys:lang')])
+        ? ChangelogMap[Status.get('sys:lang')] : false;
 };
 
 export default function Changelog(props) {
@@ -57,25 +68,13 @@ export default function Changelog(props) {
     /**
      * Handle Functions
      */
-    let handleFastWindowClose = (event) => {
+    const handleFastWindowClose = useCallback((event) => {
         if (refModal.current !== event.target) {
             return;
         }
 
-        handleWindowClose();
-    };
-
-    let handleWindowClose = () => {
         ModalState.setter.hideChangelog();
-    };
-
-    /**
-     * Render Functions
-     */
-    let renderChangelog = () => {
-        return Helper.isNotEmpty(ChangelogMap[Status.get('sys:lang')])
-            ? ChangelogMap[Status.get('sys:lang')] : false;
-    };
+    }, []);
 
     return stateIsShow ? (
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
@@ -86,11 +85,11 @@ export default function Changelog(props) {
                     <div className="mhwc-icons_bundle">
                         <FunctionalButton
                             iconName="times" altName={_('close')}
-                            onClick={handleWindowClose} />
+                            onClick={ModalState.setter.hideChangelog} />
                     </div>
                 </div>
                 <div className="mhwc-list">
-                    <div className="mhwc-article" dangerouslySetInnerHTML={{__html: renderChangelog()}}></div>
+                    <div className="mhwc-article" dangerouslySetInnerHTML={{__html: getChangelog()}}></div>
                 </div>
             </div>
         </div>

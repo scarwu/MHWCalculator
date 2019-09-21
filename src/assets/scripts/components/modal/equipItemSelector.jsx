@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Fragment, useState, useEffect, useRef, useMemo, useCallback } from 'react';
+import React, { Fragment, useState, useEffect, useCallback, useMemo, useRef } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -30,12 +30,12 @@ import FunctionalSelector from 'components/common/functionalSelector';
 import FunctionalInput from 'components/common/functionalInput';
 import SharpnessBar from 'components/common/sharpnessBar';
 
-// Load Constant
-import Constant from 'constant';
-
 // Load State Control
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
+
+// Load Constant
+import Constant from 'constant';
 
 /**
  * Variables
@@ -47,6 +47,378 @@ const weaponTypeList = Constant.weaponTypes.map((type) => {
 const rareList = [12, 11, 10, 9, 8, 7, 6, 5].map((rare) => {
     return { key: rare, value: _('rare') + `: ${rare}` };
 });
+
+/**
+ * Handle Functions
+ */
+const handleItemPickUp = (bypassData, itemId) => {
+    if (Helper.isNotEmpty(bypassData.enhanceIndex)) {
+        bypassData.enhanceId = itemId;
+    } else if (Helper.isNotEmpty(bypassData.slotIndex)) {
+        bypassData.slotId = itemId;
+    } else {
+        bypassData.equipId = itemId;
+    }
+
+    CommonState.setter.setCurrentEquip(bypassData);
+    ModalState.setter.hideEquipItemSelector();
+};
+
+const handleItemToggle = (itemType, itemId) => {
+    CommonState.setter.toggleInventoryEquip({
+        type: itemType,
+        id: itemId
+    });
+};
+
+/**
+ * Render Functions
+ */
+const renderWeaponItem = (weapon, bypassData) => {
+    let originalSharpness = null;
+    let enhancedSharpness = null;
+
+    if (Helper.isNotEmpty(weapon.sharpness)) {
+        originalSharpness = Helper.deepCopy(weapon.sharpness);
+        enhancedSharpness = Helper.deepCopy(weapon.sharpness);
+        enhancedSharpness.value += 50;
+    }
+
+    if (Helper.isNotEmpty(weapon.element.attack)
+        && Helper.isEmpty(weapon.element.attack.maxValue)
+    ) {
+        weapon.element.attack.maxValue = '?';
+    }
+
+    if (Helper.isNotEmpty(weapon.element.status)
+        && Helper.isEmpty(weapon.element.status.maxValue)
+    ) {
+        weapon.element.status.maxValue = '?';
+    }
+
+    return (
+        <div key={weapon.id} className="mhwc-item mhwc-item-2-step">
+            <div className="col-12 mhwc-name">
+                <span>{_(weapon.name)} (R{weapon.rare})</span>
+
+                <div className="mhwc-icons_bundle">
+                    <FunctionalButton
+                        iconName={weapon.isInclude ? 'star' : 'star-o'}
+                        altName={weapon.isInclude ? _('exclude') : _('include')}
+                        onClick={() => {handleItemToggle('weapon', weapon.id)}} />
+
+                    {(false === weapon.isSelect) ? (
+                        <FunctionalButton
+                            iconName="check" altName={_('select')}
+                            onClick={() => {handleItemPickUp(bypassData, weapon.id)}} />
+                    ) : false}
+                </div>
+            </div>
+            <div className="col-12 mhwc-content">
+                <div className="col-3 mhwc-name">
+                    <span>{_('series')}</span>
+                </div>
+                <div className="col-9 mhwc-value">
+                    <span>{_(weapon.series)}</span>
+                </div>
+
+                <div className="col-3 mhwc-name">
+                    <span>{_('attack')}</span>
+                </div>
+                <div className="col-3 mhwc-value">
+                    <span>{weapon.attack}</span>
+                </div>
+
+                <div className="col-3 mhwc-name">
+                    <span>{_('criticalRate')}</span>
+                </div>
+                <div className="col-3 mhwc-value">
+                    <span>{weapon.criticalRate}</span>
+                </div>
+
+                {Helper.isNotEmpty(weapon.sharpness) ? (
+                    <Fragment>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('sharpness')}</span>
+                        </div>
+                        <div className="col-9 mhwc-value mhwc-sharpness">
+                            <SharpnessBar data={originalSharpness} />
+                            <SharpnessBar data={enhancedSharpness} />
+                        </div>
+                    </Fragment>
+                ) : false}
+
+                {Helper.isNotEmpty(weapon.element.attack) ? (
+                    <Fragment>
+                        <div className="col-3 mhwc-name">
+                            <span>{_(weapon.element.attack.type)}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            {weapon.element.attack.isHidden ? (
+                                <span>({weapon.element.attack.minValue}-{weapon.element.attack.maxValue})</span>
+                            ) : (
+                                <span>{weapon.element.attack.minValue}-{weapon.element.attack.maxValue}</span>
+                            )}
+                        </div>
+                    </Fragment>
+                ) : false}
+
+                {Helper.isNotEmpty(weapon.element.status) ? (
+                    <Fragment>
+                        <div className="col-3 mhwc-name">
+                            <span>{_(weapon.element.status.type)}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            {weapon.element.status.isHidden ? (
+                                <span>({weapon.element.status.minValue}-{weapon.element.status.maxValue})</span>
+                            ) : (
+                                <span>{weapon.element.status.minValue}-{weapon.element.status.maxValue}</span>
+                            )}
+                        </div>
+                    </Fragment>
+                ) : false}
+
+                <div className="col-3 mhwc-name">
+                    <span>{_('elderseal')}</span>
+                </div>
+                <div className="col-3 mhwc-value">
+                    {Helper.isNotEmpty(weapon.elderseal) ? (
+                        <span>{_(weapon.elderseal.affinity)}</span>
+                    ) : false}
+                </div>
+
+                <div className="col-3 mhwc-name">
+                    <span>{_('defense')}</span>
+                </div>
+                <div className="col-3 mhwc-value">
+                    <span>{weapon.defense}</span>
+                </div>
+
+                <div className="col-3 mhwc-name">
+                    <span>{_('slot')}</span>
+                </div>
+                <div className="col-3 mhwc-value">
+                    {weapon.slots.map((slot, index) => {
+                        return (
+                            <span key={index}>[{slot.size}]</span>
+                        );
+                    })}
+                </div>
+
+                {weapon.skills.map((skill, index) => {
+                    let skillInfo = SkillDataset.getInfo(skill.id);
+
+                    return Helper.isNotEmpty(skillInfo) ? (
+                        <Fragment>
+                            <div className="col-12 mhwc-name">
+                                <span>{_(skillInfo.name)} Lv.{skill.level}</span>
+                            </div>
+                            <div className="col-12 mhwc-value mhwc-description">
+                                <span>{_(skillInfo.list[skill.level - 1].description)}</span>
+                            </div>
+                        </Fragment>
+                    ) : false;
+                })}
+            </div>
+        </div>
+    );
+};
+
+const renderArmorItem = (armor, bypassData) => {
+    let setInfo = Helper.isNotEmpty(armor.set)
+        ? SetDataset.getInfo(armor.set.id) : false;
+
+    return (
+        <div key={armor.id} className="mhwc-item mhwc-item-2-step">
+            <div className="col-12 mhwc-name">
+                <span>{_(armor.name)} (R{armor.rare})</span>
+
+                <div className="mhwc-icons_bundle">
+                    <FunctionalButton
+                        iconName={armor.isInclude ? 'star' : 'star-o'}
+                        altName={armor.isInclude ? _('exclude') : _('include')}
+                        onClick={() => {handleItemToggle(armor.type, armor.id)}} />
+
+                    {(false === armor.isSelect) ? (
+                        <FunctionalButton
+                            iconName="check" altName={_('select')}
+                            onClick={() => {handleItemPickUp(bypassData, armor.id)}} />
+                    ) : false}
+                </div>
+            </div>
+            <div className="col-12 mhwc-content">
+                <div className="col-3 mhwc-name">
+                    <span>{_('series')}</span>
+                </div>
+                <div className="col-9 mhwc-value">
+                    <span>{_(armor.series)}</span>
+                </div>
+
+                <div className="col-3 mhwc-name">
+                    <span>{_('defense')}</span>
+                </div>
+                <div className="col-3 mhwc-value">
+                    <span>{armor.defense}</span>
+                </div>
+
+                {Constant.resistances.map((resistanceType) => {
+                    return (
+                        <Fragment>
+                            <div className="col-3 mhwc-name">
+                                <span>{_('resistance')}: {_(resistanceType)}</span>
+                            </div>
+                            <div className="col-3 mhwc-value">
+                                <span>{armor.resistance[resistanceType]}</span>
+                            </div>
+                        </Fragment>
+                    );
+                })}
+
+                <div className="col-3 mhwc-name">
+                    <span>{_('slot')}</span>
+                </div>
+                <div className="col-9 mhwc-value">
+                    {armor.slots.map((slot, index) => {
+                        return (
+                            <span key={index}>[{slot.size}]</span>
+                        );
+                    })}
+                </div>
+
+                {Helper.isEmpty(setInfo) ? (
+                    <Fragment>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('set')}</span>
+                        </div>
+                        <div className="col-9 mhwc-value">
+                            <span>{_(setInfo.name)}</span>
+                        </div>
+                    </Fragment>
+                ) : false}
+
+                {armor.skills.map((skill, index) => {
+                    let skillInfo = SkillDataset.getInfo(skill.id);
+
+                    return Helper.isNotEmpty(skillInfo) ? (
+                        <Fragment>
+                            <div className="col-12 mhwc-name">
+                                <span>{_(skillInfo.name)} Lv.{skill.level}</span>
+                            </div>
+                            <div className="col-12 mhwc-value mhwc-description">
+                                <span>{_(skillInfo.list[skill.level - 1].description)}</span>
+                            </div>
+                        </Fragment>
+                    ) : false;
+                })}
+            </div>
+        </div>
+    );
+};
+
+const renderCharmItem = (charm, bypassData) => {
+    return (
+        <div key={charm.id} className="mhwc-item mhwc-item-2-step">
+            <div className="col-12 mhwc-name">
+                <span>{_(charm.name)} (R{charm.rare})</span>
+
+                <div className="mhwc-icons_bundle">
+                    <FunctionalButton
+                        iconName={charm.isInclude ? 'star' : 'star-o'}
+                        altName={charm.isInclude ? _('exclude') : _('include')}
+                        onClick={() => {handleItemToggle('charm', charm.id)}} />
+
+                    {(false === charm.isSelect) ? (
+                        <FunctionalButton
+                            iconName="check" altName={_('select')}
+                            onClick={() => {handleItemPickUp(bypassData, charm.id)}} />
+                    ) : false}
+                </div>
+            </div>
+            <div className="col-12 mhwc-content">
+                {charm.skills.map((skill, index) => {
+                    let skillInfo = SkillDataset.getInfo(skill.id);
+
+                    return Helper.isNotEmpty(skillInfo) ? (
+                        <Fragment>
+                            <div className="col-12 mhwc-name">
+                                <span>{_(skillInfo.name)} Lv.{skill.level}</span>
+                            </div>
+                            <div className="col-12 mhwc-value mhwc-description">
+                                <span>{_(skillInfo.list[skill.level - 1].description)}</span>
+                            </div>
+                        </Fragment>
+                    ) : false;
+                })}
+            </div>
+        </div>
+    );
+};
+
+const renderJewelItem = (jewel, bypassData) => {
+    return (
+        <div key={jewel.id} className="mhwc-item mhwc-item-2-step">
+            <div className="col-12 mhwc-name">
+                <span>[{jewel.size}] {_(jewel.name)} (R{jewel.rare})</span>
+
+                <div className="mhwc-icons_bundle">
+                    {(false === enhance.isSelect) ? (
+                        <FunctionalButton
+                            iconName="check" altName={_('select')}
+                            onClick={() => {handleItemPickUp(bypassData, jewel.id)}} />
+                    ) : false}
+                </div>
+            </div>
+            <div className="col-12 mhwc-content">
+                {jewel.skills.map((skill, index) => {
+                    let skillInfo = SkillDataset.getInfo(skill.id);
+
+                    return Helper.isNotEmpty(skillInfo) ? (
+                        <Fragment>
+                            <div className="col-12 mhwc-name">
+                                <span>{_(skillInfo.name)} Lv.{skill.level}</span>
+                            </div>
+                            <div className="col-12 mhwc-value mhwc-description">
+                                <span>{_(skillInfo.list[skill.level - 1].description)}</span>
+                            </div>
+                        </Fragment>
+                    ) : false;
+                })}
+            </div>
+        </div>
+    );
+};
+
+const renderEnhanceItem = (enhance, bypassData) => {
+    return (
+        <div key={enhance.id} className="mhwc-item mhwc-item-2-step">
+            <div className="col-12 mhwc-name">
+                <span>{_(enhance.name)}</span>
+
+                <div className="mhwc-icons_bundle">
+                    {(false === enhance.isSelect) ? (
+                        <FunctionalButton
+                            iconName="check" altName={_('select')}
+                            onClick={() => {handleItemPickUp(bypassData, enhance.id)}} />
+                    ) : false}
+                </div>
+            </div>
+            <div className="col-12 mhwc-content">
+                {enhance.list.map((item, index) => {
+                    return (
+                        <Fragment>
+                            <div className="col-2 mhwc-name">
+                                <span>Lv.{item.level}</span>
+                            </div>
+                            <div className="col-10 mhwc-value mhwc-description">
+                                <span>{_(item.description)}</span>
+                            </div>
+                        </Fragment>
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
 
 export default function EquipItemSelector(props) {
 
@@ -75,14 +447,22 @@ export default function EquipItemSelector(props) {
 
         if (Helper.isNotEmpty(stateBypassData.enhanceIndex)) {
             mode = 'enhance';
-            includeList = EnhanceDataset.getItems();
+            includeList = EnhanceDataset.getItems().map((enhanceInfo) => {
+                enhanceInfo.isSelect = (stateBypassData.enhanceId === enhanceInfo.id);
+
+                return enhanceInfo;
+            });
         } else if (Helper.isNotEmpty(stateBypassData.slotIndex)) {
             mode = 'jewel';
 
             for (let size = stateBypassData.slotSize; size >= 1; size--) {
                 for (let rare = 9; rare >= 5; rare--) {
                     includeList = includeList.concat(
-                        JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems()
+                        JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems().map((jewelInfo) => {
+                            jewelInfo.isSelect = (stateBypassData.jewelId === jewelInfo.id);
+
+                            return jewelInfo;
+                        })
                     );
                 }
             }
@@ -93,34 +473,22 @@ export default function EquipItemSelector(props) {
             type = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.type : Constant.weaponTypes[0];
 
             Constant.weaponTypes.forEach((weaponType) => {
-                for (let rare = 12; rare >= 5; rare--) {
-                    WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((equip) => {
+                [12, 11, 10, 9, 8, 7, 6, 5, 0].forEach((rare) => {
+                    WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((weaponInfo) => {
+                        weaponInfo.isSelect = (stateBypassData.equipId === weaponInfo.id);
+
                         if (Helper.isNotEmpty(stateInventory['weapon'])
-                            && true === stateInventory['weapon'][equip.id]
+                            && true === stateInventory['weapon'][weaponInfo.id]
                         ) {
-                            equip.isInclude = false;
+                            weaponInfo.isInclude = false;
 
-                            excludeList.push(equip);
+                            excludeList.push(weaponInfo);
                         } else {
-                            equip.isInclude = true;
+                            weaponInfo.isInclude = true;
 
-                            includeList.push(equip);
+                            includeList.push(weaponInfo);
                         }
                     });
-                }
-
-                WeaponDataset.typeIs(weaponType).rareIs(0).getItems().forEach((equip) => {
-                    if (Helper.isNotEmpty(stateInventory['weapon'])
-                        && true === stateInventory['weapon'][equip.id]
-                    ) {
-                        equip.isInclude = false;
-
-                        excludeList.push(equip);
-                    } else {
-                        equip.isInclude = true;
-
-                        includeList.push(equip);
-                    }
                 });
             });
         } else if ('helm' === stateBypassData.equipType
@@ -132,49 +500,39 @@ export default function EquipItemSelector(props) {
             mode = 'armor';
             type = stateBypassData.equipType;
 
-            for (let rare = 12; rare >= 5; rare--) {
-                ArmorDataset.typeIs(stateBypassData.equipType).rareIs(rare).getItems().forEach((equip) => {
-                    if (Helper.isNotEmpty(stateInventory[equip.type])
-                        && true === stateInventory[equip.type][equip.id]
+            [12, 11, 10, 9, 8, 7, 6, 5, 0].forEach((rare) => {
+                ArmorDataset.typeIs(stateBypassData.equipType).rareIs(rare).getItems().forEach((armorInfo) => {
+                    armorInfo.isSelect = (stateBypassData.equipId === armorInfo.id);
+
+                    if (Helper.isNotEmpty(stateInventory[armorInfo.type])
+                        && true === stateInventory[armorInfo.type][armorInfo.id]
                     ) {
-                        equip.isInclude = false;
+                        armorInfo.isInclude = false;
 
-                        excludeList.push(equip);
+                        excludeList.push(armorInfo);
                     } else {
-                        equip.isInclude = true;
+                        armorInfo.isInclude = true;
 
-                        includeList.push(equip);
+                        includeList.push(armorInfo);
                     }
                 });
-            }
-
-            ArmorDataset.typeIs(stateBypassData.equipType).rareIs(0).getItems().forEach((equip) => {
-                if (Helper.isNotEmpty(stateInventory[equip.type])
-                    && true === stateInventory[equip.type][equip.id]
-                ) {
-                    equip.isInclude = false;
-
-                    excludeList.push(equip);
-                } else {
-                    equip.isInclude = true;
-
-                    includeList.push(equip);
-                }
             });
         } else if ('charm' === stateBypassData.equipType) {
             mode = 'charm';
 
-            CharmDataset.getItems().forEach((equip) => {
+            CharmDataset.getItems().forEach((charmInfo) => {
+                charmInfo.isSelect = (stateBypassData.equipId === charmInfo.id);
+
                 if (Helper.isNotEmpty(stateInventory['charm'])
-                    && true === stateInventory['charm'][equip.id]
+                    && true === stateInventory['charm'][charmInfo.id]
                 ) {
-                    equip.isInclude = false;
+                    charmInfo.isInclude = false;
 
-                    excludeList.push(equip);
+                    excludeList.push(charmInfo);
                 } else {
-                    equip.isInclude = true;
+                    charmInfo.isInclude = true;
 
-                    includeList.push(equip);
+                    includeList.push(charmInfo);
                 }
             });
         }
@@ -204,557 +562,202 @@ export default function EquipItemSelector(props) {
     /**
      * Handle Functions
      */
-    let handleFastWindowClose = (event) => {
+    const handleFastWindowClose = useCallback((event) => {
         if (refModal.current !== event.target) {
             return;
         }
 
-        handleWindowClose();
-    };
-
-    let handleWindowClose = () => {
         ModalState.setter.hideEquipItemSelector();
-    };
+    }, []);
 
-    let handleItemPickUp = (itemId) => {
-        let bypassData = Helper.deepCopy(stateBypassData);
-
-        if (Helper.isNotEmpty(bypassData.enhanceIndex)) {
-            bypassData.enhanceId = itemId;
-        } else if (Helper.isNotEmpty(bypassData.slotIndex)) {
-            bypassData.slotId = itemId;
-        } else {
-            bypassData.equipId = itemId;
-        }
-
-        CommonState.setter.setCurrentEquip(bypassData);
-
-        handleWindowClose();
-    };
-
-    let handleItemToggle = (itemType, itemId) => {
-        CommonState.setter.toggleInventoryEquip({
-            type: itemType,
-            id: itemId
-        });
-    };
-
-    let handleSegmentInput = (event) => {
+    const handleSegmentInput = useCallback((event) => {
         let segment = event.target.value;
 
         segment = (0 !== segment.length)
             ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
 
         updateSegment(segment);
-    };
+    }, []);
 
-    let handleTypeChange = (event) => {
+    const handleTypeChange = useCallback((event) => {
         updateType(event.target.value);
-    };
+    }, []);
 
-    let handleRareChange = (event) => {
+    const handleRareChange = useCallback((event) => {
         updateRare(parseInt(event.target.value, 10));
-    };
+    }, []);
 
-    /**
-     * Render Functions
-     */
-    let renderWeaponItem = () => {
-        return stateSortedList.map((data, index) => {
-            if (data.type !== stateType) {
-                return;
-            }
-
-            if (data.rare !== stateRare) {
-                return;
-            }
-
-            // Create Text
-            let text = _(data.name);
-            text += _(data.series);
-            text += _(data.type);
-
-            if (Helper.isNotEmpty(data.element)
-                && Helper.isNotEmpty(data.element.attack)
-            ) {
-                text += _(data.element.attack.type);
-            }
-
-            if (Helper.isNotEmpty(data.element)
-                && Helper.isNotEmpty(data.element.status)
-            ) {
-                text += _(data.element.status.type);
-            }
-
-            data.skills.forEach((data) => {
-                let skillInfo = SkillDataset.getInfo(data.id);
-
-                if (Helper.isNotEmpty(skillInfo)) {
-                    text += _(skillInfo.name);
-                }
-            });
-
-            // Search Nameword
-            if (Helper.isNotEmpty(stateSegment)
-                && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
-            ) {
-                return false;
-            }
-
-            let originalSharpness = null;
-            let enhancedSharpness = null;
-
-            if (Helper.isNotEmpty(data.sharpness)) {
-                originalSharpness = Helper.deepCopy(data.sharpness);
-                enhancedSharpness = Helper.deepCopy(data.sharpness);
-                enhancedSharpness.value += 50;
-            }
-
-            if (Helper.isNotEmpty(data.element.attack)
-                && Helper.isEmpty(data.element.attack.maxValue)
-            ) {
-                data.element.attack.maxValue = '?';
-            }
-
-            if (Helper.isNotEmpty(data.element.status)
-                && Helper.isEmpty(data.element.status.maxValue)
-            ) {
-                data.element.status.maxValue = '?';
-            }
-
-            return (
-                <div key={data.id} className="mhwc-item mhwc-item-2-step">
-                    <div className="col-12 mhwc-name">
-                        <span>{_(data.name)} (R{data.rare})</span>
-
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalButton
-                                iconName={data.isInclude ? 'star' : 'star-o'}
-                                altName={data.isInclude ? _('exclude') : _('include')}
-                                onClick={() => {handleItemToggle('weapon', data.id)}} />
-
-                            {(stateBypassData.equipId !== data.id) ? (
-                                <FunctionalButton
-                                    iconName="check" altName={_('select')}
-                                    onClick={() => {handleItemPickUp(data.id)}} />
-                            ) : false}
-                        </div>
-                    </div>
-                    <div className="col-12 mhwc-content">
-                        <div className="col-3 mhwc-name">
-                            <span>{_('series')}</span>
-                        </div>
-                        <div className="col-9 mhwc-value">
-                            <span>{_(data.series)}</span>
-                        </div>
-
-                        <div className="col-3 mhwc-name">
-                            <span>{_('attack')}</span>
-                        </div>
-                        <div className="col-3 mhwc-value">
-                            <span>{data.attack}</span>
-                        </div>
-
-                        <div className="col-3 mhwc-name">
-                            <span>{_('criticalRate')}</span>
-                        </div>
-                        <div className="col-3 mhwc-value">
-                            <span>{data.criticalRate}</span>
-                        </div>
-
-                        <div className="col-3 mhwc-name">
-                            <span>{_('sharpness')}</span>
-                        </div>
-                        <div className="col-9 mhwc-value mhwc-sharpness">
-                            {Helper.isNotEmpty(data.sharpness) ? <SharpnessBar data={originalSharpness} /> :  false}
-                            {Helper.isNotEmpty(data.sharpness) ? <SharpnessBar data={enhancedSharpness} /> :  false}
-                        </div>
-
-                        {Helper.isNotEmpty(data.element.attack) ? (
-                            <Fragment>
-                                <div className="col-3 mhwc-name">
-                                    <span>{_(data.element.attack.type)}</span>
-                                </div>
-                                <div className="col-3 mhwc-value">
-                                    {data.element.attack.isHidden ? (
-                                        <span>({data.element.attack.minValue}-{data.element.attack.maxValue})</span>
-                                    ) : (
-                                        <span>{data.element.attack.minValue}-{data.element.attack.maxValue}</span>
-                                    )}
-                                </div>
-                            </Fragment>
-                        ) : false}
-
-                        {Helper.isNotEmpty(data.element.status) ? (
-                            <Fragment>
-                                <div className="col-3 mhwc-name">
-                                    <span>{_(data.element.status.type)}</span>
-                                </div>
-                                <div className="col-3 mhwc-value">
-                                    {data.element.status.isHidden ? (
-                                        <span>({data.element.status.minValue}-{data.element.status.maxValue})</span>
-                                    ) : (
-                                        <span>{data.element.status.minValue}-{data.element.status.maxValue}</span>
-                                    )}
-                                </div>
-                            </Fragment>
-                        ) : false}
-
-                        <div className="col-3 mhwc-name">
-                            <span>{_('elderseal')}</span>
-                        </div>
-                        <div className="col-3 mhwc-value">
-                            {Helper.isNotEmpty(data.elderseal) ? (
-                                <span>{_(data.elderseal.affinity)}</span>
-                            ) : false}
-                        </div>
-
-                        <div className="col-3 mhwc-name">
-                            <span>{_('defense')}</span>
-                        </div>
-                        <div className="col-3 mhwc-value">
-                            <span>{data.defense}</span>
-                        </div>
-
-                        <div className="col-3 mhwc-name">
-                            <span>{_('slot')}</span>
-                        </div>
-                        <div className="col-3 mhwc-value">
-                            {data.slots.map((data, index) => {
-                                return (
-                                    <span key={index}>[{data.size}]</span>
-                                );
-                            })}
-                        </div>
-
-                        {data.skills.map((data, index) => {
-                            let skillInfo = SkillDataset.getInfo(data.id);
-
-                            return Helper.isNotEmpty(skillInfo) ? (
-                                <Fragment>
-                                    <div className="col-12 mhwc-name">
-                                        <span>{_(skillInfo.name)} Lv.{data.level}</span>
-                                    </div>
-                                    <div className="col-12 mhwc-value mhwc-description">
-                                        <span>{_(skillInfo.list[data.level - 1].description)}</span>
-                                    </div>
-                                </Fragment>
-                            ) : false;
-                        })}
-                    </div>
-                </div>
-            );
-        });
-    };
-
-    let renderArmorItem = () => {
-        return stateSortedList.map((data, index) => {
-            if (data.rare !== stateRare) {
-                return;
-            }
-
-            // Create Text
-            let text = _(data.name);
-            text += _(data.series);
-
-            if (Helper.isNotEmpty(data.set)) {
-                let setInfo = SetDataset.getInfo(data.set.id);
-
-                if (Helper.isNotEmpty(setInfo)) {
-                    text += _(setInfo.name);
-                }
-            }
-
-            data.skills.forEach((data) => {
-                let skillInfo = SkillDataset.getInfo(data.id);
-
-                if (Helper.isNotEmpty(skillInfo)) {
-                    text += _(skillInfo.name);
-                }
-            });
-
-            // Search Nameword
-            if (Helper.isNotEmpty(stateSegment)
-                && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
-            ) {
-                return false;
-            }
-
-            let setInfo = Helper.isNotEmpty(data.set)
-                ? SetDataset.getInfo(data.set.id) : false;
-
-            return (
-                <div key={data.id} className="mhwc-item mhwc-item-2-step">
-                    <div className="col-12 mhwc-name">
-                        <span>{_(data.name)} (R{data.rare})</span>
-
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalButton
-                                iconName={data.isInclude ? 'star' : 'star-o'}
-                                altName={data.isInclude ? _('exclude') : _('include')}
-                                onClick={() => {handleItemToggle(data.type, data.id)}} />
-
-                            {(stateBypassData.equipId !== data.id) ? (
-                                <FunctionalButton
-                                    iconName="check" altName={_('select')}
-                                    onClick={() => {handleItemPickUp(data.id)}} />
-                            ) : false}
-                        </div>
-                    </div>
-                    <div className="col-12 mhwc-content">
-                        <div className="col-3 mhwc-name">
-                            <span>{_('series')}</span>
-                        </div>
-                        <div className="col-9 mhwc-value">
-                            <span>{_(data.series)}</span>
-                        </div>
-
-                        <div className="col-3 mhwc-name">
-                            <span>{_('defense')}</span>
-                        </div>
-                        <div className="col-3 mhwc-value">
-                            <span>{data.defense}</span>
-                        </div>
-
-                        {Constant.resistances.map((resistanceType) => {
-                            return (
-                                <Fragment>
-                                    <div className="col-3 mhwc-name">
-                                        <span>{_('resistance')}: {_(resistanceType)}</span>
-                                    </div>
-                                    <div className="col-3 mhwc-value">
-                                        <span>{data.resistance[resistanceType]}</span>
-                                    </div>
-                                </Fragment>
-                            );
-                        })}
-
-                        <div className="col-3 mhwc-name">
-                            <span>{_('slot')}</span>
-                        </div>
-                        <div className="col-9 mhwc-value">
-                            {data.slots.map((data, index) => {
-                                return (
-                                    <span key={index}>[{data.size}]</span>
-                                );
-                            })}
-                        </div>
-
-                        {Helper.isEmpty(setInfo) ? (
-                            <Fragment>
-                                <div className="col-3 mhwc-name">
-                                    <span>{_('set')}</span>
-                                </div>
-                                <div className="col-9 mhwc-value">
-                                    <span>{_(setInfo.name)}</span>
-                                </div>
-                            </Fragment>
-                        ) : false}
-
-                        {data.skills.map((data, index) => {
-                            let skillInfo = SkillDataset.getInfo(data.id);
-
-                            return Helper.isNotEmpty(skillInfo) ? (
-                                <Fragment>
-                                    <div className="col-12 mhwc-name">
-                                        <span>{_(skillInfo.name)} Lv.{data.level}</span>
-                                    </div>
-                                    <div className="col-12 mhwc-value mhwc-description">
-                                        <span>{_(skillInfo.list[data.level - 1].description)}</span>
-                                    </div>
-                                </Fragment>
-                            ) : false;
-                        })}
-                    </div>
-                </div>
-            );
-        });
-    };
-
-    let renderCharmItem = () => {
-        return stateSortedList.map((data, index) => {
-
-            // Create Text
-            let text = _(data.name);
-
-            data.skills.forEach((data) => {
-                let skillInfo = SkillDataset.getInfo(data.id);
-
-                if (Helper.isNotEmpty(skillInfo)) {
-                    text += _(skillInfo.anem);
-                }
-            });
-
-            // Search Nameword
-            if (Helper.isNotEmpty(stateSegment)
-                && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
-            ) {
-                return false;
-            }
-
-            return (
-                <div key={data.id} className="mhwc-item mhwc-item-2-step">
-                    <div className="col-12 mhwc-name">
-                        <span>{_(data.name)} (R{data.rare})</span>
-
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalButton
-                                iconName={data.isInclude ? 'star' : 'star-o'}
-                                altName={data.isInclude ? _('exclude') : _('include')}
-                                onClick={() => {handleItemToggle('charm', data.id)}} />
-
-                            {(stateBypassData.equipId !== data.id) ? (
-                                <FunctionalButton
-                                    iconName="check" altName={_('select')}
-                                    onClick={() => {handleItemPickUp(data.id)}} />
-                            ) : false}
-                        </div>
-                    </div>
-                    <div className="col-12 mhwc-content">
-                        {data.skills.map((data, index) => {
-                            let skillInfo = SkillDataset.getInfo(data.id);
-
-                            return Helper.isNotEmpty(skillInfo) ? (
-                                <Fragment>
-                                    <div className="col-12 mhwc-name">
-                                        <span>{_(skillInfo.name)} Lv.{data.level}</span>
-                                    </div>
-                                    <div className="col-12 mhwc-value mhwc-description">
-                                        <span>{_(skillInfo.list[data.level - 1].description)}</span>
-                                    </div>
-                                </Fragment>
-                            ) : false;
-                        })}
-                    </div>
-                </div>
-            );
-        });
-    };
-
-    let renderJewelItem = () => {
-        return stateSortedList.map((data, index) => {
-
-            // Create Text
-            let text = _(data.name);
-
-            data.skills.forEach((skill) => {
-                let skillInfo = SkillDataset.getInfo(skill.id);
-
-                if (Helper.isNotEmpty(skillInfo)) {
-                    text += _(skillInfo.name);
-                }
-            });
-
-            // Search Nameword
-            if (Helper.isNotEmpty(stateSegment)
-                && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
-            ) {
-                return false;
-            }
-
-            return (
-                <div key={data.id} className="mhwc-item mhwc-item-2-step">
-                    <div className="col-12 mhwc-name">
-                        <span>[{data.size}] {_(data.name)} (R{data.rare})</span>
-
-                        <div className="mhwc-icons_bundle">
-                            {(stateBypassData.jewelId !== data.id) ? (
-                                <FunctionalButton
-                                    iconName="check" altName={_('select')}
-                                    onClick={() => {handleItemPickUp(data.id)}} />
-                            ) : false}
-                        </div>
-                    </div>
-                    <div className="col-12 mhwc-content">
-                        {data.skills.map((data, index) => {
-                            let skillInfo = SkillDataset.getInfo(data.id);
-
-                            return Helper.isNotEmpty(skillInfo) ? (
-                                <Fragment>
-                                    <div className="col-12 mhwc-name">
-                                        <span>{_(skillInfo.name)} Lv.{data.level}</span>
-                                    </div>
-                                    <div className="col-12 mhwc-value mhwc-description">
-                                        <span>{_(skillInfo.list[data.level - 1].description)}</span>
-                                    </div>
-                                </Fragment>
-                            ) : false;
-                        })}
-                    </div>
-                </div>
-            );
-        });
-    };
-
-    let renderEnhanceItem = () => {
-        return stateSortedList.map((data, index) => {
-
-            // Create Text
-            let text = _(data.name);
-
-            data.list.forEach((data) => {
-                text += _(data.description);
-            });
-
-            // Search Nameword
-            if (Helper.isNotEmpty(stateSegment)
-                && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
-            ) {
-                return false;
-            }
-
-            return (
-                <div key={data.id} className="mhwc-item mhwc-item-2-step">
-                    <div className="col-12 mhwc-name">
-                        <span>{_(data.name)}</span>
-
-                        <div className="mhwc-icons_bundle">
-                            {(stateBypassData.enhanceId !== data.id) ? (
-                                <FunctionalButton
-                                    iconName="check" altName={_('select')}
-                                    onClick={() => {handleItemPickUp(data.id)}} />
-                            ) : false}
-                        </div>
-                    </div>
-                    <div className="col-12 mhwc-content">
-                        {data.list.map((skill, index) => {
-                            return (
-                                <Fragment>
-                                    <div className="col-2 mhwc-name">
-                                        <span>Lv.{skill.level}</span>
-                                    </div>
-                                    <div className="col-10 mhwc-value mhwc-description">
-                                        <span>{_(skill.description)}</span>
-                                    </div>
-                                </Fragment>
-                            );
-                        })}
-                    </div>
-                </div>
-            );
-        });
-    };
-
-    let renderContent = () => {
+    const getContent = useMemo(() => {
         if (Helper.isEmpty(stateBypassData)) {
             return false;
         }
 
         switch (stateMode) {
         case 'weapon':
-            return renderWeaponItem();
+            return stateSortedList.filter((data) => {
+                if (data.type !== stateType) {
+                    return false;
+                }
+
+                if (data.rare !== stateRare) {
+                    return false;
+                }
+
+                // Create Text
+                let text = _(data.name);
+                text += _(data.series);
+                text += _(data.type);
+
+                if (Helper.isNotEmpty(data.element)
+                    && Helper.isNotEmpty(data.element.attack)
+                ) {
+                    text += _(data.element.attack.type);
+                }
+
+                if (Helper.isNotEmpty(data.element)
+                    && Helper.isNotEmpty(data.element.status)
+                ) {
+                    text += _(data.element.status.type);
+                }
+
+                data.skills.forEach((data) => {
+                    let skillInfo = SkillDataset.getInfo(data.id);
+
+                    if (Helper.isNotEmpty(skillInfo)) {
+                        text += _(skillInfo.name);
+                    }
+                });
+
+                // Search Nameword
+                if (Helper.isNotEmpty(stateSegment)
+                    && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+                ) {
+                    return false;
+                }
+
+                return true;
+            }).map((data) => {
+                return renderWeaponItem(data, stateBypassData);
+            });
         case 'armor':
-            return renderArmorItem();
+            return stateSortedList.filter((data) => {
+                if (data.rare !== stateRare) {
+                    return false;
+                }
+
+                // Create Text
+                let text = _(data.name);
+                text += _(data.series);
+
+                if (Helper.isNotEmpty(data.set)) {
+                    let setInfo = SetDataset.getInfo(data.set.id);
+
+                    if (Helper.isNotEmpty(setInfo)) {
+                        text += _(setInfo.name);
+                    }
+                }
+
+                data.skills.forEach((data) => {
+                    let skillInfo = SkillDataset.getInfo(data.id);
+
+                    if (Helper.isNotEmpty(skillInfo)) {
+                        text += _(skillInfo.name);
+                    }
+                });
+
+                // Search Nameword
+                if (Helper.isNotEmpty(stateSegment)
+                    && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+                ) {
+                    return false;
+                }
+
+                return true;
+            }).map((data) => {
+                return renderArmorItem(data, stateBypassData);
+            });
         case 'charm':
-            return renderCharmItem();
+            return stateSortedList.filter((data) => {
+
+                // Create Text
+                let text = _(data.name);
+
+                data.skills.forEach((data) => {
+                    let skillInfo = SkillDataset.getInfo(data.id);
+
+                    if (Helper.isNotEmpty(skillInfo)) {
+                        text += _(skillInfo.anem);
+                    }
+                });
+
+                // Search Nameword
+                if (Helper.isNotEmpty(stateSegment)
+                    && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+                ) {
+                    return false;
+                }
+
+                return true;
+            }).map((data) => {
+                return renderCharmItem(data, stateBypassData);
+            });
         case 'jewel':
-            return renderJewelItem();
+            return stateSortedList.filter((data) => {
+
+                // Create Text
+                let text = _(data.name);
+
+                data.skills.forEach((skill) => {
+                    let skillInfo = SkillDataset.getInfo(skill.id);
+
+                    if (Helper.isNotEmpty(skillInfo)) {
+                        text += _(skillInfo.name);
+                    }
+                });
+
+                // Search Nameword
+                if (Helper.isNotEmpty(stateSegment)
+                    && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+                ) {
+                    return false;
+                }
+
+                return true;
+            }).map((data) => {
+                return renderJewelItem(data, stateBypassData);
+            });
         case 'enhance':
-            return renderEnhanceItem();
+            return stateSortedList.filter((data) => {
+
+                // Create Text
+                let text = _(data.name);
+
+                data.list.forEach((data) => {
+                    text += _(data.description);
+                });
+
+                // Search Nameword
+                if (Helper.isNotEmpty(stateSegment)
+                    && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+                ) {
+                    return false;
+                }
+
+                return true;
+            }).map((data) => {
+                return renderEnhanceItem(data, stateBypassData);
+            });
         default:
             return false;
         }
-    };
+    }, [
+        stateBypassData,
+        stateMode,
+        stateRare,
+        stateType,
+        stateSortedList,
+        stateSegment
+    ]);
 
     return stateIsShow ? (
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
@@ -781,13 +784,13 @@ export default function EquipItemSelector(props) {
 
                         <FunctionalButton
                             iconName="times" altName={_('close')}
-                            onClick={handleWindowClose} />
+                            onClick={ModalState.setter.hideEquipItemSelector} />
 
                     </div>
                 </div>
                 <div className="mhwc-list">
                     <div className="mhwc-wrapper">
-                        {renderContent()}
+                        {getContent}
                     </div>
                 </div>
             </div>

@@ -26,13 +26,13 @@ import CandidateBundles from 'components/candidateBundles';
 import EquipsDisplayer from 'components/equipsDisplayer';
 import CharacterStatus from 'components/characterStatus';
 
-// Load Config & Constant
-import Config from 'config';
-import Constant from 'constant';
-
 // Load State Control
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
+
+// Load Config & Constant
+import Config from 'config';
+import Constant from 'constant';
 
 if ('production' === Config.env) {
     if (Config.buildTime !== Status.get('sys:buildTime')) {

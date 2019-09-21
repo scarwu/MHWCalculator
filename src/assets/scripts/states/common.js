@@ -525,7 +525,6 @@ const Setter = {
         });
     },
 
-
     // Required Equip Pins
     toggleRequiredEquipPins: (equipType) => {
         Store.dispatch({
