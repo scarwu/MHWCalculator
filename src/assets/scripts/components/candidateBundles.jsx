@@ -300,7 +300,6 @@ export default function CandidateBundles(props) {
         let requiredSkills = CommonState.getter.getRequiredSkills();
         let requiredEquipPins = CommonState.getter.getRequiredEquipPins();
         let currentEquips = CommonState.getter.getCurrentEquips();
-        let inventory = CommonState.getter.getInventory();
         let algorithmParams = CommonState.getter.getAlgorithmParams();
 
         // Create Required Equips
@@ -322,7 +321,6 @@ export default function CandidateBundles(props) {
                 requiredSets,
                 requiredSkills,
                 requiredEquips,
-                inventory,
                 algorithmParams
             );
             let stopTime = new Date().getTime();

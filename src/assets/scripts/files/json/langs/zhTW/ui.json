@@ -103,7 +103,7 @@
     "candidateBundle":      "備選組合",
     "equipBundle":          "已選裝備",
     "status":               "狀態",
-    "inventorySetting":     "裝備列表",
+    "inventorySetting":     "選擇列表",
     "bundleList":           "配裝清單",
     "changelog":            "更新紀錄"
 }

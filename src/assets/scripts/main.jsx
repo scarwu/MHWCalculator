@@ -23,7 +23,6 @@ import App from 'app';
 // Load Components
 import Changelog from 'components/modal/changelog';
 import AlgorithmSetting from 'components/modal/algorithmSetting';
-import InventorySetting from 'components/modal/inventorySetting';
 import SetItemSelector from 'components/modal/setItemSelector';
 import SkillItemSelector from 'components/modal/skillItemSelector';
 import EquipItemSelector from 'components/modal/equipItemSelector';
@@ -56,7 +55,6 @@ ReactDOM.render((
 
         <Changelog />
         <AlgorithmSetting />
-        <InventorySetting />
         <SetItemSelector />
         <SkillItemSelector />
         <EquipItemSelector />

@@ -51,7 +51,7 @@ let dataset = Skills.map((skill) => {
                 level: item[0],
                 description: item[1],
                 reaction: item[2],
-                idHidden: item[3]
+                isHidden: item[3]
             }
         })
     };

@@ -64,13 +64,6 @@ const handleItemPickUp = (bypassData, itemId) => {
     ModalState.setter.hideEquipItemSelector();
 };
 
-const handleItemToggle = (itemType, itemId) => {
-    CommonState.setter.toggleInventoryEquip({
-        type: itemType,
-        id: itemId
-    });
-};
-
 /**
  * Render Functions
  */
@@ -102,11 +95,6 @@ const renderWeaponItem = (weapon, bypassData) => {
                 <span>{_(weapon.name)} (R{weapon.rare})</span>
 
                 <div className="mhwc-icons_bundle">
-                    <FunctionalButton
-                        iconName={weapon.isInclude ? 'star' : 'star-o'}
-                        altName={weapon.isInclude ? _('exclude') : _('include')}
-                        onClick={() => {handleItemToggle('weapon', weapon.id)}} />
-
                     {(false === weapon.isSelect) ? (
                         <FunctionalButton
                             iconName="check" altName={_('select')}
@@ -234,11 +222,6 @@ const renderArmorItem = (armor, bypassData) => {
                 <span>{_(armor.name)} (R{armor.rare})</span>
 
                 <div className="mhwc-icons_bundle">
-                    <FunctionalButton
-                        iconName={armor.isInclude ? 'star' : 'star-o'}
-                        altName={armor.isInclude ? _('exclude') : _('include')}
-                        onClick={() => {handleItemToggle(armor.type, armor.id)}} />
-
                     {(false === armor.isSelect) ? (
                         <FunctionalButton
                             iconName="check" altName={_('select')}
@@ -322,11 +305,6 @@ const renderCharmItem = (charm, bypassData) => {
                 <span>{_(charm.name)} (R{charm.rare})</span>
 
                 <div className="mhwc-icons_bundle">
-                    <FunctionalButton
-                        iconName={charm.isInclude ? 'star' : 'star-o'}
-                        altName={charm.isInclude ? _('exclude') : _('include')}
-                        onClick={() => {handleItemToggle('charm', charm.id)}} />
-
                     {(false === charm.isSelect) ? (
                         <FunctionalButton
                             iconName="check" altName={_('select')}
@@ -427,7 +405,6 @@ export default function EquipItemSelector(props) {
      */
     const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowEquipItemSelector());
     const [stateBypassData, updateBypassData] = useState(ModalState.getter.getEquipItemSelectorBypassData());
-    const [stateInventory, updateInventory] = useState(CommonState.getter.getInventory());
     const [stateMode, updateMode] = useState(null);
     const [stateSortedList, updateSortedList] = useState([]);
     const [stateType, updateType] = useState(null);
@@ -474,20 +451,10 @@ export default function EquipItemSelector(props) {
 
             Constant.weaponTypes.forEach((weaponType) => {
                 [12, 11, 10, 9, 8, 7, 6, 5, 0].forEach((rare) => {
-                    WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().forEach((weaponInfo) => {
+                    includeList = WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().map((weaponInfo) => {
                         weaponInfo.isSelect = (stateBypassData.equipId === weaponInfo.id);
 
-                        if (Helper.isNotEmpty(stateInventory['weapon'])
-                            && true === stateInventory['weapon'][weaponInfo.id]
-                        ) {
-                            weaponInfo.isInclude = false;
-
-                            excludeList.push(weaponInfo);
-                        } else {
-                            weaponInfo.isInclude = true;
-
-                            includeList.push(weaponInfo);
-                        }
+                        return weaponInfo;
                     });
                 });
             });
@@ -501,60 +468,35 @@ export default function EquipItemSelector(props) {
             type = stateBypassData.equipType;
 
             [12, 11, 10, 9, 8, 7, 6, 5, 0].forEach((rare) => {
-                ArmorDataset.typeIs(stateBypassData.equipType).rareIs(rare).getItems().forEach((armorInfo) => {
+                includeList = ArmorDataset.typeIs(stateBypassData.equipType).rareIs(rare).getItems().map((armorInfo) => {
                     armorInfo.isSelect = (stateBypassData.equipId === armorInfo.id);
 
-                    if (Helper.isNotEmpty(stateInventory[armorInfo.type])
-                        && true === stateInventory[armorInfo.type][armorInfo.id]
-                    ) {
-                        armorInfo.isInclude = false;
-
-                        excludeList.push(armorInfo);
-                    } else {
-                        armorInfo.isInclude = true;
-
-                        includeList.push(armorInfo);
-                    }
+                    return armorInfo;
                 });
             });
         } else if ('charm' === stateBypassData.equipType) {
             mode = 'charm';
 
-            CharmDataset.getItems().forEach((charmInfo) => {
+            includeList = CharmDataset.getItems().map((charmInfo) => {
                 charmInfo.isSelect = (stateBypassData.equipId === charmInfo.id);
 
-                if (Helper.isNotEmpty(stateInventory['charm'])
-                    && true === stateInventory['charm'][charmInfo.id]
-                ) {
-                    charmInfo.isInclude = false;
-
-                    excludeList.push(charmInfo);
-                } else {
-                    charmInfo.isInclude = true;
-
-                    includeList.push(charmInfo);
-                }
+                return charmInfo;
             });
         }
 
         updateMode(mode);
         updateSortedList(includeList.concat(excludeList));
         updateType(type);
-    }, [stateBypassData, stateInventory]);
+    }, [stateBypassData]);
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        const unsubscribeCommon = CommonState.store.subscribe(() => {
-            updateInventory(CommonState.getter.getInventory());
-        });
-
         const unsubscribeModel = ModalState.store.subscribe(() => {
             updateBypassData(ModalState.getter.getEquipItemSelectorBypassData());
             updateIsShow(ModalState.getter.isShowEquipItemSelector());
         });
 
         return () => {
-            unsubscribeCommon();
             unsubscribeModel();
         };
     }, []);

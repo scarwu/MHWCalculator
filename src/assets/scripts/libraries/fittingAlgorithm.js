@@ -29,7 +29,7 @@ class FittingAlgorithm {
     /**
      * Search
      */
-    search = (requiredSets, requiredSkills, requiredEquips, ignoreEquips, algorithmParams) => {
+    search = (requiredSets, requiredSkills, requiredEquips, algorithmParams) => {
 
         if (0 === requiredSets.length
             && 0 === requiredSkills.length
@@ -37,7 +37,6 @@ class FittingAlgorithm {
             return [];
         }
 
-        this.ignoreEquips = ignoreEquips;
         this.conditionEquips = [];
         this.conditionSets = {};
         this.conditionSkills = {};
@@ -175,7 +174,6 @@ class FittingAlgorithm {
         let requireEquipCount = this.conditionEquips.length;
         let requireSkillCount = Object.keys(this.conditionSkills).length;
 
-        Helper.log('Ignore Equips', this.ignoreEquips);
         Helper.log('Condition Skills:', this.conditionSkills);
         Helper.log('Condition Equips:', this.conditionEquips);
         Helper.log('Correspond Jewels:', this.correspondJewels);
@@ -564,14 +562,6 @@ class FittingAlgorithm {
      */
     createCandidateEquips = (equips, equipType, candidateEquips = {}) => {
         equips.forEach((equip) => {
-
-            // Check Equip is in Ignore Equips
-            if (Helper.isNotEmpty(this.ignoreEquips[equipType])
-                && true === this.ignoreEquips[equipType][equip.id]
-            ) {
-                return;
-            }
-
             let candidateEquip = this.convertEquipToCandidateEquip(equip);
             candidateEquip.type = equipType;
 

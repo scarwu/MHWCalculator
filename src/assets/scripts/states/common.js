@@ -56,7 +56,6 @@ const initialState = {
     requiredSkills: Status.get(statusPrefix + ':requiredSkills') || Helper.deepCopy(TestData.requireList[0]).skills,
     requiredEquipPins: Status.get(statusPrefix + ':requiredEquipPins') || Helper.deepCopy(Constant.defaultEquipsLock),
     currentEquips: Status.get(statusPrefix + ':currentEquips') || Helper.deepCopy(TestData.equipsList[0]),
-    inventory: Status.get(statusPrefix + ':inventory') || {},
     algorithmParams: Status.get(statusPrefix + ':algorithmParams') || Helper.deepCopy(Constant.default.algorithmParams),
     computedBundles: Status.get(statusPrefix + ':computedBundles') || [],
     reservedBundles: Status.get(statusPrefix + ':reservedBundles') || []
@@ -364,26 +363,6 @@ const Store = createStore((state = initialState, action) => {
             currentEquips: Helper.deepCopy(Constant.defaultEquips)
         });
 
-    // Inventory
-    case 'TOGGLE_INVENTORY_EQUIP':
-        return Object.assign({}, state, {
-            inventory: (() => {
-                let inventory = Helper.deepCopy(state.inventory);
-
-                if (Helper.isEmpty(inventory[action.payload.equip.type])) {
-                    inventory[action.payload.equip.type] = {};
-                }
-
-                if (Helper.isEmpty(inventory[action.payload.equip.type][action.payload.equip.id])) {
-                    inventory[action.payload.equip.type][action.payload.equip.id] = true;
-                } else {
-                    delete inventory[action.payload.equip.type][action.payload.equip.id];
-                }
-
-                return inventory;
-            })()
-        });
-
     // case 'ALGORITHM_PARAMS':
     //     return Object.assign({}, state, {
     //         algorithmParams: action.payload.data
@@ -563,16 +542,6 @@ const Setter = {
         });
     },
 
-    // Inventory
-    toggleInventoryEquip: (equip) => {
-        Store.dispatch({
-            type: 'TOGGLE_INVENTORY_EQUIP',
-            payload: {
-                equip: equip
-            }
-        });
-    },
-
     // Computed Bundles
     saveComputedBundles: (data) => {
         Store.dispatch({
@@ -631,9 +600,6 @@ const Getter = {
     },
     getCurrentEquips: () => {
         return Store.getState().currentEquips;
-    },
-    getInventory: () => {
-        return Store.getState().inventory;
     },
     getAlgorithmParams: () => {
         return Store.getState().algorithmParams;

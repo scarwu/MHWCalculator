@@ -48,9 +48,6 @@ const initialState = {
     algorithmSetting: Status.get(statusPrefix + ':algorithmSetting') || {
         isShow: false
     },
-    inventorySetting: Status.get(statusPrefix + ':inventorySetting') || {
-        isShow: false
-    },
     equipBundleSelector: Status.get(statusPrefix + ':equipBundleSelector') || {
         isShow: false
     },
@@ -72,12 +69,6 @@ const Store = createStore((state = initialState, action) => {
     case 'UPDATE_CHANGELOG':
         return Object.assign({}, state, {
             changelog: {
-                isShow: action.payload.isShow
-            }
-        });
-    case 'UPDATE_INVENTORY_SETTING':
-        return Object.assign({}, state, {
-            inventorySetting: {
                 isShow: action.payload.isShow
             }
         });
@@ -145,22 +136,6 @@ const Setter = {
     hideAlgorithmSetting: () => {
         Store.dispatch({
             type: 'UPDATE_ALGORITHM_SETTING',
-            payload: {
-                isShow: false
-            }
-        });
-    },
-    showInventorySetting: () => {
-        Store.dispatch({
-            type: 'UPDATE_INVENTORY_SETTING',
-            payload: {
-                isShow: true
-            }
-        });
-    },
-    hideInventorySetting: () => {
-        Store.dispatch({
-            type: 'UPDATE_INVENTORY_SETTING',
             payload: {
                 isShow: false
             }
@@ -240,9 +215,6 @@ const Getter = {
     },
     isShowAlgorithmSetting: () => {
         return Store.getState().algorithmSetting.isShow;
-    },
-    isShowInventorySetting: () => {
-        return Store.getState().inventorySetting.isShow;
     },
     isShowEquipBundleSelector: () => {
         return Store.getState().equipBundleSelector.isShow;

@@ -52,7 +52,11 @@ const renderSkillItem = (skill) => {
                     return (
                         <Fragment key={index}>
                             <div className="col-2 mhwc-name">
-                                <span>Lv.{item.level}</span>
+                                {item.isHidden ? (
+                                    <span>(Lv.{item.level})</span>
+                                ) : (
+                                    <span>Lv.{item.level}</span>
+                                )}
                             </div>
                             <div className="col-10 mhwc-value mhwc-description">
                                 <span>{_(item.description)}</span>

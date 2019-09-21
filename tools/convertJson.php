@@ -672,6 +672,13 @@ foreach ($skills as $skill) {
     foreach ($skill['list'] as $index => $item) {
         $item['description'] = Misc::appendLangMap("skill:{$skill['id']}:list:{$index}:description", $item['description']);
 
+        // Create ID Hash
+        if (is_array($item['reaction'])
+            && isset($item['reaction']['enableSkillLevel'])
+        ) {
+            $item['reaction']['enableSkillLevel']['id'] = md5($item['reaction']['enableSkillLevel']['id']);
+        }
+
         // Rewrite
         $skill['list'][$index] = $item;
     }

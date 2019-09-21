@@ -414,29 +414,29 @@ export default function EquipsDisplayer(props) {
     }, []);
 
     const getContent = useMemo(() => {
-        let ContentBlocks = [];
+        let blocks = [];
 
-        ContentBlocks.push(renderEquipBlock(
+        blocks.push(renderEquipBlock(
             'weapon',
             CommonDataset.getAppliedWeaponInfo(stateCurrentEquips.weapon),
             stateRequiredEquipPins.weapon
         ));
 
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-            ContentBlocks.push(renderEquipBlock(
+            blocks.push(renderEquipBlock(
                 equipType,
                 CommonDataset.getAppliedArmorInfo(stateCurrentEquips[equipType]),
                 stateRequiredEquipPins[equipType]
             ));
         });
 
-        ContentBlocks.push(renderEquipBlock(
+        blocks.push(renderEquipBlock(
             'charm',
             CommonDataset.getAppliedCharmInfo(stateCurrentEquips.charm),
             stateRequiredEquipPins.charm
         ));
 
-        return ContentBlocks;
+        return blocks;
     }, [stateCurrentEquips, stateRequiredEquipPins]);
 
     return (
@@ -451,9 +451,6 @@ export default function EquipsDisplayer(props) {
                     <FunctionalButton
                         iconName="th-list" altName={_('bundleList')}
                         onClick={ModalState.setter.showEquipBundleSelector} />
-                    {'production' !== Config.env ? <FunctionalButton
-                        iconName="th-large" altName={_('inventorySetting')}
-                        onClick={ModalState.setter.showInventorySetting} /> : false}
                 </div>
             </div>
 

@@ -81,17 +81,32 @@ const renderSetItem = (set) => {
     );
 };
 
-const renderSkillItem = (skill) => {
+const renderSkillItem = (skill, enableSkillIdList) => {
     let skillInfo = SkillDataset.getInfo(skill.id);
 
     if (Helper.isEmpty(skillInfo)) {
         return false;
     }
 
+    let currentSkillLevel = 0;
+    let totalSkillLevel = 0;
+
+    skillInfo.list.forEach((item) => {
+        if (false === item.isHidden || -1 !== enableSkillIdList.indexOf(skillInfo.id)) {
+            currentSkillLevel++;
+        }
+
+        totalSkillLevel++;
+    });
+
     return (
         <div key={skillInfo.id} className="mhwc-item mhwc-item-2-step">
             <div className="col-12 mhwc-name">
-                <span>{_(skillInfo.name)} Lv.{skill.level} / {skillInfo.list.length}</span>
+                {(currentSkillLevel === totalSkillLevel) ? (
+                    <span>{_(skillInfo.name)} Lv.{skill.level} / {currentSkillLevel}</span>
+                ) : (
+                    <span>{_(skillInfo.name)} Lv.{skill.level} / {currentSkillLevel} ({totalSkillLevel})</span>
+                )}
                 <div className="mhwc-icons_bundle">
                     <FunctionalButton
                         iconName="minus-circle" altName={_('down')}
@@ -119,26 +134,31 @@ const renderSkillItem = (skill) => {
  * Sub Components
  */
 const SetList = (props) => {
-    const {data} = props;
+
+    /**
+     * Hooks
+     */
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
+
+    // Like Did Mount & Will Unmount Cycle
+    useEffect(() => {
+        const unsubscribe = CommonState.store.subscribe(() => {
+            updateRequiredSets(CommonState.getter.getRequiredSets());
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    }, []);
 
     return useMemo(() => {
         Helper.log('Component: ConditionOptions -> SetList');
 
-        return data.map(renderSetItem);
-    }, [data]);
+        return stateRequiredSets.map(renderSetItem);
+    }, [stateRequiredSets]);
 };
 
 const SkillList = (props) => {
-    const {data} = props;
-
-    return useMemo(() => {
-        Helper.log('Component: ConditionOptions -> SkillList');
-
-        return data.map(renderSkillItem);
-    }, [data]);
-};
-
-export default function ConditionOptions(props) {
 
     /**
      * Hooks
@@ -158,6 +178,44 @@ export default function ConditionOptions(props) {
         };
     }, []);
 
+    return useMemo(() => {
+        Helper.log('Component: ConditionOptions -> SkillList');
+
+        let enableSkillIdList = [];
+
+        stateRequiredSets.forEach((set) => {
+            let setInfo = SetDataset.getInfo(set.id);
+
+            if (Helper.isEmpty(setInfo)) {
+                return;
+            }
+
+            setInfo.skills.forEach((skill) => {
+                let skillInfo = SkillDataset.getInfo(skill.id);
+
+                if (Helper.isEmpty(skillInfo)) {
+                    return;
+                }
+
+                skillInfo.list.forEach((item) => {
+                    if (Helper.isEmpty(item.reaction)
+                        && Helper.isEmpty(item.reaction.enableSkillLevel)
+                    ) {
+                        return;
+                    }
+
+                    enableSkillIdList.push(item.reaction.enableSkillLevel.id);
+                });
+            });
+        });
+
+        return stateRequiredSkills.map((skill) => {
+            return renderSkillItem(skill, enableSkillIdList);
+        });
+    }, [stateRequiredSkills, stateRequiredSets]);
+};
+
+export default function ConditionOptions(props) {
     return (
         <div className="col mhwc-conditions">
             <div className="mhwc-panel">
@@ -168,17 +226,17 @@ export default function ConditionOptions(props) {
                         iconName="refresh" altName={_('reset')}
                         onClick={handleRequireConditionRefresh} />
                     <FunctionalButton
-                        iconName="plus" altName={_('skill')}
-                        onClick={ModalState.setter.showSkillItemSelector} />
-                    <FunctionalButton
                         iconName="plus" altName={_('set')}
                         onClick={ModalState.setter.showSetItemSelector} />
+                    <FunctionalButton
+                        iconName="plus" altName={_('skill')}
+                        onClick={ModalState.setter.showSkillItemSelector} />
                 </div>
             </div>
 
             <div className="mhwc-list">
-                <SetList data={stateRequiredSets} />
-                <SkillList data={stateRequiredSkills} />
+                <SetList />
+                <SkillList />
             </div>
         </div>
     );
