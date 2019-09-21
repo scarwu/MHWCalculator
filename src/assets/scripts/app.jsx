@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -34,19 +34,46 @@ import Constant from 'constant';
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
 
+if ('production' === Config.env) {
+    if (Config.buildTime !== Status.get('sys:buildTime')) {
+        ModalState.setter.showChangelog();
+    }
+
+    Status.set('sys:buildTime', Config.buildTime);
+}
+
+/**
+ * Variables
+ */
+const langList = Object.keys(Constant.langs).filter((lang) => {
+    return ('production' === Config.env) ? 'zhTW' === lang : true;
+}).map((lang) => {
+    return { key: lang, value: Constant.langs[lang] };
+});
+
+/**
+ * Handle Functions
+ */
+const handleBundleExport = () => {
+    let equips = Helper.deepCopy(CommonState.getter.getCurrentEquips());
+    let hash = Helper.base64Encode(JSON.stringify(equips));
+
+    let protocol = window.location.protocol;
+    let hostname = window.location.hostname;
+    let pathname = window.location.pathname;
+
+    window.open(`${protocol}//${hostname}${pathname}#/${hash}`, '_blank');
+};
+
 export default function App(props) {
 
     /**
      * Hooks
      */
     const [stateLang, updateLang] = useState(Status.get('sys:lang'));
-    const refLang = useRef();
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-
-        // Set Build Time
-        Status.set('sys:buildTime', Config.buildTime);
 
         // Restore Equips from Url to State
         if (Helper.isNotEmpty(props.match.params.hash)) {
@@ -59,22 +86,10 @@ export default function App(props) {
     /**
      * Handle Functions
      */
-    let handleBundleExport = () => {
-        let equips = Helper.deepCopy(CommonState.getter.getCurrentEquips());
-        let hash = Helper.base64Encode(JSON.stringify(equips));
-
-        let protocol = window.location.protocol;
-        let hostname = window.location.hostname;
-        let pathname = window.location.pathname;
-
-        window.open(`${protocol}//${hostname}${pathname}#/${hash}`, '_blank');
-    };
-
-    let handleLangChange = (event) => {
+    const handleLangChange = useCallback((event) => {
         Status.set('sys:lang', event.target.value);
-
         updateLang(event.target.value);
-    };
+    }, []);
 
     /**
      * Render Functions
@@ -95,9 +110,7 @@ export default function App(props) {
                         onClick={ModalState.setter.showChangelog} />
                     <FunctionalSelector
                         iconName="globe" defaultValue={stateLang}
-                        options={Object.keys(Constant.langs).map((key) => {
-                            return { key: key, value: Constant.langs[key] };
-                        })} onChange={handleLangChange} />
+                        options={langList} onChange={handleLangChange} />
                 </div>
             </div>
 

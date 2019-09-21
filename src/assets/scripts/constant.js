@@ -8,17 +8,12 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Config & Constant
-import Config from 'config';
-
 export default {
     defaultLang: 'zhTW',
-    langs: ('production' !== Config.env) ? {
+    langs: {
         zhTW: '正體中文',
         jaJP: '日本語',
         enUS: 'English'
-    } : {
-        zhTW: '正體中文'
     },
     resistances: [
         'fire',

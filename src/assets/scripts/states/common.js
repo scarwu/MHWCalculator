@@ -44,8 +44,8 @@ const diffLogger = store => next => action => {
         Status.set(statusPrefix + ':' + key, nextState[key]);
     }
 
-    Helper.log('CommonState action', action);
-    Helper.log('CommonState diffState', diffState);
+    Helper.log('State: Common -> action', action);
+    Helper.log('State: Common -> diffState', diffState);
 
     return result;
 };

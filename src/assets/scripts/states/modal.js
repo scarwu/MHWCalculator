@@ -15,9 +15,6 @@ import { createStore, applyMiddleware } from 'redux'
 import Status from 'core/status';
 import Helper from 'core/helper';
 
-// Load Config
-import Config from 'config';
-
 const statusPrefix = 'state:modal';
 
 // Middleware
@@ -37,17 +34,15 @@ const diffLogger = store => next => action => {
         Status.set(statusPrefix + ':' + key, nextState[key]);
     }
 
-    Helper.log('ModalState action', action);
-    Helper.log('ModalState diffState', diffState);
+    Helper.log('State: Modal -> action', action);
+    Helper.log('State: Modal -> diffState', diffState);
 
     return result;
 };
 
 // Initial State
 const initialState = {
-    changelog: ('production' === Config.env) ? {
-        isShow: (Config.buildTime !== parseInt(Status.get('sys:buildTime')))
-    } : Status.get(statusPrefix + ':changelog') || {
+    changelog: Status.get(statusPrefix + ':changelog') || {
         isShow: false
     },
     algorithmSetting: Status.get(statusPrefix + ':algorithmSetting') || {
