@@ -358,5 +358,95 @@
                 "require": 3
             }
         ]
+    },
+    {
+        "id": "工會的見識",
+        "name": {
+            "zhTW": "工會的見識",
+            "jaJP": "ギルドの見識",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "幸運",
+                "level": 1,
+                "require": 2
+            },
+            {
+                "id": "剝取名人",
+                "level": 1,
+                "require": 4
+            }
+        ]
+    },
+    {
+        "id": "滅盡龍的霸氣",
+        "name": {
+            "zhTW": "滅盡龍的霸氣",
+            "jaJP": "滅尽龍の覇気",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "加速再生",
+                "level": 1,
+                "require": 2
+            }
+        ]
+    },
+    {
+        "id": "炎妃龍的真髓",
+        "name": {
+            "zhTW": "炎妃龍的真髓",
+            "jaJP": "炎妃龍の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "整備．極意",
+                "level": 1,
+                "require": 3
+            }
+        ]
+    },
+    {
+        "id": "金火竜の真髄",
+        "name": {
+            "zhTW": "金火龍的真髓",
+            "jaJP": "金火竜の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "精靈加護．極意",
+                "level": 1,
+                "require": 2
+            },
+            {
+                "id": "真．會心擊【特殊】",
+                "level": 1,
+                "require": 4
+            }
+        ]
+    },
+    {
+        "id": "銀火龍的真髓",
+        "name": {
+            "zhTW": "銀火龍的真髓",
+            "jaJP": "鎮火竜の真髄",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "投射器裝填．極意",
+                "level": 1,
+                "require": 2
+            },
+            {
+                "id": "真．會心擊【屬性】",
+                "level": 1,
+                "require": 4
+            }
+        ]
     }
 ]

@@ -1757,6 +1757,26 @@
                 },
                 "reaction": null,
                 "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "地面や植物などから取得する弾の装填数がさらに増える。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": true
+            },
+            {
+                "level": 5,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "すべての弾の装填数がさらに増える。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": true
             }
         ]
     },
@@ -6063,6 +6083,26 @@
                 },
                 "reaction": null,
                 "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "效果發動時，傷害減輕60%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": true
+            },
+            {
+                "level": 5,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "効果発動時、ダメージを60%軽減。効果が発動しやすくなる。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": true
             }
         ]
     },
@@ -6783,6 +6823,26 @@
                 },
                 "reaction": null,
                 "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "再使用時間縮短40%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": true
+            },
+            {
+                "level": 5,
+                "description": {
+                    "zhTW": "再使用時間縮短50%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": true
             }
         ]
     },

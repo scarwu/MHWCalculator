@@ -626,5 +626,197 @@
                 "isHidden": false
             }
         ]
+    },
+    {
+        "id": "整備．極意",
+        "name": {
+            "zhTW": "整備．極意",
+            "jaJP": "整備・極意",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "整備のレベル上限のLv4とLv5が解放される。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "解放整備技能的等級上限",
+                    "jaJP": "整備のレベル上限のLv4とLv5が解放される。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "精靈加護．極意",
+        "name": {
+            "zhTW": "精靈加護．極意",
+            "jaJP": "精霊の加護・極意",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "解放精靈加護技能的等級上限",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "投射器裝填．極意",
+        "name": {
+            "zhTW": "投射器裝填．極意",
+            "jaJP": "スリンガー装填・極意",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "解放投射器裝填數UP技能的等級上限",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "真．會心擊【特殊】",
+        "name": {
+            "zhTW": "真．會心擊【特殊】",
+            "jaJP": "真・会心撃【特殊】",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "攻撃で会心が発生した際に与える状態異常値(毒、麻痺、睡眠、爆破)がかなり高くなる。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "攻撃で会心が発生した際に与える状態異常値(毒、麻痺、睡眠、爆破)がかなり高くなる。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "真．會心擊【屬性】",
+        "name": {
+            "zhTW": "真．會心擊【屬性】",
+            "jaJP": "真・会心撃【属性】",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "攻撃で会心が発生した際に与える属性ダメージ(火、水、雷、氷、龍)がかなり高くなる。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "攻撃で会心が発生した際に与える属性ダメージ(火、水、雷、氷、龍)がかなり高くなる。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "陽動攻擊",
+        "name": {
+            "zhTW": "陽動攻擊",
+            "jaJP": "陽動攻撃",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "攻撃を当てた時、モンスターの注意をより強く引くようになる。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "攻撃を当てた時、モンスターの注意をより強く引くようになる。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
     }
 ]
