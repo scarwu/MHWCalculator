@@ -55,7 +55,7 @@ const handleItemPickUp = (bypassData, itemId) => {
     if (Helper.isNotEmpty(bypassData.enhanceIndex)) {
         bypassData.enhanceId = itemId;
     } else if (Helper.isNotEmpty(bypassData.slotIndex)) {
-        bypassData.slotId = itemId;
+        bypassData.jewelId = itemId;
     } else {
         bypassData.equipId = itemId;
     }
@@ -361,7 +361,7 @@ const renderJewelItem = (jewel, bypassData) => {
                 <span>[{jewel.size}] {_(jewel.name)} (R{jewel.rare})</span>
 
                 <div className="mhwc-icons_bundle">
-                    {(false === enhance.isSelect) ? (
+                    {(false === jewel.isSelect) ? (
                         <FunctionalButton
                             iconName="check" altName={_('select')}
                             onClick={() => {handleItemPickUp(bypassData, jewel.id)}} />
@@ -759,7 +759,7 @@ export default function EquipItemSelector(props) {
         stateSegment
     ]);
 
-    return stateIsShow ? (
+    return (stateIsShow && Helper.isNotEmpty(stateBypassData)) ? (
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
             <div className="mhwc-modal">
                 <div className="mhwc-panel">
