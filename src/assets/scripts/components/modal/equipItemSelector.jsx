@@ -418,13 +418,12 @@ export default function EquipItemSelector(props) {
         }
 
         let mode = null;
-        let includeList = [];
-        let excludeList = [];
+        let sortedList = [];
         let type = null;
 
         if (Helper.isNotEmpty(stateBypassData.enhanceIndex)) {
             mode = 'enhance';
-            includeList = EnhanceDataset.getItems().map((enhanceInfo) => {
+            sortedList = EnhanceDataset.getItems().map((enhanceInfo) => {
                 enhanceInfo.isSelect = (stateBypassData.enhanceId === enhanceInfo.id);
 
                 return enhanceInfo;
@@ -434,7 +433,7 @@ export default function EquipItemSelector(props) {
 
             for (let size = stateBypassData.slotSize; size >= 1; size--) {
                 for (let rare = 9; rare >= 5; rare--) {
-                    includeList = includeList.concat(
+                    sortedList = sortedList.concat(
                         JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems().map((jewelInfo) => {
                             jewelInfo.isSelect = (stateBypassData.jewelId === jewelInfo.id);
 
@@ -451,11 +450,13 @@ export default function EquipItemSelector(props) {
 
             Constant.weaponTypes.forEach((weaponType) => {
                 [12, 11, 10, 9, 8, 7, 6, 5, 0].forEach((rare) => {
-                    includeList = WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().map((weaponInfo) => {
-                        weaponInfo.isSelect = (stateBypassData.equipId === weaponInfo.id);
+                    sortedList = sortedList.concat(
+                        WeaponDataset.typeIs(weaponType).rareIs(rare).getItems().map((weaponInfo) => {
+                            weaponInfo.isSelect = (stateBypassData.equipId === weaponInfo.id);
 
-                        return weaponInfo;
-                    });
+                            return weaponInfo;
+                        })
+                    );
                 });
             });
         } else if ('helm' === stateBypassData.equipType
@@ -468,16 +469,18 @@ export default function EquipItemSelector(props) {
             type = stateBypassData.equipType;
 
             [12, 11, 10, 9, 8, 7, 6, 5, 0].forEach((rare) => {
-                includeList = ArmorDataset.typeIs(stateBypassData.equipType).rareIs(rare).getItems().map((armorInfo) => {
-                    armorInfo.isSelect = (stateBypassData.equipId === armorInfo.id);
+                sortedList = sortedList.concat(
+                    ArmorDataset.typeIs(stateBypassData.equipType).rareIs(rare).getItems().map((armorInfo) => {
+                        armorInfo.isSelect = (stateBypassData.equipId === armorInfo.id);
 
-                    return armorInfo;
-                });
+                        return armorInfo;
+                    })
+                );
             });
         } else if ('charm' === stateBypassData.equipType) {
             mode = 'charm';
 
-            includeList = CharmDataset.getItems().map((charmInfo) => {
+            sortedList = CharmDataset.getItems().map((charmInfo) => {
                 charmInfo.isSelect = (stateBypassData.equipId === charmInfo.id);
 
                 return charmInfo;
@@ -485,7 +488,7 @@ export default function EquipItemSelector(props) {
         }
 
         updateMode(mode);
-        updateSortedList(includeList.concat(excludeList));
+        updateSortedList(sortedList);
         updateType(type);
     }, [stateBypassData]);
 

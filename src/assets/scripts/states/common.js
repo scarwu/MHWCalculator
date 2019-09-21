@@ -102,6 +102,53 @@ const Store = createStore((state = initialState, action) => {
             }
 
             let requiredSets = Helper.deepCopy(state.requiredSets);
+            let requiredSkills = Helper.deepCopy(state.requiredSkills);
+
+            let enableSkillIdList = [];
+
+            setInfo.skills.forEach((skill) => {
+                let skillInfo = SkillDataset.getInfo(skill.id);
+
+                if (Helper.isEmpty(skillInfo)) {
+                    return;
+                }
+
+                skillInfo.list.forEach((item) => {
+                    if (Helper.isEmpty(item.reaction)
+                        && Helper.isEmpty(item.reaction.enableSkillLevel)
+                    ) {
+                        return;
+                    }
+
+                    enableSkillIdList.push(item.reaction.enableSkillLevel.id);
+                });
+            });
+
+            requiredSkills.map((skill) => {
+                let skillInfo = SkillDataset.getInfo(skill.id);
+
+                if (Helper.isEmpty(skillInfo)) {
+                    return skill;
+                }
+
+                if (-1 !== enableSkillIdList.indexOf(skill.id)) {
+                    let currentSkillLevel = 0;
+                    let totalSkillLevel = 0;
+
+                    skillInfo.list.forEach((item) => {
+                        if (false === item.isHidden) {
+                            currentSkillLevel++;
+                        }
+
+                        totalSkillLevel++;
+                    });
+
+                    skill.level = (skill.level > currentSkillLevel)
+                        ? currentSkillLevel : skill.level;
+                }
+
+                return skill;
+            });
 
             for (let index in requiredSets) {
                 if (action.payload.setId !== requiredSets[index].id) {
@@ -113,7 +160,8 @@ const Store = createStore((state = initialState, action) => {
                 });
 
                 return Object.assign({}, state, {
-                    requiredSets: requiredSets
+                    requiredSets: requiredSets,
+                    requiredSkills: requiredSkills,
                 });
             }
 
@@ -242,7 +290,36 @@ const Store = createStore((state = initialState, action) => {
                 return state;
             }
 
+            let requiredSets = Helper.deepCopy(state.requiredSets);
             let requiredSkills = Helper.deepCopy(state.requiredSkills);
+
+            let enableSkillIdList = [];
+
+            requiredSets.forEach((set) => {
+                let setInfo = SetDataset.getInfo(set.id);
+
+                if (Helper.isEmpty(setInfo)) {
+                    return;
+                }
+
+                setInfo.skills.forEach((skill) => {
+                    let skillInfo = SkillDataset.getInfo(skill.id);
+
+                    if (Helper.isEmpty(skillInfo)) {
+                        return;
+                    }
+
+                    skillInfo.list.forEach((item) => {
+                        if (Helper.isEmpty(item.reaction)
+                            && Helper.isEmpty(item.reaction.enableSkillLevel)
+                        ) {
+                            return;
+                        }
+
+                        enableSkillIdList.push(item.reaction.enableSkillLevel.id);
+                    });
+                });
+            });
 
             for (let index in requiredSkills) {
                 if (action.payload.skillId !== requiredSkills[index].id) {
@@ -254,6 +331,12 @@ const Store = createStore((state = initialState, action) => {
                 }
 
                 requiredSkills[index].level += 1;
+
+                if (true === skillInfo.list[requiredSkills[index].level - 1].isHidden
+                    && -1 === enableSkillIdList.indexOf(requiredSkills[index].id)
+                ) {
+                    return state;
+                }
 
                 return Object.assign({}, state, {
                     requiredSkills: requiredSkills
