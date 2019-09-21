@@ -24,16 +24,16 @@ import FunctionalButton from 'components/common/functionalButton';
 import FunctionalInput from 'components/common/functionalInput';
 
 // Load State Control
-import CommonStates from 'states/common';
-import ModalStates from 'states/modal';
+import CommonState from 'states/common';
+import ModalState from 'states/modal';
 
 export default function SetItemSelector(props) {
 
     /**
      * Hooks
      */
-    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowSetItemSelector());
-    const [stateRequiredSets, updateRequiredSets] = useState(CommonStates.getters.getRequiredSets());
+    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowSetItemSelector());
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
     const [stateList, updateList] = useState([]);
     const [stateSegment, updateSegment] = useState(null);
     const [stateSortedList, updateSortedList] = useState([]);
@@ -71,12 +71,12 @@ export default function SetItemSelector(props) {
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        const unsubscribeCommon = CommonStates.store.subscribe(() => {
-            updateRequiredSets(CommonStates.getters.getRequiredSets());
+        const unsubscribeCommon = CommonState.store.subscribe(() => {
+            updateRequiredSets(CommonState.getter.getRequiredSets());
         });
 
-        const unsubscribeModal = ModalStates.store.subscribe(() => {
-            updateIsShow(ModalStates.getters.isShowSetItemSelector());
+        const unsubscribeModal = ModalState.store.subscribe(() => {
+            updateIsShow(ModalState.getter.isShowSetItemSelector());
         });
 
         return () => {
@@ -97,17 +97,17 @@ export default function SetItemSelector(props) {
     };
 
     let handleWindowClose = () => {
-        ModalStates.setters.hideSetItemSelector();
+        ModalState.setter.hideSetItemSelector();
     };
 
     let handleItemPickUp = (itemId) => {
-        CommonStates.setters.addRequiredSet({
+        CommonState.setter.addRequiredSet({
             setId: itemId
         });
     };
 
     let handleItemThrowDown = (itemId) => {
-        CommonStates.setters.removeRequiredSet({
+        CommonState.setter.removeRequiredSet({
             setId: itemId
         });
     };

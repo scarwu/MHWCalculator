@@ -28,30 +28,30 @@ import FunctionalButton from 'components/common/functionalButton';
 import Constant from 'constant';
 
 // Load State Control
-import CommonStates from 'states/common';
-import ModalStates from 'states/modal';
+import CommonState from 'states/common';
+import ModalState from 'states/modal';
 
 export default function EquipBundleSelector(props) {
 
     /**
      * Hooks
      */
-    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowEquipBundleSelector());
-    const [stateReservedBundles, updateReservedBundles] = useState(CommonStates.getters.getReservedBundles());
-    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonStates.getters.getCurrentEquips());
+    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowEquipBundleSelector());
+    const [stateReservedBundles, updateReservedBundles] = useState(CommonState.getter.getReservedBundles());
+    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
     const refModal = useRef();
     const refName = useRef();
     const refNameList = useRef(stateReservedBundles.map(() => createRef()));
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        const unsubscribeCommon = CommonStates.store.subscribe(() => {
-            updateReservedBundles(CommonStates.getters.getReservedBundles());
-            updateCurrentEquips(CommonStates.getters.getCurrentEquips());
+        const unsubscribeCommon = CommonState.store.subscribe(() => {
+            updateReservedBundles(CommonState.getter.getReservedBundles());
+            updateCurrentEquips(CommonState.getter.getCurrentEquips());
         });
 
-        const unsubscribeModal = ModalStates.store.subscribe(() => {
-            updateIsShow(ModalStates.getters.isShowEquipBundleSelector());
+        const unsubscribeModal = ModalState.store.subscribe(() => {
+            updateIsShow(ModalState.getter.isShowEquipBundleSelector());
         });
 
         return () => {
@@ -72,7 +72,7 @@ export default function EquipBundleSelector(props) {
     };
 
     let handleWindowClose = () => {
-        ModalStates.setters.hideEquipBundleSelector();
+        ModalState.setter.hideEquipBundleSelector();
     };
 
     let handleBundleSave = (index) => {
@@ -85,9 +85,9 @@ export default function EquipBundleSelector(props) {
         }
 
         if (Helper.isNotEmpty(index)) {
-            CommonStates.setters.updateReservedBundleName(index, name);
+            CommonState.setter.updateReservedBundleName(index, name);
         } else {
-            CommonStates.setters.addReservedBundle({
+            CommonState.setter.addReservedBundle({
                 id: MD5(JSON.stringify(stateCurrentEquips)),
                 name: name,
                 equips: stateCurrentEquips
@@ -96,14 +96,14 @@ export default function EquipBundleSelector(props) {
     };
 
     let handleBundleRemove = (index) => {
-        CommonStates.setters.removeReservedBundle(index);
+        CommonState.setter.removeReservedBundle(index);
     };
 
     let handleBundlePickUp = (index) => {
         let reservedBundles = stateReservedBundles;
 
-        CommonStates.setters.replaceCurrentEquips(reservedBundles[index].equips);
-        ModalStates.setters.hideEquipBundleSelector();
+        CommonState.setter.replaceCurrentEquips(reservedBundles[index].equips);
+        ModalState.setter.hideEquipBundleSelector();
     };
 
     /**

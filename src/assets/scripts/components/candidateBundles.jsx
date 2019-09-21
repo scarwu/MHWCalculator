@@ -32,21 +32,21 @@ import Config from 'config';
 import Constant from 'constant';
 
 // Load State Control
-import CommonStates from 'states/common';
-import ModalStates from 'states/modal';
+import CommonState from 'states/common';
+import ModalState from 'states/modal';
 
 export default function CandidateBundles(props) {
 
     /**
      * Hooks
      */
-    const [stateComputedBundles, updateComputedBundles] = useState(CommonStates.getters.getComputedBundles());
+    const [stateComputedBundles, updateComputedBundles] = useState(CommonState.getter.getComputedBundles());
     const [stateIsSearching, updateIsSearching] = useState(false);
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        const unsubscribe = CommonStates.store.subscribe(() => {
-            updateComputedBundles(CommonStates.getters.getComputedBundles());
+        const unsubscribe = CommonState.store.subscribe(() => {
+            updateComputedBundles(CommonState.getter.getComputedBundles());
         });
 
         return () => {
@@ -58,12 +58,12 @@ export default function CandidateBundles(props) {
      * Handle Functions
      */
     let handleCandidateBundlesSearch = () => {
-        let requiredSets = CommonStates.getters.getRequiredSets();
-        let requiredSkills = CommonStates.getters.getRequiredSkills();
-        let requiredEquipPins = CommonStates.getters.getRequiredEquipPins();
-        let currentEquips = CommonStates.getters.getCurrentEquips();
-        let inventory = CommonStates.getters.getInventory();
-        let algorithmParams = CommonStates.getters.getAlgorithmParams();
+        let requiredSets = CommonState.getter.getRequiredSets();
+        let requiredSkills = CommonState.getter.getRequiredSkills();
+        let requiredEquipPins = CommonState.getter.getRequiredEquipPins();
+        let currentEquips = CommonState.getter.getCurrentEquips();
+        let inventory = CommonState.getter.getInventory();
+        let algorithmParams = CommonState.getter.getAlgorithmParams();
 
         // Create Required Equips
         let requiredEquips = {};
@@ -101,7 +101,7 @@ export default function CandidateBundles(props) {
             Helper.log('Bundle List:', computedBundles);
             Helper.log('Search Time:', searchTime);
 
-            CommonStates.setters.saveComputedBundles(computedBundles);
+            CommonState.setter.saveComputedBundles(computedBundles);
 
             updateIsSearching(false);
         }, 100);
@@ -109,7 +109,7 @@ export default function CandidateBundles(props) {
 
     let handleBundlePickUp = (index) => {
         let bundle = stateComputedBundles[index];
-        let equips = Helper.deepCopy(CommonStates.getters.getCurrentEquips());
+        let equips = Helper.deepCopy(CommonState.getter.getCurrentEquips());
         let slotMap = {
             1: [],
             2: [],
@@ -191,7 +191,7 @@ export default function CandidateBundles(props) {
             }
         });
 
-        CommonStates.setters.replaceCurrentEquips(equips);
+        CommonState.setter.replaceCurrentEquips(equips);
     };
 
     /**
@@ -339,10 +339,10 @@ export default function CandidateBundles(props) {
                 <div className="mhwc-icons_bundle">
                     <FunctionalButton
                         iconName="refresh" altName={_('reset')}
-                        onClick={CommonStates.setters.cleanComputedBundles} />
+                        onClick={CommonState.setter.cleanComputedBundles} />
                     {'production' !== Config.env ? <FunctionalButton
                         iconName="cog" altName={_('setting')}
-                        onClick={ModalStates.setters.showAlgorithmSetting} /> : false}
+                        onClick={ModalState.setter.showAlgorithmSetting} /> : false}
                     <FunctionalButton
                         iconName="search" altName={_('search')}
                         onClick={handleCandidateBundlesSearch} />

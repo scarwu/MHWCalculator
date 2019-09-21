@@ -31,22 +31,22 @@ import Config from 'config';
 import Constant from 'constant';
 
 // Load State Control
-import CommonStates from 'states/common';
-import ModalStates from 'states/modal';
+import CommonState from 'states/common';
+import ModalState from 'states/modal';
 
 export default function EquipsDisplayer(props) {
 
     /**
      * Hooks
      */
-    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonStates.getters.getCurrentEquips());
-    const [stateRequiredEquipPins, updateRequiredEquipPins] = useState(CommonStates.getters.getRequiredEquipPins());
+    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
+    const [stateRequiredEquipPins, updateRequiredEquipPins] = useState(CommonState.getter.getRequiredEquipPins());
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        const unsubscribe = CommonStates.store.subscribe(() => {
-            updateCurrentEquips(CommonStates.getters.getCurrentEquips());
-            updateRequiredEquipPins(CommonStates.getters.getRequiredEquipPins());
+        const unsubscribe = CommonState.store.subscribe(() => {
+            updateCurrentEquips(CommonState.getter.getCurrentEquips());
+            updateRequiredEquipPins(CommonState.getter.getRequiredEquipPins());
         });
 
         return () => {
@@ -58,20 +58,20 @@ export default function EquipsDisplayer(props) {
      * Handle Functions
      */
     let handleEquipsDisplayerRefresh = () => {
-        CommonStates.setters.cleanRequiredEquipPins();
-        CommonStates.setters.cleanCurrentEquips();
+        CommonState.setter.cleanRequiredEquipPins();
+        CommonState.setter.cleanCurrentEquips();
     };
 
     let handleEquipLockToggle = (equipType) => {
-        CommonStates.setters.toggleRequiredEquipPins(equipType);
+        CommonState.setter.toggleRequiredEquipPins(equipType);
     };
 
     let handleEquipSwitch = (data) => {
-        ModalStates.setters.showEquipItemSelector(data);
+        ModalState.setter.showEquipItemSelector(data);
     };
 
     let handleEquipEmpty = (data) => {
-        CommonStates.setters.setCurrentEquip(data);
+        CommonState.setter.setCurrentEquip(data);
     };
 
     /**
@@ -458,10 +458,10 @@ export default function EquipsDisplayer(props) {
                         onClick={handleEquipsDisplayerRefresh} />
                     <FunctionalButton
                         iconName="th-list" altName={_('bundleList')}
-                        onClick={ModalStates.setters.showEquipBundleSelector} />
+                        onClick={ModalState.setter.showEquipBundleSelector} />
                     {'production' !== Config.env ? <FunctionalButton
                         iconName="th-large" altName={_('inventorySetting')}
-                        onClick={ModalStates.setters.showInventorySetting} /> : false}
+                        onClick={ModalState.setter.showInventorySetting} /> : false}
                 </div>
             </div>
 

@@ -23,16 +23,16 @@ import FunctionalButton from 'components/common/functionalButton';
 import FunctionalInput from 'components/common/functionalInput';
 
 // Load State Control
-import CommonStates from 'states/common';
-import ModalStates from 'states/modal';
+import CommonState from 'states/common';
+import ModalState from 'states/modal';
 
 export default function SkillItemSelector(props) {
 
     /**
      * Hooks
      */
-    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowSkillItemSelector());
-    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonStates.getters.getRequiredSkills());
+    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowSkillItemSelector());
+    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
     const [stateList, updateList] = useState([]);
     const [stateSegment, updateSegment] = useState(null);
     const [stateSortedList, updateSortedList] = useState([]);
@@ -74,12 +74,12 @@ export default function SkillItemSelector(props) {
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        const unsubscribeCommon = CommonStates.store.subscribe(() => {
-            updateRequiredSkills(CommonStates.getters.getRequiredSkills());
+        const unsubscribeCommon = CommonState.store.subscribe(() => {
+            updateRequiredSkills(CommonState.getter.getRequiredSkills());
         });
 
-        const unsubscribeModal = ModalStates.store.subscribe(() => {
-            updateIsShow(ModalStates.getters.isShowSkillItemSelector());
+        const unsubscribeModal = ModalState.store.subscribe(() => {
+            updateIsShow(ModalState.getter.isShowSkillItemSelector());
         });
 
         return () => {
@@ -100,17 +100,17 @@ export default function SkillItemSelector(props) {
     };
 
     let handleWindowClose = () => {
-        ModalStates.setters.hideSkillItemSelector();
+        ModalState.setter.hideSkillItemSelector();
     };
 
     let handleItemPickUp = (itemId) => {
-        CommonStates.setters.addRequiredSkill({
+        CommonState.setter.addRequiredSkill({
             skillId: itemId
         });
     };
 
     let handleItemThrowDown = (itemId) => {
-        CommonStates.setters.removeRequiredSkill({
+        CommonState.setter.removeRequiredSkill({
             skillId: itemId
         });
     };

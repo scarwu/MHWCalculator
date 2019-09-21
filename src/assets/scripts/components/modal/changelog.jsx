@@ -22,7 +22,7 @@ import _ from 'libraries/lang';
 import FunctionalButton from 'components/common/functionalButton';
 
 // Load State Control
-import ModalStates from 'states/modal';
+import ModalState from 'states/modal';
 
 // Load Markdown
 import zhTWChangelog from 'files/md/langs/zhTW/changelog.md';
@@ -40,13 +40,13 @@ export default function Changelog(props) {
     /**
      * Hooks
      */
-    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowChangelog());
+    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowChangelog());
     const refModal = useRef();
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        const unsubscribe = ModalStates.store.subscribe(() => {
-            updateIsShow(ModalStates.getters.isShowChangelog());
+        const unsubscribe = ModalState.store.subscribe(() => {
+            updateIsShow(ModalState.getter.isShowChangelog());
         });
 
         return () => {
@@ -66,7 +66,7 @@ export default function Changelog(props) {
     };
 
     let handleWindowClose = () => {
-        ModalStates.setters.hideChangelog();
+        ModalState.setter.hideChangelog();
     };
 
     /**

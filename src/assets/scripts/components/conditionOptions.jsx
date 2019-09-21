@@ -23,15 +23,15 @@ import SkillDataset from 'libraries/dataset/skill';
 import FunctionalButton from 'components/common/functionalButton';
 
 // Load State Control
-import CommonStates from 'states/common';
-import ModalStates from 'states/modal';
+import CommonState from 'states/common';
+import ModalState from 'states/modal';
 
 /**
  * Handle Functions
  */
 const handleRequireConditionRefresh = () => {
-    CommonStates.setters.cleanRequiredSets();
-    CommonStates.setters.cleanRequiredSkills();
+    CommonState.setter.cleanRequiredSets();
+    CommonState.setter.cleanRequiredSkills();
 };
 
 /**
@@ -53,13 +53,13 @@ const renderSetItem = (set, index) => {
                 <div className="mhwc-icons_bundle">
                     <FunctionalButton
                         iconName="minus-circle" altName={_('down')}
-                        onClick={() => {CommonStates.setters.decreaseRequiredSetStep(index)}} />
+                        onClick={() => {CommonState.setter.decreaseRequiredSetStep(index)}} />
                     <FunctionalButton
                         iconName="plus-circle" altName={_('up')}
-                        onClick={() => {CommonStates.setters.increaseRequiredSetStep(index)}} />
+                        onClick={() => {CommonState.setter.increaseRequiredSetStep(index)}} />
                     <FunctionalButton
                         iconName="times" altName={_('clean')}
-                        onClick={() => {CommonStates.setters.removeRequiredSetByIndex(index)}} />
+                        onClick={() => {CommonState.setter.removeRequiredSetByIndex(index)}} />
                 </div>
             </div>
             <div className="col-12 mhwc-value">
@@ -95,13 +95,13 @@ const renderSkillItem = (skill, index) => {
                 <div className="mhwc-icons_bundle">
                     <FunctionalButton
                         iconName="minus-circle" altName={_('down')}
-                        onClick={() => {CommonStates.setters.decreaseRequiredSkillLevel(index)}} />
+                        onClick={() => {CommonState.setter.decreaseRequiredSkillLevel(index)}} />
                     <FunctionalButton
                         iconName="plus-circle" altName={_('up')}
-                        onClick={() => {CommonStates.setters.increaseRequiredSkillLevel(index)}} />
+                        onClick={() => {CommonState.setter.increaseRequiredSkillLevel(index)}} />
                     <FunctionalButton
                         iconName="times" altName={_('clean')}
-                        onClick={() => {CommonStates.setters.removeRequiredSkillByIndex(index)}} />
+                        onClick={() => {CommonState.setter.removeRequiredSkillByIndex(index)}} />
                 </div>
             </div>
             <div className="col-12 mhwc-value mhwc-description">
@@ -143,14 +143,14 @@ export default function ConditionOptions(props) {
     /**
      * Hooks
      */
-    const [stateRequiredSets, updateRequiredSets] = useState(CommonStates.getters.getRequiredSets());
-    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonStates.getters.getRequiredSkills());
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
+    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        const unsubscribe = CommonStates.store.subscribe(() => {
-            updateRequiredSets(CommonStates.getters.getRequiredSets());
-            updateRequiredSkills(CommonStates.getters.getRequiredSkills());
+        const unsubscribe = CommonState.store.subscribe(() => {
+            updateRequiredSets(CommonState.getter.getRequiredSets());
+            updateRequiredSkills(CommonState.getter.getRequiredSkills());
         });
 
         return () => {
@@ -169,10 +169,10 @@ export default function ConditionOptions(props) {
                         onClick={handleRequireConditionRefresh} />
                     <FunctionalButton
                         iconName="plus" altName={_('skill')}
-                        onClick={ModalStates.setters.showSkillItemSelector} />
+                        onClick={ModalState.setter.showSkillItemSelector} />
                     <FunctionalButton
                         iconName="plus" altName={_('set')}
-                        onClick={ModalStates.setters.showSetItemSelector} />
+                        onClick={ModalState.setter.showSetItemSelector} />
                 </div>
             </div>
 

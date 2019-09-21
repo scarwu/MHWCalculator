@@ -373,7 +373,7 @@ const Store = createStore((state = initialState, action) => {
     }
 }, applyMiddleware(diffLogger));
 
-const Setters = {
+const Setter = {
 
     // Required Sets
     addRequiredSet: (data) => {
@@ -564,7 +564,7 @@ const Setters = {
     }
 };
 
-const Getters = {
+const Getter = {
     getRequiredSets: () => {
         return Store.getState().requiredSets;
     },
@@ -593,6 +593,6 @@ const Getters = {
 
 export default {
     store: Store,
-    setters: Setters,
-    getters: Getters
+    setter: Setter,
+    getter: Getter
 };

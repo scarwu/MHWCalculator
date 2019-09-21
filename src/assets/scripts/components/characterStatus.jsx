@@ -28,7 +28,7 @@ import SharpnessBar from 'components/common/sharpnessBar';
 import Constant from 'constant';
 
 // Load State Control
-import CommonStates from 'states/common';
+import CommonState from 'states/common';
 
 /**
  * Generate Functions
@@ -522,7 +522,7 @@ export default function CharacterStatus(props) {
     /**
      * Hooks
      */
-    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonStates.getters.getCurrentEquips());
+    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
     const [stateEquipInfos, updateEquipInfos] = useState({});
     const [stateStatus, updateStatus] = useState(Helper.deepCopy(Constant.defaultStatus));
     const [stateExtraInfo, updateExtraInfo] = useState(Helper.deepCopy(Constant.defaultExtraInfo));
@@ -552,8 +552,8 @@ export default function CharacterStatus(props) {
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        const unsubscribe = CommonStates.store.subscribe(() => {
-            updateCurrentEquips(CommonStates.getters.getCurrentEquips());
+        const unsubscribe = CommonState.store.subscribe(() => {
+            updateCurrentEquips(CommonState.getter.getCurrentEquips());
         });
 
         return () => {

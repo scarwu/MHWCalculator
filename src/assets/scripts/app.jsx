@@ -31,8 +31,8 @@ import Config from 'config';
 import Constant from 'constant';
 
 // Load State Control
-import CommonStates from 'states/common';
-import ModalStates from 'states/modal';
+import CommonState from 'states/common';
+import ModalState from 'states/modal';
 
 export default function App(props) {
 
@@ -50,7 +50,7 @@ export default function App(props) {
 
         // Restore Equips from Url to State
         if (Helper.isNotEmpty(props.match.params.hash)) {
-            CommonStates.setters.replaceCurrentEquips(
+            CommonState.setter.replaceCurrentEquips(
                 JSON.parse(Helper.base64Decode(props.match.params.hash))
             );
         }
@@ -60,7 +60,7 @@ export default function App(props) {
      * Handle Functions
      */
     let handleBundleExport = () => {
-        let equips = Helper.deepCopy(CommonStates.getters.getCurrentEquips());
+        let equips = Helper.deepCopy(CommonState.getter.getCurrentEquips());
         let hash = Helper.base64Encode(JSON.stringify(equips));
 
         let protocol = window.location.protocol;
@@ -92,7 +92,7 @@ export default function App(props) {
                         onClick={handleBundleExport} />
                     <FunctionalButton
                         iconName="info" altName={_('showChangelog')}
-                        onClick={ModalStates.setters.showChangelog} />
+                        onClick={ModalState.setter.showChangelog} />
                     <FunctionalSelector
                         iconName="globe" defaultValue={stateLang}
                         options={Object.keys(Constant.langs).map((key) => {

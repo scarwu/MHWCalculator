@@ -122,7 +122,7 @@ const Store = createStore((state = initialState, action) => {
     }
 }, applyMiddleware(diffLogger));
 
-const Setters = {
+const Setter = {
     showChangelog: () => {
         Store.dispatch({
             type: 'UPDATE_CHANGELOG',
@@ -239,7 +239,7 @@ const Setters = {
     }
 };
 
-const Getters = {
+const Getter = {
     isShowChangelog: () => {
         return Store.getState().changelog.isShow;
     },
@@ -268,6 +268,6 @@ const Getters = {
 
 export default {
     store: Store,
-    setters: Setters,
-    getters: Getters
+    setter: Setter,
+    getter: Getter
 };

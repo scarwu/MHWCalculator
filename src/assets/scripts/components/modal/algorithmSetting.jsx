@@ -22,26 +22,26 @@ import _ from 'libraries/lang';
 import FunctionalButton from 'components/common/functionalButton';
 
 // Load State Control
-import CommonStates from 'states/common';
-import ModalStates from 'states/modal';
+import CommonState from 'states/common';
+import ModalState from 'states/modal';
 
 export default function AlgorithmSetting(props) {
 
     /**
      * Hooks
      */
-    const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonStates.getters.getAlgorithmParams());
-    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowAlgorithmSetting());
+    const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonState.getter.getAlgorithmParams());
+    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowAlgorithmSetting());
     const refModal = useRef();
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        const unsubscribeCommon = CommonStates.store.subscribe(() => {
-            updateAlgorithmParams(CommonStates.getters.getAlgorithmParams());
+        const unsubscribeCommon = CommonState.store.subscribe(() => {
+            updateAlgorithmParams(CommonState.getter.getAlgorithmParams());
         });
 
-        const unsubscribeModal = ModalStates.store.subscribe(() => {
-            updateIsShow(ModalStates.getters.isShowAlgorithmSetting());
+        const unsubscribeModal = ModalState.store.subscribe(() => {
+            updateIsShow(ModalState.getter.isShowAlgorithmSetting());
         });
 
         return () => {
@@ -62,7 +62,7 @@ export default function AlgorithmSetting(props) {
     };
 
     let handleWindowClose = () => {
-        ModalStates.setters.hideAlgorithmSetting();
+        ModalState.setter.hideAlgorithmSetting();
     };
 
     /**

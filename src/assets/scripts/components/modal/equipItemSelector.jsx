@@ -34,8 +34,8 @@ import SharpnessBar from 'components/common/sharpnessBar';
 import Constant from 'constant';
 
 // Load State Control
-import CommonStates from 'states/common';
-import ModalStates from 'states/modal';
+import CommonState from 'states/common';
+import ModalState from 'states/modal';
 
 /**
  * Variables
@@ -53,9 +53,9 @@ export default function EquipItemSelector(props) {
     /**
      * Hooks
      */
-    const [stateIsShow, updateIsShow] = useState(ModalStates.getters.isShowEquipItemSelector());
-    const [stateBypassData, updateBypassData] = useState(ModalStates.getters.getEquipItemSelectorBypassData());
-    const [stateInventory, updateInventory] = useState(CommonStates.getters.getInventory());
+    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowEquipItemSelector());
+    const [stateBypassData, updateBypassData] = useState(ModalState.getter.getEquipItemSelectorBypassData());
+    const [stateInventory, updateInventory] = useState(CommonState.getter.getInventory());
     const [stateMode, updateMode] = useState(null);
     const [stateSortedList, updateSortedList] = useState([]);
     const [stateType, updateType] = useState(null);
@@ -186,13 +186,13 @@ export default function EquipItemSelector(props) {
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
-        const unsubscribeCommon = CommonStates.store.subscribe(() => {
-            updateInventory(CommonStates.getters.getInventory());
+        const unsubscribeCommon = CommonState.store.subscribe(() => {
+            updateInventory(CommonState.getter.getInventory());
         });
 
-        const unsubscribeModel = ModalStates.store.subscribe(() => {
-            updateBypassData(ModalStates.getters.getEquipItemSelectorBypassData());
-            updateIsShow(ModalStates.getters.isShowEquipItemSelector());
+        const unsubscribeModel = ModalState.store.subscribe(() => {
+            updateBypassData(ModalState.getter.getEquipItemSelectorBypassData());
+            updateIsShow(ModalState.getter.isShowEquipItemSelector());
         });
 
         return () => {
@@ -213,7 +213,7 @@ export default function EquipItemSelector(props) {
     };
 
     let handleWindowClose = () => {
-        ModalStates.setters.hideEquipItemSelector();
+        ModalState.setter.hideEquipItemSelector();
     };
 
     let handleItemPickUp = (itemId) => {
@@ -227,13 +227,13 @@ export default function EquipItemSelector(props) {
             bypassData.equipId = itemId;
         }
 
-        CommonStates.setters.setCurrentEquip(bypassData);
+        CommonState.setter.setCurrentEquip(bypassData);
 
         handleWindowClose();
     };
 
     let handleItemToggle = (itemType, itemId) => {
-        CommonStates.setters.toggleInventoryEquip({
+        CommonState.setter.toggleInventoryEquip({
             type: itemType,
             id: itemId
         });
