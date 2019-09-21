@@ -18,7 +18,7 @@ export default function FunctionalButton(props) {
     const {iconName, altName, onClick} = props;
 
     return useMemo(() => {
-        Helper.log('Component: FunctionalButton');
+        Helper.log('Component: Common -> FunctionalButton');
 
         return (
             <div className="mhwc-functional_button">

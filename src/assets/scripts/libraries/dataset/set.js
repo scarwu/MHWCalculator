@@ -57,7 +57,7 @@ class SetDataset {
         this.filterSkillName = null;
     };
 
-    getNames = () => {
+    getIds = () => {
         return Object.keys(this.mapping);
     };
 

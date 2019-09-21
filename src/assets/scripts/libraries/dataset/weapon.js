@@ -91,7 +91,7 @@ class WeaponDataset {
         this.filterSlotCount = null;
     };
 
-    getNames = () => {
+    getIds = () => {
         return Object.keys(this.mapping);
     };
 

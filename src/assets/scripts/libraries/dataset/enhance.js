@@ -57,7 +57,7 @@ class EnhanceDataset {
         this.filterSkillName = null;
     };
 
-    getNames = () => {
+    getIds = () => {
         return Object.keys(this.mapping);
     };
 

@@ -554,7 +554,6 @@ export default function EquipItemSelector(props) {
                         {data.skills.map((data, index) => {
                             let skillInfo = SkillDataset.getInfo(data.id);
 
-                            console.log(_(skillInfo.name), skillInfo, data.level)
                             return Helper.isNotEmpty(skillInfo) ? (
                                 <Fragment>
                                     <div className="col-12 mhwc-name">

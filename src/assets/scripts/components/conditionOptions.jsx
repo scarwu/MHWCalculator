@@ -37,7 +37,7 @@ const handleRequireConditionRefresh = () => {
 /**
  * Render Functions
  */
-const renderSetItem = (set, index) => {
+const renderSetItem = (set) => {
     let setInfo = SetDataset.getInfo(set.id);
 
     if (Helper.isEmpty(setInfo)) {
@@ -53,13 +53,13 @@ const renderSetItem = (set, index) => {
                 <div className="mhwc-icons_bundle">
                     <FunctionalButton
                         iconName="minus-circle" altName={_('down')}
-                        onClick={() => {CommonState.setter.decreaseRequiredSetStep(index)}} />
+                        onClick={() => {CommonState.setter.decreaseRequiredSetStep(set.id)}} />
                     <FunctionalButton
                         iconName="plus-circle" altName={_('up')}
-                        onClick={() => {CommonState.setter.increaseRequiredSetStep(index)}} />
+                        onClick={() => {CommonState.setter.increaseRequiredSetStep(set.id)}} />
                     <FunctionalButton
                         iconName="times" altName={_('clean')}
-                        onClick={() => {CommonState.setter.removeRequiredSetByIndex(index)}} />
+                        onClick={() => {CommonState.setter.removeRequiredSet(set.id)}} />
                 </div>
             </div>
             <div className="col-12 mhwc-value">
@@ -81,7 +81,7 @@ const renderSetItem = (set, index) => {
     );
 };
 
-const renderSkillItem = (skill, index) => {
+const renderSkillItem = (skill) => {
     let skillInfo = SkillDataset.getInfo(skill.id);
 
     if (Helper.isEmpty(skillInfo)) {
@@ -95,13 +95,13 @@ const renderSkillItem = (skill, index) => {
                 <div className="mhwc-icons_bundle">
                     <FunctionalButton
                         iconName="minus-circle" altName={_('down')}
-                        onClick={() => {CommonState.setter.decreaseRequiredSkillLevel(index)}} />
+                        onClick={() => {CommonState.setter.decreaseRequiredSkillLevel(skill.id)}} />
                     <FunctionalButton
                         iconName="plus-circle" altName={_('up')}
-                        onClick={() => {CommonState.setter.increaseRequiredSkillLevel(index)}} />
+                        onClick={() => {CommonState.setter.increaseRequiredSkillLevel(skill.id)}} />
                     <FunctionalButton
                         iconName="times" altName={_('clean')}
-                        onClick={() => {CommonState.setter.removeRequiredSkillByIndex(index)}} />
+                        onClick={() => {CommonState.setter.removeRequiredSkill(skill.id)}} />
                 </div>
             </div>
             <div className="col-12 mhwc-value mhwc-description">
@@ -122,7 +122,7 @@ const SetList = (props) => {
     const {data} = props;
 
     return useMemo(() => {
-        Helper.log('Component: SetList');
+        Helper.log('Component: ConditionOptions -> SetList');
 
         return data.map(renderSetItem);
     }, [data]);
@@ -132,7 +132,7 @@ const SkillList = (props) => {
     const {data} = props;
 
     return useMemo(() => {
-        Helper.log('Component: SkillList');
+        Helper.log('Component: ConditionOptions -> SkillList');
 
         return data.map(renderSkillItem);
     }, [data]);

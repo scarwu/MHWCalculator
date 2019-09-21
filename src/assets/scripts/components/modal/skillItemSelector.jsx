@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Fragment, useState, useEffect, useRef } from 'react';
+import React, { Fragment, useState, useEffect, useRef, useCallback, useMemo } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -26,6 +26,58 @@ import FunctionalInput from 'components/common/functionalInput';
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
 
+/**
+ * Render Functions
+ */
+const renderSkillItem = (skill) => {
+    return (
+        <div key={skill.id} className="mhwc-item mhwc-item-2-step">
+            <div className="col-12 mhwc-name">
+                <span>{_(skill.name)}</span>
+
+                <div className="mhwc-icons_bundle">
+                    {skill.isSelect ? (
+                        <FunctionalButton
+                            iconName="minus" altName={_('remove')}
+                            onClick={() => {CommonState.setter.removeRequiredSkill(skill.id)}} />
+                    ) : (
+                        <FunctionalButton
+                            iconName="plus" altName={_('add')}
+                            onClick={() => {CommonState.setter.addRequiredSkill(skill.id)}} />
+                    )}
+                </div>
+            </div>
+            <div className="col-12 mhwc-content">
+                {skill.list.map((item, index) => {
+                    return (
+                        <Fragment key={index}>
+                            <div className="col-2 mhwc-name">
+                                <span>Lv.{item.level}</span>
+                            </div>
+                            <div className="col-10 mhwc-value mhwc-description">
+                                <span>{_(item.description)}</span>
+                            </div>
+                        </Fragment>
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
+
+/**
+ * Sub Components
+ */
+const SkillList = (props) => {
+    const {data} = props;
+
+    return useMemo(() => {
+        Helper.log('Component: SkillItemSelector -> SkillList');
+
+        return data.map(renderSkillItem);
+    }, [data]);
+};
+
 export default function SkillItemSelector(props) {
 
     /**
@@ -39,25 +91,18 @@ export default function SkillItemSelector(props) {
     const refModal = useRef();
 
     useEffect(() => {
-        let idList = stateRequiredSkills.map((skill) => {
+        const idList = stateRequiredSkills.map((skill) => {
             return skill.id;
         });
 
         let selectedList = [];
         let unselectedList = [];
 
-        SkillDataset.getNames().sort().forEach((skillId) => {
-            let skillInfo = SkillDataset.getInfo(skillId);
-
-            if (Helper.isEmpty(skillInfo)) {
-                return;
-            }
-
+        SkillDataset.getItems().forEach((skillInfo) => {
             if (false === skillInfo.from.jewel && false === skillInfo.from.armor) {
                 return;
             }
 
-            // Skip Selected Skills
             if (-1 !== idList.indexOf(skillInfo.id)) {
                 skillInfo.isSelect = true;
 
@@ -91,92 +136,22 @@ export default function SkillItemSelector(props) {
     /**
      * Handle Functions
      */
-    let handleFastWindowClose = (event) => {
+    const handleFastWindowClose = useCallback((event) => {
         if (refModal.current !== event.target) {
             return;
         }
 
-        handleWindowClose();
-    };
-
-    let handleWindowClose = () => {
         ModalState.setter.hideSkillItemSelector();
-    };
+    }, []);
 
-    let handleItemPickUp = (itemId) => {
-        CommonState.setter.addRequiredSkill({
-            skillId: itemId
-        });
-    };
-
-    let handleItemThrowDown = (itemId) => {
-        CommonState.setter.removeRequiredSkill({
-            skillId: itemId
-        });
-    };
-
-    let handleSegmentInput = (event) => {
+    const handleSegmentInput = useCallback((event) => {
         let segment = event.target.value;
 
         segment = (0 !== segment.length)
             ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
 
         updateSegment(segment);
-    };
-
-    /**
-     * Render Functions
-     */
-    let renderItem = (data, index) => {
-
-        // Create Text
-        let text = _(data.name);
-
-        data.list.forEach((data) => {
-            text += _(data.name) + _(data.description);
-        })
-
-        // Search Nameword
-        if (Helper.isNotEmpty(stateSegment)
-            && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
-        ) {
-            return false;
-        }
-
-        return (
-            <div key={data.id} className="mhwc-item mhwc-item-2-step">
-                <div className="col-12 mhwc-name">
-                    <span>{_(data.name)}</span>
-
-                    <div className="mhwc-icons_bundle">
-                        {data.isSelect ? (
-                            <FunctionalButton
-                                iconName="minus" altName={_('remove')}
-                                onClick={() => {handleItemThrowDown(data.id)}} />
-                        ) : (
-                            <FunctionalButton
-                                iconName="plus" altName={_('add')}
-                                onClick={() => {handleItemPickUp(data.id)}} />
-                        )}
-                    </div>
-                </div>
-                <div className="col-12 mhwc-content">
-                    {data.list.map((skill, index) => {
-                        return (
-                            <Fragment key={index}>
-                                <div className="col-2 mhwc-name">
-                                    <span>Lv.{skill.level}</span>
-                                </div>
-                                <div className="col-10 mhwc-value mhwc-description">
-                                    <span>{_(skill.description)}</span>
-                                </div>
-                            </Fragment>
-                        );
-                    })}
-                </div>
-            </div>
-        );
-    };
+    }, []);
 
     return stateIsShow ? (
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
@@ -191,12 +166,29 @@ export default function SkillItemSelector(props) {
 
                         <FunctionalButton
                             iconName="times" altName={_('close')}
-                            onClick={handleWindowClose} />
+                            onClick={ModalState.setter.hideSkillItemSelector} />
                     </div>
                 </div>
                 <div className="mhwc-list">
                     <div className="mhwc-wrapper">
-                        {stateSortedList.map(renderItem)}
+                        <SkillList data={stateSortedList.filter((skill) => {
+
+                            // Create Text
+                            let text = _(skill.name);
+
+                            skill.list.forEach((item) => {
+                                text += _(item.name) + _(item.description);
+                            })
+
+                            // Search Nameword
+                            if (Helper.isNotEmpty(stateSegment)
+                                && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+                            ) {
+                                return false;
+                            }
+
+                            return true;
+                        })} />
                     </div>
                 </div>
             </div>

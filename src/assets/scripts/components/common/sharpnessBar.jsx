@@ -18,7 +18,7 @@ export default function SharpnessBar(props) {
     const {data} = props;
 
     return useMemo(() => {
-        Helper.log('Component: SharpnessBar');
+        Helper.log('Component: Common -> SharpnessBar');
 
         return (
             <div className="mhwc-sharpness_bar">

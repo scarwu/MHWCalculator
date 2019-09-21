@@ -67,7 +67,7 @@ class SkillDataset {
         });
     }
 
-    getNames = () => {
+    getIds = () => {
         return Object.keys(this.mapping);
     };
 

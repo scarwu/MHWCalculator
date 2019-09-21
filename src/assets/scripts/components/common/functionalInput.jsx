@@ -18,7 +18,7 @@ export default function FunctionalInput(props) {
     const {iconName, placeholder, onChange} = props;
 
     return useMemo(() => {
-        Helper.log('Component: FunctionalInput');
+        Helper.log('Component: Common -> FunctionalInput');
 
         return (
             <div className="mhwc-functional_input">

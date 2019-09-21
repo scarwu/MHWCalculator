@@ -68,77 +68,113 @@ const Store = createStore((state = initialState, action) => {
 
     // Required Sets
     case 'ADD_REQUIRED_SET':
-        return Object.assign({}, state, {
-            requiredSets: (() => {
-                let requiredSets = Helper.deepCopy(state.requiredSets);
-
-                requiredSets.push({
-                    id: action.payload.data.setId,
-                    step: 1
-                });
-
-                return requiredSets;
-            })()
-        });
-    case 'REMOVE_REQUIRED_SET':
-        return Object.assign({}, state, {
-            requiredSets: (() => {
-                let requiredSets = Helper.deepCopy(state.requiredSets);
-
-                requiredSets = requiredSets.filter((set) => {
-                    return set.id !== action.payload.data.setId;
-                });
-
-                return requiredSets;
-            })()
-        });
-    case 'REMOVE_REQUIRED_SET_BY_INDEX':
-        return Object.assign({}, state, {
-            requiredSets: (() => {
-                let requiredSets = Helper.deepCopy(state.requiredSets);
-
-                delete requiredSets[action.payload.index];
-
-                requiredSets = requiredSets.filter((set) => {
-                    return Helper.isNotEmpty(set);
-                });
-
-                return requiredSets;
-            })()
-        });
-    case 'INCREASE_REQUIRED_SET_STEP':
         return (() => {
-            let requiredSets = Helper.deepCopy(state.requiredSets);
-            let setInfo = SetDataset.getInfo(requiredSets[action.payload.index].id);
+            let setInfo = SetDataset.getInfo(action.payload.setId);
 
-            if (Helper.isEmpty(setInfo)
-                || setInfo.skills.length === requiredSets[action.payload.index].step
-            ) {
+            if (Helper.isEmpty(setInfo)) {
                 return state;
             }
 
-            requiredSets[action.payload.index].step += 1;
+            let requiredSets = Helper.deepCopy(state.requiredSets);
+
+            for (let index in requiredSets) {
+                if (action.payload.setId !== requiredSets[index].id) {
+                    continue;
+                }
+
+                return stete;
+            }
+
+            requiredSets.push({
+                id: action.payload.setId,
+                step: 1
+            });
 
             return Object.assign({}, state, {
                 requiredSets: requiredSets
             });
         })();
-    case 'DECREASE_REQUIRED_SET_STEP':
+    case 'REMOVE_REQUIRED_SET':
         return (() => {
-            let requiredSets = Helper.deepCopy(state.requiredSets);
-            let setInfo = SetDataset.getInfo(requiredSets[action.payload.index].id);
+            let setInfo = SetDataset.getInfo(action.payload.setId);
 
-            if (Helper.isEmpty(setInfo)
-                || 1 === requiredSets[action.payload.index].step
-            ) {
+            if (Helper.isEmpty(setInfo)) {
                 return state;
             }
 
-            requiredSets[action.payload.index].step -= 1;
+            let requiredSets = Helper.deepCopy(state.requiredSets);
 
-            return Object.assign({}, state, {
-                requiredSets: requiredSets
-            });
+            for (let index in requiredSets) {
+                if (action.payload.setId !== requiredSets[index].id) {
+                    continue;
+                }
+
+                requiredSets = requiredSets.filter((set) => {
+                    return set.id !== action.payload.setId;
+                });
+
+                return Object.assign({}, state, {
+                    requiredSets: requiredSets
+                });
+            }
+
+            return stete;
+        })();
+    case 'INCREASE_REQUIRED_SET_STEP':
+        return (() => {
+            let setInfo = SetDataset.getInfo(action.payload.setId);
+
+            if (Helper.isEmpty(setInfo)) {
+                return state;
+            }
+
+            let requiredSets = Helper.deepCopy(state.requiredSets);
+
+            for (let index in requiredSets) {
+                if (action.payload.setId !== requiredSets[index].id) {
+                    continue;
+                }
+
+                if (setInfo.skills.length === requiredSets[index].step) {
+                    return state;
+                }
+
+                requiredSets[index].step += 1;
+
+                return Object.assign({}, state, {
+                    requiredSets: requiredSets
+                });
+            }
+
+            return state;
+        })();
+    case 'DECREASE_REQUIRED_SET_STEP':
+        return (() => {
+            let setInfo = SetDataset.getInfo(action.payload.setId);
+
+            if (Helper.isEmpty(setInfo)) {
+                return state;
+            }
+
+            let requiredSets = Helper.deepCopy(state.requiredSets);
+
+            for (let index in requiredSets) {
+                if (action.payload.setId !== requiredSets[index].id) {
+                    continue;
+                }
+
+                if (1 === requiredSets[index].step) {
+                    return state;
+                }
+
+                requiredSets[index].step -= 1;
+
+                return Object.assign({}, state, {
+                    requiredSets: requiredSets
+                });
+            }
+
+            return state;
         })();
     case 'CLEAN_REQUIRED_SETS':
         return Object.assign({}, state, {
@@ -147,77 +183,113 @@ const Store = createStore((state = initialState, action) => {
 
     // Required Skills
     case 'ADD_REQUIRED_SKILL':
-        return Object.assign({}, state, {
-            requiredSkills: (() => {
-                let requiredSkills = Helper.deepCopy(state.requiredSkills);
-
-                requiredSkills.push({
-                    id: action.payload.data.skillId,
-                    level: 1
-                });
-
-                return requiredSkills;
-            })()
-        });
-    case 'REMOVE_REQUIRED_SKILL':
-        return Object.assign({}, state, {
-            requiredSkills: (() => {
-                let requiredSkills = Helper.deepCopy(state.requiredSkills);
-
-                requiredSkills = requiredSkills.filter((skill) => {
-                    return skill.id !== action.payload.data.skillId;
-                });
-
-                return requiredSkills;
-            })()
-        });
-    case 'REMOVE_REQUIRED_SKILL_BY_INDEX':
-        return Object.assign({}, state, {
-            requiredSkills: (() => {
-                let requiredSkills = Helper.deepCopy(state.requiredSkills);
-
-                delete requiredSkills[action.payload.index];
-
-                requiredSkills = requiredSkills.filter((skill) => {
-                    return Helper.isNotEmpty(skill);
-                });
-
-                return requiredSkills;
-            })()
-        });
-    case 'INCREASE_REQUIRED_SKILL_LEVEL':
         return (() => {
-            let requiredSkills = Helper.deepCopy(state.requiredSkills);
-            let skillInfo = SkillDataset.getInfo(requiredSkills[action.payload.index].id);
+            let skillInfo = SkillDataset.getInfo(action.payload.skillId);
 
-            if (Helper.isEmpty(skillInfo)
-                || skillInfo.list.length === requiredSkills[action.payload.index].level
-            ) {
+            if (Helper.isEmpty(skillInfo)) {
                 return state;
             }
 
-            requiredSkills[action.payload.index].level += 1;
+            let requiredSkills = Helper.deepCopy(state.requiredSkills);
+
+            for (let index in requiredSkills) {
+                if (action.payload.skillId !== requiredSkills[index].id) {
+                    continue;
+                }
+
+                return stete;
+            }
+
+            requiredSkills.push({
+                id: action.payload.skillId,
+                level: 1
+            });
 
             return Object.assign({}, state, {
                 requiredSkills: requiredSkills
             });
         })();
-    case 'DECREASE_REQUIRED_SKILL_LEVEL':
+    case 'REMOVE_REQUIRED_SKILL':
         return (() => {
-            let requiredSkills = Helper.deepCopy(state.requiredSkills);
-            let skillInfo = SkillDataset.getInfo(requiredSkills[action.payload.index].id);
+            let skillInfo = SkillDataset.getInfo(action.payload.skillId);
 
-            if (Helper.isEmpty(skillInfo)
-                || 0 === requiredSkills[action.payload.index].level
-            ) {
+            if (Helper.isEmpty(skillInfo)) {
                 return state;
             }
 
-            requiredSkills[action.payload.index].level -= 1;
+            let requiredSkills = Helper.deepCopy(state.requiredSkills);
 
-            return Object.assign({}, state, {
-                requiredSkills: requiredSkills
-            });
+            for (let index in requiredSkills) {
+                if (action.payload.skillId !== requiredSkills[index].id) {
+                    continue;
+                }
+
+                requiredSkills = requiredSkills.filter((skill) => {
+                    return skill.id !== action.payload.skillId;
+                });
+
+                return Object.assign({}, state, {
+                    requiredSkills: requiredSkills
+                });
+            }
+
+            return stete;
+        })();
+    case 'INCREASE_REQUIRED_SKILL_LEVEL':
+        return (() => {
+            let skillInfo = SkillDataset.getInfo(action.payload.skillId);
+
+            if (Helper.isEmpty(skillInfo)) {
+                return state;
+            }
+
+            let requiredSkills = Helper.deepCopy(state.requiredSkills);
+
+            for (let index in requiredSkills) {
+                if (action.payload.skillId !== requiredSkills[index].id) {
+                    continue;
+                }
+
+                if (skillInfo.list.length === requiredSkills[index].level) {
+                    return state;
+                }
+
+                requiredSkills[index].level += 1;
+
+                return Object.assign({}, state, {
+                    requiredSkills: requiredSkills
+                });
+            }
+
+            return stete;
+        })();
+    case 'DECREASE_REQUIRED_SKILL_LEVEL':
+        return (() => {
+            let skillInfo = SkillDataset.getInfo(action.payload.skillId);
+
+            if (Helper.isEmpty(skillInfo)) {
+                return state;
+            }
+
+            let requiredSkills = Helper.deepCopy(state.requiredSkills);
+
+            for (let index in requiredSkills) {
+                if (action.payload.skillId !== requiredSkills[index].id) {
+                    continue;
+                }
+
+                if (0 === requiredSkills[index].level) {
+                    return state;
+                }
+
+                requiredSkills[index].level -= 1;
+
+                return Object.assign({}, state, {
+                    requiredSkills: requiredSkills
+                });
+            }
+
+            return stete;
         })();
     case 'CLEAN_REQUIRED_SKILLS':
         return Object.assign({}, state, {
@@ -376,43 +448,35 @@ const Store = createStore((state = initialState, action) => {
 const Setter = {
 
     // Required Sets
-    addRequiredSet: (data) => {
+    addRequiredSet: (setId) => {
         Store.dispatch({
             type: 'ADD_REQUIRED_SET',
             payload: {
-                data: data
+                setId: setId
             }
         });
     },
-    removeRequiredSet: (data) => {
+    removeRequiredSet: (setId) => {
         Store.dispatch({
             type: 'REMOVE_REQUIRED_SET',
             payload: {
-                data: data
+                setId: setId
             }
         });
     },
-    removeRequiredSetByIndex: (index) => {
-        Store.dispatch({
-            type: 'REMOVE_REQUIRED_SET_BY_INDEX',
-            payload: {
-                index: index
-            }
-        });
-    },
-    increaseRequiredSetStep: (index) => {
+    increaseRequiredSetStep: (setId) => {
         Store.dispatch({
             type: 'INCREASE_REQUIRED_SET_STEP',
             payload: {
-                index: index
+                setId: setId
             }
         });
     },
-    decreaseRequiredSetStep: (index) => {
+    decreaseRequiredSetStep: (setId) => {
         Store.dispatch({
             type: 'DECREASE_REQUIRED_SET_STEP',
             payload: {
-                index: index
+                setId: setId
             }
         });
     },
@@ -423,43 +487,35 @@ const Setter = {
     },
 
     // Required Skills
-    addRequiredSkill: (data) => {
+    addRequiredSkill: (skillId) => {
         Store.dispatch({
             type: 'ADD_REQUIRED_SKILL',
             payload: {
-                data: data
+                skillId: skillId
             }
         });
     },
-    removeRequiredSkill: (data) => {
+    removeRequiredSkill: (skillId) => {
         Store.dispatch({
             type: 'REMOVE_REQUIRED_SKILL',
             payload: {
-                data: data
+                skillId: skillId
             }
         });
     },
-    removeRequiredSkillByIndex: (index) => {
-        Store.dispatch({
-            type: 'REMOVE_REQUIRED_SKILL_BY_INDEX',
-            payload: {
-                index: index
-            }
-        });
-    },
-    increaseRequiredSkillLevel: (index) => {
+    increaseRequiredSkillLevel: (skillId) => {
         Store.dispatch({
             type: 'INCREASE_REQUIRED_SKILL_LEVEL',
             payload: {
-                index: index
+                skillId: skillId
             }
         });
     },
-    decreaseRequiredSkillLevel: (index) => {
+    decreaseRequiredSkillLevel: (skillId) => {
         Store.dispatch({
             type: 'DECREASE_REQUIRED_SKILL_LEVEL',
             payload: {
-                index: index
+                skillId: skillId
             }
         });
     },

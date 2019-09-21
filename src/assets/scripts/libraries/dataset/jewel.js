@@ -62,7 +62,7 @@ class JewelDataset {
         this.filterSizeCondition = null;
     };
 
-    getNames = () => {
+    getIds = () => {
         return Object.keys(this.mapping);
     };
 

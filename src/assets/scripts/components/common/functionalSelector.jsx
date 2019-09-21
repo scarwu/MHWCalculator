@@ -18,7 +18,7 @@ export default function FunctionalSelector(props) {
     const {iconName, defaultValue, options, onChange} = props;
 
     return useMemo(() => {
-        Helper.log('Component: FunctionalSelector');
+        Helper.log('Component: Common -> FunctionalSelector');
 
         return (
             <div className="mhwc-functional_selector">

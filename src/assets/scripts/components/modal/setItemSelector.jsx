@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { Fragment, useState, useEffect, useRef } from 'react';
+import React, { Fragment, useState, useEffect, useRef, useCallback, useMemo } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -27,6 +27,60 @@ import FunctionalInput from 'components/common/functionalInput';
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
 
+/**
+ * Render Functions
+ */
+const renderSetItem = (set) => {
+    return (
+        <div key={set.id} className="mhwc-item mhwc-item-2-step">
+            <div className="col-12 mhwc-name">
+                <span>{_(set.name)}</span>
+
+                <div className="mhwc-icons_bundle">
+                    {set.isSelect ? (
+                        <FunctionalButton
+                            iconName="minus" altName={_('remove')}
+                            onClick={() => {CommonState.setter.removeRequiredSet(set.id)}} />
+                    ) : (
+                        <FunctionalButton
+                            iconName="plus" altName={_('add')}
+                            onClick={() => {CommonState.setter.addRequiredSet(set.id)}} />
+                    )}
+                </div>
+            </div>
+            <div className="col-12 mhwc-content">
+                {set.skills.map((skill, index) => {
+                    let skillInfo = SkillDataset.getInfo(skill.id);
+
+                    return Helper.isNotEmpty(skillInfo) ? (
+                        <Fragment key={index}>
+                            <div className="col-12 mhwc-name">
+                                <span>({skill.require}) {_(skillInfo.name)} Lv.{skill.level}</span>
+                            </div>
+                            <div className="col-12 mhwc-value mhwc-description">
+                                <span>{_(skillInfo.list[0].description)}</span>
+                            </div>
+                        </Fragment>
+                    ) : false;
+                })}
+            </div>
+        </div>
+    );
+};
+
+/**
+ * Sub Components
+ */
+const SetList = (props) => {
+    const {data} = props;
+
+    return useMemo(() => {
+        Helper.log('Component: SetItemSelector -> SetList');
+
+        return data.map(renderSetItem);
+    }, [data]);
+};
+
 export default function SetItemSelector(props) {
 
     /**
@@ -40,21 +94,14 @@ export default function SetItemSelector(props) {
     const refModal = useRef();
 
     useEffect(() => {
-        let idList = stateRequiredSets.map((set) => {
+        const idList = stateRequiredSets.map((set) => {
             return set.id;
         });
 
         let selectedList = [];
         let unselectedList = [];
 
-        SetDataset.getNames().sort().forEach((setId) => {
-            let setInfo = SetDataset.getInfo(setId);
-
-            if (Helper.isEmpty(setInfo)) {
-                return;
-            }
-
-            // Skip Selected Sets
+        SetDataset.getItems().forEach((setInfo) => {
             if (-1 !== idList.indexOf(setInfo.id)) {
                 setInfo.isSelect = true;
 
@@ -88,102 +135,22 @@ export default function SetItemSelector(props) {
     /**
      * Handle Functions
      */
-    let handleFastWindowClose = (event) => {
+    const handleFastWindowClose = useCallback((event) => {
         if (refModal.current !== event.target) {
             return;
         }
 
-        handleWindowClose();
-    };
-
-    let handleWindowClose = () => {
         ModalState.setter.hideSetItemSelector();
-    };
+    }, []);
 
-    let handleItemPickUp = (itemId) => {
-        CommonState.setter.addRequiredSet({
-            setId: itemId
-        });
-    };
-
-    let handleItemThrowDown = (itemId) => {
-        CommonState.setter.removeRequiredSet({
-            setId: itemId
-        });
-    };
-
-    let handleSegmentInput = (event) => {
+    const handleSegmentInput = useCallback((event) => {
         let segment = event.target.value;
 
         segment = (0 !== segment.length)
             ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
 
         updateSegment(segment);
-    };
-
-    /**
-     * Render Functions
-     */
-    let renderItem = (data, index) => {
-
-        // Create Text
-        let text = _(data.name);
-
-        data.skills.forEach((data) => {
-            let skillInfo = SkillDataset.getInfo(data.id);
-
-            if (Helper.isEmpty(skillInfo)) {
-                return;
-            }
-
-            text += _(skillInfo.name) + skillInfo.list.map((item) => {
-                return _(item.description);
-            }).join('');
-        });
-
-        // Search Nameword
-        if (Helper.isNotEmpty(stateSegment)
-            && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
-        ) {
-            return false;
-        }
-
-        return (
-            <div key={data.id} className="mhwc-item mhwc-item-2-step">
-                <div className="col-12 mhwc-name">
-                    <span>{_(data.name)}</span>
-
-                    <div className="mhwc-icons_bundle">
-                        {data.isSelect ? (
-                            <FunctionalButton
-                                iconName="minus" altName={_('remove')}
-                                onClick={() => {handleItemThrowDown(data.id)}} />
-                        ) : (
-                            <FunctionalButton
-                                iconName="plus" altName={_('add')}
-                                onClick={() => {handleItemPickUp(data.id)}} />
-                        )}
-                    </div>
-                </div>
-                <div className="col-12 mhwc-content">
-                    {data.skills.map((skill, index) => {
-                        let skillInfo = SkillDataset.getInfo(skill.id);
-
-                        return Helper.isNotEmpty(skillInfo) ? (
-                            <Fragment key={index}>
-                                <div className="col-12 mhwc-name">
-                                    <span>({skill.require}) {_(skillInfo.name)} Lv.{skill.level}</span>
-                                </div>
-                                <div className="col-12 mhwc-value mhwc-description">
-                                    <span>{_(skillInfo.list[0].description)}</span>
-                                </div>
-                            </Fragment>
-                        ) : false;
-                    })}
-                </div>
-            </div>
-        );
-    };
+    }, []);
 
     return stateIsShow ? (
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
@@ -198,12 +165,37 @@ export default function SetItemSelector(props) {
 
                         <FunctionalButton
                             iconName="times" altName={_('close')}
-                            onClick={handleWindowClose} />
+                            onClick={ModalState.setter.hideSetItemSelector} />
                     </div>
                 </div>
                 <div className="mhwc-list">
                     <div className="mhwc-wrapper">
-                        {stateSortedList.map(renderItem)}
+                        <SetList data={stateSortedList.filter((set) => {
+
+                            // Create Text
+                            let text = _(set.name);
+
+                            set.skills.forEach((set) => {
+                                let skillInfo = SkillDataset.getInfo(set.id);
+
+                                if (Helper.isEmpty(skillInfo)) {
+                                    return;
+                                }
+
+                                text += _(skillInfo.name) + skillInfo.list.map((item) => {
+                                    return _(item.description);
+                                }).join('');
+                            });
+
+                            // Search Nameword
+                            if (Helper.isNotEmpty(stateSegment)
+                                && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+                            ) {
+                                return false;
+                            }
+
+                            return true;
+                        })} />
                     </div>
                 </div>
             </div>
