@@ -6,6 +6,7 @@ define('ROOT', __DIR__);
 
 class Misc
 {
+    public static $uiLang = null;
     public static $langMap = [];
     public static $datasetMap = [
         'weapons' => [],
@@ -58,6 +59,10 @@ class Misc
             return self::$hashMap[$hash];
         }
 
+        if (null === self::$uiLang) {
+            self::$uiLang = Misc::loadJson('../src/assets/scripts/files/json/langs/zhTW/ui');
+        }
+
         $poolSize = count(self::$charPool);
 
         // Set Random Seed
@@ -70,7 +75,7 @@ class Misc
                 $code .= self::$charPool[rand() % $poolSize];
             }
 
-            if (!isset(self::$codeMap[$code])) {
+            if (!isset(self::$codeMap[$code]) && !isset(self::$uiLang[$code])) {
                 self::$hashMap[$hash] = $code;
                 self::$codeMap[$code] = true;
 
