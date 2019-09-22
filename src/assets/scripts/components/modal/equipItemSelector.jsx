@@ -506,8 +506,8 @@ export default function EquipItemSelector(props) {
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribeModel = ModalState.store.subscribe(() => {
-            updateBypassData(ModalState.getter.getEquipItemSelectorBypassData());
             updateIsShow(ModalState.getter.isShowEquipItemSelector());
+            updateBypassData(ModalState.getter.getEquipItemSelectorBypassData());
         });
 
         return () => {

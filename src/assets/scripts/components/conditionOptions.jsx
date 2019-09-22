@@ -34,6 +34,18 @@ const handleRequireConditionRefresh = () => {
     CommonState.setter.cleanRequiredSkills();
 };
 
+const handleShowSetItemSelector = () => {
+    ModalState.setter.showConditionItemSelector({
+        mode: 'set'
+    });
+};
+
+const handleShowSkillItemSelector = () => {
+    ModalState.setter.showConditionItemSelector({
+        mode: 'skill'
+    });
+};
+
 /**
  * Render Functions
  */
@@ -199,7 +211,7 @@ const SkillList = (props) => {
 
                 skillInfo.list.forEach((item) => {
                     if (Helper.isEmpty(item.reaction)
-                        && Helper.isEmpty(item.reaction.enableSkillLevel)
+                        || Helper.isEmpty(item.reaction.enableSkillLevel)
                     ) {
                         return;
                     }
@@ -227,10 +239,10 @@ export default function ConditionOptions(props) {
                         onClick={handleRequireConditionRefresh} />
                     <FunctionalButton
                         iconName="plus" altName={_('set')}
-                        onClick={ModalState.setter.showSetItemSelector} />
+                        onClick={handleShowSetItemSelector} />
                     <FunctionalButton
                         iconName="plus" altName={_('skill')}
-                        onClick={ModalState.setter.showSkillItemSelector} />
+                        onClick={handleShowSkillItemSelector} />
                 </div>
             </div>
 

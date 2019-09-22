@@ -51,11 +51,9 @@ const initialState = {
     equipBundleSelector: Status.get(statusPrefix + ':equipBundleSelector') || {
         isShow: false
     },
-    setItemSelector: Status.get(statusPrefix + ':setItemSelector') || {
-        isShow: false
-    },
-    skillItemSelector: Status.get(statusPrefix + ':skillItemSelector') || {
-        isShow: false
+    conditionItemSelector: Status.get(statusPrefix + ':conditionItemSelector') || {
+        isShow: false,
+        bypassData: null
     },
     equipItemSelector: Status.get(statusPrefix + ':equipItemSelector') || {
         isShow: false,
@@ -84,16 +82,11 @@ const Store = createStore((state = initialState, action) => {
                 isShow: action.payload.isShow
             }
         });
-    case 'UPDATE_SET_ITEM_SELECTOR':
+    case 'UPDATE_CONDITION_ITEM_SELECTOR':
         return Object.assign({}, state, {
-            setItemSelector: {
-                isShow: action.payload.isShow
-            }
-        });
-    case 'UPDATE_SKILL_ITEM_SELECTOR':
-        return Object.assign({}, state, {
-            skillItemSelector: {
-                isShow: action.payload.isShow
+            conditionItemSelector: {
+                isShow: action.payload.isShow,
+                bypassData: action.payload.bypassData
             }
         });
     case 'UPDATE_EQUIP_ITEM_SELECTOR':
@@ -157,35 +150,21 @@ const Setter = {
             }
         });
     },
-    showSetItemSelector: () => {
+    showConditionItemSelector: (bypassData = null) => {
         Store.dispatch({
-            type: 'UPDATE_SET_ITEM_SELECTOR',
+            type: 'UPDATE_CONDITION_ITEM_SELECTOR',
             payload: {
-                isShow: true
+                isShow: true,
+                bypassData: bypassData
             }
         });
     },
-    hideSetItemSelector: () => {
+    hideConditionItemSelector: () => {
         Store.dispatch({
-            type: 'UPDATE_SET_ITEM_SELECTOR',
+            type: 'UPDATE_CONDITION_ITEM_SELECTOR',
             payload: {
-                isShow: false
-            }
-        });
-    },
-    showSkillItemSelector: () => {
-        Store.dispatch({
-            type: 'UPDATE_SKILL_ITEM_SELECTOR',
-            payload: {
-                isShow: true
-            }
-        });
-    },
-    hideSkillItemSelector: () => {
-        Store.dispatch({
-            type: 'UPDATE_SKILL_ITEM_SELECTOR',
-            payload: {
-                isShow: false
+                isShow: false,
+                bypassData: null
             }
         });
     },
@@ -219,11 +198,11 @@ const Getter = {
     isShowEquipBundleSelector: () => {
         return Store.getState().equipBundleSelector.isShow;
     },
-    isShowSetItemSelector: () => {
-        return Store.getState().setItemSelector.isShow;
+    isShowConditionItemSelector: () => {
+        return Store.getState().conditionItemSelector.isShow;
     },
-    isShowSkillItemSelector: () => {
-        return Store.getState().skillItemSelector.isShow;
+    getConditionItemSelectorBypassData: () => {
+        return Store.getState().conditionItemSelector.bypassData;
     },
     isShowEquipItemSelector: () => {
         return Store.getState().equipItemSelector.isShow;

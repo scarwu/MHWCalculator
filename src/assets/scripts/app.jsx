@@ -70,7 +70,7 @@ export default function App(props) {
     /**
      * Hooks
      */
-    const [stateLang, updateLang] = useState(Status.get('sys:lang'));
+    const [stateLang, setLang] = useState(Status.get('sys:lang'));
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
@@ -88,7 +88,7 @@ export default function App(props) {
      */
     const handleLangChange = useCallback((event) => {
         Status.set('sys:lang', event.target.value);
-        updateLang(event.target.value);
+        setLang(event.target.value);
     }, []);
 
     /**

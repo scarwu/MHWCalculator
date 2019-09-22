@@ -23,8 +23,7 @@ import App from 'app';
 // Load Components
 import Changelog from 'components/modal/changelog';
 import AlgorithmSetting from 'components/modal/algorithmSetting';
-import SetItemSelector from 'components/modal/setItemSelector';
-import SkillItemSelector from 'components/modal/skillItemSelector';
+import ConditionItemSelector from 'components/modal/conditionItemSelector';
 import EquipItemSelector from 'components/modal/equipItemSelector';
 import EquipBundleSelector from 'components/modal/equipBundleSelector';
 
@@ -55,8 +54,7 @@ ReactDOM.render((
 
         <Changelog />
         <AlgorithmSetting />
-        <SetItemSelector />
-        <SkillItemSelector />
+        <ConditionItemSelector />
         <EquipItemSelector />
         <EquipBundleSelector />
     </Router>
