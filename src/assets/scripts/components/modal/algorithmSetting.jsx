@@ -9,7 +9,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { Fragment, useState, useEffect, useCallback, useRef } from 'react';
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -77,7 +77,52 @@ export default function AlgorithmSetting(props) {
                     </div>
                 </div>
                 <div className="mhwc-list">
-
+                    <div className="mhwc-wrapper">
+                        <div className="mhwc-item mhwc-item-2-step">
+                            <div className="col-12 mhwc-name">
+                                <span>一般設定</span>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                <div className="col-4 mhwc-name">
+                                    顯示數量
+                                </div>
+                                <div className="col-8 mhwc-value">
+                                    {stateAlgorithmParams.limit}
+                                </div>
+                                <div className="col-4 mhwc-name">
+                                    排序方式
+                                </div>
+                                <div className="col-8 mhwc-value">
+                                    {stateAlgorithmParams.sort}
+                                </div>
+                                <div className="col-4 mhwc-name">
+                                    搜尋策略
+                                </div>
+                                <div className="col-8 mhwc-value">
+                                    {stateAlgorithmParams.strategy}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mhwc-item mhwc-item-2-step">
+                            <div className="col-12 mhwc-name">
+                                <span>裝備因子</span>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                {Object.keys(stateAlgorithmParams.includeArmorRare).map((rare) => {
+                                    return (
+                                        <Fragment>
+                                            <div className="col-4 mhwc-name">
+                                                {_('rare') + `: ${rare}`}
+                                            </div>
+                                            <div className="col-8 mhwc-value">
+                                                {stateAlgorithmParams.includeArmorRare[rare] ? '納入' : '未納入'}
+                                            </div>
+                                        </Fragment>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -85,7 +85,16 @@ export default {
         algorithmParams: {
             limit: 25,
             sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel
-            strategy: 'complete' // complete | speed
+            strategy: 'complete', // complete | speed
+            includeArmorRare: {
+                12: true,
+                11: true,
+                10: true,
+                9: true,
+                8: false,
+                7: false,
+                6: false
+            }
         }
     },
     defaultCandidateEquip: {
@@ -97,7 +106,8 @@ export default {
         ownSlotCount: {
             1: 0,
             2: 0,
-            3: 0
+            3: 0,
+            4: 0
         },
         expectedValue: 0,
         expectedLevel: 0
@@ -125,6 +135,7 @@ export default {
                 1: 0,
                 2: 0,
                 3: 0,
+                4: 0,
                 all: 0
             }
         }
