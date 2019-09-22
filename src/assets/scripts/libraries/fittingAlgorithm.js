@@ -30,13 +30,18 @@ class FittingAlgorithm {
      * Search
      */
     search = (requiredSets, requiredSkills, requiredEquips, algorithmParams) => {
-
         if (0 === requiredSets.length
             && 0 === requiredSkills.length
         ) {
             return [];
         }
 
+        Helper.log('Input: Required Sets', requiredSets);
+        Helper.log('Input: Required Skills', requiredSkills);
+        Helper.log('Input: Required Equips', requiredEquips);
+        Helper.log('Input: Algorithm Params', algorithmParams);
+
+        this.algorithmParams = algorithmParams;
         this.conditionEquips = [];
         this.conditionSets = {};
         this.conditionSkills = {};
@@ -97,9 +102,9 @@ class FittingAlgorithm {
 
             // Increase Expected Value & Level
             if (Helper.isNotEmpty(jewel)) {
-                this.conditionExpectedValue += skill.level * jewel.size; // 1, 2, 3
+                this.conditionExpectedValue += skill.level * jewel.size; // 1, 2, 3, 4
             } else {
-                this.conditionExpectedValue += skill.level * 4;
+                this.conditionExpectedValue += skill.level * 5;
             }
 
             this.conditionExpectedLevel += skill.level;
@@ -140,7 +145,7 @@ class FittingAlgorithm {
             equipInfo.type = equipType;
 
             // Convert Equip to Candidate Equip
-            let candidateEquip = this.convertEquipToCandidateEquip(equipInfo);
+            let candidateEquip = this.convertEquipToCandidateEquip(equipInfo, equipType);
 
             // Add Candidate Equip to Bundle
             bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
@@ -166,6 +171,13 @@ class FittingAlgorithm {
             this.usedEquips[candidateEquip.id] = true;
         });
 
+        Helper.log('Init: Condition Skills:', this.conditionSkills);
+        Helper.log('Init: Condition Sets:', this.conditionSets);
+        Helper.log('Init: Condition Equips:', this.conditionEquips);
+        Helper.log('Init: Correspond Jewels:', this.correspondJewels);
+        Helper.log('Init: Condition Expected Value:', this.conditionExpectedValue);
+        Helper.log('Init: Condition Expected Level:', this.conditionExpectedLevel);
+
         // Reset Equip Count
         bundle.meta.equipCount = 0;
 
@@ -174,12 +186,7 @@ class FittingAlgorithm {
         let requireEquipCount = this.conditionEquips.length;
         let requireSkillCount = Object.keys(this.conditionSkills).length;
 
-        Helper.log('Condition Skills:', this.conditionSkills);
-        Helper.log('Condition Equips:', this.conditionEquips);
-        Helper.log('Correspond Jewels:', this.correspondJewels);
-        Helper.log('Condition Expected Value:', this.conditionExpectedValue);
-        Helper.log('Condition Expected Level:', this.conditionExpectedLevel);
-        Helper.log('Init - Bundle List:', prevBundleList);
+        Helper.log('First: Bundle List:', prevBundleList);
 
         if (0 !== Object.keys(this.conditionSets).length) {
 
@@ -199,10 +206,10 @@ class FittingAlgorithm {
 
                 // Create Candidate Equips
                 Object.keys(this.conditionSets).forEach((setId) => {
-                    let equips = ArmorDataset.typeIs(equipType).setIs(setId).getItems();
+                    let equipInfos = ArmorDataset.typeIs(equipType).setIs(setId).getItems();
 
                     // Get Candidate Equips
-                    candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
+                    candidateEquips[equipType] = this.createCandidateEquips(equipInfos, equipType, candidateEquips[equipType]);
                 });
 
                 // Append Empty Candidate Equip
@@ -336,7 +343,7 @@ class FittingAlgorithm {
 
             // Create Candidate Equips
             Object.keys(this.conditionSkills).forEach((skillId) => {
-                let equips = null;
+                let equipInfos = null;
 
                 // Get Equips With Skill
                 if ('helm' === equipType
@@ -345,21 +352,21 @@ class FittingAlgorithm {
                     || 'waist' === equipType
                     || 'leg' === equipType
                 ) {
-                    equips = ArmorDataset.typeIs(equipType).hasSkill(skillId).getItems();
+                    equipInfos = ArmorDataset.typeIs(equipType).hasSkill(skillId).getItems();
                 } else if ('charm' === equipType) {
-                    equips = CharmDataset.hasSkill(skillId).getItems();
+                    equipInfos = CharmDataset.hasSkill(skillId).getItems();
                 }
 
                 // Get Candidate Equips
-                candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
+                candidateEquips[equipType] = this.createCandidateEquips(equipInfos, equipType, candidateEquips[equipType]);
 
                 if ('charm' !== equipType) {
 
                     // Get Equips With Slot
-                    equips = ArmorDataset.typeIs(equipType).rareIs(0).getItems();
+                    equipInfos = ArmorDataset.typeIs(equipType).rareIs(0).getItems();
 
                     // Get Candidate Equips
-                    candidateEquips[equipType] = this.createCandidateEquips(equips, equipType, candidateEquips[equipType]);
+                    candidateEquips[equipType] = this.createCandidateEquips(equipInfos, equipType, candidateEquips[equipType]);
                 }
             });
 
@@ -494,7 +501,7 @@ class FittingAlgorithm {
 
             prevBundleList = nextBundleList;
 
-            Helper.log('Result - Bundle Count (Pre):', Object.keys(lastBundleList).length);
+            Helper.log('Result: Bundle Count (Pre):', Object.keys(lastBundleList).length);
         });
 
         // Find Completed Bundle into Last BundleList
@@ -519,16 +526,66 @@ class FittingAlgorithm {
             }
         });
 
-        Helper.log('Result - Bundle Count (Final):', Object.keys(lastBundleList).length);
+        Helper.log('Result: Bundle Count (Final):', Object.keys(lastBundleList).length);
 
-        lastBundleList = Object.values(lastBundleList).sort((bundleA, bundleB) => {
-            let valueA = (8 - bundleA.meta.equipCount) * 1000 + bundleA.defense;
-            let valueB = (8 - bundleB.meta.equipCount) * 1000 + bundleB.defense;
+        switch (this.algorithmParams.sort) {
+        case 'complex':
+            lastBundleList = Object.values(lastBundleList).sort((bundleA, bundleB) => {
+                let valueA = (8 - bundleA.meta.equipCount) * 1000 + bundleA.defense;
+                let valueB = (8 - bundleB.meta.equipCount) * 1000 + bundleB.defense;
 
-            return valueB - valueA;
-        });
+                return valueB - valueA;
+            });
 
-        return lastBundleList.slice(0, algorithmParams.limit);
+            break;
+        case 'defense':
+            lastBundleList = Object.values(lastBundleList).sort((bundleA, bundleB) => {
+                let valueA = bundleA.defense;
+                let valueB = bundleB.defense;
+
+                return valueB - valueA;
+            });
+
+            break;
+        case 'amount':
+            lastBundleList = Object.values(lastBundleList).sort((bundleA, bundleB) => {
+                let valueA = bundleA.meta.equipCount;
+                let valueB = bundleB.meta.equipCount;
+
+                return valueB - valueA;
+            });
+
+            break;
+        case 'slot':
+            lastBundleList = Object.values(lastBundleList).sort((bundleA, bundleB) => {
+                let valueA = bundleA.meta.remainingSlotCount.all;
+                let valueB = bundleB.meta.remainingSlotCount.all;
+
+                return valueB - valueA;
+            });
+
+            break;
+        case 'expectedValue':
+            lastBundleList = Object.values(lastBundleList).sort((bundleA, bundleB) => {
+                let valueA = bundleA.meta.expectedValue;
+                let valueB = bundleB.meta.expectedValue;
+
+                return valueB - valueA;
+            });
+
+            break;
+        case 'expectedLevel':
+            lastBundleList = Object.values(lastBundleList).sort((bundleA, bundleB) => {
+                let valueA = bundleA.meta.expectedLevel;
+                let valueB = bundleB.meta.expectedLevel;
+
+                return valueB - valueA;
+            });
+
+            break;
+        }
+
+        return lastBundleList.slice(0, this.algorithmParams.limit);
     };
 
     /**
@@ -560,10 +617,15 @@ class FittingAlgorithm {
     /**
      * Create Candidate Equips
      */
-    createCandidateEquips = (equips, equipType, candidateEquips = {}) => {
-        equips.forEach((equip) => {
-            let candidateEquip = this.convertEquipToCandidateEquip(equip);
-            candidateEquip.type = equipType;
+    createCandidateEquips = (equipInfos, equipType, candidateEquips = {}) => {
+        equipInfos.forEach((equipInfo) => {
+
+            // Check is Armor Factor
+            if (false === this.algorithmParams.armorFactor[equipInfo.rare]) {
+                return;
+            }
+
+            let candidateEquip = this.convertEquipToCandidateEquip(equipInfo, equipType);
 
             // Check is Skip Equips
             if (true === this.isSkipCandidateEquip(candidateEquip)) {
@@ -588,12 +650,12 @@ class FittingAlgorithm {
     /**
      * Convert Equip To Candidate Equip
      */
-    convertEquipToCandidateEquip = (equip) => {
+    convertEquipToCandidateEquip = (equip, equipType) => {
         let candidateEquip = Helper.deepCopy(Constant.defaultCandidateEquip);
 
         // Set Id, Type & Defense
         candidateEquip.id = equip.id;
-        candidateEquip.type = equip.type;
+        candidateEquip.type = ('charm' !== equipType) ? equip.type : equipType;
         candidateEquip.defense = (Helper.isNotEmpty(equip.defense)) ? equip.defense : 0;
 
         if (Helper.isNotEmpty(equip.set)) {
