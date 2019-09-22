@@ -15,7 +15,7 @@ import React, { useMemo } from 'react';
 import Helper from 'core/helper';
 
 export default function FunctionalInput(props) {
-    const {iconName, placeholder, onChange} = props;
+    const {iconName, defaultValue, placeholder, onChange} = props;
 
     return useMemo(() => {
         Helper.log('Component: Common -> FunctionalInput');
@@ -24,13 +24,14 @@ export default function FunctionalInput(props) {
             <div className="mhwc-functional_input">
                 <div className="mhwc-body">
                     <div className="mhwc-icon">
-                        <i className={`fa fa-${props.iconName}`}></i>
+                        <i className={`fa fa-${iconName}`}></i>
                     </div>
                     <input className="mhwc-input" type="text"
-                        placeholder={props.placeholder}
-                        onChange={props.onChange} />
+                        defaultValue={defaultValue}
+                        placeholder={placeholder}
+                        onChange={onChange} />
                 </div>
             </div>
         );
-    }, [iconName, placeholder]);
+    }, [iconName, defaultValue, placeholder]);
 };

@@ -164,9 +164,9 @@ export default function ConditionItemSelector(props) {
     const [stateBypassData, updateBypassData] = useState(ModalState.getter.getConditionItemSelectorBypassData());
     const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
     const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
-    const [stateMode, updateMode] = useState(null);
+    const [stateMode, updateMode] = useState(undefined);
     const [stateSortedList, updateSortedList] = useState([]);
-    const [stateSegment, updateSegment] = useState(null);
+    const [stateSegment, updateSegment] = useState(undefined);
     const refModal = useRef();
 
     useEffect(() => {
@@ -335,7 +335,7 @@ export default function ConditionItemSelector(props) {
                     <div className="mhwc-icons_bundle">
                         <FunctionalInput
                             iconName="search" placeholder={_('inputKeyword')}
-                            onChange={handleSegmentInput} />
+                            defaultValue={stateSegment} onChange={handleSegmentInput} />
                         <FunctionalSelector
                             iconName="globe" defaultValue={stateMode}
                             options={modeList} onChange={handleModeChange} />
