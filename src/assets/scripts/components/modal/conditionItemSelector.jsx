@@ -32,14 +32,8 @@ import ModalState from 'states/modal';
  * Variables
  */
 const modeList = [
-    {
-        key: 'set',
-        value: _('set')
-    },
-    {
-        key: 'skill',
-        value: _('skill')
-    }
+    { key: 'set', value: _('set') },
+    { key: 'skill', value: _('skill') }
 ];
 
 /**

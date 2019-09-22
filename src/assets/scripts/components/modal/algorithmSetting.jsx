@@ -20,10 +20,46 @@ import _ from 'libraries/lang';
 
 // Load Components
 import FunctionalButton from 'components/common/functionalButton';
+import FunctionalSelector from 'components/common/functionalSelector';
+import FunctionalInput from 'components/common/functionalInput';
 
 // Load State Control
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
+
+/**
+ * Variables
+ */
+const sortList = [
+    { key: 'complex', value: _('complex') },
+    { key: 'defense', value: _('defense') },
+    { key: 'amount', value: _('amount') },
+    { key: 'slot', value: _('slot') },
+    { key: 'expectedValue', value: _('expectedValue') },
+    { key: 'expectedLevel', value: _('expectedLevel') }
+];
+
+const strategyList = [
+    { key: 'complete', value: _('complete') },
+    { key: 'speed', value: _('speed') }
+];
+
+/**
+ * Handler Functions
+ */
+const handleLimitChange = (event) => {
+    let limit = ('' !== event.target.value) ? parseInt(event.target.value) : 25;
+
+    CommonState.setter.setAlgorithmParamsLimit(limit);
+};
+
+const handleSortChange = (event) => {
+    CommonState.setter.setAlgorithmParamsSort(event.target.value);
+};
+
+const handleStrategyChange = (event) => {
+    CommonState.setter.setAlgorithmParamsStrategy(event.target.value);
+};
 
 export default function AlgorithmSetting(props) {
 
@@ -80,26 +116,35 @@ export default function AlgorithmSetting(props) {
                     <div className="mhwc-wrapper">
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
-                                <span>一般設定</span>
+                                <span>顯示數量</span>
+
+                                <div className="mhwc-icons_bundle">
+                                    <FunctionalInput
+                                        iconName="list-alt" placeholder={_('inputKeyword')}
+                                        defaultValue={stateAlgorithmParams.limit}
+                                        onChange={handleLimitChange} />
+                                </div>
                             </div>
-                            <div className="col-12 mhwc-content">
-                                <div className="col-4 mhwc-name">
-                                    顯示數量
+                        </div>
+                        <div className="mhwc-item mhwc-item-2-step">
+                            <div className="col-12 mhwc-name">
+                                <span>排序方式</span>
+
+                                <div className="mhwc-icons_bundle">
+                                    <FunctionalSelector
+                                        iconName="sort-amount-desc" defaultValue={stateAlgorithmParams.sort}
+                                        options={sortList} onChange={handleSortChange} />
                                 </div>
-                                <div className="col-8 mhwc-value">
-                                    {stateAlgorithmParams.limit}
-                                </div>
-                                <div className="col-4 mhwc-name">
-                                    排序方式
-                                </div>
-                                <div className="col-8 mhwc-value">
-                                    {stateAlgorithmParams.sort}
-                                </div>
-                                <div className="col-4 mhwc-name">
-                                    搜尋策略
-                                </div>
-                                <div className="col-8 mhwc-value">
-                                    {stateAlgorithmParams.strategy}
+                            </div>
+                        </div>
+                        <div className="mhwc-item mhwc-item-2-step">
+                            <div className="col-12 mhwc-name">
+                                <span>搜尋策略</span>
+
+                                <div className="mhwc-icons_bundle">
+                                    <FunctionalSelector
+                                        iconName="book" defaultValue={stateAlgorithmParams.strategy}
+                                        options={strategyList} onChange={handleStrategyChange} />
                                 </div>
                             </div>
                         </div>
@@ -108,16 +153,26 @@ export default function AlgorithmSetting(props) {
                                 <span>裝備因子</span>
                             </div>
                             <div className="col-12 mhwc-content">
-                                {Object.keys(stateAlgorithmParams.includeArmorRare).map((rare) => {
+                                {Object.keys(stateAlgorithmParams.armorFactor).map((rare) => {
                                     return (
-                                        <Fragment>
-                                            <div className="col-4 mhwc-name">
-                                                {_('rare') + `: ${rare}`}
-                                            </div>
-                                            <div className="col-8 mhwc-value">
-                                                {stateAlgorithmParams.includeArmorRare[rare] ? '納入' : '未納入'}
-                                            </div>
-                                        </Fragment>
+                                        <div key={rare} className="col-6 mhwc-value">
+                                            <span>{_('rare') + `: ${rare}`}</span>
+                                            {stateAlgorithmParams.armorFactor[rare] ? (
+                                                <div className="mhwc-icons_bundle">
+                                                    <FunctionalButton
+                                                        iconName="star"
+                                                        altName={_('exclude')}
+                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsArmorFactor(rare)}} />
+                                                </div>
+                                            ) : (
+                                                <div className="mhwc-icons_bundle">
+                                                    <FunctionalButton
+                                                        iconName="star-o"
+                                                        altName={_('include')}
+                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsArmorFactor(rare)}} />
+                                                </div>
+                                            )}
+                                        </div>
                                     );
                                 })}
                             </div>

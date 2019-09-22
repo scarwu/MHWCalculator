@@ -86,7 +86,7 @@ export default {
             limit: 25,
             sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel
             strategy: 'complete', // complete | speed
-            includeArmorRare: {
+            armorFactor: {
                 12: true,
                 11: true,
                 10: true,

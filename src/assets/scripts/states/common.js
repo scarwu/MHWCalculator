@@ -446,10 +446,47 @@ const Store = createStore((state = initialState, action) => {
             currentEquips: Helper.deepCopy(Constant.defaultEquips)
         });
 
-    // case 'ALGORITHM_PARAMS':
-    //     return Object.assign({}, state, {
-    //         algorithmParams: action.payload.data
-    //     });
+    // Algorithm Params
+    case 'SET_ALGORITHM_PARAMS_LIMIT':
+        return (() => {
+            let algorithmParams = Helper.deepCopy(state.algorithmParams);
+
+            algorithmParams.limit = action.payload.limit;
+
+            return Object.assign({}, state, {
+                algorithmParams: algorithmParams
+            });
+        })();
+    case 'SET_ALGORITHM_PARAMS_SORT':
+        return (() => {
+            let algorithmParams = Helper.deepCopy(state.algorithmParams);
+
+            algorithmParams.sort = action.payload.sort;
+
+            return Object.assign({}, state, {
+                algorithmParams: algorithmParams
+            });
+        })();
+    case 'SET_ALGORITHM_PARAMS_STRATEGY':
+        return (() => {
+            let algorithmParams = Helper.deepCopy(state.algorithmParams);
+
+            algorithmParams.strategy = action.payload.strategy;
+
+            return Object.assign({}, state, {
+                algorithmParams: algorithmParams
+            });
+        })();
+    case 'TOGGLE_ALGORITHM_PARAMS_ARMOR_FACTOR':
+        return (() => {
+            let algorithmParams = Helper.deepCopy(state.algorithmParams);
+
+            algorithmParams.armorFactor[action.payload.rare] = !algorithmParams.armorFactor[action.payload.rare];
+
+            return Object.assign({}, state, {
+                algorithmParams: algorithmParams
+            });
+        })();
 
     // Computed Bundles
     case 'UPDATE_COMPUTED_BUNDLES':
@@ -622,6 +659,40 @@ const Setter = {
     cleanCurrentEquips: () => {
         Store.dispatch({
             type: 'CLEAN_CURRENT_EQUIPS'
+        });
+    },
+
+    // Algorithm Params
+    setAlgorithmParamsLimit: (limit) => {
+        Store.dispatch({
+            type: 'SET_ALGORITHM_PARAMS_LIMIT',
+            payload: {
+                limit: limit
+            }
+        });
+    },
+    setAlgorithmParamsSort: (sort) => {
+        Store.dispatch({
+            type: 'SET_ALGORITHM_PARAMS_SORT',
+            payload: {
+                sort: sort
+            }
+        });
+    },
+    setAlgorithmParamsStrategy: (strategy) => {
+        Store.dispatch({
+            type: 'SET_ALGORITHM_PARAMS_STRATEGY',
+            payload: {
+                strategy: strategy
+            }
+        });
+    },
+    toggleAlgorithmParamsArmorFactor: (rare) => {
+        Store.dispatch({
+            type: 'TOGGLE_ALGORITHM_PARAMS_ARMOR_FACTOR',
+            payload: {
+                rare: rare
+            }
         });
     },
 

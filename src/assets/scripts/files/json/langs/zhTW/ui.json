@@ -112,5 +112,13 @@
     "weaponList":           "武器列表",
     "bundleList":           "配裝清單",
     "algorithmSetting":     "搜尋設定",
-    "changelog":            "更新紀錄"
+    "changelog":            "更新紀錄",
+    "complex":              "綜合",
+    "defense":              "防禦",
+    "amount":               "數量",
+    "slot":                 "插槽",
+    "expectedValue":        "期望數值",
+    "expectedLevel":        "期望等級",
+    "complete":             "完整",
+    "speed":                "速度"
 }

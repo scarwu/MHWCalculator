@@ -32,7 +32,7 @@ import enUSChangelog from 'files/md/langs/enUS/changelog.md';
 /**
  * Variables
  */
-const ChangelogMap = {
+const changelogMap = {
     zhTW: zhTWChangelog,
     jaJP: jaJPChangelog,
     enUS: enUSChangelog
@@ -42,8 +42,8 @@ const ChangelogMap = {
  * Handle Functions
  */
 const getChangelog = () => {
-    return Helper.isNotEmpty(ChangelogMap[Status.get('sys:lang')])
-        ? ChangelogMap[Status.get('sys:lang')] : false;
+    return Helper.isNotEmpty(changelogMap[Status.get('sys:lang')])
+        ? changelogMap[Status.get('sys:lang')] : false;
 };
 
 export default function Changelog(props) {

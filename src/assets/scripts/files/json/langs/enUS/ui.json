@@ -112,5 +112,13 @@
     "weaponList":           "Weapon List",
     "bundleList":           "Bundle List",
     "algorithmSetting":     "Algorithm Setting",
-    "changelog":            "Change Log"
+    "changelog":            "Change Log",
+    "complex":              "Complex",
+    "defense":              "Defense",
+    "amount":               "Amount",
+    "slot":                 "Slot",
+    "expectedValue":        "ExpectedValue",
+    "expectedLevel":        "ExpectedLevel",
+    "complete":             "Complete",
+    "speed":                "Speed"
 }

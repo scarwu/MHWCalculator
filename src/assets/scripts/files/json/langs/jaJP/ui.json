@@ -112,5 +112,13 @@
     "weaponList":           null,
     "bundleList":           null,
     "algorithmSetting":     null,
-    "changelog":            "変更履歴"
+    "changelog":            "変更履歴",
+    "complex":              null,
+    "defense":              null,
+    "amount":               null,
+    "slot":                 null,
+    "expectedValue":        null,
+    "expectedLevel":        null,
+    "complete":             null,
+    "speed":                null
 }
