@@ -450,7 +450,7 @@ export default function EquipsDisplayer(props) {
                         onClick={handleEquipsDisplayerRefresh} />
                     <FunctionalButton
                         iconName="th-list" altName={_('bundleList')}
-                        onClick={ModalState.setter.showEquipBundleSelector} />
+                        onClick={ModalState.setter.showBundleItemSelector} />
                 </div>
             </div>
 

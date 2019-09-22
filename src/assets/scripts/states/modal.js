@@ -48,7 +48,7 @@ const initialState = {
     algorithmSetting: Status.get(statusPrefix + ':algorithmSetting') || {
         isShow: false
     },
-    equipBundleSelector: Status.get(statusPrefix + ':equipBundleSelector') || {
+    bundleItemSelector: Status.get(statusPrefix + ':bundleItemSelector') || {
         isShow: false
     },
     conditionItemSelector: Status.get(statusPrefix + ':conditionItemSelector') || {
@@ -76,9 +76,9 @@ const Store = createStore((state = initialState, action) => {
                 isShow: action.payload.isShow
             }
         });
-    case 'UPDATE_EQUIP_BUNDLE_SELECTOR':
+    case 'UPDATE_BUNDLE_ITEM_SELECTOR':
         return Object.assign({}, state, {
-            equipBundleSelector: {
+            bundleItemSelector: {
                 isShow: action.payload.isShow
             }
         });
@@ -134,17 +134,17 @@ const Setter = {
             }
         });
     },
-    showEquipBundleSelector: () => {
+    showBundleItemSelector: () => {
         Store.dispatch({
-            type: 'UPDATE_EQUIP_BUNDLE_SELECTOR',
+            type: 'UPDATE_BUNDLE_ITEM_SELECTOR',
             payload: {
                 isShow: true
             }
         });
     },
-    hideEquipBundleSelector: () => {
+    hideBundleItemSelector: () => {
         Store.dispatch({
-            type: 'UPDATE_EQUIP_BUNDLE_SELECTOR',
+            type: 'UPDATE_BUNDLE_ITEM_SELECTOR',
             payload: {
                 isShow: false
             }
@@ -195,8 +195,8 @@ const Getter = {
     isShowAlgorithmSetting: () => {
         return Store.getState().algorithmSetting.isShow;
     },
-    isShowEquipBundleSelector: () => {
-        return Store.getState().equipBundleSelector.isShow;
+    isShowBundleItemSelector: () => {
+        return Store.getState().bundleItemSelector.isShow;
     },
     isShowConditionItemSelector: () => {
         return Store.getState().conditionItemSelector.isShow;

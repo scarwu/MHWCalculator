@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Equip Bundle Selector
+ * Bundle Item Selector
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -31,12 +31,12 @@ import ModalState from 'states/modal';
 // Load Constant
 import Constant from 'constant';
 
-export default function EquipBundleSelector(props) {
+export default function BundleItemSelector(props) {
 
     /**
      * Hooks
      */
-    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowEquipBundleSelector());
+    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowBundleItemSelector());
     const [stateReservedBundles, updateReservedBundles] = useState(CommonState.getter.getReservedBundles());
     const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
     const refModal = useRef();
@@ -51,7 +51,7 @@ export default function EquipBundleSelector(props) {
         });
 
         const unsubscribeModal = ModalState.store.subscribe(() => {
-            updateIsShow(ModalState.getter.isShowEquipBundleSelector());
+            updateIsShow(ModalState.getter.isShowBundleItemSelector());
         });
 
         return () => {
@@ -68,7 +68,7 @@ export default function EquipBundleSelector(props) {
             return;
         }
 
-        ModalState.setter.hideEquipBundleSelector();
+        ModalState.setter.hideBundleItemSelector();
     }, []);
 
     const handleBundleSave = useCallback((index) => {
@@ -93,7 +93,7 @@ export default function EquipBundleSelector(props) {
 
     const handleBundlePickUp = useCallback((index) => {
         CommonState.setter.replaceCurrentEquips(stateReservedBundles[index].equips);
-        ModalState.setter.hideEquipBundleSelector();
+        ModalState.setter.hideBundleItemSelector();
     }, [stateReservedBundles]);
 
     /**
@@ -229,12 +229,12 @@ export default function EquipBundleSelector(props) {
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
             <div className="mhwc-modal">
                 <div className="mhwc-panel">
-                    <span className="mhwc-title">{_('inventorySetting')}</span>
+                    <span className="mhwc-title">{_('bundleList')}</span>
 
                     <div className="mhwc-icons_bundle">
                         <FunctionalButton
                             iconName="times" altName={_('close')}
-                            onClick={ModalState.setter.hideEquipBundleSelector} />
+                            onClick={ModalState.setter.hideBundleItemSelector} />
                     </div>
                 </div>
                 <div className="mhwc-list">

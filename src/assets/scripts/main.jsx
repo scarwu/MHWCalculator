@@ -25,7 +25,7 @@ import Changelog from 'components/modal/changelog';
 import AlgorithmSetting from 'components/modal/algorithmSetting';
 import ConditionItemSelector from 'components/modal/conditionItemSelector';
 import EquipItemSelector from 'components/modal/equipItemSelector';
-import EquipBundleSelector from 'components/modal/equipBundleSelector';
+import BundleItemSelector from 'components/modal/bundleItemSelector';
 
 // Polyfill
 const polyfillObjectValues = (object) => {
@@ -56,6 +56,6 @@ ReactDOM.render((
         <AlgorithmSetting />
         <ConditionItemSelector />
         <EquipItemSelector />
-        <EquipBundleSelector />
+        <BundleItemSelector />
     </Router>
 ), document.getElementById('mhwc'));
