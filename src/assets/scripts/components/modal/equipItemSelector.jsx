@@ -445,7 +445,8 @@ export default function EquipItemSelector(props) {
             typeList = Constant.weaponTypes.map((type) => {
                 return { key: type, value: _(type) };
             });
-            type = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.type : typeList[0].key;
+            type = (Helper.isNotEmpty(stateBypassData.equipType))
+                ? stateBypassData.equipType : typeList[0].key;
 
             mode = 'weapon';
             sortedList =  WeaponDataset.getItems().map((weaponInfo) => {
@@ -471,7 +472,8 @@ export default function EquipItemSelector(props) {
             typeList = Constant.armorTypes.map((type) => {
                 return { key: type, value: _(type) };
             });
-            type = (Helper.isNotEmpty(armoreInfo)) ? armoreInfo.type : typeList[0].key;
+            type = (Helper.isNotEmpty(stateBypassData.equipType))
+                ? stateBypassData.equipType : typeList[0].key;
 
             mode = 'armor';
             sortedList = ArmorDataset.getItems().map((armorInfo) => {

@@ -27,6 +27,9 @@ import FunctionalInput from 'components/common/functionalInput';
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
 
+// Load Config
+import Config from 'config';
+
 /**
  * Variables
  */
@@ -48,7 +51,15 @@ const strategyList = [
  * Handler Functions
  */
 const handleLimitChange = (event) => {
-    let limit = ('' !== event.target.value) ? parseInt(event.target.value) : 25;
+    if ('' === event.target.value) {
+        return;
+    }
+
+    let limit = parseInt(event.target.value);
+
+    limit = (false === isNaN(limit)) ? limit : 1;
+
+    event.target.value = limit;
 
     CommonState.setter.setAlgorithmParamsLimit(limit);
 };
@@ -120,34 +131,41 @@ export default function AlgorithmSetting(props) {
 
                                 <div className="mhwc-icons_bundle">
                                     <FunctionalInput
-                                        iconName="list-alt" placeholder={_('inputKeyword')}
+                                        iconName="list-alt"
                                         defaultValue={stateAlgorithmParams.limit}
                                         onChange={handleLimitChange} />
                                 </div>
                             </div>
                         </div>
+
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
                                 <span>排序方式</span>
 
                                 <div className="mhwc-icons_bundle">
                                     <FunctionalSelector
-                                        iconName="sort-amount-desc" defaultValue={stateAlgorithmParams.sort}
+                                        iconName="sort-amount-desc"
+                                        defaultValue={stateAlgorithmParams.sort}
                                         options={sortList} onChange={handleSortChange} />
                                 </div>
                             </div>
                         </div>
-                        <div className="mhwc-item mhwc-item-2-step">
-                            <div className="col-12 mhwc-name">
-                                <span>搜尋策略</span>
 
-                                <div className="mhwc-icons_bundle">
-                                    <FunctionalSelector
-                                        iconName="book" defaultValue={stateAlgorithmParams.strategy}
-                                        options={strategyList} onChange={handleStrategyChange} />
+                        {'production' !== Config.env ? (
+                            <div className="mhwc-item mhwc-item-2-step">
+                                <div className="col-12 mhwc-name">
+                                    <span>搜尋策略</span>
+
+                                    <div className="mhwc-icons_bundle">
+                                        <FunctionalSelector
+                                            iconName="book"
+                                            defaultValue={stateAlgorithmParams.strategy}
+                                            options={strategyList} onChange={handleStrategyChange} />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        ) : false}
+
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
                                 <span>裝備因子</span>

@@ -115,7 +115,7 @@ const Store = createStore((state = initialState, action) => {
 
                 skillInfo.list.forEach((item) => {
                     if (Helper.isEmpty(item.reaction)
-                        && Helper.isEmpty(item.reaction.enableSkillLevel)
+                        || Helper.isEmpty(item.reaction.enableSkillLevel)
                     ) {
                         return;
                     }
@@ -311,7 +311,7 @@ const Store = createStore((state = initialState, action) => {
 
                     skillInfo.list.forEach((item) => {
                         if (Helper.isEmpty(item.reaction)
-                            && Helper.isEmpty(item.reaction.enableSkillLevel)
+                            || Helper.isEmpty(item.reaction.enableSkillLevel)
                         ) {
                             return;
                         }
