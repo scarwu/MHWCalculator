@@ -27,15 +27,6 @@ import ConditionItemSelector from 'components/modal/conditionItemSelector';
 import EquipItemSelector from 'components/modal/equipItemSelector';
 import BundleItemSelector from 'components/modal/bundleItemSelector';
 
-// Polyfill
-const polyfillObjectValues = (object) => {
-    return Object.keys(object).map((key) => {
-        return object[key];
-    });
-};
-
-Object.values = Object.values || polyfillObjectValues;
-
 // Set Sentry Endpoint
 if ('production' === Config.env) {
     Sentry.configureScope((scope) => {
