@@ -650,27 +650,24 @@ class FittingAlgorithm {
     /**
      * Convert Equip To Candidate Equip
      */
-    convertEquipToCandidateEquip = (equip, equipType) => {
+    convertEquipToCandidateEquip = (equipInfo, equipType) => {
         let candidateEquip = Helper.deepCopy(Constant.defaultCandidateEquip);
 
         // Set Id, Type & Defense
-        candidateEquip.id = equip.id;
-        candidateEquip.type = ('charm' !== equipType) ? equip.type : equipType;
-        candidateEquip.defense = (Helper.isNotEmpty(equip.defense)) ? equip.defense : 0;
+        candidateEquip.id = equipInfo.id;
+        candidateEquip.type = ('charm' !== equipType) ? equipInfo.type : equipType;
+        candidateEquip.defense = Helper.isNotEmpty(equipInfo.defense) ? equipInfo.defense : 0;
+        candidateEquip.setId = Helper.isNotEmpty(equipInfo.set) ? equipInfo.set.id : null;
 
-        if (Helper.isNotEmpty(equip.set)) {
-            candidateEquip.setId = equip.set.id;
+        if (Helper.isEmpty(equipInfo.skills)) {
+            equipInfo.skills = [];
         }
 
-        if (Helper.isEmpty(equip.skills)) {
-            equip.skills = [];
+        if (Helper.isEmpty(equipInfo.slots)) {
+            equipInfo.slots = [];
         }
 
-        if (Helper.isEmpty(equip.slots)) {
-            equip.slots = [];
-        }
-
-        equip.skills.forEach((skill) => {
+        equipInfo.skills.forEach((skill) => {
             candidateEquip.skills[skill.id] = skill.level;
 
             // Increase Expected Value & Level
@@ -687,7 +684,7 @@ class FittingAlgorithm {
             }
         });
 
-        equip.slots.forEach((slot) => {
+        equipInfo.slots.forEach((slot) => {
             candidateEquip.ownSlotCount[slot.size] += 1;
 
             // Increase Expected Value & Level
