@@ -54,12 +54,6 @@ class FittingAlgorithm {
         this.maxEquipsExpectedValue = {};
         this.maxEquipsExpectedLevel = {};
 
-        let candidateEquips = {};
-        let prevBundleList = {};
-        let nextBundleList = {};
-        let lastBundleList = {};
-        let bundle = Helper.deepCopy(Constant.defaultBundle);
-
         // Create Info by Sets
         requiredSets.sort((setA, setB) => {
             let setInfoA = SetDataset.getInfo(setA.id);
@@ -117,6 +111,8 @@ class FittingAlgorithm {
             this.conditionExpectedLevel += skill.level;
         });
 
+        let defaultBundle = Helper.deepCopy(Constant.defaultBundle);
+
         // Create First Bundle
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
             if (Helper.isEmpty(requiredEquips[equipType])) {
@@ -152,7 +148,7 @@ class FittingAlgorithm {
             let candidateEquip = this.convertEquipInfoToCandidateEquip(equipInfo, equipType);
 
             // Add Candidate Equip to Bundle
-            bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
+            defaultBundle = this.addCandidateEquipToBundle(defaultBundle, candidateEquip);
 
             // Add Jewels info to Bundle
             if (Helper.isNotEmpty(equipInfo.slots)) {
@@ -161,13 +157,13 @@ class FittingAlgorithm {
                         return;
                     }
 
-                    if (Helper.isEmpty(bundle.jewels[slot.jewel.id])) {
-                        bundle.jewels[slot.jewel.id] = 0;
+                    if (Helper.isEmpty(defaultBundle.jewels[slot.jewel.id])) {
+                        defaultBundle.jewels[slot.jewel.id] = 0;
                     }
 
-                    bundle.jewels[slot.jewel.id] += 1;
-                    bundle.meta.remainingSlotCount[slot.size] -= 1;
-                    bundle.meta.remainingSlotCount.all -= 1;
+                    defaultBundle.jewels[slot.jewel.id] += 1;
+                    defaultBundle.meta.remainingSlotCount[slot.size] -= 1;
+                    defaultBundle.meta.remainingSlotCount.all -= 1;
                 });
             }
 
@@ -176,10 +172,10 @@ class FittingAlgorithm {
         });
 
         // Reset Equip Count
-        bundle.meta.equipCount = 0;
+        defaultBundle.meta.equipCount = 0;
 
-        let this.requireEquipCount = this.conditionEquips.length;
-        let this.requireSkillCount = Object.keys(this.conditionSkills).length;
+        this.requireEquipCount = this.conditionEquips.length;
+        this.requireSkillCount = Object.keys(this.conditionSkills).length;
 
         Helper.log('Init: Condition Skills:', this.conditionSkills);
         Helper.log('Init: Condition Sets:', this.conditionSets);
@@ -188,28 +184,179 @@ class FittingAlgorithm {
         Helper.log('Init: Condition Expected Value:', this.conditionExpectedValue);
         Helper.log('Init: Condition Expected Level:', this.conditionExpectedLevel);
 
-        // Init Prev Bundle List
-        prevBundleList[this.generateBundleHash(bundle)] = bundle;
+        let bundlePool = {};
 
-        Helper.log('Init: Bundle List:', prevBundleList);
+        // Init Prev Bundle Pool
+        bundlePool[this.generateBundleHash(defaultBundle)] = defaultBundle;
 
-        // Create Bundle List with Set Equips
+        Helper.log('First: Bundle Pool:', bundlePool);
+
+        // Create Bundle Pool with Set Equips
         if (0 !== Object.keys(this.conditionSets).length) {
-            prevBundleList = this.createBundleListWithSetEquips(prevBundleList);
+            bundlePool = this.createBundlePoolWithSetEquips(bundlePool);
 
             // Sets Require Equips is Overflow
-            if (0 === Object.keys(prevBundleList).length) {
+            if (0 === Object.keys(bundlePool).length) {
                 return [];
             }
         }
 
         // Reset Completed Skills
-        prevBundleList = this.resetBundleListCompletedSkills(prevBundleList);
+        bundlePool = this.resetBundlePoolCompletedSkills(bundlePool);
 
-        // Create Candidate Equips with Skill & Slot Equips
-        Helper.log('Create Candidate Equips with Skill & Slot Equips');
+        // Create Bundle Pool with Set Equips
+        if (0 !== Object.keys(this.conditionSkills).length) {
+            bundlePool = this.createBundlePoolWithSkillEquips(bundlePool);
 
-        candidateEquips = {};
+            // Sets Require Equips is Overflow
+            if (0 === Object.keys(bundlePool).length) {
+                return [];
+            }
+        }
+
+        // Create Sorted Bundle List & Limit Quantity
+        return this.createSortedBundleList(bundlePool)
+            .slice(0, this.algorithmParams.limit);
+    };
+
+    /**
+     * Generate Bundle Hash
+     */
+    generateBundleHash = (bundle) => {
+        let equips = {};
+        let jewels = {};
+
+        Object.keys(bundle.equips).forEach((equipType) => {
+            if (Helper.isEmpty(bundle.equips[equipType])) {
+                return;
+            }
+
+            equips[equipType] = bundle.equips[equipType];
+        });
+
+        Object.keys(bundle.jewels).sort().forEach((jewelId) => {
+            if (0 === bundle.jewels[jewelId]) {
+                return;
+            }
+
+            jewels[jewelId] = bundle.jewels[jewelId];
+        });
+
+        return MD5(JSON.stringify([equips, jewels]));
+    };
+
+    /**
+     * Create Bundle Pool with Set Equips
+     */
+    createBundlePoolWithSetEquips = (prevBundlePool) => {
+        let candidateEquips = {};
+        let nextBundlePool = {};
+
+        this.conditionEquips.forEach((equipType) => {
+            if ('charm' === equipType) {
+                return;
+            }
+
+            if (Helper.isEmpty(candidateEquips[equipType])) {
+                candidateEquips[equipType] = {};
+            }
+
+            // Create Candidate Equips
+            Object.keys(this.conditionSets).forEach((setId) => {
+                let equipInfos = ArmorDataset.typeIs(equipType).setIs(setId).getItems();
+
+                // Merge Candidate Equips
+                candidateEquips[equipType] = Object.assign(
+                    candidateEquips[equipType],
+                    this.createCandidateEquips(equipInfos, equipType)
+                );
+            });
+
+            // Append Empty Candidate Equip
+            candidateEquips[equipType]['empty'] = this.getEmptyCandidateEquip(equipType);
+
+            Helper.log('BundleList: With Sets: Equip', equipType, Object.keys(candidateEquips[equipType]).length, candidateEquips[equipType]);
+        });
+
+        this.conditionEquips.forEach((equipType) => {
+            if ('charm' === equipType) {
+                return;
+            }
+
+            nextBundlePool = {};
+
+            Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
+                Object.keys(prevBundlePool).forEach((hash) => {
+                    let bundle = Helper.deepCopy(prevBundlePool[hash]);
+
+                    // Check Equip Part is Used
+                    if (Helper.isNotEmpty(bundle.equips[equipType])) {
+                        nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+
+                        return;
+                    }
+
+                    // Check Candidate Equip Id
+                    if (Helper.isEmpty(candidateEquip.id)) {
+                        nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+
+                        return;
+                    }
+
+                    // Add Candidate Equip to Bundle
+                    bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
+
+                    // Sets
+                    let setRequire = this.conditionSets[candidateEquip.setId];
+
+                    if (Helper.isEmpty(bundle.sets[candidateEquip.setId])) {
+                        bundle.sets[candidateEquip.setId] = 0;
+                    }
+
+                    if (setRequire < bundle.sets[candidateEquip.setId]) {
+                        bundle = Helper.deepCopy(prevBundlePool[hash]);
+                        nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+
+                        return;
+                    }
+
+                    nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+                });
+            });
+
+            prevBundlePool = nextBundlePool;
+        });
+
+        Object.keys(this.conditionSets).forEach((setId) => {
+            nextBundlePool = {};
+
+            let setRequire = this.conditionSets[setId];
+
+            Object.keys(prevBundlePool).forEach((hash) => {
+                let bundle = Helper.deepCopy(prevBundlePool[hash]);
+
+                if (setRequire !== bundle.sets[setId]) {
+                    return;
+                }
+
+                nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+            });
+
+            prevBundlePool = nextBundlePool;
+        });
+
+        Helper.log('BundleList: With Sets: Count', Object.keys(prevBundlePool).length);
+
+        return prevBundlePool;
+    };
+
+    /**
+     * Create Bundle Pool with Skill Equips
+     */
+    createBundlePoolWithSkillEquips = (prevBundlePool) => {
+        let candidateEquips = {};
+        let nextBundlePool = {};
+        let lastBundlePool = {};
 
         this.conditionEquips.forEach((equipType) => {
             if (Helper.isEmpty(candidateEquips[equipType])) {
@@ -284,26 +431,26 @@ class FittingAlgorithm {
         Helper.log('Create Next BundleList');
 
         this.conditionEquips.forEach((equipType) => {
-            Helper.log('Bundle Count:', equipType, Object.keys(prevBundleList).length);
+            Helper.log('Bundle Count:', equipType, Object.keys(prevBundlePool).length);
 
             this.usedEquipTypes[equipType] = true;
 
-            nextBundleList = {};
+            nextBundlePool = {};
 
             Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
-                Object.keys(prevBundleList).forEach((hash) => {
-                    let bundle = Helper.deepCopy(prevBundleList[hash]);
+                Object.keys(prevBundlePool).forEach((hash) => {
+                    let bundle = Helper.deepCopy(prevBundlePool[hash]);
 
                     // Check Equip Part is Used
                     if (Helper.isNotEmpty(bundle.equips[equipType])) {
-                        nextBundleList[this.generateBundleHash(bundle)] = bundle;
+                        nextBundlePool[this.generateBundleHash(bundle)] = bundle;
 
                         return;
                     }
 
                     // Check Candidate Equip Id
                     if (Helper.isEmpty(candidateEquip.id)) {
-                        nextBundleList[this.generateBundleHash(bundle)] = bundle;
+                        nextBundlePool[this.generateBundleHash(bundle)] = bundle;
 
                         return;
                     }
@@ -331,8 +478,8 @@ class FittingAlgorithm {
                         let skillLevel = this.conditionSkills[skillId];
 
                         if (skillLevel < bundle.skills[skillId]) {
-                            bundle = Helper.deepCopy(prevBundleList[hash]);
-                            nextBundleList[this.generateBundleHash(bundle)] = bundle;
+                            bundle = Helper.deepCopy(prevBundlePool[hash]);
+                            nextBundlePool[this.generateBundleHash(bundle)] = bundle;
 
                             isSkip = true;
 
@@ -349,7 +496,7 @@ class FittingAlgorithm {
                     }
 
                     if (this.requireSkillCount === Object.keys(bundle.meta.completedSkills).length) {
-                        lastBundleList[this.generateBundleHash(bundle)] = bundle;
+                        lastBundlePool[this.generateBundleHash(bundle)] = bundle;
 
                         return;
                     }
@@ -363,30 +510,30 @@ class FittingAlgorithm {
                                 return;
                             }
 
-                            lastBundleList[this.generateBundleHash(bundle)] = bundle;
+                            lastBundlePool[this.generateBundleHash(bundle)] = bundle;
                         });
 
                         return;
                     }
 
-                    nextBundleList[this.generateBundleHash(bundle)] = bundle;
+                    nextBundlePool[this.generateBundleHash(bundle)] = bundle;
                 });
             });
 
-            prevBundleList = nextBundleList;
+            prevBundlePool = nextBundlePool;
 
-            Helper.log('Result: Bundle Count (Pre):', Object.keys(lastBundleList).length);
+            Helper.log('Result: Bundle Count (Pre):', Object.keys(lastBundlePool).length);
         });
+
+        Helper.log('Bundle Pool:', Object.keys(prevBundlePool).length);
 
         // Find Completed Bundle into Last BundleList
         Helper.log('Find Completed Bundles');
 
-        Helper.log('Bundle List:', Object.keys(prevBundleList).length);
+        nextBundlePool = {};
 
-        nextBundleList = {};
-
-        Object.keys(prevBundleList).forEach((hash) => {
-            let bundle = Helper.deepCopy(prevBundleList[hash]);
+        Object.keys(prevBundlePool).forEach((hash) => {
+            let bundle = Helper.deepCopy(prevBundlePool[hash]);
 
             // Completed Bundles By Skills
             this.completeBundlesBySkills(bundle).forEach((bundle) => {
@@ -394,157 +541,25 @@ class FittingAlgorithm {
                     return;
                 }
 
-                lastBundleList[this.generateBundleHash(bundle)] = bundle;
+                lastBundlePool[this.generateBundleHash(bundle)] = bundle;
             });
         });
 
-        Helper.log('Result: Bundle Count (Final):', Object.keys(lastBundleList).length);
+        Helper.log('Result: Bundle Count (Final):', Object.keys(lastBundlePool).length);
 
-        return this.sortBundleList(lastBundleList)
-            .slice(0, this.algorithmParams.limit);
-    };
+        return lastBundlePool;
+    }
 
     /**
-     * Generate Bundle Hash
+     * Reset Bundle Pool Compeleted Skills
      */
-    generateBundleHash = (bundle) => {
-        let equips = {};
-        let jewels = {};
+    resetBundlePoolCompletedSkills = (prevBundlePool) => {
+        Helper.log('Bundle Pool: Reset Completed Skills');
 
-        Object.keys(bundle.equips).forEach((equipType) => {
-            if (Helper.isEmpty(bundle.equips[equipType])) {
-                return;
-            }
+        let nextBundlePool = {};
 
-            equips[equipType] = bundle.equips[equipType];
-        });
-
-        Object.keys(bundle.jewels).sort().forEach((jewelId) => {
-            if (0 === bundle.jewels[jewelId]) {
-                return;
-            }
-
-            jewels[jewelId] = bundle.jewels[jewelId];
-        });
-
-        return MD5(JSON.stringify([equips, jewels]));
-    };
-
-    /**
-     * Create Bundle List with Set Equips
-     */
-    createBundleListWithSetEquips = (prevBundleList) => {
-        let candidateEquips = {};
-        let nextBundleList = {};
-
-        this.conditionEquips.forEach((equipType) => {
-            if ('charm' === equipType) {
-                return;
-            }
-
-            if (Helper.isEmpty(candidateEquips[equipType])) {
-                candidateEquips[equipType] = {};
-            }
-
-            // Create Candidate Equips
-            Object.keys(this.conditionSets).forEach((setId) => {
-                let equipInfos = ArmorDataset.typeIs(equipType).setIs(setId).getItems();
-
-                // Merge Candidate Equips
-                candidateEquips[equipType] = Object.assign(
-                    candidateEquips[equipType],
-                    this.createCandidateEquips(equipInfos, equipType)
-                );
-            });
-
-            // Append Empty Candidate Equip
-            candidateEquips[equipType]['empty'] = this.getEmptyCandidateEquip(equipType);
-
-            Helper.log('BundleList: With Sets: Equip', equipType, Object.keys(candidateEquips[equipType]).length, candidateEquips[equipType]);
-        });
-
-        this.conditionEquips.forEach((equipType) => {
-            if ('charm' === equipType) {
-                return;
-            }
-
-            nextBundleList = {};
-
-            Object.values(candidateEquips[equipType]).forEach((candidateEquip) => {
-                Object.keys(prevBundleList).forEach((hash) => {
-                    let bundle = Helper.deepCopy(prevBundleList[hash]);
-
-                    // Check Equip Part is Used
-                    if (Helper.isNotEmpty(bundle.equips[equipType])) {
-                        nextBundleList[this.generateBundleHash(bundle)] = bundle;
-
-                        return;
-                    }
-
-                    // Check Candidate Equip Id
-                    if (Helper.isEmpty(candidateEquip.id)) {
-                        nextBundleList[this.generateBundleHash(bundle)] = bundle;
-
-                        return;
-                    }
-
-                    // Add Candidate Equip to Bundle
-                    bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
-
-                    // Sets
-                    let setRequire = this.conditionSets[candidateEquip.setId];
-
-                    if (Helper.isEmpty(bundle.sets[candidateEquip.setId])) {
-                        bundle.sets[candidateEquip.setId] = 0;
-                    }
-
-                    if (setRequire < bundle.sets[candidateEquip.setId]) {
-                        bundle = Helper.deepCopy(prevBundleList[hash]);
-                        nextBundleList[this.generateBundleHash(bundle)] = bundle;
-
-                        return;
-                    }
-
-                    nextBundleList[this.generateBundleHash(bundle)] = bundle;
-                });
-            });
-
-            prevBundleList = nextBundleList;
-        });
-
-        Object.keys(this.conditionSets).forEach((setId) => {
-            nextBundleList = {};
-
-            let setRequire = this.conditionSets[setId];
-
-            Object.keys(prevBundleList).forEach((hash) => {
-                let bundle = Helper.deepCopy(prevBundleList[hash]);
-
-                if (setRequire !== bundle.sets[setId]) {
-                    return;
-                }
-
-                nextBundleList[this.generateBundleHash(bundle)] = bundle;
-            });
-
-            prevBundleList = nextBundleList;
-        });
-
-        Helper.log('BundleList: With Sets: Count', Object.keys(prevBundleList).length);
-
-        return prevBundleList;
-    };
-
-    /**
-     * Reset Bundle List Compeleted Skills
-     */
-    resetBundleListCompletedSkills = (initBundleList) => {
-        Helper.log('Bundle List: Reset Completed Skills');
-
-        let lastBundleList = {};
-
-        Object.keys(initBundleList).forEach((hash) => {
-            let bundle = Helper.deepCopy(initBundleList[hash]);
+        Object.keys(prevBundlePool).forEach((hash) => {
+            let bundle = Helper.deepCopy(prevBundlePool[hash]);
 
             bundle.meta.completedSkills = {};
 
@@ -560,61 +575,61 @@ class FittingAlgorithm {
                 }
             });
 
-            lastBundleList[this.generateBundleHash(bundle)] = bundle;
+            nextBundlePool[this.generateBundleHash(bundle)] = bundle;
         });
 
-        return lastBundleList;
+        return nextBundlePool;
     };
 
     /**
-     * Sort Bundle List
+     * Create Sorted Bundle List
      */
-    sortBundleList = (bundleList) => {
+    createSortedBundleList = (bundlePool) => {
         switch (this.algorithmParams.sort) {
         case 'complex':
-            return Object.values(bundleList).sort((bundleA, bundleB) => {
+            return Object.values(bundlePool).sort((bundleA, bundleB) => {
                 let valueA = (8 - bundleA.meta.equipCount) * 1000 + bundleA.defense;
                 let valueB = (8 - bundleB.meta.equipCount) * 1000 + bundleB.defense;
 
                 return valueB - valueA;
             });
         case 'defense':
-            return Object.values(bundleList).sort((bundleA, bundleB) => {
+            return Object.values(bundlePool).sort((bundleA, bundleB) => {
                 let valueA = bundleA.defense;
                 let valueB = bundleB.defense;
 
                 return valueB - valueA;
             });
         case 'amount':
-            return Object.values(bundleList).sort((bundleA, bundleB) => {
+            return Object.values(bundlePool).sort((bundleA, bundleB) => {
                 let valueA = bundleA.meta.equipCount;
                 let valueB = bundleB.meta.equipCount;
 
                 return valueB - valueA;
             });
         case 'slot':
-            return Object.values(bundleList).sort((bundleA, bundleB) => {
+            return Object.values(bundlePool).sort((bundleA, bundleB) => {
                 let valueA = bundleA.meta.remainingSlotCount.all;
                 let valueB = bundleB.meta.remainingSlotCount.all;
 
                 return valueB - valueA;
             });
         case 'expectedValue':
-            return Object.values(bundleList).sort((bundleA, bundleB) => {
+            return Object.values(bundlePool).sort((bundleA, bundleB) => {
                 let valueA = bundleA.meta.expectedValue;
                 let valueB = bundleB.meta.expectedValue;
 
                 return valueB - valueA;
             });
         case 'expectedLevel':
-            return Object.values(bundleList).sort((bundleA, bundleB) => {
+            return Object.values(bundlePool).sort((bundleA, bundleB) => {
                 let valueA = bundleA.meta.expectedLevel;
                 let valueB = bundleB.meta.expectedLevel;
 
                 return valueB - valueA;
             });
         default:
-            return bundleList;
+            return Object.values(bundlePool);
         }
     };
 
