@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
-
 error_reporting(E_ALL);
+
 define('ROOT', __DIR__);
 
 class Misc
@@ -47,7 +47,7 @@ class Misc
         return file_put_contents($path, $json);
     }
 
-    private static function createCode ($text)
+    public static function createCode ($text)
     {
         if (!is_string($text)) {
             return false;
@@ -524,11 +524,11 @@ $charmChecklist = [];
 $jewelChecklist = [];
 
 // Load Lang
-$_ = [
-    'zhTW' => Misc::loadJson('../src/assets/scripts/files/json/langs/zhTW/ui'),
-    'jaJP' => Misc::loadJson('../src/assets/scripts/files/json/langs/jaJP/ui'),
-    'enUS' => Misc::loadJson('../src/assets/scripts/files/json/langs/enUS/ui')
-];
+// $_ = [
+//     'zhTW' => Misc::loadJson('../src/assets/scripts/files/json/langs/zhTW/ui'),
+//     'jaJP' => Misc::loadJson('../src/assets/scripts/files/json/langs/jaJP/ui'),
+//     'enUS' => Misc::loadJson('../src/assets/scripts/files/json/langs/enUS/ui')
+// ];
 
 // Extend Weapons
 // $slotWeapons = [];
@@ -650,7 +650,7 @@ foreach ($enhances as $enhance) {
     $enhanceChecklist[$enhance['id']] = true;
 
     // Create Translation Mapping
-    $enhance['name'] = Misc::appendLangMap("enhance:{$enhance['id']}:name", $enhance['name']);
+    $enhance['name'] = Misc::appendLangMap("enhance:name:{$enhance['id']}", $enhance['name']);
 
     foreach ($enhance['list'] as $index => $item) {
         $item['description'] = Misc::appendLangMap("enhance:{$enhance['id']}:list:{$index}:description", $item['description']);
@@ -660,7 +660,7 @@ foreach ($enhances as $enhance) {
     }
 
     // Create ID Hash
-    $enhance['id'] = md5($enhance['id']);
+    $enhance['id'] = Misc::createCode("enhance:name:{$enhance['id']}");
 
     // Create Dataset
     Misc::appendDatasetMap('enhance', $enhance);
@@ -671,17 +671,17 @@ foreach ($skills as $skill) {
     $skillChecklist[$skill['id']] = true;
 
     // Create Translation Mapping
-    $skill['name'] = Misc::appendLangMap("skill:{$skill['id']}:name", $skill['name']);
-    $skill['description'] = Misc::appendLangMap("skill:{$skill['id']}:description", $skill['description']);
+    $skill['name'] = Misc::appendLangMap("skill:name:{$skill['id']}", $skill['name']);
+    $skill['description'] = Misc::appendLangMap("skill:description:{$skill['id']}", $skill['description']);
 
     foreach ($skill['list'] as $index => $item) {
-        $item['description'] = Misc::appendLangMap("skill:{$skill['id']}:list:{$index}:description", $item['description']);
+        $item['description'] = Misc::appendLangMap("skill:description:{$skill['id']}:{$index}", $item['description']);
 
         // Create ID Hash
         if (is_array($item['reaction'])
             && isset($item['reaction']['enableSkillLevel'])
         ) {
-            $item['reaction']['enableSkillLevel']['id'] = md5($item['reaction']['enableSkillLevel']['id']);
+            $item['reaction']['enableSkillLevel']['id'] = Misc::createCode("skill:name:{$item['reaction']['enableSkillLevel']['id']}");
         }
 
         // Rewrite
@@ -689,7 +689,7 @@ foreach ($skills as $skill) {
     }
 
     // Create ID Hash
-    $skill['id'] = md5($skill['id']);
+    $skill['id'] = Misc::createCode("skill:name:{$skill['id']}");
 
     // Create Dataset
     Misc::appendDatasetMap('skill', $skill);
@@ -709,12 +709,12 @@ foreach ($sets as $set) {
     }
 
     // Create Translation Mapping
-    $set['name'] = Misc::appendLangMap("set:{$set['id']}:name", $set['name']);
+    $set['name'] = Misc::appendLangMap("set:name:{$set['id']}", $set['name']);
 
     // Create ID Hash
-    $set['id'] = md5($set['id']);
+    $set['id'] = Misc::createCode("set:name:{$set['id']}");
     $set['skills'] = array_map(function ($skill) {
-        $skill['id'] = md5($skill['id']);
+        $skill['id'] = Misc::createCode("skill:name:{$skill['id']}");
 
         return $skill;
     }, $set['skills']);
@@ -737,15 +737,15 @@ foreach ($weapons as $weapon) {
     }
 
     // Create Translation Mapping
-    $weapon['name'] = Misc::appendLangMap("weapon:{$weapon['id']}:name", $weapon['name']);
-    $weapon['series'] = Misc::appendLangMap("weapon:{$weapon['series']['zhTW']}:series", $weapon['series']);
+    $weapon['name'] = Misc::appendLangMap("weapon:name:{$weapon['id']}", $weapon['name']);
+    $weapon['series'] = Misc::appendLangMap("weapon:series:{$weapon['series']['zhTW']}", $weapon['series']);
 
     // Create ID Hash
-    $weapon['id'] = md5($weapon['id']);
+    $weapon['id'] = Misc::createCode("weapon:name:{$weapon['id']}");
 
     if (is_array($weapon['skills']) && 0 !== count($weapon['skills'])) {
         $weapon['skills'] = array_map(function ($skill) {
-            $skill['id'] = md5($skill['id']);
+            $skill['id'] = Misc::createCode("skill:name:{$skill['id']}");
 
             return $skill;
         }, $weapon['skills']);
@@ -779,23 +779,23 @@ foreach ($armors as $index => $armor) {
 
     // Create ID Hash
     if (is_array($armor['common']['set'])) {
-        $armor['common']['set']['id'] = md5($armor['common']['set']['id']);
+        $armor['common']['set']['id'] = Misc::createCode("set:name:{$armor['common']['set']['id']}");
     }
 
     // Create Translation Mapping
-    $armor['common']['series'] = Misc::appendLangMap("armor:common:{$armor['common']['series']['zhTW']}:series", $armor['common']['series']);
+    $armor['common']['series'] = Misc::appendLangMap("armor:series:{$armor['common']['series']['zhTW']}", $armor['common']['series']);
 
     foreach ($armor['list'] as $index => $item) {
 
         // Create Translation Mapping
-        $item['name'] = Misc::appendLangMap("armor:{$index}:list:{$item['id']}:name", $item['name']);
+        $item['name'] = Misc::appendLangMap("armor:name:{$item['id']}", $item['name']);
 
         // Create ID Hash
-        $item['id'] = md5($item['id']);
+        $item['id'] = Misc::createCode("armor:name:{$item['id']}");
 
         if (is_array($item['skills']) && 0 !== count($item['skills'])) {
             $item['skills'] = array_map(function ($skill) {
-                $skill['id'] = md5($skill['id']);
+                $skill['id'] = Misc::createCode("skill:name:{$skill['id']}");
 
                 return $skill;
             }, $item['skills']);
@@ -823,12 +823,12 @@ foreach ($charms as $charm) {
     }
 
     // Create Translation Mapping
-    $charm['name'] = Misc::appendLangMap("charm:{$charm['id']}:name", $charm['name']);
+    $charm['name'] = Misc::appendLangMap("charm:name:{$charm['id']}", $charm['name']);
 
     // Create ID Hash
-    $charm['id'] = md5($charm['id']);
+    $charm['id'] = Misc::createCode("charm:name:{$charm['id']}");
     $charm['skills'] = array_map(function ($skill) {
-        $skill['id'] = md5($skill['id']);
+        $skill['id'] = Misc::createCode("skill:name:{$skill['id']}");
 
         return $skill;
     }, $charm['skills']);
@@ -851,12 +851,12 @@ foreach ($jewels as $jewel) {
     }
 
     // Create Translation Mapping
-    $jewel['name'] = Misc::appendLangMap("jewel:{$jewel['id']}:name", $jewel['name']);
+    $jewel['name'] = Misc::appendLangMap("jewel:name:{$jewel['id']}", $jewel['name']);
 
     // Create ID Hash
-    $jewel['id'] = md5($jewel['id']);
+    $jewel['id'] = Misc::createCode("jewel:name:{$jewel['id']}");
     $jewel['skills'] = array_map(function ($skill) {
-        $skill['id'] = md5($skill['id']);
+        $skill['id'] = Misc::createCode("skill:name:{$skill['id']}");
 
         return $skill;
     }, $jewel['skills']);
@@ -875,14 +875,14 @@ foreach ($testData['equipsList'] as $index => $equips) {
         echo "Error: Weapon={$equips['weapon']['id']}\n";
     }
 
-    $equips['weapon']['id'] = md5($equips['weapon']['id']);
+    $equips['weapon']['id'] = Misc::createCode("weapon:name:{$equips['weapon']['id']}");
 
     foreach ($equips['weapon']['enhanceIds'] as $enhanceIndex => $id) {
         if (!isset($enhanceChecklist[$id])) {
             echo "Error: Enhance={$id}\n";
         }
 
-        $equips['weapon']['enhanceIds'][$enhanceIndex] = md5($id);
+        $equips['weapon']['enhanceIds'][$enhanceIndex] = Misc::createCode("enhance:name:{$id}");
     }
 
     foreach ($equips['weapon']['slotIds'] as $slotIndex => $id) {
@@ -890,7 +890,7 @@ foreach ($testData['equipsList'] as $index => $equips) {
             echo "Error: Slot={$id}\n";
         }
 
-        $equips['weapon']['slotIds'][$slotIndex] = md5($id);
+        $equips['weapon']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");
     }
 
     // Helm
@@ -898,14 +898,14 @@ foreach ($testData['equipsList'] as $index => $equips) {
         echo "Error: Helm={$equips['helm']['id']}\n";
     }
 
-    $equips['helm']['id'] = md5($equips['helm']['id']);
+    $equips['helm']['id'] = Misc::createCode("armor:name:{$equips['helm']['id']}");
 
     foreach ($equips['helm']['slotIds'] as $slotIndex => $id) {
         if (!isset($jewelChecklist[$id])) {
             echo "Error: Slot={$id}\n";
         }
 
-        $equips['helm']['slotIds'][$slotIndex] = md5($id);
+        $equips['helm']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");
     }
 
     // Chest
@@ -913,14 +913,14 @@ foreach ($testData['equipsList'] as $index => $equips) {
         echo "Error: Chest={$equips['chest']['id']}\n";
     }
 
-    $equips['chest']['id'] = md5($equips['chest']['id']);
+    $equips['chest']['id'] = Misc::createCode("armor:name:{$equips['chest']['id']}");
 
     foreach ($equips['chest']['slotIds'] as $slotIndex => $id) {
         if (!isset($jewelChecklist[$id])) {
             echo "Error: Slot={$id}\n";
         }
 
-        $equips['chest']['slotIds'][$slotIndex] = md5($id);
+        $equips['chest']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");
     }
 
     // Arm
@@ -932,14 +932,14 @@ foreach ($testData['equipsList'] as $index => $equips) {
         echo "Error: Arm={$equips['arm']['id']}\n";
     }
 
-    $equips['arm']['id'] = md5($equips['arm']['id']);
+    $equips['arm']['id'] = Misc::createCode("armor:name:{$equips['arm']['id']}");
 
     foreach ($equips['arm']['slotIds'] as $slotIndex => $id) {
         if (!isset($jewelChecklist[$id])) {
             echo "Error: Slot={$id}\n";
         }
 
-        $equips['arm']['slotIds'][$slotIndex] = md5($id);
+        $equips['arm']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");
     }
 
     // Waist
@@ -947,14 +947,14 @@ foreach ($testData['equipsList'] as $index => $equips) {
         echo "Error: Waist={$equips['waist']['id']}\n";
     }
 
-    $equips['waist']['id'] = md5($equips['waist']['id']);
+    $equips['waist']['id'] = Misc::createCode("armor:name:{$equips['waist']['id']}");
 
     foreach ($equips['waist']['slotIds'] as $slotIndex => $id) {
         if (!isset($jewelChecklist[$id])) {
             echo "Error: Slot={$id}\n";
         }
 
-        $equips['waist']['slotIds'][$slotIndex] = md5($id);
+        $equips['waist']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");
     }
 
     // Leg
@@ -962,14 +962,14 @@ foreach ($testData['equipsList'] as $index => $equips) {
         echo "Error: Leg={$equips['leg']['id']}\n";
     }
 
-    $equips['leg']['id'] = md5($equips['leg']['id']);
+    $equips['leg']['id'] = Misc::createCode("armor:name:{$equips['leg']['id']}");
 
     foreach ($equips['leg']['slotIds'] as $slotIndex => $id) {
         if (!isset($jewelChecklist[$id])) {
             echo "Error: Slot={$id}\n";
         }
 
-        $equips['leg']['slotIds'][$slotIndex] = md5($id);
+        $equips['leg']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");
     }
 
     // Charm
@@ -977,7 +977,7 @@ foreach ($testData['equipsList'] as $index => $equips) {
         echo "Error: Charm={$equips['charm']['id']}\n";
     }
 
-    $equips['charm']['id'] = md5($equips['charm']['id']);
+    $equips['charm']['id'] = Misc::createCode("charm:name:{$equips['charm']['id']}");
 
     $testData['equipsList'][$index] = $equips;
 }
@@ -991,7 +991,7 @@ foreach ($testData['requireList'] as $index => $require) {
             echo "Error: Set={$set['id']}\n";
         }
 
-        $set['id'] = md5($set['id']);
+        $set['id'] = Misc::createCode("set:name:{$set['id']}");
 
         $require['sets'][$setIndex] = $set;
     }
@@ -1002,7 +1002,7 @@ foreach ($testData['requireList'] as $index => $require) {
             echo "Error: Set={$skill['id']}\n";
         }
 
-        $skill['id'] = md5($skill['id']);
+        $skill['id'] = Misc::createCode("skill:name:{$skill['id']}");
 
         $require['skills'][$skillIndex] = $skill;
     }
