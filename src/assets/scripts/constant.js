@@ -123,10 +123,10 @@ export default {
             charm: null
         },
         jewels: {},
-        defense: 0,
         skills: {},
         sets: {},
         meta: {
+            defense: 0,
             expectedValue: 0,
             expectedLevel: 0,
             equipCount: 0,
