@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Bundle Item Selector
  *

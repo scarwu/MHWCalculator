@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Functional Selector
  *
