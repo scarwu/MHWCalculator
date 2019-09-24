@@ -139,6 +139,17 @@ const renderBundleItem = (bundle, index, totalIndex) => {
                 </div>
             </div>
 
+            {Helper.isNotEmpty(bundle.sortedBy) ? (
+                <div className="col-12 mhwc-content">
+                    <div className="col-4 mhwc-name">
+                        <span>{_(bundle.sortedBy.key)}</span>
+                    </div>
+                    <div className="col-8 mhwc-value">
+                        <span>{bundle.sortedBy.value}</span>
+                    </div>
+                </div>
+            ) : false}
+
             <div className="col-12 mhwc-content">
                 <div className="col-12 mhwc-name">
                     <span>{_('equip')}</span>
@@ -175,15 +186,6 @@ const renderBundleItem = (bundle, index, totalIndex) => {
                             </Fragment>
                         ) : false;
                     })}
-                </div>
-            </div>
-
-            <div className="col-12 mhwc-content">
-                <div className="col-4 mhwc-name">
-                    <span>{_('defense')}</span>
-                </div>
-                <div className="col-8 mhwc-value">
-                    <span>{bundle.defense}</span>
                 </div>
             </div>
 

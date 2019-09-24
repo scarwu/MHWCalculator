@@ -590,6 +590,13 @@ class FittingAlgorithm {
                 let valueB = (8 - bundleB.meta.equipCount) * 1000 + bundleB.meta.defense;
 
                 return valueB - valueA;
+            }).map((bundle) => {
+                bundle.sortedBy = {
+                    key: this.algorithmParams.sort,
+                    value: (8 - bundle.meta.equipCount) * 1000 + bundle.meta.defense
+                };
+
+                return bundle;
             });
         case 'defense':
             return Object.values(bundlePool).sort((bundleA, bundleB) => {
@@ -597,6 +604,13 @@ class FittingAlgorithm {
                 let valueB = bundleB.meta.defense;
 
                 return valueB - valueA;
+            }).map((bundle) => {
+                bundle.sortedBy = {
+                    key: this.algorithmParams.sort,
+                    value: bundle.meta.defense
+                };
+
+                return bundle;
             });
         case 'amount':
             return Object.values(bundlePool).sort((bundleA, bundleB) => {
@@ -604,6 +618,13 @@ class FittingAlgorithm {
                 let valueB = bundleB.meta.equipCount;
 
                 return valueB - valueA;
+            }).map((bundle) => {
+                bundle.sortedBy = {
+                    key: this.algorithmParams.sort,
+                    value: bundle.meta.equipCount
+                };
+
+                return bundle;
             });
         case 'slot':
             return Object.values(bundlePool).sort((bundleA, bundleB) => {
@@ -611,6 +632,13 @@ class FittingAlgorithm {
                 let valueB = bundleB.meta.remainingSlotCount.all;
 
                 return valueB - valueA;
+            }).map((bundle) => {
+                bundle.sortedBy = {
+                    key: this.algorithmParams.sort,
+                    value: bundle.meta.remainingSlotCount.all
+                };
+
+                return bundle;
             });
         case 'expectedValue':
             return Object.values(bundlePool).sort((bundleA, bundleB) => {
@@ -618,6 +646,13 @@ class FittingAlgorithm {
                 let valueB = bundleB.meta.expectedValue;
 
                 return valueB - valueA;
+            }).map((bundle) => {
+                bundle.sortedBy = {
+                    key: this.algorithmParams.sort,
+                    value: bundle.meta.expectedValue
+                };
+
+                return bundle;
             });
         case 'expectedLevel':
             return Object.values(bundlePool).sort((bundleA, bundleB) => {
@@ -625,6 +660,13 @@ class FittingAlgorithm {
                 let valueB = bundleB.meta.expectedLevel;
 
                 return valueB - valueA;
+            }).map((bundle) => {
+                bundle.sortedBy = {
+                    key: this.algorithmParams.sort,
+                    value: bundle.meta.expectedLevel
+                };
+
+                return bundle;
             });
         default:
             return Object.values(bundlePool);
@@ -664,7 +706,7 @@ class FittingAlgorithm {
             bundle.skills[skillId] += skillLevel;
         });
 
-        for (let size = 1; size <= 3; size++) {
+        for (let size = 1; size <= 4; size++) {
             bundle.meta.remainingSlotCount[size] += candidateEquip.ownSlotCount[size];
             bundle.meta.remainingSlotCount.all += candidateEquip.ownSlotCount[size];
         }
