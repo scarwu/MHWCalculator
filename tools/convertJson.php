@@ -18,7 +18,7 @@ class Misc
         'sets' => []
     ];
 
-    private static $codeLength = 2;
+    private static $codeLength = 3;
     private static $codeMap = [];
     private static $hashMap = [];
     private static $seed = 0;
@@ -738,7 +738,7 @@ foreach ($weapons as $weapon) {
 
     // Create Translation Mapping
     $weapon['name'] = Misc::appendLangMap("weapon:name:{$weapon['id']}", $weapon['name']);
-    $weapon['series'] = Misc::appendLangMap("weapon:series:{$weapon['series']['zhTW']}", $weapon['series']);
+    $weapon['series'] = Misc::appendLangMap("weapon:series:{$weapon['id']}", $weapon['series']);
 
     // Create ID Hash
     $weapon['id'] = Misc::createCode("weapon:name:{$weapon['id']}");
@@ -783,7 +783,7 @@ foreach ($armors as $index => $armor) {
     }
 
     // Create Translation Mapping
-    $armor['common']['series'] = Misc::appendLangMap("armor:series:{$armor['common']['series']['zhTW']}", $armor['common']['series']);
+    $armor['common']['series'] = Misc::appendLangMap("armor:series:{$armor['common']['id']}", $armor['common']['series']);
 
     foreach ($armor['list'] as $index => $item) {
 

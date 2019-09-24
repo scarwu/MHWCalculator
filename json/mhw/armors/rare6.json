@@ -1,6 +1,7 @@
 [
     {
         "common": {
+            "id": "鑄島熔岩α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -125,6 +126,7 @@
     },
     {
         "common": {
+            "id": "鑄島熔岩β",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -249,6 +251,7 @@
     },
     {
         "common": {
+            "id": "骨鎚龍α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -359,6 +362,7 @@
     },
     {
         "common": {
+            "id": "骨鎚龍β",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -485,6 +489,7 @@
     },
     {
         "common": {
+            "id": "火龍心α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -601,6 +606,7 @@
     },
     {
         "common": {
+            "id": "火龍心β",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -728,6 +734,7 @@
     },
     {
         "common": {
+            "id": "熔岩龍α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -858,6 +865,7 @@
     },
     {
         "common": {
+            "id": "熔岩龍β",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -990,6 +998,7 @@
     },
     {
         "common": {
+            "id": "鑄鐵α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -1100,6 +1109,7 @@
     },
     {
         "common": {
+            "id": "鑄鐵β",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -1222,6 +1232,7 @@
     },
     {
         "common": {
+            "id": "艾路頭套α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -1260,6 +1271,7 @@
     },
     {
         "common": {
+            "id": "知性眼鏡α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -1302,6 +1314,7 @@
     },
     {
         "common": {
+            "id": "風漂龍α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -1426,6 +1439,7 @@
     },
     {
         "common": {
+            "id": "風漂龍β",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -1550,6 +1564,7 @@
     },
     {
         "common": {
+            "id": "角龍α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -1674,6 +1689,7 @@
     },
     {
         "common": {
+            "id": "角龍β",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -1801,6 +1817,7 @@
     },
     {
         "common": {
+            "id": "礦石α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -1923,6 +1940,7 @@
     },
     {
         "common": {
+            "id": "礦石β",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -2049,6 +2067,7 @@
     },
     {
         "common": {
+            "id": "慘爪龍α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -2173,6 +2192,7 @@
     },
     {
         "common": {
+            "id": "慘爪龍β",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -2297,6 +2317,7 @@
     },
     {
         "common": {
+            "id": "火龍α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -2421,6 +2442,7 @@
     },
     {
         "common": {
+            "id": "火龍β",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -2545,6 +2567,7 @@
     },
     {
         "common": {
+            "id": "旅團α",
             "rare": 6,
             "gender": "general",
             "series": {
@@ -2671,6 +2694,7 @@
     },
     {
         "common": {
+            "id": "旅團β",
             "rare": 6,
             "gender": "general",
             "series": {

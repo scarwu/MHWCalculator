@@ -1,6 +1,7 @@
 [
     {
         "common": {
+            "id": "EXラヴィーナαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -154,6 +155,7 @@
     },
     {
         "common": {
+            "id": "EXラヴィーナβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -294,6 +296,7 @@
     },
     {
         "common": {
+            "id": "EXヴァルファーαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -453,6 +456,7 @@
     },
     {
         "common": {
+            "id": "EXヴァルファーβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -599,6 +603,7 @@
     },
     {
         "common": {
+            "id": "EXカイザーαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -746,6 +751,7 @@
     },
     {
         "common": {
+            "id": "EXカイザーβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -897,6 +903,7 @@
     },
     {
         "common": {
+            "id": "EXクシャナαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -1033,6 +1040,7 @@
     },
     {
         "common": {
+            "id": "EXクシャナβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -1176,6 +1184,7 @@
     },
     {
         "common": {
+            "id": "EXキリンαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -1329,6 +1338,7 @@
     },
     {
         "common": {
+            "id": "EXキリンβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -1478,6 +1488,7 @@
     },
     {
         "common": {
+            "id": "EXテンタクルαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -1634,6 +1645,7 @@
     },
     {
         "common": {
+            "id": "EXテンタクルβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -1782,6 +1794,7 @@
     },
     {
         "common": {
+            "id": "EXアンガルダαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -1941,6 +1954,7 @@
     },
     {
         "common": {
+            "id": "EXアンガルダβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -2084,6 +2098,7 @@
     },
     {
         "common": {
+            "id": "EXゾラマグナαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -2243,6 +2258,7 @@
     },
     {
         "common": {
+            "id": "EXゾラマグナβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -2385,6 +2401,7 @@
     },
     {
         "common": {
+            "id": "EXゾークαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -2538,6 +2555,7 @@
     },
     {
         "common": {
+            "id": "EXゾークβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -2685,6 +2703,7 @@
     },
     {
         "common": {
+            "id": "EXギルドワークαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -2847,6 +2866,7 @@
     },
     {
         "common": {
+            "id": "EXギルドワークβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -2997,6 +3017,7 @@
     },
     {
         "common": {
+            "id": "EXエンプレスαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -3150,6 +3171,7 @@
     },
     {
         "common": {
+            "id": "EXエンプレスβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -3301,6 +3323,7 @@
     },
     {
         "common": {
+            "id": "EXゴールドルナαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -3454,6 +3477,7 @@
     },
     {
         "common": {
+            "id": "EXゴールドルナβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -3593,6 +3617,7 @@
     },
     {
         "common": {
+            "id": "EXシルバーソルαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -3749,6 +3774,7 @@
     },
     {
         "common": {
+            "id": "EXシルバーソルβシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {
@@ -3892,6 +3918,7 @@
     },
     {
         "common": {
+            "id": "EX陽動の耳飾りαシリーズ",
             "rare": 12,
             "gender": "general",
             "series": {

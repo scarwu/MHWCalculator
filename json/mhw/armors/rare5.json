@@ -1,6 +1,7 @@
 [
     {
         "common": {
+            "id": "合金α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -115,6 +116,7 @@
     },
     {
         "common": {
+            "id": "合金β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -237,6 +239,7 @@
     },
     {
         "common": {
+            "id": "浮空龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -347,6 +350,7 @@
     },
     {
         "common": {
+            "id": "浮空龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -472,6 +476,7 @@
     },
     {
         "common": {
+            "id": "獨角仙α",
             "rare": 5,
             "gender": "male",
             "series": {
@@ -606,6 +611,7 @@
     },
     {
         "common": {
+            "id": "獨角仙β",
             "rare": 5,
             "gender": "male",
             "series": {
@@ -737,6 +743,7 @@
     },
     {
         "common": {
+            "id": "飛雷龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -851,6 +858,7 @@
     },
     {
         "common": {
+            "id": "飛雷龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -979,6 +987,7 @@
     },
     {
         "common": {
+            "id": "咬魚α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -1021,6 +1030,7 @@
     },
     {
         "common": {
+            "id": "咬魚β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -1067,6 +1077,7 @@
     },
     {
         "common": {
+            "id": "兇顎龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -1177,6 +1188,7 @@
     },
     {
         "common": {
+            "id": "兇顎龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -1299,6 +1311,7 @@
     },
     {
         "common": {
+            "id": "搔鳥α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -1417,6 +1430,7 @@
     },
     {
         "common": {
+            "id": "搔鳥β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -1542,6 +1556,7 @@
     },
     {
         "common": {
+            "id": "冠突龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -1584,6 +1599,7 @@
     },
     {
         "common": {
+            "id": "冠突龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -1626,6 +1642,7 @@
     },
     {
         "common": {
+            "id": "凶豺龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -1740,6 +1757,7 @@
     },
     {
         "common": {
+            "id": "凶豺龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -1862,6 +1880,7 @@
     },
     {
         "common": {
+            "id": "蠻顎龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -1982,6 +2001,7 @@
     },
     {
         "common": {
+            "id": "蠻顎龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -2109,6 +2129,7 @@
     },
     {
         "common": {
+            "id": "貓蜥龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -2151,6 +2172,7 @@
     },
     {
         "common": {
+            "id": "貓蜥龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -2193,6 +2215,7 @@
     },
     {
         "common": {
+            "id": "泥魚龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -2303,6 +2326,7 @@
     },
     {
         "common": {
+            "id": "泥魚龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -2425,6 +2449,7 @@
     },
     {
         "common": {
+            "id": "巨甲蟲α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -2547,6 +2572,7 @@
     },
     {
         "common": {
+            "id": "巨甲蟲β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -2669,6 +2695,7 @@
     },
     {
         "common": {
+            "id": "鎖甲α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -2775,6 +2802,7 @@
     },
     {
         "common": {
+            "id": "鎖甲β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -2877,6 +2905,7 @@
     },
     {
         "common": {
+            "id": "眩鳥α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -2995,6 +3024,7 @@
     },
     {
         "common": {
+            "id": "眩鳥β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -3120,6 +3150,7 @@
     },
     {
         "common": {
+            "id": "燕尾蝶α",
             "rare": 5,
             "gender": "female",
             "series": {
@@ -3254,6 +3285,7 @@
     },
     {
         "common": {
+            "id": "燕尾蝶β",
             "rare": 5,
             "gender": "female",
             "series": {
@@ -3385,6 +3417,7 @@
     },
     {
         "common": {
+            "id": "獵人α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -3499,6 +3532,7 @@
     },
     {
         "common": {
+            "id": "獵人β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -3621,6 +3655,7 @@
     },
     {
         "common": {
+            "id": "毒妖鳥α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -3735,6 +3770,7 @@
     },
     {
         "common": {
+            "id": "毒妖鳥β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -3863,6 +3899,7 @@
     },
     {
         "common": {
+            "id": "骨製α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -3977,6 +4014,7 @@
     },
     {
         "common": {
+            "id": "骨製β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -4099,6 +4137,7 @@
     },
     {
         "common": {
+            "id": "土砂龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -4213,6 +4252,7 @@
     },
     {
         "common": {
+            "id": "土砂龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -4338,6 +4378,7 @@
     },
     {
         "common": {
+            "id": "菌豬頭套",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -4376,6 +4417,7 @@
     },
     {
         "common": {
+            "id": "巨蜂α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -4486,6 +4528,7 @@
     },
     {
         "common": {
+            "id": "巨蜂β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -4608,6 +4651,7 @@
     },
     {
         "common": {
+            "id": "雌火龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -4722,6 +4766,7 @@
     },
     {
         "common": {
+            "id": "雌火龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -4856,6 +4901,7 @@
     },
     {
         "common": {
+            "id": "皮製α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -4958,6 +5004,7 @@
     },
     {
         "common": {
+            "id": "皮製β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5060,6 +5107,7 @@
     },
     {
         "common": {
+            "id": "岩賊龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5170,6 +5218,7 @@
     },
     {
         "common": {
+            "id": "岩賊龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5292,6 +5341,7 @@
     },
     {
         "common": {
+            "id": "酸翼龍斗篷α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5334,6 +5384,7 @@
     },
     {
         "common": {
+            "id": "酸翼龍斗篷β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5376,6 +5427,7 @@
     },
     {
         "common": {
+            "id": "突擊龍α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5418,6 +5470,7 @@
     },
     {
         "common": {
+            "id": "突擊龍β",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5460,6 +5513,7 @@
     },
     {
         "common": {
+            "id": "封印的眼帶α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5505,6 +5559,7 @@
     },
     {
         "common": {
+            "id": "墨鏡α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5553,6 +5608,7 @@
     },
     {
         "common": {
+            "id": "扒手龍頭套α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5598,6 +5654,7 @@
     },
     {
         "common": {
+            "id": "孑孓α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5643,6 +5700,7 @@
     },
     {
         "common": {
+            "id": "巴魯特α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5780,6 +5838,7 @@
     },
     {
         "common": {
+            "id": "潛水夫α",
             "rare": 5,
             "gender": "general",
             "series": {
@@ -5902,6 +5961,7 @@
     },
     {
         "common": {
+            "id": "獨角仙后α",
             "rare": 5,
             "gender": "female",
             "series": {
@@ -6032,6 +6092,7 @@
     },
     {
         "common": {
+            "id": "獨角仙后β",
             "rare": 5,
             "gender": "female",
             "series": {

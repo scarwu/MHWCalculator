@@ -1,6 +1,7 @@
 [
     {
         "common": {
+            "id": "火龍魂α",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -133,6 +134,7 @@
     },
     {
         "common": {
+            "id": "火龍魂β",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -260,6 +262,7 @@
     },
     {
         "common": {
+            "id": "骷髏α",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -302,6 +305,7 @@
     },
     {
         "common": {
+            "id": "杜賓α",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -432,6 +436,7 @@
     },
     {
         "common": {
+            "id": "杜賓β",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -561,6 +566,7 @@
     },
     {
         "common": {
+            "id": "爆鎚龍α",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -696,6 +702,7 @@
     },
     {
         "common": {
+            "id": "爆鎚龍β",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -826,6 +833,7 @@
     },
     {
         "common": {
+            "id": "大馬士革α",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -964,6 +972,7 @@
     },
     {
         "common": {
+            "id": "大馬士革β",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -1098,6 +1107,7 @@
     },
     {
         "common": {
+            "id": "暴君角龍α",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -1226,6 +1236,7 @@
     },
     {
         "common": {
+            "id": "暴君角龍β",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -1356,6 +1367,7 @@
     },
     {
         "common": {
+            "id": "死神α",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -1486,6 +1498,7 @@
     },
     {
         "common": {
+            "id": "死神β",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -1617,6 +1630,7 @@
     },
     {
         "common": {
+            "id": "爆鱗龍α",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -1753,6 +1767,7 @@
     },
     {
         "common": {
+            "id": "爆鱗龍β",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -1883,6 +1898,7 @@
     },
     {
         "common": {
+            "id": "龍封的耳環α",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -1928,6 +1944,7 @@
     },
     {
         "common": {
+            "id": "殘虐α",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -2062,6 +2079,7 @@
     },
     {
         "common": {
+            "id": "殘虐β",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -2193,6 +2211,7 @@
     },
     {
         "common": {
+            "id": "蒼星α",
             "rare": 7,
             "gender": "general",
             "series": {
@@ -2317,6 +2336,7 @@
     },
     {
         "common": {
+            "id": "盛裝α",
             "rare": 7,
             "gender": "general",
             "series": {
