@@ -444,7 +444,7 @@ export default function EquipItemSelector(props) {
             typeList = Constant.weaponTypes.map((type) => {
                 return { key: type, value: _(type) };
             });
-            type = (Helper.isNotEmpty(weaponInfo.type))
+            type = (Helper.isNotEmpty(weaponInfo) && Helper.isNotEmpty(weaponInfo.type))
                 ? weaponInfo.type : typeList[0].key;
 
             mode = 'weapon';
