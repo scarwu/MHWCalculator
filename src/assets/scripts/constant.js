@@ -92,7 +92,8 @@ export default {
                 9: true,
                 8: false,
                 7: false,
-                6: false
+                6: false,
+                5: false
             }
         }
     },
