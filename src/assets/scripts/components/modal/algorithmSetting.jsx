@@ -150,18 +150,20 @@ export default function AlgorithmSetting(props) {
                             </div>
                         </div>
 
-                        <div className="mhwc-item mhwc-item-2-step">
-                            <div className="col-12 mhwc-name">
-                                <span>搜尋策略</span>
+                        {'production' !== Config.env ? (
+                            <div className="mhwc-item mhwc-item-2-step">
+                                <div className="col-12 mhwc-name">
+                                    <span>搜尋策略</span>
 
-                                <div className="mhwc-icons_bundle">
-                                    <FunctionalSelector
-                                        iconName="book"
-                                        defaultValue={stateAlgorithmParams.strategy}
-                                        options={strategyList} onChange={handleStrategyChange} />
+                                    <div className="mhwc-icons_bundle">
+                                        <FunctionalSelector
+                                            iconName="book"
+                                            defaultValue={stateAlgorithmParams.strategy}
+                                            options={strategyList} onChange={handleStrategyChange} />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        ) : false}
 
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">

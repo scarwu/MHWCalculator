@@ -1,4 +1,4 @@
-# Monster Hunter: World - Calculator
+# Monster Hunter World: Iceborne - Calculator
 
 ## Development
 

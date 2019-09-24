@@ -44,9 +44,7 @@ if ('production' === Config.env) {
 /**
  * Variables
  */
-const langList = Object.keys(Constant.langs).filter((lang) => {
-    return ('production' === Config.env) ? 'zhTW' === lang : true;
-}).map((lang) => {
+const langList = Object.keys(Constant.langs).map((lang) => {
     return { key: lang, value: Constant.langs[lang] };
 });
 

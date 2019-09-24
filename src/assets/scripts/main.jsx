@@ -13,7 +13,7 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import * as Sentry from '@sentry/browser'
 
-// Load Config & Constant
+// Load Config
 import Config from 'config';
 
 // Load App

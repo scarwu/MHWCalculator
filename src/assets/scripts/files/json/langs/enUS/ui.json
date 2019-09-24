@@ -1,6 +1,6 @@
 {
     "title":                "Monster Hunter World: Iceborne - Calculator",
-    "skillLevelZero":       "This skill will not include in candidate bundles",
+    "skillLevelZero":       "This skill will exclude in candidate bundles",
     "every":                "Every",
     "rawAttackEV":          "Points Raw Attack EV",
     "criticalRateEV":       "Points Critical Rate EV",
@@ -90,7 +90,7 @@
     "up":                   "Up",
     "down":                 "Down",
     "skill":                "Skill",
-    "jewel":                "Jewel",
+    "jewel":                "Decoration",
     "set":                  "Set",
     "reset":                "Reset",
     "setting":              "Setting",
@@ -106,7 +106,7 @@
     "skillList":            "Skill List",
     "setList":              "Set List",
     "enhanceList":          "Enhance List",
-    "jewelList":            "Jewel List",
+    "jewelList":            "Decoration List",
     "charmList":            "Chram List",
     "armorList":            "Armor List",
     "weaponList":           "Weapon List",
@@ -117,8 +117,8 @@
     "defense":              "Defense",
     "amount":               "Amount",
     "slot":                 "Slot",
-    "expectedValue":        "ExpectedValue",
-    "expectedLevel":        "ExpectedLevel",
+    "expectedValue":        "Expected Value",
+    "expectedLevel":        "Expected Level",
     "complete":             "Complete",
     "speed":                "Speed"
 }

@@ -353,9 +353,9 @@ export default function CandidateBundles(props) {
                     <FunctionalButton
                         iconName="refresh" altName={_('reset')}
                         onClick={CommonState.setter.cleanComputedBundles} />
-                    {'production' !== Config.env ? <FunctionalButton
+                    <FunctionalButton
                         iconName="cog" altName={_('setting')}
-                        onClick={ModalState.setter.showAlgorithmSetting} /> : false}
+                        onClick={ModalState.setter.showAlgorithmSetting} />
                     <FunctionalButton
                         iconName="search" altName={_('search')}
                         onClick={handleCandidateBundlesSearch} />
