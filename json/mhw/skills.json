@@ -947,7 +947,7 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": true
         },
         "list": [
             {
@@ -1987,7 +1987,7 @@
         "id": "利刃／彈藥節約",
         "name": {
             "zhTW": "利刃／彈藥節約",
-            "jaJP": "業物/弾丸節約",
+            "jaJP": "業物\/弾丸節約",
             "enUS": "Razor Sharp\/Spare Shot"
         },
         "description": {
@@ -2000,7 +2000,7 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": true
         },
         "list": [
             {
@@ -3045,9 +3045,9 @@
         },
         "type": "passive",
         "from": {
-            "set": false,
-            "jewel": true,
-            "armor": true,
+            "set": true,
+            "jewel": false,
+            "armor": false,
             "weapon": false
         },
         "list": [
@@ -5593,7 +5593,7 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": true
         },
         "list": [
             {
@@ -5689,7 +5689,7 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": true
         },
         "list": [
             {
@@ -6539,7 +6539,7 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": true
         },
         "list": [
             {
