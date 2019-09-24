@@ -155,22 +155,22 @@ foreach ($armors as $armor) {
     }
 }
 
-// $weaponMap = [];
+$weaponMap = [];
 
-// foreach ($weapons as $weapon) {
-//     if (false === is_array($weapon['skills'])) {
-//         continue;
-//     }
+foreach ($weapons as $weapon) {
+    if (false === is_array($weapon['skills'])) {
+        continue;
+    }
 
-//     foreach ($weapon['skills'] as $skill) {
-//         $weaponMap[$skill['id']] = true;
-//     }
-// }
+    foreach ($weapon['skills'] as $skill) {
+        $weaponMap[$skill['id']] = true;
+    }
+}
 
 print_r($setMap);
 print_r($jewelMap);
 print_r($armorMap);
-// print_r($weaponMap);
+print_r($weaponMap);
 
 $newSkills = [];
 
@@ -178,7 +178,7 @@ foreach ($skills as $skill) {
     $skill['from']['set'] = isset($setMap[$skill['id']]);
     $skill['from']['jewel'] = isset($jewelMap[$skill['id']]);
     $skill['from']['armor'] = isset($armorMap[$skill['id']]);
-    // $skill['from']['weapon'] = isset($weaponMap[$skill['id']]);
+    $skill['from']['weapon'] = isset($weaponMap[$skill['id']]);
 
     $newSkills[] = $skill;
 }
