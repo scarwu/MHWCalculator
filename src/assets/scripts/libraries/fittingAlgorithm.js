@@ -329,12 +329,10 @@ class FittingAlgorithm {
         Object.keys(this.conditionSets).forEach((setId) => {
             nextBundlePool = {};
 
-            let setRequire = this.conditionSets[setId];
-
             Object.keys(prevBundlePool).forEach((hash) => {
                 let bundle = Helper.deepCopy(prevBundlePool[hash]);
 
-                if (setRequire !== bundle.sets[setId]) {
+                if (this.conditionSets[setId] !== bundle.sets[setId]) {
                     return;
                 }
 
@@ -396,8 +394,11 @@ class FittingAlgorithm {
 
             // Append Empty Candidate Equip
             candidateEquipPool[equipType]['empty'] = this.getEmptyCandidateEquip(equipType);
+
+            Helper.log('BundleList: With Skills: Equip', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
         });
 
+        // Get Maximum Equips EV & EL
         Object.keys(candidateEquipPool).forEach((equipType) => {
             if (Helper.isEmpty(this.maxEquipsExpectedValue[equipType])) {
                 this.maxEquipsExpectedValue[equipType] = 0;
@@ -416,10 +417,6 @@ class FittingAlgorithm {
                     this.maxEquipsExpectedLevel[equipType] = candidateEquip.expectedLevel;
                 }
             });
-        });
-
-        this.conditionEquips.forEach((equipType) => {
-            Helper.log('Equip Count:', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
         });
 
         Helper.log('Equips Expected Value:', this.maxEquipsExpectedValue);
@@ -820,12 +817,18 @@ class FittingAlgorithm {
      * Create Completed Bundles By Skills
      */
     createCompletedBundlesBySkills = (bundle) => {
-        let prevBundlePool = {}
+        let prevBundlePool = {};
         let nextBundlePool = {};
 
         prevBundlePool[this.generateBundleHash(bundle)] = bundle;
 
         Object.keys(this.conditionSkills).forEach((skillId) => {
+            if (Helper.isEmpty(this.correspondJewels[skillId])) {
+                return;
+            }
+
+            nextBundlePool = {};
+
             Object.keys(prevBundlePool).forEach((hash) => {
                 this.correspondJewels[skillId].forEach((jewel) => {
                     let bundle = Helper.deepCopy(prevBundlePool[hash]);
