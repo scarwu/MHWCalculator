@@ -926,6 +926,8 @@ class FittingAlgorithm {
         while (true) {
             if (0 === bundle.meta.remainingSlotCount[currentSlotSize]) {
                 currentSlotSize += 1;
+
+                continue;
             }
 
             if (4 < currentSlotSize) {
@@ -935,10 +937,6 @@ class FittingAlgorithm {
             // Reset Flags
             isComplete = false;
             isOverflow = false;
-
-            // Decrease Slot Counts
-            bundle.meta.remainingSlotCount[currentSlotSize]--;
-            bundle.meta.remainingSlotCount.all--;
 
             // Check Skill is Completed
             jewel.skills.forEach((skill) => {
@@ -962,6 +960,10 @@ class FittingAlgorithm {
 
             // Bundle Backup
             bundleBackup = Helper.deepCopy(bundle);
+
+            // Decrease Slot Counts
+            bundle.meta.remainingSlotCount[currentSlotSize]--;
+            bundle.meta.remainingSlotCount.all--;
 
             // Add Jewel
             if (Helper.isEmpty(bundle.jewels[jewel.id])) {
