@@ -99,8 +99,11 @@ class FittingAlgorithm {
                 this.correspondJewels[skill.id].push({
                     id: jewelInfo.id,
                     size: jewelInfo.size,
-                    skillIds: jewelInfo.skills.map((skill) => {
-                        return skill.id;
+                    skills: jewelInfo.skills.map((skill) => {
+                        return {
+                            id: skill.id,
+                            level: skill.level
+                        };
                     })
                 });
             });
@@ -833,18 +836,24 @@ class FittingAlgorithm {
                 this.correspondJewels[skillId].forEach((jewel) => {
                     let bundle = Helper.deepCopy(prevBundlePool[hash]);
 
-                    // Add Jewel to Bundle
-                    bundle = this.addJewelToBundleBySpecificSkill(bundle, jewel, {
-                        id: skillId,
-                        level: this.conditionSkills[skillId]
-                    });
-
-                    if (false === bundle) {
-                        return;
+                    if (Helper.isEmpty(bundle.skills[skillId])) {
+                        bundle.skills[skillId] = 0;
                     }
 
-                    if (this.conditionSkills[skillId] === bundle.skills[skillId]) {
-                        bundle.meta.completedSkills[skillId] = true;
+                    if (this.conditionSkills[skillId] < bundle.skills[skillId]) {
+                        return false;
+                    }
+
+                    // Add Jewel to Bundle
+                    if (this.conditionSkills[skillId] > bundle.skills[skillId]) {
+                        bundle = this.addJewelToBundleBySpecificSkill(bundle, jewel, {
+                            id: skillId,
+                            level: this.conditionSkills[skillId]
+                        });
+
+                        if (false === bundle) {
+                            return;
+                        }
                     }
 
                     nextBundlePool[this.generateBundleHash(bundle)] = bundle;
@@ -860,72 +869,98 @@ class FittingAlgorithm {
     /**
      * Add Jewel To Bundle By Specific Skill
      */
-    addJewelToBundleBySpecificSkill = (bundle, jewel, skill) => {
-        if (Helper.isEmpty(bundle.skills[skill.id])) {
-            bundle.skills[skill.id] = 0
-        }
+    addJewelToBundleBySpecificSkill = (bundle, jewel) => {
+        let currentSlotSize = jewel.size;
+        let isComplete = false;
+        let isOverflow = false;
+        let bundleBackup = null;
 
-        let diffSkillLevel = skill.level - bundle.skills[skill.id];
-
-        if (0 === diffSkillLevel) {
+        if (0 === bundle.meta.remainingSlotCount.all) {
             return bundle;
         }
 
-        // Failed - No Jewel
-        if (Helper.isEmpty(jewel) && 0 !== diffSkillLevel) {
-            return false;
-        }
-
-        let currentSlotSize = jewel.size;
-        let usedSlotCount = {
-            1: 0,
-            2: 0,
-            3: 0,
-            4: 0
-        };
-
+        // 已透過技能選出了裝飾珠 再用裝飾珠有的技能 id & level 來 completed skill
+        // 加入裝飾珠 同時計算洞數以及技能等級
         while (true) {
-            if (0 !== bundle.meta.remainingSlotCount[currentSlotSize]) {
-                if (diffSkillLevel > bundle.meta.remainingSlotCount[currentSlotSize]) {
-                    usedSlotCount[currentSlotSize] = bundle.meta.remainingSlotCount[currentSlotSize];
-                    diffSkillLevel -= bundle.meta.remainingSlotCount[currentSlotSize];
-                } else {
-                    usedSlotCount[currentSlotSize] = diffSkillLevel;
-                    diffSkillLevel = 0;
-                }
+            if (0 === bundle.meta.remainingSlotCount[currentSlotSize]) {
+                currentSlotSize += 1;
             }
 
-            currentSlotSize += 1;
-
-            if (0 === diffSkillLevel) {
+            if (4 < currentSlotSize) {
                 break;
             }
 
-            // Failed - No Slots
-            if (4 < currentSlotSize) {
-                return false;
+            // Reset Flags
+            isComplete = false;
+            isOverflow = false;
+
+            // Decrease Slot Counts
+            bundle.meta.remainingSlotCount[currentSlotSize]--;
+            bundle.meta.remainingSlotCount.all--;
+
+            // Check Skill is Completed
+            jewel.skills.forEach((skill) => {
+                if (Helper.isEmpty(this.conditionSkills[skill.id])){
+                    return;
+                }
+
+                if (Helper.isEmpty(bundle.skills[skill.id])) {
+                    bundle.skills[skill.id] = 0;
+                }
+
+                if (this.conditionSkills[skill.id] === bundle.skills[skill.id]) {
+                    bundle.meta.completedSkills[skill.id] = true;
+                    isComplete = true;
+                }
+            });
+
+            if (true === isComplete) {
+                return bundle;
+            }
+
+            // Bundle Backup
+            bundleBackup = Helper.deepCopy(bundle);
+
+            // Add Jewel
+            if (Helper.isEmpty(bundle.jewels[jewel.id])) {
+                bundle.jewels[jewel.id] = 0;
+            }
+
+            bundle.jewels[jewel.id]++;
+
+            // Add Skills
+            jewel.skills.forEach((skill) => {
+                if (Helper.isEmpty(bundle.skills[skill.id])) {
+                    bundle.skills[skill.id] = 0;
+                }
+
+                bundle.skills[skill.id] += skill.level;
+
+                // Check Skill is Completed
+                if (Helper.isNotEmpty(this.conditionSkills[skill.id])) {
+                    if (this.conditionSkills[skill.id] < bundle.skills[skill.id]) {
+                        isOverflow = true;
+                    }
+
+                    if (this.conditionSkills[skill.id] === bundle.skills[skill.id]) {
+                        bundle.meta.completedSkills[skill.id] = true;
+                        isComplete = true;
+                    }
+                }
+            });
+
+            if (true === isOverflow) {
+                return bundleBackup;
+            }
+
+            if (true === isComplete) {
+                return bundle;
+            }
+
+            if (0 === bundle.meta.remainingSlotCount.all) {
+                break;
             }
         }
-
-        if (Helper.isEmpty(bundle.skills[skill.id])) {
-            bundle.skills[skill.id] = 0;
-        }
-
-        if (Helper.isEmpty(bundle.jewels[jewel.id])) {
-            bundle.jewels[jewel.id] = 0;
-        }
-
-        diffSkillLevel = skill.level - bundle.skills[skill.id];
-
-        jewel.skillIds.map((skillIds) => {
-            bundle.skills[skill.id] += diffSkillLevel;
-        });
-        bundle.jewels[jewel.id] += diffSkillLevel;
-
-        Object.keys(usedSlotCount).forEach((slotSize) => {
-            bundle.meta.remainingSlotCount[slotSize] -= usedSlotCount[slotSize];
-            bundle.meta.remainingSlotCount.all -= usedSlotCount[slotSize];
-        });
 
         return bundle;
     };
