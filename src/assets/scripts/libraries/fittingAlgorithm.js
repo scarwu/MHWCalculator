@@ -87,7 +87,9 @@ class FittingAlgorithm {
 
             let minJewelSize = 5;
 
-            JewelDataset.hasSkill(skill.id).getItems().forEach((jewelInfo) => {
+            JewelDataset.hasSkill(skill.id).getItems().sort((jewelInfoA, jewelInfoB) => {
+                return jewelInfoA.size - jewelInfoB.size;
+            }).forEach((jewelInfo) => {
                 if (minJewelSize > jewelInfo.size) {
                     minJewelSize = jewelInfo.size;
                 }
@@ -178,6 +180,7 @@ class FittingAlgorithm {
 
         this.requireEquipCount = this.conditionEquips.length;
         this.requireSkillCount = Object.keys(this.conditionSkills).length;
+        this.requireSetCount = Object.keys(this.conditionSets).length;
 
         Helper.log('Init: Condition Skills:', this.conditionSkills);
         Helper.log('Init: Condition Sets:', this.conditionSets);
@@ -189,7 +192,7 @@ class FittingAlgorithm {
         let bundlePool = {};
 
         // Init Prev Bundle Pool
-        bundlePool[this.generateBundleHash(defaultBundle)] = defaultBundle;
+        bundlePool[this.getBundleHash(defaultBundle)] = defaultBundle;
 
         Helper.log('First: Bundle Pool:', bundlePool);
 
@@ -202,9 +205,6 @@ class FittingAlgorithm {
                 return [];
             }
         }
-
-        // Reset Completed Skills
-        bundlePool = this.resetBundlePoolCompletedSkills(bundlePool);
 
         // Create Bundle Pool with Set Equips
         if (0 !== Object.keys(this.conditionSkills).length) {
@@ -224,7 +224,7 @@ class FittingAlgorithm {
     /**
      * Generate Bundle Hash
      */
-    generateBundleHash = (bundle) => {
+    getBundleHash = (bundle) => {
         let equips = {};
         let jewels = {};
 
@@ -253,6 +253,7 @@ class FittingAlgorithm {
     createBundlePoolWithSetEquips = (prevBundlePool) => {
         let candidateEquipPool = {};
         let nextBundlePool = {};
+        let lastBundlePool = {};
 
         this.conditionEquips.forEach((equipType) => {
             if ('charm' === equipType) {
@@ -293,14 +294,14 @@ class FittingAlgorithm {
 
                     // Check Equip Part is Used
                     if (Helper.isNotEmpty(bundle.equips[equipType])) {
-                        nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+                        nextBundlePool[this.getBundleHash(bundle)] = bundle;
 
                         return;
                     }
 
                     // Check Candidate Equip Id
                     if (Helper.isEmpty(candidateEquip.id)) {
-                        nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+                        nextBundlePool[this.getBundleHash(bundle)] = bundle;
 
                         return;
                     }
@@ -308,46 +309,37 @@ class FittingAlgorithm {
                     // Add Candidate Equip to Bundle
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
-                    // Sets
-                    let setRequire = this.conditionSets[candidateEquip.setId];
-
-                    if (Helper.isEmpty(bundle.sets[candidateEquip.setId])) {
-                        bundle.sets[candidateEquip.setId] = 0;
-                    }
-
-                    if (setRequire < bundle.sets[candidateEquip.setId]) {
+                    if (false === bundle) {
                         bundle = Helper.deepCopy(prevBundlePool[hash]);
-                        nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+                        nextBundlePool[this.getBundleHash(bundle)] = bundle;
 
                         return;
                     }
 
-                    nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+                    if (this.isBundleSetComplete(bundle)) {
+                        lastBundlePool[this.getBundleHash(bundle)] = bundle;
+
+                        return;
+                    }
+
+                    nextBundlePool[this.getBundleHash(bundle)] = bundle;
                 });
             });
 
             prevBundlePool = nextBundlePool;
         });
 
-        Object.keys(this.conditionSets).forEach((setId) => {
-            nextBundlePool = {};
+        Object.keys(prevBundlePool).forEach((hash) => {
+            let bundle = Helper.deepCopy(prevBundlePool[hash]);
 
-            Object.keys(prevBundlePool).forEach((hash) => {
-                let bundle = Helper.deepCopy(prevBundlePool[hash]);
-
-                if (this.conditionSets[setId] !== bundle.sets[setId]) {
-                    return;
-                }
-
-                nextBundlePool[this.generateBundleHash(bundle)] = bundle;
-            });
-
-            prevBundlePool = nextBundlePool;
+            if (this.isBundleSetComplete(bundle)) {
+                lastBundlePool[this.getBundleHash(bundle)] = bundle;
+            }
         });
 
-        Helper.log('BundleList: With Sets: Count', Object.keys(prevBundlePool).length);
+        Helper.log('BundleList: With Sets: Count', Object.keys(lastBundlePool).length);
 
-        return prevBundlePool;
+        return lastBundlePool;
     };
 
     /**
@@ -356,7 +348,6 @@ class FittingAlgorithm {
     createBundlePoolWithSkillEquips = (prevBundlePool) => {
         let candidateEquipPool = {};
         let nextBundlePool = {};
-        let lastBundlePool = {};
 
         this.conditionEquips.forEach((equipType) => {
             if (Helper.isEmpty(candidateEquipPool[equipType])) {
@@ -441,14 +432,14 @@ class FittingAlgorithm {
 
                     // Check Equip Part is Used
                     if (Helper.isNotEmpty(bundle.equips[equipType])) {
-                        nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+                        nextBundlePool[this.getBundleHash(bundle)] = bundle;
 
                         return;
                     }
 
                     // Check Candidate Equip Id
                     if (Helper.isEmpty(candidateEquip.id)) {
-                        nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+                        nextBundlePool[this.getBundleHash(bundle)] = bundle;
 
                         return;
                     }
@@ -456,45 +447,22 @@ class FittingAlgorithm {
                     // Add Candidate Equip to Bundle
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
+                    if (false === bundle) {
+                        bundle = Helper.deepCopy(prevBundlePool[hash]);
+                        nextBundlePool[this.getBundleHash(bundle)] = bundle;
+
+                        return;
+                    }
+
                     // Check Bundle Have a Future
-                    if (false === this.isBundleHaveFuture(bundle)) {
+                    if ('speed' === this.algorithmParams.strategy
+                        && false === this.isBundleHaveFuture(bundle)
+                    ) {
                         return;
                     }
 
-                    // Count & Check Skills from Candidate Equip
-                    let isSkip = false;
-
-                    Object.keys(candidateEquip.skills).forEach((skillId) => {
-                        if (true === isSkip) {
-                            return;
-                        }
-
-                        if (Helper.isEmpty(this.conditionSkills[skillId])) {
-                            return;
-                        }
-
-                        let skillLevel = this.conditionSkills[skillId];
-
-                        if (skillLevel < bundle.skills[skillId]) {
-                            bundle = Helper.deepCopy(prevBundlePool[hash]);
-                            nextBundlePool[this.generateBundleHash(bundle)] = bundle;
-
-                            isSkip = true;
-
-                            return;
-                        }
-
-                        if (skillLevel === bundle.skills[skillId]) {
-                            bundle.meta.completedSkills[skillId] = true;
-                        }
-                    });
-
-                    if (true === isSkip) {
-                        return;
-                    }
-
-                    if (this.requireSkillCount === Object.keys(bundle.meta.completedSkills).length) {
-                        lastBundlePool[this.generateBundleHash(bundle)] = bundle;
+                    if (this.isBundleSkillComplete(bundle)) {
+                        lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
                         return;
                     }
@@ -504,17 +472,15 @@ class FittingAlgorithm {
 
                         // Create Completed Bundles By Skills
                         this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
-                            if (this.requireSkillCount !== Object.keys(bundle.meta.completedSkills).length) {
-                                return;
+                            if (this.isBundleSkillComplete(bundle)) {
+                                lastBundlePool[this.getBundleHash(bundle)] = bundle;
                             }
-
-                            lastBundlePool[this.generateBundleHash(bundle)] = bundle;
                         });
 
                         return;
                     }
 
-                    nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+                    nextBundlePool[this.getBundleHash(bundle)] = bundle;
                 });
             });
 
@@ -528,18 +494,14 @@ class FittingAlgorithm {
         // Find Completed Bundle into Last BundleList
         Helper.log('Find Completed Bundles');
 
-        nextBundlePool = {};
-
         Object.keys(prevBundlePool).forEach((hash) => {
             let bundle = Helper.deepCopy(prevBundlePool[hash]);
 
             // Completed Bundles By Skills
             this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
-                if (this.requireSkillCount !== Object.keys(bundle.meta.completedSkills).length) {
-                    return;
+                if (this.isBundleSkillComplete(bundle)) {
+                    lastBundlePool[this.getBundleHash(bundle)] = bundle;
                 }
-
-                lastBundlePool[this.generateBundleHash(bundle)] = bundle;
             });
         });
 
@@ -547,37 +509,6 @@ class FittingAlgorithm {
 
         return lastBundlePool;
     }
-
-    /**
-     * Reset Bundle Pool Compeleted Skills
-     */
-    resetBundlePoolCompletedSkills = (prevBundlePool) => {
-        Helper.log('Bundle Pool: Reset Completed Skills');
-
-        let nextBundlePool = {};
-
-        Object.keys(prevBundlePool).forEach((hash) => {
-            let bundle = Helper.deepCopy(prevBundlePool[hash]);
-
-            bundle.meta.completedSkills = {};
-
-            Object.keys(bundle.skills).forEach((skillId) => {
-                if (Helper.isEmpty(this.conditionSkills[skillId])) {
-                    return;
-                }
-
-                let skillLevel = this.conditionSkills[skillId];
-
-                if (skillLevel === bundle.skills[skillId]) {
-                    bundle.meta.completedSkills[skillId] = true;
-                }
-            });
-
-            nextBundlePool[this.generateBundleHash(bundle)] = bundle;
-        });
-
-        return nextBundlePool;
-    };
 
     /**
      * Create Sorted Bundle List
@@ -596,7 +527,7 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: (8 - bundle.meta.equipCount) * 1000 + bundle.meta.defense
                 };
-                bundle.hash = this.generateBundleHash(bundle);
+                bundle.hash = this.getBundleHash(bundle);
 
                 return bundle;
             });
@@ -612,7 +543,7 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.defense
                 };
-                bundle.hash = this.generateBundleHash(bundle);
+                bundle.hash = this.getBundleHash(bundle);
 
                 return bundle;
             });
@@ -632,7 +563,7 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.resistance[this.algorithmParams.sort]
                 };
-                bundle.hash = this.generateBundleHash(bundle);
+                bundle.hash = this.getBundleHash(bundle);
 
                 return bundle;
             });
@@ -648,7 +579,7 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.equipCount
                 };
-                bundle.hash = this.generateBundleHash(bundle);
+                bundle.hash = this.getBundleHash(bundle);
 
                 return bundle;
             });
@@ -664,7 +595,7 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.remainingSlotCount.all
                 };
-                bundle.hash = this.generateBundleHash(bundle);
+                bundle.hash = this.getBundleHash(bundle);
 
                 return bundle;
             });
@@ -680,7 +611,7 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.expectedValue
                 };
-                bundle.hash = this.generateBundleHash(bundle);
+                bundle.hash = this.getBundleHash(bundle);
 
                 return bundle;
             });
@@ -696,13 +627,13 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.expectedLevel
                 };
-                bundle.hash = this.generateBundleHash(bundle);
+                bundle.hash = this.getBundleHash(bundle);
 
                 return bundle;
             });
         default:
             return Object.map((bundle) => {
-                bundle.hash = this.generateBundleHash(bundle);
+                bundle.hash = this.getBundleHash(bundle);
 
                 return bundle;
             }).values(bundlePool);
@@ -722,20 +653,9 @@ class FittingAlgorithm {
         }
 
         bundle.equips[candidateEquip.type] = candidateEquip.id;
-        bundle.meta.defense += candidateEquip.defense;
-        bundle.meta.resistance.fire += candidateEquip.resistance.fire;
-        bundle.meta.resistance.water += candidateEquip.resistance.water;
-        bundle.meta.resistance.thunder += candidateEquip.resistance.thunder;
-        bundle.meta.resistance.ice += candidateEquip.resistance.ice;
-        bundle.meta.resistance.dragon += candidateEquip.resistance.dragon;
 
-        if (Helper.isNotEmpty(candidateEquip.setId)) {
-            if (Helper.isEmpty(bundle.sets[candidateEquip.setId])) {
-                bundle.sets[candidateEquip.setId] = 0;
-            }
-
-            bundle.sets[candidateEquip.setId] += 1;
-        }
+        // Increase Skill
+        let isSkillLevelOverflow = false;
 
         Object.keys(candidateEquip.skills).forEach((skillId) => {
             let skillLevel = candidateEquip.skills[skillId];
@@ -745,8 +665,48 @@ class FittingAlgorithm {
             }
 
             bundle.skills[skillId] += skillLevel;
+
+            if (Helper.isNotEmpty(this.conditionSkills[skillId])) {
+                if (this.conditionSkills[skillId] < bundle.skills[skillId]) {
+                    isSkillLevelOverflow = true;
+                }
+
+                if (this.conditionSkills[skillId] === bundle.skills[skillId]) {
+                    bundle.meta.completedSkills[skillId] = true;
+                }
+            }
         });
 
+        if (true === isSkillLevelOverflow) {
+            return false;
+        }
+
+        // Increase Set
+        if (Helper.isNotEmpty(candidateEquip.setId)) {
+            if (Helper.isEmpty(bundle.sets[candidateEquip.setId])) {
+                bundle.sets[candidateEquip.setId] = 0;
+            }
+
+            bundle.sets[candidateEquip.setId] += 1;
+
+            if (this.conditionSets[candidateEquip.setId] < bundle.sets[candidateEquip.setId]) {
+                return false;
+            }
+
+            if (this.conditionSets[candidateEquip.setId] === bundle.sets[candidateEquip.setId]) {
+                bundle.meta.completedSets[candidateEquip.setId] = true;
+            }
+        }
+
+        // Increase Defense & Resistances
+        bundle.meta.defense += candidateEquip.defense;
+        bundle.meta.resistance.fire += candidateEquip.resistance.fire;
+        bundle.meta.resistance.water += candidateEquip.resistance.water;
+        bundle.meta.resistance.thunder += candidateEquip.resistance.thunder;
+        bundle.meta.resistance.ice += candidateEquip.resistance.ice;
+        bundle.meta.resistance.dragon += candidateEquip.resistance.dragon;
+
+        // Increase Slot Count
         for (let size = 1; size <= 4; size++) {
             bundle.meta.remainingSlotCount[size] += candidateEquip.ownSlotCount[size];
             bundle.meta.remainingSlotCount.all += candidateEquip.ownSlotCount[size];
@@ -865,7 +825,7 @@ class FittingAlgorithm {
         let prevBundlePool = {};
         let nextBundlePool = {};
 
-        prevBundlePool[this.generateBundleHash(bundle)] = bundle;
+        prevBundlePool[this.getBundleHash(bundle)] = bundle;
 
         Object.keys(this.conditionSkills).forEach((skillId) => {
             if (Helper.isEmpty(this.correspondJewels[skillId])) {
@@ -898,7 +858,7 @@ class FittingAlgorithm {
                         }
                     }
 
-                    nextBundlePool[this.generateBundleHash(bundle)] = bundle;
+                    nextBundlePool[this.getBundleHash(bundle)] = bundle;
                 });
             })
 
@@ -913,8 +873,8 @@ class FittingAlgorithm {
      */
     addJewelToBundleBySpecificSkill = (bundle, jewel) => {
         let currentSlotSize = jewel.size;
-        let isComplete = false;
-        let isOverflow = false;
+        let isSkillLevelCompelete = false;
+        let isSkillLevelOverflow = false;
         let bundleBackup = null;
 
         if (0 === bundle.meta.remainingSlotCount.all) {
@@ -934,11 +894,9 @@ class FittingAlgorithm {
                 break;
             }
 
-            // Reset Flags
-            isComplete = false;
-            isOverflow = false;
-
             // Check Skill is Completed
+            isSkillLevelCompelete = false;
+
             jewel.skills.forEach((skill) => {
                 if (Helper.isEmpty(this.conditionSkills[skill.id])){
                     return;
@@ -950,11 +908,11 @@ class FittingAlgorithm {
 
                 if (this.conditionSkills[skill.id] === bundle.skills[skill.id]) {
                     bundle.meta.completedSkills[skill.id] = true;
-                    isComplete = true;
+                    isSkillLevelCompelete = true;
                 }
             });
 
-            if (true === isComplete) {
+            if (true === isSkillLevelCompelete) {
                 return bundle;
             }
 
@@ -962,17 +920,19 @@ class FittingAlgorithm {
             bundleBackup = Helper.deepCopy(bundle);
 
             // Decrease Slot Counts
-            bundle.meta.remainingSlotCount[currentSlotSize]--;
-            bundle.meta.remainingSlotCount.all--;
+            bundle.meta.remainingSlotCount[currentSlotSize] -= 1;
+            bundle.meta.remainingSlotCount.all -= 1;
 
             // Add Jewel
             if (Helper.isEmpty(bundle.jewels[jewel.id])) {
                 bundle.jewels[jewel.id] = 0;
             }
 
-            bundle.jewels[jewel.id]++;
+            bundle.jewels[jewel.id] += 1;
 
             // Add Skills
+            isSkillLevelOverflow = false;
+
             jewel.skills.forEach((skill) => {
                 if (Helper.isEmpty(bundle.skills[skill.id])) {
                     bundle.skills[skill.id] = 0;
@@ -983,22 +943,17 @@ class FittingAlgorithm {
                 // Check Skill is Completed
                 if (Helper.isNotEmpty(this.conditionSkills[skill.id])) {
                     if (this.conditionSkills[skill.id] < bundle.skills[skill.id]) {
-                        isOverflow = true;
+                        isSkillLevelOverflow = true;
                     }
 
                     if (this.conditionSkills[skill.id] === bundle.skills[skill.id]) {
                         bundle.meta.completedSkills[skill.id] = true;
-                        isComplete = true;
                     }
                 }
             });
 
-            if (true === isOverflow) {
+            if (true === isSkillLevelOverflow) {
                 return bundleBackup;
-            }
-
-            if (true === isComplete) {
-                return bundle;
             }
 
             if (0 === bundle.meta.remainingSlotCount.all) {
@@ -1031,9 +986,24 @@ class FittingAlgorithm {
     };
 
     /**
+     * Is Bundle Skill Compelete
+     */
+    isBundleSkillComplete = (bundle) => {
+        return this.requireSkillCount === Object.keys(bundle.meta.completedSkills).length;
+    };
+
+    /**
+     * Is Bundle Set Compelete
+     */
+    isBundleSetComplete = (bundle) => {
+        return this.requireSetCount === Object.keys(bundle.meta.completedSets).length;
+    };
+
+    /**
      * Is Bundle Have Future
      *
-     * This is magic function, which is see through the future
+     * This is magic function, which is see through the future,
+     * maybe will lost some results.
      */
     isBundleHaveFuture = (bundle) => {
         let currentExpectedValue = bundle.meta.expectedValue;

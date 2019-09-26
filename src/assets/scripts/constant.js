@@ -90,7 +90,7 @@ export default {
             limit: 25,
             sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel
             order: 'desc', // asc | desc
-            strategy: 'complete', // complete | speed
+            strategy: 'speed', // complete | speed
             armorFactor: {
                 12: true,
                 11: true,
@@ -151,6 +151,7 @@ export default {
             expectedLevel: 0,
             equipCount: 0,
             completedSkills: {},
+            completedSets: {},
             remainingSlotCount: {
                 1: 0,
                 2: 0,

@@ -101,13 +101,13 @@ export default function AlgorithmSetting(props) {
     ];
 
     const orderList = [
-        { key: 'asc', value: _('asc') },
-        { key: 'desc', value: _('desc') }
+        { key: 'desc', value: _('desc') },
+        { key: 'asc', value: _('asc') }
     ];
 
     const strategyList = [
-        { key: 'complete', value: _('completeStrategy') },
-        { key: 'speed', value: _('speedStrategy') }
+        { key: 'speed', value: _('speedStrategy') },
+        { key: 'complete', value: _('completeStrategy') }
     ];
 
     /**
@@ -168,20 +168,18 @@ export default function AlgorithmSetting(props) {
                             </div>
                         </div>
 
-                        {'production' !== Config.env ? (
-                            <div className="mhwc-item mhwc-item-2-step">
-                                <div className="col-12 mhwc-name">
-                                    <span>{_('strategy')}</span>
+                        <div className="mhwc-item mhwc-item-2-step">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('strategy')}</span>
 
-                                    <div className="mhwc-icons_bundle">
-                                        <FunctionalSelector
-                                            iconName="book"
-                                            defaultValue={stateAlgorithmParams.strategy}
-                                            options={strategyList} onChange={handleStrategyChange} />
-                                    </div>
+                                <div className="mhwc-icons_bundle">
+                                    <FunctionalSelector
+                                        iconName="book"
+                                        defaultValue={stateAlgorithmParams.strategy}
+                                        options={strategyList} onChange={handleStrategyChange} />
                                 </div>
                             </div>
-                        ) : false}
+                        </div>
 
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
