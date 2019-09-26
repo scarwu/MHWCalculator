@@ -589,7 +589,8 @@ class FittingAlgorithm {
                 let valueA = (8 - bundleA.meta.equipCount) * 1000 + bundleA.meta.defense;
                 let valueB = (8 - bundleB.meta.equipCount) * 1000 + bundleB.meta.defense;
 
-                return valueB - valueA;
+                return ('asc' === this.algorithmParams.order)
+                    ? (valueA - valueB) : (valueB - valueA);
             }).map((bundle) => {
                 bundle.sortedBy = {
                     key: this.algorithmParams.sort,
@@ -604,7 +605,8 @@ class FittingAlgorithm {
                 let valueA = bundleA.meta.defense;
                 let valueB = bundleB.meta.defense;
 
-                return valueB - valueA;
+                return ('asc' === this.algorithmParams.order)
+                    ? (valueA - valueB) : (valueB - valueA);
             }).map((bundle) => {
                 bundle.sortedBy = {
                     key: this.algorithmParams.sort,
@@ -619,7 +621,8 @@ class FittingAlgorithm {
                 let valueA = bundleA.meta.equipCount;
                 let valueB = bundleB.meta.equipCount;
 
-                return valueB - valueA;
+                return ('asc' === this.algorithmParams.order)
+                    ? (valueA - valueB) : (valueB - valueA);
             }).map((bundle) => {
                 bundle.sortedBy = {
                     key: this.algorithmParams.sort,
@@ -634,7 +637,8 @@ class FittingAlgorithm {
                 let valueA = bundleA.meta.remainingSlotCount.all;
                 let valueB = bundleB.meta.remainingSlotCount.all;
 
-                return valueB - valueA;
+                return ('asc' === this.algorithmParams.order)
+                    ? (valueA - valueB) : (valueB - valueA);
             }).map((bundle) => {
                 bundle.sortedBy = {
                     key: this.algorithmParams.sort,
@@ -649,7 +653,8 @@ class FittingAlgorithm {
                 let valueA = bundleA.meta.expectedValue;
                 let valueB = bundleB.meta.expectedValue;
 
-                return valueB - valueA;
+                return ('asc' === this.algorithmParams.order)
+                    ? (valueA - valueB) : (valueB - valueA);
             }).map((bundle) => {
                 bundle.sortedBy = {
                     key: this.algorithmParams.sort,
@@ -664,7 +669,8 @@ class FittingAlgorithm {
                 let valueA = bundleA.meta.expectedLevel;
                 let valueB = bundleB.meta.expectedLevel;
 
-                return valueB - valueA;
+                return ('asc' === this.algorithmParams.order)
+                    ? (valueA - valueB) : (valueB - valueA);
             }).map((bundle) => {
                 bundle.sortedBy = {
                     key: this.algorithmParams.sort,

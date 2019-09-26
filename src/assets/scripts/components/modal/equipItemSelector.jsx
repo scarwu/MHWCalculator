@@ -595,6 +595,8 @@ export default function EquipItemSelector(props) {
                 }
 
                 return true;
+            }).sort((dataA, dataB) => {
+                return _(dataA.id) > _(dataB.id) ? 1 : -1;
             }).map((data) => {
                 return renderWeaponItem(data, bypassData);
             });
@@ -636,6 +638,8 @@ export default function EquipItemSelector(props) {
                 }
 
                 return true;
+            }).sort((dataA, dataB) => {
+                return _(dataA.id) > _(dataB.id) ? 1 : -1;
             }).map((data) => {
                 return renderArmorItem(data, bypassData);
             });
@@ -661,6 +665,8 @@ export default function EquipItemSelector(props) {
                 }
 
                 return true;
+            }).sort((dataA, dataB) => {
+                return _(dataA.id) > _(dataB.id) ? 1 : -1;
             }).map((data) => {
                 return renderCharmItem(data, bypassData);
             });
@@ -686,6 +692,8 @@ export default function EquipItemSelector(props) {
                 }
 
                 return true;
+            }).sort((dataA, dataB) => {
+                return _(dataA.id) > _(dataB.id) ? 1 : -1;
             }).map((data) => {
                 return renderJewelItem(data, bypassData);
             });
@@ -707,6 +715,8 @@ export default function EquipItemSelector(props) {
                 }
 
                 return true;
+            }).sort((dataA, dataB) => {
+                return _(dataA.id) > _(dataB.id) ? 1 : -1;
             }).map((data) => {
                 return renderEnhanceItem(data, bypassData);
             });

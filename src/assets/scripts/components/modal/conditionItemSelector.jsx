@@ -28,14 +28,6 @@ import CommonState from 'states/common';
 import ModalState from 'states/modal';
 
 /**
- * Variables
- */
-const modeList = [
-    { key: 'set', value: _('set') },
-    { key: 'skill', value: _('skill') }
-];
-
-/**
  * Handle Functions
  */
 const handleModeChange = (event) => {
@@ -239,6 +231,14 @@ export default function ConditionItemSelector(props) {
     }, []);
 
     /**
+     * Variables
+     */
+    const modeList = [
+        { key: 'set', value: _('set') },
+        { key: 'skill', value: _('skill') }
+    ];
+
+    /**
      * Handle Functions
      */
     const handleFastWindowClose = useCallback((event) => {
@@ -287,6 +287,8 @@ export default function ConditionItemSelector(props) {
                     }
 
                     return true;
+                }).sort((dataA, dataB) => {
+                    return _(dataA.id) > _(dataB.id) ? 1 : -1;
                 })} />
             );
         case 'skill':
@@ -308,6 +310,8 @@ export default function ConditionItemSelector(props) {
                     }
 
                     return true;
+                }).sort((dataA, dataB) => {
+                    return _(dataA.id) > _(dataB.id) ? 1 : -1;
                 })} />
             );
         default:

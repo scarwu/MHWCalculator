@@ -89,6 +89,7 @@ export default {
         algorithmParams: {
             limit: 25,
             sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel
+            order: 'desc', // asc | desc
             strategy: 'complete', // complete | speed
             armorFactor: {
                 12: true,

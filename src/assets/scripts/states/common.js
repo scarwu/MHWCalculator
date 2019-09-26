@@ -480,6 +480,16 @@ const Store = createStore((state = initialState, action) => {
                 algorithmParams: algorithmParams
             });
         })();
+    case 'SET_ALGORITHM_PARAMS_ORDER':
+        return (() => {
+            let algorithmParams = Helper.deepCopy(state.algorithmParams);
+
+            algorithmParams.order = action.payload.order;
+
+            return Object.assign({}, state, {
+                algorithmParams: algorithmParams
+            });
+        })();
     case 'SET_ALGORITHM_PARAMS_STRATEGY':
         return (() => {
             let algorithmParams = Helper.deepCopy(state.algorithmParams);
@@ -689,6 +699,14 @@ const Setter = {
             type: 'SET_ALGORITHM_PARAMS_SORT',
             payload: {
                 sort: sort
+            }
+        });
+    },
+    setAlgorithmParamsOrder: (order) => {
+        Store.dispatch({
+            type: 'SET_ALGORITHM_PARAMS_ORDER',
+            payload: {
+                order: order
             }
         });
     },

@@ -142,7 +142,7 @@ const renderBundleItem = (bundle, index, totalIndex) => {
             {Helper.isNotEmpty(bundle.sortedBy) ? (
                 <div className="col-12 mhwc-content">
                     <div className="col-4 mhwc-name">
-                        <span>{_(bundle.sortedBy.key)}</span>
+                        <span>{_(bundle.sortedBy.key + 'Sort')}</span>
                     </div>
                     <div className="col-8 mhwc-value">
                         <span>{bundle.sortedBy.value}</span>

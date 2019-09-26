@@ -30,23 +30,6 @@ import ModalState from 'states/modal';
 import Config from 'config';
 
 /**
- * Variables
- */
-const sortList = [
-    { key: 'complex', value: _('complex') },
-    { key: 'defense', value: _('defense') },
-    { key: 'amount', value: _('amount') },
-    { key: 'slot', value: _('slot') },
-    { key: 'expectedValue', value: _('expectedValue') },
-    { key: 'expectedLevel', value: _('expectedLevel') }
-];
-
-const strategyList = [
-    { key: 'complete', value: _('complete') },
-    { key: 'speed', value: _('speed') }
-];
-
-/**
  * Handler Functions
  */
 const handleLimitChange = (event) => {
@@ -65,6 +48,10 @@ const handleLimitChange = (event) => {
 
 const handleSortChange = (event) => {
     CommonState.setter.setAlgorithmParamsSort(event.target.value);
+};
+
+const handleOrderChange = (event) => {
+    CommonState.setter.setAlgorithmParamsOrder(event.target.value);
 };
 
 const handleStrategyChange = (event) => {
@@ -97,6 +84,28 @@ export default function AlgorithmSetting(props) {
     }, []);
 
     /**
+     * Variables
+     */
+    const sortList = [
+        { key: 'complex', value: _('complexSort') },
+        { key: 'defense', value: _('defenseSort') },
+        { key: 'amount', value: _('amountSort') },
+        { key: 'slot', value: _('slotSort') },
+        { key: 'expectedValue', value: _('expectedValueSort') },
+        { key: 'expectedLevel', value: _('expectedLevelSort') }
+    ];
+
+    const orderList = [
+        { key: 'asc', value: _('asc') },
+        { key: 'desc', value: _('desc') }
+    ];
+
+    const strategyList = [
+        { key: 'complete', value: _('completeStrategy') },
+        { key: 'speed', value: _('speedStrategy') }
+    ];
+
+    /**
      * Handle Functions
      */
     const handleFastWindowClose = useCallback((event) => {
@@ -126,7 +135,7 @@ export default function AlgorithmSetting(props) {
                     <div className="mhwc-wrapper">
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
-                                <span>顯示數量</span>
+                                <span>{_('limit')}</span>
 
                                 <div className="mhwc-icons_bundle">
                                     <FunctionalInput
@@ -139,13 +148,17 @@ export default function AlgorithmSetting(props) {
 
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
-                                <span>排序方式</span>
+                                <span>{_('sort')}</span>
 
                                 <div className="mhwc-icons_bundle">
                                     <FunctionalSelector
                                         iconName="sort-amount-desc"
                                         defaultValue={stateAlgorithmParams.sort}
                                         options={sortList} onChange={handleSortChange} />
+                                    <FunctionalSelector
+                                        iconName="sort-amount-desc"
+                                        defaultValue={stateAlgorithmParams.order}
+                                        options={orderList} onChange={handleOrderChange} />
                                 </div>
                             </div>
                         </div>
@@ -153,7 +166,7 @@ export default function AlgorithmSetting(props) {
                         {'production' !== Config.env ? (
                             <div className="mhwc-item mhwc-item-2-step">
                                 <div className="col-12 mhwc-name">
-                                    <span>搜尋策略</span>
+                                    <span>{_('strategy')}</span>
 
                                     <div className="mhwc-icons_bundle">
                                         <FunctionalSelector
@@ -167,7 +180,7 @@ export default function AlgorithmSetting(props) {
 
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
-                                <span>裝備因子</span>
+                                <span>{_('armorFactor')}</span>
                             </div>
                             <div className="col-12 mhwc-content">
                                 {Object.keys(stateAlgorithmParams.armorFactor).map((rare) => {
