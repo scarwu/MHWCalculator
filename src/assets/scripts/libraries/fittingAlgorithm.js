@@ -310,9 +310,6 @@ class FittingAlgorithm {
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
                     if (false === bundle) {
-                        bundle = Helper.deepCopy(prevBundlePool[hash]);
-                        nextBundlePool[this.getBundleHash(bundle)] = bundle;
-
                         return;
                     }
 
@@ -449,8 +446,11 @@ class FittingAlgorithm {
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
                     if (false === bundle) {
-                        bundle = Helper.deepCopy(prevBundlePool[hash]);
-                        nextBundlePool[this.getBundleHash(bundle)] = bundle;
+                        return;
+                    }
+
+                    if (this.isBundleSkillComplete(bundle)) {
+                        lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
                         return;
                     }
@@ -462,20 +462,12 @@ class FittingAlgorithm {
                         return;
                     }
 
-                    if (this.isBundleSkillComplete(bundle)) {
-                        lastBundlePool[this.getBundleHash(bundle)] = bundle;
-
-                        return;
-                    }
-
                     // If Equips Is Full Then Do Fully Check
                     if (this.requireEquipCount === bundle.meta.equipCount) {
 
                         // Create Completed Bundles By Skills
                         this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
-                            if (this.isBundleSkillComplete(bundle)) {
-                                lastBundlePool[this.getBundleHash(bundle)] = bundle;
-                            }
+                            lastBundlePool[this.getBundleHash(bundle)] = bundle;
                         });
 
                         return;
@@ -500,9 +492,7 @@ class FittingAlgorithm {
 
             // Completed Bundles By Skills
             this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
-                if (this.isBundleSkillComplete(bundle)) {
-                    lastBundlePool[this.getBundleHash(bundle)] = bundle;
-                }
+                lastBundlePool[this.getBundleHash(bundle)] = bundle;
             });
         });
 
@@ -823,6 +813,10 @@ class FittingAlgorithm {
      * Create Completed Bundles By Skills
      */
     createCompletedBundlesBySkills = (bundle) => {
+        if (0 === bundle.meta.remainingSlotCount.all) {
+            return [];
+        }
+
         let prevBundlePool = {};
         let nextBundlePool = {};
 
@@ -844,7 +838,7 @@ class FittingAlgorithm {
                     }
 
                     if (this.conditionSkills[skillId] < bundle.skills[skillId]) {
-                        return false;
+                        return;
                     }
 
                     // Add Jewel to Bundle
@@ -866,7 +860,9 @@ class FittingAlgorithm {
             prevBundlePool = nextBundlePool;
         });
 
-        return Object.values(prevBundlePool);
+        return Object.values(prevBundlePool).filter((bundle) => {
+            return this.isBundleSkillComplete(bundle);
+        });
     };
 
     /**
