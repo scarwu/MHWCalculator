@@ -306,7 +306,7 @@ const renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
         ? SetDataset.getInfo(equipInfo.set.id) : null;
 
     return (
-        <div key={equipType} className="mhwc-item mhwc-item-3-step">
+        <div key={selectorData.equipId} className="mhwc-item mhwc-item-3-step">
             <div className="col-12 mhwc-name">
                 <span>{_(equipType)}: {_(equipInfo.name)}</span>
                 <div className="mhwc-icons_bundle">

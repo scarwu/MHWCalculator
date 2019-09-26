@@ -595,6 +595,7 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: (8 - bundle.meta.equipCount) * 1000 + bundle.meta.defense
                 };
+                bundle.hash = this.generateBundleHash(bundle);
 
                 return bundle;
             });
@@ -609,6 +610,7 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.defense
                 };
+                bundle.hash = this.generateBundleHash(bundle);
 
                 return bundle;
             });
@@ -623,6 +625,7 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.equipCount
                 };
+                bundle.hash = this.generateBundleHash(bundle);
 
                 return bundle;
             });
@@ -637,6 +640,7 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.remainingSlotCount.all
                 };
+                bundle.hash = this.generateBundleHash(bundle);
 
                 return bundle;
             });
@@ -651,6 +655,7 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.expectedValue
                 };
+                bundle.hash = this.generateBundleHash(bundle);
 
                 return bundle;
             });
@@ -665,11 +670,16 @@ class FittingAlgorithm {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.expectedLevel
                 };
+                bundle.hash = this.generateBundleHash(bundle);
 
                 return bundle;
             });
         default:
-            return Object.values(bundlePool);
+            return Object.map((bundle) => {
+                bundle.hash = this.generateBundleHash(bundle);
+
+                return bundle;
+            }).values(bundlePool);
         }
     };
 

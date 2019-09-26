@@ -129,7 +129,7 @@ const handleBundlePickUp = (bundle) => {
  */
 const renderBundleItem = (bundle, index, totalIndex) => {
     return (
-        <div key={index} className="mhwc-item mhwc-item-3-step">
+        <div key={bundle.hash} className="mhwc-item mhwc-item-3-step">
             <div className="col-12 mhwc-name">
                 <span>{_('bundle')}: {index + 1} / {totalIndex}</span>
                 <div className="mhwc-icons_bundle">
