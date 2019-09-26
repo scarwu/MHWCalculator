@@ -807,7 +807,7 @@ class FittingAlgorithm {
         candidateEquip.id = equipInfo.id;
         candidateEquip.type = ('charm' !== equipType) ? equipInfo.type : equipType;
         candidateEquip.defense = Helper.isNotEmpty(equipInfo.defense) ? equipInfo.defense : 0;
-        candidateEquip.resistance = Helper.isNotEmpty(equipInfo.resistance) ? equipInfo.resistance : 0;
+        candidateEquip.resistance = Helper.isNotEmpty(equipInfo.resistance) ? equipInfo.resistance : candidateEquip.resistance;
         candidateEquip.setId = Helper.isNotEmpty(equipInfo.set) ? equipInfo.set.id : null;
 
         if (Helper.isEmpty(equipInfo.skills)) {
