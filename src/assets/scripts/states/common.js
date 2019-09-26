@@ -395,47 +395,61 @@ const Store = createStore((state = initialState, action) => {
 
     // Current Equips
     case 'SET_CURRENT_EQUIP':
-        return Object.assign({}, state, {
-            currentEquips: (() => {
-                let currentEquips = Helper.deepCopy(state.currentEquips);
+        return (() => {
+            let requiredEquipPins = Helper.deepCopy(state.requiredEquipPins);
+            let currentEquips = Helper.deepCopy(state.currentEquips);
 
-                if (Helper.isNotEmpty(action.payload.data.enhanceIndex)) {
-                    if (Helper.isEmpty(currentEquips.weapon.enhanceIds)) {
-                        currentEquips.weapon.enhanceIds = {};
-                    }
-
-                    currentEquips.weapon.enhanceIds[action.payload.data.enhanceIndex] = action.payload.data.enhanceId;
-                } else if (Helper.isNotEmpty(action.payload.data.slotIndex)) {
-                    if (Helper.isEmpty(currentEquips.weapon.slotIds)) {
-                        currentEquips[action.payload.data.equipType].slotIds = {};
-                    }
-
-                    currentEquips[action.payload.data.equipType].slotIds[action.payload.data.slotIndex] = action.payload.data.slotId;
-                } else if ('weapon' === action.payload.data.equipType) {
-                    currentEquips.weapon = {
-                        id: action.payload.data.equipId,
-                        enhanceIds: {},
-                        slotIds: {}
-                    };
-                } else if ('helm' === action.payload.data.equipType
-                    || 'chest' === action.payload.data.equipType
-                    || 'arm' === action.payload.data.equipType
-                    || 'waist' === action.payload.data.equipType
-                    || 'leg' === action.payload.data.equipType
-                ) {
-                    currentEquips[action.payload.data.equipType] = {
-                        id: action.payload.data.equipId,
-                        slotIds: {}
-                    };
-                } else if ('charm' === action.payload.data.equipType) {
-                    currentEquips.charm = {
-                        id: action.payload.data.equipId
-                    };
+            if (Helper.isNotEmpty(action.payload.data.enhanceIndex)) {
+                if (Helper.isEmpty(currentEquips.weapon.enhanceIds)) {
+                    currentEquips.weapon.enhanceIds = {};
                 }
 
-                return currentEquips;
-            })()
-        });
+                currentEquips.weapon.enhanceIds[action.payload.data.enhanceIndex] = action.payload.data.enhanceId;
+            } else if (Helper.isNotEmpty(action.payload.data.slotIndex)) {
+                if (Helper.isEmpty(currentEquips.weapon.slotIds)) {
+                    currentEquips[action.payload.data.equipType].slotIds = {};
+                }
+
+                currentEquips[action.payload.data.equipType].slotIds[action.payload.data.slotIndex] = action.payload.data.slotId;
+            } else if ('weapon' === action.payload.data.equipType) {
+                if (Helper.isEmpty(action.payload.data.equipId)) {
+                    requiredEquipPins.weapon = false;
+                }
+
+                currentEquips.weapon = {
+                    id: action.payload.data.equipId,
+                    enhanceIds: {},
+                    slotIds: {}
+                };
+            } else if ('helm' === action.payload.data.equipType
+                || 'chest' === action.payload.data.equipType
+                || 'arm' === action.payload.data.equipType
+                || 'waist' === action.payload.data.equipType
+                || 'leg' === action.payload.data.equipType
+            ) {
+                if (Helper.isEmpty(action.payload.data.equipId)) {
+                    requiredEquipPins[action.payload.data.equipType] = false;
+                }
+
+                currentEquips[action.payload.data.equipType] = {
+                    id: action.payload.data.equipId,
+                    slotIds: {}
+                };
+            } else if ('charm' === action.payload.data.equipType) {
+                if (Helper.isEmpty(action.payload.data.equipId)) {
+                    requiredEquipPins.charm = false;
+                }
+
+                currentEquips.charm = {
+                    id: action.payload.data.equipId
+                };
+            }
+
+            return Object.assign({}, state, {
+                requiredEquipPins: requiredEquipPins,
+                currentEquips: currentEquips
+            });
+        })();
     case 'REPLACE_CURRENT_EQUIPS':
         return Object.assign({}, state, {
             currentEquips: action.payload.data
