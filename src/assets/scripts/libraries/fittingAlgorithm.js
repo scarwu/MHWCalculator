@@ -348,6 +348,7 @@ class FittingAlgorithm {
     createBundlePoolWithSkillEquips = (prevBundlePool) => {
         let candidateEquipPool = {};
         let nextBundlePool = {};
+        let lastBundlePool = {};
 
         this.conditionEquips.forEach((equipType) => {
             if (Helper.isEmpty(candidateEquipPool[equipType])) {
