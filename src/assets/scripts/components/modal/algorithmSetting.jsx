@@ -89,6 +89,11 @@ export default function AlgorithmSetting(props) {
     const sortList = [
         { key: 'complex', value: _('complexSort') },
         { key: 'defense', value: _('defenseSort') },
+        { key: 'fire', value: _('fireSort') },
+        { key: 'water', value: _('waterSort') },
+        { key: 'thunder', value: _('thunderSort') },
+        { key: 'ice', value: _('iceSort') },
+        { key: 'dragon', value: _('dragonSort') },
         { key: 'amount', value: _('amountSort') },
         { key: 'slot', value: _('slotSort') },
         { key: 'expectedValue', value: _('expectedValueSort') },

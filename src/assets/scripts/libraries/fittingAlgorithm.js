@@ -616,6 +616,26 @@ class FittingAlgorithm {
 
                 return bundle;
             });
+        case 'fire':
+        case 'water':
+        case 'thunder':
+        case 'ice':
+        case 'dragon':
+            return Object.values(bundlePool).sort((bundleA, bundleB) => {
+                let valueA = bundleA.meta.resistance[this.algorithmParams.sort];
+                let valueB = bundleB.meta.resistance[this.algorithmParams.sort];
+
+                return ('asc' === this.algorithmParams.order)
+                    ? (valueA - valueB) : (valueB - valueA);
+            }).map((bundle) => {
+                bundle.sortedBy = {
+                    key: this.algorithmParams.sort,
+                    value: bundle.meta.resistance[this.algorithmParams.sort]
+                };
+                bundle.hash = this.generateBundleHash(bundle);
+
+                return bundle;
+            });
         case 'amount':
             return Object.values(bundlePool).sort((bundleA, bundleB) => {
                 let valueA = bundleA.meta.equipCount;
@@ -703,6 +723,11 @@ class FittingAlgorithm {
 
         bundle.equips[candidateEquip.type] = candidateEquip.id;
         bundle.meta.defense += candidateEquip.defense;
+        bundle.meta.resistance.fire += candidateEquip.resistance.fire;
+        bundle.meta.resistance.water += candidateEquip.resistance.water;
+        bundle.meta.resistance.thunder += candidateEquip.resistance.thunder;
+        bundle.meta.resistance.ice += candidateEquip.resistance.ice;
+        bundle.meta.resistance.dragon += candidateEquip.resistance.dragon;
 
         if (Helper.isNotEmpty(candidateEquip.setId)) {
             if (Helper.isEmpty(bundle.sets[candidateEquip.setId])) {
@@ -782,6 +807,7 @@ class FittingAlgorithm {
         candidateEquip.id = equipInfo.id;
         candidateEquip.type = ('charm' !== equipType) ? equipInfo.type : equipType;
         candidateEquip.defense = Helper.isNotEmpty(equipInfo.defense) ? equipInfo.defense : 0;
+        candidateEquip.resistance = Helper.isNotEmpty(equipInfo.resistance) ? equipInfo.resistance : 0;
         candidateEquip.setId = Helper.isNotEmpty(equipInfo.set) ? equipInfo.set.id : null;
 
         if (Helper.isEmpty(equipInfo.skills)) {

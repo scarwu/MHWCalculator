@@ -107,6 +107,13 @@ export default {
         id: null,
         type: null,
         defense: 0,
+        resistance: {
+            fire: 0,
+            water: 0,
+            thunder: 0,
+            ice: 0,
+            dragon: 0
+        },
         skills: {},
         setId: null,
         ownSlotCount: {
@@ -133,6 +140,13 @@ export default {
         sets: {},
         meta: {
             defense: 0,
+            resistance: {
+                fire: 0,
+                water: 0,
+                thunder: 0,
+                ice: 0,
+                dragon: 0
+            },
             expectedValue: 0,
             expectedLevel: 0,
             equipCount: 0,
