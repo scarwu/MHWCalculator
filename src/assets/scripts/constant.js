@@ -90,7 +90,7 @@ export default {
             limit: 25,
             sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel
             order: 'desc', // asc | desc
-            strategy: 'speed', // complete | speed
+            strategy: 'speed', // complete | speed | rough
             armorFactor: {
                 12: true,
                 11: true,

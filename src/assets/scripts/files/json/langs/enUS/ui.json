@@ -126,6 +126,7 @@
     "expectedLevelSort":    "Expected Level",
     "completeStrategy":     "Complete",
     "speedStrategy":        "Speed",
+    "roughStrategy":        "Rough",
     "limit":                "Result Limit",
     "sort":                 "Sorting",
     "strategy":             "Strategy",

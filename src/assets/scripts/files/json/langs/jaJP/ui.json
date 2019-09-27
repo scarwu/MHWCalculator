@@ -126,6 +126,7 @@
     "expectedLevelSort":    null,
     "completeStrategy":     null,
     "speedStrategy":        null,
+    "roughStrategy":        null,
     "limit":                null,
     "sort":                 null,
     "strategy":             null,

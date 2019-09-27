@@ -106,6 +106,7 @@ export default function AlgorithmSetting(props) {
     ];
 
     const strategyList = [
+        { key: 'rough', value: _('roughStrategy') },
         { key: 'speed', value: _('speedStrategy') },
         { key: 'complete', value: _('completeStrategy') }
     ];
