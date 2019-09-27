@@ -52,6 +52,12 @@ class FittingAlgorithm {
         this.conditionExpectedLevel = 0;
         this.maxEquipsExpectedValue = {};
         this.maxEquipsExpectedLevel = {};
+        this.maxSlotsSkillLevel = {
+            1: 0,
+            2: 0,
+            3: 0,
+            4: 0
+        };
 
         // Create Info by Sets
         requiredSets.sort((setA, setB) => {
@@ -94,6 +100,12 @@ class FittingAlgorithm {
                     minJewelSize = jewelInfo.size;
                 }
 
+                jewelInfo.skills.forEach((skill) => {
+                    if (this.maxSlotsSkillLevel[jewelInfo.size] < skill.level) {
+                        this.maxSlotsSkillLevel[jewelInfo.size] = skill.level;
+                    }
+                });
+
                 if (Helper.isEmpty(this.correspondJewels[skill.id])) {
                     this.correspondJewels[skill.id] = []
                 }
@@ -115,6 +127,7 @@ class FittingAlgorithm {
             this.conditionExpectedLevel += skill.level;
         });
 
+        // Create Default Bundle
         let defaultBundle = Helper.deepCopy(Constant.defaultBundle);
 
         // Create First Bundle
@@ -182,16 +195,18 @@ class FittingAlgorithm {
         this.requireSkillCount = Object.keys(this.conditionSkills).length;
         this.requireSetCount = Object.keys(this.conditionSets).length;
 
+        // Print Init Information
         Helper.log('Init: Condition Skills:', this.conditionSkills);
         Helper.log('Init: Condition Sets:', this.conditionSets);
         Helper.log('Init: Condition Equips:', this.conditionEquips);
         Helper.log('Init: Correspond Jewels:', this.correspondJewels);
         Helper.log('Init: Condition Expected Value:', this.conditionExpectedValue);
         Helper.log('Init: Condition Expected Level:', this.conditionExpectedLevel);
-
-        let bundlePool = {};
+        Helper.log('Init: Max Slots Skill Level:', this.maxSlotsSkillLevel);
 
         // Init Prev Bundle Pool
+        let bundlePool = {};
+
         bundlePool[this.getBundleHash(defaultBundle)] = defaultBundle;
 
         Helper.log('First: Bundle Pool:', bundlePool);
@@ -255,6 +270,9 @@ class FittingAlgorithm {
         let nextBundlePool = {};
         let lastBundlePool = {};
 
+        // Init Set Equips
+        Helper.log('Init Set Equips');
+
         this.conditionEquips.forEach((equipType) => {
             if ('charm' === equipType) {
                 return;
@@ -278,14 +296,21 @@ class FittingAlgorithm {
             // Append Empty Candidate Equip
             candidateEquipPool[equipType]['empty'] = this.getEmptyCandidateEquip(equipType);
 
-            Helper.log('BundleList: With Sets: Equip', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
+            Helper.log('Candidate Equip Pool', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
         });
+
+        // Create Bundle Pool With Set Equips
+        Helper.log('Create Bundle Pool With Set Equips');
 
         this.conditionEquips.forEach((equipType) => {
             if ('charm' === equipType) {
                 return;
             }
 
+            Helper.log('Bundle Pool: Candidate Equip Count:', equipType, Object.keys(candidateEquipPool[equipType]).length);
+            Helper.log('Bundle Pool: Prev Bundle Count', Object.keys(prevBundlePool).length);
+
+            // Create Bundle Pool
             nextBundlePool = {};
 
             Object.values(candidateEquipPool[equipType]).forEach((candidateEquip) => {
@@ -313,7 +338,7 @@ class FittingAlgorithm {
                         return;
                     }
 
-                    if (this.isBundleSetComplete(bundle)) {
+                    if (this.isBundleSetCompleted(bundle)) {
                         lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
                         return;
@@ -324,17 +349,23 @@ class FittingAlgorithm {
             });
 
             prevBundlePool = nextBundlePool;
+
+            Helper.log('Bundle Pool: Last Bundle Count (Pre)', Object.keys(lastBundlePool).length);
         });
+
+        // Find Completed Bundle into Last Bundle Pool
+        Helper.log('Find Last Bundle Pool');
+        Helper.log('Bundle Pool: Prev Bundle Count', Object.keys(prevBundlePool).length);
 
         Object.keys(prevBundlePool).forEach((hash) => {
             let bundle = Helper.deepCopy(prevBundlePool[hash]);
 
-            if (this.isBundleSetComplete(bundle)) {
+            if (this.isBundleSetCompleted(bundle)) {
                 lastBundlePool[this.getBundleHash(bundle)] = bundle;
             }
         });
 
-        Helper.log('BundleList: With Sets: Count', Object.keys(lastBundlePool).length);
+        Helper.log('Bundle Pool: Last Bundle Count (Final)', Object.keys(lastBundlePool).length);
 
         return lastBundlePool;
     };
@@ -346,6 +377,9 @@ class FittingAlgorithm {
         let candidateEquipPool = {};
         let nextBundlePool = {};
         let lastBundlePool = {};
+
+        // Init Skill Equips
+        Helper.log('Init Skill Equips');
 
         this.conditionEquips.forEach((equipType) => {
             if (Helper.isEmpty(candidateEquipPool[equipType])) {
@@ -387,10 +421,12 @@ class FittingAlgorithm {
             // Append Empty Candidate Equip
             candidateEquipPool[equipType]['empty'] = this.getEmptyCandidateEquip(equipType);
 
-            Helper.log('BundleList: With Skills: Equip', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
+            Helper.log('Candidate Equip Pool', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
         });
 
         // Get Maximum Equips EV & EL
+        Helper.log('Get Maximum Equips EV & EL');
+
         Object.keys(candidateEquipPool).forEach((equipType) => {
             if (Helper.isEmpty(this.maxEquipsExpectedValue[equipType])) {
                 this.maxEquipsExpectedValue[equipType] = 0;
@@ -411,17 +447,19 @@ class FittingAlgorithm {
             });
         });
 
-        Helper.log('Equips Expected Value:', this.maxEquipsExpectedValue);
-        Helper.log('Equips Expected Level:', this.maxEquipsExpectedLevel);
+        Helper.log('Init: Max Equips Expected Value:', this.maxEquipsExpectedValue);
+        Helper.log('Init: Max Equips Expected Level:', this.maxEquipsExpectedLevel);
 
-        // Create Next BundleList
-        Helper.log('Create Next BundleList');
+        // Create Bundle Pool With Skill Equips
+        Helper.log('Create Bundle Pool With Skill Equips');
 
         this.conditionEquips.forEach((equipType) => {
-            Helper.log('Bundle Count:', equipType, Object.keys(prevBundlePool).length);
+            Helper.log('Bundle Pool: Candidate Equip Count:', equipType, Object.keys(candidateEquipPool[equipType]).length);
+            Helper.log('Bundle Pool: Prev Bundle Count', Object.keys(prevBundlePool).length);
 
             this.usedEquipTypes[equipType] = true;
 
+            // Create Next Bundle Pool
             nextBundlePool = {};
 
             Object.values(candidateEquipPool[equipType]).forEach((candidateEquip) => {
@@ -449,8 +487,19 @@ class FittingAlgorithm {
                         return;
                     }
 
-                    if (this.isBundleSkillComplete(bundle)) {
+                    if (this.isBundleSkillCompleted(bundle)) {
                         lastBundlePool[this.getBundleHash(bundle)] = bundle;
+
+                        return;
+                    }
+
+                    // If Equips is Full or Expected
+                    if (this.isBundleFull(bundle) || this.isBundleExpected(bundle)) {
+
+                        // Create Completed Bundles By Skills
+                        this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
+                            lastBundlePool[this.getBundleHash(bundle)] = bundle;
+                        });
 
                         return;
                     }
@@ -462,33 +511,22 @@ class FittingAlgorithm {
                         return;
                     }
 
-                    // If Equips Is Full Then Do Fully Check
-                    if (this.requireEquipCount === bundle.meta.equipCount) {
-
-                        // Create Completed Bundles By Skills
-                        this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
-                            lastBundlePool[this.getBundleHash(bundle)] = bundle;
-                        });
-
-                        return;
-                    }
-
                     nextBundlePool[this.getBundleHash(bundle)] = bundle;
                 });
             });
 
             prevBundlePool = nextBundlePool;
 
-            Helper.log('Result: Bundle Count (Pre):', Object.keys(lastBundlePool).length);
+            Helper.log('Bundle Pool: Last Bundle Count (Pre)', Object.keys(lastBundlePool).length);
         });
 
-        Helper.log('Bundle Pool:', Object.keys(prevBundlePool).length);
-
-        // Find Completed Bundle into Last BundleList
-        Helper.log('Find Completed Bundles');
+        // Find Completed Bundle into Last Bundle Pool
+        Helper.log('Find Last Bundle Pool');
+        Helper.log('Bundle Pool: Prev Bundle Count', Object.keys(prevBundlePool).length);
 
         Object.keys(prevBundlePool).forEach((hash) => {
             let bundle = Helper.deepCopy(prevBundlePool[hash]);
+            let bundle2 = Helper.deepCopy(prevBundlePool[hash]);
 
             // Completed Bundles By Skills
             this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
@@ -496,7 +534,7 @@ class FittingAlgorithm {
             });
         });
 
-        Helper.log('Result: Bundle Count (Final):', Object.keys(lastBundlePool).length);
+        Helper.log('Bundle Pool: Last Bundle Count (Final)', Object.keys(lastBundlePool).length);
 
         return lastBundlePool;
     }
@@ -793,6 +831,8 @@ class FittingAlgorithm {
             // Increase Expected Value & Level
             candidateEquip.expectedValue += slot.size;
             candidateEquip.expectedLevel += 1;
+            // candidateEquip.expectedLevel += (0 < this.maxSlotsSkillLevel[slot.size])
+            //     ? this.maxSlotsSkillLevel[slot.size] : 1;
         });
 
         return candidateEquip;
@@ -861,7 +901,7 @@ class FittingAlgorithm {
         });
 
         return Object.values(prevBundlePool).filter((bundle) => {
-            return this.isBundleSkillComplete(bundle);
+            return this.isBundleSkillCompleted(bundle);
         });
     };
 
@@ -983,17 +1023,32 @@ class FittingAlgorithm {
     };
 
     /**
-     * Is Bundle Skill Compelete
+     * Is Bundle Full
      */
-    isBundleSkillComplete = (bundle) => {
+    isBundleFull = (bundle) => {
+        return this.requireEquipCount === bundle.meta.equipCount;
+    };
+
+    /**
+     * Is Bundle Skill Compeleted
+     */
+    isBundleSkillCompleted = (bundle) => {
         return this.requireSkillCount === Object.keys(bundle.meta.completedSkills).length;
     };
 
     /**
-     * Is Bundle Set Compelete
+     * Is Bundle Set Compeleted
      */
-    isBundleSetComplete = (bundle) => {
+    isBundleSetCompleted = (bundle) => {
         return this.requireSetCount === Object.keys(bundle.meta.completedSets).length;
+    };
+
+    /**
+     * Is Bundle Expected
+     */
+    isBundleExpected = (bundle) => {
+        return this.conditionExpectedValue <= bundle.meta.expectedValue
+            && this.conditionExpectedLevel <= bundle.meta.expectedLevel;
     };
 
     /**
@@ -1003,37 +1058,20 @@ class FittingAlgorithm {
      * maybe will lost some results.
      */
     isBundleHaveFuture = (bundle) => {
-        let currentExpectedValue = bundle.meta.expectedValue;
-        let currentExpectedLevel = bundle.meta.expectedLevel;
-
-        if (currentExpectedValue >= this.conditionExpectedValue
-            && currentExpectedLevel >= this.conditionExpectedLevel
-        ) {
-            return true;
-        }
-
-        let haveFuture = false;
+        let futureExpectedValue = bundle.meta.expectedValue;
+        let futureExpectedLevel = bundle.meta.expectedLevel;
 
         this.conditionEquips.forEach((equipType) => {
-            if (true === haveFuture) {
-                return;
-            }
-
             if (true === this.usedEquipTypes[equipType]) {
                 return;
             }
 
-            currentExpectedValue += this.maxEquipsExpectedValue[equipType];
-            currentExpectedLevel += this.maxEquipsExpectedLevel[equipType];
-
-            if (currentExpectedValue >= this.conditionExpectedValue
-                && currentExpectedLevel >= this.conditionExpectedLevel
-            ) {
-                haveFuture = true;
-            }
+            futureExpectedValue += this.maxEquipsExpectedValue[equipType];
+            futureExpectedLevel += this.maxEquipsExpectedLevel[equipType];
         });
 
-        return haveFuture;
+        return this.conditionExpectedValue <= futureExpectedValue
+            && this.conditionExpectedLevel <= futureExpectedLevel;
     };
 }
 
