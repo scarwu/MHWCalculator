@@ -107,7 +107,7 @@ export default function App(props) {
                         iconName="link" altName={_('exportBundle')}
                         onClick={handleBundleExport} />
                     <FunctionalButton
-                        iconName="info" altName={_('showChangelog')}
+                        iconName="info" altName={_('changelog')}
                         onClick={ModalState.setter.showChangelog} />
                     <FunctionalButton
                         iconName="question" altName={_('readme')}
