@@ -113,6 +113,7 @@
     "bundleList":           null,
     "algorithmSetting":     null,
     "changelog":            "変更履歴",
+    "readme":               null,
     "complexSort":          null,
     "defenseSort":          null,
     "fireSort":             null,

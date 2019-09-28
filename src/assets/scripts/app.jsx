@@ -62,6 +62,10 @@ const handleBundleExport = () => {
     window.open(`${protocol}//${hostname}${pathname}#/${hash}`, '_blank');
 };
 
+const handleOpenReadme = () => {
+    window.open('https://scar.tw/article/2018/05/02/mhw-calculator-readme/','_blank');
+};
+
 export default function App(props) {
 
     /**
@@ -105,6 +109,9 @@ export default function App(props) {
                     <FunctionalButton
                         iconName="info" altName={_('showChangelog')}
                         onClick={ModalState.setter.showChangelog} />
+                    <FunctionalButton
+                        iconName="question" altName={_('readme')}
+                        onClick={handleOpenReadme} />
                     <FunctionalSelector
                         iconName="globe" defaultValue={stateLang}
                         options={langList} onChange={handleLangChange} />
