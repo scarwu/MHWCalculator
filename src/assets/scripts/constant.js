@@ -11,7 +11,6 @@
 import Config from 'config';
 
 export default {
-    defaultLang: 'zhTW',
     langs: ('production' !== Config.env) ? {
         zhTW: '正體中文',
         jaJP: '日本語',
@@ -86,6 +85,7 @@ export default {
         bow: 1.2
     },
     default: {
+        lang: 'zhTW',
         algorithmParams: {
             limit: 25,
             sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel
@@ -101,44 +101,10 @@ export default {
                 6: false,
                 5: false
             }
-        }
-    },
-    defaultCandidateEquip: {
-        id: null,
-        type: null,
-        defense: 0,
-        resistance: {
-            fire: 0,
-            water: 0,
-            thunder: 0,
-            ice: 0,
-            dragon: 0
         },
-        skills: {},
-        setId: null,
-        ownSlotCount: {
-            1: 0,
-            2: 0,
-            3: 0,
-            4: 0
-        },
-        expectedValue: 0,
-        expectedLevel: 0
-    },
-    defaultBundle: {
-        equips: {
-            weapon: null,
-            helm: null,
-            chest: null,
-            arm: null,
-            waist: null,
-            leg: null,
-            charm: null
-        },
-        jewels: {},
-        skills: {},
-        sets: {},
-        meta: {
+        candidateEquip: {
+            id: null,
+            type: null,
             defense: 0,
             resistance: {
                 fire: 0,
@@ -147,97 +113,131 @@ export default {
                 ice: 0,
                 dragon: 0
             },
-            expectedValue: 0,
-            expectedLevel: 0,
-            equipCount: 0,
-            completedSkills: {},
-            completedSets: {},
-            remainingSlotCount: {
+            skills: {},
+            setId: null,
+            ownSlotCount: {
                 1: 0,
                 2: 0,
                 3: 0,
-                4: 0,
-                all: 0
-            }
-        }
-    },
-    defaultEquips: {
-        weapon: {
-            id: null,
-            enhanceIds: {},
-            slotIds: {}
+                4: 0
+            },
+            expectedValue: 0,
+            expectedLevel: 0
         },
-        helm: {
-            id: null,
-            slotIds: {}
-        },
-        chest: {
-            id: null,
-            slotIds: {}
-        },
-        arm: {
-            id: null,
-            slotIds: {}
-        },
-        waist: {
-            id: null,
-            slotIds: {}
-        },
-        leg: {
-            id: null,
-            slotIds: {}
-        },
-        charm: {
-            id: null
-        }
-    },
-    defaultEquipsLock: {
-        weapon: false,
-        helm: false,
-        chest: false,
-        arm: false,
-        waist: false,
-        leg: false,
-        charm: false
-    },
-    defaultStatus: {
-        health: 100,
-        stamina: 100,
-        attack: 15, // 力量護符+6 力量之爪+9
-        critical: {
-            rate: 0,
-            multiple: {
-                positive: 1.25,
-                nagetive: 0.75
+        bundle: {
+            equips: {
+                weapon: null,
+                helm: null,
+                chest: null,
+                arm: null,
+                waist: null,
+                leg: null,
+                charm: null
+            },
+            jewels: {},
+            skills: {},
+            sets: {},
+            meta: {
+                defense: 0,
+                resistance: {
+                    fire: 0,
+                    water: 0,
+                    thunder: 0,
+                    ice: 0,
+                    dragon: 0
+                },
+                expectedValue: 0,
+                expectedLevel: 0,
+                equipCount: 0,
+                completedSkills: {},
+                completedSets: {},
+                remainingSlotCount: {
+                    1: 0,
+                    2: 0,
+                    3: 0,
+                    4: 0,
+                    all: 0
+                }
             }
         },
-        sharpness: null,
-        element: {
-            attack: null,
-            status: null
+        equips: {
+            weapon: {
+                id: null,
+                enhanceIds: {},
+                slotIds: {}
+            },
+            helm: {
+                id: null,
+                slotIds: {}
+            },
+            chest: {
+                id: null,
+                slotIds: {}
+            },
+            arm: {
+                id: null,
+                slotIds: {}
+            },
+            waist: {
+                id: null,
+                slotIds: {}
+            },
+            leg: {
+                id: null,
+                slotIds: {}
+            },
+            charm: {
+                id: null
+            }
         },
-        elderseal: null,
-        defense: 31, // 守護護符+10 守護之爪+20
-        resistance: {
-            fire: 0,
-            water: 0,
-            thunder: 0,
-            ice: 0,
-            dragon: 0
+        equipsLock: {
+            weapon: false,
+            helm: false,
+            chest: false,
+            arm: false,
+            waist: false,
+            leg: false,
+            charm: false
         },
-        sets: [],
-        skills: []
-    },
-    defaultExtraInfo: {
-        rawAttack: 0,
-        rawCriticalAttack: 0,
-        rawExpectedValue: 0,
-        elementAttack: 0,
-        elementExpectedValue: 0,
-        expectedValue: 0,
-        perNRawAttackExpectedValue: 0,
-        perNRawCriticalRateExpectedValue: 0,
-        perNRawCriticalMultipleExpectedValue: 0,
-        perNElementAttackExpectedValue: 0
+        status: {
+            health: 100,
+            stamina: 100,
+            attack: 15, // 力量護符+6 力量之爪+9
+            critical: {
+                rate: 0,
+                multiple: {
+                    positive: 1.25,
+                    nagetive: 0.75
+                }
+            },
+            sharpness: null,
+            element: {
+                attack: null,
+                status: null
+            },
+            elderseal: null,
+            defense: 31, // 守護護符+10 守護之爪+20
+            resistance: {
+                fire: 0,
+                water: 0,
+                thunder: 0,
+                ice: 0,
+                dragon: 0
+            },
+            sets: [],
+            skills: []
+        },
+        extraInfo: {
+            rawAttack: 0,
+            rawCriticalAttack: 0,
+            rawExpectedValue: 0,
+            elementAttack: 0,
+            elementExpectedValue: 0,
+            expectedValue: 0,
+            perNRawAttackExpectedValue: 0,
+            perNRawCriticalRateExpectedValue: 0,
+            perNRawCriticalMultipleExpectedValue: 0,
+            perNElementAttackExpectedValue: 0
+        }
     }
 };

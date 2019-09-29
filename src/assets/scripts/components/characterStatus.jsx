@@ -75,7 +75,7 @@ const generatePassiveSkills = (equipInfos) => {
 };
 
 const generateStatus = (equipInfos, passiveSkills) => {
-    let status = Helper.deepCopy(Constant.defaultStatus);
+    let status = Helper.deepCopy(Constant.default.status);
 
     if (Helper.isNotEmpty(equipInfos.weapon)) {
         status.critical.rate = equipInfos.weapon.criticalRate;
@@ -372,7 +372,7 @@ const generateStatus = (equipInfos, passiveSkills) => {
 };
 
 const generateExtraInfo = (equipInfos, status, tuning) => {
-    let extraInfo = Helper.deepCopy(Constant.defaultExtraInfo);
+    let extraInfo = Helper.deepCopy(Constant.default.extraInfo);
     let result = getBasicExtraInfo(equipInfos, Helper.deepCopy(status), {});
 
     extraInfo.rawAttack = result.rawAttack;
@@ -523,8 +523,8 @@ export default function CharacterStatus(props) {
      */
     const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
     const [stateEquipInfos, updateEquipInfos] = useState({});
-    const [stateStatus, updateStatus] = useState(Helper.deepCopy(Constant.defaultStatus));
-    const [stateExtraInfo, updateExtraInfo] = useState(Helper.deepCopy(Constant.defaultExtraInfo));
+    const [stateStatus, updateStatus] = useState(Helper.deepCopy(Constant.default.status));
+    const [stateExtraInfo, updateExtraInfo] = useState(Helper.deepCopy(Constant.default.extraInfo));
     const [statePassiveSkills, updatePassiveSkills] = useState({});
     const [stateTuning, updateTuning] = useState({
         rawAttack: 5,

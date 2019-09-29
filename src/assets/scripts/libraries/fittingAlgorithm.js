@@ -128,7 +128,7 @@ class FittingAlgorithm {
         });
 
         // Create First Bundle
-        let firstBundle = Helper.deepCopy(Constant.defaultBundle);
+        let firstBundle = Helper.deepCopy(Constant.default.bundle);
 
         // Create First Bundle
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
@@ -827,7 +827,7 @@ class FittingAlgorithm {
      * Convert Equip Info To Candidate Equip
      */
     convertEquipInfoToCandidateEquip = (equipInfo, equipType) => {
-        let candidateEquip = Helper.deepCopy(Constant.defaultCandidateEquip);
+        let candidateEquip = Helper.deepCopy(Constant.default.candidateEquip);
 
         // Set Id, Type & Defense
         candidateEquip.id = equipInfo.id;
@@ -885,7 +885,7 @@ class FittingAlgorithm {
      * Get Empty Candidate Equip
      */
     getEmptyCandidateEquip = (equipType) => {
-        let candidateEquip = Helper.deepCopy(Constant.defaultCandidateEquip);
+        let candidateEquip = Helper.deepCopy(Constant.default.candidateEquip);
 
         candidateEquip.type = equipType;
 
