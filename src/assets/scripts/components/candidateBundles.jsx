@@ -51,6 +51,10 @@ const handleBundlePickUp = (bundle) => {
             return;
         }
 
+        if (Helper.isEmpty(equips[equipType])) {
+            equips[equipType] = {};
+        }
+
         equips[equipType].id = bundle.equips[equipType];
         equips[equipType].slotIds = {};
 
