@@ -452,10 +452,12 @@ const Store = createStore((state = initialState, action) => {
         })();
     case 'REPLACE_CURRENT_EQUIPS':
         return Object.assign({}, state, {
+            requiredEquipPins: Helper.deepCopy(Constant.defaultEquipsLock),
             currentEquips: action.payload.data
         });
     case 'CLEAN_CURRENT_EQUIPS':
         return Object.assign({}, state, {
+            requiredEquipPins: Helper.deepCopy(Constant.defaultEquipsLock),
             currentEquips: Helper.deepCopy(Constant.defaultEquips)
         });
 
