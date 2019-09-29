@@ -90,16 +90,27 @@ export default {
             limit: 25,
             sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel
             order: 'desc', // asc | desc
-            strategy: 'speed', // complete | speed | rough
-            armorFactor: {
-                12: true,
-                11: true,
-                10: true,
-                9: true,
-                8: false,
-                7: false,
-                6: false,
-                5: false
+            isEndEarly: false,
+            isExpectBundle: true,
+            isDeepSearch: true,
+            isRequireConsistent: false,
+            isUsingFactor: {
+                armorRare: {
+                    12: true,
+                    11: true,
+                    10: true,
+                    9: true,
+                    8: false,
+                    7: false,
+                    6: false,
+                    5: false
+                },
+                jewelRare: {
+                    4: true,
+                    3: true,
+                    2: true,
+                    1: true
+                }
             }
         },
         candidateEquip: {
