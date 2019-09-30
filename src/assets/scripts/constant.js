@@ -91,7 +91,7 @@ export default {
             sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel
             order: 'desc', // asc | desc
             flag: {
-                isEndEarly: false,
+                isEndEarly: true,
                 isExpectBundle: true,
                 isDeepSearch: false,
                 isRequireConsistent: false
@@ -99,9 +99,9 @@ export default {
             usingFactor: {
                 armor: {
                     12: true,
-                    11: true,
-                    10: true,
-                    9: true,
+                    11: false,
+                    10: false,
+                    9: false,
                     8: false,
                     7: false,
                     6: false,

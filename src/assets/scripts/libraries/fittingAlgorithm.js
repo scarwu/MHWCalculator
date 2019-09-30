@@ -398,7 +398,7 @@ class FittingAlgorithm {
 
             prevBundlePool = nextBundlePool;
 
-            Helper.log('Bundle Pool: Last Bundle Count (Pre)', Object.keys(lastBundlePool).length);
+            Helper.log('Bundle Pool: Last Bundle Count', Object.keys(lastBundlePool).length);
         });
 
         // Find Completed Bundle into Last Bundle Pool
@@ -554,7 +554,9 @@ class FittingAlgorithm {
 
                         // Last Bundle Pre Check
                         if (this.algorithmParams.flag.isEndEarly) {
-                            if (Object.keys(lastBundlePool).length >= this.algorithmParams.limit) {
+                            Helper.log('Bundle Pool: Last Bundle Count', Object.keys(lastBundlePool).length);
+
+                            if (this.algorithmParams.limit <= Object.keys(lastBundlePool).length) {
                                 isEndEarly = true;
                             }
                         }
@@ -575,7 +577,9 @@ class FittingAlgorithm {
 
                             // Last Bundle Pre Check
                             if (this.algorithmParams.flag.isEndEarly) {
-                                if (Object.keys(lastBundlePool).length >= this.algorithmParams.limit) {
+                                Helper.log('Bundle Pool: Last Bundle Count', Object.keys(lastBundlePool).length);
+
+                                if (this.algorithmParams.limit <= Object.keys(lastBundlePool).length) {
                                     isEndEarly = true;
                                 }
                             }
@@ -597,7 +601,7 @@ class FittingAlgorithm {
 
             prevBundlePool = nextBundlePool;
 
-            Helper.log('Bundle Pool: Last Bundle Count (Pre)', Object.keys(lastBundlePool).length);
+            Helper.log('Bundle Pool: Last Bundle Count', Object.keys(lastBundlePool).length);
         });
 
         // Find Completed Bundle into Last Bundle Pool
@@ -618,7 +622,9 @@ class FittingAlgorithm {
 
                     // Last Bundle Pre Check
                     if (this.algorithmParams.flag.isEndEarly) {
-                        if (Object.keys(lastBundlePool).length >= this.algorithmParams.limit) {
+                        Helper.log('Bundle Pool: Last Bundle Count', Object.keys(lastBundlePool).length);
+
+                        if (this.algorithmParams.limit <= Object.keys(lastBundlePool).length) {
                             isEndEarly = true;
                         }
                     }
