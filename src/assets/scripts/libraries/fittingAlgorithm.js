@@ -60,7 +60,7 @@ class FittingAlgorithm {
             4: 0
         };
 
-        // Init Condtion
+        // Init Condtions
         this.initConditionSets(requiredSets);
         this.initConditionSkills(requiredSkills);
         this.initConditionEquips(requiredEquips);
@@ -79,7 +79,7 @@ class FittingAlgorithm {
         Helper.log('Init: Condition Expected Level:', this.conditionExpectedLevel);
         Helper.log('Init: Max Slots Skill Level:', this.maxSlotsSkillLevel);
 
-        // Init Prev Bundle Pool
+        // Init Bundle Pool
         let bundlePool = {};
 
         bundlePool[this.getBundleHash(this.firstBundle)] = this.firstBundle;
@@ -185,29 +185,30 @@ class FittingAlgorithm {
                     return;
                 }
 
-                // let isConsistent = true;
+                let isConsistent = true;
 
                 jewelInfo.skills.forEach((skill) => {
-                    // if (false === isConsistent) {
-                    //     return;
-                    // }
+                    if (false === isConsistent) {
+                        return;
+                    }
 
-                    // if (this.algorithmParams.flag.isRequireConsistent) {
-                    //     if (Helper.isEmpty(this.conditionSkills[skill.id])) {
-                    //         isConsistent = false;
+                    // If Skill not match condition then skip
+                    if (Helper.isEmpty(this.conditionSkills[skill.id])) {
+                        if (this.algorithmParams.flag.isRequireConsistent) {
+                            isConsistent = false;
+                        }
 
-                    //         return;
-                    //     }
-                    // }
+                        return;
+                    }
 
                     if (this.maxSlotsSkillLevel[jewelInfo.size] < skill.level) {
                         this.maxSlotsSkillLevel[jewelInfo.size] = skill.level;
                     }
                 });
 
-                // if (false === isConsistent) {
-                //     return;
-                // }
+                if (false === isConsistent) {
+                    return;
+                }
 
                 if (minJewelSize > jewelInfo.size) {
                     minJewelSize = jewelInfo.size;
@@ -898,11 +899,21 @@ class FittingAlgorithm {
             equipInfo.slots = [];
         }
 
+        let isConsistent = true;
+
         equipInfo.skills.forEach((skill) => {
+            if (false === isConsistent) {
+                return;
+            }
+
             candidateEquip.skills[skill.id] = skill.level;
 
             // If Skill not match condition then skip
             if (Helper.isEmpty(this.conditionSkills[skill.id])) {
+                if (this.algorithmParams.flag.isRequireConsistent) {
+                    isConsistent = false;
+                }
+
                 return;
             }
 
@@ -921,14 +932,18 @@ class FittingAlgorithm {
             }
         });
 
+        if (false === isConsistent) {
+            return false;
+        }
+
         equipInfo.slots.forEach((slot) => {
             candidateEquip.ownSlotCount[slot.size] += 1;
 
             // Increase Expected Value & Level
             candidateEquip.expectedValue += slot.size;
-            candidateEquip.expectedLevel += 1;
-            // candidateEquip.expectedLevel += (0 < this.maxSlotsSkillLevel[slot.size])
-            //     ? this.maxSlotsSkillLevel[slot.size] : 1;
+            // candidateEquip.expectedLevel += 1;
+            candidateEquip.expectedLevel += (0 < this.maxSlotsSkillLevel[slot.size])
+                ? this.maxSlotsSkillLevel[slot.size] : 1;
         });
 
         return candidateEquip;
