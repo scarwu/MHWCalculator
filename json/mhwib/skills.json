@@ -812,14 +812,14 @@
         ]
     },
     {
-        "id": "陽動攻擊",
+        "id": "佯動攻擊",
         "name": {
-            "zhTW": "陽動攻擊",
+            "zhTW": "佯動攻擊",
             "jaJP": "陽動攻撃",
             "enUS": null
         },
         "description": {
-            "zhTW": null,
+            "zhTW": "攻擊擊中時，能更加吸引魔物的注意。",
             "jaJP": "攻撃を当てた時、モンスターの注意をより強く引くようになる。",
             "enUS": null
         },
@@ -834,8 +834,40 @@
             {
                 "level": 1,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "攻擊擊中時，能更加吸引魔物的注意。",
                     "jaJP": "攻撃を当てた時、モンスターの注意をより強く引くようになる。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "受身術",
+        "name": {
+            "zhTW": "受身術",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": "拔刀狀態下受到攻擊而遠遠擊飛時，可以進行受身來迅速回歸。",
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": "active",
+        "from": {
+            "set": false,
+            "jewel": false,
+            "armor": true,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "拔刀狀態下受到攻擊而遠遠擊飛時，可以進行受身來迅速回歸。",
+                    "jaJP": null,
                     "enUS": null
                 },
                 "reaction": null,
