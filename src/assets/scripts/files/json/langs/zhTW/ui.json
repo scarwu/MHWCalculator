@@ -128,7 +128,7 @@
     "sort":                 "排序方式",
     "strategy":             "搜尋策略",
     "isEndEarly":           "提早終止",
-    "isExpectBundle":       "裝備期望",
+    "isExpectBundle":       "組合期望",
     "isDeepSearch":         "深度搜尋",
     "isRequireConsistent":  "需求一致",
     "armorFactor":          "裝甲因子",

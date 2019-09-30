@@ -93,7 +93,7 @@ export default {
             flag: {
                 isEndEarly: false,
                 isExpectBundle: true,
-                isDeepSearch: true,
+                isDeepSearch: false,
                 isRequireConsistent: false
             },
             usingFactor: {
