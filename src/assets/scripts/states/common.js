@@ -95,7 +95,7 @@ const Store = createStore((state = initialState, action) => {
                     continue;
                 }
 
-                return stete;
+                return state;
             }
 
             requiredSets.push({
@@ -179,7 +179,7 @@ const Store = createStore((state = initialState, action) => {
                 });
             }
 
-            return stete;
+            return state;
         })();
     case 'INCREASE_REQUIRED_SET_STEP':
         return (() => {
@@ -258,7 +258,7 @@ const Store = createStore((state = initialState, action) => {
                     continue;
                 }
 
-                return stete;
+                return state;
             }
 
             requiredSkills.push({
@@ -294,7 +294,7 @@ const Store = createStore((state = initialState, action) => {
                 });
             }
 
-            return stete;
+            return state;
         })();
     case 'INCREASE_REQUIRED_SKILL_LEVEL':
         return (() => {
@@ -357,7 +357,7 @@ const Store = createStore((state = initialState, action) => {
                 });
             }
 
-            return stete;
+            return state;
         })();
     case 'DECREASE_REQUIRED_SKILL_LEVEL':
         return (() => {
@@ -385,7 +385,7 @@ const Store = createStore((state = initialState, action) => {
                 });
             }
 
-            return stete;
+            return state;
         })();
     case 'CLEAN_REQUIRED_SKILLS':
         return Object.assign({}, state, {
