@@ -234,23 +234,23 @@ export default function AlgorithmSetting(props) {
                                 <span>{_('jewelFactor')}</span>
                             </div>
                             <div className="col-12 mhwc-content">
-                                {Object.keys(stateAlgorithmParams.usingFactor.jewel).map((rare) => {
+                                {Object.keys(stateAlgorithmParams.usingFactor.jewel).map((size) => {
                                     return (
-                                        <div key={rare} className="col-6 mhwc-value">
-                                            <span>{_('rare') + `: ${rare}`}</span>
-                                            {stateAlgorithmParams.usingFactor.jewel[rare] ? (
+                                        <div key={size} className="col-6 mhwc-value">
+                                            <span>{_('size') + `: ${size}`}</span>
+                                            {stateAlgorithmParams.usingFactor.jewel[size] ? (
                                                 <div className="mhwc-icons_bundle">
                                                     <FunctionalButton
                                                         iconName="star"
                                                         altName={_('exclude')}
-                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', rare)}} />
+                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', size)}} />
                                                 </div>
                                             ) : (
                                                 <div className="mhwc-icons_bundle">
                                                     <FunctionalButton
                                                         iconName="star-o"
                                                         altName={_('include')}
-                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', rare)}} />
+                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', size)}} />
                                                 </div>
                                             )}
                                         </div>

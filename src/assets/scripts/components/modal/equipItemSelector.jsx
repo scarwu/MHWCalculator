@@ -205,7 +205,7 @@ const renderArmorItem = (armor, bypassData) => {
         ? SetDataset.getInfo(armor.set.id) : false;
 
     // Re-write BypassData
-    bypassData.type = armor.type;
+    bypassData.equipType = armor.type;
 
     return (
         <div key={armor.id} className="mhwc-item mhwc-item-2-step">
@@ -410,15 +410,35 @@ export default function EquipItemSelector(props) {
             return;
         }
 
-        let mode = stateBypassData.mode;
+        let mode = null;
         let sortedList = [];
         let typeList = {};
         let rareList = {};
         let type = null;
         let rare = null;
 
-        switch (stateBypassData.mode) {
-        case 'weapon':
+        if (Helper.isNotEmpty(stateBypassData.enhanceIndex)) {
+            mode = 'enhance';
+            sortedList = EnhanceDataset.getItems().map((enhanceInfo) => {
+                enhanceInfo.isSelect = (stateBypassData.enhanceId === enhanceInfo.id);
+
+                return enhanceInfo;
+            });
+        } else if (Helper.isNotEmpty(stateBypassData.slotIndex)) {
+            mode = 'jewel';
+
+            for (let size = stateBypassData.slotSize; size >= 1; size--) {
+                for (let rare = 9; rare >= 5; rare--) {
+                    sortedList = sortedList.concat(
+                        JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems().map((jewelInfo) => {
+                            jewelInfo.isSelect = (stateBypassData.jewelId === jewelInfo.id);
+
+                            return jewelInfo;
+                        })
+                    );
+                }
+            }
+        } else if ('weapon' === stateBypassData.equipType) {
             let weaponInfo = WeaponDataset.getInfo(stateBypassData.equipId);
 
             typeList = Constant.weaponTypes.map((type) => {
@@ -427,6 +447,7 @@ export default function EquipItemSelector(props) {
             type = (Helper.isNotEmpty(weaponInfo) && Helper.isNotEmpty(weaponInfo.type))
                 ? weaponInfo.type : typeList[0].key;
 
+            mode = 'weapon';
             sortedList =  WeaponDataset.getItems().map((weaponInfo) => {
                 rareList[weaponInfo.rare] = weaponInfo.rare;
 
@@ -439,17 +460,21 @@ export default function EquipItemSelector(props) {
                 return { key: rare, value: _('rare') + `: ${rare}` };
             });
             rare = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.rare : rareList[0].key;
-
-            break;
-        case 'armor':
+        } else if ('helm' === stateBypassData.equipType
+            || 'chest' === stateBypassData.equipType
+            || 'arm' === stateBypassData.equipType
+            || 'waist' === stateBypassData.equipType
+            || 'leg' === stateBypassData.equipType
+        ) {
             let armoreInfo = ArmorDataset.getInfo(stateBypassData.equipId);
 
             typeList = Constant.armorTypes.map((type) => {
                 return { key: type, value: _(type) };
             });
-            type = (Helper.isNotEmpty(stateBypassData.type))
-                ? stateBypassData.type : typeList[0].key;
+            type = (Helper.isNotEmpty(stateBypassData.equipType))
+                ? stateBypassData.equipType : typeList[0].key;
 
+            mode = 'armor';
             sortedList = ArmorDataset.getItems().map((armorInfo) => {
                 rareList[armorInfo.rare] = armorInfo.rare;
 
@@ -462,41 +487,16 @@ export default function EquipItemSelector(props) {
                 return { key: rare, value: _('rare') + `: ${rare}` };
             });
             rare = (Helper.isNotEmpty(armoreInfo)) ? armoreInfo.rare : rareList[0].key;
-
-            break;
-        case 'charm':
+        } else if ('charm' === stateBypassData.equipType) {
+            mode = 'charm';
             sortedList = CharmDataset.getItems().map((charmInfo) => {
                 charmInfo.isSelect = (stateBypassData.equipId === charmInfo.id);
 
                 return charmInfo;
             });
-
-            break;
-        case 'jewel':
-            for (let size = stateBypassData.slotSize; size >= 1; size--) {
-                for (let rare = 9; rare >= 5; rare--) {
-                    sortedList = sortedList.concat(
-                        JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems().map((jewelInfo) => {
-                            jewelInfo.isSelect = (stateBypassData.jewelId === jewelInfo.id);
-
-                            return jewelInfo;
-                        })
-                    );
-                }
-            }
-
-            break;
-        case 'enhance':
-            sortedList = EnhanceDataset.getItems().map((enhanceInfo) => {
-                enhanceInfo.isSelect = (stateBypassData.enhanceId === enhanceInfo.id);
-
-                return enhanceInfo;
-            });
-
-            break;
         }
 
-        updateMode(stateBypassData.mode);
+        updateMode(mode);
         updateSortedList(sortedList);
         updateTypeList(typeList);
         updateRareList(rareList);

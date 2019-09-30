@@ -8,7 +8,7 @@
  */
 
 // Load Libraries
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware } from 'redux';
 
 // Load Core Libraries
 import Status from 'core/status';

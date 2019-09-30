@@ -8,7 +8,7 @@
  */
 
 // Load Libraries
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware } from 'redux';
 
 // Load Core Libraries
 import Status from 'core/status';
@@ -526,12 +526,12 @@ const Store = createStore((state = initialState, action) => {
             let algorithmParams = Helper.deepCopy(state.algorithmParams);
 
             if (Helper.isEmpty(algorithmParams.usingFactor[action.payload.target])
-                || Helper.isEmpty(algorithmParams.usingFactor[action.payload.target][action.payload.rare])
+                || Helper.isEmpty(algorithmParams.usingFactor[action.payload.target][action.payload.flag])
             ) {
                 return state;
             }
 
-            algorithmParams.usingFactor[action.payload.target][action.payload.rare] = !algorithmParams.usingFactor[action.payload.target][action.payload.rare];
+            algorithmParams.usingFactor[action.payload.target][action.payload.flag] = !algorithmParams.usingFactor[action.payload.target][action.payload.flag];
 
             return Object.assign({}, state, {
                 algorithmParams: algorithmParams
@@ -745,12 +745,12 @@ const Setter = {
             }
         });
     },
-    toggleAlgorithmParamsUsingFactor: (target, rare) => {
+    toggleAlgorithmParamsUsingFactor: (target, flag) => {
         Store.dispatch({
             type: 'TOGGLE_ALGORITHM_PARAMS_USING_FACTOR',
             payload: {
                 target: target,
-                rare: rare
+                flag: flag
             }
         });
     },

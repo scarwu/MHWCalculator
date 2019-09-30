@@ -181,7 +181,7 @@ class FittingAlgorithm {
             }).forEach((jewelInfo) => {
 
                 // Check is Using Factor Jewel
-                if (false === this.algorithmParams.usingFactor.jewel[jewelInfo.rare]) {
+                if (false === this.algorithmParams.usingFactor.jewel[jewelInfo.size]) {
                     return;
                 }
 
