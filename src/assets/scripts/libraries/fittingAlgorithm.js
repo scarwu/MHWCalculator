@@ -96,6 +96,12 @@ class FittingAlgorithm {
             JewelDataset.hasSkill(skill.id).getItems().sort((jewelInfoA, jewelInfoB) => {
                 return jewelInfoA.size - jewelInfoB.size;
             }).forEach((jewelInfo) => {
+
+                // Check is Using Factor Jewel
+                if (false === this.algorithmParams.usingFactor.jewel[jewelInfo.rare]) {
+                    return;
+                }
+
                 if (minJewelSize > jewelInfo.size) {
                     minJewelSize = jewelInfo.size;
                 }
@@ -505,7 +511,7 @@ class FittingAlgorithm {
                         lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
                         // Last Bundle Pre Check
-                        if ('rough' === this.algorithmParams.strategy) {
+                        if (this.algorithmParams.flag.isEndEarly) {
                             if (Object.keys(lastBundlePool).length >= this.algorithmParams.limit) {
                                 isEndEarly = true;
                             }
@@ -526,7 +532,7 @@ class FittingAlgorithm {
                             lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
                             // Last Bundle Pre Check
-                            if ('rough' === this.algorithmParams.strategy) {
+                            if (this.algorithmParams.flag.isEndEarly) {
                                 if (Object.keys(lastBundlePool).length >= this.algorithmParams.limit) {
                                     isEndEarly = true;
                                 }
@@ -537,9 +543,7 @@ class FittingAlgorithm {
                     }
 
                     // Check Bundle Have a Future
-                    if ('speed' === this.algorithmParams.strategy
-                        || 'rough' === this.algorithmParams.strategy
-                    ) {
+                    if (this.algorithmParams.flag.isExpectBundle) {
                         if (false === this.isBundleHaveFuture(bundle)) {
                             return;
                         }
@@ -555,9 +559,7 @@ class FittingAlgorithm {
         });
 
         // Find Completed Bundle into Last Bundle Pool
-        if ('complete' === this.algorithmParams.strategy
-            || 'speed' === this.algorithmParams.strategy
-        ) {
+        if (this.algorithmParams.flag.isDeepSearch) {
             Helper.log('Find Last Bundle Pool');
             Helper.log('Bundle Pool: Prev Bundle Count', Object.keys(prevBundlePool).length);
 
@@ -566,7 +568,18 @@ class FittingAlgorithm {
 
                 // Completed Bundles By Skills
                 this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
+                    if (true === isEndEarly) {
+                        return;
+                    }
+
                     lastBundlePool[this.getBundleHash(bundle)] = bundle;
+
+                    // Last Bundle Pre Check
+                    if (this.algorithmParams.flag.isEndEarly) {
+                        if (Object.keys(lastBundlePool).length >= this.algorithmParams.limit) {
+                            isEndEarly = true;
+                        }
+                    }
                 });
             });
         }
@@ -796,8 +809,8 @@ class FittingAlgorithm {
 
         equipInfos.forEach((equipInfo) => {
 
-            // Check is Armor Factor
-            if (false === this.algorithmParams.armorFactor[equipInfo.rare]) {
+            // Check is Using Factor Armor
+            if (false === this.algorithmParams.usingFactor.armor[equipInfo.rare]) {
                 return;
             }
 
@@ -848,9 +861,9 @@ class FittingAlgorithm {
             candidateEquip.skills[skill.id] = skill.level;
 
             // If Skill not match condition then skip
-            if (Helper.isEmpty(this.conditionSkills[skill.id])) {
-                return;
-            }
+            // if (Helper.isEmpty(this.conditionSkills[skill.id])) {
+            //     return;
+            // }
 
             // Increase Expected Value & Level
             if (Helper.isNotEmpty(this.correspondJewels[skill.id])) {
@@ -872,15 +885,9 @@ class FittingAlgorithm {
 
             // Increase Expected Value & Level
             candidateEquip.expectedValue += slot.size;
-
-            if ('speed' === this.algorithmParams.strategy
-                || 'rough' === this.algorithmParams.strategy
-            ) {
-                candidateEquip.expectedLevel += 1;
-            } else {
-                candidateEquip.expectedLevel += (0 < this.maxSlotsSkillLevel[slot.size])
-                    ? this.maxSlotsSkillLevel[slot.size] : 1;
-            }
+            candidateEquip.expectedLevel += 1;
+            // candidateEquip.expectedLevel += (0 < this.maxSlotsSkillLevel[slot.size])
+            //     ? this.maxSlotsSkillLevel[slot.size] : 1;
         });
 
         return candidateEquip;
