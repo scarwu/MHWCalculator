@@ -124,13 +124,15 @@
     "slotSort":             null,
     "expectedValueSort":    null,
     "expectedLevelSort":    null,
-    "completeStrategy":     null,
-    "speedStrategy":        null,
-    "roughStrategy":        null,
     "limit":                null,
     "sort":                 null,
     "strategy":             null,
+    "isEndEarly":           null,
+    "isExpectBundle":       null,
+    "isDeepSearch":         null,
+    "isRequireConsistent":  null,
     "armorFactor":          null,
+    "jewelFactor":          null,
     "asc":                  null,
     "desc":                 null
 }

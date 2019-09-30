@@ -124,13 +124,15 @@
     "slotSort":             "Slot Amount",
     "expectedValueSort":    "Expected Value",
     "expectedLevelSort":    "Expected Level",
-    "completeStrategy":     "Complete",
-    "speedStrategy":        "Speed",
-    "roughStrategy":        "Rough",
     "limit":                "Result Limit",
     "sort":                 "Sorting",
     "strategy":             "Strategy",
+    "isEndEarly":           "Is End Early",
+    "isExpectBundle":       "Is Expecte Bundle",
+    "isDeepSearch":         "Is Deep Search",
+    "isRequireConsistent":  "Is Require Consistent",
     "armorFactor":          "Armor Factor",
+    "jewelFactor":          "Jewel Factor",
     "asc":                  "ASC",
     "desc":                 "DESC"
 }

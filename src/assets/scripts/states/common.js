@@ -53,7 +53,7 @@ const diffLogger = store => next => action => {
 const initialState = {
     requiredSets: Status.get(statusPrefix + ':requiredSets') || Helper.deepCopy(TestData.requireList[0]).sets,
     requiredSkills: Status.get(statusPrefix + ':requiredSkills') || Helper.deepCopy(TestData.requireList[0]).skills,
-    requiredEquipPins: Status.get(statusPrefix + ':requiredEquipPins') || Helper.deepCopy(Constant.defaultEquipsLock),
+    requiredEquipPins: Status.get(statusPrefix + ':requiredEquipPins') || Helper.deepCopy(Constant.default.equipsLock),
     currentEquips: Status.get(statusPrefix + ':currentEquips') || Helper.deepCopy(TestData.equipsList[0]),
     algorithmParams: Status.get(statusPrefix + ':algorithmParams') || Helper.deepCopy(Constant.default.algorithmParams),
     computedBundles: Status.get(statusPrefix + ':computedBundles') || [],
@@ -390,7 +390,7 @@ const Store = createStore((state = initialState, action) => {
         });
     case 'CLEAN_REQUIRED_EQUIP_PARTS':
         return Object.assign({}, state, {
-            requiredEquipPins: Helper.deepCopy(Constant.defaultEquipsLock)
+            requiredEquipPins: Helper.deepCopy(Constant.default.equipsLock)
         });
 
     // Current Equips
@@ -452,13 +452,13 @@ const Store = createStore((state = initialState, action) => {
         })();
     case 'REPLACE_CURRENT_EQUIPS':
         return Object.assign({}, state, {
-            requiredEquipPins: Helper.deepCopy(Constant.defaultEquipsLock),
+            requiredEquipPins: Helper.deepCopy(Constant.default.equipsLock),
             currentEquips: action.payload.data
         });
     case 'CLEAN_CURRENT_EQUIPS':
         return Object.assign({}, state, {
-            requiredEquipPins: Helper.deepCopy(Constant.defaultEquipsLock),
-            currentEquips: Helper.deepCopy(Constant.defaultEquips)
+            requiredEquipPins: Helper.deepCopy(Constant.default.equipsLock),
+            currentEquips: Helper.deepCopy(Constant.default.equips)
         });
 
     // Algorithm Params
@@ -492,21 +492,31 @@ const Store = createStore((state = initialState, action) => {
                 algorithmParams: algorithmParams
             });
         })();
-    case 'SET_ALGORITHM_PARAMS_STRATEGY':
+    case 'TOGGLE_ALGORITHM_PARAMS_FLAG':
         return (() => {
             let algorithmParams = Helper.deepCopy(state.algorithmParams);
 
-            algorithmParams.strategy = action.payload.strategy;
+            if (Helper.isEmpty(algorithmParams.flag[action.payload.target])) {
+                return state;
+            }
+
+            algorithmParams.flag[action.payload.target] = !algorithmParams.flag[action.payload.target];
 
             return Object.assign({}, state, {
                 algorithmParams: algorithmParams
             });
         })();
-    case 'TOGGLE_ALGORITHM_PARAMS_ARMOR_FACTOR':
+    case 'TOGGLE_ALGORITHM_PARAMS_USING_FACTOR':
         return (() => {
             let algorithmParams = Helper.deepCopy(state.algorithmParams);
 
-            algorithmParams.armorFactor[action.payload.rare] = !algorithmParams.armorFactor[action.payload.rare];
+            if (Helper.isEmpty(algorithmParams.usingFactor[action.payload.target])
+                || Helper.isEmpty(algorithmParams.usingFactor[action.payload.target][action.payload.rare])
+            ) {
+                return state;
+            }
+
+            algorithmParams.usingFactor[action.payload.target][action.payload.rare] = !algorithmParams.usingFactor[action.payload.target][action.payload.rare];
 
             return Object.assign({}, state, {
                 algorithmParams: algorithmParams
@@ -712,18 +722,19 @@ const Setter = {
             }
         });
     },
-    setAlgorithmParamsStrategy: (strategy) => {
+    toggleAlgorithmParamsFlag: (target) => {
         Store.dispatch({
-            type: 'SET_ALGORITHM_PARAMS_STRATEGY',
+            type: 'TOGGLE_ALGORITHM_PARAMS_FLAG',
             payload: {
-                strategy: strategy
+                target: target
             }
         });
     },
-    toggleAlgorithmParamsArmorFactor: (rare) => {
+    toggleAlgorithmParamsUsingFactor: (target, rare) => {
         Store.dispatch({
-            type: 'TOGGLE_ALGORITHM_PARAMS_ARMOR_FACTOR',
+            type: 'TOGGLE_ALGORITHM_PARAMS_USING_FACTOR',
             payload: {
+                target: target,
                 rare: rare
             }
         });

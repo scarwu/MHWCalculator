@@ -172,13 +172,30 @@ export default function AlgorithmSetting(props) {
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
                                 <span>{_('strategy')}</span>
-
-                                <div className="mhwc-icons_bundle">
-                                    <FunctionalSelector
-                                        iconName="book"
-                                        defaultValue={stateAlgorithmParams.strategy}
-                                        options={strategyList} onChange={handleStrategyChange} />
-                                </div>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                {['isEndEarly', 'isExpectBundle', 'isDeepSearch', 'isRequireConsistent'].map((target) => {
+                                    return (
+                                        <div key={target} className="col-6 mhwc-value">
+                                            <span>{_(target)}</span>
+                                            {stateAlgorithmParams.flag[target] ? (
+                                                <div className="mhwc-icons_bundle">
+                                                    <FunctionalButton
+                                                        iconName="star"
+                                                        altName={_('exclude')}
+                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsFlag(target)}} />
+                                                </div>
+                                            ) : (
+                                                <div className="mhwc-icons_bundle">
+                                                    <FunctionalButton
+                                                        iconName="star-o"
+                                                        altName={_('include')}
+                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsFlag(target)}} />
+                                                </div>
+                                            )}
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
 
@@ -187,23 +204,53 @@ export default function AlgorithmSetting(props) {
                                 <span>{_('armorFactor')}</span>
                             </div>
                             <div className="col-12 mhwc-content">
-                                {Object.keys(stateAlgorithmParams.armorFactor).map((rare) => {
+                                {Object.keys(stateAlgorithmParams.usingFactor.armor).map((rare) => {
                                     return (
                                         <div key={rare} className="col-6 mhwc-value">
                                             <span>{_('rare') + `: ${rare}`}</span>
-                                            {stateAlgorithmParams.armorFactor[rare] ? (
+                                            {stateAlgorithmParams.usingFactor.armor[rare] ? (
                                                 <div className="mhwc-icons_bundle">
                                                     <FunctionalButton
                                                         iconName="star"
                                                         altName={_('exclude')}
-                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsArmorFactor(rare)}} />
+                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', rare)}} />
                                                 </div>
                                             ) : (
                                                 <div className="mhwc-icons_bundle">
                                                     <FunctionalButton
                                                         iconName="star-o"
                                                         altName={_('include')}
-                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsArmorFactor(rare)}} />
+                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', rare)}} />
+                                                </div>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+
+                        <div className="mhwc-item mhwc-item-2-step">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('jewelFactor')}</span>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                {Object.keys(stateAlgorithmParams.usingFactor.jewel).map((rare) => {
+                                    return (
+                                        <div key={rare} className="col-6 mhwc-value">
+                                            <span>{_('rare') + `: ${rare}`}</span>
+                                            {stateAlgorithmParams.usingFactor.jewel[rare] ? (
+                                                <div className="mhwc-icons_bundle">
+                                                    <FunctionalButton
+                                                        iconName="star"
+                                                        altName={_('exclude')}
+                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', rare)}} />
+                                                </div>
+                                            ) : (
+                                                <div className="mhwc-icons_bundle">
+                                                    <FunctionalButton
+                                                        iconName="star-o"
+                                                        altName={_('include')}
+                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', rare)}} />
                                                 </div>
                                             )}
                                         </div>
