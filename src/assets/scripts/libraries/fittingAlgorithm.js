@@ -437,11 +437,11 @@ class FittingAlgorithm {
             }
 
             Object.values(candidateEquipPool[equipType]).forEach((candidateEquip) => {
-                if (this.maxEquipsExpectedValue[equipType] <= candidateEquip.expectedValue) {
+                if (this.maxEquipsExpectedValue[equipType] < candidateEquip.expectedValue) {
                     this.maxEquipsExpectedValue[equipType] = candidateEquip.expectedValue;
                 }
 
-                if (this.maxEquipsExpectedLevel[equipType] <= candidateEquip.expectedLevel) {
+                if (this.maxEquipsExpectedLevel[equipType] < candidateEquip.expectedLevel) {
                     this.maxEquipsExpectedLevel[equipType] = candidateEquip.expectedLevel;
                 }
             });
@@ -846,6 +846,11 @@ class FittingAlgorithm {
 
         equipInfo.skills.forEach((skill) => {
             candidateEquip.skills[skill.id] = skill.level;
+
+            // If Skill not match condition then skip
+            if (Helper.isEmpty(this.conditionSkills[skill.id])) {
+                return;
+            }
 
             // Increase Expected Value & Level
             if (Helper.isNotEmpty(this.correspondJewels[skill.id])) {

@@ -90,12 +90,14 @@ export default {
             limit: 25,
             sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel
             order: 'desc', // asc | desc
-            isEndEarly: false,
-            isExpectBundle: true,
-            isDeepSearch: true,
-            isRequireConsistent: false,
-            isUsingFactor: {
-                armorRare: {
+            flag: {
+                isEndEarly: false,
+                isExpectBundle: true,
+                isDeepSearch: true,
+                isRequireConsistent: false
+            },
+            usingFactor: {
+                armor: {
                     12: true,
                     11: true,
                     10: true,
@@ -105,7 +107,7 @@ export default {
                     6: false,
                     5: false
                 },
-                jewelRare: {
+                jewel: {
                     4: true,
                     3: true,
                     2: true,

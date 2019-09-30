@@ -492,21 +492,31 @@ const Store = createStore((state = initialState, action) => {
                 algorithmParams: algorithmParams
             });
         })();
-    case 'SET_ALGORITHM_PARAMS_STRATEGY':
+    case 'TOGGLE_ALGORITHM_PARAMS_FLAG':
         return (() => {
             let algorithmParams = Helper.deepCopy(state.algorithmParams);
 
-            algorithmParams.strategy = action.payload.strategy;
+            if (Helper.isEmpty(algorithmParams.flag[action.payload.target])) {
+                return state;
+            }
+
+            algorithmParams.flag[action.payload.target] = !algorithmParams.flag[action.payload.target];
 
             return Object.assign({}, state, {
                 algorithmParams: algorithmParams
             });
         })();
-    case 'TOGGLE_ALGORITHM_PARAMS_ARMOR_FACTOR':
+    case 'TOGGLE_ALGORITHM_PARAMS_USING_FACTOR':
         return (() => {
             let algorithmParams = Helper.deepCopy(state.algorithmParams);
 
-            algorithmParams.armorFactor[action.payload.rare] = !algorithmParams.armorFactor[action.payload.rare];
+            if (Helper.isEmpty(algorithmParams.usingFactor[action.payload.target])
+                || Helper.isEmpty(algorithmParams.usingFactor[action.payload.target][action.payload.rare])
+            ) {
+                return state;
+            }
+
+            algorithmParams.usingFactor[action.payload.target][action.payload.rare] = !algorithmParams.usingFactor[action.payload.target][action.payload.rare];
 
             return Object.assign({}, state, {
                 algorithmParams: algorithmParams
@@ -712,18 +722,19 @@ const Setter = {
             }
         });
     },
-    setAlgorithmParamsStrategy: (strategy) => {
+    toggleAlgorithmParamsFlag: (target) => {
         Store.dispatch({
-            type: 'SET_ALGORITHM_PARAMS_STRATEGY',
+            type: 'TOGGLE_ALGORITHM_PARAMS_FLAG',
             payload: {
-                strategy: strategy
+                target: target
             }
         });
     },
-    toggleAlgorithmParamsArmorFactor: (rare) => {
+    toggleAlgorithmParamsUsingFactor: (target, rare) => {
         Store.dispatch({
-            type: 'TOGGLE_ALGORITHM_PARAMS_ARMOR_FACTOR',
+            type: 'TOGGLE_ALGORITHM_PARAMS_USING_FACTOR',
             payload: {
+                target: target,
                 rare: rare
             }
         });
