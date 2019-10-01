@@ -395,7 +395,7 @@ class FittingAlgorithm {
 
                 // Add Candidate Equip to Bundle
                 if (Helper.isEmpty(bundle.equips[typeList[typeIndex]])
-                    || Helper.isNotEmpty(candidateEquip.id)
+                    && Helper.isNotEmpty(candidateEquip.id)
                 ) {
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
@@ -593,7 +593,7 @@ class FittingAlgorithm {
 
                 // Add Candidate Equip to Bundle
                 if (Helper.isEmpty(bundle.equips[typeList[typeIndex]])
-                    || Helper.isNotEmpty(candidateEquip.id)
+                    && Helper.isNotEmpty(candidateEquip.id)
                 ) {
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
@@ -848,16 +848,15 @@ class FittingAlgorithm {
      * Add Candidate Equip To Bundle
      */
     addCandidateEquipToBundle = (bundle, candidateEquip) => {
-        bundle = Helper.deepCopy(bundle);
-
         if (Helper.isEmpty(candidateEquip.id)) {
-            return bundle;
+            return false;
         }
 
         if (Helper.isNotEmpty(bundle.equips[candidateEquip.type])) {
-            return bundle;
+            return false;
         }
-        bundle
+
+        bundle = Helper.deepCopy(bundle);
         bundle.equips[candidateEquip.type] = candidateEquip.id;
 
         // Increase Skill
