@@ -399,24 +399,58 @@ class FittingAlgorithm {
                 ) {
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
+                    // If Add Candidate Equip Failed
                     if (false === bundle) {
                         if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                             statusStack[typeIndex].equipIndex++;
+                        } else {
+                            while (true) {
+                                typeIndex--;
+                                statusStack.pop();
 
-                            continue;
+                                if (0 === statusStack.length) {
+                                    break;
+                                }
+
+                                equipIndex = statusStack[typeIndex].equipIndex;
+
+                                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                                    statusStack[typeIndex].equipIndex++;
+
+                                    break;
+                                }
+                            }
                         }
 
-                        break;
+                        continue;
                     }
 
+                    // Check Bundle Sets
                     if (this.isBundleSetCompleted(bundle)) {
                         lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
                         if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                             statusStack[typeIndex].equipIndex++;
+                        } else {
+                            while (true) {
+                                typeIndex--;
+                                statusStack.pop();
 
-                            continue;
+                                if (0 === statusStack.length) {
+                                    break;
+                                }
+
+                                equipIndex = statusStack[typeIndex].equipIndex;
+
+                                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                                    statusStack[typeIndex].equipIndex++;
+
+                                    break;
+                                }
+                            }
                         }
+
+                        continue;
                     }
                 }
 
@@ -428,7 +462,7 @@ class FittingAlgorithm {
                     });
 
                     continue;
-                } if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                } else if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                     statusStack[typeIndex].equipIndex++;
 
                     continue;
@@ -597,16 +631,33 @@ class FittingAlgorithm {
                 ) {
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
+                    // If Add Candidate Equip Failed
                     if (false === bundle) {
                         if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                             statusStack[typeIndex].equipIndex++;
+                        } else {
+                            while (true) {
+                                typeIndex--;
+                                statusStack.pop();
 
-                            continue;
+                                if (0 === statusStack.length) {
+                                    break;
+                                }
+
+                                equipIndex = statusStack[typeIndex].equipIndex;
+
+                                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                                    statusStack[typeIndex].equipIndex++;
+
+                                    break;
+                                }
+                            }
                         }
 
-                        break;
+                        continue;
                     }
 
+                    // Check Bundle Skills
                     if (this.isBundleSkillCompleted(bundle)) {
                         lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
@@ -621,12 +672,29 @@ class FittingAlgorithm {
 
                         if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                             statusStack[typeIndex].equipIndex++;
+                        } else {
+                            while (true) {
+                                typeIndex--;
+                                statusStack.pop();
 
-                            continue;
+                                if (0 === statusStack.length) {
+                                    break;
+                                }
+
+                                equipIndex = statusStack[typeIndex].equipIndex;
+
+                                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                                    statusStack[typeIndex].equipIndex++;
+
+                                    break;
+                                }
+                            }
                         }
+
+                        continue;
                     }
 
-                    // If Equips is Full or Expected
+                    // Check Bundle Expected
                     if (this.isBundleExpected(bundle)) {
 
                         // Create Completed Bundles By Skills
@@ -649,25 +717,55 @@ class FittingAlgorithm {
 
                         if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                             statusStack[typeIndex].equipIndex++;
+                        } else {
+                            while (true) {
+                                typeIndex--;
+                                statusStack.pop();
 
-                            continue;
+                                if (0 === statusStack.length) {
+                                    break;
+                                }
+
+                                equipIndex = statusStack[typeIndex].equipIndex;
+
+                                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                                    statusStack[typeIndex].equipIndex++;
+
+                                    break;
+                                }
+                            }
                         }
 
                         continue;
                     }
 
                     // Check Bundle Have a Future
-                    // if (this.algorithmParams.flag.isExpectBundle) {
-                    //     if (false === this.isBundleHaveFuture(bundle, typeList.slice(0, equipIndex + 1))) {
-                    //         if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                    //             statusStack[typeIndex].equipIndex++;
+                    if (this.algorithmParams.flag.isExpectBundle) {
+                        if (false === this.isBundleHaveFuture(bundle, typeList.slice(0, typeIndex + 1))) {
+                            if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                                statusStack[typeIndex].equipIndex++;
+                            } else {
+                                while (true) {
+                                    typeIndex--;
+                                    statusStack.pop();
 
-                    //             continue;
-                    //         }
+                                    if (0 === statusStack.length) {
+                                        break;
+                                    }
 
-                    //         break;
-                    //     }
-                    // }
+                                    equipIndex = statusStack[typeIndex].equipIndex;
+
+                                    if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                                        statusStack[typeIndex].equipIndex++;
+
+                                        break;
+                                    }
+                                }
+                            }
+
+                            continue;
+                        }
+                    }
                 }
 
                 if (Helper.isNotEmpty(candidateEquipPool[typeIndex + 1])) {
@@ -678,7 +776,7 @@ class FittingAlgorithm {
                     });
 
                     continue;
-                } if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                } else if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                     statusStack[typeIndex].equipIndex++;
 
                     continue;
