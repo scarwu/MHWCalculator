@@ -1193,10 +1193,7 @@ class FittingAlgorithm {
 
                     // Add Jewel to Bundle
                     if (this.conditionSkills[skillId] > bundle.skills[skillId]) {
-                        bundle = this.addJewelToBundleBySpecificSkill(bundle, jewel, {
-                            id: skillId,
-                            level: this.conditionSkills[skillId]
-                        });
+                        bundle = this.addJewelToBundleBySpecificSkill(bundle, jewel);
 
                         if (false === bundle) {
                             return;
@@ -1220,9 +1217,9 @@ class FittingAlgorithm {
      */
     addJewelToBundleBySpecificSkill = (bundle, jewel) => {
         let currentSlotSize = jewel.size;
+        let maxSkillLevel = null;
+        let minDiffSkillLevel = null;
         let isSkillLevelCompelete = false;
-        let isSkillLevelOverflow = false;
-        let bundleBackup = null;
 
         if (0 === bundle.meta.remainingSlotCount.all) {
             return bundle;
@@ -1242,10 +1239,16 @@ class FittingAlgorithm {
             }
 
             // Check Skill is Completed
+            maxSkillLevel = null;
+            minDiffSkillLevel = null;
             isSkillLevelCompelete = false;
 
             jewel.skills.forEach((skill) => {
-                if (Helper.isEmpty(this.conditionSkills[skill.id])){
+                if (true === isSkillLevelCompelete) {
+                    return;
+                }
+
+                if (Helper.isEmpty(this.conditionSkills[skill.id])) {
                     return;
                 }
 
@@ -1253,7 +1256,17 @@ class FittingAlgorithm {
                     bundle.skills[skill.id] = 0;
                 }
 
-                if (this.conditionSkills[skill.id] === bundle.skills[skill.id]) {
+                if (null === maxSkillLevel || maxSkillLevel < skill.level) {
+                    maxSkillLevel = skill.level;
+                }
+
+                let diffSkillLevel = this.conditionSkills[skill.id] - bundle.skills[skill.id];
+
+                if (null === minDiffSkillLevel || minDiffSkillLevel > diffSkillLevel) {
+                    minDiffSkillLevel = diffSkillLevel;
+                }
+
+                if (0 === diffSkillLevel) {
                     bundle.meta.completedSkills[skill.id] = true;
                     isSkillLevelCompelete = true;
                 }
@@ -1263,44 +1276,46 @@ class FittingAlgorithm {
                 return bundle;
             }
 
-            // Bundle Backup
-            bundleBackup = Helper.deepCopy(bundle);
+            // Need Insert Jewel Count
+            let jewelCount = parseInt(minDiffSkillLevel / maxSkillLevel);
 
-            // Decrease Slot Counts
-            bundle.meta.remainingSlotCount[currentSlotSize] -= 1;
-            bundle.meta.remainingSlotCount.all -= 1;
+            jewelCount = bundle.meta.remainingSlotCount[currentSlotSize] < jewelCount
+                ? bundle.meta.remainingSlotCount[currentSlotSize] : jewelCount;
 
-            // Add Jewel
-            if (Helper.isEmpty(bundle.jewels[jewel.id])) {
-                bundle.jewels[jewel.id] = 0;
+            if (0 === jewelCount) {
+                currentSlotSize += 1;
+
+                continue;
             }
 
-            bundle.jewels[jewel.id] += 1;
+            // Decrease Slot Counts
+            bundle.meta.remainingSlotCount[currentSlotSize] -= jewelCount;
+            bundle.meta.remainingSlotCount.all -= jewelCount;
 
-            // Add Skills
-            isSkillLevelOverflow = false;
+            // Add Jewel
+            bundle.jewels[jewel.id] = Helper.isNotEmpty(bundle.jewels[jewel.id])
+                ? bundle.jewels[jewel.id] + jewelCount : jewelCount;
 
             jewel.skills.forEach((skill) => {
                 if (Helper.isEmpty(bundle.skills[skill.id])) {
                     bundle.skills[skill.id] = 0;
                 }
 
-                bundle.skills[skill.id] += skill.level;
+                bundle.skills[skill.id] += jewelCount * skill.level;
+
+                if (Helper.isEmpty(this.conditionSkills[skill.id])) {
+                    return;
+                }
 
                 // Check Skill is Completed
-                if (Helper.isNotEmpty(this.conditionSkills[skill.id])) {
-                    if (this.conditionSkills[skill.id] < bundle.skills[skill.id]) {
-                        isSkillLevelOverflow = true;
-                    }
-
-                    if (this.conditionSkills[skill.id] === bundle.skills[skill.id]) {
-                        bundle.meta.completedSkills[skill.id] = true;
-                    }
+                if (this.conditionSkills[skill.id] === bundle.skills[skill.id]) {
+                    bundle.meta.completedSkills[skill.id] = true;
+                    isSkillLevelCompelete = true;
                 }
             });
 
-            if (true === isSkillLevelOverflow) {
-                return bundleBackup;
+            if (true === isSkillLevelCompelete) {
+                return bundle;
             }
 
             if (0 === bundle.meta.remainingSlotCount.all) {
