@@ -382,7 +382,7 @@ class FittingAlgorithm {
                 equipIndex: 0
             });
 
-            Helper.log('Root Bundle:', bundle);
+            Helper.log('Set Equips: Root Bundle:', bundle);
 
             while (true) {
                 bundle = statusStack[typeIndex].bundle;
@@ -391,7 +391,7 @@ class FittingAlgorithm {
                 traversalCount++;
 
                 if (0 === traversalCount % 1000) {
-                    Helper.log('Traversal Count:', traversalCount);
+                    Helper.log('Set Equips: Traversal Count:', traversalCount);
                 }
 
                 // Add Candidate Equip to Bundle
@@ -491,7 +491,7 @@ class FittingAlgorithm {
                 }
             }
 
-            Helper.log('Traversal Count:', traversalCount);
+            Helper.log('Set Equips: Traversal Count:', traversalCount);
         });
 
         Helper.log('Last Bundle Result:', Object.keys(lastBundlePool).length, lastBundlePool);
@@ -624,7 +624,7 @@ class FittingAlgorithm {
                 equipIndex: 0
             });
 
-            Helper.log('Root Bundle:', bundle);
+            Helper.log('Skill Equip: Root Bundle:', bundle);
 
             while (true) {
                 if (isEndEarly) {
@@ -637,7 +637,7 @@ class FittingAlgorithm {
                 traversalCount++;
 
                 if (0 === traversalCount % 1000) {
-                    Helper.log('Traversal Count:', traversalCount);
+                    Helper.log('Skill Equips: Traversal Count:', traversalCount);
                 }
 
                 // Add Candidate Equip to Bundle
@@ -819,7 +819,7 @@ class FittingAlgorithm {
                 }
             }
 
-            Helper.log('Traversal Count:', traversalCount);
+            Helper.log('Skill Equips: Traversal Count:', traversalCount);
         });
 
         Helper.log('Last Bundle Result:', Object.keys(lastBundlePool).length, lastBundlePool);
@@ -1165,52 +1165,225 @@ class FittingAlgorithm {
             return [];
         }
 
-        let prevBundlePool = {};
-        let nextBundlePool = {};
+        // Create Current Skill Ids and Convert Correspond Jewel Pool
+        let currentSkillIds = [];
+        let correspondJewelPool = Helper.deepCopy(this.correspondJewelsBySkill);
 
-        // Init Prev Bundle Pool
-        prevBundlePool[this.getBundleHash(bundle)] = bundle;
+        for (const [equipType, correspondJewels] of Object.entries(correspondJewelPool)) {
+            currentSkillIds.push(equipType);
+            correspondJewelPool[equipType] = Object.values(correspondJewels);
+        }
 
-        Object.keys(this.conditionSkills).forEach((skillId) => {
-            if (Helper.isEmpty(this.correspondJewelsBySkill[skillId])) {
-                return;
+        correspondJewelPool = Object.values(correspondJewelPool);
+
+        // Create Bundle Pool With Correspond Jewels
+        Helper.log('Create Bundle Pool With Correspond Jewels');
+
+        let lastBundlePool = {};
+        let traversalCount = 0;
+        let skillIndex = 0;
+        let jewelIndex = 0;
+        let correspondJewel = null;
+        let statusStack = [];
+
+        // Push Root Bundle
+        statusStack.push({
+            bundle: bundle,
+            jewelIndex: 0
+        });
+
+        Helper.log('Skill Equips: Root Bundle:', bundle);
+
+        while (true) {
+            bundle = statusStack[skillIndex].bundle;
+            jewelIndex = statusStack[skillIndex].jewelIndex;
+            correspondJewel = correspondJewelPool[skillIndex][jewelIndex];
+            traversalCount++;
+
+            if (0 === traversalCount % 100000) {
+                Helper.log('Skill Equips: Traversal Count:', traversalCount);
             }
 
-            // Create Next Bundle Pool
-            nextBundlePool = {};
+            if (Helper.isEmpty(bundle.skills[currentSkillIds[skillIndex]])) {
+                bundle.skills[currentSkillIds[skillIndex]] = 0;
+            }
 
-            Object.keys(prevBundlePool).forEach((hash) => {
-                this.correspondJewelsBySkill[skillId].forEach((jewel) => {
-                    let bundle = Helper.deepCopy(prevBundlePool[hash]);
+            if (this.conditionSkills[currentSkillIds[skillIndex]] < bundle.skills[currentSkillIds[skillIndex]]) {
+                if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
+                    statusStack[skillIndex].jewelIndex++;
+                } else {
+                    while (true) {
+                        skillIndex--;
+                        statusStack.pop();
 
-                    if (Helper.isEmpty(bundle.skills[skillId])) {
-                        bundle.skills[skillId] = 0;
+                        if (0 === statusStack.length) {
+                            break;
+                        }
+
+                        jewelIndex = statusStack[skillIndex].jewelIndex;
+
+                        if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
+                            statusStack[skillIndex].jewelIndex++;
+
+                            break;
+                        }
                     }
+                }
 
-                    if (this.conditionSkills[skillId] < bundle.skills[skillId]) {
-                        return;
-                    }
+                continue;
+            }
 
-                    // Add Jewel to Bundle
-                    if (this.conditionSkills[skillId] > bundle.skills[skillId]) {
-                        bundle = this.addJewelToBundleBySpecificSkill(bundle, jewel);
+            // Add Jewels To Bundle
+            if (this.conditionSkills[currentSkillIds[skillIndex]] > bundle.skills[currentSkillIds[skillIndex]]) {
+                bundle = this.addJewelToBundleBySpecificSkill(bundle, correspondJewel);
 
-                        if (false === bundle) {
-                            return;
+                // If Add Jewel Failed
+                if (false === bundle) {
+                    if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
+                        statusStack[skillIndex].jewelIndex++;
+                    } else {
+                        while (true) {
+                            skillIndex--;
+                            statusStack.pop();
+
+                            if (0 === statusStack.length) {
+                                break;
+                            }
+
+                            jewelIndex = statusStack[skillIndex].jewelIndex;
+
+                            if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
+                                statusStack[skillIndex].jewelIndex++;
+
+                                break;
+                            }
                         }
                     }
 
-                    nextBundlePool[this.getBundleHash(bundle)] = bundle;
+                    continue;
+                }
+            }
+
+            // Check Bundle Skills
+            if (this.isBundleSkillCompleted(bundle)) {
+                lastBundlePool[this.getBundleHash(bundle)] = bundle;
+
+                if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
+                    statusStack[skillIndex].jewelIndex++;
+                } else {
+                    while (true) {
+                        skillIndex--;
+                        statusStack.pop();
+
+                        if (0 === statusStack.length) {
+                            break;
+                        }
+
+                        jewelIndex = statusStack[skillIndex].jewelIndex;
+
+                        if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
+                            statusStack[skillIndex].jewelIndex++;
+
+                            break;
+                        }
+                    }
+                }
+
+                continue;
+            }
+
+            if (Helper.isNotEmpty(correspondJewelPool[skillIndex + 1])) {
+                skillIndex++;
+                statusStack.push({
+                    bundle: bundle,
+                    jewelIndex: 0
                 });
-            })
 
-            prevBundlePool = nextBundlePool;
-        });
+                continue;
+            } else if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
+                statusStack[skillIndex].jewelIndex++;
 
-        return Object.values(prevBundlePool).filter((bundle) => {
-            return this.isBundleSkillCompleted(bundle);
-        });
+                continue;
+            }
+
+            while (true) {
+                skillIndex--;
+                statusStack.pop();
+
+                if (0 === statusStack.length) {
+                    break;
+                }
+
+                jewelIndex = statusStack[skillIndex].jewelIndex;
+
+                if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
+                    statusStack[skillIndex].jewelIndex++;
+
+                    break;
+                }
+            }
+
+            if (0 === statusStack.length) {
+                break;
+            }
+        }
+
+        Helper.log('Skill Equips: Traversal Count:', traversalCount);
+
+        return Object.values(lastBundlePool);
     };
+
+    // createCompletedBundlesBySkillsOld = (bundle) => {
+    //     if (0 === bundle.meta.remainingSlotCount.all) {
+    //         return [];
+    //     }
+
+    //     let prevBundlePool = {};
+    //     let nextBundlePool = {};
+
+    //     // Init Prev Bundle Pool
+    //     prevBundlePool[this.getBundleHash(bundle)] = bundle;
+
+    //     Object.keys(this.conditionSkills).forEach((skillId) => {
+    //         if (Helper.isEmpty(this.correspondJewelsBySkill[skillId])) {
+    //             return;
+    //         }
+
+    //         // Create Next Bundle Pool
+    //         nextBundlePool = {};
+
+    //         Object.keys(prevBundlePool).forEach((hash) => {
+    //             this.correspondJewelsBySkill[skillId].forEach((jewel) => {
+    //                 let bundle = Helper.deepCopy(prevBundlePool[hash]);
+
+    //                 if (Helper.isEmpty(bundle.skills[skillId])) {
+    //                     bundle.skills[skillId] = 0;
+    //                 }
+
+    //                 if (this.conditionSkills[skillId] < bundle.skills[skillId]) {
+    //                     return;
+    //                 }
+
+    //                 // Add Jewel to Bundle
+    //                 if (this.conditionSkills[skillId] > bundle.skills[skillId]) {
+    //                     bundle = this.addJewelToBundleBySpecificSkill(bundle, jewel);
+
+    //                     if (false === bundle) {
+    //                         return;
+    //                     }
+    //                 }
+
+    //                 nextBundlePool[this.getBundleHash(bundle)] = bundle;
+    //             });
+    //         })
+
+    //         prevBundlePool = nextBundlePool;
+    //     });
+
+    //     return Object.values(prevBundlePool).filter((bundle) => {
+    //         return this.isBundleSkillCompleted(bundle);
+    //     });
+    // };
 
     /**
      * Add Jewel To Bundle By Specific Skill
