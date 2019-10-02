@@ -47,13 +47,14 @@ class FittingAlgorithm {
         this.correspondJewelsBySkill = {};
         this.correspondJewelsBySize = {};
         this.firstBundle = {};
-        this.skipSkills = {};
-        this.usedEquips = {};
-        this.usedEquipTypes = {};
+        this.skippedSkillIds = {};
+        this.usedEquipIds = {};
         this.conditionExpectedValue = 0;
         this.conditionExpectedLevel = 0;
-        this.maxEquipsExpectedValue = {};
-        this.maxEquipsExpectedLevel = {};
+        this.maxEquipExpectedValue = {};
+        this.maxEquipExpectedLevel = {};
+        this.futureExpectedValue = {};
+        this.futureExpectedLevel = {};
         this.maxSlotsSkillLevel = {
             1: 0,
             2: 0,
@@ -169,7 +170,7 @@ class FittingAlgorithm {
             return skillB.level - skillA.level;
         }).forEach((skill) => {
             if (0 === skill.level) {
-                this.skipSkills[skill.id] = true;
+                this.skippedSkillIds[skill.id] = true;
 
                 return;
             }
@@ -290,7 +291,7 @@ class FittingAlgorithm {
             }
 
             // Set Used Candidate Equip
-            this.usedEquips[candidateEquip.id] = true;
+            this.usedEquipIds[candidateEquip.id] = true;
 
             // Add Candidate Equip to Bundle
             firstBundle = this.addCandidateEquipToBundle(firstBundle, candidateEquip);
@@ -355,18 +356,18 @@ class FittingAlgorithm {
             Helper.log('Candidate Equip Pool:', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
         });
 
-        // Create Bundle Pool With Set Equips
-        Helper.log('Create Bundle Pool With Set Equips');
-
-        let typeList = [];
+        // Create Current Equip Types and Convert Candidate Equip Pool
+        let currentEquipTypes = [];
 
         for (const [equipType, candidateEquips] of Object.entries(candidateEquipPool)) {
-            typeList.push(equipType);
-
+            currentEquipTypes.push(equipType);
             candidateEquipPool[equipType] = Object.values(candidateEquips);
         }
 
         candidateEquipPool = Object.values(candidateEquipPool);
+
+        // Create Bundle Pool With Set Equips
+        Helper.log('Create Bundle Pool With Set Equips');
 
         Object.values(initBundlePool).forEach((bundle) => {
             let traversalCount = 0;
@@ -394,7 +395,7 @@ class FittingAlgorithm {
                 }
 
                 // Add Candidate Equip to Bundle
-                if (Helper.isEmpty(bundle.equips[typeList[typeIndex]])
+                if (Helper.isEmpty(bundle.equips[currentEquipTypes[typeIndex]])
                     && Helper.isNotEmpty(candidateEquip.id)
                 ) {
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
@@ -551,44 +552,58 @@ class FittingAlgorithm {
             Helper.log('Candidate Equip Pool:', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
         });
 
-        // Get Maximum Equips EV & EL
-        Helper.log('Get Maximum Equips EV & EL');
+        // Create Current Equip Types and Convert Candidate Equip Pool
+        // Create Max Equip Expected Value & Expected Level
+        let currentEquipTypes = [];
 
         for (const [equipType, candidateEquips] of Object.entries(candidateEquipPool)) {
-            if (Helper.isEmpty(this.maxEquipsExpectedValue[equipType])) {
-                this.maxEquipsExpectedValue[equipType] = 0;
+            if (Helper.isEmpty(this.maxEquipExpectedValue[equipType])) {
+                this.maxEquipExpectedValue[equipType] = 0;
             }
 
-            if (Helper.isEmpty(this.maxEquipsExpectedLevel[equipType])) {
-                this.maxEquipsExpectedLevel[equipType] = 0;
+            if (Helper.isEmpty(this.maxEquipExpectedLevel[equipType])) {
+                this.maxEquipExpectedLevel[equipType] = 0;
             }
 
             Object.values(candidateEquips).forEach((candidateEquip) => {
-                if (this.maxEquipsExpectedValue[equipType] < candidateEquip.expectedValue) {
-                    this.maxEquipsExpectedValue[equipType] = candidateEquip.expectedValue;
+                if (this.maxEquipExpectedValue[equipType] < candidateEquip.expectedValue) {
+                    this.maxEquipExpectedValue[equipType] = candidateEquip.expectedValue;
                 }
 
-                if (this.maxEquipsExpectedLevel[equipType] < candidateEquip.expectedLevel) {
-                    this.maxEquipsExpectedLevel[equipType] = candidateEquip.expectedLevel;
+                if (this.maxEquipExpectedLevel[equipType] < candidateEquip.expectedLevel) {
+                    this.maxEquipExpectedLevel[equipType] = candidateEquip.expectedLevel;
                 }
             });
-        }
 
-        Helper.log('Init: Max Equips Expected Value:', this.maxEquipsExpectedValue);
-        Helper.log('Init: Max Equips Expected Level:', this.maxEquipsExpectedLevel);
-
-        // Create Bundle Pool With Skill Equips
-        Helper.log('Create Bundle Pool With Skill Equips');
-
-        let typeList = [];
-
-        for (const [equipType, candidateEquips] of Object.entries(candidateEquipPool)) {
-            typeList.push(equipType);
-
+            currentEquipTypes.push(equipType);
             candidateEquipPool[equipType] = Object.values(candidateEquips);
         }
 
         candidateEquipPool = Object.values(candidateEquipPool);
+
+        Helper.log('Init: Max Equip Expected Value:', this.maxEquipExpectedValue);
+        Helper.log('Init: Max Equip Expected Level:', this.maxEquipExpectedLevel);
+
+        // Create Future Expected Value & Expected Level
+        currentEquipTypes.forEach((equipTypeA, typeIndex) => {
+            this.futureExpectedValue[equipTypeA] = 0;
+            this.futureExpectedLevel[equipTypeA] = 0;
+
+            currentEquipTypes.forEach((equipTypeB) => {
+                if (-1 !== currentEquipTypes.slice(0, typeIndex +1).indexOf(equipTypeB)) {
+                    return;
+                }
+
+                this.futureExpectedValue[equipTypeA] += this.maxEquipExpectedValue[equipTypeB];
+                this.futureExpectedLevel[equipTypeA] += this.maxEquipExpectedLevel[equipTypeB];
+            });
+        });
+
+        Helper.log('Init: Future Expected Value:', this.futureExpectedValue);
+        Helper.log('Init: Future Expected Level:', this.futureExpectedLevel);
+
+        // Create Bundle Pool With Skill Equips
+        Helper.log('Create Bundle Pool With Skill Equips');
 
         let isEndEarly = false;
 
@@ -626,7 +641,7 @@ class FittingAlgorithm {
                 }
 
                 // Add Candidate Equip to Bundle
-                if (Helper.isEmpty(bundle.equips[typeList[typeIndex]])
+                if (Helper.isEmpty(bundle.equips[currentEquipTypes[typeIndex]])
                     && Helper.isNotEmpty(candidateEquip.id)
                 ) {
                     bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
@@ -741,7 +756,7 @@ class FittingAlgorithm {
 
                     // Check Bundle Have a Future
                     if (this.algorithmParams.flag.isExpectBundle) {
-                        if (false === this.isBundleHaveFuture(bundle, typeList.slice(0, typeIndex + 1))) {
+                        if (false === this.isBundleHaveFuture(bundle, currentEquipTypes[typeIndex])) {
                             if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                                 statusStack[typeIndex].equipIndex++;
                             } else {
@@ -1051,7 +1066,7 @@ class FittingAlgorithm {
             }
 
             // Set Used Candidate Equip Id
-            this.usedEquips[candidateEquip.id] = true;
+            this.usedEquipIds[candidateEquip.id] = true;
 
             // Set Candidate Equip
             candidateEquipPool[candidateEquip.id] = candidateEquip;
@@ -1301,8 +1316,8 @@ class FittingAlgorithm {
      */
     isCandidateEquipSkip = (candidateEquip) => {
 
-        // Check Used Equips
-        if (true === this.usedEquips[candidateEquip.id]) {
+        // Check Used Equip Ids
+        if (true === this.usedEquipIds[candidateEquip.id]) {
             return;
         }
 
@@ -1313,8 +1328,8 @@ class FittingAlgorithm {
                 return;
             }
 
-            if (Helper.isNotEmpty(this.skipSkills[skillId])
-                && true === this.skipSkills[skillId]
+            if (Helper.isNotEmpty(this.skippedSkillIds[skillId])
+                && true === this.skippedSkillIds[skillId]
             ) {
                 isSkip = true;
             }
@@ -1358,18 +1373,9 @@ class FittingAlgorithm {
      * This is magic function, which is see through the future,
      * maybe will lost some results.
      */
-    isBundleHaveFuture = (bundle, usedEquipTypes) => {
-        let futureExpectedValue = bundle.meta.expectedValue;
-        let futureExpectedLevel = bundle.meta.expectedLevel;
-
-        this.conditionEquips.forEach((equipType) => {
-            if (-1 !== usedEquipTypes.indexOf(equipType)) {
-                return;
-            }
-
-            futureExpectedValue += this.maxEquipsExpectedValue[equipType];
-            futureExpectedLevel += this.maxEquipsExpectedLevel[equipType];
-        });
+    isBundleHaveFuture = (bundle, equipType) => {
+        let futureExpectedValue = bundle.meta.expectedValue + this.futureExpectedValue[equipType];
+        let futureExpectedLevel = bundle.meta.expectedLevel + this.futureExpectedLevel[equipType];
 
         return this.conditionExpectedValue <= futureExpectedValue
             && this.conditionExpectedLevel <= futureExpectedLevel;
