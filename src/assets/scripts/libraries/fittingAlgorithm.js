@@ -1161,6 +1161,10 @@ class FittingAlgorithm {
      * Create Completed Bundles By Skills
      */
     createCompletedBundlesBySkills = (bundle) => {
+        if (this.isBundleSkillCompleted(bundle)) {
+            return [ bundle ];
+        }
+
         if (0 === bundle.meta.remainingSlotCount.all) {
             return [];
         }
@@ -1169,9 +1173,13 @@ class FittingAlgorithm {
         let currentSkillIds = [];
         let correspondJewelPool = Helper.deepCopy(this.correspondJewelsBySkill);
 
-        for (const [equipType, correspondJewels] of Object.entries(correspondJewelPool)) {
-            currentSkillIds.push(equipType);
-            correspondJewelPool[equipType] = Object.values(correspondJewels);
+        for (const [skillId, correspondJewels] of Object.entries(correspondJewelPool)) {
+            currentSkillIds.push(skillId);
+            correspondJewelPool[skillId] = Object.values(correspondJewels);
+
+            if (Helper.isEmpty(bundle.skills[skillId])) {
+                bundle.skills[skillId] = 0;
+            }
         }
 
         correspondJewelPool = Object.values(correspondJewelPool);
@@ -1202,10 +1210,6 @@ class FittingAlgorithm {
 
             if (0 === traversalCount % 100000) {
                 Helper.log('Skill Equips: Traversal Count:', traversalCount);
-            }
-
-            if (Helper.isEmpty(bundle.skills[currentSkillIds[skillIndex]])) {
-                bundle.skills[currentSkillIds[skillIndex]] = 0;
             }
 
             if (this.conditionSkills[currentSkillIds[skillIndex]] < bundle.skills[currentSkillIds[skillIndex]]) {
@@ -1262,34 +1266,34 @@ class FittingAlgorithm {
 
                     continue;
                 }
-            }
 
-            // Check Bundle Skills
-            if (this.isBundleSkillCompleted(bundle)) {
-                lastBundlePool[this.getBundleHash(bundle)] = bundle;
+                // Check Bundle Skills
+                if (this.isBundleSkillCompleted(bundle)) {
+                    lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
-                if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
-                    statusStack[skillIndex].jewelIndex++;
-                } else {
-                    while (true) {
-                        skillIndex--;
-                        statusStack.pop();
+                    if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
+                        statusStack[skillIndex].jewelIndex++;
+                    } else {
+                        while (true) {
+                            skillIndex--;
+                            statusStack.pop();
 
-                        if (0 === statusStack.length) {
-                            break;
-                        }
+                            if (0 === statusStack.length) {
+                                break;
+                            }
 
-                        jewelIndex = statusStack[skillIndex].jewelIndex;
+                            jewelIndex = statusStack[skillIndex].jewelIndex;
 
-                        if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
-                            statusStack[skillIndex].jewelIndex++;
+                            if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
+                                statusStack[skillIndex].jewelIndex++;
 
-                            break;
+                                break;
+                            }
                         }
                     }
-                }
 
-                continue;
+                    continue;
+                }
             }
 
             if (Helper.isNotEmpty(correspondJewelPool[skillIndex + 1])) {
@@ -1460,6 +1464,8 @@ class FittingAlgorithm {
 
                 continue;
             }
+
+            bundle = Helper.deepCopy(bundle);
 
             // Decrease Slot Counts
             bundle.meta.remainingSlotCount[currentSlotSize] -= jewelCount;
