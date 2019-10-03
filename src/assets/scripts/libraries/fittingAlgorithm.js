@@ -430,7 +430,7 @@ class FittingAlgorithm {
                 candidateEquip = candidateEquipPool[typeIndex][equipIndex];
                 traversalCount++;
 
-                if (0 === traversalCount % 1000) {
+                if (0 === traversalCount % 10000) {
                     Helper.log('Set Equips: Traversal Count:', traversalCount);
                 }
 
@@ -648,7 +648,7 @@ class FittingAlgorithm {
                 candidateEquip = candidateEquipPool[typeIndex][equipIndex];
                 traversalCount++;
 
-                if (0 === traversalCount % 1000) {
+                if (0 === traversalCount % 10000) {
                     Helper.log('Skill Equips: Traversal Count:', traversalCount);
                 }
 
@@ -1070,9 +1070,6 @@ class FittingAlgorithm {
             return [];
         }
 
-        // Create Bundle Pool With Correspond Jewels
-        Helper.log('Create Bundle Pool With Correspond Jewels');
-
         // Create Current Skill Ids and Convert Correspond Jewel Pool
         let currentSkillIds = [];
         let correspondJewelPool = Helper.deepCopy(this.correspondJewels);
@@ -1148,8 +1145,8 @@ class FittingAlgorithm {
             correspondJewel = correspondJewelPool[skillIndex][jewelIndex];
             traversalCount++;
 
-            if (0 === traversalCount % 100000) {
-                Helper.log('Skill Equips: Traversal Count:', traversalCount);
+            if (0 === traversalCount % 10000) {
+                Helper.log('Correspond Jewels: Traversal Count:', traversalCount);
             }
 
             if (0 === bundle.meta.remainingSlotCount.all) {
@@ -1188,7 +1185,7 @@ class FittingAlgorithm {
             findNextSkill();
         }
 
-        Helper.log('Skill Equips: Traversal Count:', traversalCount);
+        Helper.log('Correspond Jewels: Traversal Count:', traversalCount);
 
         return Object.values(lastBundlePool);
     };
