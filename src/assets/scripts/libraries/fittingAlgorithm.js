@@ -44,8 +44,7 @@ class FittingAlgorithm {
         this.conditionEquips = [];
         this.conditionSets = {};
         this.conditionSkills = {};
-        this.correspondJewelsBySkill = {};
-        this.correspondJewelsBySize = {};
+        this.correspondJewels = {};
         this.firstBundle = {};
         this.skippedSkillIds = {};
         this.usedEquipIds = {};
@@ -76,8 +75,7 @@ class FittingAlgorithm {
         Helper.log('Init: Condition Sets:', this.conditionSets);
         Helper.log('Init: Condition Equips:', this.conditionEquips);
         Helper.log('Init: First Bundle:', this.firstBundle);
-        Helper.log('Init: Correspond Jewels By Skill:', this.correspondJewelsBySkill);
-        Helper.log('Init: Correspond Jewels By Size:', this.correspondJewelsBySize);
+        Helper.log('Init: Correspond Jewels:', this.correspondJewels);
         Helper.log('Init: Condition Expected Value:', this.conditionExpectedValue);
         Helper.log('Init: Condition Expected Level:', this.conditionExpectedLevel);
         Helper.log('Init: Max Slots Skill Level:', this.maxSlotsSkillLevel);
@@ -197,9 +195,7 @@ class FittingAlgorithm {
 
                     // If Skill not match condition then skip
                     if (Helper.isEmpty(this.conditionSkills[skill.id])) {
-                        if (this.algorithmParams.flag.isRequireConsistent) {
-                            isConsistent = false;
-                        }
+                        isConsistent = false;
 
                         return;
                     }
@@ -228,16 +224,11 @@ class FittingAlgorithm {
                     })
                 };
 
-                if (Helper.isEmpty(this.correspondJewelsBySkill[skill.id])) {
-                    this.correspondJewelsBySkill[skill.id] = []
+                if (Helper.isEmpty(this.correspondJewels[skill.id])) {
+                    this.correspondJewels[skill.id] = []
                 }
 
-                if (Helper.isEmpty(this.correspondJewelsBySize[jewelInfo.size])) {
-                    this.correspondJewelsBySize[jewelInfo.size] = []
-                }
-
-                this.correspondJewelsBySkill[skill.id].push(correspondJewel);
-                this.correspondJewelsBySize[jewelInfo.size].push(correspondJewel);
+                this.correspondJewels[skill.id].push(correspondJewel);
             });
 
             // Increase Expected Value & Level
@@ -1021,10 +1012,10 @@ class FittingAlgorithm {
             }
 
             // Increase Expected Value & Level
-            if (Helper.isNotEmpty(this.correspondJewelsBySkill[skill.id])) {
+            if (Helper.isNotEmpty(this.correspondJewels[skill.id])) {
                 let minJewelSize = 5;
 
-                this.correspondJewelsBySkill[skill.id].forEach((jewel) => {
+                this.correspondJewels[skill.id].forEach((jewel) => {
                     if (minJewelSize > jewel.size) {
                         minJewelSize = jewel.size;
                     }
@@ -1080,7 +1071,7 @@ class FittingAlgorithm {
 
         // Create Current Skill Ids and Convert Correspond Jewel Pool
         let currentSkillIds = [];
-        let correspondJewelPool = Helper.deepCopy(this.correspondJewelsBySkill);
+        let correspondJewelPool = Helper.deepCopy(this.correspondJewels);
 
         for (const [skillId, correspondJewels] of Object.entries(correspondJewelPool)) {
             currentSkillIds.push(skillId);
@@ -1220,7 +1211,7 @@ class FittingAlgorithm {
         prevBundlePool[this.getBundleHash(bundle)] = bundle;
 
         Object.keys(this.conditionSkills).forEach((skillId) => {
-            if (Helper.isEmpty(this.correspondJewelsBySkill[skillId])) {
+            if (Helper.isEmpty(this.correspondJewels[skillId])) {
                 return;
             }
 
@@ -1228,15 +1219,11 @@ class FittingAlgorithm {
             nextBundlePool = {};
 
             Object.keys(prevBundlePool).forEach((hash) => {
-                this.correspondJewelsBySkill[skillId].forEach((jewel) => {
+                this.correspondJewels[skillId].forEach((jewel) => {
                     let bundle = Helper.deepCopy(prevBundlePool[hash]);
 
                     if (Helper.isEmpty(bundle.skills[skillId])) {
                         bundle.skills[skillId] = 0;
-                    }
-
-                    if (this.conditionSkills[skillId] < bundle.skills[skillId]) {
-                        return;
                     }
 
                     // Add Jewel to Bundle

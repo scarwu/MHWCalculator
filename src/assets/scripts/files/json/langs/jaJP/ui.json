@@ -128,8 +128,6 @@
     "sort":                 null,
     "strategy":             null,
     "isEndEarly":           null,
-    "isExpectBundle":       null,
-    "isDeepSearch":         null,
     "isRequireConsistent":  null,
     "armorFactor":          null,
     "jewelFactor":          null,

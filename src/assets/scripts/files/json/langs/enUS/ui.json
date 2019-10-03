@@ -128,8 +128,6 @@
     "sort":                 "Sorting",
     "strategy":             "Strategy",
     "isEndEarly":           "Is End Early",
-    "isExpectBundle":       "Is Expecte Bundle",
-    "isDeepSearch":         "Is Deep Search",
     "isRequireConsistent":  "Is Require Consistent",
     "armorFactor":          "Armor Factor",
     "jewelFactor":          "Jewel Factor",

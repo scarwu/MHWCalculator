@@ -92,8 +92,6 @@ export default {
             order: 'desc', // asc | desc
             flag: {
                 isEndEarly: true,
-                isExpectBundle: true,
-                isDeepSearch: false,
                 isRequireConsistent: false
             },
             usingFactor: {

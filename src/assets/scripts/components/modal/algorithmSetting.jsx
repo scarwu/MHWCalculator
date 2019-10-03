@@ -174,7 +174,7 @@ export default function AlgorithmSetting(props) {
                                 <span>{_('strategy')}</span>
                             </div>
                             <div className="col-12 mhwc-content">
-                                {['isEndEarly', 'isExpectBundle', 'isDeepSearch', 'isRequireConsistent'].map((target) => {
+                                {['isEndEarly', 'isRequireConsistent'].map((target) => {
                                     return (
                                         <div key={target} className="col-6 mhwc-value">
                                             <span>{_(target)}</span>
