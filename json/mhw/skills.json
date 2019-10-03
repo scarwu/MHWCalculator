@@ -2748,6 +2748,16 @@
                 },
                 "reaction": null,
                 "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "毒素累積值變為1.3倍，毒素累積值+10",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4377,6 +4387,16 @@
                 },
                 "reaction": null,
                 "isHidden": false
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "貫通彈、龍之箭的威力UP",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4493,6 +4513,16 @@
                 },
                 "reaction": null,
                 "isHidden": false
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "通常彈、通常箭的威力UP",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
             }
         ]
     },
@@ -4592,6 +4622,16 @@
                 "level": 3,
                 "description": {
                     "zhTW": "麻痺累積值變為1.2倍，麻痺累積值+10",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "麻痺累積值變為1.3倍，麻痺累積值+10",
                     "jaJP": null,
                     "enUS": null
                 },
@@ -5120,6 +5160,16 @@
         "list": [
             {
                 "level": 1,
+                "description": {
+                    "zhTW": "散彈、剛射的威力UP",
+                    "jaJP": null,
+                    "enUS": "Increases the Attack Power of spread ammo and power shot arrows"
+                },
+                "reaction": null,
+                "isHidden": false
+            },
+            {
+                "level": 2,
                 "description": {
                     "zhTW": "散彈、剛射的威力UP",
                     "jaJP": null,
@@ -5816,6 +5866,16 @@
             },
             {
                 "level": 3,
+                "description": {
+                    "zhTW": "睡眠累積值變為1.2倍，睡眠累積值+10",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            },
+            {
+                "level": 4,
                 "description": {
                     "zhTW": "睡眠累積值變為1.2倍，睡眠累積值+10",
                     "jaJP": null,
@@ -7040,6 +7100,16 @@
                     "zhTW": "爆破累積值變為1.2倍，爆破累積值+10",
                     "jaJP": null,
                     "enUS": "last buildup +20% Bonus: +10"
+                },
+                "reaction": null,
+                "isHidden": false
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "爆破累積值變為1.3倍，爆破累積值+10",
+                    "jaJP": null,
+                    "enUS": "last buildup +30% Bonus: +10"
                 },
                 "reaction": null,
                 "isHidden": false
