@@ -38,6 +38,38 @@ $untrack = [
 ];
 
 // Armor
+for ($rare = 5; $rare <= 8; $rare++) {
+    $bundles = loadJson("../../json/mhw/armors/rare{$rare}");
+
+    foreach ($bundles as $bundleIndex => $bundle) {
+        if (false !== isset($bundle['common']['set'])) {
+            if (false === isset($setNameMapping[$bundle['common']['set']['id']])) {
+                $untrack['sets'][$bundle['common']['set']['id']] = true;
+            } else {
+                $bundle['common']['set']['id'] = $setNameMapping[$bundle['common']['set']['id']];
+            }
+        }
+
+        foreach ($bundle['list'] as $armorIndex => $armor) {
+            if (null !== $armor['skills']) {
+                foreach ($armor['skills'] as $skillIndex => $skill) {
+                    if (false === isset($skillNameMapping[$skill['id']])) {
+                        $untrack['skills'][$skill['id']] = true;
+                    } else {
+                        $armor['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+                    }
+                }
+            }
+
+            $bundle['list'][$armorIndex] = $armor;
+        }
+
+        $bundles[$bundleIndex] = $bundle;
+    }
+
+    saveJson("../../json/mhw/armors/rare{$rare}", $bundles);
+}
+
 for ($rare = 9; $rare <= 12; $rare++) {
     $bundles = loadJson("../../json/mhwib/armors/rare{$rare}");
 
@@ -51,11 +83,13 @@ for ($rare = 9; $rare <= 12; $rare++) {
         }
 
         foreach ($bundle['list'] as $armorIndex => $armor) {
-            foreach ($armor['skills'] as $skillIndex => $skill) {
-                if (false === isset($skillNameMapping[$skill['id']])) {
-                    $untrack['skills'][$skill['id']] = true;
-                } else {
-                    $armor['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+            if (null !== $armor['skills']) {
+                foreach ($armor['skills'] as $skillIndex => $skill) {
+                    if (false === isset($skillNameMapping[$skill['id']])) {
+                        $untrack['skills'][$skill['id']] = true;
+                    } else {
+                        $armor['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+                    }
                 }
             }
 
@@ -69,6 +103,22 @@ for ($rare = 9; $rare <= 12; $rare++) {
 }
 
 // Jewel
+$jewels = loadJson("../../json/mhw/jewels");
+
+foreach ($jewels as $jewelIndex => $jewel) {
+    foreach ($jewel['skills'] as $skillIndex => $skill) {
+        if (false === isset($skillNameMapping[$skill['id']])) {
+            $untrack['skills'][$skill['id']] = true;
+        } else {
+            $jewel['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+        }
+    }
+
+    $jewels[$jewelIndex] = $jewel;
+}
+
+saveJson("../../json/mhw/jewels", $jewels);
+
 $jewels = loadJson("../../json/mhwib/jewels");
 
 foreach ($jewels as $jewelIndex => $jewel) {
@@ -86,6 +136,22 @@ foreach ($jewels as $jewelIndex => $jewel) {
 saveJson("../../json/mhwib/jewels", $jewels);
 
 // Charm
+$charms = loadJson("../../json/mhw/charms");
+
+foreach ($charms as $charmIndex => $charm) {
+    foreach ($charm['skills'] as $skillIndex => $skill) {
+        if (false === isset($skillNameMapping[$skill['id']])) {
+            $untrack['skills'][$skill['id']] = true;
+        } else {
+            $charm['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+        }
+    }
+
+    $charms[$charmIndex] = $charm;
+}
+
+saveJson("../../json/mhw/charms", $charms);
+
 $charms = loadJson("../../json/mhwib/charms");
 
 foreach ($charms as $charmIndex => $charm) {
@@ -103,6 +169,22 @@ foreach ($charms as $charmIndex => $charm) {
 saveJson("../../json/mhwib/charms", $charms);
 
 // Set
+$sets = loadJson("../../json/mhw/sets");
+
+foreach ($sets as $setIndex => $set) {
+    foreach ($set['skills'] as $skillIndex => $skill) {
+        if (false === isset($skillNameMapping[$skill['id']])) {
+            $untrack['skills'][$skill['id']] = true;
+        } else {
+            $set['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+        }
+    }
+
+    $sets[$setIndex] = $set;
+}
+
+saveJson("../../json/mhw/sets", $sets);
+
 $sets = loadJson("../../json/mhwib/sets");
 
 foreach ($sets as $setIndex => $set) {
