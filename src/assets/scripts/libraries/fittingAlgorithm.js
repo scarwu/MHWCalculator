@@ -382,91 +382,25 @@ class FittingAlgorithm {
                 equipIndex: 0
             });
 
-            Helper.log('Set Equips: Root Bundle:', bundle);
-
-            while (true) {
-                bundle = statusStack[typeIndex].bundle;
-                equipIndex = statusStack[typeIndex].equipIndex;
-                candidateEquip = candidateEquipPool[typeIndex][equipIndex];
-                traversalCount++;
-
-                if (0 === traversalCount % 1000) {
-                    Helper.log('Set Equips: Traversal Count:', traversalCount);
-                }
-
-                // Add Candidate Equip to Bundle
-                if (Helper.isEmpty(bundle.equips[currentEquipTypes[typeIndex]])
-                    && Helper.isNotEmpty(candidateEquip.id)
+            const findNext = (target) => {
+                if ('type' === target
+                    && Helper.isNotEmpty(candidateEquipPool[typeIndex + 1])
                 ) {
-                    bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
-
-                    // If Add Candidate Equip Failed
-                    if (false === bundle) {
-                        if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                            statusStack[typeIndex].equipIndex++;
-                        } else {
-                            while (true) {
-                                typeIndex--;
-                                statusStack.pop();
-
-                                if (0 === statusStack.length) {
-                                    break;
-                                }
-
-                                equipIndex = statusStack[typeIndex].equipIndex;
-
-                                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                                    statusStack[typeIndex].equipIndex++;
-
-                                    break;
-                                }
-                            }
-                        }
-
-                        continue;
-                    }
-
-                    // Check Bundle Sets
-                    if (this.isBundleSetCompleted(bundle)) {
-                        lastBundlePool[this.getBundleHash(bundle)] = bundle;
-
-                        if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                            statusStack[typeIndex].equipIndex++;
-                        } else {
-                            while (true) {
-                                typeIndex--;
-                                statusStack.pop();
-
-                                if (0 === statusStack.length) {
-                                    break;
-                                }
-
-                                equipIndex = statusStack[typeIndex].equipIndex;
-
-                                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                                    statusStack[typeIndex].equipIndex++;
-
-                                    break;
-                                }
-                            }
-                        }
-
-                        continue;
-                    }
-                }
-
-                if (Helper.isNotEmpty(candidateEquipPool[typeIndex + 1])) {
                     typeIndex++;
                     statusStack.push({
                         bundle: bundle,
                         equipIndex: 0
                     });
 
-                    continue;
-                } else if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                    return;
+                }
+
+                if (('type' === target || 'equip' === target)
+                    && Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])
+                ) {
                     statusStack[typeIndex].equipIndex++;
 
-                    continue;
+                    return;
                 }
 
                 while (true) {
@@ -485,10 +419,48 @@ class FittingAlgorithm {
                         break;
                     }
                 }
+            };
 
+            Helper.log('Set Equips: Root Bundle:', bundle);
+
+            while (true) {
                 if (0 === statusStack.length) {
                     break;
                 }
+
+                bundle = statusStack[typeIndex].bundle;
+                equipIndex = statusStack[typeIndex].equipIndex;
+                candidateEquip = candidateEquipPool[typeIndex][equipIndex];
+                traversalCount++;
+
+                if (0 === traversalCount % 1000) {
+                    Helper.log('Set Equips: Traversal Count:', traversalCount);
+                }
+
+                // Add Candidate Equip to Bundle
+                if (Helper.isEmpty(bundle.equips[currentEquipTypes[typeIndex]])
+                    && Helper.isNotEmpty(candidateEquip.id)
+                ) {
+                    bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
+
+                    // If Add Candidate Equip Failed
+                    if (false === bundle) {
+                        findNext('equip');
+
+                        continue;
+                    }
+
+                    // Check Bundle Sets
+                    if (this.isBundleSetCompleted(bundle)) {
+                        lastBundlePool[this.getBundleHash(bundle)] = bundle;
+
+                        findNext('equip');
+
+                        continue;
+                    }
+                }
+
+                findNext('type');
             }
 
             Helper.log('Set Equips: Traversal Count:', traversalCount);
@@ -624,10 +596,53 @@ class FittingAlgorithm {
                 equipIndex: 0
             });
 
+            const findNext = (target) => {
+                if ('type' === target
+                    && Helper.isNotEmpty(candidateEquipPool[typeIndex + 1])
+                ) {
+                    typeIndex++;
+                    statusStack.push({
+                        bundle: bundle,
+                        equipIndex: 0
+                    });
+
+                    return;
+                }
+
+                if (('type' === target || 'equip' === target)
+                    && Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])
+                ) {
+                    statusStack[typeIndex].equipIndex++;
+
+                    return;
+                }
+
+                while (true) {
+                    typeIndex--;
+                    statusStack.pop();
+
+                    if (0 === statusStack.length) {
+                        break;
+                    }
+
+                    equipIndex = statusStack[typeIndex].equipIndex;
+
+                    if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                        statusStack[typeIndex].equipIndex++;
+
+                        break;
+                    }
+                }
+            };
+
             Helper.log('Skill Equip: Root Bundle:', bundle);
 
             while (true) {
                 if (isEndEarly) {
+                    break;
+                }
+
+                if (0 === statusStack.length) {
                     break;
                 }
 
@@ -648,26 +663,7 @@ class FittingAlgorithm {
 
                     // If Add Candidate Equip Failed
                     if (false === bundle) {
-                        if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                            statusStack[typeIndex].equipIndex++;
-                        } else {
-                            while (true) {
-                                typeIndex--;
-                                statusStack.pop();
-
-                                if (0 === statusStack.length) {
-                                    break;
-                                }
-
-                                equipIndex = statusStack[typeIndex].equipIndex;
-
-                                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                                    statusStack[typeIndex].equipIndex++;
-
-                                    break;
-                                }
-                            }
-                        }
+                        findNext('equip');
 
                         continue;
                     }
@@ -685,26 +681,7 @@ class FittingAlgorithm {
                             }
                         }
 
-                        if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                            statusStack[typeIndex].equipIndex++;
-                        } else {
-                            while (true) {
-                                typeIndex--;
-                                statusStack.pop();
-
-                                if (0 === statusStack.length) {
-                                    break;
-                                }
-
-                                equipIndex = statusStack[typeIndex].equipIndex;
-
-                                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                                    statusStack[typeIndex].equipIndex++;
-
-                                    break;
-                                }
-                            }
-                        }
+                        findNext('equip');
 
                         continue;
                     }
@@ -730,26 +707,7 @@ class FittingAlgorithm {
                             }
                         });
 
-                        if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                            statusStack[typeIndex].equipIndex++;
-                        } else {
-                            while (true) {
-                                typeIndex--;
-                                statusStack.pop();
-
-                                if (0 === statusStack.length) {
-                                    break;
-                                }
-
-                                equipIndex = statusStack[typeIndex].equipIndex;
-
-                                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                                    statusStack[typeIndex].equipIndex++;
-
-                                    break;
-                                }
-                            }
-                        }
+                        findNext('equip');
 
                         continue;
                     }
@@ -757,66 +715,14 @@ class FittingAlgorithm {
                     // Check Bundle Have a Future
                     if (this.algorithmParams.flag.isExpectBundle) {
                         if (false === this.isBundleHaveFuture(bundle, currentEquipTypes[typeIndex])) {
-                            if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                                statusStack[typeIndex].equipIndex++;
-                            } else {
-                                while (true) {
-                                    typeIndex--;
-                                    statusStack.pop();
-
-                                    if (0 === statusStack.length) {
-                                        break;
-                                    }
-
-                                    equipIndex = statusStack[typeIndex].equipIndex;
-
-                                    if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                                        statusStack[typeIndex].equipIndex++;
-
-                                        break;
-                                    }
-                                }
-                            }
+                            findNext('equip');
 
                             continue;
                         }
                     }
                 }
 
-                if (Helper.isNotEmpty(candidateEquipPool[typeIndex + 1])) {
-                    typeIndex++;
-                    statusStack.push({
-                        bundle: bundle,
-                        equipIndex: 0
-                    });
-
-                    continue;
-                } else if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                    statusStack[typeIndex].equipIndex++;
-
-                    continue;
-                }
-
-                while (true) {
-                    typeIndex--;
-                    statusStack.pop();
-
-                    if (0 === statusStack.length) {
-                        break;
-                    }
-
-                    equipIndex = statusStack[typeIndex].equipIndex;
-
-                    if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                        statusStack[typeIndex].equipIndex++;
-
-                        break;
-                    }
-                }
-
-                if (0 === statusStack.length) {
-                    break;
-                }
+                findNext('type');
             }
 
             Helper.log('Skill Equips: Traversal Count:', traversalCount);
@@ -1169,6 +1075,9 @@ class FittingAlgorithm {
             return [];
         }
 
+        // Create Bundle Pool With Correspond Jewels
+        Helper.log('Create Bundle Pool With Correspond Jewels');
+
         // Create Current Skill Ids and Convert Correspond Jewel Pool
         let currentSkillIds = [];
         let correspondJewelPool = Helper.deepCopy(this.correspondJewelsBySkill);
@@ -1184,9 +1093,6 @@ class FittingAlgorithm {
 
         correspondJewelPool = Object.values(correspondJewelPool);
 
-        // Create Bundle Pool With Correspond Jewels
-        Helper.log('Create Bundle Pool With Correspond Jewels');
-
         let lastBundlePool = {};
         let traversalCount = 0;
         let skillIndex = 0;
@@ -1200,114 +1106,25 @@ class FittingAlgorithm {
             jewelIndex: 0
         });
 
-        Helper.log('Skill Equips: Root Bundle:', bundle);
-
-        while (true) {
-            bundle = statusStack[skillIndex].bundle;
-            jewelIndex = statusStack[skillIndex].jewelIndex;
-            correspondJewel = correspondJewelPool[skillIndex][jewelIndex];
-            traversalCount++;
-
-            if (0 === traversalCount % 100000) {
-                Helper.log('Skill Equips: Traversal Count:', traversalCount);
-            }
-
-            if (this.conditionSkills[currentSkillIds[skillIndex]] < bundle.skills[currentSkillIds[skillIndex]]) {
-                if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
-                    statusStack[skillIndex].jewelIndex++;
-                } else {
-                    while (true) {
-                        skillIndex--;
-                        statusStack.pop();
-
-                        if (0 === statusStack.length) {
-                            break;
-                        }
-
-                        jewelIndex = statusStack[skillIndex].jewelIndex;
-
-                        if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
-                            statusStack[skillIndex].jewelIndex++;
-
-                            break;
-                        }
-                    }
-                }
-
-                continue;
-            }
-
-            // Add Jewels To Bundle
-            if (this.conditionSkills[currentSkillIds[skillIndex]] > bundle.skills[currentSkillIds[skillIndex]]) {
-                bundle = this.addJewelToBundleBySpecificSkill(bundle, correspondJewel);
-
-                // If Add Jewel Failed
-                if (false === bundle) {
-                    if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
-                        statusStack[skillIndex].jewelIndex++;
-                    } else {
-                        while (true) {
-                            skillIndex--;
-                            statusStack.pop();
-
-                            if (0 === statusStack.length) {
-                                break;
-                            }
-
-                            jewelIndex = statusStack[skillIndex].jewelIndex;
-
-                            if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
-                                statusStack[skillIndex].jewelIndex++;
-
-                                break;
-                            }
-                        }
-                    }
-
-                    continue;
-                }
-
-                // Check Bundle Skills
-                if (this.isBundleSkillCompleted(bundle)) {
-                    lastBundlePool[this.getBundleHash(bundle)] = bundle;
-
-                    if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
-                        statusStack[skillIndex].jewelIndex++;
-                    } else {
-                        while (true) {
-                            skillIndex--;
-                            statusStack.pop();
-
-                            if (0 === statusStack.length) {
-                                break;
-                            }
-
-                            jewelIndex = statusStack[skillIndex].jewelIndex;
-
-                            if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
-                                statusStack[skillIndex].jewelIndex++;
-
-                                break;
-                            }
-                        }
-                    }
-
-                    continue;
-                }
-            }
-
-            if (Helper.isNotEmpty(correspondJewelPool[skillIndex + 1])) {
+        const findNext = (target) => {
+            if ('skill' === target
+                && Helper.isNotEmpty(correspondJewelPool[skillIndex + 1])
+            ) {
                 skillIndex++;
                 statusStack.push({
                     bundle: bundle,
                     jewelIndex: 0
                 });
 
-                continue;
-            } else if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
+                return;
+            }
+
+            if (('skill' === target || 'jewel' === target)
+                && Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])
+            ) {
                 statusStack[skillIndex].jewelIndex++;
 
-                continue;
+                return;
             }
 
             while (true) {
@@ -1326,10 +1143,64 @@ class FittingAlgorithm {
                     break;
                 }
             }
+        };
 
+        Helper.log('Correspond Jewels: Root Bundle:', bundle);
+
+        while (true) {
             if (0 === statusStack.length) {
                 break;
             }
+
+            bundle = statusStack[skillIndex].bundle;
+            jewelIndex = statusStack[skillIndex].jewelIndex;
+            correspondJewel = correspondJewelPool[skillIndex][jewelIndex];
+            traversalCount++;
+
+            if (0 === traversalCount % 100000) {
+                Helper.log('Skill Equips: Traversal Count:', traversalCount);
+            }
+
+            if (0 === bundle.meta.remainingSlotCount.all) {
+                findNext('jewel');
+
+                continue;
+            }
+
+            // if (0 === bundle.meta.remainingSlotCount[correspondJewel.size]) {
+            //     findNext('jewel');
+
+            //     continue;
+            // }
+
+            if (this.conditionSkills[currentSkillIds[skillIndex]] < bundle.skills[currentSkillIds[skillIndex]]) {
+                findNext('jewel');
+
+                continue;
+            }
+
+            // Add Jewels To Bundle
+            if (this.conditionSkills[currentSkillIds[skillIndex]] > bundle.skills[currentSkillIds[skillIndex]]) {
+                bundle = this.addJewelToBundleBySpecificSkill(bundle, correspondJewel);
+
+                // If Add Jewel Failed
+                if (false === bundle) {
+                    findNext('jewel');
+
+                    continue;
+                }
+
+                // Check Bundle Skills
+                if (this.isBundleSkillCompleted(bundle)) {
+                    lastBundlePool[this.getBundleHash(bundle)] = bundle;
+
+                    findNext('jewel');
+
+                    continue;
+                }
+            }
+
+            findNext('skill');
         }
 
         Helper.log('Skill Equips: Traversal Count:', traversalCount);
@@ -1337,57 +1208,57 @@ class FittingAlgorithm {
         return Object.values(lastBundlePool);
     };
 
-    // createCompletedBundlesBySkillsOld = (bundle) => {
-    //     if (0 === bundle.meta.remainingSlotCount.all) {
-    //         return [];
-    //     }
+    createCompletedBundlesBySkillsOld = (bundle) => {
+        if (0 === bundle.meta.remainingSlotCount.all) {
+            return [];
+        }
 
-    //     let prevBundlePool = {};
-    //     let nextBundlePool = {};
+        let prevBundlePool = {};
+        let nextBundlePool = {};
 
-    //     // Init Prev Bundle Pool
-    //     prevBundlePool[this.getBundleHash(bundle)] = bundle;
+        // Init Prev Bundle Pool
+        prevBundlePool[this.getBundleHash(bundle)] = bundle;
 
-    //     Object.keys(this.conditionSkills).forEach((skillId) => {
-    //         if (Helper.isEmpty(this.correspondJewelsBySkill[skillId])) {
-    //             return;
-    //         }
+        Object.keys(this.conditionSkills).forEach((skillId) => {
+            if (Helper.isEmpty(this.correspondJewelsBySkill[skillId])) {
+                return;
+            }
 
-    //         // Create Next Bundle Pool
-    //         nextBundlePool = {};
+            // Create Next Bundle Pool
+            nextBundlePool = {};
 
-    //         Object.keys(prevBundlePool).forEach((hash) => {
-    //             this.correspondJewelsBySkill[skillId].forEach((jewel) => {
-    //                 let bundle = Helper.deepCopy(prevBundlePool[hash]);
+            Object.keys(prevBundlePool).forEach((hash) => {
+                this.correspondJewelsBySkill[skillId].forEach((jewel) => {
+                    let bundle = Helper.deepCopy(prevBundlePool[hash]);
 
-    //                 if (Helper.isEmpty(bundle.skills[skillId])) {
-    //                     bundle.skills[skillId] = 0;
-    //                 }
+                    if (Helper.isEmpty(bundle.skills[skillId])) {
+                        bundle.skills[skillId] = 0;
+                    }
 
-    //                 if (this.conditionSkills[skillId] < bundle.skills[skillId]) {
-    //                     return;
-    //                 }
+                    if (this.conditionSkills[skillId] < bundle.skills[skillId]) {
+                        return;
+                    }
 
-    //                 // Add Jewel to Bundle
-    //                 if (this.conditionSkills[skillId] > bundle.skills[skillId]) {
-    //                     bundle = this.addJewelToBundleBySpecificSkill(bundle, jewel);
+                    // Add Jewel to Bundle
+                    if (this.conditionSkills[skillId] > bundle.skills[skillId]) {
+                        bundle = this.addJewelToBundleBySpecificSkill(bundle, jewel);
 
-    //                     if (false === bundle) {
-    //                         return;
-    //                     }
-    //                 }
+                        if (false === bundle) {
+                            return;
+                        }
+                    }
 
-    //                 nextBundlePool[this.getBundleHash(bundle)] = bundle;
-    //             });
-    //         })
+                    nextBundlePool[this.getBundleHash(bundle)] = bundle;
+                });
+            })
 
-    //         prevBundlePool = nextBundlePool;
-    //     });
+            prevBundlePool = nextBundlePool;
+        });
 
-    //     return Object.values(prevBundlePool).filter((bundle) => {
-    //         return this.isBundleSkillCompleted(bundle);
-    //     });
-    // };
+        return Object.values(prevBundlePool).filter((bundle) => {
+            return this.isBundleSkillCompleted(bundle);
+        });
+    };
 
     /**
      * Add Jewel To Bundle By Specific Skill
