@@ -1,443 +1,30 @@
 [
     {
-        "id": "KO護石 III",
+        "id": "威嚇護石 I",
         "name": {
-            "zhTW": "KO護石 III",
-            "jaJP": null,
-            "enUS": "KO Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "KO術",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "體術護石 III",
-        "name": {
-            "zhTW": "體術護石 III",
-            "jaJP": null,
-            "enUS": "Fitness Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "體術",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "體力護石 III",
-        "name": {
-            "zhTW": "體力護石 III",
-            "jaJP": null,
-            "enUS": "Health Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "體力增強",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "小胃口護石",
-        "name": {
-            "zhTW": "小胃口護石",
-            "jaJP": null,
-            "enUS": "Light Eater's Charm"
+            "zhTW": "威嚇護石 I",
+            "jaJP": "威嚇の護石 I",
+            "enUS": "Intimidator Charm I"
         },
         "rare": 3,
         "skills": [
             {
-                "id": "滿足感",
+                "id": "威嚇",
                 "level": 1
             }
         ]
     },
     {
-        "id": "火焰護石 III",
+        "id": "威嚇護石 II",
         "name": {
-            "zhTW": "火焰護石 III",
-            "jaJP": null,
-            "enUS": "Blaze Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "火屬性攻擊強化",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "心靜自然涼護石",
-        "name": {
-            "zhTW": "心靜自然涼護石",
-            "jaJP": null,
-            "enUS": "Clearmind Charm"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "熱傷害無效",
-                "level": 1
-            },
-            {
-                "id": "適應瘴氣環境",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "不屈護石",
-        "name": {
-            "zhTW": "不屈護石",
-            "jaJP": null,
-            "enUS": "Fortification Charm"
-        },
-        "rare": 3,
-        "skills": [
-            {
-                "id": "不屈",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "友愛護石 III",
-        "name": {
-            "zhTW": "友愛護石 III",
-            "jaJP": null,
-            "enUS": "Friendship Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "廣域化",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "加護護石 III",
-        "name": {
-            "zhTW": "加護護石 III",
-            "jaJP": null,
-            "enUS": "Blessing Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "精靈加護",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "全開護石 II",
-        "name": {
-            "zhTW": "全開護石 II",
-            "jaJP": null,
-            "enUS": "Power Charm II"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "力量解放",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "id": "早氣護石 II",
-        "name": {
-            "zhTW": "早氣護石 II",
-            "jaJP": null,
-            "enUS": "Surge Charm II"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "耐力急速回復",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "id": "早復護石 III",
-        "name": {
-            "zhTW": "早復護石 III",
-            "jaJP": null,
-            "enUS": "Speed Heal Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "回復速度",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "匠之護石 III",
-        "name": {
-            "zhTW": "匠之護石 III",
-            "jaJP": null,
-            "enUS": "Handicraft Charm III"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "匠",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "地學護石 III",
-        "name": {
-            "zhTW": "地學護石 III",
-            "jaJP": null,
-            "enUS": "Geology Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "地質學",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "冰結護石 III",
-        "name": {
-            "zhTW": "冰結護石 III",
-            "jaJP": null,
-            "enUS": "Frost Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "冰屬性攻擊強化",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耳塞護石 III",
-        "name": {
-            "zhTW": "耳塞護石 III",
-            "jaJP": null,
-            "enUS": "Earplugs Charm III"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "耳塞",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "攻擊護石 III",
-        "name": {
-            "zhTW": "攻擊護石 III",
-            "jaJP": null,
-            "enUS": "Attack Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "攻擊",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "快吃護石 III",
-        "name": {
-            "zhTW": "快吃護石 III",
-            "jaJP": null,
-            "enUS": "Glutton's Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "快吃",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "投石護石 III",
-        "name": {
-            "zhTW": "投石護石 III",
-            "jaJP": null,
-            "enUS": "Slinger Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "投射器裝填數UP",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "吹笛護石",
-        "name": {
-            "zhTW": "吹笛護石",
-            "jaJP": null,
-            "enUS": "Performer's Charm"
-        },
-        "rare": 3,
-        "skills": [
-            {
-                "id": "吹笛名人",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "防禦護石 III",
-        "name": {
-            "zhTW": "防禦護石 III",
-            "jaJP": null,
-            "enUS": "Defense Charm III"
-        },
-        "rare": 6,
-        "skills": [
-            {
-                "id": "防禦",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "防風護石 III",
-        "name": {
-            "zhTW": "防風護石 III",
-            "jaJP": null,
-            "enUS": "Windproof Charm III"
-        },
-        "rare": 6,
-        "skills": [
-            {
-                "id": "風壓耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "昆蟲學護石 III",
-        "name": {
-            "zhTW": "昆蟲學護石 III",
-            "jaJP": null,
-            "enUS": "Insect Charm III"
-        },
-        "rare": 6,
-        "skills": [
-            {
-                "id": "昆蟲標本達人",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "昂揚護石 II",
-        "name": {
-            "zhTW": "昂揚護石 II",
-            "jaJP": null,
-            "enUS": "Invigorate Charm II"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "強化持續",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "id": "底力護石 II",
-        "name": {
-            "zhTW": "底力護石 II",
-            "jaJP": null,
-            "enUS": "Grit Charm II"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "火場怪力",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "id": "治癒護石 III",
-        "name": {
-            "zhTW": "治癒護石 III",
-            "jaJP": null,
-            "enUS": "Recovery Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "體力回復量UP",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "泥浴護石",
-        "name": {
-            "zhTW": "泥浴護石",
-            "jaJP": null,
-            "enUS": "Mud Puppy Charm"
+            "zhTW": "威嚇護石 II",
+            "jaJP": "威嚇の護石 II",
+            "enUS": "Intimidator Charm II"
         },
         "rare": 5,
         "skills": [
             {
-                "id": "泥耐性",
-                "level": 1
-            },
-            {
-                "id": "飛身躍入",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "沼渡護石 III",
-        "name": {
-            "zhTW": "沼渡護石 III",
-            "jaJP": null,
-            "enUS": "Mirewalker Charm III"
-        },
-        "rare": 6,
-        "skills": [
-            {
-                "id": "適應水場．深雪",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "拔刀護石 II",
-        "name": {
-            "zhTW": "拔刀護石 II",
-            "jaJP": null,
-            "enUS": "Draw Charm II"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "拔刀術【技】",
+                "id": "威嚇",
                 "level": 2
             }
         ]
@@ -446,7 +33,7 @@
         "id": "威嚇護石 III",
         "name": {
             "zhTW": "威嚇護石 III",
-            "jaJP": null,
+            "jaJP": "威嚇の護石 III",
             "enUS": "Intimidator Charm III"
         },
         "rare": 6,
@@ -458,10 +45,427 @@
         ]
     },
     {
+        "id": "順風護石",
+        "name": {
+            "zhTW": "順風護石",
+            "jaJP": "追い風の護石",
+            "enUS": "Fair Wind Charm"
+        },
+        "rare": 3,
+        "skills": {
+            "0": {
+                "id": "攻撃",
+                "level": 1
+            },
+            "18": {
+                "id": "精霊の加護",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "迴避護石 I",
+        "name": {
+            "zhTW": "迴避護石 I",
+            "jaJP": "回避の護石 I",
+            "enUS": "Evasion Charm I"
+        },
+        "rare": 4,
+        "skills": [
+            {
+                "id": "回避性能",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "迴避護石 II",
+        "name": {
+            "zhTW": "迴避護石 II",
+            "jaJP": "回避の護石 II",
+            "enUS": "Evasion Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "回避性能",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "迴避護石 III",
+        "name": {
+            "zhTW": "迴避護石 III",
+            "jaJP": "回避の護石 III",
+            "enUS": "Evasion Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "回避性能",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "火焰護石 I",
+        "name": {
+            "zhTW": "火焰護石 I",
+            "jaJP": "火炎の護石 I",
+            "enUS": "Blaze Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "火属性攻撃強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "火焰護石 II",
+        "name": {
+            "zhTW": "火焰護石 II",
+            "jaJP": "火炎の護石 II",
+            "enUS": "Blaze Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "火属性攻撃強化",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "火焰護石 III",
+        "name": {
+            "zhTW": "火焰護石 III",
+            "jaJP": "火炎の護石 III",
+            "enUS": "Blaze Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "火属性攻撃強化",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "覺醒護石 I",
+        "name": {
+            "zhTW": "覺醒護石 I",
+            "jaJP": "覚醒の護石 I",
+            "enUS": "Awakening Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "属性解放\/装填拡張",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "覺醒護石 II",
+        "name": {
+            "zhTW": "覺醒護石 II",
+            "jaJP": "覚醒の護石 II",
+            "enUS": "Awakening Charm II"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "属性解放\/装填拡張",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "加護護石 I",
+        "name": {
+            "zhTW": "加護護石 I",
+            "jaJP": "加護の護石 I",
+            "enUS": "Blessing Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "精霊の加護",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "加護護石 II",
+        "name": {
+            "zhTW": "加護護石 II",
+            "jaJP": "加護の護石 II",
+            "enUS": "Blessing Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "精霊の加護",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "加護護石 III",
+        "name": {
+            "zhTW": "加護護石 III",
+            "jaJP": "加護の護石 III",
+            "enUS": "Blessing Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "精霊の加護",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "環境護石 I",
+        "name": {
+            "zhTW": "環境護石 I",
+            "jaJP": "環境の護石 I",
+            "enUS": "Smoke Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "環境利用の知識",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "環境護石 II",
+        "name": {
+            "zhTW": "環境護石 II",
+            "jaJP": "環境の護石 II",
+            "enUS": "Smoke Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "環境利用の知識",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "環境護石 III",
+        "name": {
+            "zhTW": "環境護石 III",
+            "jaJP": "環境の護石 III",
+            "enUS": "Smoke Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "環境利用の知識",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "貫通彈護石 I",
+        "name": {
+            "zhTW": "貫通彈護石 I",
+            "jaJP": "貫通弾の護石 I",
+            "enUS": "Penetration Charm I"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "貫通弾・竜の一矢強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "騎手護石",
+        "name": {
+            "zhTW": "騎手護石",
+            "jaJP": "騎手の護石",
+            "enUS": "Rider's Charm"
+        },
+        "rare": 7,
+        "skills": {
+            "0": {
+                "id": "乗り名人",
+                "level": 1
+            },
+            "18": {
+                "id": "ジャンプ鉄人",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "暴怒護石 I",
+        "name": {
+            "zhTW": "暴怒護石 I",
+            "jaJP": "逆上の護石 I",
+            "enUS": "Fury Charm I"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "逆恨み",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "暴怒護石 II",
+        "name": {
+            "zhTW": "暴怒護石 II",
+            "jaJP": "逆上の護石 II",
+            "enUS": "Fury Charm II"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "逆恨み",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "強走護石 I",
+        "name": {
+            "zhTW": "強走護石 I",
+            "jaJP": "強走の護石 I",
+            "enUS": "Marathon Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "ランナー",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "強走護石 II",
+        "name": {
+            "zhTW": "強走護石 II",
+            "jaJP": "強走の護石 II",
+            "enUS": "Marathon Charm II"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "ランナー",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "KO護石 I",
+        "name": {
+            "zhTW": "KO護石 I",
+            "jaJP": "KOの護石 I",
+            "enUS": "KO Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "KO術",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "KO護石 II",
+        "name": {
+            "zhTW": "KO護石 II",
+            "jaJP": "KOの護石 II",
+            "enUS": "KO Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "KO術",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "KO護石 III",
+        "name": {
+            "zhTW": "KO護石 III",
+            "jaJP": "KOの護石 III",
+            "enUS": "KO Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "KO術",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "堅守護石",
+        "name": {
+            "zhTW": "堅守護石",
+            "jaJP": "堅守の護石",
+            "enUS": "Bulwark Charm"
+        },
+        "rare": 8,
+        "skills": {
+            "0": {
+                "id": "ガード強化",
+                "level": 1
+            },
+            "18": {
+                "id": "死中に活",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "研磨護石 I",
+        "name": {
+            "zhTW": "研磨護石 I",
+            "jaJP": "研磨の護石 I",
+            "enUS": "Whetstone Charm I"
+        },
+        "rare": 4,
+        "skills": [
+            {
+                "id": "砥石使用高速化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "研磨護石 II",
+        "name": {
+            "zhTW": "研磨護石 II",
+            "jaJP": "研磨の護石 II",
+            "enUS": "Whetstone Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "砥石使用高速化",
+                "level": 2
+            }
+        ]
+    },
+    {
         "id": "研磨護石 III",
         "name": {
             "zhTW": "研磨護石 III",
-            "jaJP": null,
+            "jaJP": "研磨の護石 III",
             "enUS": "Whetstone Charm III"
         },
         "rare": 7,
@@ -473,644 +477,91 @@
         ]
     },
     {
-        "id": "指揮護石 III",
+        "id": "攻擊護石 I",
         "name": {
-            "zhTW": "指揮護石 III",
-            "jaJP": null,
-            "enUS": "Rally Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "指示隨從",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "持續護石 III",
-        "name": {
-            "zhTW": "持續護石 III",
-            "jaJP": null,
-            "enUS": "Extension Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "道具使用強化",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "狩獵生活護石",
-        "name": {
-            "zhTW": "狩獵生活護石",
-            "jaJP": null,
-            "enUS": "Hunter's Life Charm"
-        },
-        "rare": 5,
-        "skills": [
-            {
-                "id": "烤肉名人",
-                "level": 1
-            },
-            {
-                "id": "釣魚名人",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "重擊護石 II",
-        "name": {
-            "zhTW": "重擊護石 II",
-            "jaJP": null,
-            "enUS": "Breaker Charm II"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "破壞王",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "id": "耐瘴護石 III",
-        "name": {
-            "zhTW": "耐瘴護石 III",
-            "jaJP": null,
-            "enUS": "Miasma Charm III"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "瘴氣耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐火護石 III",
-        "name": {
-            "zhTW": "耐火護石 III",
-            "jaJP": null,
-            "enUS": "Fire Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "火耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐衝護石 II",
-        "name": {
-            "zhTW": "耐衝護石 II",
-            "jaJP": null,
-            "enUS": "Impact Charm II"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "減輕膽怯",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "id": "耐震護石 II",
-        "name": {
-            "zhTW": "耐震護石 II",
-            "jaJP": null,
-            "enUS": "Tremor Charm II"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "耐震",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "id": "耐水護石 III",
-        "name": {
-            "zhTW": "耐水護石 III",
-            "jaJP": null,
-            "enUS": "Water Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "水耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐絕護石 III",
-        "name": {
-            "zhTW": "耐絕護石 III",
-            "jaJP": null,
-            "enUS": "Stun Charm III"
-        },
-        "rare": 6,
-        "skills": [
-            {
-                "id": "昏厥耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐屬護石 III",
-        "name": {
-            "zhTW": "耐屬護石 III",
-            "jaJP": null,
-            "enUS": "Blight Charm III"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "屬性異常狀態耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐毒護石 III",
-        "name": {
-            "zhTW": "耐毒護石 III",
-            "jaJP": null,
-            "enUS": "Poison Charm III"
-        },
-        "rare": 6,
-        "skills": [
-            {
-                "id": "毒耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐爆護石 III",
-        "name": {
-            "zhTW": "耐爆護石 III",
-            "jaJP": null,
-            "enUS": "Blast Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "爆破異常狀態的耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐冰護石 III",
-        "name": {
-            "zhTW": "耐冰護石 III",
-            "jaJP": null,
-            "enUS": "Ice Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "冰耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐防護石 III",
-        "name": {
-            "zhTW": "耐防護石 III",
-            "jaJP": null,
-            "enUS": "Guard Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "防禦力DOWN耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐眠護石 III",
-        "name": {
-            "zhTW": "耐眠護石 III",
-            "jaJP": null,
-            "enUS": "Sleep Charm III"
-        },
-        "rare": 6,
-        "skills": [
-            {
-                "id": "睡眠耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐雷護石 III",
-        "name": {
-            "zhTW": "耐雷護石 III",
-            "jaJP": null,
-            "enUS": "Thunder Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "雷耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐龍護石 III",
-        "name": {
-            "zhTW": "耐龍護石 III",
-            "jaJP": null,
-            "enUS": "Dragon Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "龍耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐裂護石 III",
-        "name": {
-            "zhTW": "耐裂護石 III",
-            "jaJP": null,
-            "enUS": "Bleed Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "裂傷耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "耐痺護石 III",
-        "name": {
-            "zhTW": "耐痺護石 III",
-            "jaJP": null,
-            "enUS": "Paralysis Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "麻痺耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "挑戰護石 II",
-        "name": {
-            "zhTW": "挑戰護石 II",
-            "jaJP": null,
-            "enUS": "Challenger Charm II"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "挑戰者",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "id": "毒擊護石 III",
-        "name": {
-            "zhTW": "毒擊護石 III",
-            "jaJP": null,
-            "enUS": "Venom Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "毒屬性強化",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "毒瓶護石",
-        "name": {
-            "zhTW": "毒瓶護石",
-            "jaJP": null,
-            "enUS": "Poison Coating Charm"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "毒瓶追加",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "風水護石",
-        "name": {
-            "zhTW": "風水護石",
-            "jaJP": null,
-            "enUS": "Geomancy Charm"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "探索者的幸運",
-                "level": 1
-            },
-            {
-                "id": "察覺",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "流水護石 III",
-        "name": {
-            "zhTW": "流水護石 III",
-            "jaJP": null,
-            "enUS": "Flood Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "水屬性攻擊強化",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "順風護石",
-        "name": {
-            "zhTW": "順風護石",
-            "jaJP": null,
-            "enUS": "Fair Wind Charm"
+            "zhTW": "攻擊護石 I",
+            "jaJP": "攻撃の護石 I",
+            "enUS": "Attack Charm I"
         },
         "rare": 3,
         "skills": [
             {
-                "id": "攻擊",
-                "level": 1
-            },
-            {
-                "id": "精靈加護",
+                "id": "攻撃",
                 "level": 1
             }
         ]
     },
     {
-        "id": "迴避護石 III",
+        "id": "攻擊護石 II",
         "name": {
-            "zhTW": "迴避護石 III",
-            "jaJP": null,
-            "enUS": "Evasion Charm III"
+            "zhTW": "攻擊護石 II",
+            "jaJP": "攻撃の護石 II",
+            "enUS": "Attack Charm II"
         },
-        "rare": 7,
+        "rare": 5,
         "skills": [
             {
-                "id": "迴避性能",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "疾風護石",
-        "name": {
-            "zhTW": "疾風護石",
-            "jaJP": null,
-            "enUS": "Gale Charm"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "滑走強化",
-                "level": 1
-            },
-            {
-                "id": "飛燕",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "追踨護石",
-        "name": {
-            "zhTW": "追踨護石",
-            "jaJP": null,
-            "enUS": "Tracker Charm"
-        },
-        "rare": 3,
-        "skills": [
-            {
-                "id": "追蹤達人",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "特射護石 II",
-        "name": {
-            "zhTW": "特射護石 II",
-            "jaJP": null,
-            "enUS": "Special Shot Charm II"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "特殊射擊強化",
+                "id": "攻撃",
                 "level": 2
             }
         ]
     },
     {
-        "id": "納刀護石 III",
+        "id": "攻擊護石 III",
         "name": {
-            "zhTW": "納刀護石 III",
-            "jaJP": null,
-            "enUS": "Sheath Charm III"
+            "zhTW": "攻擊護石 III",
+            "jaJP": "攻撃の護石 III",
+            "enUS": "Attack Charm II"
         },
-        "rare": 8,
+        "rare": 7,
         "skills": [
             {
-                "id": "收刀術",
+                "id": "攻撃",
                 "level": 3
             }
         ]
     },
     {
-        "id": "破龍護石 III",
+        "id": "昂揚護石 I",
         "name": {
-            "zhTW": "破龍護石 III",
-            "jaJP": null,
-            "enUS": "Wyrmsbane Charm III"
+            "zhTW": "昂揚護石 I",
+            "jaJP": "昴揚の護石 I",
+            "enUS": "Invigorate Charm I"
         },
         "rare": 8,
         "skills": [
             {
-                "id": "龍屬性攻擊強化",
-                "level": 3
+                "id": "強化持続",
+                "level": 1
             }
         ]
     },
     {
-        "id": "砲擊手護石 II",
+        "id": "昂揚護石 II",
         "name": {
-            "zhTW": "砲擊手護石 II",
-            "jaJP": null,
-            "enUS": "Heavy Artillery Charm II"
+            "zhTW": "昂揚護石 II",
+            "jaJP": "昴揚の護石 II",
+            "enUS": "Invigorate Charm II"
         },
-        "rare": 5,
+        "rare": 8,
         "skills": [
             {
-                "id": "砲擊手",
+                "id": "強化持続",
                 "level": 2
             }
         ]
     },
     {
-        "id": "砲術護石 III",
+        "id": "渾身護石 I",
         "name": {
-            "zhTW": "砲術護石 III",
-            "jaJP": null,
-            "enUS": "Artillery Charm III"
+            "zhTW": "渾身護石 I",
+            "jaJP": "渾身の護石 I",
+            "enUS": "Mighty Charm I"
         },
         "rare": 7,
         "skills": [
             {
-                "id": "砲術",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "貫通彈護石",
-        "name": {
-            "zhTW": "貫通彈護石",
-            "jaJP": null,
-            "enUS": "Penetration Charm"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "貫通彈・龍之箭強化",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "強走護石 II",
-        "name": {
-            "zhTW": "強走護石 II",
-            "jaJP": null,
-            "enUS": "Marathon Charm II"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "跑者",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "id": "堅守護石",
-        "name": {
-            "zhTW": "堅守護石",
-            "jaJP": null,
-            "enUS": "Bulwark Charm"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "防禦強化",
-                "level": 1
-            },
-            {
-                "id": "死裡逃生",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "採集鐵人護石",
-        "name": {
-            "zhTW": "採集鐵人護石",
-            "jaJP": null,
-            "enUS": "Gatherer's Charm"
-        },
-        "rare": 5,
-        "skills": [
-            {
-                "id": "採集達人",
-                "level": 1
-            },
-            {
-                "id": "剝取鐵人",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "陷阱彈護石",
-        "name": {
-            "zhTW": "陷阱彈護石",
-            "jaJP": null,
-            "enUS": "Trickshot Charm"
-        },
-        "rare": 5,
-        "skills": [
-            {
-                "id": "異臭名人",
-                "level": 1
-            },
-            {
-                "id": "閃光強化",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "通常彈護石",
-        "name": {
-            "zhTW": "通常彈護石",
-            "jaJP": null,
-            "enUS": "Normal Shots Charm"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "通常彈・通常箭強化",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "麻痺瓶護石",
-        "name": {
-            "zhTW": "麻痺瓶護石",
-            "jaJP": null,
-            "enUS": "Para Coating Charm"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "麻痺瓶追加",
+                "id": "渾身",
                 "level": 1
             }
         ]
@@ -1119,28 +570,265 @@
         "id": "渾身護石 II",
         "name": {
             "zhTW": "渾身護石 II",
-            "jaJP": null,
+            "jaJP": "渾身の護石 II",
             "enUS": "Mighty Charm II"
         },
         "rare": 8,
         "skills": [
             {
-                "id": "精神抖擻",
+                "id": "渾身",
                 "level": 2
             }
         ]
     },
     {
-        "id": "散彈護石",
+        "id": "昆蟲學護石 I",
         "name": {
-            "zhTW": "散彈護石",
-            "jaJP": null,
-            "enUS": "Dispersal Charm"
+            "zhTW": "昆蟲學護石 I",
+            "jaJP": "昆虫学の護石 I",
+            "enUS": "Insect Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "昆虫標本の達人",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "昆蟲學護石 II",
+        "name": {
+            "zhTW": "昆蟲學護石 II",
+            "jaJP": "昆虫学の護石 II",
+            "enUS": "Insect Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "昆虫標本の達人",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "昆蟲學護石 III",
+        "name": {
+            "zhTW": "昆蟲學護石 III",
+            "jaJP": "昆虫学の護石 III",
+            "enUS": "Insect Charm III"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "昆虫標本の達人",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "採集鐵人護石",
+        "name": {
+            "zhTW": "採集鐵人護石",
+            "jaJP": "採集鉄人の護石",
+            "enUS": "Gatherer's Charm"
+        },
+        "rare": 5,
+        "skills": {
+            "0": {
+                "id": "採集の達人",
+                "level": 1
+            },
+            "18": {
+                "id": "剥ぎ取り鉄人",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "指揮護石 I",
+        "name": {
+            "zhTW": "指揮護石 I",
+            "jaJP": "采配の護石 I",
+            "enUS": "Rally Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "オトモへの采配",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "指揮護石 II",
+        "name": {
+            "zhTW": "指揮護石 II",
+            "jaJP": "采配の護石 II",
+            "enUS": "Rally Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "オトモへの采配",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "指揮護石 III",
+        "name": {
+            "zhTW": "指揮護石 III",
+            "jaJP": "采配の護石 III",
+            "enUS": "Rally Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "オトモへの采配",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "散彈護石 I",
+        "name": {
+            "zhTW": "散彈護石 I",
+            "jaJP": "散弾の護石 I",
+            "enUS": "Dispersal Charm I"
         },
         "rare": 8,
         "skills": [
             {
-                "id": "散彈・剛射強化",
+                "id": "散弾・剛射強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "陷阱彈護石",
+        "name": {
+            "zhTW": "陷阱彈護石",
+            "jaJP": "仕掛け弾の護石",
+            "enUS": "Trickshot Charm"
+        },
+        "rare": 5,
+        "skills": {
+            "0": {
+                "id": "こやし名人",
+                "level": 1
+            },
+            "18": {
+                "id": "閃光強化",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "持續護石 I",
+        "name": {
+            "zhTW": "持續護石 I",
+            "jaJP": "持続の護石 I",
+            "enUS": "Extension Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "アイテム使用強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "持續護石 II",
+        "name": {
+            "zhTW": "持續護石 II",
+            "jaJP": "持続の護石 II",
+            "enUS": "Extension Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "アイテム使用強化",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "持續護石 III",
+        "name": {
+            "zhTW": "持續護石 III",
+            "jaJP": "持続の護石 III",
+            "enUS": "Extension Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "アイテム使用強化",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "疾風護石",
+        "name": {
+            "zhTW": "疾風護石",
+            "jaJP": "疾風の護石",
+            "enUS": "Gale Charm"
+        },
+        "rare": 8,
+        "skills": {
+            "0": {
+                "id": "滑走強化",
+                "level": 1
+            },
+            "18": {
+                "id": "飛燕",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "重擊護石 I",
+        "name": {
+            "zhTW": "重擊護石 I",
+            "jaJP": "重撃の護石 I",
+            "enUS": "Breaker Charm I"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "破壊王",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "重擊護石 II",
+        "name": {
+            "zhTW": "重擊護石 II",
+            "jaJP": "重撃の護石 II",
+            "enUS": "Breaker Charm II"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "破壊王",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "集中護石 I",
+        "name": {
+            "zhTW": "集中護石 I",
+            "jaJP": "集中の護石 I",
+            "enUS": "Focus Charm I"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "集中",
                 "level": 1
             }
         ]
@@ -1149,7 +837,7 @@
         "id": "集中護石 II",
         "name": {
             "zhTW": "集中護石 II",
-            "jaJP": null,
+            "jaJP": "集中の護石 II",
             "enUS": "Focus Charm II"
         },
         "rare": 7,
@@ -1161,119 +849,198 @@
         ]
     },
     {
+        "id": "狩獵生活護石",
+        "name": {
+            "zhTW": "狩獵生活護石",
+            "jaJP": "狩猟生活の護石",
+            "enUS": "Hunter's Life Charm"
+        },
+        "rare": 5,
+        "skills": {
+            "0": {
+                "id": "肉焼き名人",
+                "level": 1
+            },
+            "18": {
+                "id": "釣り名人",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "小胃口護石",
+        "name": {
+            "zhTW": "小胃口護石",
+            "jaJP": "小食の護石",
+            "enUS": "Light Eater's Charm"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "満足感",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "植學護石 I",
+        "name": {
+            "zhTW": "植學護石 I",
+            "jaJP": "植学の護石 I",
+            "enUS": "Botany Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "植生学",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "植學護石 II",
+        "name": {
+            "zhTW": "植學護石 II",
+            "jaJP": "植学の護石 II",
+            "enUS": "Botany Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "植生学",
+                "level": 2
+            }
+        ]
+    },
+    {
         "id": "植學護石 III",
         "name": {
             "zhTW": "植學護石 III",
-            "jaJP": null,
+            "jaJP": "植学の護石 III",
             "enUS": "Botany Charm III"
         },
         "rare": 7,
         "skills": [
             {
-                "id": "植生學",
+                "id": "植生学",
                 "level": 3
             }
         ]
     },
     {
-        "id": "超心護石",
+        "id": "心靜自然涼護石",
         "name": {
-            "zhTW": "超心護石",
-            "jaJP": null,
-            "enUS": "Critical Boost"
+            "zhTW": "心靜自然涼護石",
+            "jaJP": "心頭滅却の護石",
+            "enUS": "Clearmind Charm"
         },
-        "rare": 8,
+        "rare": 7,
+        "skills": {
+            "0": {
+                "id": "熱ダメージ無効",
+                "level": 1
+            },
+            "18": {
+                "id": "瘴気環境適応",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "睡擊護石 I",
+        "name": {
+            "zhTW": "睡擊護石 I",
+            "jaJP": "睡撃の護石 I",
+            "enUS": "Tranq Charm I"
+        },
+        "rare": 3,
         "skills": [
             {
-                "id": "超會心",
+                "id": "睡眠属性強化",
                 "level": 1
             }
         ]
     },
     {
-        "id": "痛擊護石 II",
+        "id": "睡擊護石 II",
         "name": {
-            "zhTW": "痛擊護石 II",
-            "jaJP": null,
-            "enUS": "Exploiter Charm II"
+            "zhTW": "睡擊護石 II",
+            "jaJP": "睡撃の護石 II",
+            "enUS": "Tranq Charm II"
         },
-        "rare": 8,
+        "rare": 5,
         "skills": [
             {
-                "id": "弱點特效",
+                "id": "睡眠属性強化",
                 "level": 2
             }
         ]
     },
     {
-        "id": "無傷護石 II",
+        "id": "睡擊護石 III",
         "name": {
-            "zhTW": "無傷護石 II",
-            "jaJP": null,
-            "enUS": "Unscathed Charm II"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "無傷",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "id": "環境護石 III",
-        "name": {
-            "zhTW": "環境護石 III",
-            "jaJP": null,
-            "enUS": "Smoke Charm III"
+            "zhTW": "睡擊護石 III",
+            "jaJP": "睡撃の護石 III",
+            "enUS": "Tranq Charm III"
         },
         "rare": 7,
         "skills": [
             {
-                "id": "環境利用的知識",
+                "id": "睡眠属性強化",
                 "level": 3
             }
         ]
     },
     {
-        "id": "滅龍護石",
+        "id": "睡眠瓶護石",
         "name": {
-            "zhTW": "滅龍護石",
-            "jaJP": null,
-            "enUS": "Wyrmslayer Charm"
+            "zhTW": "睡眠瓶護石",
+            "jaJP": "睡眠瓶の護石",
+            "enUS": "Sleep Coating Charm"
         },
         "rare": 8,
         "skills": [
             {
-                "id": "龍封力強化",
-                "level": 1
-            },
-            {
-                "id": "龍屬性攻擊強化",
+                "id": "睡眠ビン追加",
                 "level": 1
             }
         ]
     },
     {
-        "id": "嗜菇護石 II",
+        "id": "整備護石 I",
         "name": {
-            "zhTW": "嗜菇護石 II",
-            "jaJP": null,
-            "enUS": "Mushroom Charm II"
+            "zhTW": "整備護石 I",
+            "jaJP": "整備の護石 I",
+            "enUS": "Maintenance Charm I"
         },
-        "rare": 8,
+        "rare": 6,
         "skills": [
             {
-                "id": "最愛菇類",
+                "id": "整備",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "整備護石 II",
+        "name": {
+            "zhTW": "整備護石 II",
+            "jaJP": "整備の護石 II",
+            "enUS": "Maintenance Charm II"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "整備",
                 "level": 2
             }
         ]
     },
     {
-        "id": "裝備護石 III",
+        "id": "整備護石 III",
         "name": {
-            "zhTW": "裝備護石 III",
-            "jaJP": null,
+            "zhTW": "整備護石 III",
+            "jaJP": "整備の護石 III",
             "enUS": "Maintenance Charm III"
         },
         "rare": 8,
@@ -1285,136 +1052,61 @@
         ]
     },
     {
-        "id": "裝填護石",
+        "id": "全開護石 I",
         "name": {
-            "zhTW": "裝填護石",
-            "jaJP": null,
-            "enUS": "Capacity Charm"
+            "zhTW": "全開護石 I",
+            "jaJP": "全開の護石 I",
+            "enUS": "Power Charm I"
         },
-        "rare": 3,
+        "rare": 7,
         "skills": [
             {
-                "id": "砲彈裝填數UP",
+                "id": "力の解放",
                 "level": 1
             }
         ]
     },
     {
-        "id": "達人護石 III",
+        "id": "全開護石 II",
         "name": {
-            "zhTW": "達人護石 III",
-            "jaJP": null,
-            "enUS": "Master's Charm III"
+            "zhTW": "全開護石 II",
+            "jaJP": "全開の護石 II",
+            "enUS": "Power Charm II"
         },
-        "rare": 7,
+        "rare": 8,
         "skills": [
             {
-                "id": "看破",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "跳躍護石 II",
-        "name": {
-            "zhTW": "跳躍護石 II",
-            "jaJP": null,
-            "enUS": "Leaping Charm II"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "迴避距離UP",
+                "id": "力の解放",
                 "level": 2
             }
         ]
     },
     {
-        "id": "痺擊護石 III",
+        "id": "潛伏護石 I",
         "name": {
-            "zhTW": "痺擊護石 III",
-            "jaJP": null,
-            "enUS": "Immobilize Charm III"
+            "zhTW": "潛伏護石 I",
+            "jaJP": "潜伏の護石 I",
+            "enUS": "Stealth Charm I"
         },
-        "rare": 7,
+        "rare": 3,
         "skills": [
             {
-                "id": "麻痺屬性強化",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "雷光護石 III",
-        "name": {
-            "zhTW": "雷光護石 III",
-            "jaJP": null,
-            "enUS": "Shock Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "雷屬性攻擊強化",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "睡擊護石 III",
-        "name": {
-            "zhTW": "睡擊護石 III",
-            "jaJP": null,
-            "enUS": "Tranq Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "睡眠屬性強化",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "睡眠瓶護石",
-        "name": {
-            "zhTW": "睡眠瓶護石",
-            "jaJP": null,
-            "enUS": "Sleep Coating Charm"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "睡眠瓶追加",
+                "id": "潜伏",
                 "level": 1
             }
         ]
     },
     {
-        "id": "奪氣護石 III",
+        "id": "潛伏護石 II",
         "name": {
-            "zhTW": "奪氣護石 III",
-            "jaJP": null,
-            "enUS": "Enervate Charm III"
+            "zhTW": "潛伏護石 II",
+            "jaJP": "潜伏の護石 II",
+            "enUS": "Stealth Charm II"
         },
         "rare": 6,
         "skills": [
             {
-                "id": "奪取耐力",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "暴怒護石 II",
-        "name": {
-            "zhTW": "暴怒護石 II",
-            "jaJP": null,
-            "enUS": "Fury Charm II"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "怨恨",
+                "id": "潜伏",
                 "level": 2
             }
         ]
@@ -1423,13 +1115,1213 @@
         "id": "潛伏護石 III",
         "name": {
             "zhTW": "潛伏護石 III",
-            "jaJP": null,
+            "jaJP": "潜伏の護石 III",
             "enUS": "Stealth Charm III"
         },
         "rare": 7,
         "skills": [
             {
-                "id": "潛伏",
+                "id": "潜伏",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "早氣護石 I",
+        "name": {
+            "zhTW": "早氣護石 I",
+            "jaJP": "早気の護石 I",
+            "enUS": "Surge Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "スタミナ急速回復",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "早氣護石 II",
+        "name": {
+            "zhTW": "早氣護石 II",
+            "jaJP": "早気の護石 II",
+            "enUS": "Surge Charm II"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "スタミナ急速回復",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "快吃護石 I",
+        "name": {
+            "zhTW": "快吃護石 I",
+            "jaJP": "早食の護石 I",
+            "enUS": "Glutton's Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "早食い",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "快吃護石 II",
+        "name": {
+            "zhTW": "快吃護石 II",
+            "jaJP": "早食の護石 II",
+            "enUS": "Glutton's Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "早食い",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "快吃護石 III",
+        "name": {
+            "zhTW": "快吃護石 III",
+            "jaJP": "早食の護石 III",
+            "enUS": "Glutton's Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "早食い",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "裝填護石",
+        "name": {
+            "zhTW": "裝填護石",
+            "jaJP": "装填の護石",
+            "enUS": "Capacity Charm"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "砲弾装填数UP",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "早復護石 I",
+        "name": {
+            "zhTW": "早復護石 I",
+            "jaJP": "早復の護石 I",
+            "enUS": "Speed Heal Charm I"
+        },
+        "rare": 4,
+        "skills": [
+            {
+                "id": "回復速度",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "早復護石 II",
+        "name": {
+            "zhTW": "早復護石 II",
+            "jaJP": "早復の護石 II",
+            "enUS": "Speed Heal Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "回復速度",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "早復護石 III",
+        "name": {
+            "zhTW": "早復護石 III",
+            "jaJP": "早復の護石 III",
+            "enUS": "Speed Heal Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "回復速度",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "底力護石 I",
+        "name": {
+            "zhTW": "底力護石 I",
+            "jaJP": "底力の護石 I",
+            "enUS": "Grit Charm I"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "火事場力",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "底力護石 II",
+        "name": {
+            "zhTW": "底力護石 II",
+            "jaJP": "底力の護石 II",
+            "enUS": "Grit Charm II"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "火事場力",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐火護石 I",
+        "name": {
+            "zhTW": "耐火護石 I",
+            "jaJP": "耐火の護石 I",
+            "enUS": "Fire Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "火耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐火護石 II",
+        "name": {
+            "zhTW": "耐火護石 II",
+            "jaJP": "耐火の護石 II",
+            "enUS": "Fire Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "火耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐火護石 III",
+        "name": {
+            "zhTW": "耐火護石 III",
+            "jaJP": "耐火の護石 III",
+            "enUS": "Fire Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "火耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "體術護石 I",
+        "name": {
+            "zhTW": "體術護石 I",
+            "jaJP": "体術の護石 I",
+            "enUS": "Fitness Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "体術",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "體術護石 II",
+        "name": {
+            "zhTW": "體術護石 II",
+            "jaJP": "体術の護石 II",
+            "enUS": "Fitness Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "体術",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "體術護石 III",
+        "name": {
+            "zhTW": "體術護石 III",
+            "jaJP": "体術の護石 III",
+            "enUS": "Fitness Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "体術",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐衝護石 I",
+        "name": {
+            "zhTW": "耐衝護石 I",
+            "jaJP": "耐衝の護石 I",
+            "enUS": "Impact Charm I"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "ひるみ軽減",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐衝護石 II",
+        "name": {
+            "zhTW": "耐衝護石 II",
+            "jaJP": "耐衝の護石 II",
+            "enUS": "Impact Charm II"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "ひるみ軽減",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐瘴護石 I",
+        "name": {
+            "zhTW": "耐瘴護石 I",
+            "jaJP": "耐瘴の護石 I",
+            "enUS": "Miasma Charm I"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "瘴気耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐瘴護石 II",
+        "name": {
+            "zhTW": "耐瘴護石 II",
+            "jaJP": "耐瘴の護石 II",
+            "enUS": "Miasma Charm II"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "瘴気耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐瘴護石 III",
+        "name": {
+            "zhTW": "耐瘴護石 III",
+            "jaJP": "耐瘴の護石 III",
+            "enUS": "Miasma Charm III"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "瘴気耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐震護石 I",
+        "name": {
+            "zhTW": "耐震護石 I",
+            "jaJP": "耐震の護石 I",
+            "enUS": "Tremor Charm I"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "耐震",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐震護石 II",
+        "name": {
+            "zhTW": "耐震護石 II",
+            "jaJP": "耐震の護石 II",
+            "enUS": "Tremor Charm II"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "耐震",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐水護石 I",
+        "name": {
+            "zhTW": "耐水護石 I",
+            "jaJP": "耐水の護石 I",
+            "enUS": "Water Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "水耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐水護石 II",
+        "name": {
+            "zhTW": "耐水護石 II",
+            "jaJP": "耐水の護石 II",
+            "enUS": "Water Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "水耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐水護石 III",
+        "name": {
+            "zhTW": "耐水護石 III",
+            "jaJP": "耐水の護石 III",
+            "enUS": "Water Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "水耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐絕護石 I",
+        "name": {
+            "zhTW": "耐絕護石 I",
+            "jaJP": "耐絶の護石 I",
+            "enUS": "Stun Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "気絶耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐絕護石 II",
+        "name": {
+            "zhTW": "耐絕護石 II",
+            "jaJP": "耐絶の護石 II",
+            "enUS": "Stun Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "気絶耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐絕護石 III",
+        "name": {
+            "zhTW": "耐絕護石 III",
+            "jaJP": "耐絶の護石 III",
+            "enUS": "Stun Charm III"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "気絶耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐屬護石 I",
+        "name": {
+            "zhTW": "耐屬護石 I",
+            "jaJP": "耐属の護石 I",
+            "enUS": "Blight Charm I"
+        },
+        "rare": 4,
+        "skills": [
+            {
+                "id": "属性やられ耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐屬護石 II",
+        "name": {
+            "zhTW": "耐屬護石 II",
+            "jaJP": "耐属の護石 II",
+            "enUS": "Blight Charm II"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "属性やられ耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐屬護石 III",
+        "name": {
+            "zhTW": "耐屬護石 III",
+            "jaJP": "耐属の護石 III",
+            "enUS": "Blight Charm III"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "属性やられ耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐毒護石 I",
+        "name": {
+            "zhTW": "耐毒護石 I",
+            "jaJP": "耐毒の護石 I",
+            "enUS": "Poison Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "毒耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐毒護石 II",
+        "name": {
+            "zhTW": "耐毒護石 II",
+            "jaJP": "耐毒の護石 II",
+            "enUS": "Poison Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "毒耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐毒護石 III",
+        "name": {
+            "zhTW": "耐毒護石 III",
+            "jaJP": "耐毒の護石 III",
+            "enUS": "Poison Charm III"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "毒耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐爆護石 I",
+        "name": {
+            "zhTW": "耐爆護石 I",
+            "jaJP": "耐爆の護石 I",
+            "enUS": "Blast Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "爆破やられ耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐爆護石 II",
+        "name": {
+            "zhTW": "耐爆護石 II",
+            "jaJP": "耐爆の護石 II",
+            "enUS": "Blast Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "爆破やられ耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐爆護石 III",
+        "name": {
+            "zhTW": "耐爆護石 III",
+            "jaJP": "耐爆の護石 III",
+            "enUS": "Blast Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "爆破やられ耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐痺護石 I",
+        "name": {
+            "zhTW": "耐痺護石 I",
+            "jaJP": "耐痺の護石 I",
+            "enUS": "Paralysis Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "麻痺耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐痺護石 II",
+        "name": {
+            "zhTW": "耐痺護石 II",
+            "jaJP": "耐痺の護石 II",
+            "enUS": "Paralysis Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "麻痺耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐痺護石 III",
+        "name": {
+            "zhTW": "耐痺護石 III",
+            "jaJP": "耐痺の護石 III",
+            "enUS": "Paralysis Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "麻痺耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐冰護石 I",
+        "name": {
+            "zhTW": "耐冰護石 I",
+            "jaJP": "耐氷の護石 I",
+            "enUS": "Ice Charm I"
+        },
+        "rare": 4,
+        "skills": [
+            {
+                "id": "氷耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐冰護石 II",
+        "name": {
+            "zhTW": "耐冰護石 II",
+            "jaJP": "耐氷の護石 II",
+            "enUS": "Ice Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "氷耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐冰護石 III",
+        "name": {
+            "zhTW": "耐冰護石 III",
+            "jaJP": "耐氷の護石 III",
+            "enUS": "Ice Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "氷耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐防護石 I",
+        "name": {
+            "zhTW": "耐防護石 I",
+            "jaJP": "耐防の護石 I",
+            "enUS": "Guard Charm I"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "防御力DOWN耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐防護石 II",
+        "name": {
+            "zhTW": "耐防護石 II",
+            "jaJP": "耐防の護石 II",
+            "enUS": "Guard Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "防御力DOWN耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐防護石 III",
+        "name": {
+            "zhTW": "耐防護石 III",
+            "jaJP": "耐防の護石 III",
+            "enUS": "Guard Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "防御力DOWN耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐眠護石 I",
+        "name": {
+            "zhTW": "耐眠護石 I",
+            "jaJP": "耐眠の護石 I",
+            "enUS": "Sleep Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "睡眠耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐眠護石 II",
+        "name": {
+            "zhTW": "耐眠護石 II",
+            "jaJP": "耐眠の護石 II",
+            "enUS": "Sleep Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "睡眠耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐眠護石 III",
+        "name": {
+            "zhTW": "耐眠護石 III",
+            "jaJP": "耐眠の護石 III",
+            "enUS": "Sleep Charm III"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "睡眠耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐雷護石 I",
+        "name": {
+            "zhTW": "耐雷護石 I",
+            "jaJP": "耐雷の護石 I",
+            "enUS": "Thunder Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "雷耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐雷護石 II",
+        "name": {
+            "zhTW": "耐雷護石 II",
+            "jaJP": "耐雷の護石 II",
+            "enUS": "Thunder Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "雷耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐雷護石 III",
+        "name": {
+            "zhTW": "耐雷護石 III",
+            "jaJP": "耐雷の護石 III",
+            "enUS": "Thunder Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "雷耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐龍護石 I",
+        "name": {
+            "zhTW": "耐龍護石 I",
+            "jaJP": "耐龍の護石 I",
+            "enUS": "Dragon Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "龍耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐龍護石 II",
+        "name": {
+            "zhTW": "耐龍護石 II",
+            "jaJP": "耐龍の護石 II",
+            "enUS": "Dragon Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "龍耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐龍護石 III",
+        "name": {
+            "zhTW": "耐龍護石 III",
+            "jaJP": "耐龍の護石 III",
+            "enUS": "Dragon Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "龍耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "體力護石 I",
+        "name": {
+            "zhTW": "體力護石 I",
+            "jaJP": "体力の護石 I",
+            "enUS": "Health Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "体力増強",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "體力護石 II",
+        "name": {
+            "zhTW": "體力護石 II",
+            "jaJP": "体力の護石 II",
+            "enUS": "Health Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "体力増強",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "體力護石 III",
+        "name": {
+            "zhTW": "體力護石 III",
+            "jaJP": "体力の護石 III",
+            "enUS": "Health Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "体力増強",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "耐裂護石 I",
+        "name": {
+            "zhTW": "耐裂護石 I",
+            "jaJP": "耐裂の護石 I",
+            "enUS": "Bleed Charm I"
+        },
+        "rare": 4,
+        "skills": [
+            {
+                "id": "裂傷耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耐裂護石 II",
+        "name": {
+            "zhTW": "耐裂護石 II",
+            "jaJP": "耐裂の護石 II",
+            "enUS": "Bleed Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "裂傷耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耐裂護石 III",
+        "name": {
+            "zhTW": "耐裂護石 III",
+            "jaJP": "耐裂の護石 III",
+            "enUS": "Bleed Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "裂傷耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "匠護石 I",
+        "name": {
+            "zhTW": "匠護石 I",
+            "jaJP": "匠の護石 I",
+            "enUS": "Handicraft Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "匠",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "匠護石 II",
+        "name": {
+            "zhTW": "匠護石 II",
+            "jaJP": "匠の護石 II",
+            "enUS": "Handicraft Charm II"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "匠",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "匠護石 III",
+        "name": {
+            "zhTW": "匠護石 III",
+            "jaJP": "匠の護石 III",
+            "enUS": "Handicraft Charm III"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "匠",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "嗜菇護石 I",
+        "name": {
+            "zhTW": "嗜菇護石 I",
+            "jaJP": "茸好の護石 I",
+            "enUS": "Mushroom Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "キノコ大好き",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "嗜菇護石 II",
+        "name": {
+            "zhTW": "嗜菇護石 II",
+            "jaJP": "茸好の護石 II",
+            "enUS": "Mushroom Charm II"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "キノコ大好き",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "奪氣護石 I",
+        "name": {
+            "zhTW": "奪氣護石 I",
+            "jaJP": "奪気の護石 I",
+            "enUS": "Enervate Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "スタミナ奪取",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "奪氣護石 II",
+        "name": {
+            "zhTW": "奪氣護石 II",
+            "jaJP": "奪気の護石 II",
+            "enUS": "Enervate Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "スタミナ奪取",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "奪氣護石 III",
+        "name": {
+            "zhTW": "奪氣護石 III",
+            "jaJP": "奪気の護石 III",
+            "enUS": "Enervate Charm III"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "スタミナ奪取",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "達人護石 I",
+        "name": {
+            "zhTW": "達人護石 I",
+            "jaJP": "達人の護石 I",
+            "enUS": "Master's Charm I"
+        },
+        "rare": 4,
+        "skills": [
+            {
+                "id": "見切り",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "達人護石 II",
+        "name": {
+            "zhTW": "達人護石 II",
+            "jaJP": "達人の護石 II",
+            "enUS": "Master's Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "見切り",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "達人護石 III",
+        "name": {
+            "zhTW": "達人護石 III",
+            "jaJP": "達人の護石 III",
+            "enUS": "Master's Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "見切り",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "地學護石 I",
+        "name": {
+            "zhTW": "地學護石 I",
+            "jaJP": "地学の護石 I",
+            "enUS": "Geology Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "地質学",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "地學護石 II",
+        "name": {
+            "zhTW": "地學護石 II",
+            "jaJP": "地学の護石 II",
+            "enUS": "Geology Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "地質学",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "地學護石 III",
+        "name": {
+            "zhTW": "地學護石 III",
+            "jaJP": "地学の護石 III",
+            "enUS": "Geology Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "地質学",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "治癒護石 I",
+        "name": {
+            "zhTW": "治癒護石 I",
+            "jaJP": "治癒の護石 I",
+            "enUS": "Recovery Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "体力回復量UP",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "治癒護石 II",
+        "name": {
+            "zhTW": "治癒護石 II",
+            "jaJP": "治癒の護石 II",
+            "enUS": "Recovery Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "体力回復量UP",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "治癒護石 III",
+        "name": {
+            "zhTW": "治癒護石 III",
+            "jaJP": "治癒の護石 III",
+            "enUS": "Recovery Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "体力回復量UP",
                 "level": 3
             }
         ]
@@ -1438,111 +2330,62 @@
         "id": "調查達人護石",
         "name": {
             "zhTW": "調查達人護石",
-            "jaJP": null,
+            "jaJP": "調査達人の護石",
             "enUS": "Surveyor's Charm"
         },
         "rare": 7,
-        "skills": [
-            {
-                "id": "導蟲反應距離UP",
+        "skills": {
+            "0": {
+                "id": "導蟲反応距離UP",
                 "level": 1
             },
-            {
+            "18": {
                 "id": "研究者",
                 "level": 1
             }
-        ]
+        }
     },
     {
-        "id": "騎手護石",
+        "id": "超心護石",
         "name": {
-            "zhTW": "騎手護石",
-            "jaJP": null,
-            "enUS": "Rider's Charm"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "騎乘名人",
-                "level": 1
-            },
-            {
-                "id": "跳躍鐵人",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "id": "斷食護石 III",
-        "name": {
-            "zhTW": "斷食護石 III",
-            "jaJP": null,
-            "enUS": "Hungerless Charm III"
-        },
-        "rare": 6,
-        "skills": [
-            {
-                "id": "飢餓耐性",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "爆師護石 III",
-        "name": {
-            "zhTW": "爆師護石 III",
-            "jaJP": null,
-            "enUS": "Bombardier Charm III"
-        },
-        "rare": 7,
-        "skills": [
-            {
-                "id": "炸彈客",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "爆破護石 III",
-        "name": {
-            "zhTW": "爆破護石 III",
-            "jaJP": null,
-            "enUS": "Demolition Charm III"
+            "zhTW": "超心護石",
+            "jaJP": "超心の護石",
+            "enUS": "Critical Boost Charm 超心の護石"
         },
         "rare": 8,
         "skills": [
             {
-                "id": "爆破屬性強化",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "id": "爆破瓶護石",
-        "name": {
-            "zhTW": "爆破瓶護石",
-            "jaJP": null,
-            "enUS": "Blast Coating Charm"
-        },
-        "rare": 8,
-        "skills": [
-            {
-                "id": "爆破瓶追加",
+                "id": "超会心",
                 "level": 1
             }
         ]
     },
     {
-        "id": "覺醒護石 II",
+        "id": "挑戰護石 I",
         "name": {
-            "zhTW": "覺醒護石 II",
-            "jaJP": null,
-            "enUS": "Awakening Charm II"
+            "zhTW": "挑戰護石 I",
+            "jaJP": "挑戦の護石 I",
+            "enUS": "Challenger Charm I"
         },
         "rare": 7,
         "skills": [
             {
-                "id": "屬性解放／裝填擴充",
+                "id": "挑戦者",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "挑戰護石 II",
+        "name": {
+            "zhTW": "挑戰護石 II",
+            "jaJP": "挑戦の護石 II",
+            "enUS": "Challenger Charm II"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "挑戦者",
                 "level": 2
             }
         ]
@@ -1551,18 +2394,138 @@
         "id": "籌備護石",
         "name": {
             "zhTW": "籌備護石",
-            "jaJP": null,
+            "jaJP": "調達の護石",
             "enUS": "Procurer's Charm"
+        },
+        "rare": 5,
+        "skills": {
+            "0": {
+                "id": "運搬の達人",
+                "level": 1
+            },
+            "18": {
+                "id": "ハニーハンター",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "跳躍護石 I",
+        "name": {
+            "zhTW": "跳躍護石 I",
+            "jaJP": "跳躍の護石 I",
+            "enUS": "Leaping Charm I"
         },
         "rare": 5,
         "skills": [
             {
-                "id": "搬運達人",
+                "id": "回避距離UP",
                 "level": 1
-            },
+            }
+        ]
+    },
+    {
+        "id": "跳躍護石 II",
+        "name": {
+            "zhTW": "跳躍護石 II",
+            "jaJP": "跳躍の護石 II",
+            "enUS": "Leaping Charm II"
+        },
+        "rare": 7,
+        "skills": [
             {
-                "id": "蜂蜜獵人",
+                "id": "回避距離UP",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "追踨護石",
+        "name": {
+            "zhTW": "追踨護石",
+            "jaJP": "追跡の護石",
+            "enUS": "Tracker Charm"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "追跡の達人",
                 "level": 1
+            }
+        ]
+    },
+    {
+        "id": "痛擊護石 I",
+        "name": {
+            "zhTW": "痛擊護石 I",
+            "jaJP": "痛撃の護石 I",
+            "enUS": "Exploiter Charm I"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "弱点特効",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "痛擊護石 II",
+        "name": {
+            "zhTW": "痛擊護石 II",
+            "jaJP": "痛撃の護石 II",
+            "enUS": "Exploiter Charm II"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "弱点特効",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "通常彈護石 I",
+        "name": {
+            "zhTW": "通常彈護石 I",
+            "jaJP": "通常弾の護石 I",
+            "enUS": "Normal Shots Charm I"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "通常弾・通常矢強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "鐵壁護石 I",
+        "name": {
+            "zhTW": "鐵壁護石 I",
+            "jaJP": "鉄壁の護石 I",
+            "enUS": "Ironside Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "ガード性能",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "鐵壁護石 II",
+        "name": {
+            "zhTW": "鐵壁護石 II",
+            "jaJP": "鉄壁の護石 II",
+            "enUS": "Ironside Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "ガード性能",
+                "level": 2
             }
         ]
     },
@@ -1570,13 +2533,1030 @@
         "id": "鐵壁護石 III",
         "name": {
             "zhTW": "鐵壁護石 III",
-            "jaJP": null,
+            "jaJP": "鉄壁の護石 III",
             "enUS": "Ironside Charm III"
         },
         "rare": 7,
         "skills": [
             {
-                "id": "防禦性能",
+                "id": "ガード性能",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "投石護石 I",
+        "name": {
+            "zhTW": "投石護石 I",
+            "jaJP": "投石の護石 I",
+            "enUS": "Slinger Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "スリンガー装填数UP",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "投石護石 II",
+        "name": {
+            "zhTW": "投石護石 II",
+            "jaJP": "投石の護石 II",
+            "enUS": "Slinger Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "スリンガー装填数UP",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "投石護石 III",
+        "name": {
+            "zhTW": "投石護石 III",
+            "jaJP": "投石の護石 III",
+            "enUS": "Slinger Charm II"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "スリンガー装填数UP",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "毒擊護石 I",
+        "name": {
+            "zhTW": "毒擊護石 I",
+            "jaJP": "毒撃の護石 I",
+            "enUS": "Venom Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "毒属性強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "毒擊護石 II",
+        "name": {
+            "zhTW": "毒擊護石 II",
+            "jaJP": "毒撃の護石 II",
+            "enUS": "Venom Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "毒属性強化",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "毒擊護石 III",
+        "name": {
+            "zhTW": "毒擊護石 III",
+            "jaJP": "毒撃の護石 III",
+            "enUS": "Venom Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "毒属性強化",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "特射護石 I",
+        "name": {
+            "zhTW": "特射護石 I",
+            "jaJP": "特射の護石 I",
+            "enUS": "Special Shot Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "特殊射撃強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "特射護石 II",
+        "name": {
+            "zhTW": "特射護石 II",
+            "jaJP": "特射の護石 II",
+            "enUS": "Special Shot Charm II"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "特殊射撃強化",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "毒瓶護石",
+        "name": {
+            "zhTW": "毒瓶護石",
+            "jaJP": "毒瓶の護石",
+            "enUS": "Poison Coating Charm"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "毒ビン追加",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "泥浴護石",
+        "name": {
+            "zhTW": "泥浴護石",
+            "jaJP": "泥浴びの護石",
+            "enUS": "Mud Puppy Charm"
+        },
+        "rare": 5,
+        "skills": {
+            "0": {
+                "id": "泥耐性",
+                "level": 1
+            },
+            "18": {
+                "id": "飛び込み",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "沼渡護石 I",
+        "name": {
+            "zhTW": "沼渡護石 I",
+            "jaJP": "沼渡りの護石 I",
+            "enUS": "Mirewalker Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "水場・深雪適応",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "沼渡護石 II",
+        "name": {
+            "zhTW": "沼渡護石 II",
+            "jaJP": "沼渡りの護石 II",
+            "enUS": "Mirewalker Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "水場・深雪適応",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "沼渡護石 III",
+        "name": {
+            "zhTW": "沼渡護石 III",
+            "jaJP": "沼渡りの護石 III",
+            "enUS": "Mirewalker Charm III"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "水場・深雪適応",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "納刀護石 I",
+        "name": {
+            "zhTW": "納刀護石 I",
+            "jaJP": "納刀の護石 I",
+            "enUS": "Sheath Charm I"
+        },
+        "rare": 4,
+        "skills": [
+            {
+                "id": "納刀術",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "納刀護石 II",
+        "name": {
+            "zhTW": "納刀護石 II",
+            "jaJP": "納刀の護石 II",
+            "enUS": "Sheath Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "納刀術",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "納刀護石 III",
+        "name": {
+            "zhTW": "納刀護石 III",
+            "jaJP": "納刀の護石 III",
+            "enUS": "Sheath Charm III"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "納刀術",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "爆師護石 I",
+        "name": {
+            "zhTW": "爆師護石 I",
+            "jaJP": "爆師の護石 I",
+            "enUS": "Bombardier Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "ボマー",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "爆師護石 II",
+        "name": {
+            "zhTW": "爆師護石 II",
+            "jaJP": "爆師の護石 II",
+            "enUS": "Bombardier Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "ボマー",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "爆師護石 III",
+        "name": {
+            "zhTW": "爆師護石 III",
+            "jaJP": "爆師の護石 III",
+            "enUS": "Bombardier Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "ボマー",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "爆破護石 I",
+        "name": {
+            "zhTW": "爆破護石 I",
+            "jaJP": "爆破の護石 I",
+            "enUS": "Demolition Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "爆破属性強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "爆破護石 II",
+        "name": {
+            "zhTW": "爆破護石 II",
+            "jaJP": "爆破の護石 II",
+            "enUS": "Demolition Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "爆破属性強化",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "爆破護石 III",
+        "name": {
+            "zhTW": "爆破護石 III",
+            "jaJP": "爆破の護石 III",
+            "enUS": "Demolition Charm III"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "爆破属性強化",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "爆破瓶護石",
+        "name": {
+            "zhTW": "爆破瓶護石",
+            "jaJP": "爆破瓶の護石",
+            "enUS": "Blast Coating Charm"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "爆破ビン追加",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "拔刀護石 I",
+        "name": {
+            "zhTW": "拔刀護石 I",
+            "jaJP": "抜刀の護石 I",
+            "enUS": "Draw Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "抜刀術【技】",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "拔刀護石 II",
+        "name": {
+            "zhTW": "拔刀護石 II",
+            "jaJP": "抜刀の護石 II",
+            "enUS": "Draw Charm II"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "抜刀術【技】",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "破龍護石 I",
+        "name": {
+            "zhTW": "破龍護石 I",
+            "jaJP": "破龍の護石 I",
+            "enUS": "Wyrmsbane Charm I"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "龍属性攻撃強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "破龍護石 II",
+        "name": {
+            "zhTW": "破龍護石 II",
+            "jaJP": "破龍の護石 II",
+            "enUS": "Wyrmsbane Charm II"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "龍属性攻撃強化",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "破龍護石 III",
+        "name": {
+            "zhTW": "破龍護石 III",
+            "jaJP": "破龍の護石 III",
+            "enUS": "Wyrmsbane Charm III"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "龍属性攻撃強化",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "痺擊護石 I",
+        "name": {
+            "zhTW": "痺擊護石 I",
+            "jaJP": "痺撃の護石 I",
+            "enUS": "Immobilize Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "麻痺属性強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "痺擊護石 II",
+        "name": {
+            "zhTW": "痺擊護石 II",
+            "jaJP": "痺撃の護石 II",
+            "enUS": "Immobilize Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "麻痺属性強化",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "痺擊護石 III",
+        "name": {
+            "zhTW": "痺擊護石 III",
+            "jaJP": "痺撃の護石 III",
+            "enUS": "Immobilize Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "麻痺属性強化",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "冰結護石 I",
+        "name": {
+            "zhTW": "冰結護石 I",
+            "jaJP": "氷結の護石 I",
+            "enUS": "Frost Charm I"
+        },
+        "rare": 4,
+        "skills": [
+            {
+                "id": "氷属性攻撃強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "冰結護石 II",
+        "name": {
+            "zhTW": "冰結護石 II",
+            "jaJP": "氷結の護石 II",
+            "enUS": "Frost Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "氷属性攻撃強化",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "冰結護石 III",
+        "name": {
+            "zhTW": "冰結護石 III",
+            "jaJP": "氷結の護石 III",
+            "enUS": "Frost Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "氷属性攻撃強化",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "風水護石",
+        "name": {
+            "zhTW": "風水護石",
+            "jaJP": "風水の護石",
+            "enUS": "Geomancy Charm"
+        },
+        "rare": 8,
+        "skills": {
+            "0": {
+                "id": "探索者の幸運",
+                "level": 1
+            },
+            "18": {
+                "id": "感知",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "吹笛護石 I",
+        "name": {
+            "zhTW": "吹笛護石 I",
+            "jaJP": "笛吹きの護石 I",
+            "enUS": "Performer's Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "笛吹き名人",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "不屈護石",
+        "name": {
+            "zhTW": "不屈護石",
+            "jaJP": "不屈の護石",
+            "enUS": "Fortification Charm"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "不屈",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "防禦護石 I",
+        "name": {
+            "zhTW": "防禦護石 I",
+            "jaJP": "防御の護石 I",
+            "enUS": "Defense Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "防御",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "防禦護石 II",
+        "name": {
+            "zhTW": "防禦護石 II",
+            "jaJP": "防御の護石 II",
+            "enUS": "Defense Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "防御",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "防禦護石 III",
+        "name": {
+            "zhTW": "防禦護石 III",
+            "jaJP": "防御の護石 III",
+            "enUS": "Defense Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "防御",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "砲擊手護石 I",
+        "name": {
+            "zhTW": "砲擊手護石 I",
+            "jaJP": "砲撃手の護石 I",
+            "enUS": "Heavy Artillery Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "砲撃手",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "砲擊手護石 II",
+        "name": {
+            "zhTW": "砲擊手護石 II",
+            "jaJP": "砲撃手の護石 II",
+            "enUS": "Heavy Artillery Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "砲撃手",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "砲術護石 I",
+        "name": {
+            "zhTW": "砲術護石 I",
+            "jaJP": "砲術の護石 I",
+            "enUS": "Artillery Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "砲術",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "砲術護石 II",
+        "name": {
+            "zhTW": "砲術護石 II",
+            "jaJP": "砲術の護石 II",
+            "enUS": "Artillery Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "砲術",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "砲術護石 III",
+        "name": {
+            "zhTW": "砲術護石 III",
+            "jaJP": "砲術の護石 III",
+            "enUS": "Artillery Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "砲術",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "防風護石 I",
+        "name": {
+            "zhTW": "防風護石 I",
+            "jaJP": "防風の護石 I",
+            "enUS": "Windproof Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "風圧耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "防風護石 II",
+        "name": {
+            "zhTW": "防風護石 II",
+            "jaJP": "防風の護石 II",
+            "enUS": "Windproof Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "風圧耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "防風護石 III",
+        "name": {
+            "zhTW": "防風護石 III",
+            "jaJP": "防風の護石 III",
+            "enUS": "Windproof Charm III"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "風圧耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "麻痺瓶護石",
+        "name": {
+            "zhTW": "麻痺瓶護石",
+            "jaJP": "麻痺瓶の護石",
+            "enUS": "Para Coating Charm"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "麻痺ビン追加",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耳塞護石 I",
+        "name": {
+            "zhTW": "耳塞護石 I",
+            "jaJP": "耳栓の護石 I",
+            "enUS": "Earplugs Charm I"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "耳栓",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "耳塞護石 II",
+        "name": {
+            "zhTW": "耳塞護石 II",
+            "jaJP": "耳栓の護石 II",
+            "enUS": "Earplugs Charm II"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "耳栓",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "耳塞護石 III",
+        "name": {
+            "zhTW": "耳塞護石 III",
+            "jaJP": "耳栓の護石 III",
+            "enUS": "Earplugs Charm III"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "耳栓",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "無傷護石 I",
+        "name": {
+            "zhTW": "無傷護石 I",
+            "jaJP": "無傷の護石 I",
+            "enUS": "Unscathed Charm I"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "フルチャージ",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "無傷護石 II",
+        "name": {
+            "zhTW": "無傷護石 II",
+            "jaJP": "無傷の護石 II",
+            "enUS": "Unscathed Charm II"
+        },
+        "rare": 8,
+        "skills": [
+            {
+                "id": "フルチャージ",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "斷食護石 I",
+        "name": {
+            "zhTW": "斷食護石 I",
+            "jaJP": "無食の護石 I",
+            "enUS": "Hungerless Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "腹減り耐性",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "斷食護石 II",
+        "name": {
+            "zhTW": "斷食護石 II",
+            "jaJP": "無食の護石 II",
+            "enUS": "Hungerless Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "腹減り耐性",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "斷食護石 III",
+        "name": {
+            "zhTW": "斷食護石 III",
+            "jaJP": "無食の護石 III",
+            "enUS": "Hungerless Charm III"
+        },
+        "rare": 6,
+        "skills": [
+            {
+                "id": "腹減り耐性",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "滅龍護石",
+        "name": {
+            "zhTW": "滅龍護石",
+            "jaJP": "滅龍の護石",
+            "enUS": "Wyrmslayer Charm"
+        },
+        "rare": 8,
+        "skills": {
+            "0": {
+                "id": "龍封力強化",
+                "level": 1
+            },
+            "18": {
+                "id": "龍属性攻撃強化",
+                "level": 1
+            }
+        }
+    },
+    {
+        "id": "友愛護石 I",
+        "name": {
+            "zhTW": "友愛護石 I",
+            "jaJP": "友愛の護石 I",
+            "enUS": "Friendship Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "広域化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "友愛護石 II",
+        "name": {
+            "zhTW": "友愛護石 II",
+            "jaJP": "友愛の護石 II",
+            "enUS": "Friendship Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "広域化",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "友愛護石 III",
+        "name": {
+            "zhTW": "友愛護石 III",
+            "jaJP": "友愛の護石 III",
+            "enUS": "Friendship Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "広域化",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "雷光護石 I",
+        "name": {
+            "zhTW": "雷光護石 I",
+            "jaJP": "雷光の護石 I",
+            "enUS": "Shock Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "雷属性攻撃強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "雷光護石 II",
+        "name": {
+            "zhTW": "雷光護石 II",
+            "jaJP": "雷光の護石 II",
+            "enUS": "Shock Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "雷属性攻撃強化",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "雷光護石 III",
+        "name": {
+            "zhTW": "雷光護石 III",
+            "jaJP": "雷光の護石 III",
+            "enUS": "Shock Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "雷属性攻撃強化",
+                "level": 3
+            }
+        ]
+    },
+    {
+        "id": "流水護石 I",
+        "name": {
+            "zhTW": "流水護石 I",
+            "jaJP": "流水の護石 I",
+            "enUS": "Flood Charm I"
+        },
+        "rare": 3,
+        "skills": [
+            {
+                "id": "水属性攻撃強化",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "流水護石 II",
+        "name": {
+            "zhTW": "流水護石 II",
+            "jaJP": "流水の護石 II",
+            "enUS": "Flood Charm II"
+        },
+        "rare": 5,
+        "skills": [
+            {
+                "id": "水属性攻撃強化",
+                "level": 2
+            }
+        ]
+    },
+    {
+        "id": "流水護石 III",
+        "name": {
+            "zhTW": "流水護石 III",
+            "jaJP": "流水の護石 III",
+            "enUS": "Flood Charm III"
+        },
+        "rare": 7,
+        "skills": [
+            {
+                "id": "水属性攻撃強化",
                 "level": 3
             }
         ]
