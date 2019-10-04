@@ -413,7 +413,7 @@ const Store = createStore((state = initialState, action) => {
                     currentEquips[action.payload.data.equipType].slotIds = {};
                 }
 
-                currentEquips[action.payload.data.equipType].slotIds[action.payload.data.slotIndex] = action.payload.data.slotId;
+                currentEquips[action.payload.data.equipType].slotIds[action.payload.data.slotIndex] = action.payload.data.jewelId;
             } else if ('weapon' === action.payload.data.equipType) {
                 if (Helper.isEmpty(action.payload.data.equipId)) {
                     requiredEquipPins.weapon = false;
