@@ -16,6 +16,7 @@ const colors = require('ansi-colors');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
+const sentryCliPlugin = require('@sentry/webpack-plugin');
 const postfix = (new Date()).getTime().toString();
 
 let ENVIRONMENT = 'development';
@@ -55,6 +56,15 @@ function compileWebpack(callback) {
         webpackConfig.mode = ENVIRONMENT;
         webpackConfig.plugins = webpackConfig.plugins || [];
         webpackConfig.plugins.push(definePlugin);
+        webpackConfig.plugins.push(
+            new sentryCliPlugin({
+                include: './docs/assets/scripts',
+                ignore: [ 'node_modules' ],
+                configFile: './.sentryclirc',
+                release: postfix,
+                // deleteAfterCompile: true
+            })
+        );
     }
 
     if (WEBPACK_NEED_WATCH) {

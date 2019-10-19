@@ -20,6 +20,7 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@sentry/webpack-plugin": "^1.9.1",
     "ansi-colors": "^4.1.1",
     "babel-loader": "^8.0.6",
     "del": "^5.0.0",
