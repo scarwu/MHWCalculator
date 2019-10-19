@@ -10,16 +10,7 @@
  /**
  * Font Face
  */
-@font-face {
-    font-family: 'PT Serif';
-    font-style: normal;
-    font-weight: 400;
-    src: local('PT Serif'),
-         local('PTSerif-Regular'),
-         url('//themes.googleusercontent.com/static/fonts/ptserif/v4/sDRi4fY9bOiJUbgq53yZCfesZW2xOQ-xsNqO47m55DA.woff') format('woff');
-}
-
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+JP');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700Noto+Sans:100,300,400,700|Noto+Sans+JP:100,300,400,700');
 
 /**
  * Mixins
