@@ -61,8 +61,7 @@ const handleStrategyChange = (event) => {
     CommonState.setter.setAlgorithmParamsStrategy(event.target.value);
 };
 
-const renderArmorFactors = (stateAlgorithmParams) => {
-    // stateAlgorithmParams.usingFactor.armor
+const renderArmorFactors = (armorFactor) => {
     return [5, 6, 7, 8, 9, 10, 11, 12].map((rare) => {
         let seriesIds = {};
 
@@ -82,19 +81,105 @@ const renderArmorFactors = (stateAlgorithmParams) => {
                         return (
                             <div key={seriesId} className="col-6 mhwc-value">
                                 <span>{_(seriesId)}</span>
-                                {stateAlgorithmParams.usingFactor.armor[rare][seriesId] ? (
+                                {armorFactor[seriesId] ? (
                                     <div className="mhwc-icons_bundle">
                                         <FunctionalButton
                                             iconName="star"
                                             altName={_('exclude')}
-                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', rare)}} />
+                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', seriesId)}} />
                                     </div>
                                 ) : (
                                     <div className="mhwc-icons_bundle">
                                         <FunctionalButton
                                             iconName="star-o"
                                             altName={_('include')}
-                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', rare)}} />
+                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', seriesId)}} />
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        );
+    });
+};
+
+const renderCharmFactors = (charmFactor) => {
+    let seriesIds = {};
+
+    CharmDataset.getItems().forEach((info) => {
+        seriesIds[info.seriesId] = true;
+    });
+
+    return (
+        <div className="mhwc-item mhwc-item-2-step">
+            <div className="col-12 mhwc-name">
+                <span>{_('charmFactor')}</span>
+            </div>
+            <div className="col-12 mhwc-content">
+                {Object.keys(seriesIds).sort((seriesIdA, seriesIdB) => {
+                    return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
+                }).map((seriesId) => {
+                    return (
+                        <div key={seriesId} className="col-6 mhwc-value">
+                            <span>{_(seriesId)}</span>
+                            {charmFactor[seriesId] ? (
+                                <div className="mhwc-icons_bundle">
+                                    <FunctionalButton
+                                        iconName="star"
+                                        altName={_('exclude')}
+                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('charm', seriesId)}} />
+                                </div>
+                            ) : (
+                                <div className="mhwc-icons_bundle">
+                                    <FunctionalButton
+                                        iconName="star-o"
+                                        altName={_('include')}
+                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('charm', seriesId)}} />
+                                </div>
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
+
+const renderJewelFactors = (jewelFactor) => {
+    return [1, 2, 3, 4].map((size) => {
+        let jewelIds = {};
+
+        JewelDataset.sizeIs(size).getItems().forEach((info) => {
+            jewelIds[info.id] = true;
+        });
+
+        return (
+            <div key={size} className="mhwc-item mhwc-item-2-step">
+                <div className="col-12 mhwc-name">
+                    <span>{_('jewelFactor')} [{size}]</span>
+                </div>
+                <div className="col-12 mhwc-content">
+                    {Object.keys(jewelIds).sort((jewelIdA, jewelIdB) => {
+                        return _(jewelIdA) > _(jewelIdB) ? 1 : -1;
+                    }).map((jewelId) => {
+                        return (
+                            <div key={jewelId} className="col-6 mhwc-value">
+                                <span>{_(jewelId)}</span>
+                                {jewelFactor[jewelId] ? (
+                                    <div className="mhwc-icons_bundle">
+                                        <FunctionalButton
+                                            iconName="star"
+                                            altName={_('exclude')}
+                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', jewelId)}} />
+                                    </div>
+                                ) : (
+                                    <div className="mhwc-icons_bundle">
+                                        <FunctionalButton
+                                            iconName="star-o"
+                                            altName={_('include')}
+                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', jewelId)}} />
                                     </div>
                                 )}
                             </div>
@@ -247,37 +332,9 @@ export default function AlgorithmSetting(props) {
                             </div>
                         </div>
 
-                        {renderArmorFactors(stateAlgorithmParams)}
-
-                        <div className="mhwc-item mhwc-item-2-step">
-                            <div className="col-12 mhwc-name">
-                                <span>{_('jewelFactor')}</span>
-                            </div>
-                            <div className="col-12 mhwc-content">
-                                {Object.keys(stateAlgorithmParams.usingFactor.jewel).map((size) => {
-                                    return (
-                                        <div key={size} className="col-6 mhwc-value">
-                                            <span>{_('size') + `: ${size}`}</span>
-                                            {stateAlgorithmParams.usingFactor.jewel[size] ? (
-                                                <div className="mhwc-icons_bundle">
-                                                    <FunctionalButton
-                                                        iconName="star"
-                                                        altName={_('exclude')}
-                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', size)}} />
-                                                </div>
-                                            ) : (
-                                                <div className="mhwc-icons_bundle">
-                                                    <FunctionalButton
-                                                        iconName="star-o"
-                                                        altName={_('include')}
-                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', size)}} />
-                                                </div>
-                                            )}
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        </div>
+                        {renderArmorFactors(stateAlgorithmParams.usingFactor.armor)}
+                        {renderCharmFactors(stateAlgorithmParams.usingFactor.charm)}
+                        {renderJewelFactors(stateAlgorithmParams.usingFactor.jewel)}
                     </div>
                 </div>
             </div>

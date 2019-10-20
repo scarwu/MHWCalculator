@@ -130,6 +130,7 @@
     "isEndEarly":           "提早終止",
     "isRequireConsistent":  "需求一致",
     "armorFactor":          "裝甲因子",
+    "charmFactor":          "護石因子",
     "jewelFactor":          "裝飾珠因子",
     "asc":                  "升冪",
     "desc":                 "降冪"

@@ -130,6 +130,7 @@
     "isEndEarly":           null,
     "isRequireConsistent":  null,
     "armorFactor":          null,
+    "charmFactor":          null,
     "jewelFactor":          null,
     "asc":                  null,
     "desc":                 null

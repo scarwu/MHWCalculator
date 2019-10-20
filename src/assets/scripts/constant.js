@@ -95,22 +95,9 @@ export default {
                 isRequireConsistent: false
             },
             usingFactor: {
-                armor: {
-                    12: true,
-                    11: false,
-                    10: false,
-                    9: false,
-                    8: false,
-                    7: false,
-                    6: false,
-                    5: false
-                },
-                jewel: {
-                    4: true,
-                    3: true,
-                    2: true,
-                    1: true
-                }
+                armor: {},
+                charm: {},
+                jewel: {}
             }
         },
         candidateEquip: {

@@ -130,6 +130,7 @@
     "isEndEarly":           "Is End Early",
     "isRequireConsistent":  "Is Require Consistent",
     "armorFactor":          "Armor Factor",
+    "charmFactor":          "Charm Factor",
     "jewelFactor":          "Jewel Factor",
     "asc":                  "ASC",
     "desc":                 "DESC"

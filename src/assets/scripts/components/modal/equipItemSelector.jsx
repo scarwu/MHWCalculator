@@ -430,7 +430,7 @@ export default function EquipItemSelector(props) {
             for (let size = stateBypassData.slotSize; size >= 1; size--) {
                 for (let rare = 9; rare >= 5; rare--) {
                     sortedList = sortedList.concat(
-                        JewelDataset.rareIs(rare).sizeIsEqualThen(size).getItems().map((jewelInfo) => {
+                        JewelDataset.rareIs(rare).sizeIs(size).getItems().map((jewelInfo) => {
                             jewelInfo.isSelect = (stateBypassData.jewelId === jewelInfo.id);
 
                             return jewelInfo;

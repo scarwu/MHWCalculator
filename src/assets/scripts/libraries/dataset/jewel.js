@@ -126,22 +126,15 @@ class JewelDataset {
         return this;
     };
 
+    sizeIs = (value, condition = 'equal') => {
+        this.filterSize = value;
+        this.filterSizeCondition = condition;
+
+        return this;
+    };
+
     hasSkill = (name) => {
         this.filterSkillName = name;
-
-        return this;
-    };
-
-    sizeIsGreaterEqualThen = (value) => {
-        this.filterSize = value;
-        this.filterSizeCondition = 'greaterEqual';
-
-        return this;
-    };
-
-    sizeIsEqualThen = (value) => {
-        this.filterSize = value;
-        this.filterSizeCondition = 'equal';
 
         return this;
     };
