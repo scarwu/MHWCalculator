@@ -1,5 +1,7 @@
 [
     {
+        "seriesId": "迴避護石",
+        "level": 4,
         "id": "迴避護石 IV",
         "name": {
             "zhTW": "迴避護石 IV",
@@ -15,6 +17,8 @@
         ]
     },
     {
+        "seriesId": "火焰護石",
+        "level": 4,
         "id": "火焰護石 IV",
         "name": {
             "zhTW": "火焰護石 IV",
@@ -30,6 +34,8 @@
         ]
     },
     {
+        "seriesId": "火焰護石",
+        "level": 5,
         "id": "火焰護石 V",
         "name": {
             "zhTW": "火焰護石 V",
@@ -45,6 +51,8 @@
         ]
     },
     {
+        "seriesId": "覺醒護石",
+        "level": 3,
         "id": "覺醒護石 III",
         "name": {
             "zhTW": "覺醒護石 III",
@@ -60,6 +68,8 @@
         ]
     },
     {
+        "seriesId": "貫通彈護石",
+        "level": 2,
         "id": "貫通彈護石 II",
         "name": {
             "zhTW": "貫通彈護石 II",
@@ -75,6 +85,8 @@
         ]
     },
     {
+        "seriesId": "暴怒護石",
+        "level": 3,
         "id": "暴怒護石 III",
         "name": {
             "zhTW": "暴怒護石 III",
@@ -90,6 +102,8 @@
         ]
     },
     {
+        "seriesId": "暴怒護石",
+        "level": 4,
         "id": "暴怒護石 IV",
         "name": {
             "zhTW": "暴怒護石 IV",
@@ -105,6 +119,8 @@
         ]
     },
     {
+        "seriesId": "強走護石",
+        "level": 3,
         "id": "強走護石 III",
         "name": {
             "zhTW": "強走護石 III",
@@ -120,6 +136,8 @@
         ]
     },
     {
+        "seriesId": "攻擊護石",
+        "level": 4,
         "id": "攻擊護石 IV",
         "name": {
             "zhTW": "攻擊護石 IV",
@@ -135,6 +153,8 @@
         ]
     },
     {
+        "seriesId": "昂揚護石",
+        "level": 3,
         "id": "昂揚護石 III",
         "name": {
             "zhTW": "昂揚護石 III",
@@ -150,6 +170,8 @@
         ]
     },
     {
+        "seriesId": "剛力護石",
+        "level": 1,
         "id": "剛力護石",
         "name": {
             "zhTW": "剛力護石",
@@ -169,6 +191,8 @@
         ]
     },
     {
+        "seriesId": "毅力護石",
+        "level": 1,
         "id": "毅力護石",
         "name": {
             "zhTW": "毅力護石",
@@ -184,6 +208,8 @@
         ]
     },
     {
+        "seriesId": "指揮護石",
+        "level": 4,
         "id": "指揮護石 IV",
         "name": {
             "zhTW": "指揮護石 IV",
@@ -199,6 +225,8 @@
         ]
     },
     {
+        "seriesId": "指揮護石",
+        "level": 5,
         "id": "指揮護石 V",
         "name": {
             "zhTW": "指揮護石 V",
@@ -214,6 +242,8 @@
         ]
     },
     {
+        "seriesId": "散彈護石",
+        "level": 2,
         "id": "散彈護石 II",
         "name": {
             "zhTW": "散彈護石 II",
@@ -229,6 +259,8 @@
         ]
     },
     {
+        "seriesId": "重擊護石",
+        "level": 3,
         "id": "重擊護石 III",
         "name": {
             "zhTW": "重擊護石 III",
@@ -244,6 +276,8 @@
         ]
     },
     {
+        "seriesId": "集中護石",
+        "level": 3,
         "id": "集中護石 III",
         "name": {
             "zhTW": "集中護石 III",
@@ -259,6 +293,8 @@
         ]
     },
     {
+        "seriesId": "守勢護石",
+        "level": 1,
         "id": "守勢護石 I",
         "name": {
             "zhTW": "守勢護石 I",
@@ -274,6 +310,8 @@
         ]
     },
     {
+        "seriesId": "守勢護石",
+        "level": 2,
         "id": "守勢護石 II",
         "name": {
             "zhTW": "守勢護石 II",
@@ -289,6 +327,8 @@
         ]
     },
     {
+        "seriesId": "守勢護石",
+        "level": 3,
         "id": "守勢護石 III",
         "name": {
             "zhTW": "守勢護石 III",
@@ -304,6 +344,8 @@
         ]
     },
     {
+        "seriesId": "植學護石",
+        "level": 4,
         "id": "植學護石 IV",
         "name": {
             "zhTW": "植學護石 IV",
@@ -319,6 +361,8 @@
         ]
     },
     {
+        "seriesId": "睡擊護石",
+        "level": 4,
         "id": "睡擊護石 IV",
         "name": {
             "zhTW": "睡擊護石 IV",
@@ -334,6 +378,8 @@
         ]
     },
     {
+        "seriesId": "全開護石",
+        "level": 3,
         "id": "全開護石 III",
         "name": {
             "zhTW": "全開護石 III",
@@ -349,6 +395,8 @@
         ]
     },
     {
+        "seriesId": "全開護石",
+        "level": 4,
         "id": "全開護石 IV",
         "name": {
             "zhTW": "全開護石 IV",
@@ -364,6 +412,8 @@
         ]
     },
     {
+        "seriesId": "早氣護石",
+        "level": 3,
         "id": "早氣護石 III",
         "name": {
             "zhTW": "早氣護石 III",
@@ -379,6 +429,8 @@
         ]
     },
     {
+        "seriesId": "底力護石",
+        "level": 3,
         "id": "底力護石 III",
         "name": {
             "zhTW": "底力護石 III",
@@ -394,6 +446,8 @@
         ]
     },
     {
+        "seriesId": "底力護石",
+        "level": 4,
         "id": "底力護石 IV",
         "name": {
             "zhTW": "底力護石 IV",
@@ -409,6 +463,8 @@
         ]
     },
     {
+        "seriesId": "體術護石",
+        "level": 4,
         "id": "體術護石 IV",
         "name": {
             "zhTW": "體術護石 IV",
@@ -424,6 +480,8 @@
         ]
     },
     {
+        "seriesId": "耐衝護石",
+        "level": 3,
         "id": "耐衝護石 III",
         "name": {
             "zhTW": "耐衝護石 III",
@@ -439,6 +497,8 @@
         ]
     },
     {
+        "seriesId": "耐震護石",
+        "level": 3,
         "id": "耐震護石 III",
         "name": {
             "zhTW": "耐震護石 III",
@@ -454,6 +514,8 @@
         ]
     },
     {
+        "seriesId": "匠之護石",
+        "level": 4,
         "id": "匠之護石 IV",
         "name": {
             "zhTW": "匠之護石 IV",
@@ -469,6 +531,8 @@
         ]
     },
     {
+        "seriesId": "嗜菇護石",
+        "level": 3,
         "id": "嗜菇護石 III",
         "name": {
             "zhTW": "嗜菇護石 III",
@@ -484,6 +548,8 @@
         ]
     },
     {
+        "seriesId": "達人護石",
+        "level": 4,
         "id": "達人護石 IV",
         "name": {
             "zhTW": "達人護石 IV",
@@ -499,6 +565,8 @@
         ]
     },
     {
+        "seriesId": "超心護石",
+        "level": 2,
         "id": "超心護石 II",
         "name": {
             "zhTW": "超心護石 II",
@@ -514,6 +582,8 @@
         ]
     },
     {
+        "seriesId": "挑戰護石",
+        "level": 3,
         "id": "挑戰護石 III",
         "name": {
             "zhTW": "挑戰護石 III",
@@ -529,6 +599,8 @@
         ]
     },
     {
+        "seriesId": "挑戰護石",
+        "level": 4,
         "id": "挑戰護石 IV",
         "name": {
             "zhTW": "挑戰護石 IV",
@@ -544,6 +616,8 @@
         ]
     },
     {
+        "seriesId": "跳躍護石",
+        "level": 3,
         "id": "跳躍護石 III",
         "name": {
             "zhTW": "跳躍護石 III",
@@ -559,6 +633,8 @@
         ]
     },
     {
+        "seriesId": "通常彈護石",
+        "level": 2,
         "id": "通常彈護石 II",
         "name": {
             "zhTW": "通常彈護石 II",
@@ -574,6 +650,8 @@
         ]
     },
     {
+        "seriesId": "鐵壁護石",
+        "level": 4,
         "id": "鐵壁護石 IV",
         "name": {
             "zhTW": "鐵壁護石 IV",
@@ -589,6 +667,8 @@
         ]
     },
     {
+        "seriesId": "鐵壁護石",
+        "level": 5,
         "id": "鐵壁護石 V",
         "name": {
             "zhTW": "鐵壁護石 V",
@@ -604,6 +684,8 @@
         ]
     },
     {
+        "seriesId": "轉福護石",
+        "level": 1,
         "id": "轉福護石 I",
         "name": {
             "zhTW": "轉福護石 I",
@@ -619,6 +701,8 @@
         ]
     },
     {
+        "seriesId": "轉福護石",
+        "level": 2,
         "id": "轉福護石 II",
         "name": {
             "zhTW": "轉福護石 II",
@@ -634,6 +718,8 @@
         ]
     },
     {
+        "seriesId": "毒擊護石",
+        "level": 4,
         "id": "毒擊護石 IV",
         "name": {
             "zhTW": "毒擊護石 IV",
@@ -649,6 +735,8 @@
         ]
     },
     {
+        "seriesId": "爆破護石",
+        "level": 4,
         "id": "爆破護石 IV",
         "name": {
             "zhTW": "爆破護石 IV",
@@ -664,6 +752,8 @@
         ]
     },
     {
+        "seriesId": "破龍護石",
+        "level": 4,
         "id": "破龍護石 IV",
         "name": {
             "zhTW": "破龍護石 IV",
@@ -679,6 +769,8 @@
         ]
     },
     {
+        "seriesId": "破龍護石",
+        "level": 5,
         "id": "破龍護石 V",
         "name": {
             "zhTW": "破龍護石 V",
@@ -694,6 +786,8 @@
         ]
     },
     {
+        "seriesId": "痺擊護石",
+        "level": 4,
         "id": "痺擊護石 IV",
         "name": {
             "zhTW": "痺擊護石 IV",
@@ -709,6 +803,8 @@
         ]
     },
     {
+        "seriesId": "冰結護石",
+        "level": 4,
         "id": "冰結護石 IV",
         "name": {
             "zhTW": "冰結護石 IV",
@@ -724,6 +820,8 @@
         ]
     },
     {
+        "seriesId": "冰結護石",
+        "level": 5,
         "id": "冰結護石 V",
         "name": {
             "zhTW": "冰結護石 V",
@@ -739,6 +837,8 @@
         ]
     },
     {
+        "seriesId": "封印護石",
+        "level": 1,
         "id": "封印護石",
         "name": {
             "zhTW": "封印護石",
@@ -758,6 +858,8 @@
         ]
     },
     {
+        "seriesId": "吹笛護石",
+        "level": 2,
         "id": "吹笛護石 II",
         "name": {
             "zhTW": "吹笛護石 II",
@@ -773,6 +875,8 @@
         ]
     },
     {
+        "seriesId": "防禦護石",
+        "level": 4,
         "id": "防禦護石 IV",
         "name": {
             "zhTW": "防禦護石 IV",
@@ -788,6 +892,8 @@
         ]
     },
     {
+        "seriesId": "防禦護石",
+        "level": 5,
         "id": "防禦護石 V",
         "name": {
             "zhTW": "防禦護石 V",
@@ -803,6 +909,8 @@
         ]
     },
     {
+        "seriesId": "防風護石",
+        "level": 4,
         "id": "防風護石 IV",
         "name": {
             "zhTW": "防風護石 IV",
@@ -818,6 +926,8 @@
         ]
     },
     {
+        "seriesId": "耳塞護石",
+        "level": 4,
         "id": "耳塞護石 IV",
         "name": {
             "zhTW": "耳塞護石 IV",
@@ -833,6 +943,8 @@
         ]
     },
     {
+        "seriesId": "友愛護石",
+        "level": 4,
         "id": "友愛護石 IV",
         "name": {
             "zhTW": "友愛護石 IV",
@@ -848,6 +960,8 @@
         ]
     },
     {
+        "seriesId": "友愛護石",
+        "level": 5,
         "id": "友愛護石 V",
         "name": {
             "zhTW": "友愛護石 V",
@@ -863,6 +977,8 @@
         ]
     },
     {
+        "seriesId": "雷光護石",
+        "level": 4,
         "id": "雷光護石 IV",
         "name": {
             "zhTW": "雷光護石 IV",
@@ -878,6 +994,8 @@
         ]
     },
     {
+        "seriesId": "雷光護石",
+        "level": 5,
         "id": "雷光護石 V",
         "name": {
             "zhTW": "雷光護石 V",
@@ -893,6 +1011,8 @@
         ]
     },
     {
+        "seriesId": "流水護石",
+        "level": 4,
         "id": "流水護石 IV",
         "name": {
             "zhTW": "流水護石 IV",
@@ -908,6 +1028,8 @@
         ]
     },
     {
+        "seriesId": "流水護石",
+        "level": 5,
         "id": "流水護石 V",
         "name": {
             "zhTW": "流水護石 V",
@@ -923,6 +1045,8 @@
         ]
     },
     {
+        "seriesId": "利刃護石",
+        "level": 1,
         "id": "利刃護石",
         "name": {
             "zhTW": "利刃護石",

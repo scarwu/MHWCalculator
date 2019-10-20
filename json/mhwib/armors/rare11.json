@@ -1,14 +1,14 @@
 [
     {
-        "common": {
+        "series": {
             "id": "精英．雷顎龍α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．雷顎龍α",
                 "jaJP": "EXジャナールα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 146,
             "resistance": {
                 "fire": -1,
@@ -21,15 +21,15 @@
                 "id": "蠻顎龍的霸氣"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．雷顎龍頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．雷顎龍頭盔α",
                     "jaJP": "EXジャナールヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -51,12 +51,12 @@
             },
             {
                 "id": "精英．雷顎龍鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．雷顎龍鎧甲α",
                     "jaJP": "EXジャナールメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 3
@@ -75,12 +75,12 @@
             },
             {
                 "id": "精英．雷顎龍腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．雷顎龍腕甲α",
                     "jaJP": "EXジャナールアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -99,12 +99,12 @@
             },
             {
                 "id": "精英．雷顎龍腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．雷顎龍腰甲α",
                     "jaJP": "EXジャナールコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -123,12 +123,12 @@
             },
             {
                 "id": "精英．雷顎龍護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．雷顎龍護腿α",
                     "jaJP": "EXジャナールグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -151,15 +151,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．雷顎龍β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．雷顎龍β",
                 "jaJP": "EXジャナールβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 146,
             "resistance": {
                 "fire": -1,
@@ -172,15 +172,15 @@
                 "id": "蠻顎龍的霸氣"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．雷顎龍頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．雷顎龍頭盔β",
                     "jaJP": "EXジャナールヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -198,12 +198,12 @@
             },
             {
                 "id": "精英．雷顎龍鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．雷顎龍鎧甲β",
                     "jaJP": "EXジャナールメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -222,12 +222,12 @@
             },
             {
                 "id": "精英．雷顎龍腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．雷顎龍腕甲β",
                     "jaJP": "EXジャナールアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -245,12 +245,12 @@
             },
             {
                 "id": "精英．雷顎龍腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．雷顎龍腰甲β",
                     "jaJP": "EXジャナールコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -272,12 +272,12 @@
             },
             {
                 "id": "精英．雷顎龍護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．雷顎龍護腿β",
                     "jaJP": "EXジャナールグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -296,15 +296,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．火龍魂α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．火龍魂α",
                 "jaJP": "EXリオソウルα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 148,
             "resistance": {
                 "fire": 3,
@@ -317,15 +317,15 @@
                 "id": "火龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．火龍魂頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．火龍魂頭盔α",
                     "jaJP": "EXリオソウルヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -347,12 +347,12 @@
             },
             {
                 "id": "精英．火龍魂鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．火龍魂鎧甲α",
                     "jaJP": "EXリオソウルメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 2
@@ -371,12 +371,12 @@
             },
             {
                 "id": "精英．火龍魂腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．火龍魂腕甲α",
                     "jaJP": "EXリオソウルアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -395,12 +395,12 @@
             },
             {
                 "id": "精英．火龍魂腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．火龍魂腰甲α",
                     "jaJP": "EXリオソウルコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -419,12 +419,12 @@
             },
             {
                 "id": "精英．火龍魂護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．火龍魂護腿α",
                     "jaJP": "EXリオソウルグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -444,15 +444,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．火龍魂β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．火龍魂β",
                 "jaJP": "EXリオソウルβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 148,
             "resistance": {
                 "fire": 3,
@@ -465,15 +465,15 @@
                 "id": "火龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．火龍魂頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．火龍魂頭盔β",
                     "jaJP": "EXリオソウルヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -488,12 +488,12 @@
             },
             {
                 "id": "精英．火龍魂鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．火龍魂鎧甲β",
                     "jaJP": "EXリオソウルメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -511,12 +511,12 @@
             },
             {
                 "id": "精英．火龍魂腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．火龍魂腕甲β",
                     "jaJP": "EXリオソウルアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -538,12 +538,12 @@
             },
             {
                 "id": "精英．火龍魂腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．火龍魂腰甲β",
                     "jaJP": "EXリオソウルコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -561,12 +561,12 @@
             },
             {
                 "id": "精英．火龍魂護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．火龍魂護腿β",
                     "jaJP": "EXリオソウルグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -586,15 +586,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．暴君角龍ロα",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．暴君角龍ロα",
                 "jaJP": "EXディアネロα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 148,
             "resistance": {
                 "fire": 2,
@@ -607,15 +607,15 @@
                 "id": "角龍的霸氣"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．暴君角龍ロ頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．暴君角龍ロ頭盔α",
                     "jaJP": "EXディアネロヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -637,12 +637,12 @@
             },
             {
                 "id": "精英．暴君角龍ロ鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．暴君角龍ロ鎧甲α",
                     "jaJP": "EXディアネロメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 2
@@ -661,12 +661,12 @@
             },
             {
                 "id": "精英．暴君角龍ロ腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．暴君角龍ロ腕甲α",
                     "jaJP": "EXディアネロアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -688,12 +688,12 @@
             },
             {
                 "id": "精英．暴君角龍ロ腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．暴君角龍ロ腰甲α",
                     "jaJP": "EXディアネロコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -712,12 +712,12 @@
             },
             {
                 "id": "精英．暴君角龍ロ護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．暴君角龍ロ護腿α",
                     "jaJP": "EXディアネログリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -737,15 +737,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．暴君角龍ロβ",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．暴君角龍ロβ",
                 "jaJP": "EXディアネロβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 148,
             "resistance": {
                 "fire": 2,
@@ -758,15 +758,15 @@
                 "id": "角龍的霸氣"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．暴君角龍ロ頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．暴君角龍ロ頭盔β",
                     "jaJP": "EXディアネロヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -784,12 +784,12 @@
             },
             {
                 "id": "精英．暴君角龍ロ鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．暴君角龍ロ鎧甲β",
                     "jaJP": "EXディアネロメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -811,12 +811,12 @@
             },
             {
                 "id": "精英．暴君角龍ロ腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．暴君角龍ロ腕甲β",
                     "jaJP": "EXディアネロアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -838,12 +838,12 @@
             },
             {
                 "id": "精英．暴君角龍ロ腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．暴君角龍ロ腰甲β",
                     "jaJP": "EXディアネロコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -861,12 +861,12 @@
             },
             {
                 "id": "精英．暴君角龍ロ護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．暴君角龍ロ護腿β",
                     "jaJP": "EXディアネログリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -882,15 +882,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．霜翼風漂龍α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．霜翼風漂龍α",
                 "jaJP": "EXブリーナα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 146,
             "resistance": {
                 "fire": -3,
@@ -903,15 +903,15 @@
                 "id": "風漂龍的霸氣"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．霜翼風漂龍頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．霜翼風漂龍頭盔α",
                     "jaJP": "EXブリーナヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -936,12 +936,12 @@
             },
             {
                 "id": "精英．霜翼風漂龍鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．霜翼風漂龍鎧甲α",
                     "jaJP": "EXブリーナメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -963,12 +963,12 @@
             },
             {
                 "id": "精英．霜翼風漂龍腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．霜翼風漂龍腕甲α",
                     "jaJP": "EXブリーナアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -990,12 +990,12 @@
             },
             {
                 "id": "精英．霜翼風漂龍腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．霜翼風漂龍腰甲α",
                     "jaJP": "EXブリーナコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -1017,12 +1017,12 @@
             },
             {
                 "id": "精英．霜翼風漂龍護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．霜翼風漂龍護腿α",
                     "jaJP": "EXブリーナグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -1045,15 +1045,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．霜翼風漂龍β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．霜翼風漂龍β",
                 "jaJP": "EXブリーナβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 146,
             "resistance": {
                 "fire": -3,
@@ -1066,15 +1066,15 @@
                 "id": "風漂龍的霸氣"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．霜翼風漂龍頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．霜翼風漂龍頭盔β",
                     "jaJP": "EXブリーナヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -1092,12 +1092,12 @@
             },
             {
                 "id": "精英．霜翼風漂龍鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．霜翼風漂龍鎧甲β",
                     "jaJP": "EXブリーナメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -1112,12 +1112,12 @@
             },
             {
                 "id": "精英．霜翼風漂龍腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．霜翼風漂龍腕甲β",
                     "jaJP": "EXブリーナアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -1132,12 +1132,12 @@
             },
             {
                 "id": "精英．霜翼風漂龍腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．霜翼風漂龍腰甲β",
                     "jaJP": "EXブリーナコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -1152,12 +1152,12 @@
             },
             {
                 "id": "精英．霜翼風漂龍護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．霜翼風漂龍護腿β",
                     "jaJP": "EXブリーナグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -1176,15 +1176,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．兇爪龍α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．兇爪龍α",
                 "jaJP": "EXデスガロンα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 148,
             "resistance": {
                 "fire": -2,
@@ -1197,15 +1197,15 @@
                 "id": "惨爪龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．兇爪龍頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．兇爪龍頭盔α",
                     "jaJP": "EXデスガロンヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -1224,12 +1224,12 @@
             },
             {
                 "id": "精英．兇爪龍鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．兇爪龍鎧甲α",
                     "jaJP": "EXデスガロンメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 2
@@ -1248,12 +1248,12 @@
             },
             {
                 "id": "精英．兇爪龍腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．兇爪龍腕甲α",
                     "jaJP": "EXデスガロンアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -1275,12 +1275,12 @@
             },
             {
                 "id": "精英．兇爪龍腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．兇爪龍腰甲α",
                     "jaJP": "EXデスガロンコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -1302,12 +1302,12 @@
             },
             {
                 "id": "精英．兇爪龍護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．兇爪龍護腿α",
                     "jaJP": "EXデスガロングリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -1330,15 +1330,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．兇爪龍β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．兇爪龍β",
                 "jaJP": "EXデスガロンβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 148,
             "resistance": {
                 "fire": -2,
@@ -1351,15 +1351,15 @@
                 "id": "惨爪龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．兇爪龍頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．兇爪龍頭盔β",
                     "jaJP": "EXデスガロンヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -1377,12 +1377,12 @@
             },
             {
                 "id": "精英．兇爪龍鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．兇爪龍鎧甲β",
                     "jaJP": "EXデスガロンメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -1404,12 +1404,12 @@
             },
             {
                 "id": "精英．兇爪龍腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．兇爪龍腕甲β",
                     "jaJP": "EXデスガロンアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -1431,12 +1431,12 @@
             },
             {
                 "id": "精英．兇爪龍腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．兇爪龍腰甲β",
                     "jaJP": "EXデスガロンコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -1454,12 +1454,12 @@
             },
             {
                 "id": "精英．兇爪龍護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．兇爪龍護腿β",
                     "jaJP": "EXデスガロングリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -1481,15 +1481,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．硫斬龍α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．硫斬龍α",
                 "jaJP": "EXディノイエロα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 150,
             "resistance": {
                 "fire": -3,
@@ -1502,15 +1502,15 @@
                 "id": "斬龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．硫斬龍頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．硫斬龍頭盔α",
                     "jaJP": "EXディノイエロヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -1529,12 +1529,12 @@
             },
             {
                 "id": "精英．硫斬龍鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．硫斬龍鎧甲α",
                     "jaJP": "EXディノイエロメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -1553,12 +1553,12 @@
             },
             {
                 "id": "精英．硫斬龍腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．硫斬龍腕甲α",
                     "jaJP": "EXディノイエロアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -1580,12 +1580,12 @@
             },
             {
                 "id": "精英．硫斬龍腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．硫斬龍腰甲α",
                     "jaJP": "EXディノイエロコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -1604,12 +1604,12 @@
             },
             {
                 "id": "精英．硫斬龍護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．硫斬龍護腿α",
                     "jaJP": "EXディノイエログリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -1629,15 +1629,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．硫斬龍β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．硫斬龍β",
                 "jaJP": "EXディノイエロβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 150,
             "resistance": {
                 "fire": -3,
@@ -1650,15 +1650,15 @@
                 "id": "斬龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．硫斬龍頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．硫斬龍頭盔β",
                     "jaJP": "EXディノイエロヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -1677,12 +1677,12 @@
             },
             {
                 "id": "精英．硫斬龍鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．硫斬龍鎧甲β",
                     "jaJP": "EXディノイエロメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -1704,12 +1704,12 @@
             },
             {
                 "id": "精英．硫斬龍腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．硫斬龍腕甲β",
                     "jaJP": "EXディノイエロアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -1730,12 +1730,12 @@
             },
             {
                 "id": "精英．硫斬龍腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．硫斬龍腰甲β",
                     "jaJP": "EXディノイエロコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -1750,12 +1750,12 @@
             },
             {
                 "id": "精英．硫斬龍護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．硫斬龍護腿β",
                     "jaJP": "EXディノイエログリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -1774,15 +1774,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．鬥技場獎賞１α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．鬥技場獎賞１α",
                 "jaJP": "EXクロオビα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 150,
             "resistance": {
                 "fire": 1,
@@ -1795,15 +1795,15 @@
                 "id": "教官的指導"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．鬥技場獎賞１頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．鬥技場獎賞１頭盔α",
                     "jaJP": "EXクロオビヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -1822,12 +1822,12 @@
             },
             {
                 "id": "精英．鬥技場獎賞１鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．鬥技場獎賞１鎧甲α",
                     "jaJP": "EXクロオビメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -1852,12 +1852,12 @@
             },
             {
                 "id": "精英．鬥技場獎賞１腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．鬥技場獎賞１腕甲α",
                     "jaJP": "EXクロオビアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -1876,12 +1876,12 @@
             },
             {
                 "id": "精英．鬥技場獎賞１腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．鬥技場獎賞１腰甲α",
                     "jaJP": "EXクロオビコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -1900,12 +1900,12 @@
             },
             {
                 "id": "精英．鬥技場獎賞１護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．鬥技場獎賞１護腿α",
                     "jaJP": "EXクロオビグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -1928,15 +1928,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．鬥技場獎賞１β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．鬥技場獎賞１β",
                 "jaJP": "EXクロオビβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 150,
             "resistance": {
                 "fire": 1,
@@ -1949,15 +1949,15 @@
                 "id": "教官的指導"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．鬥技場獎賞１頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．鬥技場獎賞１頭盔β",
                     "jaJP": "EXクロオビヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -1975,12 +1975,12 @@
             },
             {
                 "id": "精英．鬥技場獎賞１鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．鬥技場獎賞１鎧甲β",
                     "jaJP": "EXクロオビメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -2001,12 +2001,12 @@
             },
             {
                 "id": "精英．鬥技場獎賞１腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．鬥技場獎賞１腕甲β",
                     "jaJP": "EXクロオビアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -2024,12 +2024,12 @@
             },
             {
                 "id": "精英．鬥技場獎賞１腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．鬥技場獎賞１腰甲β",
                     "jaJP": "EXクロオビコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -2047,12 +2047,12 @@
             },
             {
                 "id": "精英．鬥技場獎賞１護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．鬥技場獎賞１護腿β",
                     "jaJP": "EXクロオビグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -2071,15 +2071,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．杜賓α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．杜賓α",
                 "jaJP": "EXドーベルα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 152,
             "resistance": {
                 "fire": -2,
@@ -2090,15 +2090,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．杜賓頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．杜賓頭盔α",
                     "jaJP": "EXドーベルヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -2117,12 +2117,12 @@
             },
             {
                 "id": "精英．杜賓鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．杜賓鎧甲α",
                     "jaJP": "EXドーベルメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -2147,12 +2147,12 @@
             },
             {
                 "id": "精英．杜賓腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．杜賓腕甲α",
                     "jaJP": "EXドーベルアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -2174,12 +2174,12 @@
             },
             {
                 "id": "精英．杜賓腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．杜賓腰甲α",
                     "jaJP": "EXドーベルコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -2201,12 +2201,12 @@
             },
             {
                 "id": "精英．杜賓護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．杜賓護腿α",
                     "jaJP": "EXドーベルグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -2226,15 +2226,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．杜賓β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．杜賓β",
                 "jaJP": "EXドーベルβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 152,
             "resistance": {
                 "fire": -2,
@@ -2245,15 +2245,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．杜賓頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．杜賓頭盔β",
                     "jaJP": "EXドーベルヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -2268,12 +2268,12 @@
             },
             {
                 "id": "精英．杜賓鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．杜賓鎧甲β",
                     "jaJP": "EXドーベルメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -2298,12 +2298,12 @@
             },
             {
                 "id": "精英．杜賓腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．杜賓腕甲β",
                     "jaJP": "EXドーベルアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -2325,12 +2325,12 @@
             },
             {
                 "id": "精英．杜賓腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．杜賓腰甲β",
                     "jaJP": "EXドーベルコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -2352,12 +2352,12 @@
             },
             {
                 "id": "精英．杜賓護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．杜賓護腿β",
                     "jaJP": "EXドーベルグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -2380,15 +2380,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．大馬士革α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．大馬士革α",
                 "jaJP": "EXダマスクα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 152,
             "resistance": {
                 "fire": 4,
@@ -2399,15 +2399,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．大馬士革頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．大馬士革頭盔α",
                     "jaJP": "EXダマスクヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -2426,12 +2426,12 @@
             },
             {
                 "id": "精英．大馬士革鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．大馬士革鎧甲α",
                     "jaJP": "EXダマスクメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 3
@@ -2453,12 +2453,12 @@
             },
             {
                 "id": "精英．大馬士革腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．大馬士革腕甲α",
                     "jaJP": "EXダマスクアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -2480,12 +2480,12 @@
             },
             {
                 "id": "精英．大馬士革腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．大馬士革腰甲α",
                     "jaJP": "EXダマスクコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -2507,12 +2507,12 @@
             },
             {
                 "id": "精英．大馬士革護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．大馬士革護腿α",
                     "jaJP": "EXダマスクグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -2535,15 +2535,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．大馬士革β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．大馬士革β",
                 "jaJP": "EXダマスクβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 152,
             "resistance": {
                 "fire": 4,
@@ -2554,15 +2554,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．大馬士革頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．大馬士革頭盔β",
                     "jaJP": "EXダマスクヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -2583,12 +2583,12 @@
             },
             {
                 "id": "精英．大馬士革鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．大馬士革鎧甲β",
                     "jaJP": "EXダマスクメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -2609,12 +2609,12 @@
             },
             {
                 "id": "精英．大馬士革腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．大馬士革腕甲β",
                     "jaJP": "EXダマスクアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -2632,12 +2632,12 @@
             },
             {
                 "id": "精英．大馬士革腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．大馬士革腰甲β",
                     "jaJP": "EXダマスクコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -2658,12 +2658,12 @@
             },
             {
                 "id": "精英．大馬士革護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．大馬士革護腿β",
                     "jaJP": "EXダマスクグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -2686,15 +2686,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．紅蓮爆鱗龍α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．紅蓮爆鱗龍α",
                 "jaJP": "EXブライドα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 154,
             "resistance": {
                 "fire": 3,
@@ -2707,15 +2707,15 @@
                 "id": "爆鱗龍的霸氣"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．紅蓮爆鱗龍頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍頭盔α",
                     "jaJP": "EXブライドヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -2737,12 +2737,12 @@
             },
             {
                 "id": "精英．紅蓮爆鱗龍鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍鎧甲α",
                     "jaJP": "EXブライドメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -2764,12 +2764,12 @@
             },
             {
                 "id": "精英．紅蓮爆鱗龍腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍腕甲α",
                     "jaJP": "EXブライドアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -2788,12 +2788,12 @@
             },
             {
                 "id": "精英．紅蓮爆鱗龍腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍腰甲α",
                     "jaJP": "EXブライドコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -2812,12 +2812,12 @@
             },
             {
                 "id": "精英．紅蓮爆鱗龍護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍護腿α",
                     "jaJP": "EXブライドグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 3
@@ -2837,15 +2837,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．紅蓮爆鱗龍β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．紅蓮爆鱗龍β",
                 "jaJP": "EXブライドβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 154,
             "resistance": {
                 "fire": 3,
@@ -2858,15 +2858,15 @@
                 "id": "爆鱗龍的霸氣"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．紅蓮爆鱗龍頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍頭盔β",
                     "jaJP": "EXブライドヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -2888,12 +2888,12 @@
             },
             {
                 "id": "精英．紅蓮爆鱗龍鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍鎧甲β",
                     "jaJP": "EXブライドメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -2914,12 +2914,12 @@
             },
             {
                 "id": "精英．紅蓮爆鱗龍腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍腕甲β",
                     "jaJP": "EXブライドアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -2937,12 +2937,12 @@
             },
             {
                 "id": "精英．紅蓮爆鱗龍腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍腰甲β",
                     "jaJP": "EXブライドコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -2960,12 +2960,12 @@
             },
             {
                 "id": "精英．紅蓮爆鱗龍護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍護腿β",
                     "jaJP": "EXブライドグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -2988,15 +2988,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．煌怒恐暴龍α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．煌怒恐暴龍α",
                 "jaJP": "EXグリードα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 156,
             "resistance": {
                 "fire": 2,
@@ -3009,15 +3009,15 @@
                 "id": "恐暴龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．煌怒恐暴龍頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．煌怒恐暴龍頭盔α",
                     "jaJP": "EXグリードヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -3036,12 +3036,12 @@
             },
             {
                 "id": "精英．煌怒恐暴龍鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．煌怒恐暴龍鎧甲α",
                     "jaJP": "EXグリードメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 2
@@ -3060,12 +3060,12 @@
             },
             {
                 "id": "精英．煌怒恐暴龍腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．煌怒恐暴龍腕甲α",
                     "jaJP": "EXグリードアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -3084,12 +3084,12 @@
             },
             {
                 "id": "精英．煌怒恐暴龍腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．煌怒恐暴龍腰甲α",
                     "jaJP": "EXグリードコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -3108,12 +3108,12 @@
             },
             {
                 "id": "精英．煌怒恐暴龍護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．煌怒恐暴龍護腿α",
                     "jaJP": "EXグリードグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -3136,15 +3136,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．煌怒恐暴龍β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．煌怒恐暴龍β",
                 "jaJP": "EXグリードβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 156,
             "resistance": {
                 "fire": 2,
@@ -3157,15 +3157,15 @@
                 "id": "恐暴龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．煌怒恐暴龍頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．煌怒恐暴龍頭盔β",
                     "jaJP": "EXグリードヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -3183,12 +3183,12 @@
             },
             {
                 "id": "精英．煌怒恐暴龍鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．煌怒恐暴龍鎧甲β",
                     "jaJP": "EXグリードメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -3209,12 +3209,12 @@
             },
             {
                 "id": "精英．煌怒恐暴龍腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．煌怒恐暴龍腕甲β",
                     "jaJP": "EXグリードアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -3229,12 +3229,12 @@
             },
             {
                 "id": "精英．煌怒恐暴龍腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．煌怒恐暴龍腰甲β",
                     "jaJP": "EXグリードコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -3252,12 +3252,12 @@
             },
             {
                 "id": "精英．煌怒恐暴龍護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．煌怒恐暴龍護腿β",
                     "jaJP": "EXグリードグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -3280,15 +3280,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．雷狼龍α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．雷狼龍α",
                 "jaJP": "EXジンオウα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 158,
             "resistance": {
                 "fire": -1,
@@ -3301,15 +3301,15 @@
                 "id": "雷狼龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．雷狼龍頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．雷狼龍頭盔α",
                     "jaJP": "EXジンオウヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -3328,12 +3328,12 @@
             },
             {
                 "id": "精英．雷狼龍鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．雷狼龍鎧甲α",
                     "jaJP": "EXジンオウメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 3
@@ -3352,12 +3352,12 @@
             },
             {
                 "id": "精英．雷狼龍腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．雷狼龍腕甲α",
                     "jaJP": "EXジンオウアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -3379,12 +3379,12 @@
             },
             {
                 "id": "精英．雷狼龍腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．雷狼龍腰甲α",
                     "jaJP": "EXジンオウコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -3403,12 +3403,12 @@
             },
             {
                 "id": "精英．雷狼龍護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．雷狼龍護腿α",
                     "jaJP": "EXジンオウグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -3428,15 +3428,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．雷狼龍β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．雷狼龍β",
                 "jaJP": "EXジンオウβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 158,
             "resistance": {
                 "fire": -1,
@@ -3449,15 +3449,15 @@
                 "id": "雷狼龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．雷狼龍頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．雷狼龍頭盔β",
                     "jaJP": "EXジンオウヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -3476,12 +3476,12 @@
             },
             {
                 "id": "精英．雷狼龍鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．雷狼龍鎧甲β",
                     "jaJP": "EXジンオウメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -3496,12 +3496,12 @@
             },
             {
                 "id": "精英．雷狼龍腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．雷狼龍腕甲β",
                     "jaJP": "EXジンオウアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -3523,12 +3523,12 @@
             },
             {
                 "id": "精英．雷狼龍腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．雷狼龍腰甲β",
                     "jaJP": "EXジンオウコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -3546,12 +3546,12 @@
             },
             {
                 "id": "精英．雷狼龍護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．雷狼龍護腿β",
                     "jaJP": "EXジンオウグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -3574,15 +3574,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．黑狼鳥α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．黑狼鳥α",
                 "jaJP": "EXガルルガα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 154,
             "resistance": {
                 "fire": 2,
@@ -3593,15 +3593,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．黑狼鳥頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．黑狼鳥頭盔α",
                     "jaJP": "EXガルルガヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -3620,12 +3620,12 @@
             },
             {
                 "id": "精英．黑狼鳥鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．黑狼鳥鎧甲α",
                     "jaJP": "EXガルルガメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -3644,12 +3644,12 @@
             },
             {
                 "id": "精英．黑狼鳥腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．黑狼鳥腕甲α",
                     "jaJP": "EXガルルガアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -3664,12 +3664,12 @@
             },
             {
                 "id": "精英．黑狼鳥腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．黑狼鳥腰甲α",
                     "jaJP": "EXガルルガコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -3691,12 +3691,12 @@
             },
             {
                 "id": "精英．黑狼鳥護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．黑狼鳥護腿α",
                     "jaJP": "EXガルルガグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 3
@@ -3719,15 +3719,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．黑狼鳥β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．黑狼鳥β",
                 "jaJP": "EXガルルガβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 154,
             "resistance": {
                 "fire": 2,
@@ -3738,15 +3738,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．黑狼鳥頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．黑狼鳥頭盔β",
                     "jaJP": "EXガルルガヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -3768,12 +3768,12 @@
             },
             {
                 "id": "精英．黑狼鳥鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．黑狼鳥鎧甲β",
                     "jaJP": "EXガルルガメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -3792,12 +3792,12 @@
             },
             {
                 "id": "精英．黑狼鳥腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．黑狼鳥腕甲β",
                     "jaJP": "EXガルルガアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -3812,12 +3812,12 @@
             },
             {
                 "id": "精英．黑狼鳥腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．黑狼鳥腰甲β",
                     "jaJP": "EXガルルガコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -3835,12 +3835,12 @@
             },
             {
                 "id": "精英．黑狼鳥護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．黑狼鳥護腿β",
                     "jaJP": "EXガルルガグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -3862,15 +3862,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．黑轟龍α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．黑轟龍α",
                 "jaJP": "EXレックスロアα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 158,
             "resistance": {
                 "fire": 3,
@@ -3883,15 +3883,15 @@
                 "id": "轟龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．黑轟龍頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．黑轟龍頭盔α",
                     "jaJP": "EXレックスロアヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -3910,12 +3910,12 @@
             },
             {
                 "id": "精英．黑轟龍鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．黑轟龍鎧甲α",
                     "jaJP": "EXレックスロアメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 3
@@ -3934,12 +3934,12 @@
             },
             {
                 "id": "精英．黑轟龍腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．黑轟龍腕甲α",
                     "jaJP": "EXレックスロアアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -3958,12 +3958,12 @@
             },
             {
                 "id": "精英．黑轟龍腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．黑轟龍腰甲α",
                     "jaJP": "EXレックスロアコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -3982,12 +3982,12 @@
             },
             {
                 "id": "精英．黑轟龍護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．黑轟龍護腿α",
                     "jaJP": "EXレックスロアグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -4007,15 +4007,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．黑轟龍β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．黑轟龍β",
                 "jaJP": "EXレックスロアβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 158,
             "resistance": {
                 "fire": 3,
@@ -4028,15 +4028,15 @@
                 "id": "轟龍的真髓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．黑轟龍頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．黑轟龍頭盔β",
                     "jaJP": "EXレックスロアヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -4055,12 +4055,12 @@
             },
             {
                 "id": "精英．黑轟龍鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．黑轟龍鎧甲β",
                     "jaJP": "EXレックスロアメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -4082,12 +4082,12 @@
             },
             {
                 "id": "精英．黑轟龍腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．黑轟龍腕甲β",
                     "jaJP": "EXレックスロアアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -4106,12 +4106,12 @@
             },
             {
                 "id": "精英．黑轟龍腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．黑轟龍腰甲β",
                     "jaJP": "EXレックスロアコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -4130,12 +4130,12 @@
             },
             {
                 "id": "精英．黑轟龍護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．黑轟龍護腿β",
                     "jaJP": "EXレックスロアグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -4155,15 +4155,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．公會宮殿α",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．公會宮殿α",
                 "jaJP": "EXギルドパレスα",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 154,
             "resistance": {
                 "fire": 1,
@@ -4176,15 +4176,15 @@
                 "id": "工會的見識"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．公會宮殿頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．公會宮殿頭盔α",
                     "jaJP": "EXギルドパレスヘルムα",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -4203,12 +4203,12 @@
             },
             {
                 "id": "精英．公會宮殿鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．公會宮殿鎧甲α",
                     "jaJP": "EXギルドパレスメイルα",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -4230,12 +4230,12 @@
             },
             {
                 "id": "精英．公會宮殿腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．公會宮殿腕甲α",
                     "jaJP": "EXギルドパレスアームα",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -4254,12 +4254,12 @@
             },
             {
                 "id": "精英．公會宮殿腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．公會宮殿腰甲α",
                     "jaJP": "EXギルドパレスコイルα",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -4281,12 +4281,12 @@
             },
             {
                 "id": "精英．公會宮殿護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．公會宮殿護腿α",
                     "jaJP": "EXギルドパレスグリーヴα",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -4306,15 +4306,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．公會宮殿β",
-            "rare": 11,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．公會宮殿β",
                 "jaJP": "EXギルドパレスβ",
                 "enUS": null
             },
+            "rare": 11,
+            "gender": "general",
             "defense": 154,
             "resistance": {
                 "fire": 1,
@@ -4327,15 +4327,15 @@
                 "id": "工會的見識"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．公會宮殿頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．公會宮殿頭盔β",
                     "jaJP": "EXギルドパレスヘルムβ",
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 4
@@ -4353,12 +4353,12 @@
             },
             {
                 "id": "精英．公會宮殿鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "精英．公會宮殿鎧甲β",
                     "jaJP": "EXギルドパレスメイルβ",
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 4
@@ -4380,12 +4380,12 @@
             },
             {
                 "id": "精英．公會宮殿腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "精英．公會宮殿腕甲β",
                     "jaJP": "EXギルドパレスアームβ",
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 4
@@ -4403,12 +4403,12 @@
             },
             {
                 "id": "精英．公會宮殿腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "精英．公會宮殿腰甲β",
                     "jaJP": "EXギルドパレスコイルβ",
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 4
@@ -4430,12 +4430,12 @@
             },
             {
                 "id": "精英．公會宮殿護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "精英．公會宮殿護腿β",
                     "jaJP": "EXギルドパレスグリーヴβ",
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 4
@@ -4458,11 +4458,11 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "精英．敏捷耳飾α",
             "rare": 12,
             "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "精英．敏捷耳飾α",
                 "jaJP": null,
                 "enUS": null
@@ -4477,15 +4477,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "精英．敏捷耳飾α",
-                "type": "helm",
                 "name": {
                     "zhTW": "精英．敏捷耳飾α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2

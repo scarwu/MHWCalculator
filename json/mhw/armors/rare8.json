@@ -1,14 +1,14 @@
 [
     {
-        "common": {
+        "series": {
             "id": "烏爾德α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "烏爾德α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": -4,
@@ -21,15 +21,15 @@
                 "id": "屍套龍的命脈"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "烏爾德頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "烏爾德頭盔α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": null,
                 "skills": [
                     {
@@ -44,12 +44,12 @@
             },
             {
                 "id": "烏爾德鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "烏爾德鎧甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -68,12 +68,12 @@
             },
             {
                 "id": "烏爾德腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "烏爾德腕甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -92,12 +92,12 @@
             },
             {
                 "id": "烏爾德腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "烏爾德腰甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -116,12 +116,12 @@
             },
             {
                 "id": "烏爾德護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "烏爾德護腿α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -141,15 +141,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "烏爾德β",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "烏爾德β",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": -4,
@@ -162,15 +162,15 @@
                 "id": "屍套龍的命脈"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "烏爾德頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "烏爾德頭盔β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -185,12 +185,12 @@
             },
             {
                 "id": "烏爾德鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "烏爾德鎧甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -208,12 +208,12 @@
             },
             {
                 "id": "烏爾德腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "烏爾德腕甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -234,12 +234,12 @@
             },
             {
                 "id": "烏爾德腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "烏爾德腰甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -257,12 +257,12 @@
             },
             {
                 "id": "烏爾德護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "烏爾德護腿β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -281,15 +281,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "戰紋α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "戰紋α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": 1,
@@ -302,15 +302,15 @@
                 "id": "滅盡龍的飢餓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "戰紋頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "戰紋頭盔α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -329,12 +329,12 @@
             },
             {
                 "id": "戰紋鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "戰紋鎧甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -353,12 +353,12 @@
             },
             {
                 "id": "戰紋腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "戰紋腕甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": null,
                 "skills": [
                     {
@@ -373,12 +373,12 @@
             },
             {
                 "id": "戰紋腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "戰紋腰甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": null,
                 "skills": [
                     {
@@ -393,12 +393,12 @@
             },
             {
                 "id": "戰紋護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "戰紋護腿α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -418,15 +418,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "戰紋β",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "戰紋β",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": 1,
@@ -439,15 +439,15 @@
                 "id": "滅盡龍的飢餓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "戰紋頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "戰紋頭盔β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -465,12 +465,12 @@
             },
             {
                 "id": "戰紋鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "戰紋鎧甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 2
@@ -488,12 +488,12 @@
             },
             {
                 "id": "戰紋腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "戰紋腕甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -508,12 +508,12 @@
             },
             {
                 "id": "戰紋腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "戰紋腰甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -528,12 +528,12 @@
             },
             {
                 "id": "戰紋護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "戰紋護腿β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -549,15 +549,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "帝王α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "帝王α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": 3,
@@ -570,15 +570,15 @@
                 "id": "炎王龍的武技"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "帝王皇冠α",
-                "type": "helm",
                 "name": {
                     "zhTW": "帝王皇冠α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": null,
                 "skills": [
                     {
@@ -589,12 +589,12 @@
             },
             {
                 "id": "帝王鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "帝王鎧甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": null,
                 "skills": [
                     {
@@ -609,12 +609,12 @@
             },
             {
                 "id": "帝王腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "帝王腕甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -629,12 +629,12 @@
             },
             {
                 "id": "帝王腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "帝王腰甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": null,
                 "skills": [
                     {
@@ -649,12 +649,12 @@
             },
             {
                 "id": "帝王護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "帝王護腿α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": null,
                 "skills": [
                     {
@@ -670,15 +670,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "帝王β",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "帝王β",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": 3,
@@ -691,15 +691,15 @@
                 "id": "炎王龍的武技"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "帝王皇冠β",
-                "type": "helm",
                 "name": {
                     "zhTW": "帝王皇冠β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -714,12 +714,12 @@
             },
             {
                 "id": "帝王鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "帝王鎧甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -737,12 +737,12 @@
             },
             {
                 "id": "帝王腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "帝王腕甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -757,12 +757,12 @@
             },
             {
                 "id": "帝王腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "帝王腰甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -777,12 +777,12 @@
             },
             {
                 "id": "帝王護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "帝王護腿β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -798,15 +798,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "鋼龍α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "鋼龍α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": 0,
@@ -819,15 +819,15 @@
                 "id": "鋼龍的飛翔"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "鋼龍強力α",
-                "type": "helm",
                 "name": {
                     "zhTW": "鋼龍強力α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": null,
                 "skills": [
                     {
@@ -842,12 +842,12 @@
             },
             {
                 "id": "鋼龍恐懼α",
-                "type": "chest",
                 "name": {
                     "zhTW": "鋼龍恐懼α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": null,
                 "skills": [
                     {
@@ -862,12 +862,12 @@
             },
             {
                 "id": "鋼龍剛強α",
-                "type": "arm",
                 "name": {
                     "zhTW": "鋼龍剛強α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": null,
                 "skills": [
                     {
@@ -882,12 +882,12 @@
             },
             {
                 "id": "鋼龍安穩α",
-                "type": "waist",
                 "name": {
                     "zhTW": "鋼龍安穩α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": null,
                 "skills": [
                     {
@@ -902,12 +902,12 @@
             },
             {
                 "id": "鋼龍踏實α",
-                "type": "leg",
                 "name": {
                     "zhTW": "鋼龍踏實α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": null,
                 "skills": [
                     {
@@ -923,15 +923,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "鋼龍β",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "鋼龍β",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": 0,
@@ -944,15 +944,15 @@
                 "id": "鋼龍的飛翔"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "鋼龍強力β",
-                "type": "helm",
                 "name": {
                     "zhTW": "鋼龍強力β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -973,12 +973,12 @@
             },
             {
                 "id": "鋼龍恐懼β",
-                "type": "chest",
                 "name": {
                     "zhTW": "鋼龍恐懼β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 2
@@ -993,12 +993,12 @@
             },
             {
                 "id": "鋼龍剛強β",
-                "type": "arm",
                 "name": {
                     "zhTW": "鋼龍剛強β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -1013,12 +1013,12 @@
             },
             {
                 "id": "鋼龍安穩β",
-                "type": "waist",
                 "name": {
                     "zhTW": "鋼龍安穩β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -1036,12 +1036,12 @@
             },
             {
                 "id": "鋼龍踏實β",
-                "type": "leg",
                 "name": {
                     "zhTW": "鋼龍踏實β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 3
@@ -1057,15 +1057,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "龍王的獨眼α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "龍王的獨眼α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 90,
             "resistance": {
                 "fire": 0,
@@ -1076,15 +1076,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "龍王的獨眼α",
-                "type": "helm",
                 "name": {
                     "zhTW": "龍王的獨眼α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -1100,15 +1100,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "冥燈幽火α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "冥燈幽火α",
                 "jaJP": null,
                 "enUS": "Xeno'jiiva Alpha Armor Set"
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 92,
             "resistance": {
                 "fire": -3,
@@ -1121,15 +1121,15 @@
                 "id": "冥燈龍的神秘"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "異種大型頭飾α",
-                "type": "helm",
                 "name": {
                     "zhTW": "異種大型頭飾α",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Headgear Alpha"
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -1148,12 +1148,12 @@
             },
             {
                 "id": "異種大型皮α",
-                "type": "chest",
                 "name": {
                     "zhTW": "異種大型皮α",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Hide Alpha"
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -1172,12 +1172,12 @@
             },
             {
                 "id": "異種大型鋼爪α",
-                "type": "arm",
                 "name": {
                     "zhTW": "異種大型鋼爪α",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Claws Alpha"
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -1196,12 +1196,12 @@
             },
             {
                 "id": "異種大型脊椎α",
-                "type": "waist",
                 "name": {
                     "zhTW": "異種大型脊椎α",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Spine Alpha"
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -1220,12 +1220,12 @@
             },
             {
                 "id": "異種大型靴α",
-                "type": "leg",
                 "name": {
                     "zhTW": "異種大型靴α",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Spurs Alpha"
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -1245,15 +1245,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "冥燈幽火β",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "冥燈幽火β",
                 "jaJP": null,
                 "enUS": "Xeno'jiiva Beta Armor Set"
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 92,
             "resistance": {
                 "fire": -3,
@@ -1266,15 +1266,15 @@
                 "id": "冥燈龍的神秘"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "異種大型頭飾β",
-                "type": "helm",
                 "name": {
                     "zhTW": "異種大型頭飾β",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Headgear Beta"
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -1289,12 +1289,12 @@
             },
             {
                 "id": "異種大型皮β",
-                "type": "chest",
                 "name": {
                     "zhTW": "異種大型皮β",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Hide Beta"
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -1312,12 +1312,12 @@
             },
             {
                 "id": "異種大型鋼爪β",
-                "type": "arm",
                 "name": {
                     "zhTW": "異種大型鋼爪β",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Claws Beta"
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -1332,12 +1332,12 @@
             },
             {
                 "id": "異種大型脊椎β",
-                "type": "waist",
                 "name": {
                     "zhTW": "異種大型脊椎β",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Spine Beta"
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -1355,12 +1355,12 @@
             },
             {
                 "id": "異種大型靴β",
-                "type": "leg",
                 "name": {
                     "zhTW": "異種大型靴β",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Spurs Beta"
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -1379,15 +1379,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "麒麟α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "麒麟α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": -3,
@@ -1400,15 +1400,15 @@
                 "id": "麒麟的恩寵"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "麒麟角α",
-                "type": "helm",
                 "name": {
                     "zhTW": "麒麟角α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": null,
                 "skills": [
                     {
@@ -1423,12 +1423,12 @@
             },
             {
                 "id": "麒麟服飾α",
-                "type": "chest",
                 "name": {
                     "zhTW": "麒麟服飾α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": null,
                 "skills": [
                     {
@@ -1443,12 +1443,12 @@
             },
             {
                 "id": "麒麟長腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "麒麟長腕甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": null,
                 "skills": [
                     {
@@ -1463,12 +1463,12 @@
             },
             {
                 "id": "麒麟腰環α",
-                "type": "waist",
                 "name": {
                     "zhTW": "麒麟腰環α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": null,
                 "skills": [
                     {
@@ -1483,12 +1483,12 @@
             },
             {
                 "id": "麒麟護脛α",
-                "type": "leg",
                 "name": {
                     "zhTW": "麒麟護脛α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": null,
                 "skills": [
                     {
@@ -1504,15 +1504,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "麒麟β",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "麒麟β",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": -3,
@@ -1525,15 +1525,15 @@
                 "id": "麒麟的恩寵"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "麒麟角β",
-                "type": "helm",
                 "name": {
                     "zhTW": "麒麟角β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -1548,12 +1548,12 @@
             },
             {
                 "id": "麒麟服飾β",
-                "type": "chest",
                 "name": {
                     "zhTW": "麒麟服飾β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -1568,12 +1568,12 @@
             },
             {
                 "id": "麒麟長腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "麒麟長腕甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -1591,12 +1591,12 @@
             },
             {
                 "id": "麒麟腰環β",
-                "type": "waist",
                 "name": {
                     "zhTW": "麒麟腰環β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -1617,12 +1617,12 @@
             },
             {
                 "id": "麒麟護脛β",
-                "type": "leg",
                 "name": {
                     "zhTW": "麒麟護脛β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -1641,15 +1641,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "公會十字α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "公會十字α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 82,
             "resistance": {
                 "fire": 0,
@@ -1662,15 +1662,15 @@
                 "id": "公會的引導"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "公會十字頭飾α",
-                "type": "helm",
                 "name": {
                     "zhTW": "公會十字頭飾α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -1689,12 +1689,12 @@
             },
             {
                 "id": "公會十字戰衣α",
-                "type": "chest",
                 "name": {
                     "zhTW": "公會十字戰衣α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -1713,12 +1713,12 @@
             },
             {
                 "id": "公會十字腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "公會十字腕甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -1737,12 +1737,12 @@
             },
             {
                 "id": "公會十字腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "公會十字腰甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -1761,12 +1761,12 @@
             },
             {
                 "id": "公會十字靴α",
-                "type": "leg",
                 "name": {
                     "zhTW": "公會十字靴α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -1786,15 +1786,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "公會十字β",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "公會十字β",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 82,
             "resistance": {
                 "fire": 0,
@@ -1807,15 +1807,15 @@
                 "id": "公會的引導"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "公會十字頭飾β",
-                "type": "helm",
                 "name": {
                     "zhTW": "公會十字頭飾β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -1836,12 +1836,12 @@
             },
             {
                 "id": "公會十字戰衣β",
-                "type": "chest",
                 "name": {
                     "zhTW": "公會十字戰衣β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 3
@@ -1856,12 +1856,12 @@
             },
             {
                 "id": "公會十字腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "公會十字腕甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -1876,12 +1876,12 @@
             },
             {
                 "id": "公會十字腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "公會十字腰甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -1902,12 +1902,12 @@
             },
             {
                 "id": "公會十字靴β",
-                "type": "leg",
                 "name": {
                     "zhTW": "公會十字靴β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 3
@@ -1923,15 +1923,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "追蹤者α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "追蹤者α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 90,
             "resistance": {
                 "fire": 2,
@@ -1944,15 +1944,15 @@
                 "id": "調查團的引導"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "追蹤者頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "追蹤者頭盔α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -1971,12 +1971,12 @@
             },
             {
                 "id": "追蹤者鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "追蹤者鎧甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": null,
                 "skills": [
                     {
@@ -1991,12 +1991,12 @@
             },
             {
                 "id": "追蹤者腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "追蹤者腕甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -2015,12 +2015,12 @@
             },
             {
                 "id": "追蹤者腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "追蹤者腰甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -2039,12 +2039,12 @@
             },
             {
                 "id": "追蹤者護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "追蹤者護腿α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": null,
                 "skills": [
                     {
@@ -2060,15 +2060,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "追蹤者β",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "追蹤者β",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 90,
             "resistance": {
                 "fire": 2,
@@ -2081,15 +2081,15 @@
                 "id": "調查團的引導"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "追蹤者頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "追蹤者頭盔β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -2104,12 +2104,12 @@
             },
             {
                 "id": "追蹤者鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "追蹤者鎧甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -2124,12 +2124,12 @@
             },
             {
                 "id": "追蹤者腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "追蹤者腕甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -2144,12 +2144,12 @@
             },
             {
                 "id": "追蹤者腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "追蹤者腰甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -2164,12 +2164,12 @@
             },
             {
                 "id": "追蹤者護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "追蹤者護腿β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -2185,15 +2185,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "絢輝龍鎧羅α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "絢輝龍鎧羅α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 92,
             "resistance": {
                 "fire": 4,
@@ -2204,15 +2204,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "絢輝龍鎧羅頭盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "絢輝龍鎧羅頭盔α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -2231,12 +2231,12 @@
             },
             {
                 "id": "絢輝龍鎧羅鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "絢輝龍鎧羅鎧甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -2255,12 +2255,12 @@
             },
             {
                 "id": "絢輝龍鎧羅腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "絢輝龍鎧羅腕甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -2279,12 +2279,12 @@
             },
             {
                 "id": "絢輝龍鎧羅腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "絢輝龍鎧羅腰甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -2303,12 +2303,12 @@
             },
             {
                 "id": "絢輝龍鎧羅護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "絢輝龍鎧羅護腿α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -2328,15 +2328,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "絢輝龍鎧羅β",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "絢輝龍鎧羅β",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 92,
             "resistance": {
                 "fire": 4,
@@ -2347,15 +2347,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "絢輝龍鎧羅頭盔β",
-                "type": "helm",
                 "name": {
                     "zhTW": "絢輝龍鎧羅頭盔β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -2377,12 +2377,12 @@
             },
             {
                 "id": "絢輝龍鎧羅鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "絢輝龍鎧羅鎧甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 3
@@ -2404,12 +2404,12 @@
             },
             {
                 "id": "絢輝龍鎧羅腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "絢輝龍鎧羅腕甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -2431,12 +2431,12 @@
             },
             {
                 "id": "絢輝龍鎧羅腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "絢輝龍鎧羅腰甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -2458,12 +2458,12 @@
             },
             {
                 "id": "絢輝龍鎧羅護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "絢輝龍鎧羅護腿β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -2486,15 +2486,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "但丁α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "但丁α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": 3,
@@ -2505,15 +2505,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "但丁假髮α",
-                "type": "helm",
                 "name": {
                     "zhTW": "但丁假髮α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -2532,12 +2532,12 @@
             },
             {
                 "id": "但丁風衣α",
-                "type": "chest",
                 "name": {
                     "zhTW": "但丁風衣α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 3
@@ -2556,12 +2556,12 @@
             },
             {
                 "id": "但丁手套α",
-                "type": "arm",
                 "name": {
                     "zhTW": "但丁手套α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -2580,12 +2580,12 @@
             },
             {
                 "id": "但丁皮帶α",
-                "type": "waist",
                 "name": {
                     "zhTW": "但丁皮帶α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -2604,12 +2604,12 @@
             },
             {
                 "id": "但丁皮褲靴α",
-                "type": "leg",
                 "name": {
                     "zhTW": "但丁皮褲靴α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 1
@@ -2628,15 +2628,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "皇后α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "皇后α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 90,
             "resistance": {
                 "fire": 3,
@@ -2649,15 +2649,15 @@
                 "id": "炎妃龍的恩寵"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "皇后琴眩α",
-                "type": "helm",
                 "name": {
                     "zhTW": "皇后琴眩α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -2679,12 +2679,12 @@
             },
             {
                 "id": "皇后鎧甲α",
-                "type": "chest",
                 "name": {
                     "zhTW": "皇后鎧甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -2706,12 +2706,12 @@
             },
             {
                 "id": "皇后腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "皇后腕甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -2730,12 +2730,12 @@
             },
             {
                 "id": "皇后腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "皇后腰甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -2757,12 +2757,12 @@
             },
             {
                 "id": "皇后護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "皇后護腿α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -2785,15 +2785,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "皇后β",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "皇后β",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 90,
             "resistance": {
                 "fire": 3,
@@ -2806,15 +2806,15 @@
                 "id": "炎妃龍的恩寵"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "皇后琴眩β",
-                "type": "helm",
                 "name": {
                     "zhTW": "皇后琴眩β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -2832,12 +2832,12 @@
             },
             {
                 "id": "皇后鎧甲β",
-                "type": "chest",
                 "name": {
                     "zhTW": "皇后鎧甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -2858,12 +2858,12 @@
             },
             {
                 "id": "皇后腕甲β",
-                "type": "arm",
                 "name": {
                     "zhTW": "皇后腕甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -2881,12 +2881,12 @@
             },
             {
                 "id": "皇后腰甲β",
-                "type": "waist",
                 "name": {
                     "zhTW": "皇后腰甲β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -2904,12 +2904,12 @@
             },
             {
                 "id": "皇后護腿β",
-                "type": "leg",
                 "name": {
                     "zhTW": "皇后護腿β",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -2928,15 +2928,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "烏爾德γ",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "烏爾德γ",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 92,
             "resistance": {
                 "fire": -4,
@@ -2949,15 +2949,15 @@
                 "id": "屍套龍的命脈"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "烏爾德頭盔γ",
-                "type": "helm",
                 "name": {
                     "zhTW": "烏爾德頭盔γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -2976,12 +2976,12 @@
             },
             {
                 "id": "烏爾德鎧甲γ",
-                "type": "chest",
                 "name": {
                     "zhTW": "烏爾德鎧甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 3
@@ -3000,12 +3000,12 @@
             },
             {
                 "id": "烏爾德腕甲γ",
-                "type": "arm",
                 "name": {
                     "zhTW": "烏爾德腕甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -3023,12 +3023,12 @@
             },
             {
                 "id": "烏爾德腰甲γ",
-                "type": "waist",
                 "name": {
                     "zhTW": "烏爾德腰甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 2
@@ -3053,12 +3053,12 @@
             },
             {
                 "id": "烏爾德護腿γ",
-                "type": "leg",
                 "name": {
                     "zhTW": "烏爾德護腿γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 3
@@ -3081,15 +3081,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "麒麟γ",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "麒麟γ",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 92,
             "resistance": {
                 "fire": -3,
@@ -3102,15 +3102,15 @@
                 "id": "麒麟的恩寵"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "麒麟角γ",
-                "type": "helm",
                 "name": {
                     "zhTW": "麒麟角γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -3129,12 +3129,12 @@
             },
             {
                 "id": "麒麟服飾γ",
-                "type": "chest",
                 "name": {
                     "zhTW": "麒麟服飾γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -3152,12 +3152,12 @@
             },
             {
                 "id": "麒麟長腕甲γ",
-                "type": "arm",
                 "name": {
                     "zhTW": "麒麟長腕甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -3179,12 +3179,12 @@
             },
             {
                 "id": "麒麟腰環γ",
-                "type": "waist",
                 "name": {
                     "zhTW": "麒麟腰環γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -3202,12 +3202,12 @@
             },
             {
                 "id": "麒麟護脛γ",
-                "type": "leg",
                 "name": {
                     "zhTW": "麒麟護脛γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 3
@@ -3227,15 +3227,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "騰龍α",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "騰龍α",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 92,
             "resistance": {
                 "fire": -2,
@@ -3248,15 +3248,15 @@
                 "id": "龍騎士之證"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "騰龍戰盔α",
-                "type": "helm",
                 "name": {
                     "zhTW": "騰龍戰盔α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -3278,12 +3278,12 @@
             },
             {
                 "id": "騰龍戰鎧α",
-                "type": "chest",
                 "name": {
                     "zhTW": "騰龍戰鎧α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 3
@@ -3302,12 +3302,12 @@
             },
             {
                 "id": "騰龍腕甲α",
-                "type": "arm",
                 "name": {
                     "zhTW": "騰龍腕甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -3329,12 +3329,12 @@
             },
             {
                 "id": "騰龍腰甲α",
-                "type": "waist",
                 "name": {
                     "zhTW": "騰龍腰甲α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -3353,12 +3353,12 @@
             },
             {
                 "id": "騰龍護腿α",
-                "type": "leg",
                 "name": {
                     "zhTW": "騰龍護腿α",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -3378,15 +3378,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "帝王γ",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "帝王γ",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 92,
             "resistance": {
                 "fire": 3,
@@ -3399,15 +3399,15 @@
                 "id": "炎王龍的武技"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "帝王皇冠γ",
-                "type": "helm",
                 "name": {
                     "zhTW": "帝王皇冠γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -3425,12 +3425,12 @@
             },
             {
                 "id": "帝王鎧甲γ",
-                "type": "chest",
                 "name": {
                     "zhTW": "帝王鎧甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 2
@@ -3449,12 +3449,12 @@
             },
             {
                 "id": "帝王腕甲γ",
-                "type": "arm",
                 "name": {
                     "zhTW": "帝王腕甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -3469,12 +3469,12 @@
             },
             {
                 "id": "帝王腰甲γ",
-                "type": "waist",
                 "name": {
                     "zhTW": "帝王腰甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -3492,12 +3492,12 @@
             },
             {
                 "id": "帝王護腿γ",
-                "type": "leg",
                 "name": {
                     "zhTW": "帝王護腿γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 3
@@ -3516,15 +3516,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "鋼龍γ",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "鋼龍γ",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 92,
             "resistance": {
                 "fire": 0,
@@ -3537,15 +3537,15 @@
                 "id": "鋼龍的飛翔"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "鋼龍強力γ",
-                "type": "helm",
                 "name": {
                     "zhTW": "鋼龍強力γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -3560,12 +3560,12 @@
             },
             {
                 "id": "鋼龍恐懼γ",
-                "type": "chest",
                 "name": {
                     "zhTW": "鋼龍恐懼γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 2
@@ -3584,12 +3584,12 @@
             },
             {
                 "id": "鋼龍剛強γ",
-                "type": "arm",
                 "name": {
                     "zhTW": "鋼龍剛強γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -3610,12 +3610,12 @@
             },
             {
                 "id": "鋼龍安穩γ",
-                "type": "waist",
                 "name": {
                     "zhTW": "鋼龍安穩γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 1
@@ -3633,12 +3633,12 @@
             },
             {
                 "id": "鋼龍踏實γ",
-                "type": "leg",
                 "name": {
                     "zhTW": "鋼龍踏實γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 3
@@ -3654,15 +3654,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "皇后γ",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "皇后γ",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 90,
             "resistance": {
                 "fire": 3,
@@ -3675,15 +3675,15 @@
                 "id": "炎妃龍的恩寵"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "皇后琴眩γ",
-                "type": "helm",
                 "name": {
                     "zhTW": "皇后琴眩γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 1
@@ -3708,12 +3708,12 @@
             },
             {
                 "id": "皇后鎧甲γ",
-                "type": "chest",
                 "name": {
                     "zhTW": "皇后鎧甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 3
@@ -3732,12 +3732,12 @@
             },
             {
                 "id": "皇后腕甲γ",
-                "type": "arm",
                 "name": {
                     "zhTW": "皇后腕甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -3759,12 +3759,12 @@
             },
             {
                 "id": "皇后腰甲γ",
-                "type": "waist",
                 "name": {
                     "zhTW": "皇后腰甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -3783,12 +3783,12 @@
             },
             {
                 "id": "皇后護腿γ",
-                "type": "leg",
                 "name": {
                     "zhTW": "皇后護腿γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 3
@@ -3808,15 +3808,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "絢輝龍鎧羅γ",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "絢輝龍鎧羅γ",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 90,
             "resistance": {
                 "fire": 4,
@@ -3827,15 +3827,15 @@
             },
             "set": null
         },
-        "list": [
+        "items": [
             {
                 "id": "絢輝龍鎧羅琴眩γ",
-                "type": "helm",
                 "name": {
                     "zhTW": "絢輝龍鎧羅琴眩γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 3
@@ -3860,12 +3860,12 @@
             },
             {
                 "id": "絢輝龍鎧羅鎧甲γ",
-                "type": "chest",
                 "name": {
                     "zhTW": "絢輝龍鎧羅鎧甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -3884,12 +3884,12 @@
             },
             {
                 "id": "絢輝龍鎧羅腕甲γ",
-                "type": "arm",
                 "name": {
                     "zhTW": "絢輝龍鎧羅腕甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 1
@@ -3908,12 +3908,12 @@
             },
             {
                 "id": "絢輝龍鎧羅腰甲γ",
-                "type": "waist",
                 "name": {
                     "zhTW": "絢輝龍鎧羅腰甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -3932,12 +3932,12 @@
             },
             {
                 "id": "絢輝龍鎧羅護腿γ",
-                "type": "leg",
                 "name": {
                     "zhTW": "絢輝龍鎧羅護腿γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 3
@@ -3960,15 +3960,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "冥燈幽火γ",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "冥燈幽火γ",
                 "jaJP": null,
                 "enUS": "Xeno'jiiva Gamma Armor Set"
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 90,
             "resistance": {
                 "fire": -3,
@@ -3981,15 +3981,15 @@
                 "id": "冥燈龍的神秘"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "異種大型頭飾γ",
-                "type": "helm",
                 "name": {
                     "zhTW": "異種大型頭飾γ",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Headgear Gamma"
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -4014,12 +4014,12 @@
             },
             {
                 "id": "異種大型皮γ",
-                "type": "chest",
                 "name": {
                     "zhTW": "異種大型皮γ",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Hide Gamma"
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -4037,12 +4037,12 @@
             },
             {
                 "id": "異種大型爪γ",
-                "type": "arm",
                 "name": {
                     "zhTW": "異種大型爪γ",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Claws Gamma"
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -4067,12 +4067,12 @@
             },
             {
                 "id": "異種大型脊椎γ",
-                "type": "waist",
                 "name": {
                     "zhTW": "異種大型脊椎γ",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Spine Gamma"
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -4090,12 +4090,12 @@
             },
             {
                 "id": "異種大型護腿γ",
-                "type": "leg",
                 "name": {
                     "zhTW": "異種大型護腿γ",
                     "jaJP": null,
                     "enUS": "Xeno'jiiva Spurs Gamma"
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2
@@ -4117,15 +4117,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "鑄島熔岩γ",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "鑄島熔岩γ",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 90,
             "resistance": {
                 "fire": 4,
@@ -4138,15 +4138,15 @@
                 "id": "熔山龍的奧秘"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "鑄島熔岩頭飾γ",
-                "type": "helm",
                 "name": {
                     "zhTW": "鑄島熔岩頭飾γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -4165,12 +4165,12 @@
             },
             {
                 "id": "鑄島熔岩皮γ",
-                "type": "chest",
                 "name": {
                     "zhTW": "鑄島熔岩皮γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 1
@@ -4191,12 +4191,12 @@
             },
             {
                 "id": "鑄島熔岩鋼爪γ",
-                "type": "arm",
                 "name": {
                     "zhTW": "鑄島熔岩鋼爪γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 3
@@ -4214,12 +4214,12 @@
             },
             {
                 "id": "鑄島熔岩腰甲γ",
-                "type": "waist",
                 "name": {
                     "zhTW": "鑄島熔岩腰甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -4241,12 +4241,12 @@
             },
             {
                 "id": "鑄島熔岩護腿γ",
-                "type": "leg",
                 "name": {
                     "zhTW": "鑄島熔岩護腿γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 3
@@ -4269,15 +4269,15 @@
         ]
     },
     {
-        "common": {
+        "series": {
             "id": "戰紋γ",
-            "rare": 8,
-            "gender": "general",
-            "series": {
+            "name": {
                 "zhTW": "戰紋γ",
                 "jaJP": null,
                 "enUS": null
             },
+            "rare": 8,
+            "gender": "general",
             "defense": 84,
             "resistance": {
                 "fire": 1,
@@ -4290,15 +4290,15 @@
                 "id": "滅盡龍的飢餓"
             }
         },
-        "list": [
+        "items": [
             {
                 "id": "戰紋頭盔γ",
-                "type": "helm",
                 "name": {
                     "zhTW": "戰紋頭盔γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "helm",
                 "slots": [
                     {
                         "size": 2
@@ -4320,12 +4320,12 @@
             },
             {
                 "id": "戰紋鎧甲γ",
-                "type": "chest",
                 "name": {
                     "zhTW": "戰紋鎧甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "chest",
                 "slots": [
                     {
                         "size": 3
@@ -4346,12 +4346,12 @@
             },
             {
                 "id": "戰紋腕甲γ",
-                "type": "arm",
                 "name": {
                     "zhTW": "戰紋腕甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "arm",
                 "slots": [
                     {
                         "size": 2
@@ -4376,12 +4376,12 @@
             },
             {
                 "id": "戰紋腰甲γ",
-                "type": "waist",
                 "name": {
                     "zhTW": "戰紋腰甲γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "waist",
                 "slots": [
                     {
                         "size": 3
@@ -4403,12 +4403,12 @@
             },
             {
                 "id": "戰紋護腿γ",
-                "type": "leg",
                 "name": {
                     "zhTW": "戰紋護腿γ",
                     "jaJP": null,
                     "enUS": null
                 },
+                "type": "leg",
                 "slots": [
                     {
                         "size": 2

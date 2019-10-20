@@ -213,12 +213,13 @@ class Misc
             break;
         case 'armor':
             // {
-            //     "common": {
-            //         "rare": 8,
-            //         "gender": "general",
-            //         "series": {
+            //     "series": {
+            //         "id": "龍王的獨眼α",
+            //         "name": {
             //             "zhTW": "龍王的獨眼α"
             //         },
+            //         "rare": 8,
+            //         "gender": "general",
             //         "defense": 90,
             //         "resistance": {
             //             "fire": 0,
@@ -229,7 +230,7 @@ class Misc
             //         },
             //         "set": null
             //     },
-            //     "list": [
+            //     "items": [
             //         {
             //             "id": "龍王的獨眼α",
             //             "type": "helm",
@@ -252,24 +253,25 @@ class Misc
             // }
             Misc::$datasetMap['armors'][] = [
                 [
-                    $data['common']['rare'],
-                    $data['common']['gender'],
-                    $data['common']['series'],
-                    $data['common']['defense'],
+                    $data['series']['id'],
+                    $data['series']['name'],
+                    $data['series']['rare'],
+                    $data['series']['gender'],
+                    $data['series']['defense'],
                     [
-                        $data['common']['resistance']['fire'],
-                        $data['common']['resistance']['water'],
-                        $data['common']['resistance']['thunder'],
-                        $data['common']['resistance']['ice'],
-                        $data['common']['resistance']['dragon']
+                        $data['series']['resistance']['fire'],
+                        $data['series']['resistance']['water'],
+                        $data['series']['resistance']['thunder'],
+                        $data['series']['resistance']['ice'],
+                        $data['series']['resistance']['dragon']
                     ],
-                    (null !== $data['common']['set']) ? $data['common']['set']['id'] : null,
+                    (null !== $data['series']['set']) ? $data['series']['set']['id'] : null,
                 ],
                 array_map(function ($item) {
                     return [
                         $item['id'],
-                        $item['type'],
                         $item['name'],
+                        $item['type'],
                         (null !== $item['slots']) ? array_map(function ($slot) {
                             return $slot['size'];
                         }, $item['slots']) : null,
@@ -280,7 +282,7 @@ class Misc
                             ];
                         }, $item['skills']) : null
                     ];
-                }, $data['list'])
+                }, $data['items'])
             ];
             break;
         case 'charm':
@@ -290,6 +292,8 @@ class Misc
             //         "zhTW": "心靜自然涼護石"
             //     },
             //     "rare": 7,
+            //     "seriesId": "心靜自然涼護石",
+            //     "level": 1,
             //     "skills": [
             //         {
             //             "id": "熱傷害無效",
@@ -305,6 +309,8 @@ class Misc
                 $data['id'],
                 $data['name'],
                 $data['rare'],
+                $data['seriesId'],
+                $data['level'],
                 array_map(function ($item) {
                     return [
                         $item['id'],
@@ -607,7 +613,7 @@ $jewelChecklist = [];
 // ];
 
 // foreach ($armors as $armor) {
-//     foreach ($armor['list'] as $item) {
+//     foreach ($armor['items'] as $item) {
 //         if (!is_array($item['slots']) || 0 === count($item['slots'])) {
 //             continue;
 //         }
@@ -641,7 +647,7 @@ $jewelChecklist = [];
 // ksort($slotArmorList);
 
 // $armors[] = [
-//     'common' => $slotArmorCommon,
+//     'series' => $slotArmorCommon,
 //     'list' => array_values($slotArmorList)
 // ];
 
@@ -759,13 +765,13 @@ foreach ($weapons as $weapon) {
 foreach ($armors as $index => $armor) {
 
     // Checklist
-    if (is_array($armor['common']['set'])) {
-        if (!isset($setChecklist[$armor['common']['set']['id']])) {
-            echo "Error: Set={$armor['common']['set']['id']}\n";
+    if (is_array($armor['series']['set'])) {
+        if (!isset($setChecklist[$armor['series']['set']['id']])) {
+            echo "Error: Set={$armor['series']['set']['id']}\n";
         }
     }
 
-    foreach ($armor['list'] as $item) {
+    foreach ($armor['items'] as $item) {
         $armorChecklist[$item['id']] = true;
 
         if (is_array($item['skills'])) {
@@ -778,14 +784,17 @@ foreach ($armors as $index => $armor) {
     }
 
     // Create ID Hash
-    if (is_array($armor['common']['set'])) {
-        $armor['common']['set']['id'] = Misc::createCode("set:name:{$armor['common']['set']['id']}");
+    if (is_array($armor['series']['set'])) {
+        $armor['series']['set']['id'] = Misc::createCode("set:name:{$armor['series']['set']['id']}");
     }
 
     // Create Translation Mapping
-    $armor['common']['series'] = Misc::appendLangMap("armor:series:{$armor['common']['id']}", $armor['common']['series']);
+    $armor['series']['name'] = Misc::appendLangMap("armor:series:{$armor['series']['id']}", $armor['series']['name']);
 
-    foreach ($armor['list'] as $index => $item) {
+    // Create ID Hash
+    $armor['series']['id'] = Misc::createCode("armor:series:{$armor['series']['id']}");
+
+    foreach ($armor['items'] as $index => $item) {
 
         // Create Translation Mapping
         $item['name'] = Misc::appendLangMap("armor:name:{$item['id']}", $item['name']);
@@ -802,7 +811,7 @@ foreach ($armors as $index => $armor) {
         }
 
         // Rewrite
-        $armor['list'][$index] = $item;
+        $armor['items'][$index] = $item;
     }
 
     // Create Dataset
@@ -827,6 +836,7 @@ foreach ($charms as $charm) {
 
     // Create ID Hash
     $charm['id'] = Misc::createCode("charm:name:{$charm['id']}");
+    $charm['seriesId'] = Misc::createCode("charm:name:{$charm['seriesId']}");
     $charm['skills'] = array_map(function ($skill) {
         $skill['id'] = Misc::createCode("skill:name:{$skill['id']}");
 

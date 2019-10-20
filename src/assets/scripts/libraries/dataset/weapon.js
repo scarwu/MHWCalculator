@@ -82,12 +82,7 @@ class WeaponDataset {
     resetFilter = () => {
         this.filterType = null;
         this.filterRare = null;
-        this.filterElementType = null;
-        this.filterAttack = null;
-        this.filterCriticalRate = null;
-        this.filterDefense = null;
-        this.filterElementValue = null;
-        this.filterSlotCount = null;
+        this.filterSkillName = null;
     };
 
     getIds = () => {
@@ -104,6 +99,22 @@ class WeaponDataset {
 
             if (Helper.isNotEmpty(this.filterRare)) {
                 if (this.filterRare !== data.rare) {
+                    return false;
+                }
+            }
+
+            let isSkip = true;
+
+            if (Helper.isNotEmpty(this.filterSkillName)) {
+                for (let index in data.skills) {
+                    if (this.filterSkillName !== data.skills[index].id) {
+                        continue;
+                    }
+
+                    isSkip = false;
+                }
+
+                if (isSkip) {
                     return false;
                 }
             }
@@ -134,38 +145,8 @@ class WeaponDataset {
         return this;
     };
 
-    elementTypeIs = (text) => {
-        this.filterElementType = text;
-
-        return this;
-    };
-
-    attackIsGreaterEqualThen = (value) => {
-        this.filterAttack = value;
-
-        return this;
-    };
-
-    criticalRateIsGreaterEqualThen = (value) => {
-        this.filterCriticalRate = value;
-
-        return this;
-    };
-
-    defenseIsGreaterEqualThen = (value) => {
-        this.filterDefense = value;
-
-        return this;
-    };
-
-    elementValueIsGreaterEqualThen = (value) => {
-        this.filterElementValue = value;
-
-        return this;
-    };
-
-    slotCountIsGreaterEqualThen = (value) => {
-        this.filterSlotCount = value;
+    hasSkill = (name) => {
+        this.filterSkillName = name;
 
         return this;
     };

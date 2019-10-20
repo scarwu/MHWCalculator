@@ -17,7 +17,9 @@ import Charms from 'files/json/datasets/charms.json';
 //     0: id,
 //     1: name,
 //     2: rare,
-//     3: skills [
+//     3: seriesId,
+//     4: level,
+//     5: skills [
 //         [
 //             0: id,
 //             1: level
@@ -30,7 +32,9 @@ let dataset = Charms.map((charm) => {
         id: charm[0],
         name: charm[1],
         rare: charm[2],
-        skills: charm[3].map((skill) => {
+        rare: charm[3],
+        rare: charm[4],
+        skills: charm[5].map((skill) => {
             return {
                 id: skill[0],
                 level: skill[1]

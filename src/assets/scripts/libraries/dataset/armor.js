@@ -16,23 +16,24 @@ import Armors from 'files/json/datasets/armors.json';
 let dataset = Armors.map((pack) => {
     return pack[1].map((item) => {
         return {
-            rare: pack[0][0],
-            gender: pack[0][1],
-            series: pack[0][2],
-            defense: pack[0][3],
+            seriesId: pack[0][0],
+            series: pack[0][1],
+            rare: pack[0][2],
+            gender: pack[0][3],
+            defense: pack[0][4],
             resistance: {
-                fire: pack[0][4][0],
-                water: pack[0][4][1],
-                thunder: pack[0][4][2],
-                ice: pack[0][4][3],
-                dragon: pack[0][4][4]
+                fire: pack[0][5][0],
+                water: pack[0][5][1],
+                thunder: pack[0][5][2],
+                ice: pack[0][5][3],
+                dragon: pack[0][5][4]
             },
-            set: (Helper.isNotEmpty(pack[0][5])) ? {
-                id: pack[0][5]
+            set: (Helper.isNotEmpty(pack[0][6])) ? {
+                id: pack[0][6]
             } : null,
             id: item[0],
-            type: item[1],
-            name: item[2],
+            name: item[1],
+            type: item[2],
             slots: (Helper.isNotEmpty(item[3])) ? item[3].map((size) => {
                 return {
                     size: size

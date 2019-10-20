@@ -81,6 +81,7 @@ class SetDataset {
             ? Helper.deepCopy(this.mapping[name]) : null;
     };
 
+    // Conditional Functions
     hasSkill = (name) => {
         this.filterSkillName = name;
 
