@@ -116,14 +116,22 @@ function watch() {
  */
 function releaseCopyBoot() {
     return gulp.src('src/boot/**/*')
+        .pipe($.filter(['**', '!**/*.map']))
         .pipe(gulp.dest('docs'));
 }
 
 function releaseReplaceIndex() {
-    return gulp.src('docs/index.html')
-        .pipe($.replace('?timestamp', '?' + postfix))
-        .pipe(gulp.dest('docs'));
+    return gulp.src('src/boot/index.html')
+        .pipe($.replace('?timestamp', `?${postfix}`))
+        .pipe(gulp.dest('src/boot'));
 }
+
+gulp.task(
+    'releaseUploadSourcemap',
+    $.shell.task([
+        `./node_modules/@sentry/cli/bin/sentry-cli releases files ${postfix} upload-sourcemaps ./src/boot --ignore node_modules --rewrite`
+    ])
+);
 
 /**
  * Set Variables
@@ -167,7 +175,8 @@ gulp.task('prepare', gulp.series(
 gulp.task('release', gulp.series(
     setEnv, cleanDocs,
     'prepare',
-    releaseCopyBoot, releaseReplaceIndex
+    gulp.parallel('releaseUploadSourcemap', releaseReplaceIndex),
+    releaseCopyBoot
 ));
 
 gulp.task('default', gulp.series(

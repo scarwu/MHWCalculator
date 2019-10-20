@@ -13,6 +13,7 @@ const marked = require('marked');
 
 module.exports = {
     mode: 'development',
+    devtool: 'source-map',
     entry: {
         main: './src/assets/scripts/main.jsx'
     },
@@ -28,9 +29,6 @@ module.exports = {
             '.js',
             '.jsx'
         ]
-    },
-    externals: {
-
     },
     module: {
         rules: [
