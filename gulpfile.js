@@ -16,7 +16,6 @@ const colors = require('ansi-colors');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
-const sentryCliPlugin = require('@sentry/webpack-plugin');
 const postfix = (new Date()).getTime().toString();
 
 let ENVIRONMENT = 'development';
@@ -56,15 +55,6 @@ function compileWebpack(callback) {
         webpackConfig.mode = ENVIRONMENT;
         webpackConfig.plugins = webpackConfig.plugins || [];
         webpackConfig.plugins.push(definePlugin);
-        webpackConfig.plugins.push(
-            new sentryCliPlugin({
-                include: './docs/assets/scripts',
-                ignore: [ 'node_modules' ],
-                configFile: './.sentryclirc',
-                release: postfix,
-                // deleteAfterCompile: true
-            })
-        );
     }
 
     if (WEBPACK_NEED_WATCH) {
@@ -126,14 +116,22 @@ function watch() {
  */
 function releaseCopyBoot() {
     return gulp.src('src/boot/**/*')
+        .pipe($.filter(['**', '!**/*.map']))
         .pipe(gulp.dest('docs'));
 }
 
 function releaseReplaceIndex() {
-    return gulp.src('docs/index.html')
-        .pipe($.replace('?timestamp', '?' + postfix))
-        .pipe(gulp.dest('docs'));
+    return gulp.src('src/boot/index.html')
+        .pipe($.replace('?timestamp', `?${postfix}`))
+        .pipe(gulp.dest('src/boot'));
 }
+
+gulp.task(
+    'releaseUploadSourcemap',
+    $.shell.task([
+        `./node_modules/@sentry/cli/bin/sentry-cli releases files ${postfix} upload-sourcemaps ./src/boot --ignore node_modules --rewrite`
+    ])
+);
 
 /**
  * Set Variables
@@ -177,7 +175,8 @@ gulp.task('prepare', gulp.series(
 gulp.task('release', gulp.series(
     setEnv, cleanDocs,
     'prepare',
-    releaseCopyBoot, releaseReplaceIndex
+    gulp.parallel('releaseUploadSourcemap', releaseReplaceIndex),
+    releaseCopyBoot
 ));
 
 gulp.task('default', gulp.series(
