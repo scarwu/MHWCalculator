@@ -182,7 +182,7 @@ class FittingAlgorithm {
             }).forEach((jewelInfo) => {
 
                 // Check is Using Factor Jewel
-                if (false === this.algorithmParams.usingFactor.jewel[jewelInfo.size]) {
+                if (false === this.algorithmParams.usingFactor.jewel['size' + jewelInfo.size]) {
                     return;
                 }
 
@@ -950,7 +950,7 @@ class FittingAlgorithm {
         equipInfos.forEach((equipInfo) => {
 
             // Check is Using Factor Armor
-            if (false === this.algorithmParams.usingFactor.armor[equipInfo.rare]) {
+            if (false === this.algorithmParams.usingFactor.armor['rare' + equipInfo.rare]) {
                 return;
             }
 

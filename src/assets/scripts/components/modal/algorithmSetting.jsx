@@ -38,6 +38,31 @@ import Config from 'config';
  */
 const levelMapping = [ 'I', 'II', 'III', 'IV', 'V' ];
 
+const sortList = [
+    { key: 'complex', value: _('complexSort') },
+    { key: 'defense', value: _('defenseSort') },
+    { key: 'fire', value: _('fireSort') },
+    { key: 'water', value: _('waterSort') },
+    { key: 'thunder', value: _('thunderSort') },
+    { key: 'ice', value: _('iceSort') },
+    { key: 'dragon', value: _('dragonSort') },
+    { key: 'amount', value: _('amountSort') },
+    { key: 'slot', value: _('slotSort') },
+    { key: 'expectedValue', value: _('expectedValueSort') },
+    { key: 'expectedLevel', value: _('expectedLevelSort') }
+];
+
+const orderList = [
+    { key: 'desc', value: _('desc') },
+    { key: 'asc', value: _('asc') }
+];
+
+const strategyList = [
+    { key: 'rough', value: _('roughStrategy') },
+    { key: 'speed', value: _('speedStrategy') },
+    { key: 'complete', value: _('completeStrategy') }
+];
+
 /**
  * Handler Functions
  */
@@ -79,6 +104,19 @@ const renderArmorFactors = (armorFactor) => {
             <div key={rare} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
                     <span>{_('armorFactor')} R{rare}</span>
+                    <div className="mhwc-icons_bundle">
+                        {armorFactor['rare' + rare] ? (
+                            <FunctionalButton
+                                iconName="star"
+                                altName={_('exclude')}
+                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, true)}} />
+                        ) : (
+                            <FunctionalButton
+                                iconName="star-o"
+                                altName={_('include')}
+                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, false)}} />
+                        )}
+                    </div>
                 </div>
                 <div className="col-12 mhwc-content">
                     {Object.keys(seriesIds).sort((seriesIdA, seriesIdB) => {
@@ -90,21 +128,19 @@ const renderArmorFactors = (armorFactor) => {
                         return (
                             <div key={seriesId} className="col-6 mhwc-value">
                                 <span>{_(seriesId)}</span>
-                                {isInclude ? (
-                                    <div className="mhwc-icons_bundle">
+                                <div className="mhwc-icons_bundle">
+                                    {isInclude ? (
                                         <FunctionalButton
                                             iconName="star"
                                             altName={_('exclude')}
                                             onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, true)}} />
-                                    </div>
-                                ) : (
-                                    <div className="mhwc-icons_bundle">
+                                    ) : (
                                         <FunctionalButton
                                             iconName="star-o"
                                             altName={_('include')}
                                             onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, false)}} />
-                                    </div>
-                                )}
+                                    )}
+                                </div>
                             </div>
                         );
                     })}
@@ -193,6 +229,19 @@ const renderJewelFactors = (jewelFactor) => {
             <div key={size} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
                     <span>{_('jewelFactor')} [{size}]</span>
+                    <div className="mhwc-icons_bundle">
+                        {jewelFactor['size' + size] ? (
+                            <FunctionalButton
+                                iconName="star"
+                                altName={_('exclude')}
+                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, true)}} />
+                        ) : (
+                            <FunctionalButton
+                                iconName="star-o"
+                                altName={_('include')}
+                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, false)}} />
+                        )}
+                    </div>
                 </div>
                 <div className="col-12 mhwc-content">
                     {Object.keys(jewelIds).sort((jewelIdA, jewelIdB) => {
@@ -252,34 +301,6 @@ export default function AlgorithmSetting(props) {
             unsubscribeModal();
         };
     }, []);
-
-    /**
-     * Variables
-     */
-    const sortList = [
-        { key: 'complex', value: _('complexSort') },
-        { key: 'defense', value: _('defenseSort') },
-        { key: 'fire', value: _('fireSort') },
-        { key: 'water', value: _('waterSort') },
-        { key: 'thunder', value: _('thunderSort') },
-        { key: 'ice', value: _('iceSort') },
-        { key: 'dragon', value: _('dragonSort') },
-        { key: 'amount', value: _('amountSort') },
-        { key: 'slot', value: _('slotSort') },
-        { key: 'expectedValue', value: _('expectedValueSort') },
-        { key: 'expectedLevel', value: _('expectedLevelSort') }
-    ];
-
-    const orderList = [
-        { key: 'desc', value: _('desc') },
-        { key: 'asc', value: _('asc') }
-    ];
-
-    const strategyList = [
-        { key: 'rough', value: _('roughStrategy') },
-        { key: 'speed', value: _('speedStrategy') },
-        { key: 'complete', value: _('completeStrategy') }
-    ];
 
     /**
      * Handle Functions
@@ -348,21 +369,19 @@ export default function AlgorithmSetting(props) {
                                     return (
                                         <div key={target} className="col-6 mhwc-value">
                                             <span>{_(target)}</span>
-                                            {stateAlgorithmParams.flag[target] ? (
-                                                <div className="mhwc-icons_bundle">
+                                            <div className="mhwc-icons_bundle">
+                                                {stateAlgorithmParams.flag[target] ? (
                                                     <FunctionalButton
                                                         iconName="star"
                                                         altName={_('exclude')}
                                                         onClick={() => {CommonState.setter.toggleAlgorithmParamsFlag(target)}} />
-                                                </div>
-                                            ) : (
-                                                <div className="mhwc-icons_bundle">
+                                                ) : (
                                                     <FunctionalButton
                                                         iconName="star-o"
                                                         altName={_('include')}
                                                         onClick={() => {CommonState.setter.toggleAlgorithmParamsFlag(target)}} />
-                                                </div>
-                                            )}
+                                                )}
+                                            </div>
                                         </div>
                                     );
                                 })}

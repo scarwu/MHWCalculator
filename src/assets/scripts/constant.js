@@ -95,9 +95,23 @@ export default {
                 isRequireConsistent: false
             },
             usingFactor: {
-                armor: {},
+                armor: {
+                    'rare12': true,
+                    'rare11': false,
+                    'rare10': false,
+                    'rare9': false,
+                    'rare8': false,
+                    'rare7': false,
+                    'rare6': false,
+                    'rare5': false
+                },
                 charm: {},
-                jewel: {}
+                jewel: {
+                    'size4': true,
+                    'size3': true,
+                    'size2': true,
+                    'size1': true
+                }
             }
         },
         candidateEquip: {
