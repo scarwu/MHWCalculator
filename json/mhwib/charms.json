@@ -1,1063 +1,1553 @@
 [
     {
-        "seriesId": "迴避護石",
-        "level": 4,
-        "id": "迴避護石 IV",
-        "name": {
-            "zhTW": "迴避護石 IV",
-            "jaJP": "回避の護石 IV",
-            "enUS": "Evasion Charm IV"
+        "series": {
+            "id": "迴避護石",
+            "name": {
+                "zhTW": "迴避護石",
+                "jaJP": "回避の護石",
+                "enUS": "Evasion Charm"
+            }
         },
-        "rare": 12,
-        "skills": [
+        "items": [
             {
-                "id": "迴避性能",
-                "level": 4
+                "id": "迴避護石 IV",
+                "name": {
+                    "zhTW": "迴避護石 IV",
+                    "jaJP": "回避の護石 IV",
+                    "enUS": "Evasion Charm IV"
+                },
+                "rare": 12,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "迴避性能",
+                        "level": 4
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "火焰護石",
-        "level": 4,
-        "id": "火焰護石 IV",
-        "name": {
-            "zhTW": "火焰護石 IV",
-            "jaJP": "火炎の護石 IV",
-            "enUS": "Blaze Charm IV"
-        },
-        "rare": 10,
-        "skills": [
-            {
-                "id": "火屬性攻擊強化",
-                "level": 4
+        "series": {
+            "id": "火焰護石",
+            "name": {
+                "zhTW": "火焰護石",
+                "jaJP": "火炎の護石",
+                "enUS": "Blaze Charm"
             }
-        ]
-    },
-    {
-        "seriesId": "火焰護石",
-        "level": 5,
-        "id": "火焰護石 V",
-        "name": {
-            "zhTW": "火焰護石 V",
-            "jaJP": "火炎の護石 V",
-            "enUS": "Blaze Charm V"
         },
-        "rare": 11,
-        "skills": [
+        "items": [
             {
-                "id": "火屬性攻擊強化",
-                "level": 5
-            }
-        ]
-    },
-    {
-        "seriesId": "覺醒護石",
-        "level": 3,
-        "id": "覺醒護石 III",
-        "name": {
-            "zhTW": "覺醒護石 III",
-            "jaJP": "覚醒の護石 III",
-            "enUS": "Awakening Charm III"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "屬性解放／裝填擴充",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "貫通彈護石",
-        "level": 2,
-        "id": "貫通彈護石 II",
-        "name": {
-            "zhTW": "貫通彈護石 II",
-            "jaJP": "貫通弾の護石 II",
-            "enUS": "Penetration Charm II"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "貫通彈・龍之箭強化",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "seriesId": "暴怒護石",
-        "level": 3,
-        "id": "暴怒護石 III",
-        "name": {
-            "zhTW": "暴怒護石 III",
-            "jaJP": "逆上の護石 III",
-            "enUS": "Fury Charm III"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "怨恨",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "暴怒護石",
-        "level": 4,
-        "id": "暴怒護石 IV",
-        "name": {
-            "zhTW": "暴怒護石 IV",
-            "jaJP": "逆上の護石 IV",
-            "enUS": "Fury Charm IV"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "怨恨",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "強走護石",
-        "level": 3,
-        "id": "強走護石 III",
-        "name": {
-            "zhTW": "強走護石 III",
-            "jaJP": "強走の護石 III",
-            "enUS": "Marathon Charm III"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "跑者",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "攻擊護石",
-        "level": 4,
-        "id": "攻擊護石 IV",
-        "name": {
-            "zhTW": "攻擊護石 IV",
-            "jaJP": "攻撃の護石 IV",
-            "enUS": "Attack Charm IV"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "攻擊",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "昂揚護石",
-        "level": 3,
-        "id": "昂揚護石 III",
-        "name": {
-            "zhTW": "昂揚護石 III",
-            "jaJP": "昴揚の護石 III",
-            "enUS": "Invigorate Charm III"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "強化持續",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "剛力護石",
-        "level": 1,
-        "id": "剛力護石",
-        "name": {
-            "zhTW": "剛力護石",
-            "jaJP": "剛力の護石",
-            "enUS": null
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "無屬性強化",
-                "level": 1
+                "id": "火焰護石 IV",
+                "name": {
+                    "zhTW": "火焰護石 IV",
+                    "jaJP": "火炎の護石 IV",
+                    "enUS": "Blaze Charm IV"
+                },
+                "rare": 10,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "火屬性攻擊強化",
+                        "level": 4
+                    }
+                ]
             },
             {
-                "id": "鈍器能手",
-                "level": 1
+                "id": "火焰護石 V",
+                "name": {
+                    "zhTW": "火焰護石 V",
+                    "jaJP": "火炎の護石 V",
+                    "enUS": "Blaze Charm V"
+                },
+                "rare": 11,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "火屬性攻擊強化",
+                        "level": 5
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "毅力護石",
-        "level": 1,
-        "id": "毅力護石",
-        "name": {
-            "zhTW": "毅力護石",
-            "jaJP": "根性の護石",
-            "enUS": null
+        "series": {
+            "id": "覺醒護石",
+            "name": {
+                "zhTW": "覺醒護石",
+                "jaJP": "覚醒の護石",
+                "enUS": "Awakening Charm"
+            }
         },
-        "rare": 11,
-        "skills": [
+        "items": [
             {
-                "id": "毅力",
-                "level": 1
+                "id": "覺醒護石 III",
+                "name": {
+                    "zhTW": "覺醒護石 III",
+                    "jaJP": "覚醒の護石 III",
+                    "enUS": "Awakening Charm III"
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "屬性解放／裝填擴充",
+                        "level": 3
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "指揮護石",
-        "level": 4,
-        "id": "指揮護石 IV",
-        "name": {
-            "zhTW": "指揮護石 IV",
-            "jaJP": "采配の護石 IV",
-            "enUS": "Rally Charm IV"
+        "series": {
+            "id": "貫通彈護石",
+            "name": {
+                "zhTW": "貫通彈護石",
+                "jaJP": "貫通弾の護石",
+                "enUS": "Penetration Charm"
+            }
         },
-        "rare": 9,
-        "skills": [
+        "items": [
             {
-                "id": "指示隨從",
-                "level": 4
+                "id": "貫通彈護石 II",
+                "name": {
+                    "zhTW": "貫通彈護石 II",
+                    "jaJP": "貫通弾の護石 II",
+                    "enUS": "Penetration Charm II"
+                },
+                "rare": 11,
+                "level": 2,
+                "skills": [
+                    {
+                        "id": "貫通彈・龍之箭強化",
+                        "level": 2
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "指揮護石",
-        "level": 5,
-        "id": "指揮護石 V",
-        "name": {
-            "zhTW": "指揮護石 V",
-            "jaJP": "采配の護石 V",
-            "enUS": "Rally Charm V"
-        },
-        "rare": 10,
-        "skills": [
-            {
-                "id": "指示隨從",
-                "level": 5
+        "series": {
+            "id": "暴怒護石",
+            "name": {
+                "zhTW": "暴怒護石",
+                "jaJP": "逆上の護石",
+                "enUS": "Fury Charm"
             }
-        ]
-    },
-    {
-        "seriesId": "散彈護石",
-        "level": 2,
-        "id": "散彈護石 II",
-        "name": {
-            "zhTW": "散彈護石 II",
-            "jaJP": "散弾の護石 II",
-            "enUS": "Dispersal Charm II"
         },
-        "rare": 11,
-        "skills": [
+        "items": [
             {
-                "id": "散彈・剛射強化",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "seriesId": "重擊護石",
-        "level": 3,
-        "id": "重擊護石 III",
-        "name": {
-            "zhTW": "重擊護石 III",
-            "jaJP": "重撃の護石 III",
-            "enUS": "Breaker Charm III"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "破壞王",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "集中護石",
-        "level": 3,
-        "id": "集中護石 III",
-        "name": {
-            "zhTW": "集中護石 III",
-            "jaJP": "集中の護石 III",
-            "enUS": "Focus Charm III"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "集中",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "守勢護石",
-        "level": 1,
-        "id": "守勢護石 I",
-        "name": {
-            "zhTW": "守勢護石 I",
-            "jaJP": "守勢の護石 I",
-            "enUS": null
-        },
-        "rare": 9,
-        "skills": [
-            {
-                "id": "攻擊守勢",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "seriesId": "守勢護石",
-        "level": 2,
-        "id": "守勢護石 II",
-        "name": {
-            "zhTW": "守勢護石 II",
-            "jaJP": "守勢の護石 II",
-            "enUS": null
-        },
-        "rare": 10,
-        "skills": [
-            {
-                "id": "攻擊守勢",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "seriesId": "守勢護石",
-        "level": 3,
-        "id": "守勢護石 III",
-        "name": {
-            "zhTW": "守勢護石 III",
-            "jaJP": "守勢の護石 III",
-            "enUS": null
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "攻擊守勢",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "植學護石",
-        "level": 4,
-        "id": "植學護石 IV",
-        "name": {
-            "zhTW": "植學護石 IV",
-            "jaJP": "植学の護石 IV",
-            "enUS": "Botany Charm IV"
-        },
-        "rare": 9,
-        "skills": [
-            {
-                "id": "植生學",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "睡擊護石",
-        "level": 4,
-        "id": "睡擊護石 IV",
-        "name": {
-            "zhTW": "睡擊護石 IV",
-            "jaJP": "睡撃の護石 IV",
-            "enUS": "Tranq Charm IV"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "睡眠屬性強化",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "全開護石",
-        "level": 3,
-        "id": "全開護石 III",
-        "name": {
-            "zhTW": "全開護石 III",
-            "jaJP": "全開の護石 III",
-            "enUS": "Power Charm III"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "力量解放",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "全開護石",
-        "level": 4,
-        "id": "全開護石 IV",
-        "name": {
-            "zhTW": "全開護石 IV",
-            "jaJP": "全開の護石 IV",
-            "enUS": "Power Charm IV"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "力量解放",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "早氣護石",
-        "level": 3,
-        "id": "早氣護石 III",
-        "name": {
-            "zhTW": "早氣護石 III",
-            "jaJP": "早気の護石 III",
-            "enUS": "Surge Charm III"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "耐力急速回復",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "底力護石",
-        "level": 3,
-        "id": "底力護石 III",
-        "name": {
-            "zhTW": "底力護石 III",
-            "jaJP": "底力の護石 III",
-            "enUS": "Grit Charm III"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "火場怪力",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "底力護石",
-        "level": 4,
-        "id": "底力護石 IV",
-        "name": {
-            "zhTW": "底力護石 IV",
-            "jaJP": "底力の護石 IV",
-            "enUS": "Grit Charm IV"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "火場怪力",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "體術護石",
-        "level": 4,
-        "id": "體術護石 IV",
-        "name": {
-            "zhTW": "體術護石 IV",
-            "jaJP": "体術の護石 IV",
-            "enUS": "Fitness Charm IV"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "體術",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "耐衝護石",
-        "level": 3,
-        "id": "耐衝護石 III",
-        "name": {
-            "zhTW": "耐衝護石 III",
-            "jaJP": "耐衝の護石 III",
-            "enUS": "Impact Charm III"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "減輕膽怯",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "耐震護石",
-        "level": 3,
-        "id": "耐震護石 III",
-        "name": {
-            "zhTW": "耐震護石 III",
-            "jaJP": "耐震の護石 III",
-            "enUS": "Tremor Charm III"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "耐震",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "匠之護石",
-        "level": 4,
-        "id": "匠之護石 IV",
-        "name": {
-            "zhTW": "匠之護石 IV",
-            "jaJP": "匠の護石 IV",
-            "enUS": "Handicraft Charm IV"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "匠",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "嗜菇護石",
-        "level": 3,
-        "id": "嗜菇護石 III",
-        "name": {
-            "zhTW": "嗜菇護石 III",
-            "jaJP": "茸好の護石 III",
-            "enUS": "Mushroom Charm III"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "最愛菇類",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "達人護石",
-        "level": 4,
-        "id": "達人護石 IV",
-        "name": {
-            "zhTW": "達人護石 IV",
-            "jaJP": "達人の護石 IV",
-            "enUS": "Master's Charm IV"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "看破",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "超心護石",
-        "level": 2,
-        "id": "超心護石 II",
-        "name": {
-            "zhTW": "超心護石 II",
-            "jaJP": "超心の護石 II",
-            "enUS": "Critical Boost Charm II"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "超會心",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "seriesId": "挑戰護石",
-        "level": 3,
-        "id": "挑戰護石 III",
-        "name": {
-            "zhTW": "挑戰護石 III",
-            "jaJP": "挑戦の護石 III",
-            "enUS": "Challenger Charm III"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "挑戰者",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "挑戰護石",
-        "level": 4,
-        "id": "挑戰護石 IV",
-        "name": {
-            "zhTW": "挑戰護石 IV",
-            "jaJP": "挑戦の護石 IV",
-            "enUS": "Challenger Charm IV"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "挑戰者",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "跳躍護石",
-        "level": 3,
-        "id": "跳躍護石 III",
-        "name": {
-            "zhTW": "跳躍護石 III",
-            "jaJP": "跳躍の護石 III",
-            "enUS": "Leaping Charm III"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "迴避距離UP",
-                "level": 3
-            }
-        ]
-    },
-    {
-        "seriesId": "通常彈護石",
-        "level": 2,
-        "id": "通常彈護石 II",
-        "name": {
-            "zhTW": "通常彈護石 II",
-            "jaJP": "通常弾の護石 II",
-            "enUS": "Normal Shots Charm II"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "通常彈・通常箭強化",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "seriesId": "鐵壁護石",
-        "level": 4,
-        "id": "鐵壁護石 IV",
-        "name": {
-            "zhTW": "鐵壁護石 IV",
-            "jaJP": "鉄壁の護石 IV",
-            "enUS": "Ironside Charm IV"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "防禦性能",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "鐵壁護石",
-        "level": 5,
-        "id": "鐵壁護石 V",
-        "name": {
-            "zhTW": "鐵壁護石 V",
-            "jaJP": "鉄壁の護石 V",
-            "enUS": "Ironside Charm V"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "防禦性能",
-                "level": 5
-            }
-        ]
-    },
-    {
-        "seriesId": "轉福護石",
-        "level": 1,
-        "id": "轉福護石 I",
-        "name": {
-            "zhTW": "轉福護石 I",
-            "jaJP": "転福の護石 I",
-            "enUS": null
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "災禍轉福",
-                "level": 1
-            }
-        ]
-    },
-    {
-        "seriesId": "轉福護石",
-        "level": 2,
-        "id": "轉福護石 II",
-        "name": {
-            "zhTW": "轉福護石 II",
-            "jaJP": "転福の護石 II",
-            "enUS": null
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "災禍轉福",
-                "level": 2
-            }
-        ]
-    },
-    {
-        "seriesId": "毒擊護石",
-        "level": 4,
-        "id": "毒擊護石 IV",
-        "name": {
-            "zhTW": "毒擊護石 IV",
-            "jaJP": "毒撃の護石 IV",
-            "enUS": "Venom Charm IV"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "毒屬性強化",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "爆破護石",
-        "level": 4,
-        "id": "爆破護石 IV",
-        "name": {
-            "zhTW": "爆破護石 IV",
-            "jaJP": "爆破の護石 IV",
-            "enUS": "Demolition Charm IV"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "爆破屬性強化",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "破龍護石",
-        "level": 4,
-        "id": "破龍護石 IV",
-        "name": {
-            "zhTW": "破龍護石 IV",
-            "jaJP": "破龍の護石 IV",
-            "enUS": "Wyrmsbane Charm IV"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "龍屬性攻擊強化",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "破龍護石",
-        "level": 5,
-        "id": "破龍護石 V",
-        "name": {
-            "zhTW": "破龍護石 V",
-            "jaJP": "破龍の護石 V",
-            "enUS": "Wyrmsbane Charm V"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "龍屬性攻擊強化",
-                "level": 5
-            }
-        ]
-    },
-    {
-        "seriesId": "痺擊護石",
-        "level": 4,
-        "id": "痺擊護石 IV",
-        "name": {
-            "zhTW": "痺擊護石 IV",
-            "jaJP": "痺撃の護石 IV",
-            "enUS": "Immobilize Charm IV"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "麻痺屬性強化",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "冰結護石",
-        "level": 4,
-        "id": "冰結護石 IV",
-        "name": {
-            "zhTW": "冰結護石 IV",
-            "jaJP": "氷結の護石 IV",
-            "enUS": "Frost Charm IV"
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "冰屬性攻擊強化",
-                "level": 4
-            }
-        ]
-    },
-    {
-        "seriesId": "冰結護石",
-        "level": 5,
-        "id": "冰結護石 V",
-        "name": {
-            "zhTW": "冰結護石 V",
-            "jaJP": "氷結の護石 V",
-            "enUS": "Frost Charm V"
-        },
-        "rare": 12,
-        "skills": [
-            {
-                "id": "冰屬性攻擊強化",
-                "level": 5
-            }
-        ]
-    },
-    {
-        "seriesId": "封印護石",
-        "level": 1,
-        "id": "封印護石",
-        "name": {
-            "zhTW": "封印護石",
-            "jaJP": "封印の護石",
-            "enUS": null
-        },
-        "rare": 11,
-        "skills": [
-            {
-                "id": "龍封力強化",
-                "level": 1
+                "id": "暴怒護石 III",
+                "name": {
+                    "zhTW": "暴怒護石 III",
+                    "jaJP": "逆上の護石 III",
+                    "enUS": "Fury Charm III"
+                },
+                "rare": 11,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "怨恨",
+                        "level": 3
+                    }
+                ]
             },
             {
-                "id": "振奮",
-                "level": 1
+                "id": "暴怒護石 IV",
+                "name": {
+                    "zhTW": "暴怒護石 IV",
+                    "jaJP": "逆上の護石 IV",
+                    "enUS": "Fury Charm IV"
+                },
+                "rare": 12,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "怨恨",
+                        "level": 4
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "吹笛護石",
-        "level": 2,
-        "id": "吹笛護石 II",
-        "name": {
-            "zhTW": "吹笛護石 II",
-            "jaJP": "笛吹きの護石 II",
-            "enUS": "Performer's Charm II"
+        "series": {
+            "id": "強走護石",
+            "name": {
+                "zhTW": "強走護石",
+                "jaJP": "強走の護石",
+                "enUS": "Marathon Charm"
+            }
         },
-        "rare": 9,
-        "skills": [
+        "items": [
             {
-                "id": "吹笛名人",
-                "level": 2
+                "id": "強走護石 III",
+                "name": {
+                    "zhTW": "強走護石 III",
+                    "jaJP": "強走の護石 III",
+                    "enUS": "Marathon Charm III"
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "跑者",
+                        "level": 3
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "防禦護石",
-        "level": 4,
-        "id": "防禦護石 IV",
-        "name": {
-            "zhTW": "防禦護石 IV",
-            "jaJP": "防御の護石 IV",
-            "enUS": "Defense Charm IV"
+        "series": {
+            "id": "攻擊護石",
+            "name": {
+                "zhTW": "攻擊護石",
+                "jaJP": "攻撃の護石",
+                "enUS": "Attack Charm"
+            }
         },
-        "rare": 9,
-        "skills": [
+        "items": [
             {
-                "id": "防禦",
-                "level": 4
+                "id": "攻擊護石 IV",
+                "name": {
+                    "zhTW": "攻擊護石 IV",
+                    "jaJP": "攻撃の護石 IV",
+                    "enUS": "Attack Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "攻擊",
+                        "level": 4
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "防禦護石",
-        "level": 5,
-        "id": "防禦護石 V",
-        "name": {
-            "zhTW": "防禦護石 V",
-            "jaJP": "防御の護石 V",
-            "enUS": "Defense Charm V"
+        "series": {
+            "id": "昂揚護石",
+            "name": {
+                "zhTW": "昂揚護石",
+                "jaJP": "昴揚の護石",
+                "enUS": "Invigorate Charm"
+            }
         },
-        "rare": 11,
-        "skills": [
+        "items": [
             {
-                "id": "防禦",
-                "level": 5
+                "id": "昂揚護石 III",
+                "name": {
+                    "zhTW": "昂揚護石 III",
+                    "jaJP": "昴揚の護石 III",
+                    "enUS": "Invigorate Charm III"
+                },
+                "rare": 11,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "強化持續",
+                        "level": 3
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "防風護石",
-        "level": 4,
-        "id": "防風護石 IV",
-        "name": {
-            "zhTW": "防風護石 IV",
-            "jaJP": "防風の護石 IV",
-            "enUS": "Windproof Charm IV"
+        "series": {
+            "id": "剛力護石",
+            "name": {
+                "zhTW": "剛力護石",
+                "jaJP": "剛力の護石",
+                "enUS": null
+            }
         },
-        "rare": 11,
-        "skills": [
+        "items": [
             {
-                "id": "風壓耐性",
-                "level": 4
+                "id": "剛力護石",
+                "name": {
+                    "zhTW": "剛力護石",
+                    "jaJP": "剛力の護石",
+                    "enUS": null
+                },
+                "rare": 11,
+                "level": 1,
+                "skills": [
+                    {
+                        "id": "無屬性強化",
+                        "level": 1
+                    },
+                    {
+                        "id": "鈍器能手",
+                        "level": 1
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "耳塞護石",
-        "level": 4,
-        "id": "耳塞護石 IV",
-        "name": {
-            "zhTW": "耳塞護石 IV",
-            "jaJP": "耳栓の護石 IV",
-            "enUS": "Earplugs Charm IV"
+        "series": {
+            "id": "毅力護石",
+            "name": {
+                "zhTW": "毅力護石",
+                "jaJP": "根性の護石",
+                "enUS": null
+            }
         },
-        "rare": 12,
-        "skills": [
+        "items": [
             {
-                "id": "耳塞",
-                "level": 4
+                "id": "毅力護石",
+                "name": {
+                    "zhTW": "毅力護石",
+                    "jaJP": "根性の護石",
+                    "enUS": null
+                },
+                "rare": 11,
+                "level": 1,
+                "skills": [
+                    {
+                        "id": "毅力",
+                        "level": 1
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "友愛護石",
-        "level": 4,
-        "id": "友愛護石 IV",
-        "name": {
-            "zhTW": "友愛護石 IV",
-            "jaJP": "友愛の護石 IV",
-            "enUS": "Friendship Charm IV"
+        "series": {
+            "id": "指揮護石",
+            "name": {
+                "zhTW": "指揮護石",
+                "jaJP": "采配の護石",
+                "enUS": "Rally Charm"
+            }
         },
-        "rare": 11,
-        "skills": [
+        "items": [
             {
-                "id": "廣域化",
-                "level": 4
+                "id": "指揮護石 IV",
+                "name": {
+                    "zhTW": "指揮護石 IV",
+                    "jaJP": "采配の護石 IV",
+                    "enUS": "Rally Charm IV"
+                },
+                "rare": 9,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "指示隨從",
+                        "level": 4
+                    }
+                ]
+            },
+            {
+                "id": "指揮護石 V",
+                "name": {
+                    "zhTW": "指揮護石 V",
+                    "jaJP": "采配の護石 V",
+                    "enUS": "Rally Charm V"
+                },
+                "rare": 10,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "指示隨從",
+                        "level": 5
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "友愛護石",
-        "level": 5,
-        "id": "友愛護石 V",
-        "name": {
-            "zhTW": "友愛護石 V",
-            "jaJP": "友愛の護石 V",
-            "enUS": "Friendship Charm V"
+        "series": {
+            "id": "散彈護石",
+            "name": {
+                "zhTW": "散彈護石",
+                "jaJP": "散弾の護石",
+                "enUS": "Dispersal Charm"
+            }
         },
-        "rare": 12,
-        "skills": [
+        "items": [
             {
-                "id": "廣域化",
-                "level": 5
+                "id": "散彈護石 II",
+                "name": {
+                    "zhTW": "散彈護石 II",
+                    "jaJP": "散弾の護石 II",
+                    "enUS": "Dispersal Charm II"
+                },
+                "rare": 11,
+                "level": 2,
+                "skills": [
+                    {
+                        "id": "散彈・剛射強化",
+                        "level": 2
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "雷光護石",
-        "level": 4,
-        "id": "雷光護石 IV",
-        "name": {
-            "zhTW": "雷光護石 IV",
-            "jaJP": "雷光の護石 IV",
-            "enUS": "Shock Charm IV"
+        "series": {
+            "id": "重擊護石",
+            "name": {
+                "zhTW": "重擊護石",
+                "jaJP": "重撃の護石",
+                "enUS": "Breaker Charm"
+            }
         },
-        "rare": 10,
-        "skills": [
+        "items": [
             {
-                "id": "雷屬性攻擊強化",
-                "level": 4
+                "id": "重擊護石 III",
+                "name": {
+                    "zhTW": "重擊護石 III",
+                    "jaJP": "重撃の護石 III",
+                    "enUS": "Breaker Charm III"
+                },
+                "rare": 11,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "破壞王",
+                        "level": 3
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "雷光護石",
-        "level": 5,
-        "id": "雷光護石 V",
-        "name": {
-            "zhTW": "雷光護石 V",
-            "jaJP": "雷光の護石 V",
-            "enUS": "Shock Charm V"
+        "series": {
+            "id": "集中護石",
+            "name": {
+                "zhTW": "集中護石",
+                "jaJP": "集中の護石",
+                "enUS": "Focus Charm"
+            }
         },
-        "rare": 11,
-        "skills": [
+        "items": [
             {
-                "id": "雷屬性攻擊強化",
-                "level": 5
+                "id": "集中護石 III",
+                "name": {
+                    "zhTW": "集中護石 III",
+                    "jaJP": "集中の護石 III",
+                    "enUS": "Focus Charm III"
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "集中",
+                        "level": 3
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "流水護石",
-        "level": 4,
-        "id": "流水護石 IV",
-        "name": {
-            "zhTW": "流水護石 IV",
-            "jaJP": "流水の護石 IV",
-            "enUS": "Flood Charm IV"
+        "series": {
+            "id": "守勢護石",
+            "name": {
+                "zhTW": "守勢護石",
+                "jaJP": "守勢の護石",
+                "enUS": null
+            }
         },
-        "rare": 10,
-        "skills": [
+        "items": [
             {
-                "id": "水屬性攻擊強化",
-                "level": 4
+                "id": "守勢護石 I",
+                "name": {
+                    "zhTW": "守勢護石 I",
+                    "jaJP": "守勢の護石 I",
+                    "enUS": null
+                },
+                "rare": 9,
+                "level": 1,
+                "skills": [
+                    {
+                        "id": "攻擊守勢",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "守勢護石 II",
+                "name": {
+                    "zhTW": "守勢護石 II",
+                    "jaJP": "守勢の護石 II",
+                    "enUS": null
+                },
+                "rare": 10,
+                "level": 2,
+                "skills": [
+                    {
+                        "id": "攻擊守勢",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "守勢護石 III",
+                "name": {
+                    "zhTW": "守勢護石 III",
+                    "jaJP": "守勢の護石 III",
+                    "enUS": null
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "攻擊守勢",
+                        "level": 3
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "流水護石",
-        "level": 5,
-        "id": "流水護石 V",
-        "name": {
-            "zhTW": "流水護石 V",
-            "jaJP": "流水の護石 V",
-            "enUS": "Flood Charm V"
+        "series": {
+            "id": "植學護石",
+            "name": {
+                "zhTW": "植學護石",
+                "jaJP": "植学の護石",
+                "enUS": "Botany Charm"
+            }
         },
-        "rare": 11,
-        "skills": [
+        "items": [
             {
-                "id": "水屬性攻擊強化",
-                "level": 5
+                "id": "植學護石 IV",
+                "name": {
+                    "zhTW": "植學護石 IV",
+                    "jaJP": "植学の護石 IV",
+                    "enUS": "Botany Charm IV"
+                },
+                "rare": 9,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "植生學",
+                        "level": 4
+                    }
+                ]
             }
         ]
     },
     {
-        "seriesId": "利刃護石",
-        "level": 1,
-        "id": "利刃護石",
-        "name": {
-            "zhTW": "利刃護石",
-            "jaJP": "業物の護石",
-            "enUS": null
+        "series": {
+            "id": "睡擊護石",
+            "name": {
+                "zhTW": "睡擊護石",
+                "jaJP": "睡撃の護石",
+                "enUS": "Tranq Charm"
+            }
         },
-        "rare": 11,
-        "skills": [
+        "items": [
             {
-                "id": "利刃／彈藥節約",
-                "level": 1
+                "id": "睡擊護石 IV",
+                "name": {
+                    "zhTW": "睡擊護石 IV",
+                    "jaJP": "睡撃の護石 IV",
+                    "enUS": "Tranq Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "睡眠屬性強化",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "全開護石",
+            "name": {
+                "zhTW": "全開護石",
+                "jaJP": "全開の護石",
+                "enUS": "Power Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "全開護石 III",
+                "name": {
+                    "zhTW": "全開護石 III",
+                    "jaJP": "全開の護石 III",
+                    "enUS": "Power Charm III"
+                },
+                "rare": 11,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "力量解放",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "全開護石 IV",
+                "name": {
+                    "zhTW": "全開護石 IV",
+                    "jaJP": "全開の護石 IV",
+                    "enUS": "Power Charm IV"
+                },
+                "rare": 12,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "力量解放",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "早氣護石",
+            "name": {
+                "zhTW": "早氣護石",
+                "jaJP": "早気の護石",
+                "enUS": "Surge Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "早氣護石 III",
+                "name": {
+                    "zhTW": "早氣護石 III",
+                    "jaJP": "早気の護石 III",
+                    "enUS": "Surge Charm III"
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "耐力急速回復",
+                        "level": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "底力護石",
+            "name": {
+                "zhTW": "底力護石",
+                "jaJP": "底力の護石",
+                "enUS": "Grit Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "底力護石 III",
+                "name": {
+                    "zhTW": "底力護石 III",
+                    "jaJP": "底力の護石 III",
+                    "enUS": "Grit Charm III"
+                },
+                "rare": 11,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "火場怪力",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "底力護石 IV",
+                "name": {
+                    "zhTW": "底力護石 IV",
+                    "jaJP": "底力の護石 IV",
+                    "enUS": "Grit Charm IV"
+                },
+                "rare": 12,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "火場怪力",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "體術護石",
+            "name": {
+                "zhTW": "體術護石",
+                "jaJP": "体術の護石",
+                "enUS": "Fitness Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "體術護石 IV",
+                "name": {
+                    "zhTW": "體術護石 IV",
+                    "jaJP": "体術の護石 IV",
+                    "enUS": "Fitness Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "體術",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "耐衝護石",
+            "name": {
+                "zhTW": "耐衝護石",
+                "jaJP": "耐衝の護石",
+                "enUS": "Impact Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "耐衝護石 III",
+                "name": {
+                    "zhTW": "耐衝護石 III",
+                    "jaJP": "耐衝の護石 III",
+                    "enUS": "Impact Charm III"
+                },
+                "rare": 11,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "減輕膽怯",
+                        "level": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "耐震護石",
+            "name": {
+                "zhTW": "耐震護石",
+                "jaJP": "耐震の護石",
+                "enUS": "Tremor Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "耐震護石 III",
+                "name": {
+                    "zhTW": "耐震護石 III",
+                    "jaJP": "耐震の護石 III",
+                    "enUS": "Tremor Charm III"
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "耐震",
+                        "level": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "匠之護石",
+            "name": {
+                "zhTW": "匠之護石",
+                "jaJP": "匠の護石",
+                "enUS": "Handicraft Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "匠之護石 IV",
+                "name": {
+                    "zhTW": "匠之護石 IV",
+                    "jaJP": "匠の護石 IV",
+                    "enUS": "Handicraft Charm IV"
+                },
+                "rare": 12,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "匠",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "嗜菇護石",
+            "name": {
+                "zhTW": "嗜菇護石",
+                "jaJP": "茸好の護石",
+                "enUS": "Mushroom Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "嗜菇護石 III",
+                "name": {
+                    "zhTW": "嗜菇護石 III",
+                    "jaJP": "茸好の護石 III",
+                    "enUS": "Mushroom Charm III"
+                },
+                "rare": 11,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "最愛菇類",
+                        "level": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "達人護石",
+            "name": {
+                "zhTW": "達人護石",
+                "jaJP": "達人の護石",
+                "enUS": "Master's Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "達人護石 IV",
+                "name": {
+                    "zhTW": "達人護石 IV",
+                    "jaJP": "達人の護石 IV",
+                    "enUS": "Master's Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "看破",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "超心護石",
+            "name": {
+                "zhTW": "超心護石",
+                "jaJP": "超心の護石",
+                "enUS": "Critical Boost Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "超心護石 II",
+                "name": {
+                    "zhTW": "超心護石 II",
+                    "jaJP": "超心の護石 II",
+                    "enUS": "Critical Boost Charm II"
+                },
+                "rare": 12,
+                "level": 2,
+                "skills": [
+                    {
+                        "id": "超會心",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "挑戰護石",
+            "name": {
+                "zhTW": "挑戰護石",
+                "jaJP": "挑戦の護石",
+                "enUS": "Challenger Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "挑戰護石 III",
+                "name": {
+                    "zhTW": "挑戰護石 III",
+                    "jaJP": "挑戦の護石 III",
+                    "enUS": "Challenger Charm III"
+                },
+                "rare": 11,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "挑戰者",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "挑戰護石 IV",
+                "name": {
+                    "zhTW": "挑戰護石 IV",
+                    "jaJP": "挑戦の護石 IV",
+                    "enUS": "Challenger Charm IV"
+                },
+                "rare": 12,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "挑戰者",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "跳躍護石",
+            "name": {
+                "zhTW": "跳躍護石",
+                "jaJP": "跳躍の護石",
+                "enUS": "Leaping Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "跳躍護石 III",
+                "name": {
+                    "zhTW": "跳躍護石 III",
+                    "jaJP": "跳躍の護石 III",
+                    "enUS": "Leaping Charm III"
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "迴避距離UP",
+                        "level": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "通常彈護石",
+            "name": {
+                "zhTW": "通常彈護石",
+                "jaJP": "通常弾の護石",
+                "enUS": "Normal Shots Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "通常彈護石 II",
+                "name": {
+                    "zhTW": "通常彈護石 II",
+                    "jaJP": "通常弾の護石 II",
+                    "enUS": "Normal Shots Charm II"
+                },
+                "rare": 11,
+                "level": 2,
+                "skills": [
+                    {
+                        "id": "通常彈・通常箭強化",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "鐵壁護石",
+            "name": {
+                "zhTW": "鐵壁護石",
+                "jaJP": "鉄壁の護石",
+                "enUS": "Ironside Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "鐵壁護石 IV",
+                "name": {
+                    "zhTW": "鐵壁護石 IV",
+                    "jaJP": "鉄壁の護石 IV",
+                    "enUS": "Ironside Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "防禦性能",
+                        "level": 4
+                    }
+                ]
+            },
+            {
+                "id": "鐵壁護石 V",
+                "name": {
+                    "zhTW": "鐵壁護石 V",
+                    "jaJP": "鉄壁の護石 V",
+                    "enUS": "Ironside Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "防禦性能",
+                        "level": 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "轉福護石",
+            "name": {
+                "zhTW": "轉福護石",
+                "jaJP": "転福の護石",
+                "enUS": null
+            }
+        },
+        "items": [
+            {
+                "id": "轉福護石 I",
+                "name": {
+                    "zhTW": "轉福護石 I",
+                    "jaJP": "転福の護石 I",
+                    "enUS": null
+                },
+                "rare": 11,
+                "level": 1,
+                "skills": [
+                    {
+                        "id": "災禍轉福",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "轉福護石 II",
+                "name": {
+                    "zhTW": "轉福護石 II",
+                    "jaJP": "転福の護石 II",
+                    "enUS": null
+                },
+                "rare": 12,
+                "level": 2,
+                "skills": [
+                    {
+                        "id": "災禍轉福",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "毒擊護石",
+            "name": {
+                "zhTW": "毒擊護石",
+                "jaJP": "毒撃の護石",
+                "enUS": "Venom Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "毒擊護石 IV",
+                "name": {
+                    "zhTW": "毒擊護石 IV",
+                    "jaJP": "毒撃の護石 IV",
+                    "enUS": "Venom Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "毒屬性強化",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "爆破護石",
+            "name": {
+                "zhTW": "爆破護石",
+                "jaJP": "爆破の護石",
+                "enUS": "Demolition Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "爆破護石 IV",
+                "name": {
+                    "zhTW": "爆破護石 IV",
+                    "jaJP": "爆破の護石 IV",
+                    "enUS": "Demolition Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "爆破屬性強化",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "破龍護石",
+            "name": {
+                "zhTW": "破龍護石",
+                "jaJP": "破龍の護石",
+                "enUS": "Wyrmsbane Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "破龍護石 IV",
+                "name": {
+                    "zhTW": "破龍護石 IV",
+                    "jaJP": "破龍の護石 IV",
+                    "enUS": "Wyrmsbane Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "龍屬性攻擊強化",
+                        "level": 4
+                    }
+                ]
+            },
+            {
+                "id": "破龍護石 V",
+                "name": {
+                    "zhTW": "破龍護石 V",
+                    "jaJP": "破龍の護石 V",
+                    "enUS": "Wyrmsbane Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "龍屬性攻擊強化",
+                        "level": 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "痺擊護石",
+            "name": {
+                "zhTW": "痺擊護石",
+                "jaJP": "痺撃の護石",
+                "enUS": "Immobilize Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "痺擊護石 IV",
+                "name": {
+                    "zhTW": "痺擊護石 IV",
+                    "jaJP": "痺撃の護石 IV",
+                    "enUS": "Immobilize Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "麻痺屬性強化",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "冰結護石",
+            "name": {
+                "zhTW": "冰結護石",
+                "jaJP": "氷結の護石",
+                "enUS": "Frost Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "冰結護石 IV",
+                "name": {
+                    "zhTW": "冰結護石 IV",
+                    "jaJP": "氷結の護石 IV",
+                    "enUS": "Frost Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "冰屬性攻擊強化",
+                        "level": 4
+                    }
+                ]
+            },
+            {
+                "id": "冰結護石 V",
+                "name": {
+                    "zhTW": "冰結護石 V",
+                    "jaJP": "氷結の護石 V",
+                    "enUS": "Frost Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "冰屬性攻擊強化",
+                        "level": 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "封印護石",
+            "name": {
+                "zhTW": "封印護石",
+                "jaJP": "封印の護石",
+                "enUS": null
+            }
+        },
+        "items": [
+            {
+                "id": "封印護石",
+                "name": {
+                    "zhTW": "封印護石",
+                    "jaJP": "封印の護石",
+                    "enUS": null
+                },
+                "rare": 11,
+                "level": 1,
+                "skills": [
+                    {
+                        "id": "龍封力強化",
+                        "level": 1
+                    },
+                    {
+                        "id": "振奮",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "吹笛護石",
+            "name": {
+                "zhTW": "吹笛護石",
+                "jaJP": "笛吹きの護石",
+                "enUS": "Performer's Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "吹笛護石 II",
+                "name": {
+                    "zhTW": "吹笛護石 II",
+                    "jaJP": "笛吹きの護石 II",
+                    "enUS": "Performer's Charm II"
+                },
+                "rare": 9,
+                "level": 2,
+                "skills": [
+                    {
+                        "id": "吹笛名人",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "防禦護石",
+            "name": {
+                "zhTW": "防禦護石",
+                "jaJP": "防御の護石",
+                "enUS": "Defense Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "防禦護石 IV",
+                "name": {
+                    "zhTW": "防禦護石 IV",
+                    "jaJP": "防御の護石 IV",
+                    "enUS": "Defense Charm IV"
+                },
+                "rare": 9,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "防禦",
+                        "level": 4
+                    }
+                ]
+            },
+            {
+                "id": "防禦護石 V",
+                "name": {
+                    "zhTW": "防禦護石 V",
+                    "jaJP": "防御の護石 V",
+                    "enUS": "Defense Charm V"
+                },
+                "rare": 11,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "防禦",
+                        "level": 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "防風護石",
+            "name": {
+                "zhTW": "防風護石",
+                "jaJP": "防風の護石",
+                "enUS": "Windproof Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "防風護石 IV",
+                "name": {
+                    "zhTW": "防風護石 IV",
+                    "jaJP": "防風の護石 IV",
+                    "enUS": "Windproof Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "風壓耐性",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "耳塞護石",
+            "name": {
+                "zhTW": "耳塞護石",
+                "jaJP": "耳栓の護石",
+                "enUS": "Earplugs Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "耳塞護石 IV",
+                "name": {
+                    "zhTW": "耳塞護石 IV",
+                    "jaJP": "耳栓の護石 IV",
+                    "enUS": "Earplugs Charm IV"
+                },
+                "rare": 12,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "耳塞",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "友愛護石",
+            "name": {
+                "zhTW": "友愛護石",
+                "jaJP": "友愛の護石",
+                "enUS": "Friendship Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "友愛護石 IV",
+                "name": {
+                    "zhTW": "友愛護石 IV",
+                    "jaJP": "友愛の護石 IV",
+                    "enUS": "Friendship Charm IV"
+                },
+                "rare": 11,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "廣域化",
+                        "level": 4
+                    }
+                ]
+            },
+            {
+                "id": "友愛護石 V",
+                "name": {
+                    "zhTW": "友愛護石 V",
+                    "jaJP": "友愛の護石 V",
+                    "enUS": "Friendship Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "廣域化",
+                        "level": 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "雷光護石",
+            "name": {
+                "zhTW": "雷光護石",
+                "jaJP": "雷光の護石",
+                "enUS": "Shock Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "雷光護石 IV",
+                "name": {
+                    "zhTW": "雷光護石 IV",
+                    "jaJP": "雷光の護石 IV",
+                    "enUS": "Shock Charm IV"
+                },
+                "rare": 10,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "雷屬性攻擊強化",
+                        "level": 4
+                    }
+                ]
+            },
+            {
+                "id": "雷光護石 V",
+                "name": {
+                    "zhTW": "雷光護石 V",
+                    "jaJP": "雷光の護石 V",
+                    "enUS": "Shock Charm V"
+                },
+                "rare": 11,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "雷屬性攻擊強化",
+                        "level": 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "流水護石",
+            "name": {
+                "zhTW": "流水護石",
+                "jaJP": "流水の護石",
+                "enUS": "Flood Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "流水護石 IV",
+                "name": {
+                    "zhTW": "流水護石 IV",
+                    "jaJP": "流水の護石 IV",
+                    "enUS": "Flood Charm IV"
+                },
+                "rare": 10,
+                "level": 4,
+                "skills": [
+                    {
+                        "id": "水屬性攻擊強化",
+                        "level": 4
+                    }
+                ]
+            },
+            {
+                "id": "流水護石 V",
+                "name": {
+                    "zhTW": "流水護石 V",
+                    "jaJP": "流水の護石 V",
+                    "enUS": "Flood Charm V"
+                },
+                "rare": 11,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "水屬性攻擊強化",
+                        "level": 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "利刃護石",
+            "name": {
+                "zhTW": "利刃護石",
+                "jaJP": "業物の護石",
+                "enUS": null
+            }
+        },
+        "items": [
+            {
+                "id": "利刃護石",
+                "name": {
+                    "zhTW": "利刃護石",
+                    "jaJP": "業物の護石",
+                    "enUS": null
+                },
+                "rare": 11,
+                "level": 1,
+                "skills": [
+                    {
+                        "id": "利刃／彈藥節約",
+                        "level": 1
+                    }
+                ]
             }
         ]
     }

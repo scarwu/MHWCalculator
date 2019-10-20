@@ -287,36 +287,52 @@ class Misc
             break;
         case 'charm':
             // {
-            //     "seriesId": "心靜自然涼護石",
-            //     "level": 1,
-            //     "id": "心靜自然涼護石",
-            //     "name": {
-            //         "zhTW": "心靜自然涼護石"
+            //     "series": {
+            //         "id": "迴避護石",
+            //         "name": {
+            //             "zhTW": "迴避護石",
+            //             "jaJP": "回避の護石",
+            //             "enUS": "Evasion Charm"
+            //         }
             //     },
-            //     "rare": 7,
-            //     "skills": [
+            //     "items": [
             //         {
-            //             "id": "熱傷害無效",
-            //             "level": 1
-            //         },
-            //         {
-            //             "id": "適應瘴氣環境",
-            //             "level": 1
+            //             "id": "迴避護石 IV",
+            //             "name": {
+            //                 "zhTW": "迴避護石 IV",
+            //                 "jaJP": "回避の護石 IV",
+            //                 "enUS": "Evasion Charm IV"
+            //             },
+            //             "rare": 12,
+            //             "level": 4,
+            //             "skills": [
+            //                 {
+            //                     "id": "迴避性能",
+            //                     "level": 4
+            //                 }
+            //             ]
             //         }
             //     ]
             // }
             Misc::$datasetMap['charms'][] = [
-                $data['seriesId'],
-                $data['level'],
-                $data['id'],
-                $data['name'],
-                $data['rare'],
+                [
+                    $data['series']['id'],
+                    $data['series']['name']
+                ],
                 array_map(function ($item) {
                     return [
                         $item['id'],
-                        $item['level']
+                        $item['name'],
+                        $item['rare'],
+                        $item['level'],
+                        array_map(function ($skill) {
+                            return [
+                                $skill['id'],
+                                $skill['level']
+                            ];
+                        }, $item['skills'])
                     ];
-                }, $data['skills'])
+                }, $data['items'])
             ];
             break;
         case 'jewel':
@@ -820,28 +836,44 @@ foreach ($armors as $index => $armor) {
 
 // Handle Charm Data
 foreach ($charms as $charm) {
-    $charmChecklist[$charm['id']] = true;
 
-    // Checklist
-    if (is_array($charm['skills'])) {
-        foreach ($charm['skills'] as $skill) {
-            if (!isset($skillChecklist[$skill['id']])) {
-                echo "Error: Charm={$charm['id']}, Skill={$skill['id']}\n";
+    foreach ($charm['items'] as $item) {
+        $charmChecklist[$item['id']] = true;
+
+        if (is_array($item['skills'])) {
+            foreach ($item['skills'] as $skill) {
+                if (!isset($skillChecklist[$skill['id']])) {
+                    echo "Error: Armor={$item['id']}, Skill={$skill['id']}\n";
+                }
             }
         }
     }
 
     // Create Translation Mapping
-    $charm['name'] = Misc::appendLangMap("charm:name:{$charm['id']}", $charm['name']);
+    $charm['series']['name'] = Misc::appendLangMap("armor:series:{$charm['series']['id']}", $charm['series']['name']);
 
     // Create ID Hash
-    $charm['id'] = Misc::createCode("charm:name:{$charm['id']}");
-    $charm['seriesId'] = Misc::createCode("charm:name:{$charm['seriesId']}");
-    $charm['skills'] = array_map(function ($skill) {
-        $skill['id'] = Misc::createCode("skill:name:{$skill['id']}");
+    $charm['series']['id'] = Misc::createCode("armor:series:{$charm['series']['id']}");
 
-        return $skill;
-    }, $charm['skills']);
+    foreach ($charm['items'] as $index => $item) {
+
+        // Create Translation Mapping
+        $item['name'] = Misc::appendLangMap("armor:name:{$item['id']}", $item['name']);
+
+        // Create ID Hash
+        $item['id'] = Misc::createCode("armor:name:{$item['id']}");
+
+        if (is_array($item['skills']) && 0 !== count($item['skills'])) {
+            $item['skills'] = array_map(function ($skill) {
+                $skill['id'] = Misc::createCode("skill:name:{$skill['id']}");
+
+                return $skill;
+            }, $item['skills']);
+        }
+
+        // Rewrite
+        $charm['items'][$index] = $item;
+    }
 
     // Create Dataset
     Misc::appendDatasetMap('charm', $charm);

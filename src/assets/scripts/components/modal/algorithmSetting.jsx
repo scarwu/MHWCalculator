@@ -178,7 +178,7 @@ const renderCharmFactors = (charmFactor) => {
                     let selectLevel = Helper.isNotEmpty(charmFactor[seriesId])
                         ? charmFactor[seriesId] : -1;
                     let levelList = [
-                        { key: -1, value: _('unlimited') },
+                        { key: -1, value: _('all') },
                         { key: 0, value: _('exclude') }
                     ];
 

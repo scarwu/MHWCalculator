@@ -14,33 +14,46 @@ import Helper from 'core/helper';
 import Charms from 'files/json/datasets/charms.json';
 
 // [
-//     0: seriesId,
-//     1: level,
-//     2: id,
-//     3: name,
-//     4: rare,
-//     5: skills [
+//     0: series [
+//         0: id,
+//         1: name
+//     ],
+//     1: items [
 //         [
-//             0: id,
-//             1: level
+//             0: id
+//             1: name
+//             2: rare
+//             3: level
+//             4: skills [
+//                 [
+//                     0: id,
+//                     1: level
+//                 ]
+//             ]
 //         ],
 //         [ ... ]
 //     ]
 // ]
-let dataset = Charms.map((charm) => {
-    return {
-        seriesId: charm[0],
-        level: charm[1],
-        id: charm[2],
-        name: charm[3],
-        rare: charm[4],
-        skills: charm[5].map((skill) => {
-            return {
-                id: skill[0],
-                level: skill[1]
-            };
-        })
-    };
+let dataset = Charms.map((bundle) => {
+    return bundle[1].map((item) => {
+        return {
+            seriesId: bundle[0][0],
+            series: bundle[0][1],
+            id: item[0],
+            name: item[1],
+            rare: item[2],
+            level: item[3],
+            skills: (Helper.isNotEmpty(item[4])) ? item[4].map((skill) => {
+                return {
+                    id: skill[0],
+                    level: skill[1]
+                };
+            }) : []
+        };
+    });
+})
+.reduce((charmsA, charmsB) => {
+    return charmsA.concat(charmsB);
 });
 
 class CharmDataset {

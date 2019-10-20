@@ -42,15 +42,15 @@ for ($rare = 5; $rare <= 8; $rare++) {
     $bundles = loadJson("../../json/mhw/armors/rare{$rare}");
 
     foreach ($bundles as $bundleIndex => $bundle) {
-        if (false !== isset($bundle['common']['set'])) {
-            if (false === isset($setNameMapping[$bundle['common']['set']['id']])) {
-                $untrack['sets'][$bundle['common']['set']['id']] = true;
+        if (false !== isset($bundle['series']['set'])) {
+            if (false === isset($setNameMapping[$bundle['series']['set']['id']])) {
+                $untrack['sets'][$bundle['series']['set']['id']] = true;
             } else {
-                $bundle['common']['set']['id'] = $setNameMapping[$bundle['common']['set']['id']];
+                $bundle['series']['set']['id'] = $setNameMapping[$bundle['series']['set']['id']];
             }
         }
 
-        foreach ($bundle['list'] as $armorIndex => $armor) {
+        foreach ($bundle['items'] as $armorIndex => $armor) {
             if (null !== $armor['skills']) {
                 foreach ($armor['skills'] as $skillIndex => $skill) {
                     if (false === isset($skillNameMapping[$skill['id']])) {
@@ -61,7 +61,7 @@ for ($rare = 5; $rare <= 8; $rare++) {
                 }
             }
 
-            $bundle['list'][$armorIndex] = $armor;
+            $bundle['items'][$armorIndex] = $armor;
         }
 
         $bundles[$bundleIndex] = $bundle;
@@ -74,15 +74,15 @@ for ($rare = 9; $rare <= 12; $rare++) {
     $bundles = loadJson("../../json/mhwib/armors/rare{$rare}");
 
     foreach ($bundles as $bundleIndex => $bundle) {
-        if (false !== isset($bundle['common']['set'])) {
-            if (false === isset($setNameMapping[$bundle['common']['set']['id']])) {
-                $untrack['sets'][$bundle['common']['set']['id']] = true;
+        if (false !== isset($bundle['series']['set'])) {
+            if (false === isset($setNameMapping[$bundle['series']['set']['id']])) {
+                $untrack['sets'][$bundle['series']['set']['id']] = true;
             } else {
-                $bundle['common']['set']['id'] = $setNameMapping[$bundle['common']['set']['id']];
+                $bundle['series']['set']['id'] = $setNameMapping[$bundle['series']['set']['id']];
             }
         }
 
-        foreach ($bundle['list'] as $armorIndex => $armor) {
+        foreach ($bundle['items'] as $armorIndex => $armor) {
             if (null !== $armor['skills']) {
                 foreach ($armor['skills'] as $skillIndex => $skill) {
                     if (false === isset($skillNameMapping[$skill['id']])) {
@@ -93,7 +93,7 @@ for ($rare = 9; $rare <= 12; $rare++) {
                 }
             }
 
-            $bundle['list'][$armorIndex] = $armor;
+            $bundle['items'][$armorIndex] = $armor;
         }
 
         $bundles[$bundleIndex] = $bundle;

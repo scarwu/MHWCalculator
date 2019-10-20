@@ -64,7 +64,7 @@ foreach ($jewels as $jewel) {
 $armorMap = [];
 
 foreach ($armors as $armor) {
-    foreach ($armor['list'] as $item) {
+    foreach ($armor['items'] as $item) {
         if (false === is_array($item['skills'])) {
             continue;
         }
@@ -144,7 +144,7 @@ foreach ($jewels as $jewel) {
 $armorMap = [];
 
 foreach ($armors as $armor) {
-    foreach ($armor['list'] as $item) {
+    foreach ($armor['items'] as $item) {
         if (false === is_array($item['skills'])) {
             continue;
         }

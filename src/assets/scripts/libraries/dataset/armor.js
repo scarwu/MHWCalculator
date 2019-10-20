@@ -13,23 +13,23 @@ import Helper from 'core/helper';
 // Load Dataset
 import Armors from 'files/json/datasets/armors.json';
 
-let dataset = Armors.map((pack) => {
-    return pack[1].map((item) => {
+let dataset = Armors.map((bundle) => {
+    return bundle[1].map((item) => {
         return {
-            seriesId: pack[0][0],
-            series: pack[0][1],
-            rare: pack[0][2],
-            gender: pack[0][3],
-            defense: pack[0][4],
+            seriesId: bundle[0][0],
+            series: bundle[0][1],
+            rare: bundle[0][2],
+            gender: bundle[0][3],
+            defense: bundle[0][4],
             resistance: {
-                fire: pack[0][5][0],
-                water: pack[0][5][1],
-                thunder: pack[0][5][2],
-                ice: pack[0][5][3],
-                dragon: pack[0][5][4]
+                fire: bundle[0][5][0],
+                water: bundle[0][5][1],
+                thunder: bundle[0][5][2],
+                ice: bundle[0][5][3],
+                dragon: bundle[0][5][4]
             },
-            set: (Helper.isNotEmpty(pack[0][6])) ? {
-                id: pack[0][6]
+            set: (Helper.isNotEmpty(bundle[0][6])) ? {
+                id: bundle[0][6]
             } : null,
             id: item[0],
             name: item[1],
