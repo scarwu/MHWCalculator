@@ -1,5 +1,5 @@
 /**
- *
+ * Algorithm Setting
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -16,6 +16,9 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
+import JewelDataset from 'libraries/dataset/jewel';
+import ArmorDataset from 'libraries/dataset/armor';
+import CharmDataset from 'libraries/dataset/charm';
 
 // Load Components
 import FunctionalButton from 'components/common/functionalButton';
@@ -56,6 +59,51 @@ const handleOrderChange = (event) => {
 
 const handleStrategyChange = (event) => {
     CommonState.setter.setAlgorithmParamsStrategy(event.target.value);
+};
+
+const renderArmorFactors = (stateAlgorithmParams) => {
+    // stateAlgorithmParams.usingFactor.armor
+    return [5, 6, 7, 8, 9, 10, 11, 12].map((rare) => {
+        let seriesIds = {};
+
+        ArmorDataset.rareIs(rare).getItems().forEach((info) => {
+            seriesIds[info.seriesId] = true;
+        });
+
+        return (
+            <div key={rare} className="mhwc-item mhwc-item-2-step">
+                <div className="col-12 mhwc-name">
+                    <span>{_('armorFactor')} R{rare}</span>
+                </div>
+                <div className="col-12 mhwc-content">
+                    {Object.keys(seriesIds).sort((seriesIdA, seriesIdB) => {
+                        return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
+                    }).map((seriesId) => {
+                        return (
+                            <div key={seriesId} className="col-6 mhwc-value">
+                                <span>{_(seriesId)}</span>
+                                {stateAlgorithmParams.usingFactor.armor[rare][seriesId] ? (
+                                    <div className="mhwc-icons_bundle">
+                                        <FunctionalButton
+                                            iconName="star"
+                                            altName={_('exclude')}
+                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', rare)}} />
+                                    </div>
+                                ) : (
+                                    <div className="mhwc-icons_bundle">
+                                        <FunctionalButton
+                                            iconName="star-o"
+                                            altName={_('include')}
+                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', rare)}} />
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        );
+    });
 };
 
 export default function AlgorithmSetting(props) {
@@ -127,7 +175,7 @@ export default function AlgorithmSetting(props) {
      */
     return stateIsShow ? (
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
-            <div className="mhwc-modal mhwc-slim-modal">
+            <div className="mhwc-modal">
                 <div className="mhwc-panel">
                     <strong>{_('algorithmSetting')}</strong>
 
@@ -199,35 +247,7 @@ export default function AlgorithmSetting(props) {
                             </div>
                         </div>
 
-                        <div className="mhwc-item mhwc-item-2-step">
-                            <div className="col-12 mhwc-name">
-                                <span>{_('armorFactor')}</span>
-                            </div>
-                            <div className="col-12 mhwc-content">
-                                {Object.keys(stateAlgorithmParams.usingFactor.armor).map((rare) => {
-                                    return (
-                                        <div key={rare} className="col-6 mhwc-value">
-                                            <span>{_('rare') + `: ${rare}`}</span>
-                                            {stateAlgorithmParams.usingFactor.armor[rare] ? (
-                                                <div className="mhwc-icons_bundle">
-                                                    <FunctionalButton
-                                                        iconName="star"
-                                                        altName={_('exclude')}
-                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', rare)}} />
-                                                </div>
-                                            ) : (
-                                                <div className="mhwc-icons_bundle">
-                                                    <FunctionalButton
-                                                        iconName="star-o"
-                                                        altName={_('include')}
-                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', rare)}} />
-                                                </div>
-                                            )}
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        </div>
+                        {renderArmorFactors(stateAlgorithmParams)}
 
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">

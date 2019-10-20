@@ -14,11 +14,11 @@ import Helper from 'core/helper';
 import Charms from 'files/json/datasets/charms.json';
 
 // [
-//     0: id,
-//     1: name,
-//     2: rare,
-//     3: seriesId,
-//     4: level,
+//     0: seriesId,
+//     1: level,
+//     2: id,
+//     3: name,
+//     4: rare,
 //     5: skills [
 //         [
 //             0: id,
@@ -29,10 +29,10 @@ import Charms from 'files/json/datasets/charms.json';
 // ]
 let dataset = Charms.map((charm) => {
     return {
-        id: charm[0],
-        name: charm[1],
-        rare: charm[2],
-        rare: charm[3],
+        seriesId: charm[0],
+        level: charm[1],
+        id: charm[2],
+        name: charm[3],
         rare: charm[4],
         skills: charm[5].map((skill) => {
             return {

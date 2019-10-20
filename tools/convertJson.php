@@ -287,13 +287,13 @@ class Misc
             break;
         case 'charm':
             // {
+            //     "seriesId": "心靜自然涼護石",
+            //     "level": 1,
             //     "id": "心靜自然涼護石",
             //     "name": {
             //         "zhTW": "心靜自然涼護石"
             //     },
             //     "rare": 7,
-            //     "seriesId": "心靜自然涼護石",
-            //     "level": 1,
             //     "skills": [
             //         {
             //             "id": "熱傷害無效",
@@ -306,11 +306,11 @@ class Misc
             //     ]
             // }
             Misc::$datasetMap['charms'][] = [
+                $data['seriesId'],
+                $data['level'],
                 $data['id'],
                 $data['name'],
                 $data['rare'],
-                $data['seriesId'],
-                $data['level'],
                 array_map(function ($item) {
                     return [
                         $item['id'],
