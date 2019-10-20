@@ -40,7 +40,7 @@ class FittingAlgorithm {
         Helper.log('Input: Required Equips', requiredEquips);
         Helper.log('Input: Algorithm Params', algorithmParams);
 
-        this.algorithmParams = algorithmParams;
+        this.algorithmParams = Helper.deepCopy(algorithmParams);
         this.conditionEquips = [];
         this.conditionSets = {};
         this.conditionSkills = {};
@@ -184,6 +184,10 @@ class FittingAlgorithm {
                 // Check is Using Factor Jewel
                 if (false === this.algorithmParams.usingFactor.jewel['size' + jewelInfo.size]) {
                     return;
+                }
+
+                if (Helper.isEmpty(this.algorithmParams.usingFactor.jewel[jewelInfo.id])) {
+                    this.algorithmParams.usingFactor.jewel[jewelInfo.id] = -1;
                 }
 
                 let isConsistent = true;
@@ -949,9 +953,24 @@ class FittingAlgorithm {
 
         equipInfos.forEach((equipInfo) => {
 
-            // Check is Using Factor Armor
-            if (false === this.algorithmParams.usingFactor.armor['rare' + equipInfo.rare]) {
-                return;
+            // Check is Using Factor
+            if ('charm' === equipType) {
+                if (Helper.isNotEmpty(this.algorithmParams.usingFactor.charm[equipInfo.seriesId])
+                    && -1 !== this.algorithmParams.usingFactor.charm[equipInfo.seriesId]
+                    && equipInfo.level !== this.algorithmParams.usingFactor.charm[equipInfo.seriesId]
+                ) {
+                    return;
+                }
+            } else {
+                if (false === this.algorithmParams.usingFactor.armor['rare' + equipInfo.rare]) {
+                    return;
+                }
+
+                if (Helper.isNotEmpty(this.algorithmParams.usingFactor.armor[equipInfo.seriesId])
+                    && false === this.algorithmParams.usingFactor.armor[equipInfo.seriesId]
+                ) {
+                    return;
+                }
             }
 
             // Convert Equip to Candidate Equip
@@ -1252,6 +1271,19 @@ class FittingAlgorithm {
             jewelCount = bundle.meta.remainingSlotCount[currentSlotSize] < jewelCount
                 ? bundle.meta.remainingSlotCount[currentSlotSize] : jewelCount;
 
+            // Check is Using Factor
+            if (-1 !== this.algorithmParams.usingFactor.jewel[jewel.id]) {
+                if (Helper.isNotEmpty(bundle.jewels[jewel.id])) {
+                    if (jewelCount > (this.algorithmParams.usingFactor.jewel[jewel.id] - bundle.jewels[jewel.id])) {
+                        jewelCount = this.algorithmParams.usingFactor.jewel[jewel.id] - bundle.jewels[jewel.id];
+                    }
+                } else {
+                    if (jewelCount > this.algorithmParams.usingFactor.jewel[jewel.id]) {
+                        jewelCount = this.algorithmParams.usingFactor.jewel[jewel.id];
+                    }
+                }
+            }
+
             if (0 === jewelCount) {
                 currentSlotSize += 1;
 
@@ -1265,8 +1297,11 @@ class FittingAlgorithm {
             bundle.meta.remainingSlotCount.all -= jewelCount;
 
             // Add Jewel
-            bundle.jewels[jewel.id] = Helper.isNotEmpty(bundle.jewels[jewel.id])
-                ? bundle.jewels[jewel.id] + jewelCount : jewelCount;
+            if (Helper.isEmpty(bundle.jewels[jewel.id])) {
+                bundle.jewels[jewel.id] = 0;
+            }
+
+            bundle.jewels[jewel.id] += jewelCount;
 
             jewel.skills.forEach((skill) => {
                 bundle.skills[skill.id] += jewelCount * skill.level;

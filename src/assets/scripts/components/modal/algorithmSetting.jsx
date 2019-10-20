@@ -176,9 +176,10 @@ const renderCharmFactors = (charmFactor) => {
                     return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
                 }).map((seriesId) => {
                     let selectLevel = Helper.isNotEmpty(charmFactor[seriesId])
-                        ? charmFactor[seriesId] : 0;
+                        ? charmFactor[seriesId] : -1;
                     let levelList = [
-                        { key: 0, value: _('all') }
+                        { key: -1, value: _('unlimited') },
+                        { key: 0, value: _('exclude') }
                     ];
 
                     [...Array(seriesIds[seriesId].max - seriesIds[seriesId].min + 1).keys()].forEach((data, index) => {
@@ -219,8 +220,8 @@ const renderJewelFactors = (jewelFactor) => {
             info.skills.forEach((skill) => {
                 let skillInfo = SkillDataset.getInfo(skill.id);
 
-                if (jewelIds[info.id].max < skillInfo.list.length + 1) {
-                    jewelIds[info.id].max = skillInfo.list.length + 1;
+                if (jewelIds[info.id].max < skillInfo.list.length) {
+                    jewelIds[info.id].max = skillInfo.list.length;
                 }
             })
         });
@@ -248,12 +249,14 @@ const renderJewelFactors = (jewelFactor) => {
                         return _(jewelIdA) > _(jewelIdB) ? 1 : -1;
                     }).map((jewelId) => {
                         let selectLevel = Helper.isNotEmpty(jewelFactor[jewelId])
-                            ? jewelFactor[jewelId] : 0;
+                            ? jewelFactor[jewelId] : -1;
+                        let diffLevel = jewelIds[jewelId].max - jewelIds[jewelId].min + 1;
                         let levelList = [
-                            { key: 0, value: _('unlimited') }
+                            { key: -1, value: _('unlimited') },
+                            { key: 0, value: _('exclude') }
                         ];
 
-                        [...Array(jewelIds[jewelId].max - jewelIds[jewelId].min + 1).keys()].forEach((data, index) => {
+                        [...Array(diffLevel).keys()].forEach((data, index) => {
                             levelList.push({ key: index + 1, value: index + 1 })
                         });
 
