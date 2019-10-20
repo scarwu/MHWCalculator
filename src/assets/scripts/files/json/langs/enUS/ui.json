@@ -124,7 +124,7 @@
     "slotSort":             "Slot Amount",
     "expectedValueSort":    "Expected Value",
     "expectedLevelSort":    "Expected Level",
-    "limit":                "Result Limit",
+    "resultLimit":          "Result Limit",
     "sort":                 "Sorting",
     "strategy":             "Strategy",
     "isEndEarly":           "Is End Early",
@@ -132,6 +132,8 @@
     "armorFactor":          "Armor Factor",
     "charmFactor":          "Charm Factor",
     "jewelFactor":          "Jewel Factor",
+    "all":                  "All",
+    "unlimited":            "Unlimited",
     "asc":                  "ASC",
     "desc":                 "DESC"
 }

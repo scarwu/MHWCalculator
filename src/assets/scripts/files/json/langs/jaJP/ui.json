@@ -124,7 +124,7 @@
     "slotSort":             null,
     "expectedValueSort":    null,
     "expectedLevelSort":    null,
-    "limit":                null,
+    "resultLimit":          null,
     "sort":                 null,
     "strategy":             null,
     "isEndEarly":           null,
@@ -132,6 +132,8 @@
     "armorFactor":          null,
     "charmFactor":          null,
     "jewelFactor":          null,
+    "all":                  null,
+    "unlimited":            null,
     "asc":                  null,
     "desc":                 null
 }

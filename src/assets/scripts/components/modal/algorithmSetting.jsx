@@ -19,6 +19,7 @@ import _ from 'libraries/lang';
 import JewelDataset from 'libraries/dataset/jewel';
 import ArmorDataset from 'libraries/dataset/armor';
 import CharmDataset from 'libraries/dataset/charm';
+import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
 import FunctionalButton from 'components/common/functionalButton';
@@ -31,6 +32,11 @@ import ModalState from 'states/modal';
 
 // Load Config
 import Config from 'config';
+
+/**
+ * Variables
+ */
+const levelMapping = [ 'I', 'II', 'III', 'IV', 'V' ];
 
 /**
  * Handler Functions
@@ -78,22 +84,25 @@ const renderArmorFactors = (armorFactor) => {
                     {Object.keys(seriesIds).sort((seriesIdA, seriesIdB) => {
                         return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
                     }).map((seriesId) => {
+                        let isInclude = Helper.isNotEmpty(armorFactor[seriesId])
+                            ? armorFactor[seriesId] : true;
+
                         return (
                             <div key={seriesId} className="col-6 mhwc-value">
                                 <span>{_(seriesId)}</span>
-                                {armorFactor[seriesId] ? (
+                                {isInclude ? (
                                     <div className="mhwc-icons_bundle">
                                         <FunctionalButton
                                             iconName="star"
                                             altName={_('exclude')}
-                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', seriesId)}} />
+                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, true)}} />
                                     </div>
                                 ) : (
                                     <div className="mhwc-icons_bundle">
                                         <FunctionalButton
                                             iconName="star-o"
                                             altName={_('include')}
-                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('armor', seriesId)}} />
+                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, false)}} />
                                     </div>
                                 )}
                             </div>
@@ -109,7 +118,16 @@ const renderCharmFactors = (charmFactor) => {
     let seriesIds = {};
 
     CharmDataset.getItems().forEach((info) => {
-        seriesIds[info.seriesId] = true;
+        if (Helper.isEmpty(seriesIds[info.seriesId])) {
+            seriesIds[info.seriesId] = {
+                min: 1,
+                max: 1
+            };
+        }
+
+        if (seriesIds[info.seriesId].max < info.level) {
+            seriesIds[info.seriesId].max = info.level;
+        }
     });
 
     return (
@@ -121,24 +139,27 @@ const renderCharmFactors = (charmFactor) => {
                 {Object.keys(seriesIds).sort((seriesIdA, seriesIdB) => {
                     return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
                 }).map((seriesId) => {
+                    let selectLevel = Helper.isNotEmpty(charmFactor[seriesId])
+                        ? charmFactor[seriesId] : 0;
+                    let levelList = [
+                        { key: 0, value: _('all') }
+                    ];
+
+                    [...Array(seriesIds[seriesId].max - seriesIds[seriesId].min + 1).keys()].forEach((data, index) => {
+                        levelList.push({ key: index + 1, value: levelMapping[index] })
+                    });
+
                     return (
                         <div key={seriesId} className="col-6 mhwc-value">
                             <span>{_(seriesId)}</span>
-                            {charmFactor[seriesId] ? (
-                                <div className="mhwc-icons_bundle">
-                                    <FunctionalButton
-                                        iconName="star"
-                                        altName={_('exclude')}
-                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('charm', seriesId)}} />
-                                </div>
-                            ) : (
-                                <div className="mhwc-icons_bundle">
-                                    <FunctionalButton
-                                        iconName="star-o"
-                                        altName={_('include')}
-                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('charm', seriesId)}} />
-                                </div>
-                            )}
+                            <div className="mhwc-icons_bundle">
+                                <FunctionalSelector
+                                    iconName="sort-numeric-asc"
+                                    defaultValue={selectLevel}
+                                    options={levelList} onChange={(event) => {
+                                        CommonState.setter.setAlgorithmParamsUsingFactor('charm', seriesId, parseInt(event.target.value));
+                                    }} />
+                            </div>
                         </div>
                     );
                 })}
@@ -152,7 +173,20 @@ const renderJewelFactors = (jewelFactor) => {
         let jewelIds = {};
 
         JewelDataset.sizeIs(size).getItems().forEach((info) => {
-            jewelIds[info.id] = true;
+            if (Helper.isEmpty(jewelIds[info.id])) {
+                jewelIds[info.id] = {
+                    min: 1,
+                    max: 1
+                };
+            }
+
+            info.skills.forEach((skill) => {
+                let skillInfo = SkillDataset.getInfo(skill.id);
+
+                if (jewelIds[info.id].max < skillInfo.list.length + 1) {
+                    jewelIds[info.id].max = skillInfo.list.length + 1;
+                }
+            })
         });
 
         return (
@@ -164,24 +198,27 @@ const renderJewelFactors = (jewelFactor) => {
                     {Object.keys(jewelIds).sort((jewelIdA, jewelIdB) => {
                         return _(jewelIdA) > _(jewelIdB) ? 1 : -1;
                     }).map((jewelId) => {
+                        let selectLevel = Helper.isNotEmpty(jewelFactor[jewelId])
+                            ? jewelFactor[jewelId] : 0;
+                        let levelList = [
+                            { key: 0, value: _('unlimited') }
+                        ];
+
+                        [...Array(jewelIds[jewelId].max - jewelIds[jewelId].min + 1).keys()].forEach((data, index) => {
+                            levelList.push({ key: index + 1, value: index + 1 })
+                        });
+
                         return (
                             <div key={jewelId} className="col-6 mhwc-value">
                                 <span>{_(jewelId)}</span>
-                                {jewelFactor[jewelId] ? (
-                                    <div className="mhwc-icons_bundle">
-                                        <FunctionalButton
-                                            iconName="star"
-                                            altName={_('exclude')}
-                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', jewelId)}} />
-                                    </div>
-                                ) : (
-                                    <div className="mhwc-icons_bundle">
-                                        <FunctionalButton
-                                            iconName="star-o"
-                                            altName={_('include')}
-                                            onClick={() => {CommonState.setter.toggleAlgorithmParamsUsingFactor('jewel', jewelId)}} />
-                                    </div>
-                                )}
+                                <div className="mhwc-icons_bundle">
+                                    <FunctionalSelector
+                                        iconName="sort-numeric-asc"
+                                        defaultValue={selectLevel}
+                                        options={levelList} onChange={(event) => {
+                                            CommonState.setter.setAlgorithmParamsUsingFactor('jewel', jewelId, parseInt(event.target.value));
+                                        }} />
+                                </div>
                             </div>
                         );
                     })}
@@ -274,7 +311,7 @@ export default function AlgorithmSetting(props) {
                     <div className="mhwc-wrapper">
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
-                                <span>{_('limit')}</span>
+                                <span>{_('resultLimit')}</span>
 
                                 <div className="mhwc-icons_bundle">
                                     <FunctionalInput

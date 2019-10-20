@@ -509,22 +509,21 @@ const Store = createStore((state = initialState, action) => {
                 algorithmParams: algorithmParams
             });
         })();
-    case 'TOGGLE_ALGORITHM_PARAMS_USING_FACTOR':
+    case 'SET_ALGORITHM_PARAMS_USING_FACTOR':
         return (() => {
             let algorithmParams = Helper.deepCopy(state.algorithmParams);
 
-            if (Helper.isEmpty(algorithmParams.usingFactor[action.payload.target])
-                || Helper.isEmpty(algorithmParams.usingFactor[action.payload.target][action.payload.flag])
-            ) {
+            if (Helper.isEmpty(algorithmParams.usingFactor[action.payload.target])) {
                 return state;
             }
 
-            algorithmParams.usingFactor[action.payload.target][action.payload.flag] = !algorithmParams.usingFactor[action.payload.target][action.payload.flag];
+            algorithmParams.usingFactor[action.payload.target][action.payload.flag] = action.payload.value;
 
             return Object.assign({}, state, {
                 algorithmParams: algorithmParams
             });
         })();
+
 
     // Computed Bundles
     case 'UPDATE_COMPUTED_BUNDLES':
@@ -733,12 +732,13 @@ const Setter = {
             }
         });
     },
-    toggleAlgorithmParamsUsingFactor: (target, flag) => {
+    setAlgorithmParamsUsingFactor: (target, flag, value) => {
         Store.dispatch({
-            type: 'TOGGLE_ALGORITHM_PARAMS_USING_FACTOR',
+            type: 'SET_ALGORITHM_PARAMS_USING_FACTOR',
             payload: {
                 target: target,
-                flag: flag
+                flag: flag,
+                value: value
             }
         });
     },

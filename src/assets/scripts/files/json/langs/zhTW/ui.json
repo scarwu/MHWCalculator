@@ -124,7 +124,7 @@
     "slotSort":             "插槽數量",
     "expectedValueSort":    "期望數值",
     "expectedLevelSort":    "期望等級",
-    "limit":                "結果數量",
+    "resultLimit":          "結果數量",
     "sort":                 "排序方式",
     "strategy":             "搜尋策略",
     "isEndEarly":           "提早終止",
@@ -132,6 +132,8 @@
     "armorFactor":          "裝甲因子",
     "charmFactor":          "護石因子",
     "jewelFactor":          "裝飾珠因子",
+    "all":                  "全部",
+    "unlimited":            "無限制",
     "asc":                  "升冪",
     "desc":                 "降冪"
 }
