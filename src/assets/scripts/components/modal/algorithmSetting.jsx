@@ -109,12 +109,12 @@ const renderArmorFactors = (armorFactor) => {
                             <FunctionalButton
                                 iconName="star"
                                 altName={_('exclude')}
-                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, true)}} />
+                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, false)}} />
                         ) : (
                             <FunctionalButton
                                 iconName="star-o"
                                 altName={_('include')}
-                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, false)}} />
+                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, true)}} />
                         )}
                     </div>
                 </div>
@@ -133,12 +133,12 @@ const renderArmorFactors = (armorFactor) => {
                                         <FunctionalButton
                                             iconName="star"
                                             altName={_('exclude')}
-                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, true)}} />
+                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, false)}} />
                                     ) : (
                                         <FunctionalButton
                                             iconName="star-o"
                                             altName={_('include')}
-                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, false)}} />
+                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, true)}} />
                                     )}
                                 </div>
                             </div>
@@ -235,12 +235,12 @@ const renderJewelFactors = (jewelFactor) => {
                             <FunctionalButton
                                 iconName="star"
                                 altName={_('exclude')}
-                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, true)}} />
+                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, false)}} />
                         ) : (
                             <FunctionalButton
                                 iconName="star-o"
                                 altName={_('include')}
-                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, false)}} />
+                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, true)}} />
                         )}
                     </div>
                 </div>
