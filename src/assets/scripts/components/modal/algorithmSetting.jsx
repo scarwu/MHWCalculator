@@ -63,6 +63,9 @@ const strategyList = [
     { key: 'complete', value: _('completeStrategy') }
 ];
 
+const armorRareList = [5, 6, 7, 8, 9, 10, 11, 12];
+const jewelSizeList = [1, 2, 3, 4];
+
 /**
  * Handler Functions
  */
@@ -93,7 +96,11 @@ const handleStrategyChange = (event) => {
 };
 
 const renderArmorFactors = (armorFactor) => {
-    return [5, 6, 7, 8, 9, 10, 11, 12].map((rare) => {
+    return armorRareList.map((rare) => {
+        if (false === armorFactor['rare' + rare]) {
+            return false;
+        }
+
         let seriesIds = {};
 
         ArmorDataset.rareIs(rare).getItems().forEach((info) => {
@@ -104,19 +111,6 @@ const renderArmorFactors = (armorFactor) => {
             <div key={rare} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
                     <span>{_('armorFactor')} R{rare}</span>
-                    <div className="mhwc-icons_bundle">
-                        {armorFactor['rare' + rare] ? (
-                            <FunctionalButton
-                                iconName="star"
-                                altName={_('exclude')}
-                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, false)}} />
-                        ) : (
-                            <FunctionalButton
-                                iconName="star-o"
-                                altName={_('include')}
-                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, true)}} />
-                        )}
-                    </div>
                 </div>
                 <div className="col-12 mhwc-content">
                     {Object.keys(seriesIds).sort((seriesIdA, seriesIdB) => {
@@ -206,7 +200,11 @@ const renderCharmFactors = (charmFactor) => {
 };
 
 const renderJewelFactors = (jewelFactor) => {
-    return [1, 2, 3, 4].map((size) => {
+    return jewelSizeList.map((size) => {
+        if (false === jewelFactor['size' + size]) {
+            return false;
+        }
+
         let jewelIds = {};
 
         JewelDataset.sizeIs(size).getItems().forEach((info) => {
@@ -230,19 +228,6 @@ const renderJewelFactors = (jewelFactor) => {
             <div key={size} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
                     <span>{_('jewelFactor')} [{size}]</span>
-                    <div className="mhwc-icons_bundle">
-                        {jewelFactor['size' + size] ? (
-                            <FunctionalButton
-                                iconName="star"
-                                altName={_('exclude')}
-                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, false)}} />
-                        ) : (
-                            <FunctionalButton
-                                iconName="star-o"
-                                altName={_('include')}
-                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, true)}} />
-                        )}
-                    </div>
                 </div>
                 <div className="col-12 mhwc-content">
                     {Object.keys(jewelIds).sort((jewelIdA, jewelIdB) => {
@@ -391,8 +376,65 @@ export default function AlgorithmSetting(props) {
                             </div>
                         </div>
 
+                        <div className="mhwc-item mhwc-item-2-step">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('armorFactor')}</span>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                {armorRareList.map((rare) => {
+                                    return (
+                                        <div key={rare} className="col-6 mhwc-value">
+                                            <span>{_('rare') + `: ${rare}`}</span>
+                                            <div className="mhwc-icons_bundle">
+                                                {stateAlgorithmParams.usingFactor.armor['rare' + rare] ? (
+                                                    <FunctionalButton
+                                                        iconName="star"
+                                                        altName={_('exclude')}
+                                                        onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, false)}} />
+                                                ) : (
+                                                    <FunctionalButton
+                                                        iconName="star-o"
+                                                        altName={_('include')}
+                                                        onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, true)}} />
+                                                )}
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+
                         {renderArmorFactors(stateAlgorithmParams.usingFactor.armor)}
                         {renderCharmFactors(stateAlgorithmParams.usingFactor.charm)}
+
+                        <div className="mhwc-item mhwc-item-2-step">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('jewelFactor')}</span>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                {jewelSizeList.map((size) => {
+                                    return (
+                                        <div key={size} className="col-6 mhwc-value">
+                                            <span>{_('size') + `: ${size}`}</span>
+                                            <div className="mhwc-icons_bundle">
+                                                {stateAlgorithmParams.usingFactor.jewel['size' + size] ? (
+                                                    <FunctionalButton
+                                                        iconName="star"
+                                                        altName={_('exclude')}
+                                                        onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, false)}} />
+                                                ) : (
+                                                    <FunctionalButton
+                                                        iconName="star-o"
+                                                        altName={_('include')}
+                                                        onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, true)}} />
+                                                )}
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+
                         {renderJewelFactors(stateAlgorithmParams.usingFactor.jewel)}
                     </div>
                 </div>
