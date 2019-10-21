@@ -133,7 +133,7 @@ const handleBundlePickUp = (bundle) => {
 /**
  * Render Functions
  */
-const renderBundleItem = (bundle, index, totalIndex) => {
+const renderBundleItem = (bundle, index, totalIndex, requiredSkillIds) => {
     return (
         <div key={bundle.hash} className="mhwc-item mhwc-item-3-step">
             <div className="col-12 mhwc-name">
@@ -252,6 +252,13 @@ const renderBundleItem = (bundle, index, totalIndex) => {
                             return (Helper.isNotEmpty(skillInfo)) ? (
                                 <div key={skillId} className="col-6 mhwc-value">
                                     <span>{`${_(skillInfo.name)} Lv.${skillCount}`}</span>
+                                    {(-1 === requiredSkillIds.indexOf(skillInfo.id)) ? (
+                                        <div className="mhwc-icons_bundle">
+                                            <FunctionalButton
+                                                iconName="arrow-left" altName={_('include')}
+                                                onClick={() => {CommonState.setter.addRequiredSkill(skillInfo.id)}} />
+                                        </div>
+                                    ) : false}
                                 </div>
                             ) : false;
                         })}
@@ -267,17 +274,34 @@ const renderBundleItem = (bundle, index, totalIndex) => {
  */
 const BundleList = (props) => {
     const {data} = props;
-    const requiredSkills = CommonState.getter.getRequiredSkills();
 
+    /**
+     * Hooks
+     */
+    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
 
+    // Like Did Mount & Will Unmount Cycle
+    useEffect(() => {
+        const unsubscribe = CommonState.store.subscribe(() => {
+            updateRequiredSkills(CommonState.getter.getRequiredSkills());
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    }, []);
 
     return useMemo(() => {
         Helper.log('Component: CandidateBundles -> BundleList');
 
-        return data.map((bundle, index) => {
-            return renderBundleItem(bundle, index, data.length);
+        const requiredSkillIds = stateRequiredSkills.map((skill) => {
+            return skill.id;
         });
-    }, [data]);
+
+        return data.map((bundle, index) => {
+            return renderBundleItem(bundle, index, data.length, requiredSkillIds);
+        });
+    }, [data, stateRequiredSkills]);
 };
 
 export default function CandidateBundles(props) {

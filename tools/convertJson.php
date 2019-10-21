@@ -1058,14 +1058,14 @@ echo "Dataset\n";
 echo "---\n";
 
 foreach (Misc::$datasetMap as $name => $data) {
-    if ('armors' === $name) {
+    if ('armors' === $name || 'charms' === $name) {
         $count = 0;
 
         foreach ($data as $bundle) {
             $count += count($bundle[1]);
         }
 
-        echo "{$name} => {$count}\n";
+        echo "{$name} => " . count($data) . "({$count})\n";
     } else {
         echo "{$name} => " . count($data) . "\n";
     }
