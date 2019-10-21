@@ -15,7 +15,8 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     entry: {
-        main: './src/assets/scripts/main.jsx'
+        main: './src/assets/scripts/main.jsx',
+        worker: './src/assets/scripts/worker.js'
     },
     output: {
         filename: '[name].min.js'

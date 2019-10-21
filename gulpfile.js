@@ -61,7 +61,7 @@ function compileWebpack(callback) {
         webpackConfig.watch = true;
     }
 
-    let result = gulp.src('src/assets/scripts/main.jsx')
+    let result = gulp.src([ 'src/assets/scripts/main.jsx', 'src/assets/scripts/worker.js' ])
         .pipe(webpackStream(webpackConfig, webpack).on('error', handleCompileError))
         .pipe(gulp.dest('src/boot/assets/scripts'));
 

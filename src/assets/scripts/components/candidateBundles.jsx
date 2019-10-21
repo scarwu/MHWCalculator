@@ -21,7 +21,6 @@ import CharmDataset from 'libraries/dataset/charm';
 import JewelDataset from 'libraries/dataset/jewel';
 import SkillDataset from 'libraries/dataset/skill';
 import CommonDataset from 'libraries/dataset/common';
-import FittingAlgorithm from 'libraries/fittingAlgorithm';
 
 // Load Components
 import FunctionalButton from 'components/common/functionalButton';
@@ -33,6 +32,9 @@ import ModalState from 'states/modal';
 // Load Config & Constant
 import Config from 'config';
 import Constant from 'constant';
+
+// Load Worker
+const worker = new Worker('assets/scripts/worker.min.js');
 
 /**
  * Handle Functions
@@ -292,6 +294,17 @@ export default function CandidateBundles(props) {
             updateComputedBundles(CommonState.getter.getComputedBundles());
         });
 
+        worker.onmessage = (e) => {
+            switch (e.data.action) {
+            case 'result':
+                CommonState.setter.saveComputedBundles(e.data.payload.computedBundles);
+
+                updateIsSearching(false);
+            default:
+                break;
+            }
+        };
+
         return () => {
             unsubscribe();
         };
@@ -320,32 +333,15 @@ export default function CandidateBundles(props) {
 
         updateIsSearching(true);
 
-        setTimeout(() => {
-            let startTime = new Date().getTime();
-            let computedBundles = FittingAlgorithm.search(
-                requiredSets,
-                requiredSkills,
-                requiredEquips,
-                algorithmParams
-            );
-            let stopTime = new Date().getTime();
-            let searchTime = (stopTime - startTime) / 1000;
-            let weaponEnhanceIds = Helper.isNotEmpty(requiredEquips.weapon)
-                ? requiredEquips.weapon.enhanceIds : null;
-
-            computedBundles.map((bundle) => {
-                bundle.meta.weaponEnhanceIds = weaponEnhanceIds;
-
-                return bundle;
-            });
-
-            Helper.log('Bundle List:', computedBundles);
-            Helper.log('Search Time:', searchTime);
-
-            CommonState.setter.saveComputedBundles(computedBundles);
-
-            updateIsSearching(false);
-        }, 100);
+        worker.postMessage({
+            action: 'search',
+            payload: {
+                requiredSets: requiredSets,
+                requiredSkills: requiredSkills,
+                requiredEquips: requiredEquips,
+                algorithmParams: algorithmParams
+            }
+        });
     }, []);
 
     return (
