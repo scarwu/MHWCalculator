@@ -108,7 +108,7 @@ const handleBundlePickUp = (bundle) => {
         let currentSize = jewelInfo.size;
 
         let jewelCount = bundle.jewels[jewelId];
-        let data = null
+        let data = null;
 
         let jewelIndex = 0;
 
@@ -183,10 +183,7 @@ const renderBundleItem = (bundle, index, totalIndex) => {
 
                         return Helper.isNotEmpty(equipInfo) ? (
                             <Fragment key={equipType}>
-                                <div className="col-2 mhwc-name">
-                                    <span>{_(equipType)}</span>
-                                </div>
-                                <div className="col-4 mhwc-value">
+                                <div className="col-6 mhwc-value">
                                     <span>{_(equipInfo.name)}</span>
                                 </div>
                             </Fragment>
@@ -270,6 +267,9 @@ const renderBundleItem = (bundle, index, totalIndex) => {
  */
 const BundleList = (props) => {
     const {data} = props;
+    const requiredSkills = CommonState.getter.getRequiredSkills();
+
+
 
     return useMemo(() => {
         Helper.log('Component: CandidateBundles -> BundleList');
@@ -287,6 +287,7 @@ export default function CandidateBundles(props) {
      */
     const [stateComputedBundles, updateComputedBundles] = useState(CommonState.getter.getComputedBundles());
     const [stateIsSearching, updateIsSearching] = useState(false);
+    const [stateBundleCount, updateBundleCount] = useState(0);
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
@@ -295,11 +296,20 @@ export default function CandidateBundles(props) {
         });
 
         worker.onmessage = (e) => {
-            switch (e.data.action) {
+            let action = e.data.action;
+            let payload = e.data.payload;
+
+            switch (action) {
+            case 'progress':
+                updateBundleCount(payload.bundleCount);
+
+                break;
             case 'result':
-                CommonState.setter.saveComputedBundles(e.data.payload.computedBundles);
+                CommonState.setter.saveComputedBundles(payload.computedBundles);
 
                 updateIsSearching(false);
+
+                break;
             default:
                 break;
             }
@@ -307,6 +317,7 @@ export default function CandidateBundles(props) {
 
         return () => {
             unsubscribe();
+            worker.terminate();
         };
     }, []);
 
@@ -332,6 +343,7 @@ export default function CandidateBundles(props) {
         });
 
         updateIsSearching(true);
+        updateBundleCount(0);
 
         worker.postMessage({
             action: 'search',

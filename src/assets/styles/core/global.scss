@@ -10,7 +10,7 @@
  /**
  * Font Face
  */
-@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700Noto+Sans:100,300,400,700|Noto+Sans+JP:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700|Noto+Sans:100,300,400,700|Noto+Sans+JP:100,300,400,700');
 
 /**
  * Mixins
@@ -92,12 +92,7 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    font-family:
-        "PT Serif",
-        "Noto Sans",
-        "Noto Sans JP",
-        Arial,
-        sans-serif;
+    font-family: "PT Serif", "Noto Sans", "Noto Sans JP", Arial, sans-serif;
 }
 
 html {

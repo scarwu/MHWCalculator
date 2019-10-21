@@ -28,7 +28,7 @@ class FittingAlgorithm {
     /**
      * Search
      */
-    search = (requiredSets, requiredSkills, requiredEquips, algorithmParams) => {
+    search = (requiredSets, requiredSkills, requiredEquips, algorithmParams, callback) => {
         if (0 === requiredSets.length
             && 0 === requiredSkills.length
         ) {
@@ -41,6 +41,8 @@ class FittingAlgorithm {
         Helper.log('Input: Algorithm Params', algorithmParams);
 
         this.algorithmParams = Helper.deepCopy(algorithmParams);
+        this.callback = callback;
+
         this.conditionEquips = [];
         this.conditionSets = {};
         this.conditionSkills = {};

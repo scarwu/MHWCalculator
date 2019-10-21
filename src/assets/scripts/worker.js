@@ -1,5 +1,5 @@
 /**
- * Bootstrap
+ * Worker
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -36,7 +36,13 @@ const onSearch = (data) => {
         data.requiredSets,
         data.requiredSkills,
         data.requiredEquips,
-        data.algorithmParams
+        data.algorithmParams,
+        (payload) => {
+            postMessage({
+                action: 'progress',
+                payload: payload
+            });
+        }
     );
     let stopTime = new Date().getTime();
     let searchTime = (stopTime - startTime) / 1000;
@@ -61,9 +67,14 @@ const onSearch = (data) => {
 };
 
 onmessage = (e) => {
-    switch (e.data.action) {
+    let action = e.data.action;
+    let payload = e.data.payload;
+
+    switch (action) {
     case 'search':
-        onSearch(e.data.payload);
+        onSearch(payload);
+
+        break;
     default:
         break;
     }
