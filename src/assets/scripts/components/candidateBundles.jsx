@@ -312,6 +312,7 @@ export default function CandidateBundles(props) {
     const [stateComputedBundles, updateComputedBundles] = useState(CommonState.getter.getComputedBundles());
     const [stateIsSearching, updateIsSearching] = useState(false);
     const [stateBundleCount, updateBundleCount] = useState(0);
+    const [stateSearchPercent, updateSearchPercent] = useState(0);
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
@@ -325,7 +326,13 @@ export default function CandidateBundles(props) {
 
             switch (action) {
             case 'progress':
-                updateBundleCount(payload.bundleCount);
+                if (Helper.isNotEmpty(payload.bundleCount)) {
+                    updateBundleCount(payload.bundleCount);
+                }
+
+                if (Helper.isNotEmpty(payload.searchPercent)) {
+                    updateSearchPercent(payload.searchPercent);
+                }
 
                 break;
             case 'result':
@@ -368,6 +375,7 @@ export default function CandidateBundles(props) {
 
         updateIsSearching(true);
         updateBundleCount(0);
+        updateSearchPercent(0);
 
         worker.postMessage({
             action: 'search',
@@ -400,8 +408,11 @@ export default function CandidateBundles(props) {
 
             <div key="list" className="mhwc-list">
                 {true === stateIsSearching ? (
-                    <div className="mhwc-loading">
-                        <i className="fa fa-spin fa-spinner"></i>
+                    <div className="mhwc-searching">
+                        <div className="mhwc-count">{stateBundleCount}</div>
+                        <div className="mhwc-progress">
+                            <div style={{width: stateSearchPercent + '%'}}></div>
+                        </div>
                     </div>
                 ) : false}
 

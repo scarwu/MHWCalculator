@@ -91,6 +91,11 @@ class FittingAlgorithm {
         if (0 !== Object.keys(this.conditionSets).length) {
             bundlePool = this.createBundlePoolWithSetEquips(bundlePool);
 
+            this.callback({
+                bundleCount: Object.keys(bundlePool).length,
+                searchPercent: 100
+            });
+
             // Sets Require Equips is Overflow
             if (0 === Object.keys(bundlePool).length) {
                 return [];
@@ -100,6 +105,11 @@ class FittingAlgorithm {
         // Create Bundle Pool with Set Equips
         if (0 !== Object.keys(this.conditionSkills).length) {
             bundlePool = this.createBundlePoolWithSkillEquips(bundlePool);
+
+            this.callback({
+                bundleCount: Object.keys(bundlePool).length,
+                searchPercent: 100
+            });
 
             // Sets Require Equips is Overflow
             if (0 === Object.keys(bundlePool).length) {
@@ -361,10 +371,12 @@ class FittingAlgorithm {
 
         // Create Current Equip Types and Convert Candidate Equip Pool
         let currentEquipTypes = [];
+        let totalTraversalCount = 1;
 
         for (const [equipType, candidateEquips] of Object.entries(candidateEquipPool)) {
             currentEquipTypes.push(equipType);
             candidateEquipPool[equipType] = Object.values(candidateEquips);
+            totalTraversalCount *= candidateEquipPool[equipType].length;
         }
 
         candidateEquipPool = Object.values(candidateEquipPool);
@@ -436,8 +448,12 @@ class FittingAlgorithm {
                 candidateEquip = candidateEquipPool[typeIndex][equipIndex];
                 traversalCount++;
 
-                if (0 === traversalCount % 10000) {
+                if (0 === traversalCount % parseInt(totalTraversalCount / 100)) {
                     Helper.log('Set Equips: Traversal Count:', traversalCount);
+
+                    this.callback({
+                        searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
+                    });
                 }
 
                 // Add Candidate Equip to Bundle
@@ -457,6 +473,10 @@ class FittingAlgorithm {
                     if (this.isBundleSetCompleted(bundle)) {
                         lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
+                        this.callback({
+                            bundleCount: Object.keys(lastBundlePool).length
+                        });
+
                         findNextEquip();
 
                         continue;
@@ -467,6 +487,11 @@ class FittingAlgorithm {
             }
 
             Helper.log('Set Equips: Traversal Count:', traversalCount);
+
+            this.callback({
+                bundleCount: Object.keys(lastBundlePool).length,
+                searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
+            });
         });
 
         Helper.log('Last Bundle Result:', Object.keys(lastBundlePool).length, lastBundlePool);
@@ -530,6 +555,7 @@ class FittingAlgorithm {
         // Create Current Equip Types and Convert Candidate Equip Pool
         // Create Max Equip Expected Value & Expected Level
         let currentEquipTypes = [];
+        let totalTraversalCount = 1;
 
         for (const [equipType, candidateEquips] of Object.entries(candidateEquipPool)) {
             if (Helper.isEmpty(this.maxEquipExpectedValue[equipType])) {
@@ -552,6 +578,7 @@ class FittingAlgorithm {
 
             currentEquipTypes.push(equipType);
             candidateEquipPool[equipType] = Object.values(candidateEquips);
+            totalTraversalCount *= candidateEquipPool[equipType].length;
         }
 
         candidateEquipPool = Object.values(candidateEquipPool);
@@ -654,8 +681,12 @@ class FittingAlgorithm {
                 candidateEquip = candidateEquipPool[typeIndex][equipIndex];
                 traversalCount++;
 
-                if (0 === traversalCount % 10000) {
+                if (0 === traversalCount % parseInt(totalTraversalCount / 100)) {
                     Helper.log('Skill Equips: Traversal Count:', traversalCount);
+
+                    this.callback({
+                        searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
+                    });
                 }
 
                 // Add Candidate Equip to Bundle
@@ -674,6 +705,10 @@ class FittingAlgorithm {
                     // Check Bundle Skills
                     if (this.isBundleSkillCompleted(bundle)) {
                         lastBundlePool[this.getBundleHash(bundle)] = bundle;
+
+                        this.callback({
+                            bundleCount: Object.keys(lastBundlePool).length
+                        });
 
                         // Last Bundle Pre Check
                         if (this.algorithmParams.flag.isEndEarly) {
@@ -699,6 +734,10 @@ class FittingAlgorithm {
                             }
 
                             lastBundlePool[this.getBundleHash(bundle)] = bundle;
+
+                            this.callback({
+                                bundleCount: Object.keys(lastBundlePool).length
+                            });
 
                             // Last Bundle Pre Check
                             if (this.algorithmParams.flag.isEndEarly) {
@@ -729,6 +768,11 @@ class FittingAlgorithm {
             }
 
             Helper.log('Skill Equips: Traversal Count:', traversalCount);
+
+            this.callback({
+                bundleCount: Object.keys(lastBundlePool).length,
+                searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
+            });
         });
 
         Helper.log('Last Bundle Result:', Object.keys(lastBundlePool).length, lastBundlePool);
