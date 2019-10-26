@@ -30,13 +30,18 @@ if ('production' === Config.env) {
     });
 }
 
-const onSearch = (data) => {
+onmessage = (event) => {
+    const requiredSets = event.data.requiredSets;
+    const requiredSkills = event.data.requiredSkills;
+    const requiredEquips = event.data.requiredEquips;
+    const algorithmParams = event.data.algorithmParams;
+
     let startTime = new Date().getTime();
     let computedBundles = FittingAlgorithm.search(
-        data.requiredSets,
-        data.requiredSkills,
-        data.requiredEquips,
-        data.algorithmParams,
+        requiredSets,
+        requiredSkills,
+        requiredEquips,
+        algorithmParams,
         (payload) => {
             postMessage({
                 action: 'progress',
@@ -46,8 +51,8 @@ const onSearch = (data) => {
     );
     let stopTime = new Date().getTime();
     let searchTime = (stopTime - startTime) / 1000;
-    let weaponEnhanceIds = Helper.isNotEmpty(data.requiredEquips.weapon)
-        ? data.requiredEquips.weapon.enhanceIds : null;
+    let weaponEnhanceIds = Helper.isNotEmpty(requiredEquips.weapon)
+        ? requiredEquips.weapon.enhanceIds : null;
 
     computedBundles.map((bundle) => {
         bundle.meta.weaponEnhanceIds = weaponEnhanceIds;
@@ -64,18 +69,4 @@ const onSearch = (data) => {
             computedBundles: computedBundles
         }
     });
-};
-
-onmessage = (e) => {
-    let action = e.data.action;
-    let payload = e.data.payload;
-
-    switch (action) {
-    case 'search':
-        onSearch(payload);
-
-        break;
-    default:
-        break;
-    }
 };

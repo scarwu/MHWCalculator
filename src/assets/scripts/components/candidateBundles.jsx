@@ -33,8 +33,8 @@ import ModalState from 'states/modal';
 import Config from 'config';
 import Constant from 'constant';
 
-// Load Worker
-const worker = new Worker('assets/scripts/worker.min.js');
+// Variables
+let worker = undefined;
 
 /**
  * Handle Functions
@@ -320,35 +320,8 @@ export default function CandidateBundles(props) {
             updateComputedBundles(CommonState.getter.getComputedBundles());
         });
 
-        worker.onmessage = (e) => {
-            let action = e.data.action;
-            let payload = e.data.payload;
-
-            switch (action) {
-            case 'progress':
-                if (Helper.isNotEmpty(payload.bundleCount)) {
-                    updateBundleCount(payload.bundleCount);
-                }
-
-                if (Helper.isNotEmpty(payload.searchPercent)) {
-                    updateSearchPercent(payload.searchPercent);
-                }
-
-                break;
-            case 'result':
-                CommonState.setter.saveComputedBundles(payload.computedBundles);
-
-                updateIsSearching(false);
-
-                break;
-            default:
-                break;
-            }
-        };
-
         return () => {
             unsubscribe();
-            worker.terminate();
         };
     }, []);
 
@@ -377,23 +350,48 @@ export default function CandidateBundles(props) {
         updateBundleCount(0);
         updateSearchPercent(0);
 
+        if (undefined == worker) {
+            worker = new Worker('assets/scripts/worker.min.js')
+            worker.onmessage = (event) => {
+                const action = event.data.action;
+                const payload = event.data.payload;
+
+                switch (action) {
+                case 'progress':
+                    if (Helper.isNotEmpty(payload.bundleCount)) {
+                        updateBundleCount(payload.bundleCount);
+                    }
+
+                    if (Helper.isNotEmpty(payload.searchPercent)) {
+                        updateSearchPercent(payload.searchPercent);
+                    }
+
+                    break;
+                case 'result':
+                    CommonState.setter.saveComputedBundles(payload.computedBundles);
+
+                    updateIsSearching(false);
+
+                    break;
+                default:
+                    break;
+                }
+            };
+        }
+
         worker.postMessage({
-            action: 'search',
-            payload: {
-                requiredSets: requiredSets,
-                requiredSkills: requiredSkills,
-                requiredEquips: requiredEquips,
-                algorithmParams: algorithmParams
-            }
+            requiredSets: requiredSets,
+            requiredSkills: requiredSkills,
+            requiredEquips: requiredEquips,
+            algorithmParams: algorithmParams
         });
     }, []);
 
     const handleCandidateBundlesCancel = useCallback(() => {
         updateIsSearching(false);
 
-        worker.postMessage({
-            action: 'cancel'
-        });
+        worker.terminate();
+        worker = undefined;
     }, []);
 
     return (
