@@ -388,6 +388,14 @@ export default function CandidateBundles(props) {
         });
     }, []);
 
+    const handleCandidateBundlesCancel = useCallback(() => {
+        updateIsSearching(false);
+
+        worker.postMessage({
+            action: 'cancel'
+        });
+    }, []);
+
     return (
         <div className="col mhwc-bundles">
             <div className="mhwc-panel">
@@ -408,15 +416,33 @@ export default function CandidateBundles(props) {
 
             <div key="list" className="mhwc-list">
                 {true === stateIsSearching ? (
-                    <div className="mhwc-searching">
-                        <div className="mhwc-count">{stateBundleCount}</div>
-                        <div className="mhwc-progress">
-                            <div style={{width: stateSearchPercent + '%'}}></div>
+                    <div className="mhwc-item mhwc-item-3-step">
+                        <div className="col-12 mhwc-name">
+                            <span>{_('searching')}</span>
+                            <div className="mhwc-icons_bundle">
+                                <FunctionalButton
+                                    iconName="times" altName={_('cancel')}
+                                    onClick={handleCandidateBundlesCancel} />
+                            </div>
+                        </div>
+                        <div className="col-12 mhwc-content">
+                            <div className="col-2 mhwc-name">
+                                <span>{_('bundleCount')}</span>
+                            </div>
+                            <div className="col-4 mhwc-value">
+                                <span>{stateBundleCount}</span>
+                            </div>
+                            <div className="col-2 mhwc-name">
+                                <span>{_('searchPercent')}</span>
+                            </div>
+                            <div className="col-4 mhwc-value">
+                                <span>{stateSearchPercent} %</span>
+                            </div>
                         </div>
                     </div>
-                ) : false}
-
-                <BundleList data={stateComputedBundles} />
+                ) : (
+                    <BundleList data={stateComputedBundles} />
+                )}
             </div>
         </div>
     );

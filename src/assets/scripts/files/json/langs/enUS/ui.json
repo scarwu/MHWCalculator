@@ -95,6 +95,7 @@
     "reset":                "Reset",
     "setting":              "Setting",
     "search":               "Search",
+    "cancel":               "Cancel",
     "inputKeyword":         "Input Keyword",
     "inputName":            "Input Name",
     "exportBundle":         "Export Bundle",
@@ -135,5 +136,8 @@
     "all":                  "All",
     "unlimited":            "Unlimited",
     "asc":                  "ASC",
-    "desc":                 "DESC"
+    "desc":                 "DESC",
+    "searching":            "Searching",
+    "bundleCount":          "Bundle Count",
+    "searchPercent":        "Percentage"
 }

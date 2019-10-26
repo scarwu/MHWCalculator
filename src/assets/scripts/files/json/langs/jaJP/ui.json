@@ -95,6 +95,7 @@
     "reset":                null,
     "setting":              null,
     "search":               null,
+    "cancel":               null,
     "inputKeyword":         null,
     "inputName":            null,
     "exportBundle":         null,
@@ -135,5 +136,8 @@
     "all":                  null,
     "unlimited":            null,
     "asc":                  null,
-    "desc":                 null
+    "desc":                 null,
+    "searching":            null,
+    "bundleCount":          null,
+    "searchPercent":        null
 }

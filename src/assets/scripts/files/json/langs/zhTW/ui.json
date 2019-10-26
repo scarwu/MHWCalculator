@@ -95,6 +95,7 @@
     "reset":                "重置",
     "setting":              "設定",
     "search":               "搜尋",
+    "cancel":               "取消",
     "inputKeyword":         "輸入關鍵字",
     "inputName":            "輸入配裝名稱",
     "exportBundle":         "匯出裝備",
@@ -135,5 +136,8 @@
     "all":                  "全部",
     "unlimited":            "無限",
     "asc":                  "升冪",
-    "desc":                 "降冪"
+    "desc":                 "降冪",
+    "searching":            "搜尋中",
+    "bundleCount":          "數量",
+    "searchPercent":        "進度"
 }
