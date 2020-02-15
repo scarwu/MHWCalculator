@@ -139,5 +139,7 @@
     "desc":                 "DESC",
     "searching":            "Searching",
     "bundleCount":          "Bundle Count",
-    "searchPercent":        "Percentage"
+    "searchPercent":        "Percentage",
+    "basic":                "Basic",
+    "advanced":             "Advanced"
 }

@@ -139,5 +139,7 @@
     "desc":                 null,
     "searching":            null,
     "bundleCount":          null,
-    "searchPercent":        null
+    "searchPercent":        null,
+    "basic":                null,
+    "advanced":             null
 }

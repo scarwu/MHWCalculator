@@ -139,5 +139,7 @@
     "desc":                 "降冪",
     "searching":            "搜尋中",
     "bundleCount":          "數量",
-    "searchPercent":        "進度"
+    "searchPercent":        "進度",
+    "basic":                "初階",
+    "advanced":             "進階"
 }

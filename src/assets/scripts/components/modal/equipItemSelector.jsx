@@ -80,7 +80,7 @@ const renderWeaponItem = (weapon, bypassData) => {
     return (
         <div key={weapon.id} className="mhwc-item mhwc-item-2-step">
             <div className="col-12 mhwc-name">
-                <span>{_(weapon.name)} (R{weapon.rare})</span>
+                <span>{_(weapon.name)}</span>
 
                 <div className="mhwc-icons_bundle">
                     {(false === weapon.isSelect) ? (
@@ -210,7 +210,7 @@ const renderArmorItem = (armor, bypassData) => {
     return (
         <div key={armor.id} className="mhwc-item mhwc-item-2-step">
             <div className="col-12 mhwc-name">
-                <span>{_(armor.name)} (R{armor.rare})</span>
+                <span>{_(armor.name)}</span>
 
                 <div className="mhwc-icons_bundle">
                     {(false === armor.isSelect) ? (
@@ -293,7 +293,7 @@ const renderCharmItem = (charm, bypassData) => {
     return (
         <div key={charm.id} className="mhwc-item mhwc-item-2-step">
             <div className="col-12 mhwc-name">
-                <span>{_(charm.name)} (R{charm.rare})</span>
+                <span>{_(charm.name)}</span>
 
                 <div className="mhwc-icons_bundle">
                     {(false === charm.isSelect) ? (
@@ -327,7 +327,7 @@ const renderJewelItem = (jewel, bypassData) => {
     return (
         <div key={jewel.id} className="mhwc-item mhwc-item-2-step">
             <div className="col-12 mhwc-name">
-                <span>[{jewel.size}] {_(jewel.name)} (R{jewel.rare})</span>
+                <span>[{jewel.size}] {_(jewel.name)}</span>
 
                 <div className="mhwc-icons_bundle">
                     {(false === jewel.isSelect) ? (

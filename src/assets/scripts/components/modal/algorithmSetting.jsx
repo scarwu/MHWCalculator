@@ -95,7 +95,7 @@ const handleStrategyChange = (event) => {
     CommonState.setter.setAlgorithmParamsStrategy(event.target.value);
 };
 
-const renderArmorFactors = (armorFactor) => {
+const renderArmorFactors = (armorFactor, stateSegment) => {
     return armorRareList.map((rare) => {
         if (false === armorFactor['rare' + rare]) {
             return false;
@@ -103,14 +103,30 @@ const renderArmorFactors = (armorFactor) => {
 
         let seriesIds = {};
 
-        ArmorDataset.rareIs(rare).getItems().forEach((info) => {
-            seriesIds[info.seriesId] = true;
+        ArmorDataset.rareIs(rare).getItems().filter((info) => {
+            let text = _(info.series);
+
+            if (Helper.isNotEmpty(stateSegment)
+                && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+            ) {
+                return false;
+            }
+
+            return true;
+        }).forEach((info) => {
+            seriesIds[info.seriesId] = {
+                series: info.series
+            };
         });
+
+        if (0 === Object.keys(seriesIds).length) {
+            return false;
+        }
 
         return (
             <div key={rare} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
-                    <span>{_('armorFactor')} R{rare}</span>
+                    <span>{_('advanced')}: {_('armorFactor')} R{rare}</span>
                 </div>
                 <div className="col-12 mhwc-content">
                     {Object.keys(seriesIds).sort((seriesIdA, seriesIdB) => {
@@ -121,7 +137,7 @@ const renderArmorFactors = (armorFactor) => {
 
                         return (
                             <div key={seriesId} className="col-6 mhwc-value">
-                                <span>{_(seriesId)}</span>
+                                <span>{_(seriesIds[seriesId].series)}</span>
                                 <div className="mhwc-icons_bundle">
                                     {isInclude ? (
                                         <FunctionalButton
@@ -144,12 +160,23 @@ const renderArmorFactors = (armorFactor) => {
     });
 };
 
-const renderCharmFactors = (charmFactor) => {
+const renderCharmFactors = (charmFactor, stateSegment) => {
     let seriesIds = {};
 
-    CharmDataset.getItems().forEach((info) => {
+    CharmDataset.getItems().filter((info) => {
+        let text = _(info.series);
+
+        if (Helper.isNotEmpty(stateSegment)
+            && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+        ) {
+            return false;
+        }
+
+        return true;
+    }).forEach((info) => {
         if (Helper.isEmpty(seriesIds[info.seriesId])) {
             seriesIds[info.seriesId] = {
+                series: info.series,
                 min: 1,
                 max: 1
             };
@@ -160,10 +187,14 @@ const renderCharmFactors = (charmFactor) => {
         }
     });
 
+    if (0 === Object.keys(seriesIds).length) {
+        return false;
+    }
+
     return (
         <div className="mhwc-item mhwc-item-2-step">
             <div className="col-12 mhwc-name">
-                <span>{_('charmFactor')}</span>
+                <span>{_('advanced')}: {_('charmFactor')}</span>
             </div>
             <div className="col-12 mhwc-content">
                 {Object.keys(seriesIds).sort((seriesIdA, seriesIdB) => {
@@ -182,7 +213,7 @@ const renderCharmFactors = (charmFactor) => {
 
                     return (
                         <div key={seriesId} className="col-6 mhwc-value">
-                            <span>{_(seriesId)}</span>
+                            <span>{_(seriesIds[seriesId].series)}</span>
                             <div className="mhwc-icons_bundle">
                                 <FunctionalSelector
                                     iconName="sort-numeric-asc"
@@ -199,7 +230,7 @@ const renderCharmFactors = (charmFactor) => {
     );
 };
 
-const renderJewelFactors = (jewelFactor) => {
+const renderJewelFactors = (jewelFactor, stateSegment) => {
     return jewelSizeList.map((size) => {
         if (false === jewelFactor['size' + size]) {
             return false;
@@ -207,9 +238,20 @@ const renderJewelFactors = (jewelFactor) => {
 
         let jewelIds = {};
 
-        JewelDataset.sizeIs(size).getItems().forEach((info) => {
+        JewelDataset.sizeIs(size).getItems().filter((info) => {
+            let text = _(info.name);
+
+            if (Helper.isNotEmpty(stateSegment)
+                && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+            ) {
+                return false;
+            }
+
+            return true;
+        }).forEach((info) => {
             if (Helper.isEmpty(jewelIds[info.id])) {
                 jewelIds[info.id] = {
+                    name: info.name,
                     min: 1,
                     max: 1
                 };
@@ -224,10 +266,14 @@ const renderJewelFactors = (jewelFactor) => {
             })
         });
 
+        if (0 === Object.keys(jewelIds).length) {
+            return false;
+        }
+
         return (
             <div key={size} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
-                    <span>{_('jewelFactor')} [{size}]</span>
+                    <span>{_('advanced')}: {_('jewelFactor')} [{size}]</span>
                 </div>
                 <div className="col-12 mhwc-content">
                     {Object.keys(jewelIds).sort((jewelIdA, jewelIdB) => {
@@ -247,7 +293,7 @@ const renderJewelFactors = (jewelFactor) => {
 
                         return (
                             <div key={jewelId} className="col-6 mhwc-value">
-                                <span>{_(jewelId)}</span>
+                                <span>{_(jewelIds[jewelId].name)}</span>
                                 <div className="mhwc-icons_bundle">
                                     <FunctionalSelector
                                         iconName="sort-numeric-asc"
@@ -272,6 +318,7 @@ export default function AlgorithmSetting(props) {
      */
     const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonState.getter.getAlgorithmParams());
     const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowAlgorithmSetting());
+    const [stateSegment, updateSegment] = useState(undefined);
     const refModal = useRef();
 
     // Like Did Mount & Will Unmount Cycle
@@ -301,6 +348,15 @@ export default function AlgorithmSetting(props) {
         ModalState.setter.hideAlgorithmSetting();
     }, []);
 
+    const handleSegmentInput = useCallback((event) => {
+        let segment = event.target.value;
+
+        segment = (0 !== segment.length)
+            ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
+
+        updateSegment(segment);
+    }, []);
+
     /**
      * Render Functions
      */
@@ -311,6 +367,10 @@ export default function AlgorithmSetting(props) {
                     <strong>{_('algorithmSetting')}</strong>
 
                     <div className="mhwc-icons_bundle">
+                        <FunctionalInput
+                            iconName="search" placeholder={_('inputKeyword')}
+                             defaultValue={stateSegment} onChange={handleSegmentInput} />
+
                         <FunctionalButton
                             iconName="times" altName={_('close')}
                             onClick={ModalState.setter.hideAlgorithmSetting} />
@@ -378,7 +438,7 @@ export default function AlgorithmSetting(props) {
 
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
-                                <span>{_('armorFactor')}</span>
+                                <span>{_('basic')}: {_('armorFactor')}</span>
                             </div>
                             <div className="col-12 mhwc-content">
                                 {armorRareList.map((rare) => {
@@ -404,12 +464,9 @@ export default function AlgorithmSetting(props) {
                             </div>
                         </div>
 
-                        {renderArmorFactors(stateAlgorithmParams.usingFactor.armor)}
-                        {renderCharmFactors(stateAlgorithmParams.usingFactor.charm)}
-
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
-                                <span>{_('jewelFactor')}</span>
+                                <span>{_('basic')}: {_('jewelFactor')}</span>
                             </div>
                             <div className="col-12 mhwc-content">
                                 {jewelSizeList.map((size) => {
@@ -435,7 +492,9 @@ export default function AlgorithmSetting(props) {
                             </div>
                         </div>
 
-                        {renderJewelFactors(stateAlgorithmParams.usingFactor.jewel)}
+                        {renderArmorFactors(stateAlgorithmParams.usingFactor.armor, stateSegment)}
+                        {renderCharmFactors(stateAlgorithmParams.usingFactor.charm, stateSegment)}
+                        {renderJewelFactors(stateAlgorithmParams.usingFactor.jewel, stateSegment)}
                     </div>
                 </div>
             </div>

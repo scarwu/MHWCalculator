@@ -184,7 +184,7 @@ const renderBundleItem = (bundle, index, totalIndex, requiredSkillIds) => {
                         return Helper.isNotEmpty(equipInfo) ? (
                             <Fragment key={equipType}>
                                 <div className="col-6 mhwc-value">
-                                    <span>{_(equipInfo.name)}</span>
+                                    <span>(R{equipInfo.rare}) {_(equipInfo.name)}</span>
                                 </div>
                             </Fragment>
                         ) : false;
