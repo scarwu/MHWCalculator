@@ -29,9 +29,6 @@ foreach ($skills as $skill) {
     }
 }
 
-/**
- * MHWIB
- */
 $untrack = [
     'sets' => [],
     'skills' => []
@@ -136,37 +133,41 @@ foreach ($jewels as $jewelIndex => $jewel) {
 saveJson("../../json/mhwib/jewels", $jewels);
 
 // Charm
-$charms = loadJson("../../json/mhw/charms");
+$bundles = loadJson("../../json/mhw/charms");
 
-foreach ($charms as $charmIndex => $charm) {
-    foreach ($charm['skills'] as $skillIndex => $skill) {
-        if (false === isset($skillNameMapping[$skill['id']])) {
-            $untrack['skills'][$skill['id']] = true;
-        } else {
-            $charm['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+foreach ($bundles as $bundleIndex => $bundle) {
+    foreach ($bundle['items'] as $charmIndex => $charm) {
+        foreach ($charm['skills'] as $skillIndex => $skill) {
+            if (false === isset($skillNameMapping[$skill['id']])) {
+                $untrack['skills'][$skill['id']] = true;
+            } else {
+                $charm['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+            }
         }
     }
 
-    $charms[$charmIndex] = $charm;
+    $charms['items'][$charmIndex] = $charm;
 }
 
-saveJson("../../json/mhw/charms", $charms);
+saveJson("../../json/mhw/charms", $bundles);
 
-$charms = loadJson("../../json/mhwib/charms");
+$bundles = loadJson("../../json/mhwib/charms");
 
-foreach ($charms as $charmIndex => $charm) {
-    foreach ($charm['skills'] as $skillIndex => $skill) {
-        if (false === isset($skillNameMapping[$skill['id']])) {
-            $untrack['skills'][$skill['id']] = true;
-        } else {
-            $charm['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+foreach ($bundles as $bundleIndex => $bundle) {
+    foreach ($bundle['items'] as $charmIndex => $charm) {
+        foreach ($charm['skills'] as $skillIndex => $skill) {
+            if (false === isset($skillNameMapping[$skill['id']])) {
+                $untrack['skills'][$skill['id']] = true;
+            } else {
+                $charm['skills'][$skillIndex]['id'] = $skillNameMapping[$skill['id']];
+            }
         }
     }
 
-    $charms[$charmIndex] = $charm;
+    $charms['items'][$charmIndex] = $charm;
 }
 
-saveJson("../../json/mhwib/charms", $charms);
+saveJson("../../json/mhwib/charms", $bundles);
 
 // Set
 $sets = loadJson("../../json/mhw/sets");

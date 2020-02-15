@@ -672,6 +672,22 @@
                         "level": 4
                     }
                 ]
+            },
+            {
+                "id": "底力護石 V",
+                "name": {
+                    "zhTW": "底力護石 V",
+                    "jaJP": "底力の護石 V",
+                    "enUS": "Grit Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "火場怪力",
+                        "level": 5
+                    }
+                ]
             }
         ]
     },
@@ -1360,6 +1376,22 @@
                         "level": 4
                     }
                 ]
+            },
+            {
+                "id": "防風護石 V",
+                "name": {
+                    "zhTW": "防風護石 V",
+                    "jaJP": "防風の護石 V",
+                    "enUS": "Windproof Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "風壓耐性",
+                        "level": 5
+                    }
+                ]
             }
         ]
     },
@@ -1386,6 +1418,34 @@
                     {
                         "id": "耳塞",
                         "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "無傷護石",
+            "name": {
+                "zhTW": "無傷護石",
+                "jaJP": "無傷の護石",
+                "enUS": "Unscathed Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "無傷護石 III",
+                "name": {
+                    "zhTW": "無傷護石 III",
+                    "jaJP": "無傷の護石 III",
+                    "enUS": "Unscathed Charm III"
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "無傷",
+                        "level": 3
                     }
                 ]
             }
