@@ -876,9 +876,9 @@
         ]
     },
     {
-        "id": "万福の贈り物",
+        "id": "萬福的贈禮",
         "name": {
-            "zhTW": null,
+            "zhTW": "萬福的贈禮",
             "jaJP": "万福の贈り物",
             "enUS": null
         },
@@ -908,9 +908,9 @@
         ]
     },
     {
-        "id": "万福の恵み",
+        "id": "萬福的恩惠",
         "name": {
-            "zhTW": null,
+            "zhTW": "萬福的恩惠",
             "jaJP": "万福の恵み",
             "enUS": null
         },
@@ -919,7 +919,7 @@
             "jaJP": "特別報酬の発生する確率が大きく上昇する。クエストの途中からは効果が得られない。",
             "enUS": null
         },
-        "type": null,
+        "type": "active",
         "from": {
             "set": true,
             "jewel": false,
@@ -940,9 +940,9 @@
         ]
     },
     {
-        "id": "大感謝の贈り物",
+        "id": "大感謝的贈禮",
         "name": {
-            "zhTW": null,
+            "zhTW": "大感謝的贈禮",
             "jaJP": "大感謝の贈り物",
             "enUS": null
         },
@@ -951,7 +951,7 @@
             "jaJP": "特別報酬の発生する確率が上昇する。クエストの途中からは効果が得られない。",
             "enUS": null
         },
-        "type": null,
+        "type": "active",
         "from": {
             "set": true,
             "jewel": false,
@@ -972,9 +972,9 @@
         ]
     },
     {
-        "id": "大感謝の恵み",
+        "id": "大感謝的恩惠",
         "name": {
-            "zhTW": null,
+            "zhTW": "大感謝的恩惠",
             "jaJP": "大感謝の恵み",
             "enUS": null
         },
@@ -983,7 +983,7 @@
             "jaJP": "特別報酬の発生する確率が大きく上昇する。クエストの途中からは効果が得られない。",
             "enUS": null
         },
-        "type": null,
+        "type": "active",
         "from": {
             "set": true,
             "jewel": false,
@@ -1015,9 +1015,9 @@
             "jaJP": "ゾンビ状態・瘴気侵蝕状態を無効化する。",
             "enUS": null
         },
-        "type": null,
+        "type": "active",
         "from": {
-            "set": true,
+            "set": false,
             "jewel": false,
             "armor": false,
             "weapon": false
@@ -1049,7 +1049,7 @@
         },
         "type": null,
         "from": {
-            "set": true,
+            "set": false,
             "jewel": false,
             "armor": false,
             "weapon": false
@@ -1068,9 +1068,9 @@
         ]
     },
     {
-        "id": "龍脈覚醒",
+        "id": "龍脈覺醒",
         "name": {
-            "zhTW": null,
+            "zhTW": "龍脈覺醒",
             "jaJP": "龍脈覚醒",
             "enUS": null
         },
@@ -1100,15 +1100,15 @@
         ]
     },
     {
-        "id": "真・龍脈覚醒",
+        "id": "真．龍脈覺醒",
         "name": {
-            "zhTW": null,
+            "zhTW": "真．龍脈覺醒",
             "jaJP": "真・龍脈覚醒",
             "enUS": null
         },
         "description": {
             "zhTW": null,
-            "jaJP": "抜刀中に会心率が40%、属性値が150、状態異常値が120上昇。。攻撃時にダメージを受けるが、攻撃し続けると自動回復効果を得る。",
+            "jaJP": "抜刀中に会心率が40%、属性値が150、状態異常値が120上昇。攻撃時にダメージを受けるが、攻撃し続けると自動回復効果を得る。",
             "enUS": null
         },
         "type": null,
@@ -1123,7 +1123,7 @@
                 "level": 1,
                 "description": {
                     "zhTW": null,
-                    "jaJP": "抜刀中に会心率が40%、属性値が150、状態異常値が120上昇。。攻撃時にダメージを受けるが、攻撃し続けると自動回復効果を得る。",
+                    "jaJP": "抜刀中に会心率が40%、属性値が150、状態異常値が120上昇。攻撃時にダメージを受けるが、攻撃し続けると自動回復効果を得る。",
                     "enUS": null
                 },
                 "reaction": null,

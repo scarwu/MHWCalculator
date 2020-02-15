@@ -3967,467 +3967,9 @@
     },
     {
         "series": {
-            "id": "EXレオンα",
+            "id": "精英．巴努克α",
             "name": {
-                "zhTW": null,
-                "jaJP": "EXレオンα",
-                "enUS": null
-            },
-            "rare": 12,
-            "gender": "general",
-            "defense": 150,
-            "resistance": {
-                "fire": 3,
-                "water": 2,
-                "thunder": 2,
-                "ice": 3,
-                "dragon": 0
-            },
-            "set": {
-                "id": "サバイバー"
-            }
-        },
-        "items": [
-            {
-                "id": "EXレオンフェイスα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXレオンフェイスα",
-                    "enUS": null
-                },
-                "type": "helm",
-                "slots": [
-                    {
-                        "size": 1
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "挑戰者",
-                        "level": 2
-                    },
-                    {
-                        "id": "弱點特效",
-                        "level": 1
-                    }
-                ]
-            },
-            {
-                "id": "EXレオンボディα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXレオンボディα",
-                    "enUS": null
-                },
-                "type": "chest",
-                "slots": [
-                    {
-                        "size": 1
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "挑戰者",
-                        "level": 2
-                    },
-                    {
-                        "id": "弱點特效",
-                        "level": 1
-                    }
-                ]
-            },
-            {
-                "id": "EXレオンアームα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXレオンアームα",
-                    "enUS": null
-                },
-                "type": "arm",
-                "slots": [
-                    {
-                        "size": 4
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "挑戰者",
-                        "level": 1
-                    },
-                    {
-                        "id": "攻擊",
-                        "level": 2
-                    }
-                ]
-            },
-            {
-                "id": "EXレオンウエストα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXレオンウエストα",
-                    "enUS": null
-                },
-                "type": "waist",
-                "slots": [
-                    {
-                        "size": 4
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "挑戰者",
-                        "level": 1
-                    },
-                    {
-                        "id": "攻擊",
-                        "level": 1
-                    }
-                ]
-            },
-            {
-                "id": "EXレオンレッグα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXレオンレッグα",
-                    "enUS": null
-                },
-                "type": "leg",
-                "slots": [
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 2
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "挑戰者",
-                        "level": 1
-                    },
-                    {
-                        "id": "散彈・剛射強化",
-                        "level": 1
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "series": {
-            "id": "EXクレアα",
-            "name": {
-                "zhTW": null,
-                "jaJP": "EXクレアα",
-                "enUS": null
-            },
-            "rare": 12,
-            "gender": "general",
-            "defense": 150,
-            "resistance": {
-                "fire": 3,
-                "water": 2,
-                "thunder": 2,
-                "ice": 3,
-                "dragon": 0
-            },
-            "set": {
-                "id": "サバイバー"
-            }
-        },
-        "items": [
-            {
-                "id": "EXクレアフェイスα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXクレアフェイスα",
-                    "enUS": null
-                },
-                "type": "helm",
-                "slots": [
-                    {
-                        "size": 1
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "挑戰者",
-                        "level": 2
-                    },
-                    {
-                        "id": "迴避性能",
-                        "level": 2
-                    }
-                ]
-            },
-            {
-                "id": "EXクレアボディα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXクレアボディα",
-                    "enUS": null
-                },
-                "type": "chest",
-                "slots": [
-                    {
-                        "size": 1
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "挑戰者",
-                        "level": 2
-                    },
-                    {
-                        "id": "迴避性能",
-                        "level": 2
-                    }
-                ]
-            },
-            {
-                "id": "EXクレアアームα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXクレアアームα",
-                    "enUS": null
-                },
-                "type": "arm",
-                "slots": [
-                    {
-                        "size": 4
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "挑戰者",
-                        "level": 2
-                    },
-                    {
-                        "id": "迴避性能",
-                        "level": 1
-                    }
-                ]
-            },
-            {
-                "id": "EXクレアウエストα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXクレアウエストα",
-                    "enUS": null
-                },
-                "type": "waist",
-                "slots": [
-                    {
-                        "size": 4
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "挑戰者",
-                        "level": 1
-                    },
-                    {
-                        "id": "耐力急速回復",
-                        "level": 2
-                    }
-                ]
-            },
-            {
-                "id": "EXクレアレッグα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXクレアレッグα",
-                    "enUS": null
-                },
-                "type": "leg",
-                "slots": [
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "耐力急速回復",
-                        "level": 1
-                    },
-                    {
-                        "id": "通常彈・通常箭強化",
-                        "level": 1
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "series": {
-            "id": "EXシールドウィーバ",
-            "name": {
-                "zhTW": null,
-                "jaJP": "EXシールドウィーバ",
-                "enUS": null
-            },
-            "rare": 12,
-            "gender": "general",
-            "defense": 132,
-            "resistance": {
-                "fire": -1,
-                "water": -1,
-                "thunder": 3,
-                "ice": -1,
-                "dragon": 2
-            },
-            "set": {
-                "id": "動力源"
-            }
-        },
-        "items": [
-            {
-                "id": "EXシールドウィーバー・頭",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXシールドウィーバー・頭",
-                    "enUS": null
-                },
-                "type": "helm",
-                "slots": [
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 2
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "體力增強",
-                        "level": 2
-                    },
-                    {
-                        "id": "雷屬性攻擊強化",
-                        "level": 2
-                    }
-                ]
-            },
-            {
-                "id": "EXシールドウィーバー・胴",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXシールドウィーバー・胴",
-                    "enUS": null
-                },
-                "type": "chest",
-                "slots": [
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 2
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "雷屬性攻擊強化",
-                        "level": 3
-                    }
-                ]
-            },
-            {
-                "id": "EXシールドウィーバー・腕",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXシールドウィーバー・腕",
-                    "enUS": null
-                },
-                "type": "arm",
-                "slots": [
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "怨恨",
-                        "level": 2
-                    }
-                ]
-            },
-            {
-                "id": "EXシールドウィーバー・腰",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXシールドウィーバー・腰",
-                    "enUS": null
-                },
-                "type": "waist",
-                "slots": [
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "怨恨",
-                        "level": 3
-                    }
-                ]
-            },
-            {
-                "id": "EXシールドウィーバー・脚",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXシールドウィーバー・脚",
-                    "enUS": null
-                },
-                "type": "leg",
-                "slots": [
-                    {
-                        "size": 2
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "弱點特效",
-                        "level": 2
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "series": {
-            "id": "EXバヌークα",
-            "name": {
-                "zhTW": null,
+                "zhTW": "精英．巴努克α",
                 "jaJP": "EXバヌークα",
                 "enUS": null
             },
@@ -4447,9 +3989,9 @@
         },
         "items": [
             {
-                "id": "EXバヌークヘルムα",
+                "id": "精英．巴努克頭盔α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．巴努克頭盔α",
                     "jaJP": "EXバヌークヘルムα",
                     "enUS": null
                 },
@@ -4477,9 +4019,9 @@
                 ]
             },
             {
-                "id": "EXバヌークメイルα",
+                "id": "精英．巴努克鎧甲α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．巴努克鎧甲α",
                     "jaJP": "EXバヌークメイルα",
                     "enUS": null
                 },
@@ -4504,9 +4046,9 @@
                 ]
             },
             {
-                "id": "EXバヌークアームα",
+                "id": "精英．巴努克腕甲α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．巴努克腕甲α",
                     "jaJP": "EXバヌークアームα",
                     "enUS": null
                 },
@@ -4531,9 +4073,9 @@
                 ]
             },
             {
-                "id": "EXバヌークコイルα",
+                "id": "精英．巴努克腰甲α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．巴努克腰甲α",
                     "jaJP": "EXバヌークコイルα",
                     "enUS": null
                 },
@@ -4561,9 +4103,9 @@
                 ]
             },
             {
-                "id": "EXバヌークグリーヴα",
+                "id": "精英．巴努克護腿α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．巴努克護腿α",
                     "jaJP": "EXバヌークグリーヴα",
                     "enUS": null
                 },
@@ -4594,9 +4136,9 @@
     },
     {
         "series": {
-            "id": "EX龍紋α",
+            "id": "精英．龍紋α",
             "name": {
-                "zhTW": null,
+                "zhTW": "精英．龍紋α",
                 "jaJP": "EX龍紋α",
                 "enUS": null
             },
@@ -4611,14 +4153,14 @@
                 "dragon": -1
             },
             "set": {
-                "id": "赤龍の封印"
+                "id": "冥赤龍的封印"
             }
         },
         "items": [
             {
-                "id": "EX龍紋ヲ刻マレシ封冠α",
+                "id": "精英．龍紋刻印封冠α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．龍紋刻印封冠α",
                     "jaJP": "EX龍紋ヲ刻マレシ封冠α",
                     "enUS": null
                 },
@@ -4646,9 +4188,9 @@
                 ]
             },
             {
-                "id": "EX龍紋ヲ刻マレシ封鎧α",
+                "id": "精英．龍紋刻印封鎧α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．龍紋刻印封鎧α",
                     "jaJP": "EX龍紋ヲ刻マレシ封鎧α",
                     "enUS": null
                 },
@@ -4673,9 +4215,9 @@
                 ]
             },
             {
-                "id": "EX龍紋ヲ刻マレシ封甲α",
+                "id": "精英．龍紋刻印封甲α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．龍紋刻印封甲α",
                     "jaJP": "EX龍紋ヲ刻マレシ封甲α",
                     "enUS": null
                 },
@@ -4703,9 +4245,9 @@
                 ]
             },
             {
-                "id": "EX龍紋ヲ刻マレシ封帯α",
+                "id": "精英．龍紋刻印封帶α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．龍紋刻印封帶α",
                     "jaJP": "EX龍紋ヲ刻マレシ封帯α",
                     "enUS": null
                 },
@@ -4727,9 +4269,9 @@
                 ]
             },
             {
-                "id": "EX龍紋ヲ刻マレシ封靴α",
+                "id": "精英．龍紋刻印封靴α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．龍紋刻印封靴α",
                     "jaJP": "EX龍紋ヲ刻マレシ封靴α",
                     "enUS": null
                 },
@@ -4760,9 +4302,9 @@
     },
     {
         "series": {
-            "id": "EX龍紋β",
+            "id": "精英．龍紋β",
             "name": {
-                "zhTW": null,
+                "zhTW": "精英．龍紋β",
                 "jaJP": "EX龍紋β",
                 "enUS": null
             },
@@ -4777,14 +4319,14 @@
                 "dragon": -1
             },
             "set": {
-                "id": "赤龍の封印"
+                "id": "冥赤龍的封印"
             }
         },
         "items": [
             {
-                "id": "EX龍紋ヲ刻マレシ封冠β",
+                "id": "精英．龍紋刻印封冠β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．龍紋刻印封冠β",
                     "jaJP": "EX龍紋ヲ刻マレシ封冠β",
                     "enUS": null
                 },
@@ -4812,9 +4354,9 @@
                 ]
             },
             {
-                "id": "EX龍紋ヲ刻マレシ封鎧β",
+                "id": "精英．龍紋刻印封鎧β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．龍紋刻印封鎧β",
                     "jaJP": "EX龍紋ヲ刻マレシ封鎧β",
                     "enUS": null
                 },
@@ -4839,9 +4381,9 @@
                 ]
             },
             {
-                "id": "EX龍紋ヲ刻マレシ封甲β",
+                "id": "精英．龍紋刻印封甲β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．龍紋刻印封甲β",
                     "jaJP": "EX龍紋ヲ刻マレシ封甲β",
                     "enUS": null
                 },
@@ -4865,9 +4407,9 @@
                 ]
             },
             {
-                "id": "EX龍紋ヲ刻マレシ封帯β",
+                "id": "精英．龍紋刻印封帶β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．龍紋刻印封帶β",
                     "jaJP": "EX龍紋ヲ刻マレシ封帯β",
                     "enUS": null
                 },
@@ -4888,9 +4430,9 @@
                 ]
             },
             {
-                "id": "EX龍紋ヲ刻マレシ封靴β",
+                "id": "精英．龍紋刻印封靴β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．龍紋刻印封靴β",
                     "jaJP": "EX龍紋ヲ刻マレシ封靴β",
                     "enUS": null
                 },
@@ -4917,9 +4459,9 @@
     },
     {
         "series": {
-            "id": "EX封印の龍骸布α",
+            "id": "精英．封印的龍骸布α",
             "name": {
-                "zhTW": null,
+                "zhTW": "精英．封印的龍骸布α",
                 "jaJP": "EX封印の龍骸布α",
                 "enUS": null
             },
@@ -4937,9 +4479,9 @@
         },
         "items": [
             {
-                "id": "EX封印の龍骸布α",
+                "id": "精英．封印的龍骸布α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．封印的龍骸布α",
                     "jaJP": "EX封印の龍骸布α",
                     "enUS": null
                 },

@@ -2690,7 +2690,7 @@
             "id": "精英．紅蓮爆鱗龍α",
             "name": {
                 "zhTW": "精英．紅蓮爆鱗龍α",
-                "jaJP": "EXブライドα",
+                "jaJP": "EXプライドα",
                 "enUS": null
             },
             "rare": 11,
@@ -2712,7 +2712,7 @@
                 "id": "精英．紅蓮爆鱗龍頭盔α",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍頭盔α",
-                    "jaJP": "EXブライドヘルムα",
+                    "jaJP": "EXプライドヘルムα",
                     "enUS": null
                 },
                 "type": "helm",
@@ -2739,7 +2739,7 @@
                 "id": "精英．紅蓮爆鱗龍鎧甲α",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍鎧甲α",
-                    "jaJP": "EXブライドメイルα",
+                    "jaJP": "EXプライドメイルα",
                     "enUS": null
                 },
                 "type": "chest",
@@ -2766,7 +2766,7 @@
                 "id": "精英．紅蓮爆鱗龍腕甲α",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍腕甲α",
-                    "jaJP": "EXブライドアームα",
+                    "jaJP": "EXプライドアームα",
                     "enUS": null
                 },
                 "type": "arm",
@@ -2790,7 +2790,7 @@
                 "id": "精英．紅蓮爆鱗龍腰甲α",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍腰甲α",
-                    "jaJP": "EXブライドコイルα",
+                    "jaJP": "EXプライドコイルα",
                     "enUS": null
                 },
                 "type": "waist",
@@ -2814,7 +2814,7 @@
                 "id": "精英．紅蓮爆鱗龍護腿α",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍護腿α",
-                    "jaJP": "EXブライドグリーヴα",
+                    "jaJP": "EXプライドグリーヴα",
                     "enUS": null
                 },
                 "type": "leg",
@@ -2841,7 +2841,7 @@
             "id": "精英．紅蓮爆鱗龍β",
             "name": {
                 "zhTW": "精英．紅蓮爆鱗龍β",
-                "jaJP": "EXブライドβ",
+                "jaJP": "EXプライドβ",
                 "enUS": null
             },
             "rare": 11,
@@ -2863,7 +2863,7 @@
                 "id": "精英．紅蓮爆鱗龍頭盔β",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍頭盔β",
-                    "jaJP": "EXブライドヘルムβ",
+                    "jaJP": "EXプライドヘルムβ",
                     "enUS": null
                 },
                 "type": "helm",
@@ -2890,7 +2890,7 @@
                 "id": "精英．紅蓮爆鱗龍鎧甲β",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍鎧甲β",
-                    "jaJP": "EXブライドメイルβ",
+                    "jaJP": "EXプライドメイルβ",
                     "enUS": null
                 },
                 "type": "chest",
@@ -2916,7 +2916,7 @@
                 "id": "精英．紅蓮爆鱗龍腕甲β",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍腕甲β",
-                    "jaJP": "EXブライドアームβ",
+                    "jaJP": "EXプライドアームβ",
                     "enUS": null
                 },
                 "type": "arm",
@@ -2939,7 +2939,7 @@
                 "id": "精英．紅蓮爆鱗龍腰甲β",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍腰甲β",
-                    "jaJP": "EXブライドコイルβ",
+                    "jaJP": "EXプライドコイルβ",
                     "enUS": null
                 },
                 "type": "waist",
@@ -2962,7 +2962,7 @@
                 "id": "精英．紅蓮爆鱗龍護腿β",
                 "name": {
                     "zhTW": "精英．紅蓮爆鱗龍護腿β",
-                    "jaJP": "EXブライドグリーヴβ",
+                    "jaJP": "EXプライドグリーヴβ",
                     "enUS": null
                 },
                 "type": "leg",
@@ -4464,7 +4464,7 @@
             "gender": "general",
             "name": {
                 "zhTW": "精英．敏捷耳飾α",
-                "jaJP": null,
+                "jaJP": "EX身軽さの耳飾りα",
                 "enUS": null
             },
             "defense": 154,
@@ -4482,7 +4482,7 @@
                 "id": "精英．敏捷耳飾α",
                 "name": {
                     "zhTW": "精英．敏捷耳飾α",
-                    "jaJP": null,
+                    "jaJP": "EX身軽さの耳飾りα",
                     "enUS": null
                 },
                 "type": "helm",
@@ -4508,311 +4508,9 @@
     },
     {
         "series": {
-            "id": "EXプライドα",
+            "id": "精英．金色α",
             "name": {
-                "zhTW": null,
-                "jaJP": "EXプライドα",
-                "enUS": null
-            },
-            "rare": 11,
-            "gender": "general",
-            "defense": 154,
-            "resistance": {
-                "fire": 3,
-                "water": 1,
-                "thunder": -2,
-                "ice": -4,
-                "dragon": -2
-            },
-            "set": {
-                "id": "爆鱗龍的霸氣"
-            }
-        },
-        "items": [
-            {
-                "id": "EXプライドヘルムα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXプライドヘルムα",
-                    "enUS": null
-                },
-                "type": "helm",
-                "slots": [
-                    {
-                        "size": 2
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "耳塞",
-                        "level": 2
-                    },
-                    {
-                        "id": "爆破屬性強化",
-                        "level": 2
-                    }
-                ]
-            },
-            {
-                "id": "EXプライドメイルα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXプライドメイルα",
-                    "enUS": null
-                },
-                "type": "chest",
-                "slots": [
-                    {
-                        "size": 1
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "防禦性能",
-                        "level": 2
-                    },
-                    {
-                        "id": "爆破異常狀態的耐性",
-                        "level": 2
-                    }
-                ]
-            },
-            {
-                "id": "EXプライドアームα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXプライドアームα",
-                    "enUS": null
-                },
-                "type": "arm",
-                "slots": [
-                    {
-                        "size": 3
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "拔刀術【技】",
-                        "level": 2
-                    },
-                    {
-                        "id": "耳塞",
-                        "level": 1
-                    }
-                ]
-            },
-            {
-                "id": "EXプライドコイルα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXプライドコイルα",
-                    "enUS": null
-                },
-                "type": "waist",
-                "slots": [
-                    {
-                        "size": 3
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "炸彈客",
-                        "level": 2
-                    },
-                    {
-                        "id": "拔刀術【技】",
-                        "level": 1
-                    }
-                ]
-            },
-            {
-                "id": "EXプライドグリーヴα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXプライドグリーヴα",
-                    "enUS": null
-                },
-                "type": "leg",
-                "slots": [
-                    {
-                        "size": 3
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "耳塞",
-                        "level": 2
-                    },
-                    {
-                        "id": "跳躍鐵人",
-                        "level": 1
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "series": {
-            "id": "EXプライドβ",
-            "name": {
-                "zhTW": null,
-                "jaJP": "EXプライドβ",
-                "enUS": null
-            },
-            "rare": 11,
-            "gender": "general",
-            "defense": 154,
-            "resistance": {
-                "fire": 3,
-                "water": 1,
-                "thunder": -2,
-                "ice": -4,
-                "dragon": -2
-            },
-            "set": {
-                "id": "爆鱗龍的霸氣"
-            }
-        },
-        "items": [
-            {
-                "id": "EXプライドヘルムβ",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXプライドヘルムβ",
-                    "enUS": null
-                },
-                "type": "helm",
-                "slots": [
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "耳塞",
-                        "level": 2
-                    },
-                    {
-                        "id": "爆破屬性強化",
-                        "level": 1
-                    }
-                ]
-            },
-            {
-                "id": "EXプライドメイルβ",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXプライドメイルβ",
-                    "enUS": null
-                },
-                "type": "chest",
-                "slots": [
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 1
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "防禦性能",
-                        "level": 2
-                    }
-                ]
-            },
-            {
-                "id": "EXプライドアームβ",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXプライドアームβ",
-                    "enUS": null
-                },
-                "type": "arm",
-                "slots": [
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 3
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "拔刀術【技】",
-                        "level": 2
-                    }
-                ]
-            },
-            {
-                "id": "EXプライドコイルβ",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXプライドコイルβ",
-                    "enUS": null
-                },
-                "type": "waist",
-                "slots": [
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 2
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "炸彈客",
-                        "level": 2
-                    }
-                ]
-            },
-            {
-                "id": "EXプライドグリーヴβ",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EXプライドグリーヴβ",
-                    "enUS": null
-                },
-                "type": "leg",
-                "slots": [
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 2
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "耳塞",
-                        "level": 1
-                    },
-                    {
-                        "id": "跳躍鐵人",
-                        "level": 1
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "series": {
-            "id": "EX金色α",
-            "name": {
-                "zhTW": null,
+                "zhTW": "精英．金色α",
                 "jaJP": "EX金色α",
                 "enUS": null
             },
@@ -4827,14 +4525,14 @@
                 "dragon": 2
             },
             "set": {
-                "id": "金獅子の怒気"
+                "id": "金獅子的怒氣"
             }
         },
         "items": [
             {
-                "id": "EX金色ノ添髪α",
+                "id": "精英．金色毛髮α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．金色毛髮α",
                     "jaJP": "EX金色ノ添髪α",
                     "enUS": null
                 },
@@ -4856,9 +4554,9 @@
                 ]
             },
             {
-                "id": "EX金色ノ羽織α",
+                "id": "精英．金色羽織α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．金色羽織α",
                     "jaJP": "EX金色ノ羽織α",
                     "enUS": null
                 },
@@ -4883,9 +4581,9 @@
                 ]
             },
             {
-                "id": "EX金色ノ篭手α",
+                "id": "精英．金色臂甲α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．金色臂甲α",
                     "jaJP": "EX金色ノ篭手α",
                     "enUS": null
                 },
@@ -4907,9 +4605,9 @@
                 ]
             },
             {
-                "id": "EX金色ノ帯α",
+                "id": "精英．金色帶α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．金色帶α",
                     "jaJP": "EX金色ノ帯α",
                     "enUS": null
                 },
@@ -4934,9 +4632,9 @@
                 ]
             },
             {
-                "id": "EX金色ノ袴α",
+                "id": "精英．金色下裳α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．金色下裳α",
                     "jaJP": "EX金色ノ袴α",
                     "enUS": null
                 },
@@ -4964,9 +4662,9 @@
     },
     {
         "series": {
-            "id": "EX金色β",
+            "id": "精英．金色β",
             "name": {
-                "zhTW": null,
+                "zhTW": "精英．金色β",
                 "jaJP": "EX金色β",
                 "enUS": null
             },
@@ -4981,14 +4679,14 @@
                 "dragon": 2
             },
             "set": {
-                "id": "金獅子の怒気"
+                "id": "金獅子的怒氣"
             }
         },
         "items": [
             {
-                "id": "EX金色ノ添髪β",
+                "id": "精英．金色毛髮β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．金色毛髮β",
                     "jaJP": "EX金色ノ添髪β",
                     "enUS": null
                 },
@@ -5009,9 +4707,9 @@
                 ]
             },
             {
-                "id": "EX金色ノ羽織β",
+                "id": "精英．金色羽織β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．金色羽織β",
                     "jaJP": "EX金色ノ羽織β",
                     "enUS": null
                 },
@@ -5035,9 +4733,9 @@
                 ]
             },
             {
-                "id": "EX金色ノ篭手β",
+                "id": "精英．金色臂甲β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．金色臂甲β",
                     "jaJP": "EX金色ノ篭手β",
                     "enUS": null
                 },
@@ -5058,9 +4756,9 @@
                 ]
             },
             {
-                "id": "EX金色ノ帯β",
+                "id": "精英．金色帶β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．金色帶β",
                     "jaJP": "EX金色ノ帯β",
                     "enUS": null
                 },
@@ -5081,9 +4779,9 @@
                 ]
             },
             {
-                "id": "EX金色ノ袴β",
+                "id": "精英．金色下裳β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．金色下裳β",
                     "jaJP": "EX金色ノ袴β",
                     "enUS": null
                 },
@@ -5111,9 +4809,9 @@
     },
     {
         "series": {
-            "id": "EXゴクオウα",
+            "id": "精英．獄狼龍α",
             "name": {
-                "zhTW": null,
+                "zhTW": "精英．獄狼龍α",
                 "jaJP": "EXゴクオウα",
                 "enUS": null
             },
@@ -5133,9 +4831,9 @@
         },
         "items": [
             {
-                "id": "EXゴクオウヘルムα",
+                "id": "精英．獄狼龍頭盔α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．獄狼龍頭盔α",
                     "jaJP": "EXゴクオウヘルムα",
                     "enUS": null
                 },
@@ -5160,9 +4858,9 @@
                 ]
             },
             {
-                "id": "EXゴクオウメイルα",
+                "id": "精英．獄狼龍鎧甲α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．獄狼龍鎧甲α",
                     "jaJP": "EXゴクオウメイルα",
                     "enUS": null
                 },
@@ -5184,9 +4882,9 @@
                 ]
             },
             {
-                "id": "EXゴクオウアームα",
+                "id": "精英．獄狼龍腕甲α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．獄狼龍腕甲α",
                     "jaJP": "EXゴクオウアームα",
                     "enUS": null
                 },
@@ -5208,9 +4906,9 @@
                 ]
             },
             {
-                "id": "EXゴクオウコイルα",
+                "id": "精英．獄狼龍腰甲α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．獄狼龍腰甲α",
                     "jaJP": "EXゴクオウコイルα",
                     "enUS": null
                 },
@@ -5238,9 +4936,9 @@
                 ]
             },
             {
-                "id": "EXゴクオウグリーヴα",
+                "id": "精英．獄狼龍護腿α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．獄狼龍護腿α",
                     "jaJP": "EXゴクオウグリーヴα",
                     "enUS": null
                 },
@@ -5268,9 +4966,9 @@
     },
     {
         "series": {
-            "id": "EXゴクオウβ",
+            "id": "精英．獄狼龍β",
             "name": {
-                "zhTW": null,
+                "zhTW": "精英．獄狼龍β",
                 "jaJP": "EXゴクオウβ",
                 "enUS": null
             },
@@ -5290,9 +4988,9 @@
         },
         "items": [
             {
-                "id": "EXゴクオウヘルムβ",
+                "id": "精英．獄狼龍頭盔β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．獄狼龍頭盔β",
                     "jaJP": "EXゴクオウヘルムβ",
                     "enUS": null
                 },
@@ -5317,9 +5015,9 @@
                 ]
             },
             {
-                "id": "EXゴクオウメイルβ",
+                "id": "精英．獄狼龍鎧甲β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．獄狼龍鎧甲β",
                     "jaJP": "EXゴクオウメイルβ",
                     "enUS": null
                 },
@@ -5341,9 +5039,9 @@
                 ]
             },
             {
-                "id": "EXゴクオウアームβ",
+                "id": "精英．獄狼龍腕甲β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．獄狼龍腕甲β",
                     "jaJP": "EXゴクオウアームβ",
                     "enUS": null
                 },
@@ -5364,9 +5062,9 @@
                 ]
             },
             {
-                "id": "EXゴクオウコイルβ",
+                "id": "精英．獄狼龍腰甲β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．獄狼龍腰甲β",
                     "jaJP": "EXゴクオウコイルβ",
                     "enUS": null
                 },
@@ -5394,9 +5092,9 @@
                 ]
             },
             {
-                "id": "EXゴクオウグリーヴβ",
+                "id": "精英．獄狼龍護腿β",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．獄狼龍護腿β",
                     "jaJP": "EXゴクオウグリーヴβ",
                     "enUS": null
                 },
@@ -5420,58 +5118,9 @@
     },
     {
         "series": {
-            "id": "EX身軽さの耳飾りα",
+            "id": "精英．健美α",
             "name": {
-                "zhTW": null,
-                "jaJP": "EX身軽さの耳飾りα",
-                "enUS": null
-            },
-            "rare": 11,
-            "gender": "general",
-            "defense": 154,
-            "resistance": {
-                "fire": 1,
-                "water": 1,
-                "thunder": 1,
-                "ice": 1,
-                "dragon": 1
-            },
-            "set": null
-        },
-        "items": [
-            {
-                "id": "EX身軽さの耳飾りα",
-                "name": {
-                    "zhTW": null,
-                    "jaJP": "EX身軽さの耳飾りα",
-                    "enUS": null
-                },
-                "type": "helm",
-                "slots": [
-                    {
-                        "size": 2
-                    },
-                    {
-                        "size": 2
-                    },
-                    {
-                        "size": 1
-                    }
-                ],
-                "skills": [
-                    {
-                        "id": "受身術",
-                        "level": 1
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "series": {
-            "id": "EXマッスルα",
-            "name": {
-                "zhTW": null,
+                "zhTW": "精英．健美α",
                 "jaJP": "EXマッスルα",
                 "enUS": null
             },
@@ -5489,9 +5138,9 @@
         },
         "items": [
             {
-                "id": "EXマッスルボディα",
+                "id": "精英．健美身體α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．健美身體α",
                     "jaJP": "EXマッスルボディα",
                     "enUS": null
                 },
@@ -5519,9 +5168,9 @@
                 ]
             },
             {
-                "id": "EXマッスルアームα",
+                "id": "精英．健美腕甲α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．健美腕甲α",
                     "jaJP": "EXマッスルアームα",
                     "enUS": null
                 },
@@ -5543,9 +5192,9 @@
                 ]
             },
             {
-                "id": "EXマッスルウエストα",
+                "id": "精英．健美腰部α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．健美腰部α",
                     "jaJP": "EXマッスルウエストα",
                     "enUS": null
                 },
@@ -5567,9 +5216,9 @@
                 ]
             },
             {
-                "id": "EXマッスルレッグα",
+                "id": "精英．健美護腿α",
                 "name": {
-                    "zhTW": null,
+                    "zhTW": "精英．健美護腿α",
                     "jaJP": "EXマッスルレッグα",
                     "enUS": null
                 },
