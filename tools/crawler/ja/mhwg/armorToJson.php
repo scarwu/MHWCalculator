@@ -37,7 +37,7 @@ foreach ($list as $rare => $mainUrl) {
 
         $armor = [
             'series' => [
-                'id' => null,
+                'id' => $name,
                 'name' => [
                     'zhTW' => null,
                     'jaJP' => $name,

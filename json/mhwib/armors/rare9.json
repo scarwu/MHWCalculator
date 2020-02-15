@@ -7650,5 +7650,360 @@
                 ]
             }
         ]
+    },
+    {
+        "series": {
+            "id": "EXウーロンα",
+            "name": {
+                "zhTW": null,
+                "jaJP": "EXウーロンα",
+                "enUS": null
+            },
+            "rare": 9,
+            "gender": "general",
+            "defense": 120,
+            "resistance": {
+                "fire": 1,
+                "water": 1,
+                "thunder": 1,
+                "ice": 4,
+                "dragon": 1
+            },
+            "set": {
+                "id": "万福の恵み [5]"
+            }
+        },
+        "items": [
+            {
+                "id": "EXウーロンヘッドα",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXウーロンヘッドα",
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "看破",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "EXウーロンベストα",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXウーロンベストα",
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "耐力急速回復",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXウーロンアームα",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXウーロンアームα",
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "災禍轉福",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXウーロンウエストα",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXウーロンウエストα",
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "體術",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "EXウーロンフットα",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXウーロンフットα",
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "體力增強",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "EXキブクレフェイクα",
+            "name": {
+                "zhTW": null,
+                "jaJP": "EXキブクレフェイクα",
+                "enUS": null
+            },
+            "rare": 9,
+            "gender": "general",
+            "defense": 138,
+            "resistance": {
+                "fire": -1,
+                "water": 3,
+                "thunder": 0,
+                "ice": 4,
+                "dragon": 0
+            },
+            "set": null
+        },
+        "items": [
+            {
+                "id": "EXキブクレフェイクα",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXキブクレフェイクα",
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "迴避性能",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "EXアストラα",
+            "name": {
+                "zhTW": null,
+                "jaJP": "EXアストラα",
+                "enUS": null
+            },
+            "rare": 9,
+            "gender": "general",
+            "defense": 140,
+            "resistance": {
+                "fire": 2,
+                "water": 2,
+                "thunder": 2,
+                "ice": 2,
+                "dragon": 2
+            },
+            "set": {
+                "id": "大感謝の恵み [5]"
+            }
+        },
+        "items": [
+            {
+                "id": "EXアストラヴェールα",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXアストラヴェールα",
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "廣域化",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "EXアストラクロスα",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXアストラクロスα",
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "超會心",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXアストラスカーフα",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXアストラスカーフα",
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "精靈加護",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXアストラスカートα",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXアストラスカートα",
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "減輕膽怯",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "EXアストラタイツα",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EXアストラタイツα",
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "弱點特效",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "EX竜人族の耳α",
+            "name": {
+                "zhTW": null,
+                "jaJP": "EX竜人族の耳α",
+                "enUS": null
+            },
+            "rare": 9,
+            "gender": "general",
+            "defense": 140,
+            "resistance": {
+                "fire": 1,
+                "water": 1,
+                "thunder": 1,
+                "ice": 1,
+                "dragon": 5
+            },
+            "set": null
+        },
+        "items": [
+            {
+                "id": "EX竜人族の耳α",
+                "name": {
+                    "zhTW": null,
+                    "jaJP": "EX竜人族の耳α",
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "最愛菇類",
+                        "level": 2
+                    },
+                    {
+                        "id": "環境利用的知識",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
     }
 ]

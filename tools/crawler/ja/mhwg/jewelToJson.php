@@ -7,12 +7,6 @@ $root = __DIR__;
 include "{$root}/../../common.php";
 
 $host = 'http://mhwg.org';
-$list = [
-    9 => '/data/3216.html',
-    10 => '/data/3217.html',
-    11 => '/data/3218.html',
-    12 => '/data/3219.html'
-];
 
 $result = [];
 
@@ -24,7 +18,7 @@ if (!isset($result[$path])) {
 
 $mainDom = getDOM("{$host}/data/4412.html");
 
-foreach ($mainDom->find('.t1') as $index => $item) {
+foreach ($mainDom->find('.row_x .t1') as $index => $item) {
     $name = trim($item->find('tr', 0)->find('td', 0)->plaintext);
     $name = trim(explode("\r\n", $name)[0]);
     $name = str_replace('Ⅱ', 'II', $name);
