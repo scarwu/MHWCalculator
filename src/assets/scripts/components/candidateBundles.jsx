@@ -416,7 +416,7 @@ export default function CandidateBundles(props) {
                 {true === stateIsSearching ? (
                     <div className="mhwc-item mhwc-item-3-step">
                         <div className="col-12 mhwc-name">
-                            <span>{_('searching')}</span>
+                            <span>{_('searching')} <i className="fa fa-circle-o-notch fa-spin" /></span>
                             <div className="mhwc-icons_bundle">
                                 <FunctionalButton
                                     iconName="times" altName={_('cancel')}

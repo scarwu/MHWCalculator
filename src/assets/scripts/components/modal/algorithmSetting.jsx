@@ -126,7 +126,7 @@ const renderArmorFactors = (armorFactor, stateSegment) => {
         return (
             <div key={rare} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
-                    <span>{_('advanced')}: {_('armorFactor')} R{rare}</span>
+                    <span>{_('advanced')}: {_('armorFactor')} (R{rare})</span>
                 </div>
                 <div className="col-12 mhwc-content">
                     {Object.keys(seriesIds).sort((seriesIdA, seriesIdB) => {
