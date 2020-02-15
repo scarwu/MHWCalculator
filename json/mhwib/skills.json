@@ -874,5 +874,261 @@
                 "isHidden": false
             }
         ]
+    },
+    {
+        "id": "万福の贈り物",
+        "name": {
+            "zhTW": null,
+            "jaJP": "万福の贈り物",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "特別報酬の発生する確率が上昇する。クエストの途中からは効果が得られない。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "特別報酬の発生する確率が上昇する。クエストの途中からは効果が得られない。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "万福の恵み",
+        "name": {
+            "zhTW": null,
+            "jaJP": "万福の恵み",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "特別報酬の発生する確率が大きく上昇する。クエストの途中からは効果が得られない。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "特別報酬の発生する確率が大きく上昇する。クエストの途中からは効果が得られない。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "大感謝の贈り物",
+        "name": {
+            "zhTW": null,
+            "jaJP": "大感謝の贈り物",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "特別報酬の発生する確率が上昇する。クエストの途中からは効果が得られない。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "特別報酬の発生する確率が上昇する。クエストの途中からは効果が得られない。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "大感謝の恵み",
+        "name": {
+            "zhTW": null,
+            "jaJP": "大感謝の恵み",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "特別報酬の発生する確率が大きく上昇する。クエストの途中からは効果が得られない。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "特別報酬の発生する確率が大きく上昇する。クエストの途中からは効果が得られない。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "ゾンビ・瘴気無効",
+        "name": {
+            "zhTW": null,
+            "jaJP": "ゾンビ・瘴気無効",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "ゾンビ状態・瘴気侵蝕状態を無効化する。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "ゾンビ状態・瘴気侵蝕状態を無効化する。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "太古の鎧",
+        "name": {
+            "zhTW": null,
+            "jaJP": "太古の鎧",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "防御力が2倍になり、ダメージリアクション無効化効果(不動の装衣のように怯まない)。攻撃を5回受けると効果が解除される。2分30秒経過で再発動。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "防御力が2倍になり、ダメージリアクション無効化効果(不動の装衣のように怯まない)。攻撃を5回受けると効果が解除される。2分30秒経過で再発動。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "龍脈覚醒",
+        "name": {
+            "zhTW": null,
+            "jaJP": "龍脈覚醒",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "抜刀中に会心率が20%、属性、状態異常値が80上昇。攻撃時にダメージを受けるが、攻撃し続けると自動回復効果を得る。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "抜刀中に会心率が20%、属性、状態異常値が80上昇。攻撃時にダメージを受けるが、攻撃し続けると自動回復効果を得る。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "真・龍脈覚醒",
+        "name": {
+            "zhTW": null,
+            "jaJP": "真・龍脈覚醒",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": "抜刀中に会心率が40%、属性値が150、状態異常値が120上昇。。攻撃時にダメージを受けるが、攻撃し続けると自動回復効果を得る。",
+            "enUS": null
+        },
+        "type": null,
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": null,
+                    "jaJP": "抜刀中に会心率が40%、属性値が150、状態異常値が120上昇。。攻撃時にダメージを受けるが、攻撃し続けると自動回復効果を得る。",
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
     }
 ]

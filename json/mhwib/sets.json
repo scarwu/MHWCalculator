@@ -448,5 +448,120 @@
                 "require": 4
             }
         ]
+    },
+    {
+        "id": "万福の祝福",
+        "name": {
+            "zhTW": null,
+            "jaJP": "万福の祝福",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "万福の贈り物",
+                "level": 1,
+                "require": 3
+            },
+            {
+                "id": "万福の恵み",
+                "level": 1,
+                "require": 5
+            }
+        ]
+    },
+    {
+        "id": "大感謝の祝福",
+        "name": {
+            "zhTW": null,
+            "jaJP": "大感謝の祝福",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "大感謝の贈り物",
+                "level": 1,
+                "require": 3
+            },
+            {
+                "id": "大感謝の恵み",
+                "level": 1,
+                "require": 5
+            }
+        ]
+    },
+    {
+        "id": "金獅子の怒気",
+        "name": {
+            "zhTW": null,
+            "jaJP": "金獅子の怒気",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "心眼／彈導強化",
+                "level": 1,
+                "require": 2
+            },
+            {
+                "id": "剛刃研磨",
+                "level": 1,
+                "require": 4
+            }
+        ]
+    },
+    {
+        "id": "サバイバー",
+        "name": {
+            "zhTW": null,
+            "jaJP": "サバイバー",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "ゾンビ・瘴気無効",
+                "level": 1,
+                "require": 2
+            },
+            {
+                "id": "挑戰者．極意",
+                "level": 1,
+                "require": 4
+            }
+        ]
+    },
+    {
+        "id": "動力源",
+        "name": {
+            "zhTW": null,
+            "jaJP": "動力源",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "太古の鎧",
+                "level": 1,
+                "require": 5
+            }
+        ]
+    },
+    {
+        "id": "赤龍の封印",
+        "name": {
+            "zhTW": null,
+            "jaJP": "赤龍の封印",
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "龍脈覚醒",
+                "level": 1,
+                "require": 3
+            },
+            {
+                "id": "真・龍脈覚醒",
+                "level": 1,
+                "require": 5
+            }
+        ]
     }
 ]
