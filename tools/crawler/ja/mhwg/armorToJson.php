@@ -108,7 +108,7 @@ foreach ($list as $rare => $mainUrl) {
             ][$row->find('td', 0)->plaintext];
         }
 
-        foreach ($subDom->find('.t1', 3)->find('tbody tr') as $index => $row) {
+        foreach ($subDom->find('.t1', 4)->find('tbody tr') as $index => $row) {
             if (0 === $index) {
                 continue;
             }
@@ -153,7 +153,7 @@ foreach ($list as $rare => $mainUrl) {
             }
         }
 
-        foreach ($subDom->find('.t1', 5)->find('tbody tr') as $index => $row) {
+        foreach ($subDom->find('.t1', 6)->find('tbody tr') as $index => $row) {
             if (0 === $index) {
                 continue;
             }

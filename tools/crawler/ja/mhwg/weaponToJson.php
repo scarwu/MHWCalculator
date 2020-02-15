@@ -58,6 +58,12 @@ foreach ($list[0] as $type => $url) {
             continue;
         }
 
+        if (6 === $count) {
+            if (0 === strlen(filter($item->find('td', 0)->plaintext))) {
+                continue;
+            }
+        }
+
         $offset = 0;
 
         if (6 === $count) {
@@ -81,6 +87,8 @@ foreach ($list[0] as $type => $url) {
         $attrs = array_filter($attrs, function ($attr) {
             return '' !== $attr;
         });
+
+        echo "{$name}\n";
 
         foreach ($attrs as $attr) {
             if (preg_match('/^\((火|水|雷|氷|龍)(\d+)\)$/', $attr, $matches)) {
