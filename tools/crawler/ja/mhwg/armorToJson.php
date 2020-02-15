@@ -31,18 +31,20 @@ foreach ($list as $rare => $mainUrl) {
 
     foreach ($mainDom->find('.card-success3') as $item) {
         $name = trim($item->find('.card-header a', 0)->plaintext);
+        $name = rtrim($name, 'シリーズ');
 
         echo "{$name}\n";
 
         $armor = [
-            'common' => [
-                'rare' => $rare,
-                'gender' => 'general',
-                'series' => [
+            'series' => [
+                'id' => null,
+                'name' => [
                     'zhTW' => null,
                     'jaJP' => $name,
                     'enUS' => null
                 ],
+                'rare' => $rare,
+                'gender' => 'general',
                 'defense' => null,
                 'resistance' => [
                     'fire' => null,
@@ -53,7 +55,7 @@ foreach ($list as $rare => $mainUrl) {
                 ],
                 'set' => null
             ],
-            'list' => []
+            'items' => []
         ];
 
         $subUrl = $item->find('.card-header a', 0)->attr['href'];
@@ -69,22 +71,22 @@ foreach ($list as $rare => $mainUrl) {
             }
 
             if (1 === $index) {
-                $armor['common']['defense'] = (int) trim($row->find('td', 1)->plaintext);
-                $armor['common']['resistance']['fire'] = (int) trim($row->find('td', 2)->plaintext);
-                $armor['common']['resistance']['water'] = (int) trim($row->find('td', 3)->plaintext);
-                $armor['common']['resistance']['thunder'] = (int) trim($row->find('td', 4)->plaintext);
-                $armor['common']['resistance']['ice'] = (int) trim($row->find('td', 5)->plaintext);
-                $armor['common']['resistance']['dragon'] = (int) trim($row->find('td', 6)->plaintext);
+                $armor['series']['defense'] = (int) trim($row->find('td', 1)->plaintext);
+                $armor['series']['resistance']['fire'] = (int) trim($row->find('td', 2)->plaintext);
+                $armor['series']['resistance']['water'] = (int) trim($row->find('td', 3)->plaintext);
+                $armor['series']['resistance']['thunder'] = (int) trim($row->find('td', 4)->plaintext);
+                $armor['series']['resistance']['ice'] = (int) trim($row->find('td', 5)->plaintext);
+                $armor['series']['resistance']['dragon'] = (int) trim($row->find('td', 6)->plaintext);
             }
 
-            $armor['list'][$index] = [
+            $armor['items'][$index] = [
                 'id' => trim($row->find('td', 0)->plaintext),
-                'type' => null,
                 'name' => [
                     'zhTW' => null,
                     'jaJP' => trim($row->find('td', 0)->plaintext),
                     'enUS' => null
                 ],
+                'type' => null,
                 'slots' => null,
                 'skills' => null
             ];
@@ -99,7 +101,7 @@ foreach ($list as $rare => $mainUrl) {
                 continue;
             }
 
-            $armor['list'][$index]['type'] = [
+            $armor['items'][$index]['type'] = [
                 '頭' => 'helm',
                 '胴' => 'chest',
                 '腕' => 'arm',
@@ -120,7 +122,7 @@ foreach ($list as $rare => $mainUrl) {
             $slots = trim($row->find('td', 1)->plaintext);
 
             if (0 < strlen($slots)) {
-                $armor['list'][$index]['slots'] = array_map(function ($size) {
+                $armor['items'][$index]['slots'] = array_map(function ($size) {
                     return [
                         'size' => (int) $size
                     ];
@@ -142,10 +144,10 @@ foreach ($list as $rare => $mainUrl) {
             }
 
             if (0 !== sizeof($skills)) {
-                $armor['list'][$index]['skills'] = [];
+                $armor['items'][$index]['skills'] = [];
 
                 for ($i = 0; $i < sizeof($skills) / 2; $i++) {
-                    $armor['list'][$index]['skills'][] = [
+                    $armor['items'][$index]['skills'][] = [
                         'id' => $skills[$i * 2],
                         'level' => (int) $skills[$i * 2 + 1]
                     ];
@@ -162,7 +164,7 @@ foreach ($list as $rare => $mainUrl) {
                 continue;
             }
 
-            $armor['common']['set'] = [
+            $armor['series']['set'] = [
                 'id' => trim($row->find('td', 0)->plaintext)
             ];
         }
@@ -173,7 +175,7 @@ foreach ($list as $rare => $mainUrl) {
             $result[$path] = [];
         }
 
-        $armor['list'] = array_values($armor['list']);
+        $armor['items'] = array_values($armor['items']);
 
         $result[$path][] = $armor;
     }
