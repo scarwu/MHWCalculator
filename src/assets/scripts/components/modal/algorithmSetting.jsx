@@ -101,7 +101,7 @@ const renderArmorFactors = (armorFactor, stateSegment) => {
             return false;
         }
 
-        let seriesIds = {};
+        let seriesMapping = {};
 
         ArmorDataset.rareIs(rare).getItems().filter((info) => {
             let text = _(info.series);
@@ -114,54 +114,62 @@ const renderArmorFactors = (armorFactor, stateSegment) => {
 
             return true;
         }).forEach((info) => {
-            seriesIds[info.seriesId] = {
+            seriesMapping[info.seriesId] = {
                 series: info.series
             };
         });
 
-        if (0 === Object.keys(seriesIds).length) {
+        let seriesIds = Object.keys(seriesMapping).sort((seriesIdA, seriesIdB) => {
+            return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
+        });
+
+        if (0 === seriesIds.length) {
             return false;
         }
 
-        return (
-            <div key={rare} className="mhwc-item mhwc-item-2-step">
-                <div className="col-12 mhwc-name">
-                    <span>{_('advanced')}: {_('armorFactor')} (R{rare})</span>
-                </div>
-                <div className="col-12 mhwc-content">
-                    {Object.keys(seriesIds).sort((seriesIdA, seriesIdB) => {
-                        return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
-                    }).map((seriesId) => {
-                        let isInclude = Helper.isNotEmpty(armorFactor[seriesId])
-                            ? armorFactor[seriesId] : true;
+        let blocks = []
 
-                        return (
-                            <div key={seriesId} className="col-6 mhwc-value">
-                                <span>{_(seriesIds[seriesId].series)}</span>
-                                <div className="mhwc-icons_bundle">
-                                    {isInclude ? (
-                                        <FunctionalButton
-                                            iconName="star"
-                                            altName={_('exclude')}
-                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, false)}} />
-                                    ) : (
-                                        <FunctionalButton
-                                            iconName="star-o"
-                                            altName={_('include')}
-                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, true)}} />
-                                    )}
+        for (let blockIndex = 0; blockIndex < Math.ceil(seriesIds.length / 10); blockIndex++) {
+            blocks.push(
+                <div key={rare + '_' + blockIndex} className="mhwc-item mhwc-item-2-step">
+                    <div className="col-12 mhwc-name">
+                        <span>{_('advanced')}: (R{rare}) {_('armorFactor')}-{blockIndex + 1}</span>
+                    </div>
+                    <div className="col-12 mhwc-content">
+                        {seriesIds.slice(blockIndex * 10, (blockIndex + 1) * 10).map((seriesId) => {
+                            let isInclude = Helper.isNotEmpty(armorFactor[seriesId])
+                                ? armorFactor[seriesId] : true;
+
+                            return (
+                                <div key={seriesId} className="col-6 mhwc-value">
+                                    <span>{_(seriesMapping[seriesId].series)}</span>
+                                    <div className="mhwc-icons_bundle">
+                                        {isInclude ? (
+                                            <FunctionalButton
+                                                iconName="star"
+                                                altName={_('exclude')}
+                                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, false)}} />
+                                        ) : (
+                                            <FunctionalButton
+                                                iconName="star-o"
+                                                altName={_('include')}
+                                                onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, true)}} />
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
-            </div>
-        );
+            );
+        }
+
+        return blocks;
     });
 };
 
 const renderCharmFactors = (charmFactor, stateSegment) => {
-    let seriesIds = {};
+    let seriesMapping = {};
 
     CharmDataset.getItems().filter((info) => {
         let text = _(info.series);
@@ -174,60 +182,68 @@ const renderCharmFactors = (charmFactor, stateSegment) => {
 
         return true;
     }).forEach((info) => {
-        if (Helper.isEmpty(seriesIds[info.seriesId])) {
-            seriesIds[info.seriesId] = {
+        if (Helper.isEmpty(seriesMapping[info.seriesId])) {
+            seriesMapping[info.seriesId] = {
                 series: info.series,
                 min: 1,
                 max: 1
             };
         }
 
-        if (seriesIds[info.seriesId].max < info.level) {
-            seriesIds[info.seriesId].max = info.level;
+        if (seriesMapping[info.seriesId].max < info.level) {
+            seriesMapping[info.seriesId].max = info.level;
         }
     });
 
-    if (0 === Object.keys(seriesIds).length) {
+    let seriesIds = Object.keys(seriesMapping).sort((seriesIdA, seriesIdB) => {
+        return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
+    });
+
+    if (0 === seriesIds.length) {
         return false;
     }
 
-    return (
-        <div className="mhwc-item mhwc-item-2-step">
-            <div className="col-12 mhwc-name">
-                <span>{_('advanced')}: {_('charmFactor')}</span>
-            </div>
-            <div className="col-12 mhwc-content">
-                {Object.keys(seriesIds).sort((seriesIdA, seriesIdB) => {
-                    return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
-                }).map((seriesId) => {
-                    let selectLevel = Helper.isNotEmpty(charmFactor[seriesId])
-                        ? charmFactor[seriesId] : -1;
-                    let levelList = [
-                        { key: -1, value: _('all') },
-                        { key: 0, value: _('exclude') }
-                    ];
+    let blocks = []
 
-                    [...Array(seriesIds[seriesId].max - seriesIds[seriesId].min + 1).keys()].forEach((data, index) => {
-                        levelList.push({ key: index + 1, value: levelMapping[index] })
-                    });
+    for (let blockIndex = 0; blockIndex < Math.ceil(seriesIds.length / 10); blockIndex++) {
+        blocks.push(
+            <div key={blockIndex} className="mhwc-item mhwc-item-2-step">
+                <div className="col-12 mhwc-name">
+                    <span>{_('advanced')}: {_('charmFactor')}-{blockIndex + 1}</span>
+                </div>
+                <div className="col-12 mhwc-content">
+                    {seriesIds.slice(blockIndex * 10, (blockIndex + 1) * 10).map((seriesId) => {
+                        let selectLevel = Helper.isNotEmpty(charmFactor[seriesId])
+                            ? charmFactor[seriesId] : -1;
+                        let levelList = [
+                            { key: -1, value: _('all') },
+                            { key: 0, value: _('exclude') }
+                        ];
 
-                    return (
-                        <div key={seriesId} className="col-6 mhwc-value">
-                            <span>{_(seriesIds[seriesId].series)}</span>
-                            <div className="mhwc-icons_bundle">
-                                <FunctionalSelector
-                                    iconName="sort-numeric-asc"
-                                    defaultValue={selectLevel}
-                                    options={levelList} onChange={(event) => {
-                                        CommonState.setter.setAlgorithmParamsUsingFactor('charm', seriesId, parseInt(event.target.value));
-                                    }} />
+                        [...Array(seriesMapping[seriesId].max - seriesMapping[seriesId].min + 1).keys()].forEach((data, index) => {
+                            levelList.push({ key: index + 1, value: levelMapping[index] })
+                        });
+
+                        return (
+                            <div key={seriesId} className="col-6 mhwc-value">
+                                <span>{_(seriesMapping[seriesId].series)}</span>
+                                <div className="mhwc-icons_bundle">
+                                    <FunctionalSelector
+                                        iconName="sort-numeric-asc"
+                                        defaultValue={selectLevel}
+                                        options={levelList} onChange={(event) => {
+                                            CommonState.setter.setAlgorithmParamsUsingFactor('charm', seriesId, parseInt(event.target.value));
+                                        }} />
+                                </div>
                             </div>
-                        </div>
-                    );
-                })}
+                        );
+                    })}
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
+
+    return blocks;
 };
 
 const renderJewelFactors = (jewelFactor, stateSegment) => {
@@ -236,7 +252,7 @@ const renderJewelFactors = (jewelFactor, stateSegment) => {
             return false;
         }
 
-        let jewelIds = {};
+        let jewelMapping = {};
 
         JewelDataset.sizeIs(size).getItems().filter((info) => {
             let text = _(info.name);
@@ -249,8 +265,8 @@ const renderJewelFactors = (jewelFactor, stateSegment) => {
 
             return true;
         }).forEach((info) => {
-            if (Helper.isEmpty(jewelIds[info.id])) {
-                jewelIds[info.id] = {
+            if (Helper.isEmpty(jewelMapping[info.id])) {
+                jewelMapping[info.id] = {
                     name: info.name,
                     min: 1,
                     max: 1
@@ -260,54 +276,62 @@ const renderJewelFactors = (jewelFactor, stateSegment) => {
             info.skills.forEach((skill) => {
                 let skillInfo = SkillDataset.getInfo(skill.id);
 
-                if (jewelIds[info.id].max < skillInfo.list.length) {
-                    jewelIds[info.id].max = skillInfo.list.length;
+                if (jewelMapping[info.id].max < skillInfo.list.length) {
+                    jewelMapping[info.id].max = skillInfo.list.length;
                 }
             })
         });
 
-        if (0 === Object.keys(jewelIds).length) {
+        let jewelIds = Object.keys(jewelMapping).sort((jewelIdA, jewelIdB) => {
+            return _(jewelIdA) > _(jewelIdB) ? 1 : -1;
+        });
+
+        if (0 === jewelIds.length) {
             return false;
         }
 
-        return (
-            <div key={size} className="mhwc-item mhwc-item-2-step">
-                <div className="col-12 mhwc-name">
-                    <span>{_('advanced')}: {_('jewelFactor')} [{size}]</span>
-                </div>
-                <div className="col-12 mhwc-content">
-                    {Object.keys(jewelIds).sort((jewelIdA, jewelIdB) => {
-                        return _(jewelIdA) > _(jewelIdB) ? 1 : -1;
-                    }).map((jewelId) => {
-                        let selectLevel = Helper.isNotEmpty(jewelFactor[jewelId])
-                            ? jewelFactor[jewelId] : -1;
-                        let diffLevel = jewelIds[jewelId].max - jewelIds[jewelId].min + 1;
-                        let levelList = [
-                            { key: -1, value: _('unlimited') },
-                            { key: 0, value: _('exclude') }
-                        ];
+        let blocks = []
 
-                        [...Array(diffLevel).keys()].forEach((data, index) => {
-                            levelList.push({ key: index + 1, value: index + 1 })
-                        });
+        for (let blockIndex = 0; blockIndex < Math.ceil(jewelIds.length / 10); blockIndex++) {
+            blocks.push(
+                <div key={size + '_' + blockIndex} className="mhwc-item mhwc-item-2-step">
+                    <div className="col-12 mhwc-name">
+                        <span>{_('advanced')}: [{size}] {_('jewelFactor')}-{blockIndex + 1}</span>
+                    </div>
+                    <div className="col-12 mhwc-content">
+                        {jewelIds.slice(blockIndex * 10, (blockIndex + 1) * 10).map((jewelId) => {
+                            let selectLevel = Helper.isNotEmpty(jewelFactor[jewelId])
+                                ? jewelFactor[jewelId] : -1;
+                            let diffLevel = jewelMapping[jewelId].max - jewelMapping[jewelId].min + 1;
+                            let levelList = [
+                                { key: -1, value: _('unlimited') },
+                                { key: 0, value: _('exclude') }
+                            ];
 
-                        return (
-                            <div key={jewelId} className="col-6 mhwc-value">
-                                <span>{_(jewelIds[jewelId].name)}</span>
-                                <div className="mhwc-icons_bundle">
-                                    <FunctionalSelector
-                                        iconName="sort-numeric-asc"
-                                        defaultValue={selectLevel}
-                                        options={levelList} onChange={(event) => {
-                                            CommonState.setter.setAlgorithmParamsUsingFactor('jewel', jewelId, parseInt(event.target.value));
-                                        }} />
+                            [...Array(diffLevel).keys()].forEach((data, index) => {
+                                levelList.push({ key: index + 1, value: index + 1 })
+                            });
+
+                            return (
+                                <div key={jewelId} className="col-6 mhwc-value">
+                                    <span>{_(jewelMapping[jewelId].name)}</span>
+                                    <div className="mhwc-icons_bundle">
+                                        <FunctionalSelector
+                                            iconName="sort-numeric-asc"
+                                            defaultValue={selectLevel}
+                                            options={levelList} onChange={(event) => {
+                                                CommonState.setter.setAlgorithmParamsUsingFactor('jewel', jewelId, parseInt(event.target.value));
+                                            }} />
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
-            </div>
-        );
+            );
+        }
+
+        return blocks;
     });
 };
 
