@@ -1130,5 +1130,41 @@
                 "isHidden": false
             }
         ]
+    },
+    {
+        "id": "火場怪力．極意",
+        "name": {
+            "zhTW": "火場怪力．極意",
+            "jaJP": "火事場力・極意",
+            "enUS": null
+        },
+        "description": {
+            "zhTW": null,
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": "active",
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "解放火場怪力技能的等級上限",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "enableSkillLevel": {
+                        "id": "火場怪力"
+                    }
+                },
+                "isHidden": false
+            }
+        ]
     }
 ]

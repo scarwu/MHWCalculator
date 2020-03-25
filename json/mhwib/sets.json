@@ -528,5 +528,45 @@
                 "require": 5
             }
         ]
+    },
+    {
+        "id": "金獅子的鬥志",
+        "name": {
+            "zhTW": "金獅子的鬥志",
+            "jaJP": null,
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "精神抖擻．極意",
+                "level": 1,
+                "require": 2
+            },
+            {
+                "id": "火場怪力．極意",
+                "level": 1,
+                "require": 4
+            }
+        ]
+    },
+    {
+        "id": "碎龍之鬥志",
+        "name": {
+            "zhTW": "碎龍之鬥志",
+            "jaJP": null,
+            "enUS": null
+        },
+        "skills": [
+            {
+                "id": "挑戰者．極意",
+                "level": 1,
+                "require": 2
+            },
+            {
+                "id": "砲術．極意",
+                "level": 1,
+                "require": 4
+            }
+        ]
     }
 ]
