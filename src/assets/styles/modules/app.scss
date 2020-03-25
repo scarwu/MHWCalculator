@@ -75,7 +75,9 @@
                 @include font-size(1.6);
             }
 
-            .mhwc-icons_bundle {
+            .mhwc-icons_bundle,
+            .mhwc-icons_bundle-left,
+            .mhwc-icons_bundle-right {
                 position: absolute;
                 top: 0;
                 right: 10px;
@@ -93,6 +95,11 @@
                         }
                     }
                 }
+            }
+
+            .mhwc-icons_bundle-left {
+                right: inherit;
+                left: 10px;
             }
         }
 

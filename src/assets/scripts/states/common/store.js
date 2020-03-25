@@ -51,6 +51,12 @@ const diffLogger = store => next => action => {
 
 // Initial State
 const initialState = {
+    tempData: Status.get(statusPrefix + ':tempData') || {
+        conditionOptions: {
+            index: 1,
+            list: []
+        }
+    },
     requiredSets: Status.get(statusPrefix + ':requiredSets') || Helper.deepCopy(TestData.requireList[0]).sets,
     requiredSkills: Status.get(statusPrefix + ':requiredSkills') || Helper.deepCopy(TestData.requireList[0]).skills,
     requiredEquipPins: Status.get(statusPrefix + ':requiredEquipPins') || Helper.deepCopy(Constant.default.equipsLock),
@@ -65,6 +71,35 @@ const initialState = {
 
 export default createStore((state = initialState, action) => {
     switch (action.type) {
+
+    // Switch Temp Data
+    case 'SWITCH_TEMP_DATA':
+        return (() => {
+            let setInfo = SetDataset.getInfo(action.payload.setId);
+
+            if (Helper.isEmpty(setInfo)) {
+                return state;
+            }
+
+            let requiredSets = Helper.deepCopy(state.requiredSets);
+
+            for (let index in requiredSets) {
+                if (action.payload.setId !== requiredSets[index].id) {
+                    continue;
+                }
+
+                return state;
+            }
+
+            requiredSets.push({
+                id: action.payload.setId,
+                step: 1
+            });
+
+            return Object.assign({}, state, {
+                requiredSets: requiredSets
+            });
+        })();
 
     // Required Sets
     case 'ADD_REQUIRED_SET':

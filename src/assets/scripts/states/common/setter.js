@@ -11,6 +11,17 @@ import Store from './store';
 
 export default {
 
+    // Switch Temp Data
+    switchTempData: (target, index) => {
+        Store.dispatch({
+            type: 'SWITCH_TEMP_DATA',
+            payload: {
+                target: target,
+                index: index
+            }
+        });
+    },
+
     // Required Sets
     addRequiredSet: (setId) => {
         Store.dispatch({

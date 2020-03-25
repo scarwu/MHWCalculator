@@ -20,6 +20,7 @@ import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
 import FunctionalButton from 'components/common/functionalButton';
+import FunctionalSelector from 'components/common/functionalSelector';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -45,6 +46,10 @@ const handleShowSkillItemSelector = () => {
     });
 };
 
+const handleSwitchTempData = (event) => {
+    CommonState.setter.switchTempData('conditionOptions', parseInt(event.target.value, 10));
+};
+
 /**
  * Render Functions
  */
@@ -61,6 +66,7 @@ const renderSetItem = (set) => {
         <div key={setInfo.id} className="mhwc-item mhwc-item-2-step">
             <div className="col-12 mhwc-name">
                 <span>{_(setInfo.name)} x {setRequire}</span>
+
                 <div className="mhwc-icons_bundle">
                     <FunctionalButton
                         iconName="minus-circle" altName={_('down')}
@@ -118,6 +124,7 @@ const renderSkillItem = (skill, enableSkillIdList) => {
                 ) : (
                     <span>{_(skillInfo.name)} Lv.{skill.level} / {currentSkillLevel} ({totalSkillLevel})</span>
                 )}
+
                 <div className="mhwc-icons_bundle">
                     <FunctionalButton
                         iconName="minus-circle" altName={_('down')}
@@ -230,6 +237,17 @@ export default function ConditionOptions(props) {
     return (
         <div className="col mhwc-conditions">
             <div className="mhwc-panel">
+                <div className="mhwc-icons_bundle-left">
+                    <FunctionalSelector
+                        iconName="folder" defaultValue={1}
+                        options={[
+                            { key: 0, value: _('tempData') + ' 1' },
+                            { key: 1, value: _('tempData') + ' 2' },
+                            { key: 2, value: _('tempData') + ' 3' },
+                            { key: 3, value: _('tempData') + ' 4' }
+                        ]} onChange={handleSwitchTempData} />
+                </div>
+
                 <span className="mhwc-title">{_('requireCondition')}</span>
 
                 <div className="mhwc-icons_bundle">
