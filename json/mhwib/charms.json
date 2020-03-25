@@ -168,6 +168,22 @@
                         "level": 4
                     }
                 ]
+            },
+            {
+                "id": "暴怒護石 V",
+                "name": {
+                    "zhTW": "暴怒護石 V",
+                    "jaJP": "逆上の護石 V",
+                    "enUS": "Fury Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "怨恨",
+                        "level": 5
+                    }
+                ]
             }
         ]
     },
@@ -600,6 +616,22 @@
                         "level": 4
                     }
                 ]
+            },
+            {
+                "id": "全開護石 V",
+                "name": {
+                    "zhTW": "全開護石 V",
+                    "jaJP": "全開の護石 V",
+                    "enUS": "Power Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "力量解放",
+                        "level": 5
+                    }
+                ]
             }
         ]
     },
@@ -926,6 +958,22 @@
                     {
                         "id": "挑戰者",
                         "level": 4
+                    }
+                ]
+            },
+            {
+                "id": "挑戰護石 V",
+                "name": {
+                    "zhTW": "挑戰護石 V",
+                    "jaJP": "挑戦の護石 V",
+                    "enUS": "Challenger Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "挑戰者",
+                        "level": 5
                     }
                 ]
             }
@@ -1606,6 +1654,34 @@
                     {
                         "id": "利刃／彈藥節約",
                         "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "渾身護石",
+            "name": {
+                "zhTW": "渾身護石",
+                "jaJP": "渾身の護石",
+                "enUS": "Mighty Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "渾身護石 III",
+                "name": {
+                    "zhTW": "渾身護石 III",
+                    "jaJP": "渾身の護石 III",
+                    "enUS": "Mighty Charm III"
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "精神抖擻",
+                        "level": 3
                     }
                 ]
             }
