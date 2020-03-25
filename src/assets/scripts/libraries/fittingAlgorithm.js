@@ -91,10 +91,12 @@ class FittingAlgorithm {
         if (0 !== Object.keys(this.conditionSets).length) {
             bundlePool = this.createBundlePoolWithSetEquips(bundlePool);
 
-            this.callback({
-                bundleCount: Object.keys(bundlePool).length,
-                searchPercent: 100
-            });
+            if (0 === Object.keys(this.conditionSkills).length) {
+                this.callback({
+                    bundleCount: Object.keys(bundlePool).length,
+                    searchPercent: 100
+                });
+            }
 
             // Sets Require Equips is Overflow
             if (0 === Object.keys(bundlePool).length) {
@@ -371,7 +373,8 @@ class FittingAlgorithm {
 
         // Create Current Equip Types and Convert Candidate Equip Pool
         let currentEquipTypes = [];
-        let totalTraversalCount = 1;
+        let traversalCount = 0;
+        let totalTraversalCount = Object.keys(initBundlePool).length;
 
         for (const [equipType, candidateEquips] of Object.entries(candidateEquipPool)) {
             currentEquipTypes.push(equipType);
@@ -385,7 +388,6 @@ class FittingAlgorithm {
         Helper.log('Create Bundle Pool With Set Equips');
 
         Object.values(initBundlePool).forEach((bundle) => {
-            let traversalCount = 0;
             let typeIndex = 0;
             let equipIndex = 0;
             let candidateEquip = null;
@@ -451,9 +453,11 @@ class FittingAlgorithm {
                 if (0 === traversalCount % parseInt(totalTraversalCount / 100)) {
                     Helper.log('Set Equips: Traversal Count:', traversalCount);
 
-                    this.callback({
-                        searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
-                    });
+                    if (0 === Object.keys(this.conditionSkills).length) {
+                        this.callback({
+                            searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
+                        });
+                    }
                 }
 
                 // Add Candidate Equip to Bundle
@@ -473,9 +477,11 @@ class FittingAlgorithm {
                     if (this.isBundleSetCompleted(bundle)) {
                         lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
-                        this.callback({
-                            bundleCount: Object.keys(lastBundlePool).length
-                        });
+                        if (0 === Object.keys(this.conditionSkills).length) {
+                            this.callback({
+                                bundleCount: Object.keys(lastBundlePool).length
+                            });
+                        }
 
                         findNextEquip();
 
@@ -488,10 +494,12 @@ class FittingAlgorithm {
 
             Helper.log('Set Equips: Traversal Count:', traversalCount);
 
-            this.callback({
-                bundleCount: Object.keys(lastBundlePool).length,
-                searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
-            });
+            if (0 === Object.keys(this.conditionSkills).length) {
+                this.callback({
+                    bundleCount: Object.keys(lastBundlePool).length,
+                    searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
+                });
+            }
         });
 
         Helper.log('Last Bundle Result:', Object.keys(lastBundlePool).length, lastBundlePool);
@@ -555,7 +563,8 @@ class FittingAlgorithm {
         // Create Current Equip Types and Convert Candidate Equip Pool
         // Create Max Equip Expected Value & Expected Level
         let currentEquipTypes = [];
-        let totalTraversalCount = 1;
+        let traversalCount = 0;
+        let totalTraversalCount = Object.keys(initBundlePool).length;
 
         for (const [equipType, candidateEquips] of Object.entries(candidateEquipPool)) {
             if (Helper.isEmpty(this.maxEquipExpectedValue[equipType])) {
@@ -614,7 +623,6 @@ class FittingAlgorithm {
                 return;
             }
 
-            let traversalCount = 0;
             let typeIndex = 0;
             let equipIndex = 0;
             let candidateEquip = null;
