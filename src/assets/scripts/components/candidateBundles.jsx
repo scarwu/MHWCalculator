@@ -304,6 +304,28 @@ const BundleList = (props) => {
     }, [data, stateRequiredSkills]);
 };
 
+const convertTimeFormat = (seconds) => {
+    let text = '';
+
+    if (seconds > 3600) {
+        let hours = parseInt(seconds / 3600);
+
+        seconds -= hours * 3600;
+        text += hours + ' ' + _('hour') + ' ';
+    }
+
+    if (seconds > 60) {
+        let minutes = parseInt(seconds / 60);
+
+        seconds -= minutes * 60;
+        text += minutes + ' ' + _('minute') + ' ';
+    }
+
+    text += seconds + ' ' + _('second');
+
+    return text;
+};
+
 export default function CandidateBundles(props) {
 
     /**
@@ -313,6 +335,7 @@ export default function CandidateBundles(props) {
     const [stateIsSearching, updateIsSearching] = useState(false);
     const [stateBundleCount, updateBundleCount] = useState(0);
     const [stateSearchPercent, updateSearchPercent] = useState(0);
+    const [stateTimeRemaining, updateTimeRemaining] = useState(0);
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
@@ -324,6 +347,25 @@ export default function CandidateBundles(props) {
             unsubscribe();
         };
     }, []);
+
+    // Search Remaining Timer
+    useEffect(() => {
+        if (false === stateIsSearching) {
+            return;
+        }
+
+        let timerId = setInterval(() => {
+            if (0 === stateTimeRemaining) {
+                return;
+            }
+
+            updateTimeRemaining(stateTimeRemaining - 1);
+        }, 1000);
+
+        return () => {
+            clearInterval(timerId);
+        };
+    }, [stateIsSearching, stateTimeRemaining])
 
     /**
      * Handle Functions
@@ -349,6 +391,7 @@ export default function CandidateBundles(props) {
         updateIsSearching(true);
         updateBundleCount(0);
         updateSearchPercent(0);
+        updateTimeRemaining(0);
 
         if (undefined == worker) {
             worker = new Worker('assets/scripts/worker.min.js')
@@ -364,6 +407,10 @@ export default function CandidateBundles(props) {
 
                     if (Helper.isNotEmpty(payload.searchPercent)) {
                         updateSearchPercent(payload.searchPercent);
+                    }
+
+                    if (Helper.isNotEmpty(payload.timeRemaining)) {
+                        updateTimeRemaining(payload.timeRemaining);
                     }
 
                     break;
@@ -388,10 +435,10 @@ export default function CandidateBundles(props) {
     }, []);
 
     const handleCandidateBundlesCancel = useCallback(() => {
-        updateIsSearching(false);
-
         worker.terminate();
         worker = undefined;
+
+        updateIsSearching(false);
     }, []);
 
     return (
@@ -424,17 +471,23 @@ export default function CandidateBundles(props) {
                             </div>
                         </div>
                         <div className="col-12 mhwc-content">
-                            <div className="col-2 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('bundleCount')}</span>
                             </div>
-                            <div className="col-4 mhwc-value">
+                            <div className="col-3 mhwc-value">
                                 <span>{stateBundleCount}</span>
                             </div>
-                            <div className="col-2 mhwc-name">
+                            <div className="col-3 mhwc-name">
                                 <span>{_('searchPercent')}</span>
                             </div>
-                            <div className="col-4 mhwc-value">
+                            <div className="col-3 mhwc-value">
                                 <span>{stateSearchPercent} %</span>
+                            </div>
+                            <div className="col-3 mhwc-name">
+                                <span>{_('timeRemaining')}</span>
+                            </div>
+                            <div className="col-9 mhwc-value">
+                                <span>{convertTimeFormat(stateTimeRemaining)}</span>
                             </div>
                         </div>
                     </div>

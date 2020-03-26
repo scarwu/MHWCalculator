@@ -141,6 +141,10 @@
     "searching":            "Searching",
     "bundleCount":          "Bundle Count",
     "searchPercent":        "Percentage",
+    "timeRemaining":        "Remaining",
     "basic":                "Basic",
-    "advanced":             "Advanced"
+    "advanced":             "Advanced",
+    "hour":                 "h",
+    "minute":               "m",
+    "second":               "s"
 }

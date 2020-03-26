@@ -141,6 +141,10 @@
     "searching":            null,
     "bundleCount":          null,
     "searchPercent":        null,
+    "timeRemaining":        null,
     "basic":                null,
-    "advanced":             null
+    "advanced":             null,
+    "hour":                 "時",
+    "minute":               "分",
+    "second":               "秒"
 }

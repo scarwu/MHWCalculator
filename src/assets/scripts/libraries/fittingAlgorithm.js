@@ -82,6 +82,9 @@ class FittingAlgorithm {
         Helper.log('Init: Condition Expected Level:', this.conditionExpectedLevel);
         Helper.log('Init: Max Slots Skill Level:', this.maxSlotsSkillLevel);
 
+        // Save StartTime
+        this.startTime = parseInt(Math.floor(Date.now() / 1000), 10);
+
         // Init Bundle Pool
         let bundlePool = {};
 
@@ -94,7 +97,8 @@ class FittingAlgorithm {
             if (0 === Object.keys(this.conditionSkills).length) {
                 this.callback({
                     bundleCount: Object.keys(bundlePool).length,
-                    searchPercent: 100
+                    searchPercent: 100,
+                    timeRemaining: 0
                 });
             }
 
@@ -110,7 +114,8 @@ class FittingAlgorithm {
 
             this.callback({
                 bundleCount: Object.keys(bundlePool).length,
-                searchPercent: 100
+                searchPercent: 100,
+                timeRemaining: 0
             });
 
             // Sets Require Equips is Overflow
@@ -454,8 +459,12 @@ class FittingAlgorithm {
                     Helper.log('Set Equips: Traversal Count:', traversalCount);
 
                     if (0 === Object.keys(this.conditionSkills).length) {
+                        let precent = traversalCount / totalTraversalCount;
+                        let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
+
                         this.callback({
-                            searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
+                            searchPercent: parseInt(precent * 100),
+                            timeRemaining: parseInt(diffTime / precent - diffTime)
                         });
                     }
                 }
@@ -495,9 +504,13 @@ class FittingAlgorithm {
             Helper.log('Set Equips: Traversal Count:', traversalCount);
 
             if (0 === Object.keys(this.conditionSkills).length) {
+                let precent = traversalCount / totalTraversalCount;
+                let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
+
                 this.callback({
                     bundleCount: Object.keys(lastBundlePool).length,
-                    searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
+                    searchPercent: parseInt(precent * 100),
+                    timeRemaining: parseInt(diffTime / precent - diffTime)
                 });
             }
         });
@@ -692,8 +705,12 @@ class FittingAlgorithm {
                 if (0 === traversalCount % parseInt(totalTraversalCount / 100)) {
                     Helper.log('Skill Equips: Traversal Count:', traversalCount);
 
+                    let precent = traversalCount / totalTraversalCount;
+                    let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
+
                     this.callback({
-                        searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
+                        searchPercent: parseInt(precent * 100),
+                        timeRemaining: parseInt(diffTime / precent - diffTime)
                     });
                 }
 
@@ -777,9 +794,13 @@ class FittingAlgorithm {
 
             Helper.log('Skill Equips: Traversal Count:', traversalCount);
 
+            let precent = traversalCount / totalTraversalCount;
+            let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
+
             this.callback({
                 bundleCount: Object.keys(lastBundlePool).length,
-                searchPercent: parseInt((traversalCount / totalTraversalCount) * 100)
+                searchPercent: parseInt(precent * 100),
+                timeRemaining: parseInt(diffTime / precent - diffTime)
             });
         });
 

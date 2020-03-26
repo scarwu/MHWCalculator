@@ -141,6 +141,10 @@
     "searching":            "搜尋中",
     "bundleCount":          "數量",
     "searchPercent":        "進度",
+    "timeRemaining":        "剩餘",
     "basic":                "初階",
-    "advanced":             "進階"
+    "advanced":             "進階",
+    "hour":                 "時",
+    "minute":               "分",
+    "second":               "秒"
 }
