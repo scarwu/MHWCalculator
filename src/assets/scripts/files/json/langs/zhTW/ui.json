@@ -129,6 +129,7 @@
     "sort":                 "排序方式",
     "strategy":             "搜尋策略",
     "isEndEarly":           "提早終止",
+    "isExpectBundle":       "期望預測",
     "isRequireConsistent":  "需求一致",
     "armorFactor":          "裝甲因子",
     "charmFactor":          "護石因子",

@@ -129,6 +129,7 @@
     "sort":                 null,
     "strategy":             null,
     "isEndEarly":           null,
+    "isExpectBundle":       null,
     "isRequireConsistent":  null,
     "armorFactor":          null,
     "charmFactor":          null,
