@@ -803,9 +803,6 @@ export default function CharacterStatus(props) {
                                     <Fragment key={data.id}>
                                         <div className="col-12 mhwc-name">
                                             <span>{_(skillInfo.name)} Lv.{data.level}</span>
-                                        </div>
-                                        <div className="col-12 mhwc-value mhwc-description">
-                                            <span>{_(data.description)}</span>
 
                                             <div className="mhwc-icons_bundle">
                                                 {Helper.isNotEmpty(passiveSkills[data.id]) ? (
@@ -815,6 +812,9 @@ export default function CharacterStatus(props) {
                                                         onClick={() => {handlePassiveSkillToggle(data.id)}} />
                                                 ) : false}
                                             </div>
+                                        </div>
+                                        <div className="col-12 mhwc-value mhwc-description">
+                                            <span>{_(data.description)}</span>
                                         </div>
                                     </Fragment>
                                 ) : false;

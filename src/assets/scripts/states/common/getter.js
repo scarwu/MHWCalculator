@@ -10,6 +10,9 @@
 import Store from './store';
 
 export default {
+    getTempData: () => {
+        return Store.getState().tempData;
+    },
     getRequiredSets: () => {
         return Store.getState().requiredSets;
     },

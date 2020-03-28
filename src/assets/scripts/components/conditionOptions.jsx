@@ -20,7 +20,7 @@ import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
 import FunctionalButton from 'components/common/functionalButton';
-import FunctionalSelector from 'components/common/functionalSelector';
+import FunctionalTab from 'components/common/functionalTab';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -46,8 +46,12 @@ const handleShowSkillItemSelector = () => {
     });
 };
 
-const handleSwitchTempData = (event) => {
-    CommonState.setter.switchTempData('conditionOptions', parseInt(event.target.value, 10));
+const isCurrentTampData = (index) => {
+    return index === CommonState.getter.getTempData().conditionOptions.index;
+};
+
+const handleSwitchTempData = (index) => {
+    CommonState.setter.switchTempData('conditionOptions', index);
 };
 
 /**
@@ -238,19 +242,20 @@ export default function ConditionOptions(props) {
         <div className="col mhwc-conditions">
             <div className="mhwc-panel">
                 <div className="mhwc-icons_bundle-left">
-                    <FunctionalSelector
-                        iconName="folder" defaultValue={1}
-                        options={[
-                            { key: 0, value: _('tempData') + ' 1' },
-                            { key: 1, value: _('tempData') + ' 2' },
-                            { key: 2, value: _('tempData') + ' 3' },
-                            { key: 3, value: _('tempData') + ' 4' }
-                        ]} onChange={handleSwitchTempData} />
+                    <FunctionalTab
+                        iconName="refresh" isActive={isCurrentTampData(0)}
+                        onClick={() => {handleSwitchTempData(0)}} />
+                    <FunctionalTab
+                        iconName="refresh" isActive={isCurrentTampData(1)}
+                        onClick={() => {handleSwitchTempData(1)}} />
+                    <FunctionalTab
+                        iconName="refresh" isActive={isCurrentTampData(2)}
+                        onClick={() => {handleSwitchTempData(2)}} />
                 </div>
 
                 <span className="mhwc-title">{_('requireCondition')}</span>
 
-                <div className="mhwc-icons_bundle">
+                <div className="mhwc-icons_bundle-right">
                     <FunctionalButton
                         iconName="refresh" altName={_('reset')}
                         onClick={handleRequireConditionRefresh} />

@@ -55,6 +55,14 @@ const initialState = {
         conditionOptions: {
             index: 1,
             list: []
+        },
+        candidateBundles: {
+            index: 1,
+            list: []
+        },
+        equipsDisplayer: {
+            index: 1,
+            list: []
         }
     },
     requiredSets: Status.get(statusPrefix + ':requiredSets') || Helper.deepCopy(TestData.requireList[0]).sets,
@@ -75,30 +83,37 @@ export default createStore((state = initialState, action) => {
     // Switch Temp Data
     case 'SWITCH_TEMP_DATA':
         return (() => {
-            let setInfo = SetDataset.getInfo(action.payload.setId);
+            let tempData = Helper.deepCopy(state.tempData);
+            let target = action.payload.target;
+            let index = action.payload.index;
 
-            if (Helper.isEmpty(setInfo)) {
-                return state;
+            switch (target) {
+            case 'conditionOptions':
+                let requiredSets = Helper.deepCopy(state.requiredSets);
+                let requiredSkills = Helper.deepCopy(state.requiredSkills);
+
+                return Object.assign({}, state, {
+                    tempData: tempData,
+                    requiredSets: requiredSets,
+                    requiredSkills: requiredSkills
+                });
+            case 'conditionOptions':
+                let computedBundles = Helper.deepCopy(state.computedBundles);
+
+                return Object.assign({}, state, {
+                    tempData: tempData,
+                    computedBundles: computedBundles
+                });
+            case 'equipsDisplayer':
+                let requiredEquipPins = Helper.deepCopy(state.requiredEquipPins);
+                let currentEquips = Helper.deepCopy(state.currentEquips);
+
+                return Object.assign({}, state, {
+                    tempData: tempData,
+                    requiredEquipPins: requiredEquipPins,
+                    currentEquips: currentEquips
+                });
             }
-
-            let requiredSets = Helper.deepCopy(state.requiredSets);
-
-            for (let index in requiredSets) {
-                if (action.payload.setId !== requiredSets[index].id) {
-                    continue;
-                }
-
-                return state;
-            }
-
-            requiredSets.push({
-                id: action.payload.setId,
-                step: 1
-            });
-
-            return Object.assign({}, state, {
-                requiredSets: requiredSets
-            });
         })();
 
     // Required Sets

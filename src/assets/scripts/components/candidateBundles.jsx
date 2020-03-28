@@ -24,6 +24,7 @@ import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
 import FunctionalButton from 'components/common/functionalButton';
+import FunctionalTab from 'components/common/functionalTab';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -128,6 +129,14 @@ const handleBundlePickUp = (bundle) => {
     });
 
     CommonState.setter.replaceCurrentEquips(equips);
+};
+
+const isCurrentTampData = (index) => {
+    return index === CommonState.getter.getTempData().candidateBundles.index;
+};
+
+const handleSwitchTempData = (index) => {
+    CommonState.setter.switchTempData('candidateBundles', index);
 };
 
 /**
@@ -397,9 +406,21 @@ export default function CandidateBundles(props) {
     return (
         <div className="col mhwc-bundles">
             <div className="mhwc-panel">
+                <div className="mhwc-icons_bundle-left">
+                    <FunctionalTab
+                        iconName="refresh" isActive={isCurrentTampData(0)}
+                        onClick={() => {handleSwitchTempData(0)}} />
+                    <FunctionalTab
+                        iconName="refresh" isActive={isCurrentTampData(1)}
+                        onClick={() => {handleSwitchTempData(1)}} />
+                    <FunctionalTab
+                        iconName="refresh" isActive={isCurrentTampData(2)}
+                        onClick={() => {handleSwitchTempData(2)}} />
+                </div>
+
                 <span className="mhwc-title">{_('candidateBundle')}</span>
 
-                <div className="mhwc-icons_bundle">
+                <div className="mhwc-icons_bundle-right">
                     <FunctionalButton
                         iconName="refresh" altName={_('reset')}
                         onClick={CommonState.setter.cleanComputedBundles} />
