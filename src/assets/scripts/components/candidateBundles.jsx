@@ -339,6 +339,7 @@ export default function CandidateBundles(props) {
     const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
     const [stateComputedBundles, updateComputedBundles] = useState(CommonState.getter.getComputedBundles());
     const [stateIsSearching, updateIsSearching] = useState(false);
+    const [stateSearchingTabIndex, updateSearchingTabIndex] = useState(null);
     const [stateBundleCount, updateBundleCount] = useState(0);
     const [stateSearchPercent, updateSearchPercent] = useState(0);
     const [stateTimeRemaining, updateTimeRemaining] = useState(0);
@@ -378,6 +379,11 @@ export default function CandidateBundles(props) {
      * Handle Functions
      */
     const handleCandidateBundlesSearch = useCallback(() => {
+        if (undefined !== worker) {
+            return;
+        }
+
+        let tempData = CommonState.getter.getTempData();
         let requiredSets = CommonState.getter.getRequiredSets();
         let requiredSkills = CommonState.getter.getRequiredSkills();
         let requiredEquipPins = CommonState.getter.getRequiredEquipPins();
@@ -395,12 +401,15 @@ export default function CandidateBundles(props) {
             requiredEquips[equipType] = currentEquips[equipType];
         });
 
+        let currentSearchingTabIndex = tempData.candidateBundles.index;
+
         updateIsSearching(true);
+        updateSearchingTabIndex(currentSearchingTabIndex);
         updateBundleCount(0);
         updateSearchPercent(0);
         updateTimeRemaining(0);
 
-        if (undefined == worker) {
+        if (undefined === worker) {
             worker = new Worker('assets/scripts/worker.min.js')
             worker.onmessage = (event) => {
                 const action = event.data.action;
@@ -422,9 +431,15 @@ export default function CandidateBundles(props) {
 
                     break;
                 case 'result':
+                    handleSwitchTempData(currentSearchingTabIndex);
+
                     CommonState.setter.saveComputedBundles(payload.computedBundles);
 
+                    worker.terminate();
+                    worker = undefined;
+
                     updateIsSearching(false);
+                    updateSearchingTabIndex(null);
 
                     break;
                 default:
@@ -446,6 +461,7 @@ export default function CandidateBundles(props) {
         worker = undefined;
 
         updateIsSearching(false);
+        updateSearchingTabIndex(null);
     }, []);
 
     return (
@@ -455,15 +471,18 @@ export default function CandidateBundles(props) {
 
                 <div className="mhwc-icons_bundle-left">
                     <FunctionalTab
-                        iconName="circle-o" altName={_('tab') + ' 1'}
+                        iconName={stateSearchingTabIndex === 0 ? 'cog fa-spin' : 'circle-o'}
+                        altName={_('tab') + ' 1'}
                         isActive={0 === stateTempData.candidateBundles.index}
                         onClick={() => {handleSwitchTempData(0)}} />
                     <FunctionalTab
-                        iconName="circle-o" altName={_('tab') + ' 2'}
+                        iconName={stateSearchingTabIndex === 1 ? 'cog fa-spin' : 'circle-o'}
+                        altName={_('tab') + ' 2'}
                         isActive={1 === stateTempData.candidateBundles.index}
                         onClick={() => {handleSwitchTempData(1)}} />
                     <FunctionalTab
-                        iconName="circle-o" altName={_('tab') + ' 3'}
+                        iconName={stateSearchingTabIndex === 2 ? 'cog fa-spin' : 'circle-o'}
+                        altName={_('tab') + ' 3'}
                         isActive={2 === stateTempData.candidateBundles.index}
                         onClick={() => {handleSwitchTempData(2)}} />
                 </div>
@@ -482,10 +501,12 @@ export default function CandidateBundles(props) {
             </div>
 
             <div key="list" className="mhwc-list">
-                {true === stateIsSearching ? (
+                {(true === stateIsSearching
+                    && stateTempData.candidateBundles.index == stateSearchingTabIndex
+                ) ? (
                     <div className="mhwc-item mhwc-item-3-step">
                         <div className="col-12 mhwc-name">
-                            <span>{_('searching')} <i className="fa fa-circle-o-notch fa-spin" /></span>
+                            <span>{_('searching')} ...</span>
                             <div className="mhwc-icons_bundle">
                                 <FunctionalButton
                                     iconName="times" altName={_('cancel')}
