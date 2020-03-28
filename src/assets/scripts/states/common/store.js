@@ -53,15 +53,15 @@ const diffLogger = store => next => action => {
 const initialState = {
     tempData: Status.get(statusPrefix + ':tempData') || {
         conditionOptions: {
-            index: 1,
+            index: 0,
             list: []
         },
         candidateBundles: {
-            index: 1,
+            index: 0,
             list: []
         },
         equipsDisplayer: {
-            index: 1,
+            index: 0,
             list: []
         }
     },
@@ -83,35 +83,82 @@ export default createStore((state = initialState, action) => {
     // Switch Temp Data
     case 'SWITCH_TEMP_DATA':
         return (() => {
-            let tempData = Helper.deepCopy(state.tempData);
             let target = action.payload.target;
             let index = action.payload.index;
+            let tempData = Helper.deepCopy(state.tempData);
+            let oldBundle = undefined
+            let newBundle = undefined
+
+            if (Helper.isEmpty(tempData[target])) {
+                tempData[target] = {
+                    index: 0,
+                    list: []
+                };
+            }
 
             switch (target) {
             case 'conditionOptions':
-                let requiredSets = Helper.deepCopy(state.requiredSets);
-                let requiredSkills = Helper.deepCopy(state.requiredSkills);
+                if (Helper.isEmpty(tempData[target].list[index])) {
+                    tempData[target].list[index] = {
+                        requiredSets: [],
+                        requiredSkills: []
+                    }
+                }
+
+                oldBundle = Helper.deepCopy(tempData[target].list[index]);
+                newBundle = {
+                    requiredSets: Helper.deepCopy(state.requiredSets),
+                    requiredSkills: Helper.deepCopy(state.requiredSkills)
+                };
+
+                tempData[target].index = index
+                tempData[target].list[index] = newBundle
 
                 return Object.assign({}, state, {
                     tempData: tempData,
-                    requiredSets: requiredSets,
-                    requiredSkills: requiredSkills
+                    requiredSets: oldBundle.requiredSets,
+                    requiredSkills: oldBundle.requiredSkills
                 });
-            case 'conditionOptions':
-                let computedBundles = Helper.deepCopy(state.computedBundles);
+            case 'candidateBundles':
+                if (Helper.isEmpty(tempData[target].list[index])) {
+                    tempData[target].list[index] = {
+                        computedBundles: []
+                    }
+                }
+
+                oldBundle = Helper.deepCopy(tempData[target].list[index]);
+                newBundle = {
+                    computedBundles: Helper.deepCopy(state.computedBundles)
+                };
+
+                tempData[target].index = index
+                tempData[target].list[index] = newBundle
 
                 return Object.assign({}, state, {
                     tempData: tempData,
-                    computedBundles: computedBundles
+                    computedBundles: oldBundle.computedBundles
                 });
             case 'equipsDisplayer':
-                let requiredEquipPins = Helper.deepCopy(state.requiredEquipPins);
-                let currentEquips = Helper.deepCopy(state.currentEquips);
+                if (Helper.isEmpty(tempData[target].list[index])) {
+                    tempData[target].list[index] = {
+                        requiredEquipPins: {},
+                        currentEquips: {}
+                    }
+                }
+
+                oldBundle = Helper.deepCopy(tempData[target].list[index]);
+                newBundle = {
+                    requiredEquipPins: Helper.deepCopy(state.requiredEquipPins),
+                    currentEquips: Helper.deepCopy(state.currentEquips)
+                };
+
+                tempData[target].index = index
+                tempData[target].list[index] = newBundle
 
                 return Object.assign({}, state, {
                     tempData: tempData,
-                    requiredEquipPins: requiredEquipPins,
-                    currentEquips: currentEquips
+                    requiredEquipPins: oldBundle.requiredEquipPins,
+                    currentEquips: oldBundle.currentEquips
                 });
             }
         })();

@@ -46,10 +46,6 @@ const handleShowSkillItemSelector = () => {
     });
 };
 
-const isCurrentTampData = (index) => {
-    return index === CommonState.getter.getTempData().conditionOptions.index;
-};
-
 const handleSwitchTempData = (index) => {
     CommonState.setter.switchTempData('conditionOptions', index);
 };
@@ -238,18 +234,35 @@ const SkillList = (props) => {
 };
 
 export default function ConditionOptions(props) {
+
+    /**
+     * Hooks
+     */
+    const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
+
+    // Like Did Mount & Will Unmount Cycle
+    useEffect(() => {
+        const unsubscribe = CommonState.store.subscribe(() => {
+            updateTempData(CommonState.getter.getTempData());
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    }, []);
+
     return (
         <div className="col mhwc-conditions">
             <div className="mhwc-panel">
                 <div className="mhwc-icons_bundle-left">
                     <FunctionalTab
-                        iconName="refresh" isActive={isCurrentTampData(0)}
+                        iconName="circle-o" isActive={0 === stateTempData.conditionOptions.index}
                         onClick={() => {handleSwitchTempData(0)}} />
                     <FunctionalTab
-                        iconName="refresh" isActive={isCurrentTampData(1)}
+                        iconName="circle-o" isActive={1 === stateTempData.conditionOptions.index}
                         onClick={() => {handleSwitchTempData(1)}} />
                     <FunctionalTab
-                        iconName="refresh" isActive={isCurrentTampData(2)}
+                        iconName="circle-o" isActive={2 === stateTempData.conditionOptions.index}
                         onClick={() => {handleSwitchTempData(2)}} />
                 </div>
 

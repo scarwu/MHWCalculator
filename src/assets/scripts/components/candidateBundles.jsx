@@ -131,10 +131,6 @@ const handleBundlePickUp = (bundle) => {
     CommonState.setter.replaceCurrentEquips(equips);
 };
 
-const isCurrentTampData = (index) => {
-    return index === CommonState.getter.getTempData().candidateBundles.index;
-};
-
 const handleSwitchTempData = (index) => {
     CommonState.setter.switchTempData('candidateBundles', index);
 };
@@ -318,6 +314,7 @@ export default function CandidateBundles(props) {
     /**
      * Hooks
      */
+    const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
     const [stateComputedBundles, updateComputedBundles] = useState(CommonState.getter.getComputedBundles());
     const [stateIsSearching, updateIsSearching] = useState(false);
     const [stateBundleCount, updateBundleCount] = useState(0);
@@ -326,6 +323,7 @@ export default function CandidateBundles(props) {
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
+            updateTempData(CommonState.getter.getTempData());
             updateComputedBundles(CommonState.getter.getComputedBundles());
         });
 
@@ -408,13 +406,13 @@ export default function CandidateBundles(props) {
             <div className="mhwc-panel">
                 <div className="mhwc-icons_bundle-left">
                     <FunctionalTab
-                        iconName="refresh" isActive={isCurrentTampData(0)}
+                        iconName="circle-o" isActive={0 === stateTempData.candidateBundles.index}
                         onClick={() => {handleSwitchTempData(0)}} />
                     <FunctionalTab
-                        iconName="refresh" isActive={isCurrentTampData(1)}
+                        iconName="circle-o" isActive={1 === stateTempData.candidateBundles.index}
                         onClick={() => {handleSwitchTempData(1)}} />
                     <FunctionalTab
-                        iconName="refresh" isActive={isCurrentTampData(2)}
+                        iconName="circle-o" isActive={2 === stateTempData.candidateBundles.index}
                         onClick={() => {handleSwitchTempData(2)}} />
                 </div>
 

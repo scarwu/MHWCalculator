@@ -42,10 +42,6 @@ const handleEquipsDisplayerRefresh = () => {
     CommonState.setter.cleanCurrentEquips();
 };
 
-const isCurrentTampData = (index) => {
-    return index === CommonState.getter.getTempData().equipsDisplayer.index;
-};
-
 const handleSwitchTempData = (index) => {
     CommonState.setter.switchTempData('equipsDisplayer', index);
 };
@@ -406,12 +402,14 @@ export default function EquipsDisplayer(props) {
     /**
      * Hooks
      */
+    const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
     const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
     const [stateRequiredEquipPins, updateRequiredEquipPins] = useState(CommonState.getter.getRequiredEquipPins());
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
+            updateTempData(CommonState.getter.getTempData());
             updateCurrentEquips(CommonState.getter.getCurrentEquips());
             updateRequiredEquipPins(CommonState.getter.getRequiredEquipPins());
         });
@@ -452,13 +450,13 @@ export default function EquipsDisplayer(props) {
             <div className="mhwc-panel">
                 <div className="mhwc-icons_bundle-left">
                     <FunctionalTab
-                        iconName="refresh" isActive={isCurrentTampData(0)}
+                        iconName="circle-o" isActive={0 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(0)}} />
                     <FunctionalTab
-                        iconName="refresh" isActive={isCurrentTampData(1)}
+                        iconName="circle-o" isActive={1 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(1)}} />
                     <FunctionalTab
-                        iconName="refresh" isActive={isCurrentTampData(2)}
+                        iconName="circle-o" isActive={2 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(2)}} />
                 </div>
 

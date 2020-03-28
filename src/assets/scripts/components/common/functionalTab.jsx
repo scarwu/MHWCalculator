@@ -19,9 +19,17 @@ export default function FunctionalTab(props) {
     return useMemo(() => {
         Helper.log('Component: Common -> FunctionalTab');
 
+        let className = [
+            'mhwc-body'
+        ];
+
+        if (isActive) {
+            className.push('is-active');
+        }
+
         return (
             <div className="mhwc-functional_tab">
-                <a className="mhwc-body" onClick={onClick}>
+                <a className={className.join(' ')} onClick={onClick}>
                     <div className="mhwc-icon">
                         <i className={`fa fa-${iconName}`}></i>
                     </div>
