@@ -119,7 +119,7 @@ export default function BundleItemSelector(props) {
         }
 
         return (
-            <div className="mhwc-item mhwc-item-2-step">
+            <div key={bundleId} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
                     <input className="mhwc-input" type="text" placeholder={_('inputName')} ref={refName} />
 
@@ -152,7 +152,7 @@ export default function BundleItemSelector(props) {
                         }
 
                         return Helper.isNotEmpty(equipInfo) ? (
-                            <Fragment>
+                            <Fragment key={index}>
                                 <div className="col-2 mhwc-name">
                                     <span>{_(equipType)}</span>
                                 </div>
@@ -209,7 +209,7 @@ export default function BundleItemSelector(props) {
                         }
 
                         return Helper.isNotEmpty(equipInfo) ? (
-                            <Fragment>
+                            <Fragment key={index}>
                                 <div className="col-2 mhwc-name">
                                     <span>{_(equipType)}</span>
                                 </div>

@@ -69,7 +69,7 @@ class Misc
         srand(self::$seed);
 
         while (true) {
-            $code = '';
+            $code = '_';
 
             for ($i = 0; $i < self::$codeLength; $i++) {
                 $code .= self::$charPool[rand() % $poolSize];
