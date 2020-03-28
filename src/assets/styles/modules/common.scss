@@ -97,14 +97,10 @@
             height: 30px;
             padding-bottom: 10px;
         }
-
-        &:hover {
-            background-color: #333;
-        }
     }
 
     .is-active {
-        background-color: #fff;
+        background-color: #fff !important;
 
         .mhwc-icon {
             color: #999;

@@ -141,5 +141,6 @@
     "bundleCount":          "Bundle Count",
     "searchPercent":        "Percentage",
     "basic":                "Basic",
-    "advanced":             "Advanced"
+    "advanced":             "Advanced",
+    "tab":                  "Tab"
 }

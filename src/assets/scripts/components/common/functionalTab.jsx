@@ -14,7 +14,7 @@ import React, { useMemo } from 'react';
 import Helper from 'core/helper';
 
 export default function FunctionalTab(props) {
-    const {iconName, isActive, onClick} = props;
+    const {iconName, altName, isActive, onClick} = props;
 
     return useMemo(() => {
         Helper.log('Component: Common -> FunctionalTab');
@@ -34,7 +34,11 @@ export default function FunctionalTab(props) {
                         <i className={`fa fa-${iconName}`}></i>
                     </div>
                 </a>
+
+                <div className="mhwc-label">
+                    <span>{altName}</span>
+                </div>
             </div>
         )
-    }, [iconName, isActive]);
+    }, [iconName, altName, isActive]);
 };

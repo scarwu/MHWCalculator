@@ -448,19 +448,22 @@ export default function EquipsDisplayer(props) {
     return (
         <div className="col mhwc-equips">
             <div className="mhwc-panel">
+                <span className="mhwc-title">{_('equipBundle')}</span>
+
                 <div className="mhwc-icons_bundle-left">
                     <FunctionalTab
-                        iconName="circle-o" isActive={0 === stateTempData.equipsDisplayer.index}
+                        iconName="circle-o" altName={_('tab') + ' 1'}
+                        isActive={0 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(0)}} />
                     <FunctionalTab
-                        iconName="circle-o" isActive={1 === stateTempData.equipsDisplayer.index}
+                        iconName="circle-o" altName={_('tab') + ' 2'}
+                        isActive={1 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(1)}} />
                     <FunctionalTab
-                        iconName="circle-o" isActive={2 === stateTempData.equipsDisplayer.index}
+                        iconName="circle-o" altName={_('tab') + ' 3'}
+                        isActive={2 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(2)}} />
                 </div>
-
-                <span className="mhwc-title">{_('equipBundle')}</span>
 
                 <div className="mhwc-icons_bundle-right">
                     <FunctionalButton

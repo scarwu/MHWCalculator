@@ -141,5 +141,6 @@
     "bundleCount":          null,
     "searchPercent":        null,
     "basic":                null,
-    "advanced":             null
+    "advanced":             null,
+    "tab":                  null
 }

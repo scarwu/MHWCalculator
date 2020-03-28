@@ -141,5 +141,6 @@
     "bundleCount":          "數量",
     "searchPercent":        "進度",
     "basic":                "初階",
-    "advanced":             "進階"
+    "advanced":             "進階",
+    "tab":                  "分頁"
 }
