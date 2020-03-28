@@ -86,14 +86,17 @@ export default createStore((state = initialState, action) => {
             let target = action.payload.target;
             let index = action.payload.index;
             let tempData = Helper.deepCopy(state.tempData);
-            let oldBundle = undefined
-            let newBundle = undefined
+            let bundle = undefined;
 
             if (Helper.isEmpty(tempData[target])) {
                 tempData[target] = {
                     index: 0,
                     list: []
                 };
+            }
+
+            if (index === tempData[target].index) {
+                return state;
             }
 
             switch (target) {
@@ -105,60 +108,57 @@ export default createStore((state = initialState, action) => {
                     }
                 }
 
-                oldBundle = Helper.deepCopy(tempData[target].list[index]);
-                newBundle = {
-                    requiredSets: Helper.deepCopy(state.requiredSets),
-                    requiredSkills: Helper.deepCopy(state.requiredSkills)
-                };
+                bundle = Helper.deepCopy(tempData[target].list[index]);
 
-                tempData[target].index = index
-                tempData[target].list[index] = newBundle
+                tempData[target].list[tempData[target].index] = Helper.deepCopy({
+                    requiredSets: state.requiredSets,
+                    requiredSkills: state.requiredSkills
+                });
+                tempData[target].index = index;
 
                 return Object.assign({}, state, {
                     tempData: tempData,
-                    requiredSets: oldBundle.requiredSets,
-                    requiredSkills: oldBundle.requiredSkills
+                    requiredSets: bundle.requiredSets,
+                    requiredSkills: bundle.requiredSkills
                 });
             case 'candidateBundles':
                 if (Helper.isEmpty(tempData[target].list[index])) {
                     tempData[target].list[index] = {
                         computedBundles: []
-                    }
+                    };
                 }
 
-                oldBundle = Helper.deepCopy(tempData[target].list[index]);
-                newBundle = {
-                    computedBundles: Helper.deepCopy(state.computedBundles)
-                };
+                bundle = Helper.deepCopy(tempData[target].list[index]);
 
-                tempData[target].index = index
-                tempData[target].list[index] = newBundle
+                tempData[target].list[tempData[target].index] = Helper.deepCopy({
+                    computedBundles: state.computedBundles
+                });
+                tempData[target].index = index;
 
                 return Object.assign({}, state, {
                     tempData: tempData,
-                    computedBundles: oldBundle.computedBundles
+                    computedBundles: bundle.computedBundles
                 });
             case 'equipsDisplayer':
                 if (Helper.isEmpty(tempData[target].list[index])) {
                     tempData[target].list[index] = {
                         requiredEquipPins: {},
                         currentEquips: {}
-                    }
+                    };
                 }
 
-                oldBundle = Helper.deepCopy(tempData[target].list[index]);
-                newBundle = {
-                    requiredEquipPins: Helper.deepCopy(state.requiredEquipPins),
-                    currentEquips: Helper.deepCopy(state.currentEquips)
-                };
+                bundle = Helper.deepCopy(tempData[target].list[index]);
 
-                tempData[target].index = index
-                tempData[target].list[index] = newBundle
+                tempData[target].list[tempData[target].index] = Helper.deepCopy({
+                    requiredEquipPins: state.requiredEquipPins,
+                    currentEquips: state.currentEquips
+                });
+                tempData[target].index = index;
 
                 return Object.assign({}, state, {
                     tempData: tempData,
-                    requiredEquipPins: oldBundle.requiredEquipPins,
-                    currentEquips: oldBundle.currentEquips
+                    requiredEquipPins: bundle.requiredEquipPins,
+                    currentEquips: bundle.currentEquips
                 });
             }
         })();
@@ -495,52 +495,53 @@ export default createStore((state = initialState, action) => {
     // Current Equips
     case 'SET_CURRENT_EQUIP':
         return (() => {
+            let data = action.payload.data;
             let requiredEquipPins = Helper.deepCopy(state.requiredEquipPins);
             let currentEquips = Helper.deepCopy(state.currentEquips);
 
-            if (Helper.isNotEmpty(action.payload.data.enhanceIndex)) {
+            if (Helper.isNotEmpty(data.enhanceIndex)) {
                 if (Helper.isEmpty(currentEquips.weapon.enhanceIds)) {
                     currentEquips.weapon.enhanceIds = {};
                 }
 
-                currentEquips.weapon.enhanceIds[action.payload.data.enhanceIndex] = action.payload.data.enhanceId;
-            } else if (Helper.isNotEmpty(action.payload.data.slotIndex)) {
+                currentEquips.weapon.enhanceIds[data.enhanceIndex] = data.enhanceId;
+            } else if (Helper.isNotEmpty(data.slotIndex)) {
                 if (Helper.isEmpty(currentEquips.weapon.slotIds)) {
-                    currentEquips[action.payload.data.equipType].slotIds = {};
+                    currentEquips[data.equipType].slotIds = {};
                 }
 
-                currentEquips[action.payload.data.equipType].slotIds[action.payload.data.slotIndex] = action.payload.data.jewelId;
-            } else if ('weapon' === action.payload.data.equipType) {
-                if (Helper.isEmpty(action.payload.data.equipId)) {
+                currentEquips[data.equipType].slotIds[data.slotIndex] = data.jewelId;
+            } else if ('weapon' === data.equipType) {
+                if (Helper.isEmpty(data.equipId)) {
                     requiredEquipPins.weapon = false;
                 }
 
                 currentEquips.weapon = {
-                    id: action.payload.data.equipId,
+                    id: data.equipId,
                     enhanceIds: {},
                     slotIds: {}
                 };
-            } else if ('helm' === action.payload.data.equipType
-                || 'chest' === action.payload.data.equipType
-                || 'arm' === action.payload.data.equipType
-                || 'waist' === action.payload.data.equipType
-                || 'leg' === action.payload.data.equipType
+            } else if ('helm' === data.equipType
+                || 'chest' === data.equipType
+                || 'arm' === data.equipType
+                || 'waist' === data.equipType
+                || 'leg' === data.equipType
             ) {
-                if (Helper.isEmpty(action.payload.data.equipId)) {
-                    requiredEquipPins[action.payload.data.equipType] = false;
+                if (Helper.isEmpty(data.equipId)) {
+                    requiredEquipPins[data.equipType] = false;
                 }
 
-                currentEquips[action.payload.data.equipType] = {
-                    id: action.payload.data.equipId,
+                currentEquips[data.equipType] = {
+                    id: data.equipId,
                     slotIds: {}
                 };
-            } else if ('charm' === action.payload.data.equipType) {
-                if (Helper.isEmpty(action.payload.data.equipId)) {
+            } else if ('charm' === data.equipType) {
+                if (Helper.isEmpty(data.equipId)) {
                     requiredEquipPins.charm = false;
                 }
 
                 currentEquips.charm = {
-                    id: action.payload.data.equipId
+                    id: data.equipId
                 };
             }
 
@@ -593,13 +594,14 @@ export default createStore((state = initialState, action) => {
         })();
     case 'TOGGLE_ALGORITHM_PARAMS_FLAG':
         return (() => {
+            let target = action.payload.target;
             let algorithmParams = Helper.deepCopy(state.algorithmParams);
 
-            if (Helper.isEmpty(algorithmParams.flag[action.payload.target])) {
-                return state;
+            if (Helper.isEmpty(algorithmParams.flag[target])) {
+                algorithmParams.flag[target] = false;
             }
 
-            algorithmParams.flag[action.payload.target] = !algorithmParams.flag[action.payload.target];
+            algorithmParams.flag[target] = !algorithmParams.flag[target];
 
             return Object.assign({}, state, {
                 algorithmParams: algorithmParams
@@ -607,13 +609,16 @@ export default createStore((state = initialState, action) => {
         })();
     case 'SET_ALGORITHM_PARAMS_USING_FACTOR':
         return (() => {
+            let target = action.payload.target;
+            let flag = action.payload.flag;
+            let value = action.payload.value;
             let algorithmParams = Helper.deepCopy(state.algorithmParams);
 
-            if (Helper.isEmpty(algorithmParams.usingFactor[action.payload.target])) {
-                return state;
+            if (Helper.isEmpty(algorithmParams.usingFactor[target])) {
+                return algorithmParams.usingFactor[target] = {};
             }
 
-            algorithmParams.usingFactor[action.payload.target][action.payload.flag] = action.payload.value;
+            algorithmParams.usingFactor[target][flag] = value;
 
             return Object.assign({}, state, {
                 algorithmParams: algorithmParams
