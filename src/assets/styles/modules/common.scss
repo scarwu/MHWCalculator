@@ -10,13 +10,15 @@
 // Common Components
 .mhwc-functional_input,
 .mhwc-functional_selector,
-.mhwc-functional_button {
+.mhwc-functional_button,
+.mhwc-functional_tab {
     transition-property: background-color;
     transition-duration: 0.1s;
 
     position: relative;
     display: inline-block;
-    margin-left: 2px;
+    margin-left: 1px;
+    margin-right: 1px;
 
     @include font-size(1.2);
 
@@ -81,6 +83,31 @@
 
         .mhwc-label {
             display: block;
+        }
+    }
+}
+
+.mhwc-functional_tab {
+    .mhwc-body {
+        background-color: #999;
+
+        @include border-radius(3px 3px 0 0);
+
+        .mhwc-icon {
+            height: 30px;
+            padding-bottom: 10px;
+        }
+    }
+
+    .is-active {
+        background-color: #fff !important;
+
+        .mhwc-icon {
+            color: #999;
+        }
+
+        &:hover {
+            background-color: #fff;
         }
     }
 }

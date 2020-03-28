@@ -146,5 +146,6 @@
     "advanced":             "進階",
     "hour":                 "時",
     "minute":               "分",
-    "second":               "秒"
+    "second":               "秒",
+    "tab":                  "分頁"
 }

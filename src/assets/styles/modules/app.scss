@@ -35,11 +35,13 @@
         position: absolute;
         top: 0;
         right: 10px;
+        padding-top: 20px;
         height: $header-height;
-        line-height: $header-height;
 
         .mhwc-functional_selector,
         .mhwc-functional_button {
+            vertical-align: top;
+
             .mhwc-body {
                 background-color: #999;
             }
@@ -75,14 +77,17 @@
                 @include font-size(1.6);
             }
 
-            .mhwc-icons_bundle {
+            .mhwc-icons_bundle-left,
+            .mhwc-icons_bundle-right {
                 position: absolute;
                 top: 0;
-                right: 10px;
+                padding-top: 10px;
                 height: $panel-height;
-                line-height: $panel-height;
 
+                .mhwc-functional_tab,
                 .mhwc-functional_button {
+                    vertical-align: top;
+
                     .mhwc-body {
                         background-color: #999;
                     }
@@ -93,6 +98,21 @@
                         }
                     }
                 }
+            }
+
+            .mhwc-icons_bundle-left {
+                left: 10px;
+
+                .mhwc-functional_tab {
+                    .mhwc-label {
+                        left: 22px;
+                        right: initial;
+                    }
+                }
+            }
+
+            .mhwc-icons_bundle-right {
+                right: 10px;
             }
         }
 

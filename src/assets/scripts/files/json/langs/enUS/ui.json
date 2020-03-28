@@ -146,5 +146,6 @@
     "advanced":             "Advanced",
     "hour":                 "h",
     "minute":               "m",
-    "second":               "s"
+    "second":               "s",
+    "tab":                  "Tab"
 }

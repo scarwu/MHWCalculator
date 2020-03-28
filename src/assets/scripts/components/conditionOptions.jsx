@@ -20,6 +20,7 @@ import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
 import FunctionalButton from 'components/common/functionalButton';
+import FunctionalTab from 'components/common/functionalTab';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -45,6 +46,10 @@ const handleShowSkillItemSelector = () => {
     });
 };
 
+const handleSwitchTempData = (index) => {
+    CommonState.setter.switchTempData('conditionOptions', index);
+};
+
 /**
  * Render Functions
  */
@@ -61,6 +66,7 @@ const renderSetItem = (set) => {
         <div key={setInfo.id} className="mhwc-item mhwc-item-2-step">
             <div className="col-12 mhwc-name">
                 <span>{_(setInfo.name)} x {setRequire}</span>
+
                 <div className="mhwc-icons_bundle">
                     <FunctionalButton
                         iconName="minus-circle" altName={_('down')}
@@ -118,6 +124,7 @@ const renderSkillItem = (skill, enableSkillIdList) => {
                 ) : (
                     <span>{_(skillInfo.name)} Lv.{skill.level} / {currentSkillLevel} ({totalSkillLevel})</span>
                 )}
+
                 <div className="mhwc-icons_bundle">
                     <FunctionalButton
                         iconName="minus-circle" altName={_('down')}
@@ -227,12 +234,44 @@ const SkillList = (props) => {
 };
 
 export default function ConditionOptions(props) {
+
+    /**
+     * Hooks
+     */
+    const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
+
+    // Like Did Mount & Will Unmount Cycle
+    useEffect(() => {
+        const unsubscribe = CommonState.store.subscribe(() => {
+            updateTempData(CommonState.getter.getTempData());
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    }, []);
+
     return (
         <div className="col mhwc-conditions">
             <div className="mhwc-panel">
                 <span className="mhwc-title">{_('requireCondition')}</span>
 
-                <div className="mhwc-icons_bundle">
+                <div className="mhwc-icons_bundle-left">
+                    <FunctionalTab
+                        iconName="circle-o" altName={_('tab') + ' 1'}
+                        isActive={0 === stateTempData.conditionOptions.index}
+                        onClick={() => {handleSwitchTempData(0)}} />
+                    <FunctionalTab
+                        iconName="circle-o" altName={_('tab') + ' 2'}
+                        isActive={1 === stateTempData.conditionOptions.index}
+                        onClick={() => {handleSwitchTempData(1)}} />
+                    <FunctionalTab
+                        iconName="circle-o" altName={_('tab') + ' 3'}
+                        isActive={2 === stateTempData.conditionOptions.index}
+                        onClick={() => {handleSwitchTempData(2)}} />
+                </div>
+
+                <div className="mhwc-icons_bundle-right">
                     <FunctionalButton
                         iconName="refresh" altName={_('reset')}
                         onClick={handleRequireConditionRefresh} />

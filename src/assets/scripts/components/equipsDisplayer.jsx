@@ -23,6 +23,7 @@ import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
 import FunctionalButton from 'components/common/functionalButton';
+import FunctionalTab from 'components/common/functionalTab';
 import SharpnessBar from 'components/common/sharpnessBar';
 
 // Load State Control
@@ -39,6 +40,10 @@ import Constant from 'constant';
 const handleEquipsDisplayerRefresh = () => {
     CommonState.setter.cleanRequiredEquipPins();
     CommonState.setter.cleanCurrentEquips();
+};
+
+const handleSwitchTempData = (index) => {
+    CommonState.setter.switchTempData('equipsDisplayer', index);
 };
 
 /**
@@ -397,12 +402,14 @@ export default function EquipsDisplayer(props) {
     /**
      * Hooks
      */
+    const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
     const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
     const [stateRequiredEquipPins, updateRequiredEquipPins] = useState(CommonState.getter.getRequiredEquipPins());
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
+            updateTempData(CommonState.getter.getTempData());
             updateCurrentEquips(CommonState.getter.getCurrentEquips());
             updateRequiredEquipPins(CommonState.getter.getRequiredEquipPins());
         });
@@ -443,7 +450,22 @@ export default function EquipsDisplayer(props) {
             <div className="mhwc-panel">
                 <span className="mhwc-title">{_('equipBundle')}</span>
 
-                <div className="mhwc-icons_bundle">
+                <div className="mhwc-icons_bundle-left">
+                    <FunctionalTab
+                        iconName="circle-o" altName={_('tab') + ' 1'}
+                        isActive={0 === stateTempData.equipsDisplayer.index}
+                        onClick={() => {handleSwitchTempData(0)}} />
+                    <FunctionalTab
+                        iconName="circle-o" altName={_('tab') + ' 2'}
+                        isActive={1 === stateTempData.equipsDisplayer.index}
+                        onClick={() => {handleSwitchTempData(1)}} />
+                    <FunctionalTab
+                        iconName="circle-o" altName={_('tab') + ' 3'}
+                        isActive={2 === stateTempData.equipsDisplayer.index}
+                        onClick={() => {handleSwitchTempData(2)}} />
+                </div>
+
+                <div className="mhwc-icons_bundle-right">
                     <FunctionalButton
                         iconName="refresh" altName={_('reset')}
                         onClick={handleEquipsDisplayerRefresh} />
