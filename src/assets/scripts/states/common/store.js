@@ -74,7 +74,8 @@ const initialState = {
         Status.get(statusPrefix + ':algorithmParams') || {}
     ),
     computedBundles: Status.get(statusPrefix + ':computedBundles') || [],
-    reservedBundles: Status.get(statusPrefix + ':reservedBundles') || []
+    reservedBundles: Status.get(statusPrefix + ':reservedBundles') || [],
+    customWeapon: Status.get(statusPrefix + ':customWeapon') || Helper.deepCopy(Constant.default.customWeapon)
 };
 
 export default createStore((state = initialState, action) => {
@@ -672,6 +673,123 @@ export default createStore((state = initialState, action) => {
                 return reservedBundles;
             })()
         });
+
+    // Custom Weapon
+    case 'SET_CUSTOM_WEAPON_VALUE':
+        return (() => {
+            let target = action.payload.target;
+            let value = action.payload.value;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            customWeapon[target] = value;
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
+    case 'SET_CUSTOM_WEAPON_SHARPNESS':
+        return (() => {
+            let step = action.payload.step;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            if ('none' === step) {
+                customWeapon.sharpness = null;
+            } else {
+                customWeapon.sharpness = {
+                    value: 350,
+                    steps: {
+                        red: 0,
+                        orange: 0,
+                        yellow: 0,
+                        green: 0,
+                        blue: 0,
+                        white: 0,
+                        purple: 0
+                    }
+                };
+
+                customWeapon.sharpness.steps[step] = 350
+            }
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
+    case 'SET_CUSTOM_WEAPON_ELEMENT_TYPE':
+        return (() => {
+            let target = action.payload.target;
+            let type = action.payload.type;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            if ('none' === type) {
+                customWeapon.element[target] = null;
+            } else {
+                customWeapon.element[target] = {
+                    type: type,
+                    minValue: 0,
+                    maxValue: null,
+                    isHidden: false
+                };
+            }
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
+
+    case 'SET_CUSTOM_WEAPON_ELEMENT_VALUE':
+        return (() => {
+            let target = action.payload.target;
+            let value = action.payload.value;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            customWeapone.element[target].minValue = value;
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
+    case 'SET_CUSTOM_WEAPON_SLOT':
+        return (() => {
+            let index = action.payload.index;
+            let size = action.payload.size;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            if ('none' === size) {
+                customWeapon.slots = customWeapon.slots.filter((currentIndex) => {
+                    return index === currentIndex;
+                });
+            } else {
+                customWeapon.slots[index] = {
+                    size: size
+                };
+            }
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
+    case 'SET_CUSTOM_WEAPON_SKILL':
+        return (() => {
+            let index = action.payload.index;
+            let id = action.payload.id;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            if ('none' === id) {
+                customWeapon.skills = customWeapon.skills.filter((currentIndex) => {
+                    return index === currentIndex;
+                });
+            } else {
+                customWeapon.skills[index] = {
+                    id: id,
+                    level: 1
+                };
+            }
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
 
     // Default
     default:

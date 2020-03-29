@@ -33,5 +33,8 @@ export default {
     },
     getReservedBundles: () => {
         return Store.getState().reservedBundles;
+    },
+    getCustomWeapon: () => {
+        return Store.getState().customWeapon;
     }
 };

@@ -290,21 +290,21 @@
         }
     }
 
-    .mhwc-input {
-        padding: 0 5px;
-        height: 21px;
-        line-height: 21px;
-        border: 1px solid #666;
+    // .mhwc-input {
+    //     padding: 0 5px;
+    //     height: 21px;
+    //     line-height: 21px;
+    //     border: 1px solid #666;
 
-        @include border-radius(5px);
-    }
+    //     @include border-radius(5px);
+    // }
 
-    .mhwc-input-ev {
-        .mhwc-input {
-            margin: 0 5px;
-            width: 50px;
-        }
-    }
+    // .mhwc-input-ev {
+    //     .mhwc-input {
+    //         margin: 0 5px;
+    //         width: 50px;
+    //     }
+    // }
 }
 
 .mhwc-item-2-step {

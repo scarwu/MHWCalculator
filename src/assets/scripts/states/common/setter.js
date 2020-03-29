@@ -225,5 +225,60 @@ export default {
                 index: index
             }
         });
+    },
+
+    // Custom Weapon
+    setCustomWeaponValue: (target, value) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_VALUE',
+            payload: {
+                target: target,
+                value: value
+            }
+        });
+    },
+    setCustomWeaponSharpness: (step) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_SHARPNESS',
+            payload: {
+                step: step
+            }
+        });
+    },
+    setCustomWeaponElementType: (target, type) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_ELEMENT_TYPE',
+            payload: {
+                target: target,
+                type: type
+            }
+        });
+    },
+    setCustomWeaponElementValue: (target, value) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_ELEMENT_VALUE',
+            payload: {
+                target: target,
+                value: value
+            }
+        });
+    },
+    setCustomWeaponSlot: (index, size) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_SLOT',
+            payload: {
+                index: index,
+                size: size
+            }
+        });
+    },
+    setCustomWeaponSkill: (index, id) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_SKILL',
+            payload: {
+                index: index,
+                id: id
+            }
+        });
     }
 };

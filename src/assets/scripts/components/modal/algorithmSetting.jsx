@@ -40,28 +40,22 @@ import Config from 'config';
 const levelMapping = [ 'I', 'II', 'III', 'IV', 'V' ];
 
 const sortList = [
-    { key: 'complex', value: _('complexSort') },
-    { key: 'defense', value: _('defenseSort') },
-    { key: 'fire', value: _('fireSort') },
-    { key: 'water', value: _('waterSort') },
-    { key: 'thunder', value: _('thunderSort') },
-    { key: 'ice', value: _('iceSort') },
-    { key: 'dragon', value: _('dragonSort') },
-    { key: 'amount', value: _('amountSort') },
-    { key: 'slot', value: _('slotSort') },
+    { key: 'complex',       value: _('complexSort') },
+    { key: 'defense',       value: _('defenseSort') },
+    { key: 'fire',          value: _('fireSort') },
+    { key: 'water',         value: _('waterSort') },
+    { key: 'thunder',       value: _('thunderSort') },
+    { key: 'ice',           value: _('iceSort') },
+    { key: 'dragon',        value: _('dragonSort') },
+    { key: 'amount',        value: _('amountSort') },
+    { key: 'slot',          value: _('slotSort') },
     { key: 'expectedValue', value: _('expectedValueSort') },
     { key: 'expectedLevel', value: _('expectedLevelSort') }
 ];
 
 const orderList = [
-    { key: 'desc', value: _('desc') },
-    { key: 'asc', value: _('asc') }
-];
-
-const strategyList = [
-    { key: 'rough', value: _('roughStrategy') },
-    { key: 'speed', value: _('speedStrategy') },
-    { key: 'complete', value: _('completeStrategy') }
+    { key: 'desc',          value: _('desc') },
+    { key: 'asc',           value: _('asc') }
 ];
 
 const armorRareList = [5, 6, 7, 8, 9, 10, 11, 12];

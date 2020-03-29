@@ -212,6 +212,24 @@ export default {
             leg: false,
             charm: false
         },
+        customWeapon: {
+            id: 'customWeapon',
+            rare: null,
+            type: null,
+            series: null,
+            name: 'customWeapon',
+            attack: null,
+            criticalRate: null,
+            defense: null,
+            sharpness:  null,
+            element: {
+                attack: null,
+                status: null
+            },
+            elderseal: null,
+            slots: [],
+            skills: []
+        },
         status: {
             health: 100,
             stamina: 100,

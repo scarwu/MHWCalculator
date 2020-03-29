@@ -442,7 +442,7 @@ export default function EquipsDisplayer(props) {
 
         if ('customWeapon' === stateCurrentEquips.weapon.id) {
             blocks.push((
-                <CustomWeapon />
+                <CustomWeapon key="customWeapon" />
             ));
         } else {
             blocks.push(renderEquipBlock(
