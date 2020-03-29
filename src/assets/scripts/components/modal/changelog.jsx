@@ -41,6 +41,27 @@ const changelogMap = {
  * Handle Functions
  */
 const getChangelog = () => {
+    let changeLog = Helper.isNotEmpty(changelogMap[Status.get('sys:lang')])
+        ? changelogMap[Status.get('sys:lang')] : false;
+
+    if (false === changeLog) {
+        return false;
+    }
+
+    return changeLog.replace(/\n/g, '').split('<hr>').map((log) => {
+        let [all, title, content] = log.match(/^\<h3.+\>(.+)\<\/h3\>(.+)$/);
+
+        return (
+            <div className="mhwc-item mhwc-item-2-step">
+                <div className="col-12 mhwc-name">
+                    <span>{title}</span>
+                </div>
+                <div className="col-12 mhwc-value mhwc-description"
+                     dangerouslySetInnerHTML={{__html: content}}></div>
+            </div>
+        );
+    });
+
     return Helper.isNotEmpty(changelogMap[Status.get('sys:lang')])
         ? changelogMap[Status.get('sys:lang')] : false;
 };
@@ -88,7 +109,9 @@ export default function Changelog(props) {
                     </div>
                 </div>
                 <div className="mhwc-list">
-                    <div className="mhwc-article" dangerouslySetInnerHTML={{__html: getChangelog()}}></div>
+                    <div className="mhwc-wrapper">
+                        {getChangelog()}
+                    </div>
                 </div>
             </div>
         </div>

@@ -215,9 +215,8 @@
 
     .mhwc-name {
         margin: 5px 2.5px 0 2.5px;
-        padding: 0;
+        padding: 4px 0 5px 0;
         height: 30px;
-        line-height: 30px;
     }
 
     .mhwc-content {
@@ -229,16 +228,15 @@
 
     .mhwc-value {
         margin: 5px 2.5px 0 2.5px;
-        padding: 0px 5px;
-        height: 32px;
-        line-height: 30px;
+        padding: 4px 5px 5px 5px;
+        min-height: 32px;
 
         @include nowrap();
     }
 
     .mhwc-icons_bundle {
-        padding-top: 5px;
-        height: 30px;
+        margin-top: 1px;
+        height: 20px;
         float: right;
 
         .mhwc-functional_input,
@@ -260,6 +258,10 @@
 
     .mhwc-description {
         @include wrap();
+
+        ul {
+            margin: 0;
+        }
     }
 
     .mhwc-input {
