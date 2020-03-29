@@ -692,7 +692,7 @@ export default createStore((state = initialState, action) => {
             let step = action.payload.step;
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
-            if ('none' === step) {
+            if (null === step) {
                 customWeapon.sharpness = null;
             } else {
                 customWeapon.sharpness = {
@@ -721,12 +721,12 @@ export default createStore((state = initialState, action) => {
             let type = action.payload.type;
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
-            if ('none' === type) {
+            if (null === type) {
                 customWeapon.element[target] = null;
             } else {
                 customWeapon.element[target] = {
                     type: type,
-                    minValue: 0,
+                    minValue: null,
                     maxValue: null,
                     isHidden: false
                 };
@@ -755,8 +755,8 @@ export default createStore((state = initialState, action) => {
             let size = action.payload.size;
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
-            if ('none' === size) {
-                customWeapon.slots = customWeapon.slots.filter((currentIndex) => {
+            if (null === size) {
+                customWeapon.slots = customWeapon.slots.filter((slot, currentIndex) => {
                     return index === currentIndex;
                 });
             } else {
@@ -775,7 +775,7 @@ export default createStore((state = initialState, action) => {
             let id = action.payload.id;
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
-            if ('none' === id) {
+            if (null === id) {
                 customWeapon.skills = customWeapon.skills.filter((currentIndex) => {
                     return index === currentIndex;
                 });

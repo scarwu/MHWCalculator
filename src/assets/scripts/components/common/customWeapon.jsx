@@ -135,6 +135,112 @@ const getSkillId = (skill) => {
     return skill.id;
 };
 
+/**
+ * Render Functions
+ */
+const renderEnhanceOption = (equipType, enhanceIndex, enhanceInfo) => {
+    let selectorData = {
+        equipType: equipType,
+        enhanceIndex: enhanceIndex,
+        enhanceId: (Helper.isNotEmpty(enhanceInfo)) ? enhanceInfo.id : null
+    };
+
+    let emptySelectorData = {
+        equipType: equipType,
+        enhanceIndex: enhanceIndex,
+        enhanceId: null
+    };
+
+    if (Helper.isEmpty(enhanceInfo)) {
+        return (
+            <Fragment key={`${equipType}:${enhanceIndex}`}>
+                <div className="col-3 mhwc-name">
+                    <span>{_('enhance')}: {enhanceIndex + 1}</span>
+                </div>
+
+                <div className="col-9 mhwc-value">
+                    <div className="mhwc-icons_bundle">
+                        <IconButton
+                            iconName="plus" altName={_('add')}
+                            onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
+                    </div>
+                </div>
+            </Fragment>
+        );
+    }
+
+    return (
+        <Fragment key={`${equipType}:${enhanceIndex}`}>
+            <div className="col-3 mhwc-name">
+                <span>{_('enhance')}: {enhanceIndex + 1}</span>
+            </div>
+            <div className="col-9 mhwc-value">
+                <span>{_(enhanceInfo.name)}</span>
+                <div className="mhwc-icons_bundle">
+                    <IconButton
+                        iconName="exchange" altName={_('change')}
+                        onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
+                    <IconButton
+                        iconName="times" altName={_('clean')}
+                        onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
+                </div>
+            </div>
+        </Fragment>
+    );
+};
+
+const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
+    let selectorData = {
+        equipType: equipType,
+        slotIndex: slotIndex,
+        slotSize: slotSize,
+        jewelId: (Helper.isNotEmpty(jewelInfo)) ? jewelInfo.id : null
+    };
+
+    let emptySelectorData = {
+        equipType: equipType,
+        slotIndex: slotIndex,
+        slotSize: slotSize,
+        jewelId: null
+    };
+
+    if (Helper.isEmpty(jewelInfo)) {
+        return (
+            <Fragment key={`${equipType}:${slotIndex}`}>
+                <div className="col-3 mhwc-name">
+                    <span>{_('slot')}: {slotIndex + 1} [{slotSize}]</span>
+                </div>
+                <div className="col-9 mhwc-value">
+                    <div className="mhwc-icons_bundle">
+                        <IconButton
+                            iconName="plus" altName={_('add')}
+                            onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
+                    </div>
+                </div>
+            </Fragment>
+        );
+    }
+
+    return (
+        <Fragment key={`${equipType}:${slotIndex}`}>
+            <div className="col-3 mhwc-name">
+                <span>{_('slot')}: {slotIndex + 1} [{slotSize}]</span>
+            </div>
+            <div className="col-9 mhwc-value">
+                <span>[{jewelInfo.size}] {_(jewelInfo.name)}</span>
+                <div className="mhwc-icons_bundle">
+                    <IconButton
+                        iconName="exchange" altName={_('change')}
+                        onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
+                    <IconButton
+                        iconName="times" altName={_('clean')}
+                        onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
+                </div>
+            </div>
+        </Fragment>
+    );
+};
+
 export default function CustomWeapon(props) {
 
     /**
@@ -191,7 +297,7 @@ export default function CustomWeapon(props) {
                         <BasicSelector
                             defaultValue={getValue(stateCustomWeapon.rare)}
                             options={rareList} onChange={(event) => {
-                                let value = (null !== event.target.value)
+                                let value = ('none' !== event.target.value)
                                     ? parseInt(event.target.value) : null;
 
                                 CommonState.setter.setCustomWeaponValue('rare', value);
@@ -204,7 +310,10 @@ export default function CustomWeapon(props) {
                         <BasicSelector
                             defaultValue={getSharpnessStep(stateCustomWeapon.sharpness)}
                             options={sharpnessList} onChange={(event) => {
-                                CommonState.setter.setCustomWeaponSharpness(event.target.value);
+                                let value = ('none' !== event.target.value)
+                                    ? event.target.value : null;
+
+                                CommonState.setter.setCustomWeaponSharpness(value);
                             }} />
                     </div>
 
@@ -214,7 +323,7 @@ export default function CustomWeapon(props) {
                     <div className="col-3 mhwc-value">
                         <BasicInput
                             defaultValue={stateCustomWeapon.attack} onChange={(event) => {
-                                let value = (null !== event.target.value)
+                                let value = ('' !== event.target.value)
                                     ? parseInt(event.target.value) : null;
 
                                 CommonState.setter.setCustomWeaponValue('attack', value);
@@ -227,7 +336,7 @@ export default function CustomWeapon(props) {
                     <div className="col-3 mhwc-value">
                         <BasicInput
                             defaultValue={stateCustomWeapon.criticalRate} onChange={() => {
-                                let value = (null !== event.target.value)
+                                let value = ('' !== event.target.value)
                                     ? parseInt(event.target.value) : null;
 
                                 CommonState.setter.setCustomWeaponValue('criticalRate', value);
@@ -240,7 +349,7 @@ export default function CustomWeapon(props) {
                     <div className="col-3 mhwc-value">
                         <BasicInput
                             defaultValue={stateCustomWeapon.defense} onChange={() => {
-                                let value = (null !== event.target.value)
+                                let value = ('' !== event.target.value)
                                     ? parseInt(event.target.value) : null;
 
                                 CommonState.setter.setCustomWeaponValue('defense', value);
@@ -254,7 +363,10 @@ export default function CustomWeapon(props) {
                         <BasicSelector
                             defaultValue={getValue(stateCustomWeapon.elderseal)}
                             options={eldersealList} onChange={(event) => {
-                                CommonState.setter.setCustomWeaponValue('elderseal', event.target.value);
+                                let value = ('none' !== event.target.value)
+                                    ? event.target.value : null;
+
+                                CommonState.setter.setCustomWeaponValue('elderseal', value);
                             }} />
                     </div>
                 </div>
@@ -266,14 +378,17 @@ export default function CustomWeapon(props) {
                         <BasicSelector
                             defaultValue={getElementType(stateCustomWeapon.element.attack)}
                             options={attackElementList} onChange={(event) => {
-                                CommonState.setter.setCustomWeaponElementType('attack', event.target.value);
+                                let value = ('none' !== event.target.value)
+                                    ? event.target.value : null;
+
+                                CommonState.setter.setCustomWeaponElementType('attack', value);
                             }} />
                     </div>
                     {('none' !== getElementType(stateCustomWeapon.element.attack)) ? (
                         <div className="col-6 mhwc-value">
                             <BasicInput
                                 defaultValue={stateCustomWeapon.element.attack.minValue} onChange={() => {
-                                    let value = (null !== event.target.value)
+                                    let value = ('' !== event.target.value)
                                         ? parseInt(event.target.value) : null;
 
                                     CommonState.setter.setCustomWeaponElementValue('attack', value);
@@ -287,14 +402,17 @@ export default function CustomWeapon(props) {
                         <BasicSelector
                             defaultValue={getElementType(stateCustomWeapon.element.status)}
                             options={statusElementList} onChange={(event) => {
-                                CommonState.setter.setCustomWeaponElementType('status', event.target.value);
+                                let value = ('none' !== event.target.value)
+                                    ? event.target.value : null;
+
+                                CommonState.setter.setCustomWeaponElementType('status', value);
                             }} />
                     </div>
                     {('none' !== getElementType(stateCustomWeapon.element.status)) ? (
                         <div className="col-6 mhwc-value">
                             <BasicInput
                                 defaultValue={stateCustomWeapon.element.status.minValue} onChange={() => {
-                                    let value = (null !== event.target.value)
+                                    let value = ('' !== event.target.value)
                                         ? parseInt(event.target.value) : null;
 
                                     CommonState.setter.setCustomWeaponElementValue('status', value);
@@ -311,9 +429,9 @@ export default function CustomWeapon(props) {
                                 </div>
                                 <div className="col-3 mhwc-value">
                                     <BasicSelector
-                                        defaultValue={getSkillId(stateCustomWeapon.slots[index])}
+                                        defaultValue={getSlotSize(stateCustomWeapon.slots[index])}
                                         options={slotSizeList} onChange={(event) => {
-                                            let value = (null !== event.target.value)
+                                            let value = ('none' !== event.target.value)
                                                 ? parseInt(event.target.value) : null;
 
                                             CommonState.setter.setCustomWeaponSlot(index, value);
@@ -336,7 +454,10 @@ export default function CustomWeapon(props) {
                         <BasicSelector
                             defaultValue={getSkillId(stateCustomWeapon.skills[0])}
                             options={skillList} onChange={(event) => {
-                                CommonState.setter.setCustomWeaponSkill(0, event.target.value);
+                                let value = ('none' !== event.target.value)
+                                    ? event.target.value : null;
+
+                                CommonState.setter.setCustomWeaponSkill(0, value);
                             }} />
                     </div>
                 </div>
