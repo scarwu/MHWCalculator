@@ -148,5 +148,13 @@
     "minute":               "分",
     "second":               "秒",
     "tab":                  null,
-    "customWeapon":         null
+    "customWeapon":         null,
+    "none":                 null,
+    "red":                  null,
+    "orange":               null,
+    "yellow":               null,
+    "green":                null,
+    "blue":                 null,
+    "white":                null,
+    "purple":               null
 }

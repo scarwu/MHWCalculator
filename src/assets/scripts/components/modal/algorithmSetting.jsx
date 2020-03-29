@@ -393,7 +393,7 @@ export default function AlgorithmSetting(props) {
                     <div className="mhwc-icons_bundle">
                         <FunctionalInput
                             iconName="search" placeholder={_('inputKeyword')}
-                             defaultValue={stateSegment} onChange={handleSegmentInput} />
+                            defaultValue={stateSegment} onChange={handleSegmentInput} />
 
                         <FunctionalButton
                             iconName="times" altName={_('close')}

@@ -148,5 +148,13 @@
     "minute":               "m",
     "second":               "s",
     "tab":                  "Tab",
-    "customWeapon":         "Custom Weapon"
+    "customWeapon":         "Custom Weapon",
+    "none":                 "None",
+    "red":                  "Red",
+    "orange":               "Orange",
+    "yellow":               "Yellow",
+    "green":                "Green",
+    "blue":                 "Blue",
+    "white":                "White",
+    "purple":               "Purple"
 }

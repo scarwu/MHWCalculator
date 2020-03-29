@@ -148,5 +148,13 @@
     "minute":               "分",
     "second":               "秒",
     "tab":                  "分頁",
-    "customWeapon":         "自訂武器"
+    "customWeapon":         "自訂武器",
+    "none":                 "無",
+    "red":                  "紅",
+    "orange":               "橘",
+    "yellow":               "黃",
+    "green":                "綠",
+    "blue":                 "藍",
+    "white":                "白",
+    "purple":               "紫"
 }
