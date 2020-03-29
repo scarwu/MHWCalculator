@@ -25,6 +25,7 @@ import CommonDataset from 'libraries/dataset/common';
 import FunctionalButton from 'components/common/functionalButton';
 import FunctionalTab from 'components/common/functionalTab';
 import SharpnessBar from 'components/common/sharpnessBar';
+import CustomWeapon from 'components/common/customWeapon';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -298,6 +299,14 @@ const renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
                 <div className="col-12 mhwc-name">
                     <span>{_(equipType)}</span>
                     <div className="mhwc-icons_bundle">
+                        {'weapon' === equipType ? (
+                            <FunctionalButton
+                                iconName="wrench" altName={_('customWeapon')}
+                                onClick={() => {CommonState.setter.setCurrentEquip({
+                                    equipType: 'weapon',
+                                    equipId: 'customWeapon'
+                                })}} />
+                        ) : false}
                         <FunctionalButton
                             iconName="plus" altName={_('add')}
                             onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
@@ -319,6 +328,14 @@ const renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
                         iconName={isEquipLock ? 'lock' : 'unlock-alt'}
                         altName={isEquipLock ? _('unlock') : _('lock')}
                         onClick={() => {CommonState.setter.toggleRequiredEquipPins(equipType)}} />
+                    {'weapon' === equipType ? (
+                        <FunctionalButton
+                            iconName="wrench" altName={_('customWeapon')}
+                            onClick={() => {CommonState.setter.setCurrentEquip({
+                                equipType: 'weapon',
+                                equipId: 'customWeapon'
+                            })}} />
+                    ) : false}
                     <FunctionalButton
                         iconName="exchange" altName={_('change')}
                         onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
@@ -421,12 +438,19 @@ export default function EquipsDisplayer(props) {
 
     const getContent = useMemo(() => {
         let blocks = [];
+        let isCustomWeapon = true;
 
-        blocks.push(renderEquipBlock(
-            'weapon',
-            CommonDataset.getAppliedWeaponInfo(stateCurrentEquips.weapon),
-            stateRequiredEquipPins.weapon
-        ));
+        if ('customWeapon' === stateCurrentEquips.weapon.id) {
+            blocks.push((
+                <CustomWeapon />
+            ));
+        } else {
+            blocks.push(renderEquipBlock(
+                'weapon',
+                CommonDataset.getAppliedWeaponInfo(stateCurrentEquips.weapon),
+                stateRequiredEquipPins.weapon
+            ));
+        }
 
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             blocks.push(renderEquipBlock(

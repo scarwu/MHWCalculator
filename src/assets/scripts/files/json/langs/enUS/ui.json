@@ -147,5 +147,6 @@
     "hour":                 "h",
     "minute":               "m",
     "second":               "s",
-    "tab":                  "Tab"
+    "tab":                  "Tab",
+    "customWeapon":         "Custom Weapon"
 }

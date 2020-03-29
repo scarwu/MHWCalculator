@@ -147,5 +147,6 @@
     "hour":                 "時",
     "minute":               "分",
     "second":               "秒",
-    "tab":                  null
+    "tab":                  null,
+    "customWeapon":         null
 }

@@ -147,5 +147,6 @@
     "hour":                 "時",
     "minute":               "分",
     "second":               "秒",
-    "tab":                  "分頁"
+    "tab":                  "分頁",
+    "customWeapon":         "自訂武器"
 }
