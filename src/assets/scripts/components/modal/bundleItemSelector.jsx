@@ -47,6 +47,8 @@ export default function BundleItemSelector(props) {
         const unsubscribeCommon = CommonState.store.subscribe(() => {
             updateReservedBundles(CommonState.getter.getReservedBundles());
             updateCurrentEquips(CommonState.getter.getCurrentEquips());
+
+            refNameList.current = CommonState.getter.getReservedBundles().map(() => createRef());
         });
 
         const unsubscribeModal = ModalState.store.subscribe(() => {
@@ -88,7 +90,7 @@ export default function BundleItemSelector(props) {
                 equips: stateCurrentEquips
             });
         }
-    }, []);
+    }, [stateCurrentEquips]);
 
     const handleBundlePickUp = useCallback((index) => {
         CommonState.setter.replaceCurrentEquips(stateReservedBundles[index].equips);
@@ -121,7 +123,8 @@ export default function BundleItemSelector(props) {
         return (
             <div key={bundleId} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
-                    <input className="mhwc-input" type="text" placeholder={_('inputName')} ref={refName} />
+                    <input className="mhwc-input" type="text"
+                        placeholder={_('inputName')} ref={refName} />
 
                     <div className="mhwc-icons_bundle">
                         <FunctionalButton
@@ -169,22 +172,21 @@ export default function BundleItemSelector(props) {
 
     let renderItem = (data, index) => {
         return (
-            <div key={data.id} className="mhwc-item mhwc-item-2-step">
+            <div key={`${data.id}:${index}`} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
-                    <input className="mhwc-input" type="text" placeholder={_('inputName')} ref={refNameList.current[index]} defaultValue={data.name} />
+                    <input className="mhwc-input" type="text" defaultValue={data.name}
+                        placeholder={_('inputName')} ref={refNameList.current[index]} />
 
                     <div className="mhwc-icons_bundle">
-                        <div className="mhwc-icons_bundle">
-                            <FunctionalButton
-                                iconName="check" altName={_('select')}
-                                onClick={() => {handleBundlePickUp(index)}} />
-                            <FunctionalButton
-                                iconName="times" altName={_('remove')}
-                                onClick={() => {CommonState.setter.removeReservedBundle(index)}} />
-                            <FunctionalButton
-                                iconName="floppy-o" altName={_('save')}
-                                onClick={() => {handleBundleSave(index)}} />
-                        </div>
+                        <FunctionalButton
+                            iconName="check" altName={_('select')}
+                            onClick={() => {handleBundlePickUp(index)}} />
+                        <FunctionalButton
+                            iconName="times" altName={_('remove')}
+                            onClick={() => {CommonState.setter.removeReservedBundle(index)}} />
+                        <FunctionalButton
+                            iconName="floppy-o" altName={_('save')}
+                            onClick={() => {handleBundleSave(index)}} />
                     </div>
                 </div>
                 <div className="col-12 mhwc-content">

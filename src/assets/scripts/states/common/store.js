@@ -665,10 +665,8 @@ export default createStore((state = initialState, action) => {
                     return reservedBundles;
                 }
 
-                delete reservedBundles[action.payload.index];
-
-                reservedBundles = reservedBundles.filter((euqipBundle) => {
-                    return (Helper.isNotEmpty(euqipBundle));
+                reservedBundles = reservedBundles.filter((euqipBundle, index) => {
+                    return index !== action.payload.index;
                 });
 
                 return reservedBundles;
