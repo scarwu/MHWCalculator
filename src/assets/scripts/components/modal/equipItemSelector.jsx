@@ -24,9 +24,9 @@ import SetDataset from 'libraries/dataset/set';
 import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
-import FunctionalSelector from 'components/common/functionalSelector';
-import FunctionalInput from 'components/common/functionalInput';
+import IconButton from 'components/common/iconButton';
+import IconSelector from 'components/common/iconSelector';
+import IconInput from 'components/common/iconInput';
 import SharpnessBar from 'components/common/sharpnessBar';
 
 // Load State Control
@@ -84,7 +84,7 @@ const renderWeaponItem = (weapon, bypassData) => {
 
                 <div className="mhwc-icons_bundle">
                     {(false === weapon.isSelect) ? (
-                        <FunctionalButton
+                        <IconButton
                             iconName="check" altName={_('select')}
                             onClick={() => {handleItemPickUp(bypassData, weapon.id)}} />
                     ) : false}
@@ -214,7 +214,7 @@ const renderArmorItem = (armor, bypassData) => {
 
                 <div className="mhwc-icons_bundle">
                     {(false === armor.isSelect) ? (
-                        <FunctionalButton
+                        <IconButton
                             iconName="check" altName={_('select')}
                             onClick={() => {handleItemPickUp(bypassData, armor.id)}} />
                     ) : false}
@@ -297,7 +297,7 @@ const renderCharmItem = (charm, bypassData) => {
 
                 <div className="mhwc-icons_bundle">
                     {(false === charm.isSelect) ? (
-                        <FunctionalButton
+                        <IconButton
                             iconName="check" altName={_('select')}
                             onClick={() => {handleItemPickUp(bypassData, charm.id)}} />
                     ) : false}
@@ -331,7 +331,7 @@ const renderJewelItem = (jewel, bypassData) => {
 
                 <div className="mhwc-icons_bundle">
                     {(false === jewel.isSelect) ? (
-                        <FunctionalButton
+                        <IconButton
                             iconName="check" altName={_('select')}
                             onClick={() => {handleItemPickUp(bypassData, jewel.id)}} />
                     ) : false}
@@ -365,7 +365,7 @@ const renderEnhanceItem = (enhance, bypassData) => {
 
                 <div className="mhwc-icons_bundle">
                     {(false === enhance.isSelect) ? (
-                        <FunctionalButton
+                        <IconButton
                             iconName="check" altName={_('select')}
                             onClick={() => {handleItemPickUp(bypassData, enhance.id)}} />
                     ) : false}
@@ -741,23 +741,23 @@ export default function EquipItemSelector(props) {
                     <span className="mhwc-title">{_(stateMode + 'List')}</span>
 
                     <div className="mhwc-icons_bundle">
-                        <FunctionalInput
+                        <IconInput
                             iconName="search" placeholder={_('inputKeyword')}
                              defaultValue={stateSegment} onChange={handleSegmentInput} />
 
                         {('weapon' === stateMode || 'armor' === stateMode) ? (
-                            <FunctionalSelector
+                            <IconSelector
                                 iconName="globe" defaultValue={stateType}
                                 options={stateTypeList} onChange={handleTypeChange} />
                         ) : false}
 
                         {('weapon' === stateMode || 'armor' === stateMode) ? (
-                            <FunctionalSelector
+                            <IconSelector
                                 iconName="globe" defaultValue={stateRare}
                                 options={stateRareList} onChange={handleRareChange} />
                         ) : false}
 
-                        <FunctionalButton
+                        <IconButton
                             iconName="times" altName={_('close')}
                             onClick={ModalState.setter.hideEquipItemSelector} />
                     </div>

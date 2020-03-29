@@ -1,5 +1,5 @@
 /**
- * Functional Selector
+ * Icon Selector
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -13,14 +13,14 @@ import React, { useMemo } from 'react';
 // Load Core Libraries
 import Helper from 'core/helper';
 
-export default function FunctionalSelector(props) {
+export default function IconSelector(props) {
     const {iconName, defaultValue, options, onChange} = props;
 
     return useMemo(() => {
-        Helper.log('Component: Common -> FunctionalSelector');
+        Helper.log('Component: Common -> IconSelector');
 
         return (
-            <div className="mhwc-functional_selector">
+            <div className="mhwc-icon_selector">
                 <div className="mhwc-body">
                     <div className="mhwc-icon">
                         <i className={`fa fa-${iconName}`}></i>

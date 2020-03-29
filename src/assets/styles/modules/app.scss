@@ -38,8 +38,8 @@
         padding-top: 20px;
         height: $header-height;
 
-        .mhwc-functional_selector,
-        .mhwc-functional_button {
+        .mhwc-icon_selector,
+        .mhwc-icon_button {
             vertical-align: top;
 
             .mhwc-body {
@@ -84,8 +84,8 @@
                 padding-top: 10px;
                 height: $panel-height;
 
-                .mhwc-functional_tab,
-                .mhwc-functional_button {
+                .mhwc-icon_tab,
+                .mhwc-icon_button {
                     vertical-align: top;
 
                     .mhwc-body {
@@ -103,7 +103,7 @@
             .mhwc-icons_bundle-left {
                 left: 10px;
 
-                .mhwc-functional_tab {
+                .mhwc-icon_tab {
                     .mhwc-label {
                         left: 22px;
                         right: initial;

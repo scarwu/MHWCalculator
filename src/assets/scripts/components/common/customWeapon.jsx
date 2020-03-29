@@ -15,11 +15,12 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
+import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
-import FunctionalSelector from 'components/common/functionalSelector';
-import FunctionalInput from 'components/common/functionalInput';
+import IconButton from 'components/common/iconButton';
+import BasicSelector from 'components/common/basicSelector';
+import BasicInput from 'components/common/basicInput';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -78,6 +79,13 @@ const shrapnessList = [
     { key: 'purple',    value: _('purple') },
 ];
 
+const skillList = [
+    { key: null,        value: _('none') },
+    ...SkillDataset.getItems().map((skill) => {
+        return { key: skill.id, value: _(skill.name) }
+    })
+];
+
 export default function CustomWeapon(props) {
 
     /**
@@ -112,14 +120,14 @@ export default function CustomWeapon(props) {
                 <div className="col-12 mhwc-name">
                     <span>{_('customWeapon')}</span>
                     <div className="mhwc-icons_bundle">
-                        <FunctionalButton
+                        <IconButton
                             iconName={isEquipLock ? 'lock' : 'unlock-alt'}
                             altName={isEquipLock ? _('unlock') : _('lock')}
                             onClick={() => {CommonState.setter.toggleRequiredEquipPins(equipType)}} />
-                        <FunctionalButton
+                        <IconButton
                             iconName="exchange" altName={_('change')}
                             onClick={() => {ModalState.setter.showEquipItemSelector(emptySelectorData)}} />
-                        <FunctionalButton
+                        <IconButton
                             iconName="times" altName={_('clean')}
                             onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
                     </div>
@@ -129,7 +137,7 @@ export default function CustomWeapon(props) {
                         <span>{_('rare')}</span>
                     </div>
                     <div className="col-3 mhwc-value">
-                        <FunctionalSelector
+                        <BasicSelector
                             iconName="sort-numeric-asc"
                             defaultValue="0"
                             options={rareList} onChange={(event) => {
@@ -140,7 +148,7 @@ export default function CustomWeapon(props) {
                         <span>{_('sharpness')}</span>
                     </div>
                     <div className="col-3 mhwc-value">
-                        <FunctionalSelector
+                        <BasicSelector
                             iconName="sort-numeric-asc"
                             defaultValue="0"
                             options={shrapnessList} onChange={(event) => {
@@ -152,7 +160,7 @@ export default function CustomWeapon(props) {
                         <span>{_('attack')}</span>
                     </div>
                     <div className="col-3 mhwc-value">
-                        <FunctionalInput
+                        <BasicInput
                             iconName="search" placeholder={''}
                             defaultValue={''} onChange={() => {}} />
                     </div>
@@ -161,7 +169,7 @@ export default function CustomWeapon(props) {
                         <span>{_('criticalRate')}</span>
                     </div>
                     <div className="col-3 mhwc-value">
-                        <FunctionalInput
+                        <BasicInput
                             iconName="search" placeholder={''}
                             defaultValue={''} onChange={() => {}} />
                     </div>
@@ -170,7 +178,7 @@ export default function CustomWeapon(props) {
                         <span>{_('defense')}</span>
                     </div>
                     <div className="col-3 mhwc-value">
-                        <FunctionalInput
+                        <BasicInput
                             iconName="search" placeholder={''}
                             defaultValue={''} onChange={() => {}} />
                     </div>
@@ -179,7 +187,7 @@ export default function CustomWeapon(props) {
                         <span>{_('elderseal')}</span>
                     </div>
                     <div className="col-3 mhwc-value">
-                        <FunctionalSelector
+                        <BasicSelector
                             iconName="sort-numeric-asc"
                             defaultValue="0"
                             options={eldersealList} onChange={(event) => {
@@ -192,7 +200,7 @@ export default function CustomWeapon(props) {
                         <span>{_('element')}: 1</span>
                     </div>
                     <div className="col-3 mhwc-value">
-                        <FunctionalSelector
+                        <BasicSelector
                             iconName="sort-numeric-asc"
                             defaultValue="0"
                             options={elementList} onChange={(event) => {
@@ -200,7 +208,7 @@ export default function CustomWeapon(props) {
                             }} />
                     </div>
                     <div className="col-6 mhwc-value">
-                        <FunctionalInput
+                        <BasicInput
                             iconName="search" placeholder={''}
                             defaultValue={''} onChange={() => {}} />
                     </div>
@@ -208,7 +216,7 @@ export default function CustomWeapon(props) {
                         <span>{_('element')}: 2</span>
                     </div>
                     <div className="col-3 mhwc-value">
-                        <FunctionalSelector
+                        <BasicSelector
                             iconName="sort-numeric-asc"
                             defaultValue="0"
                             options={elementList} onChange={(event) => {
@@ -216,7 +224,7 @@ export default function CustomWeapon(props) {
                             }} />
                     </div>
                     <div className="col-6 mhwc-value">
-                        <FunctionalInput
+                        <BasicInput
                             iconName="search" placeholder={''}
                             defaultValue={''} onChange={() => {}} />
                     </div>
@@ -229,7 +237,7 @@ export default function CustomWeapon(props) {
                                     <span>{_('slot')}: {index + 1}</span>
                                 </div>
                                 <div className="col-3 mhwc-value">
-                                    <FunctionalSelector
+                                    <BasicSelector
                                         iconName="sort-numeric-asc"
                                         defaultValue="0"
                                         options={jewelSizeList} onChange={(event) => {
@@ -250,10 +258,10 @@ export default function CustomWeapon(props) {
                         <span>{_('skill')}</span>
                     </div>
                     <div className="col-9 mhwc-value">
-                        <FunctionalSelector
+                        <BasicSelector
                             iconName="sort-numeric-asc"
                             defaultValue="0"
-                            options={jewelSizeList} onChange={(event) => {
+                            options={skillList} onChange={(event) => {
 
                             }} />
                     </div>

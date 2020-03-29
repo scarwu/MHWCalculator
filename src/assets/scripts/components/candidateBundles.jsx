@@ -23,8 +23,8 @@ import SkillDataset from 'libraries/dataset/skill';
 import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
-import FunctionalTab from 'components/common/functionalTab';
+import IconButton from 'components/common/iconButton';
+import IconTab from 'components/common/iconTab';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -144,7 +144,7 @@ const renderBundleItem = (bundle, index, totalIndex, requiredSkillIds) => {
             <div className="col-12 mhwc-name">
                 <span>{_('bundle')}: {index + 1} / {totalIndex}</span>
                 <div className="mhwc-icons_bundle">
-                    <FunctionalButton
+                    <IconButton
                         iconName="check" altName={_('equip')}
                         onClick={() => {handleBundlePickUp(bundle)}} />
                 </div>
@@ -259,7 +259,7 @@ const renderBundleItem = (bundle, index, totalIndex, requiredSkillIds) => {
                                     <span>{`${_(skillInfo.name)} Lv.${skillCount}`}</span>
                                     {(-1 === requiredSkillIds.indexOf(skillInfo.id)) ? (
                                         <div className="mhwc-icons_bundle">
-                                            <FunctionalButton
+                                            <IconButton
                                                 iconName="arrow-left" altName={_('include')}
                                                 onClick={() => {CommonState.setter.addRequiredSkill(skillInfo.id)}} />
                                         </div>
@@ -470,17 +470,17 @@ export default function CandidateBundles(props) {
                 <span className="mhwc-title">{_('candidateBundle')}</span>
 
                 <div className="mhwc-icons_bundle-left">
-                    <FunctionalTab
+                    <IconTab
                         iconName={stateSearchingTabIndex === 0 ? 'cog fa-spin' : 'circle-o'}
                         altName={_('tab') + ' 1'}
                         isActive={0 === stateTempData.candidateBundles.index}
                         onClick={() => {handleSwitchTempData(0)}} />
-                    <FunctionalTab
+                    <IconTab
                         iconName={stateSearchingTabIndex === 1 ? 'cog fa-spin' : 'circle-o'}
                         altName={_('tab') + ' 2'}
                         isActive={1 === stateTempData.candidateBundles.index}
                         onClick={() => {handleSwitchTempData(1)}} />
-                    <FunctionalTab
+                    <IconTab
                         iconName={stateSearchingTabIndex === 2 ? 'cog fa-spin' : 'circle-o'}
                         altName={_('tab') + ' 3'}
                         isActive={2 === stateTempData.candidateBundles.index}
@@ -488,13 +488,13 @@ export default function CandidateBundles(props) {
                 </div>
 
                 <div className="mhwc-icons_bundle-right">
-                    <FunctionalButton
+                    <IconButton
                         iconName="refresh" altName={_('reset')}
                         onClick={CommonState.setter.cleanComputedBundles} />
-                    <FunctionalButton
+                    <IconButton
                         iconName="cog" altName={_('setting')}
                         onClick={ModalState.setter.showAlgorithmSetting} />
-                    <FunctionalButton
+                    <IconButton
                         iconName="search" altName={_('search')}
                         onClick={handleCandidateBundlesSearch} />
                 </div>
@@ -508,7 +508,7 @@ export default function CandidateBundles(props) {
                         <div className="col-12 mhwc-name">
                             <span>{_('searching')} ...</span>
                             <div className="mhwc-icons_bundle">
-                                <FunctionalButton
+                                <IconButton
                                     iconName="times" altName={_('cancel')}
                                     onClick={handleCandidateBundlesCancel} />
                             </div>

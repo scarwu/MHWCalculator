@@ -18,7 +18,7 @@ import Helper from 'core/helper';
 import _ from 'libraries/lang';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
+import IconButton from 'components/common/iconButton';
 
 // Load State Control
 import ModalState from 'states/modal';
@@ -103,7 +103,7 @@ export default function Changelog(props) {
                     <span className="mhwc-title">{_('changelog')}</span>
 
                     <div className="mhwc-icons_bundle">
-                        <FunctionalButton
+                        <IconButton
                             iconName="times" altName={_('close')}
                             onClick={ModalState.setter.hideChangelog} />
                     </div>

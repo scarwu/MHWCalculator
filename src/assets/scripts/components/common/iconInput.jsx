@@ -1,5 +1,5 @@
 /**
- * Functional Input
+ * Icon Input
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -13,14 +13,14 @@ import React, { useMemo } from 'react';
 // Load Core Libraries
 import Helper from 'core/helper';
 
-export default function FunctionalInput(props) {
+export default function IconInput(props) {
     const {iconName, defaultValue, placeholder, onChange} = props;
 
     return useMemo(() => {
-        Helper.log('Component: Common -> FunctionalInput');
+        Helper.log('Component: Common -> IconInput');
 
         return (
-            <div className="mhwc-functional_input">
+            <div className="mhwc-icon_input">
                 <div className="mhwc-body">
                     <div className="mhwc-icon">
                         <i className={`fa fa-${iconName}`}></i>

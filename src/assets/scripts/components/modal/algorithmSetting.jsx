@@ -22,9 +22,10 @@ import CharmDataset from 'libraries/dataset/charm';
 import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
-import FunctionalSelector from 'components/common/functionalSelector';
-import FunctionalInput from 'components/common/functionalInput';
+import IconButton from 'components/common/iconButton';
+import IconInput from 'components/common/iconInput';
+import BasicSelector from 'components/common/basicSelector';
+import BasicInput from 'components/common/basicInput';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -145,12 +146,12 @@ const renderArmorFactors = (armorFactor, stateSegment) => {
                                     <span>{_(seriesMapping[seriesId].series)}</span>
                                     <div className="mhwc-icons_bundle">
                                         {isInclude ? (
-                                            <FunctionalButton
+                                            <IconButton
                                                 iconName="star"
                                                 altName={_('exclude')}
                                                 onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, false)}} />
                                         ) : (
-                                            <FunctionalButton
+                                            <IconButton
                                                 iconName="star-o"
                                                 altName={_('include')}
                                                 onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, true)}} />
@@ -228,7 +229,7 @@ const renderCharmFactors = (charmFactor, stateSegment) => {
                             <div key={seriesId} className="col-6 mhwc-value">
                                 <span>{_(seriesMapping[seriesId].series)}</span>
                                 <div className="mhwc-icons_bundle">
-                                    <FunctionalSelector
+                                    <BasicSelector
                                         iconName="sort-numeric-asc"
                                         defaultValue={selectLevel}
                                         options={levelList} onChange={(event) => {
@@ -316,7 +317,7 @@ const renderJewelFactors = (jewelFactor, stateSegment) => {
                                 <div key={jewelId} className="col-6 mhwc-value">
                                     <span>{_(jewelMapping[jewelId].name)}</span>
                                     <div className="mhwc-icons_bundle">
-                                        <FunctionalSelector
+                                        <BasicSelector
                                             iconName="sort-numeric-asc"
                                             defaultValue={selectLevel}
                                             options={levelList} onChange={(event) => {
@@ -391,11 +392,11 @@ export default function AlgorithmSetting(props) {
                     <strong>{_('algorithmSetting')}</strong>
 
                     <div className="mhwc-icons_bundle">
-                        <FunctionalInput
+                        <IconInput
                             iconName="search" placeholder={_('inputKeyword')}
                             defaultValue={stateSegment} onChange={handleSegmentInput} />
 
-                        <FunctionalButton
+                        <IconButton
                             iconName="times" altName={_('close')}
                             onClick={ModalState.setter.hideAlgorithmSetting} />
                     </div>
@@ -407,7 +408,7 @@ export default function AlgorithmSetting(props) {
                                 <span>{_('resultLimit')}</span>
 
                                 <div className="mhwc-icons_bundle">
-                                    <FunctionalInput
+                                    <BasicInput
                                         iconName="list-alt"
                                         defaultValue={stateAlgorithmParams.limit}
                                         onChange={handleLimitChange} />
@@ -420,11 +421,11 @@ export default function AlgorithmSetting(props) {
                                 <span>{_('sort')}</span>
 
                                 <div className="mhwc-icons_bundle">
-                                    <FunctionalSelector
+                                    <BasicSelector
                                         iconName="sort-amount-desc"
                                         defaultValue={stateAlgorithmParams.sort}
                                         options={sortList} onChange={handleSortChange} />
-                                    <FunctionalSelector
+                                    <BasicSelector
                                         iconName="sort-amount-desc"
                                         defaultValue={stateAlgorithmParams.order}
                                         options={orderList} onChange={handleOrderChange} />
@@ -443,12 +444,12 @@ export default function AlgorithmSetting(props) {
                                             <span>{_(target)}</span>
                                             <div className="mhwc-icons_bundle">
                                                 {stateAlgorithmParams.flag[target] ? (
-                                                    <FunctionalButton
+                                                    <IconButton
                                                         iconName="star"
                                                         altName={_('exclude')}
                                                         onClick={() => {CommonState.setter.toggleAlgorithmParamsFlag(target)}} />
                                                 ) : (
-                                                    <FunctionalButton
+                                                    <IconButton
                                                         iconName="star-o"
                                                         altName={_('include')}
                                                         onClick={() => {CommonState.setter.toggleAlgorithmParamsFlag(target)}} />
@@ -471,12 +472,12 @@ export default function AlgorithmSetting(props) {
                                             <span>{_('rare') + `: ${rare}`}</span>
                                             <div className="mhwc-icons_bundle">
                                                 {stateAlgorithmParams.usingFactor.armor['rare' + rare] ? (
-                                                    <FunctionalButton
+                                                    <IconButton
                                                         iconName="star"
                                                         altName={_('exclude')}
                                                         onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, false)}} />
                                                 ) : (
-                                                    <FunctionalButton
+                                                    <IconButton
                                                         iconName="star-o"
                                                         altName={_('include')}
                                                         onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, true)}} />
@@ -499,12 +500,12 @@ export default function AlgorithmSetting(props) {
                                             <span>{_('size') + `: ${size}`}</span>
                                             <div className="mhwc-icons_bundle">
                                                 {stateAlgorithmParams.usingFactor.jewel['size' + size] ? (
-                                                    <FunctionalButton
+                                                    <IconButton
                                                         iconName="star"
                                                         altName={_('exclude')}
                                                         onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, false)}} />
                                                 ) : (
-                                                    <FunctionalButton
+                                                    <IconButton
                                                         iconName="star-o"
                                                         altName={_('include')}
                                                         onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, true)}} />

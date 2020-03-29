@@ -8,10 +8,34 @@
  */
 
 // Common Components
-.mhwc-functional_input,
-.mhwc-functional_selector,
-.mhwc-functional_button,
-.mhwc-functional_tab {
+.mhwc-basic_input,
+.mhwc-basic_selector {
+    position: relative;
+    display: inline-block;
+    margin-left: 1px;
+    margin-right: 1px;
+
+    @include font-size(1.2);
+
+    .mhwc-select,
+    .mhwc-input {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0;
+        padding: 0;
+        border: none;
+        height: 20px;
+        width: 100%;
+        line-height: 20px;
+
+        @include border-radius(3px);
+    }
+}
+
+.mhwc-icon_input,
+.mhwc-icon_selector,
+.mhwc-icon_button,
+.mhwc-icon_tab {
     transition-property: background-color;
     transition-duration: 0.1s;
 
@@ -87,7 +111,7 @@
     }
 }
 
-.mhwc-functional_tab {
+.mhwc-icon_tab {
     .mhwc-body {
         background-color: #999;
 
@@ -239,9 +263,11 @@
         height: 20px;
         float: right;
 
-        .mhwc-functional_input,
-        .mhwc-functional_selector,
-        .mhwc-functional_button {
+        .mhwc-basic_input,
+        .mhwc-basic_selector,
+        .mhwc-icon_input,
+        .mhwc-icon_selector,
+        .mhwc-icon_button {
             vertical-align: top;
         }
     }

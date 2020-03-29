@@ -20,7 +20,7 @@ import SkillDataset from 'libraries/dataset/skill';
 import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
+import IconButton from 'components/common/iconButton';
 import SharpnessBar from 'components/common/sharpnessBar';
 
 // Load State Control
@@ -806,7 +806,7 @@ export default function CharacterStatus(props) {
 
                                             <div className="mhwc-icons_bundle">
                                                 {Helper.isNotEmpty(passiveSkills[data.id]) ? (
-                                                    <FunctionalButton
+                                                    <IconButton
                                                         iconName={passiveSkills[data.id].isActive ? 'eye' : 'eye-slash'}
                                                         altName={passiveSkills[data.id].isActive ? _('deactive') : _('active')}
                                                         onClick={() => {handlePassiveSkillToggle(data.id)}} />

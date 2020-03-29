@@ -22,8 +22,8 @@ import SkillDataset from 'libraries/dataset/skill';
 import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
-import FunctionalTab from 'components/common/functionalTab';
+import IconButton from 'components/common/iconButton';
+import IconTab from 'components/common/iconTab';
 import SharpnessBar from 'components/common/sharpnessBar';
 import CustomWeapon from 'components/common/customWeapon';
 
@@ -72,7 +72,7 @@ const renderEnhanceOption = (equipType, enhanceIndex, enhanceInfo) => {
 
                 <div className="col-9 mhwc-value">
                     <div className="mhwc-icons_bundle">
-                        <FunctionalButton
+                        <IconButton
                             iconName="plus" altName={_('add')}
                             onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
                     </div>
@@ -89,10 +89,10 @@ const renderEnhanceOption = (equipType, enhanceIndex, enhanceInfo) => {
             <div className="col-9 mhwc-value">
                 <span>{_(enhanceInfo.name)}</span>
                 <div className="mhwc-icons_bundle">
-                    <FunctionalButton
+                    <IconButton
                         iconName="exchange" altName={_('change')}
                         onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
-                    <FunctionalButton
+                    <IconButton
                         iconName="times" altName={_('clean')}
                         onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
                 </div>
@@ -124,7 +124,7 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
                 </div>
                 <div className="col-9 mhwc-value">
                     <div className="mhwc-icons_bundle">
-                        <FunctionalButton
+                        <IconButton
                             iconName="plus" altName={_('add')}
                             onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
                     </div>
@@ -141,10 +141,10 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
             <div className="col-9 mhwc-value">
                 <span>[{jewelInfo.size}] {_(jewelInfo.name)}</span>
                 <div className="mhwc-icons_bundle">
-                    <FunctionalButton
+                    <IconButton
                         iconName="exchange" altName={_('change')}
                         onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
-                    <FunctionalButton
+                    <IconButton
                         iconName="times" altName={_('clean')}
                         onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
                 </div>
@@ -300,14 +300,14 @@ const renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
                     <span>{_(equipType)}</span>
                     <div className="mhwc-icons_bundle">
                         {'weapon' === equipType ? (
-                            <FunctionalButton
+                            <IconButton
                                 iconName="wrench" altName={_('customWeapon')}
                                 onClick={() => {CommonState.setter.setCurrentEquip({
                                     equipType: 'weapon',
                                     equipId: 'customWeapon'
                                 })}} />
                         ) : false}
-                        <FunctionalButton
+                        <IconButton
                             iconName="plus" altName={_('add')}
                             onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
                     </div>
@@ -324,22 +324,22 @@ const renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
             <div className="col-12 mhwc-name">
                 <span>{_(equipType)}: {_(equipInfo.name)}</span>
                 <div className="mhwc-icons_bundle">
-                    <FunctionalButton
+                    <IconButton
                         iconName={isEquipLock ? 'lock' : 'unlock-alt'}
                         altName={isEquipLock ? _('unlock') : _('lock')}
                         onClick={() => {CommonState.setter.toggleRequiredEquipPins(equipType)}} />
                     {'weapon' === equipType ? (
-                        <FunctionalButton
+                        <IconButton
                             iconName="wrench" altName={_('customWeapon')}
                             onClick={() => {CommonState.setter.setCurrentEquip({
                                 equipType: 'weapon',
                                 equipId: 'customWeapon'
                             })}} />
                     ) : false}
-                    <FunctionalButton
+                    <IconButton
                         iconName="exchange" altName={_('change')}
                         onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
-                    <FunctionalButton
+                    <IconButton
                         iconName="times" altName={_('clean')}
                         onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
                 </div>
@@ -475,25 +475,25 @@ export default function EquipsDisplayer(props) {
                 <span className="mhwc-title">{_('equipBundle')}</span>
 
                 <div className="mhwc-icons_bundle-left">
-                    <FunctionalTab
+                    <IconTab
                         iconName="circle-o" altName={_('tab') + ' 1'}
                         isActive={0 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(0)}} />
-                    <FunctionalTab
+                    <IconTab
                         iconName="circle-o" altName={_('tab') + ' 2'}
                         isActive={1 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(1)}} />
-                    <FunctionalTab
+                    <IconTab
                         iconName="circle-o" altName={_('tab') + ' 3'}
                         isActive={2 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(2)}} />
                 </div>
 
                 <div className="mhwc-icons_bundle-right">
-                    <FunctionalButton
+                    <IconButton
                         iconName="refresh" altName={_('reset')}
                         onClick={handleEquipsDisplayerRefresh} />
-                    <FunctionalButton
+                    <IconButton
                         iconName="th-list" altName={_('bundleList')}
                         onClick={ModalState.setter.showBundleItemSelector} />
                 </div>

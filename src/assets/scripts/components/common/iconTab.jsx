@@ -1,5 +1,5 @@
 /**
- * Functional Button
+ * Icon Tab
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -13,15 +13,23 @@ import React, { useMemo } from 'react';
 // Load Core Libraries
 import Helper from 'core/helper';
 
-export default function FunctionalButton(props) {
-    const {iconName, altName, onClick} = props;
+export default function IconTab(props) {
+    const {iconName, altName, isActive, onClick} = props;
 
     return useMemo(() => {
-        Helper.log('Component: Common -> FunctionalButton');
+        Helper.log('Component: Common -> IconTab');
+
+        let className = [
+            'mhwc-body'
+        ];
+
+        if (isActive) {
+            className.push('is-active');
+        }
 
         return (
-            <div className="mhwc-functional_button">
-                <a className="mhwc-body" onClick={onClick}>
+            <div className="mhwc-icon_tab">
+                <a className={className.join(' ')} onClick={onClick}>
                     <div className="mhwc-icon">
                         <i className={`fa fa-${iconName}`}></i>
                     </div>
@@ -32,5 +40,5 @@ export default function FunctionalButton(props) {
                 </div>
             </div>
         )
-    }, [iconName, altName]);
+    }, [iconName, altName, isActive]);
 };
