@@ -440,7 +440,9 @@ export default function EquipsDisplayer(props) {
         let blocks = [];
         let isCustomWeapon = true;
 
-        if ('customWeapon' === stateCurrentEquips.weapon.id) {
+        if (Helper.isNotEmpty(stateCurrentEquips.weapon)
+            && 'customWeapon' === stateCurrentEquips.weapon.id
+        ) {
             blocks.push((
                 <CustomWeapon key="customWeapon" />
             ));

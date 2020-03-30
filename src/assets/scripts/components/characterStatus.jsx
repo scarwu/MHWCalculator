@@ -37,7 +37,9 @@ import Constant from 'constant';
 const generateEquipInfos = (equips) => {
     let equipInfos = {};
 
-    if ('customWeapon' === equips.weapon.id) {
+    if (Helper.isNotEmpty(equips.weapon)
+        && 'customWeapon' === equips.weapon.id
+    ) {
         let isCompleted = true;
         let customWeapon = CommonState.getter.getCustomWeapon();
 
