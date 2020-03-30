@@ -679,11 +679,17 @@ export default createStore((state = initialState, action) => {
         return (() => {
             let target = action.payload.target;
             let value = action.payload.value;
+            let currentEquips = Helper.deepCopy(state.currentEquips);
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
             customWeapon[target] = value;
 
+            if ('rare' === target) {
+                currentEquips.weapon.enhanceIds = {};
+            }
+
             return Object.assign({}, state, {
+                currentEquips: currentEquips,
                 customWeapon: customWeapon
             });
         })();
@@ -764,7 +770,7 @@ export default createStore((state = initialState, action) => {
                 currentEquips.slotIds[index] = undefined;
                 customWeapon.slots[index] = undefined;
             } else {
-                currentEquips.slotIds[index] = null;
+                currentEquips.slotIds[index] = undefined;
                 customWeapon.slots[index] = {
                     size: size
                 };

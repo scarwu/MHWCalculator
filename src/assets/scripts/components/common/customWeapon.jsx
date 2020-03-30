@@ -28,87 +28,105 @@ import BasicInput from 'components/common/basicInput';
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
 
-const typeList = [
-    { key: 'none',      value: _('none') },
-    { key: 'greatSword',        value: _('greatSword') },
-    { key: 'longSword',         value: _('longSword') },
-    { key: 'swordAndShield',    value: _('swordAndShield') },
-    { key: 'dualBlades',        value: _('dualBlades') },
-    { key: 'hammer',            value: _('hammer') },
-    { key: 'huntingHorn',       value: _('huntingHorn') },
-    { key: 'lance',             value: _('lance') },
-    { key: 'gunlance',          value: _('gunlance') },
-    { key: 'switchAxe',         value: _('switchAxe') },
-    { key: 'chargeBlade',       value: _('chargeBlade') },
-    { key: 'insectGlaive',      value: _('insectGlaive') },
-    { key: 'lightBowgun',       value: _('lightBowgun') },
-    { key: 'heavyBowgun',       value: _('heavyBowgun') },
-    { key: 'bow',               value: _('bow') }
-];
+const getTypeList = () => {
+    return [
+        { key: 'none',              value: _('none') },
+        { key: 'greatSword',        value: _('greatSword') },
+        { key: 'longSword',         value: _('longSword') },
+        { key: 'swordAndShield',    value: _('swordAndShield') },
+        { key: 'dualBlades',        value: _('dualBlades') },
+        { key: 'hammer',            value: _('hammer') },
+        { key: 'huntingHorn',       value: _('huntingHorn') },
+        { key: 'lance',             value: _('lance') },
+        { key: 'gunlance',          value: _('gunlance') },
+        { key: 'switchAxe',         value: _('switchAxe') },
+        { key: 'chargeBlade',       value: _('chargeBlade') },
+        { key: 'insectGlaive',      value: _('insectGlaive') },
+        { key: 'lightBowgun',       value: _('lightBowgun') },
+        { key: 'heavyBowgun',       value: _('heavyBowgun') },
+        { key: 'bow',               value: _('bow') }
+    ];
+};
 
-const rareList = [
-    { key: 1,           value: 1 },
-    { key: 2,           value: 2 },
-    { key: 3,           value: 3 },
-    { key: 4,           value: 4 },
-    { key: 5,           value: 5 },
-    { key: 6,           value: 6 },
-    { key: 7,           value: 7 },
-    { key: 8,           value: 8 },
-    { key: 9,           value: 9 },
-    { key: 10,          value: 10 },
-    { key: 11,          value: 11 },
-    { key: 12,          value: 12 }
-];
+const getRareList = () => {
+    return [
+        { key: 1,   value: 1 },
+        { key: 2,   value: 2 },
+        { key: 3,   value: 3 },
+        { key: 4,   value: 4 },
+        { key: 5,   value: 5 },
+        { key: 6,   value: 6 },
+        { key: 7,   value: 7 },
+        { key: 8,   value: 8 },
+        { key: 9,   value: 9 },
+        { key: 10,  value: 10 },
+        { key: 11,  value: 11 },
+        { key: 12,  value: 12 }
+    ];
+};
 
-const sharpnessList = [
-    { key: 'none',      value: _('none') },
-    { key: 'red',       value: _('red') },
-    { key: 'orange',    value: _('orange') },
-    { key: 'yellow',    value: _('yellow') },
-    { key: 'green',     value: _('green') },
-    { key: 'blue',      value: _('blue') },
-    { key: 'white',     value: _('white') },
-    { key: 'purple',    value: _('purple') },
-];
+const getSharpnessList = () => {
+    return [
+        { key: 'none',      value: _('none') },
+        { key: 'red',       value: _('red') },
+        { key: 'orange',    value: _('orange') },
+        { key: 'yellow',    value: _('yellow') },
+        { key: 'green',     value: _('green') },
+        { key: 'blue',      value: _('blue') },
+        { key: 'white',     value: _('white') },
+        { key: 'purple',    value: _('purple') },
+    ];
+};
 
-const attackElementList = [
-    { key: 'none',      value: _('none') },
-    { key: 'water',     value: _('water') },
-    { key: 'thunder',   value: _('thunder') },
-    { key: 'ice',       value: _('ice') },
-    { key: 'dragon',    value: _('dragon') }
-];
+const getAttackElementList = () => {
+    return [
+        { key: 'none',      value: _('none') },
+        { key: 'water',     value: _('water') },
+        { key: 'thunder',   value: _('thunder') },
+        { key: 'ice',       value: _('ice') },
+        { key: 'dragon',    value: _('dragon') }
+    ];
+};
 
-const statusElementList = [
-    { key: 'none',      value: _('none') },
-    { key: 'poison',    value: _('poison') },
-    { key: 'paralysis', value: _('paralysis') },
-    { key: 'sleep',     value: _('sleep') },
-    { key: 'blast',     value: _('blast') }
-];
+const getStatusElementList = () => {
+    return [
+        { key: 'none',      value: _('none') },
+        { key: 'poison',    value: _('poison') },
+        { key: 'paralysis', value: _('paralysis') },
+        { key: 'sleep',     value: _('sleep') },
+        { key: 'blast',     value: _('blast') }
+    ];
+};
 
-const eldersealList = [
-    { key: 'none',      value: _('none') },
-    { key: 'low',       value: _('low') },
-    { key: 'medium',    value: _('medium') },
-    { key: 'high',      value: _('high') }
-];
+const getEldersealList = () => {
+    return [
+        { key: 'none',      value: _('none') },
+        { key: 'low',       value: _('low') },
+        { key: 'medium',    value: _('medium') },
+        { key: 'high',      value: _('high') }
+    ];
+};
 
-const slotSizeList = [
-    { key: 'none',      value: _('none') },
-    { key: 1,           value: 1 },
-    { key: 2,           value: 2 },
-    { key: 3,           value: 3 },
-    { key: 4,           value: 4 }
-];
+const getSlotSizeList = () => {
+    return [
+        { key: 'none',  value: _('none') },
+        { key: 1,       value: 1 },
+        { key: 2,       value: 2 },
+        { key: 3,       value: 3 },
+        { key: 4,       value: 4 }
+    ];
+};
 
-const skillList = [
-    { key: 'none', value: _('none') },
-    ...SkillDataset.getItems().map((skill) => {
-        return { key: skill.id, value: _(skill.name) }
-    })
-];
+const getSkillList = () => {
+    return [
+        { key: 'none', value: _('none') },
+        ...SkillDataset.getItems().filter((skillInfo) => {
+            return skillInfo.from.weapon;
+        }).map((skillInfo) => {
+            return { key: skillInfo.id, value: _(skillInfo.name) }
+        })
+    ];
+};
 
 const getValue = (value) => {
     if (Helper.isEmpty(value)) {
@@ -278,7 +296,7 @@ export default function CustomWeapon(props) {
         let newEnhanceCount = null
 
         if (10 <= stateCustomWeapon.rare && stateCustomWeapon.rare <= 12) {
-            newEnhanceCount = 20 - stateCustomWeapon.rare;
+            newEnhanceCount = (15 - stateCustomWeapon.rare) * 2;
         }
 
         return (
@@ -305,7 +323,7 @@ export default function CustomWeapon(props) {
                     <div className="col-3 mhwc-value">
                         <BasicSelector
                             defaultValue={getValue(stateCustomWeapon.type)}
-                            options={typeList} onChange={(event) => {
+                            options={getTypeList()} onChange={(event) => {
                                 let value = ('none' !== event.target.value)
                                     ? event.target.value : null;
 
@@ -319,7 +337,7 @@ export default function CustomWeapon(props) {
                     <div className="col-3 mhwc-value">
                         <BasicSelector
                             defaultValue={getValue(stateCustomWeapon.rare)}
-                            options={rareList} onChange={(event) => {
+                            options={getRareList()} onChange={(event) => {
                                 let value = parseInt(event.target.value);
 
                                 CommonState.setter.setCustomWeaponValue('rare', value);
@@ -332,7 +350,7 @@ export default function CustomWeapon(props) {
                     <div className="col-3 mhwc-value">
                         <BasicSelector
                             defaultValue={getSharpnessStep(stateCustomWeapon.sharpness)}
-                            options={sharpnessList} onChange={(event) => {
+                            options={getSharpnessList()} onChange={(event) => {
                                 let value = ('none' !== event.target.value)
                                     ? event.target.value : null;
 
@@ -389,7 +407,7 @@ export default function CustomWeapon(props) {
                     <div className="col-3 mhwc-value">
                         <BasicSelector
                             defaultValue={getElementType(stateCustomWeapon.element.attack)}
-                            options={attackElementList} onChange={(event) => {
+                            options={getAttackElementList()} onChange={(event) => {
                                 let value = ('none' !== event.target.value)
                                     ? event.target.value : null;
 
@@ -414,7 +432,7 @@ export default function CustomWeapon(props) {
                     <div className="col-3 mhwc-value">
                         <BasicSelector
                             defaultValue={getElementType(stateCustomWeapon.element.status)}
-                            options={statusElementList} onChange={(event) => {
+                            options={getStatusElementList()} onChange={(event) => {
                                 let value = ('none' !== event.target.value)
                                     ? event.target.value : null;
 
@@ -442,7 +460,7 @@ export default function CustomWeapon(props) {
                             <div className="col-3 mhwc-value">
                                 <BasicSelector
                                     defaultValue={getValue(stateCustomWeapon.elderseal)}
-                                    options={eldersealList} onChange={(event) => {
+                                    options={getEldersealList()} onChange={(event) => {
                                         let value = ('none' !== event.target.value)
                                             ? event.target.value : null;
 
@@ -471,8 +489,27 @@ export default function CustomWeapon(props) {
                         })}
                     </div>
                 ) : false}
+                {(null !== newEnhanceCount) ? (
+                    <div className="col-12 mhwc-content">
+                        {[...Array(newEnhanceCount).keys()].map((index) => {
+                            return (
+                                <Fragment key={index}>
+                                    <div className="col-3 mhwc-name">
+                                        <span>{_('enhance')}: {index + 1}</span>
+                                    </div>
+                                    <div className="col-9 mhwc-value">
+                                        {renderEnhanceOption(
+                                            equipType, index,
+                                            EnhanceDataset.getInfo(equipInfo.enhanceIds[index])
+                                        )}
+                                    </div>
+                                </Fragment>
+                            );
+                        })}
+                    </div>
+                ) : false}
                 <div className="col-12 mhwc-content">
-                    {[...Array(3).keys()].map((index) => {
+                    {[...Array(2).keys()].map((index) => {
                         return (
                             <Fragment key={index}>
                                 <div className="col-3 mhwc-name">
@@ -481,7 +518,7 @@ export default function CustomWeapon(props) {
                                 <div className="col-3 mhwc-value">
                                     <BasicSelector
                                         defaultValue={getSlotSize(stateCustomWeapon.slots[index])}
-                                        options={slotSizeList} onChange={(event) => {
+                                        options={getSlotSizeList()} onChange={(event) => {
                                             let value = ('none' !== event.target.value)
                                                 ? parseInt(event.target.value) : null;
 
@@ -508,7 +545,7 @@ export default function CustomWeapon(props) {
                     <div className="col-9 mhwc-value">
                         <BasicSelector
                             defaultValue={getSkillId(stateCustomWeapon.skills[0])}
-                            options={skillList} onChange={(event) => {
+                            options={getSkillList()} onChange={(event) => {
                                 let value = ('none' !== event.target.value)
                                     ? event.target.value : null;
 

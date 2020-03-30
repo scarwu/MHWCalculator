@@ -116,7 +116,11 @@ class CharmDataset {
     };
 
     setInfo = (id, info) => {
-        this.mapping[id] = info;
+        if (Helper.isNotEmpty(info)) {
+            this.mapping[id] = info;
+        } else {
+            delete this.mapping[id];
+        }
     };
 
     // Conditional Functions

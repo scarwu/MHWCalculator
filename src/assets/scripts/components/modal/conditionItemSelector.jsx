@@ -233,10 +233,12 @@ export default function ConditionItemSelector(props) {
     /**
      * Variables
      */
-    const modeList = [
-        { key: 'set', value: _('set') },
-        { key: 'skill', value: _('skill') }
-    ];
+    const getModeList = () => {
+        return [
+            { key: 'set',   value: _('set') },
+            { key: 'skill', value: _('skill') }
+        ];
+    };
 
     /**
      * Handle Functions
@@ -335,7 +337,7 @@ export default function ConditionItemSelector(props) {
                             defaultValue={stateSegment} onChange={handleSegmentInput} />
                         <IconSelector
                             iconName="globe" defaultValue={stateMode}
-                            options={modeList} onChange={handleModeChange} />
+                            options={getModeList()} onChange={handleModeChange} />
                         <IconButton
                             iconName="times" altName={_('close')}
                             onClick={ModalState.setter.hideConditionItemSelector} />
