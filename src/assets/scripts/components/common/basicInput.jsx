@@ -14,14 +14,14 @@ import React, { useMemo } from 'react';
 import Helper from 'core/helper';
 
 export default function BasicInput(props) {
-    const {defaultValue, placeholder, onChange} = props;
+    const {defaultValue, placeholder, onChange, bypassRef} = props;
 
     return useMemo(() => {
         Helper.log('Component: Common -> BasicInput');
 
         return (
             <div className="mhwc-basic_input">
-                <input className="mhwc-input" type="text"
+                <input className="mhwc-input" type="text" ref={bypassRef}
                     defaultValue={defaultValue}
                     placeholder={placeholder}
                     onChange={onChange} />

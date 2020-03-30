@@ -22,6 +22,7 @@ import CharmDataset from 'libraries/dataset/charm';
 
 // Load Components
 import IconButton from 'components/common/iconButton';
+import BasicInput from 'components/common/basicInput';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -123,8 +124,7 @@ export default function BundleItemSelector(props) {
         return (
             <div key={bundleId} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
-                    <input className="mhwc-input" type="text"
-                        placeholder={_('inputName')} ref={refName} />
+                    <BasicInput placeholder={_('inputName')} bypassRef={refName} />
 
                     <div className="mhwc-icons_bundle">
                         <IconButton
@@ -174,8 +174,8 @@ export default function BundleItemSelector(props) {
         return (
             <div key={`${data.id}:${index}`} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
-                    <input className="mhwc-input" type="text" defaultValue={data.name}
-                        placeholder={_('inputName')} ref={refNameList.current[index]} />
+                    <BasicInput placeholder={_('inputName')} defaultValue={data.name}
+                        bypassRef={refNameList.current[index]} />
 
                     <div className="mhwc-icons_bundle">
                         <IconButton

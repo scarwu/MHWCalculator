@@ -756,9 +756,7 @@ export default createStore((state = initialState, action) => {
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
             if (null === size) {
-                customWeapon.slots = customWeapon.slots.filter((slot, currentIndex) => {
-                    return index === currentIndex;
-                });
+                customWeapon.slots[index] = undefined;
             } else {
                 customWeapon.slots[index] = {
                     size: size
@@ -776,9 +774,7 @@ export default createStore((state = initialState, action) => {
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
             if (null === id) {
-                customWeapon.skills = customWeapon.skills.filter((currentIndex) => {
-                    return index === currentIndex;
-                });
+                customWeapon.skills[index] = undefined;
             } else {
                 customWeapon.skills[index] = {
                     id: id,

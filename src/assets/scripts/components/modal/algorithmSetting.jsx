@@ -399,37 +399,36 @@ export default function AlgorithmSetting(props) {
                     <div className="mhwc-wrapper">
                         <div className="mhwc-item mhwc-item-2-step">
                             <div className="col-12 mhwc-name">
-                                <span>{_('resultLimit')}</span>
-
-                                <div className="mhwc-icons_bundle">
+                                <span>{_('strategy')}</span>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                <div className="col-6 mhwc-name">
+                                    <span>{_('resultLimit')}</span>
+                                </div>
+                                <div className="col-6 mhwc-value">
                                     <BasicInput
                                         iconName="list-alt"
                                         defaultValue={stateAlgorithmParams.limit}
                                         onChange={handleLimitChange} />
                                 </div>
-                            </div>
-                        </div>
-
-                        <div className="mhwc-item mhwc-item-2-step">
-                            <div className="col-12 mhwc-name">
-                                <span>{_('sort')}</span>
-
-                                <div className="mhwc-icons_bundle">
+                                <div className="col-6 mhwc-name">
+                                    <span>{_('sortBy')}</span>
+                                </div>
+                                <div className="col-6 mhwc-value">
                                     <BasicSelector
                                         iconName="sort-amount-desc"
                                         defaultValue={stateAlgorithmParams.sort}
                                         options={sortList} onChange={handleSortChange} />
+                                </div>
+                                <div className="col-6 mhwc-name">
+                                    <span>{_('sortOrder')}</span>
+                                </div>
+                                <div className="col-6 mhwc-value">
                                     <BasicSelector
                                         iconName="sort-amount-desc"
                                         defaultValue={stateAlgorithmParams.order}
                                         options={orderList} onChange={handleOrderChange} />
                                 </div>
-                            </div>
-                        </div>
-
-                        <div className="mhwc-item mhwc-item-2-step">
-                            <div className="col-12 mhwc-name">
-                                <span>{_('strategy')}</span>
                             </div>
                             <div className="col-12 mhwc-content">
                                 {['isEndEarly', 'isExpectBundle', 'isRequireConsistent'].map((target) => {

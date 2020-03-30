@@ -15,6 +15,8 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
+import JewelDataset from 'libraries/dataset/jewel';
+import EnhanceDataset from 'libraries/dataset/enhance';
 import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
@@ -153,37 +155,24 @@ const renderEnhanceOption = (equipType, enhanceIndex, enhanceInfo) => {
 
     if (Helper.isEmpty(enhanceInfo)) {
         return (
-            <Fragment key={`${equipType}:${enhanceIndex}`}>
-                <div className="col-3 mhwc-name">
-                    <span>{_('enhance')}: {enhanceIndex + 1}</span>
-                </div>
-
-                <div className="col-9 mhwc-value">
-                    <div className="mhwc-icons_bundle">
-                        <IconButton
-                            iconName="plus" altName={_('add')}
-                            onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
-                    </div>
-                </div>
-            </Fragment>
+            <div key={`${equipType}:${enhanceIndex}`} className="mhwc-icons_bundle">
+                <IconButton
+                    iconName="plus" altName={_('add')}
+                    onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
+            </div>
         );
     }
 
     return (
         <Fragment key={`${equipType}:${enhanceIndex}`}>
-            <div className="col-3 mhwc-name">
-                <span>{_('enhance')}: {enhanceIndex + 1}</span>
-            </div>
-            <div className="col-9 mhwc-value">
-                <span>{_(enhanceInfo.name)}</span>
-                <div className="mhwc-icons_bundle">
-                    <IconButton
-                        iconName="exchange" altName={_('change')}
-                        onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
-                    <IconButton
-                        iconName="times" altName={_('clean')}
-                        onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
-                </div>
+            <span>{_(enhanceInfo.name)}</span>
+            <div className="mhwc-icons_bundle">
+                <IconButton
+                    iconName="exchange" altName={_('change')}
+                    onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
+                <IconButton
+                    iconName="times" altName={_('clean')}
+                    onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
             </div>
         </Fragment>
     );
@@ -206,36 +195,24 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
 
     if (Helper.isEmpty(jewelInfo)) {
         return (
-            <Fragment key={`${equipType}:${slotIndex}`}>
-                <div className="col-3 mhwc-name">
-                    <span>{_('slot')}: {slotIndex + 1} [{slotSize}]</span>
-                </div>
-                <div className="col-9 mhwc-value">
-                    <div className="mhwc-icons_bundle">
-                        <IconButton
-                            iconName="plus" altName={_('add')}
-                            onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
-                    </div>
-                </div>
-            </Fragment>
+            <div key={`${equipType}:${slotIndex}`} className="mhwc-icons_bundle">
+                <IconButton
+                    iconName="plus" altName={_('add')}
+                    onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
+            </div>
         );
     }
 
     return (
         <Fragment key={`${equipType}:${slotIndex}`}>
-            <div className="col-3 mhwc-name">
-                <span>{_('slot')}: {slotIndex + 1} [{slotSize}]</span>
-            </div>
-            <div className="col-9 mhwc-value">
-                <span>[{jewelInfo.size}] {_(jewelInfo.name)}</span>
-                <div className="mhwc-icons_bundle">
-                    <IconButton
-                        iconName="exchange" altName={_('change')}
-                        onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
-                    <IconButton
-                        iconName="times" altName={_('clean')}
-                        onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
-                </div>
+            <span>[{jewelInfo.size}] {_(jewelInfo.name)}</span>
+            <div className="mhwc-icons_bundle">
+                <IconButton
+                    iconName="exchange" altName={_('change')}
+                    onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
+                <IconButton
+                    iconName="times" altName={_('clean')}
+                    onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
             </div>
         </Fragment>
     );
@@ -247,12 +224,14 @@ export default function CustomWeapon(props) {
      * Hooks
      */
     const [stateCustomWeapon, updateCustomWeapon] = useState(CommonState.getter.getCustomWeapon());
+    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
     const [stateRequiredEquipPins, updateRequiredEquipPins] = useState(CommonState.getter.getRequiredEquipPins());
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
             updateCustomWeapon(CommonState.getter.getCustomWeapon());
+            updateCurrentEquips(CommonState.getter.getCurrentEquips());
             updateRequiredEquipPins(CommonState.getter.getRequiredEquipPins());
         });
 
@@ -264,13 +243,20 @@ export default function CustomWeapon(props) {
     return useMemo(() => {
         Helper.log('Component: Common -> SharpnessBar');
 
+        let equipType = 'weapon';
+        let equipInfo = stateCurrentEquips[equipType];
+        let isEquipLock = stateRequiredEquipPins[equipType];
+
         let emptySelectorData = {
-            equipType: 'weapon',
+            equipType: equipType,
             equipId: null
         };
 
-        let equipType = 'weapon';
-        let isEquipLock = stateRequiredEquipPins.weapon;
+        let oldEnhanceCount = null
+
+        if (6 <= stateCustomWeapon.rare && stateCustomWeapon.rare <= 8) {
+            oldEnhanceCount = 9 - stateCustomWeapon.rare;
+        }
 
         return (
             <div key="customWeapon" className="mhwc-item mhwc-item-3-step">
@@ -420,8 +406,27 @@ export default function CustomWeapon(props) {
                         </div>
                     ) : false}
                 </div>
+                {(null !== oldEnhanceCount) ? (
+                    <div className="col-12 mhwc-content">
+                        {[...Array(oldEnhanceCount).keys()].map((index) => {
+                            return (
+                                <Fragment key={index}>
+                                    <div className="col-3 mhwc-name">
+                                        <span>{_('enhance')}: {index + 1}</span>
+                                    </div>
+                                    <div className="col-9 mhwc-value">
+                                        {renderEnhanceOption(
+                                            equipType, index,
+                                            EnhanceDataset.getInfo(equipInfo.enhanceIds[index])
+                                        )}
+                                    </div>
+                                </Fragment>
+                            );
+                        })}
+                    </div>
+                ) : false}
                 <div className="col-12 mhwc-content">
-                    {[0, 1, 2].map((index) => {
+                    {[...Array(3).keys()].map((index) => {
                         return (
                             <Fragment key={index}>
                                 <div className="col-3 mhwc-name">
@@ -437,11 +442,15 @@ export default function CustomWeapon(props) {
                                             CommonState.setter.setCustomWeaponSlot(index, value);
                                         }} />
                                 </div>
-                                <div className="col-6 mhwc-value">
-                                    <div className="mhwc-icons_bundle">
-
+                                {('none' !== getSlotSize(stateCustomWeapon.slots[index])) ? (
+                                    <div className="col-6 mhwc-value">
+                                        {renderJewelOption(
+                                            equipType, index,
+                                            getSlotSize(stateCustomWeapon.slots[index]),
+                                            JewelDataset.getInfo(equipInfo.slotIds[index])
+                                        )}
                                     </div>
-                                </div>
+                                ) : false}
                             </Fragment>
                         );
                     })}
@@ -463,5 +472,5 @@ export default function CustomWeapon(props) {
                 </div>
             </div>
         );
-    }, [stateCustomWeapon, stateRequiredEquipPins]);
+    }, [stateCustomWeapon, stateCurrentEquips, stateRequiredEquipPins]);
 };

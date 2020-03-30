@@ -21,6 +21,7 @@ import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
 import IconButton from 'components/common/iconButton';
+import BasicInput from 'components/common/basicInput';
 import SharpnessBar from 'components/common/sharpnessBar';
 
 // Load State Control
@@ -864,10 +865,12 @@ export default function CharacterStatus(props) {
                         <div className="col-3 mhwc-value">
                             <span>{extraInfo.expectedValue}</span>
                         </div>
+                    </div>
+                    <div className="col-12 mhwc-content">
                         <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-input" type="text" defaultValue={stateTuning.rawAttack}
-                                ref={refTuningRawAttack} onChange={handleTuningChange} />
+                            <BasicInput defaultValue={stateTuning.rawAttack}
+                                bypassRef={refTuningRawAttack} onChange={handleTuningChange} />
                             <span>{_('rawAttackEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
@@ -875,8 +878,8 @@ export default function CharacterStatus(props) {
                         </div>
                         <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-input" type="text" defaultValue={stateTuning.rawCriticalRate}
-                                ref={refTuningRawCriticalRate} onChange={handleTuningChange} />
+                            <BasicInput defaultValue={stateTuning.rawCriticalRate}
+                                bypassRef={refTuningRawCriticalRate} onChange={handleTuningChange} />
                             <span>{_('criticalRateEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
@@ -884,8 +887,8 @@ export default function CharacterStatus(props) {
                         </div>
                         <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-input" type="text" defaultValue={stateTuning.rawCriticalMultiple}
-                                ref={refTuningRawCriticalMultiple} onChange={handleTuningChange} />
+                            <BasicInput defaultValue={stateTuning.rawCriticalMultiple}
+                                bypassRef={refTuningRawCriticalMultiple} onChange={handleTuningChange} />
                             <span>{_('criticalMultipleEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
@@ -893,8 +896,8 @@ export default function CharacterStatus(props) {
                         </div>
                         <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-input" type="text" defaultValue={stateTuning.elementAttack}
-                                ref={refTuningElementAttack} onChange={handleTuningChange} />
+                            <BasicInput defaultValue={stateTuning.elementAttack}
+                                bypassRef={refTuningElementAttack} onChange={handleTuningChange} />
                             <span>{_('elementAttackEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
