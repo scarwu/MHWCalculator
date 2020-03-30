@@ -505,10 +505,16 @@ export default createStore((state = initialState, action) => {
                     currentEquips.weapon.enhances = [];
                 }
 
-                currentEquips.weapon.enhances[data.enhanceIndex] = {
-                    id: data.enhanceId,
-                    level: 1
-                };
+                if (Helper.isNotEmpty(data.enhanceId)) {
+                    currentEquips.weapon.enhances[data.enhanceIndex] = {
+                        id: data.enhanceId,
+                        level: Helper.isNotEmpty(data.enhanceLevel) ? data.enhanceLevel : 1
+                    };
+                } else {
+                    currentEquips.weapon.enhances = currentEquips.weapon.enhances.filter((enhance, index) => {
+                        return index !== data.enhanceIndex
+                    });
+                }
             } else if (Helper.isNotEmpty(data.slotIndex)) {
                 if (Helper.isEmpty(currentEquips.weapon.slotIds)) {
                     currentEquips[data.equipType].slotIds = [];

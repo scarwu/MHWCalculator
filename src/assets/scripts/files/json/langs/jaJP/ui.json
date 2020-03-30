@@ -158,5 +158,6 @@
     "blue":                 null,
     "white":                null,
     "purple":               null,
-    "type":                 null
+    "type":                 null,
+    "enhanceFieldSize":     null
 }

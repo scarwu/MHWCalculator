@@ -158,5 +158,6 @@
     "blue":                 "Blue",
     "white":                "White",
     "purple":               "Purple",
-    "type":                 "Type"
+    "type":                 "Type",
+    "enhanceFieldSize":     "Enhance Fields"
 }

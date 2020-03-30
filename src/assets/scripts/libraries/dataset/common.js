@@ -47,58 +47,23 @@ let getAppliedWeaponInfo = (extend) => {
     }
 
     // Handle Enhance
-    let enhanceLevelMapping = {};
-    let enhanceTimes = 0;
+    let enhanceSize = 0;
 
     if (6 <= info.rare && info.rare <= 8) {
-        enhanceTimes = 9 - info.rare;
+        enhanceSize = 9 - info.rare;
     }
 
     if (10 <= info.rare && info.rare <= 12) {
-        enhanceTimes = (15 - info.rare) * 2;
+        enhanceSize = (15 - info.rare) * 2;
     }
 
+    info.enhanceSize = enhanceSize;
     info.enhances = Helper.isNotEmpty(extend.enhances)
         ? extend.enhances : [];
 
     info.enhances.forEach((enhance) => {
         let enhanceLevel = enhance.level;
         let enhanceInfo = EnhanceDataset.getInfo(enhance.id);
-
-        if (Helper.isEmpty(enhanceInfo.list[enhanceLevel - 1].reaction)) {
-            return false;
-        }
-
-        Object.keys(enhanceInfo.list[enhanceLevel - 1].reaction).forEach((reactionType) => {
-            let data = enhanceInfo.list[enhanceLevel - 1].reaction[reactionType];
-
-            switch (reactionType) {
-            case 'attack':
-                info.attack += data.value * Constant.weaponMultiple[info.type];
-                info.attack = parseInt(Math.round(info.attack));
-
-                break;
-            case 'criticalRate':
-                info.criticalRate += data.value;
-
-                break;
-            case 'defense':
-                info.defense = data.value;
-
-                break;
-            case 'addSlot':
-                info.slots.push({
-                    size: data.size
-                });
-
-                break;
-            }
-        });
-    });
-
-    Object.keys(enhanceLevelMapping).forEach((enhanceId) => {
-        let enhanceLevel = enhanceLevelMapping[enhanceId];
-        let enhanceInfo = EnhanceDataset.getInfo(enhanceId);
 
         if (Helper.isEmpty(enhanceInfo.list[enhanceLevel - 1].reaction)) {
             return false;

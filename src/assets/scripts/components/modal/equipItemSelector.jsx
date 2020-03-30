@@ -715,6 +715,9 @@ export default function EquipItemSelector(props) {
                 }
 
                 return true;
+            }).filter((data) => {
+                return -1 !== data.allowRares.indexOf(bypassData.equipRare)
+                    && -1 === bypassData.enhanceIds.indexOf(data.id);
             }).sort((dataA, dataB) => {
                 return _(dataA.id) > _(dataB.id) ? 1 : -1;
             }).map((data) => {

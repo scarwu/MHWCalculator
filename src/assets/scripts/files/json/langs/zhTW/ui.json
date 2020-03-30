@@ -158,5 +158,6 @@
     "blue":                 "藍",
     "white":                "白",
     "purple":               "紫",
-    "type":                 "類型"
+    "type":                 "類型",
+    "enhanceFieldSize":     "強化欄數量"
 }
