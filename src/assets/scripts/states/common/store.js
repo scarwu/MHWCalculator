@@ -723,6 +723,10 @@ export default createStore((state = initialState, action) => {
 
             if (null === type) {
                 customWeapon.element[target] = null;
+
+                if ('attack' === target) {
+                    customWeapon.elderseal = null;
+                }
             } else {
                 customWeapon.element[target] = {
                     type: type,
@@ -753,17 +757,21 @@ export default createStore((state = initialState, action) => {
         return (() => {
             let index = action.payload.index;
             let size = action.payload.size;
+            let currentEquips = Helper.deepCopy(state.currentEquips);
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
             if (null === size) {
+                currentEquips.slotIds[index] = undefined;
                 customWeapon.slots[index] = undefined;
             } else {
+                currentEquips.slotIds[index] = null;
                 customWeapon.slots[index] = {
                     size: size
                 };
             }
 
             return Object.assign({}, state, {
+                currentEquips: currentEquips,
                 customWeapon: customWeapon
             });
         })();

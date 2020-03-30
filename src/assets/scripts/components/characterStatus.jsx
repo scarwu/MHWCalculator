@@ -62,9 +62,8 @@ const generateEquipInfos = (equips) => {
             isCompleted = false;
         }
 
-        if (isCompleted) {
-            WeaponDataset.setInfo('customWeapon', Helper.deepCopy(customWeapon));
-        }
+        WeaponDataset.setInfo('customWeapon', (true === isCompleted)
+            ? Helper.deepCopy(customWeapon) : undefined);
     }
 
     equipInfos.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon);

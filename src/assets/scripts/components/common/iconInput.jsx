@@ -28,7 +28,12 @@ export default function IconInput(props) {
                     <input className="mhwc-input" type="text"
                         defaultValue={defaultValue}
                         placeholder={placeholder}
-                        onChange={onChange} />
+                        onBlur={onChange}
+                        onKeyPress={(event) => {
+                            if (13 === event.charCode) {
+                                onChange(event);
+                            }
+                        }} />
                 </div>
             </div>
         );

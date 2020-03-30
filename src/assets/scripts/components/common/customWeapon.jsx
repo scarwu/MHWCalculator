@@ -381,20 +381,6 @@ export default function CustomWeapon(props) {
                                 CommonState.setter.setCustomWeaponValue('defense', value);
                             }} />
                     </div>
-
-                    <div className="col-3 mhwc-name">
-                        <span>{_('elderseal')}</span>
-                    </div>
-                    <div className="col-3 mhwc-value">
-                        <BasicSelector
-                            defaultValue={getValue(stateCustomWeapon.elderseal)}
-                            options={eldersealList} onChange={(event) => {
-                                let value = ('none' !== event.target.value)
-                                    ? event.target.value : null;
-
-                                CommonState.setter.setCustomWeaponValue('elderseal', value);
-                            }} />
-                    </div>
                 </div>
                 <div className="col-12 mhwc-content">
                     <div className="col-3 mhwc-name">
@@ -410,17 +396,18 @@ export default function CustomWeapon(props) {
                                 CommonState.setter.setCustomWeaponElementType('attack', value);
                             }} />
                     </div>
-                    {('none' !== getElementType(stateCustomWeapon.element.attack)) ? (
-                        <div className="col-6 mhwc-value">
+                    <div className="col-6 mhwc-value">
+                        {('none' !== getElementType(stateCustomWeapon.element.attack)) ? (
                             <BasicInput
+                                key={stateCustomWeapon.element.attack.minValue}
                                 defaultValue={stateCustomWeapon.element.attack.minValue} onChange={() => {
                                     let value = ('' !== event.target.value)
-                                        ? parseInt(event.target.value) : null;
+                                        ? parseInt(event.target.value) : 0;
 
                                     CommonState.setter.setCustomWeaponElementValue('attack', value);
                                 }} />
-                        </div>
-                    ) : false}
+                        ) : false}
+                    </div>
                     <div className="col-3 mhwc-name">
                         <span>{_('element')}: 2</span>
                     </div>
@@ -434,16 +421,35 @@ export default function CustomWeapon(props) {
                                 CommonState.setter.setCustomWeaponElementType('status', value);
                             }} />
                     </div>
-                    {('none' !== getElementType(stateCustomWeapon.element.status)) ? (
-                        <div className="col-6 mhwc-value">
+                    <div className="col-6 mhwc-value">
+                        {('none' !== getElementType(stateCustomWeapon.element.status)) ? (
                             <BasicInput
+                                key={stateCustomWeapon.element.status.minValue}
                                 defaultValue={stateCustomWeapon.element.status.minValue} onChange={() => {
                                     let value = ('' !== event.target.value)
-                                        ? parseInt(event.target.value) : null;
+                                        ? parseInt(event.target.value) : 0;
 
                                     CommonState.setter.setCustomWeaponElementValue('status', value);
                                 }} />
-                        </div>
+                        ) : false}
+                    </div>
+
+                    {('dragon' === getElementType(stateCustomWeapon.element.attack)) ? (
+                        <Fragment>
+                            <div className="col-3 mhwc-name">
+                                <span>{_('elderseal')}</span>
+                            </div>
+                            <div className="col-3 mhwc-value">
+                                <BasicSelector
+                                    defaultValue={getValue(stateCustomWeapon.elderseal)}
+                                    options={eldersealList} onChange={(event) => {
+                                        let value = ('none' !== event.target.value)
+                                            ? event.target.value : null;
+
+                                        CommonState.setter.setCustomWeaponValue('elderseal', value);
+                                    }} />
+                            </div>
+                        </Fragment>
                     ) : false}
                 </div>
                 {(null !== oldEnhanceCount) ? (
@@ -482,15 +488,15 @@ export default function CustomWeapon(props) {
                                             CommonState.setter.setCustomWeaponSlot(index, value);
                                         }} />
                                 </div>
-                                {('none' !== getSlotSize(stateCustomWeapon.slots[index])) ? (
-                                    <div className="col-6 mhwc-value">
-                                        {renderJewelOption(
+                                <div className="col-6 mhwc-value">
+                                    {('none' !== getSlotSize(stateCustomWeapon.slots[index])) ? (
+                                        renderJewelOption(
                                             equipType, index,
                                             getSlotSize(stateCustomWeapon.slots[index]),
                                             JewelDataset.getInfo(equipInfo.slotIds[index])
-                                        )}
-                                    </div>
-                                ) : false}
+                                        )
+                                    ) : false}
+                                </div>
                             </Fragment>
                         );
                     })}

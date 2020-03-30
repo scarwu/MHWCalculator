@@ -24,7 +24,12 @@ export default function BasicInput(props) {
                 <input className="mhwc-input" type="text" ref={bypassRef}
                     defaultValue={defaultValue}
                     placeholder={placeholder}
-                    onChange={onChange} />
+                    onBlur={onChange}
+                    onKeyPress={(event) => {
+                        if (13 === event.charCode) {
+                            onChange(event);
+                        }
+                    }} />
             </div>
         );
     }, [defaultValue, placeholder]);
