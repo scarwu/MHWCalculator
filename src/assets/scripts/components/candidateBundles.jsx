@@ -40,7 +40,7 @@ let worker = undefined;
 /**
  * Handle Functions
  */
-const handleBundlePickUp = (bundle) => {
+const handleBundlePickUp = (bundle, meta) => {
     let equips = Helper.deepCopy(CommonState.getter.getCurrentEquips());
     let slotMap = {
         1: [],
@@ -48,6 +48,10 @@ const handleBundlePickUp = (bundle) => {
         3: [],
         4: []
     };
+
+    if (Helper.isNotEmpty(meta.customWeapon)) {
+        CommonState.setter.relpaceCustomWeapon(meta.customWeapon);
+    }
 
     Object.keys(bundle.equips).forEach((equipType) => {
         if (Helper.isEmpty(bundle.equips[equipType])) {
@@ -64,8 +68,8 @@ const handleBundlePickUp = (bundle) => {
         let equipInfo = null;
 
         if ('weapon' === equipType) {
-            if (Helper.isNotEmpty(bundle.meta.weaponEnhances)) {
-                equips.weapon.enhances = bundle.meta.weaponEnhances; // Restore Enhance
+            if (Helper.isNotEmpty(meta.weaponEnhances)) {
+                equips.weapon.enhances = meta.weaponEnhances; // Restore Enhance
             }
 
             equipInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
@@ -138,7 +142,7 @@ const handleSwitchTempData = (index) => {
 /**
  * Render Functions
  */
-const renderBundleItem = (bundle, index, totalIndex, requiredSkillIds) => {
+const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds) => {
     return (
         <div key={bundle.hash} className="mhwc-item mhwc-item-3-step">
             <div className="col-12 mhwc-name">
@@ -146,7 +150,7 @@ const renderBundleItem = (bundle, index, totalIndex, requiredSkillIds) => {
                 <div className="mhwc-icons_bundle">
                     <IconButton
                         iconName="check" altName={_('equip')}
-                        onClick={() => {handleBundlePickUp(bundle)}} />
+                        onClick={() => {handleBundlePickUp(bundle, meta)}} />
                 </div>
             </div>
 
@@ -303,8 +307,8 @@ const BundleList = (props) => {
             return skill.id;
         });
 
-        return data.map((bundle, index) => {
-            return renderBundleItem(bundle, index, data.length, requiredSkillIds);
+        return data.list.map((bundle, index) => {
+            return renderBundleItem(bundle, index, data.list.length, data.meta, requiredSkillIds);
         });
     }, [data, stateRequiredSkills]);
 };
@@ -337,7 +341,7 @@ export default function CandidateBundles(props) {
      * Hooks
      */
     const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
-    const [stateComputedBundles, updateComputedBundles] = useState(CommonState.getter.getComputedBundles());
+    const [stateComputedResult, updateComputedResult] = useState(CommonState.getter.getComputedResult());
     const [stateIsSearching, updateIsSearching] = useState(false);
     const [stateSearchingTabIndex, updateSearchingTabIndex] = useState(null);
     const [stateBundleCount, updateBundleCount] = useState(0);
@@ -348,7 +352,7 @@ export default function CandidateBundles(props) {
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
             updateTempData(CommonState.getter.getTempData());
-            updateComputedBundles(CommonState.getter.getComputedBundles());
+            updateComputedResult(CommonState.getter.getComputedResult());
         });
 
         return () => {
@@ -384,6 +388,7 @@ export default function CandidateBundles(props) {
         }
 
         let tempData = CommonState.getter.getTempData();
+        let customWeapon = CommonState.getter.getCustomWeapon();
         let requiredSets = CommonState.getter.getRequiredSets();
         let requiredSkills = CommonState.getter.getRequiredSkills();
         let requiredEquipPins = CommonState.getter.getRequiredEquipPins();
@@ -433,7 +438,20 @@ export default function CandidateBundles(props) {
                 case 'result':
                     handleSwitchTempData(currentSearchingTabIndex);
 
-                    CommonState.setter.saveComputedBundles(payload.computedBundles);
+                    let meta = {};
+
+                    if (Helper.isNotEmpty(requiredEquips.weapon)) {
+                        meta.weaponEnhances = requiredEquips.weapon.enhances;
+
+                        if ('customWeapon' === requiredEquips.weapon.id) {
+                            meta.customWeapon = customWeapon;
+                        }
+                    }
+
+                    CommonState.setter.saveComputedResult({
+                        list: payload.computedBundles,
+                        meta: meta
+                    });
 
                     worker.terminate();
                     worker = undefined;
@@ -449,6 +467,7 @@ export default function CandidateBundles(props) {
         }
 
         worker.postMessage({
+            customWeapon: customWeapon,
             requiredSets: requiredSets,
             requiredSkills: requiredSkills,
             requiredEquips: requiredEquips,
@@ -490,7 +509,7 @@ export default function CandidateBundles(props) {
                 <div className="mhwc-icons_bundle-right">
                     <IconButton
                         iconName="refresh" altName={_('reset')}
-                        onClick={CommonState.setter.cleanComputedBundles} />
+                        onClick={CommonState.setter.cleanComputedResult} />
                     <IconButton
                         iconName="cog" altName={_('setting')}
                         onClick={ModalState.setter.showAlgorithmSetting} />
@@ -535,7 +554,7 @@ export default function CandidateBundles(props) {
                         </div>
                     </div>
                 ) : (
-                    <BundleList data={stateComputedBundles} />
+                    <BundleList data={stateComputedResult} />
                 )}
             </div>
         </div>

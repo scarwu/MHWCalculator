@@ -14,6 +14,7 @@ import MD5 from 'md5';
 import Helper from 'core/helper';
 
 // Load Custom Libraries
+import WeaponDataset from 'libraries/dataset/weapon';
 import ArmorDataset from 'libraries/dataset/armor';
 import SetDataset from 'libraries/dataset/set';
 import JewelDataset from 'libraries/dataset/jewel';
@@ -28,18 +29,47 @@ class FittingAlgorithm {
     /**
      * Search
      */
-    search = (requiredSets, requiredSkills, requiredEquips, algorithmParams, callback) => {
+    search = (customWeapon, requiredSets, requiredSkills, requiredEquips, algorithmParams, callback) => {
         if (0 === requiredSets.length
             && 0 === requiredSkills.length
         ) {
             return [];
         }
 
+        Helper.log('Input: Custom Weapon', customWeapon);
         Helper.log('Input: Required Sets', requiredSets);
         Helper.log('Input: Required Skills', requiredSkills);
         Helper.log('Input: Required Equips', requiredEquips);
         Helper.log('Input: Algorithm Params', algorithmParams);
 
+        // Set Custom Weapon
+        let isCompleted = true;
+
+        if (Helper.isEmpty(customWeapon.type)
+            || Helper.isEmpty(customWeapon.rare)
+            || Helper.isEmpty(customWeapon.attack)
+            || Helper.isEmpty(customWeapon.criticalRate)
+            || Helper.isEmpty(customWeapon.defense)
+        ) {
+            isCompleted = false;
+        }
+
+        if (Helper.isNotEmpty(customWeapon.element.attack)
+            && Helper.isEmpty(customWeapon.element.attack.minValue)
+        ) {
+            isCompleted = false;
+        }
+
+        if (Helper.isNotEmpty(customWeapon.element.status)
+            && Helper.isEmpty(customWeapon.element.status.minValue)
+        ) {
+            isCompleted = false;
+        }
+
+        WeaponDataset.setInfo('customWeapon', (true === isCompleted)
+            ? Helper.deepCopy(customWeapon) : undefined);
+
+        // Set Properties
         this.algorithmParams = Helper.deepCopy(algorithmParams);
         this.callback = callback;
 

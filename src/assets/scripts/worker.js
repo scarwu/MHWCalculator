@@ -31,6 +31,7 @@ if ('production' === Config.env) {
 }
 
 onmessage = (event) => {
+    const customWeapon = event.data.customWeapon;
     const requiredSets = event.data.requiredSets;
     const requiredSkills = event.data.requiredSkills;
     const requiredEquips = event.data.requiredEquips;
@@ -38,6 +39,7 @@ onmessage = (event) => {
 
     let startTime = new Date().getTime();
     let computedBundles = FittingAlgorithm.search(
+        customWeapon,
         requiredSets,
         requiredSkills,
         requiredEquips,
@@ -51,12 +53,8 @@ onmessage = (event) => {
     );
     let stopTime = new Date().getTime();
     let searchTime = (stopTime - startTime) / 1000;
-    let weaponEnhances = Helper.isNotEmpty(requiredEquips.weapon)
-        ? requiredEquips.weapon.enhances : null;
 
     computedBundles.map((bundle) => {
-        bundle.meta.weaponEnhances = weaponEnhances;
-
         return bundle;
     });
 

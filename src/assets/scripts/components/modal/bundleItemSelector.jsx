@@ -85,16 +85,30 @@ export default function BundleItemSelector(props) {
         if (Helper.isNotEmpty(index)) {
             CommonState.setter.updateReservedBundleName(index, name);
         } else {
+            let customWeapon = null;
+
+            if (Helper.isNotEmpty(stateCurrentEquips.weapon)
+                && 'customWeapon' === stateCurrentEquips.weapon.id
+            ) {
+                customWeapon = CommonState.getter.getCustomWeapon();
+            }
+
             CommonState.setter.addReservedBundle({
                 id: MD5(JSON.stringify(stateCurrentEquips)),
                 name: name,
-                equips: stateCurrentEquips
+                equips: stateCurrentEquips,
+                customWeapon: customWeapon
             });
         }
     }, [stateCurrentEquips]);
 
     const handleBundlePickUp = useCallback((index) => {
+        if (Helper.isNotEmpty(stateReservedBundles[index].customWeapon)) {
+            CommonState.setter.replaceCustomWeapon(stateReservedBundles[index].customWeapon);
+        }
+
         CommonState.setter.replaceCurrentEquips(stateReservedBundles[index].equips);
+
         ModalState.setter.hideBundleItemSelector();
     }, [stateReservedBundles]);
 

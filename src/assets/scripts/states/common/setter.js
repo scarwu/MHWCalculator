@@ -182,20 +182,23 @@ export default {
         });
     },
 
-    // Computed Bundles
-    saveComputedBundles: (data) => {
+    // Computed Result
+    saveComputedResult: (data) => {
         Store.dispatch({
-            type: 'UPDATE_COMPUTED_BUNDLES',
+            type: 'UPDATE_COMPUTED_RESULT',
             payload: {
                 data: data
             }
         });
     },
-    cleanComputedBundles: () => {
+    cleanComputedResult: () => {
         Store.dispatch({
-            type: 'UPDATE_COMPUTED_BUNDLES',
+            type: 'UPDATE_COMPUTED_RESULT',
             payload: {
-                data: []
+                data: {
+                    list: [],
+                    meta: {}
+                }
             }
         });
     },
@@ -228,6 +231,14 @@ export default {
     },
 
     // Custom Weapon
+    relpaceCustomWeapon: (data) => {
+        Store.dispatch({
+            type: 'REPLACE_CUSTOM_WEAPON',
+            payload: {
+                data: data
+            }
+        });
+    },
     setCustomWeaponValue: (target, value) => {
         Store.dispatch({
             type: 'SET_CUSTOM_WEAPON_VALUE',
