@@ -743,7 +743,7 @@ export default createStore((state = initialState, action) => {
             let value = action.payload.value;
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
-            customWeapone.element[target].minValue = value;
+            customWeapon.element[target].minValue = value;
 
             return Object.assign({}, state, {
                 customWeapon: customWeapon

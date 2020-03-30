@@ -17,6 +17,7 @@ import Helper from 'core/helper';
 import _ from 'libraries/lang';
 import SetDataset from 'libraries/dataset/set';
 import SkillDataset from 'libraries/dataset/skill';
+import WeaponDataset from 'libraries/dataset/weapon';
 import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
@@ -35,6 +36,35 @@ import Constant from 'constant';
  */
 const generateEquipInfos = (equips) => {
     let equipInfos = {};
+
+    if ('customWeapon' === equips.weapon.id) {
+        let isCompleted = true;
+        let customWeapon = CommonState.getter.getCustomWeapon();
+
+        if (Helper.isEmpty(customWeapon.rare)
+            || Helper.isEmpty(customWeapon.attack)
+            || Helper.isEmpty(customWeapon.criticalRate)
+            || Helper.isEmpty(customWeapon.defense)
+        ) {
+            isCompleted = false;
+        }
+
+        if (Helper.isNotEmpty(customWeapon.element.attack)
+            && Helper.isEmpty(customWeapon.element.attack.minValue)
+        ) {
+            isCompleted = false;
+        }
+
+        if (Helper.isNotEmpty(customWeapon.element.status)
+            && Helper.isEmpty(customWeapon.element.status.minValue)
+        ) {
+            isCompleted = false;
+        }
+
+        if (isCompleted) {
+            WeaponDataset.setInfo('customWeapon', Helper.deepCopy(customWeapon));
+        }
+    }
 
     equipInfos.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon);
 
@@ -522,6 +552,7 @@ export default function CharacterStatus(props) {
     /**
      * Hooks
      */
+    const [stateCustomWeapon, updateCustomWeapon] = useState(CommonState.getter.getCustomWeapon());
     const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
     const [stateEquipInfos, updateEquipInfos] = useState({});
     const [stateStatus, updateStatus] = useState(Helper.deepCopy(Constant.default.status));
@@ -548,11 +579,12 @@ export default function CharacterStatus(props) {
         updatePassiveSkills(passiveSkills);
         updateStatus(status);
         updateExtraInfo(extraInfo);
-    }, [stateCurrentEquips]);
+    }, [stateCustomWeapon, stateCurrentEquips]);
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
+            updateCustomWeapon(CommonState.getter.getCustomWeapon());
             updateCurrentEquips(CommonState.getter.getCurrentEquips());
         });
 

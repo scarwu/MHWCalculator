@@ -28,16 +28,7 @@ import BasicInput from 'components/common/basicInput';
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
 
-const slotSizeList = [
-    { key: 'none',      value: _('none') },
-    { key: 1,           value: 1 },
-    { key: 2,           value: 2 },
-    { key: 3,           value: 3 },
-    { key: 4,           value: 4 }
-];
-
 const rareList = [
-    { key: 'none',      value: _('none') },
     { key: 1,           value: 1 },
     { key: 2,           value: 2 },
     { key: 3,           value: 3 },
@@ -50,6 +41,17 @@ const rareList = [
     { key: 10,          value: 10 },
     { key: 11,          value: 11 },
     { key: 12,          value: 12 }
+];
+
+const sharpnessList = [
+    { key: 'none',      value: _('none') },
+    { key: 'red',       value: _('red') },
+    { key: 'orange',    value: _('orange') },
+    { key: 'yellow',    value: _('yellow') },
+    { key: 'green',     value: _('green') },
+    { key: 'blue',      value: _('blue') },
+    { key: 'white',     value: _('white') },
+    { key: 'purple',    value: _('purple') },
 ];
 
 const attackElementList = [
@@ -75,15 +77,12 @@ const eldersealList = [
     { key: 'high',      value: _('high') }
 ];
 
-const sharpnessList = [
+const slotSizeList = [
     { key: 'none',      value: _('none') },
-    { key: 'red',       value: _('red') },
-    { key: 'orange',    value: _('orange') },
-    { key: 'yellow',    value: _('yellow') },
-    { key: 'green',     value: _('green') },
-    { key: 'blue',      value: _('blue') },
-    { key: 'white',     value: _('white') },
-    { key: 'purple',    value: _('purple') },
+    { key: 1,           value: 1 },
+    { key: 2,           value: 2 },
+    { key: 3,           value: 3 },
+    { key: 4,           value: 4 }
 ];
 
 const skillList = [
@@ -283,8 +282,7 @@ export default function CustomWeapon(props) {
                         <BasicSelector
                             defaultValue={getValue(stateCustomWeapon.rare)}
                             options={rareList} onChange={(event) => {
-                                let value = ('none' !== event.target.value)
-                                    ? parseInt(event.target.value) : null;
+                                let value = parseInt(event.target.value);
 
                                 CommonState.setter.setCustomWeaponValue('rare', value);
                             }} />
@@ -310,7 +308,7 @@ export default function CustomWeapon(props) {
                         <BasicInput
                             defaultValue={stateCustomWeapon.attack} onChange={(event) => {
                                 let value = ('' !== event.target.value)
-                                    ? parseInt(event.target.value) : null;
+                                    ? parseInt(event.target.value) : 0;
 
                                 CommonState.setter.setCustomWeaponValue('attack', value);
                             }} />
@@ -323,7 +321,7 @@ export default function CustomWeapon(props) {
                         <BasicInput
                             defaultValue={stateCustomWeapon.criticalRate} onChange={() => {
                                 let value = ('' !== event.target.value)
-                                    ? parseInt(event.target.value) : null;
+                                    ? parseInt(event.target.value) : 0;
 
                                 CommonState.setter.setCustomWeaponValue('criticalRate', value);
                             }} />
@@ -336,7 +334,7 @@ export default function CustomWeapon(props) {
                         <BasicInput
                             defaultValue={stateCustomWeapon.defense} onChange={() => {
                                 let value = ('' !== event.target.value)
-                                    ? parseInt(event.target.value) : null;
+                                    ? parseInt(event.target.value) : 0;
 
                                 CommonState.setter.setCustomWeaponValue('defense', value);
                             }} />

@@ -214,13 +214,13 @@ export default {
         },
         customWeapon: {
             id: 'customWeapon',
-            rare: null,
+            rare: 12,
             type: null,
             series: null,
             name: 'customWeapon',
-            attack: null,
-            criticalRate: null,
-            defense: null,
+            attack: 0,
+            criticalRate: 0,
+            defense: 0,
             sharpness:  null,
             element: {
                 attack: null,

@@ -110,9 +110,13 @@ class CharmDataset {
         return result;
     };
 
-    getInfo = (name) => {
-        return (Helper.isNotEmpty(this.mapping[name]))
-            ? Helper.deepCopy(this.mapping[name]) : null;
+    getInfo = (id) => {
+        return (Helper.isNotEmpty(this.mapping[id]))
+            ? Helper.deepCopy(this.mapping[id]) : null;
+    };
+
+    setInfo = (id, info) => {
+        this.mapping[id] = info;
     };
 
     // Conditional Functions
