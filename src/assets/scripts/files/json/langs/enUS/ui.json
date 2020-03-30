@@ -157,5 +157,6 @@
     "green":                "Green",
     "blue":                 "Blue",
     "white":                "White",
-    "purple":               "Purple"
+    "purple":               "Purple",
+    "type":                 "Type"
 }

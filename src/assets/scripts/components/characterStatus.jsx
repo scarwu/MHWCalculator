@@ -41,7 +41,8 @@ const generateEquipInfos = (equips) => {
         let isCompleted = true;
         let customWeapon = CommonState.getter.getCustomWeapon();
 
-        if (Helper.isEmpty(customWeapon.rare)
+        if (Helper.isEmpty(customWeapon.type)
+            || Helper.isEmpty(customWeapon.rare)
             || Helper.isEmpty(customWeapon.attack)
             || Helper.isEmpty(customWeapon.criticalRate)
             || Helper.isEmpty(customWeapon.defense)

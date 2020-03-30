@@ -157,5 +157,6 @@
     "green":                null,
     "blue":                 null,
     "white":                null,
-    "purple":               null
+    "purple":               null,
+    "type":                 null
 }

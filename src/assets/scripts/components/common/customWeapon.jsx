@@ -28,6 +28,24 @@ import BasicInput from 'components/common/basicInput';
 import CommonState from 'states/common';
 import ModalState from 'states/modal';
 
+const typeList = [
+    { key: 'none',      value: _('none') },
+    { key: 'greatSword',        value: _('greatSword') },
+    { key: 'longSword',         value: _('longSword') },
+    { key: 'swordAndShield',    value: _('swordAndShield') },
+    { key: 'dualBlades',        value: _('dualBlades') },
+    { key: 'hammer',            value: _('hammer') },
+    { key: 'huntingHorn',       value: _('huntingHorn') },
+    { key: 'lance',             value: _('lance') },
+    { key: 'gunlance',          value: _('gunlance') },
+    { key: 'switchAxe',         value: _('switchAxe') },
+    { key: 'chargeBlade',       value: _('chargeBlade') },
+    { key: 'insectGlaive',      value: _('insectGlaive') },
+    { key: 'lightBowgun',       value: _('lightBowgun') },
+    { key: 'heavyBowgun',       value: _('heavyBowgun') },
+    { key: 'bow',               value: _('bow') }
+];
+
 const rareList = [
     { key: 1,           value: 1 },
     { key: 2,           value: 2 },
@@ -257,6 +275,12 @@ export default function CustomWeapon(props) {
             oldEnhanceCount = 9 - stateCustomWeapon.rare;
         }
 
+        let newEnhanceCount = null
+
+        if (10 <= stateCustomWeapon.rare && stateCustomWeapon.rare <= 12) {
+            newEnhanceCount = 20 - stateCustomWeapon.rare;
+        }
+
         return (
             <div key="customWeapon" className="mhwc-item mhwc-item-3-step">
                 <div className="col-12 mhwc-name">
@@ -276,6 +300,20 @@ export default function CustomWeapon(props) {
                 </div>
                 <div className="col-12 mhwc-content">
                     <div className="col-3 mhwc-name">
+                        <span>{_('type')}</span>
+                    </div>
+                    <div className="col-3 mhwc-value">
+                        <BasicSelector
+                            defaultValue={getValue(stateCustomWeapon.type)}
+                            options={typeList} onChange={(event) => {
+                                let value = ('none' !== event.target.value)
+                                    ? event.target.value : null;
+
+                                CommonState.setter.setCustomWeaponValue('type', value);
+                            }} />
+                    </div>
+
+                    <div className="col-3 mhwc-name">
                         <span>{_('rare')}</span>
                     </div>
                     <div className="col-3 mhwc-value">
@@ -287,6 +325,7 @@ export default function CustomWeapon(props) {
                                 CommonState.setter.setCustomWeaponValue('rare', value);
                             }} />
                     </div>
+
                     <div className="col-3 mhwc-name">
                         <span>{_('sharpness')}</span>
                     </div>
@@ -306,6 +345,7 @@ export default function CustomWeapon(props) {
                     </div>
                     <div className="col-3 mhwc-value">
                         <BasicInput
+                            key={stateCustomWeapon.attack}
                             defaultValue={stateCustomWeapon.attack} onChange={(event) => {
                                 let value = ('' !== event.target.value)
                                     ? parseInt(event.target.value) : 0;
@@ -319,6 +359,7 @@ export default function CustomWeapon(props) {
                     </div>
                     <div className="col-3 mhwc-value">
                         <BasicInput
+                            key={stateCustomWeapon.criticalRate}
                             defaultValue={stateCustomWeapon.criticalRate} onChange={() => {
                                 let value = ('' !== event.target.value)
                                     ? parseInt(event.target.value) : 0;
@@ -332,6 +373,7 @@ export default function CustomWeapon(props) {
                     </div>
                     <div className="col-3 mhwc-value">
                         <BasicInput
+                            key={stateCustomWeapon.defense}
                             defaultValue={stateCustomWeapon.defense} onChange={() => {
                                 let value = ('' !== event.target.value)
                                     ? parseInt(event.target.value) : 0;

@@ -157,5 +157,6 @@
     "green":                "綠",
     "blue":                 "藍",
     "white":                "白",
-    "purple":               "紫"
+    "purple":               "紫",
+    "type":                 "類型"
 }
