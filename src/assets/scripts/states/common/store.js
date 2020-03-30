@@ -775,11 +775,19 @@ export default createStore((state = initialState, action) => {
             let currentEquips = Helper.deepCopy(state.currentEquips);
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
+            if (Helper.isEmpty(currentEquips.weapon.slotIds)) {
+                currentEquips.weapon.slotIds = [];
+            }
+
             if (null === size) {
-                currentEquips.slotIds[index] = undefined;
-                customWeapon.slots[index] = undefined;
+                currentEquips.weapon.slotIds = currentEquips.weapon.slotIds.filter((id, slotIndex) => {
+                    return index !== slotIndex;
+                });
+                customWeapon.slots = customWeapon.slots.filter((id, slotIndex) => {
+                    return index !== slotIndex;
+                });
             } else {
-                currentEquips.slotIds[index] = undefined;
+                currentEquips.weapon.slotIds[index] = undefined;
                 customWeapon.slots[index] = {
                     size: size
                 };

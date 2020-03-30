@@ -68,7 +68,7 @@ const renderEnhanceBlock = (equipInfo) => {
                 <span>{usedSize} / {equipInfo.enhanceSize}</span>
                 <div className="mhwc-icons_bundle">
                     {(usedSize < equipInfo.enhanceSize) ? (
-                        <IconButton iconName="plus" altName={_('add')} onClick={() => {
+                        <IconButton key={equipInfo.enhances.length} iconName="plus" altName={_('add')} onClick={() => {
                             ModalState.setter.showEquipItemSelector({
                                 equipType: equipInfo.type,
                                 equipRare: equipInfo.rare,
@@ -85,10 +85,20 @@ const renderEnhanceBlock = (equipInfo) => {
             {equipInfo.enhances.map((enhance, index) => {
                 let enhanceInfo = EnhanceDataset.getInfo(enhance.id);
 
-                let isShowDecrease = (0 < enhance.level - 1);
-                let isShowIncrease = enhance.level + 1 <= enhanceInfo.list.length
-                    && usedSize + enhanceInfo.list[enhance.level].size <= equipInfo.enhanceSize
-                    && -1 !== enhanceInfo.list[enhance.level].allowRares.indexOf(equipInfo.rare);
+                let currentLevel = enhance.level;
+                let prevLevel = 1 <= (currentLevel - 1)
+                    ? currentLevel - 1 : currentLevel;
+                let nextLevel = (currentLevel + 1) <= enhanceInfo.list.length
+                    ? currentLevel + 1 : currentLevel;
+                let currentSize = enhanceInfo.list[currentLevel - 1].size;
+                let prevSize = enhanceInfo.list[prevLevel - 1].size;
+                let nextSize = enhanceInfo.list[nextLevel - 1].size;
+
+                if ((usedSize + nextSize - currentSize) > equipInfo.enhanceSize) {
+                    nextLevel = currentLevel;
+                } else if (-1 === enhanceInfo.list[nextLevel - 1].allowRares.indexOf(equipInfo.rare)) {
+                    nextLevel = currentLevel;
+                }
 
                 return (
                     <Fragment key={`${equipInfo.type}:${index}`}>
@@ -96,24 +106,22 @@ const renderEnhanceBlock = (equipInfo) => {
                             <span>{_('enhance')}: {index + 1}</span>
                         </div>
                         <div className="col-9 mhwc-value">
-                            <span>[{enhanceInfo.list[enhance.level - 1].size}] {_(enhanceInfo.name)} Lv.{enhance.level}</span>
+                            <span>[{enhanceInfo.list[currentLevel - 1].size}] {_(enhanceInfo.name)} Lv.{currentLevel}</span>
                             <div className="mhwc-icons_bundle">
-                                <IconButton iconName="minus-circle" altName={_('down')} onClick={() => {
+                                <IconButton key={prevLevel} iconName="minus-circle" altName={_('down')} onClick={() => {
                                     CommonState.setter.setCurrentEquip({
                                         equipType: equipInfo.type,
                                         enhanceIndex: index,
                                         enhanceId: enhance.id,
-                                        enhanceLevel: (true === isShowDecrease)
-                                            ? enhance.level - 1 : enhance.level
+                                        enhanceLevel: prevLevel
                                     });
                                 }} />
-                                <IconButton iconName="plus-circle" altName={_('up')} onClick={() => {
+                                <IconButton key={nextLevel} iconName="plus-circle" altName={_('up')} onClick={() => {
                                     CommonState.setter.setCurrentEquip({
                                         equipType: equipInfo.type,
                                         enhanceIndex: index,
                                         enhanceId: enhance.id,
-                                        enhanceLevel: (true === isShowIncrease)
-                                            ? enhance.level + 1 : enhance.level
+                                        enhanceLevel: nextLevel
                                     });
                                 }} />
                                 <IconButton iconName="times" altName={_('clean')} onClick={() => {

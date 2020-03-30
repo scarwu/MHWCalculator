@@ -16,7 +16,6 @@ import Helper from 'core/helper';
 // Load Custom Libraries
 import _ from 'libraries/lang';
 import JewelDataset from 'libraries/dataset/jewel';
-import EnhanceDataset from 'libraries/dataset/enhance';
 import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
@@ -175,88 +174,6 @@ const getSkillId = (skill) => {
 /**
  * Render Functions
  */
-const renderEnhanceBlock = (equipInfo) => {
-    let usedSize = 0;
-
-    equipInfo.enhances.forEach((enhance) => {
-        let enhanceInfo = EnhanceDataset.getInfo(enhance.id);
-
-        usedSize += enhanceInfo.list[enhance.level - 1].size;
-    });
-
-    return (
-        <div className="col-12 mhwc-content">
-            <div className="col-3 mhwc-name">
-                <span>{_('enhanceFieldSize')}</span>
-            </div>
-            <div className="col-9 mhwc-value">
-                <span>{usedSize} / {equipInfo.enhanceSize}</span>
-                <div className="mhwc-icons_bundle">
-                    {(usedSize < equipInfo.enhanceSize) ? (
-                        <IconButton iconName="plus" altName={_('add')} onClick={() => {
-                            ModalState.setter.showEquipItemSelector({
-                                equipType: equipInfo.type,
-                                equipRare: equipInfo.rare,
-                                enhanceIndex: equipInfo.enhances.length,
-                                enhanceIds: equipInfo.enhances.map((enhance) => {
-                                    return enhance.id;
-                                })
-                            });
-                        }} />
-                    ) : false}
-                </div>
-            </div>
-
-            {equipInfo.enhances.map((enhance, index) => {
-                let enhanceInfo = EnhanceDataset.getInfo(enhance.id);
-
-                let isShowDecrease = (0 < enhance.level - 1);
-                let isShowIncrease = enhance.level + 1 <= enhanceInfo.list.length
-                    && usedSize + enhanceInfo.list[enhance.level].size <= equipInfo.enhanceSize
-                    && -1 !== enhanceInfo.list[enhance.level].allowRares.indexOf(equipInfo.rare);
-
-                return (
-                    <Fragment key={`${equipInfo.type}:${index}`}>
-                        <div className="col-3 mhwc-name">
-                            <span>{_('enhance')}: {index + 1}</span>
-                        </div>
-                        <div className="col-9 mhwc-value">
-                            <span>[{enhanceInfo.list[enhance.level - 1].size}] {_(enhanceInfo.name)} Lv.{enhance.level}</span>
-                            <div className="mhwc-icons_bundle">
-                                <IconButton iconName="minus-circle" altName={_('down')} onClick={() => {
-                                    CommonState.setter.setCurrentEquip({
-                                        equipType: equipInfo.type,
-                                        enhanceIndex: index,
-                                        enhanceId: enhance.id,
-                                        enhanceLevel: (true === isShowDecrease)
-                                            ? enhance.level - 1 : enhance.level
-                                    });
-                                }} />
-                                <IconButton iconName="plus-circle" altName={_('up')} onClick={() => {
-                                    CommonState.setter.setCurrentEquip({
-                                        equipType: equipInfo.type,
-                                        enhanceIndex: index,
-                                        enhanceId: enhance.id,
-                                        enhanceLevel: (true === isShowIncrease)
-                                            ? enhance.level + 1 : enhance.level
-                                    });
-                                }} />
-                                <IconButton iconName="times" altName={_('clean')} onClick={() => {
-                                    CommonState.setter.setCurrentEquip({
-                                        equipType: equipInfo.type,
-                                        enhanceIndex: index,
-                                        enhanceId: null
-                                    });
-                                }} />
-                            </div>
-                        </div>
-                    </Fragment>
-                );
-            })}
-        </div>
-    );
-};
-
 const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
     let selectorData = {
         equipType: equipType,
@@ -274,7 +191,7 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
 
     if (Helper.isEmpty(jewelInfo)) {
         return (
-            <div key={`${equipType}:${slotIndex}`} className="mhwc-icons_bundle">
+            <div key={`${equipType}:${slotIndex}:${slotSize}`} className="mhwc-icons_bundle">
                 <IconButton
                     iconName="plus" altName={_('add')}
                     onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
@@ -283,7 +200,7 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
     }
 
     return (
-        <Fragment key={`${equipType}:${slotIndex}`}>
+        <Fragment key={`${equipType}:${slotIndex}:${slotSize}`}>
             <span>[{jewelInfo.size}] {_(jewelInfo.name)}</span>
             <div className="mhwc-icons_bundle">
                 <IconButton
@@ -331,18 +248,6 @@ export default function CustomWeapon(props) {
             equipId: null
         };
 
-        let oldEnhanceCount = null
-
-        if (6 <= stateCustomWeapon.rare && stateCustomWeapon.rare <= 8) {
-            oldEnhanceCount = 9 - stateCustomWeapon.rare;
-        }
-
-        let newEnhanceCount = null
-
-        if (10 <= stateCustomWeapon.rare && stateCustomWeapon.rare <= 12) {
-            newEnhanceCount = (15 - stateCustomWeapon.rare) * 2;
-        }
-
         return (
             <div key="customWeapon" className="mhwc-item mhwc-item-3-step">
                 <div className="col-12 mhwc-name">
@@ -389,20 +294,6 @@ export default function CustomWeapon(props) {
                     </div>
 
                     <div className="col-3 mhwc-name">
-                        <span>{_('sharpness')}</span>
-                    </div>
-                    <div className="col-3 mhwc-value">
-                        <BasicSelector
-                            defaultValue={getSharpnessStep(stateCustomWeapon.sharpness)}
-                            options={getSharpnessList()} onChange={(event) => {
-                                let value = ('none' !== event.target.value)
-                                    ? event.target.value : null;
-
-                                CommonState.setter.setCustomWeaponSharpness(value);
-                            }} />
-                    </div>
-
-                    <div className="col-3 mhwc-name">
                         <span>{_('attack')}</span>
                     </div>
                     <div className="col-3 mhwc-value">
@@ -413,6 +304,20 @@ export default function CustomWeapon(props) {
                                     ? parseInt(event.target.value) : 0;
 
                                 CommonState.setter.setCustomWeaponValue('attack', value);
+                            }} />
+                    </div>
+
+                    <div className="col-3 mhwc-name">
+                        <span>{_('sharpness')}</span>
+                    </div>
+                    <div className="col-3 mhwc-value">
+                        <BasicSelector
+                            defaultValue={getSharpnessStep(stateCustomWeapon.sharpness)}
+                            options={getSharpnessList()} onChange={(event) => {
+                                let value = ('none' !== event.target.value)
+                                    ? event.target.value : null;
+
+                                CommonState.setter.setCustomWeaponSharpness(value);
                             }} />
                     </div>
 
@@ -514,46 +419,10 @@ export default function CustomWeapon(props) {
                         </Fragment>
                     ) : false}
                 </div>
-                {(null !== oldEnhanceCount) ? (
-                    <div className="col-12 mhwc-content">
-                        {[...Array(oldEnhanceCount).keys()].map((index) => {
-                            return (
-                                <Fragment key={index}>
-                                    <div className="col-3 mhwc-name">
-                                        <span>{_('enhance')}: {index + 1}</span>
-                                    </div>
-                                    <div className="col-9 mhwc-value">
-                                        {renderEnhanceOption(
-                                            equipType, index, equipInfo.enhances[index].level,
-                                            EnhanceDataset.getInfo(equipInfo.enhances[index].id)
-                                        )}
-                                    </div>
-                                </Fragment>
-                            );
-                        })}
-                    </div>
-                ) : false}
-                {(null !== newEnhanceCount) ? (
-                    <div className="col-12 mhwc-content">
-                        {[...Array(newEnhanceCount).keys()].map((index) => {
-                            return (
-                                <Fragment key={index}>
-                                    <div className="col-3 mhwc-name">
-                                        <span>{_('enhance')}: {index + 1}</span>
-                                    </div>
-                                    <div className="col-9 mhwc-value">
-                                        {renderEnhanceOption(
-                                            equipType, index,
-                                            EnhanceDataset.getInfo(equipInfo.enhances[index].id)
-                                        )}
-                                    </div>
-                                </Fragment>
-                            );
-                        })}
-                    </div>
-                ) : false}
+
                 <div className="col-12 mhwc-content">
-                    {[...Array(2).keys()].map((index) => {
+                    {[...Array(stateCustomWeapon.slots.length + 1 <= 3
+                        ? stateCustomWeapon.slots.length + 1 : 3).keys()].map((index) => {
                         return (
                             <Fragment key={index}>
                                 <div className="col-3 mhwc-name">
