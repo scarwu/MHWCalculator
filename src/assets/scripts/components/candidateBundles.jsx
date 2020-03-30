@@ -59,13 +59,13 @@ const handleBundlePickUp = (bundle) => {
         }
 
         equips[equipType].id = bundle.equips[equipType];
-        equips[equipType].slotIds = {};
+        equips[equipType].slotIds = [];
 
         let equipInfo = null;
 
         if ('weapon' === equipType) {
-            if (Helper.isNotEmpty(bundle.meta.weaponEnhanceIds)) {
-                equips.weapon.enhanceIds = bundle.meta.weaponEnhanceIds; // Restore Enhance
+            if (Helper.isNotEmpty(bundle.meta.weaponEnhances)) {
+                equips.weapon.enhances = bundle.meta.weaponEnhances; // Restore Enhance
             }
 
             equipInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);

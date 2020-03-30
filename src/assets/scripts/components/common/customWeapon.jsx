@@ -481,7 +481,7 @@ export default function CustomWeapon(props) {
                                     <div className="col-9 mhwc-value">
                                         {renderEnhanceOption(
                                             equipType, index,
-                                            EnhanceDataset.getInfo(equipInfo.enhanceIds[index])
+                                            EnhanceDataset.getInfo(equipInfo.enhances[index].id)
                                         )}
                                     </div>
                                 </Fragment>
@@ -500,7 +500,7 @@ export default function CustomWeapon(props) {
                                     <div className="col-9 mhwc-value">
                                         {renderEnhanceOption(
                                             equipType, index,
-                                            EnhanceDataset.getInfo(equipInfo.enhanceIds[index])
+                                            EnhanceDataset.getInfo(equipInfo.enhances[index].id)
                                         )}
                                     </div>
                                 </Fragment>

@@ -16,11 +16,14 @@ import Enhances from 'files/json/datasets/enhances.json';
 // [
 //     0: id,
 //     1: name,
-//     2: list [
+//     2: allowRares,
+//     4: list [
 //         [
 //             0: level,
 //             1: description,
-//             2: reaction { ... }
+//             2: allowRares,
+//             3: size,
+//             4: reaction { ... }
 //         ],
 //         [ ... ]
 //     ]
@@ -29,11 +32,14 @@ let dataset = Enhances.map((enhance) => {
     return {
         id: enhance[0],
         name: enhance[1],
-        list: enhance[2].map((item) => {
+        allowRares: enhance[2],
+        list: enhance[3].map((item) => {
             return {
                 level: item[0],
                 description: item[1],
-                reaction: item[2]
+                allowRares: item[2],
+                size: item[3],
+                reaction: item[4]
             }
         })
     };

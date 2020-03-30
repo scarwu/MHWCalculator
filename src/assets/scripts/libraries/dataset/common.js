@@ -49,41 +49,51 @@ let getAppliedWeaponInfo = (extend) => {
     // Handle Enhance
     let enhanceLevelMapping = {};
     let enhanceTimes = 0;
-    info.enhances = [];
 
-    if (8 === info.rare) {
-        enhanceTimes = [...Array(1).keys()];
-    } else if (7 === info.rare) {
-        enhanceTimes = [...Array(2).keys()];
-    } else if (6 === info.rare) {
-        enhanceTimes = [...Array(3).keys()];
-    } else {
-        enhanceTimes = [];
+    if (6 <= info.rare && info.rare <= 8) {
+        enhanceTimes = 9 - info.rare;
     }
 
-    enhanceTimes.forEach((data, index) => {
-        let enhanceId = null;
+    if (10 <= info.rare && info.rare <= 12) {
+        enhanceTimes = (15 - info.rare) * 2;
+    }
 
-        if (Helper.isNotEmpty(extend.enhanceIds)
-            && Helper.isNotEmpty(extend.enhanceIds[index])
-        ) {
-            enhanceId = extend.enhanceIds[index];
-        }
+    info.enhances = Helper.isNotEmpty(extend.enhances)
+        ? extend.enhances : [];
 
-        // Update Info
-        info.enhances.push({
-            id: enhanceId
-        });
+    info.enhances.forEach((enhance) => {
+        let enhanceLevel = enhance.level;
+        let enhanceInfo = EnhanceDataset.getInfo(enhance.id);
 
-        if (Helper.isEmpty(enhanceId)) {
+        if (Helper.isEmpty(enhanceInfo.list[enhanceLevel - 1].reaction)) {
             return false;
         }
 
-        if (Helper.isEmpty(enhanceLevelMapping[enhanceId])) {
-            enhanceLevelMapping[enhanceId] = 0;
-        }
+        Object.keys(enhanceInfo.list[enhanceLevel - 1].reaction).forEach((reactionType) => {
+            let data = enhanceInfo.list[enhanceLevel - 1].reaction[reactionType];
 
-        enhanceLevelMapping[enhanceId] += 1;
+            switch (reactionType) {
+            case 'attack':
+                info.attack += data.value * Constant.weaponMultiple[info.type];
+                info.attack = parseInt(Math.round(info.attack));
+
+                break;
+            case 'criticalRate':
+                info.criticalRate += data.value;
+
+                break;
+            case 'defense':
+                info.defense = data.value;
+
+                break;
+            case 'addSlot':
+                info.slots.push({
+                    size: data.size
+                });
+
+                break;
+            }
+        });
     });
 
     Object.keys(enhanceLevelMapping).forEach((enhanceId) => {

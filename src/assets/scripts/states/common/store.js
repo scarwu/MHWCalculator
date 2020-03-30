@@ -501,14 +501,17 @@ export default createStore((state = initialState, action) => {
             let currentEquips = Helper.deepCopy(state.currentEquips);
 
             if (Helper.isNotEmpty(data.enhanceIndex)) {
-                if (Helper.isEmpty(currentEquips.weapon.enhanceIds)) {
-                    currentEquips.weapon.enhanceIds = {};
+                if (Helper.isEmpty(currentEquips.weapon.enhances)) {
+                    currentEquips.weapon.enhances = [];
                 }
 
-                currentEquips.weapon.enhanceIds[data.enhanceIndex] = data.enhanceId;
+                currentEquips.weapon.enhances[data.enhanceIndex] = {
+                    id: data.enhanceId,
+                    level: 1
+                };
             } else if (Helper.isNotEmpty(data.slotIndex)) {
                 if (Helper.isEmpty(currentEquips.weapon.slotIds)) {
-                    currentEquips[data.equipType].slotIds = {};
+                    currentEquips[data.equipType].slotIds = [];
                 }
 
                 currentEquips[data.equipType].slotIds[data.slotIndex] = data.jewelId;
@@ -519,8 +522,8 @@ export default createStore((state = initialState, action) => {
 
                 currentEquips.weapon = {
                     id: data.equipId,
-                    enhanceIds: {},
-                    slotIds: {}
+                    enhances: [],
+                    slotIds: []
                 };
             } else if ('helm' === data.equipType
                 || 'chest' === data.equipType
@@ -534,7 +537,7 @@ export default createStore((state = initialState, action) => {
 
                 currentEquips[data.equipType] = {
                     id: data.equipId,
-                    slotIds: {}
+                    slotIds: []
                 };
             } else if ('charm' === data.equipType) {
                 if (Helper.isEmpty(data.equipId)) {
@@ -685,7 +688,7 @@ export default createStore((state = initialState, action) => {
             customWeapon[target] = value;
 
             if ('rare' === target) {
-                currentEquips.weapon.enhanceIds = {};
+                currentEquips.weapon.enhances = [];
             }
 
             return Object.assign({}, state, {

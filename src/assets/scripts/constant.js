@@ -176,28 +176,28 @@ export default {
         equips: {
             weapon: {
                 id: null,
-                enhanceIds: {},
-                slotIds: {}
+                enhances: {},
+                slotIds: []
             },
             helm: {
                 id: null,
-                slotIds: {}
+                slotIds: []
             },
             chest: {
                 id: null,
-                slotIds: {}
+                slotIds: []
             },
             arm: {
                 id: null,
-                slotIds: {}
+                slotIds: []
             },
             waist: {
                 id: null,
-                slotIds: {}
+                slotIds: []
             },
             leg: {
                 id: null,
-                slotIds: {}
+                slotIds: []
             },
             charm: {
                 id: null

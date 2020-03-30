@@ -51,11 +51,11 @@ onmessage = (event) => {
     );
     let stopTime = new Date().getTime();
     let searchTime = (stopTime - startTime) / 1000;
-    let weaponEnhanceIds = Helper.isNotEmpty(requiredEquips.weapon)
-        ? requiredEquips.weapon.enhanceIds : null;
+    let weaponEnhances = Helper.isNotEmpty(requiredEquips.weapon)
+        ? requiredEquips.weapon.enhances : null;
 
     computedBundles.map((bundle) => {
-        bundle.meta.weaponEnhanceIds = weaponEnhanceIds;
+        bundle.meta.weaponEnhances = weaponEnhances;
 
         return bundle;
     });

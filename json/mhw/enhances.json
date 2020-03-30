@@ -6,7 +6,7 @@
             "jaJP": null,
             "enUS": null
         },
-        "allowRare": [ 6,  7,  8 ],
+        "allowRares": [ 6,  7,  8 ],
         "list": [
             {
                 "level": 1,
@@ -15,7 +15,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 1,
                 "reaction": {
                     "attack": {
@@ -30,7 +30,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 2,
                 "reaction": {
                     "attack": {
@@ -45,7 +45,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 3,
                 "reaction": {
                     "attack": {
@@ -62,7 +62,7 @@
             "jaJP": null,
             "enUS": null
         },
-        "allowRare": [ 6,  7,  8 ],
+        "allowRares": [ 6,  7,  8 ],
         "list": [
             {
                 "level": 1,
@@ -71,7 +71,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 1,
                 "reaction": {
                     "criticalRate": {
@@ -86,7 +86,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 2,
                 "reaction": {
                     "criticalRate": {
@@ -101,7 +101,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 3,
                 "reaction": {
                     "criticalRate": {
@@ -118,7 +118,7 @@
             "jaJP": null,
             "enUS": null
         },
-        "allowRare": [ 6,  7,  8 ],
+        "allowRares": [ 6,  7,  8 ],
         "list": [
             {
                 "level": 1,
@@ -127,7 +127,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 1,
                 "reaction": {
                     "defense": {
@@ -142,7 +142,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 2,
                 "reaction": {
                     "defense": {
@@ -157,7 +157,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 3,
                 "reaction": {
                     "defense": {
@@ -174,7 +174,7 @@
             "jaJP": null,
             "enUS": null
         },
-        "allowRare": [ 6,  7,  8 ],
+        "allowRares": [ 6,  7,  8 ],
         "list": [
             {
                 "level": 1,
@@ -183,7 +183,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 1,
                 "reaction": {
                     "addSlot": {
@@ -198,7 +198,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 2,
                 "reaction": {
                     "addSlot": {
@@ -213,7 +213,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 3,
                 "reaction": {
                     "addSlot": {
@@ -228,7 +228,7 @@
         "name": {
             "zhTW": "賦予回復能力"
         },
-        "allowRare": [ 6,  7,  8 ],
+        "allowRares": [ 6,  7,  8 ],
         "list": [
             {
                 "level": 1,
@@ -237,7 +237,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 1,
                 "reaction": null
             },
@@ -248,7 +248,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 2,
                 "reaction": null
             },
@@ -259,7 +259,7 @@
                     "jaJP": null,
                     "enUS": null
                 },
-                "allowRare": [ 6, 7, 8 ],
+                "allowRares": [ 6, 7, 8 ],
                 "size": 3,
                 "reaction": null
             }
