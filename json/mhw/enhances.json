@@ -1,11 +1,12 @@
 [
     {
-        "id": "強化攻擊力",
-        "name":{
-            "zhTW": "強化攻擊力",
+        "id": "攻擊力強化 (mhw)",
+        "name": {
+            "zhTW": "攻擊力強化",
             "jaJP": null,
             "enUS": null
         },
+        "allowRares": [ 6,  7,  8 ],
         "list": [
             {
                 "level": 1,
@@ -14,6 +15,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 1,
                 "reaction": {
                     "attack": {
                         "value": 5
@@ -27,6 +30,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 2,
                 "reaction": {
                     "attack": {
                         "value": 10
@@ -40,6 +45,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 3,
                 "reaction": {
                     "attack": {
                         "value": 15
@@ -49,12 +56,13 @@
         ]
     },
     {
-        "id": "強化會心率",
-        "name":{
-            "zhTW": "強化會心率",
+        "id": "會心率強化 (mhw)",
+        "name": {
+            "zhTW": "會心率強化",
             "jaJP": null,
             "enUS": null
         },
+        "allowRares": [ 6,  7,  8 ],
         "list": [
             {
                 "level": 1,
@@ -63,6 +71,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 1,
                 "reaction": {
                     "criticalRate": {
                         "value": 10
@@ -76,6 +86,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 2,
                 "reaction": {
                     "criticalRate": {
                         "value": 15
@@ -89,6 +101,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 3,
                 "reaction": {
                     "criticalRate": {
                         "value": 20
@@ -98,12 +112,13 @@
         ]
     },
     {
-        "id": "強化防禦力",
-        "name":{
-            "zhTW": "強化防禦力",
+        "id": "防禦力強化 (mhw)",
+        "name": {
+            "zhTW": "防禦力強化",
             "jaJP": null,
             "enUS": null
         },
+        "allowRares": [ 6,  7,  8 ],
         "list": [
             {
                 "level": 1,
@@ -112,6 +127,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 1,
                 "reaction": {
                     "defense": {
                         "value": 10
@@ -125,6 +142,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 2,
                 "reaction": {
                     "defense": {
                         "value": 20
@@ -138,6 +157,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 3,
                 "reaction": {
                     "defense": {
                         "value": 30
@@ -147,12 +168,13 @@
         ]
     },
     {
-        "id": "強化鑲嵌槽",
-        "name":{
-            "zhTW": "強化鑲嵌槽",
+        "id": "鑲嵌槽強化 (mhw)",
+        "name": {
+            "zhTW": "鑲嵌槽強化",
             "jaJP": null,
             "enUS": null
         },
+        "allowRares": [ 6,  7,  8 ],
         "list": [
             {
                 "level": 1,
@@ -161,6 +183,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 1,
                 "reaction": {
                     "addSlot": {
                         "size": 1
@@ -174,6 +198,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 2,
                 "reaction": {
                     "addSlot": {
                         "size": 2
@@ -187,6 +213,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 3,
                 "reaction": {
                     "addSlot": {
                         "size": 3
@@ -196,10 +224,11 @@
         ]
     },
     {
-        "id": "賦予回復能力",
+        "id": "賦予回復能力 (mhw)",
         "name": {
             "zhTW": "賦予回復能力"
         },
+        "allowRares": [ 6,  7,  8 ],
         "list": [
             {
                 "level": 1,
@@ -208,6 +237,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 1,
                 "reaction": null
             },
             {
@@ -217,6 +248,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 2,
                 "reaction": null
             },
             {
@@ -226,6 +259,8 @@
                     "jaJP": null,
                     "enUS": null
                 },
+                "allowRares": [ 6, 7, 8 ],
+                "size": 3,
                 "reaction": null
             }
         ]

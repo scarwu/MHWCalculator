@@ -126,7 +126,8 @@
     "expectedValueSort":    "期望數值",
     "expectedLevelSort":    "期望等級",
     "resultLimit":          "結果數量",
-    "sort":                 "排序方式",
+    "sortBy":               "排序依據",
+    "sortOrder":            "排序順序",
     "strategy":             "搜尋策略",
     "isEndEarly":           "提早終止",
     "isExpectBundle":       "期望預測",
@@ -147,5 +148,16 @@
     "hour":                 "時",
     "minute":               "分",
     "second":               "秒",
-    "tab":                  "分頁"
+    "tab":                  "分頁",
+    "customWeapon":         "自訂武器",
+    "none":                 "無",
+    "red":                  "紅",
+    "orange":               "橘",
+    "yellow":               "黃",
+    "green":                "綠",
+    "blue":                 "藍",
+    "white":                "白",
+    "purple":               "紫",
+    "type":                 "類型",
+    "enhanceFieldSize":     "強化欄數量"
 }

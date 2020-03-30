@@ -1,1 +1,340 @@
-[]
+[
+    {
+        "id": "攻擊力強化 (mhwib)",
+        "name": {
+            "zhTW": "攻擊力強化",
+            "jaJP": null,
+            "enUS": null
+        },
+        "allowRares": [ 10, 11, 12 ],
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "基礎攻擊力+5",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11, 12 ],
+                "size": 1,
+                "reaction": {
+                    "attack": {
+                        "value": 5
+                    }
+                }
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "基礎攻擊力+10",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11 ],
+                "size": 1,
+                "reaction": {
+                    "attack": {
+                        "value": 10
+                    }
+                }
+            },
+            {
+                "level": 3,
+                "description": {
+                    "zhTW": "基礎攻擊力+15",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10 ],
+                "size": 1,
+                "reaction": {
+                    "attack": {
+                        "value": 15
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "會心率強化 (mhwib)",
+        "name": {
+            "zhTW": "會心率強化",
+            "jaJP": null,
+            "enUS": null
+        },
+        "allowRares": [ 10, 11, 12 ],
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "會心率+10%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11, 12 ],
+                "size": 1,
+                "reaction": {
+                    "criticalRate": {
+                        "value": 10
+                    }
+                }
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "會心率+15%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11, 12 ],
+                "size": 1,
+                "reaction": {
+                    "criticalRate": {
+                        "value": 15
+                    }
+                }
+            },
+            {
+                "level": 3,
+                "description": {
+                    "zhTW": "會心率+20%",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10 ],
+                "size": 1,
+                "reaction": {
+                    "criticalRate": {
+                        "value": 20
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "防禦力強化 (mhwib)",
+        "name": {
+            "zhTW": "防禦力強化",
+            "jaJP": null,
+            "enUS": null
+        },
+        "allowRares": [ 10, 11, 12 ],
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "防禦力+10",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11, 12 ],
+                "size": 1,
+                "reaction": {
+                    "defense": {
+                        "value": 10
+                    }
+                }
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "防禦力+20",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11, 12 ],
+                "size": 1,
+                "reaction": {
+                    "defense": {
+                        "value": 20
+                    }
+                }
+            },
+            {
+                "level": 3,
+                "description": {
+                    "zhTW": "防禦力+30",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11, 12 ],
+                "size": 1,
+                "reaction": {
+                    "defense": {
+                        "value": 30
+                    }
+                }
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "防禦力+40",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11 ],
+                "size": 1,
+                "reaction": {
+                    "defense": {
+                        "value": 40
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "鑲嵌槽強化 (mhwib)",
+        "name": {
+            "zhTW": "鑲嵌槽強化",
+            "jaJP": null,
+            "enUS": null
+        },
+        "allowRares": [ 10, 11, 12 ],
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "1級鑲嵌槽+1",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11, 12 ],
+                "size": 1,
+                "reaction": {
+                    "addSlot": {
+                        "size": 1
+                    }
+                }
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "2級鑲嵌槽+1",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10 ],
+                "size": 1,
+                "reaction": {
+                    "addSlot": {
+                        "size": 2
+                    }
+                }
+            },
+            {
+                "level": 3,
+                "description": {
+                    "zhTW": "3級鑲嵌槽+1",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10 ],
+                "size": 1,
+                "reaction": {
+                    "addSlot": {
+                        "size": 3
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "賦予回復能力 (mhwib)",
+        "name": {
+            "zhTW": "賦予回復能力",
+            "jaJP": null,
+            "enUS": null
+        },
+        "allowRares": [ 10, 11, 12 ],
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "造成傷害時回復少量體力",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11, 12 ],
+                "size": 1,
+                "reaction": null
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "造成傷害時回復少量體力",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11 ],
+                "size": 1,
+                "reaction": null
+            },
+            {
+                "level": 3,
+                "description": {
+                    "zhTW": "造成傷害時回復少量體力",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10 ],
+                "size": 1,
+                "reaction": null
+            }
+        ]
+    },
+    {
+        "id": "屬性．狀態異常強化 (mhwib)",
+        "name": {
+            "zhTW": "屬性．狀態異常強化",
+            "jaJP": null,
+            "enUS": null
+        },
+        "allowRares": [ 10, 11, 12 ],
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "屬性．狀態異常強化",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11, 12 ],
+                "size": 1,
+                "reaction": null
+            },
+            {
+                "level": 2,
+                "description": {
+                    "zhTW": "屬性．狀態異常強化",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11, 12 ],
+                "size": 1,
+                "reaction": null
+            },
+            {
+                "level": 3,
+                "description": {
+                    "zhTW": "屬性．狀態異常強化",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10, 11 ],
+                "size": 1,
+                "reaction": null
+            },
+            {
+                "level": 4,
+                "description": {
+                    "zhTW": "屬性．狀態異常強化",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "allowRares": [ 10 ],
+                "size": 1,
+                "reaction": null
+            }
+        ]
+    }
+]

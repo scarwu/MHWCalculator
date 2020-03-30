@@ -19,9 +19,9 @@ import SetDataset from 'libraries/dataset/set';
 import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
-import FunctionalSelector from 'components/common/functionalSelector';
-import FunctionalInput from 'components/common/functionalInput';
+import IconButton from 'components/common/iconButton';
+import IconSelector from 'components/common/iconSelector';
+import IconInput from 'components/common/iconInput';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -47,11 +47,11 @@ const renderSetItem = (set) => {
 
                 <div className="mhwc-icons_bundle">
                     {set.isSelect ? (
-                        <FunctionalButton
+                        <IconButton
                             iconName="minus" altName={_('remove')}
                             onClick={() => {CommonState.setter.removeRequiredSet(set.id)}} />
                     ) : (
-                        <FunctionalButton
+                        <IconButton
                             iconName="plus" altName={_('add')}
                             onClick={() => {CommonState.setter.addRequiredSet(set.id)}} />
                     )}
@@ -85,11 +85,11 @@ const renderSkillItem = (skill) => {
 
                 <div className="mhwc-icons_bundle">
                     {skill.isSelect ? (
-                        <FunctionalButton
+                        <IconButton
                             iconName="minus" altName={_('remove')}
                             onClick={() => {CommonState.setter.removeRequiredSkill(skill.id)}} />
                     ) : (
-                        <FunctionalButton
+                        <IconButton
                             iconName="plus" altName={_('add')}
                             onClick={() => {CommonState.setter.addRequiredSkill(skill.id)}} />
                     )}
@@ -233,10 +233,12 @@ export default function ConditionItemSelector(props) {
     /**
      * Variables
      */
-    const modeList = [
-        { key: 'set', value: _('set') },
-        { key: 'skill', value: _('skill') }
-    ];
+    const getModeList = () => {
+        return [
+            { key: 'set',   value: _('set') },
+            { key: 'skill', value: _('skill') }
+        ];
+    };
 
     /**
      * Handle Functions
@@ -330,13 +332,13 @@ export default function ConditionItemSelector(props) {
                     <span className="mhwc-title">{_(stateMode + 'List')}</span>
 
                     <div className="mhwc-icons_bundle">
-                        <FunctionalInput
+                        <IconInput
                             iconName="search" placeholder={_('inputKeyword')}
                             defaultValue={stateSegment} onChange={handleSegmentInput} />
-                        <FunctionalSelector
+                        <IconSelector
                             iconName="globe" defaultValue={stateMode}
-                            options={modeList} onChange={handleModeChange} />
-                        <FunctionalButton
+                            options={getModeList()} onChange={handleModeChange} />
+                        <IconButton
                             iconName="times" altName={_('close')}
                             onClick={ModalState.setter.hideConditionItemSelector} />
                     </div>

@@ -42,10 +42,17 @@
             position: absolute;
             top: 0;
             right: 10px;
+            padding-top: 10px;
+            height: 30px;
 
-            .mhwc-functional_input,
-            .mhwc-functional_selector,
-            .mhwc-functional_button {
+            .mhwc-basic_input,
+            .mhwc-basic_selector,
+            .mhwc-icon_input,
+            .mhwc-icon_selector,
+            .mhwc-icon_button {
+                vertical-align: top;
+                margin-left: 2px;
+
                 .mhwc-body {
                     background-color: #999;
                 }

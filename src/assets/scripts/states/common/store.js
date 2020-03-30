@@ -73,8 +73,12 @@ const initialState = {
         Helper.deepCopy(Constant.default.algorithmParams),
         Status.get(statusPrefix + ':algorithmParams') || {}
     ),
-    computedBundles: Status.get(statusPrefix + ':computedBundles') || [],
-    reservedBundles: Status.get(statusPrefix + ':reservedBundles') || []
+    computedResult: Status.get(statusPrefix + ':computedResult') || {
+        meta: {},
+        list: []
+    },
+    reservedBundles: Status.get(statusPrefix + ':reservedBundles') || [],
+    customWeapon: Status.get(statusPrefix + ':customWeapon') || Helper.deepCopy(Constant.default.customWeapon)
 };
 
 export default createStore((state = initialState, action) => {
@@ -124,26 +128,30 @@ export default createStore((state = initialState, action) => {
             case 'candidateBundles':
                 if (Helper.isEmpty(tempData[target].list[index])) {
                     tempData[target].list[index] = {
-                        computedBundles: []
+                        computedResult: {
+                            list: [],
+                            meta: {}
+                        }
                     };
                 }
 
                 bundle = Helper.deepCopy(tempData[target].list[index]);
 
                 tempData[target].list[tempData[target].index] = Helper.deepCopy({
-                    computedBundles: state.computedBundles
+                    computedResult: state.computedResult
                 });
                 tempData[target].index = index;
 
                 return Object.assign({}, state, {
                     tempData: tempData,
-                    computedBundles: bundle.computedBundles
+                    computedResult: bundle.computedResult
                 });
             case 'equipsDisplayer':
                 if (Helper.isEmpty(tempData[target].list[index])) {
                     tempData[target].list[index] = {
-                        requiredEquipPins: {},
-                        currentEquips: {}
+                        requiredEquipPins: Helper.deepCopy(Constant.default.equipsLock),
+                        currentEquips: {},
+                        customWeapon: Helper.deepCopy(Constant.default.customWeapon)
                     };
                 }
 
@@ -151,14 +159,16 @@ export default createStore((state = initialState, action) => {
 
                 tempData[target].list[tempData[target].index] = Helper.deepCopy({
                     requiredEquipPins: state.requiredEquipPins,
-                    currentEquips: state.currentEquips
+                    currentEquips: state.currentEquips,
+                    customWeapon: state.customWeapon
                 });
                 tempData[target].index = index;
 
                 return Object.assign({}, state, {
                     tempData: tempData,
                     requiredEquipPins: bundle.requiredEquipPins,
-                    currentEquips: bundle.currentEquips
+                    currentEquips: bundle.currentEquips,
+                    customWeapon: bundle.customWeapon
                 });
             }
         })();
@@ -500,14 +510,23 @@ export default createStore((state = initialState, action) => {
             let currentEquips = Helper.deepCopy(state.currentEquips);
 
             if (Helper.isNotEmpty(data.enhanceIndex)) {
-                if (Helper.isEmpty(currentEquips.weapon.enhanceIds)) {
-                    currentEquips.weapon.enhanceIds = {};
+                if (Helper.isEmpty(currentEquips.weapon.enhances)) {
+                    currentEquips.weapon.enhances = [];
                 }
 
-                currentEquips.weapon.enhanceIds[data.enhanceIndex] = data.enhanceId;
+                if (Helper.isNotEmpty(data.enhanceId)) {
+                    currentEquips.weapon.enhances[data.enhanceIndex] = {
+                        id: data.enhanceId,
+                        level: Helper.isNotEmpty(data.enhanceLevel) ? data.enhanceLevel : 1
+                    };
+                } else {
+                    currentEquips.weapon.enhances = currentEquips.weapon.enhances.filter((enhance, index) => {
+                        return index !== data.enhanceIndex
+                    });
+                }
             } else if (Helper.isNotEmpty(data.slotIndex)) {
                 if (Helper.isEmpty(currentEquips.weapon.slotIds)) {
-                    currentEquips[data.equipType].slotIds = {};
+                    currentEquips[data.equipType].slotIds = [];
                 }
 
                 currentEquips[data.equipType].slotIds[data.slotIndex] = data.jewelId;
@@ -518,8 +537,8 @@ export default createStore((state = initialState, action) => {
 
                 currentEquips.weapon = {
                     id: data.equipId,
-                    enhanceIds: {},
-                    slotIds: {}
+                    enhances: [],
+                    slotIds: []
                 };
             } else if ('helm' === data.equipType
                 || 'chest' === data.equipType
@@ -533,7 +552,7 @@ export default createStore((state = initialState, action) => {
 
                 currentEquips[data.equipType] = {
                     id: data.equipId,
-                    slotIds: {}
+                    slotIds: []
                 };
             } else if ('charm' === data.equipType) {
                 if (Helper.isEmpty(data.equipId)) {
@@ -626,9 +645,9 @@ export default createStore((state = initialState, action) => {
         })();
 
     // Computed Bundles
-    case 'UPDATE_COMPUTED_BUNDLES':
+    case 'UPDATE_COMPUTED_RESULT':
         return Object.assign({}, state, {
-            computedBundles: action.payload.data
+            computedResult: action.payload.data
         });
 
     // Reserved Bundles
@@ -672,6 +691,147 @@ export default createStore((state = initialState, action) => {
                 return reservedBundles;
             })()
         });
+
+    // Custom Weapon
+    case 'REPLACE_CUSTOM_WEAPON':
+        return (() => {
+            return Object.assign({}, state, {
+                customWeapon: action.payload.data
+            });
+        })();
+    case 'SET_CUSTOM_WEAPON_VALUE':
+        return (() => {
+            let target = action.payload.target;
+            let value = action.payload.value;
+            let currentEquips = Helper.deepCopy(state.currentEquips);
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            customWeapon[target] = value;
+
+            if ('rare' === target) {
+                currentEquips.weapon.enhances = [];
+            }
+
+            return Object.assign({}, state, {
+                currentEquips: currentEquips,
+                customWeapon: customWeapon
+            });
+        })();
+    case 'SET_CUSTOM_WEAPON_SHARPNESS':
+        return (() => {
+            let step = action.payload.step;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            if (null === step) {
+                customWeapon.sharpness = null;
+            } else {
+                customWeapon.sharpness = {
+                    value: 350,
+                    steps: {
+                        red: 0,
+                        orange: 0,
+                        yellow: 0,
+                        green: 0,
+                        blue: 0,
+                        white: 0,
+                        purple: 0
+                    }
+                };
+
+                customWeapon.sharpness.steps[step] = 350
+            }
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
+    case 'SET_CUSTOM_WEAPON_ELEMENT_TYPE':
+        return (() => {
+            let target = action.payload.target;
+            let type = action.payload.type;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            if (null === type) {
+                customWeapon.element[target] = null;
+
+                if ('attack' === target) {
+                    customWeapon.elderseal = null;
+                }
+            } else {
+                customWeapon.element[target] = {
+                    type: type,
+                    minValue: null,
+                    maxValue: null,
+                    isHidden: false
+                };
+            }
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
+
+    case 'SET_CUSTOM_WEAPON_ELEMENT_VALUE':
+        return (() => {
+            let target = action.payload.target;
+            let value = action.payload.value;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            customWeapon.element[target].minValue = value;
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
+    case 'SET_CUSTOM_WEAPON_SLOT':
+        return (() => {
+            let index = action.payload.index;
+            let size = action.payload.size;
+            let currentEquips = Helper.deepCopy(state.currentEquips);
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            if (Helper.isEmpty(currentEquips.weapon.slotIds)) {
+                currentEquips.weapon.slotIds = [];
+            }
+
+            if (null === size) {
+                currentEquips.weapon.slotIds = currentEquips.weapon.slotIds.filter((id, slotIndex) => {
+                    return index !== slotIndex;
+                });
+                customWeapon.slots = customWeapon.slots.filter((id, slotIndex) => {
+                    return index !== slotIndex;
+                });
+            } else {
+                currentEquips.weapon.slotIds[index] = undefined;
+                customWeapon.slots[index] = {
+                    size: size
+                };
+            }
+
+            return Object.assign({}, state, {
+                currentEquips: currentEquips,
+                customWeapon: customWeapon
+            });
+        })();
+    case 'SET_CUSTOM_WEAPON_SKILL':
+        return (() => {
+            let index = action.payload.index;
+            let id = action.payload.id;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            if (null === id) {
+                customWeapon.skills[index] = undefined;
+            } else {
+                customWeapon.skills[index] = {
+                    id: id,
+                    level: 1
+                };
+            }
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
 
     // Default
     default:

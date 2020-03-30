@@ -28,10 +28,13 @@ export default {
     getAlgorithmParams: () => {
         return Store.getState().algorithmParams;
     },
-    getComputedBundles: () => {
-        return Store.getState().computedBundles;
+    getComputedResult: () => {
+        return Store.getState().computedResult;
     },
     getReservedBundles: () => {
         return Store.getState().reservedBundles;
+    },
+    getCustomWeapon: () => {
+        return Store.getState().customWeapon;
     }
 };

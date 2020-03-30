@@ -22,9 +22,10 @@ import SkillDataset from 'libraries/dataset/skill';
 import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
-import FunctionalTab from 'components/common/functionalTab';
+import IconButton from 'components/common/iconButton';
+import IconTab from 'components/common/iconTab';
 import SharpnessBar from 'components/common/sharpnessBar';
+import CustomWeapon from 'components/common/customWeapon';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -49,54 +50,93 @@ const handleSwitchTempData = (index) => {
 /**
  * Render Functions
  */
-const renderEnhanceOption = (equipType, enhanceIndex, enhanceInfo) => {
-    let selectorData = {
-        equipType: equipType,
-        enhanceIndex: enhanceIndex,
-        enhanceId: (Helper.isNotEmpty(enhanceInfo)) ? enhanceInfo.id : null
-    };
+const renderEnhanceBlock = (equipInfo) => {
+    let usedSize = 0;
 
-    let emptySelectorData = {
-        equipType: equipType,
-        enhanceIndex: enhanceIndex,
-        enhanceId: null
-    };
+    equipInfo.enhances.forEach((enhance) => {
+        let enhanceInfo = EnhanceDataset.getInfo(enhance.id);
 
-    if (Helper.isEmpty(enhanceInfo)) {
-        return (
-            <Fragment key={`${equipType}:${enhanceIndex}`}>
-                <div className="col-3 mhwc-name">
-                    <span>{_('enhance')}: {enhanceIndex + 1}</span>
-                </div>
-
-                <div className="col-9 mhwc-value">
-                    <div className="mhwc-icons_bundle">
-                        <FunctionalButton
-                            iconName="plus" altName={_('add')}
-                            onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
-                    </div>
-                </div>
-            </Fragment>
-        );
-    }
+        usedSize += enhanceInfo.list[enhance.level - 1].size;
+    });
 
     return (
-        <Fragment key={`${equipType}:${enhanceIndex}`}>
+        <div className="col-12 mhwc-content">
             <div className="col-3 mhwc-name">
-                <span>{_('enhance')}: {enhanceIndex + 1}</span>
+                <span>{_('enhanceFieldSize')}</span>
             </div>
             <div className="col-9 mhwc-value">
-                <span>{_(enhanceInfo.name)}</span>
+                <span>{usedSize} / {equipInfo.enhanceSize}</span>
                 <div className="mhwc-icons_bundle">
-                    <FunctionalButton
-                        iconName="exchange" altName={_('change')}
-                        onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
-                    <FunctionalButton
-                        iconName="times" altName={_('clean')}
-                        onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
+                    {(usedSize < equipInfo.enhanceSize) ? (
+                        <IconButton key={equipInfo.enhances.length} iconName="plus" altName={_('add')} onClick={() => {
+                            ModalState.setter.showEquipItemSelector({
+                                equipType: equipInfo.type,
+                                equipRare: equipInfo.rare,
+                                enhanceIndex: equipInfo.enhances.length,
+                                enhanceIds: equipInfo.enhances.map((enhance) => {
+                                    return enhance.id;
+                                })
+                            });
+                        }} />
+                    ) : false}
                 </div>
             </div>
-        </Fragment>
+
+            {equipInfo.enhances.map((enhance, index) => {
+                let enhanceInfo = EnhanceDataset.getInfo(enhance.id);
+
+                let currentLevel = enhance.level;
+                let prevLevel = 1 <= (currentLevel - 1)
+                    ? currentLevel - 1 : currentLevel;
+                let nextLevel = (currentLevel + 1) <= enhanceInfo.list.length
+                    ? currentLevel + 1 : currentLevel;
+                let currentSize = enhanceInfo.list[currentLevel - 1].size;
+                let prevSize = enhanceInfo.list[prevLevel - 1].size;
+                let nextSize = enhanceInfo.list[nextLevel - 1].size;
+
+                if ((usedSize + nextSize - currentSize) > equipInfo.enhanceSize) {
+                    nextLevel = currentLevel;
+                } else if (-1 === enhanceInfo.list[nextLevel - 1].allowRares.indexOf(equipInfo.rare)) {
+                    nextLevel = currentLevel;
+                }
+
+                return (
+                    <Fragment key={`${equipInfo.type}:${index}`}>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('enhance')}: {index + 1}</span>
+                        </div>
+                        <div className="col-9 mhwc-value">
+                            <span>[{enhanceInfo.list[currentLevel - 1].size}] {_(enhanceInfo.name)} Lv.{currentLevel}</span>
+                            <div className="mhwc-icons_bundle">
+                                <IconButton key={prevLevel} iconName="minus-circle" altName={_('down')} onClick={() => {
+                                    CommonState.setter.setCurrentEquip({
+                                        equipType: equipInfo.type,
+                                        enhanceIndex: index,
+                                        enhanceId: enhance.id,
+                                        enhanceLevel: prevLevel
+                                    });
+                                }} />
+                                <IconButton key={nextLevel} iconName="plus-circle" altName={_('up')} onClick={() => {
+                                    CommonState.setter.setCurrentEquip({
+                                        equipType: equipInfo.type,
+                                        enhanceIndex: index,
+                                        enhanceId: enhance.id,
+                                        enhanceLevel: nextLevel
+                                    });
+                                }} />
+                                <IconButton iconName="times" altName={_('clean')} onClick={() => {
+                                    CommonState.setter.setCurrentEquip({
+                                        equipType: equipInfo.type,
+                                        enhanceIndex: index,
+                                        enhanceId: null
+                                    });
+                                }} />
+                            </div>
+                        </div>
+                    </Fragment>
+                );
+            })}
+        </div>
     );
 };
 
@@ -123,7 +163,7 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
                 </div>
                 <div className="col-9 mhwc-value">
                     <div className="mhwc-icons_bundle">
-                        <FunctionalButton
+                        <IconButton
                             iconName="plus" altName={_('add')}
                             onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
                     </div>
@@ -140,10 +180,10 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
             <div className="col-9 mhwc-value">
                 <span>[{jewelInfo.size}] {_(jewelInfo.name)}</span>
                 <div className="mhwc-icons_bundle">
-                    <FunctionalButton
+                    <IconButton
                         iconName="exchange" altName={_('change')}
                         onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
-                    <FunctionalButton
+                    <IconButton
                         iconName="times" altName={_('clean')}
                         onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
                 </div>
@@ -298,7 +338,15 @@ const renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
                 <div className="col-12 mhwc-name">
                     <span>{_(equipType)}</span>
                     <div className="mhwc-icons_bundle">
-                        <FunctionalButton
+                        {'weapon' === equipType ? (
+                            <IconButton
+                                iconName="wrench" altName={_('customWeapon')}
+                                onClick={() => {CommonState.setter.setCurrentEquip({
+                                    equipType: 'weapon',
+                                    equipId: 'customWeapon'
+                                })}} />
+                        ) : false}
+                        <IconButton
                             iconName="plus" altName={_('add')}
                             onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
                     </div>
@@ -315,30 +363,29 @@ const renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
             <div className="col-12 mhwc-name">
                 <span>{_(equipType)}: {_(equipInfo.name)}</span>
                 <div className="mhwc-icons_bundle">
-                    <FunctionalButton
+                    <IconButton
                         iconName={isEquipLock ? 'lock' : 'unlock-alt'}
                         altName={isEquipLock ? _('unlock') : _('lock')}
                         onClick={() => {CommonState.setter.toggleRequiredEquipPins(equipType)}} />
-                    <FunctionalButton
+                    {'weapon' === equipType ? (
+                        <IconButton
+                            iconName="wrench" altName={_('customWeapon')}
+                            onClick={() => {CommonState.setter.setCurrentEquip({
+                                equipType: 'weapon',
+                                equipId: 'customWeapon'
+                            })}} />
+                    ) : false}
+                    <IconButton
                         iconName="exchange" altName={_('change')}
                         onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
-                    <FunctionalButton
+                    <IconButton
                         iconName="times" altName={_('clean')}
                         onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
                 </div>
             </div>
 
-            {(Helper.isNotEmpty(equipInfo.enhances)
-                && 0 !== equipInfo.enhances.length)
-            ? (
-                <div className="col-12 mhwc-content">
-                    {equipInfo.enhances.map((data, index) => {
-                        return renderEnhanceOption(
-                            equipType, index,
-                            EnhanceDataset.getInfo(data.id)
-                        );
-                    })}
-                </div>
+            {(0 < equipInfo.enhanceSize) ? (
+                renderEnhanceBlock(equipInfo)
             ) : false}
 
             {(Helper.isNotEmpty(equipInfo.slots)
@@ -421,12 +468,21 @@ export default function EquipsDisplayer(props) {
 
     const getContent = useMemo(() => {
         let blocks = [];
+        let isCustomWeapon = true;
 
-        blocks.push(renderEquipBlock(
-            'weapon',
-            CommonDataset.getAppliedWeaponInfo(stateCurrentEquips.weapon),
-            stateRequiredEquipPins.weapon
-        ));
+        if (Helper.isNotEmpty(stateCurrentEquips.weapon)
+            && 'customWeapon' === stateCurrentEquips.weapon.id
+        ) {
+            blocks.push((
+                <CustomWeapon key="customWeapon" />
+            ));
+        } else {
+            blocks.push(renderEquipBlock(
+                'weapon',
+                CommonDataset.getAppliedWeaponInfo(stateCurrentEquips.weapon),
+                stateRequiredEquipPins.weapon
+            ));
+        }
 
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             blocks.push(renderEquipBlock(
@@ -451,25 +507,25 @@ export default function EquipsDisplayer(props) {
                 <span className="mhwc-title">{_('equipBundle')}</span>
 
                 <div className="mhwc-icons_bundle-left">
-                    <FunctionalTab
+                    <IconTab
                         iconName="circle-o" altName={_('tab') + ' 1'}
                         isActive={0 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(0)}} />
-                    <FunctionalTab
+                    <IconTab
                         iconName="circle-o" altName={_('tab') + ' 2'}
                         isActive={1 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(1)}} />
-                    <FunctionalTab
+                    <IconTab
                         iconName="circle-o" altName={_('tab') + ' 3'}
                         isActive={2 === stateTempData.equipsDisplayer.index}
                         onClick={() => {handleSwitchTempData(2)}} />
                 </div>
 
                 <div className="mhwc-icons_bundle-right">
-                    <FunctionalButton
+                    <IconButton
                         iconName="refresh" altName={_('reset')}
                         onClick={handleEquipsDisplayerRefresh} />
-                    <FunctionalButton
+                    <IconButton
                         iconName="th-list" altName={_('bundleList')}
                         onClick={ModalState.setter.showBundleItemSelector} />
                 </div>

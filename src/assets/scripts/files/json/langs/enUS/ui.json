@@ -126,7 +126,8 @@
     "expectedValueSort":    "Expected Value",
     "expectedLevelSort":    "Expected Level",
     "resultLimit":          "Result Limit",
-    "sort":                 "Sorting",
+    "sortBy":               "Sort By",
+    "sortOrder":            "Sort Order",
     "strategy":             "Strategy",
     "isEndEarly":           "Is End Early",
     "isExpectBundle":       "Is Expect Bundle",
@@ -147,5 +148,16 @@
     "hour":                 "h",
     "minute":               "m",
     "second":               "s",
-    "tab":                  "Tab"
+    "tab":                  "Tab",
+    "customWeapon":         "Custom Weapon",
+    "none":                 "None",
+    "red":                  "Red",
+    "orange":               "Orange",
+    "yellow":               "Yellow",
+    "green":                "Green",
+    "blue":                 "Blue",
+    "white":                "White",
+    "purple":               "Purple",
+    "type":                 "Type",
+    "enhanceFieldSize":     "Enhance Fields"
 }

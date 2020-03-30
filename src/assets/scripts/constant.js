@@ -176,28 +176,28 @@ export default {
         equips: {
             weapon: {
                 id: null,
-                enhanceIds: {},
-                slotIds: {}
+                enhances: {},
+                slotIds: []
             },
             helm: {
                 id: null,
-                slotIds: {}
+                slotIds: []
             },
             chest: {
                 id: null,
-                slotIds: {}
+                slotIds: []
             },
             arm: {
                 id: null,
-                slotIds: {}
+                slotIds: []
             },
             waist: {
                 id: null,
-                slotIds: {}
+                slotIds: []
             },
             leg: {
                 id: null,
-                slotIds: {}
+                slotIds: []
             },
             charm: {
                 id: null
@@ -211,6 +211,24 @@ export default {
             waist: false,
             leg: false,
             charm: false
+        },
+        customWeapon: {
+            id: 'customWeapon',
+            rare: 12,
+            type: null,
+            series: null,
+            name: 'customWeapon',
+            attack: 0,
+            criticalRate: 0,
+            defense: 0,
+            sharpness:  null,
+            element: {
+                attack: null,
+                status: null
+            },
+            elderseal: null,
+            slots: [],
+            skills: []
         },
         status: {
             health: 100,

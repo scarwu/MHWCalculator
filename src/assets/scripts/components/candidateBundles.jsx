@@ -23,8 +23,8 @@ import SkillDataset from 'libraries/dataset/skill';
 import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
-import FunctionalTab from 'components/common/functionalTab';
+import IconButton from 'components/common/iconButton';
+import IconTab from 'components/common/iconTab';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -40,7 +40,7 @@ let worker = undefined;
 /**
  * Handle Functions
  */
-const handleBundlePickUp = (bundle) => {
+const handleBundlePickUp = (bundle, meta) => {
     let equips = Helper.deepCopy(CommonState.getter.getCurrentEquips());
     let slotMap = {
         1: [],
@@ -48,6 +48,10 @@ const handleBundlePickUp = (bundle) => {
         3: [],
         4: []
     };
+
+    if (Helper.isNotEmpty(meta.customWeapon)) {
+        CommonState.setter.relpaceCustomWeapon(meta.customWeapon);
+    }
 
     Object.keys(bundle.equips).forEach((equipType) => {
         if (Helper.isEmpty(bundle.equips[equipType])) {
@@ -59,13 +63,13 @@ const handleBundlePickUp = (bundle) => {
         }
 
         equips[equipType].id = bundle.equips[equipType];
-        equips[equipType].slotIds = {};
+        equips[equipType].slotIds = [];
 
         let equipInfo = null;
 
         if ('weapon' === equipType) {
-            if (Helper.isNotEmpty(bundle.meta.weaponEnhanceIds)) {
-                equips.weapon.enhanceIds = bundle.meta.weaponEnhanceIds; // Restore Enhance
+            if (Helper.isNotEmpty(meta.weaponEnhances)) {
+                equips.weapon.enhances = meta.weaponEnhances; // Restore Enhance
             }
 
             equipInfo = CommonDataset.getAppliedWeaponInfo(equips.weapon);
@@ -138,15 +142,15 @@ const handleSwitchTempData = (index) => {
 /**
  * Render Functions
  */
-const renderBundleItem = (bundle, index, totalIndex, requiredSkillIds) => {
+const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds) => {
     return (
         <div key={bundle.hash} className="mhwc-item mhwc-item-3-step">
             <div className="col-12 mhwc-name">
                 <span>{_('bundle')}: {index + 1} / {totalIndex}</span>
                 <div className="mhwc-icons_bundle">
-                    <FunctionalButton
+                    <IconButton
                         iconName="check" altName={_('equip')}
-                        onClick={() => {handleBundlePickUp(bundle)}} />
+                        onClick={() => {handleBundlePickUp(bundle, meta)}} />
                 </div>
             </div>
 
@@ -259,7 +263,7 @@ const renderBundleItem = (bundle, index, totalIndex, requiredSkillIds) => {
                                     <span>{`${_(skillInfo.name)} Lv.${skillCount}`}</span>
                                     {(-1 === requiredSkillIds.indexOf(skillInfo.id)) ? (
                                         <div className="mhwc-icons_bundle">
-                                            <FunctionalButton
+                                            <IconButton
                                                 iconName="arrow-left" altName={_('include')}
                                                 onClick={() => {CommonState.setter.addRequiredSkill(skillInfo.id)}} />
                                         </div>
@@ -303,8 +307,8 @@ const BundleList = (props) => {
             return skill.id;
         });
 
-        return data.map((bundle, index) => {
-            return renderBundleItem(bundle, index, data.length, requiredSkillIds);
+        return data.list.map((bundle, index) => {
+            return renderBundleItem(bundle, index, data.list.length, data.meta, requiredSkillIds);
         });
     }, [data, stateRequiredSkills]);
 };
@@ -337,7 +341,7 @@ export default function CandidateBundles(props) {
      * Hooks
      */
     const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
-    const [stateComputedBundles, updateComputedBundles] = useState(CommonState.getter.getComputedBundles());
+    const [stateComputedResult, updateComputedResult] = useState(CommonState.getter.getComputedResult());
     const [stateIsSearching, updateIsSearching] = useState(false);
     const [stateSearchingTabIndex, updateSearchingTabIndex] = useState(null);
     const [stateBundleCount, updateBundleCount] = useState(0);
@@ -348,7 +352,7 @@ export default function CandidateBundles(props) {
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
             updateTempData(CommonState.getter.getTempData());
-            updateComputedBundles(CommonState.getter.getComputedBundles());
+            updateComputedResult(CommonState.getter.getComputedResult());
         });
 
         return () => {
@@ -384,6 +388,7 @@ export default function CandidateBundles(props) {
         }
 
         let tempData = CommonState.getter.getTempData();
+        let customWeapon = CommonState.getter.getCustomWeapon();
         let requiredSets = CommonState.getter.getRequiredSets();
         let requiredSkills = CommonState.getter.getRequiredSkills();
         let requiredEquipPins = CommonState.getter.getRequiredEquipPins();
@@ -433,7 +438,20 @@ export default function CandidateBundles(props) {
                 case 'result':
                     handleSwitchTempData(currentSearchingTabIndex);
 
-                    CommonState.setter.saveComputedBundles(payload.computedBundles);
+                    let meta = {};
+
+                    if (Helper.isNotEmpty(requiredEquips.weapon)) {
+                        meta.weaponEnhances = requiredEquips.weapon.enhances;
+
+                        if ('customWeapon' === requiredEquips.weapon.id) {
+                            meta.customWeapon = customWeapon;
+                        }
+                    }
+
+                    CommonState.setter.saveComputedResult({
+                        list: payload.computedBundles,
+                        meta: meta
+                    });
 
                     worker.terminate();
                     worker = undefined;
@@ -449,6 +467,7 @@ export default function CandidateBundles(props) {
         }
 
         worker.postMessage({
+            customWeapon: customWeapon,
             requiredSets: requiredSets,
             requiredSkills: requiredSkills,
             requiredEquips: requiredEquips,
@@ -470,17 +489,17 @@ export default function CandidateBundles(props) {
                 <span className="mhwc-title">{_('candidateBundle')}</span>
 
                 <div className="mhwc-icons_bundle-left">
-                    <FunctionalTab
+                    <IconTab
                         iconName={stateSearchingTabIndex === 0 ? 'cog fa-spin' : 'circle-o'}
                         altName={_('tab') + ' 1'}
                         isActive={0 === stateTempData.candidateBundles.index}
                         onClick={() => {handleSwitchTempData(0)}} />
-                    <FunctionalTab
+                    <IconTab
                         iconName={stateSearchingTabIndex === 1 ? 'cog fa-spin' : 'circle-o'}
                         altName={_('tab') + ' 2'}
                         isActive={1 === stateTempData.candidateBundles.index}
                         onClick={() => {handleSwitchTempData(1)}} />
-                    <FunctionalTab
+                    <IconTab
                         iconName={stateSearchingTabIndex === 2 ? 'cog fa-spin' : 'circle-o'}
                         altName={_('tab') + ' 3'}
                         isActive={2 === stateTempData.candidateBundles.index}
@@ -488,13 +507,13 @@ export default function CandidateBundles(props) {
                 </div>
 
                 <div className="mhwc-icons_bundle-right">
-                    <FunctionalButton
+                    <IconButton
                         iconName="refresh" altName={_('reset')}
-                        onClick={CommonState.setter.cleanComputedBundles} />
-                    <FunctionalButton
+                        onClick={CommonState.setter.cleanComputedResult} />
+                    <IconButton
                         iconName="cog" altName={_('setting')}
                         onClick={ModalState.setter.showAlgorithmSetting} />
-                    <FunctionalButton
+                    <IconButton
                         iconName="search" altName={_('search')}
                         onClick={handleCandidateBundlesSearch} />
                 </div>
@@ -508,7 +527,7 @@ export default function CandidateBundles(props) {
                         <div className="col-12 mhwc-name">
                             <span>{_('searching')} ...</span>
                             <div className="mhwc-icons_bundle">
-                                <FunctionalButton
+                                <IconButton
                                     iconName="times" altName={_('cancel')}
                                     onClick={handleCandidateBundlesCancel} />
                             </div>
@@ -535,7 +554,7 @@ export default function CandidateBundles(props) {
                         </div>
                     </div>
                 ) : (
-                    <BundleList data={stateComputedBundles} />
+                    <BundleList data={stateComputedResult} />
                 )}
             </div>
         </div>

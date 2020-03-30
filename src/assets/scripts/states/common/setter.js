@@ -182,20 +182,23 @@ export default {
         });
     },
 
-    // Computed Bundles
-    saveComputedBundles: (data) => {
+    // Computed Result
+    saveComputedResult: (data) => {
         Store.dispatch({
-            type: 'UPDATE_COMPUTED_BUNDLES',
+            type: 'UPDATE_COMPUTED_RESULT',
             payload: {
                 data: data
             }
         });
     },
-    cleanComputedBundles: () => {
+    cleanComputedResult: () => {
         Store.dispatch({
-            type: 'UPDATE_COMPUTED_BUNDLES',
+            type: 'UPDATE_COMPUTED_RESULT',
             payload: {
-                data: []
+                data: {
+                    list: [],
+                    meta: {}
+                }
             }
         });
     },
@@ -223,6 +226,69 @@ export default {
             type: 'REMOVE_RESERVED_BUNDLE',
             payload: {
                 index: index
+            }
+        });
+    },
+
+    // Custom Weapon
+    relpaceCustomWeapon: (data) => {
+        Store.dispatch({
+            type: 'REPLACE_CUSTOM_WEAPON',
+            payload: {
+                data: data
+            }
+        });
+    },
+    setCustomWeaponValue: (target, value) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_VALUE',
+            payload: {
+                target: target,
+                value: value
+            }
+        });
+    },
+    setCustomWeaponSharpness: (step) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_SHARPNESS',
+            payload: {
+                step: step
+            }
+        });
+    },
+    setCustomWeaponElementType: (target, type) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_ELEMENT_TYPE',
+            payload: {
+                target: target,
+                type: type
+            }
+        });
+    },
+    setCustomWeaponElementValue: (target, value) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_ELEMENT_VALUE',
+            payload: {
+                target: target,
+                value: value
+            }
+        });
+    },
+    setCustomWeaponSlot: (index, size) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_SLOT',
+            payload: {
+                index: index,
+                size: size
+            }
+        });
+    },
+    setCustomWeaponSkill: (index, id) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_SKILL',
+            payload: {
+                index: index,
+                id: id
             }
         });
     }

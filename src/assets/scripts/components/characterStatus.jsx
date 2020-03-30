@@ -17,10 +17,12 @@ import Helper from 'core/helper';
 import _ from 'libraries/lang';
 import SetDataset from 'libraries/dataset/set';
 import SkillDataset from 'libraries/dataset/skill';
+import WeaponDataset from 'libraries/dataset/weapon';
 import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
+import IconButton from 'components/common/iconButton';
+import BasicInput from 'components/common/basicInput';
 import SharpnessBar from 'components/common/sharpnessBar';
 
 // Load State Control
@@ -34,6 +36,37 @@ import Constant from 'constant';
  */
 const generateEquipInfos = (equips) => {
     let equipInfos = {};
+
+    if (Helper.isNotEmpty(equips.weapon)
+        && 'customWeapon' === equips.weapon.id
+    ) {
+        let isCompleted = true;
+        let customWeapon = CommonState.getter.getCustomWeapon();
+
+        if (Helper.isEmpty(customWeapon.type)
+            || Helper.isEmpty(customWeapon.rare)
+            || Helper.isEmpty(customWeapon.attack)
+            || Helper.isEmpty(customWeapon.criticalRate)
+            || Helper.isEmpty(customWeapon.defense)
+        ) {
+            isCompleted = false;
+        }
+
+        if (Helper.isNotEmpty(customWeapon.element.attack)
+            && Helper.isEmpty(customWeapon.element.attack.minValue)
+        ) {
+            isCompleted = false;
+        }
+
+        if (Helper.isNotEmpty(customWeapon.element.status)
+            && Helper.isEmpty(customWeapon.element.status.minValue)
+        ) {
+            isCompleted = false;
+        }
+
+        WeaponDataset.setInfo('customWeapon', (true === isCompleted)
+            ? Helper.deepCopy(customWeapon) : undefined);
+    }
 
     equipInfos.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon);
 
@@ -521,6 +554,7 @@ export default function CharacterStatus(props) {
     /**
      * Hooks
      */
+    const [stateCustomWeapon, updateCustomWeapon] = useState(CommonState.getter.getCustomWeapon());
     const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
     const [stateEquipInfos, updateEquipInfos] = useState({});
     const [stateStatus, updateStatus] = useState(Helper.deepCopy(Constant.default.status));
@@ -547,11 +581,12 @@ export default function CharacterStatus(props) {
         updatePassiveSkills(passiveSkills);
         updateStatus(status);
         updateExtraInfo(extraInfo);
-    }, [stateCurrentEquips]);
+    }, [stateCustomWeapon, stateCurrentEquips]);
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
+            updateCustomWeapon(CommonState.getter.getCustomWeapon());
             updateCurrentEquips(CommonState.getter.getCurrentEquips());
         });
 
@@ -806,7 +841,7 @@ export default function CharacterStatus(props) {
 
                                             <div className="mhwc-icons_bundle">
                                                 {Helper.isNotEmpty(passiveSkills[data.id]) ? (
-                                                    <FunctionalButton
+                                                    <IconButton
                                                         iconName={passiveSkills[data.id].isActive ? 'eye' : 'eye-slash'}
                                                         altName={passiveSkills[data.id].isActive ? _('deactive') : _('active')}
                                                         onClick={() => {handlePassiveSkillToggle(data.id)}} />
@@ -864,10 +899,12 @@ export default function CharacterStatus(props) {
                         <div className="col-3 mhwc-value">
                             <span>{extraInfo.expectedValue}</span>
                         </div>
+                    </div>
+                    <div className="col-12 mhwc-content">
                         <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-input" type="text" defaultValue={stateTuning.rawAttack}
-                                ref={refTuningRawAttack} onChange={handleTuningChange} />
+                            <BasicInput defaultValue={stateTuning.rawAttack}
+                                bypassRef={refTuningRawAttack} onChange={handleTuningChange} />
                             <span>{_('rawAttackEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
@@ -875,8 +912,8 @@ export default function CharacterStatus(props) {
                         </div>
                         <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-input" type="text" defaultValue={stateTuning.rawCriticalRate}
-                                ref={refTuningRawCriticalRate} onChange={handleTuningChange} />
+                            <BasicInput defaultValue={stateTuning.rawCriticalRate}
+                                bypassRef={refTuningRawCriticalRate} onChange={handleTuningChange} />
                             <span>{_('criticalRateEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
@@ -884,8 +921,8 @@ export default function CharacterStatus(props) {
                         </div>
                         <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-input" type="text" defaultValue={stateTuning.rawCriticalMultiple}
-                                ref={refTuningRawCriticalMultiple} onChange={handleTuningChange} />
+                            <BasicInput defaultValue={stateTuning.rawCriticalMultiple}
+                                bypassRef={refTuningRawCriticalMultiple} onChange={handleTuningChange} />
                             <span>{_('criticalMultipleEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
@@ -893,8 +930,8 @@ export default function CharacterStatus(props) {
                         </div>
                         <div className="col-9 mhwc-name mhwc-input-ev">
                             <span>{_('every')}</span>
-                            <input className="mhwc-input" type="text" defaultValue={stateTuning.elementAttack}
-                                ref={refTuningElementAttack} onChange={handleTuningChange} />
+                            <BasicInput defaultValue={stateTuning.elementAttack}
+                                bypassRef={refTuningElementAttack} onChange={handleTuningChange} />
                             <span>{_('elementAttackEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">

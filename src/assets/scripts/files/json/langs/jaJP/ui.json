@@ -126,7 +126,8 @@
     "expectedValueSort":    null,
     "expectedLevelSort":    null,
     "resultLimit":          null,
-    "sort":                 null,
+    "sortBy":               null,
+    "sortOrder":            null,
     "strategy":             null,
     "isEndEarly":           null,
     "isExpectBundle":       null,
@@ -147,5 +148,16 @@
     "hour":                 "時",
     "minute":               "分",
     "second":               "秒",
-    "tab":                  null
+    "tab":                  null,
+    "customWeapon":         null,
+    "none":                 null,
+    "red":                  null,
+    "orange":               null,
+    "yellow":               null,
+    "green":                null,
+    "blue":                 null,
+    "white":                null,
+    "purple":               null,
+    "type":                 null,
+    "enhanceFieldSize":     null
 }

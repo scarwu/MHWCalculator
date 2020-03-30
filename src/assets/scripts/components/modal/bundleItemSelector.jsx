@@ -21,7 +21,8 @@ import ArmorDataset from 'libraries/dataset/armor';
 import CharmDataset from 'libraries/dataset/charm';
 
 // Load Components
-import FunctionalButton from 'components/common/functionalButton';
+import IconButton from 'components/common/iconButton';
+import BasicInput from 'components/common/basicInput';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -84,16 +85,30 @@ export default function BundleItemSelector(props) {
         if (Helper.isNotEmpty(index)) {
             CommonState.setter.updateReservedBundleName(index, name);
         } else {
+            let customWeapon = null;
+
+            if (Helper.isNotEmpty(stateCurrentEquips.weapon)
+                && 'customWeapon' === stateCurrentEquips.weapon.id
+            ) {
+                customWeapon = CommonState.getter.getCustomWeapon();
+            }
+
             CommonState.setter.addReservedBundle({
                 id: MD5(JSON.stringify(stateCurrentEquips)),
                 name: name,
-                equips: stateCurrentEquips
+                equips: stateCurrentEquips,
+                customWeapon: customWeapon
             });
         }
     }, [stateCurrentEquips]);
 
     const handleBundlePickUp = useCallback((index) => {
+        if (Helper.isNotEmpty(stateReservedBundles[index].customWeapon)) {
+            CommonState.setter.replaceCustomWeapon(stateReservedBundles[index].customWeapon);
+        }
+
         CommonState.setter.replaceCurrentEquips(stateReservedBundles[index].equips);
+
         ModalState.setter.hideBundleItemSelector();
     }, [stateReservedBundles]);
 
@@ -123,11 +138,10 @@ export default function BundleItemSelector(props) {
         return (
             <div key={bundleId} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
-                    <input className="mhwc-input" type="text"
-                        placeholder={_('inputName')} ref={refName} />
+                    <BasicInput placeholder={_('inputName')} bypassRef={refName} />
 
                     <div className="mhwc-icons_bundle">
-                        <FunctionalButton
+                        <IconButton
                             iconName="floppy-o" altName={_('save')}
                             onClick={() => {handleBundleSave(null)}} />
                     </div>
@@ -174,17 +188,17 @@ export default function BundleItemSelector(props) {
         return (
             <div key={`${data.id}:${index}`} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
-                    <input className="mhwc-input" type="text" defaultValue={data.name}
-                        placeholder={_('inputName')} ref={refNameList.current[index]} />
+                    <BasicInput placeholder={_('inputName')} defaultValue={data.name}
+                        bypassRef={refNameList.current[index]} />
 
                     <div className="mhwc-icons_bundle">
-                        <FunctionalButton
+                        <IconButton
                             iconName="check" altName={_('select')}
                             onClick={() => {handleBundlePickUp(index)}} />
-                        <FunctionalButton
+                        <IconButton
                             iconName="times" altName={_('remove')}
                             onClick={() => {CommonState.setter.removeReservedBundle(index)}} />
-                        <FunctionalButton
+                        <IconButton
                             iconName="floppy-o" altName={_('save')}
                             onClick={() => {handleBundleSave(index)}} />
                     </div>
@@ -233,7 +247,7 @@ export default function BundleItemSelector(props) {
                     <span className="mhwc-title">{_('bundleList')}</span>
 
                     <div className="mhwc-icons_bundle">
-                        <FunctionalButton
+                        <IconButton
                             iconName="times" altName={_('close')}
                             onClick={ModalState.setter.hideBundleItemSelector} />
                     </div>
