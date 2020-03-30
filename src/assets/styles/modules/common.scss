@@ -12,8 +12,6 @@
 .mhwc-basic_selector {
     position: relative;
     display: inline-block;
-    margin-left: 1px;
-    margin-right: 1px;
     width: 100%;
 
     @include font-size(1.2);
@@ -22,7 +20,7 @@
     .mhwc-input {
         display: inline-block;
         vertical-align: top;
-        margin: 0 0;
+        margin: 0;
         padding: 0;
         border: none;
         height: 20px;
@@ -55,8 +53,6 @@
 
     position: relative;
     display: inline-block;
-    margin-left: 1px;
-    margin-right: 1px;
 
     @include font-size(1.2);
 
@@ -80,7 +76,7 @@
         .mhwc-input {
             display: inline-block;
             vertical-align: top;
-            margin: 0 0;
+            margin: 0;
             padding: 0;
             border: none;
             height: 20px;
@@ -309,6 +305,7 @@
         .mhwc-icon_input,
         .mhwc-icon_selector,
         .mhwc-icon_button {
+            margin-left: 2px;
             vertical-align: top;
         }
     }
@@ -332,9 +329,14 @@
     }
 
     .mhwc-input-ev {
-        .mhwc-input {
-            width: 50px;
-            background-color: #eee !important;
+        .mhwc-basic_input {
+            margin-left: 2px;
+            margin-right: 2px;
+
+            .mhwc-input {
+                width: 50px;
+                background-color: #eee !important;
+            }
         }
     }
 }

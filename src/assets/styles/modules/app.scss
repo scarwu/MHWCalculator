@@ -40,6 +40,7 @@
 
         .mhwc-icon_selector,
         .mhwc-icon_button {
+            margin-left: 2px;
             vertical-align: top;
 
             .mhwc-body {
@@ -104,6 +105,8 @@
                 left: 10px;
 
                 .mhwc-icon_tab {
+                    margin-right: 2px;
+
                     .mhwc-label {
                         left: 22px;
                         right: initial;
@@ -113,6 +116,10 @@
 
             .mhwc-icons_bundle-right {
                 right: 10px;
+
+                .mhwc-icon_button {
+                    margin-left: 2px;
+                }
             }
         }
 
