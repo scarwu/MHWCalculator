@@ -29,7 +29,6 @@ import ModalState from 'states/modal';
 
 const getTypeList = () => {
     return [
-        { key: 'none',              value: _('none') },
         { key: 'greatSword',        value: _('greatSword') },
         { key: 'longSword',         value: _('longSword') },
         { key: 'swordAndShield',    value: _('swordAndShield') },

@@ -7,6 +7,9 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+// Load Libraries
+import MD5 from 'md5';
+
 // Load Config
 import Config from 'config';
 
@@ -26,6 +29,10 @@ function isNotEmpty(variable) {
 
 function deepCopy(data) {
     return JSON.parse(JSON.stringify(data));
+}
+
+function jsonHash(data) {
+    return MD5(JSON.stringify(data));
 }
 
 function base64Encode(text) {
@@ -49,6 +56,7 @@ export default {
     isEmpty: isEmpty,
     isNotEmpty: isNotEmpty,
     deepCopy: deepCopy,
+    jsonHash: jsonHash,
     base64Encode: base64Encode,
     base64Decode: base64Decode
 };

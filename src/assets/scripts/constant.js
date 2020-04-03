@@ -215,13 +215,13 @@ export default {
         customWeapon: {
             id: 'customWeapon',
             rare: 12,
-            type: null,
+            type: 'greatSword',
             series: null,
             name: 'customWeapon',
             attack: 0,
             criticalRate: 0,
             defense: 0,
-            sharpness:  null,
+            sharpness:  'purple',
             element: {
                 attack: null,
                 status: null

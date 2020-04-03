@@ -738,7 +738,7 @@ export default createStore((state = initialState, action) => {
                     }
                 };
 
-                customWeapon.sharpness.steps[step] = 350
+                customWeapon.sharpness.steps[step] = 400
             }
 
             return Object.assign({}, state, {

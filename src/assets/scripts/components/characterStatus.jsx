@@ -110,6 +110,8 @@ const generatePassiveSkills = (equipInfos) => {
 const generateStatus = (equipInfos, passiveSkills) => {
     let status = Helper.deepCopy(Constant.default.status);
 
+    equipInfos = Helper.deepCopy(equipInfos);
+
     if (Helper.isNotEmpty(equipInfos.weapon)) {
         status.critical.rate = equipInfos.weapon.criticalRate;
         status.sharpness = equipInfos.weapon.sharpness;
@@ -651,7 +653,8 @@ export default function CharacterStatus(props) {
     ) {
         originalSharpness = Helper.deepCopy(equipInfos.weapon.sharpness);
     }
-
+console.log('1', originalSharpness);
+console.log('2', status.sharpness);
     return (
         <div className="col mhwc-status">
             <div className="mhwc-panel">
@@ -691,8 +694,12 @@ export default function CharacterStatus(props) {
                                     <span>{_('sharpness')}</span>
                                 </div>
                                 <div className="col-9 mhwc-value mhwc-sharpness">
-                                    <SharpnessBar data={originalSharpness} />
-                                    <SharpnessBar data={status.sharpness} />
+                                    <SharpnessBar
+                                        key={Helper.jsonHash(originalSharpness) + ':1'}
+                                        data={originalSharpness} />
+                                    <SharpnessBar
+                                        key={Helper.jsonHash(status.sharpness) + ':2'}
+                                        data={status.sharpness} />
                                 </div>
                             </Fragment>
                         ) : false}
@@ -863,37 +870,37 @@ export default function CharacterStatus(props) {
                         <span>{_('extraInfo')}</span>
                     </div>
                     <div className="col-12 mhwc-content">
-                        <div className="col-9 mhwc-name">
+                        <div className="col-3 mhwc-name">
                             <span>{_('rawAttack')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
                             <span>{extraInfo.rawAttack}</span>
                         </div>
-                        <div className="col-9 mhwc-name">
+                        <div className="col-3 mhwc-name">
                             <span>{_('rawCriticalAttack')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
                             <span>{extraInfo.rawCriticalAttack}</span>
                         </div>
-                        <div className="col-9 mhwc-name">
+                        <div className="col-3 mhwc-name">
                             <span>{_('rawEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
                             <span>{extraInfo.rawExpectedValue}</span>
                         </div>
-                        <div className="col-9 mhwc-name">
+                        <div className="col-3 mhwc-name">
                             <span>{_('elementAttack')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
                             <span>{extraInfo.elementAttack}</span>
                         </div>
-                        <div className="col-9 mhwc-name">
+                        <div className="col-3 mhwc-name">
                             <span>{_('elementEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
                             <span>{extraInfo.elementExpectedValue}</span>
                         </div>
-                        <div className="col-9 mhwc-name">
+                        <div className="col-3 mhwc-name">
                             <span>{_('totalEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
