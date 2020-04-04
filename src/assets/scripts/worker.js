@@ -38,7 +38,7 @@ onmessage = (event) => {
     const algorithmParams = event.data.algorithmParams;
 
     let startTime = new Date().getTime();
-    let computedBundles = FittingAlgorithm.search(
+    let list = FittingAlgorithm.search(
         customWeapon,
         requiredSets,
         requiredSkills,
@@ -54,17 +54,30 @@ onmessage = (event) => {
     let stopTime = new Date().getTime();
     let searchTime = (stopTime - startTime) / 1000;
 
-    computedBundles.map((bundle) => {
+    list.map((bundle) => {
         return bundle;
     });
 
-    Helper.log('Bundle List:', computedBundles);
+    Helper.log('Bundle List:', list);
     Helper.log('Search Time:', searchTime);
+
+    let meta = {};
+
+    if (Helper.isNotEmpty(requiredEquips.weapon)) {
+        meta.weaponEnhances = requiredEquips.weapon.enhances;
+
+        if ('customWeapon' === requiredEquips.weapon.id) {
+            meta.customWeapon = customWeapon;
+        }
+    }
 
     postMessage({
         action: 'result',
         payload: {
-            computedBundles: computedBundles
+            computedResult: {
+                list: list,
+                meta: meta
+            }
         }
     });
 };

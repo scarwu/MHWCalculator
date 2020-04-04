@@ -108,7 +108,7 @@ const renderEnhanceBlock = (equipInfo) => {
                         <div className="col-9 mhwc-value">
                             <span>[{enhanceInfo.list[currentLevel - 1].size}] {_(enhanceInfo.name)} Lv.{currentLevel}</span>
                             <div className="mhwc-icons_bundle">
-                                <IconButton key={prevLevel} iconName="minus-circle" altName={_('down')} onClick={() => {
+                                <IconButton key={`prev:${prevLevel}`} iconName="minus-circle" altName={_('down')} onClick={() => {
                                     CommonState.setter.setCurrentEquip({
                                         equipType: equipInfo.type,
                                         enhanceIndex: index,
@@ -116,7 +116,7 @@ const renderEnhanceBlock = (equipInfo) => {
                                         enhanceLevel: prevLevel
                                     });
                                 }} />
-                                <IconButton key={nextLevel} iconName="plus-circle" altName={_('up')} onClick={() => {
+                                <IconButton key={`next:${nextLevel}`} iconName="plus-circle" altName={_('up')} onClick={() => {
                                     CommonState.setter.setCurrentEquip({
                                         equipType: equipInfo.type,
                                         enhanceIndex: index,

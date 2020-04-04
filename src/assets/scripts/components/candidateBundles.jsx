@@ -12,6 +12,7 @@ import React, { Fragment, useState, useEffect, useCallback, useMemo } from 'reac
 
 // Load Core Libraries
 import Helper from 'core/helper';
+import Event from 'core/event';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
@@ -356,6 +357,53 @@ export default function CandidateBundles(props) {
         };
     }, []);
 
+    // Worker Callback
+    useEffect(() => {
+        Event.on('workerCallback', 'tasks', (data) => {
+            let tabIndex = data.tabIndex;
+            let action = data.action;
+            let payload = data.payload;
+
+            switch (action) {
+            case 'progress':
+                if (Helper.isNotEmpty(payload.bundleCount)) {
+                    stateTasks[tabIndex].bundleCount = payload.bundleCount;
+                }
+
+                if (Helper.isNotEmpty(payload.searchPercent)) {
+                    stateTasks[tabIndex].searchPercent = payload.searchPercent;
+                }
+
+                if (Helper.isNotEmpty(payload.timeRemaining)) {
+                    stateTasks[tabIndex].timeRemaining = payload.timeRemaining;
+                }
+
+                updateTasks(Helper.deepCopy(stateTasks));
+
+                break;
+            case 'result':
+                handleSwitchTempData(tabIndex);
+
+                CommonState.setter.saveComputedResult(payload.computedResult);
+
+                workers[tabIndex].terminate();
+                workers[tabIndex] = undefined;
+
+                stateTasks[tabIndex] = undefined;
+
+                updateTasks(Helper.deepCopy(stateTasks));
+
+                break;
+            default:
+                break;
+            }
+        });
+
+        return () => {
+            Event.off('workerCallback', 'tasks');
+        };
+    }, [stateTasks])
+
     // Search Remaining Timer
     useEffect(() => {
         let tabIndex = stateTempData.candidateBundles.index;
@@ -397,61 +445,16 @@ export default function CandidateBundles(props) {
 
         updateTasks(Helper.deepCopy(stateTasks));
 
-        if (undefined === workers[tabIndex]) {
-            workers[tabIndex] = new Worker('assets/scripts/worker.min.js?' + tabIndex);
-        }
-
-        workers[tabIndex].onmessage = (event) => {
-            const action = event.data.action;
-            const payload = event.data.payload;
-
-            switch (action) {
-            case 'progress':
-                if (Helper.isNotEmpty(payload.bundleCount)) {
-                    stateTasks[tabIndex].bundleCount = payload.bundleCount;
-                }
-
-                if (Helper.isNotEmpty(payload.searchPercent)) {
-                    stateTasks[tabIndex].searchPercent = payload.searchPercent;
-                }
-
-                if (Helper.isNotEmpty(payload.timeRemaining)) {
-                    stateTasks[tabIndex].timeRemaining = payload.timeRemaining;
-                }
-
-                updateTasks(Helper.deepCopy(stateTasks));
-
-                break;
-            case 'result':
-                handleSwitchTempData(tabIndex);
-
-                let meta = {};
-
-                if (Helper.isNotEmpty(requiredEquips.weapon)) {
-                    meta.weaponEnhances = requiredEquips.weapon.enhances;
-
-                    if ('customWeapon' === requiredEquips.weapon.id) {
-                        meta.customWeapon = customWeapon;
-                    }
-                }
-
-                CommonState.setter.saveComputedResult({
-                    list: payload.computedBundles,
-                    meta: meta
+        if (Helper.isEmpty(workers[tabIndex])) {
+            workers[tabIndex] = new Worker('assets/scripts/worker.min.js?' + tabIndex + '&' + Config.buildTime);
+            workers[tabIndex].onmessage = (event) => {
+                Event.trigger('workerCallback', {
+                    tabIndex: tabIndex,
+                    action: event.data.action,
+                    payload: event.data.payload
                 });
-
-                workers[tabIndex].terminate();
-                workers[tabIndex] = undefined;
-
-                stateTasks[tabIndex] = undefined;
-
-                updateTasks(Helper.deepCopy(stateTasks));
-
-                break;
-            default:
-                break;
-            }
-        };
+            };
+        }
 
         // Get All Data From Store
         let customWeapon = CommonState.getter.getCustomWeapon();
