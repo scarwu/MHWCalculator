@@ -419,7 +419,7 @@ export default function CandidateBundles(props) {
 
             stateTasks[tabIndex].timeRemaining--;
 
-            stateTasks(Helper.deepCopy(stateTasks));
+            updateTasks(Helper.deepCopy(stateTasks));
         }, 1000);
 
         return () => {
