@@ -342,11 +342,7 @@ export default function CandidateBundles(props) {
      */
     const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
     const [stateComputedResult, updateComputedResult] = useState(CommonState.getter.getComputedResult());
-    const [stateIsSearching, updateIsSearching] = useState(false);
-    const [stateSearchingTabIndex, updateSearchingTabIndex] = useState(null);
-    const [stateBundleCount, updateBundleCount] = useState(0);
-    const [stateSearchPercent, updateSearchPercent] = useState(0);
-    const [stateTimeRemaining, updateTimeRemaining] = useState(0);
+    const [stateTasks, updateTasks] = useState({});
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
@@ -362,90 +358,100 @@ export default function CandidateBundles(props) {
 
     // Search Remaining Timer
     useEffect(() => {
-        if (false === stateIsSearching) {
+        let tabIndex = stateTempData.candidateBundles.index;
+
+        if (Helper.isEmpty(stateTasks[tabIndex])) {
             return;
         }
 
         let timerId = setInterval(() => {
-            if (0 === stateTimeRemaining) {
+            if (0 === stateTasks[tabIndex].timeRemaining) {
                 return;
             }
 
-            updateTimeRemaining(stateTimeRemaining - 1);
+            stateTasks[tabIndex].timeRemaining--;
+
+            stateTasks(Helper.deepCopy(stateTasks));
         }, 1000);
 
         return () => {
             clearInterval(timerId);
         };
-    }, [stateIsSearching, stateTimeRemaining])
+    }, [stateTasks, stateTempData])
 
     /**
      * Handle Functions
      */
     const handleCandidateBundlesSearch = useCallback(() => {
-        let currentTabIndex = stateTempData.candidateBundles.index;
+        let tabIndex = stateTempData.candidateBundles.index;
 
-        if (undefined !== workers[currentTabIndex]) {
+        if (Helper.isNotEmpty(stateTasks[tabIndex])) {
             return;
         }
 
-        updateIsSearching(true);
-        updateSearchingTabIndex(currentTabIndex);
-        updateBundleCount(0);
-        updateSearchPercent(0);
-        updateTimeRemaining(0);
+        stateTasks[tabIndex] = {
+            bundleCount: 0,
+            searchPercent: 0,
+            timeRemaining: 0,
+        };
 
-        if (undefined === workers[currentTabIndex]) {
-            workers[currentTabIndex] = new Worker('assets/scripts/worker.min.js?' + currentTabIndex);
-            workers[currentTabIndex].onmessage = (event) => {
-                const action = event.data.action;
-                const payload = event.data.payload;
+        updateTasks(Helper.deepCopy(stateTasks));
 
-                switch (action) {
-                case 'progress':
-                    if (Helper.isNotEmpty(payload.bundleCount)) {
-                        updateBundleCount(payload.bundleCount);
-                    }
-
-                    if (Helper.isNotEmpty(payload.searchPercent)) {
-                        updateSearchPercent(payload.searchPercent);
-                    }
-
-                    if (Helper.isNotEmpty(payload.timeRemaining)) {
-                        updateTimeRemaining(payload.timeRemaining);
-                    }
-
-                    break;
-                case 'result':
-                    handleSwitchTempData(currentTabIndex);
-
-                    let meta = {};
-
-                    if (Helper.isNotEmpty(requiredEquips.weapon)) {
-                        meta.weaponEnhances = requiredEquips.weapon.enhances;
-
-                        if ('customWeapon' === requiredEquips.weapon.id) {
-                            meta.customWeapon = customWeapon;
-                        }
-                    }
-
-                    CommonState.setter.saveComputedResult({
-                        list: payload.computedBundles,
-                        meta: meta
-                    });
-
-                    worker.terminate();
-                    worker = undefined;
-
-                    updateIsSearching(false);
-                    updateSearchingTabIndex(null);
-
-                    break;
-                default:
-                    break;
-                }
-            };
+        if (undefined === workers[tabIndex]) {
+            workers[tabIndex] = new Worker('assets/scripts/worker.min.js?' + tabIndex);
         }
+
+        workers[tabIndex].onmessage = (event) => {
+            const action = event.data.action;
+            const payload = event.data.payload;
+
+            switch (action) {
+            case 'progress':
+                if (Helper.isNotEmpty(payload.bundleCount)) {
+                    stateTasks[tabIndex].bundleCount = payload.bundleCount;
+                }
+
+                if (Helper.isNotEmpty(payload.searchPercent)) {
+                    stateTasks[tabIndex].searchPercent = payload.searchPercent;
+                }
+
+                if (Helper.isNotEmpty(payload.timeRemaining)) {
+                    stateTasks[tabIndex].timeRemaining = payload.timeRemaining;
+                }
+
+                updateTasks(Helper.deepCopy(stateTasks));
+
+                break;
+            case 'result':
+                handleSwitchTempData(tabIndex);
+
+                let meta = {};
+
+                if (Helper.isNotEmpty(requiredEquips.weapon)) {
+                    meta.weaponEnhances = requiredEquips.weapon.enhances;
+
+                    if ('customWeapon' === requiredEquips.weapon.id) {
+                        meta.customWeapon = customWeapon;
+                    }
+                }
+
+                CommonState.setter.saveComputedResult({
+                    list: payload.computedBundles,
+                    meta: meta
+                });
+
+                workers[tabIndex].terminate();
+                workers[tabIndex] = undefined;
+
+                stateTasks[tabIndex] = undefined;
+
+                updateTasks(Helper.deepCopy(stateTasks));
+
+                break;
+            default:
+                break;
+            }
+        };
 
         // Get All Data From Store
         let customWeapon = CommonState.getter.getCustomWeapon();
@@ -466,24 +472,27 @@ export default function CandidateBundles(props) {
             requiredEquips[equipType] = currentEquips[equipType];
         });
 
-        workers[currentTabIndex].postMessage({
+        workers[tabIndex].postMessage({
             customWeapon: customWeapon,
             requiredSets: requiredSets,
             requiredSkills: requiredSkills,
             requiredEquips: requiredEquips,
             algorithmParams: algorithmParams
         });
-    }, [stateTempData]);
+    }, [stateTasks, stateTempData]);
 
     const handleCandidateBundlesCancel = useCallback(() => {
-        let currentTabIndex = stateTempData.candidateBundles.index;
+        let tabIndex = stateTempData.candidateBundles.index;
 
-        workers[currentTabIndex].terminate();
-        workers[currentTabIndex] = undefined;
+        workers[tabIndex].terminate();
+        workers[tabIndex] = undefined;
 
-        updateIsSearching(false);
-        updateSearchingTabIndex(null);
-    }, [stateTempData]);
+        stateTasks[tabIndex] = undefined;
+
+        updateTasks(Helper.deepCopy(stateTasks));
+    }, [stateTasks, stateTempData]);
+
+    let tabIndex = stateTempData.candidateBundles.index;
 
     return (
         <div className="col mhwc-bundles">
@@ -492,19 +501,19 @@ export default function CandidateBundles(props) {
 
                 <div className="mhwc-icons_bundle-left">
                     <IconTab
-                        iconName={stateSearchingTabIndex === 0 ? 'cog fa-spin' : 'circle-o'}
+                        iconName={Helper.isNotEmpty(stateTasks[0]) ? 'cog fa-spin' : 'circle-o'}
                         altName={_('tab') + ' 1'}
-                        isActive={0 === stateTempData.candidateBundles.index}
+                        isActive={0 === tabIndex}
                         onClick={() => {handleSwitchTempData(0)}} />
                     <IconTab
-                        iconName={stateSearchingTabIndex === 1 ? 'cog fa-spin' : 'circle-o'}
+                        iconName={Helper.isNotEmpty(stateTasks[1]) ? 'cog fa-spin' : 'circle-o'}
                         altName={_('tab') + ' 2'}
-                        isActive={1 === stateTempData.candidateBundles.index}
+                        isActive={1 === tabIndex}
                         onClick={() => {handleSwitchTempData(1)}} />
                     <IconTab
-                        iconName={stateSearchingTabIndex === 2 ? 'cog fa-spin' : 'circle-o'}
+                        iconName={Helper.isNotEmpty(stateTasks[2]) ? 'cog fa-spin' : 'circle-o'}
                         altName={_('tab') + ' 3'}
-                        isActive={2 === stateTempData.candidateBundles.index}
+                        isActive={2 === tabIndex}
                         onClick={() => {handleSwitchTempData(2)}} />
                 </div>
 
@@ -522,9 +531,7 @@ export default function CandidateBundles(props) {
             </div>
 
             <div key="list" className="mhwc-list">
-                {(true === stateIsSearching
-                    && stateTempData.candidateBundles.index == stateSearchingTabIndex
-                ) ? (
+                {Helper.isNotEmpty(stateTasks[tabIndex]) ? (
                     <div className="mhwc-item mhwc-item-3-step">
                         <div className="col-12 mhwc-name">
                             <span>{_('searching')} ...</span>
@@ -539,19 +546,19 @@ export default function CandidateBundles(props) {
                                 <span>{_('bundleCount')}</span>
                             </div>
                             <div className="col-3 mhwc-value">
-                                <span>{stateBundleCount}</span>
+                                <span>{stateTasks[tabIndex].bundleCount}</span>
                             </div>
                             <div className="col-3 mhwc-name">
                                 <span>{_('searchPercent')}</span>
                             </div>
                             <div className="col-3 mhwc-value">
-                                <span>{stateSearchPercent} %</span>
+                                <span>{stateTasks[tabIndex].searchPercent} %</span>
                             </div>
                             <div className="col-3 mhwc-name">
                                 <span>{_('timeRemaining')}</span>
                             </div>
                             <div className="col-9 mhwc-value">
-                                <span>{convertTimeFormat(stateTimeRemaining)}</span>
+                                <span>{convertTimeFormat(stateTasks[tabIndex].timeRemaining)}</span>
                             </div>
                         </div>
                     </div>
