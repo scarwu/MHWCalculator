@@ -37,5 +37,5 @@ export default function IconInput(props) {
                 </div>
             </div>
         );
-    }, [iconName, defaultValue, placeholder]);
+    }, [iconName, defaultValue, placeholder, onChange]);
 };

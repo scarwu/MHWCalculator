@@ -653,8 +653,7 @@ export default function CharacterStatus(props) {
     ) {
         originalSharpness = Helper.deepCopy(equipInfos.weapon.sharpness);
     }
-console.log('1', originalSharpness);
-console.log('2', status.sharpness);
+
     return (
         <div className="col mhwc-status">
             <div className="mhwc-panel">

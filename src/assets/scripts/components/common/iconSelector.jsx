@@ -35,5 +35,5 @@ export default function IconSelector(props) {
                 </div>
             </div>
         );
-    }, [iconName, defaultValue, options]);
+    }, [iconName, defaultValue, options, onChange]);
 };

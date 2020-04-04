@@ -40,5 +40,5 @@ export default function IconTab(props) {
                 </div>
             </div>
         )
-    }, [iconName, altName, isActive]);
+    }, [iconName, altName, isActive, onClick]);
 };

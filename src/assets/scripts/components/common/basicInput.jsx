@@ -32,5 +32,5 @@ export default function BasicInput(props) {
                     }} />
             </div>
         );
-    }, [defaultValue, placeholder]);
+    }, [defaultValue, placeholder, onChange, bypassRef]);
 };

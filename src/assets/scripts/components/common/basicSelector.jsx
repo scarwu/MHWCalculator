@@ -30,5 +30,5 @@ export default function BasicSelector(props) {
                 </select>
             </div>
         );
-    }, [defaultValue, options]);
+    }, [defaultValue, options, onChange]);
 };

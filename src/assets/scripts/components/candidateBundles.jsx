@@ -35,7 +35,7 @@ import Config from 'config';
 import Constant from 'constant';
 
 // Variables
-let worker = undefined;
+let workers = {};
 
 /**
  * Handle Functions
@@ -383,40 +383,21 @@ export default function CandidateBundles(props) {
      * Handle Functions
      */
     const handleCandidateBundlesSearch = useCallback(() => {
-        if (undefined !== worker) {
+        let currentTabIndex = stateTempData.candidateBundles.index;
+
+        if (undefined !== workers[currentTabIndex]) {
             return;
         }
 
-        let tempData = CommonState.getter.getTempData();
-        let customWeapon = CommonState.getter.getCustomWeapon();
-        let requiredSets = CommonState.getter.getRequiredSets();
-        let requiredSkills = CommonState.getter.getRequiredSkills();
-        let requiredEquipPins = CommonState.getter.getRequiredEquipPins();
-        let currentEquips = CommonState.getter.getCurrentEquips();
-        let algorithmParams = CommonState.getter.getAlgorithmParams();
-
-        // Create Required Equips
-        let requiredEquips = {};
-
-        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
-            if (false === requiredEquipPins[equipType]) {
-                return;
-            }
-
-            requiredEquips[equipType] = currentEquips[equipType];
-        });
-
-        let currentSearchingTabIndex = tempData.candidateBundles.index;
-
         updateIsSearching(true);
-        updateSearchingTabIndex(currentSearchingTabIndex);
+        updateSearchingTabIndex(currentTabIndex);
         updateBundleCount(0);
         updateSearchPercent(0);
         updateTimeRemaining(0);
 
-        if (undefined === worker) {
-            worker = new Worker('assets/scripts/worker.min.js')
-            worker.onmessage = (event) => {
+        if (undefined === workers[currentTabIndex]) {
+            workers[currentTabIndex] = new Worker('assets/scripts/worker.min.js?' + currentTabIndex);
+            workers[currentTabIndex].onmessage = (event) => {
                 const action = event.data.action;
                 const payload = event.data.payload;
 
@@ -436,7 +417,7 @@ export default function CandidateBundles(props) {
 
                     break;
                 case 'result':
-                    handleSwitchTempData(currentSearchingTabIndex);
+                    handleSwitchTempData(currentTabIndex);
 
                     let meta = {};
 
@@ -466,22 +447,43 @@ export default function CandidateBundles(props) {
             };
         }
 
-        worker.postMessage({
+        // Get All Data From Store
+        let customWeapon = CommonState.getter.getCustomWeapon();
+        let requiredSets = CommonState.getter.getRequiredSets();
+        let requiredSkills = CommonState.getter.getRequiredSkills();
+        let requiredEquipPins = CommonState.getter.getRequiredEquipPins();
+        let currentEquips = CommonState.getter.getCurrentEquips();
+        let algorithmParams = CommonState.getter.getAlgorithmParams();
+
+        // Create Required Equips
+        let requiredEquips = {};
+
+        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
+            if (false === requiredEquipPins[equipType]) {
+                return;
+            }
+
+            requiredEquips[equipType] = currentEquips[equipType];
+        });
+
+        workers[currentTabIndex].postMessage({
             customWeapon: customWeapon,
             requiredSets: requiredSets,
             requiredSkills: requiredSkills,
             requiredEquips: requiredEquips,
             algorithmParams: algorithmParams
         });
-    }, []);
+    }, [stateTempData]);
 
     const handleCandidateBundlesCancel = useCallback(() => {
-        worker.terminate();
-        worker = undefined;
+        let currentTabIndex = stateTempData.candidateBundles.index;
+
+        workers[currentTabIndex].terminate();
+        workers[currentTabIndex] = undefined;
 
         updateIsSearching(false);
         updateSearchingTabIndex(null);
-    }, []);
+    }, [stateTempData]);
 
     return (
         <div className="col mhwc-bundles">

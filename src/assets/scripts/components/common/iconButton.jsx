@@ -32,5 +32,5 @@ export default function IconButton(props) {
                 </div>
             </div>
         )
-    }, [iconName, altName]);
+    }, [iconName, altName, onClick]);
 };
