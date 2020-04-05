@@ -221,7 +221,18 @@ export default {
             attack: 0,
             criticalRate: 0,
             defense: 0,
-            sharpness:  'purple',
+            sharpness: {
+                value: 350,
+                steps: {
+                    red: 0,
+                    orange: 0,
+                    yellow: 0,
+                    green: 0,
+                    blue: 0,
+                    white: 0,
+                    purple: 400
+                }
+            },
             element: {
                 attack: null,
                 status: null
