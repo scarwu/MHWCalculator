@@ -99,17 +99,6 @@ html {
     font-size: 62.5%;
     min-width: 1200px;
     overflow-x: auto;
-
-    &::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
-        background: white;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-    }
 }
 
 a {
