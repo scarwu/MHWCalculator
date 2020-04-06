@@ -218,7 +218,7 @@ export default {
             type: 'greatSword',
             series: null,
             name: 'customWeapon',
-            attack: 0,
+            attack: 100,
             criticalRate: 0,
             defense: 0,
             sharpness: {

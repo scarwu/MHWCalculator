@@ -777,12 +777,15 @@ export default createStore((state = initialState, action) => {
                     customWeapon.elderseal = null;
                 }
             } else {
-                customWeapon.element[target] = {
-                    type: type,
-                    minValue: null,
-                    maxValue: null,
-                    isHidden: false
-                };
+                if (null === customWeapon.element[target]) {
+                    customWeapon.element[target] = {
+                        minValue: 100,
+                        maxValue: null,
+                        isHidden: false
+                    };
+                }
+
+                customWeapon.element[target].type = type;
 
                 if ('attack' === target && 'dragon' === type) {
                     customWeapon.elderseal = 'low';
