@@ -712,6 +712,25 @@ export default createStore((state = initialState, action) => {
                 currentEquips.weapon.enhances = [];
             }
 
+            if ('type' === target) {
+                if (-1 !== ['lightBowgun', 'heavyBowgun', 'bow'].indexOf(value)) {
+                    customWeapon.sharpness = null;
+                } else if (Helper.isEmpty(customWeapon.sharpness)) {
+                    customWeapon.sharpness = {
+                        value: 350,
+                        steps: {
+                            red: 0,
+                            orange: 0,
+                            yellow: 0,
+                            green: 0,
+                            blue: 0,
+                            white: 0,
+                            purple: 400
+                        }
+                    };
+                }
+            }
+
             return Object.assign({}, state, {
                 currentEquips: currentEquips,
                 customWeapon: customWeapon
@@ -764,6 +783,10 @@ export default createStore((state = initialState, action) => {
                     maxValue: null,
                     isHidden: false
                 };
+
+                if ('attack' === target && 'dragon' === type) {
+                    customWeapon.elderseal = 'low';
+                }
             }
 
             return Object.assign({}, state, {

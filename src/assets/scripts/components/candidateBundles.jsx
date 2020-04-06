@@ -446,7 +446,7 @@ export default function CandidateBundles(props) {
         updateTasks(Helper.deepCopy(stateTasks));
 
         if (Helper.isEmpty(workers[tabIndex])) {
-            workers[tabIndex] = new Worker('assets/scripts/worker.min.js?' + tabIndex + '&' + Config.buildTime);
+            workers[tabIndex] = new Worker('assets/scripts/worker.min.js?' + Config.buildTime + '&' + tabIndex);
             workers[tabIndex].onmessage = (event) => {
                 Event.trigger('workerCallback', {
                     tabIndex: tabIndex,

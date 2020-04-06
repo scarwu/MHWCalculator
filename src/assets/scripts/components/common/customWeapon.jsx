@@ -65,7 +65,6 @@ const getRareList = () => {
 
 const getSharpnessList = () => {
     return [
-        { key: 'none',      value: _('none') },
         { key: 'red',       value: _('red') },
         { key: 'orange',    value: _('orange') },
         { key: 'yellow',    value: _('yellow') },
@@ -98,7 +97,6 @@ const getStatusElementList = () => {
 
 const getEldersealList = () => {
     return [
-        { key: 'none',      value: _('none') },
         { key: 'low',       value: _('low') },
         { key: 'medium',    value: _('medium') },
         { key: 'high',      value: _('high') }
@@ -264,11 +262,12 @@ export default function CustomWeapon(props) {
                             onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
                     </div>
                 </div>
+
                 <div className="col-12 mhwc-content">
                     <div className="col-3 mhwc-name">
                         <span>{_('type')}</span>
                     </div>
-                    <div className="col-3 mhwc-value">
+                    <div className="col-9 mhwc-value">
                         <BasicSelector
                             defaultValue={getValue(stateCustomWeapon.type)}
                             options={getTypeList()} onChange={(event) => {
@@ -310,14 +309,16 @@ export default function CustomWeapon(props) {
                         <span>{_('sharpness')}</span>
                     </div>
                     <div className="col-3 mhwc-value">
-                        <BasicSelector
-                            defaultValue={getSharpnessStep(stateCustomWeapon.sharpness)}
-                            options={getSharpnessList()} onChange={(event) => {
-                                let value = ('none' !== event.target.value)
-                                    ? event.target.value : null;
+                        {(-1 === ['lightBowgun', 'heavyBowgun', 'bow'].indexOf(stateCustomWeapon.type)) ? (
+                            <BasicSelector
+                                defaultValue={getSharpnessStep(stateCustomWeapon.sharpness)}
+                                options={getSharpnessList()} onChange={(event) => {
+                                    let value = ('none' !== event.target.value)
+                                        ? event.target.value : null;
 
-                                CommonState.setter.setCustomWeaponSharpness(value);
-                            }} />
+                                    CommonState.setter.setCustomWeaponSharpness(value);
+                                }} />
+                        ) : false}
                     </div>
 
                     <div className="col-3 mhwc-name">
@@ -335,6 +336,22 @@ export default function CustomWeapon(props) {
                     </div>
 
                     <div className="col-3 mhwc-name">
+                        <span>{_('elderseal')}</span>
+                    </div>
+                    <div className="col-3 mhwc-value">
+                        {('dragon' === getElementType(stateCustomWeapon.element.attack)) ? (
+                            <BasicSelector
+                                defaultValue={getValue(stateCustomWeapon.elderseal)}
+                                options={getEldersealList()} onChange={(event) => {
+                                    let value = ('none' !== event.target.value)
+                                        ? event.target.value : null;
+
+                                    CommonState.setter.setCustomWeaponValue('elderseal', value);
+                                }} />
+                        ) : false}
+                    </div>
+
+                    <div className="col-3 mhwc-name">
                         <span>{_('defense')}</span>
                     </div>
                     <div className="col-3 mhwc-value">
@@ -348,6 +365,7 @@ export default function CustomWeapon(props) {
                             }} />
                     </div>
                 </div>
+
                 <div className="col-12 mhwc-content">
                     <div className="col-3 mhwc-name">
                         <span>{_('element')}: 1</span>
@@ -399,24 +417,6 @@ export default function CustomWeapon(props) {
                                 }} />
                         ) : false}
                     </div>
-
-                    {('dragon' === getElementType(stateCustomWeapon.element.attack)) ? (
-                        <Fragment>
-                            <div className="col-3 mhwc-name">
-                                <span>{_('elderseal')}</span>
-                            </div>
-                            <div className="col-3 mhwc-value">
-                                <BasicSelector
-                                    defaultValue={getValue(stateCustomWeapon.elderseal)}
-                                    options={getEldersealList()} onChange={(event) => {
-                                        let value = ('none' !== event.target.value)
-                                            ? event.target.value : null;
-
-                                        CommonState.setter.setCustomWeaponValue('elderseal', value);
-                                    }} />
-                            </div>
-                        </Fragment>
-                    ) : false}
                 </div>
 
                 <div className="col-12 mhwc-content">
@@ -450,6 +450,7 @@ export default function CustomWeapon(props) {
                         );
                     })}
                 </div>
+
                 <div className="col-12 mhwc-content">
                     <div className="col-3 mhwc-name">
                         <span>{_('skill')}</span>
