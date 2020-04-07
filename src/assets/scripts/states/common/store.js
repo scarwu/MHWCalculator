@@ -736,6 +736,19 @@ export default createStore((state = initialState, action) => {
                 customWeapon: customWeapon
             });
         })();
+    case 'SET_CUSTOM_WEAPON_ELDERSEAL':
+        return (() => {
+            let affinity = action.payload.affinity;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            customWeapon.elderseal = {
+                affinity: affinity
+            };
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
     case 'SET_CUSTOM_WEAPON_SHARPNESS':
         return (() => {
             let step = action.payload.step;
@@ -788,7 +801,9 @@ export default createStore((state = initialState, action) => {
                 customWeapon.element[target].type = type;
 
                 if ('attack' === target && 'dragon' === type) {
-                    customWeapon.elderseal = 'low';
+                    customWeapon.elderseal = {
+                        affinity: 'low'
+                    };
                 }
             }
 

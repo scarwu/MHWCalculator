@@ -248,6 +248,14 @@ export default {
             }
         });
     },
+    setCustomWeaponElderseal: (affinity) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_ELDERSEAL',
+            payload: {
+                affinity: affinity
+            }
+        });
+    },
     setCustomWeaponSharpness: (step) => {
         Store.dispatch({
             type: 'SET_CUSTOM_WEAPON_SHARPNESS',

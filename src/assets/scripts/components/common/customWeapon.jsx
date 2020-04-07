@@ -341,12 +341,12 @@ export default function CustomWeapon(props) {
                     <div className="col-3 mhwc-value">
                         {('dragon' === getElementType(stateCustomWeapon.element.attack)) ? (
                             <BasicSelector
-                                defaultValue={getValue(stateCustomWeapon.elderseal)}
+                                defaultValue={getValue(stateCustomWeapon.elderseal.affinity)}
                                 options={getEldersealList()} onChange={(event) => {
                                     let value = ('none' !== event.target.value)
                                         ? event.target.value : null;
 
-                                    CommonState.setter.setCustomWeaponValue('elderseal', value);
+                                    CommonState.setter.setCustomWeaponElderseal(value);
                                 }} />
                         ) : false}
                     </div>
