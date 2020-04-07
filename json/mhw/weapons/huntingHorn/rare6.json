@@ -46,7 +46,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "雷鼓 III",
@@ -92,7 +93,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "星空皮鼓 III",
@@ -134,7 +136,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "激流銅鑼 III",
@@ -180,7 +183,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "堅骨號角 II",
@@ -226,7 +230,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "蠻顎龍長號 III",
@@ -268,7 +273,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "曼陀羅號角 III",
@@ -317,7 +323,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "浮空龍長號 III",
@@ -366,7 +373,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "骨鎚龍號角 III",
@@ -408,7 +416,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "龍骨古笛 III",
@@ -459,6 +468,7 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     }
 ]

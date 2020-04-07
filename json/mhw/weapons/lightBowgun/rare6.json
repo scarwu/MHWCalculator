@@ -30,7 +30,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "浮空龍颶風砲 III",
@@ -60,7 +61,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "凶豺龍火砲 III",
@@ -93,7 +95,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "雷光迅擊弩 III",
@@ -123,7 +126,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "寒霜迅擊弩 II",
@@ -149,7 +153,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "狙擊射手 II",
@@ -179,7 +184,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "蠻顎龍破壞砲 III",
@@ -205,7 +211,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "泥岩龍輕弩 III",
@@ -238,7 +245,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "土砂龍射手 III",
@@ -268,7 +276,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "龍骨弩 III",
@@ -298,6 +307,7 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     }
 ]

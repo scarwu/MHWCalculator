@@ -46,7 +46,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "飛龍刀【葵】",
@@ -92,7 +93,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "屍套龍太刀 II",
@@ -140,7 +142,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "熔山龍太刀 II",
@@ -186,7 +189,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "悲慘痛苦太刀",
@@ -230,7 +234,8 @@
             "affinity": "high"
         },
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "蒼星的太刀【舞龍】",
@@ -276,7 +281,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．黑甲",
@@ -307,7 +313,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．泥魚",
@@ -338,7 +345,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．風漂",
@@ -369,7 +377,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．搔",
@@ -400,7 +409,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．飛雷",
@@ -431,7 +441,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．眩",
@@ -462,7 +473,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．屍套",
@@ -495,7 +507,8 @@
             "affinity": "medium"
         },
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．爆鎚",
@@ -530,7 +543,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．蠻顎",
@@ -561,7 +575,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．熔山",
@@ -592,6 +607,7 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     }
 ]

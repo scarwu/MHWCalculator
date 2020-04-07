@@ -27,7 +27,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "骷髏的吶喊",
@@ -57,7 +58,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "業【羯磨】",
@@ -87,7 +89,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "大鬼島",
@@ -117,7 +120,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "麒麟筒【三角】",
@@ -143,7 +147,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鋼龍冰蜂弩",
@@ -173,7 +178,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "冥燈龍輕弩槍",
@@ -206,7 +212,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "巨型十字槍",
@@ -236,7 +243,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅迅擊弩．迫擊",
@@ -266,7 +274,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅迅擊弩．狙擊",
@@ -296,7 +305,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅迅擊弩．射擊",
@@ -326,7 +336,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "皇后甲殼．炎妃",
@@ -361,7 +372,8 @@
                 "id": "毅力",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "皇后甲殼．滅盡",
@@ -396,7 +408,8 @@
                 "id": "加速再生",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "皇后甲殼．冥燈",
@@ -434,7 +447,8 @@
                 "id": "利刃／彈藥節約",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "鎧羅迅擊弩．援擊",
@@ -461,7 +475,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "帝王金弩．爆鱗",
@@ -489,7 +504,8 @@
                 "id": "會心攻擊【特殊】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金弩．慘爪",
@@ -517,7 +533,8 @@
                 "id": "會心攻擊【特殊】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金弩．屍套",
@@ -545,7 +562,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金弩．王",
@@ -573,7 +591,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金弩．雷",
@@ -605,7 +624,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金弩．冰",
@@ -633,6 +653,7 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     }
 ]

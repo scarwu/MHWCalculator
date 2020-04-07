@@ -30,7 +30,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "激流加農砲 III",
@@ -60,7 +61,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "長尾重裝弩 III",
@@ -90,7 +92,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "動能發射器 II",
@@ -120,7 +123,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "曼陀羅爆破砲 III",
@@ -153,7 +157,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "骨鎚龍加農砲 III",
@@ -179,7 +184,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "飛雷龍之針 III",
@@ -209,7 +215,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "龍骨砲 III",
@@ -239,6 +246,7 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     }
 ]

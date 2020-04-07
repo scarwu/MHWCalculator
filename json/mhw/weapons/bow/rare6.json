@@ -35,7 +35,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "星空迅擊弓 III",
@@ -66,7 +67,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "公主弓矢 III",
@@ -106,7 +108,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "激流射手 III",
@@ -141,7 +144,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "勇氣獵弓 II",
@@ -176,7 +180,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "曼陀羅弓 III",
@@ -214,7 +219,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "蠻顎龍射手 III",
@@ -245,7 +251,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "龍骨弓 III",
@@ -285,7 +292,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "亞蘿伊的戰弓",
@@ -320,6 +328,7 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     }
 ]

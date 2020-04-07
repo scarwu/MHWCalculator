@@ -43,7 +43,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "花之女神",
@@ -92,7 +93,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "爆鎚粉碎者 II",
@@ -138,7 +140,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "爆鎚戰鎚 II",
@@ -184,7 +187,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "混沌之鎚",
@@ -228,7 +232,8 @@
             "affinity": "high"
         },
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅大錘．痺賊",
@@ -259,7 +264,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅大錘．搔",
@@ -290,7 +296,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅大錘．毒妖",
@@ -321,7 +328,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅大錘．骨鎚",
@@ -352,7 +360,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅大錘．屍套",
@@ -383,7 +392,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅大錘．蠻顎",
@@ -414,7 +424,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅大錘．爆鎚",
@@ -445,7 +456,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅大錘．土砂",
@@ -480,7 +492,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅大錘．角",
@@ -511,6 +524,7 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     }
 ]

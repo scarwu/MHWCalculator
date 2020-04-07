@@ -45,7 +45,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "飛龍刀【藍染】",
@@ -91,7 +92,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "爆鱗刀赤紅利刃",
@@ -140,7 +142,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "幻光刀",
@@ -182,7 +185,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "帝王刀【陽炎】",
@@ -224,7 +228,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "冥燈龍太刀",
@@ -275,7 +280,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "天上天下無雙刀",
@@ -323,7 +329,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．麻痺",
@@ -369,7 +376,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．毒",
@@ -415,7 +423,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅劍．水",
@@ -461,7 +470,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "皇后劍．炎妃",
@@ -515,7 +525,8 @@
                 "id": "毅力",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "皇后劍．滅盡",
@@ -569,7 +580,8 @@
                 "id": "加速再生",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "皇后劍．冥燈",
@@ -623,7 +635,8 @@
                 "id": "利刃／彈藥節約",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "鎧羅劍．火",
@@ -669,7 +682,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "帝王金太刀．飛雷",
@@ -720,7 +734,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金太刀．風漂",
@@ -771,7 +786,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金太刀．屍套",
@@ -824,7 +840,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金太刀．熔山",
@@ -875,7 +892,8 @@
                 "id": "會心攻擊【特殊】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金太刀．水",
@@ -922,7 +940,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金太刀．火",
@@ -969,7 +988,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金太刀．麻痺",
@@ -1016,6 +1036,7 @@
                 "id": "會心攻擊【特殊】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     }
 ]

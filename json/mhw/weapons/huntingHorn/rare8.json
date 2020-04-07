@@ -45,7 +45,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "爆鱗鼓赤紅星光",
@@ -94,7 +95,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "炎王豎琴",
@@ -136,7 +138,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "冥燈龍狩獵笛",
@@ -187,7 +190,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅風笛．水",
@@ -233,7 +237,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅風笛．龍",
@@ -281,7 +286,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅風笛．麻痺",
@@ -327,7 +333,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "皇后鼓．炎妃",
@@ -378,7 +385,8 @@
                 "id": "毅力",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "皇后鼓．滅盡",
@@ -429,7 +437,8 @@
                 "id": "加速再生",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "皇后鼓．冥燈",
@@ -483,7 +492,8 @@
                 "id": "利刃／彈藥節約",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "鎧羅風笛．睡眠",
@@ -529,7 +539,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "帝王金龍笛．麻痺",
@@ -580,7 +591,8 @@
                 "id": "會心攻擊【特殊】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金龍笛．蠻顎",
@@ -631,7 +643,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金龍笛．幻",
@@ -678,7 +691,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金龍笛．岩賊",
@@ -729,7 +743,8 @@
                 "id": "會心攻擊【特殊】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金龍笛．風漂",
@@ -776,7 +791,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金龍笛．水",
@@ -827,7 +843,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金龍笛．龍",
@@ -876,6 +893,7 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     }
 ]

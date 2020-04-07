@@ -46,7 +46,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "洶湧奔流 III",
@@ -92,7 +93,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "浮空龍戰斧 III",
@@ -141,7 +143,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "盛開曼陀羅 III",
@@ -190,7 +193,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "瑪拉多戰斧 III",
@@ -232,7 +236,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "大地巴龍刀 II",
@@ -278,7 +283,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "骨鎚龍棍棒 III",
@@ -320,7 +326,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "凶豺龍棍棒 III",
@@ -369,7 +376,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "雷光戰狂 III",
@@ -415,7 +423,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "土砂龍棍棒 III",
@@ -464,7 +473,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "龍骨劍 III",
@@ -512,6 +522,7 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     }
 ]

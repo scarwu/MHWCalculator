@@ -39,7 +39,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "岩賊龍刺針 II",
@@ -88,7 +89,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "慘爪刺針 II",
@@ -130,7 +132,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "亞特羅西斯塔",
@@ -174,7 +177,8 @@
             "affinity": "high"
         },
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅之尖．王",
@@ -205,7 +209,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅之尖．黑甲",
@@ -236,7 +241,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅之尖．風漂",
@@ -267,7 +273,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅之尖．岩賊",
@@ -298,7 +305,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅之尖．屍套",
@@ -331,7 +339,8 @@
             "affinity": "medium"
         },
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅之尖．毒妖",
@@ -366,7 +375,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅之尖．搔",
@@ -397,7 +407,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅之尖．慘爪",
@@ -439,7 +450,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅之尖．土砂",
@@ -470,7 +482,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "團旗長槍【指引之星】",
@@ -512,7 +525,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "團旗長槍【一帆風順】",
@@ -554,6 +568,7 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     }
 ]

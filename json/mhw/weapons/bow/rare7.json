@@ -32,7 +32,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "屍套龍弓 II",
@@ -69,7 +70,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "飛雷弓【羽羽矢】",
@@ -104,7 +106,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "惡棍之弓",
@@ -137,7 +140,8 @@
             "affinity": "high"
         },
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅弓．風漂",
@@ -168,7 +172,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅弓．飛雷",
@@ -199,7 +204,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅弓．搔",
@@ -230,7 +236,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅弓．王",
@@ -261,7 +268,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅弓．女王",
@@ -294,7 +302,8 @@
             "affinity": "low"
         },
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅弓．毒妖",
@@ -325,7 +334,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅弓．屍套",
@@ -358,7 +368,8 @@
             "affinity": "medium"
         },
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅弓．蠻顎",
@@ -389,7 +400,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅弓．角",
@@ -420,6 +432,7 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     }
 ]

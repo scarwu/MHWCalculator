@@ -46,7 +46,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "星空長刀 III",
@@ -88,7 +89,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "利刃長刀 III",
@@ -134,7 +136,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "凍寒疾風刀 II",
@@ -183,7 +186,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "曼陀羅長刀 III",
@@ -232,7 +236,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "飛空棍 II",
@@ -278,7 +283,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "激流長刀 III",
@@ -324,7 +330,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "飛雷龍之柱 III",
@@ -370,7 +377,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "龍骨棍 III",
@@ -421,6 +429,7 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     }
 ]

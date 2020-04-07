@@ -45,7 +45,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "爆鱗雙斧赤紅巨星",
@@ -91,7 +92,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "罪【真】",
@@ -133,7 +135,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "迅雷",
@@ -175,7 +178,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "冰炎劍維爾瑪閃焰",
@@ -226,7 +230,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "冥燈龍雙劍",
@@ -277,7 +282,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅小刀．冰",
@@ -323,7 +329,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅小刀．毒",
@@ -369,7 +376,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅小刀．水",
@@ -415,7 +423,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "皇后小刀．炎妃",
@@ -469,7 +478,8 @@
                 "id": "毅力",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "皇后小刀．滅盡",
@@ -523,7 +533,8 @@
                 "id": "加速再生",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "皇后小刀．冥燈",
@@ -577,7 +588,8 @@
                 "id": "利刃／彈藥節約",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "鎧羅小刀．火",
@@ -623,7 +635,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "帝王金雙劍．飛雷",
@@ -674,7 +687,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金雙劍．蠻顎",
@@ -721,7 +735,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金雙劍．熔山",
@@ -772,7 +787,8 @@
                 "id": "會心攻擊【特殊】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金雙劍．黑甲",
@@ -823,7 +839,8 @@
                 "id": "會心攻擊【特殊】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金雙劍．水",
@@ -874,7 +891,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金雙劍．冰",
@@ -925,7 +943,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金雙劍．龍",
@@ -978,7 +997,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "吉薇艾兒",
@@ -1026,6 +1046,7 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     }
 ]

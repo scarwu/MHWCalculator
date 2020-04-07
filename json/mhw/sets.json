@@ -6,6 +6,10 @@
             "jaJP": null,
             "enUS": "Anjanath Power"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "振奮",
@@ -20,6 +24,10 @@
             "zhTW": "慘爪龍之力",
             "jaJP": null,
             "enUS": "Odogaron Power"
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -36,6 +44,10 @@
             "jaJP": null,
             "enUS": "Legiana Blessing"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "幸運",
@@ -50,6 +62,10 @@
             "zhTW": "幻獸的恩惠",
             "jaJP": null,
             "enUS": "Kirin Blessing"
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -66,6 +82,10 @@
             "jaJP": null,
             "enUS": "Diablos Power"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "鈍器能手",
@@ -81,6 +101,10 @@
             "jaJP": null,
             "enUS": "Rathalos Power"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "會心攻擊【屬性】",
@@ -95,6 +119,10 @@
             "zhTW": "蠻顎龍的鬥志",
             "jaJP": null,
             "enUS": "Anjanath Will"
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -116,6 +144,10 @@
             "jaJP": null,
             "enUS": "Zorah Magdaros Mastery"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "會心攻擊【特殊】",
@@ -131,6 +163,10 @@
             "jaJP": null,
             "enUS": "Pink Rathian Mastery"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "毒傷害強化",
@@ -145,6 +181,10 @@
             "zhTW": "風漂龍的恩竉",
             "jaJP": null,
             "enUS": "Legiana Favor"
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -166,6 +206,10 @@
             "jaJP": null,
             "enUS": "Diablos Mastery"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "鈍器能手",
@@ -185,6 +229,10 @@
             "zhTW": "慘爪龍的奧秘",
             "jaJP": null,
             "enUS": "Odogaron Mastery"
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -206,6 +254,10 @@
             "jaJP": null,
             "enUS": "Rathalos Mastery"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "會心攻擊【屬性】",
@@ -226,6 +278,10 @@
             "jaJP": null,
             "enUS": "Uragaan Protection"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "防禦強化",
@@ -240,6 +296,10 @@
             "zhTW": "爆鱗龍的守護",
             "jaJP": null,
             "enUS": "Bazelgeuse Protection"
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -256,6 +316,10 @@
             "jaJP": "屍套龍の霊脈",
             "enUS": "Vaal Hazak Vitality"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "超回復力",
@@ -270,6 +334,10 @@
             "zhTW": "滅盡龍的飢餓",
             "jaJP": null,
             "enUS": "Nergigante Hunger"
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -286,6 +354,10 @@
             "jaJP": "炎王龍の武技",
             "enUS": "Teostra Technique"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "達人藝",
@@ -300,6 +372,10 @@
             "zhTW": "鋼龍的飛翔",
             "jaJP": "鋼龍の飛翔",
             "enUS": "Kushala Daora Flight"
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -316,6 +392,10 @@
             "jaJP": null,
             "enUS": "Xeno'jiiva Divinity"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "利刃／彈藥節約",
@@ -330,6 +410,10 @@
             "zhTW": "麒麟的恩寵",
             "jaJP": null,
             "enUS": "Kirin Favor"
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -346,6 +430,10 @@
             "jaJP": null,
             "enUS": "Guild Guidance"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "強運",
@@ -361,6 +449,10 @@
             "jaJP": null,
             "enUS": "Commission Guidance"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "剝取名人",
@@ -375,6 +467,10 @@
             "zhTW": "炎妃龍的恩寵",
             "jaJP": null,
             "enUS": "Lunastra Favor"
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -396,6 +492,10 @@
             "jaJP": null,
             "enUS": "Soul of the Dragoon"
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "飛燕【屬性】",
@@ -415,6 +515,10 @@
             "zhTW": "星辰的祝福",
             "jaJP": null,
             "enUS": "Astera Blessing"
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {

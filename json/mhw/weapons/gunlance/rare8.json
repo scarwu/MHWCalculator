@@ -45,7 +45,8 @@
                 "size": 2
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "藍色戰車",
@@ -91,7 +92,8 @@
                 "size": 1
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "驚天動地熔山龍銃槍",
@@ -133,7 +135,8 @@
         },
         "elderseal": null,
         "slots": null,
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鋼龍爪銃槍",
@@ -179,7 +182,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "冥燈龍銃槍",
@@ -230,7 +234,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅銃槍．水",
@@ -276,7 +281,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅銃槍．睡眠",
@@ -322,7 +328,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "鎧羅銃槍．毒",
@@ -368,7 +375,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "皇后杖．炎妃",
@@ -419,7 +427,8 @@
                 "id": "毅力",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "皇后杖．滅盡",
@@ -470,7 +479,8 @@
                 "id": "加速再生",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "皇后杖．冥燈",
@@ -524,7 +534,8 @@
                 "id": "利刃／彈藥節約",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "鎧羅銃槍．冰",
@@ -570,7 +581,8 @@
                 "size": 3
             }
         ],
-        "skills": null
+        "skills": null,
+        "set": null
     },
     {
         "id": "帝王金銃槍．風漂",
@@ -617,7 +629,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金銃槍．屍套",
@@ -666,7 +679,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金銃槍．王",
@@ -713,7 +727,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金銃槍．爆鱗",
@@ -764,7 +779,8 @@
                 "id": "會心攻擊【特殊】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金銃槍．飛雷",
@@ -811,7 +827,8 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金銃槍．麻痺",
@@ -858,7 +875,8 @@
                 "id": "會心攻擊【特殊】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     },
     {
         "id": "帝王金銃槍．水",
@@ -905,6 +923,7 @@
                 "id": "會心攻擊【屬性】",
                 "level": 1
             }
-        ]
+        ],
+        "set": null
     }
 ]

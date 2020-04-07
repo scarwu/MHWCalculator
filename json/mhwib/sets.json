@@ -6,6 +6,10 @@
             "jaJP": "蛮顎竜の覇気",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "突破耐力上限",
@@ -20,6 +24,10 @@
             "zhTW": "雌火龍的真髓",
             "jaJP": "雌火竜の真髄",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -36,6 +44,10 @@
             "jaJP": "太古の神秘",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "會心攻擊【特殊】",
@@ -50,6 +62,10 @@
             "zhTW": "調查團的鍊金術",
             "jaJP": "調査団の錬金術",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -66,6 +82,10 @@
             "jaJP": "氷牙竜の秘技",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "拔刀術【力】",
@@ -80,6 +100,10 @@
             "zhTW": "火龍的真髓",
             "jaJP": "火竜の真髄",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -96,6 +120,10 @@
             "jaJP": "角竜の覇気",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "KO術．極意",
@@ -110,6 +138,10 @@
             "zhTW": "風漂龍的霸氣",
             "jaJP": "風漂竜の覇気",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -126,6 +158,10 @@
             "jaJP": "惨爪竜の真髄",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "剛刃研磨",
@@ -140,6 +176,10 @@
             "zhTW": "爆鎚龍的霸氣",
             "jaJP": "爆鎚竜の覇気",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -156,6 +196,10 @@
             "jaJP": "迅竜の真髄",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "真．利刃／彈藥節約",
@@ -170,6 +214,10 @@
             "zhTW": "斬龍的真髓",
             "jaJP": "斬竜の真髄",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -186,6 +234,10 @@
             "jaJP": "砕竜の真髄",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "挑戰者．極意",
@@ -200,6 +252,10 @@
             "zhTW": "轟龍的真髓",
             "jaJP": "轟竜の真髄",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -216,6 +272,10 @@
             "jaJP": "教官の導き",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "捕獲名人",
@@ -230,6 +290,10 @@
             "zhTW": "爆鱗龍的霸氣",
             "jaJP": "爆鱗竜の覇気",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -246,6 +310,10 @@
             "jaJP": "恐暴竜の真髄",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "奪取耐力．極意",
@@ -261,6 +329,10 @@
             "jaJP": "雷狼竜の真髄",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "力量解放．極意",
@@ -275,6 +347,10 @@
             "zhTW": "冰呪龍的神祕",
             "jaJP": "冰龍の神秘",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -296,6 +372,10 @@
             "jaJP": "幻獣の神秘",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "強運",
@@ -310,6 +390,10 @@
             "zhTW": "溟波龍的神祕",
             "jaJP": "溟龍の神秘",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -331,6 +415,10 @@
             "jaJP": "地啼龍の神秘",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "大地縫纏",
@@ -351,6 +439,10 @@
             "jaJP": "熔山龍の真髄",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "砲術．極意",
@@ -365,6 +457,10 @@
             "zhTW": "工會的見識",
             "jaJP": "ギルドの見識",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -386,6 +482,10 @@
             "jaJP": "滅尽龍の覇気",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "加速再生",
@@ -401,6 +501,10 @@
             "jaJP": "炎妃龍の真髄",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "整備．極意",
@@ -415,6 +519,10 @@
             "zhTW": "金火龍的真髓",
             "jaJP": "金火竜の真髄",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -436,6 +544,10 @@
             "jaJP": "鎮火竜の真髄",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "投射器裝填．極意",
@@ -455,6 +567,10 @@
             "zhTW": "萬福的祝福",
             "jaJP": "万福の祝福",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -476,6 +592,10 @@
             "jaJP": "大感謝の祝福",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "大感謝的贈禮",
@@ -495,6 +615,10 @@
             "zhTW": "金獅子的怒氣",
             "jaJP": "金獅子の怒気",
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
@@ -516,6 +640,10 @@
             "jaJP": "赤龍の封印",
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "龍脈覺醒",
@@ -536,6 +664,10 @@
             "jaJP": null,
             "enUS": null
         },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
         "skills": [
             {
                 "id": "精神抖擻．極意",
@@ -555,6 +687,10 @@
             "zhTW": "碎龍之鬥志",
             "jaJP": null,
             "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
         },
         "skills": [
             {
