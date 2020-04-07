@@ -36,11 +36,11 @@ class FittingAlgorithm {
             return [];
         }
 
-        Helper.log('Input: Custom Weapon', customWeapon);
-        Helper.log('Input: Required Sets', requiredSets);
-        Helper.log('Input: Required Skills', requiredSkills);
-        Helper.log('Input: Required Equips', requiredEquips);
-        Helper.log('Input: Algorithm Params', algorithmParams);
+        Helper.debug('Input: Custom Weapon', customWeapon);
+        Helper.debug('Input: Required Sets', requiredSets);
+        Helper.debug('Input: Required Skills', requiredSkills);
+        Helper.debug('Input: Required Equips', requiredEquips);
+        Helper.debug('Input: Algorithm Params', algorithmParams);
 
         // Set Custom Weapon
         let isCompleted = true;
@@ -103,14 +103,14 @@ class FittingAlgorithm {
         this.requireEquipCount = this.conditionEquips.length;
 
         // Print Init Information
-        Helper.log('Init: Condition Skills:', this.conditionSkills);
-        Helper.log('Init: Condition Sets:', this.conditionSets);
-        Helper.log('Init: Condition Equips:', this.conditionEquips);
-        Helper.log('Init: First Bundle:', this.firstBundle);
-        Helper.log('Init: Correspond Jewels:', this.correspondJewels);
-        Helper.log('Init: Condition Expected Value:', this.conditionExpectedValue);
-        Helper.log('Init: Condition Expected Level:', this.conditionExpectedLevel);
-        Helper.log('Init: Max Slots Skill Level:', this.maxSlotsSkillLevel);
+        Helper.debug('Init: Condition Skills:', this.conditionSkills);
+        Helper.debug('Init: Condition Sets:', this.conditionSets);
+        Helper.debug('Init: Condition Equips:', this.conditionEquips);
+        Helper.debug('Init: First Bundle:', this.firstBundle);
+        Helper.debug('Init: Correspond Jewels:', this.correspondJewels);
+        Helper.debug('Init: Condition Expected Value:', this.conditionExpectedValue);
+        Helper.debug('Init: Condition Expected Level:', this.conditionExpectedLevel);
+        Helper.debug('Init: Max Slots Skill Level:', this.maxSlotsSkillLevel);
 
         // Save StartTime
         this.startTime = parseInt(Math.floor(Date.now() / 1000), 10);
@@ -378,7 +378,7 @@ class FittingAlgorithm {
         let lastBundlePool = {};
 
         // Init Set Equips
-        Helper.log('Init Set Equips');
+        Helper.debug('Init Set Equips');
 
         this.conditionEquips.forEach((equipType) => {
             if ('charm' === equipType) {
@@ -403,26 +403,33 @@ class FittingAlgorithm {
             // Append Empty Candidate Equip
             candidateEquipPool[equipType]['empty'] = this.getEmptyCandidateEquip(equipType);
 
-            Helper.log('Candidate Equip Pool:', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
+            Helper.debug('Candidate Equip Pool:', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
         });
 
         // Create Current Equip Types and Convert Candidate Equip Pool
         let currentEquipTypes = [];
         let traversalCount = 0;
+        let traversalPercent = 0;
+        let partTraversalCount = 1;
         let totalTraversalCount = Object.keys(initBundlePool).length;
 
         for (const [equipType, candidateEquips] of Object.entries(candidateEquipPool)) {
             currentEquipTypes.push(equipType);
             candidateEquipPool[equipType] = Object.values(candidateEquips);
-            totalTraversalCount *= candidateEquipPool[equipType].length;
+            partTraversalCount *= candidateEquipPool[equipType].length;
         }
 
         candidateEquipPool = Object.values(candidateEquipPool);
+        totalTraversalCount *= partTraversalCount
+
+        let candidateEquipPoolCount = candidateEquipPool.map((equips) => {
+            return equips.length;
+        });
 
         // Create Bundle Pool With Set Equips
-        Helper.log('Create Bundle Pool With Set Equips');
+        Helper.debug('Create Bundle Pool With Set Equips');
 
-        Object.values(initBundlePool).forEach((bundle) => {
+        Object.values(initBundlePool).forEach((bundle, partIndex) => {
             let typeIndex = 0;
             let equipIndex = 0;
             let candidateEquip = null;
@@ -433,6 +440,60 @@ class FittingAlgorithm {
                 bundle: bundle,
                 equipIndex: 0
             });
+
+            const getTraversalCount = () => {
+                let currentCount = 1;
+                let currentTypeIndex = null;
+                let currentEquipIndex = null;
+
+                for (let typeIndex = statusStack.length - 1; typeIndex >= statusStack.length; typeIndex--) {
+                    let currentStack = statusStack[typeIndex];
+
+                    if (1 < currentStack.equipIndex) {
+                        currentTypeIndex = typeIndex;
+                        currentEquipIndex = currentStack.equipIndex;
+                    }
+                }
+
+                if (null === currentTypeIndex) {
+                    return 0;
+                }
+
+                candidateEquipPoolCount.forEach((equipCount, index) => {
+                    if (index === currentTypeIndex) {
+                        currentCount *= currentEquipIndex - 1;
+                    } else {
+                        currentCount *= equipCount;
+                    }
+                });
+
+                return currentCount;
+            };
+
+            const calculateTraversalCount = () => {
+                if (0 === Object.keys(this.conditionSkills).length) {
+                    return;
+                }
+
+                traversalCount = partIndex * partTraversalCount + getTraversalCount();
+
+                let precent = traversalCount / totalTraversalCount;
+
+                if (parseInt(precent * 100) <= traversalPercent) {
+                    return;
+                }
+
+                traversalPercent = parseInt(precent * 100);
+
+                Helper.debug('Set Equips: Traversal Count:', traversalCount);
+
+                let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
+
+                this.callback({
+                    searchPercent: traversalPercent,
+                    timeRemaining: parseInt(diffTime / precent - diffTime)
+                });
+            };
 
             const findPrevTypeAndNextEquip = () => {
                 while (true) {
@@ -448,6 +509,8 @@ class FittingAlgorithm {
                     if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                         statusStack[typeIndex].equipIndex++;
 
+                        calculateTraversalCount();
+
                         break;
                     }
                 }
@@ -456,6 +519,8 @@ class FittingAlgorithm {
             const findNextEquip = () => {
                 if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                     statusStack[typeIndex].equipIndex++;
+
+                    calculateTraversalCount();
                 } else {
                     findPrevTypeAndNextEquip();
                 }
@@ -473,7 +538,7 @@ class FittingAlgorithm {
                 }
             };
 
-            Helper.log('Set Equips: Root Bundle:', bundle);
+            Helper.debug('Set Equips: Root Bundle:', bundle);
 
             while (true) {
                 if (0 === statusStack.length) {
@@ -483,21 +548,6 @@ class FittingAlgorithm {
                 bundle = statusStack[typeIndex].bundle;
                 equipIndex = statusStack[typeIndex].equipIndex;
                 candidateEquip = candidateEquipPool[typeIndex][equipIndex];
-                traversalCount++;
-
-                if (0 === traversalCount % parseInt(totalTraversalCount / 100)) {
-                    Helper.log('Set Equips: Traversal Count:', traversalCount);
-
-                    if (0 === Object.keys(this.conditionSkills).length) {
-                        let precent = traversalCount / totalTraversalCount;
-                        let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
-
-                        this.callback({
-                            searchPercent: parseInt(precent * 100),
-                            timeRemaining: parseInt(diffTime / precent - diffTime)
-                        });
-                    }
-                }
 
                 // Add Candidate Equip to Bundle
                 if (Helper.isEmpty(bundle.equips[currentEquipTypes[typeIndex]])
@@ -531,8 +581,6 @@ class FittingAlgorithm {
                 findNextType();
             }
 
-            Helper.log('Set Equips: Traversal Count:', traversalCount);
-
             if (0 === Object.keys(this.conditionSkills).length) {
                 let precent = traversalCount / totalTraversalCount;
                 let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
@@ -545,7 +593,7 @@ class FittingAlgorithm {
             }
         });
 
-        Helper.log('Last Bundle Result:', Object.keys(lastBundlePool).length, lastBundlePool);
+        Helper.debug('Last Bundle Result:', Object.keys(lastBundlePool).length, lastBundlePool);
 
         return lastBundlePool;
     };
@@ -558,7 +606,7 @@ class FittingAlgorithm {
         let lastBundlePool = {};
 
         // Init Skill Equips
-        Helper.log('Init Skill Equips');
+        Helper.debug('Init Skill Equips');
 
         this.conditionEquips.forEach((equipType) => {
             if (Helper.isEmpty(candidateEquipPool[equipType])) {
@@ -600,13 +648,15 @@ class FittingAlgorithm {
             // Append Empty Candidate Equip
             candidateEquipPool[equipType]['empty'] = this.getEmptyCandidateEquip(equipType);
 
-            Helper.log('Candidate Equip Pool:', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
+            Helper.debug('Candidate Equip Pool:', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
         });
 
         // Create Current Equip Types and Convert Candidate Equip Pool
         // Create Max Equip Expected Value & Expected Level
         let currentEquipTypes = [];
         let traversalCount = 0;
+        let traversalPercent = 0;
+        let partTraversalCount = 1;
         let totalTraversalCount = Object.keys(initBundlePool).length;
 
         for (const [equipType, candidateEquips] of Object.entries(candidateEquipPool)) {
@@ -630,13 +680,18 @@ class FittingAlgorithm {
 
             currentEquipTypes.push(equipType);
             candidateEquipPool[equipType] = Object.values(candidateEquips);
-            totalTraversalCount *= candidateEquipPool[equipType].length;
+            partTraversalCount *= candidateEquipPool[equipType].length;
         }
 
         candidateEquipPool = Object.values(candidateEquipPool);
+        totalTraversalCount *= partTraversalCount
 
-        Helper.log('Init: Max Equip Expected Value:', this.maxEquipExpectedValue);
-        Helper.log('Init: Max Equip Expected Level:', this.maxEquipExpectedLevel);
+        let candidateEquipPoolCount = candidateEquipPool.map((equips) => {
+            return equips.length;
+        });
+
+        Helper.debug('Init: Max Equip Expected Value:', this.maxEquipExpectedValue);
+        Helper.debug('Init: Max Equip Expected Level:', this.maxEquipExpectedLevel);
 
         // Create Future Expected Value & Expected Level
         currentEquipTypes.forEach((equipTypeA, typeIndex) => {
@@ -653,15 +708,15 @@ class FittingAlgorithm {
             });
         });
 
-        Helper.log('Init: Future Expected Value:', this.futureExpectedValue);
-        Helper.log('Init: Future Expected Level:', this.futureExpectedLevel);
+        Helper.debug('Init: Future Expected Value:', this.futureExpectedValue);
+        Helper.debug('Init: Future Expected Level:', this.futureExpectedLevel);
 
         // Create Bundle Pool With Skill Equips
-        Helper.log('Create Bundle Pool With Skill Equips');
+        Helper.debug('Create Bundle Pool With Skill Equips');
 
         let isEndEarly = false;
 
-        Object.values(initBundlePool).forEach((bundle) => {
+        Object.values(initBundlePool).forEach((bundle, partIndex) => {
             if (isEndEarly) {
                 return;
             }
@@ -677,6 +732,56 @@ class FittingAlgorithm {
                 equipIndex: 0
             });
 
+            const getTraversalCount = () => {
+                let currentCount = 1;
+                let currentTypeIndex = null;
+                let currentEquipIndex = null;
+
+                for (let typeIndex = statusStack.length - 1; typeIndex >= statusStack.length; typeIndex--) {
+                    let currentStack = statusStack[typeIndex];
+
+                    if (1 < currentStack.equipIndex) {
+                        currentTypeIndex = typeIndex;
+                        currentEquipIndex = currentStack.equipIndex;
+                    }
+                }
+
+                if (null === currentTypeIndex) {
+                    return 0;
+                }
+
+                candidateEquipPoolCount.forEach((equipCount, index) => {
+                    if (index === currentTypeIndex) {
+                        currentCount *= currentEquipIndex - 1;
+                    } else {
+                        currentCount *= equipCount;
+                    }
+                })
+
+                return currentCount;
+            };
+
+            const calculateTraversalCount = () => {
+                traversalCount = partIndex * partTraversalCount + getTraversalCount();
+
+                let precent = traversalCount / totalTraversalCount;
+
+                if (parseInt(precent * 100) <= traversalPercent) {
+                    return;
+                }
+
+                traversalPercent = parseInt(precent * 100);
+
+                Helper.debug('Skill Equips: Traversal Count:', traversalCount);
+
+                let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
+
+                this.callback({
+                    searchPercent: traversalPercent,
+                    timeRemaining: parseInt(diffTime / precent - diffTime)
+                });
+            };
+
             const findPrevTypeAndNextEquip = () => {
                 while (true) {
                     typeIndex--;
@@ -691,6 +796,8 @@ class FittingAlgorithm {
                     if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                         statusStack[typeIndex].equipIndex++;
 
+                        calculateTraversalCount();
+
                         break;
                     }
                 }
@@ -699,6 +806,8 @@ class FittingAlgorithm {
             const findNextEquip = () => {
                 if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                     statusStack[typeIndex].equipIndex++;
+
+                    calculateTraversalCount();
                 } else {
                     findPrevTypeAndNextEquip();
                 }
@@ -716,7 +825,7 @@ class FittingAlgorithm {
                 }
             };
 
-            Helper.log('Skill Equip: Root Bundle:', bundle);
+            Helper.debug('Skill Equip: Root Bundle:', bundle);
 
             while (true) {
                 if (isEndEarly) {
@@ -730,19 +839,6 @@ class FittingAlgorithm {
                 bundle = statusStack[typeIndex].bundle;
                 equipIndex = statusStack[typeIndex].equipIndex;
                 candidateEquip = candidateEquipPool[typeIndex][equipIndex];
-                traversalCount++;
-
-                if (0 === traversalCount % parseInt(totalTraversalCount / 100)) {
-                    Helper.log('Skill Equips: Traversal Count:', traversalCount);
-
-                    let precent = traversalCount / totalTraversalCount;
-                    let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
-
-                    this.callback({
-                        searchPercent: parseInt(precent * 100),
-                        timeRemaining: parseInt(diffTime / precent - diffTime)
-                    });
-                }
 
                 // Add Candidate Equip to Bundle
                 if (Helper.isEmpty(bundle.equips[currentEquipTypes[typeIndex]])
@@ -767,7 +863,7 @@ class FittingAlgorithm {
 
                         // Last Bundle Pre Check
                         if (this.algorithmParams.flag.isEndEarly) {
-                            Helper.log('Last Bundle Count:', Object.keys(lastBundlePool).length);
+                            Helper.debug('Last Bundle Count:', Object.keys(lastBundlePool).length);
 
                             if (this.algorithmParams.limit <= Object.keys(lastBundlePool).length) {
                                 isEndEarly = true;
@@ -796,7 +892,7 @@ class FittingAlgorithm {
 
                             // Last Bundle Pre Check
                             if (this.algorithmParams.flag.isEndEarly) {
-                                Helper.log('Last Bundle Count:', Object.keys(lastBundlePool).length);
+                                Helper.debug('Last Bundle Count:', Object.keys(lastBundlePool).length);
 
                                 if (this.algorithmParams.limit <= Object.keys(lastBundlePool).length) {
                                     isEndEarly = true;
@@ -822,8 +918,6 @@ class FittingAlgorithm {
                 findNextType();
             }
 
-            Helper.log('Skill Equips: Traversal Count:', traversalCount);
-
             let precent = traversalCount / totalTraversalCount;
             let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
 
@@ -834,7 +928,7 @@ class FittingAlgorithm {
             });
         });
 
-        Helper.log('Last Bundle Result:', Object.keys(lastBundlePool).length, lastBundlePool);
+        Helper.debug('Last Bundle Result:', Object.keys(lastBundlePool).length, lastBundlePool);
 
         return lastBundlePool;
     }
@@ -1257,7 +1351,7 @@ class FittingAlgorithm {
             }
         };
 
-        Helper.log('Correspond Jewels: Root Bundle:', bundle);
+        // Helper.debug('Correspond Jewels: Root Bundle:', bundle);
 
         while (true) {
             if (0 === statusStack.length) {
@@ -1270,7 +1364,7 @@ class FittingAlgorithm {
             traversalCount++;
 
             if (0 === traversalCount % 10000) {
-                Helper.log('Correspond Jewels: Traversal Count:', traversalCount);
+                // Helper.debug('Correspond Jewels: Traversal Count:', traversalCount);
             }
 
             if (0 === bundle.meta.remainingSlotCount.all) {
@@ -1309,7 +1403,7 @@ class FittingAlgorithm {
             findNextSkill();
         }
 
-        Helper.log('Correspond Jewels: Traversal Count:', traversalCount);
+        // Helper.debug('Correspond Jewels: Traversal Count:', traversalCount);
 
         return Object.values(lastBundlePool);
     };

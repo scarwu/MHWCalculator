@@ -19,6 +19,12 @@ function log(...params) {
     }
 }
 
+function debug(...params) {
+    if ('production' !== Config.env) {
+        console.debug.apply(this, params);
+    }
+}
+
 function isEmpty(variable) {
     return (undefined === variable || null === variable);
 }
@@ -53,6 +59,7 @@ function base64Decode(text) {
 
 export default {
     log: log,
+    debug: debug,
     isEmpty: isEmpty,
     isNotEmpty: isNotEmpty,
     deepCopy: deepCopy,

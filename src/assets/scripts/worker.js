@@ -58,8 +58,8 @@ onmessage = (event) => {
         return bundle;
     });
 
-    Helper.log('Bundle List:', list);
-    Helper.log('Search Time:', searchTime);
+    Helper.debug('Bundle List:', list);
+    Helper.debug('Search Time:', searchTime);
 
     let meta = {};
 

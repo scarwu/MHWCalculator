@@ -179,7 +179,11 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds) => 
                         let equipInfo = null;
 
                         if ('weapon' === equipType) {
-                            equipInfo = WeaponDataset.getInfo(bundle.equips[equipType]);
+                            if ('customWeapon' === bundle.equips[equipType]) {
+                                equipInfo = meta.customWeapon;
+                            } else {
+                                equipInfo = WeaponDataset.getInfo(bundle.equips[equipType]);
+                            }
                         } else if ('helm' === equipType
                             || 'chest' === equipType
                             || 'arm' === equipType
@@ -271,6 +275,25 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds) => 
                                     ) : false}
                                 </div>
                             ) : false;
+                        })}
+                    </div>
+                </div>
+            ) : false}
+
+            {(0 !== Object.keys(bundle.sets).length) ? (
+                <div className="col-12 mhwc-content">
+                    <div className="col-12 mhwc-name">
+                        <span>{_('set')}</span>
+                    </div>
+                    <div className="col-12 mhwc-content">
+                        {Object.keys(bundle.sets).sort((setIdA, setIdB) => {
+                            return bundle.sets[setIdB] - bundle.sets[setIdA];
+                        }).map((setId) => {
+                            return (
+                                <div key={setId} className="col-6 mhwc-value">
+                                    <span>{`${_(setId)} x ${bundle.sets[setId]}`}</span>
+                                </div>
+                            );
                         })}
                     </div>
                 </div>
