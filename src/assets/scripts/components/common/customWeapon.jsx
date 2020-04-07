@@ -79,6 +79,7 @@ const getSharpnessList = () => {
 const getAttackElementList = () => {
     return [
         { key: 'none',      value: _('none') },
+        { key: 'fire',      value: _('fire') },
         { key: 'water',     value: _('water') },
         { key: 'thunder',   value: _('thunder') },
         { key: 'ice',       value: _('ice') },
