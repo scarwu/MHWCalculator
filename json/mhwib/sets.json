@@ -8,7 +8,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -27,7 +27,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -46,7 +46,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -65,7 +65,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -84,7 +84,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -103,7 +103,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -122,7 +122,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -141,7 +141,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -152,15 +152,15 @@
         ]
     },
     {
-        "id": "惨爪龍的真髓",
+        "id": "慘爪龍的真髓",
         "name": {
-            "zhTW": "惨爪龍的真髓",
+            "zhTW": "慘爪龍的真髓",
             "jaJP": "惨爪竜の真髄",
             "enUS": null
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -179,7 +179,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -198,7 +198,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -217,7 +217,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -236,7 +236,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -255,7 +255,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -293,7 +293,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -312,7 +312,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -331,7 +331,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -350,7 +350,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -374,7 +374,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -393,7 +393,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -417,7 +417,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -441,7 +441,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -484,7 +484,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -503,7 +503,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -522,7 +522,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -546,7 +546,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -618,7 +618,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {

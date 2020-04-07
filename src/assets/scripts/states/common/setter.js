@@ -299,5 +299,13 @@ export default {
                 id: id
             }
         });
+    },
+    setCustomWeaponSet: (id) => {
+        Store.dispatch({
+            type: 'SET_CUSTOM_WEAPON_SET',
+            payload: {
+                id: id
+            }
+        });
     }
 };

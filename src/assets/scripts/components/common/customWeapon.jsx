@@ -17,6 +17,7 @@ import Helper from 'core/helper';
 import _ from 'libraries/lang';
 import JewelDataset from 'libraries/dataset/jewel';
 import SkillDataset from 'libraries/dataset/skill';
+import SetDataset from 'libraries/dataset/set';
 
 // Load Components
 import IconButton from 'components/common/iconButton';
@@ -124,6 +125,17 @@ const getSkillList = () => {
     ];
 };
 
+const getSetList = () => {
+    return [
+        { key: 'none', value: _('none') },
+        ...SetDataset.getItems().filter((setInfo) => {
+            return setInfo.from.weapon;
+        }).map((setInfo) => {
+            return { key: setInfo.id, value: _(setInfo.name) }
+        })
+    ];
+};
+
 const getValue = (value) => {
     if (Helper.isEmpty(value)) {
         return 'none';
@@ -166,6 +178,14 @@ const getSkillId = (skill) => {
     }
 
     return skill.id;
+};
+
+const getSetId = (set) => {
+    if (Helper.isEmpty(set)) {
+        return 'none';
+    }
+
+    return set.id;
 };
 
 /**
@@ -463,6 +483,20 @@ export default function CustomWeapon(props) {
                                     ? event.target.value : null;
 
                                 CommonState.setter.setCustomWeaponSkill(0, value);
+                            }} />
+                    </div>
+
+                    <div className="col-3 mhwc-name">
+                        <span>{_('set')}</span>
+                    </div>
+                    <div className="col-9 mhwc-value">
+                        <BasicSelector
+                            defaultValue={getSetId(stateCustomWeapon.set)}
+                            options={getSetList()} onChange={(event) => {
+                                let value = ('none' !== event.target.value)
+                                    ? event.target.value : null;
+
+                                CommonState.setter.setCustomWeaponSet(0, value);
                             }} />
                     </div>
                 </div>

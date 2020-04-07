@@ -208,7 +208,8 @@ class Misc
                         $skill['id'],
                         $skill['level']
                     ];
-                }, $data['skills']) : null
+                }, $data['skills']) : null,
+                (null !== $data['set']) ? $data['set']['id'] : null,
             ];
             break;
         case 'armor':
@@ -463,6 +464,10 @@ class Misc
             //     "name": {
             //         "zhTW": "蠻顎龍之力"
             //     },
+            //     "from" : {
+            //         "armor": true,
+            //         "weapon": false
+            //     },
             //     "skills": [
             //         {
             //             "id": "振奮",
@@ -474,6 +479,10 @@ class Misc
             Misc::$datasetMap['sets'][] = [
                 $data['id'],
                 $data['name'],
+                [
+                    $data['from']['armor'],
+                    $data['from']['weapon']
+                ],
                 array_map(function ($item) {
                     return [
                         $item['id'],
@@ -783,6 +792,11 @@ foreach ($weapons as $weapon) {
         }, $weapon['skills']);
     }
 
+    // Create ID Hash
+    if (is_array($weapon['set'])) {
+        $weapon['set']['id'] = Misc::createCode("set:name:{$weapon['set']['id']}");
+    }
+
     // Create Dataset
     Misc::appendDatasetMap('weapon', $weapon);
 }
@@ -944,7 +958,7 @@ foreach ($testData['equipsList'] as $index => $equips) {
     if (isset($equips['weapon']['slotIds'])) {
         foreach ($equips['weapon']['slotIds'] as $slotIndex => $id) {
             if (!isset($jewelChecklist[$id])) {
-                echo "Error: Slot={$id}\n";
+                echo "Error: Weapon Slot={$id}\n";
             }
 
             $equips['weapon']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");
@@ -961,7 +975,7 @@ foreach ($testData['equipsList'] as $index => $equips) {
     if (isset($equips['helm']['slotIds'])) {
         foreach ($equips['helm']['slotIds'] as $slotIndex => $id) {
             if (!isset($jewelChecklist[$id])) {
-                echo "Error: Slot={$id}\n";
+                echo "Error: Helm Slot={$id}\n";
             }
 
             $equips['helm']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");
@@ -978,7 +992,7 @@ foreach ($testData['equipsList'] as $index => $equips) {
     if (isset($equips['chest']['slotIds'])) {
         foreach ($equips['chest']['slotIds'] as $slotIndex => $id) {
             if (!isset($jewelChecklist[$id])) {
-                echo "Error: Slot={$id}\n";
+                echo "Error: Chest Slot={$id}\n";
             }
 
             $equips['chest']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");
@@ -988,7 +1002,7 @@ foreach ($testData['equipsList'] as $index => $equips) {
     // Arm
     if (!isset($armorChecklist[$equips['arm']['id']])) {
         if (!isset($jewelChecklist[$id])) {
-            echo "Error: Slot={$id}\n";
+            echo "Error: Arm Slot={$id}\n";
         }
 
         echo "Error: Arm={$equips['arm']['id']}\n";
@@ -996,10 +1010,10 @@ foreach ($testData['equipsList'] as $index => $equips) {
 
     $equips['arm']['id'] = Misc::createCode("armor:name:{$equips['arm']['id']}");
 
-    if (isset($equips['helm']['slotIds'])) {
-        foreach ($equips['helm']['slotIds'] as $slotIndex => $id) {
+    if (isset($equips['arm']['slotIds'])) {
+        foreach ($equips['arm']['slotIds'] as $slotIndex => $id) {
             if (!isset($jewelChecklist[$id])) {
-                echo "Error: Slot={$id}\n";
+                echo "Error: Arm Slot={$id}\n";
             }
 
             $equips['arm']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");
@@ -1016,7 +1030,7 @@ foreach ($testData['equipsList'] as $index => $equips) {
     if (isset($equips['waist']['slotIds'])) {
         foreach ($equips['waist']['slotIds'] as $slotIndex => $id) {
             if (!isset($jewelChecklist[$id])) {
-                echo "Error: Slot={$id}\n";
+                echo "Error: Waist Slot={$id}\n";
             }
 
             $equips['waist']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");
@@ -1033,7 +1047,7 @@ foreach ($testData['equipsList'] as $index => $equips) {
     if (isset($equips['leg']['slotIds'])) {
         foreach ($equips['leg']['slotIds'] as $slotIndex => $id) {
             if (!isset($jewelChecklist[$id])) {
-                echo "Error: Slot={$id}\n";
+                echo "Error: Leg Slot={$id}\n";
             }
 
             $equips['leg']['slotIds'][$slotIndex] = Misc::createCode("jewel:name:{$id}");

@@ -239,7 +239,8 @@ export default {
             },
             elderseal: null,
             slots: [],
-            skills: []
+            skills: [],
+            set: null
         },
         status: {
             health: 100,

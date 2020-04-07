@@ -318,7 +318,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -356,7 +356,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {
@@ -375,7 +375,7 @@
         },
         "from": {
             "armor": true,
-            "weapon": false
+            "weapon": true
         },
         "skills": [
             {

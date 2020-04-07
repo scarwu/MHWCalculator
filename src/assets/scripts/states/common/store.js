@@ -875,6 +875,23 @@ export default createStore((state = initialState, action) => {
                 customWeapon: customWeapon
             });
         })();
+    case 'SET_CUSTOM_WEAPON_SET':
+        return (() => {
+            let id = action.payload.id;
+            let customWeapon = Helper.deepCopy(state.customWeapon);
+
+            if (null === id) {
+                customWeapon.set = null;
+            } else {
+                customWeapon.set = {
+                    id: id
+                };
+            }
+
+            return Object.assign({}, state, {
+                customWeapon: customWeapon
+            });
+        })();
 
     // Default
     default:

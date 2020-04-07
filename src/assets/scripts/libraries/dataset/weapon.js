@@ -62,7 +62,10 @@ let dataset = Weapons.map((weapon) => {
                 id: skill[0],
                 level: skill[1]
             };
-        }) : []
+        }) : [],
+        set: (Helper.isNotEmpty(weapon[13])) ? {
+            id: weapon[13]
+        } : null,
     };
 });
 
