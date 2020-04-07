@@ -119,18 +119,7 @@ const generateStatus = (equipInfos, passiveSkills) => {
         status.elderseal = equipInfos.weapon.elderseal;
     }
 
-    // Defense
-    ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-        if (Helper.isEmpty(equipInfos[equipType])) {
-            return;
-        }
-
-        status.defense += equipInfos[equipType].defense;
-    });
-
-    // Resistance & Set
-    let setMapping = {};
-
+    // Resistance
     ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
         if (Helper.isEmpty(equipInfos[equipType])) {
             return;
@@ -139,6 +128,15 @@ const generateStatus = (equipInfos, passiveSkills) => {
         Constant.resistances.forEach((elementType) => {
             status.resistance[elementType] += equipInfos[equipType].resistance[elementType];
         });
+    });
+
+    // Defense & Set
+    let setMapping = {};
+
+    ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
+        if (Helper.isEmpty(equipInfos[equipType])) {
+            return;
+        }
 
         if (Helper.isNotEmpty(equipInfos[equipType].set)) {
             let setId = equipInfos[equipType].set.id;
@@ -149,6 +147,8 @@ const generateStatus = (equipInfos, passiveSkills) => {
 
             setMapping[setId]++;
         }
+
+        status.defense += equipInfos[equipType].defense;
     });
 
     // Skills

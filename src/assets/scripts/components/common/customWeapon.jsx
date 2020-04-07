@@ -496,7 +496,7 @@ export default function CustomWeapon(props) {
                                 let value = ('none' !== event.target.value)
                                     ? event.target.value : null;
 
-                                CommonState.setter.setCustomWeaponSet(0, value);
+                                CommonState.setter.setCustomWeaponSet(value);
                             }} />
                     </div>
                 </div>
