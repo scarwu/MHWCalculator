@@ -363,7 +363,9 @@ const generateStatus = (equipInfos, passiveSkills) => {
             status.element.attack.value += elementAttack.value;
             status.element.attack.value *= elementAttack.multiple;
 
-            if (status.element.attack.value > status.element.attack.maxValue) {
+            if (Helper.isNotEmpty(status.element.attack.maxValue)
+                && status.element.attack.value > status.element.attack.maxValue
+            ) {
                 status.element.attack.value = status.element.attack.maxValue;
             }
         }
@@ -384,7 +386,9 @@ const generateStatus = (equipInfos, passiveSkills) => {
             status.element.status.value += elementStatus.value;
             status.element.status.value *= elementStatus.multiple;
 
-            if (status.element.status.value > status.element.status.maxValue) {
+            if (Helper.isNotEmpty(status.element.status.maxValue)
+                && status.element.status.value > status.element.status.maxValue
+            ) {
                 status.element.status.value = status.element.status.maxValue;
             }
         }
