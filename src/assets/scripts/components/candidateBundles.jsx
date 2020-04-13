@@ -21,6 +21,7 @@ import ArmorDataset from 'libraries/dataset/armor';
 import CharmDataset from 'libraries/dataset/charm';
 import JewelDataset from 'libraries/dataset/jewel';
 import SkillDataset from 'libraries/dataset/skill';
+import SetDataset from 'libraries/dataset/set';
 import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
@@ -143,7 +144,44 @@ const handleSwitchTempData = (index) => {
 /**
  * Render Functions
  */
-const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds) => {
+const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds, requiredSetIds) => {
+    let currentSetMapping = {};
+
+    Object.keys(bundle.sets).sort((setIdA, setIdB) => {
+        return bundle.sets[setIdB] - bundle.sets[setIdA];
+    }).forEach((setId) => {
+        let setCount = bundle.sets[setId];
+        let setInfo = SetDataset.getInfo(setId);
+
+        if (Helper.isEmpty(setInfo)) {
+            return;
+        }
+
+        setInfo.skills.forEach((skill) => {
+            if (skill.require > setCount) {
+                return;
+            }
+
+            let skillInfo = SkillDataset.getInfo(skill.id);
+
+            if (Helper.isEmpty(skillInfo)) {
+                return;
+            }
+
+            if (Helper.isEmpty(currentSetMapping[setId])) {
+                currentSetMapping[setId] = [];
+            }
+
+            currentSetMapping[setId].push({
+                skill: {
+                    id: skillInfo.id,
+                    level: 1
+                },
+                require: skill.require
+            });
+        });
+    });
+
     return (
         <div key={bundle.hash} className="mhwc-item mhwc-item-3-step">
             <div className="col-12 mhwc-name">
@@ -251,6 +289,36 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds) => 
                 </div>
             ) : false}
 
+            {(0 !== Object.keys(currentSetMapping).length) ? (
+                <div className="col-12 mhwc-content">
+                    <div className="col-12 mhwc-name">
+                        <span>{_('set')}</span>
+                    </div>
+                    <div className="col-12 mhwc-content">
+                        {Object.keys(currentSetMapping).map((setId) => {
+                            let setInfo = SetDataset.getInfo(setId);
+
+                            return (
+                                <div key={setId} className="col-6 mhwc-value">
+                                    <span>
+                                        {`${_(setInfo.name)}`}{currentSetMapping[setId].map((set) => {
+                                            return ` (${set.require})`;
+                                        })}
+                                    </span>
+                                    {(-1 === requiredSetIds.indexOf(setInfo.id)) ? (
+                                        <div className="mhwc-icons_bundle">
+                                            <IconButton
+                                                iconName="arrow-left" altName={_('include')}
+                                                onClick={() => {CommonState.setter.addRequiredSet(setInfo.id)}} />
+                                        </div>
+                                    ) : false}
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            ) : false}
+
             {(0 !== Object.keys(bundle.skills).length) ? (
                 <div className="col-12 mhwc-content">
                     <div className="col-12 mhwc-name">
@@ -279,25 +347,6 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds) => 
                     </div>
                 </div>
             ) : false}
-
-            {(0 !== Object.keys(bundle.sets).length) ? (
-                <div className="col-12 mhwc-content">
-                    <div className="col-12 mhwc-name">
-                        <span>{_('set')}</span>
-                    </div>
-                    <div className="col-12 mhwc-content">
-                        {Object.keys(bundle.sets).sort((setIdA, setIdB) => {
-                            return bundle.sets[setIdB] - bundle.sets[setIdA];
-                        }).map((setId) => {
-                            return (
-                                <div key={setId} className="col-6 mhwc-value">
-                                    <span>{`${_(setId)} x ${bundle.sets[setId]}`}</span>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            ) : false}
         </div>
     );
 };
@@ -312,11 +361,13 @@ const BundleList = (props) => {
      * Hooks
      */
     const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
             updateRequiredSkills(CommonState.getter.getRequiredSkills());
+            updateRequiredSets(CommonState.getter.getRequiredSets());
         });
 
         return () => {
@@ -331,10 +382,14 @@ const BundleList = (props) => {
             return skill.id;
         });
 
-        return data.list.map((bundle, index) => {
-            return renderBundleItem(bundle, index, data.list.length, data.meta, requiredSkillIds);
+        const requiredSetIds = stateRequiredSets.map((set) => {
+            return set.id;
         });
-    }, [data, stateRequiredSkills]);
+
+        return data.list.map((bundle, index) => {
+            return renderBundleItem(bundle, index, data.list.length, data.meta, requiredSkillIds, requiredSetIds);
+        });
+    }, [data, stateRequiredSkills, stateRequiredSets]);
 };
 
 const convertTimeFormat = (seconds) => {
