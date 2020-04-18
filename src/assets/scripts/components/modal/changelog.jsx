@@ -48,11 +48,11 @@ const getChangelog = () => {
         return false;
     }
 
-    return changeLog.replace(/\n/g, '').split('<hr>').map((log) => {
+    return changeLog.replace(/\n/g, '').split('<hr>').map((log, index) => {
         let [all, title, content] = log.match(/^\<h3.+\>(.+)\<\/h3\>(.+)$/);
 
         return (
-            <div className="mhwc-item mhwc-item-2-step">
+            <div key={index} className="mhwc-item mhwc-item-2-step">
                 <div className="col-12 mhwc-name">
                     <span>{title}</span>
                 </div>

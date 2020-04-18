@@ -8,7 +8,7 @@
  */
 
 // Load Libraries
-import React, { Fragment, useState, useEffect, useCallback, useRef, createRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef, createRef } from 'react';
 import MD5 from 'md5';
 
 // Load Core Libraries
