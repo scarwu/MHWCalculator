@@ -270,7 +270,7 @@ export default {
             sets: [],
             skills: []
         },
-        extraInfo: {
+        benefitAnalysis: {
             rawAttack: 0,
             rawCriticalAttack: 0,
             rawExpectedValue: 0,

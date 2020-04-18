@@ -63,7 +63,7 @@ const renderSetItem = (set) => {
     let setRequire = setInfo.skills[set.step - 1].require;
 
     return (
-        <div key={setInfo.id} className="mhwc-item mhwc-item-2-step">
+        <div key={setInfo.id} className="col-12 mhwc-content">
             <div className="col-12 mhwc-name">
                 <span>{_(setInfo.name)} x {setRequire}</span>
 
@@ -117,7 +117,7 @@ const renderSkillItem = (skill, enableSkillIdList) => {
     });
 
     return (
-        <div key={skillInfo.id} className="mhwc-item mhwc-item-2-step">
+        <div key={skillInfo.id} className="col-12 mhwc-content">
             <div className="col-12 mhwc-name">
                 {(currentSkillLevel === totalSkillLevel) ? (
                     <span>{_(skillInfo.name)} Lv.{skill.level} / {currentSkillLevel}</span>
@@ -275,18 +275,39 @@ export default function ConditionOptions(props) {
                     <IconButton
                         iconName="refresh" altName={_('reset')}
                         onClick={handleRequireConditionRefresh} />
-                    <IconButton
-                        iconName="plus" altName={_('set')}
-                        onClick={handleShowSetItemSelector} />
-                    <IconButton
-                        iconName="plus" altName={_('skill')}
-                        onClick={handleShowSkillItemSelector} />
                 </div>
             </div>
 
             <div className="mhwc-list">
-                <SetList />
-                <SkillList />
+                <div className="mhwc-item mhwc-item-3-step">
+                    <div className="col-12 mhwc-name">
+                        <span>{_('equip')}</span>
+                    </div>
+                </div>
+
+                <div className="mhwc-item mhwc-item-3-step">
+                    <div className="col-12 mhwc-name">
+                        <span>{_('set')}</span>
+                        <div className="mhwc-icons_bundle">
+                            <IconButton
+                                iconName="plus" altName={_('add')}
+                                onClick={handleShowSetItemSelector} />
+                        </div>
+                    </div>
+                    <SetList />
+                </div>
+
+                <div className="mhwc-item mhwc-item-3-step">
+                    <div className="col-12 mhwc-name">
+                        <span>{_('skill')}</span>
+                        <div className="mhwc-icons_bundle">
+                            <IconButton
+                                iconName="plus" altName={_('add')}
+                                onClick={handleShowSkillItemSelector} />
+                        </div>
+                    </div>
+                    <SkillList />
+                </div>
             </div>
         </div>
     );
