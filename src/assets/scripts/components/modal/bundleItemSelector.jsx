@@ -156,6 +156,16 @@ export default function BundleItemSelector(props) {
                         let equipInfo = null;
 
                         if ('weapon' === equipType) {
+                            if ('customWeapon' === stateCurrentEquips[equipType].id) {
+                                equipInfo = CommonState.getter.getCustomWeapon();
+
+                                return Helper.isNotEmpty(equipInfo) ? (
+                                    <div key={equipType} className="col-6 mhwc-value">
+                                        <span>{_(equipInfo.name)}: {_(equipInfo.type)}</span>
+                                    </div>
+                                ) : false;
+                            }
+
                             equipInfo = WeaponDataset.getInfo(stateCurrentEquips[equipType].id);
                         } else if ('helm' === equipType
                             || 'chest' === equipType
@@ -169,14 +179,9 @@ export default function BundleItemSelector(props) {
                         }
 
                         return Helper.isNotEmpty(equipInfo) ? (
-                            <Fragment key={index}>
-                                <div className="col-2 mhwc-name">
-                                    <span>{_(equipType)}</span>
-                                </div>
-                                <div className="col-4 mhwc-value">
-                                    <span>{_(equipInfo.name)}</span>
-                                </div>
-                            </Fragment>
+                            <div key={index} className="col-6 mhwc-value">
+                                <span>{_(equipInfo.name)}</span>
+                            </div>
                         ) : false;
                     })}
                 </div>
@@ -212,6 +217,16 @@ export default function BundleItemSelector(props) {
                         let equipInfo = null;
 
                         if ('weapon' === equipType) {
+                            if ('customWeapon' === data.equips[equipType].id) {
+                                equipInfo = data.customWeapon;
+
+                                return Helper.isNotEmpty(equipInfo) ? (
+                                    <div key={equipType} className="col-6 mhwc-value">
+                                        <span>{_(equipInfo.name)}: {_(equipInfo.type)}</span>
+                                    </div>
+                                ) : false;
+                            }
+
                             equipInfo = WeaponDataset.getInfo(data.equips[equipType].id);
                         } else if ('helm' === equipType
                             || 'chest' === equipType
@@ -225,14 +240,9 @@ export default function BundleItemSelector(props) {
                         }
 
                         return Helper.isNotEmpty(equipInfo) ? (
-                            <Fragment key={index}>
-                                <div className="col-2 mhwc-name">
-                                    <span>{_(equipType)}</span>
-                                </div>
-                                <div className="col-4 mhwc-value">
-                                    <span>{_(equipInfo.name)}</span>
-                                </div>
-                            </Fragment>
+                            <div key={index} className="col-6 mhwc-value">
+                                <span>{_(equipInfo.name)}</span>
+                            </div>
                         ) : false;
                     })}
                 </div>

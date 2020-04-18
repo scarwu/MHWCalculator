@@ -219,9 +219,15 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds, req
                         if ('weapon' === equipType) {
                             if ('customWeapon' === bundle.equips[equipType]) {
                                 equipInfo = meta.customWeapon;
-                            } else {
-                                equipInfo = WeaponDataset.getInfo(bundle.equips[equipType]);
+
+                                return Helper.isNotEmpty(equipInfo) ? (
+                                    <div key={equipType} className="col-6 mhwc-value">
+                                        <span>(R{equipInfo.rare}) {_(equipInfo.name)}: {_(equipInfo.type)}</span>
+                                    </div>
+                                ) : false;
                             }
+
+                            equipInfo = WeaponDataset.getInfo(bundle.equips[equipType]);
                         } else if ('helm' === equipType
                             || 'chest' === equipType
                             || 'arm' === equipType
@@ -234,11 +240,9 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds, req
                         }
 
                         return Helper.isNotEmpty(equipInfo) ? (
-                            <Fragment key={equipType}>
-                                <div className="col-6 mhwc-value">
-                                    <span>(R{equipInfo.rare}) {_(equipInfo.name)}</span>
-                                </div>
-                            </Fragment>
+                            <div key={equipType} className="col-6 mhwc-value">
+                                <span>(R{equipInfo.rare}) {_(equipInfo.name)}</span>
+                            </div>
                         ) : false;
                     })}
                 </div>
