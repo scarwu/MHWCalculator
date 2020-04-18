@@ -56,7 +56,7 @@ export default {
             green: 1.05,
             blue: 1.20,
             white: 1.32,
-            purple: 1.45
+            purple: 1.39
         },
         element: {
             red: 0.25,
