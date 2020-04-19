@@ -427,6 +427,10 @@ class FittingAlgorithm {
         candidateEquipPool = Object.values(candidateEquipPool);
         totalTraversalCount *= partTraversalCount
 
+        if (0 === candidateEquipPool.length) {
+            return initBundlePool;
+        }
+
         let candidateEquipPoolCount = candidateEquipPool.map((equips) => {
             return equips.length;
         });
@@ -690,6 +694,35 @@ class FittingAlgorithm {
 
         candidateEquipPool = Object.values(candidateEquipPool);
         totalTraversalCount *= partTraversalCount
+
+        if (0 === candidateEquipPool.length) {
+            Object.values(initBundlePool).forEach((bundle) => {
+
+                // Create Completed Bundles By Skills
+                this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
+                    if (true === isEndEarly) {
+                        return;
+                    }
+
+                    lastBundlePool[this.getBundleHash(bundle)] = bundle;
+
+                    this.callback({
+                        bundleCount: Object.keys(lastBundlePool).length
+                    });
+
+                    // Last Bundle Pre Check
+                    if (this.algorithmParams.flag.isEndEarly) {
+                        Helper.debug('Last Bundle Count:', Object.keys(lastBundlePool).length);
+
+                        if (this.algorithmParams.limit <= Object.keys(lastBundlePool).length) {
+                            isEndEarly = true;
+                        }
+                    }
+                });
+            });
+
+            return lastBundlePool;
+        }
 
         let candidateEquipPoolCount = candidateEquipPool.map((equips) => {
             return equips.length;

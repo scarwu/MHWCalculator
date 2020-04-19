@@ -521,7 +521,15 @@ export default createStore((state = initialState, action) => {
         });
     case 'CLEAN_REQUIRED_EQUIPS':
         return Object.assign({}, state, {
-            requiredEquips: {}
+            requiredEquips: {
+                weapon: null,
+                helm: null,
+                chest: null,
+                arm: null,
+                waist: null,
+                leg: null,
+                charm: null
+            }
         });
 
     // Current Equips
