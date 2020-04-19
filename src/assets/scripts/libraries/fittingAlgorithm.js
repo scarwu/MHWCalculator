@@ -268,38 +268,6 @@ class FittingAlgorithm {
     initConditionEquips = (requiredEquips) => {
         let bundle = Helper.deepCopy(Constant.default.bundle);
 
-        // Set Custom Weapon
-        if (Helper.isNotEmpty(requiredEquips.customWeapon)) {
-            let customWeapon = requiredEquips.customWeapon;
-            let isCompleted = true;
-
-            if (Helper.isEmpty(customWeapon.type)
-                || Helper.isEmpty(customWeapon.rare)
-                || Helper.isEmpty(customWeapon.attack)
-                || Helper.isEmpty(customWeapon.criticalRate)
-                || Helper.isEmpty(customWeapon.defense)
-            ) {
-                isCompleted = false;
-            }
-
-            if (Helper.isNotEmpty(customWeapon.element.attack)
-                && Helper.isEmpty(customWeapon.element.attack.minValue)
-            ) {
-                isCompleted = false;
-            }
-
-            if (Helper.isNotEmpty(customWeapon.element.status)
-                && Helper.isEmpty(customWeapon.element.status.minValue)
-            ) {
-                isCompleted = false;
-            }
-
-            WeaponDataset.setInfo('customWeapon', (true === isCompleted)
-                ? Helper.deepCopy(customWeapon) : undefined);
-
-            Helper.debug('Input: Custom Weapon', customWeapon);
-        }
-
         // Create First Bundle
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
             if (Helper.isEmpty(requiredEquips[equipType])) {
@@ -314,6 +282,39 @@ class FittingAlgorithm {
             let equipInfo = null;
 
             if ('weapon' === equipType) {
+
+                // Set Custom Weapon
+                if (Helper.isNotEmpty(requiredEquips.weapon.customWeapon)) {
+                    let customWeapon = requiredEquips.weapon.customWeapon;
+                    let isCompleted = true;
+
+                    if (Helper.isEmpty(customWeapon.type)
+                        || Helper.isEmpty(customWeapon.rare)
+                        || Helper.isEmpty(customWeapon.attack)
+                        || Helper.isEmpty(customWeapon.criticalRate)
+                        || Helper.isEmpty(customWeapon.defense)
+                    ) {
+                        isCompleted = false;
+                    }
+
+                    if (Helper.isNotEmpty(customWeapon.element.attack)
+                        && Helper.isEmpty(customWeapon.element.attack.minValue)
+                    ) {
+                        isCompleted = false;
+                    }
+
+                    if (Helper.isNotEmpty(customWeapon.element.status)
+                        && Helper.isEmpty(customWeapon.element.status.minValue)
+                    ) {
+                        isCompleted = false;
+                    }
+
+                    WeaponDataset.setInfo('customWeapon', (true === isCompleted)
+                        ? Helper.deepCopy(customWeapon) : undefined);
+
+                    Helper.debug('Input: Custom Weapon', customWeapon);
+                }
+
                 equipInfo = CommonDataset.getAppliedWeaponInfo(requiredEquips.weapon);
             } else if ('helm' === equipType
                 || 'chest' === equipType

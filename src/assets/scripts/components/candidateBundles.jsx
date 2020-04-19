@@ -228,7 +228,7 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, req
                                             {(-1 === requiredEquipIds.indexOf('customWeapon')) ? (
                                                 <IconButton
                                                     iconName="arrow-left" altName={_('include')}
-                                                    onClick={() => {CommonState.setter.setRequiredEquips(equipType, 'customWeapon')}} />
+                                                    onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo)}} />
                                             ) : false}
                                         </div>
                                     </div>
@@ -255,7 +255,7 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, req
                                     {(-1 === requiredEquipIds.indexOf(equipInfo.id)) ? (
                                         <IconButton
                                             iconName="arrow-left" altName={_('include')}
-                                            onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo.id)}} />
+                                            onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo)}} />
                                     ) : false}
                                 </div>
                             </div>
