@@ -16,7 +16,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -80,7 +81,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -132,7 +134,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -204,7 +207,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -276,7 +280,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -396,7 +401,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -514,7 +520,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -632,7 +639,8 @@
             "set": true,
             "jewel": true,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -664,7 +672,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -734,7 +743,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -804,7 +814,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -843,7 +854,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -947,7 +959,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": true
+            "weapon": true,
+            "charm": false
         },
         "list": [
             {
@@ -979,7 +992,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1049,7 +1063,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1101,7 +1116,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1153,7 +1169,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1271,7 +1288,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1323,7 +1341,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1395,7 +1414,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1427,7 +1447,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1519,7 +1540,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1651,7 +1673,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1693,7 +1716,8 @@
             "set": true,
             "jewel": true,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1725,7 +1749,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1797,7 +1822,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -1849,7 +1875,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2000,7 +2027,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": true
+            "weapon": true,
+            "charm": true
         },
         "list": [
             {
@@ -2032,7 +2060,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2084,7 +2113,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2156,7 +2186,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -2188,7 +2219,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2220,7 +2252,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2284,7 +2317,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -2316,7 +2350,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2368,7 +2403,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2420,7 +2456,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2540,7 +2577,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2612,7 +2650,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2644,7 +2683,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2716,7 +2756,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2778,7 +2819,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2830,7 +2872,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -2862,7 +2905,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -2934,7 +2978,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -2970,7 +3015,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3022,7 +3068,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3058,7 +3105,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -3090,7 +3138,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3142,7 +3191,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3194,7 +3244,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3226,7 +3277,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -3258,7 +3310,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3399,7 +3452,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3491,7 +3545,8 @@
             "set": false,
             "jewel": true,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3523,7 +3578,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3595,7 +3651,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3667,7 +3724,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3719,7 +3777,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -3751,7 +3810,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3803,7 +3863,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3835,7 +3896,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3867,7 +3929,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3899,7 +3962,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -3941,7 +4005,8 @@
             "set": true,
             "jewel": true,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -3973,7 +4038,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4025,7 +4091,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4057,7 +4124,8 @@
             "set": false,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4089,7 +4157,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4141,7 +4210,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4183,7 +4253,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4247,7 +4318,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4279,7 +4351,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -4311,7 +4384,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4343,7 +4417,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4375,7 +4450,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4417,7 +4493,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4469,7 +4546,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4501,7 +4579,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4543,7 +4622,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4595,7 +4675,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4657,7 +4738,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4689,7 +4771,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -4721,7 +4804,8 @@
             "set": false,
             "jewel": true,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4753,7 +4837,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4805,7 +4890,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4857,7 +4943,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4919,7 +5006,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -4951,7 +5039,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5003,7 +5092,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5055,7 +5145,8 @@
             "set": true,
             "jewel": true,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5091,7 +5182,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5155,7 +5247,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5197,7 +5290,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5249,7 +5343,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5313,7 +5408,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -5345,7 +5441,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5463,7 +5560,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5515,7 +5613,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5547,7 +5646,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5579,7 +5679,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5611,7 +5712,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -5643,7 +5745,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": true
+            "weapon": true,
+            "charm": false
         },
         "list": [
             {
@@ -5675,7 +5778,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5707,7 +5811,8 @@
             "set": true,
             "jewel": true,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -5739,7 +5844,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": true
+            "weapon": true,
+            "charm": false
         },
         "list": [
             {
@@ -5771,7 +5877,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5841,7 +5948,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5903,7 +6011,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5955,7 +6064,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -5987,7 +6097,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6039,7 +6150,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6111,7 +6223,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6183,7 +6296,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6235,7 +6349,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6326,8 +6441,9 @@
         "from": {
             "set": false,
             "jewel": true,
-            "armor": false,
-            "weapon": false
+            "armor": true,
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6359,7 +6475,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6431,7 +6548,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6463,7 +6581,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6513,9 +6632,10 @@
         "type": "active",
         "from": {
             "set": false,
-            "jewel": false,
+            "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6547,7 +6667,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6599,7 +6720,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": true
+            "weapon": true,
+            "charm": true
         },
         "list": [
             {
@@ -6631,7 +6753,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6701,7 +6824,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6819,7 +6943,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6851,7 +6976,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6923,7 +7049,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -6975,7 +7102,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -7007,7 +7135,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -7039,7 +7168,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -7071,7 +7201,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -7133,7 +7264,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": false
         },
         "list": [
             {
@@ -7165,7 +7297,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -7217,7 +7350,8 @@
             "set": false,
             "jewel": true,
             "armor": false,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -7249,7 +7383,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {
@@ -7313,7 +7448,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false
+            "weapon": false,
+            "charm": true
         },
         "list": [
             {

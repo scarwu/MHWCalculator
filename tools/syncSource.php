@@ -24,12 +24,18 @@ $weaponTypes = [
     'bow'
 ];
 
+$setMap = [];
+$jewelMap = [];
+$armorMap = [];
+$charmMap = [];
+$weaponMap = [];
+
 /**
  * MHW
  */
 $sets = loadJson("../../json/mhw/sets");
-$skills = loadJson("../../json/mhw/skills");
 $jewels = loadJson("../../json/mhw/jewels");
+$charms = loadJson("../../json/mhw/charms");
 $armors = [];
 
 foreach ([5, 6, 7, 8] as $rare) {
@@ -45,23 +51,17 @@ foreach ($weaponTypes as $type) {
 }
 
 // Generate Map
-$setMap = [];
-
 foreach ($sets as $set) {
     foreach ($set['skills'] as $skill) {
         $setMap[$skill['id']] = true;
     }
 }
 
-$jewelMap = [];
-
 foreach ($jewels as $jewel) {
     foreach ($jewel['skills'] as $skill) {
         $jewelMap[$skill['id']] = true;
     }
 }
-
-$armorMap = [];
 
 foreach ($armors as $armor) {
     foreach ($armor['items'] as $item) {
@@ -75,7 +75,17 @@ foreach ($armors as $armor) {
     }
 }
 
-$weaponMap = [];
+foreach ($charms as $charm) {
+    foreach ($charm['items'] as $item) {
+        if (false === is_array($item['skills'])) {
+            continue;
+        }
+
+        foreach ($item['skills'] as $skill) {
+            $charmMap[$skill['id']] = true;
+        }
+    }
+}
 
 foreach ($weapons as $weapon) {
     if (false === is_array($weapon['skills'])) {
@@ -87,30 +97,12 @@ foreach ($weapons as $weapon) {
     }
 }
 
-print_r($setMap);
-print_r($jewelMap);
-print_r($armorMap);
-print_r($weaponMap);
-
-$newSkills = [];
-
-foreach ($skills as $skill) {
-    $skill['from']['set'] = isset($setMap[$skill['id']]);
-    $skill['from']['jewel'] = isset($jewelMap[$skill['id']]);
-    $skill['from']['armor'] = isset($armorMap[$skill['id']]);
-    $skill['from']['weapon'] = isset($weaponMap[$skill['id']]);
-
-    $newSkills[] = $skill;
-}
-
-saveJson("../../json/mhw/skills", $newSkills);
-
 /**
  * MHW: IB
  */
 $sets = loadJson("../../json/mhwib/sets");
-$skills = loadJson("../../json/mhwib/skills");
 $jewels = loadJson("../../json/mhwib/jewels");
+$charms = loadJson("../../json/mhwib/charms");
 $armors = [];
 $weapons = [];
 
@@ -125,23 +117,17 @@ foreach ($weaponTypes as $type) {
 }
 
 // Generate Map
-$setMap = [];
-
 foreach ($sets as $set) {
     foreach ($set['skills'] as $skill) {
         $setMap[$skill['id']] = true;
     }
 }
 
-$jewelMap = [];
-
 foreach ($jewels as $jewel) {
     foreach ($jewel['skills'] as $skill) {
         $jewelMap[$skill['id']] = true;
     }
 }
-
-$armorMap = [];
 
 foreach ($armors as $armor) {
     foreach ($armor['items'] as $item) {
@@ -155,7 +141,17 @@ foreach ($armors as $armor) {
     }
 }
 
-$weaponMap = [];
+foreach ($charms as $charm) {
+    foreach ($charm['items'] as $item) {
+        if (false === is_array($item['skills'])) {
+            continue;
+        }
+
+        foreach ($item['skills'] as $skill) {
+            $charmMap[$skill['id']] = true;
+        }
+    }
+}
 
 foreach ($weapons as $weapon) {
     if (false === is_array($weapon['skills'])) {
@@ -170,14 +166,32 @@ foreach ($weapons as $weapon) {
 print_r($setMap);
 print_r($jewelMap);
 print_r($armorMap);
+print_r($charmMap);
 print_r($weaponMap);
 
+$skills = loadJson("../../json/mhw/skills");
 $newSkills = [];
 
 foreach ($skills as $skill) {
     $skill['from']['set'] = isset($setMap[$skill['id']]);
     $skill['from']['jewel'] = isset($jewelMap[$skill['id']]);
     $skill['from']['armor'] = isset($armorMap[$skill['id']]);
+    $skill['from']['charm'] = isset($charmMap[$skill['id']]);
+    $skill['from']['weapon'] = isset($weaponMap[$skill['id']]);
+
+    $newSkills[] = $skill;
+}
+
+saveJson("../../json/mhw/skills", $newSkills);
+
+$skills = loadJson("../../json/mhwib/skills");
+$newSkills = [];
+
+foreach ($skills as $skill) {
+    $skill['from']['set'] = isset($setMap[$skill['id']]);
+    $skill['from']['jewel'] = isset($jewelMap[$skill['id']]);
+    $skill['from']['armor'] = isset($armorMap[$skill['id']]);
+    $skill['from']['charm'] = isset($charmMap[$skill['id']]);
     $skill['from']['weapon'] = isset($weaponMap[$skill['id']]);
 
     $newSkills[] = $skill;

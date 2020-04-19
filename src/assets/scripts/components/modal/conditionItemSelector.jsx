@@ -188,7 +188,10 @@ export default function ConditionItemSelector(props) {
             });
 
             SkillDataset.getItems().forEach((skillInfo) => {
-                if (false === skillInfo.from.jewel && false === skillInfo.from.armor) {
+                if (false === skillInfo.from.jewel
+                    && false === skillInfo.from.armor
+                    && false === skillInfo.from.charm
+                ) {
                     return;
                 }
 
