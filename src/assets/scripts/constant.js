@@ -49,12 +49,12 @@ export default {
         'leg'
     ],
     sharpnessMultiple: {
-        raw: {
+        physical: {
             red: 0.50,
             orange: 0.75,
             yellow: 1.00,
             green: 1.05,
-            blue: 1.20,
+            blue: 1.2,
             white: 1.32,
             purple: 1.39
         },
@@ -271,9 +271,9 @@ export default {
             skills: []
         },
         benefitAnalysis: {
-            rawAttack: 0,
-            rawCriticalAttack: 0,
-            rawExpectedValue: 0,
+            physicalAttack: 0,
+            physicalCriticalAttack: 0,
+            physicalExpectedValue: 0,
             elementAttack: 0,
             elementExpectedValue: 0,
             expectedValue: 0,
