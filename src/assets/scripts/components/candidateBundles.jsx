@@ -401,9 +401,7 @@ const BundleList = (props) => {
         Helper.log('Component: CandidateBundles -> BundleList');
 
         const requiredEquipIds = Object.keys(stateRequiredEquips).map((equipType) => {
-            if (Helper.isEmpty(stateRequiredEquips[equipType])
-                || Helper.isEmpty(stateRequiredEquips[equipType].id)
-            ) {
+            if (Helper.isEmpty(stateRequiredEquips[equipType])) {
                 return false;
             }
 

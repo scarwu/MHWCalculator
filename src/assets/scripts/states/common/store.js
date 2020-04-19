@@ -500,9 +500,13 @@ export default createStore((state = initialState, action) => {
             requiredEquips: (() => {
                 let requiredEquips = Helper.deepCopy(state.requiredEquips);
 
-                requiredEquips[action.payload.equipType] = {
-                    id: action.payload.equipId
-                };
+                if (Helper.isEmpty(action.payload.equipId)) {
+                    requiredEquips[action.payload.equipType] = null;
+                } else {
+                    requiredEquips[action.payload.equipType] = {
+                        id: action.payload.equipId
+                    };
+                }
 
                 return requiredEquips;
             })()
@@ -748,7 +752,7 @@ export default createStore((state = initialState, action) => {
             let step = action.payload.step;
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
-            if (null === step) {
+            if (Helper.isEmpty(step)) {
                 customWeapon.sharpness = null;
             } else {
                 customWeapon.sharpness = {
@@ -777,14 +781,14 @@ export default createStore((state = initialState, action) => {
             let type = action.payload.type;
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
-            if (null === type) {
+            if (Helper.isEmpty(type)) {
                 customWeapon.element[target] = null;
 
                 if ('attack' === target) {
                     customWeapon.elderseal = null;
                 }
             } else {
-                if (null === customWeapon.element[target]) {
+                if (Helper.isEmpty(customWeapon.element[target])) {
                     customWeapon.element[target] = {
                         minValue: 100,
                         maxValue: null,
@@ -829,7 +833,7 @@ export default createStore((state = initialState, action) => {
                 currentEquips.weapon.slotIds = [];
             }
 
-            if (null === size) {
+            if (Helper.isEmpty(size)) {
                 currentEquips.weapon.slotIds = currentEquips.weapon.slotIds.filter((id, slotIndex) => {
                     return index !== slotIndex;
                 });
@@ -854,7 +858,7 @@ export default createStore((state = initialState, action) => {
             let id = action.payload.id;
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
-            if (null === id) {
+            if (Helper.isEmpty(id)) {
                 customWeapon.skills = customWeapon.skills.filter((id, skillIndex) => {
                     return index !== skillIndex;
                 });
@@ -874,7 +878,7 @@ export default createStore((state = initialState, action) => {
             let id = action.payload.id;
             let customWeapon = Helper.deepCopy(state.customWeapon);
 
-            if (null === id) {
+            if (Helper.isEmpty(id)) {
                 customWeapon.set = null;
             } else {
                 customWeapon.set = {

@@ -58,9 +58,7 @@ const handleSwitchTempData = (index) => {
  * Render Functions
  */
 const renderEquipItem = (equipType, requiredEquip) => {
-    if (Helper.isEmpty(requiredEquip)
-        || Helper.isEmpty(requiredEquip.id)
-    ) {
+    if (Helper.isEmpty(requiredEquip)) {
         return false;
     }
 

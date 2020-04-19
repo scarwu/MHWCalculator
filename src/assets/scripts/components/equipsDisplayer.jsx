@@ -332,10 +332,8 @@ const renderEquipBlock = (equipType, equipInfo, requiredEquip) => {
         equipId: null
     };
 
-    let requiredEquipId = (
-        Helper.isNotEmpty(requiredEquip)
-        && Helper.isNotEmpty(requiredEquip.id)
-    ) ? requiredEquip.id : null;
+    let requiredEquipId = Helper.isNotEmpty(requiredEquip)
+        ? requiredEquip.id : null;
 
     if (Helper.isEmpty(equipInfo)) {
         return (

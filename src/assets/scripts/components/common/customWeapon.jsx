@@ -259,10 +259,8 @@ export default function CustomWeapon(props) {
 
         let equipType = 'weapon';
         let equipInfo = stateCurrentEquips[equipType];
-        let requiredEquipId = (
-            Helper.isNotEmpty(stateRequiredEquips[equipType])
-            && Helper.isNotEmpty(stateRequiredEquips[equipType].id)
-        ) ? stateRequiredEquips[equipType].id : null;
+        let requiredEquipId = Helper.isNotEmpty(stateRequiredEquips[equipType])
+            ? stateRequiredEquips[equipType].id : null;
 
         let emptySelectorData = {
             equipType: equipType,
