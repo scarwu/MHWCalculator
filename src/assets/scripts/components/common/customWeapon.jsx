@@ -258,7 +258,7 @@ export default function CustomWeapon(props) {
         Helper.log('Component: Common -> SharpnessBar');
 
         let equipType = 'weapon';
-        let equipInfo = stateCurrentEquips[equipType];
+        let currentEquip = stateCurrentEquips[equipType];
         let requiredEquipId = Helper.isNotEmpty(stateRequiredEquips[equipType])
             ? stateRequiredEquips[equipType].id : null;
 
@@ -275,7 +275,7 @@ export default function CustomWeapon(props) {
                         {'customWeapon' !== requiredEquipId ? (
                             <IconButton
                                 iconName="arrow-left" altName={_('include')}
-                                onClick={() => {CommonState.setter.setRequiredEquips(equipType, 'customWeapon')}} />
+                                onClick={() => {CommonState.setter.setRequiredEquips(equipType, currentEquip)}} />
                         ) : false}
                         <IconButton
                             iconName="exchange" altName={_('change')}
@@ -465,7 +465,7 @@ export default function CustomWeapon(props) {
                                         renderJewelOption(
                                             equipType, index,
                                             getSlotSize(stateCustomWeapon.slots[index]),
-                                            JewelDataset.getInfo(equipInfo.slotIds[index])
+                                            JewelDataset.getInfo(currentEquip.slotIds[index])
                                         )
                                     ) : false}
                                 </div>

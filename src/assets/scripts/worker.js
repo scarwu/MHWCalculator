@@ -31,7 +31,6 @@ if ('production' === Config.env) {
 }
 
 onmessage = (event) => {
-    const customWeapon = event.data.customWeapon;
     const requiredSets = event.data.requiredSets;
     const requiredSkills = event.data.requiredSkills;
     const requiredEquips = event.data.requiredEquips;
@@ -39,7 +38,6 @@ onmessage = (event) => {
 
     let startTime = new Date().getTime();
     let list = FittingAlgorithm.search(
-        customWeapon,
         requiredSets,
         requiredSkills,
         requiredEquips,
@@ -67,7 +65,7 @@ onmessage = (event) => {
         meta.weaponEnhances = requiredEquips.weapon.enhances;
 
         if ('customWeapon' === requiredEquips.weapon.id) {
-            meta.customWeapon = customWeapon;
+            meta.customWeapon = requiredEquips.weapon.customWeapon;
         }
     }
 

@@ -29,45 +29,17 @@ class FittingAlgorithm {
     /**
      * Search
      */
-    search = (customWeapon, requiredSets, requiredSkills, requiredEquips, algorithmParams, callback) => {
+    search = (requiredSets, requiredSkills, requiredEquips, algorithmParams, callback) => {
         if (0 === requiredSets.length
             && 0 === requiredSkills.length
         ) {
             return [];
         }
 
-        Helper.debug('Input: Custom Weapon', customWeapon);
         Helper.debug('Input: Required Sets', requiredSets);
         Helper.debug('Input: Required Skills', requiredSkills);
         Helper.debug('Input: Required Equips', requiredEquips);
         Helper.debug('Input: Algorithm Params', algorithmParams);
-
-        // Set Custom Weapon
-        let isCompleted = true;
-
-        if (Helper.isEmpty(customWeapon.type)
-            || Helper.isEmpty(customWeapon.rare)
-            || Helper.isEmpty(customWeapon.attack)
-            || Helper.isEmpty(customWeapon.criticalRate)
-            || Helper.isEmpty(customWeapon.defense)
-        ) {
-            isCompleted = false;
-        }
-
-        if (Helper.isNotEmpty(customWeapon.element.attack)
-            && Helper.isEmpty(customWeapon.element.attack.minValue)
-        ) {
-            isCompleted = false;
-        }
-
-        if (Helper.isNotEmpty(customWeapon.element.status)
-            && Helper.isEmpty(customWeapon.element.status.minValue)
-        ) {
-            isCompleted = false;
-        }
-
-        WeaponDataset.setInfo('customWeapon', (true === isCompleted)
-            ? Helper.deepCopy(customWeapon) : undefined);
 
         // Set Properties
         this.algorithmParams = Helper.deepCopy(algorithmParams);
@@ -295,6 +267,38 @@ class FittingAlgorithm {
      */
     initConditionEquips = (requiredEquips) => {
         let bundle = Helper.deepCopy(Constant.default.bundle);
+
+        // Set Custom Weapon
+        if (Helper.isNotEmpty(requiredEquips.customWeapon)) {
+            let customWeapon = requiredEquips.customWeapon;
+            let isCompleted = true;
+
+            if (Helper.isEmpty(customWeapon.type)
+                || Helper.isEmpty(customWeapon.rare)
+                || Helper.isEmpty(customWeapon.attack)
+                || Helper.isEmpty(customWeapon.criticalRate)
+                || Helper.isEmpty(customWeapon.defense)
+            ) {
+                isCompleted = false;
+            }
+
+            if (Helper.isNotEmpty(customWeapon.element.attack)
+                && Helper.isEmpty(customWeapon.element.attack.minValue)
+            ) {
+                isCompleted = false;
+            }
+
+            if (Helper.isNotEmpty(customWeapon.element.status)
+                && Helper.isEmpty(customWeapon.element.status.minValue)
+            ) {
+                isCompleted = false;
+            }
+
+            WeaponDataset.setInfo('customWeapon', (true === isCompleted)
+                ? Helper.deepCopy(customWeapon) : undefined);
+
+            Helper.debug('Input: Custom Weapon', customWeapon);
+        }
 
         // Create First Bundle
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {

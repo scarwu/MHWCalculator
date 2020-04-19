@@ -65,6 +65,25 @@ const renderEquipItem = (equipType, requiredEquip) => {
     let equipInfo = null;
 
     if ('weapon' === equipType) {
+        if ('customWeapon' === requiredEquip.id) {
+            return (
+                <div key={requiredEquip.id} className="col-12 mhwc-content">
+                    <div className="col-4 mhwc-name">
+                        <span>{_(equipType)}</span>
+                    </div>
+                    <div className="col-8 mhwc-value">
+                        <span>{_('customWeapon')}: {_(requiredEquip.customWeapon.type)}</span>
+
+                        <div className="mhwc-icons_bundle">
+                            <IconButton
+                                iconName="times" altName={_('clean')}
+                                onClick={() => {CommonState.setter.setRequiredEquips(equipType, null)}} />
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
         equipInfo = WeaponDataset.getInfo(requiredEquip.id);
     } else if ('helm' === equipType
         || 'chest' === equipType

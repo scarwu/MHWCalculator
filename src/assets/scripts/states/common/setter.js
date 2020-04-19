@@ -101,12 +101,12 @@ export default {
     },
 
     // Required Equips
-    setRequiredEquips: (equipType, equipId) => {
+    setRequiredEquips: (equipType, currentEquip) => {
         Store.dispatch({
             type: 'SET_REQUIRED_EQUIPS',
             payload: {
                 equipType: equipType,
-                equipId: equipId
+                currentEquip: currentEquip
             }
         });
     },

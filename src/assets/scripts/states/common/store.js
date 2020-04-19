@@ -500,12 +500,14 @@ export default createStore((state = initialState, action) => {
             requiredEquips: (() => {
                 let requiredEquips = Helper.deepCopy(state.requiredEquips);
 
-                if (Helper.isEmpty(action.payload.equipId)) {
+                if (Helper.isEmpty(action.payload.currentEquip)) {
                     requiredEquips[action.payload.equipType] = null;
                 } else {
-                    requiredEquips[action.payload.equipType] = {
-                        id: action.payload.equipId
-                    };
+                    requiredEquips[action.payload.equipType] = action.payload.currentEquip;
+
+                    if ('customWeapon' === action.payload.currentEquip.id) {
+                        requiredEquips[action.payload.equipType].customWeapon = Helper.deepCopy(state.customWeapon);
+                    }
                 }
 
                 return requiredEquips;

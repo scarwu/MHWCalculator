@@ -320,7 +320,24 @@ const renderArmorProperties = (equipInfo) => {
     );
 };
 
-const renderEquipBlock = (equipType, equipInfo, requiredEquip) => {
+const renderEquipBlock = (equipType, currentEquip, requiredEquip) => {
+    let equipInfo = null;
+
+    if ('weapon' === equipType) {
+        equipInfo = CommonDataset.getAppliedWeaponInfo(currentEquip);
+    } else if ('helm' === equipType
+        || 'chest' === equipType
+        || 'arm' === equipType
+        || 'waist' === equipType
+        || 'leg' === equipType
+    ) {
+        equipInfo = CommonDataset.getAppliedArmorInfo(currentEquip);
+    } else if ('charm' === equipType) {
+        equipInfo = CommonDataset.getAppliedCharmInfo(currentEquip);
+    } else {
+        return false;
+    }
+
     let selectorData = {
         equipType: equipType,
         equipId: (Helper.isNotEmpty(equipInfo)) ? equipInfo.id : null
@@ -368,7 +385,7 @@ const renderEquipBlock = (equipType, equipInfo, requiredEquip) => {
                     {equipInfo.id !== requiredEquipId ? (
                         <IconButton
                             iconName="arrow-left" altName={_('include')}
-                            onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo.id)}} />
+                            onClick={() => {CommonState.setter.setRequiredEquips(equipType, currentEquip)}} />
                     ) : false}
                     {'weapon' === equipType ? (
                         <IconButton
@@ -482,7 +499,7 @@ export default function EquipsDisplayer(props) {
         } else {
             blocks.push(renderEquipBlock(
                 'weapon',
-                CommonDataset.getAppliedWeaponInfo(stateCurrentEquips.weapon),
+                stateCurrentEquips.weapon,
                 stateRequiredEquips.weapon
             ));
         }
@@ -490,14 +507,14 @@ export default function EquipsDisplayer(props) {
         ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
             blocks.push(renderEquipBlock(
                 equipType,
-                CommonDataset.getAppliedArmorInfo(stateCurrentEquips[equipType]),
+                stateCurrentEquips[equipType],
                 stateRequiredEquips[equipType]
             ));
         });
 
         blocks.push(renderEquipBlock(
             'charm',
-            CommonDataset.getAppliedCharmInfo(stateCurrentEquips.charm),
+            stateCurrentEquips.charm,
             stateRequiredEquips.charm
         ));
 
