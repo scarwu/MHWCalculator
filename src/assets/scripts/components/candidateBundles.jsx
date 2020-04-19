@@ -144,7 +144,7 @@ const handleSwitchTempData = (index) => {
 /**
  * Render Functions
  */
-const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds, requiredSetIds) => {
+const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, requiredSetIds, requiredSkillIds) => {
     let currentSetMapping = {};
 
     Object.keys(bundle.sets).sort((setIdA, setIdB) => {
@@ -222,7 +222,15 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds, req
 
                                 return Helper.isNotEmpty(equipInfo) ? (
                                     <div key={equipType} className="col-6 mhwc-value">
-                                        <span>(R{equipInfo.rare}) {_(equipInfo.name)}: {_(equipInfo.type)}</span>
+                                        <span>{_(equipInfo.name)}: {_(equipInfo.type)}</span>
+
+                                        <div className="mhwc-icons_bundle">
+                                            {(-1 === requiredEquipIds.indexOf('customWeapon')) ? (
+                                                <IconButton
+                                                    iconName="arrow-left" altName={_('include')}
+                                                    onClick={() => {CommonState.setter.setRequiredEquips(equipType, 'customWeapon')}} />
+                                            ) : false}
+                                        </div>
                                     </div>
                                 ) : false;
                             }
@@ -241,7 +249,15 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredSkillIds, req
 
                         return Helper.isNotEmpty(equipInfo) ? (
                             <div key={equipType} className="col-6 mhwc-value">
-                                <span>(R{equipInfo.rare}) {_(equipInfo.name)}</span>
+                                <span>{_(equipInfo.name)}</span>
+
+                                <div className="mhwc-icons_bundle">
+                                    {(-1 === requiredEquipIds.indexOf(equipInfo.id)) ? (
+                                        <IconButton
+                                            iconName="arrow-left" altName={_('include')}
+                                            onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo.id)}} />
+                                    ) : false}
+                                </div>
                             </div>
                         ) : false;
                     })}
@@ -364,12 +380,14 @@ const BundleList = (props) => {
     /**
      * Hooks
      */
+    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
     const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
     const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
+            updateRequiredEquips(CommonState.getter.getRequiredEquips());
             updateRequiredSkills(CommonState.getter.getRequiredSkills());
             updateRequiredSets(CommonState.getter.getRequiredSets());
         });
@@ -382,6 +400,16 @@ const BundleList = (props) => {
     return useMemo(() => {
         Helper.log('Component: CandidateBundles -> BundleList');
 
+        const requiredEquipIds = Object.keys(stateRequiredEquips).map((equipType) => {
+            if (Helper.isEmpty(stateRequiredEquips[equipType])
+                || Helper.isEmpty(stateRequiredEquips[equipType].id)
+            ) {
+                return false;
+            }
+
+            return stateRequiredEquips[equipType].id;
+        });
+
         const requiredSkillIds = stateRequiredSkills.map((skill) => {
             return skill.id;
         });
@@ -391,9 +419,12 @@ const BundleList = (props) => {
         });
 
         return data.list.map((bundle, index) => {
-            return renderBundleItem(bundle, index, data.list.length, data.meta, requiredSkillIds, requiredSetIds);
+            return renderBundleItem(
+                bundle, index, data.list.length, data.meta,
+                requiredEquipIds, requiredSetIds, requiredSkillIds
+            );
         });
-    }, [data, stateRequiredSkills, stateRequiredSets]);
+    }, [data, stateRequiredEquips, stateRequiredSkills, stateRequiredSets]);
 };
 
 const convertTimeFormat = (seconds) => {
