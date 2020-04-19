@@ -298,9 +298,7 @@ class FittingAlgorithm {
 
         // Create First Bundle
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
-            if (Helper.isEmpty(requiredEquips[equipType])
-                || Helper.isEmpty(requiredEquips[equipType].id)
-            ) {
+            if (Helper.isEmpty(requiredEquips[equipType])) {
                 if ('weapon' !== equipType) {
                     this.conditionEquips.push(equipType);
                 }
@@ -312,16 +310,16 @@ class FittingAlgorithm {
             let equipInfo = null;
 
             if ('weapon' === equipType) {
-                equipInfo = CommonDataset.getAppliedWeaponInfo(requiredEquips.weapon.id);
+                equipInfo = CommonDataset.getAppliedWeaponInfo(requiredEquips.weapon);
             } else if ('helm' === equipType
                 || 'chest' === equipType
                 || 'arm' === equipType
                 || 'waist' === equipType
                 || 'leg' === equipType
             ) {
-                equipInfo = CommonDataset.getAppliedArmorInfo(requiredEquips[equipType].id);
+                equipInfo = CommonDataset.getAppliedArmorInfo(requiredEquips[equipType]);
             } else if ('charm' === equipType) {
-                equipInfo = CommonDataset.getAppliedCharmInfo(requiredEquips.charm.id);
+                equipInfo = CommonDataset.getAppliedCharmInfo(requiredEquips.charm);
             }
 
             // Check Equip Info

@@ -39,7 +39,6 @@ import Constant from 'constant';
  * Handle Functions
  */
 const handleEquipsDisplayerRefresh = () => {
-    CommonState.setter.cleanRequiredEquips();
     CommonState.setter.cleanCurrentEquips();
 };
 
