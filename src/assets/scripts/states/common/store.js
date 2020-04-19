@@ -107,6 +107,15 @@ export default createStore((state = initialState, action) => {
             case 'conditionOptions':
                 if (Helper.isEmpty(tempData[target].list[index])) {
                     tempData[target].list[index] = {
+                        requiredEquips: {
+                            weapon: null,
+                            helm: null,
+                            chest: null,
+                            arm: null,
+                            waist: null,
+                            leg: null,
+                            charm: null
+                        },
                         requiredSets: [],
                         requiredSkills: []
                     }
@@ -115,6 +124,7 @@ export default createStore((state = initialState, action) => {
                 bundle = Helper.deepCopy(tempData[target].list[index]);
 
                 tempData[target].list[tempData[target].index] = Helper.deepCopy({
+                    requiredEquips: state.requiredEquips,
                     requiredSets: state.requiredSets,
                     requiredSkills: state.requiredSkills
                 });
@@ -122,6 +132,7 @@ export default createStore((state = initialState, action) => {
 
                 return Object.assign({}, state, {
                     tempData: tempData,
+                    requiredEquips: bundle.requiredEquips,
                     requiredSets: bundle.requiredSets,
                     requiredSkills: bundle.requiredSkills
                 });
