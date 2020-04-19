@@ -67,7 +67,7 @@ const renderEquipItem = (equipType, requiredEquip) => {
     let equipInfo = null;
 
     if ('weapon' === equipType) {
-        equipInfo = ArmorDataset.getInfo(requiredEquip.id);
+        equipInfo = WeaponDataset.getInfo(requiredEquip.id);
     } else if ('helm' === equipType
         || 'chest' === equipType
         || 'arm' === equipType
@@ -87,13 +87,16 @@ const renderEquipItem = (equipType, requiredEquip) => {
 
     return (
         <div key={equipInfo.id} className="col-12 mhwc-content">
-            <div className="col-12 mhwc-value">
+            <div className="col-4 mhwc-name">
+                <span>{_(equipType)}</span>
+            </div>
+            <div className="col-8 mhwc-value">
                 <span>{_(equipInfo.name)}</span>
 
                 <div className="mhwc-icons_bundle">
                     <IconButton
                         iconName="times" altName={_('clean')}
-                        onClick={() => {CommonState.setter.setRequiredSet(equipInfo.id, null)}} />
+                        onClick={() => {CommonState.setter.setRequiredEquips(equipType, null)}} />
                 </div>
             </div>
         </div>
@@ -224,7 +227,7 @@ const EquipList = (props) => {
         }
 
         return Object.keys(stateRequiredEquips).map((equipType) => {
-            renderEquipItem(equipType, stateRequiredEquips[equipType])
+            return renderEquipItem(equipType, stateRequiredEquips[equipType])
         });
     }, [stateRequiredEquips]);
 };

@@ -492,7 +492,7 @@ export default createStore((state = initialState, action) => {
                 requiredEquips[action.payload.equipType] = {
                     id: action.payload.equipId
                 };
-console.debug(requiredEquips)
+
                 return requiredEquips;
             })()
         });

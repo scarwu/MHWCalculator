@@ -118,7 +118,15 @@
     ],
     "requireList": [
         {
-            "equips": {},
+            "equips": {
+                "weapon": null,
+                "helm": null,
+                "chest": null,
+                "arm": null,
+                "waist": null,
+                "leg": null,
+                "charm": null
+            },
             "sets": [],
             "skills": [
                 {
@@ -148,7 +156,15 @@
             ]
         },
         {
-            "equips": {},
+            "equips": {
+                "weapon": null,
+                "helm": null,
+                "chest": null,
+                "arm": null,
+                "waist": null,
+                "leg": null,
+                "charm": null
+            },
             "sets": [],
             "skills": [
                 {
@@ -178,7 +194,15 @@
             ]
         },
         {
-            "equips": {},
+            "equips": {
+                "weapon": null,
+                "helm": null,
+                "chest": null,
+                "arm": null,
+                "waist": null,
+                "leg": null,
+                "charm": null
+            },
             "sets": [],
             "skills": [
                 {
@@ -262,7 +286,15 @@
             ]
         },
         {
-            "equips": {},
+            "equips": {
+                "weapon": null,
+                "helm": null,
+                "chest": null,
+                "arm": null,
+                "waist": null,
+                "leg": null,
+                "charm": null
+            },
             "sets": [],
             "skills": [
                 {
