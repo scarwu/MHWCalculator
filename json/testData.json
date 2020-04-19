@@ -118,6 +118,7 @@
     ],
     "requireList": [
         {
+            "equips": {},
             "sets": [],
             "skills": [
                 {
@@ -147,6 +148,7 @@
             ]
         },
         {
+            "equips": {},
             "sets": [],
             "skills": [
                 {
@@ -176,6 +178,7 @@
             ]
         },
         {
+            "equips": {},
             "sets": [],
             "skills": [
                 {
@@ -259,6 +262,7 @@
             ]
         },
         {
+            "equips": {},
             "sets": [],
             "skills": [
                 {

@@ -19,8 +19,8 @@ export default {
     getRequiredSkills: () => {
         return Store.getState().requiredSkills;
     },
-    getRequiredEquipPins: () => {
-        return Store.getState().requiredEquipPins;
+    getRequiredEquips: () => {
+        return Store.getState().requiredEquips;
     },
     getCurrentEquips: () => {
         return Store.getState().currentEquips;

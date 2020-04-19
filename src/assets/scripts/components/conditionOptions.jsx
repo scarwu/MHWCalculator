@@ -15,6 +15,9 @@ import Helper from 'core/helper';
 
 // Load Custom Libraries
 import _ from 'libraries/lang';
+import WeaponDataset from 'libraries/dataset/weapon';
+import ArmorDataset from 'libraries/dataset/armor';
+import CharmDataset from 'libraries/dataset/charm';
 import SetDataset from 'libraries/dataset/set';
 import SkillDataset from 'libraries/dataset/skill';
 
@@ -30,6 +33,7 @@ import ModalState from 'states/modal';
  * Handle Functions
  */
 const handleRequireConditionRefresh = () => {
+    CommonState.setter.cleanRequiredEquips();
     CommonState.setter.cleanRequiredSets();
     CommonState.setter.cleanRequiredSkills();
 };
@@ -53,6 +57,49 @@ const handleSwitchTempData = (index) => {
 /**
  * Render Functions
  */
+const renderEquipItem = (equipType, requiredEquip) => {
+    if (Helper.isEmpty(requiredEquip)
+        || Helper.isEmpty(requiredEquip.id)
+    ) {
+        return false;
+    }
+
+    let equipInfo = null;
+
+    if ('weapon' === equipType) {
+        equipInfo = ArmorDataset.getInfo(requiredEquip.id);
+    } else if ('helm' === equipType
+        || 'chest' === equipType
+        || 'arm' === equipType
+        || 'waist' === equipType
+        || 'leg' === equipType
+    ) {
+        equipInfo = ArmorDataset.getInfo(requiredEquip.id);
+    } else if ('charm' === equipType) {
+        equipInfo = CharmDataset.getInfo(requiredEquip.id);
+    } else {
+        return false;
+    }
+
+    if (Helper.isEmpty(equipInfo)) {
+        return false;
+    }
+
+    return (
+        <div key={equipInfo.id} className="col-12 mhwc-content">
+            <div className="col-12 mhwc-value">
+                <span>{_(equipInfo.name)}</span>
+
+                <div className="mhwc-icons_bundle">
+                    <IconButton
+                        iconName="times" altName={_('clean')}
+                        onClick={() => {CommonState.setter.setRequiredSet(equipInfo.id, null)}} />
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const renderSetItem = (set) => {
     let setInfo = SetDataset.getInfo(set.id);
 
@@ -151,6 +198,37 @@ const renderSkillItem = (skill, enableSkillIdList) => {
 /**
  * Sub Components
  */
+const EquipList = (props) => {
+
+    /**
+     * Hooks
+     */
+    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
+
+    // Like Did Mount & Will Unmount Cycle
+    useEffect(() => {
+        const unsubscribe = CommonState.store.subscribe(() => {
+            updateRequiredEquips(CommonState.getter.getRequiredEquips());
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    }, []);
+
+    return useMemo(() => {
+        Helper.log('Component: ConditionOptions -> EquipList');
+
+        if (Helper.isEmpty(stateRequiredEquips)) {
+            return false;
+        }
+
+        return Object.keys(stateRequiredEquips).map((equipType) => {
+            renderEquipItem(equipType, stateRequiredEquips[equipType])
+        });
+    }, [stateRequiredEquips]);
+};
+
 const SetList = (props) => {
 
     /**
@@ -283,6 +361,7 @@ export default function ConditionOptions(props) {
                     <div className="col-12 mhwc-name">
                         <span>{_('equip')}</span>
                     </div>
+                    <EquipList />
                 </div>
 
                 <div className="mhwc-item mhwc-item-3-step">

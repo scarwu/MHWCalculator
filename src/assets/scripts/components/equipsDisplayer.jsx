@@ -39,7 +39,7 @@ import Constant from 'constant';
  * Handle Functions
  */
 const handleEquipsDisplayerRefresh = () => {
-    CommonState.setter.cleanRequiredEquipPins();
+    CommonState.setter.cleanRequiredEquips();
     CommonState.setter.cleanCurrentEquips();
 };
 
@@ -321,7 +321,7 @@ const renderArmorProperties = (equipInfo) => {
     );
 };
 
-const renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
+const renderEquipBlock = (equipType, equipInfo, requiredEquip) => {
     let selectorData = {
         equipType: equipType,
         equipId: (Helper.isNotEmpty(equipInfo)) ? equipInfo.id : null
@@ -331,6 +331,11 @@ const renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
         equipType: equipType,
         equipId: null
     };
+
+    let requiredEquipId = (
+        Helper.isNotEmpty(requiredEquip)
+        && Helper.isNotEmpty(requiredEquip.id)
+    ) ? requiredEquip.id : null;
 
     if (Helper.isEmpty(equipInfo)) {
         return (
@@ -363,10 +368,11 @@ const renderEquipBlock = (equipType, equipInfo, isEquipLock) => {
             <div className="col-12 mhwc-name">
                 <span>{_(equipType)}: {_(equipInfo.name)}</span>
                 <div className="mhwc-icons_bundle">
-                    <IconButton
-                        iconName={isEquipLock ? 'lock' : 'unlock-alt'}
-                        altName={isEquipLock ? _('unlock') : _('lock')}
-                        onClick={() => {CommonState.setter.toggleRequiredEquipPins(equipType)}} />
+                    {equipInfo.id !== requiredEquipId ? (
+                        <IconButton
+                            iconName="arrow-left" altName={_('include')}
+                            onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo.id)}} />
+                    ) : false}
                     {'weapon' === equipType ? (
                         <IconButton
                             iconName="wrench" altName={_('customWeapon')}
@@ -451,14 +457,14 @@ export default function EquipsDisplayer(props) {
      */
     const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
     const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
-    const [stateRequiredEquipPins, updateRequiredEquipPins] = useState(CommonState.getter.getRequiredEquipPins());
+    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
             updateTempData(CommonState.getter.getTempData());
             updateCurrentEquips(CommonState.getter.getCurrentEquips());
-            updateRequiredEquipPins(CommonState.getter.getRequiredEquipPins());
+            updateRequiredEquips(CommonState.getter.getRequiredEquips());
         });
 
         return () => {
@@ -480,7 +486,7 @@ export default function EquipsDisplayer(props) {
             blocks.push(renderEquipBlock(
                 'weapon',
                 CommonDataset.getAppliedWeaponInfo(stateCurrentEquips.weapon),
-                stateRequiredEquipPins.weapon
+                stateRequiredEquips.weapon
             ));
         }
 
@@ -488,18 +494,18 @@ export default function EquipsDisplayer(props) {
             blocks.push(renderEquipBlock(
                 equipType,
                 CommonDataset.getAppliedArmorInfo(stateCurrentEquips[equipType]),
-                stateRequiredEquipPins[equipType]
+                stateRequiredEquips[equipType]
             ));
         });
 
         blocks.push(renderEquipBlock(
             'charm',
             CommonDataset.getAppliedCharmInfo(stateCurrentEquips.charm),
-            stateRequiredEquipPins.charm
+            stateRequiredEquips.charm
         ));
 
         return blocks;
-    }, [stateCurrentEquips, stateRequiredEquipPins]);
+    }, [stateCurrentEquips, stateRequiredEquips]);
 
     return (
         <div className="col mhwc-equips">

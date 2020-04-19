@@ -100,18 +100,19 @@ export default {
         });
     },
 
-    // Required Equip Pins
-    toggleRequiredEquipPins: (equipType) => {
+    // Required Equips
+    setRequiredEquips: (equipType, equipId) => {
         Store.dispatch({
-            type: 'TOGGLE_REQUIRED_EQUIP_PINS',
+            type: 'SET_REQUIRED_EQUIPS',
             payload: {
-                equipType: equipType
+                equipType: equipType,
+                equipId: equipId
             }
         });
     },
-    cleanRequiredEquipPins: () => {
+    cleanRequiredEquips: () => {
         Store.dispatch({
-            type: 'CLEAN_REQUIRED_EQUIP_PINS'
+            type: 'CLEAN_REQUIRED_EQUIPS'
         });
     },
 

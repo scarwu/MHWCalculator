@@ -239,14 +239,14 @@ export default function CustomWeapon(props) {
      */
     const [stateCustomWeapon, updateCustomWeapon] = useState(CommonState.getter.getCustomWeapon());
     const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
-    const [stateRequiredEquipPins, updateRequiredEquipPins] = useState(CommonState.getter.getRequiredEquipPins());
+    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
             updateCustomWeapon(CommonState.getter.getCustomWeapon());
             updateCurrentEquips(CommonState.getter.getCurrentEquips());
-            updateRequiredEquipPins(CommonState.getter.getRequiredEquipPins());
+            updateRequiredEquips(CommonState.getter.getRequiredEquips());
         });
 
         return () => {
@@ -259,7 +259,10 @@ export default function CustomWeapon(props) {
 
         let equipType = 'weapon';
         let equipInfo = stateCurrentEquips[equipType];
-        let isEquipLock = stateRequiredEquipPins[equipType];
+        let requiredEquipId = (
+            Helper.isNotEmpty(stateRequiredEquips[equipType])
+            && Helper.isNotEmpty(stateRequiredEquips[equipType].id)
+        ) ? stateRequiredEquips[equipType].id : null;
 
         let emptySelectorData = {
             equipType: equipType,
@@ -271,10 +274,11 @@ export default function CustomWeapon(props) {
                 <div className="col-12 mhwc-name">
                     <span>{_('customWeapon')}</span>
                     <div className="mhwc-icons_bundle">
-                        <IconButton
-                            iconName={isEquipLock ? 'lock' : 'unlock-alt'}
-                            altName={isEquipLock ? _('unlock') : _('lock')}
-                            onClick={() => {CommonState.setter.toggleRequiredEquipPins(equipType)}} />
+                        {'customWeapon' !== requiredEquipId ? (
+                            <IconButton
+                                iconName="arrow-left" altName={_('include')}
+                                onClick={() => {CommonState.setter.setRequiredEquips(equipType, 'customWeapon')}} />
+                        ) : false}
                         <IconButton
                             iconName="exchange" altName={_('change')}
                             onClick={() => {ModalState.setter.showEquipItemSelector(emptySelectorData)}} />
@@ -503,5 +507,5 @@ export default function CustomWeapon(props) {
                 </div>
             </div>
         );
-    }, [stateCustomWeapon, stateCurrentEquips, stateRequiredEquipPins]);
+    }, [stateCustomWeapon, stateCurrentEquips, stateRequiredEquips]);
 };

@@ -203,15 +203,6 @@ export default {
                 id: null
             }
         },
-        equipsLock: {
-            weapon: false,
-            helm: false,
-            chest: false,
-            arm: false,
-            waist: false,
-            leg: false,
-            charm: false
-        },
         customWeapon: {
             id: 'customWeapon',
             rare: 12,

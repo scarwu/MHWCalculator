@@ -542,20 +542,8 @@ export default function CandidateBundles(props) {
         let customWeapon = CommonState.getter.getCustomWeapon();
         let requiredSets = CommonState.getter.getRequiredSets();
         let requiredSkills = CommonState.getter.getRequiredSkills();
-        let requiredEquipPins = CommonState.getter.getRequiredEquipPins();
-        let currentEquips = CommonState.getter.getCurrentEquips();
+        let requiredEquips = CommonState.getter.getRequiredEquips();
         let algorithmParams = CommonState.getter.getAlgorithmParams();
-
-        // Create Required Equips
-        let requiredEquips = {};
-
-        ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
-            if (false === requiredEquipPins[equipType]) {
-                return;
-            }
-
-            requiredEquips[equipType] = currentEquips[equipType];
-        });
 
         workers[tabIndex].postMessage({
             customWeapon: customWeapon,
