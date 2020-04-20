@@ -488,35 +488,22 @@ export default function EquipsDisplayer(props) {
 
     const getContent = useMemo(() => {
         let blocks = [];
-        let isCustomWeapon = true;
 
-        if (Helper.isNotEmpty(stateCurrentEquips.weapon)
-            && 'customWeapon' === stateCurrentEquips.weapon.id
-        ) {
-            blocks.push((
-                <CustomWeapon key="customWeapon" />
-            ));
-        } else {
-            blocks.push(renderEquipBlock(
-                'weapon',
-                stateCurrentEquips.weapon,
-                stateRequiredEquips.weapon
-            ));
-        }
-
-        ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-            blocks.push(renderEquipBlock(
-                equipType,
-                stateCurrentEquips[equipType],
-                stateRequiredEquips[equipType]
-            ));
+        Object.keys(stateCurrentEquips).forEach((equipType) => {
+            if (Helper.isNotEmpty(stateCurrentEquips[equipType])
+                && 'customWeapon' === stateCurrentEquips[equipType].id
+            ) {
+                blocks.push((
+                    <CustomWeapon key="customWeapon" />
+                ));
+            } else {
+                blocks.push(renderEquipBlock(
+                    equipType,
+                    stateCurrentEquips[equipType],
+                    stateRequiredEquips[equipType]
+                ));
+            }
         });
-
-        blocks.push(renderEquipBlock(
-            'charm',
-            stateCurrentEquips.charm,
-            stateRequiredEquips.charm
-        ));
 
         return blocks;
     }, [stateCurrentEquips, stateRequiredEquips]);
