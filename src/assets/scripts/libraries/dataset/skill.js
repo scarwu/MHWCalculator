@@ -22,7 +22,8 @@ import Skills from 'files/json/datasets/skills.json';
 //         0: set,
 //         1: jewel,
 //         2: armor,
-//         3: weapon
+//         3: charm,
+//         4: weapon
 //     ],
 //     5: list [
 //         [
@@ -43,7 +44,8 @@ let dataset = Skills.map((skill) => {
             set: skill[4][0],
             jewel: skill[4][1],
             armor: skill[4][2],
-            weapon: skill[4][3]
+            charm: skill[4][3],
+            weapon: skill[4][4]
         },
         list: skill[5].map((item) => {
             return {

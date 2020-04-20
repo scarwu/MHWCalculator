@@ -50,39 +50,73 @@ export default {
     ],
     sharpnessMultiple: {
         physical: {
-            red: 0.50,
+            red:    0.50,
             orange: 0.75,
             yellow: 1.00,
-            green: 1.05,
-            blue: 1.2,
-            white: 1.32,
+            green:  1.05,
+            blue:   1.2,
+            white:  1.32,
             purple: 1.39
         },
         element: {
-            red: 0.25,
+            red:    0.25,
             orange: 0.50,
             yellow: 0.75,
-            green: 1.00,
-            blue: 1.0625,
-            white: 1.125,
+            green:  1.00,
+            blue:   1.0625,
+            white:  1.125,
             purple: 1.2
         }
     },
+    elementCriticalMultiple: {
+        attack: {
+            greatSword:     [ 1.50, 1.70 ],
+            longSword:      [ 1.35, 1.55 ],
+            swordAndShield: [ 1.35, 1.55 ],
+            dualBlades:     [ 1.35, 1.55 ],
+            hammer:         [ 1.50, 1.70 ],
+            huntingHorn:    [ 1.50, 1.70 ],
+            lance:          [ 1.35, 1.55 ],
+            gunlance:       [ 1.35, 1.55 ],
+            switchAxe:      [ 1.35, 1.55 ],
+            chargeBlade:    [ 1.35, 1.55 ],
+            insectGlaive:   [ 1.35, 1.55 ],
+            lightBowgun:    [ 1.25, 1.40 ],
+            heavyBowgun:    [ 1.50, 1.70 ],
+            bow:            [ 1.35, 1.55 ]
+        },
+        status: {
+            greatSword:     [ 1.40, 1.60 ],
+            longSword:      [ 1.20, 1.40 ],
+            swordAndShield: [ 1.20, 1.40 ],
+            dualBlades:     [ 1.20, 1.40 ],
+            hammer:         [ 1.40, 1.60 ],
+            huntingHorn:    [ 1.40, 1.60 ],
+            lance:          [ 1.20, 1.40 ],
+            gunlance:       [ 1.20, 1.40 ],
+            switchAxe:      [ 1.20, 1.40 ],
+            chargeBlade:    [ 1.20, 1.40 ],
+            insectGlaive:   [ 1.20, 1.40 ],
+            lightBowgun:    [ 1.20, 1.40 ],
+            heavyBowgun:    [ 1.40, 1.60 ],
+            bow:            [ 1.20, 1.40 ]
+        }
+    },
     weaponMultiple: {
-        greatSword: 4.8,
-        longSword: 3.3,
+        greatSword:     4.8,
+        longSword:      3.3,
         swordAndShield: 1.4,
-        dualBlades: 1.4,
-        hammer: 5.2,
-        huntingHorn: 4.2,
-        lance: 2.3,
-        gunlance: 2.3,
-        switchAxe: 3.5,
-        chargeBlade: 3.6,
-        insectGlaive: 3.1,
-        lightBowgun: 1.3,
-        heavyBowgun: 1.5,
-        bow: 1.2
+        dualBlades:     1.4,
+        hammer:         5.2,
+        huntingHorn:    4.2,
+        lance:          2.3,
+        gunlance:       2.3,
+        switchAxe:      3.5,
+        chargeBlade:    3.6,
+        insectGlaive:   3.1,
+        lightBowgun:    1.3,
+        heavyBowgun:    1.5,
+        bow:            1.2
     },
     default: {
         lang: 'zhTW',
@@ -248,6 +282,10 @@ export default {
             element: {
                 attack: null,
                 status: null
+            },
+            elementCriticalMultiple: {
+                attack: 1,
+                status: 1
             },
             elderseal: null,
             defense: 31, // 守護護符+10 守護之爪+20

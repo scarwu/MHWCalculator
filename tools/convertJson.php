@@ -420,6 +420,7 @@ class Misc
             //         "set": false,
             //         "jewel": true,
             //         "armor": true,
+            //         "chram": false,
             //         "weapon": false
             //     },
             //     "list": [
@@ -446,6 +447,7 @@ class Misc
                     $data['from']['set'],
                     $data['from']['jewel'],
                     $data['from']['armor'],
+                    $data['from']['charm'],
                     $data['from']['weapon']
                 ],
                 array_map(function ($item) {

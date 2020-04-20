@@ -16,8 +16,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false,
-            "charm": true
+            "charm": true,
+            "weapon": false
         },
         "list": [
             {
@@ -81,8 +81,8 @@
             "set": false,
             "jewel": true,
             "armor": true,
-            "weapon": false,
-            "charm": true
+            "charm": true,
+            "weapon": false
         },
         "list": [
             {
@@ -158,8 +158,8 @@
             "set": false,
             "jewel": true,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -191,8 +191,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -228,8 +228,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -265,8 +265,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -298,8 +298,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -335,8 +335,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -372,8 +372,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -409,8 +409,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -446,8 +446,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -483,8 +483,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -516,8 +516,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -549,8 +549,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -582,8 +582,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -615,8 +615,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -648,8 +648,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -685,8 +685,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -718,8 +718,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -751,8 +751,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -784,8 +784,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -795,7 +795,11 @@
                     "jaJP": "攻撃で会心が発生した際に与える状態異常値(毒、麻痺、睡眠、爆破)がかなり高くなる。",
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "elementStatusCriticalMultiple": {
+                        "value": 1
+                    }
+                },
                 "isHidden": false
             }
         ]
@@ -817,8 +821,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -828,7 +832,11 @@
                     "jaJP": "攻撃で会心が発生した際に与える属性ダメージ(火、水、雷、氷、龍)がかなり高くなる。",
                     "enUS": null
                 },
-                "reaction": null,
+                "reaction": {
+                    "elementAttackCriticalMultiple": {
+                        "value": 1
+                    }
+                },
                 "isHidden": false
             }
         ]
@@ -850,8 +858,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -883,8 +891,8 @@
             "set": false,
             "jewel": false,
             "armor": true,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -916,8 +924,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -949,8 +957,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -982,8 +990,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -1015,8 +1023,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -1048,8 +1056,8 @@
             "set": false,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -1081,8 +1089,8 @@
             "set": false,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -1114,8 +1122,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -1147,8 +1155,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {
@@ -1180,8 +1188,8 @@
             "set": true,
             "jewel": false,
             "armor": false,
-            "weapon": false,
-            "charm": false
+            "charm": false,
+            "weapon": false
         },
         "list": [
             {

@@ -112,11 +112,15 @@ const generateStatus = (equipInfos, passiveSkills) => {
 
     equipInfos = Helper.deepCopy(equipInfos);
 
+    let weaponType = null;
+
     if (Helper.isNotEmpty(equipInfos.weapon)) {
         status.critical.rate = equipInfos.weapon.criticalRate;
         status.sharpness = equipInfos.weapon.sharpness;
         status.element = equipInfos.weapon.element;
         status.elderseal = equipInfos.weapon.elderseal;
+
+        weaponType = equipInfos.weapon.type;
     }
 
     // Resistance
@@ -264,6 +268,26 @@ const generateStatus = (equipInfos, passiveSkills) => {
                 break;
             case 'criticalMultiple':
                 status.critical.multiple.positive = data.value;
+
+                break;
+            case 'elementAttackCriticalMultiple':
+                if (null !== weaponType
+                    && (status.elementCriticalMultiple.attack
+                        < Constant.elementCriticalMultiple.attack[weaponType][data.value])
+                ) {
+                    status.elementCriticalMultiple.attack
+                        = Constant.elementCriticalMultiple.attack[weaponType][data.value];
+                }
+
+                break;
+            case 'elementStatusCriticalMultiple':
+                if (null !== weaponType
+                    && (status.elementCriticalMultiple.status
+                        < Constant.elementCriticalMultiple.status[weaponType][data.value])
+                ) {
+                    status.elementCriticalMultiple.status
+                        = Constant.elementCriticalMultiple.status[weaponType][data.value];
+                }
 
                 break;
             case 'sharpness':
@@ -418,6 +442,7 @@ const generateBenefitAnalysis = (equipInfos, status, tuning) => {
     benefitAnalysis.physicalCriticalAttack = result.physicalCriticalAttack;
     benefitAnalysis.physicalExpectedValue = result.physicalExpectedValue;
     benefitAnalysis.elementAttack = result.elementAttack;
+    benefitAnalysis.elementCriticalAttack = result.elementCriticalAttack;
     benefitAnalysis.elementExpectedValue = result.elementExpectedValue;
     benefitAnalysis.expectedValue = result.expectedValue;
 
@@ -426,32 +451,32 @@ const generateBenefitAnalysis = (equipInfos, status, tuning) => {
         physicalAttack: tuning.physicalAttack
     });
 
-    benefitAnalysis.perNPhysicalAttackExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue;
-    benefitAnalysis.perNPhysicalAttackExpectedValue = Math.round(benefitAnalysis.perNPhysicalAttackExpectedValue * 100) / 100;
+    benefitAnalysis.perPhysicalAttackExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue;
+    benefitAnalysis.perPhysicalAttackExpectedValue = Math.round(benefitAnalysis.perPhysicalAttackExpectedValue * 100) / 100;
 
     // Critical Rate Tuning
     result = getBasicBenefitAnalysis(equipInfos, Helper.deepCopy(status), {
         physicalCriticalRate: tuning.physicalCriticalRate
     });
 
-    benefitAnalysis.perNPhysicalCriticalRateExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue;
-    benefitAnalysis.perNPhysicalCriticalRateExpectedValue = Math.round(benefitAnalysis.perNPhysicalCriticalRateExpectedValue * 100) / 100;
+    benefitAnalysis.perPhysicalCriticalRateExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue;
+    benefitAnalysis.perPhysicalCriticalRateExpectedValue = Math.round(benefitAnalysis.perPhysicalCriticalRateExpectedValue * 100) / 100;
 
     // Critical Multiple Tuning
     result = getBasicBenefitAnalysis(equipInfos, Helper.deepCopy(status), {
         physicalCriticalMultiple: tuning.physicalCriticalMultiple
     });
 
-    benefitAnalysis.perNPhysicalCriticalMultipleExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue;
-    benefitAnalysis.perNPhysicalCriticalMultipleExpectedValue = Math.round(benefitAnalysis.perNPhysicalCriticalMultipleExpectedValue * 100) / 100;
+    benefitAnalysis.perPhysicalCriticalMultipleExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue;
+    benefitAnalysis.perPhysicalCriticalMultipleExpectedValue = Math.round(benefitAnalysis.perPhysicalCriticalMultipleExpectedValue * 100) / 100;
 
     // Element Attack Tuning
     result = getBasicBenefitAnalysis(equipInfos, Helper.deepCopy(status), {
         elementAttack: tuning.elementAttack
     });
 
-    benefitAnalysis.perNElementAttackExpectedValue = result.elementExpectedValue - benefitAnalysis.elementExpectedValue;
-    benefitAnalysis.perNElementAttackExpectedValue = Math.round(benefitAnalysis.perNElementAttackExpectedValue * 100) / 100;
+    benefitAnalysis.perElementAttackExpectedValue = result.elementExpectedValue - benefitAnalysis.elementExpectedValue;
+    benefitAnalysis.perElementAttackExpectedValue = Math.round(benefitAnalysis.perElementAttackExpectedValue * 100) / 100;
 
     return benefitAnalysis;
 };
@@ -461,6 +486,7 @@ const getBasicBenefitAnalysis = (equipInfos, status, tuning) => {
     let physicalCriticalAttack = 0;
     let physicalExpectedValue = 0;
     let elementAttack = 0;
+    let elementCriticalAttack = 0;
     let elementExpectedValue = 0;
     let expectedValue = 0;
 
@@ -507,16 +533,19 @@ const getBasicBenefitAnalysis = (equipInfos, status, tuning) => {
             + (physicalCriticalAttack * criticalRate / 100);
 
         elementAttack *= sharpnessMultiple.element;
-        elementExpectedValue = elementAttack;
+        elementCriticalAttack = elementAttack * status.elementCriticalMultiple.attack;
+        elementExpectedValue = (elementAttack * (100 - criticalRate) / 100)
+            + (elementCriticalAttack * criticalRate / 100);
 
         expectedValue = physicalExpectedValue + elementExpectedValue;
 
-        physicalAttack = Math.round(physicalAttack * 100) / 100;
-        physicalCriticalAttack = Math.round(physicalCriticalAttack * 100) / 100;
-        physicalExpectedValue = Math.round(physicalExpectedValue * 100) / 100;
-        elementAttack = Math.round(elementAttack * 100) / 100;
-        elementExpectedValue = Math.round(elementExpectedValue * 100) / 100;
-        expectedValue = Math.round(expectedValue * 100) / 100;
+        physicalAttack =            Math.round(physicalAttack * 100) / 100;
+        physicalCriticalAttack =    Math.round(physicalCriticalAttack * 100) / 100;
+        physicalExpectedValue =     Math.round(physicalExpectedValue * 100) / 100;
+        elementAttack =             Math.round(elementAttack * 100) / 100;
+        elementCriticalAttack =     Math.round(elementCriticalAttack * 100) / 100;
+        elementExpectedValue =      Math.round(elementExpectedValue * 100) / 100;
+        expectedValue =             Math.round(expectedValue * 100) / 100;
     }
 
     return {
@@ -524,6 +553,7 @@ const getBasicBenefitAnalysis = (equipInfos, status, tuning) => {
         physicalCriticalAttack: physicalCriticalAttack,
         physicalExpectedValue: physicalExpectedValue,
         elementAttack: elementAttack,
+        elementCriticalAttack: elementCriticalAttack,
         elementExpectedValue: elementExpectedValue,
         expectedValue: expectedValue
     }
@@ -677,11 +707,25 @@ export default function CharacterStatus(props) {
                             <span>{benefitAnalysis.physicalAttack}</span>
                         </div>
                         <div className="col-3 mhwc-name">
+                            <span>{_('elementAttack')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{benefitAnalysis.elementAttack}</span>
+                        </div>
+
+                        <div className="col-3 mhwc-name">
                             <span>{_('physicalCriticalAttack')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
                             <span>{benefitAnalysis.physicalCriticalAttack}</span>
                         </div>
+                        <div className="col-3 mhwc-name">
+                            <span>{_('elementCriticalAttack')}</span>
+                        </div>
+                        <div className="col-3 mhwc-value">
+                            <span>{benefitAnalysis.elementCriticalAttack}</span>
+                        </div>
+
                         <div className="col-3 mhwc-name">
                             <span>{_('physicalEV')}</span>
                         </div>
@@ -689,17 +733,12 @@ export default function CharacterStatus(props) {
                             <span>{benefitAnalysis.physicalExpectedValue}</span>
                         </div>
                         <div className="col-3 mhwc-name">
-                            <span>{_('elementAttack')}</span>
-                        </div>
-                        <div className="col-3 mhwc-value">
-                            <span>{benefitAnalysis.elementAttack}</span>
-                        </div>
-                        <div className="col-3 mhwc-name">
                             <span>{_('elementEV')}</span>
                         </div>
                         <div className="col-3 mhwc-value">
                             <span>{benefitAnalysis.elementExpectedValue}</span>
                         </div>
+
                         <div className="col-3 mhwc-name">
                             <span>{_('totalEV')}</span>
                         </div>
@@ -716,7 +755,7 @@ export default function CharacterStatus(props) {
                                 bypassRef={refTuningPhysicalAttack} onChange={handleTuningChange} />
                         </div>
                         <div className="col-3 mhwc-value">
-                            <span>{benefitAnalysis.perNPhysicalAttackExpectedValue}</span>
+                            <span>{benefitAnalysis.perPhysicalAttackExpectedValue}</span>
                         </div>
                         <div className="col-6 mhwc-name mhwc-input-ev">
                             <span>{_('perCriticalRateEV')}</span>
@@ -726,7 +765,7 @@ export default function CharacterStatus(props) {
                                 bypassRef={refTuningPhysicalCriticalRate} onChange={handleTuningChange} />
                         </div>
                         <div className="col-3 mhwc-value">
-                            <span>{benefitAnalysis.perNPhysicalCriticalRateExpectedValue}</span>
+                            <span>{benefitAnalysis.perPhysicalCriticalRateExpectedValue}</span>
                         </div>
                         <div className="col-6 mhwc-name mhwc-input-ev">
                             <span>{_('perCriticalMultipleEV')}</span>
@@ -736,7 +775,7 @@ export default function CharacterStatus(props) {
                                 bypassRef={refTuningPhysicalCriticalMultiple} onChange={handleTuningChange} />
                         </div>
                         <div className="col-3 mhwc-value">
-                            <span>{benefitAnalysis.perNPhysicalCriticalMultipleExpectedValue}</span>
+                            <span>{benefitAnalysis.perPhysicalCriticalMultipleExpectedValue}</span>
                         </div>
                         <div className="col-6 mhwc-name mhwc-input-ev">
                             <span>{_('perElementAttackEV')}</span>
@@ -746,7 +785,7 @@ export default function CharacterStatus(props) {
                                 bypassRef={refTuningElementAttack} onChange={handleTuningChange} />
                         </div>
                         <div className="col-3 mhwc-value">
-                            <span>{benefitAnalysis.perNElementAttackExpectedValue}</span>
+                            <span>{benefitAnalysis.perElementAttackExpectedValue}</span>
                         </div>
                     </div>
                 </div>

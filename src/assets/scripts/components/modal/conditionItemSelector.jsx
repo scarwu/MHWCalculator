@@ -188,21 +188,19 @@ export default function ConditionItemSelector(props) {
             });
 
             SkillDataset.getItems().forEach((skillInfo) => {
-                if (false === skillInfo.from.jewel
-                    && false === skillInfo.from.armor
-                    && false === skillInfo.from.charm
+                if (true === skillInfo.from.jewel
+                    || true === skillInfo.from.armor
+                    || true === skillInfo.from.charm
                 ) {
-                    return;
-                }
+                    if (-1 !== idList.indexOf(skillInfo.id)) {
+                        skillInfo.isSelect = true;
 
-                if (-1 !== idList.indexOf(skillInfo.id)) {
-                    skillInfo.isSelect = true;
+                        selectedList.push(skillInfo);
+                    } else {
+                        skillInfo.isSelect = false;
 
-                    selectedList.push(skillInfo);
-                } else {
-                    skillInfo.isSelect = false;
-
-                    unselectedList.push(skillInfo);
+                        unselectedList.push(skillInfo);
+                    }
                 }
             });
 
