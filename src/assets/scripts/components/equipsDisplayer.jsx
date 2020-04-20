@@ -348,8 +348,21 @@ const renderEquipBlock = (equipType, currentEquip, requiredEquip) => {
         equipId: null
     };
 
-    let requiredEquipId = Helper.isNotEmpty(requiredEquip)
-        ? requiredEquip.id : null;
+    let isNotRequire = true;
+
+    if (Helper.isNotEmpty(requiredEquip)) {
+        if ('weapon' === equipType) {
+            isNotRequire = Helper.jsonHash({
+                id: currentEquip.id,
+                enhances: currentEquip.enhances
+            }) !== Helper.jsonHash({
+                id: requiredEquip.id,
+                enhances: requiredEquip.enhances
+            });
+        } else {
+            isNotRequire = currentEquip.id !== requiredEquip.id;
+        }
+    }
 
     if (Helper.isEmpty(equipInfo)) {
         return (
@@ -382,7 +395,7 @@ const renderEquipBlock = (equipType, currentEquip, requiredEquip) => {
             <div className="col-12 mhwc-name">
                 <span>{_(equipType)}: {_(equipInfo.name)}</span>
                 <div className="mhwc-icons_bundle">
-                    {equipInfo.id !== requiredEquipId ? (
+                    {isNotRequire ? (
                         <IconButton
                             iconName="arrow-left" altName={_('include')}
                             onClick={() => {CommonState.setter.setRequiredEquips(equipType, currentEquip)}} />

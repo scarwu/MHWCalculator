@@ -259,20 +259,36 @@ export default function CustomWeapon(props) {
 
         let equipType = 'weapon';
         let currentEquip = stateCurrentEquips[equipType];
-        let requiredEquipId = Helper.isNotEmpty(stateRequiredEquips[equipType])
-            ? stateRequiredEquips[equipType].id : null;
+        let requiredEquip = Helper.isNotEmpty(stateRequiredEquips[equipType])
+            ? stateRequiredEquips[equipType] : null;
 
         let emptySelectorData = {
             equipType: equipType,
             equipId: null
         };
 
+        let isNotRequire = true;
+
+        if (Helper.isNotEmpty(requiredEquip)) {
+            if ('weapon' === equipType) {
+                isNotRequire = Helper.jsonHash({
+                    customWeapon: stateCustomWeapon,
+                    enhances: currentEquip.enhances
+                }) !== Helper.jsonHash({
+                    customWeapon: requiredEquip.customWeapon,
+                    enhances: requiredEquip.enhances
+                });
+            } else {
+                isNotRequire = currentEquip.id !== requiredEquip.id;
+            }
+        }
+
         return (
             <div key="customWeapon" className="mhwc-item mhwc-item-3-step">
                 <div className="col-12 mhwc-name">
                     <span>{_('customWeapon')}</span>
                     <div className="mhwc-icons_bundle">
-                        {'customWeapon' !== requiredEquipId ? (
+                        {isNotRequire ? (
                             <IconButton
                                 iconName="arrow-left" altName={_('include')}
                                 onClick={() => {CommonState.setter.setRequiredEquips(equipType, currentEquip)}} />
