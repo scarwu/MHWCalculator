@@ -5114,5 +5114,310 @@
                 ]
             }
         ]
+    },
+    {
+        "series": {
+            "id": "精英．絢輝龍鎧羅α",
+            "name": {
+                "zhTW": "精英．絢輝龍鎧羅α",
+                "jaJP": null,
+                "enUS": null
+            },
+            "rare": 12,
+            "gender": "general",
+            "defense": 176,
+            "resistance": {
+                "fire": 4,
+                "water": -2,
+                "thunder": 3,
+                "ice": -2,
+                "dragon": -4
+            },
+            "set": {
+                "id": "絢輝龍的真髓"
+            }
+        },
+        "items": [
+            {
+                "id": "精英．絢輝龍鎧羅頭盔α",
+                "name": {
+                    "zhTW": "精英．絢輝龍鎧羅頭盔α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": null,
+                "skills": [
+                    {
+                        "id": "滿足感",
+                        "level": 1
+                    },
+                    {
+                        "id": "屬性解放／裝填擴充",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．絢輝龍鎧羅鎧甲α",
+                "name": {
+                    "zhTW": "精英．絢輝龍鎧羅鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "快吃",
+                        "level": 3
+                    },
+                    {
+                        "id": "滿足感",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．絢輝龍鎧羅腕甲α",
+                "name": {
+                    "zhTW": "精英．絢輝龍鎧羅腕甲α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "超會心",
+                        "level": 1
+                    },
+                    {
+                        "id": "廣域化",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．絢輝龍鎧羅腰甲α",
+                "name": {
+                    "zhTW": "精英．絢輝龍鎧羅腰甲α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "無傷",
+                        "level": 2
+                    },
+                    {
+                        "id": "滿足感",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．絢輝龍鎧羅護腿α",
+                "name": {
+                    "zhTW": "精英．絢輝龍鎧羅護腿α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "超會心",
+                        "level": 2
+                    },
+                    {
+                        "id": "無傷",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "精英．絢輝龍鎧羅β",
+            "name": {
+                "zhTW": "精英．絢輝龍鎧羅β",
+                "jaJP": null,
+                "enUS": null
+            },
+            "rare": 12,
+            "gender": "general",
+            "defense": 170,
+            "resistance": {
+                "fire": 3,
+                "water": -2,
+                "thunder": 1,
+                "ice": -3,
+                "dragon": 1
+            },
+            "set": {
+                "id": "絢輝龍的真髓"
+            }
+        },
+        "items": [
+            {
+                "id": "精英．絢輝龍鎧羅頭盔β",
+                "name": {
+                    "zhTW": "精英．絢輝龍鎧羅頭盔β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "滿足感",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．絢輝龍鎧羅鎧甲β",
+                "name": {
+                    "zhTW": "精英．絢輝龍鎧羅鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "快吃",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．絢輝龍鎧羅腕甲β",
+                "name": {
+                    "zhTW": "精英．絢輝龍鎧羅腕甲β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "超會心",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．絢輝龍鎧羅腰甲β",
+                "name": {
+                    "zhTW": "精英．絢輝龍鎧羅腰甲β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "無傷",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "精英．絢輝龍鎧羅護腿β",
+                "name": {
+                    "zhTW": "精英．絢輝龍鎧羅護腿β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "超會心",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
     }
 ]

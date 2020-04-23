@@ -24,6 +24,22 @@
                         "level": 4
                     }
                 ]
+            },
+            {
+                "id": "迴避護石 V",
+                "name": {
+                    "zhTW": "迴避護石 V",
+                    "jaJP": "回避の護石 V",
+                    "enUS": "Evasion Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "迴避性能",
+                        "level": 5
+                    }
+                ]
             }
         ]
     },
@@ -238,6 +254,22 @@
                     {
                         "id": "攻擊",
                         "level": 4
+                    }
+                ]
+            },
+            {
+                "id": "攻擊護石 V",
+                "name": {
+                    "zhTW": "攻擊護石 V",
+                    "jaJP": "攻撃の護石 V",
+                    "enUS": "Attack Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "攻擊",
+                        "level": 5
                     }
                 ]
             }

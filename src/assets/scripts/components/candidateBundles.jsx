@@ -8,7 +8,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { Fragment, useState, useEffect, useCallback, useMemo } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -665,7 +665,51 @@ export default function CandidateBundles(props) {
                         </div>
                     </div>
                 ) : (
-                    <BundleList data={stateComputedResult} />
+                    <Fragment>
+                        <div className="mhwc-item mhwc-item-3-step">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('required')}</span>
+                            </div>
+
+                            <div className="col-12 mhwc-content">
+                                <div className="col-12 mhwc-name">
+                                    <span>{_('equip')}</span>
+                                </div>
+
+                                <div className="col-12 mhwc-content">
+                                    <div className="col-6 mhwc-value">
+                                        <span>xxx</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-12 mhwc-content">
+                                <div className="col-12 mhwc-name">
+                                    <span>{_('set')}</span>
+                                </div>
+
+                                <div className="col-12 mhwc-content">
+                                    <div className="col-6 mhwc-value">
+                                        <span>xxx</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-12 mhwc-content">
+                                <div className="col-12 mhwc-name">
+                                    <span>{_('skill')}</span>
+                                </div>
+
+                                <div className="col-12 mhwc-content">
+                                    <div className="col-6 mhwc-value">
+                                        <span>xxx</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <BundleList data={stateComputedResult} />
+                    </Fragment>
                 )}
             </div>
         </div>

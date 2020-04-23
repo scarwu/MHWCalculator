@@ -704,5 +704,29 @@
                 "require": 4
             }
         ]
+    },
+    {
+        "id": "絢輝龍的真髓",
+        "name": {
+            "zhTW": "絢輝龍的真髓",
+            "jaJP": null,
+            "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
+        "skills": [
+            {
+                "id": "毅力",
+                "level": 1,
+                "require": 2
+            },
+            {
+                "id": "滿足感．極意",
+                "level": 1,
+                "require": 4
+            }
+        ]
     }
 ]
