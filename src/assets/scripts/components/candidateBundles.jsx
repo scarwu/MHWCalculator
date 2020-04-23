@@ -150,7 +150,7 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, req
     Object.keys(bundle.sets).sort((setIdA, setIdB) => {
         return bundle.sets[setIdB] - bundle.sets[setIdA];
     }).forEach((setId) => {
-        let setCount = bundle.sets[setId];
+        let setStep = bundle.sets[setId];
         let setInfo = SetDataset.getInfo(setId);
 
         if (Helper.isEmpty(setInfo)) {
@@ -158,7 +158,7 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, req
         }
 
         setInfo.skills.forEach((skill) => {
-            if (skill.require > setCount) {
+            if (skill.require > setStep) {
                 return;
             }
 
@@ -312,7 +312,7 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, req
             {(0 !== Object.keys(currentSetMapping).length) ? (
                 <div className="col-12 mhwc-content">
                     <div className="col-12 mhwc-name">
-                        <span>{_('set')}</span>
+                        <span>{_('additionalSets')}</span>
                     </div>
                     <div className="col-12 mhwc-content">
                         {Object.keys(currentSetMapping).map((setId) => {
@@ -342,18 +342,18 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, req
             {(0 !== Object.keys(bundle.skills).length) ? (
                 <div className="col-12 mhwc-content">
                     <div className="col-12 mhwc-name">
-                        <span>{_('skill')}</span>
+                        <span>{_('additionalSkills')}</span>
                     </div>
                     <div className="col-12 mhwc-content">
                         {Object.keys(bundle.skills).sort((skillIdA, skillIdB) => {
                             return bundle.skills[skillIdB] - bundle.skills[skillIdA];
                         }).map((skillId) => {
-                            let skillCount = bundle.skills[skillId];
-                            let skillInfo = SkillDataset.getInfo(skillId);;
+                            let skillLevel = bundle.skills[skillId];
+                            let skillInfo = SkillDataset.getInfo(skillId);
 
                             return (Helper.isNotEmpty(skillInfo)) ? (
                                 <div key={skillId} className="col-6 mhwc-value">
-                                    <span>{`${_(skillInfo.name)} Lv.${skillCount}`}</span>
+                                    <span>{`${_(skillInfo.name)} Lv.${skillLevel}`}</span>
                                     {(-1 === requiredSkillIds.indexOf(skillInfo.id)) ? (
                                         <div className="mhwc-icons_bundle">
                                             <IconButton
@@ -374,6 +374,189 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, req
 /**
  * Sub Components
  */
+const RequiredConditionBlock = (props) => {
+    const {data} = props;
+
+    /**
+     * Hooks
+     */
+    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
+    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
+
+    // Like Did Mount & Will Unmount Cycle
+    useEffect(() => {
+        const unsubscribe = CommonState.store.subscribe(() => {
+            updateRequiredEquips(CommonState.getter.getRequiredEquips());
+            updateRequiredSkills(CommonState.getter.getRequiredSkills());
+            updateRequiredSets(CommonState.getter.getRequiredSets());
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    }, []);
+
+    return useMemo(() => {
+        Helper.log('Component: CandidateBundles -> RequiredConditionBlock');
+
+        const requiredEquipIds = Object.keys(stateRequiredEquips).map((equipType) => {
+            if (Helper.isEmpty(stateRequiredEquips[equipType])) {
+                return false;
+            }
+
+            return stateRequiredEquips[equipType].id;
+        });
+
+        const requiredSkillIds = stateRequiredSkills.map((skill) => {
+            return skill.id;
+        });
+
+        const requiredSetIds = stateRequiredSets.map((set) => {
+            return set.id;
+        });
+
+        let requiredEquips = data.required.equips;
+        let requiredSets = data.required.sets;
+        let requiredSkills = data.required.skills;
+
+        let requiredEquipList = Object.keys(requiredEquips).filter((equipType) => {
+            return Helper.isNotEmpty(requiredEquips[equipType])
+        });
+
+        return (0 !== data.list.length) ? (
+            <div className="mhwc-item mhwc-item-3-step">
+                <div className="col-12 mhwc-name">
+                    <span>{_('searchCondition')}</span>
+                </div>
+
+                {0 !== requiredEquipList.length ? (
+                    <div className="col-12 mhwc-content">
+                        <div className="col-12 mhwc-name">
+                            <span>{_('equip')}</span>
+                        </div>
+
+                        <div className="col-12 mhwc-content">
+                            {requiredEquipList.map((equipType, index) => {
+                                if (Helper.isEmpty(requiredEquips[equipType])) {
+                                    return false;
+                                }
+
+                                let equipInfo = null;
+
+                                if ('weapon' === equipType) {
+                                    if ('customWeapon' === requiredEquips[equipType]) {
+                                        equipInfo = meta.customWeapon;
+
+                                        return Helper.isNotEmpty(equipInfo) ? (
+                                            <div key={equipType} className="col-6 mhwc-value">
+                                                <span>{_(equipInfo.name)}: {_(equipInfo.type)}</span>
+
+                                                <div className="mhwc-icons_bundle">
+                                                    {(-1 === requiredEquipIds.indexOf('customWeapon')) ? (
+                                                        <IconButton
+                                                            iconName="arrow-left" altName={_('include')}
+                                                            onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo)}} />
+                                                    ) : false}
+                                                </div>
+                                            </div>
+                                        ) : false;
+                                    }
+
+                                    equipInfo = WeaponDataset.getInfo(requiredEquips[equipType].id);
+                                } else if ('helm' === equipType
+                                    || 'chest' === equipType
+                                    || 'arm' === equipType
+                                    || 'waist' === equipType
+                                    || 'leg' === equipType
+                                ) {
+                                    equipInfo = ArmorDataset.getInfo(requiredEquips[equipType].id);
+                                } else if ('charm' === equipType) {
+                                    equipInfo = CharmDataset.getInfo(requiredEquips[equipType].id);
+                                }
+
+                                return Helper.isNotEmpty(equipInfo) ? (
+                                    <div key={equipType} className="col-6 mhwc-value">
+                                        <span>{_(equipInfo.name)}</span>
+
+                                        <div className="mhwc-icons_bundle">
+                                            {(-1 === requiredEquipIds.indexOf(equipInfo.id)) ? (
+                                                <IconButton
+                                                    iconName="arrow-left" altName={_('include')}
+                                                    onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo)}} />
+                                            ) : false}
+                                        </div>
+                                    </div>
+                                ) : false;
+                            })}
+                        </div>
+                    </div>
+                ) : false}
+
+                {0 !== requiredSets.length ? (
+                    <div className="col-12 mhwc-content">
+                        <div className="col-12 mhwc-name">
+                            <span>{_('set')}</span>
+                        </div>
+
+                        <div className="col-12 mhwc-content">
+                            {requiredSets.map((set) => {
+                                let setInfo = SetDataset.getInfo(set.id);
+
+                                return (
+                                    <div key={set.id} className="col-6 mhwc-value">
+                                        <span>
+                                            {`${_(setInfo.name)}`}{setInfo.skills.slice(0, set.step).map((skill) => {
+                                                return ` (${skill.require})`;
+                                            })}
+                                        </span>
+                                        {(-1 === requiredSetIds.indexOf(setInfo.id)) ? (
+                                            <div className="mhwc-icons_bundle">
+                                                <IconButton
+                                                    iconName="arrow-left" altName={_('include')}
+                                                    onClick={() => {CommonState.setter.addRequiredSet(setInfo.id)}} />
+                                            </div>
+                                        ) : false}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                ) : false}
+
+                {0 !== requiredSkills.length ? (
+                    <div className="col-12 mhwc-content">
+                        <div className="col-12 mhwc-name">
+                            <span>{_('skill')}</span>
+                        </div>
+
+                        <div className="col-12 mhwc-content">
+                            {requiredSkills.sort((skillA, skillB) => {
+                                return skillB.level - skillA.level;
+                            }).map((skill) => {
+                                let skillInfo = SkillDataset.getInfo(skill.id);
+
+                                return (Helper.isNotEmpty(skillInfo)) ? (
+                                    <div key={skill.id} className="col-6 mhwc-value">
+                                        <span>{`${_(skillInfo.name)} Lv.${skill.level}`}</span>
+                                        {(-1 === requiredSkillIds.indexOf(skillInfo.id)) ? (
+                                            <div className="mhwc-icons_bundle">
+                                                <IconButton
+                                                    iconName="arrow-left" altName={_('include')}
+                                                    onClick={() => {CommonState.setter.addRequiredSkill(skillInfo.id)}} />
+                                            </div>
+                                        ) : false}
+                                    </div>
+                                ) : false;
+                            })}
+                        </div>
+                    </div>
+                ) : false}
+            </div>
+        ) : false;
+    }, [data, stateRequiredEquips, stateRequiredSkills, stateRequiredSets]);
+};
+
 const BundleList = (props) => {
     const {data} = props;
 
@@ -666,48 +849,7 @@ export default function CandidateBundles(props) {
                     </div>
                 ) : (
                     <Fragment>
-                        <div className="mhwc-item mhwc-item-3-step">
-                            <div className="col-12 mhwc-name">
-                                <span>{_('required')}</span>
-                            </div>
-
-                            <div className="col-12 mhwc-content">
-                                <div className="col-12 mhwc-name">
-                                    <span>{_('equip')}</span>
-                                </div>
-
-                                <div className="col-12 mhwc-content">
-                                    <div className="col-6 mhwc-value">
-                                        <span>xxx</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-12 mhwc-content">
-                                <div className="col-12 mhwc-name">
-                                    <span>{_('set')}</span>
-                                </div>
-
-                                <div className="col-12 mhwc-content">
-                                    <div className="col-6 mhwc-value">
-                                        <span>xxx</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-12 mhwc-content">
-                                <div className="col-12 mhwc-name">
-                                    <span>{_('skill')}</span>
-                                </div>
-
-                                <div className="col-12 mhwc-content">
-                                    <div className="col-6 mhwc-value">
-                                        <span>xxx</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        <RequiredConditionBlock data={stateComputedResult} />
                         <BundleList data={stateComputedResult} />
                     </Fragment>
                 )}

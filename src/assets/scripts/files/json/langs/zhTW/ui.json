@@ -156,5 +156,8 @@
     "white":                    "白",
     "purple":                   "紫",
     "type":                     "類型",
-    "enhanceFieldSize":         "強化欄數量"
+    "enhanceFieldSize":         "強化欄數量",
+    "searchCondition":          "搜尋條件",
+    "additionalSets":           "額外套裝",
+    "additionalSkills":         "額外技能"
 }

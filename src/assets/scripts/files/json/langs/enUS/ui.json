@@ -156,5 +156,8 @@
     "white":                    "White",
     "purple":                   "Purple",
     "type":                     "Type",
-    "enhanceFieldSize":         "Enhance Fields"
+    "enhanceFieldSize":         "Enhance Fields",
+    "searchCondition":          "Search Condition",
+    "additionalSets":           "Additional Sets",
+    "additionalSkills":         "Additional Skills"
 }

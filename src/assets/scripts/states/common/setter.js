@@ -197,8 +197,12 @@ export default {
             type: 'UPDATE_COMPUTED_RESULT',
             payload: {
                 data: {
-                    list: [],
-                    meta: {}
+                    required: {
+                        equips: {},
+                        sets: [],
+                        skills: []
+                    },
+                    list: []
                 }
             }
         });

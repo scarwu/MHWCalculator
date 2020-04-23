@@ -156,5 +156,8 @@
     "white":                    null,
     "purple":                   null,
     "type":                     null,
-    "enhanceFieldSize":         null
+    "enhanceFieldSize":         null,
+    "searchCondition":          null,
+    "additionalSets":           null,
+    "additionalSkills":         null
 }

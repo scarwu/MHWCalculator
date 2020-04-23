@@ -66,9 +66,17 @@ class FittingAlgorithm {
         };
 
         // Init Condtions
+        this.isInitFailed = false;
+
         this.initConditionSets(requiredSets);
         this.initConditionSkills(requiredSkills);
         this.initConditionEquips(requiredEquips);
+
+        if (this.isInitFailed) {
+            Helper.debug('Init: Failed');
+
+            return [];
+        }
 
         this.requireSkillCount = Object.keys(this.conditionSkills).length;
         this.requireSetCount = Object.keys(this.conditionSets).length;
@@ -266,10 +274,18 @@ class FittingAlgorithm {
      * Init Condition Equips
      */
     initConditionEquips = (requiredEquips) => {
+        if (this.isInitFailed) {
+            return;
+        }
+
         let bundle = Helper.deepCopy(Constant.default.bundle);
 
         // Create First Bundle
         ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
+            if (this.isInitFailed) {
+                return;
+            }
+
             if (Helper.isEmpty(requiredEquips[equipType])) {
                 if ('weapon' !== equipType) {
                     this.conditionEquips.push(equipType);
@@ -345,6 +361,12 @@ class FittingAlgorithm {
             // Add Candidate Equip to Bundle
             bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
+            if (false === bundle) {
+                this.isInitFailed = true;
+
+                return;
+            }
+
             // Add Jewels info to Bundle
             if (Helper.isNotEmpty(equipInfo.slots)) {
                 equipInfo.slots.forEach((slot) => {
@@ -362,6 +384,10 @@ class FittingAlgorithm {
                 });
             }
         });
+
+        if (this.isInitFailed) {
+            return;
+        }
 
         // Reset Equip Count
         bundle.meta.equipCount = 0;
@@ -1142,6 +1168,8 @@ class FittingAlgorithm {
         }
 
         // Increase Set
+        let isSetRequireOverflow = false;
+
         if (Helper.isNotEmpty(candidateEquip.setId)) {
             if (Helper.isEmpty(bundle.sets[candidateEquip.setId])) {
                 bundle.sets[candidateEquip.setId] = 0;
@@ -1150,12 +1178,16 @@ class FittingAlgorithm {
             bundle.sets[candidateEquip.setId] += 1;
 
             if (this.conditionSets[candidateEquip.setId] < bundle.sets[candidateEquip.setId]) {
-                return false;
+                isSetRequireOverflow = true;
             }
 
             if (this.conditionSets[candidateEquip.setId] === bundle.sets[candidateEquip.setId]) {
                 bundle.meta.completedSets[candidateEquip.setId] = true;
             }
+        }
+
+        if (true === isSetRequireOverflow) {
+            return false;
         }
 
         // Increase Defense & Resistances
