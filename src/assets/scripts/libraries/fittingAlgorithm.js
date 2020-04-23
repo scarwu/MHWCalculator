@@ -29,16 +29,16 @@ class FittingAlgorithm {
     /**
      * Search
      */
-    search = (requiredSets, requiredSkills, requiredEquips, algorithmParams, callback) => {
+    search = (requiredEquips, requiredSets, requiredSkills, algorithmParams, callback) => {
         if (0 === requiredSets.length
             && 0 === requiredSkills.length
         ) {
             return [];
         }
 
+        Helper.debug('Input: Required Equips', requiredEquips);
         Helper.debug('Input: Required Sets', requiredSets);
         Helper.debug('Input: Required Skills', requiredSkills);
-        Helper.debug('Input: Required Equips', requiredEquips);
         Helper.debug('Input: Algorithm Params', algorithmParams);
 
         // Set Properties
@@ -75,9 +75,9 @@ class FittingAlgorithm {
         this.requireEquipCount = this.conditionEquips.length;
 
         // Print Init Information
-        Helper.debug('Init: Condition Skills:', this.conditionSkills);
-        Helper.debug('Init: Condition Sets:', this.conditionSets);
         Helper.debug('Init: Condition Equips:', this.conditionEquips);
+        Helper.debug('Init: Condition Sets:', this.conditionSets);
+        Helper.debug('Init: Condition Skills:', this.conditionSkills);
         Helper.debug('Init: First Bundle:', this.firstBundle);
         Helper.debug('Init: Correspond Jewels:', this.correspondJewels);
         Helper.debug('Init: Condition Expected Value:', this.conditionExpectedValue);

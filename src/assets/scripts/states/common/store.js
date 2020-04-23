@@ -150,8 +150,12 @@ export default createStore((state = initialState, action) => {
                 if (Helper.isEmpty(tempData[target].list[index])) {
                     tempData[target].list[index] = {
                         computedResult: {
-                            list: [],
-                            meta: {}
+                            required: {
+                                equips: {},
+                                sets: [],
+                                skills: []
+                            },
+                            list: []
                         }
                     };
                 }

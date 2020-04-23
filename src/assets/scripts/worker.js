@@ -38,9 +38,9 @@ onmessage = (event) => {
 
     let startTime = new Date().getTime();
     let list = FittingAlgorithm.search(
+        requiredEquips,
         requiredSets,
         requiredSkills,
-        requiredEquips,
         algorithmParams,
         (payload) => {
             postMessage({
