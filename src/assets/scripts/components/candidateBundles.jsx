@@ -52,7 +52,7 @@ const handleBundlePickUp = (bundle, meta) => {
     };
 
     if (Helper.isNotEmpty(meta.customWeapon)) {
-        CommonState.setter.relpaceCustomWeapon(meta.customWeapon);
+        CommonState.setter.replaceCustomWeapon(meta.customWeapon);
     }
 
     Object.keys(bundle.equips).forEach((equipType) => {

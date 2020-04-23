@@ -232,7 +232,7 @@ export default {
     },
 
     // Custom Weapon
-    relpaceCustomWeapon: (data) => {
+    replaceCustomWeapon: (data) => {
         Store.dispatch({
             type: 'REPLACE_CUSTOM_WEAPON',
             payload: {
