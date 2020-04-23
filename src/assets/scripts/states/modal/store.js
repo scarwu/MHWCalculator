@@ -14,7 +14,13 @@ import { createStore, applyMiddleware } from 'redux';
 import Status from 'core/status';
 import Helper from 'core/helper';
 
-const statusPrefix = 'state:modal';
+const statusMapping = {
+    changelog:              '2020:2:state:modal:changelog',
+    algorithmSetting:       '2020:2:state:modal:algorithmSetting',
+    bundleItemSelector:     '2020:2:state:modal:bundleItemSelector',
+    conditionItemSelector:  '2020:2:state:modal:conditionItemSelector',
+    equipItemSelector:      '2020:2:state:modal:equipItemSelector'
+};
 
 // Middleware
 const diffLogger = store => next => action => {
@@ -30,7 +36,7 @@ const diffLogger = store => next => action => {
 
         diffState[key] = nextState[key];
 
-        Status.set(statusPrefix + ':' + key, nextState[key]);
+        Status.set(statusMapping[key], nextState[key]);
     }
 
     Helper.log('State: Modal -> action', action);
@@ -41,20 +47,20 @@ const diffLogger = store => next => action => {
 
 // Initial State
 const initialState = {
-    changelog: Status.get(statusPrefix + ':changelog') || {
+    changelog: Status.get(statusMapping.changelog) || {
         isShow: false
     },
-    algorithmSetting: Status.get(statusPrefix + ':algorithmSetting') || {
+    algorithmSetting: Status.get(statusMapping.algorithmSetting) || {
         isShow: false
     },
-    bundleItemSelector: Status.get(statusPrefix + ':bundleItemSelector') || {
+    bundleItemSelector: Status.get(statusMapping.bundleItemSelector) || {
         isShow: false
     },
-    conditionItemSelector: Status.get(statusPrefix + ':conditionItemSelector') || {
+    conditionItemSelector: Status.get(statusMapping.conditionItemSelector) || {
         isShow: false,
         bypassData: null
     },
-    equipItemSelector: Status.get(statusPrefix + ':equipItemSelector') || {
+    equipItemSelector: Status.get(statusMapping.equipItemSelector) || {
         isShow: false,
         bypassData: null
     }

@@ -24,7 +24,16 @@ import Constant from 'constant';
 // Load Json
 import TestData from 'files/json/testData.json';
 
-const statusPrefix = 'state:common';
+const statusMapping = {
+    tempData:           '2020:2:state:common:tempData',
+    requiredEquips:     '2020:2:state:common:requiredEquips',
+    requiredSets:       '2020:2:state:common:requiredSets',
+    requiredSkills:     '2020:2:state:common:requiredSkills',
+    currentEquips:      '2020:2:state:common:currentEquips',
+    computedResult:     '2020:2:state:common:computedResult',
+    reservedBundles:    '2020:2:state:common:reservedBundles',
+    customWeapon:       '2020:2:state:common:customWeapon'
+};
 
 // Middleware
 const diffLogger = store => next => action => {
@@ -40,7 +49,7 @@ const diffLogger = store => next => action => {
 
         diffState[key] = nextState[key];
 
-        Status.set(statusPrefix + ':' + key, nextState[key]);
+        Status.set(statusMapping[key], nextState[key]);
     }
 
     Helper.log('State: Common -> action', action);
@@ -51,7 +60,7 @@ const diffLogger = store => next => action => {
 
 // Initial State
 const initialState = {
-    tempData: Status.get(statusPrefix + ':tempData') || {
+    tempData: Status.get(statusMapping.tempData) || {
         conditionOptions: {
             index: 0,
             list: []
@@ -65,20 +74,21 @@ const initialState = {
             list: []
         }
     },
-    requiredEquips: Status.get(statusPrefix + ':requiredEquips') || Helper.deepCopy(TestData.requireList[0]).equips,
-    requiredSets: Status.get(statusPrefix + ':requiredSets') || Helper.deepCopy(TestData.requireList[0]).sets,
-    requiredSkills: Status.get(statusPrefix + ':requiredSkills') || Helper.deepCopy(TestData.requireList[0]).skills,
-    currentEquips: Status.get(statusPrefix + ':currentEquips') || Helper.deepCopy(TestData.equipsList[0]),
-    algorithmParams: Object.assign(
-        Helper.deepCopy(Constant.default.algorithmParams),
-        Status.get(statusPrefix + ':algorithmParams') || {}
-    ),
-    computedResult: Status.get(statusPrefix + ':computedResult') || {
-        meta: {},
+    requiredEquips: Status.get(statusMapping.requiredEquips) || Helper.deepCopy(TestData.requireList[0]).equips,
+    requiredSets: Status.get(statusMapping.requiredSets) || Helper.deepCopy(TestData.requireList[0]).sets,
+    requiredSkills: Status.get(statusMapping.requiredSkills) || Helper.deepCopy(TestData.requireList[0]).skills,
+    currentEquips: Status.get(statusMapping.currentEquips) || Helper.deepCopy(TestData.equipsList[0]),
+    algorithmParams: Status.get(statusMapping.algorithmParams) || Helper.deepCopy(Constant.default.algorithmParams),
+    computedResult: Status.get(statusMapping.computedResult) || {
+        required: {
+            equips: {},
+            sets: [],
+            skills: []
+        },
         list: []
     },
-    reservedBundles: Status.get(statusPrefix + ':reservedBundles') || [],
-    customWeapon: Status.get(statusPrefix + ':customWeapon') || Helper.deepCopy(Constant.default.customWeapon)
+    reservedBundles: Status.get(statusMapping.reservedBundles) || [],
+    customWeapon: Status.get(statusMapping.customWeapon) || Helper.deepCopy(Constant.default.customWeapon)
 };
 
 export default createStore((state = initialState, action) => {

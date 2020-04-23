@@ -31,9 +31,9 @@ if ('production' === Config.env) {
 }
 
 onmessage = (event) => {
+    const requiredEquips = event.data.requiredEquips;
     const requiredSets = event.data.requiredSets;
     const requiredSkills = event.data.requiredSkills;
-    const requiredEquips = event.data.requiredEquips;
     const algorithmParams = event.data.algorithmParams;
 
     let startTime = new Date().getTime();
@@ -59,22 +59,16 @@ onmessage = (event) => {
     Helper.debug('Bundle List:', list);
     Helper.debug('Search Time:', searchTime);
 
-    let meta = {};
-
-    if (Helper.isNotEmpty(requiredEquips.weapon)) {
-        meta.weaponEnhances = requiredEquips.weapon.enhances;
-
-        if ('customWeapon' === requiredEquips.weapon.id) {
-            meta.customWeapon = requiredEquips.weapon.customWeapon;
-        }
-    }
-
     postMessage({
         action: 'result',
         payload: {
             computedResult: {
                 list: list,
-                meta: meta
+                required: {
+                    equips: requiredEquips,
+                    sets: requiredSets,
+                    skills: requiredSkills
+                }
             }
         }
     });
