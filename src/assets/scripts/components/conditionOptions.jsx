@@ -367,6 +367,10 @@ export default function ConditionOptions(props) {
                         iconName="circle-o" altName={_('tab') + ' 3'}
                         isActive={2 === stateTempData.conditionOptions.index}
                         onClick={() => {handleSwitchTempData(2)}} />
+                    <IconTab
+                        iconName="circle-o" altName={_('tab') + ' 4'}
+                        isActive={3 === stateTempData.conditionOptions.index}
+                        onClick={() => {handleSwitchTempData(3)}} />
                 </div>
 
                 <div className="mhwc-icons_bundle-right">

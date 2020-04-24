@@ -144,48 +144,63 @@ const handleSwitchTempData = (index) => {
 /**
  * Render Functions
  */
-const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, requiredSetIds, requiredSkillIds) => {
-    let currentSetMapping = {};
+const renderBundleItem = (bundle, currentIndex, totalIndex, required, requiredEquipIds, requiredSetIds, requiredSkillIds) => {
+    const currentRequiredSetIds = required.sets.map((set) => {
+        return set.id;
+    });
 
-    Object.keys(bundle.sets).sort((setIdA, setIdB) => {
-        return bundle.sets[setIdB] - bundle.sets[setIdA];
-    }).forEach((setId) => {
-        let setStep = bundle.sets[setId];
+    const currentRequiredSkillIds = required.skills.map((skill) => {
+        return skill.id;
+    });
+
+    const additionalSets = Object.keys(bundle.sets).map((setId) => {
         let setInfo = SetDataset.getInfo(setId);
 
         if (Helper.isEmpty(setInfo)) {
-            return;
+            return false;
         }
 
-        setInfo.skills.forEach((skill) => {
-            if (skill.require > setStep) {
-                return;
-            }
+        let setStep = setInfo.skills.filter((skill) => {
+            return skill.require <= bundle.sets[setId];
+        }).length;
 
-            let skillInfo = SkillDataset.getInfo(skill.id);
+        return {
+            id: setId,
+            step: setStep
+        };
+    }).filter((set) => {
+        if (false === set) {
+            return false;
+        }
 
-            if (Helper.isEmpty(skillInfo)) {
-                return;
-            }
+        if (-1 !== currentRequiredSetIds.indexOf(set.id)) {
+            return false;
+        }
 
-            if (Helper.isEmpty(currentSetMapping[setId])) {
-                currentSetMapping[setId] = [];
-            }
+        if (0 === set.step) {
+            return false;
+        }
 
-            currentSetMapping[setId].push({
-                skill: {
-                    id: skillInfo.id,
-                    level: 1
-                },
-                require: skill.require
-            });
-        });
+        return true;
+    }).sort((setA, setB) => {
+        return setB.step - setA.step;
+    });
+
+    let additionalSkills = Object.keys(bundle.skills).map((skillId) => {
+        return {
+            id: skillId,
+            level: bundle.skills[skillId]
+        };
+    }).filter((skill) => {
+        return -1 === currentRequiredSkillIds.indexOf(skill.id);
+    }).sort((skillA, skillB) => {
+        return skillB.level - skillA.level;
     });
 
     return (
         <div key={bundle.hash} className="mhwc-item mhwc-item-3-step">
             <div className="col-12 mhwc-name">
-                <span>{_('bundle')}: {index + 1} / {totalIndex}</span>
+                <span>{_('bundle')}: {currentIndex + 1} / {totalIndex}</span>
                 <div className="mhwc-icons_bundle">
                     <IconButton
                         iconName="check" altName={_('equip')}
@@ -206,7 +221,7 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, req
 
             <div className="col-12 mhwc-content">
                 <div className="col-12 mhwc-name">
-                    <span>{_('equip')}</span>
+                    <span>{_('requiredEquips')}</span>
                 </div>
                 <div className="col-12 mhwc-content">
                     {Object.keys(bundle.equips).map((equipType, index) => {
@@ -264,6 +279,28 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, req
                 </div>
             </div>
 
+            {(0 !== Object.keys(bundle.jewels).length) ? (
+                <div className="col-12 mhwc-content">
+                    <div className="col-12 mhwc-name">
+                        <span>{_('requiredJewels')}</span>
+                    </div>
+                    <div className="col-12 mhwc-content">
+                        {Object.keys(bundle.jewels).sort((jewelIdA, jewelIdB) => {
+                            return bundle.jewels[jewelIdB] - bundle.jewels[jewelIdA];
+                        }).map((jewelId) => {
+                            let jewelCount = bundle.jewels[jewelId];
+                            let jewelInfo = JewelDataset.getInfo(jewelId);
+
+                            return (Helper.isNotEmpty(jewelInfo)) ? (
+                                <div key={jewelId} className="col-4 mhwc-value">
+                                    <span>{`[${jewelInfo.size}] ${_(jewelInfo.name)} x ${jewelCount}`}</span>
+                                </div>
+                            ) : false;
+                        })}
+                    </div>
+                </div>
+            ) : false}
+
             {(0 < bundle.meta.remainingSlotCount.all) ? (
                 <div className="col-12 mhwc-content">
                     <div className="col-12 mhwc-name">
@@ -287,42 +324,20 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, req
                 </div>
             ) : false}
 
-            {(0 !== Object.keys(bundle.jewels).length) ? (
-                <div className="col-12 mhwc-content">
-                    <div className="col-12 mhwc-name">
-                        <span>{_('jewel')}</span>
-                    </div>
-                    <div className="col-12 mhwc-content">
-                        {Object.keys(bundle.jewels).sort((jewelIdA, jewelIdB) => {
-                            return bundle.jewels[jewelIdB] - bundle.jewels[jewelIdA];
-                        }).map((jewelId) => {
-                            let jewelCount = bundle.jewels[jewelId];
-                            let jewelInfo = JewelDataset.getInfo(jewelId);
-
-                            return (Helper.isNotEmpty(jewelInfo)) ? (
-                                <div key={jewelId} className="col-4 mhwc-value">
-                                    <span>{`[${jewelInfo.size}] ${_(jewelInfo.name)} x ${jewelCount}`}</span>
-                                </div>
-                            ) : false;
-                        })}
-                    </div>
-                </div>
-            ) : false}
-
-            {(0 !== Object.keys(currentSetMapping).length) ? (
+            {(0 !== additionalSets.length) ? (
                 <div className="col-12 mhwc-content">
                     <div className="col-12 mhwc-name">
                         <span>{_('additionalSets')}</span>
                     </div>
                     <div className="col-12 mhwc-content">
-                        {Object.keys(currentSetMapping).map((setId) => {
-                            let setInfo = SetDataset.getInfo(setId);
+                        {additionalSets.map((set) => {
+                            let setInfo = SetDataset.getInfo(set.id);
 
                             return (
-                                <div key={setId} className="col-6 mhwc-value">
+                                <div key={set.id} className="col-6 mhwc-value">
                                     <span>
-                                        {`${_(setInfo.name)}`}{currentSetMapping[setId].map((set) => {
-                                            return ` (${set.require})`;
+                                        {`${_(setInfo.name)}`}{setInfo.skills.slice(0, set.step).map((skill) => {
+                                            return ` (${skill.require})`;
                                         })}
                                     </span>
                                     {(-1 === requiredSetIds.indexOf(setInfo.id)) ? (
@@ -339,21 +354,18 @@ const renderBundleItem = (bundle, index, totalIndex, meta, requiredEquipIds, req
                 </div>
             ) : false}
 
-            {(0 !== Object.keys(bundle.skills).length) ? (
+            {(0 !== additionalSkills.length) ? (
                 <div className="col-12 mhwc-content">
                     <div className="col-12 mhwc-name">
                         <span>{_('additionalSkills')}</span>
                     </div>
                     <div className="col-12 mhwc-content">
-                        {Object.keys(bundle.skills).sort((skillIdA, skillIdB) => {
-                            return bundle.skills[skillIdB] - bundle.skills[skillIdA];
-                        }).map((skillId) => {
-                            let skillLevel = bundle.skills[skillId];
-                            let skillInfo = SkillDataset.getInfo(skillId);
+                        {additionalSkills.map((skill) => {
+                            let skillInfo = SkillDataset.getInfo(skill.id);
 
                             return (Helper.isNotEmpty(skillInfo)) ? (
-                                <div key={skillId} className="col-6 mhwc-value">
-                                    <span>{`${_(skillInfo.name)} Lv.${skillLevel}`}</span>
+                                <div key={skill.id} className="col-6 mhwc-value">
+                                    <span>{`${_(skillInfo.name)} Lv.${skill.level}`}</span>
                                     {(-1 === requiredSkillIds.indexOf(skillInfo.id)) ? (
                                         <div className="mhwc-icons_bundle">
                                             <IconButton
@@ -407,20 +419,22 @@ const RequiredConditionBlock = (props) => {
 
             return stateRequiredEquips[equipType].id;
         });
-
         const requiredSkillIds = stateRequiredSkills.map((skill) => {
             return skill.id;
         });
-
         const requiredSetIds = stateRequiredSets.map((set) => {
             return set.id;
         });
 
-        let requiredEquips = data.required.equips;
-        let requiredSets = data.required.sets;
-        let requiredSkills = data.required.skills;
+        const requiredEquips = data.required.equips;
+        const requiredSets = data.required.sets.sort((setA, setB) => {
+            return setB.step - setA.step;
+        });
+        const requiredSkills = data.required.skills.sort((skillA, skillB) => {
+            return skillB.level - skillA.level;
+        });
 
-        let requiredEquipList = Object.keys(requiredEquips).filter((equipType) => {
+        const requiredEquipList = Object.keys(requiredEquips).filter((equipType) => {
             return Helper.isNotEmpty(requiredEquips[equipType])
         });
 
@@ -531,9 +545,7 @@ const RequiredConditionBlock = (props) => {
                         </div>
 
                         <div className="col-12 mhwc-content">
-                            {requiredSkills.sort((skillA, skillB) => {
-                                return skillB.level - skillA.level;
-                            }).map((skill) => {
+                            {requiredSkills.map((skill) => {
                                 let skillInfo = SkillDataset.getInfo(skill.id);
 
                                 return (Helper.isNotEmpty(skillInfo)) ? (
@@ -601,7 +613,7 @@ const BundleList = (props) => {
 
         return data.list.map((bundle, index) => {
             return renderBundleItem(
-                bundle, index, data.list.length, data.meta,
+                bundle, index, data.list.length, data.required,
                 requiredEquipIds, requiredSetIds, requiredSkillIds
             );
         });
@@ -800,6 +812,11 @@ export default function CandidateBundles(props) {
                         altName={_('tab') + ' 3'}
                         isActive={2 === tabIndex}
                         onClick={() => {handleSwitchTempData(2)}} />
+                    <IconTab
+                        iconName={Helper.isNotEmpty(stateTasks[3]) ? 'cog fa-spin' : 'circle-o'}
+                        altName={_('tab') + ' 4'}
+                        isActive={3 === tabIndex}
+                        onClick={() => {handleSwitchTempData(3)}} />
                 </div>
 
                 <div className="mhwc-icons_bundle-right">
@@ -848,10 +865,12 @@ export default function CandidateBundles(props) {
                         </div>
                     </div>
                 ) : (
-                    <Fragment>
-                        <RequiredConditionBlock data={stateComputedResult} />
-                        <BundleList data={stateComputedResult} />
-                    </Fragment>
+                    Helper.isNotEmpty(stateComputedResult) ? (
+                        <Fragment>
+                            <RequiredConditionBlock data={stateComputedResult} />
+                            <BundleList data={stateComputedResult} />
+                        </Fragment>
+                    ) : false
                 )}
             </div>
         </div>

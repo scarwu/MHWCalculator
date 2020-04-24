@@ -79,14 +79,7 @@ const initialState = {
     requiredSkills: Status.get(statusMapping.requiredSkills) || Helper.deepCopy(TestData.requireList[0]).skills,
     currentEquips: Status.get(statusMapping.currentEquips) || Helper.deepCopy(TestData.equipsList[0]),
     algorithmParams: Status.get(statusMapping.algorithmParams) || Helper.deepCopy(Constant.default.algorithmParams),
-    computedResult: Status.get(statusMapping.computedResult) || {
-        required: {
-            equips: {},
-            sets: [],
-            skills: []
-        },
-        list: []
-    },
+    computedResult: Status.get(statusMapping.computedResult) || null,
     reservedBundles: Status.get(statusMapping.reservedBundles) || [],
     customWeapon: Status.get(statusMapping.customWeapon) || Helper.deepCopy(Constant.default.customWeapon)
 };
@@ -149,14 +142,7 @@ export default createStore((state = initialState, action) => {
             case 'candidateBundles':
                 if (Helper.isEmpty(tempData[target].list[index])) {
                     tempData[target].list[index] = {
-                        computedResult: {
-                            required: {
-                                equips: {},
-                                sets: [],
-                                skills: []
-                            },
-                            list: []
-                        }
+                        computedResult: null
                     };
                 }
 

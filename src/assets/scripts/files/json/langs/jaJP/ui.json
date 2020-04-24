@@ -158,6 +158,8 @@
     "type":                     null,
     "enhanceFieldSize":         null,
     "searchCondition":          null,
+    "requiredEquips":           null,
+    "requiredJewels":           null,
     "additionalSets":           null,
     "additionalSkills":         null
 }

@@ -196,14 +196,7 @@ export default {
         Store.dispatch({
             type: 'UPDATE_COMPUTED_RESULT',
             payload: {
-                data: {
-                    required: {
-                        equips: {},
-                        sets: [],
-                        skills: []
-                    },
-                    list: []
-                }
+                data: {}
             }
         });
     },
