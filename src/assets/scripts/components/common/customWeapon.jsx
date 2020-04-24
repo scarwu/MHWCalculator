@@ -291,7 +291,7 @@ export default function CustomWeapon(props) {
                         {isNotRequire ? (
                             <IconButton
                                 iconName="arrow-left" altName={_('include')}
-                                onClick={() => {CommonState.setter.setRequiredEquips(equipType, currentEquip)}} />
+                                onClick={() => {CommonState.setter.setRequiredEquips(equipType, stateCustomWeapon)}} />
                         ) : false}
                         <IconButton
                             iconName="exchange" altName={_('change')}

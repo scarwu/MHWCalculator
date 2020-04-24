@@ -218,13 +218,23 @@ const RequiredConditionBlock = (props) => {
 
                                 if (Helper.isNotEmpty(stateRequiredEquips[equip.type])) {
                                     if ('weapon' === equip.type) {
-                                        isNotRequire = Helper.jsonHash({
-                                            id: equip.id,
-                                            enhances: equip.enhances
-                                        }) !== Helper.jsonHash({
-                                            id: stateRequiredEquips[equip.type].id,
-                                            enhances: stateRequiredEquips[equip.type].enhances
-                                        });
+                                        if ('customWeapon' === equip.id) {
+                                            isNotRequire = Helper.jsonHash({
+                                                customWeapon: equip.customWeapon,
+                                                enhances: equip.enhances
+                                            }) !== Helper.jsonHash({
+                                                customWeapon: stateRequiredEquips[equip.type].customWeapon,
+                                                enhances: stateRequiredEquips[equip.type].enhances
+                                            });
+                                        } else {
+                                            isNotRequire = Helper.jsonHash({
+                                                id: equip.id,
+                                                enhances: equip.enhances
+                                            }) !== Helper.jsonHash({
+                                                id: stateRequiredEquips[equip.type].id,
+                                                enhances: stateRequiredEquips[equip.type].enhances
+                                            });
+                                        }
                                     } else {
                                         isNotRequire = equip.id !== stateRequiredEquips[equip.type].id;
                                     }
@@ -244,7 +254,7 @@ const RequiredConditionBlock = (props) => {
                                                     {isNotRequire ? (
                                                         <IconButton
                                                             iconName="arrow-left" altName={_('include')}
-                                                            onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo)}} />
+                                                            onClick={() => {CommonState.setter.setRequiredEquips(equip.type, equipInfo)}} />
                                                     ) : false}
                                                 </div>
                                             </div>
@@ -495,13 +505,23 @@ const BundleList = (props) => {
 
                                 if (Helper.isNotEmpty(stateRequiredEquips[equip.type])) {
                                     if ('weapon' === equip.type) {
-                                        isNotRequire = Helper.jsonHash({
-                                            id: equip.id,
-                                            enhances: equip.enhances
-                                        }) !== Helper.jsonHash({
-                                            id: stateRequiredEquips[equip.type].id,
-                                            enhances: stateRequiredEquips[equip.type].enhances
-                                        });
+                                        if ('customWeapon' === equip.id) {
+                                            isNotRequire = Helper.jsonHash({
+                                                customWeapon: equip.customWeapon,
+                                                enhances: equip.enhances
+                                            }) !== Helper.jsonHash({
+                                                customWeapon: stateRequiredEquips[equip.type].customWeapon,
+                                                enhances: stateRequiredEquips[equip.type].enhances
+                                            });
+                                        } else {
+                                            isNotRequire = Helper.jsonHash({
+                                                id: equip.id,
+                                                enhances: equip.enhances
+                                            }) !== Helper.jsonHash({
+                                                id: stateRequiredEquips[equip.type].id,
+                                                enhances: stateRequiredEquips[equip.type].enhances
+                                            });
+                                        }
                                     } else {
                                         isNotRequire = equip.id !== stateRequiredEquips[equip.type].id;
                                     }
@@ -521,7 +541,7 @@ const BundleList = (props) => {
                                                     {isNotRequire ? (
                                                         <IconButton
                                                             iconName="arrow-left" altName={_('include')}
-                                                            onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo)}} />
+                                                            onClick={() => {CommonState.setter.setRequiredEquips(equip.type, equipInfo)}} />
                                                     ) : false}
                                                 </div>
                                             </div>

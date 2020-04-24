@@ -509,10 +509,12 @@ export default createStore((state = initialState, action) => {
 
                     if (Helper.isNotEmpty(action.payload.currentEquip.enhances)) {
                         requiredEquips[action.payload.equipType].enhances = action.payload.currentEquip.enhances;
+                    } else {
+                        requiredEquips[action.payload.equipType].enhances = [];
                     }
 
                     if ('customWeapon' === action.payload.currentEquip.id) {
-                        requiredEquips[action.payload.equipType].customWeapon = Helper.deepCopy(state.customWeapon);
+                        requiredEquips[action.payload.equipType].customWeapon = action.payload.currentEquip;
                     }
                 }
 
