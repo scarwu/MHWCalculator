@@ -142,281 +142,6 @@ const handleSwitchTempData = (index) => {
 };
 
 /**
- * Render Functions
- */
-const renderBundleItem = (bundle, currentIndex, totalIndex, required, requiredEquips, requiredSets, requiredSkills) => {
-
-    // Current Required Sets & Skills
-    const currentRequiredSetIds = required.sets.map((set) => {
-        return set.id;
-    });
-    const currentRequiredSkillIds = required.skills.map((skill) => {
-        return skill.id;
-    });
-
-    // Required Equips, Skills & Sets
-    const requiredEquipIds = Object.keys(requiredEquips).map((equipType) => {
-        if (Helper.isEmpty(requiredEquips[equipType])) {
-            return false;
-        }
-
-        return requiredEquips[equipType].id;
-    });
-    const requiredSetIds = requiredSets.map((set) => {
-        return set.id;
-    });
-    const requiredSkillIds = requiredSkills.map((skill) => {
-        return skill.id;
-    });
-
-    // Additional Sets & Skills
-    const additionalSets = Object.keys(bundle.sets).map((setId) => {
-        let setInfo = SetDataset.getInfo(setId);
-
-        if (Helper.isEmpty(setInfo)) {
-            return false;
-        }
-
-        let setStep = setInfo.skills.filter((skill) => {
-            return skill.require <= bundle.sets[setId];
-        }).length;
-
-        return {
-            id: setId,
-            step: setStep
-        };
-    }).filter((set) => {
-        if (false === set) {
-            return false;
-        }
-
-        if (-1 !== currentRequiredSetIds.indexOf(set.id)) {
-            return false;
-        }
-
-        if (0 === set.step) {
-            return false;
-        }
-
-        return true;
-    }).sort((setA, setB) => {
-        return setB.step - setA.step;
-    });
-
-    const additionalSkills = Object.keys(bundle.skills).map((skillId) => {
-        return {
-            id: skillId,
-            level: bundle.skills[skillId]
-        };
-    }).filter((skill) => {
-        return -1 === currentRequiredSkillIds.indexOf(skill.id);
-    }).sort((skillA, skillB) => {
-        return skillB.level - skillA.level;
-    });
-
-    return (
-        <div key={bundle.hash} className="mhwc-item mhwc-item-3-step">
-            <div className="col-12 mhwc-name">
-                <span>{_('bundle')}: {currentIndex + 1} / {totalIndex}</span>
-                <div className="mhwc-icons_bundle">
-                    <IconButton
-                        iconName="check" altName={_('equip')}
-                        onClick={() => {handleBundlePickUp(bundle, required)}} />
-                </div>
-            </div>
-
-            {Helper.isNotEmpty(bundle.sortedBy) ? (
-                <div className="col-12 mhwc-content">
-                    <div className="col-4 mhwc-name">
-                        <span>{_(bundle.sortedBy.key + 'Sort')}</span>
-                    </div>
-                    <div className="col-8 mhwc-value">
-                        <span>{bundle.sortedBy.value}</span>
-                    </div>
-                </div>
-            ) : false}
-
-            <div className="col-12 mhwc-content">
-                <div className="col-12 mhwc-name">
-                    <span>{_('requiredEquips')}</span>
-                </div>
-                <div className="col-12 mhwc-content">
-                    {Object.keys(bundle.equips).map((equipType, index) => {
-                        if (Helper.isEmpty(bundle.equips[equipType])) {
-                            return false;
-                        }
-
-                        let isNotRequire = true;
-
-                        if (Helper.isNotEmpty(requiredEquips[equipType])) {
-                            if ('weapon' === equipType) {
-                                isNotRequire = Helper.jsonHash({
-                                    id: bundle.equips[equipType].id,
-                                    enhances: bundle.equips[equipType].enhances
-                                }) !== Helper.jsonHash({
-                                    id: requiredEquips[equipType].id,
-                                    enhances: requiredEquips[equipType].enhances
-                                });
-                            } else {
-                                isNotRequire = bundle.equips[equipType].id !== requiredEquips[equipType].id;
-                            }
-                        }
-
-                        let equipInfo = null;
-
-                        if ('weapon' === equipType) {
-                            if ('customWeapon' === bundle.equips[equipType]) {
-                                equipInfo = required.equips.weapon.customWeapon;
-
-                                return Helper.isNotEmpty(equipInfo) ? (
-                                    <div key={equipType} className="col-6 mhwc-value">
-                                        <span>{_(equipInfo.name)}: {_(equipInfo.type)}</span>
-
-                                        <div className="mhwc-icons_bundle">
-                                            {isNotRequire ? (
-                                                <IconButton
-                                                    iconName="arrow-left" altName={_('include')}
-                                                    onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo)}} />
-                                            ) : false}
-                                        </div>
-                                    </div>
-                                ) : false;
-                            }
-
-                            equipInfo = WeaponDataset.getInfo(bundle.equips[equipType]);
-                        } else if ('helm' === equipType
-                            || 'chest' === equipType
-                            || 'arm' === equipType
-                            || 'waist' === equipType
-                            || 'leg' === equipType
-                        ) {
-                            equipInfo = ArmorDataset.getInfo(bundle.equips[equipType]);
-                        } else if ('charm' === equipType) {
-                            equipInfo = CharmDataset.getInfo(bundle.equips[equipType]);
-                        }
-
-                        return Helper.isNotEmpty(equipInfo) ? (
-                            <div key={equipType} className="col-6 mhwc-value">
-                                <span>{_(equipInfo.name)}</span>
-
-                                <div className="mhwc-icons_bundle">
-                                    {isNotRequire ? (
-                                        <IconButton
-                                            iconName="arrow-left" altName={_('include')}
-                                            onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo)}} />
-                                    ) : false}
-                                </div>
-                            </div>
-                        ) : false;
-                    })}
-                </div>
-            </div>
-
-            {(0 !== Object.keys(bundle.jewels).length) ? (
-                <div className="col-12 mhwc-content">
-                    <div className="col-12 mhwc-name">
-                        <span>{_('requiredJewels')}</span>
-                    </div>
-                    <div className="col-12 mhwc-content">
-                        {Object.keys(bundle.jewels).sort((jewelIdA, jewelIdB) => {
-                            return bundle.jewels[jewelIdB] - bundle.jewels[jewelIdA];
-                        }).map((jewelId) => {
-                            let jewelCount = bundle.jewels[jewelId];
-                            let jewelInfo = JewelDataset.getInfo(jewelId);
-
-                            return (Helper.isNotEmpty(jewelInfo)) ? (
-                                <div key={jewelId} className="col-4 mhwc-value">
-                                    <span>{`[${jewelInfo.size}] ${_(jewelInfo.name)} x ${jewelCount}`}</span>
-                                </div>
-                            ) : false;
-                        })}
-                    </div>
-                </div>
-            ) : false}
-
-            {(0 < bundle.meta.remainingSlotCount.all) ? (
-                <div className="col-12 mhwc-content">
-                    <div className="col-12 mhwc-name">
-                        <span>{_('remainingSlot')}</span>
-                    </div>
-                    <div className="col-12 mhwc-content">
-                        {Object.keys(bundle.meta.remainingSlotCount).map((slotSize) => {
-                            if ('all' === slotSize) {
-                                return;
-                            }
-
-                            let slotCount = bundle.meta.remainingSlotCount[slotSize];
-
-                            return (slotCount > 0) ? (
-                                <div key={slotSize} className="col-4 mhwc-value">
-                                    <span>{`[${slotSize}] x ${slotCount}`}</span>
-                                </div>
-                            ) : false;
-                        })}
-                    </div>
-                </div>
-            ) : false}
-
-            {(0 !== additionalSets.length) ? (
-                <div className="col-12 mhwc-content">
-                    <div className="col-12 mhwc-name">
-                        <span>{_('additionalSets')}</span>
-                    </div>
-                    <div className="col-12 mhwc-content">
-                        {additionalSets.map((set) => {
-                            let setInfo = SetDataset.getInfo(set.id);
-
-                            return (
-                                <div key={set.id} className="col-6 mhwc-value">
-                                    <span>
-                                        {`${_(setInfo.name)}`}{setInfo.skills.slice(0, set.step).map((skill) => {
-                                            return ` (${skill.require})`;
-                                        })}
-                                    </span>
-                                    {(-1 === requiredSetIds.indexOf(setInfo.id)) ? (
-                                        <div className="mhwc-icons_bundle">
-                                            <IconButton
-                                                iconName="arrow-left" altName={_('include')}
-                                                onClick={() => {CommonState.setter.addRequiredSet(setInfo.id)}} />
-                                        </div>
-                                    ) : false}
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            ) : false}
-
-            {(0 !== additionalSkills.length) ? (
-                <div className="col-12 mhwc-content">
-                    <div className="col-12 mhwc-name">
-                        <span>{_('additionalSkills')}</span>
-                    </div>
-                    <div className="col-12 mhwc-content">
-                        {additionalSkills.map((skill) => {
-                            let skillInfo = SkillDataset.getInfo(skill.id);
-
-                            return (Helper.isNotEmpty(skillInfo)) ? (
-                                <div key={skill.id} className="col-6 mhwc-value">
-                                    <span>{`${_(skillInfo.name)} Lv.${skill.level}`}</span>
-                                    {(-1 === requiredSkillIds.indexOf(skillInfo.id)) ? (
-                                        <div className="mhwc-icons_bundle">
-                                            <IconButton
-                                                iconName="arrow-left" altName={_('include')}
-                                                onClick={() => {CommonState.setter.addRequiredSkill(skillInfo.id)}} />
-                                        </div>
-                                    ) : false}
-                                </div>
-                            ) : false;
-                        })}
-                    </div>
-                </div>
-            ) : false}
-        </div>
-    );
-};
-
-/**
  * Sub Components
  */
 const RequiredConditionBlock = (props) => {
@@ -445,7 +170,7 @@ const RequiredConditionBlock = (props) => {
     return useMemo(() => {
         Helper.log('Component: CandidateBundles -> RequiredConditionBlock');
 
-        // Required EquipIds, SetIds & SkillIds
+        // Required Ids
         const requiredEquipIds = Object.keys(stateRequiredEquips).map((equipType) => {
             if (Helper.isEmpty(stateRequiredEquips[equipType])) {
                 return false;
@@ -460,18 +185,18 @@ const RequiredConditionBlock = (props) => {
             return skill.id;
         });
 
-        // Required Equips, Sets & Skills
-        const requiredEquips = Object.keys(data.equips).filter((equipType) => {
+        // Current Required
+        const currentRequiredEquips = Object.keys(data.equips).filter((equipType) => {
             return Helper.isNotEmpty(data.equips[equipType])
         }).map((equipType) => {
             return Object.assign({}, data.equips[equipType], {
                 type: equipType
             });
         });
-        const requiredSets = data.sets.sort((setA, setB) => {
+        const currentRequiredSets = data.sets.sort((setA, setB) => {
             return setB.step - setA.step;
         });
-        const requiredSkills = data.skills.sort((skillA, skillB) => {
+        const currentRequiredSkills = data.skills.sort((skillA, skillB) => {
             return skillB.level - skillA.level;
         });
 
@@ -481,14 +206,14 @@ const RequiredConditionBlock = (props) => {
                     <span>{_('searchCondition')}</span>
                 </div>
 
-                {0 !== requiredEquips.length ? (
+                {0 !== currentRequiredEquips.length ? (
                     <div className="col-12 mhwc-content">
                         <div className="col-12 mhwc-name">
                             <span>{_('equip')}</span>
                         </div>
 
                         <div className="col-12 mhwc-content">
-                            {requiredEquips.map((equip) => {
+                            {currentRequiredEquips.map((equip) => {
                                 let isNotRequire = true;
 
                                 if (Helper.isNotEmpty(stateRequiredEquips[equip.type])) {
@@ -556,14 +281,14 @@ const RequiredConditionBlock = (props) => {
                     </div>
                 ) : false}
 
-                {0 !== requiredSets.length ? (
+                {0 !== currentRequiredSets.length ? (
                     <div className="col-12 mhwc-content">
                         <div className="col-12 mhwc-name">
                             <span>{_('set')}</span>
                         </div>
 
                         <div className="col-12 mhwc-content">
-                            {requiredSets.map((set) => {
+                            {currentRequiredSets.map((set) => {
                                 let setInfo = SetDataset.getInfo(set.id);
 
                                 return (
@@ -587,14 +312,14 @@ const RequiredConditionBlock = (props) => {
                     </div>
                 ) : false}
 
-                {0 !== requiredSkills.length ? (
+                {0 !== currentRequiredSkills.length ? (
                     <div className="col-12 mhwc-content">
                         <div className="col-12 mhwc-name">
                             <span>{_('skill')}</span>
                         </div>
 
                         <div className="col-12 mhwc-content">
-                            {requiredSkills.map((skill) => {
+                            {currentRequiredSkills.map((skill) => {
                                 let skillInfo = SkillDataset.getInfo(skill.id);
 
                                 return (Helper.isNotEmpty(skillInfo)) ? (
@@ -644,10 +369,292 @@ const BundleList = (props) => {
     return useMemo(() => {
         Helper.log('Component: CandidateBundles -> BundleList');
 
-        return data.list.map((bundle, index) => {
-            return renderBundleItem(
-                bundle, index, data.list.length, data.required,
-                stateRequiredEquips, stateRequiredSets, stateRequiredSkills
+        // Required Ids
+        const requiredEquipIds = Object.keys(stateRequiredEquips).map((equipType) => {
+            if (Helper.isEmpty(stateRequiredEquips[equipType])) {
+                return false;
+            }
+
+            return stateRequiredEquips[equipType].id;
+        });
+        const requiredSetIds = stateRequiredSets.map((set) => {
+            return set.id;
+        });
+        const requiredSkillIds = stateRequiredSkills.map((skill) => {
+            return skill.id;
+        });
+
+        // Current Required Ids
+        const currentRequiredSetIds = data.required.sets.map((set) => {
+            return set.id;
+        });
+        const currentRequiredSkillIds = data.required.skills.map((skill) => {
+            return skill.id;
+        });
+
+        return data.list.map((bundle, bundleIndex) => {
+
+            // Bundle Equips & Jewels
+            const bundleEquips = Object.keys(bundle.equips).filter((equipType) => {
+                return Helper.isNotEmpty(bundle.equips[equipType])
+            }).map((equipType) => {
+                if ('weapon' === equipType) {
+                    return Object.assign({}, data.required.equips[equipType], {
+                        type: equipType
+                    });
+                }
+
+                return {
+                    id: bundle.equips[equipType],
+                    type: equipType
+                };
+            });
+            const bundleJewels = Object.keys(bundle.jewels).map((jewelId) => {
+                return {
+                    id: jewelId,
+                    count: bundle.jewels[jewelId]
+                };
+            }).sort((setA, setB) => {
+                return setB.step - setA.step;
+            });
+
+            // Additional Sets & Skills
+            const additionalSets = Object.keys(bundle.sets).map((setId) => {
+                let setInfo = SetDataset.getInfo(setId);
+
+                if (Helper.isEmpty(setInfo)) {
+                    return false;
+                }
+
+                let setStep = setInfo.skills.filter((skill) => {
+                    return skill.require <= bundle.sets[setId];
+                }).length;
+
+                return {
+                    id: setId,
+                    step: setStep
+                };
+            }).filter((set) => {
+                if (false === set) {
+                    return false;
+                }
+
+                if (-1 !== currentRequiredSetIds.indexOf(set.id)) {
+                    return false;
+                }
+
+                if (0 === set.step) {
+                    return false;
+                }
+
+                return true;
+            }).sort((setA, setB) => {
+                return setB.step - setA.step;
+            });
+
+            const additionalSkills = Object.keys(bundle.skills).map((skillId) => {
+                return {
+                    id: skillId,
+                    level: bundle.skills[skillId]
+                };
+            }).filter((skill) => {
+                return -1 === currentRequiredSkillIds.indexOf(skill.id);
+            }).sort((skillA, skillB) => {
+                return skillB.level - skillA.level;
+            });
+
+            return (
+                <div key={bundle.hash} className="mhwc-item mhwc-item-3-step">
+                    <div className="col-12 mhwc-name">
+                        <span>{_('bundle')}: {bundleIndex + 1} / {data.list.length}</span>
+                        <div className="mhwc-icons_bundle">
+                            <IconButton
+                                iconName="check" altName={_('equip')}
+                                onClick={() => {handleBundlePickUp(bundle, required)}} />
+                        </div>
+                    </div>
+
+                    {Helper.isNotEmpty(bundle.sortedBy) ? (
+                        <div className="col-12 mhwc-content">
+                            <div className="col-4 mhwc-name">
+                                <span>{_(bundle.sortedBy.key + 'Sort')}</span>
+                            </div>
+                            <div className="col-8 mhwc-value">
+                                <span>{bundle.sortedBy.value}</span>
+                            </div>
+                        </div>
+                    ) : false}
+
+                    <div className="col-12 mhwc-content">
+                        <div className="col-12 mhwc-name">
+                            <span>{_('requiredEquips')}</span>
+                        </div>
+                        <div className="col-12 mhwc-content">
+                            {bundleEquips.map((equip) => {
+                                let isNotRequire = true;
+
+                                if (Helper.isNotEmpty(stateRequiredEquips[equip.type])) {
+                                    if ('weapon' === equip.type) {
+                                        isNotRequire = Helper.jsonHash({
+                                            id: equip.id,
+                                            enhances: equip.enhances
+                                        }) !== Helper.jsonHash({
+                                            id: stateRequiredEquips[equip.type].id,
+                                            enhances: stateRequiredEquips[equip.type].enhances
+                                        });
+                                    } else {
+                                        isNotRequire = equip.id !== stateRequiredEquips[equip.type].id;
+                                    }
+                                }
+
+                                let equipInfo = null;
+
+                                if ('weapon' === equip.type) {
+                                    if ('customWeapon' === equip.id) {
+                                        equipInfo = equip.customWeapon;
+
+                                        return Helper.isNotEmpty(equipInfo) ? (
+                                            <div key={equip.type} className="col-6 mhwc-value">
+                                                <span>{_(equipInfo.name)}: {_(equipInfo.type)}</span>
+
+                                                <div className="mhwc-icons_bundle">
+                                                    {isNotRequire ? (
+                                                        <IconButton
+                                                            iconName="arrow-left" altName={_('include')}
+                                                            onClick={() => {CommonState.setter.setRequiredEquips(equipType, equipInfo)}} />
+                                                    ) : false}
+                                                </div>
+                                            </div>
+                                        ) : false;
+                                    }
+
+                                    equipInfo = WeaponDataset.getInfo(equip.id);
+                                } else if ('helm' === equip.type
+                                    || 'chest' === equip.type
+                                    || 'arm' === equip.type
+                                    || 'waist' === equip.type
+                                    || 'leg' === equip.type
+                                ) {
+                                    equipInfo = ArmorDataset.getInfo(equip.id);
+                                } else if ('charm' === equip.type) {
+                                    equipInfo = CharmDataset.getInfo(equip.id);
+                                }
+
+                                return Helper.isNotEmpty(equipInfo) ? (
+                                    <div key={equip.type} className="col-6 mhwc-value">
+                                        <span>{_(equipInfo.name)}</span>
+
+                                        <div className="mhwc-icons_bundle">
+                                            {isNotRequire ? (
+                                                <IconButton
+                                                    iconName="arrow-left" altName={_('include')}
+                                                    onClick={() => {CommonState.setter.setRequiredEquips(equip.type, equipInfo)}} />
+                                            ) : false}
+                                        </div>
+                                    </div>
+                                ) : false;
+                            })}
+                        </div>
+                    </div>
+
+                    {(0 !== bundleJewels.length) ? (
+                        <div className="col-12 mhwc-content">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('requiredJewels')}</span>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                {bundleJewels.map((jewel) => {
+                                    let jewelInfo = JewelDataset.getInfo(jewel.id);
+
+                                    return (Helper.isNotEmpty(jewelInfo)) ? (
+                                        <div key={jewel.id} className="col-4 mhwc-value">
+                                            <span>{`[${jewelInfo.size}] ${_(jewelInfo.name)} x ${jewel.count}`}</span>
+                                        </div>
+                                    ) : false;
+                                })}
+                            </div>
+                        </div>
+                    ) : false}
+
+                    {(0 !== bundle.meta.remainingSlotCount.all) ? (
+                        <div className="col-12 mhwc-content">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('remainingSlot')}</span>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                {Object.keys(bundle.meta.remainingSlotCount).map((slotSize) => {
+                                    if ('all' === slotSize) {
+                                        return;
+                                    }
+
+                                    let slotCount = bundle.meta.remainingSlotCount[slotSize];
+
+                                    return (slotCount > 0) ? (
+                                        <div key={slotSize} className="col-4 mhwc-value">
+                                            <span>{`[${slotSize}] x ${slotCount}`}</span>
+                                        </div>
+                                    ) : false;
+                                })}
+                            </div>
+                        </div>
+                    ) : false}
+
+                    {(0 !== additionalSets.length) ? (
+                        <div className="col-12 mhwc-content">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('additionalSets')}</span>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                {additionalSets.map((set) => {
+                                    let setInfo = SetDataset.getInfo(set.id);
+
+                                    return (
+                                        <div key={set.id} className="col-6 mhwc-value">
+                                            <span>
+                                                {`${_(setInfo.name)}`}{setInfo.skills.slice(0, set.step).map((skill) => {
+                                                    return ` (${skill.require})`;
+                                                })}
+                                            </span>
+                                            {(-1 === requiredSetIds.indexOf(setInfo.id)) ? (
+                                                <div className="mhwc-icons_bundle">
+                                                    <IconButton
+                                                        iconName="arrow-left" altName={_('include')}
+                                                        onClick={() => {CommonState.setter.addRequiredSet(setInfo.id)}} />
+                                                </div>
+                                            ) : false}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    ) : false}
+
+                    {(0 !== additionalSkills.length) ? (
+                        <div className="col-12 mhwc-content">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('additionalSkills')}</span>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                {additionalSkills.map((skill) => {
+                                    let skillInfo = SkillDataset.getInfo(skill.id);
+
+                                    return (Helper.isNotEmpty(skillInfo)) ? (
+                                        <div key={skill.id} className="col-6 mhwc-value">
+                                            <span>{`${_(skillInfo.name)} Lv.${skill.level}`}</span>
+                                            {(-1 === requiredSkillIds.indexOf(skillInfo.id)) ? (
+                                                <div className="mhwc-icons_bundle">
+                                                    <IconButton
+                                                        iconName="arrow-left" altName={_('include')}
+                                                        onClick={() => {CommonState.setter.addRequiredSkill(skillInfo.id)}} />
+                                                </div>
+                                            ) : false}
+                                        </div>
+                                    ) : false;
+                                })}
+                            </div>
+                        </div>
+                    ) : false}
+                </div>
             );
         });
     }, [data, stateRequiredEquips, stateRequiredSets, stateRequiredSkills]);
