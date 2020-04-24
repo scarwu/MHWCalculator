@@ -15,11 +15,11 @@ import Status from 'core/status';
 import Helper from 'core/helper';
 
 const statusMapping = {
-    changelog:              '2020:2:state:modal:changelog',
-    algorithmSetting:       '2020:2:state:modal:algorithmSetting',
-    bundleItemSelector:     '2020:2:state:modal:bundleItemSelector',
-    conditionItemSelector:  '2020:2:state:modal:conditionItemSelector',
-    equipItemSelector:      '2020:2:state:modal:equipItemSelector'
+    changelog:              'state:modal:0:changelog',
+    algorithmSetting:       'state:modal:0:algorithmSetting',
+    bundleItemSelector:     'state:modal:0:bundleItemSelector',
+    conditionItemSelector:  'state:modal:0:conditionItemSelector',
+    equipItemSelector:      'state:modal:0:equipItemSelector'
 };
 
 // Middleware

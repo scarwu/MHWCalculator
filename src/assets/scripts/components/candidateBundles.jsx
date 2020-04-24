@@ -51,10 +51,6 @@ const handleBundlePickUp = (bundle, required) => {
         4: []
     };
 
-    if (Helper.isNotEmpty(required.equips.weapon.customWeapon)) {
-        CommonState.setter.replaceCustomWeapon(required.equips.weapon.customWeapon);
-    }
-
     Object.keys(bundle.equips).forEach((equipType) => {
         if (Helper.isEmpty(bundle.equips[equipType])) {
             return;
@@ -70,6 +66,10 @@ const handleBundlePickUp = (bundle, required) => {
         let equipInfo = null;
 
         if ('weapon' === equipType) {
+            if (Helper.isNotEmpty(required.equips.weapon.customWeapon)) {
+                CommonState.setter.replaceCustomWeapon(required.equips.weapon.customWeapon);
+            }
+
             if (Helper.isNotEmpty(required.equips.weapon.enhances)) {
                 currentEquips.weapon.enhances = required.equips.weapon.enhances; // Restore Enhance
             }
@@ -169,6 +169,10 @@ const RequiredConditionBlock = (props) => {
 
     return useMemo(() => {
         Helper.log('Component: CandidateBundles -> RequiredConditionBlock');
+
+        if (Helper.isEmpty(data)) {
+            return false;
+        }
 
         // Required Ids
         const requiredEquipIds = Object.keys(stateRequiredEquips).map((equipType) => {
@@ -379,6 +383,13 @@ const BundleList = (props) => {
     return useMemo(() => {
         Helper.log('Component: CandidateBundles -> BundleList');
 
+        if (Helper.isEmpty(data)
+            || Helper.isEmpty(data.required)
+            || Helper.isEmpty(data.list)
+        ) {
+            return false;
+        }
+
         // Required Ids
         const requiredEquipIds = Object.keys(stateRequiredEquips).map((equipType) => {
             if (Helper.isEmpty(stateRequiredEquips[equipType])) {
@@ -480,7 +491,7 @@ const BundleList = (props) => {
                         <div className="mhwc-icons_bundle">
                             <IconButton
                                 iconName="check" altName={_('equip')}
-                                onClick={() => {handleBundlePickUp(bundle, required)}} />
+                                onClick={() => {handleBundlePickUp(bundle, data.required)}} />
                         </div>
                     </div>
 

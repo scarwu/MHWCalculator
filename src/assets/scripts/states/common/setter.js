@@ -196,7 +196,7 @@ export default {
         Store.dispatch({
             type: 'UPDATE_COMPUTED_RESULT',
             payload: {
-                data: {}
+                data: null
             }
         });
     },
