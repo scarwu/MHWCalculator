@@ -207,7 +207,7 @@ const RequiredConditionBlock = (props) => {
         return (
             <div className="mhwc-item mhwc-item-3-step">
                 <div className="col-12 mhwc-name">
-                    <span>{_('searchCondition')}</span>
+                    <span>{_('conditions')}</span>
                 </div>
 
                 {0 !== currentRequiredEquips.length ? (
@@ -388,6 +388,16 @@ const BundleList = (props) => {
             || Helper.isEmpty(data.list)
         ) {
             return false;
+        }
+
+        if (0 === data.list.length) {
+            return (
+                <div className="mhwc-item mhwc-item-3-step">
+                    <div className="col-12 mhwc-name">
+                        <span>{_('noResult')}</span>
+                    </div>
+                </div>
+            );
         }
 
         // Required Ids
@@ -820,6 +830,12 @@ export default function CandidateBundles(props) {
         let requiredSets = CommonState.getter.getRequiredSets();
         let requiredSkills = CommonState.getter.getRequiredSkills();
         let algorithmParams = CommonState.getter.getAlgorithmParams();
+
+        if (0 === requiredSets.length
+            && 0 === requiredSkills.length
+        ) {
+            return;
+        }
 
         stateTasks[tabIndex] = {
             bundleCount: 0,

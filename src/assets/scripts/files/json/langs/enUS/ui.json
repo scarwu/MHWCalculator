@@ -157,9 +157,10 @@
     "purple":                   "Purple",
     "type":                     "Type",
     "enhanceFieldSize":         "Enhance Fields",
-    "searchCondition":          "Search Condition",
+    "conditions":               "Conditions",
     "requiredEquips":           "Required Equips",
     "requiredJewels":           "Required Jewels",
     "additionalSets":           "Additional Sets",
-    "additionalSkills":         "Additional Skills"
+    "additionalSkills":         "Additional Skills",
+    "noResult":                 "No Result"
 }

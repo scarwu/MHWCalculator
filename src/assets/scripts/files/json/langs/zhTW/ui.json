@@ -157,9 +157,10 @@
     "purple":                   "紫",
     "type":                     "類型",
     "enhanceFieldSize":         "強化欄數量",
-    "searchCondition":          "搜尋條件",
+    "conditions":               "設定條件",
     "requiredEquips":           "需求裝備",
     "requiredJewels":           "需求裝飾珠",
     "additionalSets":           "額外套裝",
-    "additionalSkills":         "額外技能"
+    "additionalSkills":         "額外技能",
+    "noResult":                 "沒有相關結果"
 }

@@ -157,9 +157,10 @@
     "purple":                   null,
     "type":                     null,
     "enhanceFieldSize":         null,
-    "searchCondition":          null,
+    "conditions":               null,
     "requiredEquips":           null,
     "requiredJewels":           null,
     "additionalSets":           null,
-    "additionalSkills":         null
+    "additionalSkills":         null,
+    "noResult":                 null
 }
