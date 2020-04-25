@@ -17,7 +17,7 @@ export default function IconTab(props) {
     const {iconName, altName, isActive, onClick} = props;
 
     return useMemo(() => {
-        Helper.log('Component: Common -> IconTab');
+        Helper.debug('Component: Common -> IconTab');
 
         let className = [
             'mhwc-body'

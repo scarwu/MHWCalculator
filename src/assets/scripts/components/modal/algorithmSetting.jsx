@@ -62,8 +62,8 @@ const getOrderList = () => {
     ];
 }
 
-const armorRareList = [5, 6, 7, 8, 9, 10, 11, 12];
-const jewelSizeList = [1, 2, 3, 4];
+const armorRareList = [ 5, 6, 7, 8, 9, 10, 11, 12 ];
+const jewelSizeList = [ 1, 2, 3, 4 ];
 
 /**
  * Handler Functions

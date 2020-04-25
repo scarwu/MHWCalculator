@@ -144,6 +144,171 @@ const handleSwitchTempData = (index) => {
 /**
  * Sub Components
  */
+const QuickSetting = (props) => {
+    const {data} = props;
+
+    /**
+     * Hooks
+     */
+    const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonState.getter.getAlgorithmParams());
+    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
+    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
+
+    // Like Did Mount & Will Unmount Cycle
+    useEffect(() => {
+        const unsubscribe = CommonState.store.subscribe(() => {
+            updateAlgorithmParams(CommonState.getter.getAlgorithmParams());
+            updateRequiredEquips(CommonState.getter.getRequiredEquips());
+            updateRequiredSkills(CommonState.getter.getRequiredSkills());
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    }, []);
+
+    return useMemo(() => {
+        Helper.debug('Component: CandidateBundles -> QuickSetting');
+
+        const equipTypes = Object.keys(stateRequiredEquips).filter((equipType) => {
+            if ('weapon' === equipType) {
+                return false;
+            }
+
+            return Helper.isEmpty(stateRequiredEquips[equipType]);
+        });
+        const skillIds = stateRequiredSkills.map((skill) => {
+            return skill.id;
+        });
+
+        let armorSeriesIds = {};
+        let charmSeriesIds = {};
+        let jewelIds = {};
+
+        skillIds.forEach((skillId) => {
+            equipTypes.forEach((equipType) => {
+                let equipInfos = null;
+
+                if ('helm' === equipType
+                    || 'chest' === equipType
+                    || 'arm' === equipType
+                    || 'waist' === equipType
+                    || 'leg' === equipType
+                ) {
+                    ArmorDataset.typeIs(equipType).hasSkill(skillId).getItems().forEach((equipInfo) => {
+                        if (false === stateAlgorithmParams.usingFactor.armor['rare' + equipInfo.rare]) {
+                            return;
+                        }
+
+                        if (Helper.isNotEmpty(stateAlgorithmParams.usingFactor.armor[equipInfo.seriesId])
+                            && false === stateAlgorithmParams.usingFactor.armor[equipInfo.seriesId]
+                        ) {
+                            return;
+                        }
+
+                        armorSeriesIds[equipInfo.seriesId] = true;
+                    });
+                }
+
+                if ('charm' === equipType) {
+                    CharmDataset.hasSkill(skillId).getItems().forEach((equipInfo) => {
+                        charmSeriesIds[equipInfo.seriesId] = true;
+                    });
+                }
+            });
+
+            JewelDataset.hasSkill(skillId).getItems().forEach((jewelInfo) => {
+                let isConsistent = true;
+
+                jewelInfo.skills.forEach((skill) => {
+                    if (false === isConsistent) {
+                        return;
+                    }
+
+                    // If Skill not match condition then skip
+                    if (-1 === skillIds.indexOf(skill.id)) {
+                        isConsistent = false;
+
+                        return;
+                    }
+                });
+
+                if (false === isConsistent) {
+                    return;
+                }
+
+                jewelIds[jewelInfo.id] = true;
+            });
+        });
+
+        armorSeriesIds = Object.keys(armorSeriesIds);
+        charmSeriesIds = Object.keys(charmSeriesIds);
+        jewelIds = Object.keys(jewelIds);
+
+        return (
+            <div className="mhwc-item mhwc-item-3-step">
+                <div className="col-12 mhwc-name">
+                    <span>{_('conditions')}</span>
+                </div>
+
+                {0 !== armorSeriesIds.length ? (
+                    <div className="col-12 mhwc-content">
+                        <div className="col-12 mhwc-name">
+                            <span>{_('armor')}</span>
+                        </div>
+
+                        <div className="col-12 mhwc-content">
+                            {armorSeriesIds.map((seriesId) => {
+                                return (
+                                    <div key={seriesId} className="col-6 mhwc-value">
+                                        <span>{_(seriesId)}</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                ) : false}
+
+                {0 !== charmSeriesIds.length ? (
+                    <div className="col-12 mhwc-content">
+                        <div className="col-12 mhwc-name">
+                            <span>{_('charm')}</span>
+                        </div>
+
+                        <div className="col-12 mhwc-content">
+                            {charmSeriesIds.map((seriesId) => {
+                                return (
+                                    <div key={seriesId} className="col-6 mhwc-value">
+                                        <span>{_(seriesId)}</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                ) : false}
+
+                {0 !== jewelIds.length ? (
+                    <div className="col-12 mhwc-content">
+                        <div className="col-12 mhwc-name">
+                            <span>{_('jewel')}</span>
+                        </div>
+
+                        <div className="col-12 mhwc-content">
+                            {jewelIds.map((jewelId) => {
+                                return (
+                                    <div key={jewelId} className="col-6 mhwc-value">
+                                        <span>{_(jewelId)}</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                ) : false}
+            </div>
+        );
+    }, [data, stateAlgorithmParams, stateRequiredEquips, stateRequiredSkills]);
+};
+
 const RequiredConditionBlock = (props) => {
     const {data} = props;
 
@@ -158,8 +323,8 @@ const RequiredConditionBlock = (props) => {
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
             updateRequiredEquips(CommonState.getter.getRequiredEquips());
-            updateRequiredSkills(CommonState.getter.getRequiredSkills());
             updateRequiredSets(CommonState.getter.getRequiredSets());
+            updateRequiredSkills(CommonState.getter.getRequiredSkills());
         });
 
         return () => {
@@ -168,7 +333,7 @@ const RequiredConditionBlock = (props) => {
     }, []);
 
     return useMemo(() => {
-        Helper.log('Component: CandidateBundles -> RequiredConditionBlock');
+        Helper.debug('Component: CandidateBundles -> RequiredConditionBlock');
 
         if (Helper.isEmpty(data)) {
             return false;
@@ -371,8 +536,8 @@ const BundleList = (props) => {
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
             updateRequiredEquips(CommonState.getter.getRequiredEquips());
-            updateRequiredSkills(CommonState.getter.getRequiredSkills());
             updateRequiredSets(CommonState.getter.getRequiredSets());
+            updateRequiredSkills(CommonState.getter.getRequiredSkills());
         });
 
         return () => {
@@ -381,7 +546,7 @@ const BundleList = (props) => {
     }, []);
 
     return useMemo(() => {
-        Helper.log('Component: CandidateBundles -> BundleList');
+        Helper.debug('Component: CandidateBundles -> BundleList');
 
         if (Helper.isEmpty(data)
             || Helper.isEmpty(data.required)
@@ -960,12 +1125,14 @@ export default function CandidateBundles(props) {
                         <RequiredConditionBlock data={stateTasks[tabIndex].required} />
                     </Fragment>
                 ) : (
-                    Helper.isNotEmpty(stateComputedResult) ? (
+                    Helper.isEmpty(stateComputedResult) ? (
+                        <QuickSetting />
+                    ) : (
                         <Fragment>
                             <RequiredConditionBlock data={stateComputedResult.required} />
                             <BundleList data={stateComputedResult} />
                         </Fragment>
-                    ) : false
+                    )
                 )}
             </div>
         </div>

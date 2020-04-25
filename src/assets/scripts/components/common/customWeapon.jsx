@@ -255,7 +255,7 @@ export default function CustomWeapon(props) {
     }, []);
 
     return useMemo(() => {
-        Helper.log('Component: Common -> SharpnessBar');
+        Helper.debug('Component: Common -> SharpnessBar');
 
         let equipType = 'weapon';
         let currentEquip = stateCurrentEquips[equipType];

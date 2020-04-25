@@ -17,7 +17,7 @@ export default function BasicSelector(props) {
     const {defaultValue, options, onChange} = props;
 
     return useMemo(() => {
-        Helper.log('Component: Common -> BasicSelector');
+        Helper.debug('Component: Common -> BasicSelector');
 
         return (
             <div className="mhwc-basic_selector">

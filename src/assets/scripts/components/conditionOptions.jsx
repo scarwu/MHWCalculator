@@ -237,7 +237,7 @@ const EquipList = (props) => {
     }, []);
 
     return useMemo(() => {
-        Helper.log('Component: ConditionOptions -> EquipList');
+        Helper.debug('Component: ConditionOptions -> EquipList');
 
         if (Helper.isEmpty(stateRequiredEquips)) {
             return false;
@@ -268,7 +268,7 @@ const SetList = (props) => {
     }, []);
 
     return useMemo(() => {
-        Helper.log('Component: ConditionOptions -> SetList');
+        Helper.debug('Component: ConditionOptions -> SetList');
 
         return stateRequiredSets.map(renderSetItem);
     }, [stateRequiredSets]);
@@ -295,7 +295,7 @@ const SkillList = (props) => {
     }, []);
 
     return useMemo(() => {
-        Helper.log('Component: ConditionOptions -> SkillList');
+        Helper.debug('Component: ConditionOptions -> SkillList');
 
         let enableSkillIdList = [];
 

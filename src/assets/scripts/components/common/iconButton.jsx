@@ -17,7 +17,7 @@ export default function IconButton(props) {
     const {iconName, altName, onClick} = props;
 
     return useMemo(() => {
-        Helper.log('Component: Common -> IconButton');
+        Helper.debug('Component: Common -> IconButton');
 
         return (
             <div className="mhwc-icon_button">

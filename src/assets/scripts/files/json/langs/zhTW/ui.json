@@ -50,6 +50,7 @@
     "sleep":                    "睡眠",
     "blast":                    "爆破",
     "weapon":                   "武器",
+    "armor":                    "裝甲",
     "helm":                     "頭",
     "chest":                    "身",
     "arm":                      "手",
@@ -162,5 +163,6 @@
     "requiredJewels":           "需求裝飾珠",
     "additionalSets":           "額外套裝",
     "additionalSkills":         "額外技能",
-    "noResult":                 "沒有相關結果"
+    "noResult":                 "沒有相關結果",
+    "quickSetting":             "快速設定"
 }

@@ -17,7 +17,7 @@ export default function IconSelector(props) {
     const {iconName, defaultValue, options, onChange} = props;
 
     return useMemo(() => {
-        Helper.log('Component: Common -> IconSelector');
+        Helper.debug('Component: Common -> IconSelector');
 
         return (
             <div className="mhwc-icon_selector">

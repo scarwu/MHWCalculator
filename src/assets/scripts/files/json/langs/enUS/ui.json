@@ -50,6 +50,7 @@
     "sleep":                    "Sleep",
     "blast":                    "Blast",
     "weapon":                   "Weapon",
+    "armor":                    "Armor",
     "helm":                     "Helm",
     "chest":                    "Chest",
     "arm":                      "Arm",
@@ -162,5 +163,6 @@
     "requiredJewels":           "Required Jewels",
     "additionalSets":           "Additional Sets",
     "additionalSkills":         "Additional Skills",
-    "noResult":                 "No Result"
+    "noResult":                 "No Result",
+    "quickSetting":             "Quick Setting"
 }

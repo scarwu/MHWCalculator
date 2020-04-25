@@ -17,7 +17,7 @@ export default function BasicInput(props) {
     const {defaultValue, placeholder, onChange, bypassRef} = props;
 
     return useMemo(() => {
-        Helper.log('Component: Common -> BasicInput');
+        Helper.debug('Component: Common -> BasicInput');
 
         return (
             <div className="mhwc-basic_input">

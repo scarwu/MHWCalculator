@@ -50,6 +50,7 @@
     "sleep":                    "睡眠",
     "blast":                    "爆破",
     "weapon":                   "武器",
+    "armor":                    "鎧",
     "helm":                     "頭",
     "chest":                    "胴",
     "arm":                      "腕",
@@ -162,5 +163,6 @@
     "requiredJewels":           null,
     "additionalSets":           null,
     "additionalSkills":         null,
-    "noResult":                 null
+    "noResult":                 null,
+    "quickSetting":             null
 }

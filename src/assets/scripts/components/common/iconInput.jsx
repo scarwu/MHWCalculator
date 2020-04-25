@@ -17,7 +17,7 @@ export default function IconInput(props) {
     const {iconName, defaultValue, placeholder, onChange} = props;
 
     return useMemo(() => {
-        Helper.log('Component: Common -> IconInput');
+        Helper.debug('Component: Common -> IconInput');
 
         return (
             <div className="mhwc-icon_input">
