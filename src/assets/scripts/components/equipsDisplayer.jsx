@@ -22,10 +22,10 @@ import SkillDataset from 'libraries/dataset/skill';
 import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
+import CustomWeapon from 'components/sub/equipsDisplayer/customWeapon';
 import IconButton from 'components/common/iconButton';
 import IconTab from 'components/common/iconTab';
 import SharpnessBar from 'components/common/sharpnessBar';
-import CustomWeapon from 'components/common/customWeapon';
 
 // Load State Control
 import CommonState from 'states/common';

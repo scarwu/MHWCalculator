@@ -102,8 +102,8 @@ const renderArmorFactors = (armorFactor, stateSegment) => {
 
         let seriesMapping = {};
 
-        ArmorDataset.rareIs(rare).getItems().filter((info) => {
-            let text = _(info.series);
+        ArmorDataset.rareIs(rare).getItems().filter((armorInfo) => {
+            let text = _(armorInfo.series);
 
             if (Helper.isNotEmpty(stateSegment)
                 && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
@@ -112,9 +112,9 @@ const renderArmorFactors = (armorFactor, stateSegment) => {
             }
 
             return true;
-        }).forEach((info) => {
-            seriesMapping[info.seriesId] = {
-                series: info.series
+        }).forEach((armorInfo) => {
+            seriesMapping[armorInfo.seriesId] = {
+                series: armorInfo.series
             };
         });
 
@@ -170,8 +170,8 @@ const renderArmorFactors = (armorFactor, stateSegment) => {
 const renderCharmFactors = (charmFactor, stateSegment) => {
     let seriesMapping = {};
 
-    CharmDataset.getItems().filter((info) => {
-        let text = _(info.series);
+    CharmDataset.getItems().filter((charmInfo) => {
+        let text = _(charmInfo.series);
 
         if (Helper.isNotEmpty(stateSegment)
             && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
@@ -180,17 +180,17 @@ const renderCharmFactors = (charmFactor, stateSegment) => {
         }
 
         return true;
-    }).forEach((info) => {
-        if (Helper.isEmpty(seriesMapping[info.seriesId])) {
-            seriesMapping[info.seriesId] = {
-                series: info.series,
+    }).forEach((charmInfo) => {
+        if (Helper.isEmpty(seriesMapping[charmInfo.seriesId])) {
+            seriesMapping[charmInfo.seriesId] = {
+                series: charmInfo.series,
                 min: 1,
                 max: 1
             };
         }
 
-        if (seriesMapping[info.seriesId].max < info.level) {
-            seriesMapping[info.seriesId].max = info.level;
+        if (seriesMapping[charmInfo.seriesId].max < charmInfo.level) {
+            seriesMapping[charmInfo.seriesId].max = charmInfo.level;
         }
     });
 
@@ -253,8 +253,8 @@ const renderJewelFactors = (jewelFactor, stateSegment) => {
 
         let jewelMapping = {};
 
-        JewelDataset.sizeIs(size).getItems().filter((info) => {
-            let text = _(info.name);
+        JewelDataset.sizeIs(size).getItems().filter((jewelInfo) => {
+            let text = _(jewelInfo.name);
 
             if (Helper.isNotEmpty(stateSegment)
                 && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
@@ -263,22 +263,22 @@ const renderJewelFactors = (jewelFactor, stateSegment) => {
             }
 
             return true;
-        }).forEach((info) => {
-            if (Helper.isEmpty(jewelMapping[info.id])) {
-                jewelMapping[info.id] = {
-                    name: info.name,
+        }).forEach((jewelInfo) => {
+            if (Helper.isEmpty(jewelMapping[jewelInfo.id])) {
+                jewelMapping[jewelInfo.id] = {
+                    name: jewelInfo.name,
                     min: 1,
                     max: 1
                 };
             }
 
-            info.skills.forEach((skill) => {
+            jewelInfo.skills.forEach((skill) => {
                 let skillInfo = SkillDataset.getInfo(skill.id);
 
-                if (jewelMapping[info.id].max < skillInfo.list.length) {
-                    jewelMapping[info.id].max = skillInfo.list.length;
+                if (jewelMapping[jewelInfo.id].max < skillInfo.list.length) {
+                    jewelMapping[jewelInfo.id].max = skillInfo.list.length;
                 }
-            })
+            });
         });
 
         let jewelIds = Object.keys(jewelMapping).sort((jewelIdA, jewelIdB) => {

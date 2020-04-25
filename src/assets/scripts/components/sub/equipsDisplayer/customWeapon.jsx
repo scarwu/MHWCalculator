@@ -1,5 +1,5 @@
 /**
- * Custom Weapon
+ * Equips Dispayler: Custom Weapon
  *
  * @package     MHW Calculator
  * @author      Scar Wu
@@ -255,7 +255,7 @@ export default function CustomWeapon(props) {
     }, []);
 
     return useMemo(() => {
-        Helper.debug('Component: Common -> SharpnessBar');
+        Helper.debug('Component: EquipsDisplayer -> CustomWeapon');
 
         let equipType = 'weapon';
         let currentEquip = stateCurrentEquips[equipType];
