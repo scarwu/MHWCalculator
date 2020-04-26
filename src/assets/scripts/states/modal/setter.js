@@ -39,7 +39,8 @@ export default {
         Store.dispatch({
             type: 'UPDATE_ALGORITHM_SETTING',
             payload: {
-                isShow: false
+                isShow: false,
+                bypassData: null
             }
         });
     },

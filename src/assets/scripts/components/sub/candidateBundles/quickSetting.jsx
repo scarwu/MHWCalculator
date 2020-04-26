@@ -55,6 +55,11 @@ export default function QuickSetting(props) {
     return useMemo(() => {
         Helper.debug('Component: CandidateBundles -> QuickFactorSetting');
 
+        let armorSeriesMapping = {};
+        let charmSeriesMapping = {};
+        let jewelMapping = {};
+        let skillLevelMapping = {};
+
         const equipTypes = Object.keys(stateRequiredEquips).filter((equipType) => {
             if ('weapon' === equipType) {
                 return false;
@@ -63,12 +68,10 @@ export default function QuickSetting(props) {
             return Helper.isEmpty(stateRequiredEquips[equipType]);
         });
         const skillIds = stateRequiredSkills.map((skill) => {
+            skillLevelMapping[skill.id] = skill.level;
+
             return skill.id;
         });
-
-        let armorSeriesMapping = {};
-        let charmSeriesMapping = {};
-        let jewelMapping = {};
 
         skillIds.forEach((skillId) => {
             equipTypes.forEach((equipType) => {
@@ -83,7 +86,29 @@ export default function QuickSetting(props) {
                             return;
                         }
 
-                        armorSeriesMapping[armorInfo.seriesId] = {
+                        let isSkip = false;
+
+                        armorInfo.skills.forEach((skill) => {
+                            if (true === isSkip) {
+                                return;
+                            }
+
+                            if (0 === skillLevelMapping[skill.id]) {
+                                isSkip = true;
+
+                                return;
+                            }
+                        });
+
+                        if (true === isSkip) {
+                            return;
+                        }
+
+                        if (Helper.isEmpty(armorSeriesMapping[armorInfo.rare])) {
+                            armorSeriesMapping[armorInfo.rare] = {};
+                        }
+
+                        armorSeriesMapping[armorInfo.rare][armorInfo.seriesId] = {
                             name: armorInfo.series
                         };
                     });
@@ -91,6 +116,24 @@ export default function QuickSetting(props) {
 
                 if ('charm' === equipType) {
                     CharmDataset.hasSkill(skillId).getItems().forEach((charmInfo) => {
+                        let isSkip = false;
+
+                        charmInfo.skills.forEach((skill) => {
+                            if (true === isSkip) {
+                                return;
+                            }
+
+                            if (0 === skillLevelMapping[skill.id]) {
+                                isSkip = true;
+
+                                return;
+                            }
+                        });
+
+                        if (true === isSkip) {
+                            return;
+                        }
+
                         if (Helper.isEmpty(charmSeriesMapping[charmInfo.seriesId])) {
                             charmSeriesMapping[charmInfo.seriesId] = {
                                 series: charmInfo.series,
@@ -107,27 +150,37 @@ export default function QuickSetting(props) {
             });
 
             JewelDataset.hasSkill(skillId).getItems().forEach((jewelInfo) => {
-                let isConsistent = true;
+                let isSkip = false;
 
                 jewelInfo.skills.forEach((skill) => {
-                    if (false === isConsistent) {
+                    if (true === isSkip) {
                         return;
                     }
 
                     // If Skill not match condition then skip
                     if (-1 === skillIds.indexOf(skill.id)) {
-                        isConsistent = false;
+                        isSkip = true;
+
+                        return;
+                    }
+
+                    if (0 === skillLevelMapping[skill.id]) {
+                        isSkip = true;
 
                         return;
                     }
                 });
 
-                if (false === isConsistent) {
+                if (true === isSkip) {
                     return;
                 }
 
-                if (Helper.isEmpty(jewelMapping[jewelInfo.id])) {
-                    jewelMapping[jewelInfo.id] = {
+                if (Helper.isEmpty(jewelMapping[jewelInfo.size])) {
+                    jewelMapping[jewelInfo.size] = {};
+                }
+
+                if (Helper.isEmpty(jewelMapping[jewelInfo.size][jewelInfo.id])) {
+                    jewelMapping[jewelInfo.size][jewelInfo.id] = {
                         name: jewelInfo.name,
                         min: 1,
                         max: 1
@@ -137,8 +190,8 @@ export default function QuickSetting(props) {
                 jewelInfo.skills.forEach((skill) => {
                     let skillInfo = SkillDataset.getInfo(skill.id);
 
-                    if (jewelMapping[jewelInfo.id].max < skillInfo.list.length) {
-                        jewelMapping[jewelInfo.id].max = skillInfo.list.length;
+                    if (jewelMapping[jewelInfo.size][jewelInfo.id].max < skillInfo.list.length) {
+                        jewelMapping[jewelInfo.size][jewelInfo.id].max = skillInfo.list.length;
                     }
                 });
             });
@@ -154,41 +207,45 @@ export default function QuickSetting(props) {
                     <span>{_('quickSetting')}</span>
                 </div>
 
-                {0 !== Object.keys(armorSeriesMapping).length ? (
-                    <div className="col-12 mhwc-content">
-                        <div className="col-12 mhwc-name">
-                            <span>{_('armorFactor')}</span>
-                        </div>
+                {0 !== Object.keys(armorSeriesMapping).length ? Object.keys(armorSeriesMapping).sort((rareA, rareB) => {
+                    return rareA > rareB ? 1 : -1;
+                }).map((rare) => {
+                    return (
+                        <div key={rare} className="col-12 mhwc-content">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('armorFactor')}: R{rare}</span>
+                            </div>
 
-                        <div className="col-12 mhwc-content">
-                            {Object.keys(armorSeriesMapping).sort((seriesIdA, seriesIdB) => {
-                                return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
-                            }).map((seriesId) => {
-                                let isInclude = Helper.isNotEmpty(armorFactor[seriesId])
-                                    ? armorFactor[seriesId] : true;
+                            <div className="col-12 mhwc-content">
+                                {Object.keys(armorSeriesMapping[rare]).sort((seriesIdA, seriesIdB) => {
+                                    return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
+                                }).map((seriesId) => {
+                                    let isInclude = Helper.isNotEmpty(armorFactor[seriesId])
+                                        ? armorFactor[seriesId] : true;
 
-                                return (
-                                    <div key={seriesId} className="col-6 mhwc-value">
-                                        <span>{_(armorSeriesMapping[seriesId].name)}</span>
-                                        <div className="mhwc-icons_bundle">
-                                            {isInclude ? (
-                                                <IconButton
-                                                    iconName="star"
-                                                    altName={_('exclude')}
-                                                    onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, false)}} />
-                                            ) : (
-                                                <IconButton
-                                                    iconName="star-o"
-                                                    altName={_('include')}
-                                                    onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, true)}} />
-                                            )}
+                                    return (
+                                        <div key={seriesId} className="col-6 mhwc-value">
+                                            <span>{_(armorSeriesMapping[rare][seriesId].name)}</span>
+                                            <div className="mhwc-icons_bundle">
+                                                {isInclude ? (
+                                                    <IconButton
+                                                        iconName="star"
+                                                        altName={_('exclude')}
+                                                        onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, false)}} />
+                                                ) : (
+                                                    <IconButton
+                                                        iconName="star-o"
+                                                        altName={_('include')}
+                                                        onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', seriesId, true)}} />
+                                                )}
+                                            </div>
                                         </div>
-                                    </div>
-                                );
-                            })}
+                                    );
+                                })}
+                            </div>
                         </div>
-                    </div>
-                ) : false}
+                    );
+                }) : false}
 
                 {0 !== Object.keys(charmSeriesMapping).length ? (
                     <div className="col-12 mhwc-content">
@@ -229,46 +286,50 @@ export default function QuickSetting(props) {
                     </div>
                 ) : false}
 
-                {0 !== Object.keys(jewelMapping).length ? (
-                    <div className="col-12 mhwc-content">
-                        <div className="col-12 mhwc-name">
-                            <span>{_('jewelFactor')}</span>
-                        </div>
+                {0 !== Object.keys(jewelMapping).length ? Object.keys(jewelMapping).sort((sizeA, sizeB) => {
+                    return sizeA > sizeB ? 1 : -1;
+                }).map((size) => {
+                    return (
+                        <div key={size} className="col-12 mhwc-content">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('jewelFactor')}: [{size}]</span>
+                            </div>
 
-                        <div className="col-12 mhwc-content">
-                            {Object.keys(jewelMapping).sort((jewelIdA, jewelIdB) => {
-                                return _(jewelIdA) > _(jewelIdB) ? 1 : -1;
-                            }).map((jewelId) => {
-                                let selectLevel = Helper.isNotEmpty(jewelFactor[jewelId])
-                                    ? jewelFactor[jewelId] : -1;
-                                let diffLevel = jewelMapping[jewelId].max - jewelMapping[jewelId].min + 1;
-                                let levelList = [
-                                    { key: -1, value: _('unlimited') },
-                                    { key: 0, value: _('exclude') }
-                                ];
+                            <div className="col-12 mhwc-content">
+                                {Object.keys(jewelMapping[size]).sort((jewelIdA, jewelIdB) => {
+                                    return _(jewelIdA) > _(jewelIdB) ? 1 : -1;
+                                }).map((jewelId) => {
+                                    let selectLevel = Helper.isNotEmpty(jewelFactor[jewelId])
+                                        ? jewelFactor[jewelId] : -1;
+                                    let diffLevel = jewelMapping[size][jewelId].max - jewelMapping[size][jewelId].min + 1;
+                                    let levelList = [
+                                        { key: -1, value: _('unlimited') },
+                                        { key: 0, value: _('exclude') }
+                                    ];
 
-                                [...Array(diffLevel).keys()].forEach((data, index) => {
-                                    levelList.push({ key: index + 1, value: index + 1 })
-                                });
+                                    [...Array(diffLevel).keys()].forEach((data, index) => {
+                                        levelList.push({ key: index + 1, value: index + 1 })
+                                    });
 
-                                return (
-                                    <div key={jewelId} className="col-6 mhwc-value">
-                                        <span>{_(jewelMapping[jewelId].name)}</span>
+                                    return (
+                                        <div key={jewelId} className="col-6 mhwc-value">
+                                            <span>{_(jewelMapping[size][jewelId].name)}</span>
 
-                                        <div className="mhwc-icons_bundle">
-                                            <BasicSelector
-                                                iconName="sort-numeric-asc"
-                                                defaultValue={selectLevel}
-                                                options={levelList} onChange={(event) => {
-                                                    CommonState.setter.setAlgorithmParamsUsingFactor('jewel', jewelId, parseInt(event.target.value));
-                                                }} />
+                                            <div className="mhwc-icons_bundle">
+                                                <BasicSelector
+                                                    iconName="sort-numeric-asc"
+                                                    defaultValue={selectLevel}
+                                                    options={levelList} onChange={(event) => {
+                                                        CommonState.setter.setAlgorithmParamsUsingFactor('jewel', jewelId, parseInt(event.target.value));
+                                                    }} />
+                                            </div>
                                         </div>
-                                    </div>
-                                );
-                            })}
+                                    );
+                                })}
+                            </div>
                         </div>
-                    </div>
-                ) : false}
+                    );
+                }) : false}
             </div>
         );
     }, [data, stateAlgorithmParams, stateRequiredEquips, stateRequiredSkills]);

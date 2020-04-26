@@ -320,11 +320,7 @@ export default function ConditionItemSelector(props) {
         default:
             return false;
         }
-    }, [
-        stateMode,
-        stateSortedList,
-        stateSegment
-    ]);
+    }, [stateMode, stateSortedList, stateSegment]);
 
     return (stateIsShow && Helper.isNotEmpty(stateBypassData)) ? (
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
