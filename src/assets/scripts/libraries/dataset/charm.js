@@ -72,6 +72,8 @@ class CharmDataset {
     resetFilter = () => {
         this.filterRare = null;
         this.filterSkillName = null;
+        this.filterSkillNames = null;
+        this.filterSkillIsConsistent = null;
     };
 
     getIds = () => {
@@ -80,14 +82,16 @@ class CharmDataset {
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
+            let isSkip = true;
+
+            // Rare Is
             if (Helper.isNotEmpty(this.filterRare)) {
                 if (this.filterRare !== data.rare) {
                     return false;
                 }
             }
 
-            let isSkip = true;
-
+            // Has Skill
             if (Helper.isNotEmpty(this.filterSkillName)) {
                 for (let index in data.skills) {
                     if (this.filterSkillName !== data.skills[index].id) {
@@ -95,6 +99,31 @@ class CharmDataset {
                     }
 
                     isSkip = false;
+                }
+
+                if (isSkip) {
+                    return false;
+                }
+            }
+
+            // Has Skills
+            if (Helper.isNotEmpty(this.filterSkillNames)) {
+                if (this.filterSkillIsConsistent) {
+                    isSkip = false;
+
+                    data.skills.forEach((skill) => {
+                        if (-1 === this.filterSkillNames.indexOf(skill.id)) {
+                            isSkip = true;
+                        }
+                    });
+                } else {
+                    isSkip = true;
+
+                    data.skills.forEach((skill) => {
+                        if (-1 !== this.filterSkillNames.indexOf(skill.id)) {
+                            isSkip = false;
+                        }
+                    });
                 }
 
                 if (isSkip) {
@@ -132,6 +161,13 @@ class CharmDataset {
 
     hasSkill = (name) => {
         this.filterSkillName = name;
+
+        return this;
+    };
+
+    hasSkills = (names, isConsistent = false) => {
+        this.filterSkillNames = names;
+        this.filterSkillIsConsistent = isConsistent;
 
         return this;
     };

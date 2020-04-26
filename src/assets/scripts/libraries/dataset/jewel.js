@@ -59,6 +59,8 @@ class JewelDataset {
         this.filterSkillName = null;
         this.filterSize = null;
         this.filterSizeCondition = null;
+        this.filterSkillNames = null;
+        this.filterSkillIsConsistent = null;
     };
 
     getIds = () => {
@@ -67,28 +69,16 @@ class JewelDataset {
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
+            let isSkip = true;
+
+            // Rare Is
             if (Helper.isNotEmpty(this.filterRare)) {
                 if (this.filterRare !== data.rare) {
                     return false;
                 }
             }
 
-            let isSkip = true;
-
-            if (Helper.isNotEmpty(this.filterSkillName)) {
-                for (let index in data.skills) {
-                    if (this.filterSkillName !== data.skills[index].id) {
-                        continue;
-                    }
-
-                    isSkip = false;
-                }
-
-                if (isSkip) {
-                    return false;
-                }
-            }
-
+            // Size Is
             if (Helper.isNotEmpty(this.filterSize)) {
                 switch (this.filterSizeCondition) {
                 case 'equal':
@@ -103,6 +93,46 @@ class JewelDataset {
                     }
 
                     break;
+                }
+            }
+
+            // Has Skill
+            if (Helper.isNotEmpty(this.filterSkillName)) {
+                for (let index in data.skills) {
+                    if (this.filterSkillName !== data.skills[index].id) {
+                        continue;
+                    }
+
+                    isSkip = false;
+                }
+
+                if (isSkip) {
+                    return false;
+                }
+            }
+
+            // Has Skills
+            if (Helper.isNotEmpty(this.filterSkillNames)) {
+                if (this.filterSkillIsConsistent) {
+                    isSkip = false;
+
+                    data.skills.forEach((skill) => {
+                        if (-1 === this.filterSkillNames.indexOf(skill.id)) {
+                            isSkip = true;
+                        }
+                    });
+                } else {
+                    isSkip = true;
+
+                    data.skills.forEach((skill) => {
+                        if (-1 !== this.filterSkillNames.indexOf(skill.id)) {
+                            isSkip = false;
+                        }
+                    });
+                }
+
+                if (isSkip) {
+                    return false;
                 }
             }
 
@@ -143,6 +173,13 @@ class JewelDataset {
 
     hasSkill = (name) => {
         this.filterSkillName = name;
+
+        return this;
+    };
+
+    hasSkills = (names, isConsistent = false) => {
+        this.filterSkillNames = names;
+        this.filterSkillIsConsistent = isConsistent;
 
         return this;
     };

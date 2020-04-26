@@ -30,7 +30,7 @@ import CommonState from 'states/common';
 const levelMapping = [ 'I', 'II', 'III', 'IV', 'V' ];
 
 export default function CharmFactors(props) {
-    const {segment} = props;
+    const {segment, byRequiredConditions} = props;
 
     /**
      * Hooks
@@ -57,64 +57,24 @@ export default function CharmFactors(props) {
 
         let charmSeriesMapping = {};
         let skillLevelMapping = {};
+        let dataset = CharmDataset;
+        let charmFactor = stateAlgorithmParams.usingFactor.charm;
 
-        const equipTypes = Object.keys(stateRequiredEquips).filter((equipType) => {
-            if ('weapon' === equipType) {
+        if (true === byRequiredConditions) {
+            if (Helper.isNotEmpty(stateRequiredEquips.charm)) {
                 return false;
             }
 
-            return Helper.isEmpty(stateRequiredEquips[equipType]);
-        });
-        const skillIds = stateRequiredSkills.map((skill) => {
-            skillLevelMapping[skill.id] = skill.level;
+            const skillIds = stateRequiredSkills.map((skill) => {
+                skillLevelMapping[skill.id] = skill.level;
 
-            return skill.id;
-        });
-
-        skillIds.forEach((skillId) => {
-            equipTypes.forEach((equipType) => {
-                if ('charm' === equipType) {
-                    CharmDataset.hasSkill(skillId).getItems().forEach((charmInfo) => {
-                        let isSkip = false;
-
-                        charmInfo.skills.forEach((skill) => {
-                            if (true === isSkip) {
-                                return;
-                            }
-
-                            if (0 === skillLevelMapping[skill.id]) {
-                                isSkip = true;
-
-                                return;
-                            }
-                        });
-
-                        if (true === isSkip) {
-                            return;
-                        }
-
-                        if (Helper.isEmpty(charmSeriesMapping[charmInfo.seriesId])) {
-                            charmSeriesMapping[charmInfo.seriesId] = {
-                                series: charmInfo.series,
-                                min: 1,
-                                max: 1
-                            };
-                        }
-
-                        if (charmSeriesMapping[charmInfo.seriesId].max < charmInfo.level) {
-                            charmSeriesMapping[charmInfo.seriesId].max = charmInfo.level;
-                        }
-                    });
-                }
+                return skill.id;
             });
-        });
 
-        let charmFactor = stateAlgorithmParams.usingFactor.charm;
+            dataset = dataset.hasSkills(skillIds);
+        }
 
-
-        let seriesMapping = {};
-
-        CharmDataset.getItems().filter((charmInfo) => {
+        dataset.getItems().filter((charmInfo) => {
             let text = _(charmInfo.series);
 
             if (Helper.isNotEmpty(segment)
@@ -125,20 +85,40 @@ export default function CharmFactors(props) {
 
             return true;
         }).forEach((charmInfo) => {
-            if (Helper.isEmpty(seriesMapping[charmInfo.seriesId])) {
-                seriesMapping[charmInfo.seriesId] = {
+            if (true === byRequiredConditions) {
+                let isSkip = false;
+
+                charmInfo.skills.forEach((skill) => {
+                    if (true === isSkip) {
+                        return;
+                    }
+
+                    if (0 === skillLevelMapping[skill.id]) {
+                        isSkip = true;
+
+                        return;
+                    }
+                });
+
+                if (true === isSkip) {
+                    return;
+                }
+            }
+
+            if (Helper.isEmpty(charmSeriesMapping[charmInfo.seriesId])) {
+                charmSeriesMapping[charmInfo.seriesId] = {
                     series: charmInfo.series,
                     min: 1,
                     max: 1
                 };
             }
 
-            if (seriesMapping[charmInfo.seriesId].max < charmInfo.level) {
-                seriesMapping[charmInfo.seriesId].max = charmInfo.level;
+            if (charmSeriesMapping[charmInfo.seriesId].max < charmInfo.level) {
+                charmSeriesMapping[charmInfo.seriesId].max = charmInfo.level;
             }
         });
 
-        let seriesIds = Object.keys(seriesMapping).sort((seriesIdA, seriesIdB) => {
+        let seriesIds = Object.keys(charmSeriesMapping).sort((seriesIdA, seriesIdB) => {
             return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
         });
 
@@ -154,6 +134,7 @@ export default function CharmFactors(props) {
                     <div className="col-12 mhwc-name">
                         <span>{_('charmFactor')}</span>
                     </div>
+
                     <div className="col-12 mhwc-content">
                         {seriesIds.slice(blockIndex * 10, (blockIndex + 1) * 10).map((seriesId) => {
                             let selectLevel = Helper.isNotEmpty(charmFactor[seriesId])
@@ -163,13 +144,13 @@ export default function CharmFactors(props) {
                                 { key: 0, value: _('exclude') }
                             ];
 
-                            [...Array(seriesMapping[seriesId].max - seriesMapping[seriesId].min + 1).keys()].forEach((data, index) => {
+                            [...Array(charmSeriesMapping[seriesId].max - charmSeriesMapping[seriesId].min + 1).keys()].forEach((data, index) => {
                                 levelList.push({ key: index + 1, value: levelMapping[index] })
                             });
 
                             return (
                                 <div key={seriesId} className="col-6 mhwc-value">
-                                    <span>{_(seriesMapping[seriesId].series)}</span>
+                                    <span>{_(charmSeriesMapping[seriesId].series)}</span>
                                     <div className="mhwc-icons_bundle">
                                         <BasicSelector
                                             iconName="sort-numeric-asc"
@@ -187,5 +168,5 @@ export default function CharmFactors(props) {
         }
 
         return blocks;
-    }, [segment, stateAlgorithmParams, stateRequiredSkills]);
+    }, [segment, byRequiredConditions, stateAlgorithmParams, stateRequiredSkills]);
 };

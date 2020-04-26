@@ -84,6 +84,7 @@ class WeaponDataset {
 
     resetFilter = () => {
         this.filterType = null;
+        this.filterTypes = null;
         this.filterRare = null;
         this.filterSkillName = null;
     };
@@ -94,20 +95,36 @@ class WeaponDataset {
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
+            let isSkip = true;
+
+            // Type Is
             if (Helper.isNotEmpty(this.filterType)) {
                 if (this.filterType !== data.type) {
                     return false;
                 }
             }
 
+            // Types Is
+            if (Helper.isNotEmpty(this.filterTypes)) {
+                isSkip = false;
+
+                if (-1 === this.filterTypes.indexOf(data.type)) {
+                    isSkip = true;
+                }
+
+                if (isSkip) {
+                    return false;
+                }
+            }
+
+            // Rare Is
             if (Helper.isNotEmpty(this.filterRare)) {
                 if (this.filterRare !== data.rare) {
                     return false;
                 }
             }
 
-            let isSkip = true;
-
+            // Has Skill
             if (Helper.isNotEmpty(this.filterSkillName)) {
                 for (let index in data.skills) {
                     if (this.filterSkillName !== data.skills[index].id) {
@@ -146,6 +163,12 @@ class WeaponDataset {
     // Conditional Functions
     typeIs = (text) => {
         this.filterType = text;
+
+        return this;
+    };
+
+    typesIs = (types) => {
+        this.filterTypes = types;
 
         return this;
     };

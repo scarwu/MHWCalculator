@@ -61,7 +61,7 @@ export default function QuickSetting(props) {
         let skillLevelMapping = {};
 
         const equipTypes = Object.keys(stateRequiredEquips).filter((equipType) => {
-            if ('weapon' === equipType) {
+            if ('weapon' === equipType || 'charm' === equipType) {
                 return false;
             }
 
@@ -73,94 +73,44 @@ export default function QuickSetting(props) {
             return skill.id;
         });
 
-        skillIds.forEach((skillId) => {
-            equipTypes.forEach((equipType) => {
-                if ('helm' === equipType
-                    || 'chest' === equipType
-                    || 'arm' === equipType
-                    || 'waist' === equipType
-                    || 'leg' === equipType
-                ) {
-                    ArmorDataset.typeIs(equipType).hasSkill(skillId).getItems().forEach((armorInfo) => {
-                        if (false === stateAlgorithmParams.usingFactor.armor['rare' + armorInfo.rare]) {
-                            return;
-                        }
+        ArmorDataset.typesIs(equipTypes).hasSkills(skillIds).getItems().forEach((armorInfo) => {
+            if (false === stateAlgorithmParams.usingFactor.armor['rare' + armorInfo.rare]) {
+                return;
+            }
 
-                        let isSkip = false;
+            let isSkip = false;
 
-                        armorInfo.skills.forEach((skill) => {
-                            if (true === isSkip) {
-                                return;
-                            }
-
-                            if (0 === skillLevelMapping[skill.id]) {
-                                isSkip = true;
-
-                                return;
-                            }
-                        });
-
-                        if (true === isSkip) {
-                            return;
-                        }
-
-                        if (Helper.isEmpty(armorSeriesMapping[armorInfo.rare])) {
-                            armorSeriesMapping[armorInfo.rare] = {};
-                        }
-
-                        armorSeriesMapping[armorInfo.rare][armorInfo.seriesId] = {
-                            name: armorInfo.series
-                        };
-                    });
+            armorInfo.skills.forEach((skill) => {
+                if (true === isSkip) {
+                    return;
                 }
 
-                if ('charm' === equipType) {
-                    CharmDataset.hasSkill(skillId).getItems().forEach((charmInfo) => {
-                        let isSkip = false;
+                if (0 === skillLevelMapping[skill.id]) {
+                    isSkip = true;
 
-                        charmInfo.skills.forEach((skill) => {
-                            if (true === isSkip) {
-                                return;
-                            }
-
-                            if (0 === skillLevelMapping[skill.id]) {
-                                isSkip = true;
-
-                                return;
-                            }
-                        });
-
-                        if (true === isSkip) {
-                            return;
-                        }
-
-                        if (Helper.isEmpty(charmSeriesMapping[charmInfo.seriesId])) {
-                            charmSeriesMapping[charmInfo.seriesId] = {
-                                series: charmInfo.series,
-                                min: 1,
-                                max: 1
-                            };
-                        }
-
-                        if (charmSeriesMapping[charmInfo.seriesId].max < charmInfo.level) {
-                            charmSeriesMapping[charmInfo.seriesId].max = charmInfo.level;
-                        }
-                    });
+                    return;
                 }
             });
 
-            JewelDataset.hasSkill(skillId).getItems().forEach((jewelInfo) => {
+            if (true === isSkip) {
+                return;
+            }
+
+            if (Helper.isEmpty(armorSeriesMapping[armorInfo.rare])) {
+                armorSeriesMapping[armorInfo.rare] = {};
+            }
+
+            armorSeriesMapping[armorInfo.rare][armorInfo.seriesId] = {
+                name: armorInfo.series
+            };
+        });
+
+        if (Helper.isNotEmpty(stateRequiredEquips.charm)) {
+            CharmDataset.hasSkills(skillIds).getItems().forEach((charmInfo) => {
                 let isSkip = false;
 
-                jewelInfo.skills.forEach((skill) => {
+                charmInfo.skills.forEach((skill) => {
                     if (true === isSkip) {
-                        return;
-                    }
-
-                    // If Skill not match condition then skip
-                    if (-1 === skillIds.indexOf(skill.id)) {
-                        isSkip = true;
-
                         return;
                     }
 
@@ -175,25 +125,57 @@ export default function QuickSetting(props) {
                     return;
                 }
 
-                if (Helper.isEmpty(jewelMapping[jewelInfo.size])) {
-                    jewelMapping[jewelInfo.size] = {};
-                }
-
-                if (Helper.isEmpty(jewelMapping[jewelInfo.size][jewelInfo.id])) {
-                    jewelMapping[jewelInfo.size][jewelInfo.id] = {
-                        name: jewelInfo.name,
+                if (Helper.isEmpty(charmSeriesMapping[charmInfo.seriesId])) {
+                    charmSeriesMapping[charmInfo.seriesId] = {
+                        series: charmInfo.series,
                         min: 1,
                         max: 1
                     };
                 }
 
-                jewelInfo.skills.forEach((skill) => {
-                    let skillInfo = SkillDataset.getInfo(skill.id);
+                if (charmSeriesMapping[charmInfo.seriesId].max < charmInfo.level) {
+                    charmSeriesMapping[charmInfo.seriesId].max = charmInfo.level;
+                }
+            });
+        }
 
-                    if (jewelMapping[jewelInfo.size][jewelInfo.id].max < skillInfo.list.length) {
-                        jewelMapping[jewelInfo.size][jewelInfo.id].max = skillInfo.list.length;
-                    }
-                });
+        JewelDataset.hasSkills(skillIds, true).getItems().forEach((jewelInfo) => {
+            let isSkip = false;
+
+            jewelInfo.skills.forEach((skill) => {
+                if (true === isSkip) {
+                    return;
+                }
+
+                if (0 === skillLevelMapping[skill.id]) {
+                    isSkip = true;
+
+                    return;
+                }
+            });
+
+            if (true === isSkip) {
+                return;
+            }
+
+            if (Helper.isEmpty(jewelMapping[jewelInfo.size])) {
+                jewelMapping[jewelInfo.size] = {};
+            }
+
+            if (Helper.isEmpty(jewelMapping[jewelInfo.size][jewelInfo.id])) {
+                jewelMapping[jewelInfo.size][jewelInfo.id] = {
+                    name: jewelInfo.name,
+                    min: 1,
+                    max: 1
+                };
+            }
+
+            jewelInfo.skills.forEach((skill) => {
+                let skillInfo = SkillDataset.getInfo(skill.id);
+
+                if (jewelMapping[jewelInfo.size][jewelInfo.id].max < skillInfo.list.length) {
+                    jewelMapping[jewelInfo.size][jewelInfo.id].max = skillInfo.list.length;
+                }
             });
         });
 

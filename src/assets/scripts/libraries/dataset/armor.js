@@ -67,9 +67,12 @@ class ArmorDataset {
 
     resetFilter = () => {
         this.filterType = null;
+        this.filterTypes = null;
         this.filterRare = null;
         this.filterSet = null;
         this.filterSkillName = null;
+        this.filterSkillNames = null;
+        this.filterSkillIsConsistent = null;
     };
 
     getIds = () => {
@@ -78,18 +81,36 @@ class ArmorDataset {
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
+            let isSkip = true;
+
+            // Type Is
             if (Helper.isNotEmpty(this.filterType)) {
                 if (this.filterType !== data.type) {
                     return false;
                 }
             }
 
+            // Types Is
+            if (Helper.isNotEmpty(this.filterTypes)) {
+                isSkip = false;
+
+                if (-1 === this.filterTypes.indexOf(data.type)) {
+                    isSkip = true;
+                }
+
+                if (isSkip) {
+                    return false;
+                }
+            }
+
+            // Rare Is
             if (Helper.isNotEmpty(this.filterRare)) {
                 if (this.filterRare !== data.rare) {
                     return false;
                 }
             }
 
+            // Set Is
             if (Helper.isNotEmpty(this.filterSet)) {
                 if (Helper.isEmpty(data.set)
                     || this.filterSet !== data.set.id
@@ -98,8 +119,7 @@ class ArmorDataset {
                 }
             }
 
-            let isSkip = true;
-
+            // Has Skill
             if (Helper.isNotEmpty(this.filterSkillName)) {
                 for (let index in data.skills) {
                     if (this.filterSkillName !== data.skills[index].id) {
@@ -107,6 +127,31 @@ class ArmorDataset {
                     }
 
                     isSkip = false;
+                }
+
+                if (isSkip) {
+                    return false;
+                }
+            }
+
+            // Has Skills
+            if (Helper.isNotEmpty(this.filterSkillNames)) {
+                if (this.filterSkillIsConsistent) {
+                    isSkip = false;
+
+                    data.skills.forEach((skill) => {
+                        if (-1 === this.filterSkillNames.indexOf(skill.id)) {
+                            isSkip = true;
+                        }
+                    });
+                } else {
+                    isSkip = true;
+
+                    data.skills.forEach((skill) => {
+                        if (-1 !== this.filterSkillNames.indexOf(skill.id)) {
+                            isSkip = false;
+                        }
+                    });
                 }
 
                 if (isSkip) {
@@ -142,6 +187,12 @@ class ArmorDataset {
         return this;
     };
 
+    typesIs = (types) => {
+        this.filterTypes = types;
+
+        return this;
+    };
+
     rareIs = (number) => {
         this.filterRare = number;
 
@@ -156,6 +207,13 @@ class ArmorDataset {
 
     hasSkill = (name) => {
         this.filterSkillName = name;
+
+        return this;
+    };
+
+    hasSkills = (names, isConsistent = false) => {
+        this.filterSkillNames = names;
+        this.filterSkillIsConsistent = isConsistent;
 
         return this;
     };

@@ -17,6 +17,7 @@ import Helper from 'core/helper';
 // Load Custom Libraries
 import _ from 'libraries/lang';
 import JewelDataset from 'libraries/dataset/jewel';
+import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
 import BasicSelector from 'components/common/basicSelector';
@@ -30,7 +31,7 @@ import CommonState from 'states/common';
 const jewelSizeList = [ 1, 2, 3, 4 ];
 
 export default function JewelFactors(props) {
-    const {segment} = props;
+    const {segment, byRequiredConditions} = props;
 
     /**
      * Hooks
@@ -53,28 +54,41 @@ export default function JewelFactors(props) {
     return useMemo(() => {
         Helper.debug('Component: AlgorithmSetting -> JewelFactors');
 
-        let jewelMapping = {};
+        let jewelSizeMapping = {};
         let skillLevelMapping = {};
+        let dataset = JewelDataset;
+        let jewelFactor = stateAlgorithmParams.usingFactor.jewel;
 
-        const skillIds = stateRequiredSkills.map((skill) => {
-            skillLevelMapping[skill.id] = skill.level;
+        if (true === byRequiredConditions) {
+            const skillIds = stateRequiredSkills.map((skill) => {
+                skillLevelMapping[skill.id] = skill.level;
 
-            return skill.id;
-        });
+                return skill.id;
+            });
 
-        skillIds.forEach((skillId) => {
-            JewelDataset.hasSkill(skillId).getItems().forEach((jewelInfo) => {
+            dataset = dataset.hasSkills(skillIds, true);
+        }
+
+        dataset.getItems().filter((jewelInfo) => {
+            let text = _(jewelInfo.name);
+
+            if (Helper.isNotEmpty(segment)
+                && -1 === text.toLowerCase().search(segment.toLowerCase())
+            ) {
+                return false;
+            }
+
+            return true;
+        }).forEach((jewelInfo) => {
+            if (false === jewelFactor['size' + jewelInfo.size]) {
+                return false;
+            }
+
+            if (true === byRequiredConditions) {
                 let isSkip = false;
 
                 jewelInfo.skills.forEach((skill) => {
                     if (true === isSkip) {
-                        return;
-                    }
-
-                    // If Skill not match condition then skip
-                    if (-1 === skillIds.indexOf(skill.id)) {
-                        isSkip = true;
-
                         return;
                     }
 
@@ -88,67 +102,37 @@ export default function JewelFactors(props) {
                 if (true === isSkip) {
                     return;
                 }
+            }
 
-                if (Helper.isEmpty(jewelMapping[jewelInfo.size])) {
-                    jewelMapping[jewelInfo.size] = {};
+            if (Helper.isEmpty(jewelSizeMapping[jewelInfo.size])) {
+                jewelSizeMapping[jewelInfo.size] = {};
+            }
+
+            if (Helper.isEmpty(jewelSizeMapping[jewelInfo.size][jewelInfo.id])) {
+                jewelSizeMapping[jewelInfo.size][jewelInfo.id] = {
+                    name: jewelInfo.name,
+                    min: 1,
+                    max: 1
+                };
+            }
+
+            jewelInfo.skills.forEach((skill) => {
+                let skillInfo = SkillDataset.getInfo(skill.id);
+
+                if (jewelSizeMapping[jewelInfo.size][jewelInfo.id].max < skillInfo.list.length) {
+                    jewelSizeMapping[jewelInfo.size][jewelInfo.id].max = skillInfo.list.length;
                 }
-
-                if (Helper.isEmpty(jewelMapping[jewelInfo.size][jewelInfo.id])) {
-                    jewelMapping[jewelInfo.size][jewelInfo.id] = {
-                        name: jewelInfo.name,
-                        min: 1,
-                        max: 1
-                    };
-                }
-
-                jewelInfo.skills.forEach((skill) => {
-                    let skillInfo = SkillDataset.getInfo(skill.id);
-
-                    if (jewelMapping[jewelInfo.size][jewelInfo.id].max < skillInfo.list.length) {
-                        jewelMapping[jewelInfo.size][jewelInfo.id].max = skillInfo.list.length;
-                    }
-                });
             });
         });
 
-        let jewelFactor = stateAlgorithmParams.usingFactor.jewel;
+        if (0 === Object.keys(jewelSizeMapping).length) {
+            return false;
+        }
 
-        return jewelSizeList.map((size) => {
-            if (false === jewelFactor['size' + size]) {
-                return false;
-            }
-
-            let jewelMapping = {};
-
-            JewelDataset.sizeIs(size).getItems().filter((jewelInfo) => {
-                let text = _(jewelInfo.name);
-
-                if (Helper.isNotEmpty(segment)
-                    && -1 === text.toLowerCase().search(segment.toLowerCase())
-                ) {
-                    return false;
-                }
-
-                return true;
-            }).forEach((jewelInfo) => {
-                if (Helper.isEmpty(jewelMapping[jewelInfo.id])) {
-                    jewelMapping[jewelInfo.id] = {
-                        name: jewelInfo.name,
-                        min: 1,
-                        max: 1
-                    };
-                }
-
-                jewelInfo.skills.forEach((skill) => {
-                    let skillInfo = SkillDataset.getInfo(skill.id);
-
-                    if (jewelMapping[jewelInfo.id].max < skillInfo.list.length) {
-                        jewelMapping[jewelInfo.id].max = skillInfo.list.length;
-                    }
-                });
-            });
-
-            let jewelIds = Object.keys(jewelMapping).sort((jewelIdA, jewelIdB) => {
+        return Object.keys(jewelSizeMapping).sort((sizeA, sizeB) => {
+            return sizeA > sizeB ? 1 : -1;
+        }).map((size) => {
+            let jewelIds = Object.keys(jewelSizeMapping[size]).sort((jewelIdA, jewelIdB) => {
                 return _(jewelIdA) > _(jewelIdB) ? 1 : -1;
             });
 
@@ -164,11 +148,12 @@ export default function JewelFactors(props) {
                         <div className="col-12 mhwc-name">
                             <span>{_('jewelFactor')}: [{size}]</span>
                         </div>
+
                         <div className="col-12 mhwc-content">
                             {jewelIds.slice(blockIndex * 10, (blockIndex + 1) * 10).map((jewelId) => {
                                 let selectLevel = Helper.isNotEmpty(jewelFactor[jewelId])
                                     ? jewelFactor[jewelId] : -1;
-                                let diffLevel = jewelMapping[jewelId].max - jewelMapping[jewelId].min + 1;
+                                let diffLevel = jewelSizeMapping[size][jewelId].max - jewelSizeMapping[size][jewelId].min + 1;
                                 let levelList = [
                                     { key: -1, value: _('unlimited') },
                                     { key: 0, value: _('exclude') }
@@ -180,7 +165,8 @@ export default function JewelFactors(props) {
 
                                 return (
                                     <div key={jewelId} className="col-6 mhwc-value">
-                                        <span>{_(jewelMapping[jewelId].name)}</span>
+                                        <span>{_(jewelSizeMapping[size][jewelId].name)}</span>
+
                                         <div className="mhwc-icons_bundle">
                                             <BasicSelector
                                                 iconName="sort-numeric-asc"
@@ -199,5 +185,5 @@ export default function JewelFactors(props) {
 
             return blocks;
         });
-    }, [segment, stateAlgorithmParams, stateRequiredSkills]);
+    }, [segment, byRequiredConditions, stateAlgorithmParams, stateRequiredSkills]);
 };
