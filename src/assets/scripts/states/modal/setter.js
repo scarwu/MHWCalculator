@@ -26,11 +26,12 @@ export default {
             }
         });
     },
-    showAlgorithmSetting: () => {
+    showAlgorithmSetting: (bypassData = null) => {
         Store.dispatch({
             type: 'UPDATE_ALGORITHM_SETTING',
             payload: {
-                isShow: true
+                isShow: true,
+                bypassData: bypassData
             }
         });
     },

@@ -23,6 +23,16 @@ import IconButton from 'components/common/iconButton';
 
 // Load State Control
 import CommonState from 'states/common';
+import ModalState from 'states/modal';
+
+/**
+ * Handle Functions
+ */
+const handleShowSkillItemSelector = () => {
+    ModalState.setter.showConditionItemSelector({
+        mode: 'skill'
+    });
+};
 
 /**
  * Render Functions
@@ -128,8 +138,21 @@ export default function SkillList(props) {
             });
         });
 
-        return stateRequiredSkills.map((skill) => {
-            return renderSkillItem(skill, enableSkillIdList);
-        });
+        return (
+            <div className="mhwc-item mhwc-item-3-step">
+                <div className="col-12 mhwc-name">
+                    <span>{_('skill')}</span>
+                    <div className="mhwc-icons_bundle">
+                        <IconButton
+                            iconName="plus" altName={_('add')}
+                            onClick={handleShowSkillItemSelector} />
+                    </div>
+                </div>
+
+                {stateRequiredSkills.map((skill) => {
+                    return renderSkillItem(skill, enableSkillIdList);
+                })}
+             </div>
+        );
     }, [stateRequiredSkills, stateRequiredSets]);
 };

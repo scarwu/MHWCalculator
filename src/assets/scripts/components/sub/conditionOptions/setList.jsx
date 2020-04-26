@@ -23,6 +23,16 @@ import IconButton from 'components/common/iconButton';
 
 // Load State Control
 import CommonState from 'states/common';
+import ModalState from 'states/modal';
+
+/**
+ * Handle Functions
+ */
+const handleShowSetItemSelector = () => {
+    ModalState.setter.showConditionItemSelector({
+        mode: 'set'
+    });
+};
 
 /**
  * Render Functions
@@ -93,6 +103,19 @@ export default function SetList (props) {
     return useMemo(() => {
         Helper.debug('Component: ConditionOptions -> SetList');
 
-        return stateRequiredSets.map(renderSetItem);
+        return (
+            <div className="mhwc-item mhwc-item-3-step">
+                <div className="col-12 mhwc-name">
+                    <span>{_('set')}</span>
+                    <div className="mhwc-icons_bundle">
+                        <IconButton
+                            iconName="plus" altName={_('add')}
+                            onClick={handleShowSetItemSelector} />
+                    </div>
+                </div>
+
+                {stateRequiredSets.map(renderSetItem)}
+            </div>
+        );
     }, [stateRequiredSets]);
 };

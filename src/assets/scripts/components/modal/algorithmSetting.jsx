@@ -23,6 +23,7 @@ import SkillDataset from 'libraries/dataset/skill';
 
 // Load Components
 import IconButton from 'components/common/iconButton';
+import IconSelector from 'components/common/iconSelector';
 import IconInput from 'components/common/iconInput';
 import BasicSelector from 'components/common/basicSelector';
 import BasicInput from 'components/common/basicInput';
@@ -62,12 +63,28 @@ const getOrderList = () => {
     ];
 }
 
+const getModeList = () => {
+    return [
+        { key: 'all',                   value: _('all') },
+        { key: 'armorFactor',           value: _('armorFactor') },
+        { key: 'charmFactor',           value: _('charmFactor') },
+        { key: 'jewelFactor',           value: _('jewelFactor') },
+        { key: 'byRequiredConditions',  value: _('byRequiredConditions') }
+    ];
+}
+
 const armorRareList = [ 5, 6, 7, 8, 9, 10, 11, 12 ];
 const jewelSizeList = [ 1, 2, 3, 4 ];
 
 /**
  * Handler Functions
  */
+const handleModeChange = (event) => {
+    ModalState.setter.showAlgorithmSetting({
+        mode: event.target.value
+    });
+};
+
 const handleLimitChange = (event) => {
     if ('' === event.target.value) {
         return;
@@ -341,8 +358,14 @@ export default function AlgorithmSetting(props) {
      */
     const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonState.getter.getAlgorithmParams());
     const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowAlgorithmSetting());
+    const [stateBypassData, updateBypassData] = useState(ModalState.getter.getAlgorithmSettingBypassData());
     const [stateSegment, updateSegment] = useState(undefined);
+    const [stateMode, updateMode] = useState(undefined);
     const refModal = useRef();
+
+    useEffect(() => {
+        updateMode(stateBypassData.mode);
+    }, [stateBypassData]);
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
@@ -352,6 +375,7 @@ export default function AlgorithmSetting(props) {
 
         const unsubscribeModal = ModalState.store.subscribe(() => {
             updateIsShow(ModalState.getter.isShowAlgorithmSetting());
+            updateBypassData(ModalState.getter.getAlgorithmSettingBypassData());
         });
 
         return () => {
@@ -393,7 +417,9 @@ export default function AlgorithmSetting(props) {
                         <IconInput
                             iconName="search" placeholder={_('inputKeyword')}
                             defaultValue={stateSegment} onChange={handleSegmentInput} />
-
+                        <IconSelector
+                            iconName="globe" defaultValue={stateMode}
+                            options={getModeList()} onChange={handleModeChange} />
                         <IconButton
                             iconName="times" altName={_('close')}
                             onClick={ModalState.setter.hideAlgorithmSetting} />
@@ -458,65 +484,72 @@ export default function AlgorithmSetting(props) {
                             </div>
                         </div>
 
-                        <div className="mhwc-item mhwc-item-2-step">
-                            <div className="col-12 mhwc-name">
-                                <span>{_('basic')}: {_('armorFactor')}</span>
-                            </div>
-                            <div className="col-12 mhwc-content">
-                                {armorRareList.map((rare) => {
-                                    return (
-                                        <div key={rare} className="col-6 mhwc-value">
-                                            <span>{_('rare') + `: ${rare}`}</span>
-                                            <div className="mhwc-icons_bundle">
-                                                {stateAlgorithmParams.usingFactor.armor['rare' + rare] ? (
-                                                    <IconButton
-                                                        iconName="star"
-                                                        altName={_('exclude')}
-                                                        onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, false)}} />
-                                                ) : (
-                                                    <IconButton
-                                                        iconName="star-o"
-                                                        altName={_('include')}
-                                                        onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, true)}} />
-                                                )}
+                        {'all' === stateMode || 'armorFactor' === stateMode || 'byRequiredConditions' === stateMode ? (
+                            <div className="mhwc-item mhwc-item-2-step">
+                                <div className="col-12 mhwc-name">
+                                    <span>{_('basic')}: {_('armorFactor')}</span>
+                                </div>
+                                <div className="col-12 mhwc-content">
+                                    {armorRareList.map((rare) => {
+                                        return (
+                                            <div key={rare} className="col-6 mhwc-value">
+                                                <span>{_('rare') + `: ${rare}`}</span>
+                                                <div className="mhwc-icons_bundle">
+                                                    {stateAlgorithmParams.usingFactor.armor['rare' + rare] ? (
+                                                        <IconButton
+                                                            iconName="star"
+                                                            altName={_('exclude')}
+                                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, false)}} />
+                                                    ) : (
+                                                        <IconButton
+                                                            iconName="star-o"
+                                                            altName={_('include')}
+                                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('armor', 'rare' + rare, true)}} />
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
-                                    );
-                                })}
+                                        );
+                                    })}
+                                </div>
                             </div>
-                        </div>
+                        ) : false}
 
-                        <div className="mhwc-item mhwc-item-2-step">
-                            <div className="col-12 mhwc-name">
-                                <span>{_('basic')}: {_('jewelFactor')}</span>
-                            </div>
-                            <div className="col-12 mhwc-content">
-                                {jewelSizeList.map((size) => {
-                                    return (
-                                        <div key={size} className="col-6 mhwc-value">
-                                            <span>{_('size') + `: ${size}`}</span>
-                                            <div className="mhwc-icons_bundle">
-                                                {stateAlgorithmParams.usingFactor.jewel['size' + size] ? (
-                                                    <IconButton
-                                                        iconName="star"
-                                                        altName={_('exclude')}
-                                                        onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, false)}} />
-                                                ) : (
-                                                    <IconButton
-                                                        iconName="star-o"
-                                                        altName={_('include')}
-                                                        onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, true)}} />
-                                                )}
+                        {'all' === stateMode || 'jewelFactor' === stateMode || 'byRequiredConditions' === stateMode ? (
+                            <div className="mhwc-item mhwc-item-2-step">
+                                <div className="col-12 mhwc-name">
+                                    <span>{_('basic')}: {_('jewelFactor')}</span>
+                                </div>
+                                <div className="col-12 mhwc-content">
+                                    {jewelSizeList.map((size) => {
+                                        return (
+                                            <div key={size} className="col-6 mhwc-value">
+                                                <span>{_('size') + `: ${size}`}</span>
+                                                <div className="mhwc-icons_bundle">
+                                                    {stateAlgorithmParams.usingFactor.jewel['size' + size] ? (
+                                                        <IconButton
+                                                            iconName="star"
+                                                            altName={_('exclude')}
+                                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, false)}} />
+                                                    ) : (
+                                                        <IconButton
+                                                            iconName="star-o"
+                                                            altName={_('include')}
+                                                            onClick={() => {CommonState.setter.setAlgorithmParamsUsingFactor('jewel', 'size' + size, true)}} />
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
-                                    );
-                                })}
+                                        );
+                                    })}
+                                </div>
                             </div>
-                        </div>
+                        ) : false}
 
-                        {renderArmorFactors(stateAlgorithmParams.usingFactor.armor, stateSegment)}
-                        {renderCharmFactors(stateAlgorithmParams.usingFactor.charm, stateSegment)}
-                        {renderJewelFactors(stateAlgorithmParams.usingFactor.jewel, stateSegment)}
+                        {'all' === stateMode || 'armorFactor' === stateMode || 'byRequiredConditions' === stateMode
+                            ?  renderArmorFactors(stateAlgorithmParams.usingFactor.armor, stateSegment) : false}
+                        {'all' === stateMode || 'charmFactor' === stateMode || 'byRequiredConditions' === stateMode
+                            ?  renderCharmFactors(stateAlgorithmParams.usingFactor.charm, stateSegment) : false}
+                        {'all' === stateMode || 'jewelFactor' === stateMode || 'byRequiredConditions' === stateMode
+                            ?  renderJewelFactors(stateAlgorithmParams.usingFactor.jewel, stateSegment) : false}
                     </div>
                 </div>
             </div>

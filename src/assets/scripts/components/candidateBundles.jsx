@@ -38,6 +38,11 @@ let workers = {};
 /**
  * Handle Functions
  */
+const handleShowAllAlgorithmSetting = () => {
+    ModalState.setter.showAlgorithmSetting({
+        mode: 'all'
+    });
+};
 
 const handleSwitchTempData = (index) => {
     CommonState.setter.switchTempData('candidateBundles', index);
@@ -259,7 +264,7 @@ export default function CandidateBundles(props) {
                         onClick={CommonState.setter.cleanComputedResult} />
                     <IconButton
                         iconName="cog" altName={_('setting')}
-                        onClick={ModalState.setter.showAlgorithmSetting} />
+                        onClick={handleShowAllAlgorithmSetting} />
                     <IconButton
                         iconName="search" altName={_('search')}
                         onClick={handleCandidateBundlesSearch} />

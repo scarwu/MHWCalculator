@@ -51,7 +51,8 @@ const initialState = {
         isShow: false
     },
     algorithmSetting: Status.get(statusMapping.algorithmSetting) || {
-        isShow: false
+        isShow: false,
+        bypassData: null
     },
     bundleItemSelector: Status.get(statusMapping.bundleItemSelector) || {
         isShow: false
@@ -77,7 +78,8 @@ export default createStore((state = initialState, action) => {
     case 'UPDATE_ALGORITHM_SETTING':
         return Object.assign({}, state, {
             algorithmSetting: {
-                isShow: action.payload.isShow
+                isShow: action.payload.isShow,
+                bypassData: action.payload.bypassData
             }
         });
     case 'UPDATE_BUNDLE_ITEM_SELECTOR':

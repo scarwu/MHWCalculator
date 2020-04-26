@@ -116,8 +116,16 @@ export default function EquipList (props) {
             return false;
         }
 
-        return Object.keys(stateRequiredEquips).map((equipType) => {
-            return renderEquipItem(equipType, stateRequiredEquips[equipType])
-        });
+        return (
+            <div className="mhwc-item mhwc-item-3-step">
+                <div className="col-12 mhwc-name">
+                    <span>{_('equip')}</span>
+                </div>
+
+                {Object.keys(stateRequiredEquips).map((equipType) => {
+                    return renderEquipItem(equipType, stateRequiredEquips[equipType])
+                })}
+            </div>
+        );
     }, [stateRequiredEquips]);
 };

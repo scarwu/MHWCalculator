@@ -25,7 +25,6 @@ import IconTab from 'components/common/iconTab';
 
 // Load State Control
 import CommonState from 'states/common';
-import ModalState from 'states/modal';
 
 /**
  * Handle Functions
@@ -34,18 +33,6 @@ const handleRequireConditionRefresh = () => {
     CommonState.setter.cleanRequiredEquips();
     CommonState.setter.cleanRequiredSets();
     CommonState.setter.cleanRequiredSkills();
-};
-
-const handleShowSetItemSelector = () => {
-    ModalState.setter.showConditionItemSelector({
-        mode: 'set'
-    });
-};
-
-const handleShowSkillItemSelector = () => {
-    ModalState.setter.showConditionItemSelector({
-        mode: 'skill'
-    });
 };
 
 const handleSwitchTempData = (index) => {
@@ -102,36 +89,9 @@ export default function ConditionOptions(props) {
             </div>
 
             <div className="mhwc-list">
-                <div className="mhwc-item mhwc-item-3-step">
-                    <div className="col-12 mhwc-name">
-                        <span>{_('equip')}</span>
-                    </div>
-                    <EquipList />
-                </div>
-
-                <div className="mhwc-item mhwc-item-3-step">
-                    <div className="col-12 mhwc-name">
-                        <span>{_('set')}</span>
-                        <div className="mhwc-icons_bundle">
-                            <IconButton
-                                iconName="plus" altName={_('add')}
-                                onClick={handleShowSetItemSelector} />
-                        </div>
-                    </div>
-                    <SetList />
-                </div>
-
-                <div className="mhwc-item mhwc-item-3-step">
-                    <div className="col-12 mhwc-name">
-                        <span>{_('skill')}</span>
-                        <div className="mhwc-icons_bundle">
-                            <IconButton
-                                iconName="plus" altName={_('add')}
-                                onClick={handleShowSkillItemSelector} />
-                        </div>
-                    </div>
-                    <SkillList />
-                </div>
+                <EquipList />
+                <SetList />
+                <SkillList />
             </div>
         </div>
     );

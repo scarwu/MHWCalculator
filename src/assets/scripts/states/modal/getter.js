@@ -16,6 +16,9 @@ export default {
     isShowAlgorithmSetting: () => {
         return Store.getState().algorithmSetting.isShow;
     },
+    getAlgorithmSettingBypassData: () => {
+        return Store.getState().algorithmSetting.bypassData;
+    },
     isShowBundleItemSelector: () => {
         return Store.getState().bundleItemSelector.isShow;
     },
