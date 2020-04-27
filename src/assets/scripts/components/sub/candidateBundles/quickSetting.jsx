@@ -142,7 +142,7 @@ export default function QuickSetting(props) {
             };
         });
 
-        if (Helper.isNotEmpty(stateRequiredEquips.charm)) {
+        if (Helper.isEmpty(stateRequiredEquips.charm)) {
             CharmDataset.hasSkills(skillIds).getItems().forEach((charmInfo) => {
                 let isSkip = false;
 
