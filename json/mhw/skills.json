@@ -939,6 +939,40 @@
                     }
                 },
                 "isHidden": false
+            },
+            {
+                "level": 6,
+                "description": {
+                    "zhTW": "技能發動時，攻擊力1.25倍，防禦力+150",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "attackMultiple": {
+                        "value": 1.25
+                    },
+                    "defense": {
+                        "value": 150
+                    }
+                },
+                "isHidden": true
+            },
+            {
+                "level": 7,
+                "description": {
+                    "zhTW": "技能發動時，攻擊力1.4倍，防禦力+150",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "attackMultiple": {
+                        "value": 1.4
+                    },
+                    "defense": {
+                        "value": 150
+                    }
+                },
+                "isHidden": true
             }
         ]
     },
@@ -1786,7 +1820,7 @@
             {
                 "level": 4,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "從地面或植物等取得 彈藥的裝填數進一步增加。",
                     "jaJP": "地面や植物などから取得する弾の装填数がさらに増える。",
                     "enUS": null
                 },
@@ -1796,7 +1830,7 @@
             {
                 "level": 5,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "所有彈藥的裝填數進一步增加。",
                     "jaJP": "すべての弾の装填数がさらに増える。",
                     "enUS": null
                 },
@@ -6278,7 +6312,7 @@
             {
                 "level": 5,
                 "description": {
-                    "zhTW": null,
+                    "zhTW": "效果發動時，傷害減輕60%。更容易發動效果。",
                     "jaJP": "効果発動時、ダメージを60%軽減。効果が発動しやすくなる。",
                     "enUS": null
                 },
