@@ -100,27 +100,11 @@ class FittingAlgorithm {
 
         bundlePool[this.getBundleHash(this.firstBundle)] = this.firstBundle;
 
-        // Create Bundle Pool with Set Equips
-        if (0 !== Object.keys(this.conditionSets).length) {
-            bundlePool = this.createBundlePoolWithSetEquips(bundlePool);
-
-            if (0 === Object.keys(this.conditionSkills).length) {
-                this.callback({
-                    bundleCount: Object.keys(bundlePool).length,
-                    searchPercent: 100,
-                    timeRemaining: 0
-                });
-            }
-
-            // Sets Require Equips is Overflow
-            if (0 === Object.keys(bundlePool).length) {
-                return [];
-            }
-        }
-
-        // Create Bundle Pool with Set Equips
-        if (0 !== Object.keys(this.conditionSkills).length) {
-            bundlePool = this.createBundlePoolWithSkillEquips(bundlePool);
+        // Create Bundle Pool with Equips
+        if (0 !== Object.keys(this.conditionSets).length
+            || 0 !== Object.keys(this.conditionSkills).length
+        ) {
+            bundlePool = this.createBundlePoolWithEquips(bundlePool);
 
             this.callback({
                 bundleCount: Object.keys(bundlePool).length,
@@ -402,25 +386,21 @@ class FittingAlgorithm {
     };
 
     /**
-     * Create Bundle Pool with Set Equips
+     * Create Bundle Pool with Equips
      */
-    createBundlePoolWithSetEquips = (initBundlePool) => {
+    createBundlePoolWithEquips = (initBundlePool) => {
         let candidateEquipPool = {};
         let lastBundlePool = {};
 
-        // Init Set Equips
-        Helper.log('Init Set Equips');
+        // Init Skill Equips
+        Helper.log('Init Equips');
 
         this.conditionEquips.forEach((equipType) => {
-            if ('charm' === equipType) {
-                return;
-            }
-
             if (Helper.isEmpty(candidateEquipPool[equipType])) {
                 candidateEquipPool[equipType] = {};
             }
 
-            // Create Candidate Equips
+            // Create Set Equips
             Object.keys(this.conditionSets).forEach((setId) => {
                 let equipInfos = ArmorDataset.typeIs(equipType).setIs(setId).getItems();
 
@@ -431,224 +411,7 @@ class FittingAlgorithm {
                 );
             });
 
-            // Append Empty Candidate Equip
-            candidateEquipPool[equipType]['empty'] = this.getEmptyCandidateEquip(equipType);
-
-            Helper.log('Candidate Equip Pool:', equipType, Object.keys(candidateEquipPool[equipType]).length, candidateEquipPool[equipType]);
-        });
-
-        // Create Current Equip Types and Convert Candidate Equip Pool
-        let currentEquipTypes = [];
-        let traversalCount = 0;
-        let traversalPercent = 0;
-        let partTraversalCount = 1;
-        let totalTraversalCount = Object.keys(initBundlePool).length;
-
-        for (const [equipType, candidateEquips] of Object.entries(candidateEquipPool)) {
-            currentEquipTypes.push(equipType);
-            candidateEquipPool[equipType] = Object.values(candidateEquips);
-            partTraversalCount *= candidateEquipPool[equipType].length;
-        }
-
-        candidateEquipPool = Object.values(candidateEquipPool);
-        totalTraversalCount *= partTraversalCount
-
-        if (0 === candidateEquipPool.length) {
-            return initBundlePool;
-        }
-
-        let candidateEquipPoolCount = candidateEquipPool.map((equips) => {
-            return equips.length;
-        });
-
-        // Create Bundle Pool With Set Equips
-        Helper.log('Create Bundle Pool With Set Equips');
-
-        Object.values(initBundlePool).forEach((bundle, partIndex) => {
-            let typeIndex = 0;
-            let equipIndex = 0;
-            let candidateEquip = null;
-            let statusStack = [];
-
-            // Push Root Bundle
-            statusStack.push({
-                bundle: bundle,
-                equipIndex: 0
-            });
-
-            const getTraversalCount = () => {
-                let currentCount = 1;
-                let currentTypeIndex = null;
-                let currentEquipIndex = null;
-
-                for (let typeIndex = statusStack.length - 1; typeIndex >= statusStack.length; typeIndex--) {
-                    let currentStack = statusStack[typeIndex];
-
-                    if (1 < currentStack.equipIndex) {
-                        currentTypeIndex = typeIndex;
-                        currentEquipIndex = currentStack.equipIndex;
-                    }
-                }
-
-                if (null === currentTypeIndex) {
-                    return 0;
-                }
-
-                candidateEquipPoolCount.forEach((equipCount, index) => {
-                    if (index === currentTypeIndex) {
-                        currentCount *= currentEquipIndex - 1;
-                    } else {
-                        currentCount *= equipCount;
-                    }
-                });
-
-                return currentCount;
-            };
-
-            const calculateTraversalCount = () => {
-                if (0 === Object.keys(this.conditionSkills).length) {
-                    return;
-                }
-
-                traversalCount = partIndex * partTraversalCount + getTraversalCount();
-
-                let precent = traversalCount / totalTraversalCount;
-
-                if (parseInt(precent * 100) <= traversalPercent) {
-                    return;
-                }
-
-                traversalPercent = parseInt(precent * 100);
-
-                Helper.log('Set Equips: Traversal Count:', traversalCount);
-
-                let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
-
-                this.callback({
-                    searchPercent: traversalPercent,
-                    timeRemaining: parseInt(diffTime / precent - diffTime)
-                });
-            };
-
-            const findPrevTypeAndNextEquip = () => {
-                while (true) {
-                    typeIndex--;
-                    statusStack.pop();
-
-                    if (0 === statusStack.length) {
-                        break;
-                    }
-
-                    equipIndex = statusStack[typeIndex].equipIndex;
-
-                    if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                        statusStack[typeIndex].equipIndex++;
-
-                        calculateTraversalCount();
-
-                        break;
-                    }
-                }
-            };
-
-            const findNextEquip = () => {
-                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                    statusStack[typeIndex].equipIndex++;
-
-                    calculateTraversalCount();
-                } else {
-                    findPrevTypeAndNextEquip();
-                }
-            };
-
-            const findNextType = () => {
-                if (Helper.isNotEmpty(candidateEquipPool[typeIndex + 1])) {
-                    typeIndex++;
-                    statusStack.push({
-                        bundle: bundle,
-                        equipIndex: 0
-                    });
-                } else {
-                    findNextEquip();
-                }
-            };
-
-            Helper.log('Set Equips: Root Bundle:', bundle);
-
-            while (true) {
-                if (0 === statusStack.length) {
-                    break;
-                }
-
-                bundle = statusStack[typeIndex].bundle;
-                equipIndex = statusStack[typeIndex].equipIndex;
-                candidateEquip = candidateEquipPool[typeIndex][equipIndex];
-
-                // Add Candidate Equip to Bundle
-                if (Helper.isEmpty(bundle.equips[currentEquipTypes[typeIndex]])
-                    && Helper.isNotEmpty(candidateEquip.id)
-                ) {
-                    bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
-
-                    // If Add Candidate Equip Failed
-                    if (false === bundle) {
-                        findNextEquip();
-
-                        continue;
-                    }
-
-                    // Check Bundle Sets
-                    if (this.isBundleSetCompleted(bundle)) {
-                        lastBundlePool[this.getBundleHash(bundle)] = bundle;
-
-                        if (0 === Object.keys(this.conditionSkills).length) {
-                            this.callback({
-                                bundleCount: Object.keys(lastBundlePool).length
-                            });
-                        }
-
-                        findNextEquip();
-
-                        continue;
-                    }
-                }
-
-                findNextType();
-            }
-
-            if (0 === Object.keys(this.conditionSkills).length) {
-                let precent = traversalCount / totalTraversalCount;
-                let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
-
-                this.callback({
-                    bundleCount: Object.keys(lastBundlePool).length,
-                    searchPercent: parseInt(precent * 100),
-                    timeRemaining: parseInt(diffTime / precent - diffTime)
-                });
-            }
-        });
-
-        Helper.log('Last Bundle Result:', Object.keys(lastBundlePool).length, lastBundlePool);
-
-        return lastBundlePool;
-    };
-
-    /**
-     * Create Bundle Pool with Skill Equips
-     */
-    createBundlePoolWithSkillEquips = (initBundlePool) => {
-        let candidateEquipPool = {};
-        let lastBundlePool = {};
-
-        // Init Skill Equips
-        Helper.log('Init Skill Equips');
-
-        this.conditionEquips.forEach((equipType) => {
-            if (Helper.isEmpty(candidateEquipPool[equipType])) {
-                candidateEquipPool[equipType] = {};
-            }
-
-            // Create Candidate Equips
+            // Create Skill Equips
             Object.keys(this.conditionSkills).forEach((skillId) => {
                 let equipInfos = null;
 
@@ -691,8 +454,7 @@ class FittingAlgorithm {
         let currentEquipTypes = [];
         let traversalCount = 0;
         let traversalPercent = 0;
-        let partTraversalCount = 1;
-        let totalTraversalCount = Object.keys(initBundlePool).length;
+        let totalTraversalCount = 1;
 
         for (const [equipType, candidateEquips] of Object.entries(candidateEquipPool)) {
             if (Helper.isEmpty(this.maxEquipExpectedValue[equipType])) {
@@ -715,11 +477,10 @@ class FittingAlgorithm {
 
             currentEquipTypes.push(equipType);
             candidateEquipPool[equipType] = Object.values(candidateEquips);
-            partTraversalCount *= candidateEquipPool[equipType].length;
+            totalTraversalCount *= candidateEquipPool[equipType].length;
         }
 
         candidateEquipPool = Object.values(candidateEquipPool);
-        totalTraversalCount *= partTraversalCount
 
         if (0 === candidateEquipPool.length) {
             Object.values(initBundlePool).forEach((bundle) => {
@@ -775,12 +536,12 @@ class FittingAlgorithm {
         Helper.log('Init: Future Expected Value:', this.futureExpectedValue);
         Helper.log('Init: Future Expected Level:', this.futureExpectedLevel);
 
-        // Create Bundle Pool With Skill Equips
-        Helper.log('Create Bundle Pool With Skill Equips');
+        // Create Bundle Pool With Equips
+        Helper.log('Create Bundle Pool With Equips');
 
         let isEndEarly = false;
 
-        Object.values(initBundlePool).forEach((bundle, partIndex) => {
+        Object.values(initBundlePool).forEach((bundle) => {
             if (isEndEarly) {
                 return;
             }
@@ -826,7 +587,7 @@ class FittingAlgorithm {
             };
 
             const calculateTraversalCount = () => {
-                traversalCount = partIndex * partTraversalCount + getTraversalCount();
+                traversalCount = getTraversalCount();
 
                 let precent = traversalCount / totalTraversalCount;
 
@@ -917,8 +678,10 @@ class FittingAlgorithm {
                         continue;
                     }
 
-                    // Check Bundle Skills
-                    if (this.isBundleSkillCompleted(bundle)) {
+                    // Check Bundle Set & Skills
+                    if (this.isBundleSetCompleted(bundle)
+                        && this.isBundleSkillCompleted(bundle)
+                    ) {
                         lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
                         this.callback({
@@ -940,7 +703,9 @@ class FittingAlgorithm {
                     }
 
                     // Check Bundle Expected
-                    if (this.isBundleExpected(bundle)) {
+                    if (this.isBundleSetCompleted(bundle)
+                        && this.isBundleExpected(bundle)
+                    ) {
 
                         // Create Completed Bundles By Skills
                         this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
