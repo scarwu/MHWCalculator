@@ -15,11 +15,11 @@ import Status from 'core/status';
 import Helper from 'core/helper';
 
 const statusMapping = {
-    changelog:              'state:modal:0:changelog',
-    algorithmSetting:       'state:modal:0:algorithmSetting',
-    bundleItemSelector:     'state:modal:0:bundleItemSelector',
-    conditionItemSelector:  'state:modal:0:conditionItemSelector',
-    equipItemSelector:      'state:modal:0:equipItemSelector'
+    changelog:              'state:modal:1:changelog',
+    algorithmSetting:       'state:modal:1:algorithmSetting',
+    bundleItemSelector:     'state:modal:1:bundleItemSelector',
+    conditionItemSelector:  'state:modal:1:conditionItemSelector',
+    equipItemSelector:      'state:modal:1:equipItemSelector'
 };
 
 // Middleware

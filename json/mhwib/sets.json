@@ -728,5 +728,29 @@
                 "require": 4
             }
         ]
+    },
+    {
+        "id": "盛放之祝福",
+        "name": {
+            "zhTW": "盛放之祝福",
+            "jaJP": null,
+            "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
+        "skills": [
+            {
+                "id": "盛放的獻禮",
+                "level": 1,
+                "require": 3
+            },
+            {
+                "id": "盛放之恩惠",
+                "level": 1,
+                "require": 5
+            }
+        ]
     }
 ]

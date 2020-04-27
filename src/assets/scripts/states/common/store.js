@@ -25,14 +25,15 @@ import Constant from 'constant';
 import TestData from 'files/json/testData.json';
 
 const statusMapping = {
-    tempData:           'state:common:0:tempData',
-    requiredEquips:     'state:common:0:requiredEquips',
-    requiredSets:       'state:common:0:requiredSets',
-    requiredSkills:     'state:common:0:requiredSkills',
-    currentEquips:      'state:common:0:currentEquips',
-    computedResult:     'state:common:0:computedResult',
-    reservedBundles:    'state:common:0:reservedBundles',
-    customWeapon:       'state:common:0:customWeapon'
+    tempData:           'state:common:1:tempData',
+    requiredEquips:     'state:common:1:requiredEquips',
+    requiredSets:       'state:common:1:requiredSets',
+    requiredSkills:     'state:common:1:requiredSkills',
+    currentEquips:      'state:common:1:currentEquips',
+    algorithmParams:    'state:common:1:algorithmParams',
+    computedResult:     'state:common:1:computedResult',
+    reservedBundles:    'state:common:1:reservedBundles',
+    customWeapon:       'state:common:1:customWeapon'
 };
 
 // Middleware
