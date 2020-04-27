@@ -37,6 +37,7 @@ export default function QuickSetting(props) {
      */
     const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonState.getter.getAlgorithmParams());
     const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
     const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
 
     // Like Did Mount & Will Unmount Cycle
@@ -44,6 +45,7 @@ export default function QuickSetting(props) {
         const unsubscribe = CommonState.store.subscribe(() => {
             updateAlgorithmParams(CommonState.getter.getAlgorithmParams());
             updateRequiredEquips(CommonState.getter.getRequiredEquips());
+            updateRequiredSets(CommonState.getter.getRequiredSets());
             updateRequiredSkills(CommonState.getter.getRequiredSkills());
         });
 
@@ -67,10 +69,45 @@ export default function QuickSetting(props) {
 
             return Helper.isEmpty(stateRequiredEquips[equipType]);
         });
+        const setIds = stateRequiredSets.map((set) => {
+            return set.id;
+        });
         const skillIds = stateRequiredSkills.map((skill) => {
             skillLevelMapping[skill.id] = skill.level;
 
             return skill.id;
+        });
+
+        ArmorDataset.typesIs(equipTypes).setsIs(setIds).getItems().forEach((armorInfo) => {
+            if (false === stateAlgorithmParams.usingFactor.armor['rare' + armorInfo.rare]) {
+                return;
+            }
+
+            let isSkip = false;
+
+            armorInfo.skills.forEach((skill) => {
+                if (true === isSkip) {
+                    return;
+                }
+
+                if (0 === skillLevelMapping[skill.id]) {
+                    isSkip = true;
+
+                    return;
+                }
+            });
+
+            if (true === isSkip) {
+                return;
+            }
+
+            if (Helper.isEmpty(armorSeriesMapping[armorInfo.rare])) {
+                armorSeriesMapping[armorInfo.rare] = {};
+            }
+
+            armorSeriesMapping[armorInfo.rare][armorInfo.seriesId] = {
+                name: armorInfo.series
+            };
         });
 
         ArmorDataset.typesIs(equipTypes).hasSkills(skillIds).getItems().forEach((armorInfo) => {
@@ -314,5 +351,5 @@ export default function QuickSetting(props) {
                 }) : false}
             </div>
         );
-    }, [data, stateAlgorithmParams, stateRequiredEquips, stateRequiredSkills]);
+    }, [data, stateAlgorithmParams, stateRequiredEquips, stateRequiredSets, stateRequiredSkills]);
 };

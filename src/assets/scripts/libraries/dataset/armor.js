@@ -70,6 +70,7 @@ class ArmorDataset {
         this.filterTypes = null;
         this.filterRare = null;
         this.filterSet = null;
+        this.filterSets = null;
         this.filterSkillName = null;
         this.filterSkillNames = null;
         this.filterSkillIsConsistent = null;
@@ -115,6 +116,21 @@ class ArmorDataset {
                 if (Helper.isEmpty(data.set)
                     || this.filterSet !== data.set.id
                 ) {
+                    return false;
+                }
+            }
+
+            // Sets Is
+            if (Helper.isNotEmpty(this.filterSets)) {
+                isSkip = false;
+
+                if (Helper.isEmpty(data.set)
+                    || -1 === this.filterSets.indexOf(data.set.id)
+                ) {
+                    isSkip = true;
+                }
+
+                if (isSkip) {
                     return false;
                 }
             }
@@ -201,6 +217,12 @@ class ArmorDataset {
 
     setIs = (text) => {
         this.filterSet = text;
+
+        return this;
+    };
+
+    setsIs = (sets) => {
+        this.filterSets = sets;
 
         return this;
     };

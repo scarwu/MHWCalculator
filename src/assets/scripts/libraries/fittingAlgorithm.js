@@ -482,34 +482,34 @@ class FittingAlgorithm {
 
         candidateEquipPool = Object.values(candidateEquipPool);
 
-        if (0 === candidateEquipPool.length) {
-            Object.values(initBundlePool).forEach((bundle) => {
+        // if (0 === candidateEquipPool.length) {
+        //     Object.values(initBundlePool).forEach((bundle) => {
 
-                // Create Completed Bundles By Skills
-                this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
-                    if (true === isEndEarly) {
-                        return;
-                    }
+        //         // Create Completed Bundles By Skills
+        //         this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
+        //             if (true === isEndEarly) {
+        //                 return;
+        //             }
 
-                    lastBundlePool[this.getBundleHash(bundle)] = bundle;
+        //             lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
-                    this.callback({
-                        bundleCount: Object.keys(lastBundlePool).length
-                    });
+        //             this.callback({
+        //                 bundleCount: Object.keys(lastBundlePool).length
+        //             });
 
-                    // Last Bundle Pre Check
-                    if (this.algorithmParams.flag.isEndEarly) {
-                        Helper.log('Last Bundle Count:', Object.keys(lastBundlePool).length);
+        //             // Last Bundle Pre Check
+        //             if (this.algorithmParams.flag.isEndEarly) {
+        //                 Helper.log('Last Bundle Count:', Object.keys(lastBundlePool).length);
 
-                        if (this.algorithmParams.limit <= Object.keys(lastBundlePool).length) {
-                            isEndEarly = true;
-                        }
-                    }
-                });
-            });
+        //                 if (this.algorithmParams.limit <= Object.keys(lastBundlePool).length) {
+        //                     isEndEarly = true;
+        //                 }
+        //             }
+        //         });
+        //     });
 
-            return lastBundlePool;
-        }
+        //     return lastBundlePool;
+        // }
 
         let candidateEquipPoolCount = candidateEquipPool.map((equips) => {
             return equips.length;
@@ -706,7 +706,6 @@ class FittingAlgorithm {
                     if (this.isBundleSetCompleted(bundle)
                         && this.isBundleExpected(bundle)
                     ) {
-
                         // Create Completed Bundles By Skills
                         this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
                             if (true === isEndEarly) {
