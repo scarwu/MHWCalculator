@@ -37,6 +37,7 @@ export default function ArmorFactors(props) {
      */
     const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonState.getter.getAlgorithmParams());
     const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
     const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
 
     // Like Did Mount & Will Unmount Cycle
@@ -44,6 +45,7 @@ export default function ArmorFactors(props) {
         const unsubscribe = CommonState.store.subscribe(() => {
             updateAlgorithmParams(CommonState.getter.getAlgorithmParams());
             updateRequiredEquips(CommonState.getter.getRequiredEquips());
+            updateRequiredSets(CommonState.getter.getRequiredSets());
             updateRequiredSkills(CommonState.getter.getRequiredSkills());
         });
 
@@ -60,15 +62,67 @@ export default function ArmorFactors(props) {
         let dataset = ArmorDataset;
         let armorFactor = stateAlgorithmParams.usingFactor.armor;
 
-        if (true === byRequiredConditions) {
-            const equipTypes = Object.keys(stateRequiredEquips).filter((equipType) => {
-                if ('weapon' === equipType || 'charm' === equipType) {
-                    return false;
-                }
+        const equipTypes = Object.keys(stateRequiredEquips).filter((equipType) => {
+            if ('weapon' === equipType || 'charm' === equipType) {
+                return false;
+            }
 
-                return Helper.isEmpty(stateRequiredEquips[equipType]);
+            return Helper.isEmpty(stateRequiredEquips[equipType]);
+        });
+
+        if (true === byRequiredConditions) {
+            const setIds = stateRequiredSets.map((set) => {
+                return set.id;
             });
 
+            console.log(setIds);
+
+            dataset = dataset.typesIs(equipTypes).setsIs(setIds);
+        }
+
+        dataset.getItems().filter((armorInfo) => {
+            let text = _(armorInfo.series);
+
+            if (Helper.isNotEmpty(segment)
+                && -1 === text.toLowerCase().search(segment.toLowerCase())
+            ) {
+                return false;
+            }
+
+            return true;
+        }).forEach((armorInfo) => {
+            if (false === stateAlgorithmParams.usingFactor.armor['rare' + armorInfo.rare]) {
+                return;
+            }
+
+            let isSkip = false;
+
+            armorInfo.skills.forEach((skill) => {
+                if (true === isSkip) {
+                    return;
+                }
+
+                if (0 === skillLevelMapping[skill.id]) {
+                    isSkip = true;
+
+                    return;
+                }
+            });
+
+            if (true === isSkip) {
+                return;
+            }
+
+            if (Helper.isEmpty(armorSeriesMapping[armorInfo.rare])) {
+                armorSeriesMapping[armorInfo.rare] = {};
+            }
+
+            armorSeriesMapping[armorInfo.rare][armorInfo.seriesId] = {
+                name: armorInfo.series
+            };
+        });
+
+        if (true === byRequiredConditions) {
             const skillIds = stateRequiredSkills.map((skill) => {
                 skillLevelMapping[skill.id] = skill.level;
 
@@ -178,5 +232,5 @@ export default function ArmorFactors(props) {
 
             return blocks;
         });
-    }, [segment, byRequiredConditions, stateAlgorithmParams, stateRequiredEquips, stateRequiredSkills]);
+    }, [segment, byRequiredConditions, stateAlgorithmParams, stateRequiredEquips, stateRequiredSets, stateRequiredSkills]);
 };
