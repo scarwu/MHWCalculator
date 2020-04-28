@@ -39,8 +39,8 @@ const diffLogger = store => next => action => {
         Status.set(statusMapping[key], nextState[key]);
     }
 
-    Helper.log('State: Modal -> action', action);
-    Helper.log('State: Modal -> diffState', diffState);
+    Helper.debug('State: Modal -> action', action);
+    Helper.debug('State: Modal -> diffState', diffState);
 
     return result;
 };

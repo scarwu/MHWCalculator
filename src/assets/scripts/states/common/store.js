@@ -31,7 +31,7 @@ const statusMapping = {
     requiredSkills:     'state:common:1:requiredSkills',
     currentEquips:      'state:common:1:currentEquips',
     algorithmParams:    'state:common:1:algorithmParams',
-    computedResult:     'state:common:1:computedResult',
+    computedResult:     'state:common:2:computedResult',
     reservedBundles:    'state:common:1:reservedBundles',
     customWeapon:       'state:common:1:customWeapon'
 };
@@ -53,8 +53,8 @@ const diffLogger = store => next => action => {
         Status.set(statusMapping[key], nextState[key]);
     }
 
-    Helper.log('State: Common -> action', action);
-    Helper.log('State: Common -> diffState', diffState);
+    Helper.debug('State: Common -> action', action);
+    Helper.debug('State: Common -> diffState', diffState);
 
     return result;
 };

@@ -56,8 +56,8 @@ onmessage = (event) => {
         return bundle;
     });
 
-    Helper.debug('Bundle List:', list);
-    Helper.debug('Search Time:', searchTime);
+    Helper.log('Worker: Bundle List:', list);
+    Helper.log('Worker: Search Time:', searchTime);
 
     postMessage({
         action: 'result',
