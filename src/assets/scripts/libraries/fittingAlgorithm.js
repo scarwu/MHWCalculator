@@ -588,48 +588,26 @@ class FittingAlgorithm {
                 return;
             }
 
-            let typeIndex = 0;
-            let equipIndex = 0;
-            let candidateEquip = null;
+            let stackIndex = 0;
             let statusStack = [];
+            let typeIndex = null;
+            let equipIndex = null;
+            let candidateEquip = null;
 
             // Push Root Bundle
             statusStack.push({
                 bundle: bundle,
+                typeIndex: 0,
                 equipIndex: 0
             });
 
-            const getTraversalCount = () => {
-                let currentCount = 1;
-                let currentTypeIndex = null;
-                let currentEquipIndex = null;
-
-                for (let typeIndex = statusStack.length - 1; typeIndex >= statusStack.length; typeIndex--) {
-                    let currentStack = statusStack[typeIndex];
-
-                    if (1 < currentStack.equipIndex) {
-                        currentTypeIndex = typeIndex;
-                        currentEquipIndex = currentStack.equipIndex;
-                    }
-                }
-
-                if (null === currentTypeIndex) {
-                    return 0;
-                }
+            const calculateTraversalCount = () => {
+                traversalCount = 1;
 
                 candidateEquipPoolCount.forEach((equipCount, index) => {
-                    if (index === currentTypeIndex) {
-                        currentCount *= currentEquipIndex - 1;
-                    } else {
-                        currentCount *= equipCount;
-                    }
-                })
-
-                return currentCount;
-            };
-
-            const calculateTraversalCount = () => {
-                traversalCount = getTraversalCount();
+                    traversalCount *= (index <= stackIndex)
+                        ? statusStack[index].equipIndex + 1 : equipCount;
+                });
 
                 let precent = traversalCount / totalTraversalCount;
 
@@ -651,14 +629,15 @@ class FittingAlgorithm {
 
             const findPrevTypeAndNextEquip = () => {
                 while (true) {
-                    typeIndex--;
+                    stackIndex--;
                     statusStack.pop();
 
                     if (0 === statusStack.length) {
                         break;
                     }
 
-                    equipIndex = statusStack[typeIndex].equipIndex;
+                    typeIndex = statusStack[stackIndex].typeIndex;
+                    equipIndex = statusStack[stackIndex].equipIndex;
 
                     if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
                         statusStack[typeIndex].equipIndex++;
@@ -671,8 +650,10 @@ class FittingAlgorithm {
             };
 
             const findNextEquip = () => {
+                typeIndex = statusStack[stackIndex].typeIndex;
+
                 if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                    statusStack[typeIndex].equipIndex++;
+                    statusStack[stackIndex].equipIndex++;
 
                     calculateTraversalCount();
                 } else {
@@ -681,10 +662,13 @@ class FittingAlgorithm {
             };
 
             const findNextType = () => {
+                typeIndex = statusStack[stackIndex].typeIndex;
+
                 if (Helper.isNotEmpty(candidateEquipPool[typeIndex + 1])) {
-                    typeIndex++;
+                    stackIndex++;
                     statusStack.push({
                         bundle: bundle,
+                        typeIndex: typeIndex + 1,
                         equipIndex: 0
                     });
                 } else {
@@ -703,8 +687,9 @@ class FittingAlgorithm {
                     break;
                 }
 
-                bundle = statusStack[typeIndex].bundle;
-                equipIndex = statusStack[typeIndex].equipIndex;
+                bundle = statusStack[stackIndex].bundle;
+                typeIndex = statusStack[stackIndex].typeIndex;
+                equipIndex = statusStack[stackIndex].equipIndex;
                 candidateEquip = candidateEquipPool[typeIndex][equipIndex];
 
                 // Add Candidate Equip to Bundle
@@ -824,38 +809,34 @@ class FittingAlgorithm {
             correspondJewelPool[size] = Helper.isNotEmpty(this.correspondJewels[size])
                 ? this.correspondJewels[size] : [];
 
-            // correspondJewelPool[size] = [];
+            // correspondJewelPool[size] = correspondJewelPool[size].filter((jewel) => {
+            //     let isSkip = false;
 
-            // if (Helper.isNotEmpty(this.correspondJewels[size])) {
-            //     correspondJewelPool[size] = this.correspondJewels[size].filter((jewel) => {
-            //         let isSkip = false;
-
-            //         jewel.skills.forEach((skill) => {
-            //             if (true === isSkip) {
-            //                 return;
-            //             }
-
-            //             if (Helper.isNotEmpty(bundle.meta.completedSkills[skill.id])) {
-            //                 isSkip = true;
-
-            //                 return;
-            //             }
-            //         });
-
+            //     jewel.skills.forEach((skill) => {
             //         if (true === isSkip) {
-            //             return false;
+            //             return;
             //         }
 
-            //         return true;
+            //         if (Helper.isNotEmpty(bundle.meta.completedSkills[skill.id])) {
+            //             isSkip = true;
+
+            //             return;
+            //         }
             //     });
-            // }
+
+            //     if (true === isSkip) {
+            //         return false;
+            //     }
+
+            //     return true;
+            // });
 
             // if (Helper.isNotEmpty(correspondJewelPool[size - 1])) {
             //     correspondJewelPool[size] = correspondJewelPool[size].concat(correspondJewelPool[size - 1]);
             // }
         });
 
-        console.log(correspondJewelPool);
+        // console.log(correspondJewelPool);
 
         const getCurrentSize = () => {
             for (let size = 4; size > 0; size--) {
@@ -869,10 +850,10 @@ class FittingAlgorithm {
 
         let lastBundlePool = {};
         let stackIndex = 0;
+        let statusStack = [];
         let slotSize = null;
         let jewelIndex = null;
         let correspondJewel = null;
-        let statusStack = [];
 
         // Push Root Bundle
         statusStack.push({
@@ -968,11 +949,11 @@ class FittingAlgorithm {
             }
 
             // Check Bundle Jewel Have a Future
-            if (this.algorithmParams.flag.isExpectBundle) {
-                if (false === this.isBundleJewelHaveFuture(bundle, slotMapping)) {
-                    break;
-                }
-            }
+            // if (this.algorithmParams.flag.isExpectBundle) {
+            //     if (false === this.isBundleJewelHaveFuture(bundle, slotMapping)) {
+            //         break;
+            //     }
+            // }
 
             findNextSlot();
         }
@@ -1366,7 +1347,7 @@ class FittingAlgorithm {
         }
 
         // If jewel count force set 1, then will show all combination
-        // jewelCount = 1;
+        jewelCount = 1;
 
         bundle = Helper.deepCopy(bundle);
 
