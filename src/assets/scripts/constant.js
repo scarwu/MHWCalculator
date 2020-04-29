@@ -168,8 +168,10 @@ export default {
                 3: 0,
                 4: 0
             },
-            expectedValue: 0,
-            expectedLevel: 0
+            totalExpectedValue: 0,
+            totalExpectedLevel: 0,
+            skillExpectedValue: 0,
+            skillExpectedLevel: 0
         },
         bundle: {
             equips: {
@@ -193,8 +195,10 @@ export default {
                     ice: 0,
                     dragon: 0
                 },
-                expectedValue: 0,
-                expectedLevel: 0,
+                totalExpectedValue: 0,
+                totalExpectedLevel: 0,
+                skillExpectedValue: 0,
+                skillExpectedLevel: 0,
                 equipCount: 0,
                 completedSkills: {},
                 completedSets: {},
