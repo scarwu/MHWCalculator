@@ -799,7 +799,7 @@ class FittingAlgorithm {
             });
         });
 
-        Helper.log('FA: Last Bundle Result:', Object.keys(lastBundlePool).length, lastBundlePool);
+        Helper.log('FA: Last Bundle Result:', lastBundlePool);
 
         return lastBundlePool;
     }
@@ -818,18 +818,44 @@ class FittingAlgorithm {
 
         // Create Current Skill Ids and Convert Correspond Jewel Pool
         let correspondJewelPool = {};
+        let slotMapping = this.currentSlotMapping;
 
-        [ 4, 3, 2, 1 ].forEach((size) => {
-            correspondJewelPool[size] = [];
+        [ 1, 2, 3, 4 ].forEach((size) => {
+            correspondJewelPool[size] = Helper.isNotEmpty(this.correspondJewels[size])
+                ? this.correspondJewels[size] : [];
 
-            for (let currentSize = size; currentSize > 0; currentSize--) {
-                if (Helper.isEmpty(this.correspondJewels[size])) {
-                    continue;
-                }
+            // correspondJewelPool[size] = [];
 
-                correspondJewelPool[size] = correspondJewelPool[size].concat(this.correspondJewels[size]);
-            }
+            // if (Helper.isNotEmpty(this.correspondJewels[size])) {
+            //     correspondJewelPool[size] = this.correspondJewels[size].filter((jewel) => {
+            //         let isSkip = false;
+
+            //         jewel.skills.forEach((skill) => {
+            //             if (true === isSkip) {
+            //                 return;
+            //             }
+
+            //             if (Helper.isNotEmpty(bundle.meta.completedSkills[skill.id])) {
+            //                 isSkip = true;
+
+            //                 return;
+            //             }
+            //         });
+
+            //         if (true === isSkip) {
+            //             return false;
+            //         }
+
+            //         return true;
+            //     });
+            // }
+
+            // if (Helper.isNotEmpty(correspondJewelPool[size - 1])) {
+            //     correspondJewelPool[size] = correspondJewelPool[size].concat(correspondJewelPool[size - 1]);
+            // }
         });
+
+        console.log(correspondJewelPool);
 
         const getCurrentSize = () => {
             for (let size = 4; size > 0; size--) {
@@ -899,7 +925,7 @@ class FittingAlgorithm {
             }
         };
 
-        Helper.log('FA: CreateBundlesWithJewels: Root Bundle:', bundle);
+        // Helper.log('FA: CreateBundlesWithJewels: Root Bundle:', bundle);
 
         while (true) {
             if (0 === statusStack.length) {
@@ -942,11 +968,11 @@ class FittingAlgorithm {
             }
 
             // Check Bundle Jewel Have a Future
-            // if (this.algorithmParams.flag.isExpectBundle) {
-            //     if (false === this.isBundleJewelHaveFuture(bundle)) {
-            //         break;
-            //     }
-            // }
+            if (this.algorithmParams.flag.isExpectBundle) {
+                if (false === this.isBundleJewelHaveFuture(bundle, slotMapping)) {
+                    break;
+                }
+            }
 
             findNextSlot();
         }
@@ -1340,7 +1366,7 @@ class FittingAlgorithm {
         }
 
         // If jewel count force set 1, then will show all combination
-        jewelCount = 1;
+        // jewelCount = 1;
 
         bundle = Helper.deepCopy(bundle);
 
@@ -1368,8 +1394,6 @@ class FittingAlgorithm {
         let expectedValue = jewelCount * jewel.expectedValue;
         let expectedLevel = jewelCount * jewel.expectedLevel;
 
-        bundle.meta.totalExpectedValue += expectedValue;
-        bundle.meta.totalExpectedLevel += expectedLevel;
         bundle.meta.skillExpectedValue += expectedValue;
         bundle.meta.skillExpectedLevel += expectedLevel;
 
@@ -1452,7 +1476,7 @@ class FittingAlgorithm {
      * This is magic function, which is see through the future,
      * maybe will lost some results.
      */
-    isBundleJewelHaveFuture = (bundle) => {
+    isBundleJewelHaveFuture = (bundle, slotMapping) => {
         let expectedValue = bundle.meta.skillExpectedValue;
         let expectedLevel = bundle.meta.skillExpectedLevel;
 
@@ -1463,8 +1487,8 @@ class FittingAlgorithm {
                 return;
             }
 
-            expectedValue += slotCount * this.currentSlotMapping[size].expectedValue;
-            expectedLevel += slotCount * this.currentSlotMapping[size].expectedLevel;
+            expectedValue += slotCount * slotMapping[size].expectedValue;
+            expectedLevel += slotCount * slotMapping[size].expectedLevel;
         });
 
         return this.totalExpectedValue <= expectedValue
