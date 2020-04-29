@@ -98,9 +98,9 @@ class FittingAlgorithm {
 
         bundlePool[this.getBundleHash(this.firstBundle)] = this.firstBundle;
 
-        // Create Bundle Pool with Equips
+        // Create Bundles with Equips
         if (0 !== this.currentSetCount || 0 !== this.currentSkillCount) {
-            bundlePool = this.createBundlePoolWithEquips(bundlePool);
+            bundlePool = this.createBundlesWithEquips(bundlePool);
 
             this.callback({
                 bundleCount: Object.keys(bundlePool).length,
@@ -206,6 +206,11 @@ class FittingAlgorithm {
                 this.algorithmParams.usingFactor.jewel[jewelInfo.id] = -1;
             }
 
+            if (0 === this.algorithmParams.usingFactor.jewel[jewelInfo.id]) {
+                return;
+            }
+
+            // Create Infos
             let expectedValue = 0;
             let expectedLevel = 0;
 
@@ -238,11 +243,19 @@ class FittingAlgorithm {
                 this.correspondJewels[jewelInfo.size] = [];
             }
 
+            let jewelCountLimit = null;
+
+            if (-1 !== this.algorithmParams.usingFactor.jewel[jewelInfo.id]) {
+                jewelCountLimit = this.algorithmParams.usingFactor.jewel[jewelInfo.id];
+            }
+
             this.correspondJewels[jewelInfo.size].push({
                 id: jewelInfo.id,
+                size: jewelInfo.size,
+                skills: jewelSkills,
+                countLimit: jewelCountLimit,
                 expectedValue: expectedValue,
-                expectedLevel: expectedLevel,
-                skills: jewelSkills
+                expectedLevel: expectedLevel
             });
         });
 
@@ -417,9 +430,9 @@ class FittingAlgorithm {
     };
 
     /**
-     * Create Bundle Pool with Equips
+     * Create Bundles with Equips
      */
-    createBundlePoolWithEquips = (initBundlePool) => {
+    createBundlesWithEquips = (initBundlePool) => {
         let candidateEquipPool = {};
         let lastBundlePool = {};
 
@@ -546,8 +559,8 @@ class FittingAlgorithm {
             if (0 !== this.currentSkillCount) {
                 Object.values(initBundlePool).forEach((bundle) => {
 
-                    // Create Completed Bundles By Skills
-                    this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
+                    // Create Bundles With Jewels
+                    this.createBundlesWithJewels(bundle).forEach((bundle) => {
                         if (true === isEndEarly) {
                             return;
                         }
@@ -576,7 +589,7 @@ class FittingAlgorithm {
         let isEndEarly = false;
 
         Object.values(initBundlePool).forEach((bundle) => {
-            if (isEndEarly) {
+            if (true === isEndEarly) {
                 return;
             }
 
@@ -687,7 +700,7 @@ class FittingAlgorithm {
             Helper.log('FA: Skill Equip: Root Bundle:', bundle);
 
             while (true) {
-                if (isEndEarly) {
+                if (true === isEndEarly) {
                     break;
                 }
 
@@ -738,9 +751,10 @@ class FittingAlgorithm {
                         }
 
                         // Check Bundle Expected
-                        if(this.isBundleExpected(bundle)) {
-                            // Create Completed Bundles By Skills
-                            this.createCompletedBundlesBySkills(bundle).forEach((bundle) => {
+                        if (this.isBundleExpected(bundle)) {
+
+                            // Create Bundles With Jewels
+                            this.createBundlesWithJewels(bundle).forEach((bundle) => {
                                 if (true === isEndEarly) {
                                     return;
                                 }
@@ -1135,9 +1149,9 @@ class FittingAlgorithm {
     };
 
     /**
-     * Create Completed Bundles By Skills
+     * Create Bundles With Jewels
      */
-    createCompletedBundlesBySkills = (bundle) => {
+    createBundlesWithJewels = (bundle) => {
         if (this.isBundleSkillCompleted(bundle)) {
             return [ bundle ];
         }
@@ -1147,42 +1161,58 @@ class FittingAlgorithm {
         }
 
         // Create Current Skill Ids and Convert Correspond Jewel Pool
-        let currentSkillIds = [];
-        let correspondJewelPool = Helper.deepCopy(this.correspondJewels);
+        let correspondJewelPool = {};
 
-        for (const [skillId, correspondJewels] of Object.entries(correspondJewelPool)) {
-            currentSkillIds.push(skillId);
-            correspondJewelPool[skillId] = Object.values(correspondJewels);
-        }
+        [ 4, 3, 2, 1 ].forEach((size) => {
+            correspondJewelPool[size] = [];
 
-        correspondJewelPool = Object.values(correspondJewelPool);
+            for (let currentSize = size; currentSize > 0; currentSize--) {
+                if (Helper.isEmpty(this.correspondJewels[size])) {
+                    continue;
+                }
+
+                correspondJewelPool[size] = correspondJewelPool[size].concat(this.correspondJewels[size]);
+            }
+        });
+
+        const getCurrentSize = () => {
+            for (let size = 4; size > 0; size--) {
+                if (0 === bundle.meta.remainingSlotCount[size]) {
+                    continue;
+                }
+
+                return size;
+            }
+        };
 
         let lastBundlePool = {};
-        let traversalCount = 0;
-        let skillIndex = 0;
-        let jewelIndex = 0;
+        let stackIndex = 0;
+        let slotSize = null;
+        let jewelIndex = null;
         let correspondJewel = null;
         let statusStack = [];
 
         // Push Root Bundle
         statusStack.push({
             bundle: bundle,
+            slotSize: getCurrentSize(),
             jewelIndex: 0
         });
 
         const findPrevSkillAndNextJewel = () => {
             while (true) {
-                skillIndex--;
+                stackIndex--;
                 statusStack.pop();
 
                 if (0 === statusStack.length) {
                     break;
                 }
 
-                jewelIndex = statusStack[skillIndex].jewelIndex;
+                slotSize = statusStack[stackIndex].slotSize;
+                jewelIndex = statusStack[stackIndex].jewelIndex;
 
-                if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
-                    statusStack[skillIndex].jewelIndex++;
+                if (Helper.isNotEmpty(correspondJewelPool[slotSize][jewelIndex + 1])) {
+                    statusStack[stackIndex].jewelIndex++;
 
                     break;
                 }
@@ -1190,18 +1220,22 @@ class FittingAlgorithm {
         };
 
         const findNextJewel = () => {
-            if (Helper.isNotEmpty(correspondJewelPool[skillIndex][jewelIndex + 1])) {
-                statusStack[skillIndex].jewelIndex++;
+            slotSize = statusStack[stackIndex].slotSize;
+            jewelIndex = statusStack[stackIndex].jewelIndex;
+
+            if (Helper.isNotEmpty(correspondJewelPool[slotSize][jewelIndex + 1])) {
+                statusStack[stackIndex].jewelIndex++;
             } else {
                 findPrevSkillAndNextJewel();
             }
         };
 
-        const findNextSkill = () => {
-            if (Helper.isNotEmpty(correspondJewelPool[skillIndex + 1])) {
-                skillIndex++;
+        const findNextSlot = () => {
+            if (0 !== bundle.meta.remainingSlotCount.all) {
+                stackIndex++;
                 statusStack.push({
                     bundle: bundle,
+                    slotSize: getCurrentSize(),
                     jewelIndex: 0
                 });
             } else {
@@ -1216,14 +1250,13 @@ class FittingAlgorithm {
                 break;
             }
 
-            bundle = statusStack[skillIndex].bundle;
-            jewelIndex = statusStack[skillIndex].jewelIndex;
-            correspondJewel = correspondJewelPool[skillIndex][jewelIndex];
-            traversalCount++;
+            bundle = statusStack[stackIndex].bundle;
+            slotSize = statusStack[stackIndex].slotSize;
+            jewelIndex = statusStack[stackIndex].jewelIndex;
+            correspondJewel = correspondJewelPool[slotSize][jewelIndex];
 
-            if (0 === traversalCount % 10000) {
-                Helper.log('FA: Correspond Jewels: Traversal Count:', traversalCount);
-            }
+            console.log('correspondJewel', correspondJewel);
+            console.log('remainingSlotCount', bundle.meta.remainingSlotCount);
 
             if (0 === bundle.meta.remainingSlotCount.all) {
                 findPrevSkillAndNextJewel();
@@ -1231,156 +1264,99 @@ class FittingAlgorithm {
                 continue;
             }
 
-            if (this.currentSkillMapping[currentSkillIds[skillIndex]].level < bundle.skills[currentSkillIds[skillIndex]]) {
+            if (0 === bundle.meta.remainingSlotCount[correspondJewel.size]) {
+                findNextSlot();
+
+                continue;
+            }
+
+            // Add Jewel To Bundle
+            bundle = this.addJewelToBundle(bundle, correspondJewel);
+
+            if (false === bundle) {
                 findNextJewel();
 
                 continue;
             }
 
-            // Add Jewels To Bundle
-            if (this.currentSkillMapping[currentSkillIds[skillIndex]].level > bundle.skills[currentSkillIds[skillIndex]]) {
-                bundle = this.addJewelToBundleBySpecificSkill(bundle, correspondJewel);
+            // Check Bundle Skills
+            if (this.isBundleSkillCompleted(bundle)) {
+                lastBundlePool[this.getBundleHash(bundle)] = bundle;
 
-                // If Add Jewel Failed
-                if (false === bundle) {
-                    findNextJewel();
+                findPrevSkillAndNextJewel();
 
-                    continue;
-                }
-
-                // Check Bundle Skills
-                if (this.isBundleSkillCompleted(bundle)) {
-                    lastBundlePool[this.getBundleHash(bundle)] = bundle;
-
-                    findPrevSkillAndNextJewel();
-
-                    continue;
-                }
+                continue;
             }
 
-            findNextSkill();
+            findNextSlot();
         }
-
-        Helper.log('FA: Correspond Jewels: Traversal Count:', traversalCount);
 
         return Object.values(lastBundlePool);
     };
 
     /**
-     * Add Jewel To Bundle By Specific Skill
+     * Add Jewel to Bundle
      */
-    addJewelToBundleBySpecificSkill = (bundle, jewel) => {
-        let currentSlotSize = jewel.size;
-        let maxSkillLevel = null;
-        let minDiffSkillLevel = null;
-        let isSkillLevelCompelete = false;
+    addJewelToBundle = (bundle, jewel) => {
+        let isSkip = false;
+        let jewelCount = bundle.meta.remainingSlotCount[jewel.size];
 
-        if (0 === bundle.meta.remainingSlotCount.all) {
-            return bundle;
+        jewel.skills.forEach((skill) => {
+            if (true === isSkip) {
+                return;
+            }
+
+            if (Helper.isNotEmpty(bundle.meta.completedSkills[skill.id])) {
+                isSkip = true;
+
+                return;
+            }
+
+            let diffSkillLevel = this.currentSkillMapping[skill.id].level - bundle.skills[skill.id];
+            let diffJewelCount = parseInt(diffSkillLevel / skill.level, 10);
+
+            if (jewelCount > diffJewelCount) {
+                jewelCount = diffJewelCount;
+            }
+        });
+
+        if (true === isSkip) {
+            return false;
         }
 
-        // 已透過技能選出了裝飾珠 再用裝飾珠有的技能 id & level 來 completed skill
-        // 加入裝飾珠 同時計算洞數以及技能等級
-        while (true) {
-            if (0 === bundle.meta.remainingSlotCount[currentSlotSize]) {
-                currentSlotSize += 1;
-
-                continue;
-            }
-
-            if (4 < currentSlotSize) {
-                break;
-            }
-
-            // Check Skill is Completed
-            maxSkillLevel = null;
-            minDiffSkillLevel = null;
-            isSkillLevelCompelete = false;
-
-            jewel.skills.forEach((skill) => {
-                if (true === isSkillLevelCompelete) {
-                    return;
-                }
-
-                if (null === maxSkillLevel || maxSkillLevel < skill.level) {
-                    maxSkillLevel = skill.level;
-                }
-
-                let diffSkillLevel = this.currentSkillMapping[skill.id].level - bundle.skills[skill.id];
-
-                if (null === minDiffSkillLevel || minDiffSkillLevel > diffSkillLevel) {
-                    minDiffSkillLevel = diffSkillLevel;
-                }
-
-                if (0 === diffSkillLevel) {
-                    bundle.meta.completedSkills[skill.id] = true;
-                    isSkillLevelCompelete = true;
-                }
-            });
-
-            if (true === isSkillLevelCompelete) {
-                return bundle;
-            }
-
-            // Need Insert Jewel Count
-            let jewelCount = parseInt(minDiffSkillLevel / maxSkillLevel);
-
-            jewelCount = bundle.meta.remainingSlotCount[currentSlotSize] < jewelCount
-                ? bundle.meta.remainingSlotCount[currentSlotSize] : jewelCount;
-
-            // Check is Using Factor
-            if (-1 !== this.algorithmParams.usingFactor.jewel[jewel.id]) {
-                if (Helper.isNotEmpty(bundle.jewels[jewel.id])) {
-                    if (jewelCount > (this.algorithmParams.usingFactor.jewel[jewel.id] - bundle.jewels[jewel.id])) {
-                        jewelCount = this.algorithmParams.usingFactor.jewel[jewel.id] - bundle.jewels[jewel.id];
-                    }
-                } else {
-                    if (jewelCount > this.algorithmParams.usingFactor.jewel[jewel.id]) {
-                        jewelCount = this.algorithmParams.usingFactor.jewel[jewel.id];
-                    }
-                }
-            }
-
-            if (0 === jewelCount) {
-                currentSlotSize += 1;
-
-                continue;
-            }
-
-            bundle = Helper.deepCopy(bundle);
-
-            // Decrease Slot Counts
-            bundle.meta.remainingSlotCount[currentSlotSize] -= jewelCount;
-            bundle.meta.remainingSlotCount.all -= jewelCount;
-
-            // Add Jewel
-            if (Helper.isEmpty(bundle.jewels[jewel.id])) {
-                bundle.jewels[jewel.id] = 0;
-            }
-
-            bundle.jewels[jewel.id] += jewelCount;
-
-            jewel.skills.forEach((skill) => {
-                bundle.skills[skill.id] += jewelCount * skill.level;
-
-                // Check Skill is Completed
-                if (this.currentSkillMapping[skill.id].level === bundle.skills[skill.id]) {
-                    bundle.meta.completedSkills[skill.id] = true;
-                    isSkillLevelCompelete = true;
-                }
-            });
-
-            if (true === isSkillLevelCompelete) {
-                return bundle;
-            }
-
-            if (0 === bundle.meta.remainingSlotCount.all) {
-                break;
-            }
+        // Check Jewel Check
+        if (null !== jewel.countLimit && jewelCount > jewel.countLimit) {
+            jewelCount = jewel.countLimit;
         }
+
+        if (0 === jewelCount) {
+            return false;
+        }
+
+        bundle = Helper.deepCopy(bundle);
+
+        // Increase Jewels
+        if (Helper.isEmpty(bundle.jewels[jewel.id])) {
+            bundle.jewels[jewel.id] = 0;
+        }
+
+        bundle.jewels[jewel.id] += jewelCount;
+
+        // Increase Skills
+        jewel.skills.forEach((skill) => {
+            bundle.skills[skill.id] += jewelCount * skill.level;
+
+            if (this.currentSkillMapping[skill.id].level === bundle.skills[skill.id]) {
+                bundle.meta.completedSkills[skill.id] = true;
+            }
+        });
+
+        // Decrease Slot Counts
+        bundle.meta.remainingSlotCount[jewel.size] -= jewelCount;
+        bundle.meta.remainingSlotCount.all -= jewelCount;
 
         return bundle;
-    };
+    }
 
     /**
      * Is Skip Candidate Equip
