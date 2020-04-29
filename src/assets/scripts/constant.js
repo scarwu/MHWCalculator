@@ -174,7 +174,7 @@ export default {
             skillExpectedLevel: 0
         },
         bundle: {
-            equips: {
+            equipMapping: {
                 weapon: null,
                 helm: null,
                 chest: null,
@@ -183,10 +183,11 @@ export default {
                 leg: null,
                 charm: null
             },
-            jewels: {},
-            skills: {},
-            sets: {},
+            skillMapping: {},
+            setMapping: {},
+            jewelList: [],
             meta: {
+                equipCount: 0,
                 defense: 0,
                 resistance: {
                     fire: 0,
@@ -195,11 +196,6 @@ export default {
                     ice: 0,
                     dragon: 0
                 },
-                totalExpectedValue: 0,
-                totalExpectedLevel: 0,
-                skillExpectedValue: 0,
-                skillExpectedLevel: 0,
-                equipCount: 0,
                 completedSkills: {},
                 completedSets: {},
                 remainingSlotCount: {
@@ -208,7 +204,11 @@ export default {
                     3: 0,
                     4: 0,
                     all: 0
-                }
+                },
+                totalExpectedValue: 0,
+                totalExpectedLevel: 0,
+                skillExpectedValue: 0,
+                skillExpectedLevel: 0
             }
         },
         equips: {

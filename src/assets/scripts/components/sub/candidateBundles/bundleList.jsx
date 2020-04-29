@@ -8,7 +8,7 @@
  */
 
 // Load Libraries
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
 // Load Core Libraries
 import Helper from 'core/helper';
@@ -32,7 +32,7 @@ import CommonState from 'states/common';
 /**
  * Handle Functions
  */
-const handleBundlePickUp = (bundle, required) => {
+const handleBundlePickUp = (bundle, bundleJewelIndex, required) => {
     let currentEquips = Helper.deepCopy(CommonState.getter.getCurrentEquips());
     let slotMap = {
         1: [],
@@ -41,8 +41,8 @@ const handleBundlePickUp = (bundle, required) => {
         4: []
     };
 
-    Object.keys(bundle.equips).forEach((equipType) => {
-        if (Helper.isEmpty(bundle.equips[equipType])) {
+    Object.keys(bundle.equipMapping).forEach((equipType) => {
+        if (Helper.isEmpty(bundle.equipMapping[equipType])) {
             return;
         }
 
@@ -50,7 +50,7 @@ const handleBundlePickUp = (bundle, required) => {
             currentEquips[equipType] = {};
         }
 
-        currentEquips[equipType].id = bundle.equips[equipType];
+        currentEquips[equipType].id = bundle.equipMapping[equipType];
         currentEquips[equipType].slotIds = [];
 
         let equipInfo = null;
@@ -86,7 +86,7 @@ const handleBundlePickUp = (bundle, required) => {
         });
     });
 
-    Object.keys(bundle.jewels).sort((jewelIdA, jewelIdB) => {
+    Object.keys(bundle.jewelList[bundleJewelIndex]).sort((jewelIdA, jewelIdB) => {
         let jewelInfoA = JewelDataset.getInfo(jewelIdA);
         let jewelInfoB = JewelDataset.getInfo(jewelIdB);
 
@@ -104,7 +104,7 @@ const handleBundlePickUp = (bundle, required) => {
 
         let currentSize = jewelInfo.size;
 
-        let jewelCount = bundle.jewels[jewelId];
+        let jewelCount = bundle.jewelList[bundleJewelIndex][jewelId];
         let data = null;
 
         let jewelIndex = 0;
@@ -136,6 +136,9 @@ export default function BundleList(props) {
     const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
     const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
     const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
+    const [stateJewelBundlesIndex, updateJewelBundlesIndex] = useState(data.list.map((bundle) => {
+        return 0;
+    }));
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
@@ -149,6 +152,16 @@ export default function BundleList(props) {
             unsubscribe();
         };
     }, []);
+
+    const handleBundleJewelSelect = useCallback((bundleIndex, jewelIndex) => {
+        console.log(bundleIndex, jewelIndex)
+
+        const jewelBundlesIndex = stateJewelBundlesIndex;
+
+        jewelBundlesIndex[bundleIndex] = jewelIndex;
+
+        updateJewelBundlesIndex(jewelBundlesIndex);
+    }, [stateJewelBundlesIndex]);
 
     return useMemo(() => {
         Helper.debug('Component: CandidateBundles -> BundleList');
@@ -196,8 +209,8 @@ export default function BundleList(props) {
         return data.list.map((bundle, bundleIndex) => {
 
             // Bundle Equips & Jewels
-            const bundleEquips = Object.keys(bundle.equips).filter((equipType) => {
-                return Helper.isNotEmpty(bundle.equips[equipType])
+            const bundleEquips = Object.keys(bundle.equipMapping).filter((equipType) => {
+                return Helper.isNotEmpty(bundle.equipMapping[equipType])
             }).map((equipType) => {
                 if ('weapon' === equipType) {
                     return Object.assign({}, data.required.equips[equipType], {
@@ -206,21 +219,22 @@ export default function BundleList(props) {
                 }
 
                 return {
-                    id: bundle.equips[equipType],
+                    id: bundle.equipMapping[equipType],
                     type: equipType
                 };
             });
-            const bundleJewels = Object.keys(bundle.jewels).map((jewelId) => {
+            const bundleJewelIndex = stateJewelBundlesIndex[bundleIndex];
+            const bundleJewels = Object.keys(bundle.jewelList[bundleJewelIndex]).map((jewelId) => {
                 return {
                     id: jewelId,
-                    count: bundle.jewels[jewelId]
+                    count: bundle.jewelList[bundleJewelIndex][jewelId]
                 };
             }).sort((setA, setB) => {
                 return setB.step - setA.step;
             });
 
             // Additional Sets & Skills
-            const additionalSets = Object.keys(bundle.sets).map((setId) => {
+            const additionalSets = Object.keys(bundle.setMapping).map((setId) => {
                 let setInfo = SetDataset.getInfo(setId);
 
                 if (Helper.isEmpty(setInfo)) {
@@ -228,7 +242,7 @@ export default function BundleList(props) {
                 }
 
                 let setStep = setInfo.skills.filter((skill) => {
-                    return skill.require <= bundle.sets[setId];
+                    return skill.require <= bundle.setMapping[setId];
                 }).length;
 
                 return {
@@ -253,10 +267,10 @@ export default function BundleList(props) {
                 return setB.step - setA.step;
             });
 
-            const additionalSkills = Object.keys(bundle.skills).map((skillId) => {
+            const additionalSkills = Object.keys(bundle.skillMapping).map((skillId) => {
                 return {
                     id: skillId,
-                    level: bundle.skills[skillId]
+                    level: bundle.skillMapping[skillId]
                 };
             }).filter((skill) => {
                 return -1 === currentRequiredSkillIds.indexOf(skill.id);
@@ -265,13 +279,13 @@ export default function BundleList(props) {
             });
 
             return (
-                <div key={bundle.hash} className="mhwc-item mhwc-item-3-step">
+                <div key={bundle.hash + '_' + bundleJewelIndex} className="mhwc-item mhwc-item-3-step">
                     <div className="col-12 mhwc-name">
                         <span>{_('bundle')}: {bundleIndex + 1} / {data.list.length}</span>
                         <div className="mhwc-icons_bundle">
                             <IconButton
                                 iconName="check" altName={_('equip')}
-                                onClick={() => {handleBundlePickUp(bundle, data.required)}} />
+                                onClick={() => {handleBundlePickUp(bundle, bundleJewelIndex, data.required)}} />
                         </div>
                     </div>
 
@@ -372,6 +386,15 @@ export default function BundleList(props) {
                         <div className="col-12 mhwc-content">
                             <div className="col-12 mhwc-name">
                                 <span>{_('requiredJewels')}</span>
+                                <div className="mhwc-icons_bundle">
+                                    {bundle.jewelList.map((jewel, jewelIndex) => {
+                                        return (
+                                            <IconButton
+                                                key={jewelIndex} iconName="check" altName={_('equip')}
+                                                onClick={() => {handleBundleJewelSelect(bundleIndex, jewelIndex)}} />
+                                        );
+                                    })}
+                                </div>
                             </div>
                             <div className="col-12 mhwc-content">
                                 {bundleJewels.map((jewel) => {
@@ -468,5 +491,5 @@ export default function BundleList(props) {
                 </div>
             );
         });
-    }, [data, stateRequiredEquips, stateRequiredSets, stateRequiredSkills]);
+    }, [data, stateRequiredEquips, stateRequiredSets, stateRequiredSkills, stateJewelBundlesIndex]);
 };
