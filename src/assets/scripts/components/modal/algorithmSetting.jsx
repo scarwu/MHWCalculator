@@ -43,10 +43,10 @@ const getSortList = () => {
         { key: 'thunder',       value: _('thunderSort') },
         { key: 'ice',           value: _('iceSort') },
         { key: 'dragon',        value: _('dragonSort') },
-        { key: 'amount',        value: _('amountSort') },
-        { key: 'slot',          value: _('slotSort') },
-        { key: 'expectedValue', value: _('expectedValueSort') },
-        { key: 'expectedLevel', value: _('expectedLevelSort') }
+        // { key: 'amount',        value: _('amountSort') },
+        // { key: 'slot',          value: _('slotSort') },
+        // { key: 'expectedValue', value: _('expectedValueSort') },
+        // { key: 'expectedLevel', value: _('expectedLevelSort') }
     ];
 }
 

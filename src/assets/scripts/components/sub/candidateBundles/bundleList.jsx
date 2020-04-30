@@ -25,6 +25,7 @@ import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
 import IconButton from 'components/common/iconButton';
+import BasicSelector from 'components/common/basicSelector';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -153,14 +154,17 @@ export default function BundleList(props) {
         };
     }, []);
 
-    const handleBundleJewelSelect = useCallback((bundleIndex, jewelIndex) => {
+    /**
+     * Handle Functions
+     */
+    const handleJewelPackageChange = useCallback((bundleIndex, jewelIndex) => {
         console.log(bundleIndex, jewelIndex)
 
-        const jewelBundlesIndex = stateJewelPackageMapping;
+        const jewelPackageMapping = stateJewelPackageMapping;
 
-        jewelBundlesIndex[bundleIndex] = jewelIndex;
+        jewelPackageMapping[bundleIndex] = jewelIndex;
 
-        updateJewelPackageMapping(jewelBundlesIndex);
+        updateJewelPackageMapping(Object.assign({}, jewelPackageMapping));
     }, [stateJewelPackageMapping]);
 
     return useMemo(() => {
@@ -208,6 +212,9 @@ export default function BundleList(props) {
 
         return data.list.map((bundle, bundleIndex) => {
 
+            const jewelPackageCount = bundle.jewelPackages.length;
+            const jewelPackageIndex = stateJewelPackageMapping[bundleIndex];
+
             // Bundle Equips & Jewels
             const bundleEquips = Object.keys(bundle.equipMapping).filter((equipType) => {
                 return Helper.isNotEmpty(bundle.equipMapping[equipType])
@@ -223,7 +230,6 @@ export default function BundleList(props) {
                     type: equipType
                 };
             });
-            const jewelPackageIndex = stateJewelPackageMapping[bundleIndex];
             const bundleJewels = Object.keys(bundle.jewelPackages[jewelPackageIndex]).map((jewelId) => {
                 return {
                     id: jewelId,
@@ -383,18 +389,24 @@ export default function BundleList(props) {
                     </div>
 
                     {(0 !== bundleJewels.length) ? (
-                        <div className="col-12 mhwc-content">
+                        <div key={bundleIndex} className="col-12 mhwc-content">
                             <div className="col-12 mhwc-name">
                                 <span>{_('requiredJewels')}</span>
-                                <div className="mhwc-icons_bundle">
-                                    {bundle.jewelPackages.map((jewel, jewelIndex) => {
-                                        return (
-                                            <IconButton
-                                                key={jewelIndex} iconName="check" altName={_('equip')}
-                                                onClick={() => {handleBundleJewelSelect(bundleIndex, jewelIndex)}} />
-                                        );
-                                    })}
-                                </div>
+                                {1 < jewelPackageCount ? (
+                                    <div className="mhwc-icons_bundle">
+                                        <BasicSelector
+                                            defaultValue={jewelPackageIndex}
+                                            options={bundle.jewelPackages.map((jewelMapping, packageIndex) => {
+                                                return {
+                                                    key: packageIndex,
+                                                    value: `${packageIndex + 1} / ${jewelPackageCount}`
+                                                };
+                                            })}
+                                            onChange={(event) => {
+                                                handleJewelPackageChange(bundleIndex, parseInt(event.target.value, 10))
+                                            }} />
+                                    </div>
+                                ) : false}
                             </div>
                             <div className="col-12 mhwc-content">
                                 {bundleJewels.map((jewel) => {
@@ -403,29 +415,6 @@ export default function BundleList(props) {
                                     return (Helper.isNotEmpty(jewelInfo)) ? (
                                         <div key={jewel.id} className="col-4 mhwc-value">
                                             <span>{`[${jewelInfo.size}] ${_(jewelInfo.name)} x ${jewel.count}`}</span>
-                                        </div>
-                                    ) : false;
-                                })}
-                            </div>
-                        </div>
-                    ) : false}
-
-                    {(0 !== bundle.meta.remainingSlotCount.all) ? (
-                        <div className="col-12 mhwc-content">
-                            <div className="col-12 mhwc-name">
-                                <span>{_('remainingSlot')}</span>
-                            </div>
-                            <div className="col-12 mhwc-content">
-                                {Object.keys(bundle.meta.remainingSlotCount).map((slotSize) => {
-                                    if ('all' === slotSize) {
-                                        return;
-                                    }
-
-                                    let slotCount = bundle.meta.remainingSlotCount[slotSize];
-
-                                    return (slotCount > 0) ? (
-                                        <div key={slotSize} className="col-4 mhwc-value">
-                                            <span>{`[${slotSize}] x ${slotCount}`}</span>
                                         </div>
                                     ) : false;
                                 })}
