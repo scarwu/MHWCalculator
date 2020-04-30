@@ -91,32 +91,24 @@ class FittingAlgorithm {
         Helper.log('FA: Global: Total Expected Level:', this.totalExpectedLevel);
         Helper.log('FA: Global: First Bundle:', this.firstBundle);
 
+        if (0 === this.currentSetCount && 0 === this.currentSkillCount) {
+            return [];
+        }
+
         // Save StartTime
         this.startTime = parseInt(Math.floor(Date.now() / 1000), 10);
 
-        // Init Bundle Pool
-        let bundlePool = {};
-
-        bundlePool[this.getBundleHash(this.firstBundle)] = this.firstBundle;
-
         // Create Bundles with Equips
-        if (0 !== this.currentSetCount || 0 !== this.currentSkillCount) {
-            bundlePool = this.createBundlesWithEquips(bundlePool);
+        let bundleList = this.createBundleListWithEquips(this.firstBundle);
 
-            this.callback({
-                bundleCount: Object.keys(bundlePool).length,
-                searchPercent: 100,
-                timeRemaining: 0
-            });
+        this.callback({
+            bundleCount: bundleList.length,
+            searchPercent: 100,
+            timeRemaining: 0
+        });
 
-            // Sets Require Equips is Overflow
-            if (0 === Object.keys(bundlePool).length) {
-                return [];
-            }
-        }
-
-        // Create Sorted Bundle List & Clean up
-        return this.createSortedBundleList(bundlePool).map((bundle) => {
+        // Sort Bundle List & Clean up
+        return this.sortBundleList(bundleList).map((bundle) => {
             delete bundle.meta.completedSets;
             delete bundle.meta.completedSkills;
             delete bundle.meta.remainingSlotCount;
@@ -414,23 +406,6 @@ class FittingAlgorithm {
 
                 return;
             }
-
-            // Add Jewels info to Bundle
-            // if (Helper.isNotEmpty(equipInfo.slots)) {
-            //     equipInfo.slots.forEach((slot) => {
-            //         if (Helper.isEmpty(slot.jewel.id)) {
-            //             return;
-            //         }
-
-            //         if (Helper.isEmpty(bundle.jewelList[slot.jewel.id])) {
-            //             bundle.jewelList[slot.jewel.id] = 0;
-            //         }
-
-            //         bundle.jewelList[slot.jewel.id] += 1;
-            //         bundle.meta.remainingSlotCount[slot.size] -= 1;
-            //         bundle.meta.remainingSlotCount.all -= 1;
-            //     });
-            // }
         });
 
         if (this.isInitFailed) {
@@ -450,11 +425,11 @@ class FittingAlgorithm {
     };
 
     /**
-     * Create Bundles with Equips
+     * Create Bundle List with Equips
      */
-    createBundlesWithEquips = (initBundlePool) => {
+    createBundleListWithEquips = (bundle) => {
         let candidateEquipPool = {};
-        let lastBundlePool = {};
+        let lastBundleMapping = {};
 
         this.currentEquipTypes.forEach((equipType) => {
             if (Helper.isEmpty(candidateEquipPool[equipType])) {
@@ -571,237 +546,213 @@ class FittingAlgorithm {
         // Special Case
         if (1 === totalTraversalCount) {
             if (0 !== this.currentSkillCount) {
-                Object.values(initBundlePool).forEach((bundle) => {
 
-                    // Create Bundles With Jewels
-                    bundle = this.createBundlesWithJewels(bundle);
+                // Create Bundle With Jewels
+                bundle = this.createBundleWithJewels(bundle);
 
-                    if (false !== bundle) {
-                        lastBundlePool[this.getBundleHash(bundle)] = bundle;
+                if (false !== bundle) {
+                    lastBundleMapping[this.getBundleHash(bundle)] = bundle;
 
-                        this.callback({
-                            bundleCount: Object.keys(lastBundlePool).length
-                        });
-                    }
-                });
+                    this.callback({
+                        bundleCount: Object.keys(lastBundleMapping).length
+                    });
+                }
             }
 
-            return lastBundlePool;
+            return Object.values(lastBundleMapping);
         }
 
-        let isEndEarly = false;
+        let stackIndex = 0;
+        let statusStack = [];
+        let typeIndex = null;
+        let equipIndex = null;
+        let candidateEquip = null;
 
-        Object.values(initBundlePool).forEach((bundle) => {
-            if (true === isEndEarly) {
+        // Push Root Bundle
+        statusStack.push({
+            bundle: bundle,
+            typeIndex: 0,
+            equipIndex: 0
+        });
+
+        const calculateTraversalCount = () => {
+            traversalCount = 1;
+
+            candidateEquipPoolCount.forEach((equipCount, index) => {
+                traversalCount *= (index <= stackIndex)
+                    ? statusStack[index].equipIndex + 1 : equipCount;
+            });
+
+            let precent = traversalCount / totalTraversalCount;
+
+            if (parseInt(precent * 100) <= traversalPercent) {
                 return;
             }
 
-            let stackIndex = 0;
-            let statusStack = [];
-            let typeIndex = null;
-            let equipIndex = null;
-            let candidateEquip = null;
+            traversalPercent = parseInt(precent * 100);
 
-            // Push Root Bundle
-            statusStack.push({
-                bundle: bundle,
-                typeIndex: 0,
-                equipIndex: 0
+            // Helper.log('FA: Skill Equips: Traversal Count:', traversalCount);
+
+            let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
+
+            this.callback({
+                searchPercent: traversalPercent,
+                timeRemaining: parseInt(diffTime / precent - diffTime)
             });
+        };
 
-            const calculateTraversalCount = () => {
-                traversalCount = 1;
-
-                candidateEquipPoolCount.forEach((equipCount, index) => {
-                    traversalCount *= (index <= stackIndex)
-                        ? statusStack[index].equipIndex + 1 : equipCount;
-                });
-
-                let precent = traversalCount / totalTraversalCount;
-
-                if (parseInt(precent * 100) <= traversalPercent) {
-                    return;
-                }
-
-                traversalPercent = parseInt(precent * 100);
-
-                // Helper.log('FA: Skill Equips: Traversal Count:', traversalCount);
-
-                let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
-
-                this.callback({
-                    searchPercent: traversalPercent,
-                    timeRemaining: parseInt(diffTime / precent - diffTime)
-                });
-            };
-
-            const findPrevTypeAndNextEquip = () => {
-                while (true) {
-                    stackIndex--;
-                    statusStack.pop();
-
-                    if (0 === statusStack.length) {
-                        break;
-                    }
-
-                    typeIndex = statusStack[stackIndex].typeIndex;
-                    equipIndex = statusStack[stackIndex].equipIndex;
-
-                    if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                        statusStack[typeIndex].equipIndex++;
-
-                        calculateTraversalCount();
-
-                        break;
-                    }
-                }
-            };
-
-            const findNextEquip = () => {
-                typeIndex = statusStack[stackIndex].typeIndex;
-
-                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
-                    statusStack[stackIndex].equipIndex++;
-
-                    calculateTraversalCount();
-                } else {
-                    findPrevTypeAndNextEquip();
-                }
-            };
-
-            const findNextType = () => {
-                typeIndex = statusStack[stackIndex].typeIndex;
-
-                if (Helper.isNotEmpty(candidateEquipPool[typeIndex + 1])) {
-                    stackIndex++;
-                    statusStack.push({
-                        bundle: bundle,
-                        typeIndex: typeIndex + 1,
-                        equipIndex: 0
-                    });
-                } else {
-                    findNextEquip();
-                }
-            };
-
-            // Helper.log('FA: CreateBundlesWithEquips: Root Bundle:', bundle);
-
+        const findPrevTypeAndNextEquip = () => {
             while (true) {
-                if (true === isEndEarly) {
-                    break;
-                }
+                stackIndex--;
+                statusStack.pop();
 
                 if (0 === statusStack.length) {
                     break;
                 }
 
-                bundle = statusStack[stackIndex].bundle;
                 typeIndex = statusStack[stackIndex].typeIndex;
                 equipIndex = statusStack[stackIndex].equipIndex;
-                candidateEquip = candidateEquipPool[typeIndex][equipIndex];
 
-                // Add Candidate Equip to Bundle
-                if (Helper.isEmpty(bundle.equipMapping[currentEquipTypes[typeIndex]])
-                    && Helper.isNotEmpty(candidateEquip.id)
-                ) {
-                    bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
+                if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                    statusStack[typeIndex].equipIndex++;
 
-                    // If Add Candidate Equip Failed
-                    if (false === bundle) {
+                    calculateTraversalCount();
+
+                    break;
+                }
+            }
+        };
+
+        const findNextEquip = () => {
+            typeIndex = statusStack[stackIndex].typeIndex;
+
+            if (Helper.isNotEmpty(candidateEquipPool[typeIndex][equipIndex + 1])) {
+                statusStack[stackIndex].equipIndex++;
+
+                calculateTraversalCount();
+            } else {
+                findPrevTypeAndNextEquip();
+            }
+        };
+
+        const findNextType = () => {
+            typeIndex = statusStack[stackIndex].typeIndex;
+
+            if (Helper.isNotEmpty(candidateEquipPool[typeIndex + 1])) {
+                stackIndex++;
+                statusStack.push({
+                    bundle: bundle,
+                    typeIndex: typeIndex + 1,
+                    equipIndex: 0
+                });
+            } else {
+                findNextEquip();
+            }
+        };
+
+        // Helper.log('FA: CreateBundlesWithEquips: Root Bundle:', bundle);
+
+        while (true) {
+            if (0 === statusStack.length) {
+                break;
+            }
+
+            bundle = statusStack[stackIndex].bundle;
+            typeIndex = statusStack[stackIndex].typeIndex;
+            equipIndex = statusStack[stackIndex].equipIndex;
+            candidateEquip = candidateEquipPool[typeIndex][equipIndex];
+
+            // Add Candidate Equip to Bundle
+            if (Helper.isEmpty(bundle.equipMapping[currentEquipTypes[typeIndex]])
+                && Helper.isNotEmpty(candidateEquip.id)
+            ) {
+                bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
+
+                // If Add Candidate Equip Failed
+                if (false === bundle) {
+                    findNextEquip();
+
+                    continue;
+                }
+
+                // Check Bundle Sets
+                if (this.isBundleSetsCompleted(bundle)) {
+
+                    // Check Bundle Skills
+                    if (this.isBundleSkillsCompleted(bundle)) {
+                        lastBundleMapping[this.getBundleHash(bundle)] = bundle;
+
+                        this.callback({
+                            bundleCount: Object.keys(lastBundleMapping).length
+                        });
+
+                        Helper.log('FA: Last Bundle Count:', Object.keys(lastBundleMapping).length);
+
+                        // Is End Early
+                        if (this.algorithmParams.flag.isEndEarly) {
+                            if (this.algorithmParams.limit <= Object.keys(lastBundleMapping).length) {
+                                break;
+                            }
+                        }
+
                         findNextEquip();
 
                         continue;
                     }
 
-                    // Check Bundle Sets
-                    if (this.isBundleSetsCompleted(bundle)) {
+                    // Check Bundle Reach Expected
+                    if (this.isBundleReachExpected(bundle)) {
 
-                        // Check Bundle Skills
-                        if (this.isBundleSkillsCompleted(bundle)) {
-                            lastBundlePool[this.getBundleHash(bundle)] = bundle;
+                        // Create Bundle With Jewels
+                        bundle = this.createBundleWithJewels(bundle);
+
+                        if (false !== bundle) {
+                            lastBundleMapping[this.getBundleHash(bundle)] = bundle;
 
                             this.callback({
-                                bundleCount: Object.keys(lastBundlePool).length
+                                bundleCount: Object.keys(lastBundleMapping).length
                             });
 
-                            // Last Bundle Pre Check
+                            Helper.log('FA: Last Bundle Count:', Object.keys(lastBundleMapping).length);
+
+                            // Is End Early
                             if (this.algorithmParams.flag.isEndEarly) {
-                                Helper.log('FA: Last Bundle Count:', Object.keys(lastBundlePool).length);
-
-                                if (this.algorithmParams.limit <= Object.keys(lastBundlePool).length) {
-                                    isEndEarly = true;
+                                if (this.algorithmParams.limit <= Object.keys(lastBundleMapping).length) {
+                                    break;
                                 }
                             }
-
-                            findNextEquip();
-
-                            continue;
                         }
 
-                        // Check Bundle Reach Expected
-                        if (this.isBundleReachExpected(bundle)) {
-                            if (true === isEndEarly) {
-                                break;
-                            }
+                        findNextEquip();
 
-                            // Create Bundles With Jewels
-                            bundle = this.createBundlesWithJewels(bundle);
-
-                            if (false !== bundle) {
-                                lastBundlePool[this.getBundleHash(bundle)] = bundle;
-
-                                this.callback({
-                                    bundleCount: Object.keys(lastBundlePool).length
-                                });
-
-                                // Last Bundle Pre Check
-                                if (this.algorithmParams.flag.isEndEarly) {
-                                    Helper.log('FA: Last Bundle Count:', Object.keys(lastBundlePool).length);
-
-                                    if (this.algorithmParams.limit <= Object.keys(lastBundlePool).length) {
-                                        isEndEarly = true;
-                                    }
-                                }
-                            }
-
-                            findNextEquip();
-
-                            continue;
-                        }
-                    }
-
-                    // Check Bundle Have a Future
-                    if (this.algorithmParams.flag.isExpectBundle) {
-                        if (false === this.isBundleHaveFuture(bundle, currentEquipTypes[typeIndex])) {
-                            findNextEquip();
-
-                            continue;
-                        }
+                        continue;
                     }
                 }
 
-                findNextType();
+                // Check Bundle Have a Future
+                if (this.algorithmParams.flag.isExpectBundle) {
+                    if (false === this.isBundleHaveFuture(bundle, currentEquipTypes[typeIndex])) {
+                        findNextEquip();
+
+                        continue;
+                    }
+                }
             }
 
-            let precent = traversalCount / totalTraversalCount;
-            let diffTime = parseInt(Math.floor(Date.now() / 1000), 10) - this.startTime;
+            findNextType();
+        }
 
-            this.callback({
-                bundleCount: Object.keys(lastBundlePool).length,
-                searchPercent: parseInt(precent * 100),
-                timeRemaining: parseInt(diffTime / precent - diffTime)
-            });
-        });
+        calculateTraversalCount();
 
-        Helper.log('FA: Last Bundle Result:', lastBundlePool);
+        Helper.log('FA: Last Bundle Result:', lastBundleMapping);
 
-        return lastBundlePool;
+        return Object.values(lastBundleMapping);
     }
 
     /**
-     * Create Bundles With Jewels
+     * Create Bundle With Jewels
      */
-    createBundlesWithJewels = (bundle) => {
+    createBundleWithJewels = (bundle) => {
         if (this.isBundleSkillsCompleted(bundle)) {
             return bundle;
         }
@@ -988,10 +939,10 @@ class FittingAlgorithm {
     /**
      * Create Sorted Bundle List
      */
-    createSortedBundleList = (bundlePool) => {
+    sortBundleList = (bundleList) => {
         switch (this.algorithmParams.sort) {
         case 'complex':
-            return Object.values(bundlePool).sort((bundleA, bundleB) => {
+            return bundleList.sort((bundleA, bundleB) => {
                 let valueA = (8 - bundleA.meta.equipCount) * 1000 + bundleA.meta.defense;
                 let valueB = (8 - bundleB.meta.equipCount) * 1000 + bundleB.meta.defense;
 
@@ -1006,7 +957,7 @@ class FittingAlgorithm {
                 return bundle;
             });
         case 'amount':
-            return Object.values(bundlePool).sort((bundleA, bundleB) => {
+            return bundleList.sort((bundleA, bundleB) => {
                 let valueA = bundleA.meta.equipCount;
                 let valueB = bundleB.meta.equipCount;
 
@@ -1021,7 +972,7 @@ class FittingAlgorithm {
                 return bundle;
             });
         case 'defense':
-            return Object.values(bundlePool).sort((bundleA, bundleB) => {
+            return bundleList.sort((bundleA, bundleB) => {
                 let valueA = bundleA.meta.defense;
                 let valueB = bundleB.meta.defense;
 
@@ -1040,7 +991,7 @@ class FittingAlgorithm {
         case 'thunder':
         case 'ice':
         case 'dragon':
-            return Object.values(bundlePool).sort((bundleA, bundleB) => {
+            return bundleList.sort((bundleA, bundleB) => {
                 let valueA = bundleA.meta.resistance[this.algorithmParams.sort];
                 let valueB = bundleB.meta.resistance[this.algorithmParams.sort];
 
@@ -1055,10 +1006,7 @@ class FittingAlgorithm {
                 return bundle;
             });
         default:
-            return Object.map((bundle) => {
-
-                return bundle;
-            }).values(bundlePool);
+            return bundleList;
         }
     };
 
