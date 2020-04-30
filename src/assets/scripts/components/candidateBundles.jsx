@@ -310,7 +310,7 @@ export default function CandidateBundles(props) {
                     ) : (
                         <Fragment>
                             <RequiredConditions data={stateComputedResult.required} />
-                            <BundleList data={stateComputedResult} />
+                            <BundleList />
                         </Fragment>
                     )
                 )}
