@@ -90,43 +90,45 @@ const handleBundlePickUp = (bundle, required) => {
     let jewelPackageIndex = Helper.isNotEmpty(bundle.jewelPackageIndex)
         ? bundle.jewelPackageIndex : 0;
 
-    Object.keys(bundle.jewelPackages[jewelPackageIndex]).sort((jewelIdA, jewelIdB) => {
-        let jewelInfoA = JewelDataset.getInfo(jewelIdA);
-        let jewelInfoB = JewelDataset.getInfo(jewelIdB);
+    if (Helper.isNotEmpty(bundle.jewelPackages[jewelPackageIndex])) {
+        Object.keys(bundle.jewelPackages[jewelPackageIndex]).sort((jewelIdA, jewelIdB) => {
+            let jewelInfoA = JewelDataset.getInfo(jewelIdA);
+            let jewelInfoB = JewelDataset.getInfo(jewelIdB);
 
-        if (Helper.isEmpty(jewelInfoA) || Helper.isEmpty(jewelInfoB)) {
-            return 0;
-        }
-
-        return jewelInfoA.size - jewelInfoB.size;
-    }).forEach((jewelId) => {
-        let jewelInfo = JewelDataset.getInfo(jewelId);
-
-        if (Helper.isEmpty(jewelInfo)) {
-            return;
-        }
-
-        let currentSize = jewelInfo.size;
-
-        let jewelCount = bundle.jewelPackages[jewelPackageIndex][jewelId];
-        let data = null;
-
-        let jewelIndex = 0;
-
-        while (jewelIndex < jewelCount) {
-            if (0 === slotMap[currentSize].length) {
-                currentSize++;
-
-                continue;
+            if (Helper.isEmpty(jewelInfoA) || Helper.isEmpty(jewelInfoB)) {
+                return 0;
             }
 
-            data = slotMap[currentSize].shift();
+            return jewelInfoA.size - jewelInfoB.size;
+        }).forEach((jewelId) => {
+            let jewelInfo = JewelDataset.getInfo(jewelId);
 
-            currentEquips[data.type].slotIds[data.index] = jewelId;
+            if (Helper.isEmpty(jewelInfo)) {
+                return;
+            }
 
-            jewelIndex++;
-        }
-    });
+            let currentSize = jewelInfo.size;
+
+            let jewelCount = bundle.jewelPackages[jewelPackageIndex][jewelId];
+            let data = null;
+
+            let jewelIndex = 0;
+
+            while (jewelIndex < jewelCount) {
+                if (0 === slotMap[currentSize].length) {
+                    currentSize++;
+
+                    continue;
+                }
+
+                data = slotMap[currentSize].shift();
+
+                currentEquips[data.type].slotIds[data.index] = jewelId;
+
+                jewelIndex++;
+            }
+        });
+    }
 
     CommonState.setter.replaceCurrentEquips(currentEquips);
 };
@@ -217,6 +219,20 @@ export default function BundleList(props) {
             const jewelPackageIndex = Helper.isNotEmpty(bundle.jewelPackageIndex)
                 ? bundle.jewelPackageIndex : 0;
 
+            // Remaining Slot Count Mapping
+            let remainingSlotCountMapping = {
+                1: 0,
+                2: 0,
+                3: 0,
+                4: 0,
+                all: 0
+            };
+
+            Object.keys(bundle.slotCountMapping).forEach((slotSize) => {
+                remainingSlotCountMapping.all += bundle.slotCountMapping[slotSize];
+                remainingSlotCountMapping[slotSize] += bundle.slotCountMapping[slotSize];
+            });
+
             // Bundle Equips & Jewels
             const bundleEquips = Object.keys(bundle.equipIdMapping).filter((equipType) => {
                 return Helper.isNotEmpty(bundle.equipIdMapping[equipType])
@@ -232,14 +248,40 @@ export default function BundleList(props) {
                     type: equipType
                 };
             });
-            const bundleJewels = Object.keys(bundle.jewelPackages[jewelPackageIndex]).map((jewelId) => {
-                return {
-                    id: jewelId,
-                    count: bundle.jewelPackages[jewelPackageIndex][jewelId]
-                };
-            }).sort((setA, setB) => {
-                return setB.step - setA.step;
-            });
+
+            let bundleJewels = [];
+
+            if (Helper.isNotEmpty(bundle.jewelPackages[jewelPackageIndex])) {
+                bundleJewels = Object.keys(bundle.jewelPackages[jewelPackageIndex]).map((jewelId) => {
+                    let jewelInfo = JewelDataset.getInfo(jewelId);
+                    let jewelCount = bundle.jewelPackages[jewelPackageIndex][jewelId];
+
+                    for (let slotSize = jewelInfo.size; slotSize <= 4; slotSize++) {
+                        if (0 === remainingSlotCountMapping[slotSize]) {
+                            continue;
+                        }
+
+                        if (remainingSlotCountMapping[slotSize] < jewelCount) {
+                            remainingSlotCountMapping.all -= remainingSlotCountMapping[slotSize];
+                            remainingSlotCountMapping[slotSize] = 0;
+
+                            continue;
+                        }
+
+                        remainingSlotCountMapping.all -= jewelCount;
+                        remainingSlotCountMapping[slotSize] -= jewelCount;
+
+                        break;
+                    }
+
+                    return {
+                        id: jewelId,
+                        count: bundle.jewelPackages[jewelPackageIndex][jewelId]
+                    };
+                }).sort((setA, setB) => {
+                    return setB.step - setA.step;
+                });
+            }
 
             // Additional Sets & Skills
             const additionalSets = Object.keys(bundle.setCountMapping).map((setId) => {
@@ -414,6 +456,29 @@ export default function BundleList(props) {
                                     return (Helper.isNotEmpty(jewelInfo)) ? (
                                         <div key={jewel.id} className="col-6 mhwc-value">
                                             <span>{`[${jewelInfo.size}] ${_(jewelInfo.name)} x ${jewel.count}`}</span>
+                                        </div>
+                                    ) : false;
+                                })}
+                            </div>
+                        </div>
+                    ) : false}
+
+                    {(0 !== remainingSlotCountMapping.all) ? (
+                        <div className="col-12 mhwc-content">
+                            <div className="col-12 mhwc-name">
+                                <span>{_('remainingSlot')}</span>
+                            </div>
+                            <div className="col-12 mhwc-content">
+                                {Object.keys(remainingSlotCountMapping).map((slotSize) => {
+                                    if ('all' === slotSize) {
+                                        return;
+                                    }
+
+                                    let slotCount = remainingSlotCountMapping[slotSize];
+
+                                    return (slotCount > 0) ? (
+                                        <div key={slotSize} className="col-4 mhwc-value">
+                                            <span>{`[${slotSize}] x ${slotCount}`}</span>
                                         </div>
                                     ) : false;
                                 })}

@@ -834,9 +834,9 @@ class FittingAlgorithm {
                 };
             }
 
-            // if (Helper.isNotEmpty(correspondJewelPool[size - 1])) {
-            //     correspondJewelPool[size] = correspondJewelPool[size].concat(correspondJewelPool[size - 1]);
-            // }
+            if (Helper.isNotEmpty(correspondJewelPool[size - 1])) {
+                correspondJewelPool[size] = correspondJewelPool[size].concat(correspondJewelPool[size - 1]);
+            }
 
             if (Helper.isEmpty(lastSlotSize) && 0 !== correspondJewelPool[size].length) {
                 lastSlotSize = size;
@@ -854,14 +854,10 @@ class FittingAlgorithm {
                 return size;
             }
 
-            return false;
+            return 0;
         };
 
         const getJewelSize = (slotSize) => {
-            if (false === slotSize) {
-                return false;
-            }
-
             for (let size = slotSize; size > 0; size--) {
                 if (0 === correspondJewelPool[size].length) {
                     continue;
@@ -870,7 +866,7 @@ class FittingAlgorithm {
                 return size;
             }
 
-            return false;
+            return 0;
         };
 
         let stackIndex = 0;
@@ -949,7 +945,7 @@ class FittingAlgorithm {
             jewelIndex = statusStack[stackIndex].jewelIndex;
             correspondJewel = correspondJewelPool[jewelSize][jewelIndex];
 
-            if (false === slotSize || false === jewelSize) {
+            if (0 === slotSize || 0 === jewelSize) {
                 break;
             }
 
