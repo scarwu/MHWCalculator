@@ -562,6 +562,9 @@ class FittingAlgorithm {
             return Object.values(lastBundleMapping);
         }
 
+        let lastTypeIndex = Object.keys(candidateEquipPoolCount).length - 1;
+        let lastEquipIndex = candidateEquipPoolCount[lastTypeIndex].length -1;
+
         let stackIndex = 0;
         let statusStack = [];
         let typeIndex = null;
@@ -663,23 +666,53 @@ class FittingAlgorithm {
             candidateEquip = candidateEquipPool[typeIndex][equipIndex];
 
             // Add Candidate Equip to Bundle
-            if (Helper.isEmpty(bundle.equipIdMapping[currentEquipTypes[typeIndex]])
-                && Helper.isNotEmpty(candidateEquip.id)
-            ) {
-                bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
+            bundle = this.addCandidateEquipToBundle(bundle, candidateEquip);
 
-                // If Add Candidate Equip Failed
-                if (false === bundle) {
+            // If Add Candidate Equip Failed
+            if (false === bundle) {
+
+                // Termination condition
+                if (lastTypeIndex === typeIndex && lastEquipIndex === equipIndex) {
+                    break;
+                }
+
+                findNextEquip();
+
+                continue;
+            }
+
+            // Check Bundle Sets
+            if (this.isBundleSetsCompleted(bundle)) {
+
+                // Check Bundle Skills
+                if (this.isBundleSkillsCompleted(bundle)) {
+                    lastBundleMapping[this.getBundleHash(bundle)] = bundle;
+
+                    this.callback({
+                        bundleCount: Object.keys(lastBundleMapping).length
+                    });
+
+                    Helper.log('FA: Last Bundle Count:', Object.keys(lastBundleMapping).length);
+
+                    // Is End Early
+                    if (this.algorithmParams.flag.isEndEarly) {
+                        if (this.algorithmParams.limit <= Object.keys(lastBundleMapping).length) {
+                            break;
+                        }
+                    }
+
                     findNextEquip();
 
                     continue;
                 }
 
-                // Check Bundle Sets
-                if (this.isBundleSetsCompleted(bundle)) {
+                // Check Bundle Reach Expected
+                if (this.isBundleReachExpected(bundle)) {
 
-                    // Check Bundle Skills
-                    if (this.isBundleSkillsCompleted(bundle)) {
+                    // Create Bundle With Jewels
+                    bundle = this.createBundleWithJewels(bundle);
+
+                    if (false !== bundle) {
                         lastBundleMapping[this.getBundleHash(bundle)] = bundle;
 
                         this.callback({
@@ -694,39 +727,11 @@ class FittingAlgorithm {
                                 break;
                             }
                         }
-
-                        findNextEquip();
-
-                        continue;
                     }
 
-                    // Check Bundle Reach Expected
-                    if (this.isBundleReachExpected(bundle)) {
+                    findNextEquip();
 
-                        // Create Bundle With Jewels
-                        bundle = this.createBundleWithJewels(bundle);
-
-                        if (false !== bundle) {
-                            lastBundleMapping[this.getBundleHash(bundle)] = bundle;
-
-                            this.callback({
-                                bundleCount: Object.keys(lastBundleMapping).length
-                            });
-
-                            Helper.log('FA: Last Bundle Count:', Object.keys(lastBundleMapping).length);
-
-                            // Is End Early
-                            if (this.algorithmParams.flag.isEndEarly) {
-                                if (this.algorithmParams.limit <= Object.keys(lastBundleMapping).length) {
-                                    break;
-                                }
-                            }
-                        }
-
-                        findNextEquip();
-
-                        continue;
-                    }
+                    continue;
                 }
 
                 // Check Bundle Have a Future
@@ -737,6 +742,11 @@ class FittingAlgorithm {
                         continue;
                     }
                 }
+            }
+
+            // Termination condition
+            if (lastTypeIndex === typeIndex && lastEquipIndex === equipIndex) {
+                break;
             }
 
             findNextType();
@@ -766,42 +776,76 @@ class FittingAlgorithm {
 
         // Create Current Skill Ids and Convert Correspond Jewel Pool
         let correspondJewelPool = {};
-        let slotMapping = this.currentSlotMapping;
+        let slotMapping = {};
+
+        let lastSlotSize = null;
+        let lastJewelIndex = null;
 
         [ 1, 2, 3, 4 ].forEach((size) => {
             correspondJewelPool[size] = Helper.isNotEmpty(this.correspondJewels[size])
                 ? this.correspondJewels[size] : [];
+            slotMapping[size] = null;
 
-            // correspondJewelPool[size] = correspondJewelPool[size].filter((jewel) => {
-            //     let isSkip = false;
+            correspondJewelPool[size] = correspondJewelPool[size].filter((jewel) => {
+                let isSkip = false;
 
-            //     jewel.skills.forEach((skill) => {
-            //         if (true === isSkip) {
-            //             return;
-            //         }
+                jewel.skills.forEach((skill) => {
+                    if (true === isSkip) {
+                        return;
+                    }
 
-            //         if (Helper.isNotEmpty(bundle.meta.completedSkills[skill.id])) {
-            //             isSkip = true;
+                    if (Helper.isNotEmpty(bundle.meta.completedSkills[skill.id])) {
+                        isSkip = true;
 
-            //             return;
-            //         }
-            //     });
+                        return;
+                    }
+                });
 
-            //     if (true === isSkip) {
-            //         return false;
-            //     }
+                if (true === isSkip) {
+                    return false;
+                }
 
-            //     return true;
-            // });
+                if (Helper.isEmpty(slotMapping[size])) {
+                    slotMapping[size] = {
+                        expectedValue: 0,
+                        expectedLevel: 0
+                    };
+                }
+
+                if (slotMapping[size].expectedValue < jewel.expectedValue) {
+                    slotMapping[size].expectedValue = jewel.expectedValue;
+                }
+
+                if (slotMapping[size].expectedLevel < jewel.expectedLevel) {
+                    slotMapping[size].expectedLevel = jewel.expectedLevel;
+                }
+
+                return true;
+            });
+
+            if (Helper.isEmpty(slotMapping[size]) && Helper.isNotEmpty(slotMapping[size - 1])) {
+                slotMapping[size] = slotMapping[size - 1];
+            }
+
+            if (Helper.isEmpty(slotMapping[size])) {
+                slotMapping[size] = {
+                    expectedValue: 0,
+                    expectedLevel: 0
+                };
+            }
 
             // if (Helper.isNotEmpty(correspondJewelPool[size - 1])) {
             //     correspondJewelPool[size] = correspondJewelPool[size].concat(correspondJewelPool[size - 1]);
             // }
+
+            if (Helper.isEmpty(lastSlotSize) && 0 !== correspondJewelPool[size].length) {
+                lastSlotSize = size;
+            }
         });
 
-        // console.log(correspondJewelPool);
+        lastJewelIndex = correspondJewelPool[lastSlotSize].length - 1;
 
-        const getCurrentSize = () => {
+        const getSlotSize = () => {
             for (let size = 4; size > 0; size--) {
                 if (0 === bundle.meta.remainingSlotCountMapping[size]) {
                     continue;
@@ -809,18 +853,38 @@ class FittingAlgorithm {
 
                 return size;
             }
+
+            return false;
+        };
+
+        const getJewelSize = (slotSize) => {
+            if (false === slotSize) {
+                return false;
+            }
+
+            for (let size = slotSize; size > 0; size--) {
+                if (0 === correspondJewelPool[size].length) {
+                    continue;
+                }
+
+                return size;
+            }
+
+            return false;
         };
 
         let stackIndex = 0;
         let statusStack = [];
-        let slotSize = null;
+        let slotSize = getSlotSize();
+        let jewelSize = getJewelSize(slotSize);
         let jewelIndex = null;
         let correspondJewel = null;
 
         // Push Root Bundle
         statusStack.push({
             bundle: bundle,
-            slotSize: getCurrentSize(),
+            slotSize: slotSize,
+            jewelSize: jewelSize,
             jewelIndex: 0
         });
 
@@ -833,10 +897,10 @@ class FittingAlgorithm {
                     break;
                 }
 
-                slotSize = statusStack[stackIndex].slotSize;
+                jewelSize = statusStack[stackIndex].jewelSize;
                 jewelIndex = statusStack[stackIndex].jewelIndex;
 
-                if (Helper.isNotEmpty(correspondJewelPool[slotSize][jewelIndex + 1])) {
+                if (Helper.isNotEmpty(correspondJewelPool[jewelSize][jewelIndex + 1])) {
                     statusStack[stackIndex].jewelIndex++;
 
                     break;
@@ -845,10 +909,10 @@ class FittingAlgorithm {
         };
 
         const findNextJewel = () => {
-            slotSize = statusStack[stackIndex].slotSize;
+            jewelSize = statusStack[stackIndex].jewelSize;
             jewelIndex = statusStack[stackIndex].jewelIndex;
 
-            if (Helper.isNotEmpty(correspondJewelPool[slotSize][jewelIndex + 1])) {
+            if (Helper.isNotEmpty(correspondJewelPool[jewelSize][jewelIndex + 1])) {
                 statusStack[stackIndex].jewelIndex++;
             } else {
                 findPrevSkillAndNextJewel();
@@ -857,10 +921,14 @@ class FittingAlgorithm {
 
         const findNextSlot = () => {
             if (0 !== bundle.meta.remainingSlotCountMapping.all) {
+                slotSize = getSlotSize();
+                jewelSize = getJewelSize(slotSize);
+
                 stackIndex++;
                 statusStack.push({
                     bundle: bundle,
-                    slotSize: getCurrentSize(),
+                    slotSize: slotSize,
+                    jewelSize: jewelSize,
                     jewelIndex: 0
                 });
             } else {
@@ -877,8 +945,13 @@ class FittingAlgorithm {
 
             bundle = statusStack[stackIndex].bundle;
             slotSize = statusStack[stackIndex].slotSize;
+            jewelSize = statusStack[stackIndex].jewelSize;
             jewelIndex = statusStack[stackIndex].jewelIndex;
-            correspondJewel = correspondJewelPool[slotSize][jewelIndex];
+            correspondJewel = correspondJewelPool[jewelSize][jewelIndex];
+
+            if (false === slotSize || false === jewelSize) {
+                break;
+            }
 
             if (0 === bundle.meta.remainingSlotCountMapping.all) {
                 findPrevSkillAndNextJewel();
@@ -893,9 +966,15 @@ class FittingAlgorithm {
             }
 
             // Add Jewel To Bundle
-            bundle = this.addJewelToBundle(bundle, correspondJewel);
+            bundle = this.addJewelToBundle(bundle, slotSize, correspondJewel);
 
             if (false === bundle) {
+
+                // Termination condition
+                if (lastSlotSize === slotSize && lastJewelIndex === jewelIndex) {
+                    break;
+                }
+
                 findNextJewel();
 
                 continue;
@@ -911,17 +990,21 @@ class FittingAlgorithm {
 
                 jewelPackageMapping[this.getBundleJewelHash(bundle)] = bundle.jewelMapping;
 
+                Helper.log('FA: Last Package Count:', Object.keys(jewelPackageMapping).length);
+
                 findPrevSkillAndNextJewel();
 
                 continue;
             }
 
             // Check Bundle Jewel Have a Future
-            // if (this.algorithmParams.flag.isExpectBundle) {
-            //     if (false === this.isBundleJewelHaveFuture(bundle, slotMapping)) {
-            //         break;
-            //     }
-            // }
+            if (this.algorithmParams.flag.isExpectBundle) {
+                if (false === this.isBundleJewelHaveFuture(bundle, slotMapping)) {
+                    findNextJewel();
+
+                    continue;
+                }
+            }
 
             findNextSlot();
         }
@@ -1218,9 +1301,9 @@ class FittingAlgorithm {
     /**
      * Add Jewel to Bundle
      */
-    addJewelToBundle = (bundle, jewel) => {
+    addJewelToBundle = (bundle, slotSize, jewel) => {
         let isSkip = false;
-        let jewelCount = bundle.meta.remainingSlotCountMapping[jewel.size];
+        let jewelCount = bundle.meta.remainingSlotCountMapping[slotSize];
 
         jewel.skills.forEach((skill) => {
             if (true === isSkip) {
@@ -1280,7 +1363,7 @@ class FittingAlgorithm {
         });
 
         // Decrease Slot Counts
-        bundle.meta.remainingSlotCountMapping[jewel.size] -= jewelCount;
+        bundle.meta.remainingSlotCountMapping[slotSize] -= jewelCount;
         bundle.meta.remainingSlotCountMapping.all -= jewelCount;
 
         // Increase Expected Value & Level
