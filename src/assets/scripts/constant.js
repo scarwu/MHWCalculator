@@ -185,7 +185,7 @@ export default {
             },
             skillMapping: {},
             setMapping: {},
-            jewelList: [],
+            jewelPackages: [],
             meta: {
                 equipCount: 0,
                 defense: 0,

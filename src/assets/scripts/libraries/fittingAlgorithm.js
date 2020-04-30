@@ -125,7 +125,6 @@ class FittingAlgorithm {
      */
     getBundleHash = (bundle) => {
         let equipMapping = {};
-        let jewelList = [];
 
         Object.keys(bundle.equipMapping).forEach((equipType) => {
             if (Helper.isEmpty(bundle.equipMapping[equipType])) {
@@ -135,19 +134,7 @@ class FittingAlgorithm {
             equipMapping[equipType] = bundle.equipMapping[equipType];
         });
 
-        bundle.jewelList.forEach((jewelMapping, jewelIndex) => {
-            jewelList[jewelIndex] = {};
-
-            Object.keys(jewelMapping).sort().forEach((jewelId) => {
-                if (0 === bundle.jewelList[jewelIndex][jewelId]) {
-                    return;
-                }
-
-                jewelList[jewelIndex][jewelId] = bundle.jewelList[jewelIndex][jewelId];
-            });
-        });
-
-        return MD5(JSON.stringify([equipMapping, jewelList]));
+        return MD5(JSON.stringify(equipMapping));
     };
 
     /**
@@ -164,7 +151,7 @@ class FittingAlgorithm {
             jewelMapping[jewelId] = bundle.jewelMapping[jewelId];
         });
 
-        return MD5(JSON.stringify([jewelMapping]));
+        return MD5(JSON.stringify(jewelMapping));
     };
 
     /**
@@ -418,21 +405,21 @@ class FittingAlgorithm {
             }
 
             // Add Jewels info to Bundle
-            if (Helper.isNotEmpty(equipInfo.slots)) {
-                equipInfo.slots.forEach((slot) => {
-                    if (Helper.isEmpty(slot.jewel.id)) {
-                        return;
-                    }
+            // if (Helper.isNotEmpty(equipInfo.slots)) {
+            //     equipInfo.slots.forEach((slot) => {
+            //         if (Helper.isEmpty(slot.jewel.id)) {
+            //             return;
+            //         }
 
-                    if (Helper.isEmpty(bundle.jewelList[slot.jewel.id])) {
-                        bundle.jewelList[slot.jewel.id] = 0;
-                    }
+            //         if (Helper.isEmpty(bundle.jewelList[slot.jewel.id])) {
+            //             bundle.jewelList[slot.jewel.id] = 0;
+            //         }
 
-                    bundle.jewelList[slot.jewel.id] += 1;
-                    bundle.meta.remainingSlotCount[slot.size] -= 1;
-                    bundle.meta.remainingSlotCount.all -= 1;
-                });
-            }
+            //         bundle.jewelList[slot.jewel.id] += 1;
+            //         bundle.meta.remainingSlotCount[slot.size] -= 1;
+            //         bundle.meta.remainingSlotCount.all -= 1;
+            //     });
+            // }
         });
 
         if (this.isInitFailed) {
@@ -803,17 +790,17 @@ class FittingAlgorithm {
     /**
      * Create Bundles With Jewels
      */
-    createBundlesWithJewels = (initBundle) => {
-        if (this.isBundleSkillsCompleted(initBundle)) {
-            return initBundle;
+    createBundlesWithJewels = (bundle) => {
+        if (this.isBundleSkillsCompleted(bundle)) {
+            return bundle;
         }
 
-        if (0 === initBundle.meta.remainingSlotCount.all) {
+        if (0 === bundle.meta.remainingSlotCount.all) {
             return false;
         }
 
-        let lastBundlePool = {};
-        let bundle = Helper.deepCopy(initBundle);
+        let lastBundle = null;
+        let jewelPackageMapping = [];
 
         // Create Current Skill Ids and Convert Correspond Jewel Pool
         let correspondJewelPool = {};
@@ -954,7 +941,13 @@ class FittingAlgorithm {
 
             // Check Bundle Skills
             if (this.isBundleSkillsCompleted(bundle)) {
-                lastBundlePool[this.getBundleJewelHash(bundle)] = bundle;
+                if (Helper.isEmpty(lastBundle)) {
+                    lastBundle = Helper.deepCopy(bundle);
+
+                    delete lastBundle.jewelMapping;
+                }
+
+                jewelPackageMapping[this.getBundleJewelHash(bundle)] = bundle.jewelMapping;
 
                 findPrevSkillAndNextJewel();
 
@@ -971,19 +964,12 @@ class FittingAlgorithm {
             findNextSlot();
         }
 
-        if (0 === Object.keys(lastBundlePool).length) {
+        if (Helper.isEmpty(lastBundle)) {
             return false;
         }
 
-        let lastBundle = null;
-
-        Object.values(lastBundlePool).forEach((bundle) => {
-            if (Helper.isEmpty(lastBundle)) {
-                lastBundle = Helper.deepCopy(bundle);
-            }
-
-            lastBundle.jewelList.push(bundle.jewelMapping);
-        });
+        // Replace Jewel Packages
+        lastBundle.jewelPackages = Object.values(jewelPackageMapping);
 
         return lastBundle;
     };
