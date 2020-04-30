@@ -37,16 +37,13 @@ import ModalState from 'states/modal';
 const getSortList = () => {
     return [
         { key: 'complex',       value: _('complexSort') },
+        { key: 'amount',        value: _('amountSort') },
         { key: 'defense',       value: _('defenseSort') },
         { key: 'fire',          value: _('fireSort') },
         { key: 'water',         value: _('waterSort') },
         { key: 'thunder',       value: _('thunderSort') },
         { key: 'ice',           value: _('iceSort') },
-        { key: 'dragon',        value: _('dragonSort') },
-        // { key: 'amount',        value: _('amountSort') },
-        // { key: 'slot',          value: _('slotSort') },
-        // { key: 'expectedValue', value: _('expectedValueSort') },
-        // { key: 'expectedLevel', value: _('expectedLevelSort') }
+        { key: 'dragon',        value: _('dragonSort') }
     ];
 }
 

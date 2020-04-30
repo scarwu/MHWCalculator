@@ -157,12 +157,10 @@ export default function BundleList(props) {
     /**
      * Handle Functions
      */
-    const handleJewelPackageChange = useCallback((bundleIndex, jewelIndex) => {
-        console.log(bundleIndex, jewelIndex)
-
+    const handleJewelPackageChange = useCallback((bundleIndex, packageIndex) => {
         const jewelPackageMapping = stateJewelPackageMapping;
 
-        jewelPackageMapping[bundleIndex] = jewelIndex;
+        jewelPackageMapping[bundleIndex] = packageIndex;
 
         updateJewelPackageMapping(Object.assign({}, jewelPackageMapping));
     }, [stateJewelPackageMapping]);
@@ -295,13 +293,13 @@ export default function BundleList(props) {
                         </div>
                     </div>
 
-                    {Helper.isNotEmpty(bundle.sortedBy) ? (
+                    {Helper.isNotEmpty(bundle.meta.sortBy) ? (
                         <div className="col-12 mhwc-content">
                             <div className="col-4 mhwc-name">
-                                <span>{_(bundle.sortedBy.key + 'Sort')}</span>
+                                <span>{_(bundle.meta.sortBy.key + 'Sort')}</span>
                             </div>
                             <div className="col-8 mhwc-value">
-                                <span>{bundle.sortedBy.value}</span>
+                                <span>{bundle.meta.sortBy.value}</span>
                             </div>
                         </div>
                     ) : false}

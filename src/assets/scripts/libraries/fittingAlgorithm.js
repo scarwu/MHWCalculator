@@ -115,9 +115,20 @@ class FittingAlgorithm {
             }
         }
 
-        // Create Sorted Bundle List & Limit Quantity
-        return this.createSortedBundleList(bundlePool)
-            .slice(0, this.algorithmParams.limit);
+        // Create Sorted Bundle List & Clean up
+        return this.createSortedBundleList(bundlePool).map((bundle) => {
+            delete bundle.meta.completedSets;
+            delete bundle.meta.completedSkills;
+            delete bundle.meta.remainingSlotCount;
+            delete bundle.meta.totalExpectedValue;
+            delete bundle.meta.totalExpectedLevel;
+            delete bundle.meta.skillExpectedValue;
+            delete bundle.meta.skillExpectedLevel;
+
+            bundle.hash = this.getBundleHash(bundle);
+
+            return bundle;
+        });
     };
 
     /**
@@ -987,11 +998,25 @@ class FittingAlgorithm {
                 return ('asc' === this.algorithmParams.order)
                     ? (valueA - valueB) : (valueB - valueA);
             }).map((bundle) => {
-                bundle.sortedBy = {
+                bundle.meta.sortBy = {
                     key: this.algorithmParams.sort,
                     value: (8 - bundle.meta.equipCount) * 1000 + bundle.meta.defense
                 };
-                bundle.hash = this.getBundleHash(bundle);
+
+                return bundle;
+            });
+        case 'amount':
+            return Object.values(bundlePool).sort((bundleA, bundleB) => {
+                let valueA = bundleA.meta.equipCount;
+                let valueB = bundleB.meta.equipCount;
+
+                return ('asc' === this.algorithmParams.order)
+                    ? (valueA - valueB) : (valueB - valueA);
+            }).map((bundle) => {
+                bundle.meta.sortBy = {
+                    key: this.algorithmParams.sort,
+                    value: bundle.meta.equipCount
+                };
 
                 return bundle;
             });
@@ -1003,11 +1028,10 @@ class FittingAlgorithm {
                 return ('asc' === this.algorithmParams.order)
                     ? (valueA - valueB) : (valueB - valueA);
             }).map((bundle) => {
-                bundle.sortedBy = {
+                bundle.meta.sortBy = {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.defense
                 };
-                bundle.hash = this.getBundleHash(bundle);
 
                 return bundle;
             });
@@ -1023,81 +1047,15 @@ class FittingAlgorithm {
                 return ('asc' === this.algorithmParams.order)
                     ? (valueA - valueB) : (valueB - valueA);
             }).map((bundle) => {
-                bundle.sortedBy = {
+                bundle.meta.sortBy = {
                     key: this.algorithmParams.sort,
                     value: bundle.meta.resistance[this.algorithmParams.sort]
                 };
-                bundle.hash = this.getBundleHash(bundle);
-
-                return bundle;
-            });
-        case 'amount':
-            return Object.values(bundlePool).sort((bundleA, bundleB) => {
-                let valueA = bundleA.meta.equipCount;
-                let valueB = bundleB.meta.equipCount;
-
-                return ('asc' === this.algorithmParams.order)
-                    ? (valueA - valueB) : (valueB - valueA);
-            }).map((bundle) => {
-                bundle.sortedBy = {
-                    key: this.algorithmParams.sort,
-                    value: bundle.meta.equipCount
-                };
-                bundle.hash = this.getBundleHash(bundle);
-
-                return bundle;
-            });
-        case 'slot':
-            return Object.values(bundlePool).sort((bundleA, bundleB) => {
-                let valueA = bundleA.meta.remainingSlotCount.all;
-                let valueB = bundleB.meta.remainingSlotCount.all;
-
-                return ('asc' === this.algorithmParams.order)
-                    ? (valueA - valueB) : (valueB - valueA);
-            }).map((bundle) => {
-                bundle.sortedBy = {
-                    key: this.algorithmParams.sort,
-                    value: bundle.meta.remainingSlotCount.all
-                };
-                bundle.hash = this.getBundleHash(bundle);
-
-                return bundle;
-            });
-        case 'expectedValue':
-            return Object.values(bundlePool).sort((bundleA, bundleB) => {
-                let valueA = bundleA.meta.totalExpectedValue;
-                let valueB = bundleB.meta.totalExpectedValue;
-
-                return ('asc' === this.algorithmParams.order)
-                    ? (valueA - valueB) : (valueB - valueA);
-            }).map((bundle) => {
-                bundle.sortedBy = {
-                    key: this.algorithmParams.sort,
-                    value: bundle.meta.totalExpectedValue
-                };
-                bundle.hash = this.getBundleHash(bundle);
-
-                return bundle;
-            });
-        case 'expectedLevel':
-            return Object.values(bundlePool).sort((bundleA, bundleB) => {
-                let valueA = bundleA.meta.totalExpectedLevel;
-                let valueB = bundleB.meta.totalExpectedLevel;
-
-                return ('asc' === this.algorithmParams.order)
-                    ? (valueA - valueB) : (valueB - valueA);
-            }).map((bundle) => {
-                bundle.sortedBy = {
-                    key: this.algorithmParams.sort,
-                    value: bundle.meta.totalExpectedLevel
-                };
-                bundle.hash = this.getBundleHash(bundle);
 
                 return bundle;
             });
         default:
             return Object.map((bundle) => {
-                bundle.hash = this.getBundleHash(bundle);
 
                 return bundle;
             }).values(bundlePool);
@@ -1119,7 +1077,7 @@ class FittingAlgorithm {
         bundle = Helper.deepCopy(bundle);
         bundle.equipMapping[candidateEquip.type] = candidateEquip.id;
 
-        // Increase Skill
+        // Increase Skill Level
         let isSkillLevelOverflow = false;
 
         Object.keys(candidateEquip.skills).forEach((skillId) => {
@@ -1144,7 +1102,7 @@ class FittingAlgorithm {
             return false;
         }
 
-        // Increase Set
+        // Increase Set Count
         let isSetRequireOverflow = false;
 
         if (Helper.isNotEmpty(candidateEquip.setId)) {
@@ -1266,21 +1224,12 @@ class FittingAlgorithm {
             equipInfo.slots = [];
         }
 
-        let isSkip = false;
-
         equipInfo.skills.forEach((skill) => {
-            if (true === isSkip) {
-                return;
-            }
 
+            // Increase Skill Level
             candidateEquip.skills[skill.id] = skill.level;
 
-            // If Skill not match condition then skip
             if (Helper.isEmpty(this.currentSkillMapping[skill.id])) {
-                if (this.algorithmParams.flag.isRequireConsistent) {
-                    isSkip = true;
-                }
-
                 return;
             }
 
@@ -1293,10 +1242,6 @@ class FittingAlgorithm {
             candidateEquip.skillExpectedValue += expectedValue;
             candidateEquip.skillExpectedLevel += expectedLevel;
         });
-
-        if (true === isSkip) {
-            return false;
-        }
 
         equipInfo.slots.forEach((slot) => {
             candidateEquip.ownSlotCount[slot.size] += 1;
@@ -1375,7 +1320,7 @@ class FittingAlgorithm {
 
         bundle.jewelMapping[jewel.id] += jewelCount;
 
-        // Increase Skills
+        // Increase Skill Level
         jewel.skills.forEach((skill) => {
             bundle.skillMapping[skill.id] += jewelCount * skill.level;
 
