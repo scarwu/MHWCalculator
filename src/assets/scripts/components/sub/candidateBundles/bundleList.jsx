@@ -42,8 +42,8 @@ const handleBundlePickUp = (bundle, required) => {
         4: []
     };
 
-    Object.keys(bundle.equipMapping).forEach((equipType) => {
-        if (Helper.isEmpty(bundle.equipMapping[equipType])) {
+    Object.keys(bundle.equipIdMapping).forEach((equipType) => {
+        if (Helper.isEmpty(bundle.equipIdMapping[equipType])) {
             return;
         }
 
@@ -51,7 +51,7 @@ const handleBundlePickUp = (bundle, required) => {
             currentEquips[equipType] = {};
         }
 
-        currentEquips[equipType].id = bundle.equipMapping[equipType];
+        currentEquips[equipType].id = bundle.equipIdMapping[equipType];
         currentEquips[equipType].slotIds = [];
 
         let equipInfo = null;
@@ -218,8 +218,8 @@ export default function BundleList(props) {
                 ? bundle.jewelPackageIndex : 0;
 
             // Bundle Equips & Jewels
-            const bundleEquips = Object.keys(bundle.equipMapping).filter((equipType) => {
-                return Helper.isNotEmpty(bundle.equipMapping[equipType])
+            const bundleEquips = Object.keys(bundle.equipIdMapping).filter((equipType) => {
+                return Helper.isNotEmpty(bundle.equipIdMapping[equipType])
             }).map((equipType) => {
                 if ('weapon' === equipType) {
                     return Object.assign({}, bundleRequired.equips[equipType], {
@@ -228,7 +228,7 @@ export default function BundleList(props) {
                 }
 
                 return {
-                    id: bundle.equipMapping[equipType],
+                    id: bundle.equipIdMapping[equipType],
                     type: equipType
                 };
             });
@@ -242,7 +242,7 @@ export default function BundleList(props) {
             });
 
             // Additional Sets & Skills
-            const additionalSets = Object.keys(bundle.setMapping).map((setId) => {
+            const additionalSets = Object.keys(bundle.setCountMapping).map((setId) => {
                 let setInfo = SetDataset.getInfo(setId);
 
                 if (Helper.isEmpty(setInfo)) {
@@ -250,7 +250,7 @@ export default function BundleList(props) {
                 }
 
                 let setStep = setInfo.skills.filter((skill) => {
-                    return skill.require <= bundle.setMapping[setId];
+                    return skill.require <= bundle.setCountMapping[setId];
                 }).length;
 
                 return {
@@ -275,10 +275,10 @@ export default function BundleList(props) {
                 return setB.step - setA.step;
             });
 
-            const additionalSkills = Object.keys(bundle.skillMapping).map((skillId) => {
+            const additionalSkills = Object.keys(bundle.skillLevelMapping).map((skillId) => {
                 return {
                     id: skillId,
-                    level: bundle.skillMapping[skillId]
+                    level: bundle.skillLevelMapping[skillId]
                 };
             }).filter((skill) => {
                 return -1 === currentRequiredSkillIds.indexOf(skill.id);
@@ -287,7 +287,7 @@ export default function BundleList(props) {
             });
 
             return (
-                <div key={bundle.hash + '_' + jewelPackageIndex} className="mhwc-item mhwc-item-3-step">
+                <div key={bundle.hash} className="mhwc-item mhwc-item-3-step">
                     <div className="col-12 mhwc-name">
                         <span>{_('bundle')}: {bundleIndex + 1} / {bundleList.length}</span>
                         <div className="mhwc-icons_bundle">
@@ -391,7 +391,7 @@ export default function BundleList(props) {
                     </div>
 
                     {(0 !== bundleJewels.length) ? (
-                        <div key={bundleIndex} className="col-12 mhwc-content">
+                        <div key={bundleIndex + '_' + jewelPackageIndex} className="col-12 mhwc-content">
                             <div className="col-12 mhwc-name">
                                 <span>{_('requiredJewels')}</span>
                                 {1 < jewelPackageCount ? (
@@ -412,7 +412,7 @@ export default function BundleList(props) {
                                     let jewelInfo = JewelDataset.getInfo(jewel.id);
 
                                     return (Helper.isNotEmpty(jewelInfo)) ? (
-                                        <div key={jewel.id} className="col-4 mhwc-value">
+                                        <div key={jewel.id} className="col-6 mhwc-value">
                                             <span>{`[${jewelInfo.size}] ${_(jewelInfo.name)} x ${jewel.count}`}</span>
                                         </div>
                                     ) : false;
