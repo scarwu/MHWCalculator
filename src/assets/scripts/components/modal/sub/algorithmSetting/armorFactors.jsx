@@ -75,8 +75,6 @@ export default function ArmorFactors(props) {
                 return set.id;
             });
 
-            console.log(setIds);
-
             dataset = dataset.typesIs(equipTypes).setsIs(setIds);
         }
 

@@ -262,6 +262,7 @@ export default function BundleList(props) {
                         }
 
                         if (remainingSlotCountMapping[slotSize] < jewelCount) {
+                            jewelCount -= remainingSlotCountMapping[slotSize];
                             remainingSlotCountMapping.all -= remainingSlotCountMapping[slotSize];
                             remainingSlotCountMapping[slotSize] = 0;
 
@@ -278,8 +279,11 @@ export default function BundleList(props) {
                         id: jewelId,
                         count: bundle.jewelPackages[jewelPackageIndex][jewelId]
                     };
-                }).sort((setA, setB) => {
-                    return setB.step - setA.step;
+                }).sort((jewelA, jewelB) => {
+                    let jewelInfoA = JewelDataset.getInfo(jewelA.id);
+                    let jewelInfoB = JewelDataset.getInfo(jewelB.id);
+
+                    return jewelInfoA.size < jewelInfoB.size ? 1 : -1;
                 });
             }
 
