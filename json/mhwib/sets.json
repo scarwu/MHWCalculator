@@ -752,5 +752,24 @@
                 "require": 5
             }
         ]
+    },
+    {
+        "id": "屍套龍的靈脈",
+        "name": {
+            "zhTW": "屍套龍的靈脈",
+            "jaJP": "屍套龍の霊脈",
+            "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": true
+        },
+        "skills": [
+            {
+                "id": "超回復力",
+                "level": 1,
+                "require": 2
+            }
+        ]
     }
 ]

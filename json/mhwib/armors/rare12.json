@@ -313,7 +313,7 @@
                 "dragon": -3
             },
             "set": {
-                "id": "屍套龍的命脈"
+                "id": "屍套龍的靈脈"
             }
         },
         "items": [
@@ -473,7 +473,7 @@
                 "dragon": -3
             },
             "set": {
-                "id": "屍套龍的命脈"
+                "id": "屍套龍的靈脈"
             }
         },
         "items": [
@@ -5414,6 +5414,160 @@
                 "skills": [
                     {
                         "id": "超會心",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "精英．溟波龍γ",
+            "name": {
+                "zhTW": "精英．溟波龍γ",
+                "jaJP": null,
+                "enUS": null
+            },
+            "rare": 12,
+            "gender": "general",
+            "defense": 176,
+            "resistance": {
+                "fire": -3,
+                "water": 4,
+                "thunder": 3,
+                "ice": 0,
+                "dragon": -2
+            },
+            "set": {
+                "id": "溟波龍的神祕"
+            }
+        },
+        "items": [
+            {
+                "id": "精英．溟波龍頭盔γ",
+                "name": {
+                    "zhTW": "精英．溟波龍頭盔γ",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "耐力急速回復",
+                        "level": 3
+                    },
+                    {
+                        "id": "整備",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．溟波龍鎧甲γ",
+                "name": {
+                    "zhTW": "精英．溟波龍鎧甲γ",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "迴避性能",
+                        "level": 4
+                    },
+                    {
+                        "id": "水屬性攻擊強化",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "精英．溟波龍腕甲γ",
+                "name": {
+                    "zhTW": "精英．溟波龍腕甲γ",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "跑者",
+                        "level": 3
+                    },
+                    {
+                        "id": "屬性異常狀態耐性",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．溟波龍腰甲γ",
+                "name": {
+                    "zhTW": "精英．溟波龍腰甲γ",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "迴避距離UP",
+                        "level": 3
+                    },
+                    {
+                        "id": "回復速度",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "精英．溟波龍護腿γ",
+                "name": {
+                    "zhTW": "精英．溟波龍護腿γ",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "體術",
+                        "level": 4
+                    },
+                    {
+                        "id": "雷屬性攻擊強化",
                         "level": 2
                     }
                 ]
