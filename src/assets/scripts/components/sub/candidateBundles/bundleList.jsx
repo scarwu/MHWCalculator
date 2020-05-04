@@ -440,20 +440,22 @@ export default function BundleList(props) {
                         <div key={bundleIndex + '_' + jewelPackageIndex} className="col-12 mhwc-content">
                             <div className="col-12 mhwc-name">
                                 <span>{_('requiredJewels')}</span>
-                                {1 < jewelPackageCount ? (
-                                    <div className="mhwc-icons_bundle">
-                                        {bundle.jewelPackages.map((jewelMapping, packageIndex) => {
-                                            return (
-                                                <IconButton
-                                                    key={packageIndex} altName={_('select')}
-                                                    iconName={(packageIndex === jewelPackageIndex) ? 'check' : ''}
-                                                    onClick={() => {handleJewelPackageChange(bundleIndex, packageIndex)}} />
-                                            );
-                                        })}
-                                    </div>
-                                ) : false}
                             </div>
                             <div className="col-12 mhwc-content">
+                                {1 < jewelPackageCount ? (
+                                    <div className="col-12 mhwc-value">
+                                        <div className="mhwc-icons_bundle">
+                                            {bundle.jewelPackages.map((jewelMapping, packageIndex) => {
+                                                return (
+                                                    <IconButton
+                                                        key={packageIndex} altName={_('select')}
+                                                        iconName={(packageIndex === jewelPackageIndex) ? 'check' : ''}
+                                                        onClick={() => {handleJewelPackageChange(bundleIndex, packageIndex)}} />
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                ) : false}
                                 {bundleJewels.map((jewel) => {
                                     let jewelInfo = JewelDataset.getInfo(jewel.id);
 
