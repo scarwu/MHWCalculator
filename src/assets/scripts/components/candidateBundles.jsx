@@ -120,8 +120,8 @@ export default function CandidateBundles(props) {
 
                 CommonState.setter.saveComputedResult(payload.computedResult);
 
-                workers[tabIndex].terminate();
-                workers[tabIndex] = undefined;
+                // workers[tabIndex].terminate();
+                // workers[tabIndex] = undefined;
 
                 stateTasks[tabIndex] = undefined;
 
@@ -178,9 +178,7 @@ export default function CandidateBundles(props) {
         let requiredSkills = CommonState.getter.getRequiredSkills();
         let algorithmParams = CommonState.getter.getAlgorithmParams();
 
-        if (0 === requiredSets.length
-            && 0 === requiredSkills.length
-        ) {
+        if (0 === requiredSets.length && 0 === requiredSkills.length) {
             return;
         }
 
@@ -312,7 +310,7 @@ export default function CandidateBundles(props) {
                     ) : (
                         <Fragment>
                             <RequiredConditions data={stateComputedResult.required} />
-                            <BundleList data={stateComputedResult} />
+                            <BundleList />
                         </Fragment>
                     )
                 )}

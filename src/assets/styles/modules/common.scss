@@ -26,7 +26,6 @@
         padding: 0;
         border: none;
         height: 20px;
-        width: 100%;
         line-height: 20px;
         background-color: #eee;
 
@@ -300,6 +299,11 @@
         > .mhwc-basic_selector {
             margin-top: 1px;
             vertical-align: top;
+
+            .mhwc-select,
+            .mhwc-input {
+                width: 100%;
+            }
         }
     }
 

@@ -160,19 +160,21 @@ export default {
                 ice: 0,
                 dragon: 0
             },
-            skills: {},
+            skillLevelMapping: {},
             setId: null,
-            ownSlotCount: {
+            slotCountMapping: {
                 1: 0,
                 2: 0,
                 3: 0,
                 4: 0
             },
-            expectedValue: 0,
-            expectedLevel: 0
+            totalExpectedValue: 0,
+            totalExpectedLevel: 0,
+            skillExpectedValue: 0,
+            skillExpectedLevel: 0
         },
         bundle: {
-            equips: {
+            equipIdMapping: {
                 weapon: null,
                 helm: null,
                 chest: null,
@@ -181,10 +183,17 @@ export default {
                 leg: null,
                 charm: null
             },
-            jewels: {},
-            skills: {},
-            sets: {},
+            skillLevelMapping: {},
+            setCountMapping: {},
+            slotCountMapping: {
+                1: 0,
+                2: 0,
+                3: 0,
+                4: 0
+            },
+            jewelPackages: [],
             meta: {
+                equipCount: 0,
                 defense: 0,
                 resistance: {
                     fire: 0,
@@ -193,18 +202,19 @@ export default {
                     ice: 0,
                     dragon: 0
                 },
-                expectedValue: 0,
-                expectedLevel: 0,
-                equipCount: 0,
                 completedSkills: {},
                 completedSets: {},
-                remainingSlotCount: {
+                remainingSlotCountMapping: {
                     1: 0,
                     2: 0,
                     3: 0,
                     4: 0,
                     all: 0
-                }
+                },
+                totalExpectedValue: 0,
+                totalExpectedLevel: 0,
+                skillExpectedValue: 0,
+                skillExpectedLevel: 0
             }
         },
         equips: {

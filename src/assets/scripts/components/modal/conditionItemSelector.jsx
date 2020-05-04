@@ -124,7 +124,7 @@ const SetList = (props) => {
     const {data} = props;
 
     return useMemo(() => {
-        Helper.log('Component: ConditionItemSelector -> SetList');
+        Helper.debug('Component: ConditionItemSelector -> SetList');
 
         return data.map(renderSetItem);
     }, [data]);
@@ -134,7 +134,7 @@ const SkillList = (props) => {
     const {data} = props;
 
     return useMemo(() => {
-        Helper.log('Component: ConditionItemSelector -> SkillList');
+        Helper.debug('Component: ConditionItemSelector -> SkillList');
 
         return data.map(renderSkillItem);
     }, [data]);

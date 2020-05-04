@@ -25,15 +25,15 @@ import Constant from 'constant';
 import TestData from 'files/json/testData.json';
 
 const statusMapping = {
-    tempData:           'state:common:1:tempData',
-    requiredEquips:     'state:common:1:requiredEquips',
-    requiredSets:       'state:common:1:requiredSets',
-    requiredSkills:     'state:common:1:requiredSkills',
-    currentEquips:      'state:common:1:currentEquips',
-    algorithmParams:    'state:common:1:algorithmParams',
-    computedResult:     'state:common:1:computedResult',
-    reservedBundles:    'state:common:1:reservedBundles',
-    customWeapon:       'state:common:1:customWeapon'
+    tempData:           'state:common:tempData',
+    requiredEquips:     'state:common:requiredEquips',
+    requiredSets:       'state:common:requiredSets',
+    requiredSkills:     'state:common:requiredSkills',
+    currentEquips:      'state:common:currentEquips',
+    algorithmParams:    'state:common:algorithmParams',
+    computedResult:     'state:common:computedResult',
+    reservedBundles:    'state:common:reservedBundles',
+    customWeapon:       'state:common:customWeapon'
 };
 
 // Middleware
@@ -53,8 +53,8 @@ const diffLogger = store => next => action => {
         Status.set(statusMapping[key], nextState[key]);
     }
 
-    Helper.log('State: Common -> action', action);
-    Helper.log('State: Common -> diffState', diffState);
+    Helper.debug('State: Common -> action', action);
+    Helper.debug('State: Common -> diffState', diffState);
 
     return result;
 };
