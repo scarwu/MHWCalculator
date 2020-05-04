@@ -4537,11 +4537,7 @@
                     "enUS": null
                 },
                 "type": "helm",
-                "slots": [
-                    {
-                        "size": 0
-                    }
-                ],
+                "slots": null,
                 "skills": [
                     {
                         "id": "弱點特效",
