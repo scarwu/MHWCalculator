@@ -796,9 +796,6 @@ class FittingAlgorithm {
         let correspondJewelPool = {};
         let slotMapping = {};
 
-        let lastSlotSize = null;
-        let lastJewelIndex = null;
-
         [ 1, 2, 3, 4 ].forEach((size) => {
             correspondJewelPool[size] = Helper.isNotEmpty(this.correspondJewels[size])
                 ? this.correspondJewels[size] : [];
@@ -855,36 +852,33 @@ class FittingAlgorithm {
             if (Helper.isNotEmpty(correspondJewelPool[size - 1])) {
                 correspondJewelPool[size] = correspondJewelPool[size].concat(correspondJewelPool[size - 1]);
             }
-
-            if (Helper.isEmpty(lastSlotSize) && 0 !== correspondJewelPool[size].length) {
-                lastSlotSize = size;
-            }
         });
 
-        lastJewelIndex = correspondJewelPool[lastSlotSize].length - 1;
+        let slotSizeList = [];
 
-        const getSlotSize = () => {
-            for (let size = 4; size > 0; size--) {
-                if (0 === bundle.meta.remainingSlotCountMapping[size]) {
-                    continue;
-                }
-
-                return size;
+        for (let size = 4; size > 0; size--) {
+            if (0 === bundle.meta.remainingSlotCountMapping[size]) {
+                continue;
             }
 
-            return 0;
-        };
+            for (let index = 0; index < bundle.meta.remainingSlotCountMapping[size]; index++) {
+                slotSizeList.push(size);
+            }
+        }
+
+        let lastSlotIndex = slotSizeList.length - 1;
+        let lastJewelIndex = correspondJewelPool[slotSizeList[lastSlotIndex]].length - 1;
 
         let stackIndex = 0;
         let statusStack = [];
-        let slotSize = getSlotSize();
+        let slotIndex = null;
         let jewelIndex = null;
         let correspondJewel = null;
 
         // Push Root Bundle
         statusStack.push({
             bundle: bundle,
-            slotSize: slotSize,
+            slotIndex: 0,
             jewelIndex: 0
         });
 
@@ -897,10 +891,10 @@ class FittingAlgorithm {
                     break;
                 }
 
-                slotSize = statusStack[stackIndex].slotSize;
+                slotIndex = statusStack[stackIndex].slotIndex;
                 jewelIndex = statusStack[stackIndex].jewelIndex;
 
-                if (Helper.isNotEmpty(correspondJewelPool[slotSize][jewelIndex + 1])) {
+                if (Helper.isNotEmpty(correspondJewelPool[slotSizeList[slotIndex]][jewelIndex + 1])) {
                     statusStack[stackIndex].jewelIndex++;
 
                     break;
@@ -909,10 +903,10 @@ class FittingAlgorithm {
         };
 
         const findNextJewel = () => {
-            slotSize = statusStack[stackIndex].slotSize;
+            slotIndex = statusStack[stackIndex].slotIndex;
             jewelIndex = statusStack[stackIndex].jewelIndex;
 
-            if (Helper.isNotEmpty(correspondJewelPool[slotSize][jewelIndex + 1])) {
+            if (Helper.isNotEmpty(correspondJewelPool[slotSizeList[slotIndex]][jewelIndex + 1])) {
                 statusStack[stackIndex].jewelIndex++;
             } else {
                 findPrevSkillAndNextJewel();
@@ -920,13 +914,13 @@ class FittingAlgorithm {
         };
 
         const findNextSlot = () => {
-            if (0 !== bundle.meta.remainingSlotCountMapping.all) {
-                slotSize = getSlotSize();
+            slotIndex = statusStack[stackIndex].slotIndex;
 
+            if (Helper.isNotEmpty(slotSizeList[slotIndex + 1])) {
                 stackIndex++;
                 statusStack.push({
                     bundle: bundle,
-                    slotSize: slotSize,
+                    slotIndex: slotIndex + 1,
                     jewelIndex: 0
                 });
             } else {
@@ -942,13 +936,9 @@ class FittingAlgorithm {
             }
 
             bundle = statusStack[stackIndex].bundle;
-            slotSize = statusStack[stackIndex].slotSize;
+            slotIndex = statusStack[stackIndex].slotIndex;
             jewelIndex = statusStack[stackIndex].jewelIndex;
-            correspondJewel = correspondJewelPool[slotSize][jewelIndex];
-
-            if (0 === slotSize) {
-                break;
-            }
+            correspondJewel = correspondJewelPool[slotSizeList[slotIndex]][jewelIndex];
 
             if (0 === bundle.meta.remainingSlotCountMapping.all) {
                 findPrevSkillAndNextJewel();
@@ -963,12 +953,12 @@ class FittingAlgorithm {
             }
 
             // Add Jewel To Bundle
-            bundle = this.addJewelToBundle(bundle, slotSize, correspondJewel);
+            bundle = this.addJewelToBundle(bundle, slotSizeList[slotIndex], correspondJewel);
 
             if (false === bundle) {
 
                 // Termination condition
-                if (lastSlotSize === slotSize && lastJewelIndex === jewelIndex) {
+                if (lastSlotIndex === slotIndex && lastJewelIndex === jewelIndex) {
                     break;
                 }
 
@@ -987,7 +977,7 @@ class FittingAlgorithm {
 
                 jewelPackageMapping[this.getBundleJewelHash(bundle)] = bundle.jewelMapping;
 
-                Helper.log('FA: Last Package Count:', Object.keys(jewelPackageMapping).length);
+                // Helper.log('FA: Last Package Count:', Object.keys(jewelPackageMapping).length);
 
                 findPrevSkillAndNextJewel();
 
@@ -1001,6 +991,11 @@ class FittingAlgorithm {
 
                     continue;
                 }
+            }
+
+            // Termination condition
+            if (lastSlotIndex === slotIndex && lastJewelIndex === jewelIndex) {
+                break;
             }
 
             findNextSlot();
