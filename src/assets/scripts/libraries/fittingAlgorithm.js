@@ -543,22 +543,25 @@ class FittingAlgorithm {
         Helper.log('FA: Global: Equip Future Expected Value:', this.equipFutureExpectedValue);
         Helper.log('FA: Global: Equip Future Expected Level:', this.equipFutureExpectedLevel);
 
-        // Special Case
-        if (1 === totalTraversalCount) {
-            if (0 !== this.currentSkillCount) {
+        // Special Case: 1
+        if (this.isBundleSetsCompleted(bundle)) {
 
-                // Create Bundle With Jewels
+            // Create Bundle With Jewels
+            if (false === this.isBundleSkillsCompleted(bundle)) {
                 bundle = this.createBundleWithJewels(bundle);
-
-                if (false !== bundle) {
-                    lastBundleMapping[this.getBundleHash(bundle)] = bundle;
-
-                    this.callback({
-                        bundleCount: Object.keys(lastBundleMapping).length
-                    });
-                }
             }
 
+            if (false !== bundle) {
+                lastBundleMapping[this.getBundleHash(bundle)] = bundle;
+
+                this.callback({
+                    bundleCount: Object.keys(lastBundleMapping).length
+                });
+            }
+        }
+
+        // Special Case: 2
+        if (1 === totalTraversalCount) {
             return Object.values(lastBundleMapping);
         }
 
