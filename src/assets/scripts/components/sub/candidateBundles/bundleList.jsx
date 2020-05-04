@@ -25,7 +25,7 @@ import CommonDataset from 'libraries/dataset/common';
 
 // Load Components
 import IconButton from 'components/common/iconButton';
-import BasicSelector from 'components/common/basicSelector';
+import IconSwitch from 'components/common/iconSwitch';
 
 // Load State Control
 import CommonState from 'states/common';
@@ -440,22 +440,23 @@ export default function BundleList(props) {
                         <div key={bundleIndex + '_' + jewelPackageIndex} className="col-12 mhwc-content">
                             <div className="col-12 mhwc-name">
                                 <span>{_('requiredJewels')}</span>
-                            </div>
-                            <div className="col-12 mhwc-content">
                                 {1 < jewelPackageCount ? (
-                                    <div className="col-12 mhwc-value">
-                                        <div className="mhwc-icons_bundle">
-                                            {bundle.jewelPackages.map((jewelMapping, packageIndex) => {
-                                                return (
-                                                    <IconButton
-                                                        key={packageIndex} altName={_('select')}
-                                                        iconName={(packageIndex === jewelPackageIndex) ? 'check' : ''}
-                                                        onClick={() => {handleJewelPackageChange(bundleIndex, packageIndex)}} />
-                                                );
+                                    <div className="mhwc-icons_bundle">
+                                        <IconSwitch
+                                            defaultValue={jewelPackageIndex}
+                                            options={bundle.jewelPackages.map((jewelMapping, packageIndex) => {
+                                                return {
+                                                    key: packageIndex,
+                                                    value: `${packageIndex + 1} / ${jewelPackageCount}`
+                                                };
                                             })}
-                                        </div>
+                                            onChange={(packageIndex) => {
+                                                handleJewelPackageChange(bundleIndex, parseInt(packageIndex), 10)
+                                            }} />
                                     </div>
                                 ) : false}
+                            </div>
+                            <div className="col-12 mhwc-content">
                                 {bundleJewels.map((jewel) => {
                                     let jewelInfo = JewelDataset.getInfo(jewel.id);
 

@@ -21,11 +21,11 @@ export default function IconButton(props) {
 
         return (
             <div className="mhwc-icon_button">
-                <a className="mhwc-body" onClick={onClick}>
-                    <div className="mhwc-icon">
+                <div className="mhwc-body">
+                    <a className="mhwc-icon" onClick={onClick}>
                         <i className={`fa fa-${iconName}`}></i>
-                    </div>
-                </a>
+                    </a>
+                </div>
 
                 <div className="mhwc-label">
                     <span>{altName}</span>

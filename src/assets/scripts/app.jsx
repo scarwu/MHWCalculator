@@ -113,8 +113,9 @@ export default function App(props) {
                         iconName="question" altName={_('readme')}
                         onClick={handleOpenReadme} />
                     <IconSelector
-                        iconName="globe" defaultValue={stateLang}
-                        options={langList} onChange={handleLangChange} />
+                        iconName="globe"
+                        defaultValue={stateLang} options={langList}
+                        onChange={handleLangChange} />
                 </div>
             </div>
 
