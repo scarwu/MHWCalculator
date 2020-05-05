@@ -219,28 +219,6 @@ export default function AlgorithmSetting(props) {
                                         options={getOrderList()} onChange={handleOrderChange} />
                                 </div>
                             </div>
-                            <div className="col-12 mhwc-content">
-                                {['isEndEarly', 'isExpectBundle', 'isRequireConsistent'].map((target) => {
-                                    return (
-                                        <div key={target} className="col-6 mhwc-value">
-                                            <span>{_(target)}</span>
-                                            <div className="mhwc-icons_bundle">
-                                                {stateAlgorithmParams.flag[target] ? (
-                                                    <IconButton
-                                                        iconName="star"
-                                                        altName={_('exclude')}
-                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsFlag(target)}} />
-                                                ) : (
-                                                    <IconButton
-                                                        iconName="star-o"
-                                                        altName={_('include')}
-                                                        onClick={() => {CommonState.setter.toggleAlgorithmParamsFlag(target)}} />
-                                                )}
-                                            </div>
-                                        </div>
-                                    );
-                                })}
-                            </div>
                         </div>
 
                         {'all' === stateMode || 'armorFactor' === stateMode || 'byRequiredConditions' === stateMode ? (
