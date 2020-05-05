@@ -369,6 +369,23 @@
 .mhwc-item-3-step {
     background-color: #ccc;
 
+    > .mhwc-name {
+        .mhwc-icons_bundle {
+            .mhwc-icon_selector,
+            .mhwc-icon_button {
+                .mhwc-body {
+                    background-color: #999;
+                }
+
+                &:hover {
+                    .mhwc-body {
+                        background-color: #666;
+                    }
+                }
+            }
+        }
+    }
+
     .mhwc-content {
         background-color: #eee;
 
