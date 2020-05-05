@@ -940,8 +940,6 @@ class FittingAlgorithm {
         };
 
         // Helper.log('FA: CreateBundlesWithJewels: Root Bundle:', bundle);
-        console.log(correspondJewelPool);
-        console.log('lastSlotSize', lastSlotSize, 'lastJewelIndex', lastJewelIndex);
 
         while (true) {
             if (0 === statusStack.length) {
@@ -956,9 +954,6 @@ class FittingAlgorithm {
             if (0 === slotSize) {
                 break;
             }
-
-            console.log('slotSize', slotSize, 'jewelIndex', jewelIndex);
-            console.log('jewel', correspondJewel);
 
             if (0 === bundle.meta.remainingSlotCountMapping.all) {
                 findPrevSkillAndNextJewel();
@@ -1031,7 +1026,7 @@ class FittingAlgorithm {
         return lastBundle;
     };
 
-    // createBundleWithJewels2 = (bundle) => {
+    // createBundleWithJewels = (bundle) => {
     //     if (this.isBundleSkillsCompleted(bundle)) {
     //         return bundle;
     //     }
@@ -1183,9 +1178,6 @@ class FittingAlgorithm {
     //     };
 
     //     // Helper.log('FA: CreateBundlesWithJewels: Root Bundle:', bundle);
-    //     console.log(slotSizeList);
-    //     console.log(correspondJewelPool);
-    //     console.log('lastSlotIndex', lastSlotIndex, 'lastJewelIndex', lastJewelIndex);
 
     //     while (true) {
     //         if (0 === statusStack.length) {
@@ -1197,9 +1189,6 @@ class FittingAlgorithm {
     //         slotSize = slotSizeList[slotIndex];
     //         jewelIndex = statusStack[stackIndex].jewelIndex;
     //         correspondJewel = correspondJewelPool[slotSize][jewelIndex];
-
-    //         console.log('slotIndex', slotIndex, 'jewelIndex', jewelIndex);
-    //         console.log('slotSize', slotSize, 'jewel', correspondJewel);
 
     //         if (0 === bundle.meta.remainingSlotCountMapping.all) {
     //             findPrevSkillAndNextJewel();
@@ -1214,7 +1203,7 @@ class FittingAlgorithm {
     //         }
 
     //         // Add Jewel To Bundle
-    //         bundle = this.addJewelToBundle(bundle, slotSize, correspondJewel);
+    //         bundle = this.addJewelToBundle(bundle, slotSize, correspondJewel, true);
 
     //         if (false === bundle) {
 
@@ -1554,7 +1543,7 @@ class FittingAlgorithm {
     /**
      * Add Jewel to Bundle
      */
-    addJewelToBundle = (bundle, slotSize, jewel) => {
+    addJewelToBundle = (bundle, slotSize, jewel, hasJewelCountLimit = false) => {
 
         // Check Jewel Limit
         if (Helper.isNotEmpty(bundle.jewelMapping)
@@ -1600,7 +1589,9 @@ class FittingAlgorithm {
         }
 
         // If jewel count force set 1, then will show all combination
-        jewelCount = 1;
+        if (hasJewelCountLimit) {
+            jewelCount = 1;
+        }
 
         // Increase Jewels
         bundle = Helper.deepCopy(bundle);
