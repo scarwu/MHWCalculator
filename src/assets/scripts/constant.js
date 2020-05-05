@@ -121,12 +121,9 @@ export default {
     default: {
         lang: 'zhTW',
         algorithmParams: {
-            limit: 25,
+            limit: 10,
             sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel
             order: 'desc', // asc | desc
-            flag: {
-
-            },
             usingFactor: {
                 armor: {
                     'rare12': true,
