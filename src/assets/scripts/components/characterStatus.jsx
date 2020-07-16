@@ -209,6 +209,7 @@ const generateStatus = (equipInfos, passiveSkills) => {
     });
 
     let noneElementAttackMultiple = null;
+    let resistanceMultiple = null;
     let enableElement = null;
     let elementAttack = null;
     let elementStatus = null;
@@ -330,6 +331,10 @@ const generateStatus = (equipInfos, passiveSkills) => {
                 }
 
                 break;
+            case 'resistanceMultiple':
+                resistanceMultiple = data
+
+                break;
             case 'noneElementAttackMultiple':
                 noneElementAttackMultiple = data;
 
@@ -430,6 +435,19 @@ const generateStatus = (equipInfos, passiveSkills) => {
 
     status.attack = parseInt(Math.round(status.attack));
     status.defense = parseInt(Math.round(status.defense));
+
+    // Resistance Multiple
+    if (Helper.isNotEmpty(resistanceMultiple)) {
+        if ('all' === resistanceMultiple.type) {
+            ['fire', 'water', 'thunder', 'ice', 'dragon'].forEach((type) => {
+                status.resistance[type] *= resistanceMultiple.value;
+                status.resistance[type] = parseInt(Math.round(status.resistance[type]))
+            })
+        } else {
+            status.resistance[resistanceMultiple.type] *= resistanceMultiple.value;
+            status.resistance[resistanceMultiple.type] = parseInt(Math.round(status.resistance[resistanceMultiple.type]))
+        }
+    }
 
     return status;
 };
