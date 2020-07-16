@@ -5284,13 +5284,13 @@
             },
             "rare": 12,
             "gender": "general",
-            "defense": 170,
+            "defense": 176,
             "resistance": {
-                "fire": 3,
+                "fire": 4,
                 "water": -2,
-                "thunder": 1,
-                "ice": -3,
-                "dragon": 1
+                "thunder": 3,
+                "ice": -2,
+                "dragon": -4
             },
             "set": {
                 "id": "絢輝龍的真髓"
@@ -5569,6 +5569,330 @@
                     {
                         "id": "雷屬性攻擊強化",
                         "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "精英．煌黑龍α",
+            "name": {
+                "zhTW": "精英．煌黑龍α",
+                "jaJP": null,
+                "enUS": null
+            },
+            "rare": 12,
+            "gender": "general",
+            "defense": 160,
+            "resistance": {
+                "fire": 3,
+                "water": 0,
+                "thunder": 0,
+                "ice": 3,
+                "dragon": 2
+            },
+            "set": {
+                "id": "煌黑龍的神秘"
+            }
+        },
+        "items": [
+            {
+                "id": "精英．煌黑龍智慧α",
+                "name": {
+                    "zhTW": "精英．煌黑龍智慧α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "怨恨",
+                        "level": 3
+                    },
+                    {
+                        "id": "看破",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "精英．煌黑龍靈魂α",
+                "name": {
+                    "zhTW": "精英．煌黑龍靈魂α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "體力增強",
+                        "level": 3
+                    },
+                    {
+                        "id": "怨恨",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "精英．煌黑龍長腕α",
+                "name": {
+                    "zhTW": "精英．煌黑龍長腕α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻擊",
+                        "level": 3
+                    },
+                    {
+                        "id": "強化持續",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．煌黑龍神力α",
+                "name": {
+                    "zhTW": "精英．煌黑龍神力α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻擊",
+                        "level": 4
+                    },
+                    {
+                        "id": "龍耐性",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．煌黑龍細鱗α",
+                "name": {
+                    "zhTW": "精英．煌黑龍細鱗α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "防禦",
+                        "level": 3
+                    },
+                    {
+                        "id": "龍屬性攻擊強化",
+                        "level": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "精英．煌黑龍β",
+            "name": {
+                "zhTW": "精英．煌黑龍β",
+                "jaJP": null,
+                "enUS": null
+            },
+            "rare": 12,
+            "gender": "general",
+            "defense": 160,
+            "resistance": {
+                "fire": 3,
+                "water": 0,
+                "thunder": 0,
+                "ice": 3,
+                "dragon": 2
+            },
+            "set": {
+                "id": "煌黑龍的神秘"
+            }
+        },
+        "items": [
+            {
+                "id": "精英．煌黑龍智慧β",
+                "name": {
+                    "zhTW": "精英．煌黑龍智慧β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "怨恨",
+                        "level": 3
+                    },
+                    {
+                        "id": "看破",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．煌黑龍靈魂β",
+                "name": {
+                    "zhTW": "精英．煌黑龍靈魂β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "體力增強",
+                        "level": 3
+                    },
+                    {
+                        "id": "怨恨",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．煌黑龍長腕β",
+                "name": {
+                    "zhTW": "精英．煌黑龍長腕β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻擊",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．煌黑龍神力β",
+                "name": {
+                    "zhTW": "精英．煌黑龍神力β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻擊",
+                        "level": 3
+                    },
+                    {
+                        "id": "龍耐性",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．煌黑龍細鱗β",
+                "name": {
+                    "zhTW": "精英．煌黑龍細鱗β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "防禦",
+                        "level": 3
                     }
                 ]
             }
