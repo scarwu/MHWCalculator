@@ -5191,7 +5191,7 @@
                     "enUS": null
                 },
                 "reaction": {
-                    "noneElementAttackMutiple": {
+                    "noneElementAttackMultiple": {
                         "value": 1.05
                     }
                 },

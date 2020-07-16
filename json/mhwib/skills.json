@@ -1285,5 +1285,76 @@
                 "isHidden": false
             }
         ]
+    },
+    {
+        "id": "耐性變換【屬性】",
+        "name": {
+            "zhTW": "耐性變換【屬性】",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": "防禦的屬性耐性值越高，裝備的武器屬性值也越會增高。",
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": "active",
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "charm": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "防禦的屬性耐性值越高，裝備的武器屬性值也越會增高。",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "全屬性耐性強化",
+        "name": {
+            "zhTW": "全屬性耐性強化",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": "全屬性耐性值 1.2 倍",
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": "active",
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "charm": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "全屬性耐性值 1.2 倍",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "resistanceMultiple": {
+                        "type": "all",
+                        "value": 1.2
+                    }
+                },
+                "isHidden": false
+            }
+        ]
     }
 ]

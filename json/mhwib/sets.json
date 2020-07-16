@@ -771,5 +771,29 @@
                 "require": 2
             }
         ]
+    },
+    {
+        "id": "煌黑龍的神祕",
+        "name": {
+            "zhTW": "煌黑龍的神祕",
+            "jaJP": null,
+            "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": false
+        },
+        "skills": [
+            {
+                "id": "耐性變換【屬性】",
+                "level": 1,
+                "require": 2
+            },
+            {
+                "id": "全屬性耐性強化",
+                "level": 1,
+                "require": 3
+            }
+        ]
     }
 ]

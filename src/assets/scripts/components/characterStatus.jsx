@@ -208,7 +208,7 @@ const generateStatus = (equipInfos, passiveSkills) => {
         });
     });
 
-    let noneElementAttackMutiple = null;
+    let noneElementAttackMultiple = null;
     let enableElement = null;
     let elementAttack = null;
     let elementStatus = null;
@@ -330,8 +330,8 @@ const generateStatus = (equipInfos, passiveSkills) => {
                 }
 
                 break;
-            case 'noneElementAttackMutiple':
-                noneElementAttackMutiple = data;
+            case 'noneElementAttackMultiple':
+                noneElementAttackMultiple = data;
 
                 break;
             case 'enableElement':
@@ -364,9 +364,9 @@ const generateStatus = (equipInfos, passiveSkills) => {
         status.attack *= Constant.weaponMultiple[weaponType]; // 武器倍率
 
         if (Helper.isEmpty(enableElement)
-            && Helper.isNotEmpty(noneElementAttackMutiple)
+            && Helper.isNotEmpty(noneElementAttackMultiple)
         ) {
-            status.attack += weaponAttack * noneElementAttackMutiple.value;
+            status.attack += weaponAttack * noneElementAttackMultiple.value;
         } else {
             status.attack += weaponAttack;
         }
