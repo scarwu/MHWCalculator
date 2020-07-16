@@ -780,6 +780,22 @@
                         "level": 4
                     }
                 ]
+            },
+            {
+                "id": "體術護石 V",
+                "name": {
+                    "zhTW": "體術護石 V",
+                    "jaJP": "体術の護石 V",
+                    "enUS": "Fitness Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "體術",
+                        "level": 5
+                    }
+                ]
             }
         ]
     },
@@ -1150,6 +1166,22 @@
                     {
                         "id": "災禍轉福",
                         "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "轉福護石 III",
+                "name": {
+                    "zhTW": "轉福護石 III",
+                    "jaJP": "転福の護石 III",
+                    "enUS": null
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "災禍轉福",
+                        "level": 3
                     }
                 ]
             }
@@ -1713,6 +1745,34 @@
                 "skills": [
                     {
                         "id": "精神抖擻",
+                        "level": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "拔刀護石",
+            "name": {
+                "zhTW": "拔刀護石",
+                "jaJP": "抜刀の護石",
+                "enUS": "Draw Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "拔刀護石 III",
+                "name": {
+                    "zhTW": "拔刀護石 III",
+                    "jaJP": "抜刀の護石 III",
+                    "enUS": "Draw Charm III"
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "拔刀術【技】",
                         "level": 3
                     }
                 ]
