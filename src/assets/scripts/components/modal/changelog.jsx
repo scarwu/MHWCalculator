@@ -49,7 +49,7 @@ const getChangelog = () => {
     }
 
     return changeLog.replace(/\n/g, '').split('<hr>').map((log, index) => {
-        let [all, title, content] = log.match(/^\<h3.+\>(.+)\<\/h3\>(.+)$/);
+        let [all, title, content] = log.trim().match(/^\<h3.+\>(.+)\<\/h3\>(.+)$/);
 
         return (
             <div key={index} className="mhwc-item mhwc-item-2-step">
