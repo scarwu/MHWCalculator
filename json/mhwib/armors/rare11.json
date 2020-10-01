@@ -5236,5 +5236,317 @@
                 ]
             }
         ]
+    },
+    {
+        "series": {
+            "id": "精英．霜刃冰牙龍α",
+            "name": {
+                "zhTW": "精英．霜刃冰牙龍α",
+                "jaJP": null,
+                "enUS": null
+            },
+            "rare": 11,
+            "gender": "general",
+            "defense": 162,
+            "resistance": {
+                "fire": 3,
+                "water": 2,
+                "thunder": -2,
+                "ice": 3,
+                "dragon": 0
+            },
+            "set": {
+                "id": "冰牙龍的絕技"
+            }
+        },
+        "items": [
+            {
+                "id": "精英．霜刃冰牙龍頭盔α",
+                "name": {
+                    "zhTW": "精英．霜刃冰牙龍頭盔α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "看破",
+                        "level": 2
+                    },
+                    {
+                        "id": "收刀術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．霜刃冰牙龍鎧甲α",
+                "name": {
+                    "zhTW": "精英．霜刃冰牙龍鎧甲α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻擊",
+                        "level": 3
+                    },
+                    {
+                        "id": "拔刀術【技】",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．霜刃冰牙龍腕甲α",
+                "name": {
+                    "zhTW": "精英．霜刃冰牙龍腕甲α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "看破",
+                        "level": 2
+                    },
+                    {
+                        "id": "KO術",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "精英．霜刃冰牙龍腰甲α",
+                "name": {
+                    "zhTW": "精英．霜刃冰牙龍腰甲α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "收刀術",
+                        "level": 1
+                    },
+                    {
+                        "id": "拔刀術【技】",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．霜刃冰牙龍護腿α",
+                "name": {
+                    "zhTW": "精英．霜刃冰牙龍護腿α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 1
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻擊",
+                        "level": 1
+                    },
+                    {
+                        "id": "KO術",
+                        "level": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "精英．霜刃冰牙龍β",
+            "name": {
+                "zhTW": "精英．霜刃冰牙龍β",
+                "jaJP": null,
+                "enUS": null
+            },
+            "rare": 11,
+            "gender": "general",
+            "defense": 162,
+            "resistance": {
+                "fire": 3,
+                "water": 2,
+                "thunder": -2,
+                "ice": 3,
+                "dragon": 0
+            },
+            "set": {
+                "id": "冰牙龍的絕技"
+            }
+        },
+        "items": [
+            {
+                "id": "精英．霜刃冰牙龍頭盔β",
+                "name": {
+                    "zhTW": "精英．霜刃冰牙龍頭盔β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "看破",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "精英．霜刃冰牙龍鎧甲β",
+                "name": {
+                    "zhTW": "精英．霜刃冰牙龍鎧甲β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻擊",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．霜刃冰牙龍腕甲β",
+                "name": {
+                    "zhTW": "精英．霜刃冰牙龍腕甲β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "看破",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "精英．霜刃冰牙龍腰甲β",
+                "name": {
+                    "zhTW": "精英．霜刃冰牙龍腰甲β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "收刀術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．霜刃冰牙龍護腿β",
+                "name": {
+                    "zhTW": "精英．霜刃冰牙龍護腿β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "攻擊",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
     }
 ]

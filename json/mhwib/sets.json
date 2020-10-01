@@ -795,5 +795,29 @@
                 "require": 3
             }
         ]
+    },
+    {
+        "id": "冰牙龍的絕技",
+        "name": {
+            "zhTW": "冰牙龍的絕技",
+            "jaJP": null,
+            "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": true
+        },
+        "skills": [
+            {
+                "id": "拔刀術【力】",
+                "level": 1,
+                "require": 1
+            },
+            {
+                "id": "KO術．極意",
+                "level": 1,
+                "require": 3
+            }
+        ]
     }
 ]
