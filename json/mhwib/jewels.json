@@ -5782,5 +5782,53 @@
                 "level": 2
             }
         ]
+    },
+    {
+        "id": "佯動珠",
+        "name": {
+            "zhTW": "佯動珠",
+            "jaJP": null,
+            "enUS": null
+        },
+        "rare": 12,
+        "size": 3,
+        "skills": [
+            {
+                "id": "佯動攻擊",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "受身珠",
+        "name": {
+            "zhTW": "受身珠",
+            "jaJP": null,
+            "enUS": null
+        },
+        "rare": 12,
+        "size": 3,
+        "skills": [
+            {
+                "id": "受身術",
+                "level": 1
+            }
+        ]
+    },
+    {
+        "id": "削擊珠",
+        "name": {
+            "zhTW": "削擊珠",
+            "jaJP": null,
+            "enUS": null
+        },
+        "rare": 12,
+        "size": 3,
+        "skills": [
+            {
+                "id": "飛翔龍爪攻擊強化",
+                "level": 1
+            }
+        ]
     }
 ]

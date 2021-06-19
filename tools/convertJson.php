@@ -724,7 +724,15 @@ foreach ($skills as $skill) {
         if (is_array($item['reaction'])
             && isset($item['reaction']['enableSkillLevel'])
         ) {
-            $item['reaction']['enableSkillLevel']['id'] = Misc::createCode("skill:name:{$item['reaction']['enableSkillLevel']['id']}");
+            if (true === isset($item['reaction']['enableSkillLevel']['id'])) {
+                $item['reaction']['enableSkillLevel']['id'] = Misc::createCode("skill:name:{$item['reaction']['enableSkillLevel']['id']}");
+            }
+
+            if (true === isset($item['reaction']['enableSkillLevel']['ids'])) {
+                $item['reaction']['enableSkillLevel']['ids'] = array_map(function ($skillId) {
+                    return Misc::createCode("skill:name:{$skillId}");
+                }, $item['reaction']['enableSkillLevel']['ids']);
+            }
         }
 
         // Rewrite

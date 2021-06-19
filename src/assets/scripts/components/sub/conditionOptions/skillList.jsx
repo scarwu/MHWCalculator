@@ -133,7 +133,15 @@ export default function SkillList(props) {
                         return;
                     }
 
-                    enableSkillIdList.push(item.reaction.enableSkillLevel.id);
+                    if (Helper.isNotEmpty(item.reaction.enableSkillLevel.id)) {
+                        enableSkillIdList.push(item.reaction.enableSkillLevel.id);
+                    }
+
+                    if (Helper.isNotEmpty(item.reaction.enableSkillLevel.ids)) {
+                        item.reaction.enableSkillLevel.ids.forEach((skillId) => {
+                            enableSkillIdList.push(skillId);
+                        })
+                    }
                 });
             });
         });

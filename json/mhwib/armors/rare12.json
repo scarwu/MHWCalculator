@@ -6225,5 +6225,171 @@
                 ]
             }
         ]
+    },
+    {
+        "series": {
+            "id": "精英．冰呪龍γ",
+            "name": {
+                "zhTW": "精英．冰呪龍γ",
+                "jaJP": "EXラヴィーナγ",
+                "enUS": null
+            },
+            "rare": 12,
+            "gender": "general",
+            "defense": 180,
+            "resistance": {
+                "fire": -3,
+                "water": 2,
+                "thunder": -1,
+                "ice": 4,
+                "dragon": -1
+            },
+            "set": {
+                "id": "冰呪龍的神祕"
+            }
+        },
+        "items": [
+            {
+                "id": "精英．冰呪龍頭盔γ",
+                "name": {
+                    "zhTW": "精英．冰呪龍頭盔γ",
+                    "jaJP": "EXラヴィーナヘルムγ",
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "災禍轉福",
+                        "level": 3
+                    },
+                    {
+                        "id": "死裡逃生",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．冰呪龍鎧甲γ",
+                "name": {
+                    "zhTW": "精英．冰呪龍鎧甲γ",
+                    "jaJP": "EXラヴィーナメイルγ",
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "拔刀術【技】",
+                        "level": 3
+                    },
+                    {
+                        "id": "冰屬性攻擊強化",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．冰呪龍腕甲γ",
+                "name": {
+                    "zhTW": "精英．冰呪龍腕甲γ",
+                    "jaJP": "EXラヴィーナアームγ",
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "體力回復量UP",
+                        "level": 3
+                    },
+                    {
+                        "id": "冰屬性攻擊強化",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．冰呪龍腰甲γ",
+                "name": {
+                    "zhTW": "精英．冰呪龍腰甲γ",
+                    "jaJP": "EXラヴィーナコイルγ",
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "集中",
+                        "level": 3
+                    },
+                    {
+                        "id": "收刀術",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．冰呪龍護腿γ",
+                "name": {
+                    "zhTW": "精英．冰呪龍護腿γ",
+                    "jaJP": "EXラヴィーナグリーヴγ",
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "無傷",
+                        "level": 3
+                    },
+                    {
+                        "id": "收刀術",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
     }
 ]

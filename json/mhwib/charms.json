@@ -880,6 +880,22 @@
                         "level": 4
                     }
                 ]
+            },
+            {
+                "id": "匠之護石 V",
+                "name": {
+                    "zhTW": "匠之護石 V",
+                    "jaJP": "匠の護石 V",
+                    "enUS": "Handicraft Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "匠",
+                        "level": 5
+                    }
+                ]
             }
         ]
     },
@@ -936,6 +952,22 @@
                         "level": 4
                     }
                 ]
+            },
+            {
+                "id": "達人護石 V",
+                "name": {
+                    "zhTW": "達人護石 V",
+                    "jaJP": "達人の護石 V",
+                    "enUS": "Master's Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "看破",
+                        "level": 5
+                    }
+                ]
             }
         ]
     },
@@ -962,6 +994,22 @@
                     {
                         "id": "超會心",
                         "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "超心護石 III",
+                "name": {
+                    "zhTW": "超心護石 III",
+                    "jaJP": "超心の護石 III",
+                    "enUS": "Critical Boost Charm III"
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "超會心",
+                        "level": 3
                     }
                 ]
             }
@@ -1532,6 +1580,22 @@
                         "level": 4
                     }
                 ]
+            },
+            {
+                "id": "耳塞護石 V",
+                "name": {
+                    "zhTW": "耳塞護石 V",
+                    "jaJP": "耳栓の護石 V",
+                    "enUS": "Earplugs Charm V"
+                },
+                "rare": 12,
+                "level": 5,
+                "skills": [
+                    {
+                        "id": "耳塞",
+                        "level": 5
+                    }
+                ]
             }
         ]
     },
@@ -1773,6 +1837,62 @@
                 "skills": [
                     {
                         "id": "拔刀術【技】",
+                        "level": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "削擊護石",
+            "name": {
+                "zhTW": "削擊護石",
+                "jaJP": null,
+                "enUS": null
+            }
+        },
+        "items": [
+            {
+                "id": "削擊護石",
+                "name": {
+                    "zhTW": "削擊護石",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "rare": 12,
+                "level": 1,
+                "skills": [
+                    {
+                        "id": "飛翔龍爪攻擊強化",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "痛擊護石",
+            "name": {
+                "zhTW": "痛擊護石",
+                "jaJP": "痛撃の護石",
+                "enUS": "Exploiter Charm"
+            }
+        },
+        "items": [
+            {
+                "id": "痛擊護石 III",
+                "name": {
+                    "zhTW": "痛擊護石 III",
+                    "jaJP": "痛撃の護石 III",
+                    "enUS": "Exploiter Charm III"
+                },
+                "rare": 12,
+                "level": 3,
+                "skills": [
+                    {
+                        "id": "弱點特效",
                         "level": 3
                     }
                 ]

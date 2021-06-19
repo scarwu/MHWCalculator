@@ -1439,5 +1439,38 @@
                 "isHidden": false
             }
         ]
+    },
+    {
+        "id": "飛翔龍爪攻擊強化",
+        "name": {
+            "zhTW": "飛翔龍爪攻擊強化",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": "在飛翔龍爪抓牢並進行武器攻擊時，將更容易對魔物造成傷害，投射器的彈藥也更容易掉落。",
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": "active",
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "charm": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "在飛翔龍爪抓牢並進行武器攻擊時，將更容易對魔物造成傷害，投射器的彈藥也更容易掉落。",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
     }
 ]
