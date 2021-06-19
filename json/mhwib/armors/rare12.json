@@ -5897,5 +5897,333 @@
                 ]
             }
         ]
+    },
+    {
+        "series": {
+            "id": "精英．黑龍α",
+            "name": {
+                "zhTW": "精英．黑龍α",
+                "jaJP": null,
+                "enUS": null
+            },
+            "rare": 12,
+            "gender": "general",
+            "defense": 180,
+            "resistance": {
+                "fire": -1,
+                "water": 2,
+                "thunder": 2,
+                "ice": 0,
+                "dragon": 4
+            },
+            "set": {
+                "id": "黑龍的傳說"
+            }
+        },
+        "items": [
+            {
+                "id": "精英．黑龍頭盔α",
+                "name": {
+                    "zhTW": "精英．黑龍頭盔α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 2
+                    },
+                    {
+                        "size": 2
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "昏厥耐性",
+                        "level": 3
+                    },
+                    {
+                        "id": "防禦性能",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．黑龍龍皮α",
+                "name": {
+                    "zhTW": "精英．黑龍龍皮α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "弱點特效",
+                        "level": 1
+                    },
+                    {
+                        "id": "迴避性能",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "精英．龍鋼爪α",
+                "name": {
+                    "zhTW": "精英．龍鋼爪α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 1
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "弱點特效",
+                        "level": 1
+                    },
+                    {
+                        "id": "匠",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．龍脊椎α",
+                "name": {
+                    "zhTW": "精英．龍脊椎α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 3
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "看破",
+                        "level": 3
+                    },
+                    {
+                        "id": "弱點特效",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．龍靴α",
+                "name": {
+                    "zhTW": "精英．龍靴α",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "迴避性能",
+                        "level": 1
+                    },
+                    {
+                        "id": "匠",
+                        "level": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "series": {
+            "id": "精英．黑龍β",
+            "name": {
+                "zhTW": "精英．黑龍β",
+                "jaJP": null,
+                "enUS": null
+            },
+            "rare": 12,
+            "gender": "general",
+            "defense": 160,
+            "resistance": {
+                "fire": 3,
+                "water": 0,
+                "thunder": 0,
+                "ice": 3,
+                "dragon": 2
+            },
+            "set": {
+                "id": "黑龍的傳說"
+            }
+        },
+        "items": [
+            {
+                "id": "精英．黑龍頭盔β",
+                "name": {
+                    "zhTW": "精英．黑龍頭盔β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "helm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "昏厥耐性",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "id": "精英．黑龍龍皮β",
+                "name": {
+                    "zhTW": "精英．黑龍龍皮β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "chest",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "弱點特效",
+                        "level": 1
+                    },
+                    {
+                        "id": "迴避性能",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．龍鋼爪β",
+                "name": {
+                    "zhTW": "精英．龍鋼爪β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "arm",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "弱點特效",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "精英．龍脊椎β",
+                "name": {
+                    "zhTW": "精英．龍脊椎β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "waist",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "看破",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "id": "精英．龍靴β",
+                "name": {
+                    "zhTW": "精英．龍靴β",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "type": "leg",
+                "slots": [
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    },
+                    {
+                        "size": 4
+                    }
+                ],
+                "skills": [
+                    {
+                        "id": "迴避性能",
+                        "level": 1
+                    }
+                ]
+            }
+        ]
     }
 ]

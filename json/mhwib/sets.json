@@ -819,5 +819,29 @@
                 "require": 3
             }
         ]
+    },
+    {
+        "id": "黑龍的傳說",
+        "name": {
+            "zhTW": "黑龍的傳說",
+            "jaJP": null,
+            "enUS": null
+        },
+        "from": {
+            "armor": true,
+            "weapon": true
+        },
+        "skills": [
+            {
+                "id": "繼承",
+                "level": 1,
+                "require": 2
+            },
+            {
+                "id": "超越",
+                "level": 1,
+                "require": 4
+            }
+        ]
     }
 ]

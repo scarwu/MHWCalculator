@@ -1356,5 +1356,88 @@
                 "isHidden": false
             }
         ]
+    },
+    {
+        "id": "繼承",
+        "name": {
+            "zhTW": "繼承",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": "解放因極意所限制的所有技能上限",
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": "active",
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "charm": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "解放因極意所限制的所有技能上限",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": {
+                    "enableSkillLevel": {
+                        "ids": [
+                            "炸彈客",
+                            "KO術",
+                            "精神抖擻",
+                            "挑戰者",
+                            "滿足感",
+                            "奪取耐力",
+                            "力量解放",
+                            "砲術",
+                            "整備",
+                            "精靈加護",
+                            "投射器裝填數UP",
+                            "火場怪力"
+                        ]
+                    }
+                },
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "id": "超越",
+        "name": {
+            "zhTW": "超越",
+            "jaJP": null,
+            "enUS": null
+        },
+        "description": {
+            "zhTW": "除了技能【真．利刃／彈藥節約】之外，任務開始時或力竭倒下後，體力．耐力 +100",
+            "jaJP": null,
+            "enUS": null
+        },
+        "type": "active",
+        "from": {
+            "set": true,
+            "jewel": false,
+            "armor": false,
+            "charm": false,
+            "weapon": false
+        },
+        "list": [
+            {
+                "level": 1,
+                "description": {
+                    "zhTW": "除了技能【真．利刃／彈藥節約】之外，任務開始時或力竭倒下後，體力．耐力 +100",
+                    "jaJP": null,
+                    "enUS": null
+                },
+                "reaction": null,
+                "isHidden": false
+            }
+        ]
     }
 ]
