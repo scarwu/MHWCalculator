@@ -44,17 +44,24 @@ function compileSass() {
 
 function compileWebpack(callback) {
     if ('production' === ENVIRONMENT) {
-        let definePlugin = new webpack.DefinePlugin({
+        webpackConfig.mode = ENVIRONMENT;
+        webpackConfig.plugins = webpackConfig.plugins || [];
+        webpackConfig.plugins.push(new webpack.DefinePlugin({
             'process.env': {
                 'ENV': "'production'",
                 'BUILD_TIME': postfix,
-                'NODE_ENV': "'production'"
+                'NODE_ENV': JSON.stringify('production')
             }
-        });
-
-        webpackConfig.mode = ENVIRONMENT;
+        }));
+    } else {
         webpackConfig.plugins = webpackConfig.plugins || [];
-        webpackConfig.plugins.push(definePlugin);
+        webpackConfig.plugins.push(new webpack.DefinePlugin({
+            'process.env': {
+                'ENV': "'development'",
+                'BUILD_TIME': postfix,
+                'NODE_ENV': JSON.stringify('development')
+            }
+        }));
     }
 
     if (WEBPACK_NEED_WATCH) {

@@ -12,9 +12,10 @@
     padding: 0 10px;
     height: $header-height;
     background-color: #333;
+    text-align: center;
 
     .mhwc-title {
-        margin: 0 auto;
+        display: inline-block;
         color: #ccc;
 
         &:hover {

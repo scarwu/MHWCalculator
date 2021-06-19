@@ -97,7 +97,7 @@ export default function App(props) {
      */
     return (
         <div key={stateLang} id="mhwc-app" className="container-fluid">
-            <div className="row mhwc-header">
+            <div className="mhwc-header">
                 <a className="mhwc-title" href="./">
                     <h1>{_('title')}</h1>
                 </a>
