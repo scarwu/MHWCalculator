@@ -47,10 +47,10 @@ class FittingAlgorithm {
         this.currentSetMapping = {};
         this.currentSkillMapping = {};
         this.currentSlotMapping = {
-            1: null,
-            2: null,
-            3: null,
-            4: null
+            1: { expectedValue: 0, expectedLevel: 0 },
+            2: { expectedValue: 0, expectedLevel: 0 },
+            3: { expectedValue: 0, expectedLevel: 0 },
+            4: { expectedValue: 0, expectedLevel: 0 }
         };
         this.totalExpectedValue = 0;
         this.totalExpectedLevel = 0;
@@ -235,13 +235,6 @@ class FittingAlgorithm {
                     level: skill.level
                 };
             });
-
-            if (Helper.isEmpty(this.currentSlotMapping[jewelInfo.size])) {
-                this.currentSlotMapping[jewelInfo.size] = {
-                    expectedValue: 0,
-                    expectedLevel: 0
-                };
-            }
 
             if (this.currentSlotMapping[jewelInfo.size].expectedValue < expectedValue) {
                 this.currentSlotMapping[jewelInfo.size].expectedValue = expectedValue;
@@ -1532,6 +1525,11 @@ class FittingAlgorithm {
      * Add Jewel to Bundle
      */
     addJewelToBundle = (bundle, slotSize, jewel, hasJewelCountLimit = false) => {
+
+        // Check Jewel
+        if (Helper.isEmpty(jewel)) {
+            return false;
+        }
 
         // Check Jewel Limit
         if (Helper.isNotEmpty(bundle.jewelMapping)
