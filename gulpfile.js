@@ -136,7 +136,7 @@ function releaseReplaceIndex() {
 gulp.task(
     'releaseUploadSourcemap',
     $.shell.task([
-        `./node_modules/@sentry/cli/bin/sentry-cli releases files ${postfix} upload-sourcemaps ./src/boot --ignore node_modules --rewrite`
+        `./node_modules/@sentry/cli/bin/sentry-cli releases -o scarstudio -p mhwc files ${postfix} upload-sourcemaps ./src/boot --ignore node_modules --rewrite`
     ])
 );
 

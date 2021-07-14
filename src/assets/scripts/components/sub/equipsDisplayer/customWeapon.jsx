@@ -366,7 +366,7 @@ export default function CustomWeapon(props) {
                     <div className="col-3 mhwc-value">
                         <BasicInput
                             key={stateCustomWeapon.criticalRate}
-                            defaultValue={stateCustomWeapon.criticalRate} onChange={() => {
+                            defaultValue={stateCustomWeapon.criticalRate} onChange={(event) => {
                                 let value = ('' !== event.target.value)
                                     ? parseInt(event.target.value) : 0;
 
@@ -396,7 +396,7 @@ export default function CustomWeapon(props) {
                     <div className="col-3 mhwc-value">
                         <BasicInput
                             key={stateCustomWeapon.defense}
-                            defaultValue={stateCustomWeapon.defense} onChange={() => {
+                            defaultValue={stateCustomWeapon.defense} onChange={(event) => {
                                 let value = ('' !== event.target.value)
                                     ? parseInt(event.target.value) : 0;
 
@@ -423,7 +423,7 @@ export default function CustomWeapon(props) {
                         {('none' !== getElementType(stateCustomWeapon.element.attack)) ? (
                             <BasicInput
                                 key={stateCustomWeapon.element.attack.minValue}
-                                defaultValue={stateCustomWeapon.element.attack.minValue} onChange={() => {
+                                defaultValue={stateCustomWeapon.element.attack.minValue} onChange={(event) => {
                                     let value = ('' !== event.target.value)
                                         ? parseInt(event.target.value) : 0;
 
@@ -448,7 +448,7 @@ export default function CustomWeapon(props) {
                         {('none' !== getElementType(stateCustomWeapon.element.status)) ? (
                             <BasicInput
                                 key={stateCustomWeapon.element.status.minValue}
-                                defaultValue={stateCustomWeapon.element.status.minValue} onChange={() => {
+                                defaultValue={stateCustomWeapon.element.status.minValue} onChange={(event) => {
                                     let value = ('' !== event.target.value)
                                         ? parseInt(event.target.value) : 0;
 
