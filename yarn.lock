@@ -1065,10 +1065,10 @@
     "@sentry/utils" "6.7.1"
     tslib "^1.9.3"
 
-"@sentry/cli@^1.48.0":
-  version "1.66.0"
-  resolved "https://registry.yarnpkg.com/@sentry/cli/-/cli-1.66.0.tgz#0526f1bc1c0570ce72ed817190af92f3b63a2e9a"
-  integrity sha512-2pZ+JHnvKqwyJWcGkKg/gCM/zURYronAnruBNllI+rH2g5IL0N90deMmjB1xcqXS66J222+MPTtWrGEK1Vl0/w==
+"@sentry/cli@^1.67.1":
+  version "1.67.2"
+  resolved "https://registry.yarnpkg.com/@sentry/cli/-/cli-1.67.2.tgz#dbb5631cb3637e10298f67915013592cb22f04ff"
+  integrity sha512-lPn0Sffbjg2UmCkHl2iw8pKlqpPhy85mW0za5kz3LEqC9JGUXHo9eSyyCkiRktlemMXKk+DeS/nyFy/LTRUG2Q==
   dependencies:
     https-proxy-agent "^5.0.0"
     mkdirp "^0.5.5"
@@ -1118,6 +1118,13 @@
   dependencies:
     "@sentry/types" "6.7.1"
     tslib "^1.9.3"
+
+"@sentry/webpack-plugin@^1.16.0":
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/@sentry/webpack-plugin/-/webpack-plugin-1.16.0.tgz#f9b15b5bb485995e776729b71bcf2d9fad7dca7a"
+  integrity sha512-Ax0QZ3a+LFYU876Si2HElPYSj+mX3vinvzH+o9F1g/5T2Z3HqITnX6gg+zVfLFsE819PN9KeLpmoHtO352dlmQ==
+  dependencies:
+    "@sentry/cli" "^1.67.1"
 
 "@types/eslint-scope@^3.7.0":
   version "3.7.0"
