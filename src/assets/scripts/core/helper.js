@@ -57,6 +57,10 @@ function base64Decode(text) {
     return window.atob(text);
 }
 
+function ucfirst(text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
 export default {
     log: log,
     debug: debug,
@@ -65,5 +69,6 @@ export default {
     deepCopy: deepCopy,
     jsonHash: jsonHash,
     base64Encode: base64Encode,
-    base64Decode: base64Decode
+    base64Decode: base64Decode,
+    ucfirst: ucfirst
 };
