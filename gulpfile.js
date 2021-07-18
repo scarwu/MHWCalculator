@@ -59,7 +59,7 @@ function compileWebpack(callback) {
             org: "scarstudio",
             project: "mhwc",
             release: postfix,
-            include: "src/boot/assets/scripts"
+            include: "src/boot"
         }));
     } else {
         webpackConfig.plugins = webpackConfig.plugins || [];
