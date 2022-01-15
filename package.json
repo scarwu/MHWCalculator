@@ -36,7 +36,7 @@
     "gulp-shell": "^0.8.0",
     "html-loader": "^2.1.2",
     "markdown-loader": "^6.0.0",
-    "marked": "^2.1.1",
+    "marked": "^4.0.10",
     "webpack": "^5.39.1",
     "webpack-stream": "^6.1.0"
   },
