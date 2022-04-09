@@ -1,46 +1,46 @@
 /**
  * Status Libray
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-let prefix = 'mhwc:2020:8';
-let storage = window.localStorage;
+let prefix = 'mhwc:2020:8'
+let storage = window.localStorage
 
-function get(key) {
+export const get = (key) => {
     if (undefined === storage[`${prefix}:${key}`]) {
-        return undefined;
+        return undefined
     }
 
-    let dataSet = JSON.parse(storage[`${prefix}:${key}`]);
+    let dataSet = JSON.parse(storage[`${prefix}:${key}`])
 
-    return dataSet;
+    return dataSet
 }
 
-function set(key, value) {
+export const set = (key, value) => {
     let dataSet = (undefined !== storage[`${prefix}:${key}`])
-        ? JSON.parse(storage[`${prefix}:${key}`]) : {};
+        ? JSON.parse(storage[`${prefix}:${key}`]) : {}
 
-    dataSet = value;
+    dataSet = value
 
-    storage[`${prefix}:${key}`] = JSON.stringify(dataSet);
+    storage[`${prefix}:${key}`] = JSON.stringify(dataSet)
 }
 
-function has(key) {
+export const has = (key) => {
     if (undefined === storage[`${prefix}:${key}`]) {
-        return undefined;
+        return undefined
     }
 
-    let dataSet = JSON.parse(storage[`${prefix}:${key}`]);
+    let dataSet = JSON.parse(storage[`${prefix}:${key}`])
 
-    return undefined !== dataSet;
+    return undefined !== dataSet
 }
 
 export default {
-    get: get,
-    set: set,
-    has: has
-};
+    get,
+    set,
+    has
+}

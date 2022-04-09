@@ -7,55 +7,52 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Libraries
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react'
 
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
 
 // Load Components
-import EquipList from 'components/sub/conditionOptions/equipList';
-import SetList from 'components/sub/conditionOptions/setList';
-import SkillList from 'components/sub/conditionOptions/skillList';
-import IconButton from 'components/common/iconButton';
-import IconTab from 'components/common/iconTab';
+import EquipList from 'components/sub/conditionOptions/equipList'
+import SetList from 'components/sub/conditionOptions/setList'
+import SkillList from 'components/sub/conditionOptions/skillList'
+import IconButton from 'components/common/iconButton'
+import IconTab from 'components/common/iconTab'
 
 // Load State Control
-import CommonState from 'states/common';
+import CommonState from 'states/common'
 
 /**
  * Handle Functions
  */
 const handleRequireConditionRefresh = () => {
-    CommonState.setter.cleanRequiredEquips();
-    CommonState.setter.cleanRequiredSets();
-    CommonState.setter.cleanRequiredSkills();
-};
+    CommonState.setter.cleanRequiredEquips()
+    CommonState.setter.cleanRequiredSets()
+    CommonState.setter.cleanRequiredSkills()
+}
 
 const handleSwitchTempData = (index) => {
-    CommonState.setter.switchTempData('conditionOptions', index);
-};
+    CommonState.setter.switchTempData('conditionOptions', index)
+}
 
 export default function ConditionOptions(props) {
 
     /**
      * Hooks
      */
-    const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
+    const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData())
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
-            updateTempData(CommonState.getter.getTempData());
-        });
+            updateTempData(CommonState.getter.getTempData())
+        })
 
         return () => {
-            unsubscribe();
-        };
-    }, []);
+            unsubscribe()
+        }
+    }, [])
 
     return (
         <div className="col mhwc-conditions">
@@ -94,5 +91,5 @@ export default function ConditionOptions(props) {
                 <SkillList />
             </div>
         </div>
-    );
+    )
 }

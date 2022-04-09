@@ -1,75 +1,74 @@
 /**
  * Candidate Bundles: Required Conditions
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+import React, { useState, useEffect, useMemo } from 'react'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+
 // Load Libraries
-import React, { useState, useEffect, useMemo } from 'react';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-import ArmorDataset from 'libraries/dataset/armor';
-import CharmDataset from 'libraries/dataset/charm';
-import SkillDataset from 'libraries/dataset/skill';
-import SetDataset from 'libraries/dataset/set';
+import ArmorDataset from 'libraries/dataset/armor'
+import CharmDataset from 'libraries/dataset/charm'
+import SkillDataset from 'libraries/dataset/skill'
+import SetDataset from 'libraries/dataset/set'
 
 // Load Components
-import IconButton from 'components/common/iconButton';
+import IconButton from 'components/common/iconButton'
 
 // Load State Control
-import CommonState from 'states/common';
+import CommonState from 'states/common'
 
 export default function RequiredConditions(props) {
-    const {data} = props;
+    const {data} = props
 
     /**
      * Hooks
      */
-    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
-    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
-    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
+    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips())
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets())
+    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills())
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
-            updateRequiredEquips(CommonState.getter.getRequiredEquips());
-            updateRequiredSets(CommonState.getter.getRequiredSets());
-            updateRequiredSkills(CommonState.getter.getRequiredSkills());
-        });
+            updateRequiredEquips(CommonState.getter.getRequiredEquips())
+            updateRequiredSets(CommonState.getter.getRequiredSets())
+            updateRequiredSkills(CommonState.getter.getRequiredSkills())
+        })
 
         return () => {
-            unsubscribe();
-        };
-    }, []);
+            unsubscribe()
+        }
+    }, [])
 
     return useMemo(() => {
-        Helper.debug('Component: CandidateBundles -> RequiredConditions');
+        Helper.debug('Component: CandidateBundles -> RequiredConditions')
 
         if (Helper.isEmpty(data)) {
-            return false;
+            return false
         }
 
         // Required Ids
         const requiredEquipIds = Object.keys(stateRequiredEquips).map((equipType) => {
             if (Helper.isEmpty(stateRequiredEquips[equipType])) {
-                return false;
+                return false
             }
 
-            return stateRequiredEquips[equipType].id;
-        });
+            return stateRequiredEquips[equipType].id
+        })
         const requiredSetIds = stateRequiredSets.map((set) => {
-            return set.id;
-        });
+            return set.id
+        })
         const requiredSkillIds = stateRequiredSkills.map((skill) => {
-            return skill.id;
-        });
+            return skill.id
+        })
 
         // Current Required
         const currentRequiredEquips = Object.keys(data.equips).filter((equipType) => {
@@ -77,14 +76,14 @@ export default function RequiredConditions(props) {
         }).map((equipType) => {
             return Object.assign({}, data.equips[equipType], {
                 type: equipType
-            });
-        });
+            })
+        })
         const currentRequiredSets = data.sets.sort((setA, setB) => {
-            return setB.step - setA.step;
-        });
+            return setB.step - setA.step
+        })
         const currentRequiredSkills = data.skills.sort((skillA, skillB) => {
-            return skillB.level - skillA.level;
-        });
+            return skillB.level - skillA.level
+        })
 
         return (
             <div className="mhwc-item mhwc-item-3-step">
@@ -100,7 +99,7 @@ export default function RequiredConditions(props) {
 
                         <div className="col-12 mhwc-content">
                             {currentRequiredEquips.map((equip) => {
-                                let isNotRequire = true;
+                                let isNotRequire = true
 
                                 if (Helper.isNotEmpty(stateRequiredEquips[equip.type])) {
                                     if ('weapon' === equip.type) {
@@ -111,7 +110,7 @@ export default function RequiredConditions(props) {
                                             }) !== Helper.jsonHash({
                                                 customWeapon: stateRequiredEquips[equip.type].customWeapon,
                                                 enhances: stateRequiredEquips[equip.type].enhances
-                                            });
+                                            })
                                         } else {
                                             isNotRequire = Helper.jsonHash({
                                                 id: equip.id,
@@ -119,18 +118,18 @@ export default function RequiredConditions(props) {
                                             }) !== Helper.jsonHash({
                                                 id: stateRequiredEquips[equip.type].id,
                                                 enhances: stateRequiredEquips[equip.type].enhances
-                                            });
+                                            })
                                         }
                                     } else {
-                                        isNotRequire = equip.id !== stateRequiredEquips[equip.type].id;
+                                        isNotRequire = equip.id !== stateRequiredEquips[equip.type].id
                                     }
                                 }
 
-                                let equipInfo = null;
+                                let equipInfo = null
 
                                 if ('weapon' === equip.type) {
                                     if ('customWeapon' === equip.id) {
-                                        equipInfo = equip.customWeapon;
+                                        equipInfo = equip.customWeapon
 
                                         return Helper.isNotEmpty(equipInfo) ? (
                                             <div key={equip.type} className="col-6 mhwc-value">
@@ -144,19 +143,19 @@ export default function RequiredConditions(props) {
                                                     ) : false}
                                                 </div>
                                             </div>
-                                        ) : false;
+                                        ) : false
                                     }
 
-                                    equipInfo = WeaponDataset.getInfo(equip.id);
+                                    equipInfo = WeaponDataset.getInfo(equip.id)
                                 } else if ('helm' === equip.type
                                     || 'chest' === equip.type
                                     || 'arm' === equip.type
                                     || 'waist' === equip.type
                                     || 'leg' === equip.type
                                 ) {
-                                    equipInfo = ArmorDataset.getInfo(equip.id);
+                                    equipInfo = ArmorDataset.getInfo(equip.id)
                                 } else if ('charm' === equip.type) {
-                                    equipInfo = CharmDataset.getInfo(equip.id);
+                                    equipInfo = CharmDataset.getInfo(equip.id)
                                 }
 
                                 return Helper.isNotEmpty(equipInfo) ? (
@@ -171,7 +170,7 @@ export default function RequiredConditions(props) {
                                             ) : false}
                                         </div>
                                     </div>
-                                ) : false;
+                                ) : false
                             })}
                         </div>
                     </div>
@@ -185,13 +184,13 @@ export default function RequiredConditions(props) {
 
                         <div className="col-12 mhwc-content">
                             {currentRequiredSets.map((set) => {
-                                let setInfo = SetDataset.getInfo(set.id);
+                                let setInfo = SetDataset.getInfo(set.id)
 
                                 return (
                                     <div key={set.id} className="col-6 mhwc-value">
                                         <span>
                                             {`${_(setInfo.name)}`}{setInfo.skills.slice(0, set.step).map((skill) => {
-                                                return ` (${skill.require})`;
+                                                return ` (${skill.require})`
                                             })}
                                         </span>
                                         {(-1 === requiredSetIds.indexOf(setInfo.id)) ? (
@@ -202,7 +201,7 @@ export default function RequiredConditions(props) {
                                             </div>
                                         ) : false}
                                     </div>
-                                );
+                                )
                             })}
                         </div>
                     </div>
@@ -216,7 +215,7 @@ export default function RequiredConditions(props) {
 
                         <div className="col-12 mhwc-content">
                             {currentRequiredSkills.map((skill) => {
-                                let skillInfo = SkillDataset.getInfo(skill.id);
+                                let skillInfo = SkillDataset.getInfo(skill.id)
 
                                 return (Helper.isNotEmpty(skillInfo)) ? (
                                     <div key={skill.id} className="col-6 mhwc-value">
@@ -229,12 +228,12 @@ export default function RequiredConditions(props) {
                                             </div>
                                         ) : false}
                                     </div>
-                                ) : false;
+                                ) : false
                             })}
                         </div>
                     </div>
                 ) : false}
             </div>
-        );
-    }, [data, stateRequiredEquips, stateRequiredSets, stateRequiredSkills]);
-};
+        )
+    }, [data, stateRequiredEquips, stateRequiredSets, stateRequiredSkills])
+}

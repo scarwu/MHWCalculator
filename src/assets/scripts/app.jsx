@@ -1,96 +1,103 @@
 /**
  * Main Module
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Libraries
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react'
+import { useParams as useRouteParams } from 'react-router-dom'
 
 // Load Core Libraries
-import Status from 'core/status';
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
+import _ from 'core/lang'
+import Status from 'core/status'
+import Helper from 'core/helper'
 
 // Load Components
-import IconButton from 'components/common/iconButton';
-import IconSelector from 'components/common/iconSelector';
-import ConditionOptions from 'components/conditionOptions';
-import CandidateBundles from 'components/candidateBundles';
-import EquipsDisplayer from 'components/equipsDisplayer';
-import CharacterStatus from 'components/characterStatus';
+import IconButton from 'components/common/iconButton'
+import IconSelector from 'components/common/iconSelector'
+
+import ConditionOptionsBlock from 'components/block/conditionOptions'
+import CandidateBundlesBlock from 'components/block/candidateBundles'
+import EquipsDisplayerBlock from 'components/block/equipsDisplayer'
+import CharacterStatusBlock from 'components/block/characterStatus'
+
+import ChangelogModal from 'components/modal/changelog'
+import AlgorithmSettingModal from 'components/modal/algorithmSetting'
+import ConditionItemSelectorModal from 'components/modal/conditionItemSelector'
+import EquipItemSelectorModal from 'components/modal/equipItemSelector'
+import BundleItemSelectorModal from 'components/modal/bundleItemSelector'
 
 // Load State Control
-import CommonState from 'states/common';
-import ModalState from 'states/modal';
+import CommonState from 'states/common'
+import ModalState from 'states/modal'
 
 // Load Config & Constant
-import Config from 'config';
-import Constant from 'constant';
+import Config from 'config'
+import Constant from 'constant'
 
 if ('production' === Config.env) {
     if (Config.buildTime !== Status.get('sys:buildTime')) {
-        ModalState.setter.showChangelog();
+        ModalState.setter.showChangelog()
     }
 
-    Status.set('sys:buildTime', Config.buildTime);
+    Status.set('sys:buildTime', Config.buildTime)
 }
 
 /**
  * Variables
  */
 const langList = Object.keys(Constant.langs).map((lang) => {
-    return { key: lang, value: Constant.langs[lang] };
-});
+    return { key: lang, value: Constant.langs[lang] }
+})
 
 /**
  * Handle Functions
  */
 const handleBundleExport = () => {
-    let equips = Helper.deepCopy(CommonState.getter.getCurrentEquips());
-    let hash = Helper.base64Encode(JSON.stringify(equips));
+    let equips = Helper.deepCopy(CommonState.getter.getCurrentEquips())
+    let hash = Helper.base64Encode(JSON.stringify(equips))
 
-    let protocol = window.location.protocol;
-    let hostname = window.location.hostname;
-    let pathname = window.location.pathname;
+    let protocol = window.location.protocol
+    let hostname = window.location.hostname
+    let pathname = window.location.pathname
 
-    window.open(`${protocol}//${hostname}${pathname}#/${hash}`, '_blank');
-};
+    window.open(`${protocol}//${hostname}${pathname}#/${hash}`, '_blank')
+}
 
 const handleOpenReadme = () => {
-    window.open('https://scar.tw/article/2018/05/02/mhw-calculator-readme/','_blank');
-};
+    window.open('https://scar.tw/article/2018/05/02/mhw-calculator-readme/','_blank')
+}
 
 export default function App(props) {
 
     /**
      * Hooks
      */
-    const [stateLang, setLang] = useState(Status.get('sys:lang'));
+    const [stateLang, setLang] = useState(Status.get('sys:lang'))
+
+    let routeParams = useRouteParams()
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
 
         // Restore Equips from Url to State
-        if (Helper.isNotEmpty(props.match.params.hash)) {
+        if (Helper.isNotEmpty(routeParams['*']) && '' !== routeParams['*']) {
             CommonState.setter.replaceCurrentEquips(
-                JSON.parse(Helper.base64Decode(props.match.params.hash))
-            );
+                JSON.parse(Helper.base64Decode(routeParams['*']))
+            )
         }
-    }, []);
+    }, [])
 
     /**
      * Handle Functions
      */
     const handleLangChange = useCallback((event) => {
-        Status.set('sys:lang', event.target.value);
-        setLang(event.target.value);
-    }, []);
+        Status.set('sys:lang', event.target.value)
+        setLang(event.target.value)
+    }, [])
 
     /**
      * Render Functions
@@ -120,10 +127,10 @@ export default function App(props) {
             </div>
 
             <div className="row mhwc-container">
-                <ConditionOptions />
-                <CandidateBundles />
-                <EquipsDisplayer />
-                <CharacterStatus />
+                <ConditionOptionsBlock />
+                <CandidateBundlesBlock />
+                <EquipsDisplayerBlock />
+                <CharacterStatusBlock />
             </div>
 
             <div className="row mhwc-footer">
@@ -135,12 +142,18 @@ export default function App(props) {
                     <a href="//scar.tw" target="_blank">
                         <span>Blog</span>
                     </a>
-                    &nbsp;|&nbsp;
+                    &nbsp|&nbsp
                     <a href="https://github.com/scarwu/MHWCalculator" target="_blank">
                         <span>Github</span>
                     </a>
                 </div>
             </div>
+
+            <ChangelogModal />
+            <AlgorithmSettingModal />
+            <ConditionItemSelectorModal />
+            <EquipItemSelectorModal />
+            <BundleItemSelectorModal />
         </div>
-    );
+    )
 }

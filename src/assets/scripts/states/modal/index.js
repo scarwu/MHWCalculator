@@ -1,9 +1,9 @@
 /**
  * Modal State
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 

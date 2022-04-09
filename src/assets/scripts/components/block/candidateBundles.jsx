@@ -7,33 +7,30 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Libraries
-import React, { Fragment, useState, useEffect, useCallback } from 'react';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-import Event from 'core/event';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-
-// Load Components
-import QuickSetting from 'components/sub/candidateBundles/quickSetting';
-import RequiredConditions from 'components/sub/candidateBundles/requiredConditions';
-import BundleList from 'components/sub/candidateBundles/bundleList';
-import IconButton from 'components/common/iconButton';
-import IconTab from 'components/common/iconTab';
-
-// Load State Control
-import CommonState from 'states/common';
-import ModalState from 'states/modal';
+import React, { Fragment, useState, useEffect, useCallback } from 'react'
 
 // Load Config & Constant
-import Config from 'config';
-import Constant from 'constant';
+import Config from 'config'
+import Constant from 'constant'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+import Event from 'core/event'
+
+// Load Components
+import QuickSetting from 'components/sub/candidateBundles/quickSetting'
+import RequiredConditions from 'components/sub/candidateBundles/requiredConditions'
+import BundleList from 'components/sub/candidateBundles/bundleList'
+import IconButton from 'components/common/iconButton'
+import IconTab from 'components/common/iconTab'
+
+// Load State Control
+import CommonState from 'states/common'
+import ModalState from 'states/modal'
 
 // Variables
-let workers = {};
+let workers = {}
 
 /**
  * Handle Functions
@@ -41,145 +38,145 @@ let workers = {};
 const handleShowAllAlgorithmSetting = () => {
     ModalState.setter.showAlgorithmSetting({
         mode: 'all'
-    });
-};
+    })
+}
 
 const handleSwitchTempData = (index) => {
-    CommonState.setter.switchTempData('candidateBundles', index);
-};
+    CommonState.setter.switchTempData('candidateBundles', index)
+}
 
 const convertTimeFormat = (seconds) => {
-    let text = '';
+    let text = ''
 
     if (seconds > 3600) {
-        let hours = parseInt(seconds / 3600);
+        let hours = parseInt(seconds / 3600)
 
-        seconds -= hours * 3600;
-        text += hours + ' ' + _('hour') + ' ';
+        seconds -= hours * 3600
+        text += hours + ' ' + _('hour') + ' '
     }
 
     if (seconds > 60) {
-        let minutes = parseInt(seconds / 60);
+        let minutes = parseInt(seconds / 60)
 
-        seconds -= minutes * 60;
-        text += minutes + ' ' + _('minute') + ' ';
+        seconds -= minutes * 60
+        text += minutes + ' ' + _('minute') + ' '
     }
 
-    text += seconds + ' ' + _('second');
+    text += seconds + ' ' + _('second')
 
-    return text;
-};
+    return text
+}
 
 export default function CandidateBundles(props) {
 
     /**
      * Hooks
      */
-    const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
-    const [stateComputedResult, updateComputedResult] = useState(CommonState.getter.getComputedResult());
-    const [stateTasks, updateTasks] = useState({});
+    const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData())
+    const [stateComputedResult, updateComputedResult] = useState(CommonState.getter.getComputedResult())
+    const [stateTasks, updateTasks] = useState({})
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
-            updateTempData(CommonState.getter.getTempData());
-            updateComputedResult(CommonState.getter.getComputedResult());
-        });
+            updateTempData(CommonState.getter.getTempData())
+            updateComputedResult(CommonState.getter.getComputedResult())
+        })
 
         return () => {
-            unsubscribe();
-        };
-    }, []);
+            unsubscribe()
+        }
+    }, [])
 
     // Worker Callback
     useEffect(() => {
         Event.on('workerCallback', 'tasks', (data) => {
-            let tabIndex = data.tabIndex;
-            let action = data.action;
-            let payload = data.payload;
+            let tabIndex = data.tabIndex
+            let action = data.action
+            let payload = data.payload
 
             switch (action) {
             case 'progress':
                 if (Helper.isNotEmpty(payload.bundleCount)) {
-                    stateTasks[tabIndex].bundleCount = payload.bundleCount;
+                    stateTasks[tabIndex].bundleCount = payload.bundleCount
                 }
 
                 if (Helper.isNotEmpty(payload.searchPercent)) {
-                    stateTasks[tabIndex].searchPercent = payload.searchPercent;
+                    stateTasks[tabIndex].searchPercent = payload.searchPercent
                 }
 
                 if (Helper.isNotEmpty(payload.timeRemaining)) {
-                    stateTasks[tabIndex].timeRemaining = payload.timeRemaining;
+                    stateTasks[tabIndex].timeRemaining = payload.timeRemaining
                 }
 
-                updateTasks(Helper.deepCopy(stateTasks));
+                updateTasks(Helper.deepCopy(stateTasks))
 
-                break;
+                break
             case 'result':
-                handleSwitchTempData(tabIndex);
+                handleSwitchTempData(tabIndex)
 
-                CommonState.setter.saveComputedResult(payload.computedResult);
+                CommonState.setter.saveComputedResult(payload.computedResult)
 
-                // workers[tabIndex].terminate();
-                // workers[tabIndex] = undefined;
+                // workers[tabIndex].terminate()
+                // workers[tabIndex] = undefined
 
-                stateTasks[tabIndex] = undefined;
+                stateTasks[tabIndex] = undefined
 
-                updateTasks(Helper.deepCopy(stateTasks));
+                updateTasks(Helper.deepCopy(stateTasks))
 
-                break;
+                break
             default:
-                break;
+                break
             }
-        });
+        })
 
         return () => {
-            Event.off('workerCallback', 'tasks');
-        };
+            Event.off('workerCallback', 'tasks')
+        }
     }, [stateTasks])
 
     // Search Remaining Timer
     useEffect(() => {
-        let tabIndex = stateTempData.candidateBundles.index;
+        let tabIndex = stateTempData.candidateBundles.index
 
         if (Helper.isEmpty(stateTasks[tabIndex])) {
-            return;
+            return
         }
 
         let timerId = setInterval(() => {
             if (0 === stateTasks[tabIndex].timeRemaining) {
-                return;
+                return
             }
 
-            stateTasks[tabIndex].timeRemaining--;
+            stateTasks[tabIndex].timeRemaining--
 
-            updateTasks(Helper.deepCopy(stateTasks));
-        }, 1000);
+            updateTasks(Helper.deepCopy(stateTasks))
+        }, 1000)
 
         return () => {
-            clearInterval(timerId);
-        };
+            clearInterval(timerId)
+        }
     }, [stateTasks, stateTempData])
 
     /**
      * Handle Functions
      */
     const handleCandidateBundlesSearch = useCallback(() => {
-        let tabIndex = stateTempData.candidateBundles.index;
+        let tabIndex = stateTempData.candidateBundles.index
 
         if (Helper.isNotEmpty(stateTasks[tabIndex])) {
-            return;
+            return
         }
 
         // Get All Data From Store
-        let customWeapon = CommonState.getter.getCustomWeapon();
-        let requiredEquips = CommonState.getter.getRequiredEquips();
-        let requiredSets = CommonState.getter.getRequiredSets();
-        let requiredSkills = CommonState.getter.getRequiredSkills();
-        let algorithmParams = CommonState.getter.getAlgorithmParams();
+        let customWeapon = CommonState.getter.getCustomWeapon()
+        let requiredEquips = CommonState.getter.getRequiredEquips()
+        let requiredSets = CommonState.getter.getRequiredSets()
+        let requiredSkills = CommonState.getter.getRequiredSkills()
+        let algorithmParams = CommonState.getter.getAlgorithmParams()
 
         if (0 === requiredSets.length && 0 === requiredSkills.length) {
-            return;
+            return
         }
 
         stateTasks[tabIndex] = {
@@ -191,19 +188,19 @@ export default function CandidateBundles(props) {
                 sets: requiredSets,
                 skills: requiredSkills
             }
-        };
+        }
 
-        updateTasks(Helper.deepCopy(stateTasks));
+        updateTasks(Helper.deepCopy(stateTasks))
 
         if (Helper.isEmpty(workers[tabIndex])) {
-            workers[tabIndex] = new Worker('assets/scripts/worker.min.js?' + Config.buildTime + '&' + tabIndex);
+            workers[tabIndex] = new Worker('assets/scripts/worker.min.js?' + Config.buildTime + '&' + tabIndex)
             workers[tabIndex].onmessage = (event) => {
                 Event.trigger('workerCallback', {
                     tabIndex: tabIndex,
                     action: event.data.action,
                     payload: event.data.payload
-                });
-            };
+                })
+            }
         }
 
         workers[tabIndex].postMessage({
@@ -212,21 +209,21 @@ export default function CandidateBundles(props) {
             requiredSkills: requiredSkills,
             requiredEquips: requiredEquips,
             algorithmParams: algorithmParams
-        });
-    }, [stateTasks, stateTempData]);
+        })
+    }, [stateTasks, stateTempData])
 
     const handleCandidateBundlesCancel = useCallback(() => {
-        let tabIndex = stateTempData.candidateBundles.index;
+        let tabIndex = stateTempData.candidateBundles.index
 
-        workers[tabIndex].terminate();
-        workers[tabIndex] = undefined;
+        workers[tabIndex].terminate()
+        workers[tabIndex] = undefined
 
-        stateTasks[tabIndex] = undefined;
+        stateTasks[tabIndex] = undefined
 
-        updateTasks(Helper.deepCopy(stateTasks));
-    }, [stateTasks, stateTempData]);
+        updateTasks(Helper.deepCopy(stateTasks))
+    }, [stateTasks, stateTempData])
 
-    let tabIndex = stateTempData.candidateBundles.index;
+    let tabIndex = stateTempData.candidateBundles.index
 
     return (
         <div className="col mhwc-bundles">
@@ -316,5 +313,5 @@ export default function CandidateBundles(props) {
                 )}
             </div>
         </div>
-    );
+    )
 }

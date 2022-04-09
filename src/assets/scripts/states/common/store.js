@@ -1,9 +1,9 @@
 /**
  * Common State - Store
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
@@ -22,7 +22,7 @@ import SkillDataset from 'libraries/dataset/skill';
 import Constant from 'constant';
 
 // Load Json
-import TestData from 'files/json/testData.json';
+import TestData from 'testData.json';
 
 const statusMapping = {
     tempData:           'state:common:tempData',

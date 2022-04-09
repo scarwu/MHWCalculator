@@ -7,56 +7,55 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Libraries
-import React, { Fragment, useState, useEffect, useMemo } from 'react';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-import JewelDataset from 'libraries/dataset/jewel';
-import EnhanceDataset from 'libraries/dataset/enhance';
-import SetDataset from 'libraries/dataset/set';
-import SkillDataset from 'libraries/dataset/skill';
-import CommonDataset from 'libraries/dataset/common';
-
-// Load Components
-import CustomWeapon from 'components/sub/equipsDisplayer/customWeapon';
-import IconButton from 'components/common/iconButton';
-import IconTab from 'components/common/iconTab';
-import SharpnessBar from 'components/common/sharpnessBar';
-
-// Load State Control
-import CommonState from 'states/common';
-import ModalState from 'states/modal';
+import React, { Fragment, useState, useEffect, useMemo } from 'react'
 
 // Load Config & Constant
-import Config from 'config';
-import Constant from 'constant';
+import Config from 'config'
+import Constant from 'constant'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+
+// Load Libraries
+import JewelDataset from 'libraries/dataset/jewel'
+import EnhanceDataset from 'libraries/dataset/enhance'
+import SetDataset from 'libraries/dataset/set'
+import SkillDataset from 'libraries/dataset/skill'
+import CommonDataset from 'libraries/dataset/common'
+
+// Load Components
+import CustomWeapon from 'components/sub/equipsDisplayer/customWeapon'
+import IconButton from 'components/common/iconButton'
+import IconTab from 'components/common/iconTab'
+import SharpnessBar from 'components/common/sharpnessBar'
+
+// Load State Control
+import CommonState from 'states/common'
+import ModalState from 'states/modal'
 
 /**
  * Handle Functions
  */
 const handleEquipsDisplayerRefresh = () => {
-    CommonState.setter.cleanCurrentEquips();
-};
+    CommonState.setter.cleanCurrentEquips()
+}
 
 const handleSwitchTempData = (index) => {
-    CommonState.setter.switchTempData('equipsDisplayer', index);
-};
+    CommonState.setter.switchTempData('equipsDisplayer', index)
+}
 
 /**
  * Render Functions
  */
 const renderEnhanceBlock = (equipInfo) => {
-    let usedSize = 0;
+    let usedSize = 0
 
     equipInfo.enhances.forEach((enhance) => {
-        let enhanceInfo = EnhanceDataset.getInfo(enhance.id);
+        let enhanceInfo = EnhanceDataset.getInfo(enhance.id)
 
-        usedSize += enhanceInfo.list[enhance.level - 1].size;
-    });
+        usedSize += enhanceInfo.list[enhance.level - 1].size
+    })
 
     return (
         <div className="col-12 mhwc-content">
@@ -73,30 +72,30 @@ const renderEnhanceBlock = (equipInfo) => {
                                 equipRare: equipInfo.rare,
                                 enhanceIndex: equipInfo.enhances.length,
                                 enhanceIds: equipInfo.enhances.map((enhance) => {
-                                    return enhance.id;
+                                    return enhance.id
                                 })
-                            });
+                            })
                         }} />
                     ) : false}
                 </div>
             </div>
 
             {equipInfo.enhances.map((enhance, index) => {
-                let enhanceInfo = EnhanceDataset.getInfo(enhance.id);
+                let enhanceInfo = EnhanceDataset.getInfo(enhance.id)
 
-                let currentLevel = enhance.level;
+                let currentLevel = enhance.level
                 let prevLevel = 1 <= (currentLevel - 1)
-                    ? currentLevel - 1 : currentLevel;
+                    ? currentLevel - 1 : currentLevel
                 let nextLevel = (currentLevel + 1) <= enhanceInfo.list.length
-                    ? currentLevel + 1 : currentLevel;
-                let currentSize = enhanceInfo.list[currentLevel - 1].size;
-                let prevSize = enhanceInfo.list[prevLevel - 1].size;
-                let nextSize = enhanceInfo.list[nextLevel - 1].size;
+                    ? currentLevel + 1 : currentLevel
+                let currentSize = enhanceInfo.list[currentLevel - 1].size
+                let prevSize = enhanceInfo.list[prevLevel - 1].size
+                let nextSize = enhanceInfo.list[nextLevel - 1].size
 
                 if ((usedSize + nextSize - currentSize) > equipInfo.enhanceSize) {
-                    nextLevel = currentLevel;
+                    nextLevel = currentLevel
                 } else if (-1 === enhanceInfo.list[nextLevel - 1].allowRares.indexOf(equipInfo.rare)) {
-                    nextLevel = currentLevel;
+                    nextLevel = currentLevel
                 }
 
                 return (
@@ -113,7 +112,7 @@ const renderEnhanceBlock = (equipInfo) => {
                                         enhanceIndex: index,
                                         enhanceId: enhance.id,
                                         enhanceLevel: prevLevel
-                                    });
+                                    })
                                 }} />
                                 <IconButton key={`next:${nextLevel}`} iconName="plus-circle" altName={_('up')} onClick={() => {
                                     CommonState.setter.setCurrentEquip({
@@ -121,23 +120,23 @@ const renderEnhanceBlock = (equipInfo) => {
                                         enhanceIndex: index,
                                         enhanceId: enhance.id,
                                         enhanceLevel: nextLevel
-                                    });
+                                    })
                                 }} />
                                 <IconButton iconName="times" altName={_('clean')} onClick={() => {
                                     CommonState.setter.setCurrentEquip({
                                         equipType: equipInfo.type,
                                         enhanceIndex: index,
                                         enhanceId: null
-                                    });
+                                    })
                                 }} />
                             </div>
                         </div>
                     </Fragment>
-                );
+                )
             })}
         </div>
-    );
-};
+    )
+}
 
 const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
     let selectorData = {
@@ -145,14 +144,14 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
         slotIndex: slotIndex,
         slotSize: slotSize,
         jewelId: (Helper.isNotEmpty(jewelInfo)) ? jewelInfo.id : null
-    };
+    }
 
     let emptySelectorData = {
         equipType: equipType,
         slotIndex: slotIndex,
         slotSize: slotSize,
         jewelId: null
-    };
+    }
 
     if (Helper.isEmpty(jewelInfo)) {
         return (
@@ -168,7 +167,7 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
                     </div>
                 </div>
             </Fragment>
-        );
+        )
     }
 
     return (
@@ -188,17 +187,17 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
                 </div>
             </div>
         </Fragment>
-    );
-};
+    )
+}
 
 const renderWeaponProperties = (equipInfo) => {
-    let originalSharpness = null;
-    let enhancedSharpness = null;
+    let originalSharpness = null
+    let enhancedSharpness = null
 
     if (Helper.isNotEmpty(equipInfo.sharpness)) {
-        originalSharpness = Helper.deepCopy(equipInfo.sharpness);
-        enhancedSharpness = Helper.deepCopy(equipInfo.sharpness);
-        enhancedSharpness.value += 50;
+        originalSharpness = Helper.deepCopy(equipInfo.sharpness)
+        enhancedSharpness = Helper.deepCopy(equipInfo.sharpness)
+        enhancedSharpness.value += 50
     }
 
     return (
@@ -286,8 +285,8 @@ const renderWeaponProperties = (equipInfo) => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
 const renderArmorProperties = (equipInfo) => {
     return (
@@ -313,42 +312,42 @@ const renderArmorProperties = (equipInfo) => {
                                 <span>{equipInfo.resistance[resistanceType]}</span>
                             </div>
                         </Fragment>
-                    );
+                    )
                 })}
             </div>
         </div>
-    );
-};
+    )
+}
 
 const renderEquipBlock = (equipType, currentEquip, requiredEquip) => {
-    let equipInfo = null;
+    let equipInfo = null
 
     if ('weapon' === equipType) {
-        equipInfo = CommonDataset.getAppliedWeaponInfo(currentEquip);
+        equipInfo = CommonDataset.getAppliedWeaponInfo(currentEquip)
     } else if ('helm' === equipType
         || 'chest' === equipType
         || 'arm' === equipType
         || 'waist' === equipType
         || 'leg' === equipType
     ) {
-        equipInfo = CommonDataset.getAppliedArmorInfo(currentEquip);
+        equipInfo = CommonDataset.getAppliedArmorInfo(currentEquip)
     } else if ('charm' === equipType) {
-        equipInfo = CommonDataset.getAppliedCharmInfo(currentEquip);
+        equipInfo = CommonDataset.getAppliedCharmInfo(currentEquip)
     } else {
-        return false;
+        return false
     }
 
     let selectorData = {
         equipType: equipType,
         equipId: (Helper.isNotEmpty(equipInfo)) ? equipInfo.id : null
-    };
+    }
 
     let emptySelectorData = {
         equipType: equipType,
         equipId: null
-    };
+    }
 
-    let isNotRequire = true;
+    let isNotRequire = true
 
     if (Helper.isNotEmpty(requiredEquip)) {
         if ('weapon' === equipType) {
@@ -358,9 +357,9 @@ const renderEquipBlock = (equipType, currentEquip, requiredEquip) => {
             }) !== Helper.jsonHash({
                 id: requiredEquip.id,
                 enhances: requiredEquip.enhances
-            });
+            })
         } else {
-            isNotRequire = currentEquip.id !== requiredEquip.id;
+            isNotRequire = currentEquip.id !== requiredEquip.id
         }
     }
 
@@ -384,11 +383,11 @@ const renderEquipBlock = (equipType, currentEquip, requiredEquip) => {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 
     let setInfo = (Helper.isNotEmpty(equipInfo.set))
-        ? SetDataset.getInfo(equipInfo.set.id) : null;
+        ? SetDataset.getInfo(equipInfo.set.id) : null
 
     return (
         <div key={selectorData.equipId} className="mhwc-item mhwc-item-3-step">
@@ -429,7 +428,7 @@ const renderEquipBlock = (equipType, currentEquip, requiredEquip) => {
                         return renderJewelOption(
                             equipType, index, data.size,
                             JewelDataset.getInfo(data.jewel.id)
-                        );
+                        )
                     })}
                 </div>
             ) : false}
@@ -460,47 +459,47 @@ const renderEquipBlock = (equipType, currentEquip, requiredEquip) => {
                     </div>
                     <div className="col-12 mhwc-content">
                         {equipInfo.skills.sort((skillA, skillB) => {
-                            return skillB.level - skillA.level;
+                            return skillB.level - skillA.level
                         }).map((data) => {
-                            let skillInfo = SkillDataset.getInfo(data.id);
+                            let skillInfo = SkillDataset.getInfo(data.id)
 
                             return (Helper.isNotEmpty(skillInfo)) ? (
                                 <div key={data.id} className="col-6 mhwc-value">
                                     <span>{_(skillInfo.name)} Lv.{data.level}</span>
                                 </div>
-                            ) : false;
+                            ) : false
                         })}
                     </div>
                 </div>
             ) : false}
         </div>
-    );
-};
+    )
+}
 
 export default function EquipsDisplayer(props) {
 
     /**
      * Hooks
      */
-    const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData());
-    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
-    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
+    const [stateTempData, updateTempData] = useState(CommonState.getter.getTempData())
+    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips())
+    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips())
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
-            updateTempData(CommonState.getter.getTempData());
-            updateCurrentEquips(CommonState.getter.getCurrentEquips());
-            updateRequiredEquips(CommonState.getter.getRequiredEquips());
-        });
+            updateTempData(CommonState.getter.getTempData())
+            updateCurrentEquips(CommonState.getter.getCurrentEquips())
+            updateRequiredEquips(CommonState.getter.getRequiredEquips())
+        })
 
         return () => {
-            unsubscribe();
-        };
-    }, []);
+            unsubscribe()
+        }
+    }, [])
 
     const getContent = useMemo(() => {
-        let blocks = [];
+        let blocks = []
 
         Object.keys(stateCurrentEquips).forEach((equipType) => {
             if (Helper.isNotEmpty(stateCurrentEquips[equipType])
@@ -508,18 +507,18 @@ export default function EquipsDisplayer(props) {
             ) {
                 blocks.push((
                     <CustomWeapon key="customWeapon" />
-                ));
+                ))
             } else {
                 blocks.push(renderEquipBlock(
                     equipType,
                     stateCurrentEquips[equipType],
                     stateRequiredEquips[equipType]
-                ));
+                ))
             }
-        });
+        })
 
-        return blocks;
-    }, [stateCurrentEquips, stateRequiredEquips]);
+        return blocks
+    }, [stateCurrentEquips, stateRequiredEquips])
 
     return (
         <div className="col mhwc-equips">
@@ -559,5 +558,5 @@ export default function EquipsDisplayer(props) {
                 {getContent}
             </div>
         </div>
-    );
+    )
 }

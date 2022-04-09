@@ -7,41 +7,40 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Libraries
-import React, { Fragment, useState, useEffect, useCallback, useRef } from 'react';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-import SetDataset from 'libraries/dataset/set';
-import SkillDataset from 'libraries/dataset/skill';
-import WeaponDataset from 'libraries/dataset/weapon';
-import CommonDataset from 'libraries/dataset/common';
-
-// Load Components
-import IconButton from 'components/common/iconButton';
-import BasicInput from 'components/common/basicInput';
-import SharpnessBar from 'components/common/sharpnessBar';
-
-// Load State Control
-import CommonState from 'states/common';
+import React, { Fragment, useState, useEffect, useCallback, useRef } from 'react'
 
 // Load Constant
-import Constant from 'constant';
+import Constant from 'constant'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+
+// Load Libraries
+import SetDataset from 'libraries/dataset/set'
+import SkillDataset from 'libraries/dataset/skill'
+import WeaponDataset from 'libraries/dataset/weapon'
+import CommonDataset from 'libraries/dataset/common'
+
+// Load Components
+import IconButton from 'components/common/iconButton'
+import BasicInput from 'components/common/basicInput'
+import SharpnessBar from 'components/common/sharpnessBar'
+
+// Load State Control
+import CommonState from 'states/common'
 
 /**
  * Generate Functions
  */
 const generateEquipInfos = (equips) => {
-    let equipInfos = {};
+    let equipInfos = {}
 
     if (Helper.isNotEmpty(equips.weapon)
         && 'customWeapon' === equips.weapon.id
     ) {
-        let isCompleted = true;
-        let customWeapon = CommonState.getter.getCustomWeapon();
+        let isCompleted = true
+        let customWeapon = CommonState.getter.getCustomWeapon()
 
         if (Helper.isEmpty(customWeapon.type)
             || Helper.isEmpty(customWeapon.rare)
@@ -49,146 +48,146 @@ const generateEquipInfos = (equips) => {
             || Helper.isEmpty(customWeapon.criticalRate)
             || Helper.isEmpty(customWeapon.defense)
         ) {
-            isCompleted = false;
+            isCompleted = false
         }
 
         if (Helper.isNotEmpty(customWeapon.element.attack)
             && Helper.isEmpty(customWeapon.element.attack.minValue)
         ) {
-            isCompleted = false;
+            isCompleted = false
         }
 
         if (Helper.isNotEmpty(customWeapon.element.status)
             && Helper.isEmpty(customWeapon.element.status.minValue)
         ) {
-            isCompleted = false;
+            isCompleted = false
         }
 
         WeaponDataset.setInfo('customWeapon', (true === isCompleted)
-            ? Helper.deepCopy(customWeapon) : undefined);
+            ? Helper.deepCopy(customWeapon) : undefined)
     }
 
-    equipInfos.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon);
+    equipInfos.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon)
 
-    ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
-        equipInfos[equipType] = CommonDataset.getAppliedArmorInfo(equips[equipType]);
-    });
+    for (let equipType of ['helm', 'chest', 'arm', 'waist', 'leg']) {
+        equipInfos[equipType] = CommonDataset.getAppliedArmorInfo(equips[equipType])
+    }
 
-    equipInfos.charm = CommonDataset.getAppliedCharmInfo(equips.charm);
+    equipInfos.charm = CommonDataset.getAppliedCharmInfo(equips.charm)
 
-    return equipInfos;
-};
+    return equipInfos
+}
 
 const generatePassiveSkills = (equipInfos) => {
-    let passiveSkills = {};
+    let passiveSkills = {}
 
-    ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
+    for (let equipType of ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm']) {
         if (Helper.isEmpty(equipInfos[equipType])) {
-            return;
+            continue
         }
 
         equipInfos[equipType].skills.forEach((skill) => {
-            let skillInfo = SkillDataset.getInfo(skill.id);
+            let skillInfo = SkillDataset.getInfo(skill.id)
 
             if (Helper.isEmpty(skillInfo)) {
-                return;
+                return
             }
 
             if ('passive' === skillInfo.type) {
                 if (Helper.isEmpty(passiveSkills[skillInfo.id])) {
                     passiveSkills[skillInfo.id] = {
                         isActive: false
-                    };
+                    }
                 }
             }
-        });
-    });
+        })
+    }
 
-    return passiveSkills;
-};
+    return passiveSkills
+}
 
 const generateStatus = (equipInfos, passiveSkills) => {
-    let status = Helper.deepCopy(Constant.default.status);
+    let status = Helper.deepCopy(Constant.default.status)
 
-    equipInfos = Helper.deepCopy(equipInfos);
+    equipInfos = Helper.deepCopy(equipInfos)
 
-    let weaponType = null;
+    let weaponType = null
 
     if (Helper.isNotEmpty(equipInfos.weapon)) {
-        status.critical.rate = equipInfos.weapon.criticalRate;
-        status.sharpness = equipInfos.weapon.sharpness;
-        status.element = equipInfos.weapon.element;
-        status.elderseal = equipInfos.weapon.elderseal;
+        status.critical.rate = equipInfos.weapon.criticalRate
+        status.sharpness = equipInfos.weapon.sharpness
+        status.element = equipInfos.weapon.element
+        status.elderseal = equipInfos.weapon.elderseal
 
-        weaponType = equipInfos.weapon.type;
+        weaponType = equipInfos.weapon.type
     }
 
     // Resistance
-    ['helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
+    for (let equipType of ['helm', 'chest', 'arm', 'waist', 'leg']) {
         if (Helper.isEmpty(equipInfos[equipType])) {
-            return;
+            continue
         }
 
         Constant.resistances.forEach((elementType) => {
-            status.resistance[elementType] += equipInfos[equipType].resistance[elementType];
-        });
-    });
+            status.resistance[elementType] += equipInfos[equipType].resistance[elementType]
+        })
+    }
 
     // Defense & Set
-    let setMapping = {};
+    let setMapping = {}
 
-    ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg'].forEach((equipType) => {
+    for (let equipType of ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg']) {
         if (Helper.isEmpty(equipInfos[equipType])) {
-            return;
+            continue
         }
 
         if (Helper.isNotEmpty(equipInfos[equipType].set)) {
-            let setId = equipInfos[equipType].set.id;
+            let setId = equipInfos[equipType].set.id
 
             if (Helper.isEmpty(setMapping[setId])) {
-                setMapping[setId] = 0;
+                setMapping[setId] = 0
             }
 
-            setMapping[setId]++;
+            setMapping[setId]++
         }
 
-        status.defense += equipInfos[equipType].defense;
-    });
+        status.defense += equipInfos[equipType].defense
+    }
 
     // Skills
-    let allSkills = {};
+    let allSkills = {}
 
-    ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm'].forEach((equipType) => {
+    for (let equipType of ['weapon', 'helm', 'chest', 'arm', 'waist', 'leg', 'charm']) {
         if (Helper.isEmpty(equipInfos[equipType])) {
-            return;
+            continue
         }
 
         equipInfos[equipType].skills.forEach((skill) => {
             if (Helper.isEmpty(allSkills[skill.id])) {
-                allSkills[skill.id] = 0;
+                allSkills[skill.id] = 0
             }
 
-            allSkills[skill.id] += skill.level;
-        });
-    });
+            allSkills[skill.id] += skill.level
+        })
+    }
 
     Object.keys(setMapping).forEach((setId) => {
-        let setCount = setMapping[setId];
-        let setInfo = SetDataset.getInfo(setId);
+        let setCount = setMapping[setId]
+        let setInfo = SetDataset.getInfo(setId)
 
         if (Helper.isEmpty(setInfo)) {
-            return;
+            return
         }
 
         setInfo.skills.forEach((skill) => {
             if (skill.require > setCount) {
-                return;
+                return
             }
 
-            let skillInfo = SkillDataset.getInfo(skill.id);
+            let skillInfo = SkillDataset.getInfo(skill.id)
 
             if (Helper.isEmpty(skillInfo)) {
-                return;
+                return
             }
 
             status.sets.push({
@@ -198,185 +197,185 @@ const generateStatus = (equipInfos, passiveSkills) => {
                     id: skillInfo.id,
                     level: 1
                 }
-            });
+            })
 
             if (Helper.isEmpty(allSkills[skill.id])) {
-                allSkills[skill.id] = 0;
+                allSkills[skill.id] = 0
             }
 
-            allSkills[skill.id] += 1;
-        });
-    });
+            allSkills[skill.id] += 1
+        })
+    })
 
-    let noneElementAttackMultiple = null;
-    let resistanceMultiple = null;
-    let enableElement = null;
-    let elementAttack = null;
-    let elementStatus = null;
-    let attackMultipleList = [];
-    let defenseMultipleList = [];
+    let noneElementAttackMultiple = null
+    let resistanceMultiple = null
+    let enableElement = null
+    let elementAttack = null
+    let elementStatus = null
+    let attackMultipleList = []
+    let defenseMultipleList = []
 
     for (let skillId in allSkills) {
-        let skillInfo = SkillDataset.getInfo(skillId);
+        let skillInfo = SkillDataset.getInfo(skillId)
 
         if (Helper.isEmpty(skillInfo)) {
-            continue;
+            continue
         }
 
-        let skillLevel = allSkills[skillId];
+        let skillLevel = allSkills[skillId]
 
         // Fix Skill Level Overflow
         if (skillLevel > skillInfo.list.length) {
-            skillLevel = skillInfo.list.length;
+            skillLevel = skillInfo.list.length
         }
 
         status.skills.push({
             id: skillId,
             level: skillLevel,
             description: skillInfo.list[skillLevel - 1].description
-        });
+        })
 
         if ('passive' === skillInfo.type) {
             if (Helper.isEmpty(passiveSkills[skillId])) {
                 passiveSkills[skillId] = {
                     isActive: false
-                };
+                }
             }
 
             if (false === passiveSkills[skillId].isActive) {
-                continue;
+                continue
             }
         }
 
         if (Helper.isEmpty(skillInfo.list[skillLevel - 1].reaction)) {
-            continue;
+            continue
         }
 
         for (let reactionType in skillInfo.list[skillLevel - 1].reaction) {
-            let data = skillInfo.list[skillLevel - 1].reaction[reactionType];
+            let data = skillInfo.list[skillLevel - 1].reaction[reactionType]
 
             switch (reactionType) {
             case 'health':
             case 'stamina':
             case 'attack':
             case 'defense':
-                status[reactionType] += data.value;
+                status[reactionType] += data.value
 
-                break;
+                break
             case 'criticalRate':
-                status.critical.rate += data.value;
+                status.critical.rate += data.value
 
-                break;
+                break
             case 'criticalMultiple':
-                status.critical.multiple.positive = data.value;
+                status.critical.multiple.positive = data.value
 
-                break;
+                break
             case 'elementAttackCriticalMultiple':
                 if (null !== weaponType
                     && (status.elementCriticalMultiple.attack
                         < Constant.elementCriticalMultiple.attack[weaponType][data.value])
                 ) {
                     status.elementCriticalMultiple.attack
-                        = Constant.elementCriticalMultiple.attack[weaponType][data.value];
+                        = Constant.elementCriticalMultiple.attack[weaponType][data.value]
                 }
 
-                break;
+                break
             case 'elementStatusCriticalMultiple':
                 if (null !== weaponType
                     && (status.elementCriticalMultiple.status
                         < Constant.elementCriticalMultiple.status[weaponType][data.value])
                 ) {
                     status.elementCriticalMultiple.status
-                        = Constant.elementCriticalMultiple.status[weaponType][data.value];
+                        = Constant.elementCriticalMultiple.status[weaponType][data.value]
                 }
 
-                break;
+                break
             case 'sharpness':
                 if (Helper.isEmpty(status.sharpness)) {
-                    break;
+                    break
                 }
 
-                status.sharpness.value += data.value;
+                status.sharpness.value += data.value
 
-                break;
+                break
             case 'elementAttack':
                 if (Helper.isEmpty(status.element)
                     || Helper.isEmpty(status.element.attack)
                     || status.element.attack.type !== data.type
                 ) {
-                    break;
+                    break
                 }
 
-                elementAttack = data;
+                elementAttack = data
 
-                break;
+                break
             case 'elementStatus':
                 if (Helper.isEmpty(status.element)
                     || Helper.isEmpty(status.element.status)
                     || status.element.status.type !== data.type
                 ) {
-                    break;
+                    break
                 }
 
-                elementStatus = data;
+                elementStatus = data
 
-                break;
+                break
             case 'resistance':
                 if ('all' === data.type) {
                     Constant.resistances.forEach((elementType) => {
-                        status.resistance[elementType] += data.value;
-                    });
+                        status.resistance[elementType] += data.value
+                    })
                 } else {
-                    status.resistance[data.type] += data.value;
+                    status.resistance[data.type] += data.value
                 }
 
-                break;
+                break
             case 'resistanceMultiple':
                 resistanceMultiple = data
 
-                break;
+                break
             case 'noneElementAttackMultiple':
-                noneElementAttackMultiple = data;
+                noneElementAttackMultiple = data
 
-                break;
+                break
             case 'enableElement':
-                enableElement = data;
+                enableElement = data
 
-                break;
+                break
             case 'attackMultiple':
-                attackMultipleList.push(data.value);
+                attackMultipleList.push(data.value)
 
-                break;
+                break
             case 'defenseMultiple':
                 if (Helper.isNotEmpty(status.element)
                     && false === status.element.isHidden
                 ) {
-                    break;
+                    break
                 }
 
-                defenseMultipleList.push(data.value);
+                defenseMultipleList.push(data.value)
 
-                break;
+                break
             }
         }
     }
 
     // Last Status Completion
     if (Helper.isNotEmpty(equipInfos.weapon)) {
-        let weaponAttack = equipInfos.weapon.attack;
-        let weaponType = equipInfos.weapon.type;
+        let weaponAttack = equipInfos.weapon.attack
+        let weaponType = equipInfos.weapon.type
 
-        status.attack *= Constant.weaponMultiple[weaponType]; // 武器倍率
+        status.attack *= Constant.weaponMultiple[weaponType] // 武器倍率
 
         if (Helper.isEmpty(enableElement)
             && Helper.isNotEmpty(noneElementAttackMultiple)
         ) {
-            status.attack += weaponAttack * noneElementAttackMultiple.value;
+            status.attack += weaponAttack * noneElementAttackMultiple.value
         } else {
-            status.attack += weaponAttack;
+            status.attack += weaponAttack
         }
     } else {
-        status.attack = 0;
+        status.attack = 0
     }
 
     // Attack Element
@@ -384,22 +383,22 @@ const generateStatus = (equipInfos, passiveSkills) => {
         && Helper.isNotEmpty(status.element.attack)
     ) {
         if (Helper.isNotEmpty(enableElement)) {
-            status.element.attack.value *= enableElement.multiple;
-            status.element.attack.isHidden = false;
+            status.element.attack.value *= enableElement.multiple
+            status.element.attack.isHidden = false
         }
 
         if (Helper.isNotEmpty(elementAttack)) {
-            status.element.attack.value += elementAttack.value;
-            status.element.attack.value *= elementAttack.multiple;
+            status.element.attack.value += elementAttack.value
+            status.element.attack.value *= elementAttack.multiple
 
             if (Helper.isNotEmpty(status.element.attack.maxValue)
                 && status.element.attack.value > status.element.attack.maxValue
             ) {
-                status.element.attack.value = status.element.attack.maxValue;
+                status.element.attack.value = status.element.attack.maxValue
             }
         }
 
-        status.element.attack.value = parseInt(Math.round(status.element.attack.value));
+        status.element.attack.value = parseInt(Math.round(status.element.attack.value))
     }
 
     // Status Element
@@ -407,163 +406,163 @@ const generateStatus = (equipInfos, passiveSkills) => {
         && Helper.isNotEmpty(status.element.status)
     ) {
         if (Helper.isNotEmpty(enableElement)) {
-            status.element.status.value *= enableElement.multiple;
-            status.element.status.isHidden = false;
+            status.element.status.value *= enableElement.multiple
+            status.element.status.isHidden = false
         }
 
         if (Helper.isNotEmpty(elementStatus)) {
-            status.element.status.value += elementStatus.value;
-            status.element.status.value *= elementStatus.multiple;
+            status.element.status.value += elementStatus.value
+            status.element.status.value *= elementStatus.multiple
 
             if (Helper.isNotEmpty(status.element.status.maxValue)
                 && status.element.status.value > status.element.status.maxValue
             ) {
-                status.element.status.value = status.element.status.maxValue;
+                status.element.status.value = status.element.status.maxValue
             }
         }
 
-        status.element.status.value = parseInt(Math.round(status.element.status.value));
+        status.element.status.value = parseInt(Math.round(status.element.status.value))
     }
 
     attackMultipleList.forEach((multiple) => {
-        status.attack *= multiple;
-    });
+        status.attack *= multiple
+    })
 
     defenseMultipleList.forEach((multiple) => {
-        status.defense *= multiple;
-    });
+        status.defense *= multiple
+    })
 
-    status.attack = parseInt(Math.round(status.attack));
-    status.defense = parseInt(Math.round(status.defense));
+    status.attack = parseInt(Math.round(status.attack))
+    status.defense = parseInt(Math.round(status.defense))
 
     // Resistance Multiple
     if (Helper.isNotEmpty(resistanceMultiple)) {
         if ('all' === resistanceMultiple.type) {
-            ['fire', 'water', 'thunder', 'ice', 'dragon'].forEach((type) => {
-                status.resistance[type] *= resistanceMultiple.value;
+            for (let type of ['fire', 'water', 'thunder', 'ice', 'dragon']) {
+                status.resistance[type] *= resistanceMultiple.value
                 status.resistance[type] = parseInt(Math.round(status.resistance[type]))
-            })
+            }
         } else {
-            status.resistance[resistanceMultiple.type] *= resistanceMultiple.value;
+            status.resistance[resistanceMultiple.type] *= resistanceMultiple.value
             status.resistance[resistanceMultiple.type] = parseInt(Math.round(status.resistance[resistanceMultiple.type]))
         }
     }
 
-    return status;
-};
+    return status
+}
 
 const generateBenefitAnalysis = (equipInfos, status, tuning) => {
-    let benefitAnalysis = Helper.deepCopy(Constant.default.benefitAnalysis);
-    let result = getBasicBenefitAnalysis(equipInfos, Helper.deepCopy(status), {});
+    let benefitAnalysis = Helper.deepCopy(Constant.default.benefitAnalysis)
+    let result = getBasicBenefitAnalysis(equipInfos, Helper.deepCopy(status), {})
 
-    benefitAnalysis.physicalAttack = result.physicalAttack;
-    benefitAnalysis.physicalCriticalAttack = result.physicalCriticalAttack;
-    benefitAnalysis.physicalExpectedValue = result.physicalExpectedValue;
-    benefitAnalysis.elementAttack = result.elementAttack;
-    benefitAnalysis.elementCriticalAttack = result.elementCriticalAttack;
-    benefitAnalysis.elementExpectedValue = result.elementExpectedValue;
-    benefitAnalysis.expectedValue = result.expectedValue;
+    benefitAnalysis.physicalAttack = result.physicalAttack
+    benefitAnalysis.physicalCriticalAttack = result.physicalCriticalAttack
+    benefitAnalysis.physicalExpectedValue = result.physicalExpectedValue
+    benefitAnalysis.elementAttack = result.elementAttack
+    benefitAnalysis.elementCriticalAttack = result.elementCriticalAttack
+    benefitAnalysis.elementExpectedValue = result.elementExpectedValue
+    benefitAnalysis.expectedValue = result.expectedValue
 
     // Physical Attack Tuning
     result = getBasicBenefitAnalysis(equipInfos, Helper.deepCopy(status), {
         physicalAttack: tuning.physicalAttack
-    });
+    })
 
-    benefitAnalysis.perPhysicalAttackExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue;
-    benefitAnalysis.perPhysicalAttackExpectedValue = Math.round(benefitAnalysis.perPhysicalAttackExpectedValue * 100) / 100;
+    benefitAnalysis.perPhysicalAttackExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue
+    benefitAnalysis.perPhysicalAttackExpectedValue = Math.round(benefitAnalysis.perPhysicalAttackExpectedValue * 100) / 100
 
     // Critical Rate Tuning
     result = getBasicBenefitAnalysis(equipInfos, Helper.deepCopy(status), {
         physicalCriticalRate: tuning.physicalCriticalRate
-    });
+    })
 
-    benefitAnalysis.perPhysicalCriticalRateExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue;
-    benefitAnalysis.perPhysicalCriticalRateExpectedValue = Math.round(benefitAnalysis.perPhysicalCriticalRateExpectedValue * 100) / 100;
+    benefitAnalysis.perPhysicalCriticalRateExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue
+    benefitAnalysis.perPhysicalCriticalRateExpectedValue = Math.round(benefitAnalysis.perPhysicalCriticalRateExpectedValue * 100) / 100
 
     // Critical Multiple Tuning
     result = getBasicBenefitAnalysis(equipInfos, Helper.deepCopy(status), {
         physicalCriticalMultiple: tuning.physicalCriticalMultiple
-    });
+    })
 
-    benefitAnalysis.perPhysicalCriticalMultipleExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue;
-    benefitAnalysis.perPhysicalCriticalMultipleExpectedValue = Math.round(benefitAnalysis.perPhysicalCriticalMultipleExpectedValue * 100) / 100;
+    benefitAnalysis.perPhysicalCriticalMultipleExpectedValue = result.physicalExpectedValue - benefitAnalysis.physicalExpectedValue
+    benefitAnalysis.perPhysicalCriticalMultipleExpectedValue = Math.round(benefitAnalysis.perPhysicalCriticalMultipleExpectedValue * 100) / 100
 
     // Element Attack Tuning
     result = getBasicBenefitAnalysis(equipInfos, Helper.deepCopy(status), {
         elementAttack: tuning.elementAttack
-    });
+    })
 
-    benefitAnalysis.perElementAttackExpectedValue = result.elementExpectedValue - benefitAnalysis.elementExpectedValue;
-    benefitAnalysis.perElementAttackExpectedValue = Math.round(benefitAnalysis.perElementAttackExpectedValue * 100) / 100;
+    benefitAnalysis.perElementAttackExpectedValue = result.elementExpectedValue - benefitAnalysis.elementExpectedValue
+    benefitAnalysis.perElementAttackExpectedValue = Math.round(benefitAnalysis.perElementAttackExpectedValue * 100) / 100
 
-    return benefitAnalysis;
-};
+    return benefitAnalysis
+}
 
 const getBasicBenefitAnalysis = (equipInfos, status, tuning) => {
-    let physicalAttack = 0;
-    let physicalCriticalAttack = 0;
-    let physicalExpectedValue = 0;
-    let elementAttack = 0;
-    let elementCriticalAttack = 0;
-    let elementExpectedValue = 0;
-    let expectedValue = 0;
+    let physicalAttack = 0
+    let physicalCriticalAttack = 0
+    let physicalExpectedValue = 0
+    let elementAttack = 0
+    let elementCriticalAttack = 0
+    let elementExpectedValue = 0
+    let expectedValue = 0
 
     if (Helper.isNotEmpty(equipInfos.weapon)) {
-        let weaponMultiple = Constant.weaponMultiple[equipInfos.weapon.type];
-        let sharpnessMultiple = getSharpnessMultiple(status.sharpness);
+        let weaponMultiple = Constant.weaponMultiple[equipInfos.weapon.type]
+        let sharpnessMultiple = getSharpnessMultiple(status.sharpness)
 
-        physicalAttack = (status.attack / weaponMultiple);
+        physicalAttack = (status.attack / weaponMultiple)
 
         if (Helper.isNotEmpty(tuning.physicalAttack)) {
-            physicalAttack += tuning.physicalAttack;
+            physicalAttack += tuning.physicalAttack
         }
 
         if (Helper.isNotEmpty(tuning.physicalCriticalRate)) {
-            status.critical.rate += tuning.physicalCriticalRate;
+            status.critical.rate += tuning.physicalCriticalRate
         }
 
         if (Helper.isNotEmpty(tuning.physicalCriticalMultiple)) {
-            status.critical.multiple.positive += tuning.physicalCriticalMultiple;
+            status.critical.multiple.positive += tuning.physicalCriticalMultiple
         }
 
         let criticalRate = (100 >= status.critical.rate)
-            ? Math.abs(status.critical.rate) : 100;
+            ? Math.abs(status.critical.rate) : 100
         let criticalMultiple = (0 <= status.critical.rate)
             ? status.critical.multiple.positive
-            : status.critical.multiple.nagetive;
+            : status.critical.multiple.nagetive
 
         if (Helper.isNotEmpty(status.element)
             && Helper.isNotEmpty(status.element.attack)
             && !status.element.attack.isHidden
         ) {
-            elementAttack = status.element.attack.value;
+            elementAttack = status.element.attack.value
 
             if (Helper.isNotEmpty(tuning.elementAttack)) {
-                elementAttack += tuning.elementAttack;
+                elementAttack += tuning.elementAttack
             }
 
-            elementAttack = elementAttack / 10;
+            elementAttack = elementAttack / 10
         }
 
-        physicalAttack *= sharpnessMultiple.physical;
-        physicalCriticalAttack = physicalAttack * criticalMultiple;
+        physicalAttack *= sharpnessMultiple.physical
+        physicalCriticalAttack = physicalAttack * criticalMultiple
         physicalExpectedValue = (physicalAttack * (100 - criticalRate) / 100)
-            + (physicalCriticalAttack * criticalRate / 100);
+            + (physicalCriticalAttack * criticalRate / 100)
 
-        elementAttack *= sharpnessMultiple.element;
-        elementCriticalAttack = elementAttack * status.elementCriticalMultiple.attack;
+        elementAttack *= sharpnessMultiple.element
+        elementCriticalAttack = elementAttack * status.elementCriticalMultiple.attack
         elementExpectedValue = (elementAttack * (100 - criticalRate) / 100)
-            + (elementCriticalAttack * criticalRate / 100);
+            + (elementCriticalAttack * criticalRate / 100)
 
-        expectedValue = physicalExpectedValue + elementExpectedValue;
+        expectedValue = physicalExpectedValue + elementExpectedValue
 
-        physicalAttack =            Math.round(physicalAttack * 100) / 100;
-        physicalCriticalAttack =    Math.round(physicalCriticalAttack * 100) / 100;
-        physicalExpectedValue =     Math.round(physicalExpectedValue * 100) / 100;
-        elementAttack =             Math.round(elementAttack * 100) / 100;
-        elementCriticalAttack =     Math.round(elementCriticalAttack * 100) / 100;
-        elementExpectedValue =      Math.round(elementExpectedValue * 100) / 100;
-        expectedValue =             Math.round(expectedValue * 100) / 100;
+        physicalAttack =            Math.round(physicalAttack * 100) / 100
+        physicalCriticalAttack =    Math.round(physicalCriticalAttack * 100) / 100
+        physicalExpectedValue =     Math.round(physicalExpectedValue * 100) / 100
+        elementAttack =             Math.round(elementAttack * 100) / 100
+        elementCriticalAttack =     Math.round(elementCriticalAttack * 100) / 100
+        elementExpectedValue =      Math.round(elementExpectedValue * 100) / 100
+        expectedValue =             Math.round(expectedValue * 100) / 100
     }
 
     return {
@@ -575,135 +574,135 @@ const getBasicBenefitAnalysis = (equipInfos, status, tuning) => {
         elementExpectedValue: elementExpectedValue,
         expectedValue: expectedValue
     }
-};
+}
 
 const getSharpnessMultiple = (data) => {
     if (Helper.isEmpty(data)) {
         return {
             physical: 1,
             element: 1
-        };
+        }
     }
 
-    let currentStep = null;
-    let currentValue = 0;
+    let currentStep = null
+    let currentValue = 0
 
     for (let stepName in data.steps) {
-        currentStep = stepName;
-        currentValue += data.steps[stepName];
+        currentStep = stepName
+        currentValue += data.steps[stepName]
 
         if (currentValue >= data.value) {
-            break;
+            break
         }
     }
 
     return {
         physical: Constant.sharpnessMultiple.physical[currentStep],
         element: Constant.sharpnessMultiple.element[currentStep]
-    };
-};
+    }
+}
 
 export default function CharacterStatus(props) {
 
     /**
      * Hooks
      */
-    const [stateCustomWeapon, updateCustomWeapon] = useState(CommonState.getter.getCustomWeapon());
-    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
-    const [stateEquipInfos, updateEquipInfos] = useState({});
-    const [stateStatus, updateStatus] = useState(Helper.deepCopy(Constant.default.status));
-    const [stateBenefitAnalysis, updateBenefitAnalysis] = useState(Helper.deepCopy(Constant.default.benefitAnalysis));
-    const [statePassiveSkills, updatePassiveSkills] = useState({});
+    const [stateCustomWeapon, updateCustomWeapon] = useState(CommonState.getter.getCustomWeapon())
+    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips())
+    const [stateEquipInfos, updateEquipInfos] = useState({})
+    const [stateStatus, updateStatus] = useState(Helper.deepCopy(Constant.default.status))
+    const [stateBenefitAnalysis, updateBenefitAnalysis] = useState(Helper.deepCopy(Constant.default.benefitAnalysis))
+    const [statePassiveSkills, updatePassiveSkills] = useState({})
     const [stateTuning, updateTuning] = useState({
         physicalAttack: 5,
         physicalCriticalRate: 10,
         physicalCriticalMultiple: 0.1,
         elementAttack: 100
-    });
-    const refTuningPhysicalAttack = useRef();
-    const refTuningPhysicalCriticalRate = useRef();
-    const refTuningPhysicalCriticalMultiple = useRef();
-    const refTuningElementAttack = useRef();
+    })
+    const refTuningPhysicalAttack = useRef()
+    const refTuningPhysicalCriticalRate = useRef()
+    const refTuningPhysicalCriticalMultiple = useRef()
+    const refTuningElementAttack = useRef()
 
     useEffect(() => {
-        const equipInfos = generateEquipInfos(stateCurrentEquips);
-        const passiveSkills = generatePassiveSkills(equipInfos);
-        const status = generateStatus(equipInfos, passiveSkills);
-        const benefitAnalysis = generateBenefitAnalysis(equipInfos, status, stateTuning);
+        const equipInfos = generateEquipInfos(stateCurrentEquips)
+        const passiveSkills = generatePassiveSkills(equipInfos)
+        const status = generateStatus(equipInfos, passiveSkills)
+        const benefitAnalysis = generateBenefitAnalysis(equipInfos, status, stateTuning)
 
-        updateEquipInfos(equipInfos);
-        updatePassiveSkills(passiveSkills);
-        updateStatus(status);
-        updateBenefitAnalysis(benefitAnalysis);
-    }, [stateCustomWeapon, stateCurrentEquips]);
+        updateEquipInfos(equipInfos)
+        updatePassiveSkills(passiveSkills)
+        updateStatus(status)
+        updateBenefitAnalysis(benefitAnalysis)
+    }, [stateCustomWeapon, stateCurrentEquips])
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
-            updateCustomWeapon(CommonState.getter.getCustomWeapon());
-            updateCurrentEquips(CommonState.getter.getCurrentEquips());
-        });
+            updateCustomWeapon(CommonState.getter.getCustomWeapon())
+            updateCurrentEquips(CommonState.getter.getCurrentEquips())
+        })
 
         return () => {
-            unsubscribe();
-        };
-    }, []);
+            unsubscribe()
+        }
+    }, [])
 
     /**
      * Handle Functions
      */
     const handlePassiveSkillToggle = useCallback((skillId) => {
-        const equipInfos = stateEquipInfos;
-        const passiveSkills = statePassiveSkills;
-        const tuning = stateTuning;
+        const equipInfos = stateEquipInfos
+        const passiveSkills = statePassiveSkills
+        const tuning = stateTuning
 
-        passiveSkills[skillId].isActive = !passiveSkills[skillId].isActive;
+        passiveSkills[skillId].isActive = !passiveSkills[skillId].isActive
 
-        const status = generateStatus(equipInfos, passiveSkills);
+        const status = generateStatus(equipInfos, passiveSkills)
 
-        updatePassiveSkills(passiveSkills);
-        updateStatus(status);
-        updateBenefitAnalysis(generateBenefitAnalysis(equipInfos, status, tuning));
-    }, [stateEquipInfos, statePassiveSkills, stateTuning]);
+        updatePassiveSkills(passiveSkills)
+        updateStatus(status)
+        updateBenefitAnalysis(generateBenefitAnalysis(equipInfos, status, tuning))
+    }, [stateEquipInfos, statePassiveSkills, stateTuning])
 
     const handleTuningChange = useCallback(() => {
-        let tuningPhysicalAttack = parseInt(refTuningPhysicalAttack.current.value, 10);
-        let tuningPhysicalCriticalRate = parseFloat(refTuningPhysicalCriticalRate.current.value, 10);
-        let tuningPhysicalCriticalMultiple = parseFloat(refTuningPhysicalCriticalMultiple.current.value);
-        let tuningElementAttack = parseInt(refTuningElementAttack.current.value, 10);
+        let tuningPhysicalAttack = parseInt(refTuningPhysicalAttack.current.value, 10)
+        let tuningPhysicalCriticalRate = parseFloat(refTuningPhysicalCriticalRate.current.value, 10)
+        let tuningPhysicalCriticalMultiple = parseFloat(refTuningPhysicalCriticalMultiple.current.value)
+        let tuningElementAttack = parseInt(refTuningElementAttack.current.value, 10)
 
-        tuningPhysicalAttack = !isNaN(tuningPhysicalAttack) ? tuningPhysicalAttack : 0;
-        tuningPhysicalCriticalRate = !isNaN(tuningPhysicalCriticalRate) ? tuningPhysicalCriticalRate : 0;
-        tuningPhysicalCriticalMultiple = !isNaN(tuningPhysicalCriticalMultiple) ? tuningPhysicalCriticalMultiple : 0;
-        tuningElementAttack = !isNaN(tuningElementAttack) ? tuningElementAttack : 0;
+        tuningPhysicalAttack = !isNaN(tuningPhysicalAttack) ? tuningPhysicalAttack : 0
+        tuningPhysicalCriticalRate = !isNaN(tuningPhysicalCriticalRate) ? tuningPhysicalCriticalRate : 0
+        tuningPhysicalCriticalMultiple = !isNaN(tuningPhysicalCriticalMultiple) ? tuningPhysicalCriticalMultiple : 0
+        tuningElementAttack = !isNaN(tuningElementAttack) ? tuningElementAttack : 0
 
-        const equipInfos = stateEquipInfos;
-        const status = stateStatus;
+        const equipInfos = stateEquipInfos
+        const status = stateStatus
         const tuning = {
             physicalAttack: tuningPhysicalAttack,
             physicalCriticalRate: tuningPhysicalCriticalRate,
             physicalCriticalMultiple: tuningPhysicalCriticalMultiple,
             elementAttack: tuningElementAttack
-        };
+        }
 
-        updateTuning(tuning);
-        updateBenefitAnalysis(generateBenefitAnalysis(equipInfos, status, tuning));
-    }, [stateEquipInfos, stateStatus]);
+        updateTuning(tuning)
+        updateBenefitAnalysis(generateBenefitAnalysis(equipInfos, status, tuning))
+    }, [stateEquipInfos, stateStatus])
 
     /**
      * Render Functions
      */
-    let equipInfos = stateEquipInfos;
-    let passiveSkills = statePassiveSkills;
-    let status = stateStatus;
-    let benefitAnalysis = stateBenefitAnalysis;
+    let equipInfos = stateEquipInfos
+    let passiveSkills = statePassiveSkills
+    let status = stateStatus
+    let benefitAnalysis = stateBenefitAnalysis
 
-    let originalSharpness = null;
+    let originalSharpness = null
 
     if (Helper.isNotEmpty(equipInfos.weapon)
         && Helper.isNotEmpty(equipInfos.weapon.sharpness)
     ) {
-        originalSharpness = Helper.deepCopy(equipInfos.weapon.sharpness);
+        originalSharpness = Helper.deepCopy(equipInfos.weapon.sharpness)
     }
 
     return (
@@ -934,7 +933,7 @@ export default function CharacterStatus(props) {
                                         <span>{status.resistance[elementType]}</span>
                                     </div>
                                 </Fragment>
-                            );
+                            )
                         })}
                     </div>
                 </div>
@@ -945,8 +944,8 @@ export default function CharacterStatus(props) {
                             <span>{_('set')}</span>
                         </div>
                         {status.sets.map((data, index) => {
-                            let setInfo = SetDataset.getInfo(data.id);
-                            let skillInfo = SkillDataset.getInfo(data.skill.id);
+                            let setInfo = SetDataset.getInfo(data.id)
+                            let skillInfo = SkillDataset.getInfo(data.skill.id)
 
                             return (Helper.isNotEmpty(setInfo)
                                 && Helper.isNotEmpty(skillInfo))
@@ -959,7 +958,7 @@ export default function CharacterStatus(props) {
                                         <span>{_(skillInfo.name)} Lv.{data.skill.level}</span>
                                     </div>
                                 </div>
-                            ) : false;
+                            ) : false
                         })}
                     </div>
                 ) : false}
@@ -970,9 +969,9 @@ export default function CharacterStatus(props) {
                             <span>{_('skill')}</span>
                         </div>
                         {status.skills.sort((skillA, skillB) => {
-                            return skillB.level - skillA.level;
+                            return skillB.level - skillA.level
                         }).map((data) => {
-                            let skillInfo = SkillDataset.getInfo(data.id);
+                            let skillInfo = SkillDataset.getInfo(data.id)
 
                             return (Helper.isNotEmpty(skillInfo)) ? (
                                 <div key={data.id} className="col-12 mhwc-content">
@@ -992,11 +991,11 @@ export default function CharacterStatus(props) {
                                         <span>{_(data.description)}</span>
                                     </div>
                                 </div>
-                            ) : false;
+                            ) : false
                         })}
                     </div>
                 ) : false}
             </div>
         </div>
-    );
+    )
 }

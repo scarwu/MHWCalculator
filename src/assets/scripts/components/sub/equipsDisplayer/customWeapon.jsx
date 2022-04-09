@@ -1,32 +1,31 @@
 /**
  * Equips Dispayler: Custom Weapon
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+import React, { Fragment, useState, useEffect, useCallback, useMemo, useRef } from 'react'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+
 // Load Libraries
-import React, { Fragment, useState, useEffect, useCallback, useMemo, useRef } from 'react';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-import JewelDataset from 'libraries/dataset/jewel';
-import SkillDataset from 'libraries/dataset/skill';
-import SetDataset from 'libraries/dataset/set';
+import JewelDataset from 'libraries/dataset/jewel'
+import SkillDataset from 'libraries/dataset/skill'
+import SetDataset from 'libraries/dataset/set'
 
 // Load Components
-import IconButton from 'components/common/iconButton';
-import BasicSelector from 'components/common/basicSelector';
-import BasicInput from 'components/common/basicInput';
+import IconButton from 'components/common/iconButton'
+import BasicSelector from 'components/common/basicSelector'
+import BasicInput from 'components/common/basicInput'
 
 // Load State Control
-import CommonState from 'states/common';
-import ModalState from 'states/modal';
+import CommonState from 'states/common'
+import ModalState from 'states/modal'
 
 const getTypeList = () => {
     return [
@@ -44,8 +43,8 @@ const getTypeList = () => {
         { key: 'lightBowgun',       value: _('lightBowgun') },
         { key: 'heavyBowgun',       value: _('heavyBowgun') },
         { key: 'bow',               value: _('bow') }
-    ];
-};
+    ]
+}
 
 const getRareList = () => {
     return [
@@ -61,8 +60,8 @@ const getRareList = () => {
         { key: 10,  value: 10 },
         { key: 11,  value: 11 },
         { key: 12,  value: 12 }
-    ];
-};
+    ]
+}
 
 const getSharpnessList = () => {
     return [
@@ -73,8 +72,8 @@ const getSharpnessList = () => {
         { key: 'blue',      value: _('blue') },
         { key: 'white',     value: _('white') },
         { key: 'purple',    value: _('purple') },
-    ];
-};
+    ]
+}
 
 const getAttackElementList = () => {
     return [
@@ -84,8 +83,8 @@ const getAttackElementList = () => {
         { key: 'thunder',   value: _('thunder') },
         { key: 'ice',       value: _('ice') },
         { key: 'dragon',    value: _('dragon') }
-    ];
-};
+    ]
+}
 
 const getStatusElementList = () => {
     return [
@@ -94,16 +93,16 @@ const getStatusElementList = () => {
         { key: 'paralysis', value: _('paralysis') },
         { key: 'sleep',     value: _('sleep') },
         { key: 'blast',     value: _('blast') }
-    ];
-};
+    ]
+}
 
 const getEldersealList = () => {
     return [
         { key: 'low',       value: _('low') },
         { key: 'medium',    value: _('medium') },
         { key: 'high',      value: _('high') }
-    ];
-};
+    ]
+}
 
 const getSlotSizeList = () => {
     return [
@@ -112,82 +111,82 @@ const getSlotSizeList = () => {
         { key: 2,       value: 2 },
         { key: 3,       value: 3 },
         { key: 4,       value: 4 }
-    ];
-};
+    ]
+}
 
 const getSkillList = () => {
     return [
         { key: 'none', value: _('none') },
         ...SkillDataset.getItems().filter((skillInfo) => {
-            return skillInfo.from.weapon;
+            return skillInfo.from.weapon
         }).map((skillInfo) => {
             return { key: skillInfo.id, value: _(skillInfo.name) }
         })
-    ];
-};
+    ]
+}
 
 const getSetList = () => {
     return [
         { key: 'none', value: _('none') },
         ...SetDataset.getItems().filter((setInfo) => {
-            return setInfo.from.weapon;
+            return setInfo.from.weapon
         }).map((setInfo) => {
             return { key: setInfo.id, value: _(setInfo.name) }
         })
-    ];
-};
+    ]
+}
 
 const getValue = (value) => {
     if (Helper.isEmpty(value)) {
-        return 'none';
+        return 'none'
     }
 
-    return value;
-};
+    return value
+}
 
 const getSharpnessStep = (sharpness) => {
     if (Helper.isEmpty(sharpness)) {
-        return 'none';
+        return 'none'
     }
 
     for (let step in sharpness.steps) {
         if (0 < sharpness.steps[step]) {
-            return step;
+            return step
         }
     }
-};
+}
 
 const getElementType = (element) => {
     if (Helper.isEmpty(element)) {
-        return 'none';
+        return 'none'
     }
 
-    return element.type;
-};
+    return element.type
+}
 
 const getSlotSize = (slot) => {
     if (Helper.isEmpty(slot)) {
-        return 'none';
+        return 'none'
     }
 
-    return slot.size;
-};
+    return slot.size
+}
 
 const getSkillId = (skill) => {
     if (Helper.isEmpty(skill)) {
-        return 'none';
+        return 'none'
     }
 
-    return skill.id;
-};
+    return skill.id
+}
 
 const getSetId = (set) => {
     if (Helper.isEmpty(set)) {
-        return 'none';
+        return 'none'
     }
 
-    return set.id;
-};
+    return set.id
+}
 
 /**
  * Render Functions
@@ -198,14 +197,14 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
         slotIndex: slotIndex,
         slotSize: slotSize,
         jewelId: (Helper.isNotEmpty(jewelInfo)) ? jewelInfo.id : null
-    };
+    }
 
     let emptySelectorData = {
         equipType: equipType,
         slotIndex: slotIndex,
         slotSize: slotSize,
         jewelId: null
-    };
+    }
 
     if (Helper.isEmpty(jewelInfo)) {
         return (
@@ -214,7 +213,7 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
                     iconName="plus" altName={_('add')}
                     onClick={() => {ModalState.setter.showEquipItemSelector(selectorData)}} />
             </div>
-        );
+        )
     }
 
     return (
@@ -229,45 +228,45 @@ const renderJewelOption = (equipType, slotIndex, slotSize, jewelInfo) => {
                     onClick={() => {CommonState.setter.setCurrentEquip(emptySelectorData)}} />
             </div>
         </Fragment>
-    );
-};
+    )
+}
 
 export default function CustomWeapon(props) {
 
     /**
      * Hooks
      */
-    const [stateCustomWeapon, updateCustomWeapon] = useState(CommonState.getter.getCustomWeapon());
-    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
-    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
+    const [stateCustomWeapon, updateCustomWeapon] = useState(CommonState.getter.getCustomWeapon())
+    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips())
+    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips())
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
-            updateCustomWeapon(CommonState.getter.getCustomWeapon());
-            updateCurrentEquips(CommonState.getter.getCurrentEquips());
-            updateRequiredEquips(CommonState.getter.getRequiredEquips());
-        });
+            updateCustomWeapon(CommonState.getter.getCustomWeapon())
+            updateCurrentEquips(CommonState.getter.getCurrentEquips())
+            updateRequiredEquips(CommonState.getter.getRequiredEquips())
+        })
 
         return () => {
-            unsubscribe();
-        };
-    }, []);
+            unsubscribe()
+        }
+    }, [])
 
     return useMemo(() => {
-        Helper.debug('Component: EquipsDisplayer -> CustomWeapon');
+        Helper.debug('Component: EquipsDisplayer -> CustomWeapon')
 
-        let equipType = 'weapon';
-        let currentEquip = stateCurrentEquips[equipType];
+        let equipType = 'weapon'
+        let currentEquip = stateCurrentEquips[equipType]
         let requiredEquip = Helper.isNotEmpty(stateRequiredEquips[equipType])
-            ? stateRequiredEquips[equipType] : null;
+            ? stateRequiredEquips[equipType] : null
 
         let emptySelectorData = {
             equipType: equipType,
             equipId: null
-        };
+        }
 
-        let isNotRequire = true;
+        let isNotRequire = true
 
         if (Helper.isNotEmpty(requiredEquip)) {
             if ('weapon' === equipType) {
@@ -277,9 +276,9 @@ export default function CustomWeapon(props) {
                 }) !== Helper.jsonHash({
                     customWeapon: requiredEquip.customWeapon,
                     enhances: requiredEquip.enhances
-                });
+                })
             } else {
-                isNotRequire = currentEquip.id !== requiredEquip.id;
+                isNotRequire = currentEquip.id !== requiredEquip.id
             }
         }
 
@@ -311,9 +310,9 @@ export default function CustomWeapon(props) {
                             defaultValue={getValue(stateCustomWeapon.type)}
                             options={getTypeList()} onChange={(event) => {
                                 let value = ('none' !== event.target.value)
-                                    ? event.target.value : null;
+                                    ? event.target.value : null
 
-                                CommonState.setter.setCustomWeaponValue('type', value);
+                                CommonState.setter.setCustomWeaponValue('type', value)
                             }} />
                     </div>
 
@@ -324,9 +323,9 @@ export default function CustomWeapon(props) {
                         <BasicSelector
                             defaultValue={getValue(stateCustomWeapon.rare)}
                             options={getRareList()} onChange={(event) => {
-                                let value = parseInt(event.target.value);
+                                let value = parseInt(event.target.value)
 
-                                CommonState.setter.setCustomWeaponValue('rare', value);
+                                CommonState.setter.setCustomWeaponValue('rare', value)
                             }} />
                     </div>
 
@@ -338,9 +337,9 @@ export default function CustomWeapon(props) {
                             key={stateCustomWeapon.attack}
                             defaultValue={stateCustomWeapon.attack} onChange={(event) => {
                                 let value = ('' !== event.target.value)
-                                    ? parseInt(event.target.value) : 0;
+                                    ? parseInt(event.target.value) : 0
 
-                                CommonState.setter.setCustomWeaponValue('attack', value);
+                                CommonState.setter.setCustomWeaponValue('attack', value)
                             }} />
                     </div>
 
@@ -353,9 +352,9 @@ export default function CustomWeapon(props) {
                                 defaultValue={getSharpnessStep(stateCustomWeapon.sharpness)}
                                 options={getSharpnessList()} onChange={(event) => {
                                     let value = ('none' !== event.target.value)
-                                        ? event.target.value : null;
+                                        ? event.target.value : null
 
-                                    CommonState.setter.setCustomWeaponSharpness(value);
+                                    CommonState.setter.setCustomWeaponSharpness(value)
                                 }} />
                         ) : false}
                     </div>
@@ -368,9 +367,9 @@ export default function CustomWeapon(props) {
                             key={stateCustomWeapon.criticalRate}
                             defaultValue={stateCustomWeapon.criticalRate} onChange={(event) => {
                                 let value = ('' !== event.target.value)
-                                    ? parseInt(event.target.value) : 0;
+                                    ? parseInt(event.target.value) : 0
 
-                                CommonState.setter.setCustomWeaponValue('criticalRate', value);
+                                CommonState.setter.setCustomWeaponValue('criticalRate', value)
                             }} />
                     </div>
 
@@ -383,9 +382,9 @@ export default function CustomWeapon(props) {
                                 defaultValue={getValue(stateCustomWeapon.elderseal.affinity)}
                                 options={getEldersealList()} onChange={(event) => {
                                     let value = ('none' !== event.target.value)
-                                        ? event.target.value : null;
+                                        ? event.target.value : null
 
-                                    CommonState.setter.setCustomWeaponElderseal(value);
+                                    CommonState.setter.setCustomWeaponElderseal(value)
                                 }} />
                         ) : false}
                     </div>
@@ -398,9 +397,9 @@ export default function CustomWeapon(props) {
                             key={stateCustomWeapon.defense}
                             defaultValue={stateCustomWeapon.defense} onChange={(event) => {
                                 let value = ('' !== event.target.value)
-                                    ? parseInt(event.target.value) : 0;
+                                    ? parseInt(event.target.value) : 0
 
-                                CommonState.setter.setCustomWeaponValue('defense', value);
+                                CommonState.setter.setCustomWeaponValue('defense', value)
                             }} />
                     </div>
                 </div>
@@ -414,9 +413,9 @@ export default function CustomWeapon(props) {
                             defaultValue={getElementType(stateCustomWeapon.element.attack)}
                             options={getAttackElementList()} onChange={(event) => {
                                 let value = ('none' !== event.target.value)
-                                    ? event.target.value : null;
+                                    ? event.target.value : null
 
-                                CommonState.setter.setCustomWeaponElementType('attack', value);
+                                CommonState.setter.setCustomWeaponElementType('attack', value)
                             }} />
                     </div>
                     <div className="col-6 mhwc-value">
@@ -425,9 +424,9 @@ export default function CustomWeapon(props) {
                                 key={stateCustomWeapon.element.attack.minValue}
                                 defaultValue={stateCustomWeapon.element.attack.minValue} onChange={(event) => {
                                     let value = ('' !== event.target.value)
-                                        ? parseInt(event.target.value) : 0;
+                                        ? parseInt(event.target.value) : 0
 
-                                    CommonState.setter.setCustomWeaponElementValue('attack', value);
+                                    CommonState.setter.setCustomWeaponElementValue('attack', value)
                                 }} />
                         ) : false}
                     </div>
@@ -439,9 +438,9 @@ export default function CustomWeapon(props) {
                             defaultValue={getElementType(stateCustomWeapon.element.status)}
                             options={getStatusElementList()} onChange={(event) => {
                                 let value = ('none' !== event.target.value)
-                                    ? event.target.value : null;
+                                    ? event.target.value : null
 
-                                CommonState.setter.setCustomWeaponElementType('status', value);
+                                CommonState.setter.setCustomWeaponElementType('status', value)
                             }} />
                     </div>
                     <div className="col-6 mhwc-value">
@@ -450,9 +449,9 @@ export default function CustomWeapon(props) {
                                 key={stateCustomWeapon.element.status.minValue}
                                 defaultValue={stateCustomWeapon.element.status.minValue} onChange={(event) => {
                                     let value = ('' !== event.target.value)
-                                        ? parseInt(event.target.value) : 0;
+                                        ? parseInt(event.target.value) : 0
 
-                                    CommonState.setter.setCustomWeaponElementValue('status', value);
+                                    CommonState.setter.setCustomWeaponElementValue('status', value)
                                 }} />
                         ) : false}
                     </div>
@@ -471,9 +470,9 @@ export default function CustomWeapon(props) {
                                         defaultValue={getSlotSize(stateCustomWeapon.slots[index])}
                                         options={getSlotSizeList()} onChange={(event) => {
                                             let value = ('none' !== event.target.value)
-                                                ? parseInt(event.target.value) : null;
+                                                ? parseInt(event.target.value) : null
 
-                                            CommonState.setter.setCustomWeaponSlot(index, value);
+                                            CommonState.setter.setCustomWeaponSlot(index, value)
                                         }} />
                                 </div>
                                 <div className="col-6 mhwc-value">
@@ -486,7 +485,7 @@ export default function CustomWeapon(props) {
                                     ) : false}
                                 </div>
                             </Fragment>
-                        );
+                        )
                     })}
                 </div>
 
@@ -499,9 +498,9 @@ export default function CustomWeapon(props) {
                             defaultValue={getSkillId(stateCustomWeapon.skills[0])}
                             options={getSkillList()} onChange={(event) => {
                                 let value = ('none' !== event.target.value)
-                                    ? event.target.value : null;
+                                    ? event.target.value : null
 
-                                CommonState.setter.setCustomWeaponSkill(0, value);
+                                CommonState.setter.setCustomWeaponSkill(0, value)
                             }} />
                     </div>
 
@@ -513,13 +512,13 @@ export default function CustomWeapon(props) {
                             defaultValue={getSetId(stateCustomWeapon.set)}
                             options={getSetList()} onChange={(event) => {
                                 let value = ('none' !== event.target.value)
-                                    ? event.target.value : null;
+                                    ? event.target.value : null
 
-                                CommonState.setter.setCustomWeaponSet(value);
+                                CommonState.setter.setCustomWeaponSet(value)
                             }} />
                     </div>
                 </div>
             </div>
-        );
-    }, [stateCustomWeapon, stateCurrentEquips, stateRequiredEquips]);
-};
+        )
+    }, [stateCustomWeapon, stateCurrentEquips, stateRequiredEquips])
+}

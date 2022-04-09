@@ -1,165 +1,164 @@
 /**
  * Candidate Bundles: Quick Setting
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+import React, { useState, useEffect, useMemo } from 'react'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+
 // Load Libraries
-import React, { useState, useEffect, useMemo } from 'react';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-import ArmorDataset from 'libraries/dataset/armor';
-import CharmDataset from 'libraries/dataset/charm';
-import JewelDataset from 'libraries/dataset/jewel';
-import SkillDataset from 'libraries/dataset/skill';
+import ArmorDataset from 'libraries/dataset/armor'
+import CharmDataset from 'libraries/dataset/charm'
+import JewelDataset from 'libraries/dataset/jewel'
+import SkillDataset from 'libraries/dataset/skill'
 
 // Load Components
-import IconButton from 'components/common/iconButton';
-import BasicSelector from 'components/common/basicSelector';
+import IconButton from 'components/common/iconButton'
+import BasicSelector from 'components/common/basicSelector'
 
 // Load State Control
-import CommonState from 'states/common';
+import CommonState from 'states/common'
 
-const levelMapping = [ 'I', 'II', 'III', 'IV', 'V' ];
+const levelMapping = [ 'I', 'II', 'III', 'IV', 'V' ]
 
 export default function QuickSetting(props) {
-    const {data} = props;
+    const {data} = props
 
     /**
      * Hooks
      */
-    const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonState.getter.getAlgorithmParams());
-    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
-    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
-    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
+    const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonState.getter.getAlgorithmParams())
+    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips())
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets())
+    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills())
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
-            updateAlgorithmParams(CommonState.getter.getAlgorithmParams());
-            updateRequiredEquips(CommonState.getter.getRequiredEquips());
-            updateRequiredSets(CommonState.getter.getRequiredSets());
-            updateRequiredSkills(CommonState.getter.getRequiredSkills());
-        });
+            updateAlgorithmParams(CommonState.getter.getAlgorithmParams())
+            updateRequiredEquips(CommonState.getter.getRequiredEquips())
+            updateRequiredSets(CommonState.getter.getRequiredSets())
+            updateRequiredSkills(CommonState.getter.getRequiredSkills())
+        })
 
         return () => {
-            unsubscribe();
-        };
-    }, []);
+            unsubscribe()
+        }
+    }, [])
 
     return useMemo(() => {
-        Helper.debug('Component: CandidateBundles -> QuickFactorSetting');
+        Helper.debug('Component: CandidateBundles -> QuickFactorSetting')
 
-        let armorSeriesMapping = {};
-        let charmSeriesMapping = {};
-        let jewelMapping = {};
-        let skillLevelMapping = {};
+        let armorSeriesMapping = {}
+        let charmSeriesMapping = {}
+        let jewelMapping = {}
+        let skillLevelMapping = {}
 
         const equipTypes = Object.keys(stateRequiredEquips).filter((equipType) => {
             if ('weapon' === equipType || 'charm' === equipType) {
-                return false;
+                return false
             }
 
-            return Helper.isEmpty(stateRequiredEquips[equipType]);
-        });
+            return Helper.isEmpty(stateRequiredEquips[equipType])
+        })
         const setIds = stateRequiredSets.map((set) => {
-            return set.id;
-        });
+            return set.id
+        })
         const skillIds = stateRequiredSkills.map((skill) => {
-            skillLevelMapping[skill.id] = skill.level;
+            skillLevelMapping[skill.id] = skill.level
 
-            return skill.id;
-        });
+            return skill.id
+        })
 
         ArmorDataset.typesIs(equipTypes).setsIs(setIds).getItems().forEach((armorInfo) => {
             if (false === stateAlgorithmParams.usingFactor.armor['rare' + armorInfo.rare]) {
-                return;
+                return
             }
 
-            let isSkip = false;
+            let isSkip = false
 
             armorInfo.skills.forEach((skill) => {
                 if (true === isSkip) {
-                    return;
+                    return
                 }
 
                 if (0 === skillLevelMapping[skill.id]) {
-                    isSkip = true;
+                    isSkip = true
 
-                    return;
+                    return
                 }
-            });
+            })
 
             if (true === isSkip) {
-                return;
+                return
             }
 
             if (Helper.isEmpty(armorSeriesMapping[armorInfo.rare])) {
-                armorSeriesMapping[armorInfo.rare] = {};
+                armorSeriesMapping[armorInfo.rare] = {}
             }
 
             armorSeriesMapping[armorInfo.rare][armorInfo.seriesId] = {
                 name: armorInfo.series
-            };
-        });
+            }
+        })
 
         ArmorDataset.typesIs(equipTypes).hasSkills(skillIds).getItems().forEach((armorInfo) => {
             if (false === stateAlgorithmParams.usingFactor.armor['rare' + armorInfo.rare]) {
-                return;
+                return
             }
 
-            let isSkip = false;
+            let isSkip = false
 
             armorInfo.skills.forEach((skill) => {
                 if (true === isSkip) {
-                    return;
+                    return
                 }
 
                 if (0 === skillLevelMapping[skill.id]) {
-                    isSkip = true;
+                    isSkip = true
 
-                    return;
+                    return
                 }
-            });
+            })
 
             if (true === isSkip) {
-                return;
+                return
             }
 
             if (Helper.isEmpty(armorSeriesMapping[armorInfo.rare])) {
-                armorSeriesMapping[armorInfo.rare] = {};
+                armorSeriesMapping[armorInfo.rare] = {}
             }
 
             armorSeriesMapping[armorInfo.rare][armorInfo.seriesId] = {
                 name: armorInfo.series
-            };
-        });
+            }
+        })
 
         if (Helper.isEmpty(stateRequiredEquips.charm)) {
             CharmDataset.hasSkills(skillIds).getItems().forEach((charmInfo) => {
-                let isSkip = false;
+                let isSkip = false
 
                 charmInfo.skills.forEach((skill) => {
                     if (true === isSkip) {
-                        return;
+                        return
                     }
 
                     if (0 === skillLevelMapping[skill.id]) {
-                        isSkip = true;
+                        isSkip = true
 
-                        return;
+                        return
                     }
-                });
+                })
 
                 if (true === isSkip) {
-                    return;
+                    return
                 }
 
                 if (Helper.isEmpty(charmSeriesMapping[charmInfo.seriesId])) {
@@ -167,36 +166,36 @@ export default function QuickSetting(props) {
                         series: charmInfo.series,
                         min: 1,
                         max: 1
-                    };
+                    }
                 }
 
                 if (charmSeriesMapping[charmInfo.seriesId].max < charmInfo.level) {
-                    charmSeriesMapping[charmInfo.seriesId].max = charmInfo.level;
+                    charmSeriesMapping[charmInfo.seriesId].max = charmInfo.level
                 }
-            });
+            })
         }
 
         JewelDataset.hasSkills(skillIds, true).getItems().forEach((jewelInfo) => {
-            let isSkip = false;
+            let isSkip = false
 
             jewelInfo.skills.forEach((skill) => {
                 if (true === isSkip) {
-                    return;
+                    return
                 }
 
                 if (0 === skillLevelMapping[skill.id]) {
-                    isSkip = true;
+                    isSkip = true
 
-                    return;
+                    return
                 }
-            });
+            })
 
             if (true === isSkip) {
-                return;
+                return
             }
 
             if (Helper.isEmpty(jewelMapping[jewelInfo.size])) {
-                jewelMapping[jewelInfo.size] = {};
+                jewelMapping[jewelInfo.size] = {}
             }
 
             if (Helper.isEmpty(jewelMapping[jewelInfo.size][jewelInfo.id])) {
@@ -204,21 +203,21 @@ export default function QuickSetting(props) {
                     name: jewelInfo.name,
                     min: 1,
                     max: 1
-                };
+                }
             }
 
             jewelInfo.skills.forEach((skill) => {
-                let skillInfo = SkillDataset.getInfo(skill.id);
+                let skillInfo = SkillDataset.getInfo(skill.id)
 
                 if (jewelMapping[jewelInfo.size][jewelInfo.id].max < skillInfo.list.length) {
-                    jewelMapping[jewelInfo.size][jewelInfo.id].max = skillInfo.list.length;
+                    jewelMapping[jewelInfo.size][jewelInfo.id].max = skillInfo.list.length
                 }
-            });
-        });
+            })
+        })
 
-        let armorFactor = stateAlgorithmParams.usingFactor.armor;
-        let charmFactor = stateAlgorithmParams.usingFactor.charm;
-        let jewelFactor = stateAlgorithmParams.usingFactor.jewel;
+        let armorFactor = stateAlgorithmParams.usingFactor.armor
+        let charmFactor = stateAlgorithmParams.usingFactor.charm
+        let jewelFactor = stateAlgorithmParams.usingFactor.jewel
 
         return (
             <div className="mhwc-item mhwc-item-3-step">
@@ -227,7 +226,7 @@ export default function QuickSetting(props) {
                 </div>
 
                 {0 !== Object.keys(armorSeriesMapping).length ? Object.keys(armorSeriesMapping).sort((rareA, rareB) => {
-                    return rareA > rareB ? 1 : -1;
+                    return rareA > rareB ? 1 : -1
                 }).map((rare) => {
                     return (
                         <div key={rare} className="col-12 mhwc-content">
@@ -237,10 +236,10 @@ export default function QuickSetting(props) {
 
                             <div className="col-12 mhwc-content">
                                 {Object.keys(armorSeriesMapping[rare]).sort((seriesIdA, seriesIdB) => {
-                                    return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
+                                    return _(seriesIdA) > _(seriesIdB) ? 1 : -1
                                 }).map((seriesId) => {
                                     let isInclude = Helper.isNotEmpty(armorFactor[seriesId])
-                                        ? armorFactor[seriesId] : true;
+                                        ? armorFactor[seriesId] : true
 
                                     return (
                                         <div key={seriesId} className="col-6 mhwc-value">
@@ -259,11 +258,11 @@ export default function QuickSetting(props) {
                                                 )}
                                             </div>
                                         </div>
-                                    );
+                                    )
                                 })}
                             </div>
                         </div>
-                    );
+                    )
                 }) : false}
 
                 {0 !== Object.keys(charmSeriesMapping).length ? (
@@ -274,18 +273,20 @@ export default function QuickSetting(props) {
 
                         <div className="col-12 mhwc-content">
                             {Object.keys(charmSeriesMapping).sort((seriesIdA, seriesIdB) => {
-                                return _(seriesIdA) > _(seriesIdB) ? 1 : -1;
+                                return _(seriesIdA) > _(seriesIdB) ? 1 : -1
                             }).map((seriesId) => {
                                 let selectLevel = Helper.isNotEmpty(charmFactor[seriesId])
-                                    ? charmFactor[seriesId] : -1;
+                                    ? charmFactor[seriesId] : -1
                                 let levelList = [
                                     { key: -1, value: _('all') },
                                     { key: 0, value: _('exclude') }
-                                ];
+                                ]
 
-                                [...Array(charmSeriesMapping[seriesId].max - charmSeriesMapping[seriesId].min + 1).keys()].forEach((data, index) => {
+                                let countableEmptyArray = [...Array(charmSeriesMapping[seriesId].max - charmSeriesMapping[seriesId].min + 1).keys()]
+
+                                countableEmptyArray.forEach((data, index) => {
                                     levelList.push({ key: index + 1, value: levelMapping[index] })
-                                });
+                                })
 
                                 return (
                                     <div key={seriesId} className="col-6 mhwc-value">
@@ -295,18 +296,18 @@ export default function QuickSetting(props) {
                                                 iconName="sort-numeric-asc"
                                                 defaultValue={selectLevel}
                                                 options={levelList} onChange={(event) => {
-                                                    CommonState.setter.setAlgorithmParamsUsingFactor('charm', seriesId, parseInt(event.target.value));
+                                                    CommonState.setter.setAlgorithmParamsUsingFactor('charm', seriesId, parseInt(event.target.value))
                                                 }} />
                                         </div>
                                     </div>
-                                );
+                                )
                             })}
                         </div>
                     </div>
                 ) : false}
 
                 {0 !== Object.keys(jewelMapping).length ? Object.keys(jewelMapping).sort((sizeA, sizeB) => {
-                    return sizeA > sizeB ? 1 : -1;
+                    return sizeA > sizeB ? 1 : -1
                 }).map((size) => {
                     return (
                         <div key={size} className="col-12 mhwc-content">
@@ -316,19 +317,21 @@ export default function QuickSetting(props) {
 
                             <div className="col-12 mhwc-content">
                                 {Object.keys(jewelMapping[size]).sort((jewelIdA, jewelIdB) => {
-                                    return _(jewelIdA) > _(jewelIdB) ? 1 : -1;
+                                    return _(jewelIdA) > _(jewelIdB) ? 1 : -1
                                 }).map((jewelId) => {
                                     let selectLevel = Helper.isNotEmpty(jewelFactor[jewelId])
-                                        ? jewelFactor[jewelId] : -1;
-                                    let diffLevel = jewelMapping[size][jewelId].max - jewelMapping[size][jewelId].min + 1;
+                                        ? jewelFactor[jewelId] : -1
+                                    let diffLevel = jewelMapping[size][jewelId].max - jewelMapping[size][jewelId].min + 1
                                     let levelList = [
                                         { key: -1, value: _('unlimited') },
                                         { key: 0, value: _('exclude') }
-                                    ];
+                                    ]
 
-                                    [...Array(diffLevel).keys()].forEach((data, index) => {
+                                    let countableEmptyArray = [...Array(diffLevel).keys()]
+
+                                    countableEmptyArray.forEach((data, index) => {
                                         levelList.push({ key: index + 1, value: index + 1 })
-                                    });
+                                    })
 
                                     return (
                                         <div key={jewelId} className="col-6 mhwc-value">
@@ -339,17 +342,17 @@ export default function QuickSetting(props) {
                                                     iconName="sort-numeric-asc"
                                                     defaultValue={selectLevel}
                                                     options={levelList} onChange={(event) => {
-                                                        CommonState.setter.setAlgorithmParamsUsingFactor('jewel', jewelId, parseInt(event.target.value));
+                                                        CommonState.setter.setAlgorithmParamsUsingFactor('jewel', jewelId, parseInt(event.target.value))
                                                     }} />
                                             </div>
                                         </div>
-                                    );
+                                    )
                                 })}
                             </div>
                         </div>
-                    );
+                    )
                 }) : false}
             </div>
-        );
-    }, [data, stateAlgorithmParams, stateRequiredEquips, stateRequiredSets, stateRequiredSkills]);
-};
+        )
+    }, [data, stateAlgorithmParams, stateRequiredEquips, stateRequiredSets, stateRequiredSkills])
+}

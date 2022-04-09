@@ -1,17 +1,17 @@
 /**
  * Dataset Skill
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
 // Load Core Libraries
-import Helper from 'core/helper';
+import Helper from 'core/helper'
 
 // Load Dataset
-import Skills from 'files/json/datasets/skills.json';
+import Skills from 'datasets/skills.json'
 
 // [
 //     0: id,
@@ -55,39 +55,39 @@ let dataset = Skills.map((skill) => {
                 isHidden: item[3]
             }
         })
-    };
-});
+    }
+})
 
 class SkillDataset {
 
     constructor (list) {
-        this.mapping = {};
+        this.mapping = {}
 
         list.forEach((data) => {
-            this.mapping[data.id] = data;
-        });
+            this.mapping[data.id] = data
+        })
     }
 
     getIds = () => {
-        return Object.keys(this.mapping);
-    };
+        return Object.keys(this.mapping)
+    }
 
     getItems = () => {
-        return Object.values(this.mapping);
-    };
+        return Object.values(this.mapping)
+    }
 
     getInfo = (id) => {
         return (Helper.isNotEmpty(this.mapping[id]))
-            ? Helper.deepCopy(this.mapping[id]) : null;
-    };
+            ? Helper.deepCopy(this.mapping[id]) : null
+    }
 
     setInfo = (id, info) => {
         if (Helper.isNotEmpty(info)) {
-            this.mapping[id] = info;
+            this.mapping[id] = info
         } else {
-            delete this.mapping[id];
+            delete this.mapping[id]
         }
-    };
+    }
 }
 
-export default new SkillDataset(dataset);
+export default new SkillDataset(dataset)

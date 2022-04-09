@@ -1,35 +1,32 @@
 /**
  * Algorithm Setting
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Libraries
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react'
 
-// Load Core Libraries
-import Status from 'core/status';
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
+// Load Core
+import _ from 'core/lang'
+import Status from 'core/status'
+import Helper from 'core/helper'
 
 // Load Components
-import ArmorFactors from 'components/modal/sub/algorithmSetting/armorFactors';
-import CharmFactors from 'components/modal/sub/algorithmSetting/charmFactors';
-import JewelFactors from 'components/modal/sub/algorithmSetting/jewelFactors';
-import IconButton from 'components/common/iconButton';
-import IconSelector from 'components/common/iconSelector';
-import IconInput from 'components/common/iconInput';
-import BasicSelector from 'components/common/basicSelector';
-import BasicInput from 'components/common/basicInput';
+import ArmorFactors from 'components/modal/sub/algorithmSetting/armorFactors'
+import CharmFactors from 'components/modal/sub/algorithmSetting/charmFactors'
+import JewelFactors from 'components/modal/sub/algorithmSetting/jewelFactors'
+import IconButton from 'components/common/iconButton'
+import IconSelector from 'components/common/iconSelector'
+import IconInput from 'components/common/iconInput'
+import BasicSelector from 'components/common/basicSelector'
+import BasicInput from 'components/common/basicInput'
 
 // Load State Control
-import CommonState from 'states/common';
-import ModalState from 'states/modal';
+import CommonState from 'states/common'
+import ModalState from 'states/modal'
 
 /**
  * Variables
@@ -44,14 +41,14 @@ const getSortList = () => {
         { key: 'thunder',       value: _('thunderSort') },
         { key: 'ice',           value: _('iceSort') },
         { key: 'dragon',        value: _('dragonSort') }
-    ];
+    ]
 }
 
 const getOrderList = () => {
     return [
         { key: 'desc',          value: _('desc') },
         { key: 'asc',           value: _('asc') }
-    ];
+    ]
 }
 
 const getModeList = () => {
@@ -61,11 +58,11 @@ const getModeList = () => {
         { key: 'charmFactor',           value: _('charmFactor') },
         { key: 'jewelFactor',           value: _('jewelFactor') },
         { key: 'byRequiredConditions',  value: _('byRequiredConditions') }
-    ];
+    ]
 }
 
-const armorRareList = [ 5, 6, 7, 8, 9, 10, 11, 12 ];
-const jewelSizeList = [ 1, 2, 3, 4 ];
+const armorRareList = [ 5, 6, 7, 8, 9, 10, 11, 12 ]
+const jewelSizeList = [ 1, 2, 3, 4 ]
 
 /**
  * Handler Functions
@@ -73,95 +70,95 @@ const jewelSizeList = [ 1, 2, 3, 4 ];
 const handleModeChange = (event) => {
     ModalState.setter.showAlgorithmSetting({
         mode: event.target.value
-    });
-};
+    })
+}
 
 const handleLimitChange = (event) => {
     if ('' === event.target.value) {
-        return;
+        return
     }
 
-    let limit = parseInt(event.target.value);
+    let limit = parseInt(event.target.value)
 
-    limit = (false === isNaN(limit)) ? limit : 1;
+    limit = (false === isNaN(limit)) ? limit : 1
 
-    event.target.value = limit;
+    event.target.value = limit
 
-    CommonState.setter.setAlgorithmParamsLimit(limit);
-};
+    CommonState.setter.setAlgorithmParamsLimit(limit)
+}
 
 const handleSortChange = (event) => {
-    CommonState.setter.setAlgorithmParamsSort(event.target.value);
-};
+    CommonState.setter.setAlgorithmParamsSort(event.target.value)
+}
 
 const handleOrderChange = (event) => {
-    CommonState.setter.setAlgorithmParamsOrder(event.target.value);
-};
+    CommonState.setter.setAlgorithmParamsOrder(event.target.value)
+}
 
 const handleStrategyChange = (event) => {
-    CommonState.setter.setAlgorithmParamsStrategy(event.target.value);
-};
+    CommonState.setter.setAlgorithmParamsStrategy(event.target.value)
+}
 
 export default function AlgorithmSetting(props) {
 
     /**
      * Hooks
      */
-    const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonState.getter.getAlgorithmParams());
-    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowAlgorithmSetting());
-    const [stateBypassData, updateBypassData] = useState(ModalState.getter.getAlgorithmSettingBypassData());
-    const [stateSegment, updateSegment] = useState(undefined);
-    const [stateMode, updateMode] = useState(undefined);
-    const refModal = useRef();
+    const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonState.getter.getAlgorithmParams())
+    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowAlgorithmSetting())
+    const [stateBypassData, updateBypassData] = useState(ModalState.getter.getAlgorithmSettingBypassData())
+    const [stateSegment, updateSegment] = useState(undefined)
+    const [stateMode, updateMode] = useState(undefined)
+    const refModal = useRef()
 
     useEffect(() => {
         if (Helper.isEmpty(stateBypassData)) {
-            return;
+            return
         }
 
         if (Helper.isEmpty(stateBypassData.mode)) {
-            return;
+            return
         }
 
-        updateMode(stateBypassData.mode);
-    }, [stateBypassData]);
+        updateMode(stateBypassData.mode)
+    }, [stateBypassData])
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribeCommon = CommonState.store.subscribe(() => {
-            updateAlgorithmParams(CommonState.getter.getAlgorithmParams());
-        });
+            updateAlgorithmParams(CommonState.getter.getAlgorithmParams())
+        })
 
         const unsubscribeModal = ModalState.store.subscribe(() => {
-            updateIsShow(ModalState.getter.isShowAlgorithmSetting());
-            updateBypassData(ModalState.getter.getAlgorithmSettingBypassData());
-        });
+            updateIsShow(ModalState.getter.isShowAlgorithmSetting())
+            updateBypassData(ModalState.getter.getAlgorithmSettingBypassData())
+        })
 
         return () => {
-            unsubscribeCommon();
-            unsubscribeModal();
-        };
-    }, []);
+            unsubscribeCommon()
+            unsubscribeModal()
+        }
+    }, [])
 
     /**
      * Handle Functions
      */
     const handleFastWindowClose = useCallback((event) => {
         if (refModal.current !== event.target) {
-            return;
+            return
         }
 
-        ModalState.setter.hideAlgorithmSetting();
-    }, []);
+        ModalState.setter.hideAlgorithmSetting()
+    }, [])
 
     const handleSegmentInput = useCallback((event) => {
-        let segment = event.target.value;
+        let segment = event.target.value
 
         segment = (0 !== segment.length)
-            ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
+            ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null
 
-        updateSegment(segment);
-    }, []);
+        updateSegment(segment)
+    }, [])
 
     /**
      * Render Functions
@@ -245,7 +242,7 @@ export default function AlgorithmSetting(props) {
                                                     )}
                                                 </div>
                                             </div>
-                                        );
+                                        )
                                     })}
                                 </div>
                             </div>
@@ -275,7 +272,7 @@ export default function AlgorithmSetting(props) {
                                                     )}
                                                 </div>
                                             </div>
-                                        );
+                                        )
                                     })}
                                 </div>
                             </div>
@@ -297,5 +294,5 @@ export default function AlgorithmSetting(props) {
                 </div>
             </div>
         </div>
-    ) : false;
-};
+    ) : false
+}

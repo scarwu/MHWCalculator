@@ -1,8 +1,8 @@
 .DS_Store
 src/boot
-src/assets/scripts/files/json/langs/*/dataset.json
-src/assets/scripts/files/json/testData.json
-src/assets/scripts/files/json/datasets
+src/assets/scripts/langs/*/dataset.json
+src/assets/scripts/testData.json
+src/assets/scripts/datasets
 node_modules
 .sass-cache
 tools/vendor

@@ -1,80 +1,79 @@
 /**
  * Equip Item Selector
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Libraries
-import React, { Fragment, useState, useEffect, useCallback, useMemo, useRef } from 'react';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-import WeaponDataset from 'libraries/dataset/weapon';
-import ArmorDataset from 'libraries/dataset/armor';
-import CharmDataset from 'libraries/dataset/charm';
-import JewelDataset from 'libraries/dataset/jewel';
-import EnhanceDataset from 'libraries/dataset/enhance';
-import SetDataset from 'libraries/dataset/set';
-import SkillDataset from 'libraries/dataset/skill';
-
-// Load Components
-import IconButton from 'components/common/iconButton';
-import IconSelector from 'components/common/iconSelector';
-import IconInput from 'components/common/iconInput';
-import SharpnessBar from 'components/common/sharpnessBar';
-
-// Load State Control
-import CommonState from 'states/common';
-import ModalState from 'states/modal';
+import React, { Fragment, useState, useEffect, useCallback, useMemo, useRef } from 'react'
 
 // Load Constant
-import Constant from 'constant';
+import Constant from 'constant'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+
+// Load Custom Libraries
+import WeaponDataset from 'libraries/dataset/weapon'
+import ArmorDataset from 'libraries/dataset/armor'
+import CharmDataset from 'libraries/dataset/charm'
+import JewelDataset from 'libraries/dataset/jewel'
+import EnhanceDataset from 'libraries/dataset/enhance'
+import SetDataset from 'libraries/dataset/set'
+import SkillDataset from 'libraries/dataset/skill'
+
+// Load Components
+import IconButton from 'components/common/iconButton'
+import IconSelector from 'components/common/iconSelector'
+import IconInput from 'components/common/iconInput'
+import SharpnessBar from 'components/common/sharpnessBar'
+
+// Load State Control
+import CommonState from 'states/common'
+import ModalState from 'states/modal'
 
 /**
  * Handle Functions
  */
 const handleItemPickUp = (bypassData, itemId) => {
     if (Helper.isNotEmpty(bypassData.enhanceIndex)) {
-        bypassData.enhanceId = itemId;
+        bypassData.enhanceId = itemId
     } else if (Helper.isNotEmpty(bypassData.slotIndex)) {
-        bypassData.jewelId = itemId;
+        bypassData.jewelId = itemId
     } else {
-        bypassData.equipId = itemId;
+        bypassData.equipId = itemId
     }
 
-    CommonState.setter.setCurrentEquip(bypassData);
-    ModalState.setter.hideEquipItemSelector();
-};
+    CommonState.setter.setCurrentEquip(bypassData)
+    ModalState.setter.hideEquipItemSelector()
+}
 
 /**
  * Render Functions
  */
 const renderWeaponItem = (weapon, bypassData) => {
-    let originalSharpness = null;
-    let enhancedSharpness = null;
+    let originalSharpness = null
+    let enhancedSharpness = null
 
     if (Helper.isNotEmpty(weapon.sharpness)) {
-        originalSharpness = Helper.deepCopy(weapon.sharpness);
-        enhancedSharpness = Helper.deepCopy(weapon.sharpness);
-        enhancedSharpness.value += 50;
+        originalSharpness = Helper.deepCopy(weapon.sharpness)
+        enhancedSharpness = Helper.deepCopy(weapon.sharpness)
+        enhancedSharpness.value += 50
     }
 
     if (Helper.isNotEmpty(weapon.element.attack)
         && Helper.isEmpty(weapon.element.attack.maxValue)
     ) {
-        weapon.element.attack.maxValue = '?';
+        weapon.element.attack.maxValue = '?'
     }
 
     if (Helper.isNotEmpty(weapon.element.status)
         && Helper.isEmpty(weapon.element.status.maxValue)
     ) {
-        weapon.element.status.maxValue = '?';
+        weapon.element.status.maxValue = '?'
     }
 
     return (
@@ -177,12 +176,12 @@ const renderWeaponItem = (weapon, bypassData) => {
                     {weapon.slots.map((slot, index) => {
                         return (
                             <span key={index}>[{slot.size}]</span>
-                        );
+                        )
                     })}
                 </div>
 
                 {weapon.skills.map((skill, index) => {
-                    let skillInfo = SkillDataset.getInfo(skill.id);
+                    let skillInfo = SkillDataset.getInfo(skill.id)
 
                     return Helper.isNotEmpty(skillInfo) ? (
                         <Fragment key={index}>
@@ -193,19 +192,19 @@ const renderWeaponItem = (weapon, bypassData) => {
                                 <span>{_(skillInfo.list[skill.level - 1].description)}</span>
                             </div>
                         </Fragment>
-                    ) : false;
+                    ) : false
                 })}
             </div>
         </div>
-    );
-};
+    )
+}
 
 const renderArmorItem = (armor, bypassData) => {
     let setInfo = Helper.isNotEmpty(armor.set)
-        ? SetDataset.getInfo(armor.set.id) : false;
+        ? SetDataset.getInfo(armor.set.id) : false
 
     // Re-write BypassData
-    bypassData.equipType = armor.type;
+    bypassData.equipType = armor.type
 
     return (
         <div key={armor.id} className="mhwc-item mhwc-item-2-step">
@@ -245,7 +244,7 @@ const renderArmorItem = (armor, bypassData) => {
                                 <span>{armor.resistance[resistanceType]}</span>
                             </div>
                         </Fragment>
-                    );
+                    )
                 })}
 
                 <div className="col-3 mhwc-name">
@@ -255,7 +254,7 @@ const renderArmorItem = (armor, bypassData) => {
                     {armor.slots.map((slot, index) => {
                         return (
                             <span key={index}>[{slot.size}]</span>
-                        );
+                        )
                     })}
                 </div>
 
@@ -271,7 +270,7 @@ const renderArmorItem = (armor, bypassData) => {
                 ) : false}
 
                 {armor.skills.map((skill, index) => {
-                    let skillInfo = SkillDataset.getInfo(skill.id);
+                    let skillInfo = SkillDataset.getInfo(skill.id)
 
                     return Helper.isNotEmpty(skillInfo) ? (
                         <Fragment key={index}>
@@ -282,12 +281,12 @@ const renderArmorItem = (armor, bypassData) => {
                                 <span>{_(skillInfo.list[skill.level - 1].description)}</span>
                             </div>
                         </Fragment>
-                    ) : false;
+                    ) : false
                 })}
             </div>
         </div>
-    );
-};
+    )
+}
 
 const renderCharmItem = (charm, bypassData) => {
     return (
@@ -305,7 +304,7 @@ const renderCharmItem = (charm, bypassData) => {
             </div>
             <div className="col-12 mhwc-content">
                 {charm.skills.map((skill, index) => {
-                    let skillInfo = SkillDataset.getInfo(skill.id);
+                    let skillInfo = SkillDataset.getInfo(skill.id)
 
                     return Helper.isNotEmpty(skillInfo) ? (
                         <Fragment key={index}>
@@ -316,12 +315,12 @@ const renderCharmItem = (charm, bypassData) => {
                                 <span>{_(skillInfo.list[skill.level - 1].description)}</span>
                             </div>
                         </Fragment>
-                    ) : false;
+                    ) : false
                 })}
             </div>
         </div>
-    );
-};
+    )
+}
 
 const renderJewelItem = (jewel, bypassData) => {
     return (
@@ -339,7 +338,7 @@ const renderJewelItem = (jewel, bypassData) => {
             </div>
             <div className="col-12 mhwc-content">
                 {jewel.skills.map((skill, index) => {
-                    let skillInfo = SkillDataset.getInfo(skill.id);
+                    let skillInfo = SkillDataset.getInfo(skill.id)
 
                     return Helper.isNotEmpty(skillInfo) ? (
                         <Fragment key={index}>
@@ -350,12 +349,12 @@ const renderJewelItem = (jewel, bypassData) => {
                                 <span>{_(skillInfo.list[skill.level - 1].description)}</span>
                             </div>
                         </Fragment>
-                    ) : false;
+                    ) : false
                 })}
             </div>
         </div>
-    );
-};
+    )
+}
 
 const renderEnhanceItem = (enhance, bypassData) => {
     return (
@@ -382,349 +381,349 @@ const renderEnhanceItem = (enhance, bypassData) => {
                                 <span>{_(item.description)}</span>
                             </div>
                         </Fragment>
-                    );
+                    )
                 })}
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default function EquipItemSelector(props) {
 
     /**
      * Hooks
      */
-    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowEquipItemSelector());
-    const [stateBypassData, updateBypassData] = useState(ModalState.getter.getEquipItemSelectorBypassData());
-    const [stateMode, updateMode] = useState(undefined);
-    const [stateSortedList, updateSortedList] = useState([]);
-    const [stateType, updateType] = useState(undefined);
-    const [stateRare, updateRare] = useState(undefined);
-    const [stateTypeList, updateTypeList] = useState([]);
-    const [stateRareList, updateRareList] = useState([]);
-    const [stateSegment, updateSegment] = useState(undefined);
-    const refModal = useRef();
+    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowEquipItemSelector())
+    const [stateBypassData, updateBypassData] = useState(ModalState.getter.getEquipItemSelectorBypassData())
+    const [stateMode, updateMode] = useState(undefined)
+    const [stateSortedList, updateSortedList] = useState([])
+    const [stateType, updateType] = useState(undefined)
+    const [stateRare, updateRare] = useState(undefined)
+    const [stateTypeList, updateTypeList] = useState([])
+    const [stateRareList, updateRareList] = useState([])
+    const [stateSegment, updateSegment] = useState(undefined)
+    const refModal = useRef()
 
     useEffect(() => {
         if (Helper.isEmpty(stateBypassData)) {
-            return;
+            return
         }
 
-        let mode = null;
-        let sortedList = [];
-        let typeList = {};
-        let rareList = {};
-        let type = null;
-        let rare = null;
+        let mode = null
+        let sortedList = []
+        let typeList = {}
+        let rareList = {}
+        let type = null
+        let rare = null
 
         if (Helper.isNotEmpty(stateBypassData.enhanceIndex)) {
-            mode = 'enhance';
+            mode = 'enhance'
             sortedList = EnhanceDataset.getItems().map((enhanceInfo) => {
-                enhanceInfo.isSelect = (stateBypassData.enhanceId === enhanceInfo.id);
+                enhanceInfo.isSelect = (stateBypassData.enhanceId === enhanceInfo.id)
 
-                return enhanceInfo;
-            });
+                return enhanceInfo
+            })
         } else if (Helper.isNotEmpty(stateBypassData.slotIndex)) {
-            mode = 'jewel';
+            mode = 'jewel'
 
             for (let size = stateBypassData.slotSize; size >= 1; size--) {
                 for (let rare = 9; rare >= 5; rare--) {
                     sortedList = sortedList.concat(
                         JewelDataset.rareIs(rare).sizeIs(size).getItems().map((jewelInfo) => {
-                            jewelInfo.isSelect = (stateBypassData.jewelId === jewelInfo.id);
+                            jewelInfo.isSelect = (stateBypassData.jewelId === jewelInfo.id)
 
-                            return jewelInfo;
+                            return jewelInfo
                         })
-                    );
+                    )
                 }
             }
         } else if ('weapon' === stateBypassData.equipType) {
-            let weaponInfo = WeaponDataset.getInfo(stateBypassData.equipId);
+            let weaponInfo = WeaponDataset.getInfo(stateBypassData.equipId)
 
             typeList = Constant.weaponTypes.map((type) => {
-                return { key: type, value: _(type) };
-            });
+                return { key: type, value: _(type) }
+            })
             type = (Helper.isNotEmpty(weaponInfo) && Helper.isNotEmpty(weaponInfo.type))
-                ? weaponInfo.type : typeList[0].key;
+                ? weaponInfo.type : typeList[0].key
 
-            mode = 'weapon';
+            mode = 'weapon'
             sortedList =  WeaponDataset.getItems().map((weaponInfo) => {
-                rareList[weaponInfo.rare] = weaponInfo.rare;
+                rareList[weaponInfo.rare] = weaponInfo.rare
 
-                weaponInfo.isSelect = (stateBypassData.equipId === weaponInfo.id);
+                weaponInfo.isSelect = (stateBypassData.equipId === weaponInfo.id)
 
-                return weaponInfo;
-            });
+                return weaponInfo
+            })
 
             rareList = Object.values(rareList).reverse().map((rare) => {
-                return { key: rare, value: _('rare') + `: ${rare}` };
-            });
-            rare = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.rare : rareList[0].key;
+                return { key: rare, value: _('rare') + `: ${rare}` }
+            })
+            rare = (Helper.isNotEmpty(weaponInfo)) ? weaponInfo.rare : rareList[0].key
         } else if ('helm' === stateBypassData.equipType
             || 'chest' === stateBypassData.equipType
             || 'arm' === stateBypassData.equipType
             || 'waist' === stateBypassData.equipType
             || 'leg' === stateBypassData.equipType
         ) {
-            let armoreInfo = ArmorDataset.getInfo(stateBypassData.equipId);
+            let armoreInfo = ArmorDataset.getInfo(stateBypassData.equipId)
 
             typeList = Constant.armorTypes.map((type) => {
-                return { key: type, value: _(type) };
-            });
+                return { key: type, value: _(type) }
+            })
             type = (Helper.isNotEmpty(stateBypassData.equipType))
-                ? stateBypassData.equipType : typeList[0].key;
+                ? stateBypassData.equipType : typeList[0].key
 
-            mode = 'armor';
+            mode = 'armor'
             sortedList = ArmorDataset.getItems().map((armorInfo) => {
-                rareList[armorInfo.rare] = armorInfo.rare;
+                rareList[armorInfo.rare] = armorInfo.rare
 
-                armorInfo.isSelect = (stateBypassData.equipId === armorInfo.id);
+                armorInfo.isSelect = (stateBypassData.equipId === armorInfo.id)
 
-                return armorInfo;
-            });
+                return armorInfo
+            })
 
             rareList = Object.values(rareList).reverse().map((rare) => {
-                return { key: rare, value: _('rare') + `: ${rare}` };
-            });
-            rare = (Helper.isNotEmpty(armoreInfo)) ? armoreInfo.rare : rareList[0].key;
+                return { key: rare, value: _('rare') + `: ${rare}` }
+            })
+            rare = (Helper.isNotEmpty(armoreInfo)) ? armoreInfo.rare : rareList[0].key
         } else if ('charm' === stateBypassData.equipType) {
-            mode = 'charm';
+            mode = 'charm'
             sortedList = CharmDataset.getItems().map((charmInfo) => {
-                charmInfo.isSelect = (stateBypassData.equipId === charmInfo.id);
+                charmInfo.isSelect = (stateBypassData.equipId === charmInfo.id)
 
-                return charmInfo;
-            });
+                return charmInfo
+            })
         }
 
-        updateMode(mode);
-        updateSortedList(sortedList);
-        updateTypeList(typeList);
-        updateRareList(rareList);
-        updateType(type);
-        updateRare(rare);
-    }, [stateBypassData]);
+        updateMode(mode)
+        updateSortedList(sortedList)
+        updateTypeList(typeList)
+        updateRareList(rareList)
+        updateType(type)
+        updateRare(rare)
+    }, [stateBypassData])
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribeModel = ModalState.store.subscribe(() => {
-            updateIsShow(ModalState.getter.isShowEquipItemSelector());
-            updateBypassData(ModalState.getter.getEquipItemSelectorBypassData());
-        });
+            updateIsShow(ModalState.getter.isShowEquipItemSelector())
+            updateBypassData(ModalState.getter.getEquipItemSelectorBypassData())
+        })
 
         return () => {
-            unsubscribeModel();
-        };
-    }, []);
+            unsubscribeModel()
+        }
+    }, [])
 
     /**
      * Handle Functions
      */
     const handleFastWindowClose = useCallback((event) => {
         if (refModal.current !== event.target) {
-            return;
+            return
         }
 
-        ModalState.setter.hideEquipItemSelector();
-    }, []);
+        ModalState.setter.hideEquipItemSelector()
+    }, [])
 
     const handleSegmentInput = useCallback((event) => {
-        let segment = event.target.value;
+        let segment = event.target.value
 
         segment = (0 !== segment.length)
-            ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
+            ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null
 
-        updateSegment(segment);
-    }, []);
+        updateSegment(segment)
+    }, [])
 
     const handleTypeChange = useCallback((event) => {
-        updateType(event.target.value);
-    }, []);
+        updateType(event.target.value)
+    }, [])
 
     const handleRareChange = useCallback((event) => {
-        updateRare(parseInt(event.target.value, 10));
-    }, []);
+        updateRare(parseInt(event.target.value, 10))
+    }, [])
 
     const getContent = useMemo(() => {
         if (Helper.isEmpty(stateBypassData)) {
-            return false;
+            return false
         }
 
-        let bypassData = Helper.deepCopy(stateBypassData);
+        let bypassData = Helper.deepCopy(stateBypassData)
 
         switch (stateMode) {
         case 'weapon':
             return stateSortedList.filter((data) => {
                 if (data.type !== stateType) {
-                    return false;
+                    return false
                 }
 
                 if (data.rare !== stateRare) {
-                    return false;
+                    return false
                 }
 
                 // Create Text
-                let text = _(data.name);
-                text += _(data.series);
-                text += _(data.type);
+                let text = _(data.name)
+                text += _(data.series)
+                text += _(data.type)
 
                 if (Helper.isNotEmpty(data.element)
                     && Helper.isNotEmpty(data.element.attack)
                 ) {
-                    text += _(data.element.attack.type);
+                    text += _(data.element.attack.type)
                 }
 
                 if (Helper.isNotEmpty(data.element)
                     && Helper.isNotEmpty(data.element.status)
                 ) {
-                    text += _(data.element.status.type);
+                    text += _(data.element.status.type)
                 }
 
                 data.skills.forEach((data) => {
-                    let skillInfo = SkillDataset.getInfo(data.id);
+                    let skillInfo = SkillDataset.getInfo(data.id)
 
                     if (Helper.isNotEmpty(skillInfo)) {
-                        text += _(skillInfo.name);
+                        text += _(skillInfo.name)
                     }
-                });
+                })
 
                 // Search Nameword
                 if (Helper.isNotEmpty(stateSegment)
                     && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
                 ) {
-                    return false;
+                    return false
                 }
 
-                return true;
+                return true
             }).sort((dataA, dataB) => {
-                return _(dataA.id) > _(dataB.id) ? 1 : -1;
+                return _(dataA.id) > _(dataB.id) ? 1 : -1
             }).map((data) => {
-                return renderWeaponItem(data, bypassData);
-            });
+                return renderWeaponItem(data, bypassData)
+            })
         case 'armor':
             return stateSortedList.filter((data) => {
                 if (data.type !== stateType) {
-                    return false;
+                    return false
                 }
 
                 if (data.rare !== stateRare) {
-                    return false;
+                    return false
                 }
 
                 // Create Text
-                let text = _(data.name);
-                text += _(data.series);
+                let text = _(data.name)
+                text += _(data.series)
 
                 if (Helper.isNotEmpty(data.set)) {
-                    let setInfo = SetDataset.getInfo(data.set.id);
+                    let setInfo = SetDataset.getInfo(data.set.id)
 
                     if (Helper.isNotEmpty(setInfo)) {
-                        text += _(setInfo.name);
+                        text += _(setInfo.name)
                     }
                 }
 
                 data.skills.forEach((data) => {
-                    let skillInfo = SkillDataset.getInfo(data.id);
+                    let skillInfo = SkillDataset.getInfo(data.id)
 
                     if (Helper.isNotEmpty(skillInfo)) {
-                        text += _(skillInfo.name);
+                        text += _(skillInfo.name)
                     }
-                });
+                })
 
                 // Search Nameword
                 if (Helper.isNotEmpty(stateSegment)
                     && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
                 ) {
-                    return false;
+                    return false
                 }
 
-                return true;
+                return true
             }).sort((dataA, dataB) => {
-                return _(dataA.id) > _(dataB.id) ? 1 : -1;
+                return _(dataA.id) > _(dataB.id) ? 1 : -1
             }).map((data) => {
-                return renderArmorItem(data, bypassData);
-            });
+                return renderArmorItem(data, bypassData)
+            })
         case 'charm':
             return stateSortedList.filter((data) => {
 
                 // Create Text
-                let text = _(data.name);
+                let text = _(data.name)
 
                 data.skills.forEach((data) => {
-                    let skillInfo = SkillDataset.getInfo(data.id);
+                    let skillInfo = SkillDataset.getInfo(data.id)
 
                     if (Helper.isNotEmpty(skillInfo)) {
-                        text += _(skillInfo.anem);
+                        text += _(skillInfo.anem)
                     }
-                });
+                })
 
                 // Search Nameword
                 if (Helper.isNotEmpty(stateSegment)
                     && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
                 ) {
-                    return false;
+                    return false
                 }
 
-                return true;
+                return true
             }).sort((dataA, dataB) => {
-                return _(dataA.id) > _(dataB.id) ? 1 : -1;
+                return _(dataA.id) > _(dataB.id) ? 1 : -1
             }).map((data) => {
-                return renderCharmItem(data, bypassData);
-            });
+                return renderCharmItem(data, bypassData)
+            })
         case 'jewel':
             return stateSortedList.filter((data) => {
 
                 // Create Text
-                let text = _(data.name);
+                let text = _(data.name)
 
                 data.skills.forEach((skill) => {
-                    let skillInfo = SkillDataset.getInfo(skill.id);
+                    let skillInfo = SkillDataset.getInfo(skill.id)
 
                     if (Helper.isNotEmpty(skillInfo)) {
-                        text += _(skillInfo.name);
+                        text += _(skillInfo.name)
                     }
-                });
+                })
 
                 // Search Nameword
                 if (Helper.isNotEmpty(stateSegment)
                     && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
                 ) {
-                    return false;
+                    return false
                 }
 
-                return true;
+                return true
             }).sort((dataA, dataB) => {
-                return _(dataA.id) > _(dataB.id) ? 1 : -1;
+                return _(dataA.id) > _(dataB.id) ? 1 : -1
             }).map((data) => {
-                return renderJewelItem(data, bypassData);
-            });
+                return renderJewelItem(data, bypassData)
+            })
         case 'enhance':
             return stateSortedList.filter((data) => {
 
                 // Create Text
-                let text = _(data.name);
+                let text = _(data.name)
 
                 data.list.forEach((data) => {
-                    text += _(data.description);
-                });
+                    text += _(data.description)
+                })
 
                 // Search Nameword
                 if (Helper.isNotEmpty(stateSegment)
                     && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
                 ) {
-                    return false;
+                    return false
                 }
 
-                return true;
+                return true
             }).filter((data) => {
                 return -1 !== data.allowRares.indexOf(bypassData.equipRare)
-                    && -1 === bypassData.enhanceIds.indexOf(data.id);
+                    && -1 === bypassData.enhanceIds.indexOf(data.id)
             }).sort((dataA, dataB) => {
-                return _(dataA.id) > _(dataB.id) ? 1 : -1;
+                return _(dataA.id) > _(dataB.id) ? 1 : -1
             }).map((data) => {
-                return renderEnhanceItem(data, bypassData);
-            });
+                return renderEnhanceItem(data, bypassData)
+            })
         default:
-            return false;
+            return false
         }
     }, [
         stateBypassData,
@@ -735,7 +734,7 @@ export default function EquipItemSelector(props) {
         stateType,
         stateRare,
         stateSegment
-    ]);
+    ])
 
     return (stateIsShow && Helper.isNotEmpty(stateBypassData)) ? (
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
@@ -772,5 +771,5 @@ export default function EquipItemSelector(props) {
                 </div>
             </div>
         </div>
-    ) : false;
+    ) : false
 }

@@ -1,23 +1,22 @@
 /**
  * Icon Button
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Libraries
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-// Load Core Libraries
-import Helper from 'core/helper';
+// Load Core
+import Helper from 'core/helper'
 
 export default function IconButton(props) {
-    const {iconName, altName, onClick} = props;
+    const {iconName, altName, onClick} = props
 
     return useMemo(() => {
-        Helper.debug('Component: Common -> IconButton');
+        Helper.debug('Component: Common -> IconButton')
 
         return (
             <div className="mhwc-icon_button">
@@ -32,5 +31,5 @@ export default function IconButton(props) {
                 </div>
             </div>
         )
-    }, [iconName, altName, onClick]);
-};
+    }, [iconName, altName, onClick])
+}

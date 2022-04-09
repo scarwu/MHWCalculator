@@ -1,17 +1,17 @@
 /**
  * Dataset Set
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
 // Load Core Libraries
-import Helper from 'core/helper';
+import Helper from 'core/helper'
 
 // Load Dataset
-import Sets from 'files/json/datasets/sets.json';
+import Sets from 'datasets/sets.json'
 
 // [
 //     0: id,
@@ -42,67 +42,67 @@ let dataset = Sets.map((set) => {
                 id: skill[0],
                 level: skill[1],
                 require: skill[2]
-            };
+            }
         })
-    };
-});
+    }
+})
 
 class SetDataset {
 
     constructor (list) {
-        this.mapping = {};
+        this.mapping = {}
 
         list.forEach((data) => {
-            this.mapping[data.id] = data;
-        });
+            this.mapping[data.id] = data
+        })
 
         // Filter Conditional
-        this.resetFilter();
+        this.resetFilter()
     }
 
     resetFilter = () => {
-        this.filterSkillName = null;
-    };
+        this.filterSkillName = null
+    }
 
     getIds = () => {
-        return Object.keys(this.mapping);
-    };
+        return Object.keys(this.mapping)
+    }
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
             if (Helper.isNotEmpty(this.filterSkillName)) {
                 if (this.filterSkillName !== data.skill.id) {
-                    return false;
+                    return false
                 }
             }
 
-            return true;
-        });
+            return true
+        })
 
-        this.resetFilter();
+        this.resetFilter()
 
-        return result;
-    };
+        return result
+    }
 
     getInfo = (id) => {
         return (Helper.isNotEmpty(this.mapping[id]))
-            ? Helper.deepCopy(this.mapping[id]) : null;
-    };
+            ? Helper.deepCopy(this.mapping[id]) : null
+    }
 
     setInfo = (id, info) => {
         if (Helper.isNotEmpty(info)) {
-            this.mapping[id] = info;
+            this.mapping[id] = info
         } else {
-            delete this.mapping[id];
+            delete this.mapping[id]
         }
-    };
+    }
 
     // Conditional Functions
     hasSkill = (name) => {
-        this.filterSkillName = name;
+        this.filterSkillName = name
 
-        return this;
-    };
+        return this
+    }
 }
 
-export default new SetDataset(dataset);
+export default new SetDataset(dataset)

@@ -1,29 +1,28 @@
 /**
  * Condition Options: Skill List
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+import React, { useState, useEffect, useMemo } from 'react'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+
 // Load Libraries
-import React, { useState, useEffect, useMemo } from 'react';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-import SetDataset from 'libraries/dataset/set';
-import SkillDataset from 'libraries/dataset/skill';
+import SetDataset from 'libraries/dataset/set'
+import SkillDataset from 'libraries/dataset/skill'
 
 // Load Components
-import IconButton from 'components/common/iconButton';
+import IconButton from 'components/common/iconButton'
 
 // Load State Control
-import CommonState from 'states/common';
-import ModalState from 'states/modal';
+import CommonState from 'states/common'
+import ModalState from 'states/modal'
 
 /**
  * Handle Functions
@@ -31,29 +30,29 @@ import ModalState from 'states/modal';
 const handleShowSkillItemSelector = () => {
     ModalState.setter.showConditionItemSelector({
         mode: 'skill'
-    });
-};
+    })
+}
 
 /**
  * Render Functions
  */
 const renderSkillItem = (skill, enableSkillIdList) => {
-    let skillInfo = SkillDataset.getInfo(skill.id);
+    let skillInfo = SkillDataset.getInfo(skill.id)
 
     if (Helper.isEmpty(skillInfo)) {
-        return false;
+        return false
     }
 
-    let currentSkillLevel = 0;
-    let totalSkillLevel = 0;
+    let currentSkillLevel = 0
+    let totalSkillLevel = 0
 
     skillInfo.list.forEach((item) => {
         if (false === item.isHidden || -1 !== enableSkillIdList.indexOf(skillInfo.id)) {
-            currentSkillLevel++;
+            currentSkillLevel++
         }
 
-        totalSkillLevel++;
-    });
+        totalSkillLevel++
+    })
 
     return (
         <div key={skillInfo.id} className="col-12 mhwc-content">
@@ -84,67 +83,67 @@ const renderSkillItem = (skill, enableSkillIdList) => {
                 </span>
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default function SkillList(props) {
 
     /**
      * Hooks
      */
-    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
-    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets())
+    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills())
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
-            updateRequiredSets(CommonState.getter.getRequiredSets());
-            updateRequiredSkills(CommonState.getter.getRequiredSkills());
-        });
+            updateRequiredSets(CommonState.getter.getRequiredSets())
+            updateRequiredSkills(CommonState.getter.getRequiredSkills())
+        })
 
         return () => {
-            unsubscribe();
-        };
-    }, []);
+            unsubscribe()
+        }
+    }, [])
 
     return useMemo(() => {
-        Helper.debug('Component: ConditionOptions -> SkillList');
+        Helper.debug('Component: ConditionOptions -> SkillList')
 
-        let enableSkillIdList = [];
+        let enableSkillIdList = []
 
         stateRequiredSets.forEach((set) => {
-            let setInfo = SetDataset.getInfo(set.id);
+            let setInfo = SetDataset.getInfo(set.id)
 
             if (Helper.isEmpty(setInfo)) {
-                return;
+                return
             }
 
             setInfo.skills.forEach((skill) => {
-                let skillInfo = SkillDataset.getInfo(skill.id);
+                let skillInfo = SkillDataset.getInfo(skill.id)
 
                 if (Helper.isEmpty(skillInfo)) {
-                    return;
+                    return
                 }
 
                 skillInfo.list.forEach((item) => {
                     if (Helper.isEmpty(item.reaction)
                         || Helper.isEmpty(item.reaction.enableSkillLevel)
                     ) {
-                        return;
+                        return
                     }
 
                     if (Helper.isNotEmpty(item.reaction.enableSkillLevel.id)) {
-                        enableSkillIdList.push(item.reaction.enableSkillLevel.id);
+                        enableSkillIdList.push(item.reaction.enableSkillLevel.id)
                     }
 
                     if (Helper.isNotEmpty(item.reaction.enableSkillLevel.ids)) {
                         item.reaction.enableSkillLevel.ids.forEach((skillId) => {
-                            enableSkillIdList.push(skillId);
+                            enableSkillIdList.push(skillId)
                         })
                     }
-                });
-            });
-        });
+                })
+            })
+        })
 
         return (
             <div className="mhwc-item mhwc-item-3-step">
@@ -158,9 +157,9 @@ export default function SkillList(props) {
                 </div>
 
                 {stateRequiredSkills.map((skill) => {
-                    return renderSkillItem(skill, enableSkillIdList);
+                    return renderSkillItem(skill, enableSkillIdList)
                 })}
              </div>
-        );
-    }, [stateRequiredSkills, stateRequiredSets]);
-};
+        )
+    }, [stateRequiredSkills, stateRequiredSets])
+}

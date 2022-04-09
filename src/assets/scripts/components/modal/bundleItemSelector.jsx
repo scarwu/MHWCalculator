@@ -1,96 +1,95 @@
 /**
  * Bundle Item Selector
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Libraries
-import React, { useState, useEffect, useCallback, useRef, createRef } from 'react';
-import MD5 from 'md5';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-import WeaponDataset from 'libraries/dataset/weapon';
-import ArmorDataset from 'libraries/dataset/armor';
-import CharmDataset from 'libraries/dataset/charm';
-
-// Load Components
-import IconButton from 'components/common/iconButton';
-import BasicInput from 'components/common/basicInput';
-
-// Load State Control
-import CommonState from 'states/common';
-import ModalState from 'states/modal';
+import React, { useState, useEffect, useCallback, useRef, createRef } from 'react'
+import MD5 from 'md5'
 
 // Load Constant
-import Constant from 'constant';
+import Constant from 'constant'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+
+// Load Libraries
+import WeaponDataset from 'libraries/dataset/weapon'
+import ArmorDataset from 'libraries/dataset/armor'
+import CharmDataset from 'libraries/dataset/charm'
+
+// Load Components
+import IconButton from 'components/common/iconButton'
+import BasicInput from 'components/common/basicInput'
+
+// Load State Control
+import CommonState from 'states/common'
+import ModalState from 'states/modal'
 
 export default function BundleItemSelector(props) {
 
     /**
      * Hooks
      */
-    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowBundleItemSelector());
-    const [stateReservedBundles, updateReservedBundles] = useState(CommonState.getter.getReservedBundles());
-    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips());
-    const refModal = useRef();
-    const refName = useRef();
-    const refNameList = useRef(stateReservedBundles.map(() => createRef()));
+    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowBundleItemSelector())
+    const [stateReservedBundles, updateReservedBundles] = useState(CommonState.getter.getReservedBundles())
+    const [stateCurrentEquips, updateCurrentEquips] = useState(CommonState.getter.getCurrentEquips())
+    const refModal = useRef()
+    const refName = useRef()
+    const refNameList = useRef(stateReservedBundles.map(() => createRef()))
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribeCommon = CommonState.store.subscribe(() => {
-            updateReservedBundles(CommonState.getter.getReservedBundles());
-            updateCurrentEquips(CommonState.getter.getCurrentEquips());
+            updateReservedBundles(CommonState.getter.getReservedBundles())
+            updateCurrentEquips(CommonState.getter.getCurrentEquips())
 
-            refNameList.current = CommonState.getter.getReservedBundles().map(() => createRef());
-        });
+            refNameList.current = CommonState.getter.getReservedBundles().map(() => createRef())
+        })
 
         const unsubscribeModal = ModalState.store.subscribe(() => {
-            updateIsShow(ModalState.getter.isShowBundleItemSelector());
-        });
+            updateIsShow(ModalState.getter.isShowBundleItemSelector())
+        })
 
         return () => {
-            unsubscribeCommon();
-            unsubscribeModal();
-        };
-    }, []);
+            unsubscribeCommon()
+            unsubscribeModal()
+        }
+    }, [])
 
     /**
      * Handle Functions
      */
     const handleFastWindowClose = useCallback((event) => {
         if (refModal.current !== event.target) {
-            return;
+            return
         }
 
-        ModalState.setter.hideBundleItemSelector();
-    }, []);
+        ModalState.setter.hideBundleItemSelector()
+    }, [])
 
     const handleBundleSave = useCallback((index) => {
         let name = Helper.isNotEmpty(index)
             ? refNameList.current[index].current.value
-            : refName.current.value;
+            : refName.current.value
 
         if (0 === name.length) {
-            return;
+            return
         }
 
         if (Helper.isNotEmpty(index)) {
-            CommonState.setter.updateReservedBundleName(index, name);
+            CommonState.setter.updateReservedBundleName(index, name)
         } else {
-            let customWeapon = null;
+            let customWeapon = null
 
             if (Helper.isNotEmpty(stateCurrentEquips.weapon)
                 && 'customWeapon' === stateCurrentEquips.weapon.id
             ) {
-                customWeapon = CommonState.getter.getCustomWeapon();
+                customWeapon = CommonState.getter.getCustomWeapon()
             }
 
             CommonState.setter.addReservedBundle({
@@ -98,19 +97,19 @@ export default function BundleItemSelector(props) {
                 name: name,
                 equips: stateCurrentEquips,
                 customWeapon: customWeapon
-            });
+            })
         }
-    }, [stateCurrentEquips]);
+    }, [stateCurrentEquips])
 
     const handleBundlePickUp = useCallback((index) => {
         if (Helper.isNotEmpty(stateReservedBundles[index].customWeapon)) {
-            CommonState.setter.replaceCustomWeapon(stateReservedBundles[index].customWeapon);
+            CommonState.setter.replaceCustomWeapon(stateReservedBundles[index].customWeapon)
         }
 
-        CommonState.setter.replaceCurrentEquips(stateReservedBundles[index].equips);
+        CommonState.setter.replaceCurrentEquips(stateReservedBundles[index].equips)
 
-        ModalState.setter.hideBundleItemSelector();
-    }, [stateReservedBundles]);
+        ModalState.setter.hideBundleItemSelector()
+    }, [stateReservedBundles])
 
     /**
      * Render Functions
@@ -124,14 +123,14 @@ export default function BundleItemSelector(props) {
             && Helper.isEmpty(stateCurrentEquips.leg.id)
             && Helper.isEmpty(stateCurrentEquips.charm.id)
         ) {
-            return false;
+            return false
         }
 
-        let bundleId = MD5(JSON.stringify(stateCurrentEquips));
+        let bundleId = MD5(JSON.stringify(stateCurrentEquips))
 
         for (let index in stateReservedBundles) {
             if (bundleId === stateReservedBundles[index].id) {
-                return false;
+                return false
             }
         }
 
@@ -150,44 +149,44 @@ export default function BundleItemSelector(props) {
                 <div className="col-12 mhwc-content">
                     {Object.keys(stateCurrentEquips).map((equipType, index) => {
                         if (Helper.isEmpty(stateCurrentEquips[equipType])) {
-                            return false;
+                            return false
                         }
 
-                        let equipInfo = null;
+                        let equipInfo = null
 
                         if ('weapon' === equipType) {
                             if ('customWeapon' === stateCurrentEquips[equipType].id) {
-                                equipInfo = CommonState.getter.getCustomWeapon();
+                                equipInfo = CommonState.getter.getCustomWeapon()
 
                                 return Helper.isNotEmpty(equipInfo) ? (
                                     <div key={equipType} className="col-6 mhwc-value">
                                         <span>{_(equipInfo.name)}: {_(equipInfo.type)}</span>
                                     </div>
-                                ) : false;
+                                ) : false
                             }
 
-                            equipInfo = WeaponDataset.getInfo(stateCurrentEquips[equipType].id);
+                            equipInfo = WeaponDataset.getInfo(stateCurrentEquips[equipType].id)
                         } else if ('helm' === equipType
                             || 'chest' === equipType
                             || 'arm' === equipType
                             || 'waist' === equipType
                             || 'leg' === equipType
                         ) {
-                            equipInfo = ArmorDataset.getInfo(stateCurrentEquips[equipType].id);
+                            equipInfo = ArmorDataset.getInfo(stateCurrentEquips[equipType].id)
                         } else if ('charm' === equipType) {
-                            equipInfo = CharmDataset.getInfo(stateCurrentEquips[equipType].id);
+                            equipInfo = CharmDataset.getInfo(stateCurrentEquips[equipType].id)
                         }
 
                         return Helper.isNotEmpty(equipInfo) ? (
                             <div key={index} className="col-6 mhwc-value">
                                 <span>{_(equipInfo.name)}</span>
                             </div>
-                        ) : false;
+                        ) : false
                     })}
                 </div>
             </div>
-        );
-    };
+        )
+    }
 
     let renderItem = (data, index) => {
         return (
@@ -211,44 +210,44 @@ export default function BundleItemSelector(props) {
                 <div className="col-12 mhwc-content">
                     {Object.keys(data.equips).map((equipType, index) => {
                         if (Helper.isEmpty(data.equips[equipType])) {
-                            return false;
+                            return false
                         }
 
-                        let equipInfo = null;
+                        let equipInfo = null
 
                         if ('weapon' === equipType) {
                             if ('customWeapon' === data.equips[equipType].id) {
-                                equipInfo = data.customWeapon;
+                                equipInfo = data.customWeapon
 
                                 return Helper.isNotEmpty(equipInfo) ? (
                                     <div key={equipType} className="col-6 mhwc-value">
                                         <span>{_(equipInfo.name)}: {_(equipInfo.type)}</span>
                                     </div>
-                                ) : false;
+                                ) : false
                             }
 
-                            equipInfo = WeaponDataset.getInfo(data.equips[equipType].id);
+                            equipInfo = WeaponDataset.getInfo(data.equips[equipType].id)
                         } else if ('helm' === equipType
                             || 'chest' === equipType
                             || 'arm' === equipType
                             || 'waist' === equipType
                             || 'leg' === equipType
                         ) {
-                            equipInfo = ArmorDataset.getInfo(data.equips[equipType].id);
+                            equipInfo = ArmorDataset.getInfo(data.equips[equipType].id)
                         } else if ('charm' === equipType) {
-                            equipInfo = CharmDataset.getInfo(data.equips[equipType].id);
+                            equipInfo = CharmDataset.getInfo(data.equips[equipType].id)
                         }
 
                         return Helper.isNotEmpty(equipInfo) ? (
                             <div key={index} className="col-6 mhwc-value">
                                 <span>{_(equipInfo.name)}</span>
                             </div>
-                        ) : false;
+                        ) : false
                     })}
                 </div>
             </div>
-        );
-    };
+        )
+    }
 
     return stateIsShow ? (
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
@@ -270,5 +269,5 @@ export default function BundleItemSelector(props) {
                 </div>
             </div>
         </div>
-    ) : false;
+    ) : false
 }

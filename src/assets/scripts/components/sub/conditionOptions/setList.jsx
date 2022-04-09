@@ -1,29 +1,28 @@
 /**
  * Condition Options: Set List
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+import React, { useState, useEffect, useMemo } from 'react'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+
 // Load Libraries
-import React, { useState, useEffect, useMemo } from 'react';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-import SetDataset from 'libraries/dataset/set';
-import SkillDataset from 'libraries/dataset/skill';
+import SetDataset from 'libraries/dataset/set'
+import SkillDataset from 'libraries/dataset/skill'
 
 // Load Components
-import IconButton from 'components/common/iconButton';
+import IconButton from 'components/common/iconButton'
 
 // Load State Control
-import CommonState from 'states/common';
-import ModalState from 'states/modal';
+import CommonState from 'states/common'
+import ModalState from 'states/modal'
 
 /**
  * Handle Functions
@@ -31,20 +30,20 @@ import ModalState from 'states/modal';
 const handleShowSetItemSelector = () => {
     ModalState.setter.showConditionItemSelector({
         mode: 'set'
-    });
-};
+    })
+}
 
 /**
  * Render Functions
  */
 const renderSetItem = (set) => {
-    let setInfo = SetDataset.getInfo(set.id);
+    let setInfo = SetDataset.getInfo(set.id)
 
     if (Helper.isEmpty(setInfo)) {
-        return false;
+        return false
     }
 
-    let setRequire = setInfo.skills[set.step - 1].require;
+    let setRequire = setInfo.skills[set.step - 1].require
 
     return (
         <div key={setInfo.id} className="col-12 mhwc-content">
@@ -66,42 +65,42 @@ const renderSetItem = (set) => {
             <div className="col-12 mhwc-value">
                 {setInfo.skills.map((skill) => {
                     if (setRequire < skill.require) {
-                        return false;
+                        return false
                     }
 
-                    let skillInfo = SkillDataset.getInfo(skill.id);
+                    let skillInfo = SkillDataset.getInfo(skill.id)
 
                     return (Helper.isNotEmpty(skillInfo)) ? (
                         <div key={skill.id}>
                             <span>({skill.require}) {_(skillInfo.name)}</span>
                         </div>
-                    ) : false;
+                    ) : false
                 })}
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default function SetList (props) {
 
     /**
      * Hooks
      */
-    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets())
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
-            updateRequiredSets(CommonState.getter.getRequiredSets());
-        });
+            updateRequiredSets(CommonState.getter.getRequiredSets())
+        })
 
         return () => {
-            unsubscribe();
-        };
-    }, []);
+            unsubscribe()
+        }
+    }, [])
 
     return useMemo(() => {
-        Helper.debug('Component: ConditionOptions -> SetList');
+        Helper.debug('Component: ConditionOptions -> SetList')
 
         return (
             <div className="mhwc-item mhwc-item-3-step">
@@ -116,6 +115,6 @@ export default function SetList (props) {
 
                 {stateRequiredSets.map(renderSetItem)}
             </div>
-        );
-    }, [stateRequiredSets]);
-};
+        )
+    }, [stateRequiredSets])
+}

@@ -39,7 +39,7 @@ class Misc
 
     public static function saveJson ($name, $data)
     {
-        $path = ROOT . "/../src/assets/scripts/files/json/{$name}.json";
+        $path = ROOT . "/../src/assets/scripts/{$name}.json";
         $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
         @mkdir(dirname($path), 0755, true);
@@ -60,7 +60,7 @@ class Misc
         }
 
         if (null === self::$uiLang) {
-            self::$uiLang = Misc::loadJson('../src/assets/scripts/files/json/langs/zhTW/ui');
+            self::$uiLang = Misc::loadJson('../src/assets/scripts/langs/zhTW/ui');
         }
 
         $poolSize = count(self::$charPool);
@@ -568,9 +568,9 @@ $jewelChecklist = [];
 
 // Load Lang
 // $_ = [
-//     'zhTW' => Misc::loadJson('../src/assets/scripts/files/json/langs/zhTW/ui'),
-//     'jaJP' => Misc::loadJson('../src/assets/scripts/files/json/langs/jaJP/ui'),
-//     'enUS' => Misc::loadJson('../src/assets/scripts/files/json/langs/enUS/ui')
+//     'zhTW' => Misc::loadJson('../src/assets/scripts/langs/zhTW/ui'),
+//     'jaJP' => Misc::loadJson('../src/assets/scripts/langs/jaJP/ui'),
+//     'enUS' => Misc::loadJson('../src/assets/scripts/langs/enUS/ui')
 // ];
 
 // Extend Weapons

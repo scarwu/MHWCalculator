@@ -1,17 +1,17 @@
 /**
  * Dataset Armor
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
 // Load Core Libraries
-import Helper from 'core/helper';
+import Helper from 'core/helper'
 
 // Load Dataset
-import Armors from 'files/json/datasets/armors.json';
+import Armors from 'datasets/armors.json'
 
 let dataset = Armors.map((bundle) => {
     return bundle[1].map((item) => {
@@ -43,71 +43,71 @@ let dataset = Armors.map((bundle) => {
                 return {
                     id: skill[0],
                     level: skill[1]
-                };
+                }
             }) : []
-        };
-    });
+        }
+    })
 })
 .reduce((armorsA, armorsB) => {
-    return armorsA.concat(armorsB);
-});
+    return armorsA.concat(armorsB)
+})
 
 class ArmorDataset {
 
     constructor (list) {
-        this.mapping = {};
+        this.mapping = {}
 
         list.forEach((data) => {
-            this.mapping[data.id] = data;
-        });
+            this.mapping[data.id] = data
+        })
 
         // Filter Conditional
-        this.resetFilter();
+        this.resetFilter()
     }
 
     resetFilter = () => {
-        this.filterType = null;
-        this.filterTypes = null;
-        this.filterRare = null;
-        this.filterSet = null;
-        this.filterSets = null;
-        this.filterSkillName = null;
-        this.filterSkillNames = null;
-        this.filterSkillIsConsistent = null;
-    };
+        this.filterType = null
+        this.filterTypes = null
+        this.filterRare = null
+        this.filterSet = null
+        this.filterSets = null
+        this.filterSkillName = null
+        this.filterSkillNames = null
+        this.filterSkillIsConsistent = null
+    }
 
     getIds = () => {
-        return Object.keys(this.mapping);
-    };
+        return Object.keys(this.mapping)
+    }
 
     getItems = () => {
         let result = Object.values(this.mapping).filter((data) => {
-            let isSkip = true;
+            let isSkip = true
 
             // Type Is
             if (Helper.isNotEmpty(this.filterType)) {
                 if (this.filterType !== data.type) {
-                    return false;
+                    return false
                 }
             }
 
             // Types Is
             if (Helper.isNotEmpty(this.filterTypes)) {
-                isSkip = false;
+                isSkip = false
 
                 if (-1 === this.filterTypes.indexOf(data.type)) {
-                    isSkip = true;
+                    isSkip = true
                 }
 
                 if (isSkip) {
-                    return false;
+                    return false
                 }
             }
 
             // Rare Is
             if (Helper.isNotEmpty(this.filterRare)) {
                 if (this.filterRare !== data.rare) {
-                    return false;
+                    return false
                 }
             }
 
@@ -116,22 +116,22 @@ class ArmorDataset {
                 if (Helper.isEmpty(data.set)
                     || this.filterSet !== data.set.id
                 ) {
-                    return false;
+                    return false
                 }
             }
 
             // Sets Is
             if (Helper.isNotEmpty(this.filterSets)) {
-                isSkip = false;
+                isSkip = false
 
                 if (Helper.isEmpty(data.set)
                     || -1 === this.filterSets.indexOf(data.set.id)
                 ) {
-                    isSkip = true;
+                    isSkip = true
                 }
 
                 if (isSkip) {
-                    return false;
+                    return false
                 }
             }
 
@@ -139,106 +139,106 @@ class ArmorDataset {
             if (Helper.isNotEmpty(this.filterSkillName)) {
                 for (let index in data.skills) {
                     if (this.filterSkillName !== data.skills[index].id) {
-                        continue;
+                        continue
                     }
 
-                    isSkip = false;
+                    isSkip = false
                 }
 
                 if (isSkip) {
-                    return false;
+                    return false
                 }
             }
 
             // Has Skills
             if (Helper.isNotEmpty(this.filterSkillNames)) {
                 if (this.filterSkillIsConsistent) {
-                    isSkip = false;
+                    isSkip = false
 
                     data.skills.forEach((skill) => {
                         if (-1 === this.filterSkillNames.indexOf(skill.id)) {
-                            isSkip = true;
+                            isSkip = true
                         }
-                    });
+                    })
                 } else {
-                    isSkip = true;
+                    isSkip = true
 
                     data.skills.forEach((skill) => {
                         if (-1 !== this.filterSkillNames.indexOf(skill.id)) {
-                            isSkip = false;
+                            isSkip = false
                         }
-                    });
+                    })
                 }
 
                 if (isSkip) {
-                    return false;
+                    return false
                 }
             }
 
-            return true;
-        });
+            return true
+        })
 
-        this.resetFilter();
+        this.resetFilter()
 
-        return result;
-    };
+        return result
+    }
 
     getInfo = (id) => {
         return (Helper.isNotEmpty(this.mapping[id]))
-            ? Helper.deepCopy(this.mapping[id]) : null;
-    };
+            ? Helper.deepCopy(this.mapping[id]) : null
+    }
 
     setInfo = (id, info) => {
         if (Helper.isNotEmpty(info)) {
-            this.mapping[id] = info;
+            this.mapping[id] = info
         } else {
-            delete this.mapping[id];
+            delete this.mapping[id]
         }
-    };
+    }
 
     // Conditional Functions
     typeIs = (text) => {
-        this.filterType = text;
+        this.filterType = text
 
-        return this;
-    };
+        return this
+    }
 
     typesIs = (types) => {
-        this.filterTypes = types;
+        this.filterTypes = types
 
-        return this;
-    };
+        return this
+    }
 
     rareIs = (number) => {
-        this.filterRare = number;
+        this.filterRare = number
 
-        return this;
-    };
+        return this
+    }
 
     setIs = (text) => {
-        this.filterSet = text;
+        this.filterSet = text
 
-        return this;
-    };
+        return this
+    }
 
     setsIs = (sets) => {
-        this.filterSets = sets;
+        this.filterSets = sets
 
-        return this;
-    };
+        return this
+    }
 
     hasSkill = (name) => {
-        this.filterSkillName = name;
+        this.filterSkillName = name
 
-        return this;
-    };
+        return this
+    }
 
     hasSkills = (names, isConsistent = false) => {
-        this.filterSkillNames = names;
-        this.filterSkillIsConsistent = isConsistent;
+        this.filterSkillNames = names
+        this.filterSkillIsConsistent = isConsistent
 
-        return this;
-    };
+        return this
+    }
 }
 
-export default new ArmorDataset(dataset);
+export default new ArmorDataset(dataset)

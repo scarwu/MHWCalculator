@@ -1,31 +1,30 @@
 /**
  * Condition Item Selector
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+import React, { Fragment, useState, useEffect, useCallback, useMemo, useRef } from 'react'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+
 // Load Libraries
-import React, { Fragment, useState, useEffect, useCallback, useMemo, useRef } from 'react';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-import SetDataset from 'libraries/dataset/set';
-import SkillDataset from 'libraries/dataset/skill';
+import SetDataset from 'libraries/dataset/set'
+import SkillDataset from 'libraries/dataset/skill'
 
 // Load Components
-import IconButton from 'components/common/iconButton';
-import IconSelector from 'components/common/iconSelector';
-import IconInput from 'components/common/iconInput';
+import IconButton from 'components/common/iconButton'
+import IconSelector from 'components/common/iconSelector'
+import IconInput from 'components/common/iconInput'
 
 // Load State Control
-import CommonState from 'states/common';
-import ModalState from 'states/modal';
+import CommonState from 'states/common'
+import ModalState from 'states/modal'
 
 /**
  * Handle Functions
@@ -33,8 +32,8 @@ import ModalState from 'states/modal';
 const handleModeChange = (event) => {
     ModalState.setter.showConditionItemSelector({
         mode: event.target.value
-    });
-};
+    })
+}
 
 /**
  * Render Functions
@@ -59,7 +58,7 @@ const renderSetItem = (set) => {
             </div>
             <div className="col-12 mhwc-content">
                 {set.skills.map((skill, index) => {
-                    let skillInfo = SkillDataset.getInfo(skill.id);
+                    let skillInfo = SkillDataset.getInfo(skill.id)
 
                     return Helper.isNotEmpty(skillInfo) ? (
                         <Fragment key={index}>
@@ -70,12 +69,12 @@ const renderSetItem = (set) => {
                                 <span>{_(skillInfo.list[0].description)}</span>
                             </div>
                         </Fragment>
-                    ) : false;
+                    ) : false
                 })}
             </div>
         </div>
-    );
-};
+    )
+}
 
 const renderSkillItem = (skill) => {
     return (
@@ -110,82 +109,82 @@ const renderSkillItem = (skill) => {
                                 <span>{_(item.description)}</span>
                             </div>
                         </Fragment>
-                    );
+                    )
                 })}
             </div>
         </div>
-    );
-};
+    )
+}
 
 /**
  * Sub Components
  */
 const SetList = (props) => {
-    const {data} = props;
+    const {data} = props
 
     return useMemo(() => {
-        Helper.debug('Component: ConditionItemSelector -> SetList');
+        Helper.debug('Component: ConditionItemSelector -> SetList')
 
-        return data.map(renderSetItem);
-    }, [data]);
-};
+        return data.map(renderSetItem)
+    }, [data])
+}
 
 const SkillList = (props) => {
-    const {data} = props;
+    const {data} = props
 
     return useMemo(() => {
-        Helper.debug('Component: ConditionItemSelector -> SkillList');
+        Helper.debug('Component: ConditionItemSelector -> SkillList')
 
-        return data.map(renderSkillItem);
-    }, [data]);
-};
+        return data.map(renderSkillItem)
+    }, [data])
+}
 
 export default function ConditionItemSelector(props) {
 
     /**
      * Hooks
      */
-    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowConditionItemSelector());
-    const [stateBypassData, updateBypassData] = useState(ModalState.getter.getConditionItemSelectorBypassData());
-    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets());
-    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills());
-    const [stateMode, updateMode] = useState(undefined);
-    const [stateSortedList, updateSortedList] = useState([]);
-    const [stateSegment, updateSegment] = useState(undefined);
-    const refModal = useRef();
+    const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowConditionItemSelector())
+    const [stateBypassData, updateBypassData] = useState(ModalState.getter.getConditionItemSelectorBypassData())
+    const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets())
+    const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills())
+    const [stateMode, updateMode] = useState(undefined)
+    const [stateSortedList, updateSortedList] = useState([])
+    const [stateSegment, updateSegment] = useState(undefined)
+    const refModal = useRef()
 
     useEffect(() => {
         if (Helper.isEmpty(stateBypassData)) {
-            return;
+            return
         }
 
-        let idList = [];
-        let selectedList = [];
-        let unselectedList = [];
+        let idList = []
+        let selectedList = []
+        let unselectedList = []
 
         switch (stateBypassData.mode) {
         case 'set':
             idList = stateRequiredSets.map((set) => {
-                return set.id;
-            });
+                return set.id
+            })
 
             SetDataset.getItems().forEach((setInfo) => {
                 if (-1 !== idList.indexOf(setInfo.id)) {
-                    setInfo.isSelect = true;
+                    setInfo.isSelect = true
 
-                    selectedList.push(setInfo);
+                    selectedList.push(setInfo)
                 } else {
-                    setInfo.isSelect = false;
+                    setInfo.isSelect = false
 
-                    unselectedList.push(setInfo);
+                    unselectedList.push(setInfo)
                 }
-            });
+            })
 
-            break;
+            break
         case 'skill':
             idList = stateRequiredSkills.map((skill) => {
-                return skill.id;
-            });
+                return skill.id
+            })
 
             SkillDataset.getItems().forEach((skillInfo) => {
                 if (true === skillInfo.from.jewel
@@ -193,43 +192,43 @@ export default function ConditionItemSelector(props) {
                     || true === skillInfo.from.charm
                 ) {
                     if (-1 !== idList.indexOf(skillInfo.id)) {
-                        skillInfo.isSelect = true;
+                        skillInfo.isSelect = true
 
-                        selectedList.push(skillInfo);
+                        selectedList.push(skillInfo)
                     } else {
-                        skillInfo.isSelect = false;
+                        skillInfo.isSelect = false
 
-                        unselectedList.push(skillInfo);
+                        unselectedList.push(skillInfo)
                     }
                 }
-            });
+            })
 
-            break;
+            break
         default:
-            return;
+            return
         }
 
-        updateMode(stateBypassData.mode);
-        updateSortedList(selectedList.concat(unselectedList));
-    }, [stateBypassData, stateRequiredSets, stateRequiredSkills]);
+        updateMode(stateBypassData.mode)
+        updateSortedList(selectedList.concat(unselectedList))
+    }, [stateBypassData, stateRequiredSets, stateRequiredSkills])
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribeCommon = CommonState.store.subscribe(() => {
-            updateRequiredSets(CommonState.getter.getRequiredSets());
-            updateRequiredSkills(CommonState.getter.getRequiredSkills());
-        });
+            updateRequiredSets(CommonState.getter.getRequiredSets())
+            updateRequiredSkills(CommonState.getter.getRequiredSkills())
+        })
 
         const unsubscribeModal = ModalState.store.subscribe(() => {
-            updateIsShow(ModalState.getter.isShowConditionItemSelector());
-            updateBypassData(ModalState.getter.getConditionItemSelectorBypassData());
-        });
+            updateIsShow(ModalState.getter.isShowConditionItemSelector())
+            updateBypassData(ModalState.getter.getConditionItemSelectorBypassData())
+        })
 
         return () => {
-            unsubscribeCommon();
-            unsubscribeModal();
-        };
-    }, []);
+            unsubscribeCommon()
+            unsubscribeModal()
+        }
+    }, [])
 
     /**
      * Variables
@@ -238,28 +237,28 @@ export default function ConditionItemSelector(props) {
         return [
             { key: 'set',   value: _('set') },
             { key: 'skill', value: _('skill') }
-        ];
-    };
+        ]
+    }
 
     /**
      * Handle Functions
      */
     const handleFastWindowClose = useCallback((event) => {
         if (refModal.current !== event.target) {
-            return;
+            return
         }
 
-        ModalState.setter.hideConditionItemSelector();
-    }, []);
+        ModalState.setter.hideConditionItemSelector()
+    }, [])
 
     const handleSegmentInput = useCallback((event) => {
-        let segment = event.target.value;
+        let segment = event.target.value
 
         segment = (0 !== segment.length)
-            ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null;
+            ? segment.replace(/([.?*+^$[\]\\(){}|-])/g, '').trim() : null
 
-        updateSegment(segment);
-    }, []);
+        updateSegment(segment)
+    }, [])
 
     const getContent = useCallback(() => {
         switch (stateMode) {
@@ -268,59 +267,59 @@ export default function ConditionItemSelector(props) {
                 <SetList data={stateSortedList.filter((set) => {
 
                     // Create Text
-                    let text = _(set.name);
+                    let text = _(set.name)
 
                     set.skills.forEach((set) => {
-                        let skillInfo = SkillDataset.getInfo(set.id);
+                        let skillInfo = SkillDataset.getInfo(set.id)
 
                         if (Helper.isEmpty(skillInfo)) {
-                            return;
+                            return
                         }
 
                         text += _(skillInfo.name) + skillInfo.list.map((item) => {
-                            return _(item.description);
-                        }).join('');
-                    });
-
-                    // Search Nameword
-                    if (Helper.isNotEmpty(stateSegment)
-                        && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
-                    ) {
-                        return false;
-                    }
-
-                    return true;
-                }).sort((dataA, dataB) => {
-                    return _(dataA.id) > _(dataB.id) ? 1 : -1;
-                })} />
-            );
-        case 'skill':
-            return (
-                <SkillList data={stateSortedList.filter((skill) => {
-
-                    // Create Text
-                    let text = _(skill.name);
-
-                    skill.list.forEach((item) => {
-                        text += _(item.name) + _(item.description);
+                            return _(item.description)
+                        }).join('')
                     })
 
                     // Search Nameword
                     if (Helper.isNotEmpty(stateSegment)
                         && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
                     ) {
-                        return false;
+                        return false
                     }
 
-                    return true;
+                    return true
                 }).sort((dataA, dataB) => {
-                    return _(dataA.id) > _(dataB.id) ? 1 : -1;
+                    return _(dataA.id) > _(dataB.id) ? 1 : -1
                 })} />
-            );
+            )
+        case 'skill':
+            return (
+                <SkillList data={stateSortedList.filter((skill) => {
+
+                    // Create Text
+                    let text = _(skill.name)
+
+                    skill.list.forEach((item) => {
+                        text += _(item.name) + _(item.description)
+                    })
+
+                    // Search Nameword
+                    if (Helper.isNotEmpty(stateSegment)
+                        && -1 === text.toLowerCase().search(stateSegment.toLowerCase())
+                    ) {
+                        return false
+                    }
+
+                    return true
+                }).sort((dataA, dataB) => {
+                    return _(dataA.id) > _(dataB.id) ? 1 : -1
+                })} />
+            )
         default:
-            return false;
+            return false
         }
-    }, [stateMode, stateSortedList, stateSegment]);
+    }, [stateMode, stateSortedList, stateSegment])
 
     return (stateIsShow && Helper.isNotEmpty(stateBypassData)) ? (
         <div className="mhwc-selector" ref={refModal} onClick={handleFastWindowClose}>
@@ -347,5 +346,5 @@ export default function ConditionItemSelector(props) {
                 </div>
             </div>
         </div>
-    ) : false;
+    ) : false
 }

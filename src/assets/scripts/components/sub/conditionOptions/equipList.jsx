@@ -1,39 +1,38 @@
 /**
  * Condition Options: Equip List
  *
- * @package     MHW Calculator
+ * @package     Monster Hunter World - Calculator
  * @author      Scar Wu
- * @copyright   Copyright (c) Scar Wu (http://scar.tw)
+ * @copyright   Copyright (c) Scar Wu (https://scar.tw)
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+import React, { useState, useEffect, useMemo } from 'react'
+
+// Load Core
+import _ from 'core/lang'
+import Helper from 'core/helper'
+
 // Load Libraries
-import React, { useState, useEffect, useMemo } from 'react';
-
-// Load Core Libraries
-import Helper from 'core/helper';
-
-// Load Custom Libraries
-import _ from 'libraries/lang';
-import WeaponDataset from 'libraries/dataset/weapon';
-import ArmorDataset from 'libraries/dataset/armor';
-import CharmDataset from 'libraries/dataset/charm';
+import WeaponDataset from 'libraries/dataset/weapon'
+import ArmorDataset from 'libraries/dataset/armor'
+import CharmDataset from 'libraries/dataset/charm'
 
 // Load Components
-import IconButton from 'components/common/iconButton';
+import IconButton from 'components/common/iconButton'
 
 // Load State Control
-import CommonState from 'states/common';
+import CommonState from 'states/common'
 
 /**
  * Render Functions
  */
 const renderEquipItem = (equipType, requiredEquip) => {
     if (Helper.isEmpty(requiredEquip)) {
-        return false;
+        return false
     }
 
-    let equipInfo = null;
+    let equipInfo = null
 
     if ('weapon' === equipType) {
         if ('customWeapon' === requiredEquip.id) {
@@ -52,25 +51,25 @@ const renderEquipItem = (equipType, requiredEquip) => {
                         </div>
                     </div>
                 </div>
-            );
+            )
         }
 
-        equipInfo = WeaponDataset.getInfo(requiredEquip.id);
+        equipInfo = WeaponDataset.getInfo(requiredEquip.id)
     } else if ('helm' === equipType
         || 'chest' === equipType
         || 'arm' === equipType
         || 'waist' === equipType
         || 'leg' === equipType
     ) {
-        equipInfo = ArmorDataset.getInfo(requiredEquip.id);
+        equipInfo = ArmorDataset.getInfo(requiredEquip.id)
     } else if ('charm' === equipType) {
-        equipInfo = CharmDataset.getInfo(requiredEquip.id);
+        equipInfo = CharmDataset.getInfo(requiredEquip.id)
     } else {
-        return false;
+        return false
     }
 
     if (Helper.isEmpty(equipInfo)) {
-        return false;
+        return false
     }
 
     return (
@@ -88,32 +87,32 @@ const renderEquipItem = (equipType, requiredEquip) => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default function EquipList (props) {
 
     /**
      * Hooks
      */
-    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips());
+    const [stateRequiredEquips, updateRequiredEquips] = useState(CommonState.getter.getRequiredEquips())
 
     // Like Did Mount & Will Unmount Cycle
     useEffect(() => {
         const unsubscribe = CommonState.store.subscribe(() => {
-            updateRequiredEquips(CommonState.getter.getRequiredEquips());
-        });
+            updateRequiredEquips(CommonState.getter.getRequiredEquips())
+        })
 
         return () => {
-            unsubscribe();
-        };
-    }, []);
+            unsubscribe()
+        }
+    }, [])
 
     return useMemo(() => {
-        Helper.debug('Component: ConditionOptions -> EquipList');
+        Helper.debug('Component: ConditionOptions -> EquipList')
 
         if (Helper.isEmpty(stateRequiredEquips)) {
-            return false;
+            return false
         }
 
         return (
@@ -126,6 +125,6 @@ export default function EquipList (props) {
                     return renderEquipItem(equipType, stateRequiredEquips[equipType])
                 })}
             </div>
-        );
-    }, [stateRequiredEquips]);
-};
+        )
+    }, [stateRequiredEquips])
+}
