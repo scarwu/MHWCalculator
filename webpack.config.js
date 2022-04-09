@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Webpack Config
  *
@@ -8,8 +7,8 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-const path = require('path');
-const marked = require('marked');
+const path = require('path')
+const marked = require('marked')
 
 module.exports = {
     mode: 'development',
