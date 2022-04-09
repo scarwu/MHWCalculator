@@ -18,11 +18,11 @@ import _ from 'core/lang'
 import Helper from 'core/helper'
 
 // Load Libraries
+import Misc from 'libraries/misc'
 import JewelDataset from 'libraries/dataset/jewel'
 import EnhanceDataset from 'libraries/dataset/enhance'
 import SetDataset from 'libraries/dataset/set'
 import SkillDataset from 'libraries/dataset/skill'
-import CommonDataset from 'libraries/dataset/common'
 
 // Load Components
 import CustomWeapon from 'components/sub/equipsDisplayer/customWeapon'
@@ -323,16 +323,16 @@ const renderEquipBlock = (equipType, currentEquip, requiredEquip) => {
     let equipInfo = null
 
     if ('weapon' === equipType) {
-        equipInfo = CommonDataset.getAppliedWeaponInfo(currentEquip)
+        equipInfo = Misc.getAppliedWeaponInfo(currentEquip)
     } else if ('helm' === equipType
         || 'chest' === equipType
         || 'arm' === equipType
         || 'waist' === equipType
         || 'leg' === equipType
     ) {
-        equipInfo = CommonDataset.getAppliedArmorInfo(currentEquip)
+        equipInfo = Misc.getAppliedArmorInfo(currentEquip)
     } else if ('charm' === equipType) {
-        equipInfo = CommonDataset.getAppliedCharmInfo(currentEquip)
+        equipInfo = Misc.getAppliedCharmInfo(currentEquip)
     } else {
         return false
     }

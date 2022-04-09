@@ -7,7 +7,6 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-// Load Core Libraries
 import Helper from 'core/helper'
 
 // Load Dataset

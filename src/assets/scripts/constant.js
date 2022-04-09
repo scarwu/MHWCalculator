@@ -8,7 +8,7 @@
  */
 
 // Load Config
-import Config from 'config';
+import Config from 'config'
 
 export default {
     langs: ('production' !== Config.env) ? {
@@ -317,4 +317,4 @@ export default {
             perNElementAttackExpectedValue: 0
         }
     }
-};
+}

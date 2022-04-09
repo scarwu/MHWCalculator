@@ -17,10 +17,10 @@ import _ from 'core/lang'
 import Helper from 'core/helper'
 
 // Load Libraries
+import Misc from 'libraries/misc'
 import SetDataset from 'libraries/dataset/set'
 import SkillDataset from 'libraries/dataset/skill'
 import WeaponDataset from 'libraries/dataset/weapon'
-import CommonDataset from 'libraries/dataset/common'
 
 // Load Components
 import IconButton from 'components/common/iconButton'
@@ -67,13 +67,13 @@ const generateEquipInfos = (equips) => {
             ? Helper.deepCopy(customWeapon) : undefined)
     }
 
-    equipInfos.weapon = CommonDataset.getAppliedWeaponInfo(equips.weapon)
+    equipInfos.weapon = Misc.getAppliedWeaponInfo(equips.weapon)
 
     for (let equipType of ['helm', 'chest', 'arm', 'waist', 'leg']) {
-        equipInfos[equipType] = CommonDataset.getAppliedArmorInfo(equips[equipType])
+        equipInfos[equipType] = Misc.getAppliedArmorInfo(equips[equipType])
     }
 
-    equipInfos.charm = CommonDataset.getAppliedCharmInfo(equips.charm)
+    equipInfos.charm = Misc.getAppliedCharmInfo(equips.charm)
 
     return equipInfos
 }

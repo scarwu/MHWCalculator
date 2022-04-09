@@ -7,31 +7,47 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
-import Store from './store';
+import store from './store'
+
+export const isShowChangelog = () => {
+    return store.getState().changelog.isShow
+}
+
+export const isShowAlgorithmSetting = () => {
+    return store.getState().algorithmSetting.isShow
+}
+
+export const getAlgorithmSettingBypassData = () => {
+    return store.getState().algorithmSetting.bypassData
+}
+
+export const isShowBundleItemSelector = () => {
+    return store.getState().bundleItemSelector.isShow
+}
+
+export const isShowConditionItemSelector = () => {
+    return store.getState().conditionItemSelector.isShow
+}
+
+export const getConditionItemSelectorBypassData = () => {
+    return store.getState().conditionItemSelector.bypassData
+}
+
+export const isShowEquipItemSelector = () => {
+    return store.getState().equipItemSelector.isShow
+}
+
+export const getEquipItemSelectorBypassData = () => {
+    return store.getState().equipItemSelector.bypassData
+}
 
 export default {
-    isShowChangelog: () => {
-        return Store.getState().changelog.isShow;
-    },
-    isShowAlgorithmSetting: () => {
-        return Store.getState().algorithmSetting.isShow;
-    },
-    getAlgorithmSettingBypassData: () => {
-        return Store.getState().algorithmSetting.bypassData;
-    },
-    isShowBundleItemSelector: () => {
-        return Store.getState().bundleItemSelector.isShow;
-    },
-    isShowConditionItemSelector: () => {
-        return Store.getState().conditionItemSelector.isShow;
-    },
-    getConditionItemSelectorBypassData: () => {
-        return Store.getState().conditionItemSelector.bypassData;
-    },
-    isShowEquipItemSelector: () => {
-        return Store.getState().equipItemSelector.isShow;
-    },
-    getEquipItemSelectorBypassData: () => {
-        return Store.getState().equipItemSelector.bypassData;
-    }
-};
+    isShowChangelog,
+    isShowAlgorithmSetting,
+    getAlgorithmSettingBypassData,
+    isShowBundleItemSelector,
+    isShowConditionItemSelector,
+    getConditionItemSelectorBypassData,
+    isShowEquipItemSelector,
+    getEquipItemSelectorBypassData
+}

@@ -14,13 +14,13 @@ import _ from 'core/lang'
 import Helper from 'core/helper'
 
 // Load Libraries
+import Misc from 'libraries/misc'
 import WeaponDataset from 'libraries/dataset/weapon'
 import ArmorDataset from 'libraries/dataset/armor'
 import CharmDataset from 'libraries/dataset/charm'
 import JewelDataset from 'libraries/dataset/jewel'
 import SkillDataset from 'libraries/dataset/skill'
 import SetDataset from 'libraries/dataset/set'
-import CommonDataset from 'libraries/dataset/common'
 
 // Load Components
 import IconButton from 'components/common/iconButton'
@@ -64,14 +64,14 @@ const handleBundlePickUp = (bundle, required) => {
                 currentEquips.weapon.enhances = required.equips.weapon.enhances // Restore Enhance
             }
 
-            equipInfo = CommonDataset.getAppliedWeaponInfo(currentEquips.weapon)
+            equipInfo = Misc.getAppliedWeaponInfo(currentEquips.weapon)
         } else if ('helm' === equipType
             || 'chest' === equipType
             || 'arm' === equipType
             || 'waist' === equipType
             || 'leg' === equipType
         ) {
-            equipInfo = CommonDataset.getAppliedArmorInfo(currentEquips[equipType])
+            equipInfo = Misc.getAppliedArmorInfo(currentEquips[equipType])
         }
 
         if (Helper.isEmpty(equipInfo)) {

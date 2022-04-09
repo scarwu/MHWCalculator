@@ -15,4 +15,4 @@ export default {
     env,
     buildTime,
     sentryDsn
-};
+}

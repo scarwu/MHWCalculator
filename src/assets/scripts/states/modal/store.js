@@ -8,11 +8,11 @@
  */
 
 // Load Libraries
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux'
 
 // Load Core Libraries
-import Status from 'core/status';
-import Helper from 'core/helper';
+import Status from 'core/status'
+import Helper from 'core/helper'
 
 const statusMapping = {
     changelog:              'state:modal:changelog',
@@ -20,30 +20,30 @@ const statusMapping = {
     bundleItemSelector:     'state:modal:bundleItemSelector',
     conditionItemSelector:  'state:modal:conditionItemSelector',
     equipItemSelector:      'state:modal:equipItemSelector'
-};
+}
 
 // Middleware
 const diffLogger = store => next => action => {
-    let prevState = store.getState();
-    let result = next(action);
-    let nextState = store.getState();
-    let diffState = {};
+    let prevState = store.getState()
+    let result = next(action)
+    let nextState = store.getState()
+    let diffState = {}
 
     for (let key in prevState) {
         if (JSON.stringify(prevState[key]) === JSON.stringify(nextState[key])) {
-            continue;
+            continue
         }
 
-        diffState[key] = nextState[key];
+        diffState[key] = nextState[key]
 
-        Status.set(statusMapping[key], nextState[key]);
+        Status.set(statusMapping[key], nextState[key])
     }
 
-    Helper.debug('State: Modal -> action', action);
-    Helper.debug('State: Modal -> diffState', diffState);
+    Helper.debug('State: Modal -> action', action)
+    Helper.debug('State: Modal -> diffState', diffState)
 
-    return result;
-};
+    return result
+}
 
 // Initial State
 const initialState = {
@@ -65,7 +65,7 @@ const initialState = {
         isShow: false,
         bypassData: null
     }
-};
+}
 
 export default createStore((state = initialState, action) => {
     switch (action.type) {
@@ -74,35 +74,35 @@ export default createStore((state = initialState, action) => {
             changelog: {
                 isShow: action.payload.isShow
             }
-        });
+        })
     case 'UPDATE_ALGORITHM_SETTING':
         return Object.assign({}, state, {
             algorithmSetting: {
                 isShow: action.payload.isShow,
                 bypassData: action.payload.bypassData
             }
-        });
+        })
     case 'UPDATE_BUNDLE_ITEM_SELECTOR':
         return Object.assign({}, state, {
             bundleItemSelector: {
                 isShow: action.payload.isShow
             }
-        });
+        })
     case 'UPDATE_CONDITION_ITEM_SELECTOR':
         return Object.assign({}, state, {
             conditionItemSelector: {
                 isShow: action.payload.isShow,
                 bypassData: action.payload.bypassData
             }
-        });
+        })
     case 'UPDATE_EQUIP_ITEM_SELECTOR':
         return Object.assign({}, state, {
             equipItemSelector: {
                 isShow: action.payload.isShow,
                 bypassData: action.payload.bypassData
             }
-        });
+        })
     default:
-        return state;
+        return state
     }
-}, applyMiddleware(diffLogger));
+}, applyMiddleware(diffLogger))
