@@ -5,4 +5,4 @@ cd `dirname $0`
 composer install
 yarn install
 
-./tools/convertJson.php
+./src/tools/convertJson.php

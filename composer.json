@@ -1,6 +1,6 @@
 {
     "config": {
-        "vendor-dir": "tools/vendor"
+        "vendor-dir": "src/tools/vendor"
     },
     "require": {
         "sunra/php-simple-html-dom-parser": "^1.5"

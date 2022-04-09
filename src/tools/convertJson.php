@@ -32,14 +32,14 @@ class Misc
 
     public static function loadJson ($name)
     {
-        $path = ROOT . "/../json/{$name}.json";
+        $path = ROOT . "/../{$name}.json";
 
         return json_decode(file_get_contents($path), true);
     }
 
     public static function saveJson ($name, $data)
     {
-        $path = ROOT . "/../src/assets/scripts/{$name}.json";
+        $path = ROOT . "/../{$name}.json";
         $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
         @mkdir(dirname($path), 0755, true);
@@ -60,7 +60,7 @@ class Misc
         }
 
         if (null === self::$uiLang) {
-            self::$uiLang = Misc::loadJson('../src/assets/scripts/langs/zhTW/ui');
+            self::$uiLang = Misc::loadJson('assets/scripts/langs/zhTW/ui');
         }
 
         $poolSize = count(self::$charPool);
@@ -517,19 +517,19 @@ foreach ([
     'lightBowgun', 'heavyBowgun', 'bow'
 ] as $type) {
     for ($level = 6; $level <= 8; $level++) {
-        $weapons = array_merge($weapons, Misc::loadJson("mhw/weapons/$type/rare{$level}"));
+        $weapons = array_merge($weapons, Misc::loadJson("files/mhw/weapons/$type/rare{$level}"));
     }
 }
 
 for ($level = 5; $level <= 8; $level++) {
-    $armors = array_merge($armors, Misc::loadJson("mhw/armors/rare{$level}"));
+    $armors = array_merge($armors, Misc::loadJson("files/mhw/armors/rare{$level}"));
 }
 
-$charms = array_merge($charms, Misc::loadJson('mhw/charms'));
-$jewels = array_merge($jewels, Misc::loadJson('mhw/jewels'));
-$enhances = array_merge($enhances, Misc::loadJson('mhw/enhances'));
-$skills = array_merge($skills, Misc::loadJson('mhw/skills'));
-$sets = array_merge($sets, Misc::loadJson('mhw/sets'));
+$charms = array_merge($charms, Misc::loadJson('files/mhw/charms'));
+$jewels = array_merge($jewels, Misc::loadJson('files/mhw/jewels'));
+$enhances = array_merge($enhances, Misc::loadJson('files/mhw/enhances'));
+$skills = array_merge($skills, Misc::loadJson('files/mhw/skills'));
+$sets = array_merge($sets, Misc::loadJson('files/mhw/sets'));
 
 // MHW: IB
 foreach ([
@@ -539,21 +539,21 @@ foreach ([
     'lightBowgun', 'heavyBowgun', 'bow'
 ] as $type) {
     for ($level = 9; $level <= 12; $level++) {
-        $weapons = array_merge($weapons, Misc::loadJson("mhwib/weapons/$type/rare{$level}"));
+        $weapons = array_merge($weapons, Misc::loadJson("files/mhwib/weapons/$type/rare{$level}"));
     }
 }
 
 for ($level = 9; $level <= 12; $level++) {
-    $armors = array_merge($armors, Misc::loadJson("mhwib/armors/rare{$level}"));
+    $armors = array_merge($armors, Misc::loadJson("files/mhwib/armors/rare{$level}"));
 }
 
-$charms = array_merge($charms, Misc::loadJson('mhwib/charms'));
-$jewels = array_merge($jewels, Misc::loadJson('mhwib/jewels'));
-$enhances = array_merge($enhances, Misc::loadJson('mhwib/enhances'));
-$skills = array_merge($skills, Misc::loadJson('mhwib/skills'));
-$sets = array_merge($sets, Misc::loadJson('mhwib/sets'));
+$charms = array_merge($charms, Misc::loadJson('files/mhwib/charms'));
+$jewels = array_merge($jewels, Misc::loadJson('files/mhwib/jewels'));
+$enhances = array_merge($enhances, Misc::loadJson('files/mhwib/enhances'));
+$skills = array_merge($skills, Misc::loadJson('files/mhwib/skills'));
+$sets = array_merge($sets, Misc::loadJson('files/mhwib/sets'));
 
-$testData = Misc::loadJson('testData');
+$testData = Misc::loadJson('files/testData');
 
 /**
  * Check Enhance, Skill, Set & Create Lang, Dataset
@@ -568,9 +568,9 @@ $jewelChecklist = [];
 
 // Load Lang
 // $_ = [
-//     'zhTW' => Misc::loadJson('../src/assets/scripts/langs/zhTW/ui'),
-//     'jaJP' => Misc::loadJson('../src/assets/scripts/langs/jaJP/ui'),
-//     'enUS' => Misc::loadJson('../src/assets/scripts/langs/enUS/ui')
+//     'zhTW' => Misc::loadJson('../assets/scripts/langs/zhTW/ui'),
+//     'jaJP' => Misc::loadJson('../assets/scripts/langs/jaJP/ui'),
+//     'enUS' => Misc::loadJson('../assets/scripts/langs/enUS/ui')
 // ];
 
 // Extend Weapons
@@ -1120,7 +1120,7 @@ foreach (Misc::$datasetMap as $name => $data) {
         echo "{$name} => " . count($data) . "\n";
     }
 
-    Misc::saveJson("datasets/{$name}", $data);
+    Misc::saveJson("assets/scripts/datasets/{$name}", $data);
 }
 
 echo "\n";
@@ -1130,7 +1130,7 @@ echo "---\n";
 foreach (Misc::$langMap as $lang => $data) {
     echo "{$lang} => " . count($data) . "\n";
 
-    Misc::saveJson("langs/{$lang}/dataset", $data);
+    Misc::saveJson("assets/scripts/langs/{$lang}/dataset", $data);
 }
 
-Misc::saveJson("testData", $testData);
+Misc::saveJson("assets/scripts/testData", $testData);
