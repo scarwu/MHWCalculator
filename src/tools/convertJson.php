@@ -517,19 +517,19 @@ foreach ([
     'lightBowgun', 'heavyBowgun', 'bow'
 ] as $type) {
     for ($level = 6; $level <= 8; $level++) {
-        $weapons = array_merge($weapons, Misc::loadJson("files/mhw/weapons/$type/rare{$level}"));
+        $weapons = array_merge($weapons, Misc::loadJson("files/old/mhw/weapons/$type/rare{$level}"));
     }
 }
 
 for ($level = 5; $level <= 8; $level++) {
-    $armors = array_merge($armors, Misc::loadJson("files/mhw/armors/rare{$level}"));
+    $armors = array_merge($armors, Misc::loadJson("files/old/mhw/armors/rare{$level}"));
 }
 
-$charms = array_merge($charms, Misc::loadJson('files/mhw/charms'));
-$jewels = array_merge($jewels, Misc::loadJson('files/mhw/jewels'));
-$enhances = array_merge($enhances, Misc::loadJson('files/mhw/enhances'));
-$skills = array_merge($skills, Misc::loadJson('files/mhw/skills'));
-$sets = array_merge($sets, Misc::loadJson('files/mhw/sets'));
+$charms = array_merge($charms, Misc::loadJson('files/old/mhw/charms'));
+$jewels = array_merge($jewels, Misc::loadJson('files/old/mhw/jewels'));
+$enhances = array_merge($enhances, Misc::loadJson('files/old/mhw/enhances'));
+$skills = array_merge($skills, Misc::loadJson('files/old/mhw/skills'));
+$sets = array_merge($sets, Misc::loadJson('files/old/mhw/sets'));
 
 // MHW: IB
 foreach ([
@@ -539,21 +539,21 @@ foreach ([
     'lightBowgun', 'heavyBowgun', 'bow'
 ] as $type) {
     for ($level = 9; $level <= 12; $level++) {
-        $weapons = array_merge($weapons, Misc::loadJson("files/mhwib/weapons/$type/rare{$level}"));
+        $weapons = array_merge($weapons, Misc::loadJson("files/old/mhwib/weapons/$type/rare{$level}"));
     }
 }
 
 for ($level = 9; $level <= 12; $level++) {
-    $armors = array_merge($armors, Misc::loadJson("files/mhwib/armors/rare{$level}"));
+    $armors = array_merge($armors, Misc::loadJson("files/old/mhwib/armors/rare{$level}"));
 }
 
-$charms = array_merge($charms, Misc::loadJson('files/mhwib/charms'));
-$jewels = array_merge($jewels, Misc::loadJson('files/mhwib/jewels'));
-$enhances = array_merge($enhances, Misc::loadJson('files/mhwib/enhances'));
-$skills = array_merge($skills, Misc::loadJson('files/mhwib/skills'));
-$sets = array_merge($sets, Misc::loadJson('files/mhwib/sets'));
+$charms = array_merge($charms, Misc::loadJson('files/old/mhwib/charms'));
+$jewels = array_merge($jewels, Misc::loadJson('files/old/mhwib/jewels'));
+$enhances = array_merge($enhances, Misc::loadJson('files/old/mhwib/enhances'));
+$skills = array_merge($skills, Misc::loadJson('files/old/mhwib/skills'));
+$sets = array_merge($sets, Misc::loadJson('files/old/mhwib/sets'));
 
-$testData = Misc::loadJson('files/testData');
+$testData = Misc::loadJson('files/old/testData');
 
 /**
  * Check Enhance, Skill, Set & Create Lang, Dataset

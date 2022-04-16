@@ -2,8 +2,7 @@
 .sass-cache
 src/boot
 src/assets/scripts/langs/*/dataset.json
-src/assets/scripts/testData.json
 src/assets/scripts/datasets
-src/tools/vendor
+src/assets/scripts/testData.json
 src/tools/temp
 node_modules
