@@ -122,7 +122,9 @@ function watch() {
     gulp.watch('src/assets/styles/**/*.{sass,scss}', compileSass)
 
     // Start LiveReload
-    $.livereload.listen()
+    $.livereload.listen({
+        host: '0.0.0.0'
+    })
 }
 
 /**
