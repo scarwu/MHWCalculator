@@ -395,13 +395,13 @@ export default function EquipItemSelector(props) {
      */
     const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowEquipItemSelector())
     const [stateBypassData, updateBypassData] = useState(ModalState.getter.getEquipItemSelectorBypassData())
-    const [stateMode, updateMode] = useState(undefined)
+    const [stateMode, updateMode] = useState(null)
     const [stateSortedList, updateSortedList] = useState([])
-    const [stateType, updateType] = useState(undefined)
-    const [stateRare, updateRare] = useState(undefined)
+    const [stateType, updateType] = useState(null)
+    const [stateRare, updateRare] = useState(null)
     const [stateTypeList, updateTypeList] = useState([])
     const [stateRareList, updateRareList] = useState([])
-    const [stateSegment, updateSegment] = useState(undefined)
+    const [stateSegment, updateSegment] = useState(null)
     const refModal = useRef()
 
     useEffect(() => {

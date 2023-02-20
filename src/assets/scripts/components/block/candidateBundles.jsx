@@ -118,9 +118,9 @@ export default function CandidateBundles(props) {
                 CommonState.setter.saveComputedResult(payload.computedResult)
 
                 // workers[tabIndex].terminate()
-                // workers[tabIndex] = undefined
+                // workers[tabIndex] = null
 
-                stateTasks[tabIndex] = undefined
+                stateTasks[tabIndex] = null
 
                 updateTasks(Helper.deepCopy(stateTasks))
 
@@ -216,9 +216,9 @@ export default function CandidateBundles(props) {
         let tabIndex = stateTempData.candidateBundles.index
 
         workers[tabIndex].terminate()
-        workers[tabIndex] = undefined
+        workers[tabIndex] = null
 
-        stateTasks[tabIndex] = undefined
+        stateTasks[tabIndex] = null
 
         updateTasks(Helper.deepCopy(stateTasks))
     }, [stateTasks, stateTempData])

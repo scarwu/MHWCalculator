@@ -107,8 +107,8 @@ export default function AlgorithmSetting(props) {
     const [stateAlgorithmParams, updateAlgorithmParams] = useState(CommonState.getter.getAlgorithmParams())
     const [stateIsShow, updateIsShow] = useState(ModalState.getter.isShowAlgorithmSetting())
     const [stateBypassData, updateBypassData] = useState(ModalState.getter.getAlgorithmSettingBypassData())
-    const [stateSegment, updateSegment] = useState(undefined)
-    const [stateMode, updateMode] = useState(undefined)
+    const [stateSegment, updateSegment] = useState(null)
+    const [stateMode, updateMode] = useState(null)
     const refModal = useRef()
 
     useEffect(() => {

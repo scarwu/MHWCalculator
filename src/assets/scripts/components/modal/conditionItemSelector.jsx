@@ -148,9 +148,9 @@ export default function ConditionItemSelector(props) {
     const [stateBypassData, updateBypassData] = useState(ModalState.getter.getConditionItemSelectorBypassData())
     const [stateRequiredSets, updateRequiredSets] = useState(CommonState.getter.getRequiredSets())
     const [stateRequiredSkills, updateRequiredSkills] = useState(CommonState.getter.getRequiredSkills())
-    const [stateMode, updateMode] = useState(undefined)
+    const [stateMode, updateMode] = useState(null)
     const [stateSortedList, updateSortedList] = useState([])
-    const [stateSegment, updateSegment] = useState(undefined)
+    const [stateSegment, updateSegment] = useState(null)
     const refModal = useRef()
 
     useEffect(() => {

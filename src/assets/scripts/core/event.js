@@ -7,10 +7,13 @@
  * @link        https://github.com/scarwu/MHWCalculator
  */
 
+// Load Core
+import Helper from 'core/helper'
+
 let eventList = {}
 
 function on(name, key, callback) {
-    if (undefined === eventList[name]) {
+    if (Helper.isEmpty(eventList[name])) {
         eventList[name] = {}
     }
 
@@ -18,7 +21,7 @@ function on(name, key, callback) {
 }
 
 function off(name, key) {
-    if (undefined === eventList[name]) {
+    if (Helper.isEmpty(eventList[name])) {
         return false
     }
 
@@ -26,7 +29,7 @@ function off(name, key) {
 }
 
 function trigger(name, arg) {
-    if (undefined === eventList[name]) {
+    if (Helper.isEmpty(eventList[name])) {
         return false
     }
 

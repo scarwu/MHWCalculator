@@ -118,8 +118,8 @@ export default {
         heavyBowgun:    1.5,
         bow:            1.2
     },
+    defaultLang: 'zhTW',
     default: {
-        lang: 'zhTW',
         algorithmParams: {
             limit: 10,
             sort: 'complex', // complex | defense | amount | slot | expectedValue | expectedLevel

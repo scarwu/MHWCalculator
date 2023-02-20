@@ -94,7 +94,7 @@ export default createStore((state = initialState, action) => {
             let target = action.payload.target
             let index = action.payload.index
             let tempData = Helper.deepCopy(state.tempData)
-            let bundle = undefined
+            let bundle = null
 
             if (Helper.isEmpty(tempData[target])) {
                 tempData[target] = {
@@ -868,7 +868,7 @@ export default createStore((state = initialState, action) => {
                     return index !== slotIndex
                 })
             } else {
-                currentEquips.weapon.slotIds[index] = undefined
+                currentEquips.weapon.slotIds[index] = null
                 customWeapon.slots[index] = {
                     size: size
                 }

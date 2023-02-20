@@ -364,7 +364,7 @@ class FittingAlgorithm {
                     }
 
                     WeaponDataset.setInfo('customWeapon', (true === isCompleted)
-                        ? Helper.deepCopy(customWeapon) : undefined)
+                        ? Helper.deepCopy(customWeapon) : null)
 
                     Helper.log('FA: Input: Custom Weapon', customWeapon)
                 }
